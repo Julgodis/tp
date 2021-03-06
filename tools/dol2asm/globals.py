@@ -4,6 +4,7 @@ import logging
 from rich.logging import RichHandler
 from rich.console import Console
 import asyncio
+from typing import List, Dict, Tuple
 
 DOL2ZEL_VERSION = "2.1"
 GAME_NAME = "The Legend of Zelda: Twilight Princess (GCN USA)"
@@ -76,8 +77,8 @@ class ExecutableSection:
     local_size: int
     base_addr: int
     data: bytearray = field(repr=False)
-    code_segments: list[tuple[int,int]] = field(default_factory=list)
-    relocations: dict[int, "relib.Relocation"] = field(default_factory=dict,repr=False)
+    code_segments: List[Tuple[int,int]] = field(default_factory=list)
+    relocations: Dict[int, "relib.Relocation"] = field(default_factory=dict,repr=False)
 
     def __contains__(self, addr):
         return addr >= self.local_addr and addr < self.local_addr + self.local_size
@@ -95,7 +96,18 @@ def register_symbol(symbol):
     module = symbol.section.translation_unit.library.module.index
     section = symbol.section.index
     key = (module, section)
-    MODULE_SYMBOL_LOOKUP[key][symbol.offset] = symbol
+    offset = symbol.addr
+    if module != 0:
+        offset = symbol.offset
+
+    if module == 0 and section == 1:
+        LOG.debug(symbol)
+
+    MODULE_SYMBOL_LOOKUP[key][offset] = symbol
+
+def unregister_symbol(symbol):
+    # TODO:
+    pass
 
 def lookup_symbol(relocation):
     key = (relocation.module, relocation.section)
@@ -109,8 +121,8 @@ def lookup_symbol(relocation):
 
     #LOG.warning(f"symbol for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
     #LOG.warning(MODULE_SYMBOL_LOOKUP.keys())
-    #raise Dol2ZelException(f"symbol for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
-    return data.Symbol(data.Identifier("fake", 0, None), 0, 0)
+    raise Dol2ZelException(f"symbol at offset (0x{relocation.symbol_offset:04x}) for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
+    #return data.Symbol(data.Identifier("fake", 0, None), 0, 0)
 
 # 800035e4
 # 80005518

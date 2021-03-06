@@ -41,7 +41,7 @@ class Info:
 
         name, mtime, uid, gid, perms, size, magic = (
             struct.unpack('16s12s6s6s8s10s2s', buffer))
-        print(name, mtime, uid, gid, perms, size, magic)
+        #print(name, mtime, uid, gid, perms, size, magic)
         self.name = utf8(name)#.split("/")[0].lstrip().rstrip(' ')
         self.mtime = int(mtime, 10) if len(mtime.strip()) > 0 else 0
         self.uid = int(uid, 10) if len(uid.strip()) > 0 else 0

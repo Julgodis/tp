@@ -1,6 +1,20 @@
 import re
 from pathlib import Path
 import demangle
+import asyncio
+from functools import partial, wraps
+import os
+
+
+def wrap(func):
+    @wraps(func)
+    async def run(*args, loop=None, executor=None, **kwargs):
+        if loop is None:
+            loop = asyncio.get_event_loop()
+        pfunc = partial(func, *args, **kwargs)
+        return await loop.run_in_executor(executor, pfunc)
+
+    return run
 
 def chunks(lst, n):
     for i in range(0, len(lst), n):
@@ -160,7 +174,7 @@ def _create_dirs_for_file(filepath):
         return
     parent.mkdir(parents=True, exist_ok=True)
 
-create_dirs_for_file = aiofiles.wrap(_create_dirs_for_file)
+create_dirs_for_file = wrap(_create_dirs_for_file)
 
 import globals as g
 from exception import Dol2ZelException

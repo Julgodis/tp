@@ -1,3 +1,4 @@
+import rellib
 import globals as g
 from globals import ExecutableSection
 from dataclasses import dataclass, field
@@ -7,6 +8,7 @@ from data import *
 
 import rich
 from rich.progress import Progress
+from typing import Dict, List
 
 import util
 import framework
@@ -20,16 +22,15 @@ import generate_functions
 #
 #
 
-"""
-Add symbols that we don't have names for
-"""
-def add_noname_symbol(module: int, sections: dict[int,ExecutableSection], map_sections: dict[str,framework.Section], map_addrs, addr: int):
+
+def add_noname_symbol(module: int, sections: Dict[int, ExecutableSection], map_sections: Dict[str, framework.Section], map_addrs, addr: int):
     in_sections = [x for x in sections if addr in x]
     if len(in_sections) > 1:
-        g.LOG.warning("multiple section for symbol at 0x%08X" % (addr & 0xFFFFFFFF))
-        g.LOG.warning([(x.name, x.local_addr, x.local_addr+x.local_size) for x in sections])
+        g.LOG.warning("multiple section for symbol at 0x%08X" %
+                      (addr & 0xFFFFFFFF))
+        g.LOG.warning([(x.name, x.local_addr, x.local_addr+x.local_size)
+                       for x in sections])
         g.LOG.warning([x.name for x in in_sections])
-        assert False
         return False
     elif not in_sections:
         g.LOG.warning("no section for symbol at 0x%08X" % (addr & 0xFFFFFFFF))
@@ -37,7 +38,10 @@ def add_noname_symbol(module: int, sections: dict[int,ExecutableSection], map_se
     else:
         section = in_sections[0]
         relative_addr = addr - section.local_addr
-        if relative_addr in map_addrs:
+        if relative_addr in map_addrs[section.name]:
+            if addr == 0x80280d6c:
+                g.LOG.warning(hex(addr))
+                g.LOG.warning(hex(relative_addr))
             return False
 
         obj = None
@@ -50,8 +54,13 @@ def add_noname_symbol(module: int, sections: dict[int,ExecutableSection], map_se
                 name = g.PREDEFINED_SYMBOLS[addr]
 
         symbol = framework.Symbol(relative_addr, 0, 0, name, lib, obj)
+        symbol.source = f"add_noname_symbol/{addr:08X}"
+        if addr == 0x80280d6c:
+            g.LOG.warning(symbol)
         map_sections[section.name].symbols.append(symbol)
+        map_addrs[section.name].add(relative_addr)
         return True
+
 
 def sort_symbols_and_infer_location(section, symbols):
     symbols.sort(key=lambda x: x.addr)
@@ -60,14 +69,14 @@ def sort_symbols_and_infer_location(section, symbols):
     lib = None
     symbols_without_obj = []
     for symbol in symbols:
-        if section.is_code and symbol.name:
+        if section.is_addr_code(symbol.addr) and symbol.name:
             symbol.is_function = True
         if symbol.is_function and symbol.addr in g.FAKE_FUNCTIONS:
             symbol.is_function = False
 
         # Assign symbols to the previous object and library
         if not symbol.obj:
-            if obj:
+            if obj:            
                 symbol.obj = obj
                 symbol.lib = lib
             else:
@@ -85,9 +94,10 @@ def sort_symbols_and_infer_location(section, symbols):
 
     if symbols_without_obj:
         # There are no other symbol which we can use to infer the object and library file from,
-        # create a fake translation unit 
+        # create a fake translation unit
         for rsym in symbols_without_obj:
             rsym.obj = "unknown_translation_unit.o"
+
 
 def calculate_symbol_sizes(section, symbols):
     symbols.sort(key=lambda x: (x.addr, x.size))
@@ -123,10 +133,10 @@ def calculate_symbol_sizes(section, symbols):
                 curr.padding = section.end - curr_addr
                 assert curr.padding >= 0
 
-    # Some section have their object files aligned to 8 bytes. This hacks will move symbols, 
+    # Some section have their object files aligned to 8 bytes. This hacks will move symbols,
     # which are not aligned, to the next object file. Not sure if the frameworkF.map have them listed
     # in the wrong source file or if a different alignment setting was used.
-    if section.name == ".bss" or section.name == ".sdata"  or section.name == ".sbss":
+    if section.name == ".bss" or section.name == ".sdata" or section.name == ".sbss":
         for i, curr in enumerate(symbols):
             begin_aligned = ((curr.addr) % 8) == 0
             end_aligned = ((curr.addr + curr.size + curr.padding) % 8) == 0
@@ -142,7 +152,7 @@ def calculate_symbol_sizes(section, symbols):
                     next = n
                     break
                 j += 1
-        
+
             if not next:
                 continue
             if curr.obj == next.obj and curr.lib == next.lib:
@@ -153,25 +163,27 @@ def calculate_symbol_sizes(section, symbols):
                 sym.lib = next.lib
 
     if len(symbols) > 1:
-        last_symbol  = symbols[-1]
+        last_symbol = symbols[-1]
         endp = last_symbol.end + last_symbol.padding
-        assert section.addr + endp  == section.end
+        assert section.addr + endp == section.end
         last_symbol.padding = 0
 #
 #
 #
 
-import rellib
 
 """
 Finds symbols from executable section and a symbol map.
 """
-def search(module_id: int, name: str, map_path: Path, sections: list[ExecutableSection], relocations: dict[int,"rel.Relocation"]) -> Module:
-    map_sections, map_addrs = framework.execute(map_path, sections, base_folder = (module_id == 0))
-    labels = analyze.execute(sections)
+
+
+def search(module_id: int, name: str, map_path: Path, sections: List[ExecutableSection], relocations: Dict[int, "rel.Relocation"]) -> Module:
+    map_sections, map_addrs = framework.execute(module_id,
+        map_path, sections, base_folder=(module_id == 0))
+    labels = analyze.execute(module_id, sections)
 
     laf = list(labels.items())
-    laf.sort(key = lambda x: x[0])
+    laf.sort(key=lambda x: x[0])
     for rel_relative_location, addr in laf:
         is_relocation_symbol = False
         for relocs in relocations.values():
@@ -182,6 +194,12 @@ def search(module_id: int, name: str, map_path: Path, sections: list[ExecutableS
         if is_relocation_symbol:
             continue
         add_noname_symbol(module_id, sections, map_sections, map_addrs, addr)
+
+    # Add entrypoint. Important as it's not included in the linker map
+    if module_id == 0:
+        for section in sections:
+            if g.ENTRY_POINT in section:
+                add_noname_symbol(module_id, sections, map_sections, map_addrs, g.ENTRY_POINT)
 
     relocation_symbols = {}
     for section in map_sections.values():
@@ -199,61 +217,81 @@ def search(module_id: int, name: str, map_path: Path, sections: list[ExecutableS
                         g.LOG.debug(r)
                         g.LOG.debug(map_sections.keys())
                     symbol = framework.Symbol(r.addend, 0, 0, None, None, None)
+                    symbol.source = f"relocation/{section.name}/{r.addend:08X}"
                     map_sections[section.name].symbols.append(symbol)
 
-
+    section_count = defaultdict(int)
     tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     tree_order = defaultdict(lambda: defaultdict(list))
     for section in map_sections.values():
-        sort_symbols_and_infer_location(section, section.symbols)
-        calculate_symbol_sizes(section, section.symbols)
-
         for symbol in section.symbols:
-            symbol.addr += section.addr
-
             if module_id != 0:
                 if symbol.obj == "global_destructor_chain.o":
                     symbol.lib = "Runtime.PPCEABI.H.a"
 
-                assert symbol.obj
+        if not section.name in tree[symbol.lib][symbol.obj]:
+            tree[symbol.lib][symbol.obj][section.name] = []
 
+        sort_symbols_and_infer_location(section, section.symbols)
+        calculate_symbol_sizes(section, section.symbols)
+        for symbol in section.symbols:
+            symbol.addr += section.addr
+
+            section_count[section.name] += 1
             tree[symbol.lib][symbol.obj][section.name].append(symbol)
             tree_order[symbol.lib][section.name].append(symbol.obj)
 
-
     module = Module(module_id)
+    module.executable_sections = sections
     for k, v in tree.items():
-        library = Library(k)
+        library_name = k
+        if library_name:
+            library_name = library_name.replace(".a", "")
+        library = Library(library_name)
         module.addLibrary(library)
 
         order_sections = tree_order[k]
         order = sort_objects.sort(v.keys(), order_sections)
 
         for tuk in order:
-            translation_unit = TranslationUnit(tuk.replace(".o", ""))
+            translation_name = tuk
+            if not translation_name:
+                translation_name = "_unknown_translation_unit.o"
+            translation_unit = TranslationUnit(translation_name.replace(".o", ""))
             library.addTranslationUnit(translation_unit)
 
             for sk, sv in v[tuk].items():
                 map_section = map_sections[sk]
                 exe_section = sections[map_section.index]
-                section = Section(sk, 
-                    map_section.addr, map_section.size, 
-                    map_section.is_code, map_section.data, 
-                    base_addr=exe_section.base_addr,
-                    index=map_section.index)
+                section = Section(sk,
+                                  map_section.addr, map_section.size,
+                                  map_section.data,
+                                  base_addr=exe_section.base_addr,
+                                  index=map_section.index)
+
                 if map_section.index in relocations:
                     for relocation in relocations[map_section.index]:
                         section.relocations[relocation.addr] = relocation
                 translation_unit.addSection(section)
+
+                # If the section contains data but there are no symbols for it, we need to create 
+                # a "fake" symbol or otherwise the data will not be included in the final elf.
+                if map_section.size > 0 and section_count[sk] == 0:
+                    name = f"_section_symbol_{sk.replace('.', '')}"
+                    symbol = framework.Symbol(section.addr, map_section.size, 0, name, k, tuk)
+                    symbol.source =  f"section_symbol/{tuk}/{section.name}/{section.addr:08X}"
+                    sv.append(symbol)
+                    section_count[sk] += 1
+                    g.LOG.debug(f"added symbol '{name}' for unreferenced section '{sk}'")
 
                 groups = generate_symbols.groups_from_symbols(sv)
                 for group in groups:
                     assert len(group) > 0
                     first = group[0]
                     if first.is_function:
-                        assert section.is_code
                         assert section.data
-                        function = generate_functions.from_group(section, group)
+                        function = generate_functions.from_group(
+                            section, group)
                         section.addSymbol(function)
                         g.register_symbol(function)
                         #function_map[function.addr] = function
@@ -264,10 +302,10 @@ def search(module_id: int, name: str, map_path: Path, sections: list[ExecutableS
                             g.register_symbol(symbol_data)
                             #data_map[symbol_data.addr] = symbol_data
 
-                #for sym in sv:
+                # for sym in sv:
                 #    if sym.size <= 0:
                 #        continue
                 #    symbol = Symbol(sym.name, sym.addr, sym.size, 0)
                 #    section.addSymbol(symbol)
-
+    
     return module

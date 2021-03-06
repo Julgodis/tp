@@ -152,7 +152,7 @@ def obj_get_symbols(obj):
         SYMBOLS.append(sym)
 
 def load_archive(path):
-    print(path)
+    #print(path)
     with open(path, 'rb') as file:
         header = ar.Header()
         header.read(file)
@@ -180,7 +180,7 @@ def load_archive(path):
                 name = string_table[index:].split("/")[0]
                 
             name = name.lstrip().rstrip(' ')
-            print(info.name, name)
+            #print(info.name, name)
             if name == "" or name == "/":
                 continue
 
@@ -243,7 +243,7 @@ with open("build/o_files", 'r') as content_file:
     o_files = content_file.read().strip().split(" ")
 
 for o_file in o_files:
-    print(o_file)
+    #print(o_file)
     with open(o_file, 'rb') as file:
         obj = objs.load_f(None, o_file, file)
         obj_get_symbols(obj)
@@ -277,13 +277,13 @@ with open("test.lcf", "w") as file:
         if name in undefined_active.STRING_BASE:
             continue
         addr = undefined_active.SYMBOLS[name][0]
-        print("missing symbol: %s" % name)
-        file.write("\t\"%s\" = 0x%08X;\n" % (name, addr))
+        #print("missing symbol: %s" % name)
+        pass#file.write("\t\"%s\" = 0x%08X;\n" % (name, addr))
 
     file.write("\n")
     file.write("\t/* @stringBase0 */\n")
     for k,x in undefined_active.STRING_BASE.items():
-        file.write("\t\"%s\" = 0x%08X;\n" % (k, x[0]))     
+        pass#file.write("\t\"%s\" = 0x%08X;\n" % (k, x[0]))     
     
     file.write("}\n")
     file.write("\n")

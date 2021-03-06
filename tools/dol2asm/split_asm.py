@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -42,7 +42,9 @@ import generate_symbols
 import merge_symbols
 import symbol_naming
 import rellib
+import dollib
 import makefile
+import merge_symbols
 
 import asyncio
 from functools import wraps
@@ -99,7 +101,16 @@ async def dol2zel(debug, game_path, symbol_info_path):
         symbol_info_path.resolve()
         g.SYMBOL_INFO_PATH = symbol_info_path
 
-        baserom.load()
+        
+        with g.BASEROM_PATH.open('rb') as file:
+            g.BASEROM_DATA = bytearray(file.read())
+            g.DOL = dollib.read(g.BASEROM_DATA)
+            
+            g.LOG.debug(f"'{g.BASEROM_PATH}' sections:")
+            for section in g.DOL.sections:
+                g.LOG.debug(f"\t{section.type:<4} 0x{section.offset:08X} 0x{section.addr:08X} 0x{section.size:06X} ({section.size} bytes)")
+
+        #baserom.load()
         baserom.sha1_check()
 
         g.MAPS = {}
@@ -117,9 +128,9 @@ async def dol2zel(debug, game_path, symbol_info_path):
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
         sys.exit(1)
-    except:
-        g.LOG.error(f"unknown exception")
-        g.CONSOLE.print_exception()
+    except RuntimeError:
+        sys.exit(1)
+    except KeyboardInterrupt:
         sys.exit(1)
 
 import symbol_finder
@@ -129,8 +140,9 @@ import symbol_finder
 @click.option('--lib-path', 'lib_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
 @click.option('--src-path', 'src_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="src/")
 @click.option('--rel-path', 'rel_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="rel/")
+@click.option('--asm/--no-asm', 'asm_gen', default=True)
 @coro
-async def rel_build(asm_path, lib_path, src_path, rel_path):
+async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
     g.OPEN_FILES_SEMAPHORE = asyncio.Semaphore(g.MAX_FILE_COUNT)
 
     try:
@@ -154,194 +166,209 @@ async def rel_build(asm_path, lib_path, src_path, rel_path):
             rel_path.mkdir(parents=True)
             g.LOG.debug(f"create new path: '{rel_path}'")
 
-        modules = []
-        for index, rel in g.RELS.items():
-            base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
-            base_addr -= rel.sections[1].offset
-            g.LOG.debug(f"%3i: {rel.path},  {len(rel.sections)} sections and {len(rel.relocations)} relocations" % index)
-
-            relocations = defaultdict(list)
-            executable_sections = []
-            for section in rel.sections:
-                section.offset += base_addr
-                for relocation in section.relocations:
-                    relocations[section.index].append(relocation)
-
+        cache_path = Path("cache.dump")
+        if not cache_path.exists():
+            # symbol_finder expects the first section to be a "null" section
+            executable_sections = [g.ExecutableSection("null",0,0,0,None,[],{})]
+            for section in g.DOL.sections:
                 cs = []
-                if section.executable_flag:
-                    cs.append((0, section.length))
-                executable_sections.append(g.ExecutableSection(
-                    section.name, section.offset, section.length, base_addr, 
-                    section.data, cs, {}))
+                if section.type == "text":
+                    if section.name == ".init":
+                        # TODO: Comment why!
+                        cs.append((0x80003100 - section.addr,  0x800035e4 - section.addr))
+                        cs.append((0x80005518 - section.addr,  0x80005544 - section.addr))
+                    else:
+                        cs.append((0, section.size))
 
-            module = symbol_finder.search(index, rel.path.name.replace(".rel",".o"),  rel.map, executable_sections, relocations)
-            modules.append(module)
+                executable_section = g.ExecutableSection(
+                    section.name, section.addr, section.size, 0, section.data, cs, {})
+                executable_sections.append(executable_section)
+
+            g.LOG.debug(f"{0: 3}: {g.FRAMEWORKF_PATH}")
+            main_module = symbol_finder.search(0, None, g.FRAMEWORKF_PATH, executable_sections, {})
+
+            modules = [main_module]
+            for index, rel in g.RELS.items():
+                break
             
-            #for section in rel.sections:
-            #    g.LOG.debug(f"\t{section.index:02} {executable_sections[section.index].name}")
+                base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
+                base_addr -= rel.sections[1].offset
+                g.LOG.debug(f"%3i: {rel.path},  {len(rel.sections)} sections and {len(rel.relocations)} relocations" % index)
 
-            #if len(modules) > 50:
-            #    break
+                relocations = defaultdict(list)
+                executable_sections = []
+                for section in rel.sections:
+                    section.offset += base_addr
+                    for relocation in section.relocations:
+                        relocations[section.index].append(relocation)
 
-        # merge data
-        libraries = defaultdict(list)
+                    cs = []
+                    if section.executable_flag:
+                        cs.append((0, section.length))
+                    executable_sections.append(g.ExecutableSection(
+                        section.name, section.offset, section.length, base_addr, 
+                        section.data, cs, {}))
+
+                module = symbol_finder.search(index, rel.path.name.replace(".rel",".o"),  rel.map, executable_sections, relocations)
+                modules.append(module)
+                
+                #for section in rel.sections:
+                #    g.LOG.debug(f"\t{section.index:02} {executable_sections[section.index].name}")
+
+                #if len(modules) > 50:
+                #    break
+
+            """
+            for module in modules:
+                if module.index == 245:
+                    for lib in module.libraries.values():
+                        for tu in lib.translation_units:
+                            g.LOG.error(tu.id)
+                            for x in tu.sections:
+                                g.LOG.debug(x.id)
+                                for y in x.symbols:
+                                    g.LOG.debug(f"{type(y).__name__:<15} {y.section.id} {y.identifier} {y.source}")
+            sys.exit(1)
+            """
+
+            with cache_path.open('wb') as file:
+                pickle.dump(modules, file)
+        else:
+            with cache_path.open('rb') as file:
+                modules = pickle.load(file)
+
+        main_module = modules[0]
+        for tu in main_module.libraries[None].translation_units:
+            if tu.name == "init":
+                for x in tu.sections:
+                    g.LOG.debug(x.id)
+                    for y in x.symbols:
+                        g.LOG.debug(f"{type(y).__name__:<25} {y.identifier}")
+
         for module in modules:
-            for lib in module.libraries.values():
-                libraries[lib.name].append(lib)
+            libs = list(module.libraries.values())
+            merge_symbols.execute(libs)
 
-        def all_equal(iterator):
-            return len(set(iterator)) <= 1
-
-        def merge_symbols(dsymbols):
-            result_symbols = []
-            for name, symbols in dsymbols.items():
-                if len(symbols) == 1:
-                    result_symbols.append(symbols[0])
-                else:
-                    sizes = [x.size for x in symbols]
-                    if not all_equal(sizes):
-                        raise Dol2ZelException("merging identical symbols, but they have different sizes...")
-                    
-                    """
-                    if True and isinstance(symbols[0], InitData):
-                        data = [x.data for x in symbols]
-                        if not all_equal(data):
-                            raise Dol2ZelException("merging identical symbols, but they have contain different data")
-                    """
-
-                    result_symbols.append(symbols[0])
-            return result_symbols
-
-        def merge_sections(dsections):
-            result_sections = dict()
-            for name, sections in dsections.items():
-                symbols = defaultdict(list)
-                unnamed_symbols = []
-                for section in sections:
-                    for symbol in section.symbols:
-                        #g.CONSOLE.print(f"0x%08X 0x%04X {symbol.section.id} {symbol.identifier}" % (symbol.addr, symbol.size))
-                        if symbol.identifier.name:
-                            symbols[symbol.identifier.name].append(symbol)
-                        elif symbol.identifier.label:
-                            symbols[symbol.identifier.label].append(symbol)
-                result_sections[name] = merge_symbols(symbols) 
-                result_sections[name].extend(unnamed_symbols)
-                result_sections[name].sort(key=lambda k: (k.addr, k.size))
-            return result_sections
-
-        def merge_tus(dtus):
-            result_tus = dict()
-            for name, tus in dtus.items():
-                sections = defaultdict(list)
-                for tu in tus:
-                    for section in tu.sections:
-                        sections[section.name].append(section)
-                    
-                result_tus[name] = merge_sections(sections)
-            return result_tus
-
-        def merge_libraries(dlibs):    
-            result_libs = dict()
-            for name, libs in dlibs.items():
-                if not name:
-                    continue
-                tus = defaultdict(list)
-                for lib in libs:
-                    for tu in lib.translation_units:
-                        tus[tu.name].append(tu)
-                    
-                result_libs[name] = merge_tus(tus)
-            return result_libs
-        
-        new_libs_dict = merge_libraries(libraries)
-        new_libs = dict()
-        for k,v in new_libs_dict.items():
-            lib = Library(k, lib_path=lib_path,asm_path=asm_path)
-            new_libs[k] = lib
-            for kk,vv in v.items():
-                tu = TranslationUnit(kk)
-                lib.addTranslationUnit(tu)
-                for kkk,vvv in vv.items():
-                    first = vvv[0]
-                    last = vvv[-1]
-                    section = Section(kkk, first.start, last.end - first.start, False, None)
-                    tu.addSection(section)
-                    for s in vvv:
-                        section.symbols.append(s)
-
-
-        symbol_naming.execute([*new_libs.values(), *libraries[None]])
-
-        symbol_map = {}
-        ait = IntervalTree(
-            [Interval(x.start, x.end, x) for x in symbol_map.values() if x.size > 0]
-        )
+        for module in modules:
+            libs = list(module.libraries.values())
+            symbol_naming.execute(libs)
 
         cpp_tasks = []
-        cpp_tasks += cpp.export_all(new_libs, symbol_map, ait)
-        """
-        asm_tasks = []
-        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-            task = progress.add_task("building translation units...", total=len(cpp_tasks))
+        for module in modules:
+            symbol_map = {}
+            require_resolve = []
+            for lib in module.libraries.values():
+                for tu in lib.translation_units:
+                    for section in tu.sections:
+                        for symbol in section.symbols:
+                            symbol_map[symbol.addr] = symbol
+                            if isinstance(symbol, VirtualTable):
+                                require_resolve.append(symbol)
+                            elif isinstance(symbol, ReferenceArray):
+                                require_resolve.append(symbol)
 
-            for tu, callback in cpp_tasks:
-                progress.update(task, description="%-30s" % tu.source_path)
-                asm_tasks.extend(callback())
-                progress.update(task, advance=1)
+            ait = IntervalTree(
+                [Interval(x.start, x.end, x) for x in symbol_map.values() if x.size > 0]
+            )
 
-        g.LOG.debug(f"{len(asm_tasks)} tasks for generating ASM code")
+            # Find reference arrays
+            # TODO: MOVE
+            for lib in  module.libraries.values():
+                for tu in lib.translation_units:
+                    for sec in tu.sections:
+                        for symbol in sec.symbols:
+                            if not isinstance(symbol, InitData):
+                                continue
 
-        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-            for function, callback in asm_tasks:
-                callback(progress)
-        """
+                            if len(symbol.data) % 4 != 0:
+                                continue
+                            # TODO: Is this limit still required?
+                            if len(symbol.data) > 4 * 64:
+                                continue
+
+                            section = symbol.section
+                            count = len(symbol.data) // 4
+                            values = list(struct.unpack(">" + "I" * count, symbol.data))
+                            is_all_symbols = [ait.overlaps(x) for x in values]
+                            if not any(is_all_symbols):
+                                continue
+                            
+                            new_symbol = ReferenceArray(
+                                symbol.identifier, 
+                                symbol.addr, 
+                                symbol.size, 
+                                data = symbol.data, 
+                                padding = symbol.padding,
+                                padding_data = symbol.padding_data,
+                                section = symbol.section,
+                                source = symbol.source)
+                            section.replace_symbol(symbol, new_symbol)
+                            g.unregister_symbol(symbol)
+                            g.register_symbol(symbol)
+
+                            symbol_map[symbol.addr] = new_symbol
+                            ait.remove_overlap(symbol.start, symbol.end)
+                            ait.add(Interval(new_symbol.start, new_symbol.end, new_symbol))
+                            require_resolve.append(new_symbol)
+
+            for symbol in require_resolve:
+                symbol.resolve_references(ait) 
+
+            if module.index == 0:
+                base = module.libraries[None]
+                base.lib_path = src_path 
+                base.asm_path = asm_path
+                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
+
+                for lib in module.libraries.values():
+                    if lib.name != None:
+                        lib.lib_path = lib_path 
+                        lib.asm_path = asm_path
+                        lib.mk_path = lib_path
+                        cpp_tasks += cpp.export_all({lib.name: lib}, symbol_map, ait)
+            else:
+                rel_name = g.RELS[module.index].path.name.replace(".rel", "")
+                for lib in module.libraries.values():
+                    if lib.name != None:
+                        lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
+                        lib.asm_path = asm_path.joinpath(f"rel/{rel_name}/libs/")
+                        cpp_tasks += cpp.export_all({lib.name: lib}, symbol_map, ait)
+
+                base = module.libraries[None]
+                base.name = rel_name
+                base.lib_path = rel_path 
+                base.asm_path = asm_path.joinpath("rel/")
+                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
 
         for module in modules:
             if module.index == 0:
-                continue
-
-            base = module.libraries[None]
-            base.name = g.RELS[module.index].path.name.replace(".rel", "")
-            base.lib_path = rel_path 
-            base.asm_path = asm_path.joinpath("rel/")
-
-            #g.LOG.debug(f"export {base.id}")
-            cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
-
-            """
-            asm_tasks = []
-            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-                task = progress.add_task("building translation units...", total=len(cpp_tasks))
-
-                for tu, callback in cpp_tasks:
-                    progress.update(task, description="%-30s" % tu.source_path)
-                    asm_tasks.extend(callback())
-                    progress.update(task, advance=1)
-
-            g.LOG.debug(f"{len(asm_tasks)} tasks for generating ASM code")
-
-            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-                for function, callback in asm_tasks:
-                    callback(progress)
-            """
+                for name, lib in module.libraries.items():
+                    if name != None:
+                        await makefile.create_library(lib)
+        
+        await makefile.create_obj_files(modules[0].libraries[None])
 
         with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
             task = progress.add_task("")
-            advance = [0]
+            advance = [0,0]
             async def temp(advance, callback):
+                advance[1] += 1
                 result = await callback
                 advance[0] += 1
                 return result
 
             async def progress_bar(progress, description, advance):
                 total = 0
+                started = 0
                 while True:
                     await asyncio.sleep(0.25)
                     for i in range(2):
-                        if advance[0] > 0:
+                        if advance[0] > 0 or advance[1] > 0:
                             total += advance[0]
-                            progress.update(task, description=f"{description} ({total}/{progress._tasks[task].total})", advance=advance[0])
+                            started += advance[1]
+                            progress.update(task, description=f"{description} ({started},{total}/{progress._tasks[task].total})", advance=advance[0])
                             advance[0] = 0
+                            advance[1] = 0
 
             g.CONSOLE.print(f"{len(cpp_tasks)} tasks for generating C++ code")
             cpp_async_tasks = [temp(advance, x) for x in cpp_tasks]
@@ -350,25 +377,31 @@ async def rel_build(asm_path, lib_path, src_path, rel_path):
             pb_task = asyncio.create_task(progress_bar(progress, "generating C++", advance))
             asm_tasks = await asyncio.gather(*cpp_async_tasks)
             asm_tasks = sum(asm_tasks, [])
+            #asm_tasks = []
+            #for ts in cpp_async_tasks:
+            #    asm_tasks += await ts
             pb_task.cancel()
 
-            advance = [0]
+            if asm_gen:
+                advance = [0,0]
 
-            g.CONSOLE.print(f"{len(asm_tasks)} tasks for generating ASM code")
-            asm_async_tasks = [temp(advance, x) for x in asm_tasks]
-            progress.update(task, total=len(asm_async_tasks))
-            pb_task = asyncio.create_task(progress_bar(progress, "generating ASM", advance))
-            await asyncio.gather(*asm_async_tasks)
-            pb_task.cancel()
+                g.CONSOLE.print(f"{len(asm_tasks)} tasks for generating ASM code")
+                asm_async_tasks = [temp(advance, x) for x in asm_tasks]
+                progress.update(task, total=len(asm_async_tasks))
+                pb_task = asyncio.create_task(progress_bar(progress, "generating ASM", advance))
+                await asyncio.gather(*asm_async_tasks)
+                #for ts in asm_async_tasks:
+                #    await ts
+                pb_task.cancel()
 
         g.CONSOLE.print("complete")
 
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
         sys.exit(1)
-    except:
-        g.LOG.error(f"unknown exception")
-        g.CONSOLE.print_exception()
+    except RuntimeError:
+        sys.exit(1)
+    except KeyboardInterrupt:
         sys.exit(1)
 
 @dol2zel.command(name="full-build", help="Split 'baserom.dol' into C++ files.")
@@ -635,13 +668,8 @@ def full_build(asm_path, lib_path, src_path, rel_path):
 
         #
         g.CONSOLE.print(f"15 Complete")
-
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
-        sys.exit(1)
-    except:
-        g.LOG.error(f"unknown exception")
-        g.CONSOLE.print_exception()
         sys.exit(1)
 
 
@@ -663,7 +691,15 @@ def profile():
     print("")
     ps.sort_stats(SortKey.TIME).print_stats(20)
 
-asyncio.run(dol2zel())
+try:
+    asyncio.run(dol2zel())
+except SystemExit:
+    print("Received sys.exit, exiting")
+except KeyboardInterrupt:
+    print("Received exit, exiting")
+except:
+    g.LOG.error(f"unknown exception")
+    g.CONSOLE.print_exception()
 sys.exit(1)
 
 #

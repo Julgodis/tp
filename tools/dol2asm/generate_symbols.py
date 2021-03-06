@@ -18,18 +18,32 @@ def string_decode(data):
 
     return None, None
 
-def string_from_data(addr, offset, data):
+def string_from_data(addr, data):
     string, encoding = string_decode(data)
     assert encoding != None
 
-    return StringData(Name("stringBase", addr, None), string, encoding, addr, offset, data)
+    return String(
+        Identifier("stringBase", addr, None), 
+        addr, 
+        len(data),
+        encoding = encoding,
+        decoded_string = string)
 
 def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
-    """
-    if name.name.startswith("__vt"):
+    # all virtual tables begin with "__vt"
+    if identifier.name and identifier.name.startswith("__vt"):
         assert section.name == ".data"
-        return [VTableData(name, symbol.addr, offset, data, padding_data=padding_data)]
+        return [VirtualTable(
+            identifier, 
+            symbol.addr, 
+            symbol.size,
+            section=section,
+            data=data, 
+            padding=len(padding_data),
+            padding_data=padding_data,
+            source=symbol.source)]
 
+    """
     # floats and integer literals will never be in rodata
     if section.name != ".rodata":
         if len(data) == 4 and len(padding_data) < 4:
@@ -74,6 +88,8 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
                     comment = hex(u64_data)
                     return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
 
+    """
+
     # strings will always be in rodata
     if section.name == ".rodata":
         if symbol.name == "@stringBase0":
@@ -81,15 +97,14 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
             split_data = list(util.magicsplit(data, 0))
             x_offset = 0
             for x in split_data[:-1]:
-                strings.append(string_from_data(symbol.addr + x_offset, offset + x_offset, bytes(x + [0])))
+                strings.append(string_from_data(symbol.addr + x_offset, bytes(x + [0])))
                 x_offset += len(x) + 1
-            return [StringBaseData(name, strings, symbol.addr, offset, data, padding_data=padding_data)]
+            return [StringBase.create(symbol, strings, data, padding_data, section)]
 
+    # both .ctors and .dtors symbols are special
     if section.name == ".ctors":
         if symbol.name == "__init_cpp_exceptions_reference":
             assert len(data) == 4
-            __init_cpp_exceptions = struct.unpack(">I", data)[0]
-
             assert len(padding_data) % 4 == 0
             constructor_count = len(padding_data) // 4
             constructors = list(struct.unpack(">" + "I" * constructor_count, padding_data))
@@ -100,48 +115,61 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
                     break
                 count += 1
 
+            _ctors_data = padding_data[0:count*4]
             return [
-                SymbolReferenceArrayData(name, [__init_cpp_exceptions], symbol.addr, offset, data),
-                SymbolReferenceArrayData(Name("_ctors", symbol.addr + 4, "_ctors"), constructors[0:count], symbol.addr + 4, offset + 4, padding_data[0:count*4])
+                ReferenceArray(identifier, symbol.addr, symbol.size,
+                    data=data, 
+                    section=section,
+                    source=f".ctors0/{symbol.source}"),
+                ReferenceArray(Identifier("_ctors", symbol.addr + 4, "_ctors"), symbol.addr + 4, len(_ctors_data),
+                    data=_ctors_data, 
+                    section=section,
+                    source=f".ctors1/{symbol.source}"),
             ]
         
     if section.name == ".dtors":
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
-            __destroy_global_chain = struct.unpack(">I", data)[0]
-            return [SymbolReferenceArrayData(name, [__destroy_global_chain], symbol.addr, offset, data)]
+            return [ReferenceArray(identifier, symbol.addr, symbol.size,
+                section=section,
+                data=data, 
+                source=f".dtors0/{symbol.source}")]
         elif symbol.name == "__fini_cpp_exceptions_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
-            __fini_cpp_exceptions = struct.unpack(">I", data)[0]
-            return [SymbolReferenceArrayData(name, [__fini_cpp_exceptions], symbol.addr, offset, data)]
-    """
+            return [ReferenceArray(identifier, symbol.addr, symbol.size,         
+                section=section,
+                data=data, 
+                source=f".dtors1/{symbol.source}")]
 
+    # otherwise export it as raw initialized data
     return [InitData(identifier, symbol.addr, symbol.size,
         section=section,
         data=data, 
         padding=len(padding_data),
-        padding_data=padding_data)]
+        padding_data=padding_data,
+        source=symbol.source)]
 
 def from_group(section, group):
     assert len(group) == 1
     first = group[0]
     identifier = Identifier("data", first.addr, first.name)
     if not section.data:
-        return [ZeroData(identifier, first.addr, first.size, padding=first.padding)]
+        return [ZeroData(identifier, first.addr, first.size, padding=first.padding, source=first.source)]
     else:
         data = bytes()
         padding_data = bytes()
         try:
             if first.size > 0:
                 data = section.getData(first.start, first.end)
-                if first.padding:
-                    padding_data = section.data[first.start:first.end+first.padding]
+                if first.padding > 0:
+                    padding_data =  section.getData(first.end, first.end+first.padding)
                 assert len(data) == first.size
         except IndexError:
             raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
                     (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
+
         return symbol_from_data(section, identifier, first.addr, data, padding_data, first)
 
 

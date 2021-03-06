@@ -12,9 +12,8 @@ from capstone import *
 from capstone.ppc import *
 from data import *
 from symbols import ReturnFunction, ReturnIntegerFunction, FirstParamFunction, GlobalFunction
-from symbols import VTableData, S32Data, U32Data, Float32Data, SymbolReferenceArrayData, Fraction32Data
-from symbols import Float64Data, Fraction64Data, IntegerData, MergedInitializedData
-from symbols import StringData, StringBaseData, MergedZeroInitializedData
+from symbols import S32Data, U32Data, Float32Data, Fraction32Data
+from symbols import Float64Data, Fraction64Data, IntegerData
 from demangle import demangle
 
 from intervaltree import Interval, IntervalTree
@@ -30,9 +29,8 @@ SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
     
 class CPPDisassembler(dasm.Disassembler):
-    def __init__(self, builder, function, block_map, symbol_map, address_interval_tree):
-        # TODO
-        super().__init__([])
+    def __init__(self, builder, sections, function, block_map, symbol_map, address_interval_tree):
+        super().__init__(sections)
         self.builder = builder
         self.function = function
         self.block_map = block_map
@@ -43,19 +41,23 @@ class CPPDisassembler(dasm.Disassembler):
 
     def addr_to_label(self, addr) -> str:
         if addr in self.symbol_map:
-            return self.symbol_map[addr].asm_reference(addr)
+            label = self.symbol_map[addr].asm_reference(addr)
+            assert label
+            return label
         if addr in self.block_map:
             return self.block_map[addr].identifier.label
+
         if not self.is_label_candidate(addr):
             return None
 
         symbols = list(self.address_interval_tree[addr])
         if len(symbols) == 1:
-            return symbols[0].data.getASMReferenceLabel(addr)
-        elif len(symbols) > 1:
-            raise Dol2ZelException("multiple possible symbols for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
-        else:
-            raise Dol2ZelException("no symbol for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
+            return symbols[0].data.asm_reference(addr)
+        raise Dol2ZelException(f"{self.last_address:08X}: no symbol for {addr:08X} found! (in {self.function.identifier.label})")
+        #elif len(symbols) > 1:
+        #    raise Dol2ZelException("multiple possible symbols for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
+        #else:
+        #    raise Dol2ZelException("no symbol for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
 
     async def callback(self, address, offset, insn, bytes):
         if address in self.block_map:
@@ -63,7 +65,7 @@ class CPPDisassembler(dasm.Disassembler):
             await self.builder.write("%s:" % block.identifier.label)
         elif address in self.symbol_map:
             symbol = self.symbol_map[address]
-            await self.builder.write("%s:" % dasm.addr_to_label(address))
+            await self.builder.write("%s:" % self.addr_to_label(address))
 
         self.last_address = address
         asm = None
@@ -91,7 +93,7 @@ class CPPDisassembler(dasm.Disassembler):
                 asm = dasm.disasm_ld(raw)       # ld
 
         if asm == None:
-            asm = '.4byte 0x{raw:08X}  /* unknown instruction */'
+            asm = f".4byte 0x{raw:08X}  /* unknown instruction */"
 
         prefixComment = '/* %08X %08X  %02X %02X %02X %02X */' % (
             address, offset, bytes[0], bytes[1], bytes[2], bytes[3])
@@ -139,8 +141,10 @@ class CPPDisassembler(dasm.Disassembler):
         # Branch instruction replace immediate value with label
         if id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BDZ, PPC_INS_BDNZ}:
             label = self.addr_to_label(insn.operands[0].imm)
-            if label:
-                return f"{insn.mnemonic} {label}"
+            if not label:
+                g.LOG.warning(f"'{label}' {addr:08X} to {insn.operands[0].imm:08X}, branch to unknown addr: {insn}")
+            assert label
+            return f"{insn.mnemonic} {label}"
         elif id == PPC_INS_BC:
             branchPred = '+' if (insn.bytes[1] & 0x20) else ''
             if insn.operands[0].type == PPC_OP_IMM:
@@ -175,7 +179,7 @@ class CPPDisassembler(dasm.Disassembler):
             rB = insn.reg_name(insn.operands[1].reg)
             name = self.addr_to_label(value)
             if name:
-                return f"{insn.mnemonic} {rA}, {rB}, %s@l" % (insn.mnemonic, rA, rB, name)
+                return f"{insn.mnemonic} {rA}, {rB}, {name}@l"
             else:
                 assert not self.is_label_candidate(value)
                 fixed_value = value & 0xFFFF
@@ -199,14 +203,14 @@ class CPPDisassembler(dasm.Disassembler):
                 rB = insn.reg_name(insn.operands[1].reg)
                 name = self.addr_to_label(value)
                 if name:
-                    return "%s %s, %s, 0x%08X-0x%08X /* %s-_SDA_BASE_ */"
+                    return f"{insn.mnemonic} {rA}, {rB}, 0x{value:08X}-0x{SDA_BASE:08X} /* {name}-_SDA_BASE_ */"
             if dasm.is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + dasm.sign_extend_16(insn.operands[1].mem.disp)
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].mem.base)
                 name = self.addr_to_label(value)
                 if name:
-                    return "%s %s, %s(%s)" % (insn.mnemonic, rA, name, rB)
+                    return f"{insn.mnemonic} {rA}, {name}({rB})"
         elif r2_addr != None:
             if id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R2:
                 value = r2_addr + dasm.sign_extend_16(insn.operands[2].imm)
@@ -214,14 +218,14 @@ class CPPDisassembler(dasm.Disassembler):
                 rB = insn.reg_name(insn.operands[1].reg)
                 name = self.addr_to_label(value)
                 if name:
-                    return "%s %s, %s, 0x%08X-0x%08X /* %s-_SDA2_BASE_ */" % (insn.mnemonic, rA, rB, value, SDA2_BASE, name)
+                    return f"{insn.mnemonic} {rA}, {rB}, 0x{value:08X}-0x{SDA2_BASE:08X} /* {name}-_SDA2_BASE_ */"
             if dasm.is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + dasm.sign_extend_16(insn.operands[1].mem.disp)
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].mem.base)
                 name = self.addr_to_label(value)
                 if name:
-                    return "%s %s, %s(%s)" % (insn.mnemonic, rA, name, rB)
+                    return f"{insn.mnemonic} {rA}, {name}({rB})"
 
         # Sign-extend immediate values because Capstone is an idiot and doesn't do that automatically
         if id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_SUBFIC, PPC_INS_MULLI} and (insn.operands[2].imm & 0x8000):
@@ -229,11 +233,11 @@ class CPPDisassembler(dasm.Disassembler):
         elif id in {PPC_INS_LI, PPC_INS_CMPWI} and (insn.operands[1].imm & 0x8000):
             return "%s %s, %i" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.operands[1].imm - 0x10000)
         elif id == PPC_INS_CNTLZW:
-            return "cntlzw %s" % insn.op_str
+            return f"cntlzw {insn.op_str}"
         elif id == PPC_INS_MTICCR:
             A = 0x3fb
             rB = insn.reg_name(insn.operands[0].reg)
-            return 'mtspr 0x%x, %s' % (A, rB)
+            return f"mtspr 0x{A:X}, {rB}"
         elif id == PPC_INS_SYNC:
             assert insn.operands[0].value.imm == 0
             return 'sync'
@@ -258,48 +262,6 @@ async def export_symbol_header(builder: Builder, section: Section, symbol: Symbo
         symbol.start, symbol.end+symbol.padding, symbol.size, 
         section.name, symbol.identifier.name))
 
-
-def disassemble_cpp_callback(address, offset, insn, bytes, userdata):
-    builder, function_labels = userdata
-    # Output label (if any)
-    if address in function_labels:
-        builder.write("%s:" % function_labels[address])
-    elif address in dasm.labels:
-        builder.write("%s:" % dasm.addr_to_label(address))
-    prefixComment = '/* %08X %08X  %02X %02X %02X %02X */' % (
-        address, offset, bytes[0], bytes[1], bytes[2], bytes[3])
-    asm = None
-    raw = struct.unpack(">I", bytes)[0]
-    if insn != None:
-        asm = insn_to_text_cpp(address, insn, raw, function_labels)
-    else:  # Capstone couldn't disassemble it
-        idx = (raw & 0xfc000000) >> 26
-        idx2 = (raw & 0x000007fe) >> 1
-        # mtspr
-        if idx == 31 and idx2 == 467:
-            asm = dasm.disasm_mspr(raw, 1)
-        # mfspr
-        elif idx == 31 and idx2 == 339:
-            asm = dasm.disasm_mspr(raw, 0)
-        # mcrxr
-        elif idx == 31 and idx2 == 512:
-            asm = dasm.disasm_mcrxr(raw)
-        # fcmpo
-        elif idx == 63 and idx2 == 32:
-            asm = dasm.disasm_fcmp(raw)
-        # Paired singles
-        elif idx == 4:
-            asm = dasm.disasm_ps(raw)
-        elif idx in {56, 57, 60, 61}:
-            asm = dasm.disasm_ps_mem(raw, idx)
-        # ld
-        elif idx == 58:
-            asm = dasm.disasm_ld(raw)
-
-    if asm == None:
-        asm = '.4byte 0x%08X  /* unknown instruction */' % raw
-    builder.write('%s\t%s' % (prefixComment, asm))
-
 def symbol_get_desc(section: Section, symbol: Symbol, forward: bool, **kwargs):
     declspec = ""
     is_extern = ""
@@ -314,7 +276,10 @@ def symbol_get_desc(section: Section, symbol: Symbol, forward: bool, **kwargs):
     #    is_extern = "static "
 
     if section.name == ".text":
-        assert isinstance(symbol, Function)
+        if not isinstance(symbol, Function):
+            g.LOG.error(symbol.section.id)
+            g.LOG.error(symbol)
+            sys.exit(1)
         # TODO
         #if not symbol.name.is_function:
         #    declspec = "extern \"C\" "
@@ -351,8 +316,14 @@ def symbol_get_desc(section: Section, symbol: Symbol, forward: bool, **kwargs):
             elif symbol.identifier.label == "__fini_cpp_exceptions_reference":
                 declspec = "__declspec(section \".dtors$15\") "   
         is_const = "const "
+    if section.name == ".extab":
+        if not forward:
+            declspec = "SECTION_EXTAB "
+    if section.name == ".extabindex":
+        if not forward:
+            declspec = "SECTION_EXTABINDEX "
 
-    if isinstance(symbol, StringData):
+    if isinstance(symbol, String):
         # using declspec for string will cause the compiler to add a extern symbol.
         declspec = ""
 
@@ -378,7 +349,7 @@ async def export_symbol_function_normal(builder: Builder, section: Section, func
         include_path = "%s/%s.s" % (path, file_label)
 
     section.function_files.add(include_path.lower())
-    await util.create_dirs_for_file(include_path)
+    await util.create_dirs_for_file(Path(include_path))
     #print("\t\t%s" % include_path)
 
     await builder.write("#pragma push")
@@ -399,12 +370,11 @@ async def export_symbol_function_normal(builder: Builder, section: Section, func
     #    builder.write("%sasm void %s() {" % (declspec, function.identifier.label))
 
     await builder.write("%sasm void %s() {" % (declspec, function.identifier.label))
-
     await builder.write("\tnofralloc")
     await builder.write("#include \"%s\"" % include_path)
     await builder.write("}")
     if function.padding != 0:
-        g.LOG.warning("function %s has padding" % function.identifier)
+        raise Dol2ZelException("function %s has padding" % function.identifier)
         await builder.write("/* function padding */")
     await builder.write("#pragma pop")
     await builder.write("")
@@ -412,13 +382,14 @@ async def export_symbol_function_normal(builder: Builder, section: Section, func
     # for now always rebuild the asm
     function_path = Path(include_path)
     if True or not function_path.exists():
+        exe_sections = section.translation_unit.library.module.executable_sections 
         async def callback():
             block_map = dict()
             for block in function.blocks:
                 block_map[block.addr] = block
 
             async with AsyncBuilder(include_path) as include_builder:
-                cppd = CPPDisassembler(include_builder, function, block_map, symbol_map, address_interval_tree)
+                cppd = CPPDisassembler(include_builder, exe_sections, function, block_map, symbol_map, address_interval_tree)
                 for block in function.blocks:
                     await cppd.async_execute(block.addr, block.data, block.size)
 
@@ -517,63 +488,56 @@ async def export_symbol_function(builder: Builder, section: Section, function: F
 
     return task
 
-def export_symbol_vtable_data(builder: Builder, section: Section, vtable: VTableData):
-    const = ""
-    if section.name == ".rodata":
-        const = " const"
-
-    size = len(vtable.table) + vtable.padding // 4
-    export_desc(builder, section, vtable, False)
-    builder.write(f"void*{const} %s[%i] = {{" % (vtable.name.label, size))
-    for i, vas in enumerate(vtable.table):
-        addr = vas[0]
-        symbol = vas[1]
-
+async def export_symbol_virtual_table(builder: Builder, section: Section, vtable: VirtualTable):
+    count = len(vtable.functions) + vtable.padding // 4
+    await export_desc(builder, section, vtable, False)
+    await builder.write(f"void* {vtable.identifier.label}[{count}] = {{")
+    index = 0
+    for addr, symbol in vtable.functions:
         if addr == 0 and not symbol:
-            if i == 0:
-                builder.write("\tNULL, /* RTTI */")
+            if index == 0:
+                await builder.write("\tNULL, /* RTTI */")
             else:
-                builder.write("\tNULL,")
+                await builder.write("\tNULL,")
         else:
-            builder.write("\t(void*)%s," % symbol.getCPPReferenceLabel(vtable, addr))
+            await builder.write(f"\t(void*){symbol.cpp_reference(vtable, addr)},")
+        index += 1
     if vtable.padding > 0:
         assert vtable.padding == len(vtable.padding_data)
         assert vtable.padding % 4 == 0
-        builder.write("\t/* padding */")
+        await builder.write("\t/* padding */")
         for i in range(vtable.padding // 4):
             builder.write("\tNULL,")
-    builder.write("};")
+    await builder.write("};")
 
-def export_symbol_sra_data(builder: Builder, section: Section, sra: SymbolReferenceArrayData):
+async def export_symbol_reference_array(builder: Builder, section: Section, sra: ReferenceArray):
     const = ""
     if section.name == ".rodata":
         const = " const"
 
-    size = len(sra.array) + sra.padding // 4
-    export_desc(builder, section, sra, False)
-    if size == 1:
-        addr = sra.array[0][0]
-        symbol = sra.array[0][1]
-        builder.write(f"void*{const} %s = (void*)%s;" % (sra.name.label, symbol.getCPPReferenceLabel(sra, addr)))
+    count = len(sra.references) + sra.padding // 4
+    await export_desc(builder, section, sra, False)
+    if count == 1:
+        addr = sra.references[0][0]
+        symbol = sra.references[0][1]
+        await builder.write(f"void*{const} {sra.identifier.label} = (void*){symbol.cpp_reference(sra, addr)};")
     else:
-        builder.write(f"void*{const} %s[%i] = {{" % (sra.name.label, size))
-        for i, vas in enumerate(sra.array):
-            addr = vas[0]
-            symbol = vas[1]
-
+        await builder.write(f"void*{const} {sra.identifier.label}[{count}] = {{")
+        for addr, symbol in sra.references:
             if addr == 0 and not symbol:
-                builder.write("\tNULL,")
+                await builder.write("\tNULL,")
             elif symbol != None:
-                builder.write("\t(void*)%s," % symbol.getCPPReferenceLabel(sra, addr))
+                await builder.write(f"\t(void*){symbol.cpp_reference(sra, addr)},")
             else:
-                builder.write("\t(void*)0x%08X," % addr)
+                await builder.write(f"\t(void*)0x{addr:08X},")
+
         if sra.padding > 0:
             assert sra.padding == len(sra.padding_data)
             assert sra.padding % 4 == 0
-            builder.write("\t/* padding */")
+            await builder.write("\t/* padding */")
             for i in range(sra.padding // 4):
-                builder.write("\tNULL,")
-        builder.write("};")
+                await builder.write("\tNULL,")
+        await builder.write("};")
 
 def export_symbol_float32_data(builder: Builder, section: Section, fp: Float32Data):
     if fp.comment:
@@ -628,27 +592,27 @@ async def export_symbol_init_data(builder: Builder, section: Section, init_data:
             await builder.write("\t%s," % hex_data)
     await builder.write("};")
 
-def export_symbol_merged_init_data(builder: Builder, section: Section, merged: MergedInitializedData):
+async def export_symbol_init_struct(builder: Builder, section: Section, symbol: InitStruct):
     count = 0
-    for part in merged.internal_data:
-        count += len(part.data)
-    count += len(merged.padding_data)
+    for field in symbol.members:
+        count += len(field.data)
+    count += len(symbol.padding_data)
 
-    export_desc(builder, section, merged, False)
-    builder.write(f"u8 %s[%i] = {{" % (merged.name.label, count))
-    for part in merged.internal_data:
-        builder.write("\t/* %s */" % part.name.label)
-        for chunk in util.chunks(part.data, 16):
+    await export_desc(builder, section, symbol, False)
+    await builder.write(f"u8 %s[%i] = {{" % (symbol.identifier.label, count))
+    for field in symbol.members:
+        await builder.write("\t/* %s */" % field.identifier.label)
+        for chunk in util.chunks(field.data, 16):
             hex_data = ", ".join(["0x%02X" % x for x in chunk])
-            builder.write("\t%s," % hex_data)
+            await builder.write("\t%s," % hex_data)
 
-    if merged.padding > 0:
-        assert merged.padding == len(merged.padding_data)
-        builder.write("\t/* padding */")
-        for chunk in util.chunks(merged.padding_data, 16):
+    if symbol.padding > 0:
+        assert symbol.padding == len(symbol.padding_data)
+        await builder.write("\t/* padding */")
+        for chunk in util.chunks(symbol.padding_data, 16):
             hex_data = ", ".join(["0x%02X" % x for x in chunk])
-            builder.write("\t%s," % hex_data)
-    builder.write("};")
+            await builder.write("\t%s," % hex_data)
+    await builder.write("};")
 
 async def export_symbol_zero_data(builder: Builder, section: Section, zero: ZeroData):
     count = zero.size + zero.padding
@@ -662,19 +626,19 @@ async def export_symbol_zero_data(builder: Builder, section: Section, zero: Zero
     await export_desc(builder, section, zero, False)
     await builder.write("u8 %s[%i%s];" % (zero.identifier.label, zero.size, pad_str))
 
-def export_symbol_merged_zero_data(builder: Builder, section: Section, merged: MergedZeroInitializedData):
+async def export_symbol_zero_struct(builder: Builder, section: Section, symbol: ZeroStruct):
     count = 0
-    for part in merged.internal_data:
-        count += part.size
+    for field in symbol.members:
+        count += field.size
 
     pad_str = ""
-    if merged.padding > 0:
-        pad_str = " + %i /* padding */" % merged.padding
+    if symbol.padding > 0:
+        pad_str = " + %i /* padding */" % symbol.padding
 
-    export_desc(builder, section, merged, False)
-    builder.write(f"u8 %s[%i%s];" % (merged.name.label, count, pad_str))
-    for part in merged.internal_data:
-        builder.write("/* %08X %04X %s */" % (part.addr, part.size, part.name.label))
+    await export_desc(builder, section, symbol, False)
+    await builder.write(f"u8 %s[%i%s];" % (symbol.identifier.label, count, pad_str))
+    for field in symbol.members:
+        await builder.write("/* %08X %04X %s */" % (field.addr, field.size, field.identifier.label))
 
 def string_to_cstr(data):
     return "".join(data)
@@ -717,72 +681,70 @@ def escape_char_hex(v):
 def escape_full_string(data):
     return [escape_char_hex(x) for x in data]
 
-def export_symbol_string_output(builder, label, data):
+async def export_symbol_string_output(builder, label, data):
     if len(data) < 32:
-        builder.write("char* const %s = \"%s\";" % (label, string_to_cstr(data)))
+        await builder.write(f"char* const {label} = \"{string_to_cstr(data)}\";")
     else:
-        builder.write("char* const %s = " % label)
+        await builder.write(f"char* const {label} = ")
         data_chunks = util.chunks(data, 16)
 
         lines = []
         for chunk in data_chunks:
-            lines += [ "    \"%s\"" % string_to_cstr(chunk) ]
+            lines += [ f"    \"{string_to_cstr(chunk)}\"" ]
         lines[-1] += ";"
 
         for line in lines:
-            builder.write(line)
+            await builder.write(line)
 
 
-def export_symbol_string_data(builder: Builder, section: Section, string: StringData, dead_strip: bool):
-    sjis = string.decoded_string.encode("shift_jisx0213")
+async def export_symbol_string(builder: Builder, section: Section, symbol: String, dead_strip: bool):
+    sjis = symbol.decoded_string.encode("shift_jisx0213")
     if 0x5c in sjis:
-        builder.write("// MWCC ignores mapping of some japanese characters using the ")
-        builder.write("// byte 0x5C (ASCII '\\'). This is why this string is hex-encoded.")
+        await builder.write("// MWCC ignores mapping of some japanese characters using the ")
+        await builder.write("// byte 0x5C (ASCII '\\'). This is why this string is hex-encoded.")
         data = escape_full_string(sjis)
     else:
-        data = escape_string(string.decoded_string)
+        data = escape_string(symbol.decoded_string)
 
-    export_desc(builder, section, string, False, dead=dead_strip)
-    export_symbol_string_output(builder, string.name.label, data)
-    if string.padding > 0:
-        assert len(string.padding_data) == string.padding
-        assert string.padding_data[-1] == 0
-        data = escape_full_string(string.padding_data[:-1])
-        builder.write("/* padding */")
-        export_desc(builder, section, string, False, dead=dead_strip)
-        export_symbol_string_output(builder, "pad_%08X" % (string.addr + string.size), data)
+    await export_desc(builder, section, symbol, False, dead=dead_strip)
+    await export_symbol_string_output(builder, symbol.identifier.label, data)
+    if symbol.padding > 0:
+        assert len(symbol.padding_data) == string.padding
+        assert symbol.padding_data[-1] == 0
+        data = escape_full_string(symbol.padding_data[:-1])
+        await builder.write("/* padding */")
+        await export_desc(builder, section, symbol, False, dead=dead_strip)
+        await export_symbol_string_output(builder, f"pad_{symbol.end:08X}", data)
 
-def export_symbol_string_base_data(builder: Builder, section: Section, string_base: StringBaseData):
-    builder.write("#pragma push")
-    builder.write("#pragma force_active on")
-    builder.write("#pragma section \".dead\"")
-    for string in string_base.strings:
-        export_symbol_string_data(builder, section, string, True)
+async def export_symbol_string_base(builder: Builder, section: Section, symbol: StringBase):
+    await builder.write("#pragma push")
+    await builder.write("#pragma force_active on")
+    await builder.write("#pragma section \".dead\"")
+    for string in symbol.strings:
+        await export_symbol_string(builder, section, string, True)
 
-    if string_base.padding > 0:
-        assert len(string_base.padding_data) == string_base.padding
-        assert string_base.padding_data[-1] == 0
-        data = escape_full_string(string_base.padding_data[:-1])
-        builder.write("/* @stringBase0 padding */")
-        export_desc(builder, section, string_base.strings[0], False, dead=True)
-        export_symbol_string_output(builder, "pad_%08X" % (string_base.addr + string_base.size), data)
-    builder.write("#pragma pop")
+    if symbol.padding > 0:
+        assert len(symbol.padding_data) == symbol.padding
+        assert symbol.padding_data[-1] == 0
+        data = escape_full_string(symbol.padding_data[:-1])
+        await builder.write("/* @stringBase0 padding */")
+        await export_desc(builder, section, symbol.strings[0], False, dead=True)
+        await export_symbol_string_output(builder, f"pad_{symbol.end:08X}", data)
+    await builder.write("#pragma pop")
     
 async def export_symbol(builder: Builder, section: Section, symbol: Symbol, symbol_map, address_interval_tree):
     await export_symbol_header(builder, section, symbol)
 
     if symbol.identifier.label == "_rom_copy_info" or symbol.identifier.label == "_bss_init_info":
         await builder.write("/* generated by the linker */")
-        return
+        return None
 
     if isinstance(symbol, Function):
         return await export_symbol_function(builder, section, symbol, symbol_map, address_interval_tree)
-    elif isinstance(symbol, MergedInitializedData):
-        export_symbol_merged_init_data(builder, section, symbol)
-    elif isinstance(symbol, VTableData):
-        export_symbol_vtable_data(builder, section, symbol)
-    elif isinstance(symbol, SymbolReferenceArrayData):
-        export_symbol_sra_data(builder, section, symbol)
+    elif isinstance(symbol, VirtualTable):
+        await export_symbol_virtual_table(builder, section, symbol)
+    elif isinstance(symbol, ReferenceArray):
+        await export_symbol_reference_array(builder, section, symbol)
     elif isinstance(symbol, Fraction32Data):
         export_symbol_fraction32_data(builder, section, symbol)
     elif isinstance(symbol, Float32Data):
@@ -793,12 +755,14 @@ async def export_symbol(builder: Builder, section: Section, symbol: Symbol, symb
         export_symbol_float64_data(builder, section, symbol)
     elif isinstance(symbol, IntegerData):
         export_symbol_integer_data(builder, section, symbol)
-    elif isinstance(symbol, StringBaseData):
-        export_symbol_string_base_data(builder, section, symbol)
+    elif isinstance(symbol, StringBase):
+        await export_symbol_string_base(builder, section, symbol)
+    elif isinstance(symbol, InitStruct):
+        await export_symbol_init_struct(builder, section, symbol)
     elif isinstance(symbol, InitData):
         await export_symbol_init_data(builder, section, symbol)
-    elif isinstance(symbol, MergedZeroInitializedData):
-        export_symbol_merged_zero_data(builder, section, symbol)
+    elif isinstance(symbol, ZeroStruct):
+        await export_symbol_zero_struct(builder, section, symbol)
     elif isinstance(symbol, ZeroData):
         await export_symbol_zero_data(builder, section, symbol)
     else:
@@ -809,7 +773,7 @@ async def export_symbol(builder: Builder, section: Section, symbol: Symbol, symb
 def export_section_preprocess(section: Section, symbol_map, my_labels, labels):
     for symbol in section.symbols:
         my_labels.add(symbol.addr)
-        labels.update(symbol.getInternalReferences())
+        labels.update(symbol.internal_references)
 
         if isinstance(symbol, GlobalFunction):
             offset = symbol.load_offset
@@ -897,19 +861,25 @@ async def export_section(builder: Builder, section: Section, symbol_map, address
     elif section.name == ".dtors":
         return await export_section_dtors(builder, section, symbol_map, address_interval_tree)
     else:
+        if section.name == ".extab":
+            await builder.write("#pragma section \"extab_\"")
+            await builder.write("")
+        if section.name == ".extabindex":
+            await builder.write("#pragma section \"extabindex_\"")
+            await builder.write("")
         tasks = []
         if section.name == ".rodata":
             await builder.write("extern \"C\" {")
             # @stringBase0 will always be last (because it's generated by the compiler). But we place it
-            # in the beginning of the .rodata section for referencing to work. 
+            # at the beginning of the .rodata section for referencing to work. 
             for symbol in section.symbols:
-                if isinstance(symbol, StringBaseData):
+                if isinstance(symbol, StringBase):
                     task = await export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
                     if task:
                         tasks.append(task)
 
             for symbol in section.symbols:
-                if not isinstance(symbol, StringBaseData):
+                if not isinstance(symbol, StringBase):
                     task = await export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
                     if task:
                         tasks.append(task)
@@ -927,7 +897,13 @@ async def export_section(builder: Builder, section: Section, symbol_map, address
         return tasks
 
 
-async def export_translation_unit(tu: TranslationUnit, sm, ait):
+async def export_translation_unit(tu: TranslationUnit, symbol_map, ait):
+    # Skip empty translation units
+    if len(tu.sections) == 0:
+        return []
+    if sum([len(x.symbols) for x in tu.sections]) == 0:
+        return []
+
     path = tu.source_path
     await util.create_dirs_for_file(path)
 
@@ -939,11 +915,6 @@ async def export_translation_unit(tu: TranslationUnit, sm, ait):
         await builder.write("// ")
         await builder.write("// Generated By: dol2asm")
         await builder.write("// ")
-
-        symbol_map = {}
-        for section in tu.sections:
-            for symbol in section.symbols:
-                symbol_map[symbol.addr] = symbol
 
         # TODO
         """
@@ -986,8 +957,15 @@ async def export_translation_unit(tu: TranslationUnit, sm, ait):
         sorted_labels = list(labels)
         sorted_labels.sort()
         for addr in sorted_labels:
+            symbol = None
             if addr in symbol_map:
                 symbol = symbol_map[addr]
+            else:
+                symbols = list(ait[addr])
+                if len(symbols) == 1:
+                    symbol = symbols[0].data
+
+            if symbol:
                 if hasattr(symbol, "merged_parent"):
                     symbol = symbol.merged_parent
 
@@ -1024,25 +1002,27 @@ async def export_translation_unit(tu: TranslationUnit, sm, ait):
 
                     # NOTE: even if we have the demanlged symbol name available it's important to add a mangled symbol name for the asm to find it. 
                     c_extern.append(f"{a}{b}{c}{d}void %s();" % symbol.identifier.label)
-                elif isinstance(symbol, VTableData):
-                    count = len(symbol.table) + symbol.padding // 4
+                elif isinstance(symbol, VirtualTable):
+                    count = len(symbol.functions) + symbol.padding // 4
                     c_extern.append(f"{a}{b}{c}{d}void*{const} %s[%i];" % (symbol.identifier.label, count))
-                elif isinstance(symbol, SymbolReferenceArrayData):
-                    count = len(symbol.array) + symbol.padding // 4
+                elif isinstance(symbol, ReferenceArray):
+                    count = len(symbol.references) + symbol.padding // 4
                     if count == 1:
-                        c_extern.append(f"{a}{b}{c}{d}void*{const} %s;" % symbol.identifier.label)
+                        c_extern.append(f"{a}{b}{c}{d}void*{const} {symbol.identifier.label};")
                     else:
-                        c_extern.append(f"{a}{b}{c}{d}void*{const} %s[%i];" % (symbol.identifier.label, count))
+                        c_extern.append(f"{a}{b}{c}{d}void*{const} {symbol.identifier.label}[{count}];")
                 elif isinstance(symbol, Float32Data) or isinstance(symbol, Fraction32Data):
                     c_extern.append(f"{a}{b}{c}{d}f32 %s;" % symbol.identifier.label)
                 elif isinstance(symbol, Float64Data) or isinstance(symbol, Fraction64Data):
                     c_extern.append(f"{a}{b}{c}{d}f64 %s;" % symbol.identifier.label)
                 elif isinstance(symbol, IntegerData):
                     c_extern.append(f"{a}{b}{c}{d}%s %s;" % (symbol.integer_type, symbol.identifier.label))
-                elif isinstance(symbol, InitData) or isinstance(symbol, MergedInitializedData):
+                elif isinstance(symbol, StringBase):
+                    pass
+                elif isinstance(symbol, InitData) or isinstance(symbol, InitStruct):
                     count = symbol.size + symbol.padding
                     c_extern.append(f"{a}{b}{c}{d}u8 %s[%i];" % (symbol.identifier.label, count))
-                elif isinstance(symbol, ZeroData) or isinstance(symbol, MergedZeroInitializedData):
+                elif isinstance(symbol, ZeroData) or isinstance(symbol, ZeroStruct):
                     pad_str = ""
                     if symbol.padding > 0:
                         pad_str = " + %i /* padding */" % symbol.padding

@@ -1,35 +1,43 @@
 
 import globals as g
 import util
-from symbols import *
+from data import *
+from symbols import SymbolReferenceArrayData, VTableData
 from intervaltree import Interval, IntervalTree
 
-def execute(libraries, ait, symbol_map, function_map, data_map):
-    for addr, symbol_data in data_map.items():
-            if isinstance(symbol_data, VTableData):
-                symbol_data.resolve(ait)
-            elif isinstance(symbol_data, SymbolReferenceArrayData):
-                symbol_data.resolve(ait)
-            elif isinstance(symbol_data, InitializedData):
-                section = symbol_data.section
-                if not isinstance(section, SectionPart):
-                    continue
-                if len(symbol_data.data) % 4 == 0 and len(symbol_data.data) < 4 * 64:
-                    count = len(symbol_data.data) // 4
-                    values = list(struct.unpack(">" + "I" * count, symbol_data.data))
-                    is_all_symbols = [ait.overlaps(x) for x in values]
-                    if any(is_all_symbols):
-                        new_symbol = SymbolReferenceArrayData(symbol_data.name, values, symbol_data.addr, symbol_data.offset, symbol_data.data, padding_data=symbol_data.padding_data)
-                        section.replaceSymbol(symbol_data, new_symbol)
-                        new_symbol.resolve(ait)
-                        data_map[addr] = new_symbol
-                        symbol_map[addr] = new_symbol
-                        ait.remove_overlap(symbol_data.addr, symbol_data.addr+symbol_data.size)
-                        ait.add(Interval(new_symbol.addr, new_symbol.addr+new_symbol.size, new_symbol))
+def merge_symbol_from_group(group):
+    if len(group) == 1:
+        return group
 
+    if isinstance(group[0], InitData):
+        return [InitStruct.create(group)]
+    elif isinstance(group[0], ZeroData):
+        return [ZeroStruct.create(group)]
 
-    # alignment
-    function_list = list(function_map.values())
+    assert False
+
+def static_local_from_group(group):
+    assert len(group) == 2
+
+    symbol = group[0]
+    initialized_flag = group[1]
+
+    if initialized_flag.name.original_name != None:
+        return group
+
+    # TODO: Find a better way to detect static locals?
+    #print(symbol.name, initialized_flag.name, initialized_flag.name.original_name)
+    return group#[StaticLocalData(symbol, initialized_flag)]
+
+def execute(libraries):
+
+    # Find function alignment
+    function_list = []
+    for lib in libraries:
+        for tu in lib.translation_units:
+            for sec in tu.sections:
+                function_list.extend([symbol for symbol in sec.symbols if isinstance(symbol, Function)])
+
     function_list.sort(key=lambda x: x.addr)
     for curr, next in util.mapOverlap(function_list, 2):
         if not curr or not next:
@@ -46,45 +54,13 @@ def execute(libraries, ait, symbol_map, function_map, data_map):
         for x in [32,16,8]:
             if (curr_end + x - 1) & ~(x - 1) == next_start:
                 next.alignment = x
+                g.LOG.debug(f"{next.addr:08X} {next.identifier.name} aligned with {next.alignment} bytes")
                 curr.padding = 0
-                g.LOG.debug(f"%08X %-30s aligned with %i bytes" % (next.addr, next.name, next.alignment))
                 break
-
-    def merge_symbol_from_group(group):
-        global data_map
-        if len(group) == 1:
-            return group
-
-        if isinstance(group[0], InitializedData):
-            merge = MergedInitializedData(group)
-            merge.section = merge.internal_data[0].section
-            g.LOG.debug("merge initialized data symbols at: %08X" % merge.addr)
-            return [merge]
-        elif isinstance(group[0], ZeroInitializedData):
-            merge = MergedZeroInitializedData(group)
-            merge.section = merge.internal_data[0].section
-            g.LOG.debug("merge uninitialized data symbols at: %08X" % merge.addr)
-            return [merge]
-
-        assert False
-
-    def static_local_from_group(group):
-        assert len(group) == 2
-
-        symbol = group[0]
-        initialized_flag = group[1]
-
-        if initialized_flag.name.original_name != None:
-            return group
-
-        # TODO: Find a better way to detect static locals?
-        #print(symbol.name, initialized_flag.name, initialized_flag.name.original_name)
-        return group#[StaticLocalData(symbol, initialized_flag)]
-
 
     for lib in libraries:
         for tu in lib.translation_units:
-            for sec in tu.section_parts:
+            for sec in tu.sections:
 
                 static_local_group = []
                 group = []
@@ -105,7 +81,7 @@ def execute(libraries, ait, symbol_map, function_map, data_map):
                         continue
                     """
 
-                    if (isinstance(sym, InitializedData) or isinstance(sym, ZeroInitializedData)) and sym.addr % 4 != 0 and group:
+                    if (isinstance(sym, InitData) or isinstance(sym, ZeroData)) and sym.addr % 4 != 0 and group:
                         if group[-1].padding != 0:
                             g.LOG.warning("padding in the middle of merge between: %s and %s (starting with %s)" % (group[-1].name, sym.name, group[0].name))
                             symbols.extend(group)

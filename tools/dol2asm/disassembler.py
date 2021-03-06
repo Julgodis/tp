@@ -6,6 +6,8 @@ import sys
 from collections import defaultdict
 from collections import deque
 from itertools import chain
+import util
+import globals as g
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
@@ -14,7 +16,6 @@ def sign_extend_16(value):
     if value > 0 and (value & 0x8000):
         value -= 0x10000
     return value
-
 
 def sign_extend_12(value):
     if value > 0 and (value & 0x800):
@@ -107,7 +108,6 @@ def combine_split_load_value(hiLoadInsn, loLoadInsn):
         assert False
     return value
 
-
 def is_store_insn(insn):
     # TODO: all store instructions
     return insn.id in {PPC_INS_STW}
@@ -193,7 +193,6 @@ def disasm_ps(inst):
                 return 'dcbz_l r%i, r%i' % ((inst & 0x001f0000) >> 16, (inst & 0x0000f800) >> 11)
     return None
 
-
 def disasm_ps_mem(inst, idx):
     RA = ((inst >> 16) & 0x1f)
     RS = ((inst >> 21) & 0x1f)
@@ -209,7 +208,6 @@ def disasm_ps_mem(inst, idx):
     if idx == 61:
         mnemonic = 'psq_stu'
     return '%s f%i, %i(r%i), %i, %i /* qr%i */' % (mnemonic, RS, disp, RA, W, I, I)
-
 
 def disasm_fcmp(inst):
     crd = (inst & 0x03800000) >> 23
@@ -230,7 +228,6 @@ def disasm_mspr(inst, mode):
     else:
         return 'mfspr r%i, 0x%X' % (d, spr)
 
-
 def disasm_mcrxr(inst):
     if (inst & 0x007ff801):
         return None
@@ -243,11 +240,9 @@ def disasm_ld(inst):
     ds = (inst & 0x0000fffc) >> 2
     return 'ld r%i, 0x%X(r%i)' % (d, ds, a)
 
-#
-#
-#
-
 class Disassembler:
+    """Disassemble code segments with support for merging loads that are split"""
+
     def __init__(self, sections):
         self.cs = Cs(CS_ARCH_PPC, CS_MODE_32 | CS_MODE_BIG_ENDIAN)
         self.cs.detail = True
@@ -272,15 +267,19 @@ class Disassembler:
 
         return False
 
-    def fix_wrong_addresses(self, insn, value):
-        # TODO: is this still required?
-        if insn.address == 0x80197108:
-            assert value == 0x803C0004
-            return 0x803bb8a8
+    def execute_generator(self, addr, data, size):
+        """ This generator will disassemble the 'data' at address 'addr'
+        and for each instruction call self.callback of the class.  
 
-        return value
+        To add custom functionality inherit from the Disassemble class
+        and override the callback function.
 
-    def execute(self, addr, data, size):
+        This function will yield 0, 1 or 2 and the current address. Where
+        the number indicates the phase:
+            0: disassemble instructions
+            1: pre_callback
+            2: callback
+        """
         if size <= 0:
             return
 
@@ -293,38 +292,70 @@ class Disassembler:
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
 
-        instructions = list(self.cs.disasm(data, addr))
-        for insn in instructions:
-            self.pre_callback(insn.address, insn.address - addr, insn, insn.bytes)
-        for insn in instructions:
-            self.callback(insn.address, insn.address - addr, insn, insn.bytes)
+        yield 0, addr
+        instructions = []
+        offset = 0
+        while offset < size:
+            decoded_insns = list(self.cs.disasm(data[offset:], addr + offset))
+            if len(decoded_insns) == 0:
+                instructions.append((addr + offset, offset, None, data[offset:][:4]))
+                offset += 4
+            else:
+                instructions += [(x.address, x.address - (addr + offset), x, x.bytes) for x in decoded_insns]
+                offset += len(decoded_insns) * 4
+            yield 0, addr + offset
+            
+        yield 1, addr
+        for i, insns in enumerate(util.chunks(instructions, 1024)):
+            last_addr = 0
+            for insn in insns:
+                self.pre_callback(*insn)
+                last_addr = insn[0]
+            yield 1, last_addr
+
+        yield 2, addr
+        for i, insns in enumerate(util.chunks(instructions, 1024)):
+            last_addr = 0
+            for insn in insns:
+                self.callback(*insn)
+                last_addr = insn[0]
+            yield 2, last_addr
 
     async def async_execute(self, addr, data, size):
+        """Similar to execute_generator, the only difference is that this is not an generator
+        the self.callback function is called with await.""" 
+
         if size <= 0:
             return
 
-        self.lisInsns = {}  
-        self.splitDataLoads = {}  
-        self.linkedInsns = {} 
-        self.r13AddrInsns = {}
-        self.r2AddrInsns = {}
-
-        self.r13_addr = 0x80458580
-        self.r2_addr = 0x80459A00
-
-        instructions = list(self.cs.disasm(data, addr))
+        instructions = []
+        offset = 0
+        while offset < size:
+            decoded_insns = list(self.cs.disasm(data[offset:], addr + offset))
+            if len(decoded_insns) == 0:
+                instructions.append((addr + offset, offset, None, data[offset:][:4]))
+                offset += 4
+            else:
+                for x in decoded_insns:
+                    insn = x
+                    if insn.id in blacklistedInsns:
+                        insn = None
+                    instructions.append((x.address, x.address - (addr + offset), insn, x.bytes))
+                offset += len(decoded_insns) * 4
+            
         for insn in instructions:
-            self.pre_callback(insn.address, insn.address - addr, insn, insn.bytes)
+            self.pre_callback(*insn)
         for insn in instructions:
-            await self.callback(insn.address, insn.address - addr, insn, insn.bytes)
-
-
-        #deque(self.iter(addr, data, size), maxlen=0)
+            await self.callback(*insn)
 
     def callback(self, address, offset, insn, bytes):
+        """Callback function that should be overriden"""
         pass
 
     def pre_callback(self, address, offset, insn, bytes):
+        """Pre-callback function. Used to find split loads and merge them. 
+        Later the callback function can find these merged loads and do something special"""
+
         if insn == None:
             return
 
@@ -336,6 +367,7 @@ class Disassembler:
 
         if insn.id == PPC_INS_LIS:
             self.lisInsns[insn.operands[0].reg] = insn
+        # TODO: Why is this commented?
         #elif insn.id == PPC_INS_LWZU and insn.operands[1].mem.base in self.lisInsns:
         #    hiLoadInsn = self.lisInsns[insn.operands[1].reg]
 
@@ -359,20 +391,47 @@ class Disassembler:
         elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
             self.lisInsns.pop(insn.operands[0].reg, None)
 
-import globals as g
-# Disassembler which will collect labels used
-class LCDisassembler(Disassembler):
+@dataclass
+class Access:
+    """Arbitrary access to label at a specific address"""
+    at: int
+    addr: int
+
+@dataclass 
+class BranchAccess(Access):
+    """Branch access"""
+
+@dataclass 
+class FloatLoadAccess(Access):
+    """Single-float access"""
+
+@dataclass 
+class DoubleLoadAccess(Access):
+    """Double-float access"""
+
+class AccessCollector(Disassembler):
+    """
+    Search through assembly code and collect access to possible labels.
+    """
+
     def __init__(self, sections):
         super().__init__(sections)
-        self.labels = dict()
-        self.functions = dict()
-        self.reference_fix = False
+        self.accesses = dict()
 
-    def addFunction(self, insn, value):
-        self.functions[insn.address & 0xFFFFFFFF] = value & 0xFFFFFFFF
+    def add_branch_access(self, insn, value):
+        if self.is_label_candidate(value):
+            self.accesses[insn.address] = BranchAccess(insn.address, value)
 
-    def addLabel(self, insn, value):
-        self.labels[insn.address & 0xFFFFFFFF] = value & 0xFFFFFFFF
+    def add_load_access(self, insn, value):
+        if not self.is_label_candidate(value):
+            continue
+
+        if insn.id in { PPC_INS_LFD, PPC_INS_LFDU }:
+            self.accesses[insn.address] = DoubleLoadAccess(insn.address, value)
+        elif insn.id in { PPC_INS_LFS, PPC_INS_LFSU }:
+            self.accesses[insn.address] = FloatLoadAccess(insn.address, value)
+        else:
+            self.accesses[insn.address] = Access(insn.address, value)
 
     def callback(self, address, offset, insn, bytes):
         if insn == None:
@@ -384,40 +443,30 @@ class LCDisassembler(Disassembler):
         if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
             for op in insn.operands:
                 if op.type == PPC_OP_IMM:
-                    self.addFunction(insn, op.imm)
+                    self.add_branch_access(insn, op.imm)
 
         if r13_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
                 value = r13_addr + sign_extend_16(insn.operands[2].imm)
-                if self.is_label_candidate(value) and not self.reference_fix:
-                    self.addLabel(insn, value)
+                self.add_load_access(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
-                if self.is_label_candidate(value):
-                    self.addLabel(insn, value)
+                self.add_load_access(insn, value)
 
         if r2_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)
-                if self.is_label_candidate(value) and not self.reference_fix:
-                    self.addLabel(insn, value)
+                self.add_load_access(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
-                if self.is_label_candidate(value):
-                    self.addLabel(insn, value)
+                self.add_load_access(insn, value)
 
-        #
         if insn.address in self.splitDataLoads and insn.id == PPC_INS_LIS:
             value = self.splitDataLoads[insn.address]
-            if self.is_label_candidate(value):
-                self.addLabel(insn, value)
+            self.add_load_access(insn, value)
         elif insn.address in self.splitDataLoads and insn.id in {PPC_INS_ADDI, PPC_INS_ORI}:
             value = self.splitDataLoads[insn.address]
-            if self.is_label_candidate(value):
-                self.addLabel(insn, value)
+            self.add_load_access(insn, value)
         elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
             value = self.splitDataLoads[insn.address]
-            if self.is_label_candidate(value):
-                self.addLabel(insn, value)
-
-        #g.LOG.debug("0x%08X\t%s %s" % (insn.address, insn.mnemonic, insn.op_str))
+            self.add_load_access(insn, value)
