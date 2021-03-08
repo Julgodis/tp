@@ -38,26 +38,29 @@ class CPPDisassembler(dasm.Disassembler):
         self.last_address = 0
         self.address_interval_tree = address_interval_tree
         self.relocations = function.section.relocations
+        self.unregister_references = set()
 
-    def addr_to_label(self, addr) -> str:
+    def get_symbol(self, addr):
         if addr in self.symbol_map:
-            label = self.symbol_map[addr].asm_reference(addr)
-            assert label
-            return label
+            return  self.symbol_map[addr]
         if addr in self.block_map:
-            return self.block_map[addr].identifier.label
+            return self.block_map[addr]
 
         if not self.is_label_candidate(addr):
             return None
 
         symbols = list(self.address_interval_tree[addr])
         if len(symbols) == 1:
-            return symbols[0].data.asm_reference(addr)
+            return symbols[0].data
+
         raise Dol2ZelException(f"{self.last_address:08X}: no symbol for {addr:08X} found! (in {self.function.identifier.label})")
-        #elif len(symbols) > 1:
-        #    raise Dol2ZelException("multiple possible symbols for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
-        #else:
-        #    raise Dol2ZelException("no symbol for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
+
+    def addr_to_label(self, addr) -> str:
+        symbol = self.get_symbol(addr)
+        if not symbol:
+            return None
+
+        return symbol.asm_reference(addr)
 
     async def callback(self, address, offset, insn, bytes):
         if address in self.block_map:
@@ -105,6 +108,7 @@ class CPPDisassembler(dasm.Disassembler):
         offset_load = dasm.is_load_store_reg_offset(insn, None)
         r2_addr = self.r2AddrInsns[addr]
         r13_addr = self.r13AddrInsns[addr]
+        #g.LOG.debug(f"r2={r2_addr:08X},r13={r13_addr:08X}, {addr:08X}\t{insn.mnemonic} {insn.op_str}")
 
         # Relocation
         if len(self.relocations) > 0 and addr in self.relocations:
@@ -198,7 +202,8 @@ class CPPDisassembler(dasm.Disassembler):
 
         if r13_addr != None:
             if id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R13:
-                value = r13_addr + dasm.sign_extend_16(insn.operands[2].imm)
+                imm = insn.operands[2].imm
+                value = r13_addr + dasm.sign_extend_16(imm)
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].reg)
                 name = self.addr_to_label(value)
@@ -211,7 +216,9 @@ class CPPDisassembler(dasm.Disassembler):
                 name = self.addr_to_label(value)
                 if name:
                     return f"{insn.mnemonic} {rA}, {name}({rB})"
-        elif r2_addr != None:
+
+        if r2_addr != None:
+            #g.LOG.debug(f"{id == PPC_INS_ADDI}, {insn.operands[1].reg == PPC_REG_R2 if len(insn.operands) > 1 else False}")
             if id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R2:
                 value = r2_addr + dasm.sign_extend_16(insn.operands[2].imm)
                 rA = insn.reg_name(insn.operands[0].reg)
@@ -384,6 +391,9 @@ async def export_symbol_function_normal(builder: Builder, section: Section, func
     if True or not function_path.exists():
         exe_sections = section.translation_unit.library.module.executable_sections 
         async def callback():
+            #if function.addr != 0x802813DC:
+            #    return 
+
             block_map = dict()
             for block in function.blocks:
                 block_map[block.addr] = block
@@ -393,7 +403,7 @@ async def export_symbol_function_normal(builder: Builder, section: Section, func
                 for block in function.blocks:
                     await cppd.async_execute(block.addr, block.data, block.size)
 
-            g.LOG.debug(f"generated asm: '{include_path}'")
+            #g.LOG.debug(f"generated asm: '{include_path}'")
 
         return callback()
     else:
@@ -507,7 +517,7 @@ async def export_symbol_virtual_table(builder: Builder, section: Section, vtable
         assert vtable.padding % 4 == 0
         await builder.write("\t/* padding */")
         for i in range(vtable.padding // 4):
-            builder.write("\tNULL,")
+            await builder.write("\tNULL,")
     await builder.write("};")
 
 async def export_symbol_reference_array(builder: Builder, section: Section, sra: ReferenceArray):
@@ -897,21 +907,21 @@ async def export_section(builder: Builder, section: Section, symbol_map, address
         return tasks
 
 
-async def export_translation_unit(tu: TranslationUnit, symbol_map, ait):
+async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen):
     # Skip empty translation units
     if len(tu.sections) == 0:
         return []
     if sum([len(x.symbols) for x in tu.sections]) == 0:
         return []
 
+    tasks = []
     path = tu.source_path
     await util.create_dirs_for_file(path)
 
     tu.function_skip_count = 0
     tu.function_count = 0
     
-    tasks = []
-    async with AsyncBuilder(path) as builder:
+    async with AsyncBuilder(path, dry_run=not cpp_gen) as builder:
         await builder.write("// ")
         await builder.write("// Generated By: dol2asm")
         await builder.write("// ")
@@ -1018,7 +1028,8 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait):
                 elif isinstance(symbol, IntegerData):
                     c_extern.append(f"{a}{b}{c}{d}%s %s;" % (symbol.integer_type, symbol.identifier.label))
                 elif isinstance(symbol, StringBase):
-                    pass
+                    count = symbol.size + symbol.padding
+                    c_extern.append(f"{a}{b}{c}{d}u8 %s[%i];" % (symbol.identifier.label, count))
                 elif isinstance(symbol, InitData) or isinstance(symbol, InitStruct):
                     count = symbol.size + symbol.padding
                     c_extern.append(f"{a}{b}{c}{d}u8 %s[%i];" % (symbol.identifier.label, count))
@@ -1068,19 +1079,22 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait):
         for section in sections:
             tasks.extend(await export_section(builder, section, symbol_map, ait))
 
-    g.LOG.debug(f"generated cpp: '{path}'")
+    if cpp_gen:
+        g.LOG.debug(f"generated cpp: '{path}'")
+
     return tasks
 
-def export_library(library: Library, symbol_map, ait):
+
+def export_library(library: Library, symbol_map, ait, cpp_gen):
     tasks = []
     for tu in library.translation_units:
-        tasks.append(export_translation_unit(tu, symbol_map, ait))
+        tasks.append(export_translation_unit(tu, symbol_map, ait, cpp_gen))
 
     return tasks
 
-def export_all(libraries, symbol_map, ait):
+def export_all(libraries, symbol_map, ait, cpp_gen):
     tasks = []
     for library in libraries.values():
-        tasks.extend(export_library(library, symbol_map, ait))
+        tasks.extend(export_library(library, symbol_map, ait, cpp_gen))
     return tasks
 

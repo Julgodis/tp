@@ -12,6 +12,9 @@ vtable.lcf
 # Game assets
 game/
 
+# Generate files
+generated/
+
 # Generated documentation
 docs/doxygen/
 

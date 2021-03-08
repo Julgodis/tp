@@ -22,24 +22,29 @@ class Builder:
         self.file.close()
 
 class AsyncBuilder:
-    def __init__(self, path):
+    def __init__(self, path, dry_run = False):
         self.path = path
         self.new_line = "\n"
+        self.dry_run = dry_run
 
     async def write(self, text):
-        await self.file.write(text)
-        await self.file.write(self.new_line)
+        if not self.dry_run:
+            await self.file.write(text)
+            await self.file.write(self.new_line)
     
     async def write_nonewline(self, text):
-        await self.file.write(text)
+        if not self.dry_run:
+            await self.file.write(text)
 
     async def __aenter__(self):
-        await g.OPEN_FILES_SEMAPHORE.acquire()
-        #g.LOG.debug(f"open:  '{self.path}'")
-        self.file = await aiofiles.open(self.path, 'w', encoding="utf-8")
+        if not self.dry_run:
+            await g.OPEN_FILES_SEMAPHORE.acquire()
+            #g.LOG.debug(f"open:  '{self.path}'")
+            self.file = await aiofiles.open(self.path, 'w', encoding="utf-8")
         return self
 
     async def __aexit__(self, type, value, traceback):
-        #g.LOG.debug(f"close: '{self.path}'")
-        await self.file.close()
-        g.OPEN_FILES_SEMAPHORE.release()
+        if not self.dry_run:
+            #g.LOG.debug(f"close: '{self.path}'")
+            await self.file.close()
+            g.OPEN_FILES_SEMAPHORE.release()

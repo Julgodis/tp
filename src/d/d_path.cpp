@@ -8,27 +8,18 @@
 // Additional Symbols:
 // 
 
-struct cXyz;
-struct dPath;
-struct cBgS_PolyInfo;
-
-extern void dPath_GetPnt(const dPath*, int); /* dPath_GetPnt__FPC5dPathi */
-extern void dPath_GetRoomPath(int, int); /* dPath_GetRoomPath__Fii */
-extern void dPath_GetNextRoomPath(const dPath*, int); /* dPath_GetNextRoomPath__FPC5dPathi */
-extern void dPath_GetPolyRoomPathVec(const cBgS_PolyInfo&, cXyz*, int*); /* dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi */
-
 extern "C" {
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
+extern void getStatusRoomDt__20dStage_roomControl_cFi();
+extern void isSwitch__10dSv_info_cCFii();
 extern void dPath_GetPnt__FPC5dPathi();
 extern void dPath_GetRoomPath__Fii();
 extern void dPath_GetNextRoomPath__FPC5dPathi();
 extern void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
-extern "C" extern void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
+extern void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+extern void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
+extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern void _savegpr_26();
+extern void _restgpr_26();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA2 extern u8 d_d_path__LIT_3685[8];
 }
@@ -56,7 +47,7 @@ SECTION_SDATA2 u8 d_d_path__LIT_3685[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetPnt(const dPath*, int) {
+asm void dPath_GetPnt__FPC5dPathi() {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPnt__FPC5dPathi.s"
 }
@@ -66,7 +57,7 @@ asm void dPath_GetPnt(const dPath*, int) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetRoomPath(int, int) {
+asm void dPath_GetRoomPath__Fii() {
 	nofralloc
 #include "asm/d/d_path/dPath_GetRoomPath__Fii.s"
 }
@@ -76,7 +67,7 @@ asm void dPath_GetRoomPath(int, int) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetNextRoomPath(const dPath*, int) {
+asm void dPath_GetNextRoomPath__FPC5dPathi() {
 	nofralloc
 #include "asm/d/d_path/dPath_GetNextRoomPath__FPC5dPathi.s"
 }
@@ -86,7 +77,7 @@ asm void dPath_GetNextRoomPath(const dPath*, int) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetPolyRoomPathVec(const cBgS_PolyInfo&, cXyz*, int*) {
+asm void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi() {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi.s"
 }

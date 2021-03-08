@@ -7,6 +7,7 @@ from typing import Optional, List, Tuple
 from dataclasses import dataclass, field
 from exception import *
 from collections import defaultdict
+from pathlib import Path
 
 
 @dataclass
@@ -182,7 +183,7 @@ def execute(module_id: int, linker_map_path: Path, executable_sections, base_fol
 
             # add the symbol
             symbol = Symbol(addr, size, 0, name, lib, obj)
-            symbol.source = f"linker_map/'{path}'/{addr:08X}"
+            symbol.source = f"linker_map/'{linker_map_path}'/{addr:08X}"
             sections[section_name].symbols.append(symbol)
 
     # calculate a dictionary of addresses used by each section, this will later

@@ -4,9 +4,9 @@ import struct
 import dataclasses
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Set
 from globals import ExecutableSection
-from disassembler import LCDisassembler
+from disassembler import AccessCollector
 
 
 @dataclass
@@ -237,11 +237,21 @@ class ZeroStruct(Symbol):
             section = first.section,
             source = first.source)
 
-    def asm_reference(self, addr):
+    def cpp_reference(self, accessor, addr):
         for field in self.members:
             if field.addr == addr:
                 offset = field.addr - self.addr
                 return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
+
+    def asm_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"{self.identifier.label}+0x{offset:X}"
 
         g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
         g.LOG.error(self)
@@ -293,11 +303,21 @@ class InitStruct(Data):
             section = first.section,
             source = first.source)
 
-    def asm_reference(self, addr):
+    def cpp_reference(self, accessor, addr):
         for field in self.members:
             if field.addr == addr:
                 offset = field.addr - self.addr
                 return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
+
+    def asm_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"{self.identifier.label}+0x{offset:X}"
 
         g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
         g.LOG.error(self)
@@ -370,19 +390,41 @@ class StringBase(Data):
 
 @dataclass
 class Block(Data):
-    
+    sda_hack_references: Set[int] = field(default=None,repr=False)
+
     def _get_internal_references(self):
         sections = self.section.translation_unit.library.module.executable_sections
-        lcd = LCDisassembler(sections)
-        for x in lcd.execute(self.addr, self.data, self.size):
+        collector = AccessCollector(sections)
+        for x in collector.execute_generator(self.addr, self.data, self.size):
             pass
-        return set(lcd.labels.values()) | set(lcd.functions.values())
+        self.sda_hack_references = collector.sda_hack_references
+        return set([x.addr for x in collector.accesses.values()])
 
 @dataclass
 class Function(Symbol):
     blocks: List[str] = field(default_factory=list,repr=False)
     return_type: str = None
     argument_types: List[str] = field(default_factory=list)
+
+    @property
+    def sda_hack_references(self):
+        refs = set()
+        for block in self.blocks:
+            refs.update(block.sda_hack_references if block.sda_hack_references else set())
+        return refs
+
+    def cpp_reference(self, accessor, addr):
+        if addr == self.addr:
+            return self.identifier.label
+        else:
+            offset = addr - self.addr
+            return f"(((char*){self.identifier.label})+0x{offset:X})"
+
+    def _get_internal_references(self):
+        refs = set()
+        for block in self.blocks:
+            refs.update(block.internal_references)
+        return refs
 
     @staticmethod
     def create(section, group):
@@ -423,16 +465,4 @@ class Function(Symbol):
             section = section,
             source = first.source)
 
-    def cpp_reference(self, accessor, addr):
-        if addr == self.addr:
-            return self.identifier.label
-        else:
-            offset = addr - self.addr
-            return f"(((char*){self.identifier.label})+0x{offset:X})"
-
-    def _get_internal_references(self):
-        refs = set()
-        for block in self.blocks:
-            refs.update(block.internal_references)
-        return refs
 

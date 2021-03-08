@@ -1,44 +1,55 @@
 import globals as g
-import util
 from data import *
 from exception import *
 
-def string_decode(data):
+import util
+import linker_map
+
+
+def string_decode(data: bytearray) -> Tuple[str, str]:
+    """Try to decode the data using utf-8 or shift-jis"""
+
     try:
         result = data[:-1].decode("utf-8")
         return result, "utf-8"
     except:
-        pass 
+        pass
 
     try:
         result = data[:-1].decode("shift_jisx0213")
         return result, "shift-jis"
     except:
-        pass 
+        pass
 
     return None, None
 
-def string_from_data(addr, data):
+
+def string_from_data(addr: int, data: bytearray) -> String:
+    """ Create string symbol from an address and data"""
+
     string, encoding = string_decode(data)
     assert encoding != None
 
     return String(
-        Identifier("stringBase", addr, None), 
-        addr, 
+        Identifier("stringBase", addr, None),
+        addr,
         len(data),
-        encoding = encoding,
-        decoded_string = string)
+        encoding=encoding,
+        decoded_string=string)
 
-def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
+
+def symbol_from_data(section: Section, identifier: Identifier, offset: int, data: bytearray, padding_data: bytearray, symbol: linker_map.Symbol) -> List[Symbol]:
+    """Create symbols from data. This will try to find strings, integers, floats, or other special symbols."""
+
     # all virtual tables begin with "__vt"
     if identifier.name and identifier.name.startswith("__vt"):
         assert section.name == ".data"
         return [VirtualTable(
-            identifier, 
-            symbol.addr, 
+            identifier,
+            symbol.addr,
             symbol.size,
             section=section,
-            data=data, 
+            data=data,
             padding=len(padding_data),
             padding_data=padding_data,
             source=symbol.source)]
@@ -97,7 +108,8 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
             split_data = list(util.magicsplit(data, 0))
             x_offset = 0
             for x in split_data[:-1]:
-                strings.append(string_from_data(symbol.addr + x_offset, bytes(x + [0])))
+                strings.append(string_from_data(
+                    symbol.addr + x_offset, bytes(x + [0])))
                 x_offset += len(x) + 1
             return [StringBase.create(symbol, strings, data, padding_data, section)]
 
@@ -107,7 +119,8 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
             assert len(data) == 4
             assert len(padding_data) % 4 == 0
             constructor_count = len(padding_data) // 4
-            constructors = list(struct.unpack(">" + "I" * constructor_count, padding_data))
+            constructors = list(struct.unpack(
+                ">" + "I" * constructor_count, padding_data))
 
             count = 0
             for x in constructors:
@@ -118,62 +131,70 @@ def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
             _ctors_data = padding_data[0:count*4]
             return [
                 ReferenceArray(identifier, symbol.addr, symbol.size,
-                    data=data, 
-                    section=section,
-                    source=f".ctors0/{symbol.source}"),
+                               data=data,
+                               section=section,
+                               source=f".ctors0/{symbol.source}"),
                 ReferenceArray(Identifier("_ctors", symbol.addr + 4, "_ctors"), symbol.addr + 4, len(_ctors_data),
-                    data=_ctors_data, 
-                    section=section,
-                    source=f".ctors1/{symbol.source}"),
+                               data=_ctors_data,
+                               section=section,
+                               source=f".ctors1/{symbol.source}"),
             ]
-        
+
     if section.name == ".dtors":
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
             return [ReferenceArray(identifier, symbol.addr, symbol.size,
-                section=section,
-                data=data, 
-                source=f".dtors0/{symbol.source}")]
+                                   section=section,
+                                   data=data,
+                                   source=f".dtors0/{symbol.source}")]
         elif symbol.name == "__fini_cpp_exceptions_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
-            return [ReferenceArray(identifier, symbol.addr, symbol.size,         
-                section=section,
-                data=data, 
-                source=f".dtors1/{symbol.source}")]
+            return [ReferenceArray(identifier, symbol.addr, symbol.size,
+                                   section=section,
+                                   data=data,
+                                   source=f".dtors1/{symbol.source}")]
 
     # otherwise export it as raw initialized data
     return [InitData(identifier, symbol.addr, symbol.size,
-        section=section,
-        data=data, 
-        padding=len(padding_data),
-        padding_data=padding_data,
-        source=symbol.source)]
+                     section=section,
+                     data=data,
+                     padding=len(padding_data),
+                     padding_data=padding_data,
+                     source=symbol.source)]
 
-def from_group(section, group):
+
+def from_group(section: Section, group: List[linker_map.Symbol]) -> List[Symbol]:
+    """Create symbol from a group of linker map symbols"""
     assert len(group) == 1
     first = group[0]
     identifier = Identifier("data", first.addr, first.name)
+
+    # if the section have not data, it is probably a .bss section
     if not section.data:
         return [ZeroData(identifier, first.addr, first.size, padding=first.padding, source=first.source)]
-    else:
-        data = bytes()
-        padding_data = bytes()
-        try:
-            if first.size > 0:
-                data = section.getData(first.start, first.end)
-                if first.padding > 0:
-                    padding_data =  section.getData(first.end, first.end+first.padding)
-                assert len(data) == first.size
-        except IndexError:
-            raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
-                    (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
 
-        return symbol_from_data(section, identifier, first.addr, data, padding_data, first)
+    # TODO: remove the exception and do a "real" bounds-check
+    data = bytes()
+    padding_data = bytes()
+    try:
+        if first.size > 0:
+            data = section.getData(first.start, first.end)
+            if first.padding > 0:
+                padding_data = section.getData(
+                    first.end, first.end+first.padding)
+            assert len(data) == first.size
+    except IndexError:
+        raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
+                               (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
+
+    return symbol_from_data(section, identifier, first.addr, data, padding_data, first)
 
 
-def groups_from_symbols(symbols):
+def groups_from_symbols(symbols: List[linker_map.Symbol]) -> List[List[linker_map.Symbol]]:
+    """Group symbols based on the 'is_function' flag"""
+
     group = []
     groups = []
     for symbol in symbols:

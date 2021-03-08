@@ -2,13 +2,13 @@ import globals as g
 import rich
 import pickle
 from rich.progress import Progress
-from disassembler import LCDisassembler
+from disassembler import AccessCollector, Access
 from pathlib import Path
 from globals import ExecutableSection
 from typing import Dict
 
 
-def execute(module_id: int, sections: Dict[str, ExecutableSection], cache=True):
+def execute(module_id: int, sections: Dict[str, ExecutableSection], cache=True) -> Dict[int, Access]:
     """Each code segment provided by the sections will be search through 
     to find accesses to possible labels. These accesses are necessary as the linker
     map may include all symbols. An example is symbols in '.init' section where

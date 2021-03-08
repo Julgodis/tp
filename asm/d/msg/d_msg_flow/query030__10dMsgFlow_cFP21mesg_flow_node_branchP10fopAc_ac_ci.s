@@ -1,0 +1,15 @@
+lbl_8024BAE0:
+/* 8024BAE0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8024BAE4 00000004  7C 08 02 A6 */	mflr r0
+/* 8024BAE8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8024BAEC 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024BAF0 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024BAF4 00000014  38 63 0D D8 */	addi r3, r3, 0xdd8
+/* 8024BAF8 00000018  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000FBFF@ha */
+/* 8024BAFC 0000001C  38 84 FB FF */	addi r4, r4, 0xFBFF /* 0x0000FBFF@l */
+/* 8024BB00 00000020  4B DE 8F 05 */	bl getEventReg__11dSv_event_cCFUs
+/* 8024BB04 00000024  54 63 06 3E */	clrlwi r3, r3, 0x18
+/* 8024BB08 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8024BB0C 0000002C  7C 08 03 A6 */	mtlr r0
+/* 8024BB10 00000030  38 21 00 10 */	addi r1, r1, 0x10
+/* 8024BB14 00000034  4E 80 00 20 */	blr 

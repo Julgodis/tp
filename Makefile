@@ -59,7 +59,7 @@ endif
 
 AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
 OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
-STRIP   := $(DEVKITPPC)/bin/powerpc-eabi-strip
+STRIP   := powerpc-linux-gnu-strip
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwldeppc.exe
 LD2     := tools/linker/linker.py
@@ -187,7 +187,8 @@ testx: $(LIBS)
 # elf
 $(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
 	@echo $(O_FILES) > build/o_files
-	./tools/linker/lcf_generator.py
+	@python3 ./tools/linker/lcf_generator.py
+	@cp test.lcf $(LDSCRIPT)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files $(LIBS)
 
 #@$(LD2) --map $(MAP) -o $@  $(O_FILES)
@@ -211,22 +212,22 @@ $(BUILD_DIR)/%.o: %.cpp
 #$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
 
 	
--include libs/base/Makefile
--include libs/os/Makefile
+-include libs/dolphin/base/Makefile
+-include libs/dolphin/os/Makefile
 -include libs/exi/Makefile
--include libs/si/Makefile
--include libs/db/Makefile
--include libs/mtx/Makefile
--include libs/dvd/Makefile
--include libs/vi/Makefile
--include libs/pad/Makefile
--include libs/ai/Makefile
--include libs/ar/Makefile
--include libs/dsp/Makefile
--include libs/card/Makefile
--include libs/gx/Makefile
--include libs/gd/Makefile
--include libs/gf/Makefile
+-include libs/dolphin/si/Makefile
+-include libs/dolphin/db/Makefile
+-include libs/dolphin/mtx/Makefile
+-include libs/dolphin/dvd/Makefile
+-include libs/dolphin/vi/Makefile
+-include libs/dolphin/pad/Makefile
+-include libs/dolphin/ai/Makefile
+-include libs/dolphin/ar/Makefile
+-include libs/dolphin/dsp/Makefile
+-include libs/dolphin/card/Makefile
+-include libs/dolphin/gx/Makefile
+-include libs/dolphin/gd/Makefile
+-include libs/dolphin/gf/Makefile
 -include libs/Runtime.PPCEABI.H/Makefile
 -include libs/MSL_C.PPCEABI.bare.H/Makefile
 -include libs/TRK_MINNOW_DOLPHIN/Makefile
@@ -234,29 +235,29 @@ $(BUILD_DIR)/%.o: %.cpp
 -include libs/odemuexi2/Makefile
 -include libs/odenotstub/Makefile
 
--include libs/J2DGraph/Makefile
--include libs/J3DGraphAnimator/Makefile
--include libs/J3DGraphBase/Makefile
--include libs/J3DGraphLoader/Makefile
--include libs/J3DU/Makefile
--include libs/JAudio2/Makefile
--include libs/JFramework/Makefile
--include libs/JGadget/Makefile
--include libs/JKernel/Makefile
--include libs/JMath/Makefile
--include libs/JMessage/Makefile
--include libs/JParticle/Makefile
--include libs/JStage/Makefile
--include libs/JStudio/Makefile
--include libs/JStudio_JAudio2/Makefile
--include libs/JStudio_JParticle/Makefile
--include libs/JStudio_JStage/Makefile
--include libs/JSupport/Makefile
--include libs/JUtility/Makefile
+-include libs/JSystem/J2DGraph/Makefile
+-include libs/JSystem/J3DGraphAnimator/Makefile
+-include libs/JSystem/J3DGraphBase/Makefile
+-include libs/JSystem/J3DGraphLoader/Makefile
+-include libs/JSystem/J3DU/Makefile
+-include libs/JSystem/JAudio2/Makefile
+-include libs/JSystem/JFramework/Makefile
+-include libs/JSystem/JGadget/Makefile
+-include libs/JSystem/JKernel/Makefile
+-include libs/JSystem/JMath/Makefile
+-include libs/JSystem/JMessage/Makefile
+-include libs/JSystem/JParticle/Makefile
+-include libs/JSystem/JStage/Makefile
+-include libs/JSystem/JStudio/JStudio/Makefile	
+-include libs/JSystem/JStudio/JStudio_JAudio2/Makefile
+-include libs/JSystem/JStudio/JStudio_JParticle/Makefile
+-include libs/JSystem/JStudio/JStudio_JStage/Makefile
+-include libs/JSystem/JSupport/Makefile
+-include libs/JSystem/JUtility/Makefile
 -include libs/Z2AudioLib/Makefile
 
--include libs/SComponent/Makefile
--include libs/SStandard/Makefile
+-include libs/SSystem/SComponent/Makefile
+-include libs/SSystem/SStandard/Makefile
 
 
 ### Debug Print ###

@@ -8,27 +8,23 @@
 // Additional Symbols:
 // 
 
-extern void mDoRst_resetCallBack(int, void*); /* mDoRst_resetCallBack__FiPv */
-extern void cLib_memSet(void*, int, u32); /* cLib_memSet__FPviUl */
-extern void* operator new(u32); /* __nw__FUl */
-
 extern "C" {
-extern "C" extern void create__8mDoCPd_cFv();
-extern "C" extern void read__8mDoCPd_cFv();
-extern "C" extern void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad();
-extern "C" extern void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad();
-extern "C" extern void recalibrate__8mDoCPd_cFv();
+extern void create__8mDoCPd_cFv();
+extern void read__8mDoCPd_cFv();
+extern void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad();
+extern void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad();
+extern void recalibrate__8mDoCPd_cFv();
 extern void mDoRst_resetCallBack__FiPv();
 extern void cLib_memSet__FPviUl();
 extern void __nw__FUl();
-extern "C" extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
-extern "C" extern void read__10JUTGamePadFv();
-extern "C" extern void clearForReset__10JUTGamePadFv();
-extern "C" extern void getGamePad__10JUTGamePadFi();
-extern "C" extern void setEnabled__Q210JUTGamePad7CRumbleFUl();
-extern "C" extern void PADSetAnalogMode();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern void read__10JUTGamePadFv();
+extern void clearForReset__10JUTGamePadFv();
+extern void getGamePad__10JUTGamePadFi();
+extern void setEnabled__Q210JUTGamePad7CRumbleFUl();
+extern void PADSetAnalogMode();
+extern void _savegpr_29();
+extern void _restgpr_29();
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_HIO[64 + 4 /* padding */];
@@ -37,11 +33,11 @@ SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sAnalogMode__10JUTGamePad[4];
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
 SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
-SECTION_SBSS extern u8 merged_80451500[4];
-SECTION_SDATA2 extern f32 LIT_3709;
-SECTION_SDATA2 extern f32 LIT_3710;
+SECTION_SBSS extern u8 struct_80451500[4];
+SECTION_SDATA2 extern u8 LIT_3709[4];
+SECTION_SDATA2 extern u8 LIT_3710[4];
 SECTION_SDATA2 extern u8 m_Do_m_Do_controller_pad__LIT_3711[8];
-SECTION_SDATA2 extern f64 m_Do_m_Do_controller_pad__LIT_3713;
+SECTION_SDATA2 extern u8 m_Do_m_Do_controller_pad__LIT_3713[8];
 }
 
 
@@ -51,11 +47,13 @@ SECTION_SDATA2 extern f64 m_Do_m_Do_controller_pad__LIT_3713;
 
 extern "C" {
 /* 80451A20-80451A24 0004 .sdata2    @3709                                                        */
-// 0.06666667f 0x3d888889
-SECTION_SDATA2 f32 LIT_3709 = 1.000000f / 15.000000f;
+SECTION_SDATA2 u8 LIT_3709[4] = {
+	0x3D, 0x88, 0x88, 0x89,
+};
 /* 80451A24-80451A28 0004 .sdata2    @3710                                                        */
-// 0x3f800000
-SECTION_SDATA2 f32 LIT_3710 = 1.000000f;
+SECTION_SDATA2 u8 LIT_3710[4] = {
+	0x3F, 0x80, 0x00, 0x00,
+};
 /* 80451A28-80451A30 0004 .sdata2    @3711                                                        */
 SECTION_SDATA2 u8 m_Do_m_Do_controller_pad__LIT_3711[8] = {
 	0x3B, 0xEA, 0x0E, 0xA1,
@@ -63,8 +61,9 @@ SECTION_SDATA2 u8 m_Do_m_Do_controller_pad__LIT_3711[8] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 /* 80451A30-80451A38 0008 .sdata2    @3713                                                        */
-// 0x4330000000000000 | compiler-generated value used in cast: (float)u32
-SECTION_SDATA2 f64 m_Do_m_Do_controller_pad__LIT_3713 = 4503599627370496.000000;
+SECTION_SDATA2 u8 m_Do_m_Do_controller_pad__LIT_3713[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 }
 
 
@@ -85,55 +84,50 @@ SECTION_BSS u8 m_cpadInfo__8mDoCPd_c[256];
 /* ###################################################################################### */
 
 /* 80007954-80007A94 0140 .text      create__8mDoCPd_cFv                                          */
-// mDoCPd_c::create(void)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void create__8mDoCPd_cFv() {
+asm void create__8mDoCPd_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_controller_pad/create__8mDoCPd_cFv.s"
 }
 #pragma pop
 
 /* 80007A94-80007B7C 00E8 .text      read__8mDoCPd_cFv                                            */
-// mDoCPd_c::read(void)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void read__8mDoCPd_cFv() {
+asm void read__8mDoCPd_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_controller_pad/read__8mDoCPd_cFv.s"
 }
 #pragma pop
 
 /* 80007B7C-80007CD0 0154 .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
-// mDoCPd_c::convert(interface_of_controller_pad*, JUTGamePad*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad() {
+asm void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad() {
 	nofralloc
 #include "asm/m_Do/m_Do_controller_pad/convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad.s"
 }
 #pragma pop
 
 /* 80007CD0-80007D74 00A4 .text      LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad        */
-// mDoCPd_c::LRlockCheck(interface_of_controller_pad*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad() {
+asm void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad() {
 	nofralloc
 #include "asm/m_Do/m_Do_controller_pad/LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad.s"
 }
 #pragma pop
 
 /* 80007D74-80007D9C 0028 .text      recalibrate__8mDoCPd_cFv                                     */
-// mDoCPd_c::recalibrate(void)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void recalibrate__8mDoCPd_cFv() {
+asm void recalibrate__8mDoCPd_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_controller_pad/recalibrate__8mDoCPd_cFv.s"
 }

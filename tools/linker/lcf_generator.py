@@ -7,6 +7,9 @@ import io
 import objs
 import undefined_active
 
+sys.path.append('symbols')
+import module_0
+
 SECTIONS = [
     (".init", 0x20),
     ("extab_", 0x20),
@@ -268,23 +271,24 @@ with open("test.lcf", "w") as file:
     file.write("\t__ArenaLo = (_db_stack_addr + 0x1f) & ~0x1f;\n")
     file.write("\t__ArenaHi = 0x81700000;\n")
     file.write("\n")
-    file.write("\t/* Below are function that are not matching the original mangled name */\n")
+    file.write("\t/* Below are functions that are not matching the original mangled name */\n")
 
-    base_names = set(undefined_active.SYMBOLS.keys())
+    base_names = set(module_0.SYMBOLS.keys())
     main_names = set([sym.name for sym in SYMBOLS])
     names = base_names - main_names
-    for name in names:
-        if name in undefined_active.STRING_BASE:
-            continue
-        addr = undefined_active.SYMBOLS[name][0]
-        #print("missing symbol: %s" % name)
-        pass#file.write("\t\"%s\" = 0x%08X;\n" % (name, addr))
+    #for name in names:
+    #    if name in undefined_active.STRING_BASE:
+    #        continue
+    #    addr = module_0.SYMBOLS[name][0]
+    #    #print("missing symbol: %s" % name)
+    #    pass#file.write("\t\"%s\" = 0x%08X;\n" % (name, addr))
 
     file.write("\n")
     file.write("\t/* @stringBase0 */\n")
-    for k,x in undefined_active.STRING_BASE.items():
-        pass#file.write("\t\"%s\" = 0x%08X;\n" % (k, x[0]))     
-    
+    for k,x in module_0.SYMBOLS.items():
+        if x['type'] == "StringBase":
+            file.write("\t\"%s\" = 0x%08X;\n" % (k, x['addr']))     
+
     file.write("}\n")
     file.write("\n")
 
@@ -293,13 +297,13 @@ with open("test.lcf", "w") as file:
         file.write("\t\"%s\"\n" % f)
     file.write("\n")
     file.write("\t/* vtables */\n")
-    for k,x in undefined_active.SYMBOLS.items():
+    for k,x in module_0.SYMBOLS.items():
         if k.startswith("__vt"):
             file.write("\t\"%s\"\n" % (k))     
     file.write("\n")
     file.write("\t/* Unreferenced Symbols */\n")
-    for k,x in undefined_active.SYMBOLS.items():
-        if x[3] == 0:
+    for k,x in module_0.SYMBOLS.items():
+        if x['reference_count'] == 0:
             file.write("\t\"%s\"\n" % (k))     
     file.write("\n")
     file.write("}\n")

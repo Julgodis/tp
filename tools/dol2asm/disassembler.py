@@ -1,13 +1,12 @@
-
+import globals as g
 
 from capstone import *
 from capstone.ppc import *
-import sys
 from collections import defaultdict
-from collections import deque
 from itertools import chain
+from dataclasses import dataclass, field
+
 import util
-import globals as g
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
@@ -376,7 +375,6 @@ class Disassembler:
             hiLoadInsn = self.lisInsns[insn.operands[1].reg]
 
             value = combine_split_load_value(hiLoadInsn, insn)
-            value = self.fix_wrong_addresses(insn, value)
             self.linkedInsns[hiLoadInsn.address] = insn
             self.splitDataLoads[hiLoadInsn.address] = value
             self.splitDataLoads[insn.address] = value
@@ -417,6 +415,7 @@ class AccessCollector(Disassembler):
     def __init__(self, sections):
         super().__init__(sections)
         self.accesses = dict()
+        self.sda_hack_references = set()
 
     def add_branch_access(self, insn, value):
         if self.is_label_candidate(value):
@@ -424,7 +423,7 @@ class AccessCollector(Disassembler):
 
     def add_load_access(self, insn, value):
         if not self.is_label_candidate(value):
-            continue
+            return
 
         if insn.id in { PPC_INS_LFD, PPC_INS_LFDU }:
             self.accesses[insn.address] = DoubleLoadAccess(insn.address, value)
@@ -432,6 +431,10 @@ class AccessCollector(Disassembler):
             self.accesses[insn.address] = FloatLoadAccess(insn.address, value)
         else:
             self.accesses[insn.address] = Access(insn.address, value)
+
+    def add_sda_hack(self, insn, value):
+        self.add_load_access(insn, value)
+        self.sda_hack_references.add(value)
 
     def callback(self, address, offset, insn, bytes):
         if insn == None:
@@ -448,7 +451,7 @@ class AccessCollector(Disassembler):
         if r13_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
                 value = r13_addr + sign_extend_16(insn.operands[2].imm)
-                self.add_load_access(insn, value)
+                self.add_sda_hack(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
                 self.add_load_access(insn, value)
@@ -456,7 +459,7 @@ class AccessCollector(Disassembler):
         if r2_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)
-                self.add_load_access(insn, value)
+                self.add_sda_hack(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
                 self.add_load_access(insn, value)

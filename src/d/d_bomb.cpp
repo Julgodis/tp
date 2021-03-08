@@ -9,10 +9,10 @@
 // 
 
 extern "C" {
-extern "C" extern void checkStateCarry__7dBomb_cFv();
-extern "C" extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
-extern "C" extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
-extern "C" extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
+extern void checkStateCarry__7dBomb_cFv();
+extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
+extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
 }
 
 
@@ -21,44 +21,40 @@ extern "C" extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
 /* ###################################################################################### */
 
 /* 80031F94-80031FCC 0038 .text      checkStateCarry__7dBomb_cFv                                  */
-// dBomb_c::checkStateCarry(void)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void checkStateCarry__7dBomb_cFv() {
+asm void checkStateCarry__7dBomb_cFv() {
 	nofralloc
 #include "asm/d/d_bomb/checkStateCarry__7dBomb_cFv.s"
 }
 #pragma pop
 
 /* 80031FCC-80031FF4 0028 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  */
-// dBomb_c::checkFlowerBombWait(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c() {
+asm void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 /* 80031FF4-8003201C 0028 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       */
-// dBomb_c::checkWaterBomb(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void checkWaterBomb__7dBomb_cFP10fopAc_ac_c() {
+asm void checkWaterBomb__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkWaterBomb__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 /* 8003201C-80032044 0028 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  */
-// dBomb_c::checkInsectBombMove(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c() {
+asm void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkInsectBombMove__7dBomb_cFP10fopAc_ac_c.s"
 }

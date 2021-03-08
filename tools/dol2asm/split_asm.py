@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import symbol_finder
 import os
 import sys
 import re
@@ -25,6 +26,7 @@ import concurrent.futures
 
 import globals as g
 from exception import Dol2ZelException
+from builder import AsyncBuilder
 
 import rich
 from rich.progress import Progress
@@ -34,7 +36,6 @@ from data import *
 
 import baserom
 import analyze
-import framework
 import symbol_sizes
 import sort_objects
 import generate_functions
@@ -49,12 +50,14 @@ import merge_symbols
 import asyncio
 from functools import wraps
 
+
 def coro(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
         return asyncio.run(f(*args, **kwargs))
 
     return wrapper
+
 
 @click.group()
 @click.version_option(g.DOL2ZEL_VERSION)
@@ -74,11 +77,12 @@ async def dol2zel(debug, game_path, symbol_info_path):
     game_path.resolve()
     if not game_path.exists():
         g.LOG.error(f"invalid path to game directory, '{game_path}'")
-        sys.exit(1)   
+        sys.exit(1)
 
     try:
         baserom_path = util.check_file(game_path, "main.dol")
-        framework_path = util.check_file(game_path, "map/Final/Release/frameworkF.map")
+        framework_path = util.check_file(
+            game_path, "map/Final/Release/frameworkF.map")
 
         g.LOG.debug(f"found 'main.dol' at '{baserom_path}'")
         g.BASEROM_PATH = baserom_path
@@ -86,7 +90,8 @@ async def dol2zel(debug, game_path, symbol_info_path):
         g.FRAMEWORKF_PATH = framework_path
 
         map_path = util.check_dir(game_path, "map/Final/Release")
-        maps_path = [x for x in util.get_files_with_ext(map_path, ".map") if x.name != "frameworkF.map"]
+        maps_path = [x for x in util.get_files_with_ext(
+            map_path, ".map") if x.name != "frameworkF.map"]
         g.LOG.debug(f"found {len(maps_path)} map files at '{map_path}'")
         g.MAP_PATH = map_path
         g.MAPS_PATH = maps_path
@@ -101,16 +106,16 @@ async def dol2zel(debug, game_path, symbol_info_path):
         symbol_info_path.resolve()
         g.SYMBOL_INFO_PATH = symbol_info_path
 
-        
         with g.BASEROM_PATH.open('rb') as file:
             g.BASEROM_DATA = bytearray(file.read())
             g.DOL = dollib.read(g.BASEROM_DATA)
-            
+
             g.LOG.debug(f"'{g.BASEROM_PATH}' sections:")
             for section in g.DOL.sections:
-                g.LOG.debug(f"\t{section.type:<4} 0x{section.offset:08X} 0x{section.addr:08X} 0x{section.size:06X} ({section.size} bytes)")
+                g.LOG.debug(
+                    f"\t{section.type:<4} 0x{section.offset:08X} 0x{section.addr:08X} 0x{section.size:06X} ({section.size} bytes)")
 
-        #baserom.load()
+        # baserom.load()
         baserom.sha1_check()
 
         g.MAPS = {}
@@ -133,16 +138,20 @@ async def dol2zel(debug, game_path, symbol_info_path):
     except KeyboardInterrupt:
         sys.exit(1)
 
-import symbol_finder
 
 @dol2zel.command(name="rel")
 @click.option('--asm-path', 'asm_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="asm/")
 @click.option('--lib-path', 'lib_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
 @click.option('--src-path', 'src_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="src/")
 @click.option('--rel-path', 'rel_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="rel/")
+@click.option('--makefile/--no-makefile', 'mk_gen', default=True)
+@click.option('--cpp/--no-cpp', 'cpp_gen', default=True)
 @click.option('--asm/--no-asm', 'asm_gen', default=True)
+@click.option('--symbols/--no-symbols', 'sym_gen', default=True)
+@click.option('--rels/--no-rels', default=True)
+@click.option('--cache/--no-cache', default=True)
 @coro
-async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
+async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm_gen, sym_gen, rels, cache):
     g.OPEN_FILES_SEMAPHORE = asyncio.Semaphore(g.MAX_FILE_COUNT)
 
     try:
@@ -169,14 +178,17 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
         cache_path = Path("cache.dump")
         if not cache_path.exists():
             # symbol_finder expects the first section to be a "null" section
-            executable_sections = [g.ExecutableSection("null",0,0,0,None,[],{})]
+            executable_sections = [g.ExecutableSection(
+                "null", 0, 0, 0, None, [], {})]
             for section in g.DOL.sections:
                 cs = []
                 if section.type == "text":
                     if section.name == ".init":
                         # TODO: Comment why!
-                        cs.append((0x80003100 - section.addr,  0x800035e4 - section.addr))
-                        cs.append((0x80005518 - section.addr,  0x80005544 - section.addr))
+                        cs.append((0x80003100 - section.addr,
+                                   0x800035e4 - section.addr))
+                        cs.append((0x80005518 - section.addr,
+                                   0x80005544 - section.addr))
                     else:
                         cs.append((0, section.size))
 
@@ -185,38 +197,34 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
                 executable_sections.append(executable_section)
 
             g.LOG.debug(f"{0: 3}: {g.FRAMEWORKF_PATH}")
-            main_module = symbol_finder.search(0, None, g.FRAMEWORKF_PATH, executable_sections, {})
+            main_module = symbol_finder.search(
+                0, None, g.FRAMEWORKF_PATH, executable_sections, {})
 
             modules = [main_module]
-            for index, rel in g.RELS.items():
-                break
-            
-                base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
-                base_addr -= rel.sections[1].offset
-                g.LOG.debug(f"%3i: {rel.path},  {len(rel.sections)} sections and {len(rel.relocations)} relocations" % index)
+            if rels:
+                for index, rel in g.RELS.items():
+                    base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
+                    base_addr -= rel.sections[1].offset
+                    g.LOG.debug(
+                        f"%3i: {rel.path},  {len(rel.sections)} sections and {len(rel.relocations)} relocations" % index)
 
-                relocations = defaultdict(list)
-                executable_sections = []
-                for section in rel.sections:
-                    section.offset += base_addr
-                    for relocation in section.relocations:
-                        relocations[section.index].append(relocation)
+                    relocations = defaultdict(list)
+                    executable_sections = []
+                    for section in rel.sections:
+                        section.offset += base_addr
+                        for relocation in section.relocations:
+                            relocations[section.index].append(relocation)
 
-                    cs = []
-                    if section.executable_flag:
-                        cs.append((0, section.length))
-                    executable_sections.append(g.ExecutableSection(
-                        section.name, section.offset, section.length, base_addr, 
-                        section.data, cs, {}))
+                        cs = []
+                        if section.executable_flag:
+                            cs.append((0, section.length))
+                        executable_sections.append(g.ExecutableSection(
+                            section.name, section.offset, section.length, base_addr,
+                            section.data, cs, {}))
 
-                module = symbol_finder.search(index, rel.path.name.replace(".rel",".o"),  rel.map, executable_sections, relocations)
-                modules.append(module)
-                
-                #for section in rel.sections:
-                #    g.LOG.debug(f"\t{section.index:02} {executable_sections[section.index].name}")
-
-                #if len(modules) > 50:
-                #    break
+                    module = symbol_finder.search(index, rel.path.name.replace(
+                        ".rel", ".o"),  rel.map, executable_sections, relocations)
+                    modules.append(module)
 
             """
             for module in modules:
@@ -268,12 +276,13 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
                                 require_resolve.append(symbol)
 
             ait = IntervalTree(
-                [Interval(x.start, x.end, x) for x in symbol_map.values() if x.size > 0]
+                [Interval(x.start, x.end, x)
+                 for x in symbol_map.values() if x.size > 0]
             )
 
             # Find reference arrays
             # TODO: MOVE
-            for lib in  module.libraries.values():
+            for lib in module.libraries.values():
                 for tu in lib.translation_units:
                     for sec in tu.sections:
                         for symbol in sec.symbols:
@@ -288,69 +297,76 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
 
                             section = symbol.section
                             count = len(symbol.data) // 4
-                            values = list(struct.unpack(">" + "I" * count, symbol.data))
+                            values = list(struct.unpack(
+                                ">" + "I" * count, symbol.data))
                             is_all_symbols = [ait.overlaps(x) for x in values]
                             if not any(is_all_symbols):
                                 continue
-                            
+
                             new_symbol = ReferenceArray(
-                                symbol.identifier, 
-                                symbol.addr, 
-                                symbol.size, 
-                                data = symbol.data, 
-                                padding = symbol.padding,
-                                padding_data = symbol.padding_data,
-                                section = symbol.section,
-                                source = symbol.source)
+                                symbol.identifier,
+                                symbol.addr,
+                                symbol.size,
+                                data=symbol.data,
+                                padding=symbol.padding,
+                                padding_data=symbol.padding_data,
+                                section=symbol.section,
+                                source=symbol.source)
                             section.replace_symbol(symbol, new_symbol)
                             g.unregister_symbol(symbol)
                             g.register_symbol(symbol)
 
                             symbol_map[symbol.addr] = new_symbol
                             ait.remove_overlap(symbol.start, symbol.end)
-                            ait.add(Interval(new_symbol.start, new_symbol.end, new_symbol))
+                            ait.add(Interval(new_symbol.start,
+                                             new_symbol.end, new_symbol))
                             require_resolve.append(new_symbol)
 
             for symbol in require_resolve:
-                symbol.resolve_references(ait) 
+                symbol.resolve_references(ait)
 
             if module.index == 0:
                 base = module.libraries[None]
-                base.lib_path = src_path 
+                base.lib_path = src_path
                 base.asm_path = asm_path
-                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
+                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait, cpp_gen)
 
                 for lib in module.libraries.values():
                     if lib.name != None:
-                        lib.lib_path = lib_path 
+                        lib.lib_path = lib_path
                         lib.asm_path = asm_path
                         lib.mk_path = lib_path
-                        cpp_tasks += cpp.export_all({lib.name: lib}, symbol_map, ait)
+                        cpp_tasks += cpp.export_all({lib.name: lib},
+                                                    symbol_map, ait, cpp_gen)
             else:
                 rel_name = g.RELS[module.index].path.name.replace(".rel", "")
                 for lib in module.libraries.values():
                     if lib.name != None:
                         lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
-                        lib.asm_path = asm_path.joinpath(f"rel/{rel_name}/libs/")
-                        cpp_tasks += cpp.export_all({lib.name: lib}, symbol_map, ait)
+                        lib.asm_path = asm_path.joinpath(
+                            f"rel/{rel_name}/libs/")
+                        cpp_tasks += cpp.export_all({lib.name: lib},
+                                                    symbol_map, ait, cpp_gen)
 
                 base = module.libraries[None]
                 base.name = rel_name
-                base.lib_path = rel_path 
+                base.lib_path = rel_path
                 base.asm_path = asm_path.joinpath("rel/")
-                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
+                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait, cpp_gen)
 
-        for module in modules:
-            if module.index == 0:
-                for name, lib in module.libraries.items():
-                    if name != None:
-                        await makefile.create_library(lib)
-        
-        await makefile.create_obj_files(modules[0].libraries[None])
+        if mk_gen:
+            for module in modules:
+                if module.index == 0:
+                    for name, lib in module.libraries.items():
+                        if name != None:
+                            await makefile.create_library(lib)
+
+            await makefile.create_obj_files(modules[0].libraries[None])
 
         with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
             task = progress.add_task("")
-            advance = [0,0]
+            advance = [0, 0]
+
             async def temp(advance, callback):
                 advance[1] += 1
                 result = await callback
@@ -366,33 +382,98 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
                         if advance[0] > 0 or advance[1] > 0:
                             total += advance[0]
                             started += advance[1]
-                            progress.update(task, description=f"{description} ({started},{total}/{progress._tasks[task].total})", advance=advance[0])
+                            progress.update(
+                                task, description=f"{description} ({started},{total}/{progress._tasks[task].total})", advance=advance[0])
                             advance[0] = 0
                             advance[1] = 0
 
-            g.CONSOLE.print(f"{len(cpp_tasks)} tasks for generating C++ code")
+            g.CONSOLE.print(
+                f"{len(cpp_tasks)} tasks for generating C++ code")
             cpp_async_tasks = [temp(advance, x) for x in cpp_tasks]
             progress.update(task, total=len(cpp_async_tasks))
-      
-            pb_task = asyncio.create_task(progress_bar(progress, "generating C++", advance))
+
+            pb_task = asyncio.create_task(progress_bar(
+                progress, "generating C++", advance))
             asm_tasks = await asyncio.gather(*cpp_async_tasks)
             asm_tasks = sum(asm_tasks, [])
             #asm_tasks = []
-            #for ts in cpp_async_tasks:
+            # for ts in cpp_async_tasks:
             #    asm_tasks += await ts
             pb_task.cancel()
 
             if asm_gen:
-                advance = [0,0]
+                advance = [0, 0]
 
-                g.CONSOLE.print(f"{len(asm_tasks)} tasks for generating ASM code")
+                g.CONSOLE.print(
+                    f"{len(asm_tasks)} tasks for generating ASM code")
                 asm_async_tasks = [temp(advance, x) for x in asm_tasks]
                 progress.update(task, total=len(asm_async_tasks))
-                pb_task = asyncio.create_task(progress_bar(progress, "generating ASM", advance))
+                pb_task = asyncio.create_task(progress_bar(
+                    progress, "generating ASM", advance))
                 await asyncio.gather(*asm_async_tasks)
-                #for ts in asm_async_tasks:
+                # for ts in asm_async_tasks:
                 #    await ts
                 pb_task.cancel()
+
+        if sym_gen:
+            def escape_text(name):
+                if not name:
+                    return "None"
+
+                return "\"" + name.replace('"', '\\"') + "\""
+
+            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+                for module in modules:
+                    total = 0
+                    for lib in module.libraries.values():
+                        for tu in lib.translation_units:
+                            for sec in tu.sections:
+                                total += len(sec.symbols)
+
+                    task = progress.add_task(
+                        f"module {module.index}", total=total+1)
+
+                    symbols = []
+                    reference_count = defaultdict(int)
+                    reference_count[g.ENTRY_POINT] += 1 # add reference to entrypoint '__start'
+                    for lib in module.libraries.values():
+                        for tu in lib.translation_units:
+                            for sec in tu.sections:
+                                for symbol in sec.symbols:
+                                    refs = symbol.internal_references
+                                    if isinstance(symbol, Function):
+                                        refs = refs - symbol.sda_hack_references
+                                    for ref in refs:
+                                        if ref == symbol.addr:
+                                            continue
+                                        reference_count[ref] += 1
+                                    symbols.append(symbol)
+                                progress.update(task, advance=len(sec.symbols))
+
+                    path = Path(f"symbols/module_{module.index}.py")
+                    await util.create_dirs_for_file(path)
+                    async with AsyncBuilder(path) as builder:
+                        await builder.write(f"#")
+                        await builder.write(f"# Generate By: dol2asm")
+                        await builder.write(f"# Module: {module.index}")
+                        await builder.write(f"#")
+                        await builder.write(f"")
+                        await builder.write(f"SYMBOLS = {{")
+                        symbols.sort(key=lambda x: (x.addr, x.size))
+                        for symbol in symbols:
+                            ref_count = reference_count[symbol.addr]
+                            await builder.write(f"\t'{symbol.identifier.label}': {{"
+                                                f"'library': {escape_text(symbol.section.translation_unit.library.name)}, "
+                                                f"'translation_unit': {escape_text(symbol.section.translation_unit.name)}, "
+                                                f"'section': {escape_text(symbol.section.name)}, "
+                                                f"'addr': 0x{symbol.addr:08X}, "
+                                                f"'size': 0x{symbol.size:04X}, "
+                                                f"'padding': 0x{symbol.padding:02X}, "
+                                                f"'name': {escape_text(symbol.identifier.name)}, " 
+                                                f"'reference_count': {ref_count}, "
+                                                f"'type': {escape_text(type(symbol).__name__)}}},")
+                        await builder.write(f"}}")
+                    progress.update(task, advance=1)
 
         g.CONSOLE.print("complete")
 
@@ -403,6 +484,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, asm_gen):
         sys.exit(1)
     except KeyboardInterrupt:
         sys.exit(1)
+
 
 @dol2zel.command(name="full-build", help="Split 'baserom.dol' into C++ files.")
 @click.confirmation_option('--force-continue', prompt="By running 'full-build' all previous generated files, include C++ files, will be removed.\nDo you want to continue?")
@@ -433,19 +515,22 @@ def full_build(asm_path, lib_path, src_path, rel_path):
             g.LOG.debug(f"create new path: '{rel_path}'")
 
         # Get symbols from the frameworkF.map
-        g.CONSOLE.print(f" 1 Reading symbols information from '{g.FRAMEWORKF_PATH}'")
+        g.CONSOLE.print(
+            f" 1 Reading symbols information from '{g.FRAMEWORKF_PATH}'")
         sections, framework_addrs = framework.execute(g.FRAMEWORKF_PATH)
 
         for key, section in sections.items():
-            g.LOG.debug("%-14s: found %i symbols" % (key, len(section.symbols)))
-               
+            g.LOG.debug("%-14s: found %i symbols" %
+                        (key, len(section.symbols)))
 
         # Get symbols and functions from code. This will find addresses accessed that are not in the frameworkF.map file.
-        g.CONSOLE.print(f" 2 Search for symbols and functions by analyzing code")
+        g.CONSOLE.print(
+            f" 2 Search for symbols and functions by analyzing code")
         labels, functions = analyze.execute()
-        
-        # Combine results from step 1 and step 2, with information about known (predefined-symbols). 
+
+        # Combine results from step 1 and step 2, with information about known (predefined-symbols).
         g.CONSOLE.print(f" 3 Merge symbols from 1 and 2")
+
         def add_symbol_from_addr(addr):
             in_sections = [x for x in SECTIONS.values() if x.hasAddr(addr)]
             if len(in_sections) > 1:
@@ -471,7 +556,7 @@ def full_build(asm_path, lib_path, src_path, rel_path):
         for addr in laf:
             add_symbol_from_addr(addr)
 
-        # From step 2 we add symbol without size. This step will calculate the size of 
+        # From step 2 we add symbol without size. This step will calculate the size of
         # symbols and generate a new list of symbols with more information then framework.Symbol has.
         g.CONSOLE.print(f" 4 Calculate symbols sizes")
         with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
@@ -482,8 +567,9 @@ def full_build(asm_path, lib_path, src_path, rel_path):
 
             for k, section in g.SECTIONS.items():
                 if k in sections:
-                    section.symbols = symbol_sizes.execute(progress, tasks[k], section, sections[k].symbols)
-        
+                    section.symbols = symbol_sizes.execute(
+                        progress, tasks[k], section, sections[k].symbols)
+
         # Build tree with library/object-file/section/symbol
         g.CONSOLE.print(f" 5 Build tree")
         tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
@@ -510,7 +596,8 @@ def full_build(asm_path, lib_path, src_path, rel_path):
             order_sections = tree_order[k]
             order = sort_objects.sort(v.keys(), order_sections)
 
-            g.LOG.debug("Added library '%s' with %i object files" % (k, len(order)))
+            g.LOG.debug("Added library '%s' with %i object files" %
+                        (k, len(order)))
 
             for tuk in order:
                 translation_unit = TranslationUnit(tuk)
@@ -521,7 +608,8 @@ def full_build(asm_path, lib_path, src_path, rel_path):
                     translation_unit.addSectionPart(section)
 
                     groups = generate_symbols.groups_from_symbols(sv)
-                    groups_list.append((library, translation_unit, section, groups))
+                    groups_list.append(
+                        (library, translation_unit, section, groups))
 
         g.LOG.debug("Found %i groups" % len(groups_list))
 
@@ -536,7 +624,8 @@ def full_build(asm_path, lib_path, src_path, rel_path):
                     assert len(group) > 0
                     first = group[0]
                     if first.isFunction:
-                        function = generate_functions.from_group(section, group)
+                        function = generate_functions.from_group(
+                            section, group)
                         section.addSymbol(function)
                         function_map[function.addr] = function
                     else:
@@ -549,7 +638,7 @@ def full_build(asm_path, lib_path, src_path, rel_path):
             if not section.binaryExport:
                 continue
             for symbol in section.symbols:
-                group = [ symbol ]
+                group = [symbol]
                 for symbol_data in generate_symbols.from_group(section, group):
                     symbol_data.section = section
                     symbol.symbol_data = symbol_data
@@ -562,38 +651,43 @@ def full_build(asm_path, lib_path, src_path, rel_path):
         g.CONSOLE.print(f" 8 Merge symbols and find function alignment")
         symbol_map = {**data_map, **function_map}
         ait = IntervalTree(
-            [Interval(x.addr, x.addr + x.size, x) for x in symbol_map.values() if x.size > 0]
+            [Interval(x.addr, x.addr + x.size, x)
+             for x in symbol_map.values() if x.size > 0]
         )
 
-        merge_symbols.execute(libraries, ait, symbol_map, function_map, data_map)
+        merge_symbols.execute(libraries, ait, symbol_map,
+                              function_map, data_map)
 
         #
         g.CONSOLE.print(f" 9 Naming symbols")
         symbol_naming.execute(libraries)
 
         # Generate symbol information. This can later be used by other tools.
-        g.CONSOLE.print(f"10 Generate symbol information file '%s'" % (g.SYMBOL_INFO_PATH))
+        g.CONSOLE.print(f"10 Generate symbol information file '%s'" %
+                        (g.SYMBOL_INFO_PATH))
         util.create_dirs_for_file(g.SYMBOL_INFO_PATH)
         with g.SYMBOL_INFO_PATH.open("w") as file:
             file.write("# \n")
             file.write("# symbol information generated by dol2zel\n")
             file.write("# \n")
             file.write("\n")
-            file.write("# (generated_name, original_name, addr, size, padding, library, object, section, reference_count)\n")
+            file.write(
+                "# (generated_name, original_name, addr, size, padding, library, object, section, reference_count)\n")
             file.write("SYMBOL_INFO_FUNCTIONS = [\n")
 
             symbols = []
             for lib in libraries:
                 for tu in lib.translation_units:
                     for sec in tu.section_parts:
-                        symbols.extend(sec.symbols)      
+                        symbols.extend(sec.symbols)
 
             reference_count = defaultdict(int)
             with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-                task = progress.add_task("counting symbol references...", total=len(symbols))
+                task = progress.add_task(
+                    "counting symbol references...", total=len(symbols))
 
                 for symbol in symbols:
-                    if g.SPEED_MODE: 
+                    if g.SPEED_MODE:
                         break
 
                     for ref in symbol.getInternalReferences():
@@ -610,9 +704,9 @@ def full_build(asm_path, lib_path, src_path, rel_path):
                 tu = section.tu if hasattr(section, 'tu') else None
                 lib = tu.library if hasattr(tu, 'library') else None
                 file.write("\t\"%s\": (\"%s\", \"%s\", 0x%08X, 0x%06X, 0x%02X, \"%s\", \"%s\", \"%s\", %i),\n" % (
-                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding, 
-                    lib.name if lib else "", 
-                    tu.name if tu else "", 
+                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding,
+                    lib.name if lib else "",
+                    tu.name if tu else "",
                     section.name, reference_count[addr]))
             file.write("]\n")
             file.write("\n")
@@ -626,9 +720,9 @@ def full_build(asm_path, lib_path, src_path, rel_path):
                 tu = section.tu if hasattr(section, 'tu') else None
                 lib = tu.library if hasattr(tu, 'library') else None
                 file.write("\t\"%s\": (\"%s\", \"%s\", 0x%08X, 0x%06X, 0x%02X, \"%s\", \"%s\", \"%s\", %i),\n" % (
-                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding, 
-                    lib.name if lib else "", 
-                    tu.name if tu else "", 
+                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding,
+                    lib.name if lib else "",
+                    tu.name if tu else "",
                     section.name, reference_count[addr]))
             file.write("]\n")
 
@@ -638,7 +732,7 @@ def full_build(asm_path, lib_path, src_path, rel_path):
             if not library.name:
                 continue
             makefile.export_library(library)
-        
+
         #
         g.CONSOLE.print(f"12 Generate ASM")
         for section in SECTIONS.values():
@@ -652,10 +746,11 @@ def full_build(asm_path, lib_path, src_path, rel_path):
 
         asm_tasks = []
         with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
-            task = progress.add_task("building translation units...", total=len(cpp_tasks))
+            task = progress.add_task(
+                "building translation units...", total=len(cpp_tasks))
 
             for tu, callback in cpp_tasks:
-                progress.update(task, description="%-30s"%tu.getCppPath())
+                progress.update(task, description="%-30s" % tu.getCppPath())
                 asm_tasks.extend(callback())
                 progress.update(task, advance=1)
         #
@@ -678,7 +773,9 @@ def full_build(asm_path, lib_path, src_path, rel_path):
 #
 
 def profile():
-    import cProfile, pstats, io
+    import cProfile
+    import pstats
+    import io
     from pstats import SortKey
     pr = cProfile.Profile()
     pr.enable()
@@ -690,6 +787,7 @@ def profile():
     print("")
     print("")
     ps.sort_stats(SortKey.TIME).print_stats(20)
+
 
 try:
     asyncio.run(dol2zel())
@@ -714,6 +812,7 @@ EXPORT_CPP = True
 UPDATE = False
 PRINT_FORCEACTIVE = False
 BASE_PATH = ""
+
 
 def dol2asm():
     with open("baserom.dol", 'rb') as dolfile:
@@ -752,11 +851,11 @@ def dol2asm():
                     break
                 if not last_p or (p - last_p) > 0.001:
                     sys.stdout.write("\r    %s %08X-%08X %3.2f%%" %
-                                    (section.name.ljust(20, ' '), start, stop, p * 100))
+                                     (section.name.ljust(20, ' '), start, stop, p * 100))
                     sys.stdout.flush()
                     last_p = p
             sys.stdout.write("\r    %s %08X-%08X %3.2f%%" %
-                                    (section.name.ljust(20, ' '), start, stop, p * 100))
+                             (section.name.ljust(20, ' '), start, stop, p * 100))
             sys.stdout.flush()
             print()
 
@@ -786,7 +885,8 @@ def dol2asm():
         print("    % 8i from frameworkF.map" % len(set_mapped))
 
     # Add symbols from asssembly search
-    set_labels_and_functions = list(set_labels.union(set_functions) - set_mapped)
+    set_labels_and_functions = list(
+        set_labels.union(set_functions) - set_mapped)
     set_labels_and_functions.sort()
     for addr in set_labels_and_functions:
         in_sections = [x for x in SECTIONS.values() if x.hasAddr(addr)]
@@ -852,7 +952,7 @@ def dol2asm():
         for symbol in final_symbols:
             if not symbol.obj:
                 print("error: symbol doesn't belong to any translation unit 0x%08X (%s)" %
-                    (symbol.addr, symbol.label))
+                      (symbol.addr, symbol.label))
                 sys.exit(1)
 
         # Sort symbols for sizing step (not needed???)
@@ -886,10 +986,10 @@ def dol2asm():
                     curr.padding = section.end - curr_addr
                     assert curr.padding >= 0
 
-        # Some section have their object files aligned to 8 bytes. This hacks will move symbols, 
+        # Some section have their object files aligned to 8 bytes. This hacks will move symbols,
         # which are not aligned, to the next object file. Not sure if the frameworkF.map have them listed
         # in the wrong source file or if a different alignment setting was used.
-        if section.name == ".bss" or section.name == ".sdata"  or section.name == ".sbss":
+        if section.name == ".bss" or section.name == ".sdata" or section.name == ".sbss":
             for i, curr in enumerate(final_symbols):
                 begin_aligned = ((curr.addr) % 8) == 0
                 end_aligned = ((curr.addr + curr.size + curr.padding) % 8) == 0
@@ -905,7 +1005,7 @@ def dol2asm():
                         next = n
                         break
                     j += 1
-            
+
                 if not next:
                     continue
                 if curr.obj == next.obj and curr.lib == next.lib:
@@ -916,7 +1016,7 @@ def dol2asm():
                     sym.lib = next.lib
 
         if len(final_symbols) > 1:
-            last_symbol  = final_symbols[-1]
+            last_symbol = final_symbols[-1]
             end = last_symbol.addr + last_symbol.size
             endp = end + last_symbol.padding
             assert endp == section.end
@@ -945,13 +1045,13 @@ def dol2asm():
             result = data[:-1].decode("utf-8")
             return result, "utf-8"
         except:
-            pass 
+            pass
 
         try:
             result = data[:-1].decode("shift_jisx0213")
             return result, "shift-jis"
         except:
-            pass 
+            pass
 
         return None, None
 
@@ -973,18 +1073,18 @@ def dol2asm():
                 s32_data = struct.unpack('>i', data)[0]
                 float_data = util.bytes2float32(data)
 
-                # MWCC will put zero-initialized variables in .data/.sdata/.sdata2 if they were generated other code. e.g. using a float literal in code. But if we declare a variable with a 0.0 float the compiler will move it to .bss/.sbss/.sbss2. This is the reason we cannot convert variables from u8 arrays to better types.  
+                # MWCC will put zero-initialized variables in .data/.sdata/.sdata2 if they were generated other code. e.g. using a float literal in code. But if we declare a variable with a 0.0 float the compiler will move it to .bss/.sbss/.sbss2. This is the reason we cannot convert variables from u8 arrays to better types.
                 if u32_data != 0:
                     if (s32_data >= -4096 and s32_data <= 4096) and False:
-                        return [S32Data(name, s32_data, symbol.addr, offset, data, padding_data=padding_data)] 
+                        return [S32Data(name, s32_data, symbol.addr, offset, data, padding_data=padding_data)]
                     elif (u32_data < 4096) and False:
-                        return [U32Data(name, u32_data, symbol.addr, offset, data, padding_data=padding_data)] 
+                        return [U32Data(name, u32_data, symbol.addr, offset, data, padding_data=padding_data)]
                     elif float_data in util.float32_exact:
                         comment = "%sf %s" % (float_data, hex(u32_data))
-                        return [Fraction32Data(name, util.float32_exact[float_data][0], util.float32_exact[float_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
+                        return [Fraction32Data(name, util.float32_exact[float_data][0], util.float32_exact[float_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
                     elif util.is_nice_float32(float_data):
                         comment = hex(u32_data)
-                        return [Float32Data(name, float_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
+                        return [Float32Data(name, float_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
 
             elif len(data) == 8 and len(padding_data) < 4:
                 u64_data = struct.unpack('>Q', data)[0]
@@ -993,22 +1093,24 @@ def dol2asm():
 
                 if u64_data != 0:
                     if u64_data == 0x43300000_00000000:
-                        comment = "%s | compiler-generated value used in cast: (float)u32" % hex(u64_data)
-                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
+                        comment = "%s | compiler-generated value used in cast: (float)u32" % hex(
+                            u64_data)
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
                     elif u64_data == 0x43300000_80000000:
-                        comment = "%s | compiler-generated value used in cast: (float)s32" % hex(u64_data)
-                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
+                        comment = "%s | compiler-generated value used in cast: (float)s32" % hex(
+                            u64_data)
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
 
                     elif (s64_data >= -4096 and s64_data <= 4096) and False:
                         return [S64Data(name, s64_data, symbol.addr, offset, data, padding_data=padding_data)]
                     elif (u64_data < 4096) and False:
-                        return [U64Data(name, u64_data, symbol.addr, offset, data, padding_data=padding_data)] 
+                        return [U64Data(name, u64_data, symbol.addr, offset, data, padding_data=padding_data)]
                     elif double_data in util.float64_exact:
                         comment = "%s %s" % (double_data, hex(u64_data))
-                        return [Fraction64Data(name, util.float64_exact[double_data][0], util.float64_exact[double_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)]     
+                        return [Fraction64Data(name, util.float64_exact[double_data][0], util.float64_exact[double_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
                     elif util.is_nice_float64(double_data):
                         comment = hex(u64_data)
-                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)]
 
         # strings will always be in rodata
         if section.name == ".rodata":
@@ -1017,7 +1119,8 @@ def dol2asm():
                 split_data = list(util.magicsplit(data, 0))
                 x_offset = 0
                 for x in split_data[:-1]:
-                    strings.append(string_from_data(symbol.addr + x_offset, offset + x_offset, bytes(x + [0])))
+                    strings.append(string_from_data(
+                        symbol.addr + x_offset, offset + x_offset, bytes(x + [0])))
                     x_offset += len(x) + 1
                 return [StringBaseData(name, strings, symbol.addr, offset, data, padding_data=padding_data)]
 
@@ -1025,10 +1128,11 @@ def dol2asm():
             if symbol.name == "__init_cpp_exceptions_reference":
                 assert len(data) == 4
                 __init_cpp_exceptions = struct.unpack(">I", data)[0]
-    
+
                 assert len(padding_data) % 4 == 0
                 constructor_count = len(padding_data) // 4
-                constructors = list(struct.unpack(">" + "I" * constructor_count, padding_data))
+                constructors = list(struct.unpack(
+                    ">" + "I" * constructor_count, padding_data))
                 print(constructors)
 
                 count = 0
@@ -1038,10 +1142,12 @@ def dol2asm():
                     count += 1
 
                 return [
-                    SymbolReferenceArrayData(name, [__init_cpp_exceptions], symbol.addr, offset, data),
-                    SymbolReferenceArrayData(Name("_ctors", symbol.addr + 4, "_ctors"), constructors[0:count], symbol.addr + 4, offset + 4, padding_data[0:count*4])
+                    SymbolReferenceArrayData(
+                        name, [__init_cpp_exceptions], symbol.addr, offset, data),
+                    SymbolReferenceArrayData(Name("_ctors", symbol.addr + 4, "_ctors"),
+                                             constructors[0:count], symbol.addr + 4, offset + 4, padding_data[0:count*4])
                 ]
-            
+
         if section.name == ".dtors":
             if symbol.name == "__destroy_global_chain_reference":
                 assert len(data) == 4
@@ -1070,12 +1176,13 @@ def dol2asm():
                 if first.size:
                     data = BASEROM[offset:offset+first.size]
                     if first.padding:
-                        padding_data = BASEROM[offset+first.size:offset+first.size+first.padding]
+                        padding_data = BASEROM[offset +
+                                               first.size:offset+first.size+first.padding]
                     assert len(data) == first.size
                 return symbol_from_data(section, name, offset, data, padding_data, first)
             except:
                 print("error: %08X %04X (%08X-%08X, %08X-%08X) is outside of the baserom.dol" %
-                        (first.addr, first.size, offset, offset + first.size, 0, len(BASEROM)))
+                      (first.addr, first.size, offset, offset + first.size, 0, len(BASEROM)))
                 traceback.print_exc()
                 sys.exit(1)
                 return []
@@ -1195,7 +1302,7 @@ def dol2asm():
         if not is_blr(data[4:]):
             return False, None, None, None
 
-        for r in [2,13]:
+        for r in [2, 13]:
             if is_lwz_r3_XXXX_r(data, r):
                 return True, get_short_value(data), "u32", r
             elif is_lha_r3_XXXX_r(data, r):
@@ -1221,15 +1328,18 @@ def dol2asm():
                 value = get_short_value(data)
                 return ReturnIntegerFunction(value, group, section)
 
-            lfp_result, lfp_value, lfp_type = is_load_first_param_function(data)
+            lfp_result, lfp_value, lfp_type = is_load_first_param_function(
+                data)
             if lfp_result:
                 return FirstParamFunction("load", lfp_value, lfp_type, group, section)
 
-            rfp_result, rfp_value, rfp_type = is_reference_first_param_function(data)
+            rfp_result, rfp_value, rfp_type = is_reference_first_param_function(
+                data)
             if rfp_result:
                 return FirstParamFunction("reference", rfp_value, rfp_type, group, section)
 
-            lg_result, lg_value, lg_type, lg_section = is_load_global_function(data)
+            lg_result, lg_value, lg_type, lg_section = is_load_global_function(
+                data)
             if lg_result:
                 return GlobalFunction("load", lg_value, lg_type, lg_section, group, section)
 
@@ -1243,7 +1353,7 @@ def dol2asm():
     reference_set = set()
     function_map = dict()
     data_map = dict()
-    
+
     libraries = list()
     for k, v in tree.items():
         library = Library(k, BASE_PATH, reference_set)
@@ -1274,7 +1384,7 @@ def dol2asm():
         orders = []
         order_sections = tree_order[k]
         for os, osv in order_sections.items():
-            orders.append([ x for x in unique_keeporder(osv)])
+            orders.append([x for x in unique_keeporder(osv)])
 
         edges = []
         graph = dict()
@@ -1375,7 +1485,7 @@ def dol2asm():
     for section in SECTIONS.values():
         if section.binaryExport:
             for symbol in section.symbols:
-                group = [ symbol ]
+                group = [symbol]
                 for symbol_data in symbol_from_group(section, group):
                     symbol_data.section = section
                     symbol.symbol_data = symbol_data
@@ -1397,17 +1507,21 @@ def dol2asm():
                 continue
             if len(symbol_data.data) % 4 == 0 and len(symbol_data.data) < 4 * 64:
                 count = len(symbol_data.data) // 4
-                values = list(struct.unpack(">" + "I" * count, symbol_data.data))
-                is_all_symbols = [address_interval_tree.overlaps(x) for x in values]
+                values = list(struct.unpack(
+                    ">" + "I" * count, symbol_data.data))
+                is_all_symbols = [
+                    address_interval_tree.overlaps(x) for x in values]
                 if any(is_all_symbols):
-                    new_symbol = SymbolReferenceArrayData(symbol_data.name, values, symbol_data.addr, symbol_data.offset, symbol_data.data, padding_data=symbol_data.padding_data)
+                    new_symbol = SymbolReferenceArrayData(
+                        symbol_data.name, values, symbol_data.addr, symbol_data.offset, symbol_data.data, padding_data=symbol_data.padding_data)
                     section.replaceSymbol(symbol_data, new_symbol)
                     new_symbol.resolve(address_interval_tree)
                     data_map[addr] = new_symbol
                     symbol_map[addr] = new_symbol
-                    address_interval_tree.remove_overlap(symbol_data.addr, symbol_data.addr+symbol_data.size)
-                    address_interval_tree.add(Interval(new_symbol.addr, new_symbol.addr+new_symbol.size, new_symbol))
-
+                    address_interval_tree.remove_overlap(
+                        symbol_data.addr, symbol_data.addr+symbol_data.size)
+                    address_interval_tree.add(
+                        Interval(new_symbol.addr, new_symbol.addr+new_symbol.size, new_symbol))
 
     # alignment
     function_list = list(function_map.values())
@@ -1424,7 +1538,7 @@ def dol2asm():
         if curr_end == next_start:
             continue
 
-        for x in [32,16,8]:
+        for x in [32, 16, 8]:
             if (curr_end + x - 1) & ~(x - 1) == next_start:
                 next.alignment = x
                 curr.padding = 0
@@ -1456,10 +1570,10 @@ def dol2asm():
         if initialized_flag.name.original_name != None:
             return group
 
-        print(symbol.name, initialized_flag.name, initialized_flag.name.original_name)
+        print(symbol.name, initialized_flag.name,
+              initialized_flag.name.original_name)
 
-        return group#[StaticLocalData(symbol, initialized_flag)]
-
+        return group  # [StaticLocalData(symbol, initialized_flag)]
 
     for lib in libraries:
         for tu in lib.translation_units:
@@ -1471,7 +1585,8 @@ def dol2asm():
                 for sym in sec.symbols:
                     if static_local_group:
                         static_local_group.append(sym)
-                        symbols.extend(static_local_from_group(static_local_group))
+                        symbols.extend(
+                            static_local_from_group(static_local_group))
                         static_local_group = []
                         continue
 
@@ -1492,7 +1607,7 @@ def dol2asm():
                         if group:
                             symbols.extend(merge_symbol_from_group(group))
                         group = [sym]
-                
+
                 if static_local_group:
                     assert len(static_local_group) == 1
                     symbols.extend(static_local_group)
@@ -1500,7 +1615,6 @@ def dol2asm():
                     symbols.extend(merge_symbol_from_group(group))
 
                 sec.symbols = symbols
-                    
 
     # naming
 
@@ -1513,7 +1627,7 @@ def dol2asm():
                     return False
             elif isinstance(part, demangle.ArrayParam):
                 if not is_demangled_safe([part.base_type], pointer_types):
-                    return False    
+                    return False
             else:
                 str_type = part.to_str()
                 if ":" in str_type or "<" in str_type:
@@ -1539,7 +1653,7 @@ def dol2asm():
             if symbol.name.demangled:
                 parts = symbol.name.demangled.demangled
                 demangled = symbol.name.demangled.to_str()
-                
+
                 pointer_types = []
                 valid = is_demangled_safe(parts, pointer_types)
 
@@ -1563,7 +1677,7 @@ def dol2asm():
                             symbol.return_type = ret_type
                         symbol.name.pointer_types = pointer_types
                         symbol.name.is_function = True
-                    
+
         if isinstance(symbol, StaticLocalData):
             nameFix(symbol.value)
             nameFix(symbol.init_flag)
@@ -1598,7 +1712,7 @@ def dol2asm():
                 symbol.name.label = obj_prefix + "__" + symbol.name.label
                 symbol.name.reference = obj_prefix + "__" + symbol.name.reference
 
-        # SectionSymbol doesn't have updateName 
+        # SectionSymbol doesn't have updateName
         if hasattr(symbol, 'updateName'):
             symbol.updateName()
 
@@ -1608,11 +1722,10 @@ def dol2asm():
                 for symbol in sec.symbols:
                     nameCollision(tu.name[:-2], symbol)
 
-
     for section in SECTIONS.values():
         if section.binaryExport:
             for symbol in section.symbols:
-                nameCollision(section.name.replace(".","_"), symbol)
+                nameCollision(section.name.replace(".", "_"), symbol)
 
     # Print everything
     if False:
@@ -1623,15 +1736,16 @@ def dol2asm():
                 for sec in tu.section_parts:
                     print("\t\t" + sec.name)
                     for sym in sec.symbols:
-                        print("\t\t\t%08X %04X %s %s %s" % (sym.addr, sym.size, sym.name, sym.label, sym.reference))
+                        print("\t\t\t%08X %04X %s %s %s" % (
+                            sym.addr, sym.size, sym.name, sym.label, sym.reference))
                         if isinstance(sym, Function):
                             if len(sym.blocks) > 1:
                                 for block in sym.blocks:
                                     print("\t\t\t\t%08X %04X %s" %
-                                        (block.addr, block.size, block.label))
+                                          (block.addr, block.size, block.label))
                         if sym.padding > 0:
                             print("\t\t\t%08X %04X *padding*" %
-                                (sym.addr+sym.size, sym.padding))
+                                  (sym.addr+sym.size, sym.padding))
 
     # Print undeifned active function
     if False:
@@ -1650,14 +1764,15 @@ def dol2asm():
             func_list.sort()
             for addr in func_list:
                 sym = function_map[addr]
-                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_FUNC, %i),\n" % (sym.name.label, sym.addr, sec.name, reference_count[addr]))
+                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_FUNC, %i),\n" % (
+                    sym.name.label, sym.addr, sec.name, reference_count[addr]))
 
             data_list = list(data_map.keys())
             data_list.sort()
             for addr in data_list:
                 sym = data_map[addr]
-                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_NOTYPE, %i),\n" % (sym.name.label, sym.addr, sec.name, reference_count[addr]))         
-
+                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_NOTYPE, %i),\n" % (
+                    sym.name.label, sym.addr, sec.name, reference_count[addr]))
 
     # Print undeifned active stringBase
     if False:
@@ -1666,7 +1781,8 @@ def dol2asm():
                 for sec in tu.section_parts:
                     for sym in sec.symbols:
                         if isinstance(sym, StringBaseData):
-                            print("\t\"%s\": (0x%08X, \"%s\", elf.STT_NOTYPE)," % (sym.name.label, sym.addr, sec.name))
+                            print("\t\"%s\": (0x%08X, \"%s\", elf.STT_NOTYPE)," % (
+                                sym.name.label, sym.addr, sec.name))
 
     # Print FORCEACTIVE
     if PRINT_FORCEACTIVE:
@@ -1680,7 +1796,7 @@ def dol2asm():
                 continue
             force_active.append(v)
 
-        force_active.sort(key=lambda x:x.addr)
+        force_active.sort(key=lambda x: x.addr)
         for fa in force_active:
             print("%s" % fa.name.label)
             if fa.name.label != fa.name.reference:
@@ -1697,7 +1813,8 @@ def dol2asm():
 
     # Export as c++
     if EXPORT_CPP:
-        cpp.export_all(OVERRIDE_FUNCTION, libraries, symbol_map, address_interval_tree)
+        cpp.export_all(OVERRIDE_FUNCTION, libraries,
+                       symbol_map, address_interval_tree)
 
     # Generate object file list
     if GENERATE_MAKEFILES:
@@ -1822,11 +1939,12 @@ def dol2asm():
                         path = node.lib[:-2] + "/" + node.name
                     else:
                         path = node.name
-                    builder.write("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+                    builder.write("\t$(BUILD_DIR)/asm/%s%s \\" %
+                                  (BASE_PATH, path))
                 builder.write("")
 
                 builder.write("$(BUILD_DIR)/asm/lib%s.a: $(%s)" %
-                            (lib[:-2], files))
+                              (lib[:-2], files))
                 builder.write("\t$(LD) $(LIB_LDFLAGS) -o $@ $(%s)" % files)
                 builder.write("")
                 builder.close()
@@ -1839,7 +1957,7 @@ def dol2asm():
             for section in SECTIONS.values():
                 if section.binaryExport:
                     builder.write("\t$(BUILD_DIR)/asm/%s%s.o \\" %
-                                (BASE_PATH, section.name[1:]))
+                                  (BASE_PATH, section.name[1:]))
 
             for lib in lib_order:
                 nodes = lib_groups[lib]
@@ -1850,8 +1968,10 @@ def dol2asm():
                     else:
                         path = node.name
                     if True:
-                        builder.write("\t$(BUILD_DIR)/cpp/%s%s \\" % (BASE_PATH, path))
-                    builder.write("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+                        builder.write("\t$(BUILD_DIR)/cpp/%s%s \\" %
+                                      (BASE_PATH, path))
+                    builder.write("\t$(BUILD_DIR)/asm/%s%s \\" %
+                                  (BASE_PATH, path))
                 builder.write("\\")
             builder.write("")
             builder.close()
@@ -1877,7 +1997,7 @@ def dol2asm():
             for section in SECTIONS.values():
                 if section.binaryExport:
                     print("\t$(BUILD_DIR)/asm/%s%s.o \\" %
-                        (BASE_PATH, section.name[1:]))
+                          (BASE_PATH, section.name[1:]))
 
             for lib in lib_order:
                 nodes = lib_groups[lib]
@@ -1899,7 +2019,7 @@ def dol2asm():
                 builder.write("%s = 0x%08X;" % (symbol.label, symbol.addr))
                 if symbol.reference:
                     builder.write("%s = 0x%08X;" %
-                                (symbol.reference, symbol.addr))
+                                  (symbol.reference, symbol.addr))
         builder.close()
 
     # export lcf forceactive symbols
@@ -1912,8 +2032,11 @@ def dol2asm():
                     builder.write(symbol.reference)
         builder.close()
 
+
 def profile():
-    import cProfile, pstats, io
+    import cProfile
+    import pstats
+    import io
     from pstats import SortKey
     pr = cProfile.Profile()
     pr.enable()
@@ -1925,5 +2048,6 @@ def profile():
     print("")
     print("")
     ps.sort_stats(SortKey.TIME).print_stats(20)
+
 
 dol2asm()

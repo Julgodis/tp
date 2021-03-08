@@ -1,0 +1,96 @@
+lbl_8025D3BC:
+/* 8025D3BC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8025D3C0 00000004  7C 08 02 A6 */	mflr r0
+/* 8025D3C4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8025D3C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 8025D3CC 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 8025D3D0 00000014  7C 7F 1B 78 */	mr r31, r3
+/* 8025D3D4 00000018  80 63 01 00 */	lwz r3, 0x100(r3)
+/* 8025D3D8 0000001C  28 03 00 00 */	cmplwi r3, 0
+/* 8025D3DC 00000020  41 82 00 5C */	beq lbl_8025D438
+/* 8025D3E0 00000024  4B DB 1D ED */	bl mDoExt_setCurrentHeap__FP7JKRHeap
+/* 8025D3E4 00000028  7C 7E 1B 78 */	mr r30, r3
+/* 8025D3E8 0000002C  80 7F 01 00 */	lwz r3, 0x100(r31)
+/* 8025D3EC 00000030  48 07 13 99 */	bl getTotalFreeSize__7JKRHeapFv
+/* 8025D3F0 00000034  80 7F 00 FC */	lwz r3, 0xfc(r31)
+/* 8025D3F4 00000038  48 00 18 69 */	bl deleteScreen__21dDlst_TimerScrnDraw_cFv
+/* 8025D3F8 0000003C  80 7F 00 FC */	lwz r3, 0xfc(r31)
+/* 8025D3FC 00000040  28 03 00 00 */	cmplwi r3, 0
+/* 8025D400 00000044  41 82 00 18 */	beq lbl_8025D418
+/* 8025D404 00000048  38 80 00 01 */	li r4, 1
+/* 8025D408 0000004C  81 83 00 00 */	lwz r12, 0(r3)
+/* 8025D40C 00000050  81 8C 00 0C */	lwz r12, 0xc(r12)
+/* 8025D410 00000054  7D 89 03 A6 */	mtctr r12
+/* 8025D414 00000058  4E 80 04 21 */	bctrl 
+lbl_8025D418:
+/* 8025D418 00000000  38 00 00 00 */	li r0, 0
+/* 8025D41C 00000004  90 1F 00 FC */	stw r0, 0xfc(r31)
+/* 8025D420 00000008  80 7F 01 00 */	lwz r3, 0x100(r31)
+/* 8025D424 0000000C  4B DC 2F BD */	bl fopMsgM_destroyExpHeap__FP10JKRExpHeap
+/* 8025D428 00000010  38 00 00 00 */	li r0, 0
+/* 8025D42C 00000014  90 1F 01 00 */	stw r0, 0x100(r31)
+/* 8025D430 00000018  7F C3 F3 78 */	mr r3, r30
+/* 8025D434 0000001C  4B DB 1D 99 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
+lbl_8025D438:
+/* 8025D438 00000000  80 1F 01 54 */	lwz r0, 0x154(r31)
+/* 8025D43C 00000004  2C 00 00 03 */	cmpwi r0, 3
+/* 8025D440 00000008  41 82 00 0C */	beq lbl_8025D44C
+/* 8025D444 0000000C  2C 00 00 04 */	cmpwi r0, 4
+/* 8025D448 00000010  40 82 00 5C */	bne lbl_8025D4A4
+lbl_8025D44C:
+/* 8025D44C 00000000  88 1F 01 6C */	lbz r0, 0x16c(r31)
+/* 8025D450 00000004  28 00 00 08 */	cmplwi r0, 8
+/* 8025D454 00000008  41 82 00 50 */	beq lbl_8025D4A4
+/* 8025D458 0000000C  28 00 00 07 */	cmplwi r0, 7
+/* 8025D45C 00000010  41 82 00 48 */	beq lbl_8025D4A4
+/* 8025D460 00000014  7F E3 FB 78 */	mr r3, r31
+/* 8025D464 00000018  48 00 05 8D */	bl getTimeMs__8dTimer_cFv
+/* 8025D468 0000001C  7C 64 1B 78 */	mr r4, r3
+/* 8025D46C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8025D470 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8025D474 00000028  3B C3 0F 38 */	addi r30, r3, 0xf38
+/* 8025D478 0000002C  7F C3 F3 78 */	mr r3, r30
+/* 8025D47C 00000030  4B DC F7 19 */	bl setTimerNowTimeMs__14dComIfG_play_cFi
+/* 8025D480 00000034  7F E3 FB 78 */	mr r3, r31
+/* 8025D484 00000038  48 00 05 D1 */	bl getLimitTimeMs__8dTimer_cFv
+/* 8025D488 0000003C  7C 64 1B 78 */	mr r4, r3
+/* 8025D48C 00000040  7F C3 F3 78 */	mr r3, r30
+/* 8025D490 00000044  4B DC F7 15 */	bl setTimerLimitTimeMs__14dComIfG_play_cFi
+/* 8025D494 00000048  7F C3 F3 78 */	mr r3, r30
+/* 8025D498 0000004C  80 9F 01 54 */	lwz r4, 0x154(r31)
+/* 8025D49C 00000050  4B DC F7 19 */	bl setTimerMode__14dComIfG_play_cFi
+/* 8025D4A0 00000054  48 00 00 34 */	b lbl_8025D4D4
+lbl_8025D4A4:
+/* 8025D4A4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8025D4A8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8025D4AC 00000008  3B C3 0F 38 */	addi r30, r3, 0xf38
+/* 8025D4B0 0000000C  7F C3 F3 78 */	mr r3, r30
+/* 8025D4B4 00000010  38 80 00 00 */	li r4, 0
+/* 8025D4B8 00000014  4B DC F6 DD */	bl setTimerNowTimeMs__14dComIfG_play_cFi
+/* 8025D4BC 00000018  7F C3 F3 78 */	mr r3, r30
+/* 8025D4C0 0000001C  38 80 00 00 */	li r4, 0
+/* 8025D4C4 00000020  4B DC F6 E1 */	bl setTimerLimitTimeMs__14dComIfG_play_cFi
+/* 8025D4C8 00000024  7F C3 F3 78 */	mr r3, r30
+/* 8025D4CC 00000028  38 80 FF FF */	li r4, -1
+/* 8025D4D0 0000002C  4B DC F6 E5 */	bl setTimerMode__14dComIfG_play_cFi
+lbl_8025D4D4:
+/* 8025D4D4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8025D4D8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8025D4DC 00000008  38 63 0F 38 */	addi r3, r3, 0xf38
+/* 8025D4E0 0000000C  38 80 00 00 */	li r4, 0
+/* 8025D4E4 00000010  4B DC F6 F1 */	bl setTimerPtr__14dComIfG_play_cFP8dTimer_c
+/* 8025D4E8 00000014  38 7F 01 08 */	addi r3, r31, 0x108
+/* 8025D4EC 00000018  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
+/* 8025D4F0 0000001C  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
+/* 8025D4F4 00000020  4B DC FB 15 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8025D4F8 00000024  38 00 00 00 */	li r0, 0
+/* 8025D4FC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8025D500 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8025D504 00000030  90 03 5C E0 */	stw r0, 0x5ce0(r3)
+/* 8025D508 00000034  38 60 00 01 */	li r3, 1
+/* 8025D50C 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 8025D510 0000003C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8025D514 00000040  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8025D518 00000044  7C 08 03 A6 */	mtlr r0
+/* 8025D51C 00000048  38 21 00 10 */	addi r1, r1, 0x10
+/* 8025D520 0000004C  4E 80 00 20 */	blr 

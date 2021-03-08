@@ -1,0 +1,3 @@
+lbl_80298FA8:
+/* 80298FA8 00000000  38 63 FF FC */	addi r3, r3, -4
+/* 80298FAC 00000004  4B FF FD 48 */	b __dt__17JASSimpleWaveBankFv

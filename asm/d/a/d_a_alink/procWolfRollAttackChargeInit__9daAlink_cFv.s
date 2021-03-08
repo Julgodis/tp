@@ -1,0 +1,25 @@
+lbl_801398A8:
+/* 801398A8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 801398AC 00000004  7C 08 02 A6 */	mflr r0
+/* 801398B0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 801398B4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 801398B8 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 801398BC 00000014  38 80 01 1A */	li r4, 0x11a
+/* 801398C0 00000018  4B F8 86 AD */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
+/* 801398C4 0000001C  7F E3 FB 78 */	mr r3, r31
+/* 801398C8 00000020  38 80 00 6E */	li r4, 0x6e
+/* 801398CC 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 801398D0 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_wlAttack_c0@ha
+/* 801398D4 0000002C  38 A5 F7 A4 */	addi r5, r5, m__22daAlinkHIO_wlAttack_c0@l
+/* 801398D8 00000030  C0 45 00 20 */	lfs f2, 0x20(r5)
+/* 801398DC 00000034  4B FE FD FD */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
+/* 801398E0 00000038  7F E3 FB 78 */	mr r3, r31
+/* 801398E4 0000003C  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010037@ha */
+/* 801398E8 00000040  38 84 00 37 */	addi r4, r4, 0x0037 /* 0x00010037@l */
+/* 801398EC 00000044  4B F8 57 CD */	bl voiceStartLevel__9daAlink_cFUl
+/* 801398F0 00000048  38 60 00 01 */	li r3, 1
+/* 801398F4 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 801398F8 00000050  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 801398FC 00000054  7C 08 03 A6 */	mtlr r0
+/* 80139900 00000058  38 21 00 10 */	addi r1, r1, 0x10
+/* 80139904 0000005C  4E 80 00 20 */	blr 

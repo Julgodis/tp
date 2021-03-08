@@ -1,0 +1,32 @@
+lbl_802D3C68:
+/* 802D3C68 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 802D3C6C 00000004  7C 08 02 A6 */	mflr r0
+/* 802D3C70 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 802D3C74 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 802D3C78 00000010  3C 60 80 3D */	lis r3, sMessageQueue__13JKRAramStream@ha
+/* 802D3C7C 00000014  38 63 C1 98 */	addi r3, r3, sMessageQueue__13JKRAramStream@l
+/* 802D3C80 00000018  3C 80 80 3D */	lis r4, sMessageBuffer__13JKRAramStream@ha
+/* 802D3C84 0000001C  38 84 C1 88 */	addi r4, r4, sMessageBuffer__13JKRAramStream@l
+/* 802D3C88 00000020  38 A0 00 04 */	li r5, 4
+/* 802D3C8C 00000024  48 06 AD 09 */	bl OSInitMessageQueue
+/* 802D3C90 00000028  3C 60 80 3D */	lis r3, sMessageQueue__13JKRAramStream@ha
+/* 802D3C94 0000002C  3B E3 C1 98 */	addi r31, r3, sMessageQueue__13JKRAramStream@l
+lbl_802D3C98:
+/* 802D3C98 00000000  7F E3 FB 78 */	mr r3, r31
+/* 802D3C9C 00000004  38 81 00 08 */	addi r4, r1, 8
+/* 802D3CA0 00000008  38 A0 00 01 */	li r5, 1
+/* 802D3CA4 0000000C  48 06 AE 19 */	bl OSReceiveMessage
+/* 802D3CA8 00000010  80 61 00 08 */	lwz r3, 8(r1)
+/* 802D3CAC 00000014  80 03 00 00 */	lwz r0, 0(r3)
+/* 802D3CB0 00000018  2C 00 00 02 */	cmpwi r0, 2
+/* 802D3CB4 0000001C  41 82 00 1C */	beq lbl_802D3CD0
+/* 802D3CB8 00000020  40 80 FF E0 */	bge lbl_802D3C98
+/* 802D3CBC 00000024  2C 00 00 01 */	cmpwi r0, 1
+/* 802D3CC0 00000028  40 80 00 08 */	bge lbl_802D3CC8
+/* 802D3CC4 0000002C  4B FF FF D4 */	b lbl_802D3C98
+lbl_802D3CC8:
+/* 802D3CC8 00000000  48 00 00 11 */	bl readFromAram__13JKRAramStreamFv
+/* 802D3CCC 00000004  4B FF FF CC */	b lbl_802D3C98
+lbl_802D3CD0:
+/* 802D3CD0 00000000  48 00 00 11 */	bl writeToAram__13JKRAramStreamFP20JKRAramStreamCommand
+/* 802D3CD4 00000004  4B FF FF C4 */	b lbl_802D3C98

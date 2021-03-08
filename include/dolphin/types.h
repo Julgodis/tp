@@ -44,6 +44,8 @@ typedef int BOOL;
 #define SECTION_SBSS2 __declspec(section ".sdata2")
 #define SECTION_CTORS __declspec(section ".ctors")
 #define SECTION_DTORS __declspec(section ".dtors")
+#define SECTION_EXTAB __declspec(section "extab_")
+#define SECTION_EXTABINDEX __declspec(section "extabindex_")
 
 #define SECTION_DEAD __declspec(section ".dead")
 

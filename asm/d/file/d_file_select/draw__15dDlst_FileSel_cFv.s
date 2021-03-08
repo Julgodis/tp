@@ -1,0 +1,15 @@
+lbl_8018DEBC:
+/* 8018DEBC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8018DEC0 00000004  7C 08 02 A6 */	mflr r0
+/* 8018DEC4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8018DEC8 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8018DECC 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8018DED0 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 8018DED4 00000018  80 63 00 04 */	lwz r3, 4(r3)
+/* 8018DED8 0000001C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018DEDC 00000020  FC 40 08 90 */	fmr f2, f1
+/* 8018DEE0 00000024  48 16 AF F5 */	bl draw__9J2DScreenFffPC14J2DGrafContext
+/* 8018DEE4 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8018DEE8 0000002C  7C 08 03 A6 */	mtlr r0
+/* 8018DEEC 00000030  38 21 00 10 */	addi r1, r1, 0x10
+/* 8018DEF0 00000034  4E 80 00 20 */	blr 

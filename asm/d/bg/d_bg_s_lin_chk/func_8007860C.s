@@ -1,0 +1,3 @@
+lbl_8007860C:
+/* 8007860C 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 80078610 00000004  4B FF FE AC */	b __dt__16dBgS_HorseLinChkFv
