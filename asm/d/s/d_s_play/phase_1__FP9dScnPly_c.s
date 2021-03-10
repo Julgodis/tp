@@ -430,28 +430,3 @@ lbl_8025A394:
 /* 8025A3CC 00000038  38 00 00 00 */	li r0, 0
 /* 8025A3D0 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025A3D4 00000040  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8025A3D8 00000044  B0 04 5D 46 */	sth r0, 0x5d46(r4)
-/* 8025A3DC 00000048  3C 60 80 3A */	lis r3, d_s_d_s_play__stringBase0@ha
-/* 8025A3E0 0000004C  38 63 A2 D8 */	addi r3, r3, d_s_d_s_play__stringBase0@l
-/* 8025A3E4 00000050  38 63 00 86 */	addi r3, r3, 0x86
-/* 8025A3E8 00000054  3F A4 00 02 */	addis r29, r4, 2
-/* 8025A3EC 00000058  38 9D D4 F8 */	addi r4, r29, -11016
-/* 8025A3F0 0000005C  38 A0 00 40 */	li r5, 0x40
-/* 8025A3F4 00000060  3B BD C2 F8 */	addi r29, r29, -15624
-/* 8025A3F8 00000064  4B DE 1D 69 */	bl syncRes__14dRes_control_cFPCcP11dRes_info_ci
-/* 8025A3FC 00000068  2C 03 00 00 */	cmpwi r3, 0
-/* 8025A400 0000006C  40 80 00 1C */	bge lbl_8025A41C
-/* 8025A404 00000070  7F A3 EB 78 */	mr r3, r29
-/* 8025A408 00000074  3C 80 80 3A */	lis r4, d_s_d_s_play__stringBase0@ha
-/* 8025A40C 00000078  38 84 A2 D8 */	addi r4, r4, d_s_d_s_play__stringBase0@l
-/* 8025A410 0000007C  38 84 00 86 */	addi r4, r4, 0x86
-/* 8025A414 00000080  38 A0 00 00 */	li r5, 0
-/* 8025A418 00000084  4B DE 21 A5 */	bl setStageRes__14dRes_control_cFPCcP7JKRHeap
-lbl_8025A41C:
-/* 8025A41C 00000000  38 60 00 02 */	li r3, 2
-/* 8025A420 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 8025A424 00000008  48 10 7E 05 */	bl _restgpr_29
-/* 8025A428 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8025A42C 00000010  7C 08 03 A6 */	mtlr r0
-/* 8025A430 00000014  38 21 00 20 */	addi r1, r1, 0x20
-/* 8025A434 00000018  4E 80 00 20 */	blr 

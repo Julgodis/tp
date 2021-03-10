@@ -90,12 +90,9 @@ extern "C" {
 SECTION_DEAD const char* const stringBase_8039D290 = "JKRDvdRipper.cpp";
 SECTION_DEAD const char* const stringBase_8039D2A1 = "%s";
 SECTION_DEAD const char* const stringBase_8039D2A4 = 
-    "Sorry, not appli"
-    "ed for SZP archi"
-    "ve.";
+    "Sorry, not applied for SZP archive.";
 SECTION_DEAD const char* const stringBase_8039D2C8 = 
-    "Not support SZP "
-    "with offset read";
+    "Not support SZP with offset read";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039D2E9 = "\0\0\0\0\0\0";
 #pragma pop

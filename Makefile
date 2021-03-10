@@ -181,8 +181,8 @@ tools:
 docs:
 	$(DOXYGEN) Doxyfile
 
-testx: $(LIBS)
-	echo Hej
+testx: $(BUILD_DIR)/rel/d_a_b_bh.plf
+	echo Nice!
 
 # elf
 $(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
@@ -258,6 +258,8 @@ $(BUILD_DIR)/%.o: %.cpp
 
 -include libs/SSystem/SComponent/Makefile
 -include libs/SSystem/SStandard/Makefile
+
+-include rel/d_a_b_bh/Makefile
 
 
 ### Debug Print ###

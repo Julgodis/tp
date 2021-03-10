@@ -146,9 +146,7 @@ extern "C" {
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_803A20B0 = "Unknown data block\n";
 SECTION_DEAD const char* const stringBase_803A20C4 = 
-    "WRONG SHAPE MATR"
-    "IX TYPE (__FILE_"
-    "_)\n";
+    "WRONG SHAPE MATRIX TYPE (__FILE__)\n";
 #pragma pop
 }
 

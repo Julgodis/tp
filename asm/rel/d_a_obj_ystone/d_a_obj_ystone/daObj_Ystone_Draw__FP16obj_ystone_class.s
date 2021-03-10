@@ -1,0 +1,64 @@
+lbl_80D3E090:
+/* 80D3E090 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D3E094 00000004  7C 08 02 A6 */	mflr r0
+/* 80D3E098 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D3E09C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D3E0A0 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D3E0A4 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 80D3E0A8 00000018  3C 60 00 00 */	lis r3, g_env_light@ha
+/* 80D3E0AC 0000001C  38 63 00 00 */	addi r3, g_env_light@l
+/* 80D3E0B0 00000020  38 80 00 00 */	li r4, 0
+/* 80D3E0B4 00000024  38 BE 04 D0 */	addi r5, r30, 0x4d0
+/* 80D3E0B8 00000028  38 DE 01 0C */	addi r6, r30, 0x10c
+/* 80D3E0BC 0000002C  4B FF FF 3D */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80D3E0C0 00000030  88 1E 05 99 */	lbz r0, 0x599(r30)
+/* 80D3E0C4 00000034  28 00 00 03 */	cmplwi r0, 3
+/* 80D3E0C8 00000038  40 80 00 4C */	bge lbl_80D3E114
+/* 80D3E0CC 0000003C  88 1E 05 9B */	lbz r0, 0x59b(r30)
+/* 80D3E0D0 00000040  28 00 00 00 */	cmplwi r0, 0
+/* 80D3E0D4 00000044  40 82 00 90 */	bne lbl_80D3E164
+/* 80D3E0D8 00000048  3C 60 00 00 */	lis r3, g_env_light@ha
+/* 80D3E0DC 0000004C  38 63 00 00 */	addi r3, g_env_light@l
+/* 80D3E0E0 00000050  80 9E 05 70 */	lwz r4, 0x570(r30)
+/* 80D3E0E4 00000054  80 84 00 04 */	lwz r4, 4(r4)
+/* 80D3E0E8 00000058  38 BE 01 0C */	addi r5, r30, 0x10c
+/* 80D3E0EC 0000005C  4B FF FF 0D */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80D3E0F0 00000060  80 7E 05 70 */	lwz r3, 0x570(r30)
+/* 80D3E0F4 00000064  80 83 00 04 */	lwz r4, 4(r3)
+/* 80D3E0F8 00000068  80 7E 05 74 */	lwz r3, 0x574(r30)
+/* 80D3E0FC 0000006C  C0 23 00 10 */	lfs f1, 0x10(r3)
+/* 80D3E100 00000070  38 84 00 58 */	addi r4, r4, 0x58
+/* 80D3E104 00000074  4B FF FE F5 */	bl entry__13mDoExt_brkAnmFP16J3DMaterialTablef
+/* 80D3E108 00000078  80 7E 05 70 */	lwz r3, 0x570(r30)
+/* 80D3E10C 0000007C  4B FF FE ED */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80D3E110 00000080  48 00 00 54 */	b lbl_80D3E164
+lbl_80D3E114:
+/* 80D3E114 00000000  80 7E 05 7C */	lwz r3, 0x57c(r30)
+/* 80D3E118 00000004  83 E3 00 04 */	lwz r31, 4(r3)
+/* 80D3E11C 00000008  3C 60 00 00 */	lis r3, g_env_light@ha
+/* 80D3E120 0000000C  38 63 00 00 */	addi r3, g_env_light@l
+/* 80D3E124 00000010  80 9F 00 04 */	lwz r4, 4(r31)
+/* 80D3E128 00000014  38 BE 01 0C */	addi r5, r30, 0x10c
+/* 80D3E12C 00000018  4B FF FE CD */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80D3E130 0000001C  88 1E 05 9A */	lbz r0, 0x59a(r30)
+/* 80D3E134 00000020  28 00 00 00 */	cmplwi r0, 0
+/* 80D3E138 00000024  41 82 00 18 */	beq lbl_80D3E150
+/* 80D3E13C 00000028  80 9F 00 04 */	lwz r4, 4(r31)
+/* 80D3E140 0000002C  80 7E 05 78 */	lwz r3, 0x578(r30)
+/* 80D3E144 00000030  C0 23 00 10 */	lfs f1, 0x10(r3)
+/* 80D3E148 00000034  38 84 00 58 */	addi r4, r4, 0x58
+/* 80D3E14C 00000038  4B FF FE AD */	bl entry__13mDoExt_btkAnmFP16J3DMaterialTablef
+lbl_80D3E150:
+/* 80D3E150 00000000  7F C3 F3 78 */	mr r3, r30
+/* 80D3E154 00000004  80 9F 00 04 */	lwz r4, 4(r31)
+/* 80D3E158 00000008  4B FF FE A1 */	bl fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData
+/* 80D3E15C 0000000C  80 7E 05 7C */	lwz r3, 0x57c(r30)
+/* 80D3E160 00000010  4B FF FE 99 */	bl entryDL__16mDoExt_McaMorfSOFv
+lbl_80D3E164:
+/* 80D3E164 00000000  38 60 00 01 */	li r3, 1
+/* 80D3E168 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D3E16C 00000008  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D3E170 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D3E174 00000010  7C 08 03 A6 */	mtlr r0
+/* 80D3E178 00000014  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D3E17C 00000018  4E 80 00 20 */	blr 

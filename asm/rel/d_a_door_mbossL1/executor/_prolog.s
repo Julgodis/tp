@@ -1,0 +1,12 @@
+lbl_806727C0:
+/* 806727C0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 806727C4 00000004  7C 08 02 A6 */	mflr r0
+/* 806727C8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 806727CC 0000000C  3C 60 00 00 */	lis r3, unknown_translation_unit_ctors__data_80677550@ha
+/* 806727D0 00000010  38 63 00 00 */	addi r3, unknown_translation_unit_ctors__data_80677550@l
+/* 806727D4 00000014  48 00 00 45 */	bl ModuleConstructorsX
+/* 806727D8 00000018  48 00 00 41 */	bl ModuleProlog
+/* 806727DC 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 806727E0 00000020  7C 08 03 A6 */	mtlr r0
+/* 806727E4 00000024  38 21 00 10 */	addi r1, r1, 0x10
+/* 806727E8 00000028  4E 80 00 20 */	blr 

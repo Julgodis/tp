@@ -218,39 +218,23 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039B018 = 
-    "--------------- "
-    "JASTrack (%8x) d"
-    "ump ------------"
+    "--------------- JASTrack (%8x) dump ------------"
     "----";
 SECTION_DEAD const char* const stringBase_8039B04D = 
-    " Base: 0x%08x Cu"
-    "r: 0x%08x(0x%06x"
-    ")";
+    " Base: 0x%08x Cur: 0x%08x(0x%06x)";
 SECTION_DEAD const char* const stringBase_8039B06F = "";
 SECTION_DEAD const char* const stringBase_8039B070 = 
-    " REG_A: 0x%04x R"
-    "EG_B: 0x%04x REG"
-    "_S: 0x%04x";
+    " REG_A: 0x%04x REG_B: 0x%04x REG_S: 0x%04x";
 SECTION_DEAD const char* const stringBase_8039B09B = 
-    " REG_X: 0x%04x R"
-    "EG_Y: 0x%04x REG"
-    "_F: 0x%04x";
+    " REG_X: 0x%04x REG_Y: 0x%04x REG_F: 0x%04x";
 SECTION_DEAD const char* const stringBase_8039B0C6 = 
-    " PORT 0-3: 0x%04"
-    "x 0x%04x 0x%04x "
-    "0x%04x";
+    " PORT 0-3: 0x%04x 0x%04x 0x%04x 0x%04x";
 SECTION_DEAD const char* const stringBase_8039B0ED = 
-    " PORT 4-7: 0x%04"
-    "x 0x%04x 0x%04x "
-    "0x%04x";
+    " PORT 4-7: 0x%04x 0x%04x 0x%04x 0x%04x";
 SECTION_DEAD const char* const stringBase_8039B114 = 
-    " PORT 8-B: 0x%04"
-    "x 0x%04x 0x%04x "
-    "0x%04x";
+    " PORT 8-B: 0x%04x 0x%04x 0x%04x 0x%04x";
 SECTION_DEAD const char* const stringBase_8039B13B = 
-    " PORT C-F: 0x%04"
-    "x 0x%04x 0x%04x "
-    "0x%04x";
+    " PORT C-F: 0x%04x 0x%04x 0x%04x 0x%04x";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039B162 = "\0\0\0\0\0";
 #pragma pop

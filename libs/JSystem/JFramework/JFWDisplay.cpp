@@ -189,17 +189,11 @@ extern "C" {
 SECTION_DEAD const char* const stringBase_8039A878 = "GP status %d%d%d%d%d%d --> ";
 SECTION_DEAD const char* const stringBase_8039A894 = "GP hang due to XF stall bug.\n";
 SECTION_DEAD const char* const stringBase_8039A8B2 = 
-    "GP hang due to u"
-    "nterminated prim"
-    "itive.\n";
+    "GP hang due to unterminated primitive.\n";
 SECTION_DEAD const char* const stringBase_8039A8DA = 
-    "GP hang due to i"
-    "llegal instructi"
-    "on.\n";
+    "GP hang due to illegal instruction.\n";
 SECTION_DEAD const char* const stringBase_8039A8FF = 
-    "GP appears to be"
-    " not hung (waiti"
-    "ng for input).\n";
+    "GP appears to be not hung (waiting for input).\n";
 SECTION_DEAD const char* const stringBase_8039A92F = "GP is in unknown state.\n";
 #pragma pop
 }

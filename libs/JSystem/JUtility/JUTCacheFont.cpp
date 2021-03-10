@@ -86,15 +86,11 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039D2F0 = 
-    "JUTCacheFont: Un"
-    "known data block"
-    "\n";
+    "JUTCacheFont: Unknown data block\n";
 SECTION_DEAD const char* const stringBase_8039D312 = "JUTCacheFont.cpp";
 SECTION_DEAD const char* const stringBase_8039D323 = "%s";
 SECTION_DEAD const char* const stringBase_8039D326 = 
-    "trouble occurred"
-    " in JKRMainRamTo"
-    "Aram.";
+    "trouble occurred in JKRMainRamToAram.";
 SECTION_DEAD const char* const stringBase_8039D34C = "Unknown data block\n";
 #pragma pop
 }

@@ -53,9 +53,7 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039B910 = 
-    "It cost %d steps"
-    " to prepare Soun"
-    "d(ID:%08x, Addre"
+    "It cost %d steps to prepare Sound(ID:%08x, Addre"
     "ss%08x).\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039B94A = "\0\0\0\0\0";

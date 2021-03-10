@@ -5,6 +5,7 @@ from rich.logging import RichHandler
 from rich.console import Console
 import asyncio
 from typing import List, Dict, Tuple
+from intervaltree import Interval, IntervalTree
 
 DOL2ZEL_VERSION = "2.1"
 GAME_NAME = "The Legend of Zelda: Twilight Princess (GCN USA)"
@@ -90,20 +91,20 @@ class ExecutableSection:
 import data
 from exception import *
 from collections import defaultdict
-MODULE_SYMBOL_LOOKUP = defaultdict(lambda: defaultdict(list))
+MODULE_SYMBOL_LOOKUP = defaultdict(lambda: IntervalTree())
 
 def register_symbol(symbol):
+    if symbol.size <= 0:
+        return
+
     module = symbol.section.translation_unit.library.module.index
     section = symbol.section.index
     key = (module, section)
-    offset = symbol.addr
+    start_offset = symbol.addr
     if module != 0:
-        offset = symbol.offset
-
-    if module == 0 and section == 1:
-        LOG.debug(symbol)
-
-    MODULE_SYMBOL_LOOKUP[key][offset] = symbol
+        start_offset -= symbol.section.addr
+    end_offset = start_offset + symbol.size + symbol.padding
+    MODULE_SYMBOL_LOOKUP[key].addi(start_offset, end_offset, symbol)
 
 def unregister_symbol(symbol):
     # TODO:
@@ -112,15 +113,20 @@ def unregister_symbol(symbol):
 def lookup_symbol(relocation):
     key = (relocation.module, relocation.section)
     if key in MODULE_SYMBOL_LOOKUP:
-        symbols_at_offset = MODULE_SYMBOL_LOOKUP[key]
-        if relocation.symbol_offset in symbols_at_offset:
-            return symbols_at_offset[relocation.symbol_offset]
+        tree = MODULE_SYMBOL_LOOKUP[key]
+        symbols = list(tree[relocation.symbol_offset])
+        if len(symbols) > 0:
+            if len(symbols) > 1:
+                LOG.warning(f"multiple symbols ({len(symbols)}) for relocation (0x{relocation.symbol_offset:04x})")
+            return symbols[0].data
 
         raise Dol2ZelException(f"symbol at offset (0x{relocation.symbol_offset:04x}) for relocation not found. {relocation}")
     
 
     #LOG.warning(f"symbol for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
-    #LOG.warning(MODULE_SYMBOL_LOOKUP.keys())
+    #keys = list(MODULE_SYMBOL_LOOKUP.keys())
+    #keys.sort()
+    #LOG.warning(keys)
     raise Dol2ZelException(f"symbol at offset (0x{relocation.symbol_offset:04x}) for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
     #return data.Symbol(data.Identifier("fake", 0, None), 0, 0)
 
@@ -192,9 +198,9 @@ REL_TEMP_LOCATION = {
     "d_a_andsw2.rel": 0x804d5d80,
     "d_a_bd.rel": 0x804d6b60,
     "d_a_canoe.rel": 0x804da460,
-    "d_a_cstaF.rel": 0x804dd8e0,
+    "d_a_cstaf.rel": 0x804dd8e0,
     "d_a_demo_item.rel": 0x804dfae0,
-    "d_a_door_bossL1.rel": 0x804e1d20,
+    "d_a_door_bossl1.rel": 0x804e1d20,
     "d_a_e_dn.rel": 0x804e50c0,
     "d_a_e_fm.rel": 0x804ef000,
     "d_a_e_ga.rel": 0x804fb000,
@@ -226,24 +232,24 @@ REL_TEMP_LOCATION = {
     "d_a_obj_digplace.rel": 0x8057bf20,
     "d_a_obj_eff.rel": 0x8057c960,
     "d_a_obj_fmobj.rel": 0x8057cb60,
-    "d_a_obj_gpTaru.rel": 0x8057cfe0,
+    "d_a_obj_gptaru.rel": 0x8057cfe0,
     "d_a_obj_hhashi.rel": 0x8057f940,
     "d_a_obj_kanban2.rel": 0x80581680,
     "d_a_obj_kbacket.rel": 0x80585d60,
     "d_a_obj_kgate.rel": 0x80588000,
     "d_a_obj_klift00.rel": 0x8058aec0,
-    "d_a_obj_ktOnFire.rel": 0x8058c520,
+    "d_a_obj_ktonfire.rel": 0x8058c520,
     "d_a_obj_ladder.rel": 0x8058d0e0,
-    "d_a_obj_lv2Candle.rel": 0x8058df60,
+    "d_a_obj_lv2candle.rel": 0x8058df60,
     "d_a_obj_magne_arm.rel": 0x8058f2e0,
     "d_a_obj_metalbox.rel": 0x80592e20,
     "d_a_obj_mgate.rel": 0x80593540,
     "d_a_obj_nameplate.rel": 0x80594020,
     "d_a_obj_ornament_cloth.rel": 0x80594fc0,
     "d_a_obj_rope_bridge.rel": 0x80595dc0,
-    "d_a_obj_sWallShutter.rel": 0x80598100,
+    "d_a_obj_swallshutter.rel": 0x80598100,
     "d_a_obj_stick.rel": 0x80599140,
-    "d_a_obj_stoneMark.rel": 0x80599fa0,
+    "d_a_obj_stonemark.rel": 0x80599fa0,
     "d_a_obj_swpropeller.rel": 0x8059a4a0,
     "d_a_obj_swpush5.rel": 0x8059b400,
     "d_a_obj_yobikusa.rel": 0x8059c980,
@@ -251,7 +257,7 @@ REL_TEMP_LOCATION = {
     "d_a_shop_item.rel": 0x8059e940,
     "d_a_sq.rel": 0x8059f580,
     "d_a_swc00.rel": 0x805a1380,
-    "d_a_tag_CstaSw.rel": 0x805a1f40,
+    "d_a_tag_cstasw.rel": 0x805a1f40,
     "d_a_tag_ajnot.rel": 0x805a25e0,
     "d_a_tag_attack_item.rel": 0x805a28e0,
     "d_a_tag_gstart.rel": 0x805a3400,

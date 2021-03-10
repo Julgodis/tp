@@ -102,26 +102,16 @@ extern "C" {
 SECTION_DEAD const char* const stringBase_8039CFA8 = "on";
 SECTION_DEAD const char* const stringBase_8039CFAB = "off";
 SECTION_DEAD const char* const stringBase_8039CFAF = 
-    "JKRThread:%x  OS"
-    "Thread:%x  Load:"
-    "ID:%d  (%s)\n";
+    "JKRThread:%x  OSThread:%x  Load:ID:%d  (%s)\n";
 SECTION_DEAD const char* const stringBase_8039CFDC = 
-    "JKRThreadSwitch:"
-    " currentHeap des"
-    "troyed.\n";
+    "JKRThreadSwitch: currentHeap destroyed.\n";
 SECTION_DEAD const char* const stringBase_8039D005 = 
-    " total: switch:%"
-    "3d  time:%d(%df)"
-    "\n";
+    " total: switch:%3d  time:%d(%df)\n";
 SECTION_DEAD const char* const stringBase_8039D027 = 
-    " ---------------"
-    "----------------"
-    "------\n";
+    " -------------------------------------\n";
 SECTION_DEAD const char* const stringBase_8039D04F = "%d";
 SECTION_DEAD const char* const stringBase_8039D052 = 
-    " [%10s] switch:%"
-    "5d  cost:%2d.%d%"
-    "%\n";
+    " [%10s] switch:%5d  cost:%2d.%d%%\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039D075 = "\0\0";
 #pragma pop

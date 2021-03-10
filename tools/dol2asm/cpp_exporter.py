@@ -125,9 +125,10 @@ class CPPDisassembler(dasm.Disassembler):
                 else:
                     assert False
             elif id in {PPC_INS_ADDI, PPC_INS_ORI}:
-                reg = insn.reg_name(insn.operands[0].reg)
+                rA = insn.reg_name(insn.operands[0].reg)
+                rB = insn.reg_name(insn.operands[1].reg)
                 if relocation.type == rellib.R_PPC_ADDR16_LO:
-                    return f"{insn.mnemonic} {reg}, {symbol.identifier.reference}@l"
+                    return f"{insn.mnemonic} {rA}, {rB}, {symbol.identifier.reference}@l"
                 else:
                     assert False
             elif offset_load:
@@ -530,7 +531,13 @@ async def export_symbol_reference_array(builder: Builder, section: Section, sra:
     if count == 1:
         addr = sra.references[0][0]
         symbol = sra.references[0][1]
-        await builder.write(f"void*{const} {sra.identifier.label} = (void*){symbol.cpp_reference(sra, addr)};")
+        if addr == 0 and not symbol:
+            value = "NULL"
+        elif symbol != None:
+            value = symbol.cpp_reference(sra, addr)
+        else:
+            value = f"0x{addr:08X}"
+        await builder.write(f"void*{const} {sra.identifier.label} = (void*){value};")
     else:
         await builder.write(f"void*{const} {sra.identifier.label}[{count}] = {{")
         for addr, symbol in sra.references:
@@ -696,7 +703,7 @@ async def export_symbol_string_output(builder, label, data):
         await builder.write(f"char* const {label} = \"{string_to_cstr(data)}\";")
     else:
         await builder.write(f"char* const {label} = ")
-        data_chunks = util.chunks(data, 16)
+        data_chunks = util.chunks(data, 48)
 
         lines = []
         for chunk in data_chunks:
@@ -780,10 +787,13 @@ async def export_symbol(builder: Builder, section: Section, symbol: Symbol, symb
 
     return None
 
-def export_section_preprocess(section: Section, symbol_map, my_labels, labels):
+def export_section_preprocess(section: Section, symbol_map, my_labels, labels, relocation_symbols):
     for symbol in section.symbols:
         my_labels.add(symbol.addr)
         labels.update(symbol.internal_references)
+
+        if isinstance(symbol, Function):
+            relocation_symbols.update(symbol.relocation_symbols)
 
         if isinstance(symbol, GlobalFunction):
             offset = symbol.load_offset
@@ -941,8 +951,14 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
 
         my_labels = set()
         labels = set()
+        rel_syms = set()
         for section in tu.sections:
-            export_section_preprocess(section, symbol_map, my_labels, labels)
+            export_section_preprocess(section, symbol_map, my_labels, labels, rel_syms)
+
+        rel_symbol_map = dict()
+        for symbol in rel_syms:
+            labels.add(symbol.addr)
+            rel_symbol_map[symbol.addr] = symbol
 
         await builder.write("// ")
         await builder.write("// Additional Symbols:")
@@ -970,6 +986,8 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
             symbol = None
             if addr in symbol_map:
                 symbol = symbol_map[addr]
+            elif addr in rel_symbol_map:
+                symbol = rel_symbol_map[addr]
             else:
                 symbols = list(ait[addr])
                 if len(symbols) == 1:

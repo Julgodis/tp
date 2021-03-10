@@ -75,29 +75,17 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039CE50 = 
-    "allocFromHead: c"
-    "annot alloc memo"
-    "ry (0x%x byte).\n";
+    "allocFromHead: cannot alloc memory (0x%x byte).\n";
 SECTION_DEAD const char* const stringBase_8039CE81 = 
-    "allocFromTail: c"
-    "annot alloc memo"
-    "ry (0x%x byte).\n";
+    "allocFromTail: cannot alloc memory (0x%x byte).\n";
 SECTION_DEAD const char* const stringBase_8039CEB2 = 
-    "free: cannot fre"
-    "e memory block ("
-    "%08x)\n";
+    "free: cannot free memory block (%08x)\n";
 SECTION_DEAD const char* const stringBase_8039CED9 = 
-    "resize: cannot r"
-    "esize memory blo"
-    "ck (%08x: %d)\n";
+    "resize: cannot resize memory block (%08x: %d)\n";
 SECTION_DEAD const char* const stringBase_8039CF08 = 
-    "getSize: cannot "
-    "get memory block"
-    " size (%08x)\n";
+    "getSize: cannot get memory block size (%08x)\n";
 SECTION_DEAD const char* const stringBase_8039CF36 = 
-    "check: bad total"
-    " memory block si"
-    "ze (%08X, %08X)\n";
+    "check: bad total memory block size (%08X, %08X)\n";
 SECTION_DEAD const char* const stringBase_8039CF67 = "head %08x: %08x\n";
 SECTION_DEAD const char* const stringBase_8039CF78 = "tail %08x: %08x\n";
 SECTION_DEAD const char* const stringBase_8039CF89 = "%d / %d bytes (%6.2f%%) used\n";

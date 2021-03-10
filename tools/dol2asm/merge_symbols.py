@@ -14,6 +14,9 @@ def merge_symbol_from_group(group):
     elif isinstance(group[0], ZeroData):
         return [ZeroStruct.create(group)]
 
+    g.LOG.warning(group[0])
+    g.LOG.warning(group[0].section.id)
+    g.LOG.warning(group)
     assert False
 
 def static_local_from_group(group):
@@ -61,47 +64,23 @@ def execute(libraries):
     for lib in libraries:
         for tu in lib.translation_units:
             for sec in tu.sections:
-
-                static_local_group = []
                 group = []
                 symbols = []
                 for sym in sec.symbols:
-                    if static_local_group:
-                        static_local_group.append(sym)
-                        symbols.extend(static_local_from_group(static_local_group))
-                        static_local_group = []
-                        continue
-
-                    """
-                    if sym.name.name.count("$") == 1 and isinstance(sym, ZeroInitializedData):
-                        if group:
-                            symbols.extend(merge_symbol_from_group(group))
-                        static_local_group = [sym]
-                        group = []
-                        continue
-                    """
-
                     if (isinstance(sym, InitData) or isinstance(sym, ZeroData)) and sym.addr % 4 != 0 and group:
                         if group[-1].padding != 0:
-                            g.LOG.warning("padding in the middle of merge between: %s and %s (starting with %s)" % (group[-1].name, sym.name, group[0].name))
+                            g.LOG.warning("padding in the middle of merge between: %s and %s (starting with %s)" % (group[-1].identifier, sym.identifier, group[0].identifier))
                             symbols.extend(group)
                             symbols.append(sym)
                             group = []
                         else:
                             group.append(sym)
                     else:
-                        if static_local_group:
-                            assert len(static_local_group) == 1
-                            symbols.extend(static_local_group)
                         if group:
                             symbols.extend(merge_symbol_from_group(group))
                         group = [sym]
                 
-                if static_local_group:
-                    assert len(static_local_group) == 1
-                    symbols.extend(static_local_group)
                 if group:
                     symbols.extend(merge_symbol_from_group(group))
-
                 sec.symbols = symbols   
         

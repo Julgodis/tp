@@ -181,15 +181,11 @@ SECTION_DEAD const char* const stringBase_8039D58A = "F%02d:-Inf     ";
 SECTION_DEAD const char* const stringBase_8039D59A = "F%02d: 0.0      ";
 SECTION_DEAD const char* const stringBase_8039D5AB = "F%02d:%+.3E";
 SECTION_DEAD const char* const stringBase_8039D5B7 = 
-    "----------------"
-    "----------------"
-    " FPR\n";
+    "-------------------------------- FPR\n";
 SECTION_DEAD const char* const stringBase_8039D5DD = " ";
 SECTION_DEAD const char* const stringBase_8039D5DF = "\n";
 SECTION_DEAD const char* const stringBase_8039D5E1 = 
-    "----------------"
-    "----------------"
-    " TRACE\n";
+    "-------------------------------- TRACE\n";
 SECTION_DEAD const char* const stringBase_8039D609 = "Address:   BackChain   LR save\n";
 SECTION_DEAD const char* const stringBase_8039D629 = "Suppress trace.\n";
 SECTION_DEAD const char* const stringBase_8039D63A = "%08X:  %08X    %08X\n";
@@ -212,45 +208,29 @@ SECTION_DEAD const char* const stringBase_8039D76B = " FPE: Inexact result\n";
 SECTION_DEAD const char* const stringBase_8039D781 = "SRR0:   %08XH   SRR1:%08XH\n";
 SECTION_DEAD const char* const stringBase_8039D79D = "DSISR:  %08XH   DAR: %08XH\n";
 SECTION_DEAD const char* const stringBase_8039D7B9 = 
-    "----------------"
-    "----------------"
-    " GPR\n";
+    "-------------------------------- GPR\n";
 SECTION_DEAD const char* const stringBase_8039D7DF = 
-    "R%02d:%08XH  R%0"
-    "2d:%08XH  R%02d:"
-    "%08XH\n";
+    "R%02d:%08XH  R%02d:%08XH  R%02d:%08XH\n";
 SECTION_DEAD const char* const stringBase_8039D806 = "R%02d:%08XH  R%02d:%08XH\n";
 SECTION_DEAD const char* const stringBase_8039D820 = "";
 SECTION_DEAD const char* const stringBase_8039D821 = "%s %s:%x section:%d\n";
 SECTION_DEAD const char* const stringBase_8039D836 = 
-    "----------------"
-    "----------------"
-    " GPRMAP\n";
+    "-------------------------------- GPRMAP\n";
 SECTION_DEAD const char* const stringBase_8039D85F = "R%02d: %08XH";
 SECTION_DEAD const char* const stringBase_8039D86C = "  no information\n";
 SECTION_DEAD const char* const stringBase_8039D87E = 
-    "  no register wh"
-    "ich seem to addr"
-    "ess.\n";
+    "  no register which seem to address.\n";
 SECTION_DEAD const char* const stringBase_8039D8A4 = 
-    "----------------"
-    "----------------"
-    " SRR0MAP\n";
+    "-------------------------------- SRR0MAP\n";
 SECTION_DEAD const char* const stringBase_8039D8CE = "SRR0: %08XH";
 SECTION_DEAD const char* const stringBase_8039D8DA = " MSR:%08XH\t FPSCR:%08XH\n";
 SECTION_DEAD const char* const stringBase_8039D8F3 = 
-    "******** EXCEPTI"
-    "ON OCCURRED! ***"
-    "*****\nFrameMemor"
+    "******** EXCEPTION OCCURRED! ********\nFrameMemor"
     "y:%XH\n";
 SECTION_DEAD const char* const stringBase_8039D92A = 
-    "******** USER HA"
-    "LT ********\nFram"
-    "eMemory:%XH\n";
+    "******** USER HALT ********\nFrameMemory:%XH\n";
 SECTION_DEAD const char* const stringBase_8039D957 = 
-    "----------------"
-    "----------------"
-    "\n";
+    "--------------------------------\n";
 SECTION_DEAD const char* const stringBase_8039D979 = ".map";
 SECTION_DEAD const char* const stringBase_8039D97E = "  [%08X]: .%s [%08X: %XH]\n  %s\n";
 /* @stringBase0 padding */

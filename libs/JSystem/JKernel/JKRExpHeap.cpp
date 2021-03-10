@@ -103,74 +103,46 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039CAF0 = 
-    ":::cannot alloc "
-    "memory (0x%x byt"
-    "e).\n";
+    ":::cannot alloc memory (0x%x byte).\n";
 SECTION_DEAD const char* const stringBase_8039CB15 = "JKRExpHeap.cpp";
 SECTION_DEAD const char* const stringBase_8039CB24 = "%s";
 SECTION_DEAD const char* const stringBase_8039CB27 = "bad appendUsedList\n";
 SECTION_DEAD const char* const stringBase_8039CB3B = 
-    ":::Heap may be b"
-    "roken. (block = "
-    "%x)";
+    ":::Heap may be broken. (block = %x)";
 SECTION_DEAD const char* const stringBase_8039CB5F = "Bad Block\n";
 SECTION_DEAD const char* const stringBase_8039CB6A = 
-    ":::addr %08x: ba"
-    "d heap signature"
-    ". (%c%c)\n";
+    ":::addr %08x: bad heap signature. (%c%c)\n";
 SECTION_DEAD const char* const stringBase_8039CB94 = 
-    ":::addr %08x: ba"
-    "d next pointer ("
-    "%08x)\nabort\n";
+    ":::addr %08x: bad next pointer (%08x)\nabort\n";
 SECTION_DEAD const char* const stringBase_8039CBC1 = 
-    ":::addr %08x: ba"
-    "d previous point"
-    "er (%08x)\n";
+    ":::addr %08x: bad previous pointer (%08x)\n";
 SECTION_DEAD const char* const stringBase_8039CBEC = 
-    ":::addr %08x: ba"
-    "d used list(REV)"
-    " (%08x)\n";
+    ":::addr %08x: bad used list(REV) (%08x)\n";
 SECTION_DEAD const char* const stringBase_8039CC15 = 
-    ":::addr %08x: ba"
-    "d block size (%0"
-    "8x)\n";
+    ":::addr %08x: bad block size (%08x)\n";
 SECTION_DEAD const char* const stringBase_8039CC3A = 
-    ":::bad total mem"
-    "ory block size ("
-    "%08X, %08X)\n";
+    ":::bad total memory block size (%08X, %08X)\n";
 SECTION_DEAD const char* const stringBase_8039CC67 = 
-    ":::there is some"
-    " error in this h"
-    "eap!\n";
+    ":::there is some error in this heap!\n";
 SECTION_DEAD const char* const stringBase_8039CC8D = 
-    " attr  address: "
-    "  size    gid al"
-    "n   prev_ptr nex"
+    " attr  address:   size    gid aln   prev_ptr nex"
     "t_ptr\n";
 SECTION_DEAD const char* const stringBase_8039CCC4 = "(Used Blocks)\n";
 SECTION_DEAD const char* const stringBase_8039CCD3 = " NONE\n";
 SECTION_DEAD const char* const stringBase_8039CCDA = 
-    "xxxxx %08x: ----"
-    "----  --- ---  ("
-    "-------- -------"
+    "xxxxx %08x: --------  --- ---  (-------- -------"
     "-)\nabort\n";
 SECTION_DEAD const char* const stringBase_8039CD14 = 
-    "%s %08x: %08x  %"
-    "3d %3d  (%08x %0"
-    "8x)\n";
+    "%s %08x: %08x  %3d %3d  (%08x %08x)\n";
 SECTION_DEAD const char* const stringBase_8039CD39 = " temp";
 SECTION_DEAD const char* const stringBase_8039CD3F = "alloc";
 SECTION_DEAD const char* const stringBase_8039CD45 = "(Free Blocks)\n";
 SECTION_DEAD const char* const stringBase_8039CD54 = " free";
 SECTION_DEAD const char* const stringBase_8039CD5A = 
-    "%d / %d bytes (%"
-    "6.2f%%) used (U:"
-    "%d F:%d)\n";
+    "%d / %d bytes (%6.2f%%) used (U:%d F:%d)\n";
 SECTION_DEAD const char* const stringBase_8039CD84 = "+---------------JKRExpHeap\n";
 SECTION_DEAD const char* const stringBase_8039CDA0 = 
-    "|         Align "
-    "Group  size    ("
-    " prev , next )\n";
+    "|         Align Group  size    ( prev , next )\n";
 SECTION_DEAD const char* const stringBase_8039CDD0 = "| ---- FreeFirst\n";
 SECTION_DEAD const char* const stringBase_8039CDE2 = "| %08x  ";
 SECTION_DEAD const char* const stringBase_8039CDEB = "%2x  %3d  %6x  (%08x %08x)\n";

@@ -1,0 +1,11 @@
+lbl_80A3AAF0:
+/* 80A3AAF0 00000000  B0 83 04 DE */	sth r4, 0x4de(r3)
+/* 80A3AAF4 00000004  A8 03 04 DE */	lha r0, 0x4de(r3)
+/* 80A3AAF8 00000008  B0 03 04 E6 */	sth r0, 0x4e6(r3)
+/* 80A3AAFC 0000000C  A8 03 04 DE */	lha r0, 0x4de(r3)
+/* 80A3AB00 00000010  B0 03 0D AE */	sth r0, 0xdae(r3)
+/* 80A3AB04 00000014  A8 03 0D AE */	lha r0, 0xdae(r3)
+/* 80A3AB08 00000018  B0 03 0D B4 */	sth r0, 0xdb4(r3)
+/* 80A3AB0C 0000001C  A8 03 04 DE */	lha r0, 0x4de(r3)
+/* 80A3AB10 00000020  B0 03 04 CA */	sth r0, 0x4ca(r3)
+/* 80A3AB14 00000024  4E 80 00 20 */	blr 

@@ -1,0 +1,11 @@
+lbl_8047FCBC:
+/* 8047FCBC 00000000  3C 80 00 00 */	lis r4, LIT_3687@ha
+/* 8047FCC0 00000004  C0 04 00 00 */	lfs f0, LIT_3687@l(r4)
+/* 8047FCC4 00000008  D0 03 05 2C */	stfs f0, 0x52c(r3)
+/* 8047FCC8 0000000C  3C 80 00 00 */	lis r4, dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
+/* 8047FCCC 00000010  38 04 00 00 */	addi r0, dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
+/* 8047FCD0 00000014  80 83 05 68 */	lwz r4, 0x568(r3)
+/* 8047FCD4 00000018  90 04 00 B0 */	stw r0, 0xb0(r4)
+/* 8047FCD8 0000001C  38 00 00 02 */	li r0, 2
+/* 8047FCDC 00000020  90 03 05 AC */	stw r0, 0x5ac(r3)
+/* 8047FCE0 00000024  4E 80 00 20 */	blr 

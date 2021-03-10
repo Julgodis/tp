@@ -837,38 +837,3 @@ lbl_800AE984:
 /* 800AE9E4 00000060  38 A0 00 0F */	li r5, 0xf
 /* 800AE9E8 00000064  38 C1 00 30 */	addi r6, r1, 0x30
 /* 800AE9EC 00000068  4B FC 10 39 */	bl StartShock__12dVibration_cFii4cXyz
-lbl_800AE9F0:
-/* 800AE9F0 00000000  C0 02 93 A8 */	lfs f0, LIT_9652(r2)
-/* 800AE9F4 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
-/* 800AE9F8 00000000  40 80 00 14 */	bge lbl_800AEA0C
-/* 800AE9FC 00000004  7F E3 FB 78 */	mr r3, r31
-/* 800AEA00 00000008  7F 64 DB 78 */	mr r4, r27
-/* 800AEA04 0000000C  4B FF B8 B9 */	bl setHandIndex__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 800AEA08 00000010  48 00 00 10 */	b lbl_800AEA18
-lbl_800AEA0C:
-/* 800AEA0C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800AEA10 00000004  7F 04 C3 78 */	mr r4, r24
-/* 800AEA14 00000008  4B FF B8 A9 */	bl setHandIndex__9daAlink_cFQ29daAlink_c11daAlink_ANM
-lbl_800AEA18:
-/* 800AEA18 00000000  E3 E1 00 F8 */	psq_l f31, 248(r1), 0, 0 /* qr0 */
-/* 800AEA1C 00000000  CB E1 00 F0 */	lfd f31, 0xf0(r1)
-/* 800AEA20 00000008  E3 C1 00 E8 */	psq_l f30, 232(r1), 0, 0 /* qr0 */
-/* 800AEA24 00000000  CB C1 00 E0 */	lfd f30, 0xe0(r1)
-/* 800AEA28 00000010  E3 A1 00 D8 */	psq_l f29, 216(r1), 0, 0 /* qr0 */
-/* 800AEA2C 00000000  CB A1 00 D0 */	lfd f29, 0xd0(r1)
-/* 800AEA30 00000018  E3 81 00 C8 */	psq_l f28, 200(r1), 0, 0 /* qr0 */
-/* 800AEA34 00000000  CB 81 00 C0 */	lfd f28, 0xc0(r1)
-/* 800AEA38 00000020  E3 61 00 B8 */	psq_l f27, 184(r1), 0, 0 /* qr0 */
-/* 800AEA3C 00000000  CB 61 00 B0 */	lfd f27, 0xb0(r1)
-/* 800AEA40 00000028  E3 41 00 A8 */	psq_l f26, 168(r1), 0, 0 /* qr0 */
-/* 800AEA44 00000000  CB 41 00 A0 */	lfd f26, 0xa0(r1)
-/* 800AEA48 00000030  E3 21 00 98 */	psq_l f25, 152(r1), 0, 0 /* qr0 */
-/* 800AEA4C 00000000  CB 21 00 90 */	lfd f25, 0x90(r1)
-/* 800AEA50 00000038  E3 01 00 88 */	psq_l f24, 136(r1), 0, 0 /* qr0 */
-/* 800AEA54 00000000  CB 01 00 80 */	lfd f24, 0x80(r1)
-/* 800AEA58 00000004  39 61 00 80 */	addi r11, r1, 0x80
-/* 800AEA5C 00000008  48 2B 37 AD */	bl _restgpr_21
-/* 800AEA60 0000000C  80 01 01 04 */	lwz r0, 0x104(r1)
-/* 800AEA64 00000010  7C 08 03 A6 */	mtlr r0
-/* 800AEA68 00000014  38 21 01 00 */	addi r1, r1, 0x100
-/* 800AEA6C 00000018  4E 80 00 20 */	blr 

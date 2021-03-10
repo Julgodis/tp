@@ -1,0 +1,29 @@
+lbl_80CB3B70:
+/* 80CB3B70 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80CB3B74 00000004  7C 08 02 A6 */	mflr r0
+/* 80CB3B78 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80CB3B7C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80CB3B80 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80CB3B84 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 80CB3B88 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB3B8C 0000001C  3B E3 00 00 */	addi r31, g_dComIfG_gameInfo@l
+/* 80CB3B90 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
+/* 80CB3B94 00000024  3C 80 00 00 */	lis r4, stringBase0@ha
+/* 80CB3B98 00000028  38 84 00 00 */	addi r4, stringBase0@l
+/* 80CB3B9C 0000002C  38 84 00 07 */	addi r4, r4, 7
+/* 80CB3BA0 00000030  38 A0 00 00 */	li r5, 0
+/* 80CB3BA4 00000034  38 C0 00 00 */	li r6, 0
+/* 80CB3BA8 00000038  4B FF ED 11 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80CB3BAC 0000003C  90 7E 05 8C */	stw r3, 0x58c(r30)
+/* 80CB3BB0 00000040  38 7F 4E C8 */	addi r3, r31, 0x4ec8
+/* 80CB3BB4 00000044  80 9E 05 C8 */	lwz r4, 0x5c8(r30)
+/* 80CB3BB8 00000048  4B FF ED 01 */	bl setPtT__14dEvt_control_cFPv
+/* 80CB3BBC 0000004C  7F C3 F3 78 */	mr r3, r30
+/* 80CB3BC0 00000050  4B FF FB 55 */	bl init_modeMove__10daPoFire_cFv
+/* 80CB3BC4 00000054  38 60 00 01 */	li r3, 1
+/* 80CB3BC8 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80CB3BCC 0000005C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80CB3BD0 00000060  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80CB3BD4 00000064  7C 08 03 A6 */	mtlr r0
+/* 80CB3BD8 00000068  38 21 00 10 */	addi r1, r1, 0x10
+/* 80CB3BDC 0000006C  4E 80 00 20 */	blr 

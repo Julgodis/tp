@@ -44,6 +44,7 @@ import merge_symbols
 import symbol_naming
 import rellib
 import dollib
+import arclib
 import makefile
 import merge_symbols
 
@@ -98,6 +99,7 @@ async def dol2zel(debug, game_path, symbol_info_path):
 
         rel_path = util.check_dir(game_path, "rel/Final/Release")
         rels_path = util.get_files_with_ext(rel_path, ".rel")
+        rels_archive_path = util.check_file(game_path, "RELS.arc")
         g.LOG.debug(f"found {len(rels_path)} RELs at '{rel_path}'")
         g.REL_PATH = rel_path
         g.RELS_PATH = rels_path
@@ -120,15 +122,27 @@ async def dol2zel(debug, game_path, symbol_info_path):
 
         g.MAPS = {}
         for map_filepath in maps_path:
-            g.MAPS[map_filepath.name] = map_filepath
+            g.MAPS[map_filepath.name.lower()] = map_filepath
 
         g.RELS = {}
         for rel_filepath in rels_path:
             with rel_filepath.open('rb') as file:
                 rel = rellib.read(bytearray(file.read()))
                 rel.path = rel_filepath
-                rel.map = g.MAPS[rel_filepath.name.replace(".rel", ".map")]
+                rel.map = g.MAPS[rel_filepath.name.lower().replace(".rel", ".map")]
                 g.RELS[rel.index] = rel
+
+        with rels_archive_path.open('rb') as file:
+            rarc = arclib.read(file.read())
+            for depth, file in rarc.files_and_folders:
+                if not isinstance(file, arclib.File):
+                    continue
+                
+                if file.name.endswith(".rel"):
+                    rel = rellib.read(file.data)
+                    rel.path = Path(file.name)
+                    rel.map = g.MAPS[file.name.lower().replace(".rel", ".map")]
+                    g.RELS[rel.index] = rel
 
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
@@ -150,9 +164,15 @@ async def dol2zel(debug, game_path, symbol_info_path):
 @click.option('--symbols/--no-symbols', 'sym_gen', default=True)
 @click.option('--rels/--no-rels', default=True)
 @click.option('--cache/--no-cache', default=True)
+@click.option('--select-module', 'select_modules', multiple=True)
 @coro
-async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm_gen, sym_gen, rels, cache):
+async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm_gen, sym_gen, rels, cache, select_modules):
     g.OPEN_FILES_SEMAPHORE = asyncio.Semaphore(g.MAX_FILE_COUNT)
+
+    if not select_modules:
+        gen_modules = [ x for x in g.RELS.keys() ]
+    else:
+        gen_modules = [ int(x) for x in select_modules ]
 
     try:
         g.LOG.debug(f"command: 'rel'")
@@ -160,6 +180,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
         g.LOG.debug(f"lib_path: '{lib_path}'")
         g.LOG.debug(f"src_path: '{src_path}'")
         g.LOG.debug(f"rel_path: '{rel_path}'")
+        g.LOG.debug(f"gen_modules: {gen_modules}")
 
         # Create paths
         if not asm_path.exists():
@@ -202,7 +223,9 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
 
             modules = [main_module]
             if rels:
-                for index, rel in g.RELS.items():
+                rels_items = list(g.RELS.items())
+                rels_items.sort(key=lambda x: x[0])
+                for index, rel in rels_items:
                     base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
                     base_addr -= rel.sections[1].offset
                     g.LOG.debug(
@@ -245,13 +268,12 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
             with cache_path.open('rb') as file:
                 modules = pickle.load(file)
 
-        main_module = modules[0]
-        for tu in main_module.libraries[None].translation_units:
-            if tu.name == "init":
-                for x in tu.sections:
-                    g.LOG.debug(x.id)
-                    for y in x.symbols:
-                        g.LOG.debug(f"{type(y).__name__:<25} {y.identifier}")
+        for module in modules:
+            for lib in module.libraries.values():
+                for tu in lib.translation_units:
+                    for section in tu.sections:
+                        for symbol in section.symbols:
+                            g.register_symbol(symbol)
 
         for module in modules:
             libs = list(module.libraries.values())
@@ -329,14 +351,17 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                 base = module.libraries[None]
                 base.lib_path = src_path
                 base.asm_path = asm_path
-                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait, cpp_gen)
+                if (cpp_gen or asm_gen) and module.index in gen_modules:
+                    cpp_tasks += cpp.export_all({None: base},
+                                            symbol_map, ait, cpp_gen)
 
                 for lib in module.libraries.values():
                     if lib.name != None:
                         lib.lib_path = lib_path
                         lib.asm_path = asm_path
                         lib.mk_path = lib_path
-                        cpp_tasks += cpp.export_all({lib.name: lib},
+                        if (cpp_gen or asm_gen) and module.index in gen_modules:
+                            cpp_tasks += cpp.export_all({lib.name: lib},
                                                     symbol_map, ait, cpp_gen)
             else:
                 rel_name = g.RELS[module.index].path.name.replace(".rel", "")
@@ -345,14 +370,20 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                         lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
                         lib.asm_path = asm_path.joinpath(
                             f"rel/{rel_name}/libs/")
-                        cpp_tasks += cpp.export_all({lib.name: lib},
+                        lib.mk_path = rel_path.joinpath(
+                            f"{rel_name}/libs/")
+                        if (cpp_gen or asm_gen) and module.index in gen_modules:
+                            cpp_tasks += cpp.export_all({lib.name: lib},
                                                     symbol_map, ait, cpp_gen)
 
                 base = module.libraries[None]
                 base.name = rel_name
                 base.lib_path = rel_path
                 base.asm_path = asm_path.joinpath("rel/")
-                cpp_tasks += cpp.export_all({None: base}, symbol_map, ait, cpp_gen)
+                base.mk_path = rel_path
+                if (cpp_gen or asm_gen) and module.index in gen_modules:
+                    cpp_tasks += cpp.export_all({None: base},
+                                            symbol_map, ait, cpp_gen)
 
         if mk_gen:
             for module in modules:
@@ -360,6 +391,8 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                     for name, lib in module.libraries.items():
                         if name != None:
                             await makefile.create_library(lib)
+                else:
+                    await makefile.create_rel(module)
 
             await makefile.create_obj_files(modules[0].libraries[None])
 
@@ -435,7 +468,8 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
 
                     symbols = []
                     reference_count = defaultdict(int)
-                    reference_count[g.ENTRY_POINT] += 1 # add reference to entrypoint '__start'
+                    # add reference to entrypoint '__start'
+                    reference_count[g.ENTRY_POINT] += 1
                     for lib in module.libraries.values():
                         for tu in lib.translation_units:
                             for sec in tu.sections:
@@ -469,16 +503,18 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                                                 f"'addr': 0x{symbol.addr:08X}, "
                                                 f"'size': 0x{symbol.size:04X}, "
                                                 f"'padding': 0x{symbol.padding:02X}, "
-                                                f"'name': {escape_text(symbol.identifier.name)}, " 
+                                                f"'name': {escape_text(symbol.identifier.name)}, "
                                                 f"'reference_count': {ref_count}, "
                                                 f"'type': {escape_text(type(symbol).__name__)}}},")
                         await builder.write(f"}}")
                     progress.update(task, advance=1)
+                    progress.remove_task(task)
 
         g.CONSOLE.print("complete")
 
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
+        g.CONSOLE.print_exception()
         sys.exit(1)
     except RuntimeError:
         sys.exit(1)

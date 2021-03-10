@@ -107,9 +107,7 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_803A2130 = 
-    "J3DAnmLoader: th"
-    "is is not a J3D "
-    "Binary.\n";
+    "J3DAnmLoader: this is not a J3D Binary.\n";
 SECTION_DEAD const char* const stringBase_803A2159 = "Unknown data block\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803A216D = "\0\0";

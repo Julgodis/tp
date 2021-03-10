@@ -78,13 +78,10 @@ extern "C" {
 SECTION_DEAD const char* const stringBase_8039D1B0 = "JKRDvdArchive.cpp";
 SECTION_DEAD const char* const stringBase_8039D1C2 = "%s";
 SECTION_DEAD const char* const stringBase_8039D1C5 = 
-    "Sorry, not appli"
-    "ed for SZP archi"
-    "ve.\n";
+    "Sorry, not applied for SZP archive.\n";
 SECTION_DEAD const char* const stringBase_8039D1EA = "??? bad sequence\n";
 SECTION_DEAD const char* const stringBase_8039D1FC = 
-    "Sorry, not appli"
-    "ed SZP archive.\n";
+    "Sorry, not applied SZP archive.\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039D21D = "\0\0";
 #pragma pop

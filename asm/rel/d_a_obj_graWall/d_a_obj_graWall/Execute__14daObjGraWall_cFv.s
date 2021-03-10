@@ -1,0 +1,44 @@
+lbl_80C10DD8:
+/* 80C10DD8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80C10DDC 00000004  7C 08 02 A6 */	mflr r0
+/* 80C10DE0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80C10DE4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80C10DE8 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80C10DEC 00000014  88 83 06 E0 */	lbz r4, 0x6e0(r3)
+/* 80C10DF0 00000018  28 04 00 FF */	cmplwi r4, 0xff
+/* 80C10DF4 0000001C  41 82 00 30 */	beq lbl_80C10E24
+/* 80C10DF8 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C10DFC 00000024  38 63 00 00 */	addi r3, g_dComIfG_gameInfo@l
+/* 80C10E00 00000028  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
+/* 80C10E04 0000002C  7C 05 07 74 */	extsb r5, r0
+/* 80C10E08 00000030  4B FF FD D1 */	bl isSwitch__10dSv_info_cCFii
+/* 80C10E0C 00000034  2C 03 00 00 */	cmpwi r3, 0
+/* 80C10E10 00000038  41 82 00 48 */	beq lbl_80C10E58
+/* 80C10E14 0000003C  7F E3 FB 78 */	mr r3, r31
+/* 80C10E18 00000040  4B FF FD C1 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80C10E1C 00000044  38 60 00 01 */	li r3, 1
+/* 80C10E20 00000048  48 00 00 44 */	b lbl_80C10E64
+lbl_80C10E24:
+/* 80C10E24 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C10E28 00000004  38 63 00 00 */	addi r3, g_dComIfG_gameInfo@l
+/* 80C10E2C 00000008  38 63 07 F0 */	addi r3, r3, 0x7f0
+/* 80C10E30 0000000C  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
+/* 80C10E34 00000010  38 84 00 00 */	addi r4, saveBitLabels__16dSv_event_flag_c@l
+/* 80C10E38 00000014  A0 84 00 7C */	lhz r4, 0x7c(r4)
+/* 80C10E3C 00000018  4B FF FD 9D */	bl isEventBit__11dSv_event_cCFUs
+/* 80C10E40 0000001C  2C 03 00 00 */	cmpwi r3, 0
+/* 80C10E44 00000020  41 82 00 14 */	beq lbl_80C10E58
+/* 80C10E48 00000024  7F E3 FB 78 */	mr r3, r31
+/* 80C10E4C 00000028  4B FF FD 8D */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80C10E50 0000002C  38 60 00 01 */	li r3, 1
+/* 80C10E54 00000030  48 00 00 10 */	b lbl_80C10E64
+lbl_80C10E58:
+/* 80C10E58 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80C10E5C 00000004  48 00 00 79 */	bl col_set__14daObjGraWall_cFv
+/* 80C10E60 00000008  38 60 00 01 */	li r3, 1
+lbl_80C10E64:
+/* 80C10E64 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80C10E68 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80C10E6C 00000008  7C 08 03 A6 */	mtlr r0
+/* 80C10E70 0000000C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80C10E74 00000010  4E 80 00 20 */	blr 

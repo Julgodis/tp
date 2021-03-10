@@ -140,17 +140,11 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039B950 = 
-    "index out of ran"
-    "ge of bitset::re"
-    "set";
+    "index out of range of bitset::reset";
 SECTION_DEAD const char* const stringBase_8039B974 = 
-    "index out of ran"
-    "ge of bitset::te"
-    "st";
+    "index out of range of bitset::test";
 SECTION_DEAD const char* const stringBase_8039B997 = 
-    "index out of ran"
-    "ge of bitset::se"
-    "t";
+    "index out of range of bitset::set";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039B9B9 = "\0\0\0\0\0\0";
 #pragma pop

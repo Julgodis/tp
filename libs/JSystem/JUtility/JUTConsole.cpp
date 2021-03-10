@@ -103,13 +103,9 @@ extern "C" {
 SECTION_DEAD const char* const stringBase_8039D9A8 = "[%03d] %s\n";
 SECTION_DEAD const char* const stringBase_8039D9B3 = "%s\n";
 SECTION_DEAD const char* const stringBase_8039D9B7 = 
-    "\n:::dump of cons"
-    "ole[%x]---------"
-    "-------\n";
+    "\n:::dump of console[%x]----------------\n";
 SECTION_DEAD const char* const stringBase_8039D9E0 = 
-    ":::dump of conso"
-    "le[%x] END------"
-    "------\n";
+    ":::dump of console[%x] END------------\n";
 SECTION_DEAD const char* const stringBase_8039DA08 = "%s";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039DA0B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";

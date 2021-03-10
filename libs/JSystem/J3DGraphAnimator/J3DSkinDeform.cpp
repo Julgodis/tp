@@ -84,9 +84,7 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_803A2028 = 
-    " Invlid Data : C"
-    "PU Pipeline proc"
-    "ess GX_INDEX16 D"
+    " Invlid Data : CPU Pipeline process GX_INDEX16 D"
     "ata Only\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803A2062 = "\0\0\0\0\0";

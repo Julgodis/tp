@@ -6,6 +6,7 @@ from collections import defaultdict
 from typing import Dict, List
 from pathlib import Path
 from data import *
+from intervaltree import Interval, IntervalTree
 
 import util
 import linker_map
@@ -98,7 +99,7 @@ def infer_location_from_other_symbols(section: linker_map.Section, symbols: List
         # there are no other symbol which we can use to infer the object and library file from,
         # create a fake translation unit
         for rsym in symbols_without_obj:
-            rsym.obj = "unknown_translation_unit.o"
+            rsym.obj = f"unknown_translation_unit_{section.name.replace('.','')}.o"
 
 
 def calculate_symbol_sizes(section: linker_map.Section, symbols: List[linker_map.Symbol]):
@@ -211,26 +212,29 @@ def search(module_id: int, name: str, map_path: Path, sections: List[ExecutableS
                 module_id, sections, map_sections, map_addrs, branch_access)
             break
 
-    #
-    relocation_symbols = {}
-    for section in map_sections.values():
-        for symbol in section.symbols:
-            relocation_symbols[(section.name, symbol.addr)] = symbol
+    # insert relocation that are not already symbol from the linker map
+    if len(relocations) > 0:
+        aits = {}
+        for section in map_sections.values():
+            relocation_symbols = {}
+            for symbol in section.symbols:
+                relocation_symbols[symbol.addr] = symbol
 
-    #
-    for si, relocs in relocations.items():
-        for r in relocs:
-            if r.module == module_id:
-                section = sections[r.section]
-                if not (section.name, r.addend) in relocation_symbols:
-                    if not section.name in map_sections:
-                        g.LOG.debug(sections)
-                        g.LOG.debug(section.name)
-                        g.LOG.debug(r)
-                        g.LOG.debug(map_sections.keys())
-                    symbol = linker_map.Symbol(r.addend, 0, 0, None, None, None)
-                    symbol.source = f"relocation/{section.name}/{r.addend:08X}"
-                    map_sections[section.name].symbols.append(symbol)
+            aits[section.name] = IntervalTree(
+                [Interval(x.start, x.end, x)
+                for x in relocation_symbols.values() if x.size > 0]
+            )
+
+        for si, relocs in relocations.items():
+            for r in relocs:
+                if r.module == module_id:
+                    section = sections[r.section]
+                    if section.name in aits:
+                        results = list(aits[section.name][r.addend])
+                        if len(results) == 0:
+                            symbol = linker_map.Symbol(r.addend, 0, 0, None, None, None)
+                            symbol.source = f"relocation/{section.name}/{r.addend:08X}"
+                            map_sections[section.name].symbols.append(symbol)
 
     # build a tree
     section_count = defaultdict(int)
@@ -318,11 +322,9 @@ def search(module_id: int, name: str, map_path: Path, sections: List[ExecutableS
                         function = generate_functions.from_group(
                             section, group)
                         section.addSymbol(function)
-                        g.register_symbol(function)
                     else:
                         # take the group of symbols and generate "real" symbols
                         for symbol_data in generate_symbols.from_group(section, group):
                             section.addSymbol(symbol_data)
-                            g.register_symbol(symbol_data)
 
     return module

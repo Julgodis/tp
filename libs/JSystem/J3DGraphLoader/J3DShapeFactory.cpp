@@ -54,9 +54,7 @@ extern "C" {
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_803A2100 = 
-    "WRONG SHAPE MATR"
-    "IX TYPE (J3DMode"
-    "lInit.cpp)\n";
+    "WRONG SHAPE MATRIX TYPE (J3DModelInit.cpp)\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803A212C = "\0\0\0";
 #pragma pop

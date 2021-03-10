@@ -1,0 +1,28 @@
+lbl_805A3AB8:
+/* 805A3AB8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 805A3ABC 00000004  7C 08 02 A6 */	mflr r0
+/* 805A3AC0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 805A3AC4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 805A3AC8 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 805A3ACC 00000014  3C 60 00 00 */	lis r3, l_arcName@ha
+/* 805A3AD0 00000018  38 63 00 00 */	addi r3, l_arcName@l
+/* 805A3AD4 0000001C  38 80 00 04 */	li r4, 4
+/* 805A3AD8 00000020  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805A3ADC 00000024  38 A5 00 00 */	addi r5, g_dComIfG_gameInfo@l
+/* 805A3AE0 00000028  3C A5 00 02 */	addis r5, r5, 2
+/* 805A3AE4 0000002C  38 C0 00 80 */	li r6, 0x80
+/* 805A3AE8 00000030  38 A5 C2 F8 */	addi r5, r5, -15624
+/* 805A3AEC 00000034  4B FF FF AD */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 805A3AF0 00000038  3C 80 00 08 */	lis r4, 8
+/* 805A3AF4 0000003C  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
+/* 805A3AF8 00000040  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
+/* 805A3AFC 00000044  4B FF FF 9D */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 805A3B00 00000048  90 7F 05 A8 */	stw r3, 0x5a8(r31)
+/* 805A3B04 0000004C  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
+/* 805A3B08 00000050  30 03 FF FF */	addic r0, r3, -1
+/* 805A3B0C 00000054  7C 60 19 10 */	subfe r3, r0, r3
+/* 805A3B10 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 805A3B14 0000005C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 805A3B18 00000060  7C 08 03 A6 */	mtlr r0
+/* 805A3B1C 00000064  38 21 00 10 */	addi r1, r1, 0x10
+/* 805A3B20 00000068  4E 80 00 20 */	blr 

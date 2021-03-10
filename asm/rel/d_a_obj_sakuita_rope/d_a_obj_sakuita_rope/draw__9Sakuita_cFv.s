@@ -1,0 +1,16 @@
+lbl_80CC5354:
+/* 80CC5354 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80CC5358 00000004  7C 08 02 A6 */	mflr r0
+/* 80CC535C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80CC5360 0000000C  7C 65 1B 78 */	mr r5, r3
+/* 80CC5364 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC5368 00000014  38 63 00 00 */	addi r3, g_dComIfG_gameInfo@l
+/* 80CC536C 00000018  38 63 0F 38 */	addi r3, r3, 0xf38
+/* 80CC5370 0000001C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CC5374 00000020  88 A5 00 3A */	lbz r5, 0x3a(r5)
+/* 80CC5378 00000024  7C A5 07 74 */	extsb r5, r5
+/* 80CC537C 00000028  4B FF FE 9D */	bl entrySimpleModel__14dComIfG_play_cFP8J3DModeli
+/* 80CC5380 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80CC5384 00000030  7C 08 03 A6 */	mtlr r0
+/* 80CC5388 00000034  38 21 00 10 */	addi r1, r1, 0x10
+/* 80CC538C 00000038  4E 80 00 20 */	blr 

@@ -143,11 +143,24 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
     if section.name == ".dtors":
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
-            assert len(padding_data) == 0
-            return [ReferenceArray(identifier, symbol.addr, symbol.size,
+            __destroy_global_chain_reference = ReferenceArray(identifier, symbol.addr, symbol.size,
                                    section=section,
                                    data=data,
-                                   source=f".dtors0/{symbol.source}")]
+                                   source=f".dtors0/{symbol.source}")
+
+            if len(padding_data) == 0:
+                return [__destroy_global_chain_reference]
+
+            return [
+                __destroy_global_chain_reference, 
+                InitData(Identifier('pad', symbol.addr + 4, None),
+                    symbol.addr + 4,
+                    len(padding_data), 
+                    section=section,
+                    data=padding_data,
+                    source=f".dtors0/padding/{symbol.source}")
+            ]
+
         elif symbol.name == "__fini_cpp_exceptions_reference":
             assert len(data) == 4
             assert len(padding_data) == 0

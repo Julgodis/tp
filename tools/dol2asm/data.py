@@ -32,7 +32,7 @@ class Identifier:
     def __repr__(self):
         return f"Identifier({self.prefix}_{self.addr:08X},{self.name})"
 
-@dataclass
+@dataclass(eq=False)
 class Symbol:
     identifier: Identifier
     addr: int
@@ -42,6 +42,12 @@ class Symbol:
     section: "Section" = field(default=None,repr=False)
     source: str = None
     _internal_references = None
+
+    def __hash__(self):
+        return hash(self.addr)
+
+    def __eq__(self, other):
+        return self.addr == other.addr and self.size == other.size
 
     @property
     def start(self):
@@ -206,11 +212,11 @@ class Module:
 #
 #
 
-@dataclass
+@dataclass(eq=False)
 class ZeroData(Symbol):
     pass
 
-@dataclass
+@dataclass(eq=False)
 class ZeroStruct(Symbol):
     members: List[Symbol] = field(default_factory=list)
 
@@ -257,7 +263,7 @@ class ZeroStruct(Symbol):
         g.LOG.error(self)
         assert False
 
-@dataclass
+@dataclass(eq=False)
 class Data(Symbol):
     data: bytes = field(default=None,repr=False)
     padding_data: bytes = field(default=None,repr=False)
@@ -269,11 +275,11 @@ class Data(Symbol):
             offset = addr - self.addr
             return f"(((char*)&{self.identifier.label})+0x{offset:X})"
 
-@dataclass
+@dataclass(eq=False)
 class InitData(Data):
     pass
 
-@dataclass
+@dataclass(eq=False)
 class InitStruct(Data):
     members: List[Symbol] = field(default_factory=list)
 
@@ -323,7 +329,7 @@ class InitStruct(Data):
         g.LOG.error(self)
         assert False
 
-@dataclass
+@dataclass(eq=False)
 class VirtualTable(Data):
     functions: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
 
@@ -346,7 +352,7 @@ class VirtualTable(Data):
         return set([ x[1].addr for x in self.functions if x[1]])
 
 # TODO: Almost identical to the virtual-table, combine?
-@dataclass
+@dataclass(eq=False)
 class ReferenceArray(Data):
     references: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
 
@@ -367,12 +373,12 @@ class ReferenceArray(Data):
     def _get_internal_references(self):
         return set([ x[1].addr for x in self.references if x[1]])
 
-@dataclass
+@dataclass(eq=False)
 class String(Data):
     encoding: str = None
     decoded_string: str = None
 
-@dataclass
+@dataclass(eq=False)
 class StringBase(Data):
     strings: List[str] = field(default_factory=list,repr=False)
 
@@ -388,7 +394,7 @@ class StringBase(Data):
             section = section,
             strings = strings)
 
-@dataclass
+@dataclass(eq=False)
 class Block(Data):
     sda_hack_references: Set[int] = field(default=None,repr=False)
 
@@ -400,7 +406,7 @@ class Block(Data):
         self.sda_hack_references = collector.sda_hack_references
         return set([x.addr for x in collector.accesses.values()])
 
-@dataclass
+@dataclass(eq=False)
 class Function(Symbol):
     blocks: List[str] = field(default_factory=list,repr=False)
     return_type: str = None
@@ -425,6 +431,14 @@ class Function(Symbol):
         for block in self.blocks:
             refs.update(block.internal_references)
         return refs
+
+    @property
+    def relocation_symbols(self):
+        symbols = set()
+        for addr, relocation in self.section.relocations.items():
+            symbol = g.lookup_symbol(relocation)
+            symbols.add(symbol)
+        return symbols
 
     @staticmethod
     def create(section, group):

@@ -141,17 +141,11 @@ extern "C" {
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_8039CA58 = "Audiores/Waves/";
 SECTION_DEAD const char* const stringBase_8039CA68 = 
-    "index out of ran"
-    "ge of bitset::re"
-    "set";
+    "index out of range of bitset::reset";
 SECTION_DEAD const char* const stringBase_8039CA8C = 
-    "index out of ran"
-    "ge of bitset::te"
-    "st";
+    "index out of range of bitset::test";
 SECTION_DEAD const char* const stringBase_8039CAAF = 
-    "index out of ran"
-    "ge of bitset::se"
-    "t";
+    "index out of range of bitset::set";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039CAD1 = "\0\0\0\0\0\0";
 #pragma pop
