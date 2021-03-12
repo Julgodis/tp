@@ -54,7 +54,7 @@ lbl_801C66E4:
 /* 801C67B4 000000BC  90 9D 00 18 */	stw r4, 0x18(r29)
 /* 801C67B8 000000C0  90 9D 00 B8 */	stw r4, 0xb8(r29)
 /* 801C67BC 000000C4  90 9D 00 8C */	stw r4, 0x8c(r29)
-/* 801C67C0 000000C8  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C67C0 000000C8  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C67C4 000000CC  D0 1D 01 A8 */	stfs f0, 0x1a8(r29)
 /* 801C67C8 000000D0  90 9D 00 BC */	stw r4, 0xbc(r29)
 /* 801C67CC 000000D4  90 9D 00 90 */	stw r4, 0x90(r29)
@@ -76,7 +76,7 @@ lbl_801C67E8:
 /* 801C6808 00000020  38 00 00 00 */	li r0, 0
 /* 801C680C 00000024  98 1D 03 05 */	stb r0, 0x305(r29)
 /* 801C6810 00000028  38 60 00 00 */	li r3, 0
-/* 801C6814 0000002C  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C6814 0000002C  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C6818 00000030  38 00 00 08 */	li r0, 8
 /* 801C681C 00000034  7C 09 03 A6 */	mtctr r0
 lbl_801C6820:
@@ -181,41 +181,41 @@ lbl_801C6988:
 /* 801C6988 00000000  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 801C698C 00000004  28 00 00 01 */	cmplwi r0, 1
 /* 801C6990 00000008  40 82 00 18 */	bne lbl_801C69A8
-/* 801C6994 0000000C  C0 02 A7 2C */	lfs f0, d_menu_d_menu_fmap__LIT_4159(r2)
+/* 801C6994 0000000C  C0 02 A7 2C */	lfs f0, d_menu_d_menu_fmap__lit_4159(r2)
 /* 801C6998 00000010  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801C699C 00000014  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C699C 00000014  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C69A0 00000018  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801C69A4 0000001C  48 00 00 64 */	b lbl_801C6A08
 lbl_801C69A8:
 /* 801C69A8 00000000  28 00 00 03 */	cmplwi r0, 3
 /* 801C69AC 00000004  40 82 00 18 */	bne lbl_801C69C4
-/* 801C69B0 00000008  C0 02 A7 30 */	lfs f0, LIT_4160(r2)
+/* 801C69B0 00000008  C0 02 A7 30 */	lfs f0, lit_4160(r2)
 /* 801C69B4 0000000C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801C69B8 00000010  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C69B8 00000010  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C69BC 00000014  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801C69C0 00000018  48 00 00 48 */	b lbl_801C6A08
 lbl_801C69C4:
 /* 801C69C4 00000000  28 00 00 02 */	cmplwi r0, 2
 /* 801C69C8 00000004  40 82 00 18 */	bne lbl_801C69E0
-/* 801C69CC 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C69CC 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C69D0 0000000C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801C69D4 00000010  C0 02 A7 34 */	lfs f0, LIT_4161(r2)
+/* 801C69D4 00000010  C0 02 A7 34 */	lfs f0, lit_4161(r2)
 /* 801C69D8 00000014  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801C69DC 00000018  48 00 00 2C */	b lbl_801C6A08
 lbl_801C69E0:
 /* 801C69E0 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 801C69E4 00000004  40 82 00 18 */	bne lbl_801C69FC
-/* 801C69E8 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C69E8 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C69EC 0000000C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801C69F0 00000010  C0 02 A7 38 */	lfs f0, LIT_4162(r2)
+/* 801C69F0 00000010  C0 02 A7 38 */	lfs f0, lit_4162(r2)
 /* 801C69F4 00000014  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801C69F8 00000018  48 00 00 10 */	b lbl_801C6A08
 lbl_801C69FC:
-/* 801C69FC 00000000  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C69FC 00000000  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C6A00 00000004  D0 1D 01 1C */	stfs f0, 0x11c(r29)
 /* 801C6A04 00000008  D0 1D 01 20 */	stfs f0, 0x120(r29)
 lbl_801C6A08:
-/* 801C6A08 00000000  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C6A08 00000000  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C6A0C 00000004  D0 1D 01 24 */	stfs f0, 0x124(r29)
 /* 801C6A10 00000008  9B FD 03 04 */	stb r31, 0x304(r29)
 /* 801C6A14 0000000C  38 A0 00 00 */	li r5, 0
@@ -247,7 +247,7 @@ lbl_801C6A70:
 /* 801C6A74 00000004  7C 9D 03 2E */	sthx r4, r29, r0
 /* 801C6A78 00000008  38 63 00 02 */	addi r3, r3, 2
 /* 801C6A7C 0000000C  42 00 FF F4 */	bdnz lbl_801C6A70
-/* 801C6A80 00000010  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C6A80 00000010  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C6A84 00000014  D0 1D 01 EC */	stfs f0, 0x1ec(r29)
 /* 801C6A88 00000018  38 00 00 00 */	li r0, 0
 /* 801C6A8C 0000001C  98 1D 03 06 */	stb r0, 0x306(r29)

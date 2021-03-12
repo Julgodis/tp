@@ -38,7 +38,7 @@ lbl_802438FC:
 /* 80243924 00000028  38 80 00 00 */	li r4, 0
 /* 80243928 0000002C  48 00 04 A5 */	bl moveBaseLength__14dMsgScrnHowl_cFb
 /* 8024392C 00000030  38 60 00 00 */	li r3, 0
-/* 80243930 00000034  C0 42 B2 50 */	lfs f2, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243930 00000034  C0 42 B2 50 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80243934 00000038  38 00 00 1E */	li r0, 0x1e
 /* 80243938 0000003C  7C 09 03 A6 */	mtctr r0
 lbl_8024393C:

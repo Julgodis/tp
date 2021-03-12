@@ -35,9 +35,9 @@ lbl_801DC268:
 /* 801DC28C 00000024  38 A0 00 00 */	li r5, 0
 /* 801DC290 00000028  38 C0 00 00 */	li r6, 0
 /* 801DC294 0000002C  38 E0 00 00 */	li r7, 0
-/* 801DC298 00000030  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__LIT_4348(r2)
+/* 801DC298 00000030  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__lit_4348(r2)
 /* 801DC29C 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801DC2A0 00000038  C0 62 A8 B0 */	lfs f3, d_menu_d_menu_item_explain__LIT_4304(r2)
+/* 801DC2A0 00000038  C0 62 A8 B0 */	lfs f3, d_menu_d_menu_item_explain__lit_4304(r2)
 /* 801DC2A4 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801DC2A8 00000040  39 00 00 00 */	li r8, 0
 /* 801DC2AC 00000044  48 0C F6 D9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

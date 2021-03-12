@@ -106,7 +106,7 @@ lbl_800C1404:
 /* 800C145C 00000058  4B FB 32 E9 */	bl GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 800C1460 0000005C  38 61 00 14 */	addi r3, r1, 0x14
 /* 800C1464 00000060  38 81 00 20 */	addi r4, r1, 0x20
-/* 800C1468 00000064  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 800C1468 00000064  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 800C146C 00000068  48 1A 57 19 */	bl __ml__4cXyzCFf
 /* 800C1470 0000006C  38 61 00 08 */	addi r3, r1, 8
 /* 800C1474 00000070  3C 80 80 3F */	lis r4, mLineCheck__11fopAcM_lc_c@ha
@@ -204,7 +204,7 @@ lbl_800C1594:
 lbl_800C15B8:
 /* 800C15B8 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800C15BC 00000004  38 80 00 02 */	li r4, 2
-/* 800C15C0 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800C15C0 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800C15C4 0000000C  4B FE C1 61 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800C15C8:
 /* 800C15C8 00000000  80 7F 28 40 */	lwz r3, 0x2840(r31)

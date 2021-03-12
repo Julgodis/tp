@@ -54,7 +54,7 @@ lbl_80250284:
 /* 80250354 000000D0  38 A0 00 01 */	li r5, 1
 /* 80250358 000000D4  4B F4 4D 9D */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8025035C 000000D8  80 7D 00 20 */	lwz r3, 0x20(r29)
-/* 80250360 000000DC  C0 22 B3 C0 */	lfs f1, d_d_name__LIT_3820(r2)
+/* 80250360 000000DC  C0 22 B3 C0 */	lfs f1, d_d_name__lit_3820(r2)
 /* 80250364 000000E0  4B F4 4F 3D */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80250368 000000E4  39 61 00 40 */	addi r11, r1, 0x40
 /* 8025036C 000000E8  48 11 1E BD */	bl _restgpr_29

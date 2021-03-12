@@ -4,8 +4,8 @@ lbl_8033BAF0:
 /* 8033BAF8 00000008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033BAFC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8033BB00 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 8033BB04 00000014  3C 60 80 3D */	lis r3, OSCache__LIT_63@ha
-/* 8033BB08 00000018  3B E3 F5 10 */	addi r31, r3, OSCache__LIT_63@l
+/* 8033BB04 00000014  3C 60 80 3D */	lis r3, OSCache__lit_63@ha
+/* 8033BB08 00000018  3B E3 F5 10 */	addi r31, r3, OSCache__lit_63@l
 /* 8033BB0C 0000001C  4B FF E1 C5 */	bl PPCMfhid0
 /* 8033BB10 00000020  54 60 04 20 */	rlwinm r0, r3, 0, 0x10, 0x10
 /* 8033BB14 00000024  28 00 00 00 */	cmplwi r0, 0

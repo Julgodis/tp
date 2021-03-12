@@ -490,7 +490,7 @@ lbl_80213554:
 /* 80213CA8 00000754  38 C0 00 00 */	li r6, 0
 /* 80213CAC 00000758  48 00 85 A5 */	bl getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c
 /* 80213CB0 0000075C  80 7F 03 68 */	lwz r3, 0x368(r31)
-/* 80213CB4 00000760  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80213CB4 00000760  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80213CB8 00000764  48 04 1B 19 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80213CBC 00000768  7F E3 FB 78 */	mr r3, r31
 /* 80213CC0 0000076C  3C 80 80 43 */	lis r4, g_drawHIO@ha

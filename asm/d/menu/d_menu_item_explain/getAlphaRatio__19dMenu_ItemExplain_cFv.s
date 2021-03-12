@@ -11,15 +11,15 @@ lbl_801DC7C8:
 /* 801DC7CC 00000004  41 82 00 08 */	beq lbl_801DC7D4
 /* 801DC7D0 00000008  48 00 00 24 */	b lbl_801DC7F4
 lbl_801DC7D4:
-/* 801DC7D4 00000000  C0 22 A8 8C */	lfs f1, d_menu_d_menu_item_explain__LIT_4063(r2)
+/* 801DC7D4 00000000  C0 22 A8 8C */	lfs f1, d_menu_d_menu_item_explain__lit_4063(r2)
 /* 801DC7D8 00000004  C0 03 00 BC */	lfs f0, 0xbc(r3)
 /* 801DC7DC 00000008  EC 21 00 28 */	fsubs f1, f1, f0
-/* 801DC7E0 0000000C  C0 02 A8 D0 */	lfs f0, d_menu_d_menu_item_explain__LIT_4820(r2)
+/* 801DC7E0 0000000C  C0 02 A8 D0 */	lfs f0, d_menu_d_menu_item_explain__lit_4820(r2)
 /* 801DC7E4 00000010  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801DC7E8 00000014  4E 80 00 20 */	blr 
 lbl_801DC7EC:
-/* 801DC7EC 00000000  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__LIT_4348(r2)
+/* 801DC7EC 00000000  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__lit_4348(r2)
 /* 801DC7F0 00000004  4E 80 00 20 */	blr 
 lbl_801DC7F4:
-/* 801DC7F4 00000000  C0 22 A8 88 */	lfs f1, d_menu_d_menu_item_explain__LIT_4062(r2)
+/* 801DC7F4 00000000  C0 22 A8 88 */	lfs f1, d_menu_d_menu_item_explain__lit_4062(r2)
 /* 801DC7F8 00000004  4E 80 00 20 */	blr 

@@ -25,9 +25,9 @@ lbl_80237E68:
 /* 80237EC4 0000005C  38 A0 00 00 */	li r5, 0
 /* 80237EC8 00000060  38 C0 00 01 */	li r6, 1
 /* 80237ECC 00000064  38 E0 00 00 */	li r7, 0
-/* 80237ED0 00000068  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__LIT_4084(r2)
+/* 80237ED0 00000068  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__lit_4084(r2)
 /* 80237ED4 0000006C  FC 40 08 90 */	fmr f2, f1
-/* 80237ED8 00000070  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__LIT_4145(r2)
+/* 80237ED8 00000070  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__lit_4145(r2)
 /* 80237EDC 00000074  FC 80 18 90 */	fmr f4, f3
 /* 80237EE0 00000078  39 00 00 00 */	li r8, 0
 /* 80237EE4 0000007C  48 07 3A A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

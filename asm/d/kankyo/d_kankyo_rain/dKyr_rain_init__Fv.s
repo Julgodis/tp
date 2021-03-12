@@ -43,7 +43,7 @@ lbl_8005CC5C:
 /* 8005CD00 000000A4  D0 03 36 E8 */	stfs f0, 0x36e8(r3)
 /* 8005CD04 000000A8  C0 1D 00 EC */	lfs f0, 0xec(r29)
 /* 8005CD08 000000AC  D0 03 36 EC */	stfs f0, 0x36ec(r3)
-/* 8005CD0C 000000B0  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3954(r2)
+/* 8005CD0C 000000B0  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
 /* 8005CD10 000000B4  80 7F 0E 84 */	lwz r3, 0xe84(r31)
 /* 8005CD14 000000B8  D0 03 36 FC */	stfs f0, 0x36fc(r3)
 /* 8005CD18 000000BC  80 7F 0E 84 */	lwz r3, 0xe84(r31)

@@ -10,8 +10,8 @@ lbl_801CDA74:
 /* 801CDA94 00000020  4B FF 8B 65 */	bl __ct__9dMf_HIO_cFv
 /* 801CDA98 00000024  3C 80 80 1D */	lis r4, __dt__9dMf_HIO_cFv@ha
 /* 801CDA9C 00000028  38 84 DA 2C */	addi r4, r4, __dt__9dMf_HIO_cFv@l
-/* 801CDAA0 0000002C  3C A0 80 43 */	lis r5, LIT_3989@ha
-/* 801CDAA4 00000030  38 A5 E8 20 */	addi r5, r5, LIT_3989@l
+/* 801CDAA0 0000002C  3C A0 80 43 */	lis r5, lit_3989@ha
+/* 801CDAA4 00000030  38 A5 E8 20 */	addi r5, r5, lit_3989@l
 /* 801CDAA8 00000034  48 19 41 7D */	bl __register_global_object
 /* 801CDAAC 00000038  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 801CDAB0 0000003C  80 1F 00 10 */	lwz r0, 0x10(r31)

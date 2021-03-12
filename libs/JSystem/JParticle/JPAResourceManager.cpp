@@ -5,94 +5,97 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__18JPAResourceManagerFPCvP7JKRHeap();
-extern void getResource__18JPAResourceManagerCFUs();
-extern void checkUserIndexDuplication__18JPAResourceManagerCFUs();
-extern void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
-extern void registRes__18JPAResourceManagerFP11JPAResource();
-extern void registTex__18JPAResourceManagerFP10JPATexture();
-extern void getResUserWork__18JPAResourceManagerCFUs();
-extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern void _savegpr_26();
-extern void _restgpr_26();
-extern void strcmp();
-}
+extern "C" extern void __ct__18JPAResourceManagerFPCvP7JKRHeap();
+extern "C" extern void getResource__18JPAResourceManagerCFUs();
+extern "C" extern void checkUserIndexDuplication__18JPAResourceManagerCFUs();
+extern "C" extern void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
+extern "C" extern void registRes__18JPAResourceManagerFP11JPAResource();
+extern "C" extern void registTex__18JPAResourceManagerFP10JPATexture();
+extern "C" extern void getResUserWork__18JPAResourceManagerCFUs();
+extern "C" extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
+extern "C" extern void strcmp();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80273E10-80273E68 0058 .text      __ct__18JPAResourceManagerFPCvP7JKRHeap                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__18JPAResourceManagerFPCvP7JKRHeap() {
+extern "C" asm void __ct__18JPAResourceManagerFPCvP7JKRHeap() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/__ct__18JPAResourceManagerFPCvP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 80273E68-80273EA8 0040 .text      getResource__18JPAResourceManagerCFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getResource__18JPAResourceManagerCFUs() {
+extern "C" asm void getResource__18JPAResourceManagerCFUs() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/getResource__18JPAResourceManagerCFUs.s"
 }
 #pragma pop
 
+
 /* 80273EA8-80273EEC 0044 .text      checkUserIndexDuplication__18JPAResourceManagerCFUs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkUserIndexDuplication__18JPAResourceManagerCFUs() {
+extern "C" asm void checkUserIndexDuplication__18JPAResourceManagerCFUs() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/checkUserIndexDuplication__18JPAResourceManagerCFUs.s"
 }
 #pragma pop
 
+
 /* 80273EEC-80273F8C 00A0 .text      swapTexture__18JPAResourceManagerFPC7ResTIMGPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc() {
+extern "C" asm void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/swapTexture__18JPAResourceManagerFPC7ResTIMGPCc.s"
 }
 #pragma pop
 
+
 /* 80273F8C-80273FAC 0020 .text      registRes__18JPAResourceManagerFP11JPAResource               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void registRes__18JPAResourceManagerFP11JPAResource() {
+extern "C" asm void registRes__18JPAResourceManagerFP11JPAResource() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/registRes__18JPAResourceManagerFP11JPAResource.s"
 }
 #pragma pop
 
+
 /* 80273FAC-80273FCC 0020 .text      registTex__18JPAResourceManagerFP10JPATexture                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void registTex__18JPAResourceManagerFP10JPATexture() {
+extern "C" asm void registTex__18JPAResourceManagerFP10JPATexture() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/registTex__18JPAResourceManagerFP10JPATexture.s"
 }
 #pragma pop
 
+
 /* 80273FCC-80274010 0044 .text      getResUserWork__18JPAResourceManagerCFUs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getResUserWork__18JPAResourceManagerCFUs() {
+extern "C" asm void getResUserWork__18JPAResourceManagerCFUs() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceManager/getResUserWork__18JPAResourceManagerCFUs.s"
 }

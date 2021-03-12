@@ -34,7 +34,7 @@ lbl_801C8580:
 /* 801C8590 00000010  90 1F 02 08 */	stw r0, 0x208(r31)
 /* 801C8594 00000014  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C8598 00000018  38 80 00 03 */	li r4, 3
-/* 801C859C 0000001C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801C859C 0000001C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801C85A0 00000020  48 00 F1 75 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C85A4 00000024  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C85A8 00000028  38 80 05 22 */	li r4, 0x522

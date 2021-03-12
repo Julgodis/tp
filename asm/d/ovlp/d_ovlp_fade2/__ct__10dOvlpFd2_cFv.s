@@ -9,8 +9,8 @@ lbl_80252990:
 /* 802529AC 0000001C  3C 80 80 3C */	lis r4, __vt__15dOvlpFd2_dlst_c@ha
 /* 802529B0 00000020  38 04 2D 5C */	addi r0, r4, __vt__15dOvlpFd2_dlst_c@l
 /* 802529B4 00000024  90 03 00 DC */	stw r0, 0xdc(r3)
-/* 802529B8 00000028  3C 80 80 3C */	lis r4, d_ovlp_d_ovlp_fade2__LIT_3695@ha
-/* 802529BC 0000002C  38 A4 2C F0 */	addi r5, r4, d_ovlp_d_ovlp_fade2__LIT_3695@l
+/* 802529B8 00000028  3C 80 80 3C */	lis r4, d_ovlp_d_ovlp_fade2__lit_3695@ha
+/* 802529BC 0000002C  38 A4 2C F0 */	addi r5, r4, d_ovlp_d_ovlp_fade2__lit_3695@l
 /* 802529C0 00000030  80 85 00 00 */	lwz r4, 0(r5)
 /* 802529C4 00000034  80 05 00 04 */	lwz r0, 4(r5)
 /* 802529C8 00000038  90 83 00 CC */	stw r4, 0xcc(r3)

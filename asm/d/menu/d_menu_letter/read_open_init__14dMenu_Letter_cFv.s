@@ -26,7 +26,7 @@ lbl_801DE334:
 /* 801DE394 0000004C  38 03 F8 1C */	addi r0, r3, letter_data__12dMenu_Letter@l
 /* 801DE398 00000050  7C 60 22 14 */	add r3, r0, r4
 /* 801DE39C 00000054  3B 63 00 04 */	addi r27, r3, 4
-/* 801DE3A0 00000058  C3 E2 A8 E0 */	lfs f31, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DE3A0 00000058  C3 E2 A8 E0 */	lfs f31, d_menu_d_menu_letter__lit_3827(r2)
 lbl_801DE3A4:
 /* 801DE3A4 00000000  7F 5C FA 14 */	add r26, r28, r31
 /* 801DE3A8 00000004  80 7A 02 E0 */	lwz r3, 0x2e0(r26)
@@ -38,7 +38,7 @@ lbl_801DE3A4:
 /* 801DE3C0 0000001C  7D 89 03 A6 */	mtctr r12
 /* 801DE3C4 00000020  4E 80 04 21 */	bctrl 
 /* 801DE3C8 00000024  80 7A 02 E0 */	lwz r3, 0x2e0(r26)
-/* 801DE3CC 00000028  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DE3CC 00000028  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
 /* 801DE3D0 0000002C  48 07 74 01 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801DE3D4 00000030  39 00 00 00 */	li r8, 0
 /* 801DE3D8 00000034  80 7A 02 F4 */	lwz r3, 0x2f4(r26)

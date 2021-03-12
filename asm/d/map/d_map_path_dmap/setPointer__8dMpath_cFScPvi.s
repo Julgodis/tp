@@ -17,7 +17,7 @@ lbl_8003FA40:
 /* 8003FA7C 0000003C  38 8D 80 B4 */	addi r4, r13, 0x80450634-0x80458580 /* struct_80450634+0x0-_SDA_BASE_ */
 /* 8003FA80 00000040  38 AD 80 B5 */	addi r5, r13, 0x80450635-0x80458580 /* struct_80450634+0x1-_SDA_BASE_ */
 /* 8003FA84 00000044  4B FF FD 8D */	bl setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc
-/* 8003FA88 00000048  C0 02 84 28 */	lfs f0, d_map_d_map_path_dmap__LIT_3796(r2)
+/* 8003FA88 00000048  C0 02 84 28 */	lfs f0, d_map_d_map_path_dmap__lit_3796(r2)
 /* 8003FA8C 0000004C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8003FA90 00000050  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8003FA94 00000054  D0 01 00 0C */	stfs f0, 0xc(r1)
@@ -52,7 +52,7 @@ lbl_8003FAF0:
 /* 8003FAFC 00000000  40 81 00 08 */	ble lbl_8003FB04
 /* 8003FB00 00000004  D0 2D 88 F4 */	stfs f1, mMaxZ__8dMpath_c(r13)
 lbl_8003FB04:
-/* 8003FB04 00000000  C0 22 84 2C */	lfs f1, d_map_d_map_path_dmap__LIT_3887(r2)
+/* 8003FB04 00000000  C0 22 84 2C */	lfs f1, d_map_d_map_path_dmap__lit_3887(r2)
 /* 8003FB08 00000004  C0 6D 88 EC */	lfs f3, mMaxX__8dMpath_c(r13)
 /* 8003FB0C 00000008  C0 4D 88 E8 */	lfs f2, mMinX__8dMpath_c(r13)
 /* 8003FB10 0000000C  EC 03 10 2A */	fadds f0, f3, f2

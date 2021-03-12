@@ -14,7 +14,7 @@ lbl_800F2EE0:
 /* 800F2F10 00000030  4B FC E3 CD */	bl deleteEquipItem__9daAlink_cFii
 /* 800F2F14 00000034  7F E3 FB 78 */	mr r3, r31
 /* 800F2F18 00000038  38 80 00 60 */	li r4, 0x60
-/* 800F2F1C 0000003C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F2F1C 0000003C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F2F20 00000040  4B FB A0 91 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 800F2F24 00000044  7F E3 FB 78 */	mr r3, r31
 /* 800F2F28 00000048  4B FF A5 B5 */	bl setSyncHorsePos__9daAlink_cFv
@@ -22,9 +22,9 @@ lbl_800F2EE0:
 /* 800F2F30 00000050  98 1F 2F AB */	stb r0, 0x2fab(r31)
 /* 800F2F34 00000054  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 800F2F38 00000058  B0 1F 30 12 */	sth r0, 0x3012(r31)
-/* 800F2F3C 0000005C  C0 22 93 18 */	lfs f1, LIT_7308(r2)
+/* 800F2F3C 0000005C  C0 22 93 18 */	lfs f1, lit_7308(r2)
 /* 800F2F40 00000060  48 17 4A 15 */	bl cM_rndF__Ff
-/* 800F2F44 00000064  C0 02 93 B8 */	lfs f0, LIT_10041(r2)
+/* 800F2F44 00000064  C0 02 93 B8 */	lfs f0, lit_10041(r2)
 /* 800F2F48 00000068  EC 00 08 28 */	fsubs f0, f0, f1
 /* 800F2F4C 0000006C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800F2F50 00000070  38 60 00 00 */	li r3, 0

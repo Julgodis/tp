@@ -11,9 +11,9 @@ lbl_80072D80:
 /* 80072DA4 00000024  38 A0 00 00 */	li r5, 0
 /* 80072DA8 00000028  38 C0 00 00 */	li r6, 0
 /* 80072DAC 0000002C  38 E0 00 00 */	li r7, 0
-/* 80072DB0 00000030  C0 22 8C 58 */	lfs f1, d_d_attention__LIT_4073(r2)
+/* 80072DB0 00000030  C0 22 8C 58 */	lfs f1, d_d_attention__lit_4073(r2)
 /* 80072DB4 00000034  FC 40 08 90 */	fmr f2, f1
-/* 80072DB8 00000038  C0 62 8C 90 */	lfs f3, d_d_attention__LIT_4562(r2)
+/* 80072DB8 00000038  C0 62 8C 90 */	lfs f3, d_d_attention__lit_4562(r2)
 /* 80072DBC 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 80072DC0 00000040  39 00 00 00 */	li r8, 0
 /* 80072DC4 00000044  48 23 8B C1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

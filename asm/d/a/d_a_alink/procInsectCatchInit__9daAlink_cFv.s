@@ -20,12 +20,12 @@ lbl_800E7128:
 lbl_800E7140:
 /* 800E7140 00000000  38 80 00 74 */	li r4, 0x74
 /* 800E7144 00000004  4B FD AE 29 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800E7148 00000008  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E7148 00000008  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E714C 0000000C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E7150 00000010  80 7F 27 F4 */	lwz r3, 0x27f4(r31)
 /* 800E7154 00000014  C0 43 05 54 */	lfs f2, 0x554(r3)
 /* 800E7158 00000018  C0 3F 38 38 */	lfs f1, 0x3838(r31)
-/* 800E715C 0000001C  C0 02 92 E0 */	lfs f0, LIT_6845(r2)
+/* 800E715C 0000001C  C0 02 92 E0 */	lfs f0, lit_6845(r2)
 /* 800E7160 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E7164 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800E7168 00000000  40 81 00 28 */	ble lbl_800E7190
@@ -35,7 +35,7 @@ lbl_800E7140:
 /* 800E7178 00000010  38 A5 E9 0C */	addi r5, r5, m__20daAlinkHIO_bottle_c0@l
 /* 800E717C 00000014  38 A5 00 64 */	addi r5, r5, 0x64
 /* 800E7180 00000018  4B FC 5F 75 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E7184 0000001C  C0 02 93 24 */	lfs f0, LIT_7450(r2)
+/* 800E7184 0000001C  C0 02 93 24 */	lfs f0, lit_7450(r2)
 /* 800E7188 00000020  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800E718C 00000024  48 00 00 24 */	b lbl_800E71B0
 lbl_800E7190:
@@ -45,7 +45,7 @@ lbl_800E7190:
 /* 800E719C 0000000C  38 A5 E9 0C */	addi r5, r5, m__20daAlinkHIO_bottle_c0@l
 /* 800E71A0 00000010  38 A5 00 50 */	addi r5, r5, 0x50
 /* 800E71A4 00000014  4B FC 5F 51 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E71A8 00000018  C0 02 93 8C */	lfs f0, LIT_8783(r2)
+/* 800E71A8 00000018  C0 02 93 8C */	lfs f0, lit_8783(r2)
 /* 800E71AC 0000001C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 lbl_800E71B0:
 /* 800E71B0 00000000  38 7F 28 0C */	addi r3, r31, 0x280c

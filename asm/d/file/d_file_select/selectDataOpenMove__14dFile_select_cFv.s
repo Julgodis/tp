@@ -51,7 +51,7 @@ lbl_801864DC:
 /* 801865A0 000000C4  3C 60 80 3C */	lis r3, MenuSelStartFrameTbl@ha
 /* 801865A4 000000C8  38 63 A8 84 */	addi r3, r3, MenuSelStartFrameTbl@l
 /* 801865A8 000000CC  7C 03 00 2E */	lwzx r0, r3, r0
-/* 801865AC 000000D0  C8 22 9F 38 */	lfd f1, d_file_d_file_select__LIT_4342(r2)
+/* 801865AC 000000D0  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
 /* 801865B0 000000D4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801865B4 000000D8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801865B8 000000DC  3C 00 43 30 */	lis r0, 0x4330

@@ -6,7 +6,7 @@ lbl_800CEF70:
 /* 800CEF80 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800CEF84 00000014  38 80 01 3F */	li r4, 0x13f
 /* 800CEF88 00000018  4B FF 2F E5 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800CEF8C 0000001C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800CEF8C 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800CEF90 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800CEF94 00000024  7F E3 FB 78 */	mr r3, r31
 /* 800CEF98 00000028  4B FF FB 5D */	bl setSubjectMode__9daAlink_cFv

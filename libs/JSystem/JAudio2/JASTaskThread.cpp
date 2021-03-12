@@ -5,140 +5,138 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void bcopy__7JASCalcFPCvPvUl();
-extern void __ct__13JASTaskThreadFiiUl();
-extern void __dt__13JASTaskThreadFv();
-extern void allocCallStack__13JASTaskThreadFPFPv_vPCvUl();
-extern void allocCallStack__13JASTaskThreadFPFPv_vPv();
-extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
-extern void run__13JASTaskThreadFv();
-extern void pause__13JASTaskThreadFb();
-extern void getSystemHeap__9JASKernelFv();
-extern void getCommandHeap__9JASKernelFv();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __ct__9JKRThreadFP7JKRHeapUlii();
-extern void __dt__9JKRThreadFv();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSSendMessage();
-extern void OSReceiveMessage();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void OSInitThreadQueue();
-extern void OSSleepThread();
-extern void OSWakeupThread();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-SECTION_DATA extern void* __vt__13JASTaskThread[4];
+extern "C" extern void bcopy__7JASCalcFPCvPvUl();
+extern "C" extern void __ct__13JASTaskThreadFiiUl();
+extern "C" extern void __dt__13JASTaskThreadFv();
+extern "C" extern void allocCallStack__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" extern void allocCallStack__13JASTaskThreadFPFPv_vPv();
+extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
+extern "C" extern void run__13JASTaskThreadFv();
+extern "C" extern void pause__13JASTaskThreadFb();
+extern "C" extern void getSystemHeap__9JASKernelFv();
+extern "C" extern void getCommandHeap__9JASKernelFv();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__9JKRThreadFP7JKRHeapUlii();
+extern "C" extern void __dt__9JKRThreadFv();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSSendMessage();
+extern "C" extern void OSReceiveMessage();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void OSInitThreadQueue();
+extern "C" extern void OSSleepThread();
+extern "C" extern void OSWakeupThread();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+SECTION_DATA extern void* const __vt__13JASTaskThread[4];
 SECTION_SBSS extern u8 JASDram[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C5B58-803C5B68 0010 .data      __vt__13JASTaskThread                                        */
-SECTION_DATA void* __vt__13JASTaskThread[4] = {
+void* const __vt__13JASTaskThread[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JASTaskThreadFv,
 	(void*)run__13JASTaskThreadFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8028F6C4-8028F724 0060 .text      __ct__13JASTaskThreadFiiUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JASTaskThreadFiiUl() {
+extern "C" asm void __ct__13JASTaskThreadFiiUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/__ct__13JASTaskThreadFiiUl.s"
 }
 #pragma pop
 
+
 /* 8028F724-8028F850 012C .text      __dt__13JASTaskThreadFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13JASTaskThreadFv() {
+extern "C" asm void __dt__13JASTaskThreadFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/__dt__13JASTaskThreadFv.s"
 }
 #pragma pop
 
+
 /* 8028F850-8028F9EC 019C .text      allocCallStack__13JASTaskThreadFPFPv_vPCvUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
+extern "C" asm void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPCvUl.s"
 }
 #pragma pop
 
+
 /* 8028F9EC-8028FB5C 0170 .text      allocCallStack__13JASTaskThreadFPFPv_vPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocCallStack__13JASTaskThreadFPFPv_vPv() {
+extern "C" asm void allocCallStack__13JASTaskThreadFPFPv_vPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPv.s"
 }
 #pragma pop
 
+
 /* 8028FB5C-8028FC54 00F8 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl() {
+extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl.s"
 }
 #pragma pop
 
+
 /* 8028FC54-8028FD4C 00F8 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sendCmdMsg__13JASTaskThreadFPFPv_vPv() {
+extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/sendCmdMsg__13JASTaskThreadFPFPv_vPv.s"
 }
 #pragma pop
 
+
 /* 8028FD4C-8028FE88 013C .text      run__13JASTaskThreadFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void run__13JASTaskThreadFv() {
+extern "C" asm void run__13JASTaskThreadFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/run__13JASTaskThreadFv.s"
 }
 #pragma pop
 
+
 /* 8028FE88-8028FEFC 0074 .text      pause__13JASTaskThreadFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void pause__13JASTaskThreadFb() {
+extern "C" asm void pause__13JASTaskThreadFb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/pause__13JASTaskThreadFb.s"
 }

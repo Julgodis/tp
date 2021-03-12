@@ -5,59 +5,59 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcBs_Is_JustOfType__Fii();
-extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern void fpcPause_IsEnable__FPvUc();
-extern void fpcPause_Enable__FPvUc();
-extern void fpcPause_Disable__FPvUc();
-extern void fpcPause_Init__FPv();
+extern "C" extern void fpcBs_Is_JustOfType__Fii();
+extern "C" extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" extern void fpcPause_IsEnable__FPvUc();
+extern "C" extern void fpcPause_Enable__FPvUc();
+extern "C" extern void fpcPause_Disable__FPvUc();
+extern "C" extern void fpcPause_Init__FPv();
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80023844-80023868 0024 .text      fpcPause_IsEnable__FPvUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_IsEnable__FPvUc() {
+extern "C" asm void fpcPause_IsEnable__FPvUc() {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_IsEnable__FPvUc.s"
 }
 #pragma pop
 
+
 /* 80023868-800238D4 006C .text      fpcPause_Enable__FPvUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_Enable__FPvUc() {
+extern "C" asm void fpcPause_Enable__FPvUc() {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_Enable__FPvUc.s"
 }
 #pragma pop
 
+
 /* 800238D4-80023948 0074 .text      fpcPause_Disable__FPvUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_Disable__FPvUc() {
+extern "C" asm void fpcPause_Disable__FPvUc() {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_Disable__FPvUc.s"
 }
 #pragma pop
 
+
 /* 80023948-80023954 000C .text      fpcPause_Init__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_Init__FPv() {
+extern "C" asm void fpcPause_Init__FPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_Init__FPv.s"
 }

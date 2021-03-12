@@ -243,7 +243,7 @@ lbl_800586B4:
 /* 800586BC 00000008  98 03 00 28 */	stb r0, 0x28(r3)
 /* 800586C0 0000000C  80 7E 0E 74 */	lwz r3, 0xe74(r30)
 /* 800586C4 00000010  98 03 00 29 */	stb r0, 0x29(r3)
-/* 800586C8 00000014  C0 42 86 E0 */	lfs f2, LIT_4378(r2)
+/* 800586C8 00000014  C0 42 86 E0 */	lfs f2, lit_4378(r2)
 /* 800586CC 00000018  80 7E 0E 74 */	lwz r3, 0xe74(r30)
 /* 800586D0 0000001C  D0 43 00 5C */	stfs f2, 0x5c(r3)
 /* 800586D4 00000020  80 7E 0E 74 */	lwz r3, 0xe74(r30)
@@ -255,10 +255,10 @@ lbl_800586B4:
 /* 800586EC 00000038  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800586F0 0000003C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 800586F4 00000040  C0 23 12 44 */	lfs f1, 0x1244(r3)
-/* 800586F8 00000044  C0 02 86 E8 */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4610(r2)
+/* 800586F8 00000044  C0 02 86 E8 */	lfs f0, d_kankyo_d_kankyo_wether__lit_4610(r2)
 /* 800586FC 00000048  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80058700 00000000  40 80 00 14 */	bge lbl_80058714
-/* 80058704 00000004  C0 02 86 E4 */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4379(r2)
+/* 80058704 00000004  C0 02 86 E4 */	lfs f0, d_kankyo_d_kankyo_wether__lit_4379(r2)
 /* 80058708 00000008  80 7E 0E 74 */	lwz r3, 0xe74(r30)
 /* 8005870C 0000000C  D0 03 00 6C */	stfs f0, 0x6c(r3)
 /* 80058710 00000010  48 00 00 0C */	b lbl_8005871C
@@ -310,10 +310,10 @@ lbl_8005871C:
 /* 800587C0 000000A4  4B FE 3B 2D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 800587C4 000000A8  80 9F 0E 78 */	lwz r4, 0xe78(r31)
 /* 800587C8 000000AC  90 64 00 20 */	stw r3, 0x20(r4)
-/* 800587CC 000000B0  C0 02 86 EC */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4611(r2)
+/* 800587CC 000000B0  C0 02 86 EC */	lfs f0, d_kankyo_d_kankyo_wether__lit_4611(r2)
 /* 800587D0 000000B4  80 7F 0E 78 */	lwz r3, 0xe78(r31)
 /* 800587D4 000000B8  D0 03 00 8C */	stfs f0, 0x8c(r3)
-/* 800587D8 000000BC  C0 02 86 E0 */	lfs f0, LIT_4378(r2)
+/* 800587D8 000000BC  C0 02 86 E0 */	lfs f0, lit_4378(r2)
 /* 800587DC 000000C0  80 7F 0E 78 */	lwz r3, 0xe78(r31)
 /* 800587E0 000000C4  D0 03 00 90 */	stfs f0, 0x90(r3)
 /* 800587E4 000000C8  80 7F 0E 78 */	lwz r3, 0xe78(r31)

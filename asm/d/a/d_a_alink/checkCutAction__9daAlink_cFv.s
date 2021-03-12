@@ -5,8 +5,8 @@ lbl_800D23C0:
 /* 800D23CC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 800D23D0 00000010  48 28 FE 05 */	bl _savegpr_27
 /* 800D23D4 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 800D23D8 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800D23DC 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__LIT_3757@l
+/* 800D23D8 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800D23DC 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
 /* 800D23E0 00000020  4B FF FD F1 */	bl commonCutAction__9daAlink_cFv
 /* 800D23E4 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800D23E8 00000028  41 82 00 0C */	beq lbl_800D23F4
@@ -23,7 +23,7 @@ lbl_800D23F4:
 /* 800D2410 0000001C  54 60 01 CF */	rlwinm. r0, r3, 0, 7, 7
 /* 800D2414 00000020  41 82 00 44 */	beq lbl_800D2458
 /* 800D2418 00000024  C0 3D 33 AC */	lfs f1, 0x33ac(r29)
-/* 800D241C 00000028  C0 02 92 A4 */	lfs f0, LIT_6021(r2)
+/* 800D241C 00000028  C0 02 92 A4 */	lfs f0, lit_6021(r2)
 /* 800D2420 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D2424 00000000  40 81 00 24 */	ble lbl_800D2448
 /* 800D2428 00000004  2C 1F 00 00 */	cmpwi r31, 0

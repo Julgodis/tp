@@ -5,97 +5,96 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void dComIfGs_isStageSwitch__Fii();
-extern void isSwitch__12dSv_memBit_cCFi();
-extern void isEventBit__11dSv_event_cCFUs();
-extern void isSwitch__10dSv_info_cCFii();
-extern void dComIfGs_isEventBit__FUs();
-extern void load__10JASWaveArcFP7JASHeap();
-extern void loadTail__10JASWaveArcFP7JASHeap();
-extern void erase__10JASWaveArcFv();
-extern void stop__8JAISoundFUl();
-extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern void resetFilterAll__10Z2SoundMgrFv();
-extern void resetModY__7Z2SeMgrFv();
-extern void seStopAll__7Z2SeMgrFUl();
-extern void seMoveVolumeAll__7Z2SeMgrFfUl();
-extern void bgmStart__8Z2SeqMgrFUlUll();
-extern void bgmStop__8Z2SeqMgrFUll();
-extern void bgmStreamPrepare__8Z2SeqMgrFUl();
-extern void bgmStreamCheckReady__8Z2SeqMgrFv();
-extern void bgmStreamPlay__8Z2SeqMgrFv();
-extern void changeBgmStatus__8Z2SeqMgrFl();
-extern void setHeightVolMod__8Z2SeqMgrFbUl();
-extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
-extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
-extern void resetBattleBgmParams__8Z2SeqMgrFv();
-extern void setBattleBgmOff__8Z2SeqMgrFb();
-extern void menuOut__11Z2StatusMgrFv();
-extern void setDemoName__11Z2StatusMgrFPc();
-extern void checkDayTime__11Z2StatusMgrFv();
-extern void __ct__10Z2SceneMgrFv();
-extern void setInDarkness__10Z2SceneMgrFb();
-extern void setSceneExist__10Z2SceneMgrFb();
-extern void setFadeOutStart__10Z2SceneMgrFUc();
-extern void setFadeInStart__10Z2SceneMgrFUc();
-extern void setSceneName__10Z2SceneMgrFPcll();
-extern void __ct__10JAISoundIDFRC10JAISoundID();
-extern void setFieldBgmPlay__8Z2SeqMgrFb();
-extern void isActive__12JAIStreamMgrCFv();
-extern void getID__8JAISoundCFv();
-extern void func_802B9994();
-extern void dComIfGs_getStartPoint__Fv();
-extern void unMuteSceneBgm__8Z2SeqMgrFUl();
-extern void muteSceneBgm__8Z2SeqMgrFUlf();
-extern void __as__10JAISoundIDFRC10JAISoundID();
-extern void dComIfGs_isSaveSwitch__Fi();
-extern void resetCrowdSize__7Z2SeMgrFv();
-extern void setTwilightGateVol__8Z2SeqMgrFf();
-extern void setWindStoneVol__8Z2SeqMgrFfUl();
-extern void __ct__10JAISoundIDFUl();
-extern void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb();
-extern void framework__10Z2SceneMgrFv();
-extern void load1stDynamicWave__10Z2SceneMgrFv();
-extern void _load1stWaveInner_1__10Z2SceneMgrFv();
-extern void _load1stWaveInner_2__10Z2SceneMgrFv();
-extern void check1stDynamicWave__10Z2SceneMgrFv();
-extern void load2ndDynamicWave__10Z2SceneMgrFv();
-extern void sceneBgmStart__10Z2SceneMgrFv();
-extern void loadStaticWaves__10Z2SceneMgrFv();
-extern void checkFirstWaves__10Z2SceneMgrFv();
-extern void eraseSeWave__10Z2SceneMgrFUl();
-extern void eraseBgmWave__10Z2SceneMgrFUl();
-extern void getWaveLoadStatus__10Z2SceneMgrFUlUl();
-extern void loadSeWave__10Z2SceneMgrFUl();
-extern void loadBgmWave__10Z2SceneMgrFUl();
-extern void setSceneFx__11Z2FxLineMgrFl();
-extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
-extern void deleteEnemyAll__13Z2SoundObjMgrFv();
-extern void resetSceneInner__10Z2EnvSeMgrFv();
-extern void initSceneEnvSe__10Z2EnvSeMgrFlScf();
-extern void _savegpr_16();
-extern void _savegpr_29();
-extern void _restgpr_16();
-extern void _restgpr_29();
-extern void strcmp();
+extern "C" extern void dComIfGs_isStageSwitch__Fii();
+extern "C" extern void isSwitch__12dSv_memBit_cCFi();
+extern "C" extern void isEventBit__11dSv_event_cCFUs();
+extern "C" extern void isSwitch__10dSv_info_cCFii();
+extern "C" extern void dComIfGs_isEventBit__FUs();
+extern "C" extern void load__10JASWaveArcFP7JASHeap();
+extern "C" extern void loadTail__10JASWaveArcFP7JASHeap();
+extern "C" extern void erase__10JASWaveArcFv();
+extern "C" extern void stop__8JAISoundFUl();
+extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" extern void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" extern void resetFilterAll__10Z2SoundMgrFv();
+extern "C" extern void resetModY__7Z2SeMgrFv();
+extern "C" extern void seStopAll__7Z2SeMgrFUl();
+extern "C" extern void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" extern void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" extern void bgmStop__8Z2SeqMgrFUll();
+extern "C" extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" extern void bgmStreamCheckReady__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" extern void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" extern void setHeightVolMod__8Z2SeqMgrFbUl();
+extern "C" extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
+extern "C" extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" extern void resetBattleBgmParams__8Z2SeqMgrFv();
+extern "C" extern void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" extern void menuOut__11Z2StatusMgrFv();
+extern "C" extern void setDemoName__11Z2StatusMgrFPc();
+extern "C" extern void checkDayTime__11Z2StatusMgrFv();
+extern "C" extern void __ct__10Z2SceneMgrFv();
+extern "C" extern void setInDarkness__10Z2SceneMgrFb();
+extern "C" extern void setSceneExist__10Z2SceneMgrFb();
+extern "C" extern void setFadeOutStart__10Z2SceneMgrFUc();
+extern "C" extern void setFadeInStart__10Z2SceneMgrFUc();
+extern "C" extern void setSceneName__10Z2SceneMgrFPcll();
+extern "C" extern void __ct__10JAISoundIDFRC10JAISoundID();
+extern "C" extern void setFieldBgmPlay__8Z2SeqMgrFb();
+extern "C" extern void isActive__12JAIStreamMgrCFv();
+extern "C" extern void getID__8JAISoundCFv();
+extern "C" extern void func_802B9994();
+extern "C" extern void dComIfGs_getStartPoint__Fv();
+extern "C" extern void unMuteSceneBgm__8Z2SeqMgrFUl();
+extern "C" extern void muteSceneBgm__8Z2SeqMgrFUlf();
+extern "C" extern void __as__10JAISoundIDFRC10JAISoundID();
+extern "C" extern void dComIfGs_isSaveSwitch__Fi();
+extern "C" extern void resetCrowdSize__7Z2SeMgrFv();
+extern "C" extern void setTwilightGateVol__8Z2SeqMgrFf();
+extern "C" extern void setWindStoneVol__8Z2SeqMgrFfUl();
+extern "C" extern void __ct__10JAISoundIDFUl();
+extern "C" extern void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb();
+extern "C" extern void framework__10Z2SceneMgrFv();
+extern "C" extern void load1stDynamicWave__10Z2SceneMgrFv();
+extern "C" extern void _load1stWaveInner_1__10Z2SceneMgrFv();
+extern "C" extern void _load1stWaveInner_2__10Z2SceneMgrFv();
+extern "C" extern void check1stDynamicWave__10Z2SceneMgrFv();
+extern "C" extern void load2ndDynamicWave__10Z2SceneMgrFv();
+extern "C" extern void sceneBgmStart__10Z2SceneMgrFv();
+extern "C" extern void loadStaticWaves__10Z2SceneMgrFv();
+extern "C" extern void checkFirstWaves__10Z2SceneMgrFv();
+extern "C" extern void eraseSeWave__10Z2SceneMgrFUl();
+extern "C" extern void eraseBgmWave__10Z2SceneMgrFUl();
+extern "C" extern void getWaveLoadStatus__10Z2SceneMgrFUlUl();
+extern "C" extern void loadSeWave__10Z2SceneMgrFUl();
+extern "C" extern void loadBgmWave__10Z2SceneMgrFUl();
+extern "C" extern void setSceneFx__11Z2FxLineMgrFl();
+extern "C" extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
+extern "C" extern void deleteEnemyAll__13Z2SoundObjMgrFv();
+extern "C" extern void resetSceneInner__10Z2EnvSeMgrFv();
+extern "C" extern void initSceneEnvSe__10Z2EnvSeMgrFlScf();
+extern "C" extern void _savegpr_16();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_16();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcmp();
 SECTION_RODATA extern const u8 Z2SceneMgr__stringBase0[632];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern u8 sSpotName[324];
-SECTION_DATA extern void* LIT_5354[16];
-SECTION_DATA extern void* LIT_5353[16];
-SECTION_DATA extern void* LIT_5352[14];
-SECTION_DATA extern void* LIT_5351[14];
-SECTION_DATA extern void* LIT_5350[12];
-SECTION_DATA extern void* Z2SceneMgr__LIT_5349[8];
-SECTION_DATA extern void* Z2SceneMgr__LIT_5348[13];
-SECTION_DATA extern u8 Z2SceneMgr__LIT_5347[324];
-SECTION_DATA extern u8 Z2SceneMgr__LIT_5852[348];
+SECTION_DATA extern void* sSpotName[81];
+SECTION_DATA extern void* lit_5354[16];
+SECTION_DATA extern void* lit_5353[16];
+SECTION_DATA extern void* lit_5352[14];
+SECTION_DATA extern void* lit_5351[14];
+SECTION_DATA extern void* lit_5350[12];
+SECTION_DATA extern void* Z2SceneMgr__lit_5349[8];
+SECTION_DATA extern void* Z2SceneMgr__lit_5348[13];
+SECTION_DATA extern void* Z2SceneMgr__lit_5347[81];
+SECTION_DATA extern void* Z2SceneMgr__lit_5852[87];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u8 struct_80450860[4];
 SECTION_SBSS extern u8 data_80450B3C[4];
@@ -108,24 +107,94 @@ SECTION_SBSS extern u8 data_80450B80[4];
 SECTION_SBSS extern u8 data_80450B84[4];
 SECTION_SBSS extern u8 data_80450B88[4];
 SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_3511[4];
-SECTION_SDATA2 extern u8 LIT_3512[4];
-SECTION_SDATA2 extern u8 LIT_3529[8];
-SECTION_SDATA2 extern u8 LIT_3531[8];
-SECTION_SDATA2 extern u8 LIT_5341[4];
-SECTION_SDATA2 extern u8 LIT_5342[4];
-SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5343[4];
-SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5344[4];
-SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5345[4];
-SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5346[4];
+SECTION_SDATA2 extern u8 lit_3511[4];
+SECTION_SDATA2 extern f32 lit_3512;
+SECTION_SDATA2 extern f32 lit_3529;
+SECTION_SDATA2 extern f64 lit_3531;
+SECTION_SDATA2 extern f32 lit_5341;
+SECTION_SDATA2 extern f32 lit_5342;
+SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5343;
+SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5344;
+SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5345;
+SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5346;
+
+// 
+// Functions:
+// 
+
+/* 802B6840-802B68B0 0070 .text      __ct__10Z2SceneMgrFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__10Z2SceneMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/__ct__10Z2SceneMgrFv.s"
 }
+#pragma pop
+
+
+/* 802B68B0-802B68E0 0030 .text      setInDarkness__10Z2SceneMgrFb                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setInDarkness__10Z2SceneMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/setInDarkness__10Z2SceneMgrFb.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80455A38-80455A3C 0004 .sdata2    @3511                                                        */
+u8 lit_3511[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 80455A3C-80455A40 0004 .sdata2    @3512                                                        */
+f32 lit_3512 = 1.0f;
+
+/* 802B68E0-802B697C 009C .text      setSceneExist__10Z2SceneMgrFb                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSceneExist__10Z2SceneMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/setSceneExist__10Z2SceneMgrFb.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455A40-80455A48 0004 .sdata2    @3529                                                        */
+f32 lit_3529 = 3.0f / 10.0f;
+/* padding 4 bytes */
+
+/* 80455A48-80455A50 0008 .sdata2    @3531                                                        */
+f64 lit_3531 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 802B697C-802B6A18 009C .text      setFadeOutStart__10Z2SceneMgrFUc                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFadeOutStart__10Z2SceneMgrFUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/setFadeOutStart__10Z2SceneMgrFUc.s"
+}
+#pragma pop
+
+
+/* 802B6A18-802B6AF8 00E0 .text      setFadeInStart__10Z2SceneMgrFUc                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFadeInStart__10Z2SceneMgrFUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/setFadeInStart__10Z2SceneMgrFUc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039BFA8-8039C220 0274 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -215,40 +284,94 @@ SECTION_DEAD const char* const stringBase_8039C212 = "force_end";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039C21C = "\0\0\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CA5C0-803CA704 0144 .data      sSpotName                                                    */
-SECTION_DATA u8 sSpotName[324] = {
-	0x80, 0x39, 0xBF, 0xA8, 0x80, 0x39, 0xBF, 0xAF, 0x80, 0x39, 0xBF, 0xB7, 0x80, 0x39, 0xBF, 0xBE,
-	0x80, 0x39, 0xBF, 0xC6, 0x80, 0x39, 0xBF, 0xCE, 0x80, 0x39, 0xBF, 0xD6, 0x80, 0x39, 0xBF, 0xDE,
-	0x80, 0x39, 0xBF, 0xE6, 0x80, 0x39, 0xBF, 0xEE, 0x80, 0x39, 0xBF, 0xF6, 0x80, 0x39, 0xBF, 0xFE,
-	0x80, 0x39, 0xC0, 0x06, 0x80, 0x39, 0xC0, 0x0E, 0x80, 0x39, 0xC0, 0x16, 0x80, 0x39, 0xC0, 0x1E,
-	0x80, 0x39, 0xC0, 0x26, 0x80, 0x39, 0xC0, 0x2E, 0x80, 0x39, 0xC0, 0x36, 0x80, 0x39, 0xC0, 0x3E,
-	0x80, 0x39, 0xC0, 0x46, 0x80, 0x39, 0xC0, 0x4E, 0x80, 0x39, 0xC0, 0x56, 0x80, 0x39, 0xC0, 0x5E,
-	0x80, 0x39, 0xC0, 0x66, 0x80, 0x39, 0xC0, 0x6E, 0x80, 0x39, 0xC0, 0x76, 0x80, 0x39, 0xC0, 0x7E,
-	0x80, 0x39, 0xC0, 0x86, 0x80, 0x39, 0xC0, 0x8E, 0x80, 0x39, 0xC0, 0x96, 0x80, 0x39, 0xC0, 0x9E,
-	0x80, 0x39, 0xC0, 0xA6, 0x80, 0x39, 0xC0, 0xAE, 0x80, 0x39, 0xC0, 0xB6, 0x80, 0x39, 0xC0, 0xBE,
-	0x80, 0x39, 0xC0, 0xBF, 0x80, 0x39, 0xC0, 0xC7, 0x80, 0x39, 0xC0, 0xCF, 0x80, 0x39, 0xC0, 0xD7,
-	0x80, 0x39, 0xC0, 0xDE, 0x80, 0x39, 0xC0, 0xE5, 0x80, 0x39, 0xC0, 0xED, 0x80, 0x39, 0xC0, 0xF5,
-	0x80, 0x39, 0xC0, 0xFC, 0x80, 0x39, 0xC1, 0x04, 0x80, 0x39, 0xC1, 0x0C, 0x80, 0x39, 0xC1, 0x13,
-	0x80, 0x39, 0xC1, 0x1B, 0x80, 0x39, 0xC1, 0x23, 0x80, 0x39, 0xC1, 0x2A, 0x80, 0x39, 0xC1, 0x32,
-	0x80, 0x39, 0xC1, 0x3A, 0x80, 0x39, 0xC1, 0x41, 0x80, 0x39, 0xC1, 0x49, 0x80, 0x39, 0xC1, 0x51,
-	0x80, 0x39, 0xC1, 0x58, 0x80, 0x39, 0xC1, 0x60, 0x80, 0x39, 0xC1, 0x68, 0x80, 0x39, 0xC1, 0x6F,
-	0x80, 0x39, 0xC1, 0x77, 0x80, 0x39, 0xC1, 0x7F, 0x80, 0x39, 0xC1, 0x86, 0x80, 0x39, 0xC1, 0x8E,
-	0x80, 0x39, 0xC1, 0x96, 0x80, 0x39, 0xC1, 0x9E, 0x80, 0x39, 0xC1, 0xA6, 0x80, 0x39, 0xC1, 0xAD,
-	0x80, 0x39, 0xC1, 0xB5, 0x80, 0x39, 0xC1, 0xBD, 0x80, 0x39, 0xC1, 0xC5, 0x80, 0x39, 0xC1, 0xCC,
-	0x80, 0x39, 0xC1, 0xD3, 0x80, 0x39, 0xC1, 0xDA, 0x80, 0x39, 0xC1, 0xE1, 0x80, 0x39, 0xC1, 0xE8,
-	0x80, 0x39, 0xC1, 0xEF, 0x80, 0x39, 0xC1, 0xF6, 0x80, 0x39, 0xC1, 0xFD, 0x80, 0x39, 0xC2, 0x04,
-	0x80, 0x39, 0xC2, 0x0B,
+void* sSpotName[81] = {
+	(void*)&Z2SceneMgr__stringBase0,
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x7),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xF),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x16),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x26),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x2E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x36),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x3E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x46),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x4E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x56),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x5E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x66),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x6E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x76),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x7E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x86),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x8E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x96),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x9E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xA6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xAE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xB6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xBE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xC6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xCE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xD6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xDE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xE6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xEE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xF6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0xFE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x106),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x10E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x116),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x117),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x11F),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x127),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x12F),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x136),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x13D),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x145),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x14D),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x154),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x15C),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x164),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x16B),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x173),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x17B),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x182),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x18A),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x192),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x199),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A1),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A9),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B0),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B8),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C0),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C7),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1CF),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1D7),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1DE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1EE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1F6),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x1FE),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x205),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x20D),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x215),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x21D),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x224),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x22B),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x232),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x239),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x240),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x247),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x24E),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x255),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x25C),
+	(void*)(((char*)&Z2SceneMgr__stringBase0)+0x263),
 };
+
 /* 803CA704-803CA744 0040 .data      @5354                                                        */
-SECTION_DATA void* LIT_5354[16] = {
+void* lit_5354[16] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
@@ -266,8 +389,9 @@ SECTION_DATA void* LIT_5354[16] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
 };
+
 /* 803CA744-803CA784 0040 .data      @5353                                                        */
-SECTION_DATA void* LIT_5353[16] = {
+void* lit_5353[16] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
@@ -285,8 +409,9 @@ SECTION_DATA void* LIT_5353[16] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
 };
+
 /* 803CA784-803CA7BC 0038 .data      @5352                                                        */
-SECTION_DATA void* LIT_5352[14] = {
+void* lit_5352[14] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC48),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC78),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
@@ -302,8 +427,9 @@ SECTION_DATA void* LIT_5352[14] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC34),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC3C),
 };
+
 /* 803CA7BC-803CA7F4 0038 .data      @5351                                                        */
-SECTION_DATA void* LIT_5351[14] = {
+void* lit_5351[14] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAF4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
@@ -319,8 +445,9 @@ SECTION_DATA void* LIT_5351[14] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAEC),
 };
+
 /* 803CA7F4-803CA824 0030 .data      @5350                                                        */
-SECTION_DATA void* LIT_5350[12] = {
+void* lit_5350[12] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7B0),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x72C),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x804),
@@ -334,8 +461,9 @@ SECTION_DATA void* LIT_5350[12] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
 };
+
 /* 803CA824-803CA844 0020 .data      @5349                                                        */
-SECTION_DATA void* Z2SceneMgr__LIT_5349[8] = {
+void* Z2SceneMgr__lit_5349[8] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x430),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x45C),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x52C),
@@ -345,8 +473,9 @@ SECTION_DATA void* Z2SceneMgr__LIT_5349[8] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x6F4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
 };
+
 /* 803CA844-803CA878 0034 .data      @5348                                                        */
-SECTION_DATA void* Z2SceneMgr__LIT_5348[13] = {
+void* Z2SceneMgr__lit_5348[13] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2E0),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
@@ -361,457 +490,526 @@ SECTION_DATA void* Z2SceneMgr__LIT_5348[13] = {
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
 	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x328),
 };
+
 /* 803CA878-803CA9BC 0144 .data      @5347                                                        */
-SECTION_DATA u8 Z2SceneMgr__LIT_5347[324] = {
-	0x80, 0x2B, 0x6C, 0x48, 0x80, 0x2B, 0x6C, 0xD8, 0x80, 0x2B, 0x6F, 0x04, 0x80, 0x2B, 0x71, 0xF8,
-	0x80, 0x2B, 0x73, 0x04, 0x80, 0x2B, 0x75, 0x00, 0x80, 0x2B, 0x74, 0x60, 0x80, 0x2B, 0x83, 0x1C,
-	0x80, 0x2B, 0x76, 0x8C, 0x80, 0x2B, 0x77, 0xEC, 0x80, 0x2B, 0x79, 0xF8, 0x80, 0x2B, 0x7B, 0x08,
-	0x80, 0x2B, 0x7C, 0x6C, 0x80, 0x2B, 0x7A, 0x68, 0x80, 0x2B, 0x7B, 0x90, 0x80, 0x2B, 0x7C, 0x38,
-	0x80, 0x2B, 0x7C, 0xB4, 0x80, 0x2B, 0x7E, 0xAC, 0x80, 0x2B, 0x7D, 0xD0, 0x80, 0x2B, 0x7E, 0x30,
-	0x80, 0x2B, 0x7E, 0x7C, 0x80, 0x2B, 0x7F, 0x60, 0x80, 0x2B, 0x80, 0x04, 0x80, 0x2B, 0x80, 0xDC,
-	0x80, 0x2B, 0x81, 0x80, 0x80, 0x2B, 0x82, 0xD8, 0x80, 0x2B, 0x83, 0xE0, 0x80, 0x2B, 0x84, 0x8C,
-	0x80, 0x2B, 0x84, 0x2C, 0x80, 0x2B, 0x84, 0xC0, 0x80, 0x2B, 0x85, 0x28, 0x80, 0x2B, 0x86, 0xEC,
-	0x80, 0x2B, 0x87, 0xF0, 0x80, 0x2B, 0x88, 0xA0, 0x80, 0x2B, 0x88, 0x24, 0x80, 0x2B, 0x96, 0xB8,
-	0x80, 0x2B, 0x95, 0x74, 0x80, 0x2B, 0x74, 0x40, 0x80, 0x2B, 0x6C, 0x2C, 0x80, 0x2B, 0x96, 0xB8,
-	0x80, 0x2B, 0x89, 0x60, 0x80, 0x2B, 0x89, 0x9C, 0x80, 0x2B, 0x89, 0xF8, 0x80, 0x2B, 0x8A, 0xA4,
-	0x80, 0x2B, 0x8A, 0xE0, 0x80, 0x2B, 0x8B, 0x30, 0x80, 0x2B, 0x8B, 0xD0, 0x80, 0x2B, 0x8C, 0x00,
-	0x80, 0x2B, 0x8C, 0x50, 0x80, 0x2B, 0x8C, 0xF0, 0x80, 0x2B, 0x8D, 0x40, 0x80, 0x2B, 0x8D, 0x90,
-	0x80, 0x2B, 0x8E, 0x30, 0x80, 0x2B, 0x8E, 0x6C, 0x80, 0x2B, 0x8E, 0xC8, 0x80, 0x2B, 0x8F, 0x74,
-	0x80, 0x2B, 0x8F, 0xA4, 0x80, 0x2B, 0x8F, 0xF4, 0x80, 0x2B, 0x90, 0x94, 0x80, 0x2B, 0x90, 0xEC,
-	0x80, 0x2B, 0x91, 0x3C, 0x80, 0x2B, 0x91, 0xDC, 0x80, 0x2B, 0x92, 0x58, 0x80, 0x2B, 0x92, 0x58,
-	0x80, 0x2B, 0x92, 0xA8, 0x80, 0x2B, 0x93, 0x8C, 0x80, 0x2B, 0x93, 0xCC, 0x80, 0x2B, 0x94, 0x78,
-	0x80, 0x2B, 0x94, 0xFC, 0x80, 0x2B, 0x95, 0x2C, 0x80, 0x2B, 0x95, 0xBC, 0x80, 0x2B, 0x95, 0x7C,
-	0x80, 0x2B, 0x95, 0xE8, 0x80, 0x2B, 0x95, 0xE8, 0x80, 0x2B, 0x96, 0x10, 0x80, 0x2B, 0x96, 0x3C,
-	0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C,
-	0x80, 0x2B, 0x96, 0x64,
+void* Z2SceneMgr__lit_5347[81] = {
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x40C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x700),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x80C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xA08),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x968),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1824),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB94),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCF4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF00),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1010),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1174),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF70),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1098),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1140),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x11BC),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x13B4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x12D8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1338),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1384),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1468),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x15E4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1688),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x17E0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x18E8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1994),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1934),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x19C8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1A30),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BF4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1CF8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1DA8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1D2C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A7C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x948),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x134),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E68),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1EA4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1F00),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FAC),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FE8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2038),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x20D8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2108),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2158),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x21F8),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2248),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2298),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2338),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2374),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x23D0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x247C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24AC),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24FC),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x259C),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x25F4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2644),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x26E4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x27B0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2894),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x28D4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2980),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A04),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A34),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AC4),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A84),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B18),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B6C),
 };
-/* 803CA9BC-803CAB18 015C .data      @5852                                                        */
-SECTION_DATA u8 Z2SceneMgr__LIT_5852[348] = {
-	0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA3, 0xE4,
-	0x80, 0x2B, 0xA4, 0x98, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA4, 0xD0, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA4, 0x14,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA4, 0x14, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA4, 0x14,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA4, 0x14, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA4, 0x24, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
-	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA4, 0x4C,
-};
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455A38-80455A3C 0004 .sdata2    @3511                                                        */
-SECTION_SDATA2 u8 LIT_3511[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A3C-80455A40 0004 .sdata2    @3512                                                        */
-SECTION_SDATA2 u8 LIT_3512[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455A40-80455A48 0004 .sdata2    @3529                                                        */
-SECTION_SDATA2 u8 LIT_3529[8] = {
-	0x3E, 0x99, 0x99, 0x9A,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A48-80455A50 0008 .sdata2    @3531                                                        */
-SECTION_SDATA2 u8 LIT_3531[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 /* 80455A50-80455A54 0004 .sdata2    @5341                                                        */
-SECTION_SDATA2 u8 LIT_5341[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
+f32 lit_5341 = -1.0f;
+
 /* 80455A54-80455A58 0004 .sdata2    @5342                                                        */
-SECTION_SDATA2 u8 LIT_5342[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
+f32 lit_5342 = 0.5f;
+
 /* 80455A58-80455A5C 0004 .sdata2    @5343                                                        */
-SECTION_SDATA2 u8 Z2SceneMgr__LIT_5343[4] = {
-	0x3F, 0x33, 0x33, 0x33,
-};
+f32 Z2SceneMgr__lit_5343 = 7.0f / 10.0f;
+
 /* 80455A5C-80455A60 0004 .sdata2    @5344                                                        */
-SECTION_SDATA2 u8 Z2SceneMgr__LIT_5344[4] = {
-	0x3F, 0x4C, 0xCC, 0xCD,
-};
+f32 Z2SceneMgr__lit_5344 = 4.0f / 5.0f;
+
 /* 80455A60-80455A64 0004 .sdata2    @5345                                                        */
-SECTION_SDATA2 u8 Z2SceneMgr__LIT_5345[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
+f32 Z2SceneMgr__lit_5345 = 1.0f / 10.0f;
+
 /* 80455A64-80455A68 0004 .sdata2    @5346                                                        */
-SECTION_SDATA2 u8 Z2SceneMgr__LIT_5346[4] = {
-	0x3D, 0xA3, 0xD7, 0x0A,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802B6840-802B68B0 0070 .text      __ct__10Z2SceneMgrFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__10Z2SceneMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SceneMgr/__ct__10Z2SceneMgrFv.s"
-}
-#pragma pop
-
-/* 802B68B0-802B68E0 0030 .text      setInDarkness__10Z2SceneMgrFb                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setInDarkness__10Z2SceneMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SceneMgr/setInDarkness__10Z2SceneMgrFb.s"
-}
-#pragma pop
-
-/* 802B68E0-802B697C 009C .text      setSceneExist__10Z2SceneMgrFb                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSceneExist__10Z2SceneMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SceneMgr/setSceneExist__10Z2SceneMgrFb.s"
-}
-#pragma pop
-
-/* 802B697C-802B6A18 009C .text      setFadeOutStart__10Z2SceneMgrFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFadeOutStart__10Z2SceneMgrFUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SceneMgr/setFadeOutStart__10Z2SceneMgrFUc.s"
-}
-#pragma pop
-
-/* 802B6A18-802B6AF8 00E0 .text      setFadeInStart__10Z2SceneMgrFUc                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFadeInStart__10Z2SceneMgrFUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SceneMgr/setFadeInStart__10Z2SceneMgrFUc.s"
-}
-#pragma pop
+f32 Z2SceneMgr__lit_5346 = 2.0f / 25.0f;
 
 /* 802B6AF8-802B995C 2E64 .text      setSceneName__10Z2SceneMgrFPcll                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSceneName__10Z2SceneMgrFPcll() {
+extern "C" asm void setSceneName__10Z2SceneMgrFPcll() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setSceneName__10Z2SceneMgrFPcll.s"
 }
 #pragma pop
 
+
 /* 802B995C-802B9968 000C .text      __ct__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10JAISoundIDFRC10JAISoundID() {
+extern "C" asm void __ct__10JAISoundIDFRC10JAISoundID() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/__ct__10JAISoundIDFRC10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802B9968-802B9978 0010 .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFieldBgmPlay__8Z2SeqMgrFb() {
+extern "C" asm void setFieldBgmPlay__8Z2SeqMgrFb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setFieldBgmPlay__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
+
 /* 802B9978-802B9988 0010 .text      isActive__12JAIStreamMgrCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isActive__12JAIStreamMgrCFv() {
+extern "C" asm void isActive__12JAIStreamMgrCFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/isActive__12JAIStreamMgrCFv.s"
 }
 #pragma pop
 
+
 /* 802B9988-802B9994 000C .text      getID__8JAISoundCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getID__8JAISoundCFv() {
+extern "C" asm void getID__8JAISoundCFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/getID__8JAISoundCFv.s"
 }
 #pragma pop
 
+
 /* 802B9994-802B999C 0008 .text      getFirst__19JSUList<9JAIStream>CFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802B9994() {
+extern "C" asm void func_802B9994() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/func_802B9994.s"
 }
 #pragma pop
 
+
 /* 802B999C-802B99AC 0010 .text      dComIfGs_getStartPoint__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_getStartPoint__Fv() {
+extern "C" asm void dComIfGs_getStartPoint__Fv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/dComIfGs_getStartPoint__Fv.s"
 }
 #pragma pop
 
+
 /* 802B99AC-802B9A24 0078 .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void unMuteSceneBgm__8Z2SeqMgrFUl() {
+extern "C" asm void unMuteSceneBgm__8Z2SeqMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/unMuteSceneBgm__8Z2SeqMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802B9A24-802B9A88 0064 .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void muteSceneBgm__8Z2SeqMgrFUlf() {
+extern "C" asm void muteSceneBgm__8Z2SeqMgrFUlf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/muteSceneBgm__8Z2SeqMgrFUlf.s"
 }
 #pragma pop
 
+
 /* 802B9A88-802B9A94 000C .text      __as__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__10JAISoundIDFRC10JAISoundID() {
+extern "C" asm void __as__10JAISoundIDFRC10JAISoundID() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/__as__10JAISoundIDFRC10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802B9A94-802B9AC4 0030 .text      dComIfGs_isSaveSwitch__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isSaveSwitch__Fi() {
+extern "C" asm void dComIfGs_isSaveSwitch__Fi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/dComIfGs_isSaveSwitch__Fi.s"
 }
 #pragma pop
 
+
 /* 802B9AC4-802B9AD0 000C .text      resetCrowdSize__7Z2SeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetCrowdSize__7Z2SeMgrFv() {
+extern "C" asm void resetCrowdSize__7Z2SeMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/resetCrowdSize__7Z2SeMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B9AD0-802B9AFC 002C .text      setTwilightGateVol__8Z2SeqMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTwilightGateVol__8Z2SeqMgrFf() {
+extern "C" asm void setTwilightGateVol__8Z2SeqMgrFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setTwilightGateVol__8Z2SeqMgrFf.s"
 }
 #pragma pop
 
+
 /* 802B9AFC-802B9B60 0064 .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWindStoneVol__8Z2SeqMgrFfUl() {
+extern "C" asm void setWindStoneVol__8Z2SeqMgrFfUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setWindStoneVol__8Z2SeqMgrFfUl.s"
 }
 #pragma pop
 
+
 /* 802B9B60-802B9B68 0008 .text      __ct__10JAISoundIDFUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10JAISoundIDFUl() {
+extern "C" asm void __ct__10JAISoundIDFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/__ct__10JAISoundIDFUl.s"
 }
 #pragma pop
 
+
 /* 802B9B68-802B9C50 00E8 .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb() {
+extern "C" asm void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb.s"
 }
 #pragma pop
 
+
 /* 802B9C50-802B9D40 00F0 .text      framework__10Z2SceneMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void framework__10Z2SceneMgrFv() {
+extern "C" asm void framework__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/framework__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B9D40-802B9D98 0058 .text      load1stDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load1stDynamicWave__10Z2SceneMgrFv() {
+extern "C" asm void load1stDynamicWave__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/load1stDynamicWave__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B9D98-802B9FC8 0230 .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _load1stWaveInner_1__10Z2SceneMgrFv() {
+extern "C" asm void _load1stWaveInner_1__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/_load1stWaveInner_1__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B9FC8-802BA09C 00D4 .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _load1stWaveInner_2__10Z2SceneMgrFv() {
+extern "C" asm void _load1stWaveInner_2__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/_load1stWaveInner_2__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA09C-802BA120 0084 .text      check1stDynamicWave__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check1stDynamicWave__10Z2SceneMgrFv() {
+extern "C" asm void check1stDynamicWave__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/check1stDynamicWave__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA120-802BA294 0174 .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load2ndDynamicWave__10Z2SceneMgrFv() {
+extern "C" asm void load2ndDynamicWave__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/load2ndDynamicWave__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CA9BC-803CAB18 015C .data      @5852                                                        */
+void* Z2SceneMgr__lit_5852[87] = {
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x204),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x23C),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x190),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x1B8),
+};
+
 /* 802BA294-802BA56C 02D8 .text      sceneBgmStart__10Z2SceneMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sceneBgmStart__10Z2SceneMgrFv() {
+extern "C" asm void sceneBgmStart__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/sceneBgmStart__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA56C-802BA5C0 0054 .text      loadStaticWaves__10Z2SceneMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadStaticWaves__10Z2SceneMgrFv() {
+extern "C" asm void loadStaticWaves__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/loadStaticWaves__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA5C0-802BA5C8 0008 .text      checkFirstWaves__10Z2SceneMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkFirstWaves__10Z2SceneMgrFv() {
+extern "C" asm void checkFirstWaves__10Z2SceneMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/checkFirstWaves__10Z2SceneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA5C8-802BA630 0068 .text      eraseSeWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void eraseSeWave__10Z2SceneMgrFUl() {
+extern "C" asm void eraseSeWave__10Z2SceneMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/eraseSeWave__10Z2SceneMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802BA630-802BA698 0068 .text      eraseBgmWave__10Z2SceneMgrFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void eraseBgmWave__10Z2SceneMgrFUl() {
+extern "C" asm void eraseBgmWave__10Z2SceneMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/eraseBgmWave__10Z2SceneMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802BA698-802BA704 006C .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWaveLoadStatus__10Z2SceneMgrFUlUl() {
+extern "C" asm void getWaveLoadStatus__10Z2SceneMgrFUlUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/getWaveLoadStatus__10Z2SceneMgrFUlUl.s"
 }
 #pragma pop
 
+
 /* 802BA704-802BA770 006C .text      loadSeWave__10Z2SceneMgrFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadSeWave__10Z2SceneMgrFUl() {
+extern "C" asm void loadSeWave__10Z2SceneMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/loadSeWave__10Z2SceneMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802BA770-802BA7DC 006C .text      loadBgmWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadBgmWave__10Z2SceneMgrFUl() {
+extern "C" asm void loadBgmWave__10Z2SceneMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/loadBgmWave__10Z2SceneMgrFUl.s"
 }

@@ -11,9 +11,9 @@ lbl_801C83E0:
 /* 801C8404 00000024  38 A0 00 00 */	li r5, 0
 /* 801C8408 00000028  38 C0 00 00 */	li r6, 0
 /* 801C840C 0000002C  38 E0 00 00 */	li r7, 0
-/* 801C8410 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C8410 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C8414 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801C8418 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C8418 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C841C 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801C8420 00000040  39 00 00 00 */	li r8, 0
 /* 801C8424 00000044  48 0E 35 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

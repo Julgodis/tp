@@ -52,8 +52,8 @@ lbl_80039C04:
 /* 80039C2C 00000028  38 63 46 68 */	addi r3, r3, data_80424668@l
 /* 80039C30 0000002C  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 80039C34 00000030  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
-/* 80039C38 00000034  3C A0 80 42 */	lis r5, d_d_demo__LIT_5233@ha
-/* 80039C3C 00000038  38 A5 46 5C */	addi r5, r5, d_d_demo__LIT_5233@l
+/* 80039C38 00000034  3C A0 80 42 */	lis r5, d_d_demo__lit_5233@ha
+/* 80039C3C 00000038  38 A5 46 5C */	addi r5, r5, d_d_demo__lit_5233@l
 /* 80039C40 0000003C  48 32 7F E5 */	bl __register_global_object
 /* 80039C44 00000040  38 00 00 01 */	li r0, 1
 /* 80039C48 00000044  98 0D 88 D0 */	stb r0, data_80450E50(r13)

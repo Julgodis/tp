@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_atan2();
-extern void atan2();
-}
+extern "C" extern void __ieee754_atan2();
+extern "C" extern void atan2();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C720-8036C740 0020 .text      atan2                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void atan2() {
+extern "C" asm void atan2() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_atan2/atan2.s"
 }

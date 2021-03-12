@@ -5,8 +5,8 @@ lbl_80212190:
 /* 8021219C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 802121A0 00000010  48 15 00 2D */	bl _savegpr_25
 /* 802121A4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 802121A8 00000018  3C 60 80 3A */	lis r3, d_meter_d_meter2_draw__data_80398258@ha
-/* 802121AC 0000001C  3B 63 82 58 */	addi r27, r3, d_meter_d_meter2_draw__data_80398258@l
+/* 802121A8 00000018  3C 60 80 3A */	lis r3, data_80398258@ha
+/* 802121AC 0000001C  3B 63 82 58 */	addi r27, r3, data_80398258@l
 /* 802121B0 00000020  38 60 00 6C */	li r3, 0x6c
 /* 802121B4 00000024  48 0B CA 99 */	bl __nw__FUl
 /* 802121B8 00000028  7C 60 1B 79 */	or. r0, r3, r3
@@ -106,15 +106,15 @@ lbl_802122E4:
 lbl_80212318:
 /* 80212318 00000000  90 1E 01 EC */	stw r0, 0x1ec(r30)
 /* 8021231C 00000004  80 7E 01 E0 */	lwz r3, 0x1e0(r30)
-/* 80212320 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80212320 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80212324 0000000C  48 04 34 AD */	bl setAlphaRate__13CPaneMgrAlphaFf
-/* 80212328 00000010  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80212328 00000010  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 8021232C 00000014  D0 1E 06 FC */	stfs f0, 0x6fc(r30)
 /* 80212330 00000018  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80212334 0000001C  3B E3 EB C8 */	addi r31, r3, g_drawHIO@l
 /* 80212338 00000020  C0 1F 0E 84 */	lfs f0, 0xe84(r31)
 /* 8021233C 00000024  D0 1E 06 F4 */	stfs f0, 0x6f4(r30)
-/* 80212340 00000028  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__LIT_4183(r2)
+/* 80212340 00000028  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__lit_4183(r2)
 /* 80212344 0000002C  D0 1E 06 F8 */	stfs f0, 0x6f8(r30)
 /* 80212348 00000030  3B 20 00 00 */	li r25, 0
 /* 8021234C 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

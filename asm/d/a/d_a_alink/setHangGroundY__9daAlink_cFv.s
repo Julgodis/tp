@@ -18,7 +18,7 @@ lbl_800FA6E4:
 /* 800FA724 00000040  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800FA728 00000044  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800FA72C 00000048  7C 03 04 2E */	lfsx f0, r3, r0
-/* 800FA730 0000004C  C0 22 94 64 */	lfs f1, LIT_14954(r2)
+/* 800FA730 0000004C  C0 22 94 64 */	lfs f1, lit_14954(r2)
 /* 800FA734 00000050  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800FA738 00000054  EC 03 00 28 */	fsubs f0, f3, f0
 /* 800FA73C 00000058  D0 01 00 08 */	stfs f0, 8(r1)

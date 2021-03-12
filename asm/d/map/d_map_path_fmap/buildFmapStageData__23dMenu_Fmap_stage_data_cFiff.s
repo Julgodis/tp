@@ -74,7 +74,7 @@ lbl_8003DAC4:
 /* 8003DAE0 0000001C  D3 9C 00 28 */	stfs f28, 0x28(r28)
 /* 8003DAE4 00000020  48 00 00 18 */	b lbl_8003DAFC
 lbl_8003DAE8:
-/* 8003DAE8 00000000  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003DAE8 00000000  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003DAEC 00000004  D0 1C 00 1C */	stfs f0, 0x1c(r28)
 /* 8003DAF0 00000008  D0 1C 00 20 */	stfs f0, 0x20(r28)
 /* 8003DAF4 0000000C  D0 1C 00 24 */	stfs f0, 0x24(r28)

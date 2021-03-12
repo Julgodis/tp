@@ -1,10 +1,10 @@
 lbl_80371B9C:
 /* 80371B9C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371BA0 00000004  7C 08 02 A6 */	mflr r0
-/* 80371BA4 00000008  3C 80 80 3A */	lis r4, MetroTRK_Portable_main_TRK__LIT_80@ha
+/* 80371BA4 00000008  3C 80 80 3A */	lis r4, MetroTRK_Portable_main_TRK__lit_80@ha
 /* 80371BA8 0000000C  38 60 00 01 */	li r3, 1
 /* 80371BAC 00000010  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80371BB0 00000014  38 84 2B F8 */	addi r4, r4, MetroTRK_Portable_main_TRK__LIT_80@l
+/* 80371BB0 00000014  38 84 2B F8 */	addi r4, r4, MetroTRK_Portable_main_TRK__lit_80@l
 /* 80371BB4 00000018  4C C6 31 82 */	crclr 6
 /* 80371BB8 0000001C  48 00 10 9D */	bl MWTRACE
 /* 80371BBC 00000020  4B FF B2 D1 */	bl TRKInitializeNub

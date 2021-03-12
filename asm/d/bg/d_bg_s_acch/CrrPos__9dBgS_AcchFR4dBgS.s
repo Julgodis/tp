@@ -83,7 +83,7 @@ lbl_80076BB8:
 /* 80076BE0 00000028  C0 43 00 08 */	lfs f2, 8(r3)
 /* 80076BE4 0000002C  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80076BE8 00000030  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80076BEC 00000034  C0 22 8C C0 */	lfs f1, d_bg_d_bg_s_acch__LIT_4025(r2)
+/* 80076BEC 00000034  C0 22 8C C0 */	lfs f1, d_bg_d_bg_s_acch__lit_4025(r2)
 /* 80076BF0 00000038  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80076BF4 0000003C  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 80076BF8 00000040  C0 44 00 08 */	lfs f2, 8(r4)
@@ -167,7 +167,7 @@ lbl_80076D08:
 /* 80076D20 00000018  7F E4 FB 78 */	mr r4, r31
 /* 80076D24 0000001C  4B FF F9 01 */	bl LineCheck__9dBgS_AcchFR4dBgS
 lbl_80076D28:
-/* 80076D28 00000000  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__LIT_4091(r2)
+/* 80076D28 00000000  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__lit_4091(r2)
 /* 80076D2C 00000004  D0 1E 00 CC */	stfs f0, 0xcc(r30)
 /* 80076D30 00000008  80 1E 00 2C */	lwz r0, 0x2c(r30)
 /* 80076D34 0000000C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
@@ -192,7 +192,7 @@ lbl_80076D28:
 /* 80076D80 00000058  38 9E 01 30 */	addi r4, r30, 0x130
 /* 80076D84 0000005C  4B FF E7 19 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
 /* 80076D88 00000060  D0 3E 00 C4 */	stfs f1, 0xc4(r30)
-/* 80076D8C 00000064  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__LIT_4091(r2)
+/* 80076D8C 00000064  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__lit_4091(r2)
 /* 80076D90 00000068  C0 3E 00 C4 */	lfs f1, 0xc4(r30)
 /* 80076D94 0000006C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80076D98 00000070  41 82 00 30 */	beq lbl_80076DC8
@@ -236,14 +236,14 @@ lbl_80076E10:
 /* 80076E24 00000014  80 1E 00 2C */	lwz r0, 0x2c(r30)
 /* 80076E28 00000018  54 00 05 24 */	rlwinm r0, r0, 0, 0x14, 0x12
 /* 80076E2C 0000001C  90 1E 00 2C */	stw r0, 0x2c(r30)
-/* 80076E30 00000020  C0 02 8C C4 */	lfs f0, d_bg_d_bg_s_acch__LIT_4089(r2)
+/* 80076E30 00000020  C0 02 8C C4 */	lfs f0, d_bg_d_bg_s_acch__lit_4089(r2)
 /* 80076E34 00000024  D0 1E 01 CC */	stfs f0, 0x1cc(r30)
 /* 80076E38 00000028  C0 3E 00 98 */	lfs f1, 0x98(r30)
 /* 80076E3C 0000002C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80076E40 00000030  40 82 00 18 */	bne lbl_80076E58
 /* 80076E44 00000034  80 7E 00 30 */	lwz r3, 0x30(r30)
 /* 80076E48 00000038  C0 23 00 04 */	lfs f1, 4(r3)
-/* 80076E4C 0000003C  C0 02 8C D8 */	lfs f0, d_bg_d_bg_s_acch__LIT_4554(r2)
+/* 80076E4C 0000003C  C0 02 8C D8 */	lfs f0, d_bg_d_bg_s_acch__lit_4554(r2)
 /* 80076E50 00000040  EF A1 00 28 */	fsubs f29, f1, f0
 /* 80076E54 00000044  48 00 00 08 */	b lbl_80076E5C
 lbl_80076E58:
@@ -271,10 +271,10 @@ lbl_80076E74:
 /* 80076EA4 00000030  38 81 00 38 */	addi r4, r1, 0x38
 /* 80076EA8 00000034  4B FF E5 F5 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
 /* 80076EAC 00000038  FF C0 08 90 */	fmr f30, f1
-/* 80076EB0 0000003C  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__LIT_4091(r2)
+/* 80076EB0 0000003C  C0 02 8C CC */	lfs f0, d_bg_d_bg_s_acch__lit_4091(r2)
 /* 80076EB4 00000040  FC 00 F0 00 */	fcmpu cr0, f0, f30
 /* 80076EB8 00000044  40 82 00 14 */	bne lbl_80076ECC
-/* 80076EBC 00000048  C0 22 8C DC */	lfs f1, d_bg_d_bg_s_acch__LIT_4555(r2)
+/* 80076EBC 00000048  C0 22 8C DC */	lfs f1, d_bg_d_bg_s_acch__lit_4555(r2)
 /* 80076EC0 0000004C  80 7E 00 30 */	lwz r3, 0x30(r30)
 /* 80076EC4 00000050  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80076EC8 00000054  EF C1 00 2A */	fadds f30, f1, f0

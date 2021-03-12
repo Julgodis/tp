@@ -96,7 +96,7 @@ lbl_8000921C:
 /* 80009334 00000118  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 80009338 0000011C  90 01 00 08 */	stw r0, 8(r1)
 /* 8000933C 00000120  38 60 00 00 */	li r3, 0
-/* 80009340 00000124  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80009340 00000124  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009344 00000128  FC 40 08 90 */	fmr f2, f1
 /* 80009348 0000012C  FC 60 08 90 */	fmr f3, f1
 /* 8000934C 00000130  FC 80 08 90 */	fmr f4, f1
@@ -109,12 +109,12 @@ lbl_8000921C:
 /* 80009368 0000014C  38 60 00 00 */	li r3, 0
 /* 8000936C 00000150  48 35 5D 69 */	bl GXSetNumIndStages
 /* 80009370 00000154  38 61 00 0C */	addi r3, r1, 0xc
-/* 80009374 00000158  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 80009378 0000015C  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 80009374 00000158  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
+/* 80009378 0000015C  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000937C 00000160  FC 60 08 90 */	fmr f3, f1
-/* 80009380 00000164  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__LIT_4481(r2)
+/* 80009380 00000164  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__lit_4481(r2)
 /* 80009384 00000168  FC A0 08 90 */	fmr f5, f1
-/* 80009388 0000016C  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__LIT_4105(r2)
+/* 80009388 0000016C  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__lit_4105(r2)
 /* 8000938C 00000170  48 33 DC 6D */	bl C_MTXOrtho
 /* 80009390 00000174  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
 /* 80009394 00000178  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l

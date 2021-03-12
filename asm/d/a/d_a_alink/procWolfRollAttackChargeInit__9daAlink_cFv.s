@@ -8,7 +8,7 @@ lbl_801398A8:
 /* 801398C0 00000018  4B F8 86 AD */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 801398C4 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 801398C8 00000020  38 80 00 6E */	li r4, 0x6e
-/* 801398CC 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 801398CC 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 801398D0 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_wlAttack_c0@ha
 /* 801398D4 0000002C  38 A5 F7 A4 */	addi r5, r5, m__22daAlinkHIO_wlAttack_c0@l
 /* 801398D8 00000030  C0 45 00 20 */	lfs f2, 0x20(r5)

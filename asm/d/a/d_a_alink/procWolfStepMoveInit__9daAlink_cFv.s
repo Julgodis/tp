@@ -12,11 +12,11 @@ lbl_8012F41C:
 /* 8012F444 00000028  38 A5 F1 A0 */	addi r5, r5, m__24daAlinkHIO_wlWallHang_c0@l
 /* 8012F448 0000002C  38 A5 00 50 */	addi r5, r5, 0x50
 /* 8012F44C 00000030  4B FF A3 FD */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8012F450 00000034  C0 22 92 98 */	lfs f1, LIT_5943(r2)
+/* 8012F450 00000034  C0 22 92 98 */	lfs f1, lit_5943(r2)
 /* 8012F454 00000038  C0 1F 33 98 */	lfs f0, 0x3398(r31)
 /* 8012F458 0000003C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8012F45C 00000040  D0 1F 34 78 */	stfs f0, 0x3478(r31)
-/* 8012F460 00000044  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8012F460 00000044  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8012F464 00000048  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8012F468 0000004C  38 00 00 00 */	li r0, 0
 /* 8012F46C 00000050  B0 1F 30 0C */	sth r0, 0x300c(r31)
@@ -33,7 +33,7 @@ lbl_8012F41C:
 /* 8012F498 0000007C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8012F49C 00000080  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8012F4A0 00000084  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
-/* 8012F4A4 00000088  C0 42 93 30 */	lfs f2, d_a_d_a_alink__LIT_7625(r2)
+/* 8012F4A4 00000088  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
 /* 8012F4A8 0000008C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8012F4AC 00000090  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8012F4B0 00000094  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)

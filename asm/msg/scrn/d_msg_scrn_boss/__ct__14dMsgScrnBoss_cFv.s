@@ -125,7 +125,7 @@ lbl_8023C758:
 /* 8023C7A4 0000004C  3B E0 00 00 */	li r31, 0
 /* 8023C7A8 00000050  3B A0 00 00 */	li r29, 0
 /* 8023C7AC 00000054  3B 80 00 00 */	li r28, 0
-/* 8023C7B0 00000058  C3 E2 B1 B0 */	lfs f31, msg_scrn_d_msg_scrn_boss__LIT_3854(r2)
+/* 8023C7B0 00000058  C3 E2 B1 B0 */	lfs f31, msg_scrn_d_msg_scrn_boss__lit_3854(r2)
 /* 8023C7B4 0000005C  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_boss__stringBase0@ha
 /* 8023C7B8 00000060  3B 63 98 F8 */	addi r27, r3, msg_scrn_d_msg_scrn_boss__stringBase0@l
 lbl_8023C7BC:

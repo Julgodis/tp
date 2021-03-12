@@ -139,13 +139,13 @@ lbl_80195F90:
 /* 8019602C 0000009C  3B 80 00 00 */	li r28, 0
 /* 80196030 000000A0  38 61 00 4C */	addi r3, r1, 0x4c
 /* 80196034 000000A4  48 1B 11 05 */	bl PSVECSquareMag
-/* 80196038 000000A8  C0 02 A0 94 */	lfs f0, d_shop_d_shop_camera__LIT_3916(r2)
+/* 80196038 000000A8  C0 02 A0 94 */	lfs f0, d_shop_d_shop_camera__lit_3916(r2)
 /* 8019603C 000000AC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80196040 00000000  40 81 00 58 */	ble lbl_80196098
 /* 80196044 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80196048 00000008  C8 82 A0 98 */	lfd f4, d_shop_d_shop_camera__LIT_3917(r2)
+/* 80196048 00000008  C8 82 A0 98 */	lfd f4, d_shop_d_shop_camera__lit_3917(r2)
 /* 8019604C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 80196050 00000010  C8 62 A0 A0 */	lfd f3, d_shop_d_shop_camera__LIT_3918(r2)
+/* 80196050 00000010  C8 62 A0 A0 */	lfd f3, d_shop_d_shop_camera__lit_3918(r2)
 /* 80196054 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 80196058 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8019605C 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -164,7 +164,7 @@ lbl_80195F90:
 /* 80196090 00000050  FC 20 08 18 */	frsp f1, f1
 /* 80196094 00000054  48 00 00 88 */	b lbl_8019611C
 lbl_80196098:
-/* 80196098 00000000  C8 02 A0 A8 */	lfd f0, d_shop_d_shop_camera__LIT_3919(r2)
+/* 80196098 00000000  C8 02 A0 A8 */	lfd f0, d_shop_d_shop_camera__lit_3919(r2)
 /* 8019609C 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801960A0 00000000  40 80 00 10 */	bge lbl_801960B0
 /* 801960A4 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -205,7 +205,7 @@ lbl_8019610C:
 /* 80196114 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 80196118 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_8019611C:
-/* 8019611C 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__LIT_3920(r2)
+/* 8019611C 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__lit_3920(r2)
 /* 80196120 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80196124 00000000  40 80 00 20 */	bge lbl_80196144
 /* 80196128 00000004  C0 01 00 64 */	lfs f0, 0x64(r1)
@@ -218,13 +218,13 @@ lbl_8019611C:
 lbl_80196144:
 /* 80196144 00000000  38 61 00 40 */	addi r3, r1, 0x40
 /* 80196148 00000004  48 1B 0F F1 */	bl PSVECSquareMag
-/* 8019614C 00000008  C0 02 A0 94 */	lfs f0, d_shop_d_shop_camera__LIT_3916(r2)
+/* 8019614C 00000008  C0 02 A0 94 */	lfs f0, d_shop_d_shop_camera__lit_3916(r2)
 /* 80196150 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80196154 00000000  40 81 00 58 */	ble lbl_801961AC
 /* 80196158 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8019615C 00000008  C8 82 A0 98 */	lfd f4, d_shop_d_shop_camera__LIT_3917(r2)
+/* 8019615C 00000008  C8 82 A0 98 */	lfd f4, d_shop_d_shop_camera__lit_3917(r2)
 /* 80196160 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 80196164 00000010  C8 62 A0 A0 */	lfd f3, d_shop_d_shop_camera__LIT_3918(r2)
+/* 80196164 00000010  C8 62 A0 A0 */	lfd f3, d_shop_d_shop_camera__lit_3918(r2)
 /* 80196168 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8019616C 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 80196170 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -243,7 +243,7 @@ lbl_80196144:
 /* 801961A4 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801961A8 00000054  48 00 00 88 */	b lbl_80196230
 lbl_801961AC:
-/* 801961AC 00000000  C8 02 A0 A8 */	lfd f0, d_shop_d_shop_camera__LIT_3919(r2)
+/* 801961AC 00000000  C8 02 A0 A8 */	lfd f0, d_shop_d_shop_camera__lit_3919(r2)
 /* 801961B0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801961B4 00000000  40 80 00 10 */	bge lbl_801961C4
 /* 801961B8 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -284,7 +284,7 @@ lbl_80196220:
 /* 80196228 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 8019622C 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80196230:
-/* 80196230 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__LIT_3920(r2)
+/* 80196230 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__lit_3920(r2)
 /* 80196234 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80196238 00000000  40 80 00 20 */	bge lbl_80196258
 /* 8019623C 00000004  C0 01 00 58 */	lfs f0, 0x58(r1)
@@ -295,7 +295,7 @@ lbl_80196230:
 /* 80196250 00000018  D0 1B 00 90 */	stfs f0, 0x90(r27)
 /* 80196254 0000001C  3B A0 00 01 */	li r29, 1
 lbl_80196258:
-/* 80196258 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__LIT_3920(r2)
+/* 80196258 00000000  C0 02 A0 B0 */	lfs f0, d_shop_d_shop_camera__lit_3920(r2)
 /* 8019625C 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 80196260 00000000  40 80 00 0C */	bge lbl_8019626C
 /* 80196264 00000004  D3 FB 00 94 */	stfs f31, 0x94(r27)

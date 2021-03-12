@@ -1,0 +1,92 @@
+lbl_80C23E68:
+/* 80C23E68 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80C23E6C 00000004  7C 08 02 A6 */	mflr r0
+/* 80C23E70 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80C23E74 0000000C  39 61 00 20 */	addi r11, r1, 0x20
+/* 80C23E78 00000010  4B FF DE 41 */	bl _savegpr_29
+/* 80C23E7C 00000014  7C 7F 1B 78 */	mr r31, r3
+/* 80C23E80 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
+/* 80C23E84 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80C23E88 00000020  40 82 01 24 */	bne lbl_80C23FAC
+/* 80C23E8C 00000024  7F E0 FB 79 */	or. r0, r31, r31
+/* 80C23E90 00000028  41 82 01 10 */	beq lbl_80C23FA0
+/* 80C23E94 0000002C  7C 1E 03 78 */	mr r30, r0
+/* 80C23E98 00000030  4B FF DE 21 */	bl __ct__16dBgS_MoveBgActorFv
+/* 80C23E9C 00000034  3C 60 00 00 */	lis r3, __vt__13daObjIceBlk_c@ha
+/* 80C23EA0 00000038  38 03 00 00 */	addi r0, r3, __vt__13daObjIceBlk_c@l
+/* 80C23EA4 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
+/* 80C23EA8 00000040  3B BE 05 B0 */	addi r29, r30, 0x5b0
+/* 80C23EAC 00000044  7F A3 EB 78 */	mr r3, r29
+/* 80C23EB0 00000048  4B FF DE 09 */	bl __ct__9dBgS_AcchFv
+/* 80C23EB4 0000004C  3C 60 00 00 */	lis r3, __vt__12dBgS_ObjAcch@ha
+/* 80C23EB8 00000050  38 63 00 00 */	addi r3, r3, __vt__12dBgS_ObjAcch@l
+/* 80C23EBC 00000054  90 7D 00 10 */	stw r3, 0x10(r29)
+/* 80C23EC0 00000058  38 03 00 0C */	addi r0, r3, 0xc
+/* 80C23EC4 0000005C  90 1D 00 14 */	stw r0, 0x14(r29)
+/* 80C23EC8 00000060  38 03 00 18 */	addi r0, r3, 0x18
+/* 80C23ECC 00000064  90 1D 00 24 */	stw r0, 0x24(r29)
+/* 80C23ED0 00000068  38 7D 00 14 */	addi r3, r29, 0x14
+/* 80C23ED4 0000006C  4B FF DD E5 */	bl SetObj__16dBgS_PolyPassChkFv
+/* 80C23ED8 00000070  38 7E 07 88 */	addi r3, r30, 0x788
+/* 80C23EDC 00000074  4B FF DD DD */	bl __ct__12dBgS_AcchCirFv
+/* 80C23EE0 00000078  3C 60 00 00 */	lis r3, __vt__9cCcD_Stts@ha
+/* 80C23EE4 0000007C  38 03 00 00 */	addi r0, r3, __vt__9cCcD_Stts@l
+/* 80C23EE8 00000080  90 1E 07 E0 */	stw r0, 0x7e0(r30)
+/* 80C23EEC 00000084  38 7E 07 E4 */	addi r3, r30, 0x7e4
+/* 80C23EF0 00000088  4B FF DD C9 */	bl __ct__10dCcD_GSttsFv
+/* 80C23EF4 0000008C  3C 60 00 00 */	lis r3, __vt__9dCcD_Stts@ha
+/* 80C23EF8 00000090  38 63 00 00 */	addi r3, r3, __vt__9dCcD_Stts@l
+/* 80C23EFC 00000094  90 7E 07 E0 */	stw r3, 0x7e0(r30)
+/* 80C23F00 00000098  38 03 00 20 */	addi r0, r3, 0x20
+/* 80C23F04 0000009C  90 1E 07 E4 */	stw r0, 0x7e4(r30)
+/* 80C23F08 000000A0  3B BE 08 04 */	addi r29, r30, 0x804
+/* 80C23F0C 000000A4  7F A3 EB 78 */	mr r3, r29
+/* 80C23F10 000000A8  4B FF DD A9 */	bl __ct__12dCcD_GObjInfFv
+/* 80C23F14 000000AC  3C 60 00 00 */	lis r3, __vt__14cCcD_ShapeAttr@ha
+/* 80C23F18 000000B0  38 03 00 00 */	addi r0, r3, __vt__14cCcD_ShapeAttr@l
+/* 80C23F1C 000000B4  90 1D 01 20 */	stw r0, 0x120(r29)
+/* 80C23F20 000000B8  3C 60 00 00 */	lis r3, __vt__8cM3dGAab@ha
+/* 80C23F24 000000BC  38 03 00 00 */	addi r0, r3, __vt__8cM3dGAab@l
+/* 80C23F28 000000C0  90 1D 01 1C */	stw r0, 0x11c(r29)
+/* 80C23F2C 000000C4  3C 60 00 00 */	lis r3, __vt__8cM3dGCyl@ha
+/* 80C23F30 000000C8  38 03 00 00 */	addi r0, r3, __vt__8cM3dGCyl@l
+/* 80C23F34 000000CC  90 1D 01 38 */	stw r0, 0x138(r29)
+/* 80C23F38 000000D0  3C 60 00 00 */	lis r3, __vt__12cCcD_CylAttr@ha
+/* 80C23F3C 000000D4  38 63 00 00 */	addi r3, r3, __vt__12cCcD_CylAttr@l
+/* 80C23F40 000000D8  90 7D 01 20 */	stw r3, 0x120(r29)
+/* 80C23F44 000000DC  38 03 00 58 */	addi r0, r3, 0x58
+/* 80C23F48 000000E0  90 1D 01 38 */	stw r0, 0x138(r29)
+/* 80C23F4C 000000E4  3C 60 00 00 */	lis r3, __vt__8dCcD_Cyl@ha
+/* 80C23F50 000000E8  38 63 00 00 */	addi r3, r3, __vt__8dCcD_Cyl@l
+/* 80C23F54 000000EC  90 7D 00 3C */	stw r3, 0x3c(r29)
+/* 80C23F58 000000F0  38 03 00 2C */	addi r0, r3, 0x2c
+/* 80C23F5C 000000F4  90 1D 01 20 */	stw r0, 0x120(r29)
+/* 80C23F60 000000F8  38 03 00 84 */	addi r0, r3, 0x84
+/* 80C23F64 000000FC  90 1D 01 38 */	stw r0, 0x138(r29)
+/* 80C23F68 00000100  3B BE 09 68 */	addi r29, r30, 0x968
+/* 80C23F6C 00000104  7F A3 EB 78 */	mr r3, r29
+/* 80C23F70 00000108  4B FF DD 49 */	bl __ct__11dBgS_GndChkFv
+/* 80C23F74 0000010C  3C 60 00 00 */	lis r3, __vt__14dBgS_ObjGndChk@ha
+/* 80C23F78 00000110  38 63 00 00 */	addi r3, r3, __vt__14dBgS_ObjGndChk@l
+/* 80C23F7C 00000114  90 7D 00 10 */	stw r3, 0x10(r29)
+/* 80C23F80 00000118  38 03 00 0C */	addi r0, r3, 0xc
+/* 80C23F84 0000011C  90 1D 00 20 */	stw r0, 0x20(r29)
+/* 80C23F88 00000120  38 03 00 18 */	addi r0, r3, 0x18
+/* 80C23F8C 00000124  90 1D 00 3C */	stw r0, 0x3c(r29)
+/* 80C23F90 00000128  38 03 00 24 */	addi r0, r3, 0x24
+/* 80C23F94 0000012C  90 1D 00 4C */	stw r0, 0x4c(r29)
+/* 80C23F98 00000130  38 7D 00 3C */	addi r3, r29, 0x3c
+/* 80C23F9C 00000134  4B FF DD 1D */	bl SetObj__16dBgS_PolyPassChkFv
+lbl_80C23FA0:
+/* 80C23FA0 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
+/* 80C23FA4 00000004  60 00 00 08 */	ori r0, r0, 8
+/* 80C23FA8 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
+lbl_80C23FAC:
+/* 80C23FAC 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80C23FB0 00000004  4B FF E8 45 */	bl create1st__13daObjIceBlk_cFv
+/* 80C23FB4 00000008  39 61 00 20 */	addi r11, r1, 0x20
+/* 80C23FB8 0000000C  4B FF DD 01 */	bl _restgpr_29
+/* 80C23FBC 00000010  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80C23FC0 00000014  7C 08 03 A6 */	mtlr r0
+/* 80C23FC4 00000018  38 21 00 20 */	addi r1, r1, 0x20
+/* 80C23FC8 0000001C  4E 80 00 20 */	blr 

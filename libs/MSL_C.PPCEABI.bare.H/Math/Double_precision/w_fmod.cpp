@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_fmod();
-extern void fmod();
-}
+extern "C" extern void __ieee754_fmod();
+extern "C" extern void fmod();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C760-8036C780 0020 .text      fmod                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fmod() {
+extern "C" asm void fmod() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_fmod/fmod.s"
 }

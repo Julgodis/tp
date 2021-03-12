@@ -31,7 +31,7 @@ lbl_801B1C3C:
 /* 801B1CB0 00000074  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 801B1CB4 00000078  7D 89 03 A6 */	mtctr r12
 /* 801B1CB8 0000007C  4E 80 04 21 */	bctrl 
-/* 801B1CBC 00000080  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B1CBC 00000080  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B1CC0 00000084  D0 1F 00 34 */	stfs f0, 0x34(r31)
 /* 801B1CC4 00000088  D0 1F 00 38 */	stfs f0, 0x38(r31)
 /* 801B1CC8 0000008C  D0 1F 00 3C */	stfs f0, 0x3c(r31)

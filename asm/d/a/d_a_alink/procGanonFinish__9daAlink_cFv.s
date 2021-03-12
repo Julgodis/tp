@@ -19,7 +19,7 @@ lbl_8011EA78:
 /* 8011EABC 00000044  41 82 00 14 */	beq lbl_8011EAD0
 /* 8011EAC0 00000048  7F E3 FB 78 */	mr r3, r31
 /* 8011EAC4 0000004C  38 80 01 98 */	li r4, 0x198
-/* 8011EAC8 00000050  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 8011EAC8 00000050  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 8011EACC 00000054  4B F8 E4 E5 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 lbl_8011EAD0:
 /* 8011EAD0 00000000  38 60 00 01 */	li r3, 1

@@ -13,7 +13,7 @@ lbl_801903DC:
 /* 80190408 0000002C  38 A0 00 20 */	li r5, 0x20
 /* 8019040C 00000030  4B E7 EB E9 */	bl mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl
 /* 80190410 00000034  90 7D 00 04 */	stw r3, 4(r29)
-/* 80190414 00000038  C0 02 9F 48 */	lfs f0, d_file_d_file_select__LIT_4778(r2)
+/* 80190414 00000038  C0 02 9F 48 */	lfs f0, d_file_d_file_select__lit_4778(r2)
 /* 80190418 0000003C  D0 1D 03 C4 */	stfs f0, 0x3c4(r29)
 /* 8019041C 00000040  D0 1D 03 C8 */	stfs f0, 0x3c8(r29)
 /* 80190420 00000044  9B DD 03 CE */	stb r30, 0x3ce(r29)

@@ -5,56 +5,56 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void PSMTXMultVec();
-extern void PSMTXMultVecArray();
-extern void PSMTXMultVecSR();
-extern void PSMTXMultVecArraySR();
-}
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void PSMTXMultVecArray();
+extern "C" extern void PSMTXMultVecSR();
+extern "C" extern void PSMTXMultVecArraySR();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80346D6C-80346DC0 0054 .text      PSMTXMultVec                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PSMTXMultVec() {
+extern "C" asm void PSMTXMultVec() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVec.s"
 }
 #pragma pop
 
+
 /* 80346DC0-80346E4C 008C .text      PSMTXMultVecArray                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PSMTXMultVecArray() {
+extern "C" asm void PSMTXMultVecArray() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecArray.s"
 }
 #pragma pop
 
+
 /* 80346E4C-80346EA0 0054 .text      PSMTXMultVecSR                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PSMTXMultVecSR() {
+extern "C" asm void PSMTXMultVecSR() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecSR.s"
 }
 #pragma pop
 
+
 /* 80346EA0-80346F28 0088 .text      PSMTXMultVecArraySR                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PSMTXMultVecArraySR() {
+extern "C" asm void PSMTXMultVecArraySR() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecArraySR.s"
 }

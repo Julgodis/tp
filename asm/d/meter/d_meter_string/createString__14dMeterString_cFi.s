@@ -34,9 +34,9 @@ lbl_8020F5A4:
 /* 8020F624 00000080  48 0F 10 35 */	bl getStringPtr__10J2DTextBoxCFv
 /* 8020F628 00000084  38 81 00 08 */	addi r4, r1, 8
 /* 8020F62C 00000088  48 15 95 01 */	bl strcpy
-/* 8020F630 0000008C  C0 02 AE 78 */	lfs f0, d_meter_d_meter_string__LIT_3866(r2)
+/* 8020F630 0000008C  C0 02 AE 78 */	lfs f0, d_meter_d_meter_string__lit_3866(r2)
 /* 8020F634 00000090  D0 1E 00 2C */	stfs f0, 0x2c(r30)
-/* 8020F638 00000094  C0 02 AE 64 */	lfs f0, d_meter_d_meter_string__LIT_3821(r2)
+/* 8020F638 00000094  C0 02 AE 64 */	lfs f0, d_meter_d_meter_string__lit_3821(r2)
 /* 8020F63C 00000098  D0 1E 00 30 */	stfs f0, 0x30(r30)
 /* 8020F640 0000009C  38 00 00 00 */	li r0, 0
 /* 8020F644 000000A0  B0 1E 00 38 */	sth r0, 0x38(r30)

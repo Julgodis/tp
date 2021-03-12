@@ -6,7 +6,7 @@ lbl_80029D78:
 /* 80029D88 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80029D8C 00000014  7C BE 2B 78 */	mr r30, r5
 /* 80029D90 00000018  7C DF 33 78 */	mr r31, r6
-/* 80029D94 0000001C  C0 62 82 E4 */	lfs f3, d_map_d_map__LIT_4321(r2)
+/* 80029D94 0000001C  C0 62 82 E4 */	lfs f3, d_map_d_map__lit_4321(r2)
 /* 80029D98 00000020  FC 00 18 90 */	fmr f0, f3
 /* 80029D9C 00000024  2C 04 00 00 */	cmpwi r4, 0
 /* 80029DA0 00000028  41 80 00 4C */	blt lbl_80029DEC
@@ -19,7 +19,7 @@ lbl_80029D78:
 /* 80029DBC 00000044  38 E1 00 0C */	addi r7, r1, 0xc
 /* 80029DC0 00000048  39 01 00 08 */	addi r8, r1, 8
 /* 80029DC4 0000004C  4B FF FC C9 */	bl getMapMinMaxXZ__6dMap_cFiPfPfPfPf
-/* 80029DC8 00000050  C0 42 82 A0 */	lfs f2, d_map_d_map__LIT_3745(r2)
+/* 80029DC8 00000050  C0 42 82 A0 */	lfs f2, d_map_d_map__lit_3745(r2)
 /* 80029DCC 00000054  C0 21 00 0C */	lfs f1, 0xc(r1)
 /* 80029DD0 00000058  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 80029DD4 0000005C  EC 01 00 2A */	fadds f0, f1, f0

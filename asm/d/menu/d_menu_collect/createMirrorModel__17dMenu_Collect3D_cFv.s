@@ -5,8 +5,8 @@ lbl_801B71C4:
 /* 801B71D0 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 801B71D4 00000010  48 1A B0 09 */	bl _savegpr_29
 /* 801B71D8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801B71DC 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_collect__LIT_3778@ha
-/* 801B71E0 0000001C  3B A3 4F 78 */	addi r29, r3, d_menu_d_menu_collect__LIT_3778@l
+/* 801B71DC 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_collect__lit_3778@ha
+/* 801B71E0 0000001C  3B A3 4F 78 */	addi r29, r3, d_menu_d_menu_collect__lit_3778@l
 /* 801B71E4 00000020  48 00 02 B9 */	bl getMirrorNum__17dMenu_Collect3D_cFv
 /* 801B71E8 00000024  54 7E 06 3F */	clrlwi. r30, r3, 0x18
 /* 801B71EC 00000028  54 67 15 BA */	rlwinm r7, r3, 2, 0x16, 0x1d
@@ -19,7 +19,7 @@ lbl_801B71C4:
 /* 801B7208 00000044  38 7D 03 A4 */	addi r3, r29, 0x3a4
 /* 801B720C 00000048  7C 03 3C 2E */	lfsx f0, r3, r7
 /* 801B7210 0000004C  D0 1F 03 CC */	stfs f0, 0x3cc(r31)
-/* 801B7214 00000050  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B7214 00000050  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B7218 00000054  D0 1F 03 B0 */	stfs f0, 0x3b0(r31)
 /* 801B721C 00000058  D0 1F 03 B4 */	stfs f0, 0x3b4(r31)
 /* 801B7220 0000005C  D0 1F 03 B8 */	stfs f0, 0x3b8(r31)

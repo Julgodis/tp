@@ -5,115 +5,114 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSReport();
-extern void OSPanic();
-extern void OSRegisterVersion();
-extern void OSCreateAlarm();
-extern void OSSetAlarm();
-extern void DCInvalidateRange();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __OSSetInterruptHandler();
-extern void __OSUnmaskInterrupts();
-extern void OSInitThreadQueue();
-extern void OSSleepThread();
-extern void OSWakeupThread();
-extern void __DVDInitWA();
-extern void __DVDInterruptHandler();
-extern void DVDLowRead();
-extern void DVDLowSeek();
-extern void DVDLowWaitCoverClose();
-extern void DVDLowReadDiskID();
-extern void DVDLowStopMotor();
-extern void DVDLowRequestError();
-extern void DVDLowInquiry();
-extern void DVDLowAudioStream();
-extern void DVDLowRequestAudioStatus();
-extern void DVDLowAudioBufferConfig();
-extern void DVDLowReset();
-extern void DVDLowBreak();
-extern void DVDLowClearCallback();
-extern void __DVDLowTestAlarm();
-extern void __DVDFSInit();
-extern void defaultOptionalCommandChecker();
-extern void DVDInit();
-extern void stateReadingFST();
-extern void cbForStateReadingFST();
-extern void cbForStateError();
-extern void stateTimeout();
-extern void stateGettingError();
-extern void CategorizeError();
-extern void cbForStateGettingError();
-extern void cbForUnrecoveredError();
-extern void cbForUnrecoveredErrorRetry();
-extern void stateGoToRetry();
-extern void cbForStateGoToRetry();
-extern void stateCheckID();
-extern void stateCheckID3();
-extern void stateCheckID2a();
-extern void cbForStateCheckID2a();
-extern void stateCheckID2();
-extern void cbForStateCheckID1();
-extern void cbForStateCheckID2();
-extern void cbForStateCheckID3();
-extern void dvd__AlarmHandler();
-extern void stateCoverClosed();
-extern void stateCoverClosed_CMD();
-extern void cbForStateCoverClosed();
-extern void stateMotorStopped();
-extern void cbForStateMotorStopped();
-extern void stateReady();
-extern void stateBusy();
-extern void cbForStateBusy();
-extern void DVDReadAbsAsyncPrio();
-extern void DVDReadAbsAsyncForBS();
-extern void DVDReadDiskID();
-extern void DVDCancelStreamAsync();
-extern void DVDInquiryAsync();
-extern void DVDReset();
-extern void DVDGetCommandBlockStatus();
-extern void DVDGetDriveStatus();
-extern void DVDSetAutoInvalidation();
-extern void DVDResume();
-extern void DVDCancelAsync();
-extern void DVDCancel();
-extern void cbForCancelSync();
-extern void DVDGetCurrentDiskID();
-extern void DVDCheckDisk();
-extern void __DVDPrepareResetAsync();
-extern void __DVDTestAlarm();
-extern void __DVDClearWaitingQueue();
-extern void __DVDPushWaitingQueue();
-extern void __DVDPopWaitingQueue();
-extern void __DVDCheckWaitingQueue();
-extern void __DVDDequeueWaitingQueue();
-extern void __DVDStoreErrorCode();
-extern void DVDCompareDiskID();
-extern void __DVDPrintFatalMessage();
-extern void __fstLoad();
-extern void memcmp();
-SECTION_DATA extern u8 dvd__LIT_1[72];
-SECTION_DATA extern u8 LIT_18[12];
-SECTION_DATA extern u8 LIT_24[52];
-SECTION_DATA extern void* dvd__LIT_359[17];
+extern "C" extern void OSReport();
+extern "C" extern void OSPanic();
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSCreateAlarm();
+extern "C" extern void OSSetAlarm();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __OSSetInterruptHandler();
+extern "C" extern void __OSUnmaskInterrupts();
+extern "C" extern void OSInitThreadQueue();
+extern "C" extern void OSSleepThread();
+extern "C" extern void OSWakeupThread();
+extern "C" extern void __DVDInitWA();
+extern "C" extern void __DVDInterruptHandler();
+extern "C" extern void DVDLowRead();
+extern "C" extern void DVDLowSeek();
+extern "C" extern void DVDLowWaitCoverClose();
+extern "C" extern void DVDLowReadDiskID();
+extern "C" extern void DVDLowStopMotor();
+extern "C" extern void DVDLowRequestError();
+extern "C" extern void DVDLowInquiry();
+extern "C" extern void DVDLowAudioStream();
+extern "C" extern void DVDLowRequestAudioStatus();
+extern "C" extern void DVDLowAudioBufferConfig();
+extern "C" extern void DVDLowReset();
+extern "C" extern void DVDLowBreak();
+extern "C" extern void DVDLowClearCallback();
+extern "C" extern void __DVDLowTestAlarm();
+extern "C" extern void __DVDFSInit();
+extern "C" extern void defaultOptionalCommandChecker();
+extern "C" extern void DVDInit();
+extern "C" extern void stateReadingFST();
+extern "C" extern void cbForStateReadingFST();
+extern "C" extern void cbForStateError();
+extern "C" extern void stateTimeout();
+extern "C" extern void stateGettingError();
+extern "C" extern void CategorizeError();
+extern "C" extern void cbForStateGettingError();
+extern "C" extern void cbForUnrecoveredError();
+extern "C" extern void cbForUnrecoveredErrorRetry();
+extern "C" extern void stateGoToRetry();
+extern "C" extern void cbForStateGoToRetry();
+extern "C" extern void stateCheckID();
+extern "C" extern void stateCheckID3();
+extern "C" extern void stateCheckID2a();
+extern "C" extern void cbForStateCheckID2a();
+extern "C" extern void stateCheckID2();
+extern "C" extern void cbForStateCheckID1();
+extern "C" extern void cbForStateCheckID2();
+extern "C" extern void cbForStateCheckID3();
+extern "C" extern void dvd__AlarmHandler();
+extern "C" extern void stateCoverClosed();
+extern "C" extern void stateCoverClosed_CMD();
+extern "C" extern void cbForStateCoverClosed();
+extern "C" extern void stateMotorStopped();
+extern "C" extern void cbForStateMotorStopped();
+extern "C" extern void stateReady();
+extern "C" extern void stateBusy();
+extern "C" extern void cbForStateBusy();
+extern "C" extern void DVDReadAbsAsyncPrio();
+extern "C" extern void DVDReadAbsAsyncForBS();
+extern "C" extern void DVDReadDiskID();
+extern "C" extern void DVDCancelStreamAsync();
+extern "C" extern void DVDInquiryAsync();
+extern "C" extern void DVDReset();
+extern "C" extern void DVDGetCommandBlockStatus();
+extern "C" extern void DVDGetDriveStatus();
+extern "C" extern void DVDSetAutoInvalidation();
+extern "C" extern void DVDResume();
+extern "C" extern void DVDCancelAsync();
+extern "C" extern void DVDCancel();
+extern "C" extern void cbForCancelSync();
+extern "C" extern void DVDGetCurrentDiskID();
+extern "C" extern void DVDCheckDisk();
+extern "C" extern void __DVDPrepareResetAsync();
+extern "C" extern void __DVDTestAlarm();
+extern "C" extern void __DVDClearWaitingQueue();
+extern "C" extern void __DVDPushWaitingQueue();
+extern "C" extern void __DVDPopWaitingQueue();
+extern "C" extern void __DVDCheckWaitingQueue();
+extern "C" extern void __DVDDequeueWaitingQueue();
+extern "C" extern void __DVDStoreErrorCode();
+extern "C" extern void DVDCompareDiskID();
+extern "C" extern void __DVDPrintFatalMessage();
+extern "C" extern void __fstLoad();
+extern "C" extern void memcmp();
+SECTION_DATA extern u8 dvd__lit_1[72];
+SECTION_DATA extern u8 lit_18[12];
+SECTION_DATA extern u8 lit_24[52];
+SECTION_DATA extern void* dvd__lit_359[17];
 SECTION_DATA extern u8 ImmCommand[12];
-SECTION_DATA extern u8 LIT_789[68];
-SECTION_DATA extern void* LIT_956[13];
-SECTION_DATA extern void* dvd__LIT_1060[14];
+SECTION_DATA extern u8 lit_789[68];
+SECTION_DATA extern void* lit_956[13];
+SECTION_DATA extern void* dvd__lit_1060[14];
 SECTION_BSS extern u8 BB2[32];
 SECTION_BSS extern u8 CurrDiskID[32];
 SECTION_BSS extern u8 DummyCommandBlock[48];
 SECTION_BSS extern u8 ResetAlarm[40];
 SECTION_SDATA extern void* __DVDVersion;
-SECTION_SDATA extern u8 autoInvalidation[4];
+SECTION_SDATA extern u32 autoInvalidation;
 SECTION_SDATA extern void* checkOptionalCommand;
-SECTION_SDATA extern u8 LIT_23[8];
-SECTION_SDATA extern u8 DmaCommand[4];
+SECTION_SDATA extern u8 lit_23[8];
+SECTION_SDATA extern u32 DmaCommand;
 SECTION_SBSS extern u8 __DVDThreadQueue[8];
 SECTION_SBSS extern u8 executing[4];
 SECTION_SBSS extern u8 IDShouldBe[4];
@@ -134,17 +133,25 @@ SECTION_SBSS extern u8 FirstTimeInBootrom[4];
 SECTION_SBSS extern u8 MotorState[4];
 SECTION_SBSS extern u8 DVDInitialized[4];
 SECTION_SBSS extern u8 dvd__LastState[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 803490EC-803490F0 0004 .text      defaultOptionalCommandChecker                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void defaultOptionalCommandChecker() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/defaultOptionalCommandChecker.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803D1520-803D1520 0000 .data      ...data.0                                                    */
 /* 803D1520-803D1568 0045 .data      @1                                                           */
-SECTION_DATA u8 dvd__LIT_1[72] = {
+u8 dvd__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -153,21 +160,406 @@ SECTION_DATA u8 dvd__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D1568-803D1574 000A .data      @18                                                          */
-SECTION_DATA u8 LIT_18[12] = {
+u8 lit_18[12] = {
 	0x6C, 0x6F, 0x61, 0x64, 0x20, 0x66, 0x73, 0x74, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
+/* 804509E8-804509EC 0004 .sdata     __DVDVersion                                                 */
+void* __DVDVersion = (void*)&dvd__lit_1;
+
+/* 80451778-8045177C 0004 .sbss      executing                                                    */
+u8 executing[4];
+
+/* 8045177C-80451780 0004 .sbss      IDShouldBe                                                   */
+u8 IDShouldBe[4];
+
+/* 80451780-80451784 0004 .sbss      bootInfo                                                     */
+u8 bootInfo[4];
+
+/* 80451784-80451788 0004 .sbss      PauseFlag                                                    */
+u8 PauseFlag[4];
+
+/* 80451788-8045178C 0004 .sbss      PausingFlag                                                  */
+u8 PausingFlag[4];
+
+/* 8045178C-80451790 0004 .sbss      AutoFinishing                                                */
+u8 AutoFinishing[4];
+
+/* 80451790-80451794 0004 .sbss      FatalErrorFlag                                               */
+u8 FatalErrorFlag[4];
+
+/* 80451794-80451798 0004 .sbss      CurrCommand                                                  */
+u8 CurrCommand[4];
+
+/* 80451798-8045179C 0004 .sbss      Canceling                                                    */
+u8 Canceling[4];
+
+/* 8045179C-804517A0 0004 .sbss      CancelCallback                                               */
+u8 CancelCallback[4];
+
+/* 804517A0-804517A4 0004 .sbss      ResumeFromHere                                               */
+u8 ResumeFromHere[4];
+
+/* 804517A4-804517A8 0004 .sbss      CancelLastError                                              */
+u8 CancelLastError[4];
+
+/* 804517A8-804517AC 0004 .sbss      LastError                                                    */
+u8 LastError[4];
+
+/* 804517AC-804517B0 0004 .sbss      NumInternalRetry                                             */
+u8 NumInternalRetry[4];
+
+/* 804517B0-804517B4 0004 .sbss      ResetRequired                                                */
+u8 ResetRequired[4];
+
+/* 804517B4-804517B8 0004 .sbss      FirstTimeInBootrom                                           */
+u8 FirstTimeInBootrom[4];
+
+/* 804517B8-804517BC 0004 .sbss      MotorState                                                   */
+u8 MotorState[4];
+
+/* 804517BC-804517C0 0004 .sbss      DVDInitialized                                               */
+u8 DVDInitialized[4];
+
+/* 803490F0-803491C8 00D8 .text      DVDInit                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDInit() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDInit.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D1574-803D15A8 0034 .data      @24                                                          */
-SECTION_DATA u8 LIT_24[52] = {
+u8 lit_24[52] = {
 	0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6B, 0x28, 0x29, 0x3A,
 	0x20, 0x46, 0x53, 0x54, 0x20, 0x69, 0x6E, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6E, 0x65, 0x77, 0x20,
 	0x64, 0x69, 0x73, 0x63, 0x20, 0x69, 0x73, 0x20, 0x74, 0x6F, 0x6F, 0x20, 0x62, 0x69, 0x67, 0x2E,
 	0x20, 0x20, 0x20, 0x00,
 };
+
+/* 804509EC-804509F0 0004 .sdata     autoInvalidation                                             */
+u32 autoInvalidation = 0x00000001;
+
+/* 804509F0-804509F4 0004 .sdata     checkOptionalCommand                                         */
+void* checkOptionalCommand = (void*)defaultOptionalCommandChecker;
+
+/* 804509F4-804509FC 0006 .sdata     @23                                                          */
+u8 lit_23[8] = {
+	0x64, 0x76, 0x64, 0x2E, 0x63, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 8044C900-8044C920 0020 .bss       BB2                                                          */
+u8 BB2[32];
+
+/* 804517C0-804517C8 0004 .sbss      LastState                                                    */
+u8 dvd__LastState[4 + 4 /* padding */];
+
+/* 803491C8-8034925C 0094 .text      stateReadingFST                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateReadingFST() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateReadingFST.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 8044C920-8044C940 0020 .bss       CurrDiskID                                                   */
+u8 CurrDiskID[32];
+
+/* 8044C940-8044C970 0030 .bss       DummyCommandBlock                                            */
+u8 DummyCommandBlock[48];
+
+/* 8034925C-803492DC 0080 .text      cbForStateReadingFST                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateReadingFST() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateReadingFST.s"
+}
+#pragma pop
+
+
+/* 803492DC-80349388 00AC .text      cbForStateError                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateError() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateError.s"
+}
+#pragma pop
+
+
+/* 80349388-803493BC 0034 .text      stateTimeout                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateTimeout() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateTimeout.s"
+}
+#pragma pop
+
+
+/* 803493BC-803493E4 0028 .text      stateGettingError                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateGettingError() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateGettingError.s"
+}
+#pragma pop
+
+
+/* 803493E4-80349498 00B4 .text      CategorizeError                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void CategorizeError() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/CategorizeError.s"
+}
+#pragma pop
+
+
+/* 80349498-803496FC 0264 .text      cbForStateGettingError                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateGettingError() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateGettingError.s"
+}
+#pragma pop
+
+
+/* 803496FC-80349758 005C .text      cbForUnrecoveredError                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForUnrecoveredError() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForUnrecoveredError.s"
+}
+#pragma pop
+
+
+/* 80349758-803497D8 0080 .text      cbForUnrecoveredErrorRetry                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForUnrecoveredErrorRetry() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForUnrecoveredErrorRetry.s"
+}
+#pragma pop
+
+
+/* 803497D8-80349800 0028 .text      stateGoToRetry                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateGoToRetry() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateGoToRetry.s"
+}
+#pragma pop
+
+
+/* 80349800-80349940 0140 .text      cbForStateGoToRetry                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateGoToRetry() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateGoToRetry.s"
+}
+#pragma pop
+
+
+/* 80349940-80349A20 00E0 .text      stateCheckID                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCheckID() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCheckID.s"
+}
+#pragma pop
+
+
+/* 80349A20-80349A54 0034 .text      stateCheckID3                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCheckID3() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCheckID3.s"
+}
+#pragma pop
+
+
+/* 80349A54-80349A88 0034 .text      stateCheckID2a                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCheckID2a() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCheckID2a.s"
+}
+#pragma pop
+
+
+/* 80349A88-80349AF0 0068 .text      cbForStateCheckID2a                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateCheckID2a() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateCheckID2a.s"
+}
+#pragma pop
+
+
+/* 80349AF0-80349B28 0038 .text      stateCheckID2                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCheckID2() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCheckID2.s"
+}
+#pragma pop
+
+
+/* 80349B28-80349C24 00FC .text      cbForStateCheckID1                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateCheckID1() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateCheckID1.s"
+}
+#pragma pop
+
+
+/* 80349C24-80349CFC 00D8 .text      cbForStateCheckID2                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateCheckID2() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateCheckID2.s"
+}
+#pragma pop
+
+
+/* 80349CFC-80349DEC 00F0 .text      cbForStateCheckID3                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateCheckID3() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateCheckID3.s"
+}
+#pragma pop
+
+
+/* 80349DEC-80349E30 0044 .text      AlarmHandler                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dvd__AlarmHandler() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/dvd__AlarmHandler.s"
+}
+#pragma pop
+
+
+/* 80349E30-80349F04 00D4 .text      stateCoverClosed                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCoverClosed() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCoverClosed.s"
+}
+#pragma pop
+
+
+/* 80349F04-80349F34 0030 .text      stateCoverClosed_CMD                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateCoverClosed_CMD() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateCoverClosed_CMD.s"
+}
+#pragma pop
+
+
+/* 80349F34-80349F98 0064 .text      cbForStateCoverClosed                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateCoverClosed() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateCoverClosed.s"
+}
+#pragma pop
+
+
+/* 80349F98-80349FC0 0028 .text      stateMotorStopped                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateMotorStopped() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateMotorStopped.s"
+}
+#pragma pop
+
+
+/* 80349FC0-8034A0AC 00EC .text      cbForStateMotorStopped                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateMotorStopped() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateMotorStopped.s"
+}
+#pragma pop
+
+
+/* 8034A0AC-8034A394 02E8 .text      stateReady                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateReady() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateReady.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D15A8-803D15EC 0044 .data      @359                                                         */
-SECTION_DATA void* dvd__LIT_359[17] = {
+void* dvd__lit_359[17] = {
 	(void*)(((char*)stateBusy)+0x318),
 	(void*)(((char*)stateBusy)+0x6C),
 	(void*)(((char*)stateBusy)+0x10C),
@@ -186,12 +578,151 @@ SECTION_DATA void* dvd__LIT_359[17] = {
 	(void*)(((char*)stateBusy)+0x140),
 	(void*)(((char*)stateBusy)+0x2F8),
 };
+
+/* 8034A394-8034A6D4 0340 .text      stateBusy                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stateBusy() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/stateBusy.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D15EC-803D15F8 000C .data      ImmCommand                                                   */
-SECTION_DATA u8 ImmCommand[12] = {
+u8 ImmCommand[12] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
+
+/* 804509FC-80450A00 0004 .sdata     DmaCommand                                                   */
+u32 DmaCommand = 0xFFFFFFFF;
+
+/* 8034A6D4-8034AD2C 0658 .text      cbForStateBusy                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForStateBusy() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForStateBusy.s"
+}
+#pragma pop
+
+
+/* 8034AD2C-8034AE08 00DC .text      DVDReadAbsAsyncPrio                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDReadAbsAsyncPrio() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDReadAbsAsyncPrio.s"
+}
+#pragma pop
+
+
+/* 8034AE08-8034AED8 00D0 .text      DVDReadAbsAsyncForBS                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDReadAbsAsyncForBS() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDReadAbsAsyncForBS.s"
+}
+#pragma pop
+
+
+/* 8034AED8-8034AFAC 00D4 .text      DVDReadDiskID                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDReadDiskID() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDReadDiskID.s"
+}
+#pragma pop
+
+
+/* 8034AFAC-8034B068 00BC .text      DVDCancelStreamAsync                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDCancelStreamAsync() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDCancelStreamAsync.s"
+}
+#pragma pop
+
+
+/* 8034B068-8034B138 00D0 .text      DVDInquiryAsync                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDInquiryAsync() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDInquiryAsync.s"
+}
+#pragma pop
+
+
+/* 8034B138-8034B17C 0044 .text      DVDReset                                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDReset() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDReset.s"
+}
+#pragma pop
+
+
+/* 8034B17C-8034B1C8 004C .text      DVDGetCommandBlockStatus                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDGetCommandBlockStatus() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDGetCommandBlockStatus.s"
+}
+#pragma pop
+
+
+/* 8034B1C8-8034B274 00AC .text      DVDGetDriveStatus                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDGetDriveStatus() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDGetDriveStatus.s"
+}
+#pragma pop
+
+
+/* 8034B274-8034B284 0010 .text      DVDSetAutoInvalidation                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDSetAutoInvalidation() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDSetAutoInvalidation.s"
+}
+#pragma pop
+
+
+/* 8034B284-8034B2D4 0050 .text      DVDResume                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDResume() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDResume.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D15F8-803D163C 0041 .data      @789                                                         */
-SECTION_DATA u8 LIT_789[68] = {
+u8 lit_789[68] = {
 	0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6B, 0x41, 0x73, 0x79,
 	0x6E, 0x63, 0x28, 0x29, 0x3A, 0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20,
 	0x73, 0x70, 0x65, 0x63, 0x69, 0x66, 0x79, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x74, 0x6F, 0x20,
@@ -200,8 +731,9 @@ SECTION_DATA u8 LIT_789[68] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D163C-803D1670 0034 .data      @956                                                         */
-SECTION_DATA void* LIT_956[13] = {
+void* lit_956[13] = {
 	(void*)(((char*)DVDCancelAsync)+0x50),
 	(void*)(((char*)DVDCancelAsync)+0x50),
 	(void*)(((char*)DVDCancelAsync)+0x70),
@@ -216,8 +748,54 @@ SECTION_DATA void* LIT_956[13] = {
 	(void*)(((char*)DVDCancelAsync)+0x50),
 	(void*)(((char*)DVDCancelAsync)+0x17C),
 };
+
+/* 8034B2D4-8034B550 027C .text      DVDCancelAsync                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDCancelAsync() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDCancelAsync.s"
+}
+#pragma pop
+
+
+/* 8034B550-8034B5FC 00AC .text      DVDCancel                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDCancel() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDCancel.s"
+}
+#pragma pop
+
+
+/* 8034B5FC-8034B620 0024 .text      cbForCancelSync                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cbForCancelSync() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/cbForCancelSync.s"
+}
+#pragma pop
+
+
+/* 8034B620-8034B628 0008 .text      DVDGetCurrentDiskID                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DVDGetCurrentDiskID() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/DVDGetCurrentDiskID.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D1670-803D16A8 0034 .data      @1060                                                        */
-SECTION_DATA void* dvd__LIT_1060[14] = {
+void* dvd__lit_1060[14] = {
 	(void*)(((char*)DVDCheckDisk)+0x98),
 	(void*)(((char*)DVDCheckDisk)+0xA0),
 	(void*)(((char*)DVDCheckDisk)+0x90),
@@ -234,567 +812,38 @@ SECTION_DATA void* dvd__LIT_1060[14] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804509E8-804509EC 0004 .sdata     __DVDVersion                                                 */
-SECTION_SDATA void* __DVDVersion = (void*)&dvd__LIT_1;
-/* 804509EC-804509F0 0004 .sdata     autoInvalidation                                             */
-SECTION_SDATA u8 autoInvalidation[4] = {
-	0x00, 0x00, 0x00, 0x01,
-};
-/* 804509F0-804509F4 0004 .sdata     checkOptionalCommand                                         */
-SECTION_SDATA void* checkOptionalCommand = (void*)defaultOptionalCommandChecker;
-/* 804509F4-804509FC 0006 .sdata     @23                                                          */
-SECTION_SDATA u8 LIT_23[8] = {
-	0x64, 0x76, 0x64, 0x2E, 0x63, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 804509FC-80450A00 0004 .sdata     DmaCommand                                                   */
-SECTION_SDATA u8 DmaCommand[4] = {
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044C900-8044C900 0000 .bss       ...bss.0                                                     */
-/* 8044C900-8044C920 0020 .bss       BB2                                                          */
-SECTION_BSS u8 BB2[32];
-/* 8044C920-8044C940 0020 .bss       CurrDiskID                                                   */
-SECTION_BSS u8 CurrDiskID[32];
-/* 8044C940-8044C970 0030 .bss       DummyCommandBlock                                            */
-SECTION_BSS u8 DummyCommandBlock[48];
-/* 8044C970-8044C998 0028 .bss       ResetAlarm                                                   */
-SECTION_BSS u8 ResetAlarm[40];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451778-8045177C 0004 .sbss      executing                                                    */
-SECTION_SBSS u8 executing[4];
-/* 8045177C-80451780 0004 .sbss      IDShouldBe                                                   */
-SECTION_SBSS u8 IDShouldBe[4];
-/* 80451780-80451784 0004 .sbss      bootInfo                                                     */
-SECTION_SBSS u8 bootInfo[4];
-/* 80451784-80451788 0004 .sbss      PauseFlag                                                    */
-SECTION_SBSS u8 PauseFlag[4];
-/* 80451788-8045178C 0004 .sbss      PausingFlag                                                  */
-SECTION_SBSS u8 PausingFlag[4];
-/* 8045178C-80451790 0004 .sbss      AutoFinishing                                                */
-SECTION_SBSS u8 AutoFinishing[4];
-/* 80451790-80451794 0004 .sbss      FatalErrorFlag                                               */
-SECTION_SBSS u8 FatalErrorFlag[4];
-/* 80451794-80451798 0004 .sbss      CurrCommand                                                  */
-SECTION_SBSS u8 CurrCommand[4];
-/* 80451798-8045179C 0004 .sbss      Canceling                                                    */
-SECTION_SBSS u8 Canceling[4];
-/* 8045179C-804517A0 0004 .sbss      CancelCallback                                               */
-SECTION_SBSS u8 CancelCallback[4];
-/* 804517A0-804517A4 0004 .sbss      ResumeFromHere                                               */
-SECTION_SBSS u8 ResumeFromHere[4];
-/* 804517A4-804517A8 0004 .sbss      CancelLastError                                              */
-SECTION_SBSS u8 CancelLastError[4];
-/* 804517A8-804517AC 0004 .sbss      LastError                                                    */
-SECTION_SBSS u8 LastError[4];
-/* 804517AC-804517B0 0004 .sbss      NumInternalRetry                                             */
-SECTION_SBSS u8 NumInternalRetry[4];
-/* 804517B0-804517B4 0004 .sbss      ResetRequired                                                */
-SECTION_SBSS u8 ResetRequired[4];
-/* 804517B4-804517B8 0004 .sbss      FirstTimeInBootrom                                           */
-SECTION_SBSS u8 FirstTimeInBootrom[4];
-/* 804517B8-804517BC 0004 .sbss      MotorState                                                   */
-SECTION_SBSS u8 MotorState[4];
-/* 804517BC-804517C0 0004 .sbss      DVDInitialized                                               */
-SECTION_SBSS u8 DVDInitialized[4];
-/* 804517C0-804517C8 0004 .sbss      LastState                                                    */
-SECTION_SBSS u8 dvd__LastState[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 803490EC-803490F0 0004 .text      defaultOptionalCommandChecker                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void defaultOptionalCommandChecker() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/defaultOptionalCommandChecker.s"
-}
-#pragma pop
-
-/* 803490F0-803491C8 00D8 .text      DVDInit                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDInit() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDInit.s"
-}
-#pragma pop
-
-/* 803491C8-8034925C 0094 .text      stateReadingFST                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateReadingFST() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateReadingFST.s"
-}
-#pragma pop
-
-/* 8034925C-803492DC 0080 .text      cbForStateReadingFST                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateReadingFST() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateReadingFST.s"
-}
-#pragma pop
-
-/* 803492DC-80349388 00AC .text      cbForStateError                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateError() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateError.s"
-}
-#pragma pop
-
-/* 80349388-803493BC 0034 .text      stateTimeout                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateTimeout() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateTimeout.s"
-}
-#pragma pop
-
-/* 803493BC-803493E4 0028 .text      stateGettingError                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateGettingError() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateGettingError.s"
-}
-#pragma pop
-
-/* 803493E4-80349498 00B4 .text      CategorizeError                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void CategorizeError() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/CategorizeError.s"
-}
-#pragma pop
-
-/* 80349498-803496FC 0264 .text      cbForStateGettingError                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateGettingError() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateGettingError.s"
-}
-#pragma pop
-
-/* 803496FC-80349758 005C .text      cbForUnrecoveredError                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForUnrecoveredError() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForUnrecoveredError.s"
-}
-#pragma pop
-
-/* 80349758-803497D8 0080 .text      cbForUnrecoveredErrorRetry                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForUnrecoveredErrorRetry() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForUnrecoveredErrorRetry.s"
-}
-#pragma pop
-
-/* 803497D8-80349800 0028 .text      stateGoToRetry                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateGoToRetry() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateGoToRetry.s"
-}
-#pragma pop
-
-/* 80349800-80349940 0140 .text      cbForStateGoToRetry                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateGoToRetry() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateGoToRetry.s"
-}
-#pragma pop
-
-/* 80349940-80349A20 00E0 .text      stateCheckID                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCheckID() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCheckID.s"
-}
-#pragma pop
-
-/* 80349A20-80349A54 0034 .text      stateCheckID3                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCheckID3() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCheckID3.s"
-}
-#pragma pop
-
-/* 80349A54-80349A88 0034 .text      stateCheckID2a                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCheckID2a() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCheckID2a.s"
-}
-#pragma pop
-
-/* 80349A88-80349AF0 0068 .text      cbForStateCheckID2a                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateCheckID2a() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateCheckID2a.s"
-}
-#pragma pop
-
-/* 80349AF0-80349B28 0038 .text      stateCheckID2                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCheckID2() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCheckID2.s"
-}
-#pragma pop
-
-/* 80349B28-80349C24 00FC .text      cbForStateCheckID1                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateCheckID1() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateCheckID1.s"
-}
-#pragma pop
-
-/* 80349C24-80349CFC 00D8 .text      cbForStateCheckID2                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateCheckID2() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateCheckID2.s"
-}
-#pragma pop
-
-/* 80349CFC-80349DEC 00F0 .text      cbForStateCheckID3                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateCheckID3() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateCheckID3.s"
-}
-#pragma pop
-
-/* 80349DEC-80349E30 0044 .text      AlarmHandler                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dvd__AlarmHandler() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/dvd__AlarmHandler.s"
-}
-#pragma pop
-
-/* 80349E30-80349F04 00D4 .text      stateCoverClosed                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCoverClosed() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCoverClosed.s"
-}
-#pragma pop
-
-/* 80349F04-80349F34 0030 .text      stateCoverClosed_CMD                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateCoverClosed_CMD() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateCoverClosed_CMD.s"
-}
-#pragma pop
-
-/* 80349F34-80349F98 0064 .text      cbForStateCoverClosed                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateCoverClosed() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateCoverClosed.s"
-}
-#pragma pop
-
-/* 80349F98-80349FC0 0028 .text      stateMotorStopped                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateMotorStopped() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateMotorStopped.s"
-}
-#pragma pop
-
-/* 80349FC0-8034A0AC 00EC .text      cbForStateMotorStopped                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateMotorStopped() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateMotorStopped.s"
-}
-#pragma pop
-
-/* 8034A0AC-8034A394 02E8 .text      stateReady                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateReady() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateReady.s"
-}
-#pragma pop
-
-/* 8034A394-8034A6D4 0340 .text      stateBusy                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stateBusy() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/stateBusy.s"
-}
-#pragma pop
-
-/* 8034A6D4-8034AD2C 0658 .text      cbForStateBusy                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForStateBusy() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForStateBusy.s"
-}
-#pragma pop
-
-/* 8034AD2C-8034AE08 00DC .text      DVDReadAbsAsyncPrio                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDReadAbsAsyncPrio() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDReadAbsAsyncPrio.s"
-}
-#pragma pop
-
-/* 8034AE08-8034AED8 00D0 .text      DVDReadAbsAsyncForBS                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDReadAbsAsyncForBS() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDReadAbsAsyncForBS.s"
-}
-#pragma pop
-
-/* 8034AED8-8034AFAC 00D4 .text      DVDReadDiskID                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDReadDiskID() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDReadDiskID.s"
-}
-#pragma pop
-
-/* 8034AFAC-8034B068 00BC .text      DVDCancelStreamAsync                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDCancelStreamAsync() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDCancelStreamAsync.s"
-}
-#pragma pop
-
-/* 8034B068-8034B138 00D0 .text      DVDInquiryAsync                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDInquiryAsync() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDInquiryAsync.s"
-}
-#pragma pop
-
-/* 8034B138-8034B17C 0044 .text      DVDReset                                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDReset() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDReset.s"
-}
-#pragma pop
-
-/* 8034B17C-8034B1C8 004C .text      DVDGetCommandBlockStatus                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDGetCommandBlockStatus() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDGetCommandBlockStatus.s"
-}
-#pragma pop
-
-/* 8034B1C8-8034B274 00AC .text      DVDGetDriveStatus                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDGetDriveStatus() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDGetDriveStatus.s"
-}
-#pragma pop
-
-/* 8034B274-8034B284 0010 .text      DVDSetAutoInvalidation                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDSetAutoInvalidation() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDSetAutoInvalidation.s"
-}
-#pragma pop
-
-/* 8034B284-8034B2D4 0050 .text      DVDResume                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDResume() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDResume.s"
-}
-#pragma pop
-
-/* 8034B2D4-8034B550 027C .text      DVDCancelAsync                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDCancelAsync() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDCancelAsync.s"
-}
-#pragma pop
-
-/* 8034B550-8034B5FC 00AC .text      DVDCancel                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDCancel() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDCancel.s"
-}
-#pragma pop
-
-/* 8034B5FC-8034B620 0024 .text      cbForCancelSync                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cbForCancelSync() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/cbForCancelSync.s"
-}
-#pragma pop
-
-/* 8034B620-8034B628 0008 .text      DVDGetCurrentDiskID                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DVDGetCurrentDiskID() {
-	nofralloc
-#include "asm/dolphin/dvd/dvd/DVDGetCurrentDiskID.s"
-}
-#pragma pop
 
 /* 8034B628-8034B720 00F8 .text      DVDCheckDisk                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DVDCheckDisk() {
+extern "C" asm void DVDCheckDisk() {
 	nofralloc
 #include "asm/dolphin/dvd/dvd/DVDCheckDisk.s"
 }
 #pragma pop
 
+
 /* 8034B720-8034B83C 011C .text      __DVDPrepareResetAsync                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DVDPrepareResetAsync() {
+extern "C" asm void __DVDPrepareResetAsync() {
 	nofralloc
 #include "asm/dolphin/dvd/dvd/__DVDPrepareResetAsync.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8044C970-8044C998 0028 .bss       ResetAlarm                                                   */
+u8 ResetAlarm[40];
+
 /* 8034B83C-8034B874 0038 .text      __DVDTestAlarm                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DVDTestAlarm() {
+extern "C" asm void __DVDTestAlarm() {
 	nofralloc
 #include "asm/dolphin/dvd/dvd/__DVDTestAlarm.s"
 }

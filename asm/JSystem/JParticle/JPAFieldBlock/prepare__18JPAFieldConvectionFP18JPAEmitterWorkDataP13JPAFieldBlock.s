@@ -44,14 +44,14 @@ lbl_8027C814:
 /* 8027C8BC 00000000  C3 5D 00 18 */	lfs f26, 0x18(r29)
 /* 8027C8C0 000000AC  10 9A 06 BA */	ps_madd f4, f26, f26, f0
 /* 8027C8C4 000000B0  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8027C8C8 00000000  C0 22 B9 40 */	lfs f1, LIT_2459(r2)
+/* 8027C8C8 00000000  C0 22 B9 40 */	lfs f1, lit_2459(r2)
 /* 8027C8CC 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8027C8D0 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8027C8D4 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8027C8D8 000000C4  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C8DC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027C8E0 00000004  41 82 00 5C */	beq lbl_8027C93C
-/* 8027C8E4 00000008  C0 02 B9 3C */	lfs f0, LIT_2354(r2)
+/* 8027C8E4 00000008  C0 02 B9 3C */	lfs f0, lit_2354(r2)
 /* 8027C8E8 000000D4  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C8EC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027C8F0 00000004  40 82 00 0C */	bne lbl_8027C8FC
@@ -60,9 +60,9 @@ lbl_8027C814:
 lbl_8027C8FC:
 /* 8027C8FC 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8027C900 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8027C904 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__LIT_2460(r2)
+/* 8027C904 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__lit_2460(r2)
 /* 8027C908 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8027C90C 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__LIT_2461(r2)
+/* 8027C90C 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__lit_2461(r2)
 /* 8027C910 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8027C914 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8027C918 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -81,14 +81,14 @@ lbl_8027C93C:
 /* 8027C944 00000000  C3 BD 00 24 */	lfs f29, 0x24(r29)
 /* 8027C948 0000000C  10 9D 07 7A */	ps_madd f4, f29, f29, f0
 /* 8027C94C 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8027C950 00000000  C0 22 B9 40 */	lfs f1, LIT_2459(r2)
+/* 8027C950 00000000  C0 22 B9 40 */	lfs f1, lit_2459(r2)
 /* 8027C954 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8027C958 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8027C95C 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8027C960 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C964 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027C968 00000004  41 82 00 5C */	beq lbl_8027C9C4
-/* 8027C96C 00000008  C0 02 B9 3C */	lfs f0, LIT_2354(r2)
+/* 8027C96C 00000008  C0 02 B9 3C */	lfs f0, lit_2354(r2)
 /* 8027C970 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C974 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027C978 00000004  40 82 00 0C */	bne lbl_8027C984
@@ -97,9 +97,9 @@ lbl_8027C93C:
 lbl_8027C984:
 /* 8027C984 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8027C988 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8027C98C 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__LIT_2460(r2)
+/* 8027C98C 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__lit_2460(r2)
 /* 8027C990 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8027C994 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__LIT_2461(r2)
+/* 8027C994 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__lit_2461(r2)
 /* 8027C998 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8027C99C 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8027C9A0 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -118,14 +118,14 @@ lbl_8027C9C4:
 /* 8027C9CC 00000000  C3 9D 00 30 */	lfs f28, 0x30(r29)
 /* 8027C9D0 0000000C  10 9C 07 3A */	ps_madd f4, f28, f28, f0
 /* 8027C9D4 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8027C9D8 00000000  C0 22 B9 40 */	lfs f1, LIT_2459(r2)
+/* 8027C9D8 00000000  C0 22 B9 40 */	lfs f1, lit_2459(r2)
 /* 8027C9DC 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8027C9E0 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8027C9E4 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8027C9E8 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C9EC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027C9F0 00000004  41 82 00 5C */	beq lbl_8027CA4C
-/* 8027C9F4 00000008  C0 02 B9 3C */	lfs f0, LIT_2354(r2)
+/* 8027C9F4 00000008  C0 02 B9 3C */	lfs f0, lit_2354(r2)
 /* 8027C9F8 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8027C9FC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8027CA00 00000004  40 82 00 0C */	bne lbl_8027CA0C
@@ -134,9 +134,9 @@ lbl_8027C9C4:
 lbl_8027CA0C:
 /* 8027CA0C 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8027CA10 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8027CA14 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__LIT_2460(r2)
+/* 8027CA14 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__lit_2460(r2)
 /* 8027CA18 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8027CA1C 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__LIT_2461(r2)
+/* 8027CA1C 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__lit_2461(r2)
 /* 8027CA20 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8027CA24 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8027CA28 0000001C  EC 01 00 28 */	fsubs f0, f1, f0

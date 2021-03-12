@@ -5,68 +5,62 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__15dBgS_GrpPassChkFv();
-extern void __dt__15dBgS_GrpPassChkFv();
-extern void __dt__15cBgS_GrpPassChkFv();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__15dBgS_GrpPassChk[3];
-SECTION_DATA extern void* __vt__15cBgS_GrpPassChk[3];
-}
+extern "C" extern void __ct__15dBgS_GrpPassChkFv();
+extern "C" extern void __dt__15dBgS_GrpPassChkFv();
+extern "C" extern void __dt__15cBgS_GrpPassChkFv();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__15dBgS_GrpPassChk[3];
+SECTION_DATA extern void* const __vt__15cBgS_GrpPassChk[3];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803AB7A8-803AB7B4 000C .data      __vt__15dBgS_GrpPassChk                                      */
-SECTION_DATA void* __vt__15dBgS_GrpPassChk[3] = {
+void* const __vt__15dBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_GrpPassChkFv,
 };
+
 /* 803AB7B4-803AB7C0 000C .data      __vt__15cBgS_GrpPassChk                                      */
-SECTION_DATA void* __vt__15cBgS_GrpPassChk[3] = {
+void* const __vt__15cBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15cBgS_GrpPassChkFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80077BA0-80077BC4 0024 .text      __ct__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dBgS_GrpPassChkFv() {
+extern "C" asm void __ct__15dBgS_GrpPassChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__ct__15dBgS_GrpPassChkFv.s"
 }
 #pragma pop
 
+
 /* 80077BC4-80077C20 005C .text      __dt__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dBgS_GrpPassChkFv() {
+extern "C" asm void __dt__15dBgS_GrpPassChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__dt__15dBgS_GrpPassChkFv.s"
 }
 #pragma pop
 
+
 /* 80077C20-80077C68 0048 .text      __dt__15cBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15cBgS_GrpPassChkFv() {
+extern "C" asm void __dt__15cBgS_GrpPassChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__dt__15cBgS_GrpPassChkFv.s"
 }

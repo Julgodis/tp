@@ -20,7 +20,7 @@ import generate_functions
 def insert_access_as_symbol(module_id: int,
                             sections: Dict[int, ExecutableSection],
                             map_sections: Dict[str, linker_map.Section],
-                            map_addrs: Dict[str, int],
+                            map_addrs: Dict[str, Dict[int, linker_map.Symbol]],
                             access: Access) -> bool:
     """Insert new symbol from the access data"""
 
@@ -38,6 +38,7 @@ def insert_access_as_symbol(module_id: int,
     section = in_sections[0]
     relative_addr = access.addr - section.local_addr
     if relative_addr in map_addrs[section.name]:
+        map_addrs[section.name][relative_addr].access = access
         return False
 
     obj = None
@@ -54,10 +55,10 @@ def insert_access_as_symbol(module_id: int,
     # create new linker map symbol
     symbol = linker_map.Symbol(relative_addr, 0, 0, name, lib, obj)
     symbol.source = f"insert_access_as_symbol/{access.addr:08X}"
-    # TODO: add access information here, this can later be used to find floats/doubles easier
+    symbol.access = access
 
     map_sections[section.name].symbols.append(symbol)
-    map_addrs[section.name].add(relative_addr)
+    map_addrs[section.name][relative_addr] = symbol
     return True
 
 
@@ -190,6 +191,7 @@ def search(module_id: int, name: str, map_path: Path, sections: List[ExecutableS
         is_relocation_symbol = False
         for relocs in relocations.values():
             if relative_addr in relocs:
+                relocs[relative_addr].access = access
                 is_relocation_symbol = True
                 break
 
@@ -234,6 +236,9 @@ def search(module_id: int, name: str, map_path: Path, sections: List[ExecutableS
                         if len(results) == 0:
                             symbol = linker_map.Symbol(r.addend, 0, 0, None, None, None)
                             symbol.source = f"relocation/{section.name}/{r.addend:08X}"
+                            symbol.access = r.access
+                            if module_id == 138:
+                                g.LOG.debug(symbol)
                             map_sections[section.name].symbols.append(symbol)
 
     # build a tree

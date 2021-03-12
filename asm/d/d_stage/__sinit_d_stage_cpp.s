@@ -3,8 +3,8 @@ lbl_8002824C:
 /* 80028250 00000004  7C 08 02 A6 */	mflr r0
 /* 80028254 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80028258 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8002825C 00000010  3C 60 80 3F */	lis r3, d_d_stage__LIT_3926@ha
-/* 80028260 00000014  3B E3 4E 68 */	addi r31, r3, d_d_stage__LIT_3926@l
+/* 8002825C 00000010  3C 60 80 3F */	lis r3, d_d_stage__lit_3926@ha
+/* 80028260 00000014  3B E3 4E 68 */	addi r31, r3, d_d_stage__lit_3926@l
 /* 80028264 00000018  38 7F 00 0C */	addi r3, r31, 0xc
 /* 80028268 0000001C  3C 80 80 03 */	lis r4, __ct__21stage_tgsc_data_classFv@ha
 /* 8002826C 00000020  38 84 84 B8 */	addi r4, r4, __ct__21stage_tgsc_data_classFv@l

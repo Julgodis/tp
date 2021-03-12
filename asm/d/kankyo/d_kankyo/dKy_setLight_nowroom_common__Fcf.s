@@ -167,7 +167,7 @@ lbl_801A64E0:
 /* 801A64E4 00000004  81 04 07 80 */	lwz r8, 0x780(r4)
 /* 801A64E8 00000008  2C 08 00 00 */	cmpwi r8, 0
 /* 801A64EC 0000000C  41 82 00 FC */	beq lbl_801A65E8
-/* 801A64F0 00000010  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A64F0 00000010  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A64F4 00000014  39 24 07 78 */	addi r9, r4, 0x778
 /* 801A64F8 00000018  C0 04 07 78 */	lfs f0, 0x778(r4)
 /* 801A64FC 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -188,7 +188,7 @@ lbl_801A6518:
 /* 801A6534 0000001C  D0 08 00 08 */	stfs f0, 8(r8)
 /* 801A6538 00000020  2C 05 00 00 */	cmpwi r5, 0
 /* 801A653C 00000024  40 82 00 20 */	bne lbl_801A655C
-/* 801A6540 00000028  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__LIT_4731(r2)
+/* 801A6540 00000028  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__lit_4731(r2)
 /* 801A6544 0000002C  C0 09 00 00 */	lfs f0, 0(r9)
 /* 801A6548 00000030  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801A654C 00000034  81 2D 81 84 */	lwz r9, lightStatusPt(r13)
@@ -196,14 +196,14 @@ lbl_801A6518:
 /* 801A6554 0000003C  7C 09 45 2E */	stfsx f0, r9, r8
 /* 801A6558 00000040  48 00 00 1C */	b lbl_801A6574
 lbl_801A655C:
-/* 801A655C 00000000  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__LIT_4731(r2)
+/* 801A655C 00000000  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__lit_4731(r2)
 /* 801A6560 00000004  C0 09 00 00 */	lfs f0, 0(r9)
 /* 801A6564 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801A6568 0000000C  81 2D 81 84 */	lwz r9, lightStatusPt(r13)
 /* 801A656C 00000010  39 06 00 4C */	addi r8, r6, 0x4c
 /* 801A6570 00000014  7C 09 45 2E */	stfsx f0, r9, r8
 lbl_801A6574:
-/* 801A6574 00000000  C0 02 A3 50 */	lfs f0, LIT_7012(r2)
+/* 801A6574 00000000  C0 02 A3 50 */	lfs f0, lit_7012(r2)
 /* 801A6578 00000004  81 2D 81 84 */	lwz r9, lightStatusPt(r13)
 /* 801A657C 00000008  39 06 00 50 */	addi r8, r6, 0x50
 /* 801A6580 0000000C  7C 09 45 2E */	stfsx f0, r9, r8
@@ -285,12 +285,12 @@ lbl_801A6640:
 /* 801A66A4 00000064  7C 03 05 2E */	stfsx f0, r3, r0
 /* 801A66A8 00000068  48 00 00 14 */	b lbl_801A66BC
 lbl_801A66AC:
-/* 801A66AC 00000000  C0 02 A3 10 */	lfs f0, LIT_6042(r2)
+/* 801A66AC 00000000  C0 02 A3 10 */	lfs f0, lit_6042(r2)
 /* 801A66B0 00000004  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A66B4 00000008  38 12 02 1C */	addi r0, r18, 0x21c
 /* 801A66B8 0000000C  7C 03 05 2E */	stfsx f0, r3, r0
 lbl_801A66BC:
-/* 801A66BC 00000000  C0 02 A3 50 */	lfs f0, LIT_7012(r2)
+/* 801A66BC 00000000  C0 02 A3 50 */	lfs f0, lit_7012(r2)
 /* 801A66C0 00000004  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A66C4 00000008  38 12 02 20 */	addi r0, r18, 0x220
 /* 801A66C8 0000000C  7C 03 05 2E */	stfsx f0, r3, r0
@@ -318,11 +318,11 @@ lbl_801A66BC:
 /* 801A6720 00000064  4B FF 6A 81 */	bl dKy_lightdir_set__FffP3Vec
 /* 801A6724 00000068  48 00 00 5C */	b lbl_801A6780
 lbl_801A6728:
-/* 801A6728 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A6728 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A672C 00000004  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6730 00000008  38 12 02 1C */	addi r0, r18, 0x21c
 /* 801A6734 0000000C  7C 03 05 2E */	stfsx f0, r3, r0
-/* 801A6738 00000010  C0 02 A3 50 */	lfs f0, LIT_7012(r2)
+/* 801A6738 00000010  C0 02 A3 50 */	lfs f0, lit_7012(r2)
 /* 801A673C 00000014  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6740 00000018  38 12 02 20 */	addi r0, r18, 0x220
 /* 801A6744 0000001C  7C 03 05 2E */	stfsx f0, r3, r0
@@ -336,7 +336,7 @@ lbl_801A6728:
 /* 801A6764 0000003C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6768 00000040  38 12 02 18 */	addi r0, r18, 0x218
 /* 801A676C 00000044  7C 83 01 2E */	stwx r4, r3, r0
-/* 801A6770 00000048  C0 02 A2 2C */	lfs f0, d_kankyo_d_kankyo__LIT_4442(r2)
+/* 801A6770 00000048  C0 02 A2 2C */	lfs f0, d_kankyo_d_kankyo__lit_4442(r2)
 /* 801A6774 0000004C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6778 00000050  38 12 02 14 */	addi r0, r18, 0x214
 /* 801A677C 00000054  7C 03 05 2E */	stfsx f0, r3, r0
@@ -394,11 +394,11 @@ lbl_801A6824:
 /* 801A6840 0000001C  C0 1D 10 9C */	lfs f0, 0x109c(r29)
 /* 801A6844 00000020  D0 03 00 08 */	stfs f0, 8(r3)
 lbl_801A6848:
-/* 801A6848 00000000  C0 02 A3 24 */	lfs f0, LIT_6765(r2)
+/* 801A6848 00000000  C0 02 A3 24 */	lfs f0, lit_6765(r2)
 /* 801A684C 00000004  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6850 00000008  38 12 02 1C */	addi r0, r18, 0x21c
 /* 801A6854 0000000C  7C 03 05 2E */	stfsx f0, r3, r0
-/* 801A6858 00000010  C0 02 A3 50 */	lfs f0, LIT_7012(r2)
+/* 801A6858 00000010  C0 02 A3 50 */	lfs f0, lit_7012(r2)
 /* 801A685C 00000014  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6860 00000018  38 12 02 20 */	addi r0, r18, 0x220
 /* 801A6864 0000001C  7C 03 05 2E */	stfsx f0, r3, r0
@@ -578,7 +578,7 @@ lbl_801A6AC4:
 /* 801A6AF4 00000030  7C 03 05 2E */	stfsx f0, r3, r0
 /* 801A6AF8 00000034  48 00 00 1C */	b lbl_801A6B14
 lbl_801A6AFC:
-/* 801A6AFC 00000000  C0 22 A2 8C */	lfs f1, d_kankyo_d_kankyo__LIT_5106(r2)
+/* 801A6AFC 00000000  C0 22 A2 8C */	lfs f1, d_kankyo_d_kankyo__lit_5106(r2)
 /* 801A6B00 00000004  C0 1A 0C 1C */	lfs f0, 0xc1c(r26)
 /* 801A6B04 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 801A6B08 0000000C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
@@ -610,7 +610,7 @@ lbl_801A6B24:
 /* 801A6B68 00000044  80 8D 81 84 */	lwz r4, lightStatusPt(r13)
 /* 801A6B6C 00000048  38 03 02 1C */	addi r0, r3, 0x21c
 /* 801A6B70 0000004C  7C 04 05 2E */	stfsx f0, r4, r0
-/* 801A6B74 00000050  C0 02 A3 50 */	lfs f0, LIT_7012(r2)
+/* 801A6B74 00000050  C0 02 A3 50 */	lfs f0, lit_7012(r2)
 /* 801A6B78 00000054  80 8D 81 84 */	lwz r4, lightStatusPt(r13)
 /* 801A6B7C 00000058  38 03 02 20 */	addi r0, r3, 0x220
 /* 801A6B80 0000005C  7C 04 05 2E */	stfsx f0, r4, r0
@@ -624,3 +624,35 @@ lbl_801A6B24:
 /* 801A6BA0 0000007C  7C A4 01 2E */	stwx r5, r4, r0
 /* 801A6BA4 00000080  88 BA 0C 3D */	lbz r5, 0xc3d(r26)
 /* 801A6BA8 00000084  80 8D 81 84 */	lwz r4, lightStatusPt(r13)
+/* 801A6BAC 00000088  38 03 02 24 */	addi r0, r3, 0x224
+/* 801A6BB0 0000008C  7C A4 01 2E */	stwx r5, r4, r0
+/* 801A6BB4 00000090  C0 1A 0C 30 */	lfs f0, 0xc30(r26)
+/* 801A6BB8 00000094  80 8D 81 84 */	lwz r4, lightStatusPt(r13)
+/* 801A6BBC 00000098  38 03 02 14 */	addi r0, r3, 0x214
+/* 801A6BC0 0000009C  7C 04 05 2E */	stfsx f0, r4, r0
+/* 801A6BC4 000000A0  C0 3A 0C 34 */	lfs f1, 0xc34(r26)
+/* 801A6BC8 000000A4  C0 5A 0C 38 */	lfs f2, 0xc38(r26)
+/* 801A6BCC 000000A8  80 0D 81 84 */	lwz r0, lightStatusPt(r13)
+/* 801A6BD0 000000AC  38 63 02 08 */	addi r3, r3, 0x208
+/* 801A6BD4 000000B0  7C 60 1A 14 */	add r3, r0, r3
+/* 801A6BD8 000000B4  4B FF 65 C9 */	bl dKy_lightdir_set__FffP3Vec
+/* 801A6BDC 000000B8  48 00 00 10 */	b lbl_801A6BEC
+lbl_801A6BE0:
+/* 801A6BE0 00000000  3B 18 00 01 */	addi r24, r24, 1
+/* 801A6BE4 00000004  38 63 00 02 */	addi r3, r3, 2
+/* 801A6BE8 00000008  42 00 FE 60 */	bdnz lbl_801A6A48
+lbl_801A6BEC:
+/* 801A6BEC 00000000  3A F7 00 01 */	addi r23, r23, 1
+/* 801A6BF0 00000004  2C 17 00 06 */	cmpwi r23, 6
+/* 801A6BF4 00000008  3A D6 00 28 */	addi r22, r22, 0x28
+/* 801A6BF8 0000000C  41 80 FE 24 */	blt lbl_801A6A1C
+/* 801A6BFC 00000010  4B FF F4 E5 */	bl dKy_GlobalLight_set__Fv
+lbl_801A6C00:
+/* 801A6C00 00000000  E3 E1 00 78 */	psq_l f31, 120(r1), 0, 0 /* qr0 */
+/* 801A6C04 00000000  CB E1 00 70 */	lfd f31, 0x70(r1)
+/* 801A6C08 00000004  39 61 00 70 */	addi r11, r1, 0x70
+/* 801A6C0C 00000008  48 1B B5 ED */	bl _restgpr_17
+/* 801A6C10 0000000C  80 01 00 84 */	lwz r0, 0x84(r1)
+/* 801A6C14 00000010  7C 08 03 A6 */	mtlr r0
+/* 801A6C18 00000014  38 21 00 80 */	addi r1, r1, 0x80
+/* 801A6C1C 00000018  4E 80 00 20 */	blr 

@@ -8,10 +8,10 @@ lbl_801A80D0:
 /* 801A80E8 00000018  F3 C1 00 18 */	psq_st f30, 24(r1), 0, 0 /* qr0 */
 /* 801A80EC 00000000  FF C0 08 90 */	fmr f30, f1
 /* 801A80F0 00000004  FF E0 10 90 */	fmr f31, f2
-/* 801A80F4 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A80F4 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A80F8 00000028  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801A80FC 00000000  41 80 00 10 */	blt lbl_801A810C
-/* 801A8100 00000004  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A8100 00000004  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A8104 00000034  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801A8108 00000000  40 81 00 1C */	ble lbl_801A8124
 lbl_801A810C:
@@ -20,12 +20,12 @@ lbl_801A810C:
 /* 801A8114 00000008  38 63 02 24 */	addi r3, r3, 0x224
 /* 801A8118 0000000C  4C C6 31 82 */	crclr 6
 /* 801A811C 00000010  4B E5 EB D1 */	bl OSReport_Warning
-/* 801A8120 00000014  C0 62 A2 0C */	lfs f3, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A8120 00000014  C0 62 A2 0C */	lfs f3, d_kankyo_d_kankyo__lit_4409(r2)
 lbl_801A8124:
-/* 801A8124 00000000  C0 02 A3 30 */	lfs f0, LIT_6768(r2)
+/* 801A8124 00000000  C0 02 A3 30 */	lfs f0, lit_6768(r2)
 /* 801A8128 00000004  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801A812C 00000000  40 80 00 08 */	bge lbl_801A8134
-/* 801A8130 00000004  C0 62 A2 0C */	lfs f3, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A8130 00000004  C0 62 A2 0C */	lfs f3, d_kankyo_d_kankyo__lit_4409(r2)
 lbl_801A8134:
 /* 801A8134 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A8138 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l

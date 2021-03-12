@@ -36,9 +36,9 @@ lbl_800B7258:
 /* 800B7268 00000010  38 A0 00 00 */	li r5, 0
 /* 800B726C 00000014  38 C0 00 00 */	li r6, 0
 /* 800B7270 00000018  38 E0 00 00 */	li r7, 0
-/* 800B7274 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800B7274 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800B7278 00000020  FC 40 08 90 */	fmr f2, f1
-/* 800B727C 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__LIT_6041(r2)
+/* 800B727C 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
 /* 800B7280 00000028  FC 80 18 90 */	fmr f4, f3
 /* 800B7284 0000002C  39 00 00 00 */	li r8, 0
 /* 800B7288 00000030  48 1F 46 FD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -53,7 +53,7 @@ lbl_800B7258:
 lbl_800B72AC:
 /* 800B72AC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800B72B0 00000004  38 80 00 02 */	li r4, 2
-/* 800B72B4 00000008  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800B72B4 00000008  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800B72B8 0000000C  4B FF 64 6D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800B72BC 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800B72C0 00000014  4B FF E6 2D */	bl checkWaitAction__9daAlink_cFv

@@ -37,10 +37,10 @@ lbl_8013C818:
 /* 8013C828 00000010  48 13 3D 19 */	bl cLib_addCalcAngleS__FPsssss
 lbl_8013C82C:
 /* 8013C82C 00000000  38 7F 33 98 */	addi r3, r31, 0x3398
-/* 8013C830 00000004  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 8013C834 00000008  C0 42 94 A8 */	lfs f2, LIT_16570(r2)
-/* 8013C838 0000000C  C0 62 93 3C */	lfs f3, d_a_d_a_alink__LIT_7808(r2)
-/* 8013C83C 00000010  C0 82 92 B8 */	lfs f4, d_a_d_a_alink__LIT_6040(r2)
+/* 8013C830 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 8013C834 00000008  C0 42 94 A8 */	lfs f2, lit_16570(r2)
+/* 8013C838 0000000C  C0 62 93 3C */	lfs f3, d_a_d_a_alink__lit_7808(r2)
+/* 8013C83C 00000010  C0 82 92 B8 */	lfs f4, d_a_d_a_alink__lit_6040(r2)
 /* 8013C840 00000014  48 13 31 3D */	bl cLib_addCalc__FPfffff
 /* 8013C844 00000018  38 7F 1F D0 */	addi r3, r31, 0x1fd0
 /* 8013C848 0000001C  48 02 1C 85 */	bl checkAnmEnd__16daPy_frameCtrl_cFv

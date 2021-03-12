@@ -13,11 +13,11 @@ lbl_8011CA98:
 lbl_8011CAC4:
 /* 8011CAC4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8011CAC8 00000004  38 80 00 D5 */	li r4, 0xd5
-/* 8011CACC 00000008  C0 22 93 14 */	lfs f1, LIT_7307(r2)
+/* 8011CACC 00000008  C0 22 93 14 */	lfs f1, lit_7307(r2)
 /* 8011CAD0 0000000C  4B F9 04 E1 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 8011CAD4 00000010  38 00 00 00 */	li r0, 0
 /* 8011CAD8 00000014  B0 1F 30 0C */	sth r0, 0x300c(r31)
-/* 8011CADC 00000018  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8011CADC 00000018  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011CAE0 0000001C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8011CAE4 00000020  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 8011CAE8 00000024  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)

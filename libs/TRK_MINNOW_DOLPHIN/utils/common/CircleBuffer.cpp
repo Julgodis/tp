@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void CircleBufferReadBytes();
-extern void CircleBufferWriteBytes();
-extern void CircleBufferInitialize();
-extern void CBGetBytesAvailableForRead();
-extern void MWExitCriticalSection();
-extern void MWEnterCriticalSection();
-extern void MWInitializeCriticalSection();
-}
+extern "C" extern void CircleBufferReadBytes();
+extern "C" extern void CircleBufferWriteBytes();
+extern "C" extern void CircleBufferInitialize();
+extern "C" extern void CBGetBytesAvailableForRead();
+extern "C" extern void MWExitCriticalSection();
+extern "C" extern void MWEnterCriticalSection();
+extern "C" extern void MWInitializeCriticalSection();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803726A0-803727A8 0108 .text      CircleBufferReadBytes                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CircleBufferReadBytes() {
+extern "C" asm void CircleBufferReadBytes() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/common/CircleBuffer/CircleBufferReadBytes.s"
 }
 #pragma pop
 
+
 /* 803727A8-803728B0 0108 .text      CircleBufferWriteBytes                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CircleBufferWriteBytes() {
+extern "C" asm void CircleBufferWriteBytes() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/common/CircleBuffer/CircleBufferWriteBytes.s"
 }
 #pragma pop
 
+
 /* 803728B0-80372900 0050 .text      CircleBufferInitialize                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CircleBufferInitialize() {
+extern "C" asm void CircleBufferInitialize() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/common/CircleBuffer/CircleBufferInitialize.s"
 }
 #pragma pop
 
+
 /* 80372900-80372908 0008 .text      CBGetBytesAvailableForRead                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CBGetBytesAvailableForRead() {
+extern "C" asm void CBGetBytesAvailableForRead() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/common/CircleBuffer/CBGetBytesAvailableForRead.s"
 }

@@ -39,7 +39,7 @@ lbl_801F4510:
 /* 801F45A4 00000094  54 00 10 3A */	slwi r0, r0, 2
 /* 801F45A8 00000098  7C 7E 02 14 */	add r3, r30, r0
 /* 801F45AC 0000009C  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F45B0 000000A0  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F45B0 000000A0  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F45B4 000000A4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F45B8 000000A8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F45BC 000000AC  3C 00 43 30 */	lis r0, 0x4330
@@ -55,7 +55,7 @@ lbl_801F4510:
 /* 801F45E4 000000D4  80 63 00 04 */	lwz r3, 4(r3)
 /* 801F45E8 000000D8  48 10 39 E5 */	bl animationTransform__7J2DPaneFv
 /* 801F45EC 000000DC  80 7E 00 2C */	lwz r3, 0x2c(r30)
-/* 801F45F0 000000E0  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__LIT_4175(r2)
+/* 801F45F0 000000E0  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
 /* 801F45F4 000000E4  4B FA 0C AD */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_801F45F8:
 /* 801F45F8 00000000  88 1E 01 B6 */	lbz r0, 0x1b6(r30)
@@ -84,7 +84,7 @@ lbl_801F45F8:
 /* 801F4654 0000005C  54 00 10 3A */	slwi r0, r0, 2
 /* 801F4658 00000060  7C 7E 02 14 */	add r3, r30, r0
 /* 801F465C 00000064  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F4660 00000068  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F4660 00000068  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F4664 0000006C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F4668 00000070  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F466C 00000074  3C 00 43 30 */	lis r0, 0x4330

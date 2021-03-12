@@ -5,245 +5,254 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb();
-extern void __ct__Q38JMessage18TResourceContainer10TCResourceFv();
-extern void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
-extern void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs();
-extern void Do_create__Q38JMessage18TResourceContainer10TCResourceFv();
-extern void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource();
-extern void __ct__Q28JMessage18TResourceContainerFv();
-extern void setEncoding__Q28JMessage18TResourceContainerFUc();
-extern void setEncoding___Q28JMessage18TResourceContainerFUc();
-extern void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
-extern void __dt__Q28JMessage6TParseFv();
-extern void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl();
-extern void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl();
-extern void parseCharacter_1Byte__Q28JMessage6localeFPPCc();
-extern void parseCharacter_2Byte__Q28JMessage6localeFPPCc();
-extern void func_802A94D4();
-extern void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
-extern void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern void __dt__Q27JGadget13TNodeLinkListFv();
-extern void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
-extern void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
-extern void _savegpr_28();
-extern void _restgpr_28();
-extern void memcmp();
-SECTION_DATA extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
+extern "C" extern void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb();
+extern "C" extern void __ct__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" extern void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" extern void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs();
+extern "C" extern void Do_create__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" extern void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource();
+extern "C" extern void __ct__Q28JMessage18TResourceContainerFv();
+extern "C" extern void setEncoding__Q28JMessage18TResourceContainerFUc();
+extern "C" extern void setEncoding___Q28JMessage18TResourceContainerFUc();
+extern "C" extern void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+extern "C" extern void __dt__Q28JMessage6TParseFv();
+extern "C" extern void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl();
+extern "C" extern void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl();
+extern "C" extern void parseCharacter_1Byte__Q28JMessage6localeFPPCc();
+extern "C" extern void parseCharacter_2Byte__Q28JMessage6localeFPPCc();
+extern "C" extern void func_802A94D4();
+extern "C" extern void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
+extern "C" extern void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" extern void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" extern void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" extern void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
+extern "C" extern void memcmp();
+SECTION_DATA extern void* const __vt__Q37JGadget6binary19TParse_header_block[5];
 SECTION_DATA extern void* sapfnParseCharacter___Q28JMessage18TResourceContainer[5];
-SECTION_DATA extern void* __vt__Q28JMessage6TParse[5];
-SECTION_DATA extern void* __vt__Q38JMessage18TResourceContainer10TCResource[5];
-SECTION_DATA extern void* data_803C9CBC[5];
-SECTION_SDATA2 extern u8 ga4cSignature__Q28JMessage4data[8];
+SECTION_DATA extern void* const __vt__Q28JMessage6TParse[5];
+SECTION_DATA extern void* const __vt__Q38JMessage18TResourceContainer10TCResource[5];
+SECTION_DATA extern void* const data_803C9CBC[5];
+SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data;
+
+// 
+// Functions:
+// 
+
+/* 802A8CDC-802A8EC0 01E4 .text      toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb() {
+	nofralloc
+#include "asm/JSystem/JMessage/resource/toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9C80-803C9C94 0014 .data      sapfnParseCharacter___Q28JMessage18TResourceContainer        */
-SECTION_DATA void* sapfnParseCharacter___Q28JMessage18TResourceContainer[5] = {
+void* sapfnParseCharacter___Q28JMessage18TResourceContainer[5] = {
 	NULL,
 	(void*)parseCharacter_1Byte__Q28JMessage6localeFPPCc,
 	(void*)parseCharacter_2Byte__Q28JMessage6localeFPPCc,
 	(void*)parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc,
 	(void*)parseCharacter_UTF8__Q28JMessage6localeFPPCc,
 };
+
 /* 803C9C94-803C9CA8 0014 .data      __vt__Q28JMessage6TParse                                     */
-SECTION_DATA void* __vt__Q28JMessage6TParse[5] = {
+void* const __vt__Q28JMessage6TParse[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q28JMessage6TParseFv,
 	(void*)parseHeader_next__Q28JMessage6TParseFPPCvPUlUl,
 	(void*)parseBlock_next__Q28JMessage6TParseFPPCvPUlUl,
 };
+
 /* 803C9CA8-803C9CBC 0014 .data      __vt__Q38JMessage18TResourceContainer10TCResource            */
-SECTION_DATA void* __vt__Q38JMessage18TResourceContainer10TCResource[5] = {
+void* const __vt__Q38JMessage18TResourceContainer10TCResource[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q38JMessage18TResourceContainer10TCResourceFv,
 	(void*)Do_create__Q38JMessage18TResourceContainer10TCResourceFv,
 	(void*)Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource,
 };
+
 /* 803C9CBC-803C9CD0 0014 .data      __vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0> */
-SECTION_DATA void* data_803C9CBC[5] = {
+void* const data_803C9CBC[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802A8CDC-802A8EC0 01E4 .text      toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb() {
-	nofralloc
-#include "asm/JSystem/JMessage/resource/toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb.s"
-}
-#pragma pop
 
 /* 802A8EC0-802A8EF8 0038 .text      __ct__Q38JMessage18TResourceContainer10TCResourceFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q38JMessage18TResourceContainer10TCResourceFv() {
+extern "C" asm void __ct__Q38JMessage18TResourceContainer10TCResourceFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/__ct__Q38JMessage18TResourceContainer10TCResourceFv.s"
 }
 #pragma pop
 
+
 /* 802A8EF8-802A8F6C 0074 .text      __dt__Q38JMessage18TResourceContainer10TCResourceFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q38JMessage18TResourceContainer10TCResourceFv() {
+extern "C" asm void __dt__Q38JMessage18TResourceContainer10TCResourceFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/__dt__Q38JMessage18TResourceContainer10TCResourceFv.s"
 }
 #pragma pop
 
+
 /* 802A8F6C-802A8FFC 0090 .text      Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs() {
+extern "C" asm void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs.s"
 }
 #pragma pop
 
+
 /* 802A8FFC-802A9048 004C .text      Do_create__Q38JMessage18TResourceContainer10TCResourceFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Do_create__Q38JMessage18TResourceContainer10TCResourceFv() {
+extern "C" asm void Do_create__Q38JMessage18TResourceContainer10TCResourceFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/Do_create__Q38JMessage18TResourceContainer10TCResourceFv.s"
 }
 #pragma pop
 
+
 /* 802A9048-802A906C 0024 .text      Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource() {
+extern "C" asm void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource.s"
 }
 #pragma pop
 
+
 /* 802A906C-802A90B8 004C .text      __ct__Q28JMessage18TResourceContainerFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q28JMessage18TResourceContainerFv() {
+extern "C" asm void __ct__Q28JMessage18TResourceContainerFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/__ct__Q28JMessage18TResourceContainerFv.s"
 }
 #pragma pop
 
+
 /* 802A90B8-802A90F0 0038 .text      setEncoding__Q28JMessage18TResourceContainerFUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEncoding__Q28JMessage18TResourceContainerFUc() {
+extern "C" asm void setEncoding__Q28JMessage18TResourceContainerFUc() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/setEncoding__Q28JMessage18TResourceContainerFUc.s"
 }
 #pragma pop
 
+
 /* 802A90F0-802A9130 0040 .text      setEncoding___Q28JMessage18TResourceContainerFUc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEncoding___Q28JMessage18TResourceContainerFUc() {
+extern "C" asm void setEncoding___Q28JMessage18TResourceContainerFUc() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/setEncoding___Q28JMessage18TResourceContainerFUc.s"
 }
 #pragma pop
 
+
 /* 802A9130-802A9158 0028 .text      __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer() {
+extern "C" asm void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/__ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer.s"
 }
 #pragma pop
 
+
 /* 802A9158-802A91B8 0060 .text      __dt__Q28JMessage6TParseFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q28JMessage6TParseFv() {
+extern "C" asm void __dt__Q28JMessage6TParseFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/__dt__Q28JMessage6TParseFv.s"
 }
 #pragma pop
 
+
 /* 802A91B8-802A92F4 013C .text      parseHeader_next__Q28JMessage6TParseFPPCvPUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl() {
+extern "C" asm void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/parseHeader_next__Q28JMessage6TParseFPPCvPUlUl.s"
 }
 #pragma pop
 
+
 /* 802A92F4-802A9490 019C .text      parseBlock_next__Q28JMessage6TParseFPPCvPUlUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl() {
+extern "C" asm void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/parseBlock_next__Q28JMessage6TParseFPPCvPUlUl.s"
 }
 #pragma pop
 
+
 /* 802A9490-802A94A8 0018 .text      parseCharacter_1Byte__Q28JMessage6localeFPPCc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parseCharacter_1Byte__Q28JMessage6localeFPPCc() {
+extern "C" asm void parseCharacter_1Byte__Q28JMessage6localeFPPCc() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/parseCharacter_1Byte__Q28JMessage6localeFPPCc.s"
 }
 #pragma pop
 
+
 /* 802A94A8-802A94D4 002C .text      parseCharacter_2Byte__Q28JMessage6localeFPPCc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parseCharacter_2Byte__Q28JMessage6localeFPPCc() {
+extern "C" asm void parseCharacter_2Byte__Q28JMessage6localeFPPCc() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/parseCharacter_2Byte__Q28JMessage6localeFPPCc.s"
 }
 #pragma pop
 
+
 /* 802A94D4-802A9528 0054 .text      lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A94D4() {
+extern "C" asm void func_802A94D4() {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/func_802A94D4.s"
 }

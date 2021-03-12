@@ -30,7 +30,7 @@ lbl_8019D68C:
 /* 8019D6FC 00000054  4B FF FE 71 */	bl s16_data_ratio_set__Fssf
 /* 8019D700 00000058  7C 03 F2 14 */	add r0, r3, r30
 /* 8019D704 0000005C  7C 00 07 34 */	extsh r0, r0
-/* 8019D708 00000060  C8 22 A2 30 */	lfd f1, d_kankyo_d_kankyo__LIT_4444(r2)
+/* 8019D708 00000060  C8 22 A2 30 */	lfd f1, d_kankyo_d_kankyo__lit_4444(r2)
 /* 8019D70C 00000064  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8019D710 00000068  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8019D714 0000006C  3C 00 43 30 */	lis r0, 0x4330

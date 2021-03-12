@@ -7,7 +7,7 @@ lbl_801D2678:
 /* 801D268C 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2690 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 801D2694 00000008  48 00 00 85 */	bl getMapAreaSizeX__18dMenu_Fmap2DBack_cFv
-/* 801D2698 0000000C  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4202(r2)
+/* 801D2698 0000000C  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__lit_4202(r2)
 /* 801D269C 00000010  EF E1 00 32 */	fmuls f31, f1, f0
 /* 801D26A0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 801D26A4 00000018  4B FF FF B5 */	bl getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv

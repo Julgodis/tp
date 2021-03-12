@@ -6,8 +6,8 @@ lbl_80096EDC:
 /* 80096EEC 00000010  48 2C B2 F1 */	bl _savegpr_29
 /* 80096EF0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80096EF4 00000018  3B FE 03 E8 */	addi r31, r30, 0x3e8
-/* 80096EF8 0000001C  3C 80 80 38 */	lis r4, LIT_11437@ha
-/* 80096EFC 00000020  38 A4 AA E4 */	addi r5, r4, LIT_11437@l
+/* 80096EF8 0000001C  3C 80 80 38 */	lis r4, lit_11437@ha
+/* 80096EFC 00000020  38 A4 AA E4 */	addi r5, r4, lit_11437@l
 /* 80096F00 00000024  80 85 00 00 */	lwz r4, 0(r5)
 /* 80096F04 00000028  80 05 00 04 */	lwz r0, 4(r5)
 /* 80096F08 0000002C  90 81 01 14 */	stw r4, 0x114(r1)
@@ -178,7 +178,7 @@ lbl_800970F0:
 /* 8009717C 0000008C  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 80097180 00000090  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80097184 00000094  38 A5 01 04 */	addi r5, r5, 0x104
-/* 80097188 00000098  C0 22 8E DC */	lfs f1, d_d_ev_camera__LIT_5346(r2)
+/* 80097188 00000098  C0 22 8E DC */	lfs f1, d_d_ev_camera__lit_5346(r2)
 /* 8009718C 0000009C  4B FF 1F C9 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80097190 000000A0  38 C0 00 00 */	li r6, 0
 /* 80097194 000000A4  38 60 00 00 */	li r3, 0

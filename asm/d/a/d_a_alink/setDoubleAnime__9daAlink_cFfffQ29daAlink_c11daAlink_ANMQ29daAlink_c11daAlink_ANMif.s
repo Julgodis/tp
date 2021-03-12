@@ -20,8 +20,8 @@ lbl_800ACA14:
 /* 800ACA5C 00000024  7C BD 2B 78 */	mr r29, r5
 /* 800ACA60 00000028  7C DE 33 78 */	mr r30, r6
 /* 800ACA64 0000002C  FF E0 20 90 */	fmr f31, f4
-/* 800ACA68 00000030  3C A0 80 39 */	lis r5, d_a_d_a_alink__LIT_3757@ha
-/* 800ACA6C 00000034  3B E5 D6 58 */	addi r31, r5, d_a_d_a_alink__LIT_3757@l
+/* 800ACA68 00000030  3C A0 80 39 */	lis r5, d_a_d_a_alink__lit_3757@ha
+/* 800ACA6C 00000034  3B E5 D6 58 */	addi r31, r5, d_a_d_a_alink__lit_3757@l
 /* 800ACA70 00000038  38 A1 00 14 */	addi r5, r1, 0x14
 /* 800ACA74 0000003C  38 C1 00 10 */	addi r6, r1, 0x10
 /* 800ACA78 00000040  38 E0 00 00 */	li r7, 0
@@ -37,7 +37,7 @@ lbl_800ACA14:
 /* 800ACAA0 00000068  4B FF FB 71 */	bl getUnderUpperAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMPP15J3DAnmTransformPP15J3DAnmTransformiUl
 /* 800ACAA4 0000006C  7F 40 1B 79 */	or. r0, r26, r3
 /* 800ACAA8 00000070  41 82 00 84 */	beq lbl_800ACB2C
-/* 800ACAAC 00000074  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800ACAAC 00000074  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800ACAB0 0000009C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800ACAB4 00000000  40 80 00 78 */	bge lbl_800ACB2C
 /* 800ACAB8 00000004  2C 1C 00 1A */	cmpwi r28, 0x1a
@@ -59,14 +59,14 @@ lbl_800ACAE0:
 /* 800ACAF0 00000010  48 01 32 C1 */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800ACAF4 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 800ACAF8 00000018  41 82 00 1C */	beq lbl_800ACB14
-/* 800ACAFC 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACAFC 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACB00 00000020  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB04 00000024  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 800ACB08 00000028  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACB0C 0000002C  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800ACB10 00000030  48 00 00 8C */	b lbl_800ACB9C
 lbl_800ACB14:
-/* 800ACB14 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACB14 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACB18 00000004  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB1C 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 800ACB20 0000000C  EC 01 00 24 */	fdivs f0, f1, f0
@@ -78,7 +78,7 @@ lbl_800ACB2C:
 /* 800ACB34 00000008  80 1B 31 A0 */	lwz r0, 0x31a0(r27)
 /* 800ACB38 0000000C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 800ACB3C 00000010  41 82 00 60 */	beq lbl_800ACB9C
-/* 800ACB40 00000014  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800ACB40 00000014  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800ACB44 00000018  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800ACB48 00000000  40 81 00 54 */	ble lbl_800ACB9C
 /* 800ACB4C 00000004  38 7F 00 64 */	addi r3, r31, 0x64
@@ -90,14 +90,14 @@ lbl_800ACB2C:
 /* 800ACB64 0000001C  48 01 32 4D */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800ACB68 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800ACB6C 00000024  41 82 00 1C */	beq lbl_800ACB88
-/* 800ACB70 00000028  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACB70 00000028  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACB74 0000002C  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB78 00000030  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 800ACB7C 00000034  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACB80 00000038  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800ACB84 0000003C  48 00 00 18 */	b lbl_800ACB9C
 lbl_800ACB88:
-/* 800ACB88 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACB88 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACB8C 00000004  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB90 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 800ACB94 0000000C  EC 01 00 24 */	fdivs f0, f1, f0
@@ -113,7 +113,7 @@ lbl_800ACB9C:
 /* 800ACBB8 0000001C  FC 60 F0 90 */	fmr f3, f30
 /* 800ACBBC 00000020  7F C8 F3 78 */	mr r8, r30
 /* 800ACBC0 00000024  4B FF FB 95 */	bl commonDoubleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformfffi
-/* 800ACBC4 00000028  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800ACBC4 00000028  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800ACBC8 0000002C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800ACBCC 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800ACBD0 00000004  40 82 00 18 */	bne lbl_800ACBE8
@@ -180,7 +180,7 @@ lbl_800ACCA4:
 /* 800ACCAC 00000008  40 82 00 14 */	bne lbl_800ACCC0
 /* 800ACCB0 0000000C  7F 63 DB 78 */	mr r3, r27
 /* 800ACCB4 00000010  38 80 00 02 */	li r4, 2
-/* 800ACCB8 00000014  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800ACCB8 00000014  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800ACCBC 00000018  48 00 0A 69 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800ACCC0:
 /* 800ACCC0 00000000  7F 63 DB 78 */	mr r3, r27

@@ -31,7 +31,7 @@ lbl_8018832C:
 /* 801883A0 00000074  54 00 10 3A */	slwi r0, r0, 2
 /* 801883A4 00000078  7C 7F 02 14 */	add r3, r31, r0
 /* 801883A8 0000007C  80 03 02 B4 */	lwz r0, 0x2b4(r3)
-/* 801883AC 00000080  C8 22 9F 38 */	lfd f1, d_file_d_file_select__LIT_4342(r2)
+/* 801883AC 00000080  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
 /* 801883B0 00000084  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801883B4 00000088  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801883B8 0000008C  3C 00 43 30 */	lis r0, 0x4330
@@ -82,7 +82,7 @@ lbl_801883E8:
 /* 80188468 00000080  54 00 10 3A */	slwi r0, r0, 2
 /* 8018846C 00000084  7C 7F 02 14 */	add r3, r31, r0
 /* 80188470 00000088  80 03 02 B4 */	lwz r0, 0x2b4(r3)
-/* 80188474 0000008C  C8 22 9F 38 */	lfd f1, d_file_d_file_select__LIT_4342(r2)
+/* 80188474 0000008C  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
 /* 80188478 00000090  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8018847C 00000094  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80188480 00000098  3C 00 43 30 */	lis r0, 0x4330
@@ -98,7 +98,7 @@ lbl_801883E8:
 /* 801884A8 000000C0  80 63 00 04 */	lwz r3, 4(r3)
 /* 801884AC 000000C4  48 16 FB 21 */	bl animationTransform__7J2DPaneFv
 /* 801884B0 000000C8  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 801884B4 000000CC  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 801884B4 000000CC  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 801884B8 000000D0  48 00 CD E9 */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_801884BC:
 /* 801884BC 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

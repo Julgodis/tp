@@ -6,7 +6,7 @@ lbl_8021901C:
 /* 8021902C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80219030 00000014  80 63 02 F8 */	lwz r3, 0x2f8(r3)
 /* 80219034 00000018  48 03 C7 F5 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80219038 0000001C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219038 0000001C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 8021903C 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80219040 00000024  41 82 00 54 */	beq lbl_80219094
 /* 80219044 00000028  80 7F 02 F8 */	lwz r3, 0x2f8(r31)

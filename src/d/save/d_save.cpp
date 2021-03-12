@@ -5,206 +5,205 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSReport_Error();
-extern void setNowVibration__14dComIfG_play_cFUc();
-extern void getNowVibration__14dComIfG_play_cFv();
-extern void getZoneNo__20dStage_roomControl_cFi();
-extern void dComIfGs_setSelectItemIndex__FiUc();
-extern void dComIfGs_setMixItemIndex__FiUc();
-extern void dComIfGs_getMixItemIndex__Fi();
-extern void dComIfGp_setSelectItem__Fi();
-extern void dComIfGs_getBottleMax__Fv();
-extern void dComIfGs_setKeyNum__FiUc();
-extern void __ct__13dSv_memory2_cFv();
-extern void __ct__12dSv_memory_cFv();
-extern void clrSaveFlag__12daObjCarry_cFv();
-extern void setSaveFlag__12daObjCarry_cFv();
-extern void dSv_item_rename__FUc();
-extern void init__21dSv_player_status_a_cFv();
-extern void setSelectItemIndex__21dSv_player_status_a_cFiUc();
-extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern void setMixItemIndex__21dSv_player_status_a_cFiUc();
-extern void getMixItemIndex__21dSv_player_status_a_cCFi();
-extern void getRupeeMax__21dSv_player_status_a_cCFv();
-extern void isMagicFlag__21dSv_player_status_a_cCFUc();
-extern void init__21dSv_player_status_b_cFv();
-extern void onDarkClearLV__21dSv_player_status_b_cFi();
-extern void isDarkClearLV__21dSv_player_status_b_cCFi();
-extern void onTransformLV__21dSv_player_status_b_cFi();
-extern void isTransformLV__21dSv_player_status_b_cCFi();
-extern void init__17dSv_horse_place_cFv();
-extern void set__17dSv_horse_place_cFPCcRC4cXyzsSc();
-extern void init__25dSv_player_return_place_cFv();
-extern void set__25dSv_player_return_place_cFPCcScUc();
-extern void init__33dSv_player_field_last_stay_info_cFv();
-extern void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
-extern void onRegionBit__33dSv_player_field_last_stay_info_cFi();
-extern void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
-extern void init__27dSv_player_last_mark_info_cFv();
-extern void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
-extern void init__17dSv_player_item_cFv();
-extern void setItem__17dSv_player_item_cFiUc();
-extern void getItem__17dSv_player_item_cCFib();
-extern void setLineUpItem__17dSv_player_item_cFv();
-extern void getLineUpItem__17dSv_player_item_cCFi();
-extern void setBottleItemIn__17dSv_player_item_cFUcUc();
-extern void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern void setEmptyBottle__17dSv_player_item_cFv();
-extern void setEmptyBottle__17dSv_player_item_cFUc();
-extern void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
-extern void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
-extern void checkBottle__17dSv_player_item_cFUc();
-extern void checkInsectBottle__17dSv_player_item_cFv();
-extern void checkEmptyBottle__17dSv_player_item_cFv();
-extern void setBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern void setBombBagItemIn__17dSv_player_item_cFUcUcUcb();
-extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
-extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern void setEmptyBombBag__17dSv_player_item_cFv();
-extern void setEmptyBombBag__17dSv_player_item_cFUcUc();
-extern void checkBombBag__17dSv_player_item_cFUc();
-extern void setWarashibeItem__17dSv_player_item_cFUc();
-extern void setRodTypeLevelUp__17dSv_player_item_cFv();
-extern void setBaitItem__17dSv_player_item_cFUc();
-extern void init__21dSv_player_get_item_cFv();
-extern void onFirstBit__21dSv_player_get_item_cFUc();
-extern void offFirstBit__21dSv_player_get_item_cFUc();
-extern void isFirstBit__21dSv_player_get_item_cCFUc();
-extern void init__24dSv_player_item_record_cFv();
-extern void setBombNum__24dSv_player_item_record_cFUcUc();
-extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern void setBottleNum__24dSv_player_item_record_cFUcUc();
-extern void addBottleNum__24dSv_player_item_record_cFUcs();
-extern void getBottleNum__24dSv_player_item_record_cCFUc();
-extern void init__21dSv_player_item_max_cFv();
-extern void setBombNum__21dSv_player_item_max_cFUcUc();
-extern void getBombNum__21dSv_player_item_max_cCFUc();
-extern void init__20dSv_player_collect_cFv();
-extern void setCollect__20dSv_player_collect_cFiUc();
-extern void isCollect__20dSv_player_collect_cCFiUc();
-extern void onCollectCrystal__20dSv_player_collect_cFUc();
-extern void isCollectCrystal__20dSv_player_collect_cCFUc();
-extern void onCollectMirror__20dSv_player_collect_cFUc();
-extern void isCollectMirror__20dSv_player_collect_cCFUc();
-extern void init__17dSv_player_wolf_cFv();
-extern void init__16dSv_light_drop_cFv();
-extern void setLightDropNum__16dSv_light_drop_cFUcUc();
-extern void getLightDropNum__16dSv_light_drop_cCFUc();
-extern void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern void init__17dSv_letter_info_cFv();
-extern void onLetterGetFlag__17dSv_letter_info_cFi();
-extern void isLetterGetFlag__17dSv_letter_info_cCFi();
-extern void onLetterReadFlag__17dSv_letter_info_cFi();
-extern void isLetterReadFlag__17dSv_letter_info_cCFi();
-extern void init__18dSv_fishing_info_cFv();
-extern void addFishCount__18dSv_fishing_info_cFUc();
-extern void init__17dSv_player_info_cFv();
-extern void init__19dSv_player_config_cFv();
-extern void checkVibration__19dSv_player_config_cCFv();
-extern void getSound__19dSv_player_config_cFv();
-extern void setSound__19dSv_player_config_cFUc();
-extern void getVibration__19dSv_player_config_cFv();
-extern void setVibration__19dSv_player_config_cFUc();
-extern void init__12dSv_player_cFv();
-extern void init__12dSv_memBit_cFv();
-extern void onTbox__12dSv_memBit_cFi();
-extern void offTbox__12dSv_memBit_cFi();
-extern void isTbox__12dSv_memBit_cCFi();
-extern void onSwitch__12dSv_memBit_cFi();
-extern void offSwitch__12dSv_memBit_cFi();
-extern void isSwitch__12dSv_memBit_cCFi();
-extern void revSwitch__12dSv_memBit_cFi();
-extern void onItem__12dSv_memBit_cFi();
-extern void isItem__12dSv_memBit_cCFi();
-extern void onDungeonItem__12dSv_memBit_cFi();
-extern void isDungeonItem__12dSv_memBit_cCFi();
-extern void init__11dSv_event_cFv();
-extern void onEventBit__11dSv_event_cFUs();
-extern void offEventBit__11dSv_event_cFUs();
-extern void isEventBit__11dSv_event_cCFUs();
-extern void setEventReg__11dSv_event_cFUsUc();
-extern void getEventReg__11dSv_event_cCFUs();
-extern void init__14dSv_MiniGame_cFv();
-extern void init__12dSv_memory_cFv();
-extern void init__13dSv_memory2_cFv();
-extern void onVisitedRoom__13dSv_memory2_cFi();
-extern void offVisitedRoom__13dSv_memory2_cFi();
-extern void isVisitedRoom__13dSv_memory2_cFi();
-extern void init__12dSv_danBit_cFSc();
-extern void onSwitch__12dSv_danBit_cFi();
-extern void offSwitch__12dSv_danBit_cFi();
-extern void isSwitch__12dSv_danBit_cCFi();
-extern void revSwitch__12dSv_danBit_cFi();
-extern void onItem__12dSv_danBit_cFi();
-extern void isItem__12dSv_danBit_cCFi();
-extern void init__13dSv_zoneBit_cFv();
-extern void clearRoomSwitch__13dSv_zoneBit_cFv();
-extern void clearRoomItem__13dSv_zoneBit_cFv();
-extern void onSwitch__13dSv_zoneBit_cFi();
-extern void offSwitch__13dSv_zoneBit_cFi();
-extern void isSwitch__13dSv_zoneBit_cCFi();
-extern void revSwitch__13dSv_zoneBit_cFi();
-extern void onOneSwitch__13dSv_zoneBit_cFi();
-extern void offOneSwitch__13dSv_zoneBit_cFi();
-extern void isOneSwitch__13dSv_zoneBit_cCFi();
-extern void revOneSwitch__13dSv_zoneBit_cFi();
-extern void onItem__13dSv_zoneBit_cFi();
-extern void isItem__13dSv_zoneBit_cCFi();
-extern void onOneItem__13dSv_zoneBit_cFi();
-extern void isOneItem__13dSv_zoneBit_cCFi();
-extern void init__15dSv_zoneActor_cFv();
-extern void on__15dSv_zoneActor_cFi();
-extern void off__15dSv_zoneActor_cFi();
-extern void is__15dSv_zoneActor_cCFi();
-extern void init__10dSv_zone_cFi();
-extern void setRoom__13dSv_restart_cFRC4cXyzsSc();
-extern void set__17dSv_turnRestart_cFRC4cXyzsScUl();
-extern void init__10dSv_info_cFv();
-extern void init__10dSv_save_cFv();
-extern void getSave2__10dSv_save_cFi();
-extern void getSave__10dSv_info_cFi();
-extern void putSave__10dSv_info_cFi();
-extern void initZone__10dSv_info_cFv();
-extern void createZone__10dSv_info_cFi();
-extern void onSwitch__10dSv_info_cFii();
-extern void offSwitch__10dSv_info_cFii();
-extern void isSwitch__10dSv_info_cCFii();
-extern void revSwitch__10dSv_info_cFii();
-extern void onItem__10dSv_info_cFii();
-extern void isItem__10dSv_info_cCFii();
-extern void onActor__10dSv_info_cFii();
-extern void offActor__10dSv_info_cFii();
-extern void isActor__10dSv_info_cCFii();
-extern void memory_to_card__10dSv_info_cFPci();
-extern void card_to_memory__10dSv_info_cFPci();
-extern void initdata_to_card__10dSv_info_cFPci();
-extern void setInitEventBit__Fv();
-extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void setHotSpringTimer__13dMeter2Info_cFUc();
-extern void setSaveStageName__13dMeter2Info_cFPCc();
-extern void setOutputMode__10Z2AudioMgrFUl();
-extern void OSGetSoundMode();
-extern void OSGetTime();
-extern void __construct_array();
-extern void _savegpr_22();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_22();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void __div2i();
-extern void printf();
-extern void strcpy();
+extern "C" extern void OSReport_Error();
+extern "C" extern void setNowVibration__14dComIfG_play_cFUc();
+extern "C" extern void getNowVibration__14dComIfG_play_cFv();
+extern "C" extern void getZoneNo__20dStage_roomControl_cFi();
+extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" extern void dComIfGs_setMixItemIndex__FiUc();
+extern "C" extern void dComIfGs_getMixItemIndex__Fi();
+extern "C" extern void dComIfGp_setSelectItem__Fi();
+extern "C" extern void dComIfGs_getBottleMax__Fv();
+extern "C" extern void dComIfGs_setKeyNum__FiUc();
+extern "C" extern void __ct__13dSv_memory2_cFv();
+extern "C" extern void __ct__12dSv_memory_cFv();
+extern "C" extern void clrSaveFlag__12daObjCarry_cFv();
+extern "C" extern void setSaveFlag__12daObjCarry_cFv();
+extern "C" extern void dSv_item_rename__FUc();
+extern "C" extern void init__21dSv_player_status_a_cFv();
+extern "C" extern void setSelectItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" extern void setMixItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" extern void getMixItemIndex__21dSv_player_status_a_cCFi();
+extern "C" extern void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" extern void isMagicFlag__21dSv_player_status_a_cCFUc();
+extern "C" extern void init__21dSv_player_status_b_cFv();
+extern "C" extern void onDarkClearLV__21dSv_player_status_b_cFi();
+extern "C" extern void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" extern void onTransformLV__21dSv_player_status_b_cFi();
+extern "C" extern void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" extern void init__17dSv_horse_place_cFv();
+extern "C" extern void set__17dSv_horse_place_cFPCcRC4cXyzsSc();
+extern "C" extern void init__25dSv_player_return_place_cFv();
+extern "C" extern void set__25dSv_player_return_place_cFPCcScUc();
+extern "C" extern void init__33dSv_player_field_last_stay_info_cFv();
+extern "C" extern void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
+extern "C" extern void onRegionBit__33dSv_player_field_last_stay_info_cFi();
+extern "C" extern void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+extern "C" extern void init__27dSv_player_last_mark_info_cFv();
+extern "C" extern void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
+extern "C" extern void init__17dSv_player_item_cFv();
+extern "C" extern void setItem__17dSv_player_item_cFiUc();
+extern "C" extern void getItem__17dSv_player_item_cCFib();
+extern "C" extern void setLineUpItem__17dSv_player_item_cFv();
+extern "C" extern void getLineUpItem__17dSv_player_item_cCFi();
+extern "C" extern void setBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" extern void setEmptyBottleItemIn__17dSv_player_item_cFUc();
+extern "C" extern void setEmptyBottle__17dSv_player_item_cFv();
+extern "C" extern void setEmptyBottle__17dSv_player_item_cFUc();
+extern "C" extern void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" extern void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
+extern "C" extern void checkBottle__17dSv_player_item_cFUc();
+extern "C" extern void checkInsectBottle__17dSv_player_item_cFv();
+extern "C" extern void checkEmptyBottle__17dSv_player_item_cFv();
+extern "C" extern void setBombBagItemIn__17dSv_player_item_cFUcUcb();
+extern "C" extern void setBombBagItemIn__17dSv_player_item_cFUcUcUcb();
+extern "C" extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
+extern "C" extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
+extern "C" extern void setEmptyBombBag__17dSv_player_item_cFv();
+extern "C" extern void setEmptyBombBag__17dSv_player_item_cFUcUc();
+extern "C" extern void checkBombBag__17dSv_player_item_cFUc();
+extern "C" extern void setWarashibeItem__17dSv_player_item_cFUc();
+extern "C" extern void setRodTypeLevelUp__17dSv_player_item_cFv();
+extern "C" extern void setBaitItem__17dSv_player_item_cFUc();
+extern "C" extern void init__21dSv_player_get_item_cFv();
+extern "C" extern void onFirstBit__21dSv_player_get_item_cFUc();
+extern "C" extern void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" extern void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" extern void init__24dSv_player_item_record_cFv();
+extern "C" extern void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" extern void setBottleNum__24dSv_player_item_record_cFUcUc();
+extern "C" extern void addBottleNum__24dSv_player_item_record_cFUcs();
+extern "C" extern void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" extern void init__21dSv_player_item_max_cFv();
+extern "C" extern void setBombNum__21dSv_player_item_max_cFUcUc();
+extern "C" extern void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" extern void init__20dSv_player_collect_cFv();
+extern "C" extern void setCollect__20dSv_player_collect_cFiUc();
+extern "C" extern void isCollect__20dSv_player_collect_cCFiUc();
+extern "C" extern void onCollectCrystal__20dSv_player_collect_cFUc();
+extern "C" extern void isCollectCrystal__20dSv_player_collect_cCFUc();
+extern "C" extern void onCollectMirror__20dSv_player_collect_cFUc();
+extern "C" extern void isCollectMirror__20dSv_player_collect_cCFUc();
+extern "C" extern void init__17dSv_player_wolf_cFv();
+extern "C" extern void init__16dSv_light_drop_cFv();
+extern "C" extern void setLightDropNum__16dSv_light_drop_cFUcUc();
+extern "C" extern void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" extern void onLightDropGetFlag__16dSv_light_drop_cFUc();
+extern "C" extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" extern void init__17dSv_letter_info_cFv();
+extern "C" extern void onLetterGetFlag__17dSv_letter_info_cFi();
+extern "C" extern void isLetterGetFlag__17dSv_letter_info_cCFi();
+extern "C" extern void onLetterReadFlag__17dSv_letter_info_cFi();
+extern "C" extern void isLetterReadFlag__17dSv_letter_info_cCFi();
+extern "C" extern void init__18dSv_fishing_info_cFv();
+extern "C" extern void addFishCount__18dSv_fishing_info_cFUc();
+extern "C" extern void init__17dSv_player_info_cFv();
+extern "C" extern void init__19dSv_player_config_cFv();
+extern "C" extern void checkVibration__19dSv_player_config_cCFv();
+extern "C" extern void getSound__19dSv_player_config_cFv();
+extern "C" extern void setSound__19dSv_player_config_cFUc();
+extern "C" extern void getVibration__19dSv_player_config_cFv();
+extern "C" extern void setVibration__19dSv_player_config_cFUc();
+extern "C" extern void init__12dSv_player_cFv();
+extern "C" extern void init__12dSv_memBit_cFv();
+extern "C" extern void onTbox__12dSv_memBit_cFi();
+extern "C" extern void offTbox__12dSv_memBit_cFi();
+extern "C" extern void isTbox__12dSv_memBit_cCFi();
+extern "C" extern void onSwitch__12dSv_memBit_cFi();
+extern "C" extern void offSwitch__12dSv_memBit_cFi();
+extern "C" extern void isSwitch__12dSv_memBit_cCFi();
+extern "C" extern void revSwitch__12dSv_memBit_cFi();
+extern "C" extern void onItem__12dSv_memBit_cFi();
+extern "C" extern void isItem__12dSv_memBit_cCFi();
+extern "C" extern void onDungeonItem__12dSv_memBit_cFi();
+extern "C" extern void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" extern void init__11dSv_event_cFv();
+extern "C" extern void onEventBit__11dSv_event_cFUs();
+extern "C" extern void offEventBit__11dSv_event_cFUs();
+extern "C" extern void isEventBit__11dSv_event_cCFUs();
+extern "C" extern void setEventReg__11dSv_event_cFUsUc();
+extern "C" extern void getEventReg__11dSv_event_cCFUs();
+extern "C" extern void init__14dSv_MiniGame_cFv();
+extern "C" extern void init__12dSv_memory_cFv();
+extern "C" extern void init__13dSv_memory2_cFv();
+extern "C" extern void onVisitedRoom__13dSv_memory2_cFi();
+extern "C" extern void offVisitedRoom__13dSv_memory2_cFi();
+extern "C" extern void isVisitedRoom__13dSv_memory2_cFi();
+extern "C" extern void init__12dSv_danBit_cFSc();
+extern "C" extern void onSwitch__12dSv_danBit_cFi();
+extern "C" extern void offSwitch__12dSv_danBit_cFi();
+extern "C" extern void isSwitch__12dSv_danBit_cCFi();
+extern "C" extern void revSwitch__12dSv_danBit_cFi();
+extern "C" extern void onItem__12dSv_danBit_cFi();
+extern "C" extern void isItem__12dSv_danBit_cCFi();
+extern "C" extern void init__13dSv_zoneBit_cFv();
+extern "C" extern void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" extern void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" extern void onSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void offSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void isSwitch__13dSv_zoneBit_cCFi();
+extern "C" extern void revSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void onOneSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void offOneSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void isOneSwitch__13dSv_zoneBit_cCFi();
+extern "C" extern void revOneSwitch__13dSv_zoneBit_cFi();
+extern "C" extern void onItem__13dSv_zoneBit_cFi();
+extern "C" extern void isItem__13dSv_zoneBit_cCFi();
+extern "C" extern void onOneItem__13dSv_zoneBit_cFi();
+extern "C" extern void isOneItem__13dSv_zoneBit_cCFi();
+extern "C" extern void init__15dSv_zoneActor_cFv();
+extern "C" extern void on__15dSv_zoneActor_cFi();
+extern "C" extern void off__15dSv_zoneActor_cFi();
+extern "C" extern void is__15dSv_zoneActor_cCFi();
+extern "C" extern void init__10dSv_zone_cFi();
+extern "C" extern void setRoom__13dSv_restart_cFRC4cXyzsSc();
+extern "C" extern void set__17dSv_turnRestart_cFRC4cXyzsScUl();
+extern "C" extern void init__10dSv_info_cFv();
+extern "C" extern void init__10dSv_save_cFv();
+extern "C" extern void getSave2__10dSv_save_cFi();
+extern "C" extern void getSave__10dSv_info_cFi();
+extern "C" extern void putSave__10dSv_info_cFi();
+extern "C" extern void initZone__10dSv_info_cFv();
+extern "C" extern void createZone__10dSv_info_cFi();
+extern "C" extern void onSwitch__10dSv_info_cFii();
+extern "C" extern void offSwitch__10dSv_info_cFii();
+extern "C" extern void isSwitch__10dSv_info_cCFii();
+extern "C" extern void revSwitch__10dSv_info_cFii();
+extern "C" extern void onItem__10dSv_info_cFii();
+extern "C" extern void isItem__10dSv_info_cCFii();
+extern "C" extern void onActor__10dSv_info_cFii();
+extern "C" extern void offActor__10dSv_info_cFii();
+extern "C" extern void isActor__10dSv_info_cCFii();
+extern "C" extern void memory_to_card__10dSv_info_cFPci();
+extern "C" extern void card_to_memory__10dSv_info_cFPci();
+extern "C" extern void initdata_to_card__10dSv_info_cFPci();
+extern "C" extern void setInitEventBit__Fv();
+extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void setHotSpringTimer__13dMeter2Info_cFUc();
+extern "C" extern void setSaveStageName__13dMeter2Info_cFPCc();
+extern "C" extern void setOutputMode__10Z2AudioMgrFUl();
+extern "C" extern void OSGetSoundMode();
+extern "C" extern void OSGetTime();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void __div2i();
+extern "C" extern void printf();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
 SECTION_RODATA extern const u8 d_save_d_save__stringBase0[100];
 SECTION_DATA extern u8 data_803A7270[24];
@@ -213,30 +212,161 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sRumbleSupported__10JUTGamePad[4];
-SECTION_SDATA2 extern u8 d_save_d_save__LIT_3775[4];
-SECTION_SDATA2 extern u8 LIT_3813[4];
-}
+SECTION_SDATA2 extern f32 d_save_d_save__lit_3775;
+SECTION_SDATA2 extern u8 lit_3813[4];
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80379234-80379298 0062 .rodata    @stringBase0                                                 */
+/* 80032918-80032958 0040 .text      dSv_item_rename__FUc                                         */
 #pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80379234 = "";
-SECTION_DEAD const char* const stringBase_80379235 = "F_SP108";
-SECTION_DEAD const char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
-SECTION_DEAD const char* const stringBase_8037925D = "Write size:%d\n";
-SECTION_DEAD const char* const stringBase_8037926C = "SAVE size:%d\n";
-SECTION_DEAD const char* const stringBase_8037927A = "LOAD size:%d\n";
-SECTION_DEAD const char* const stringBase_80379288 = "INIT size:%d\n";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_80379296 = "\0";
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dSv_item_rename__FUc() {
+	nofralloc
+#include "asm/d/save/d_save/dSv_item_rename__FUc.s"
+}
 #pragma pop
+
+
+/* 80032958-80032A48 00F0 .text      init__21dSv_player_status_a_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__21dSv_player_status_a_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__21dSv_player_status_a_cFv.s"
+}
+#pragma pop
+
+
+/* 80032A48-80032A5C 0014 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSelectItemIndex__21dSv_player_status_a_cFiUc() {
+	nofralloc
+#include "asm/d/save/d_save/setSelectItemIndex__21dSv_player_status_a_cFiUc.s"
+}
+#pragma pop
+
+
+/* 80032A5C-80032A78 001C .text      getSelectItemIndex__21dSv_player_status_a_cCFi               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSelectItemIndex__21dSv_player_status_a_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/getSelectItemIndex__21dSv_player_status_a_cCFi.s"
+}
+#pragma pop
+
+
+/* 80032A78-80032A8C 0014 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMixItemIndex__21dSv_player_status_a_cFiUc() {
+	nofralloc
+#include "asm/d/save/d_save/setMixItemIndex__21dSv_player_status_a_cFiUc.s"
+}
+#pragma pop
+
+
+/* 80032A8C-80032AA8 001C .text      getMixItemIndex__21dSv_player_status_a_cCFi                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMixItemIndex__21dSv_player_status_a_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/getMixItemIndex__21dSv_player_status_a_cCFi.s"
+}
+#pragma pop
+
+
+/* 80032AA8-80032AF8 0050 .text      getRupeeMax__21dSv_player_status_a_cCFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getRupeeMax__21dSv_player_status_a_cCFv() {
+	nofralloc
+#include "asm/d/save/d_save/getRupeeMax__21dSv_player_status_a_cCFv.s"
+}
+#pragma pop
+
+
+/* 80032AF8-80032B50 0058 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isMagicFlag__21dSv_player_status_a_cCFUc() {
+	nofralloc
+#include "asm/d/save/d_save/isMagicFlag__21dSv_player_status_a_cCFUc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80451D58-80451D5C 0004 .sdata2    @3775                                                        */
+f32 d_save_d_save__lit_3775 = 255.0f;
+
+/* 80032B50-80032B94 0044 .text      init__21dSv_player_status_b_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__21dSv_player_status_b_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__21dSv_player_status_b_cFv.s"
+}
+#pragma pop
+
+
+/* 80032B94-80032BB0 001C .text      onDarkClearLV__21dSv_player_status_b_cFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onDarkClearLV__21dSv_player_status_b_cFi() {
+	nofralloc
+#include "asm/d/save/d_save/onDarkClearLV__21dSv_player_status_b_cFi.s"
+}
+#pragma pop
+
+
+/* 80032BB0-80032BD0 0020 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isDarkClearLV__21dSv_player_status_b_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/isDarkClearLV__21dSv_player_status_b_cCFi.s"
+}
+#pragma pop
+
+
+/* 80032BD0-80032BEC 001C .text      onTransformLV__21dSv_player_status_b_cFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onTransformLV__21dSv_player_status_b_cFi() {
+	nofralloc
+#include "asm/d/save/d_save/onTransformLV__21dSv_player_status_b_cFi.s"
+}
+#pragma pop
+
+
+/* 80032BEC-80032C0C 0020 .text      isTransformLV__21dSv_player_status_b_cCFi                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isTransformLV__21dSv_player_status_b_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/isTransformLV__21dSv_player_status_b_cCFi.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803790C0-80379234 0172 .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
 SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x0F, 0xFE, 0xFF, 0x00, 0x40, 0xFD, 0xFF, 0xFC, 0xFF, 0x00, 0x20,
@@ -266,23 +396,281 @@ SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
 	/* padding */
 	0x00, 0x00,
 };
+
+/* 80379234-80379298 0062 .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80379234 = "";
+SECTION_DEAD const char* const stringBase_80379235 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
+SECTION_DEAD const char* const stringBase_8037925D = "Write size:%d\n";
+SECTION_DEAD const char* const stringBase_8037926C = "SAVE size:%d\n";
+SECTION_DEAD const char* const stringBase_8037927A = "LOAD size:%d\n";
+SECTION_DEAD const char* const stringBase_80379288 = "INIT size:%d\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80379296 = "\0";
+#pragma pop
+
+/* 80451D5C-80451D60 0004 .sdata2    @3813                                                        */
+u8 lit_3813[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80032C0C-80032C64 0058 .text      init__17dSv_horse_place_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__17dSv_horse_place_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__17dSv_horse_place_cFv.s"
 }
+#pragma pop
+
+
+/* 80032C64-80032CC8 0064 .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void set__17dSv_horse_place_cFPCcRC4cXyzsSc() {
+	nofralloc
+#include "asm/d/save/d_save/set__17dSv_horse_place_cFPCcRC4cXyzsSc.s"
+}
+#pragma pop
+
+
+/* 80032CC8-80032D1C 0054 .text      init__25dSv_player_return_place_cFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__25dSv_player_return_place_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__25dSv_player_return_place_cFv.s"
+}
+#pragma pop
+
+
+/* 80032D1C-80032D60 0044 .text      set__25dSv_player_return_place_cFPCcScUc                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void set__25dSv_player_return_place_cFPCcScUc() {
+	nofralloc
+#include "asm/d/save/d_save/set__25dSv_player_return_place_cFPCcScUc.s"
+}
+#pragma pop
+
+
+/* 80032D60-80032DE0 0080 .text      init__33dSv_player_field_last_stay_info_cFv                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__33dSv_player_field_last_stay_info_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__33dSv_player_field_last_stay_info_cFv.s"
+}
+#pragma pop
+
+
+/* 80032DE0-80032E4C 006C .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc() {
+	nofralloc
+#include "asm/d/save/d_save/set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc.s"
+}
+#pragma pop
+
+
+/* 80032E4C-80032E78 002C .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onRegionBit__33dSv_player_field_last_stay_info_cFi() {
+	nofralloc
+#include "asm/d/save/d_save/onRegionBit__33dSv_player_field_last_stay_info_cFi.s"
+}
+#pragma pop
+
+
+/* 80032E78-80032EB0 0038 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isRegionBit__33dSv_player_field_last_stay_info_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/isRegionBit__33dSv_player_field_last_stay_info_cCFi.s"
+}
+#pragma pop
+
+
+/* 80032EB0-80032F2C 007C .text      init__27dSv_player_last_mark_info_cFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__27dSv_player_last_mark_info_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__27dSv_player_last_mark_info_cFv.s"
+}
+#pragma pop
+
+
+/* 80032F2C-80032F90 0064 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc() {
+	nofralloc
+#include "asm/d/save/d_save/setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc.s"
+}
+#pragma pop
+
+
+/* 80032F90-80032FB8 0028 .text      init__17dSv_player_item_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__17dSv_player_item_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/init__17dSv_player_item_cFv.s"
+}
+#pragma pop
+
+
+/* 80032FB8-80033030 0078 .text      setItem__17dSv_player_item_cFiUc                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setItem__17dSv_player_item_cFiUc() {
+	nofralloc
+#include "asm/d/save/d_save/setItem__17dSv_player_item_cFiUc.s"
+}
+#pragma pop
+
+
+/* 80033030-800332F8 02C8 .text      getItem__17dSv_player_item_cCFib                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getItem__17dSv_player_item_cCFib() {
+	nofralloc
+#include "asm/d/save/d_save/getItem__17dSv_player_item_cCFib.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A7270-803A7288 0017 .data      i_item_lst$4006                                              */
-SECTION_DATA u8 data_803A7270[24] = {
+u8 data_803A7270[24] = {
 	0x0A, 0x08, 0x06, 0x02, 0x09, 0x04, 0x03, 0x00, 0x01, 0x17, 0x14, 0x05, 0x0F, 0x10, 0x11, 0x0B,
 	0x0C, 0x0D, 0x0E, 0x13, 0x12, 0x16, 0x15,
 	/* padding */
 	0x00,
 };
+
+/* 800332F8-80033354 005C .text      setLineUpItem__17dSv_player_item_cFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLineUpItem__17dSv_player_item_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/setLineUpItem__17dSv_player_item_cFv.s"
+}
+#pragma pop
+
+
+/* 80033354-80033370 001C .text      getLineUpItem__17dSv_player_item_cCFi                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLineUpItem__17dSv_player_item_cCFi() {
+	nofralloc
+#include "asm/d/save/d_save/getLineUpItem__17dSv_player_item_cCFi.s"
+}
+#pragma pop
+
+
+/* 80033370-80033450 00E0 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBottleItemIn__17dSv_player_item_cFUcUc() {
+	nofralloc
+#include "asm/d/save/d_save/setBottleItemIn__17dSv_player_item_cFUcUc.s"
+}
+#pragma pop
+
+
+/* 80033450-80033494 0044 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEmptyBottleItemIn__17dSv_player_item_cFUc() {
+	nofralloc
+#include "asm/d/save/d_save/setEmptyBottleItemIn__17dSv_player_item_cFUc.s"
+}
+#pragma pop
+
+
+/* 80033494-80033514 0080 .text      setEmptyBottle__17dSv_player_item_cFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEmptyBottle__17dSv_player_item_cFv() {
+	nofralloc
+#include "asm/d/save/d_save/setEmptyBottle__17dSv_player_item_cFv.s"
+}
+#pragma pop
+
+
+/* 80033514-80033598 0084 .text      setEmptyBottle__17dSv_player_item_cFUc                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEmptyBottle__17dSv_player_item_cFUc() {
+	nofralloc
+#include "asm/d/save/d_save/setEmptyBottle__17dSv_player_item_cFUc.s"
+}
+#pragma pop
+
+
+/* 80033598-800336BC 0124 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEquipBottleItemIn__17dSv_player_item_cFUcUc() {
+	nofralloc
+#include "asm/d/save/d_save/setEquipBottleItemIn__17dSv_player_item_cFUcUc.s"
+}
+#pragma pop
+
+
+/* 800336BC-800336E0 0024 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEquipBottleItemEmpty__17dSv_player_item_cFUc() {
+	nofralloc
+#include "asm/d/save/d_save/setEquipBottleItemEmpty__17dSv_player_item_cFUc.s"
+}
+#pragma pop
+
+
+/* 800336E0-80033754 0074 .text      checkBottle__17dSv_player_item_cFUc                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void checkBottle__17dSv_player_item_cFUc() {
+	nofralloc
+#include "asm/d/save/d_save/checkBottle__17dSv_player_item_cFUc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A7288-803A78F8 066C .data      saveBitLabels__16dSv_event_flag_c                            */
-SECTION_DATA u8 saveBitLabels__16dSv_event_flag_c[1648] = {
+u8 saveBitLabels__16dSv_event_flag_c[1648] = {
 	0xFF, 0xFF, 0x00, 0x80, 0x00, 0x40, 0x00, 0x20, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02,
 	0x00, 0x01, 0x01, 0x80, 0x01, 0x40, 0x01, 0x20, 0x01, 0x10, 0x01, 0x08, 0x01, 0x04, 0x01, 0x02,
 	0x01, 0x01, 0x02, 0x80, 0x02, 0x40, 0x02, 0x20, 0x02, 0x10, 0x02, 0x08, 0x02, 0x04, 0x02, 0x02,
@@ -389,1624 +777,1376 @@ SECTION_DATA u8 saveBitLabels__16dSv_event_flag_c[1648] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451D58-80451D5C 0004 .sdata2    @3775                                                        */
-SECTION_SDATA2 u8 d_save_d_save__LIT_3775[4] = {
-	0x43, 0x7F, 0x00, 0x00,
-};
-/* 80451D5C-80451D60 0004 .sdata2    @3813                                                        */
-SECTION_SDATA2 u8 LIT_3813[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80032918-80032958 0040 .text      dSv_item_rename__FUc                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dSv_item_rename__FUc() {
-	nofralloc
-#include "asm/d/save/d_save/dSv_item_rename__FUc.s"
-}
-#pragma pop
-
-/* 80032958-80032A48 00F0 .text      init__21dSv_player_status_a_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__21dSv_player_status_a_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__21dSv_player_status_a_cFv.s"
-}
-#pragma pop
-
-/* 80032A48-80032A5C 0014 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSelectItemIndex__21dSv_player_status_a_cFiUc() {
-	nofralloc
-#include "asm/d/save/d_save/setSelectItemIndex__21dSv_player_status_a_cFiUc.s"
-}
-#pragma pop
-
-/* 80032A5C-80032A78 001C .text      getSelectItemIndex__21dSv_player_status_a_cCFi               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSelectItemIndex__21dSv_player_status_a_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/getSelectItemIndex__21dSv_player_status_a_cCFi.s"
-}
-#pragma pop
-
-/* 80032A78-80032A8C 0014 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMixItemIndex__21dSv_player_status_a_cFiUc() {
-	nofralloc
-#include "asm/d/save/d_save/setMixItemIndex__21dSv_player_status_a_cFiUc.s"
-}
-#pragma pop
-
-/* 80032A8C-80032AA8 001C .text      getMixItemIndex__21dSv_player_status_a_cCFi                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMixItemIndex__21dSv_player_status_a_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/getMixItemIndex__21dSv_player_status_a_cCFi.s"
-}
-#pragma pop
-
-/* 80032AA8-80032AF8 0050 .text      getRupeeMax__21dSv_player_status_a_cCFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getRupeeMax__21dSv_player_status_a_cCFv() {
-	nofralloc
-#include "asm/d/save/d_save/getRupeeMax__21dSv_player_status_a_cCFv.s"
-}
-#pragma pop
-
-/* 80032AF8-80032B50 0058 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isMagicFlag__21dSv_player_status_a_cCFUc() {
-	nofralloc
-#include "asm/d/save/d_save/isMagicFlag__21dSv_player_status_a_cCFUc.s"
-}
-#pragma pop
-
-/* 80032B50-80032B94 0044 .text      init__21dSv_player_status_b_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__21dSv_player_status_b_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__21dSv_player_status_b_cFv.s"
-}
-#pragma pop
-
-/* 80032B94-80032BB0 001C .text      onDarkClearLV__21dSv_player_status_b_cFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onDarkClearLV__21dSv_player_status_b_cFi() {
-	nofralloc
-#include "asm/d/save/d_save/onDarkClearLV__21dSv_player_status_b_cFi.s"
-}
-#pragma pop
-
-/* 80032BB0-80032BD0 0020 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isDarkClearLV__21dSv_player_status_b_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/isDarkClearLV__21dSv_player_status_b_cCFi.s"
-}
-#pragma pop
-
-/* 80032BD0-80032BEC 001C .text      onTransformLV__21dSv_player_status_b_cFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onTransformLV__21dSv_player_status_b_cFi() {
-	nofralloc
-#include "asm/d/save/d_save/onTransformLV__21dSv_player_status_b_cFi.s"
-}
-#pragma pop
-
-/* 80032BEC-80032C0C 0020 .text      isTransformLV__21dSv_player_status_b_cCFi                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isTransformLV__21dSv_player_status_b_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/isTransformLV__21dSv_player_status_b_cCFi.s"
-}
-#pragma pop
-
-/* 80032C0C-80032C64 0058 .text      init__17dSv_horse_place_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__17dSv_horse_place_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__17dSv_horse_place_cFv.s"
-}
-#pragma pop
-
-/* 80032C64-80032CC8 0064 .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void set__17dSv_horse_place_cFPCcRC4cXyzsSc() {
-	nofralloc
-#include "asm/d/save/d_save/set__17dSv_horse_place_cFPCcRC4cXyzsSc.s"
-}
-#pragma pop
-
-/* 80032CC8-80032D1C 0054 .text      init__25dSv_player_return_place_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__25dSv_player_return_place_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__25dSv_player_return_place_cFv.s"
-}
-#pragma pop
-
-/* 80032D1C-80032D60 0044 .text      set__25dSv_player_return_place_cFPCcScUc                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void set__25dSv_player_return_place_cFPCcScUc() {
-	nofralloc
-#include "asm/d/save/d_save/set__25dSv_player_return_place_cFPCcScUc.s"
-}
-#pragma pop
-
-/* 80032D60-80032DE0 0080 .text      init__33dSv_player_field_last_stay_info_cFv                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__33dSv_player_field_last_stay_info_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__33dSv_player_field_last_stay_info_cFv.s"
-}
-#pragma pop
-
-/* 80032DE0-80032E4C 006C .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc() {
-	nofralloc
-#include "asm/d/save/d_save/set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc.s"
-}
-#pragma pop
-
-/* 80032E4C-80032E78 002C .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onRegionBit__33dSv_player_field_last_stay_info_cFi() {
-	nofralloc
-#include "asm/d/save/d_save/onRegionBit__33dSv_player_field_last_stay_info_cFi.s"
-}
-#pragma pop
-
-/* 80032E78-80032EB0 0038 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isRegionBit__33dSv_player_field_last_stay_info_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/isRegionBit__33dSv_player_field_last_stay_info_cCFi.s"
-}
-#pragma pop
-
-/* 80032EB0-80032F2C 007C .text      init__27dSv_player_last_mark_info_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__27dSv_player_last_mark_info_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__27dSv_player_last_mark_info_cFv.s"
-}
-#pragma pop
-
-/* 80032F2C-80032F90 0064 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc() {
-	nofralloc
-#include "asm/d/save/d_save/setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc.s"
-}
-#pragma pop
-
-/* 80032F90-80032FB8 0028 .text      init__17dSv_player_item_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__17dSv_player_item_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/init__17dSv_player_item_cFv.s"
-}
-#pragma pop
-
-/* 80032FB8-80033030 0078 .text      setItem__17dSv_player_item_cFiUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setItem__17dSv_player_item_cFiUc() {
-	nofralloc
-#include "asm/d/save/d_save/setItem__17dSv_player_item_cFiUc.s"
-}
-#pragma pop
-
-/* 80033030-800332F8 02C8 .text      getItem__17dSv_player_item_cCFib                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getItem__17dSv_player_item_cCFib() {
-	nofralloc
-#include "asm/d/save/d_save/getItem__17dSv_player_item_cCFib.s"
-}
-#pragma pop
-
-/* 800332F8-80033354 005C .text      setLineUpItem__17dSv_player_item_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLineUpItem__17dSv_player_item_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/setLineUpItem__17dSv_player_item_cFv.s"
-}
-#pragma pop
-
-/* 80033354-80033370 001C .text      getLineUpItem__17dSv_player_item_cCFi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLineUpItem__17dSv_player_item_cCFi() {
-	nofralloc
-#include "asm/d/save/d_save/getLineUpItem__17dSv_player_item_cCFi.s"
-}
-#pragma pop
-
-/* 80033370-80033450 00E0 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBottleItemIn__17dSv_player_item_cFUcUc() {
-	nofralloc
-#include "asm/d/save/d_save/setBottleItemIn__17dSv_player_item_cFUcUc.s"
-}
-#pragma pop
-
-/* 80033450-80033494 0044 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEmptyBottleItemIn__17dSv_player_item_cFUc() {
-	nofralloc
-#include "asm/d/save/d_save/setEmptyBottleItemIn__17dSv_player_item_cFUc.s"
-}
-#pragma pop
-
-/* 80033494-80033514 0080 .text      setEmptyBottle__17dSv_player_item_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEmptyBottle__17dSv_player_item_cFv() {
-	nofralloc
-#include "asm/d/save/d_save/setEmptyBottle__17dSv_player_item_cFv.s"
-}
-#pragma pop
-
-/* 80033514-80033598 0084 .text      setEmptyBottle__17dSv_player_item_cFUc                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEmptyBottle__17dSv_player_item_cFUc() {
-	nofralloc
-#include "asm/d/save/d_save/setEmptyBottle__17dSv_player_item_cFUc.s"
-}
-#pragma pop
-
-/* 80033598-800336BC 0124 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEquipBottleItemIn__17dSv_player_item_cFUcUc() {
-	nofralloc
-#include "asm/d/save/d_save/setEquipBottleItemIn__17dSv_player_item_cFUcUc.s"
-}
-#pragma pop
-
-/* 800336BC-800336E0 0024 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEquipBottleItemEmpty__17dSv_player_item_cFUc() {
-	nofralloc
-#include "asm/d/save/d_save/setEquipBottleItemEmpty__17dSv_player_item_cFUc.s"
-}
-#pragma pop
-
-/* 800336E0-80033754 0074 .text      checkBottle__17dSv_player_item_cFUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void checkBottle__17dSv_player_item_cFUc() {
-	nofralloc
-#include "asm/d/save/d_save/checkBottle__17dSv_player_item_cFUc.s"
-}
-#pragma pop
 
 /* 80033754-800337EC 0098 .text      checkInsectBottle__17dSv_player_item_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkInsectBottle__17dSv_player_item_cFv() {
+extern "C" asm void checkInsectBottle__17dSv_player_item_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/checkInsectBottle__17dSv_player_item_cFv.s"
 }
 #pragma pop
 
+
 /* 800337EC-80033828 003C .text      checkEmptyBottle__17dSv_player_item_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkEmptyBottle__17dSv_player_item_cFv() {
+extern "C" asm void checkEmptyBottle__17dSv_player_item_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/checkEmptyBottle__17dSv_player_item_cFv.s"
 }
 #pragma pop
 
+
 /* 80033828-80033910 00E8 .text      setBombBagItemIn__17dSv_player_item_cFUcUcb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBombBagItemIn__17dSv_player_item_cFUcUcb() {
+extern "C" asm void setBombBagItemIn__17dSv_player_item_cFUcUcb() {
 	nofralloc
 #include "asm/d/save/d_save/setBombBagItemIn__17dSv_player_item_cFUcUcb.s"
 }
 #pragma pop
 
+
 /* 80033910-80033A20 0110 .text      setBombBagItemIn__17dSv_player_item_cFUcUcUcb                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBombBagItemIn__17dSv_player_item_cFUcUcUcb() {
+extern "C" asm void setBombBagItemIn__17dSv_player_item_cFUcUcUcb() {
 	nofralloc
 #include "asm/d/save/d_save/setBombBagItemIn__17dSv_player_item_cFUcUcUcb.s"
 }
 #pragma pop
 
+
 /* 80033A20-80033A50 0030 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcb               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcb() {
+extern "C" asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcb() {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBagItemIn__17dSv_player_item_cFUcb.s"
 }
 #pragma pop
 
+
 /* 80033A50-80033A88 0038 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb() {
+extern "C" asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb() {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb.s"
 }
 #pragma pop
 
+
 /* 80033A88-80033B08 0080 .text      setEmptyBombBag__17dSv_player_item_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEmptyBombBag__17dSv_player_item_cFv() {
+extern "C" asm void setEmptyBombBag__17dSv_player_item_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBag__17dSv_player_item_cFv.s"
 }
 #pragma pop
 
+
 /* 80033B08-80033BEC 00E4 .text      setEmptyBombBag__17dSv_player_item_cFUcUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEmptyBombBag__17dSv_player_item_cFUcUc() {
+extern "C" asm void setEmptyBombBag__17dSv_player_item_cFUcUc() {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBag__17dSv_player_item_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 80033BEC-80033C2C 0040 .text      checkBombBag__17dSv_player_item_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkBombBag__17dSv_player_item_cFUc() {
+extern "C" asm void checkBombBag__17dSv_player_item_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/checkBombBag__17dSv_player_item_cFUc.s"
 }
 #pragma pop
 
+
 /* 80033C2C-80033CBC 0090 .text      setWarashibeItem__17dSv_player_item_cFUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWarashibeItem__17dSv_player_item_cFUc() {
+extern "C" asm void setWarashibeItem__17dSv_player_item_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/setWarashibeItem__17dSv_player_item_cFUc.s"
 }
 #pragma pop
 
+
 /* 80033CBC-80033D40 0084 .text      setRodTypeLevelUp__17dSv_player_item_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setRodTypeLevelUp__17dSv_player_item_cFv() {
+extern "C" asm void setRodTypeLevelUp__17dSv_player_item_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/setRodTypeLevelUp__17dSv_player_item_cFv.s"
 }
 #pragma pop
 
+
 /* 80033D40-80033E40 0100 .text      setBaitItem__17dSv_player_item_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBaitItem__17dSv_player_item_cFUc() {
+extern "C" asm void setBaitItem__17dSv_player_item_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/setBaitItem__17dSv_player_item_cFUc.s"
 }
 #pragma pop
 
+
 /* 80033E40-80033E60 0020 .text      init__21dSv_player_get_item_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__21dSv_player_get_item_cFv() {
+extern "C" asm void init__21dSv_player_get_item_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__21dSv_player_get_item_cFv.s"
 }
 #pragma pop
 
+
 /* 80033E60-80033E94 0034 .text      onFirstBit__21dSv_player_get_item_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onFirstBit__21dSv_player_get_item_cFUc() {
+extern "C" asm void onFirstBit__21dSv_player_get_item_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/onFirstBit__21dSv_player_get_item_cFUc.s"
 }
 #pragma pop
 
+
 /* 80033E94-80033EC8 0034 .text      offFirstBit__21dSv_player_get_item_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offFirstBit__21dSv_player_get_item_cFUc() {
+extern "C" asm void offFirstBit__21dSv_player_get_item_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/offFirstBit__21dSv_player_get_item_cFUc.s"
 }
 #pragma pop
 
+
 /* 80033EC8-80033F00 0038 .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isFirstBit__21dSv_player_get_item_cCFUc() {
+extern "C" asm void isFirstBit__21dSv_player_get_item_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/isFirstBit__21dSv_player_get_item_cCFUc.s"
 }
 #pragma pop
 
+
 /* 80033F00-80033F6C 006C .text      init__24dSv_player_item_record_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__24dSv_player_item_record_cFv() {
+extern "C" asm void init__24dSv_player_item_record_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__24dSv_player_item_record_cFv.s"
 }
 #pragma pop
 
+
 /* 80033F6C-80033F7C 0010 .text      setBombNum__24dSv_player_item_record_cFUcUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBombNum__24dSv_player_item_record_cFUcUc() {
+extern "C" asm void setBombNum__24dSv_player_item_record_cFUcUc() {
 	nofralloc
 #include "asm/d/save/d_save/setBombNum__24dSv_player_item_record_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 80033F7C-80033F8C 0010 .text      getBombNum__24dSv_player_item_record_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBombNum__24dSv_player_item_record_cCFUc() {
+extern "C" asm void getBombNum__24dSv_player_item_record_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/getBombNum__24dSv_player_item_record_cCFUc.s"
 }
 #pragma pop
 
+
 /* 80033F8C-80033F9C 0010 .text      setBottleNum__24dSv_player_item_record_cFUcUc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBottleNum__24dSv_player_item_record_cFUcUc() {
+extern "C" asm void setBottleNum__24dSv_player_item_record_cFUcUc() {
 	nofralloc
 #include "asm/d/save/d_save/setBottleNum__24dSv_player_item_record_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 80033F9C-80034030 0094 .text      addBottleNum__24dSv_player_item_record_cFUcs                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void addBottleNum__24dSv_player_item_record_cFUcs() {
+extern "C" asm void addBottleNum__24dSv_player_item_record_cFUcs() {
 	nofralloc
 #include "asm/d/save/d_save/addBottleNum__24dSv_player_item_record_cFUcs.s"
 }
 #pragma pop
 
+
 /* 80034030-80034040 0010 .text      getBottleNum__24dSv_player_item_record_cCFUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBottleNum__24dSv_player_item_record_cCFUc() {
+extern "C" asm void getBottleNum__24dSv_player_item_record_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/getBottleNum__24dSv_player_item_record_cCFUc.s"
 }
 #pragma pop
 
+
 /* 80034040-800340B8 0078 .text      init__21dSv_player_item_max_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__21dSv_player_item_max_cFv() {
+extern "C" asm void init__21dSv_player_item_max_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__21dSv_player_item_max_cFv.s"
 }
 #pragma pop
 
+
 /* 800340B8-800340F8 0040 .text      setBombNum__21dSv_player_item_max_cFUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBombNum__21dSv_player_item_max_cFUcUc() {
+extern "C" asm void setBombNum__21dSv_player_item_max_cFUcUc() {
 	nofralloc
 #include "asm/d/save/d_save/setBombNum__21dSv_player_item_max_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 800340F8-800341AC 00B4 .text      getBombNum__21dSv_player_item_max_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBombNum__21dSv_player_item_max_cCFUc() {
+extern "C" asm void getBombNum__21dSv_player_item_max_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/getBombNum__21dSv_player_item_max_cCFUc.s"
 }
 #pragma pop
 
+
 /* 800341AC-800341E8 003C .text      init__20dSv_player_collect_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__20dSv_player_collect_cFv() {
+extern "C" asm void init__20dSv_player_collect_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__20dSv_player_collect_cFv.s"
 }
 #pragma pop
 
+
 /* 800341E8-80034208 0020 .text      setCollect__20dSv_player_collect_cFiUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCollect__20dSv_player_collect_cFiUc() {
+extern "C" asm void setCollect__20dSv_player_collect_cFiUc() {
 	nofralloc
 #include "asm/d/save/d_save/setCollect__20dSv_player_collect_cFiUc.s"
 }
 #pragma pop
 
+
 /* 80034208-8003422C 0024 .text      isCollect__20dSv_player_collect_cCFiUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isCollect__20dSv_player_collect_cCFiUc() {
+extern "C" asm void isCollect__20dSv_player_collect_cCFiUc() {
 	nofralloc
 #include "asm/d/save/d_save/isCollect__20dSv_player_collect_cCFiUc.s"
 }
 #pragma pop
 
+
 /* 8003422C-8003424C 0020 .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onCollectCrystal__20dSv_player_collect_cFUc() {
+extern "C" asm void onCollectCrystal__20dSv_player_collect_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/onCollectCrystal__20dSv_player_collect_cFUc.s"
 }
 #pragma pop
 
+
 /* 8003424C-80034270 0024 .text      isCollectCrystal__20dSv_player_collect_cCFUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isCollectCrystal__20dSv_player_collect_cCFUc() {
+extern "C" asm void isCollectCrystal__20dSv_player_collect_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/isCollectCrystal__20dSv_player_collect_cCFUc.s"
 }
 #pragma pop
 
+
 /* 80034270-80034290 0020 .text      onCollectMirror__20dSv_player_collect_cFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onCollectMirror__20dSv_player_collect_cFUc() {
+extern "C" asm void onCollectMirror__20dSv_player_collect_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/onCollectMirror__20dSv_player_collect_cFUc.s"
 }
 #pragma pop
 
+
 /* 80034290-800342B4 0024 .text      isCollectMirror__20dSv_player_collect_cCFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isCollectMirror__20dSv_player_collect_cCFUc() {
+extern "C" asm void isCollectMirror__20dSv_player_collect_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/isCollectMirror__20dSv_player_collect_cCFUc.s"
 }
 #pragma pop
 
+
 /* 800342B4-800342DC 0028 .text      init__17dSv_player_wolf_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__17dSv_player_wolf_cFv() {
+extern "C" asm void init__17dSv_player_wolf_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__17dSv_player_wolf_cFv.s"
 }
 #pragma pop
 
+
 /* 800342DC-80034320 0044 .text      init__16dSv_light_drop_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__16dSv_light_drop_cFv() {
+extern "C" asm void init__16dSv_light_drop_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__16dSv_light_drop_cFv.s"
 }
 #pragma pop
 
+
 /* 80034320-80034340 0020 .text      setLightDropNum__16dSv_light_drop_cFUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setLightDropNum__16dSv_light_drop_cFUcUc() {
+extern "C" asm void setLightDropNum__16dSv_light_drop_cFUcUc() {
 	nofralloc
 #include "asm/d/save/d_save/setLightDropNum__16dSv_light_drop_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 80034340-80034368 0028 .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getLightDropNum__16dSv_light_drop_cCFUc() {
+extern "C" asm void getLightDropNum__16dSv_light_drop_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/getLightDropNum__16dSv_light_drop_cCFUc.s"
 }
 #pragma pop
 
+
 /* 80034368-8003439C 0034 .text      onLightDropGetFlag__16dSv_light_drop_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onLightDropGetFlag__16dSv_light_drop_cFUc() {
+extern "C" asm void onLightDropGetFlag__16dSv_light_drop_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/onLightDropGetFlag__16dSv_light_drop_cFUc.s"
 }
 #pragma pop
 
+
 /* 8003439C-800343DC 0040 .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isLightDropGetFlag__16dSv_light_drop_cCFUc() {
+extern "C" asm void isLightDropGetFlag__16dSv_light_drop_cCFUc() {
 	nofralloc
 #include "asm/d/save/d_save/isLightDropGetFlag__16dSv_light_drop_cCFUc.s"
 }
 #pragma pop
 
+
 /* 800343DC-80034428 004C .text      init__17dSv_letter_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__17dSv_letter_info_cFv() {
+extern "C" asm void init__17dSv_letter_info_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__17dSv_letter_info_cFv.s"
 }
 #pragma pop
 
+
 /* 80034428-8003444C 0024 .text      onLetterGetFlag__17dSv_letter_info_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onLetterGetFlag__17dSv_letter_info_cFi() {
+extern "C" asm void onLetterGetFlag__17dSv_letter_info_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onLetterGetFlag__17dSv_letter_info_cFi.s"
 }
 #pragma pop
 
+
 /* 8003444C-80034474 0028 .text      isLetterGetFlag__17dSv_letter_info_cCFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isLetterGetFlag__17dSv_letter_info_cCFi() {
+extern "C" asm void isLetterGetFlag__17dSv_letter_info_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isLetterGetFlag__17dSv_letter_info_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034474-8003449C 0028 .text      onLetterReadFlag__17dSv_letter_info_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onLetterReadFlag__17dSv_letter_info_cFi() {
+extern "C" asm void onLetterReadFlag__17dSv_letter_info_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onLetterReadFlag__17dSv_letter_info_cFi.s"
 }
 #pragma pop
 
+
 /* 8003449C-800344C8 002C .text      isLetterReadFlag__17dSv_letter_info_cCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isLetterReadFlag__17dSv_letter_info_cCFi() {
+extern "C" asm void isLetterReadFlag__17dSv_letter_info_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isLetterReadFlag__17dSv_letter_info_cCFi.s"
 }
 #pragma pop
 
+
 /* 800344C8-800344FC 0034 .text      init__18dSv_fishing_info_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__18dSv_fishing_info_cFv() {
+extern "C" asm void init__18dSv_fishing_info_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__18dSv_fishing_info_cFv.s"
 }
 #pragma pop
 
+
 /* 800344FC-80034518 001C .text      addFishCount__18dSv_fishing_info_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void addFishCount__18dSv_fishing_info_cFUc() {
+extern "C" asm void addFishCount__18dSv_fishing_info_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/addFishCount__18dSv_fishing_info_cFUc.s"
 }
 #pragma pop
 
+
 /* 80034518-800345AC 0094 .text      init__17dSv_player_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__17dSv_player_info_cFv() {
+extern "C" asm void init__17dSv_player_info_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__17dSv_player_info_cFv.s"
 }
 #pragma pop
 
+
 /* 800345AC-80034644 0098 .text      init__19dSv_player_config_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__19dSv_player_config_cFv() {
+extern "C" asm void init__19dSv_player_config_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__19dSv_player_config_cFv.s"
 }
 #pragma pop
 
+
 /* 80034644-80034684 0040 .text      checkVibration__19dSv_player_config_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkVibration__19dSv_player_config_cCFv() {
+extern "C" asm void checkVibration__19dSv_player_config_cCFv() {
 	nofralloc
 #include "asm/d/save/d_save/checkVibration__19dSv_player_config_cCFv.s"
 }
 #pragma pop
 
+
 /* 80034684-8003468C 0008 .text      getSound__19dSv_player_config_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSound__19dSv_player_config_cFv() {
+extern "C" asm void getSound__19dSv_player_config_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/getSound__19dSv_player_config_cFv.s"
 }
 #pragma pop
 
+
 /* 8003468C-80034694 0008 .text      setSound__19dSv_player_config_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSound__19dSv_player_config_cFUc() {
+extern "C" asm void setSound__19dSv_player_config_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/setSound__19dSv_player_config_cFUc.s"
 }
 #pragma pop
 
+
 /* 80034694-8003469C 0008 .text      getVibration__19dSv_player_config_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getVibration__19dSv_player_config_cFv() {
+extern "C" asm void getVibration__19dSv_player_config_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/getVibration__19dSv_player_config_cFv.s"
 }
 #pragma pop
 
+
 /* 8003469C-800346A4 0008 .text      setVibration__19dSv_player_config_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setVibration__19dSv_player_config_cFUc() {
+extern "C" asm void setVibration__19dSv_player_config_cFUc() {
 	nofralloc
 #include "asm/d/save/d_save/setVibration__19dSv_player_config_cFUc.s"
 }
 #pragma pop
 
+
 /* 800346A4-80034750 00AC .text      init__12dSv_player_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dSv_player_cFv() {
+extern "C" asm void init__12dSv_player_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__12dSv_player_cFv.s"
 }
 #pragma pop
 
+
 /* 80034750-800347A0 0050 .text      init__12dSv_memBit_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dSv_memBit_cFv() {
+extern "C" asm void init__12dSv_memBit_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__12dSv_memBit_cFv.s"
 }
 #pragma pop
 
+
 /* 800347A0-800347C4 0024 .text      onTbox__12dSv_memBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onTbox__12dSv_memBit_cFi() {
+extern "C" asm void onTbox__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onTbox__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 800347C4-800347E8 0024 .text      offTbox__12dSv_memBit_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offTbox__12dSv_memBit_cFi() {
+extern "C" asm void offTbox__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offTbox__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 800347E8-80034810 0028 .text      isTbox__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isTbox__12dSv_memBit_cCFi() {
+extern "C" asm void isTbox__12dSv_memBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isTbox__12dSv_memBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034810-80034838 0028 .text      onSwitch__12dSv_memBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onSwitch__12dSv_memBit_cFi() {
+extern "C" asm void onSwitch__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034838-80034860 0028 .text      offSwitch__12dSv_memBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offSwitch__12dSv_memBit_cFi() {
+extern "C" asm void offSwitch__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034860-8003488C 002C .text      isSwitch__12dSv_memBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isSwitch__12dSv_memBit_cCFi() {
+extern "C" asm void isSwitch__12dSv_memBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__12dSv_memBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 8003488C-800348C4 0038 .text      revSwitch__12dSv_memBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void revSwitch__12dSv_memBit_cFi() {
+extern "C" asm void revSwitch__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 800348C4-800348EC 0028 .text      onItem__12dSv_memBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onItem__12dSv_memBit_cFi() {
+extern "C" asm void onItem__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onItem__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 800348EC-80034918 002C .text      isItem__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isItem__12dSv_memBit_cCFi() {
+extern "C" asm void isItem__12dSv_memBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isItem__12dSv_memBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034918-80034934 001C .text      onDungeonItem__12dSv_memBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onDungeonItem__12dSv_memBit_cFi() {
+extern "C" asm void onDungeonItem__12dSv_memBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onDungeonItem__12dSv_memBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034934-80034954 0020 .text      isDungeonItem__12dSv_memBit_cCFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isDungeonItem__12dSv_memBit_cCFi() {
+extern "C" asm void isDungeonItem__12dSv_memBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isDungeonItem__12dSv_memBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034954-8003498C 0038 .text      init__11dSv_event_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__11dSv_event_cFv() {
+extern "C" asm void init__11dSv_event_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__11dSv_event_cFv.s"
 }
 #pragma pop
 
+
 /* 8003498C-800349A4 0018 .text      onEventBit__11dSv_event_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onEventBit__11dSv_event_cFUs() {
+extern "C" asm void onEventBit__11dSv_event_cFUs() {
 	nofralloc
 #include "asm/d/save/d_save/onEventBit__11dSv_event_cFUs.s"
 }
 #pragma pop
 
+
 /* 800349A4-800349BC 0018 .text      offEventBit__11dSv_event_cFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offEventBit__11dSv_event_cFUs() {
+extern "C" asm void offEventBit__11dSv_event_cFUs() {
 	nofralloc
 #include "asm/d/save/d_save/offEventBit__11dSv_event_cFUs.s"
 }
 #pragma pop
 
+
 /* 800349BC-800349E0 0024 .text      isEventBit__11dSv_event_cCFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isEventBit__11dSv_event_cCFUs() {
+extern "C" asm void isEventBit__11dSv_event_cCFUs() {
 	nofralloc
 #include "asm/d/save/d_save/isEventBit__11dSv_event_cCFUs.s"
 }
 #pragma pop
 
+
 /* 800349E0-80034A04 0024 .text      setEventReg__11dSv_event_cFUsUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEventReg__11dSv_event_cFUsUc() {
+extern "C" asm void setEventReg__11dSv_event_cFUsUc() {
 	nofralloc
 #include "asm/d/save/d_save/setEventReg__11dSv_event_cFUsUc.s"
 }
 #pragma pop
 
+
 /* 80034A04-80034A1C 0018 .text      getEventReg__11dSv_event_cCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getEventReg__11dSv_event_cCFUs() {
+extern "C" asm void getEventReg__11dSv_event_cCFUs() {
 	nofralloc
 #include "asm/d/save/d_save/getEventReg__11dSv_event_cCFUs.s"
 }
 #pragma pop
 
+
 /* 80034A1C-80034A64 0048 .text      init__14dSv_MiniGame_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__14dSv_MiniGame_cFv() {
+extern "C" asm void init__14dSv_MiniGame_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__14dSv_MiniGame_cFv.s"
 }
 #pragma pop
 
+
 /* 80034A64-80034A84 0020 .text      init__12dSv_memory_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dSv_memory_cFv() {
+extern "C" asm void init__12dSv_memory_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__12dSv_memory_cFv.s"
 }
 #pragma pop
 
+
 /* 80034A84-80034AA4 0020 .text      init__13dSv_memory2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13dSv_memory2_cFv() {
+extern "C" asm void init__13dSv_memory2_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__13dSv_memory2_cFv.s"
 }
 #pragma pop
 
+
 /* 80034AA4-80034AC8 0024 .text      onVisitedRoom__13dSv_memory2_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onVisitedRoom__13dSv_memory2_cFi() {
+extern "C" asm void onVisitedRoom__13dSv_memory2_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onVisitedRoom__13dSv_memory2_cFi.s"
 }
 #pragma pop
 
+
 /* 80034AC8-80034AEC 0024 .text      offVisitedRoom__13dSv_memory2_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offVisitedRoom__13dSv_memory2_cFi() {
+extern "C" asm void offVisitedRoom__13dSv_memory2_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offVisitedRoom__13dSv_memory2_cFi.s"
 }
 #pragma pop
 
+
 /* 80034AEC-80034B14 0028 .text      isVisitedRoom__13dSv_memory2_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isVisitedRoom__13dSv_memory2_cFi() {
+extern "C" asm void isVisitedRoom__13dSv_memory2_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/isVisitedRoom__13dSv_memory2_cFi.s"
 }
 #pragma pop
 
+
 /* 80034B14-80034B98 0084 .text      init__12dSv_danBit_cFSc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dSv_danBit_cFSc() {
+extern "C" asm void init__12dSv_danBit_cFSc() {
 	nofralloc
 #include "asm/d/save/d_save/init__12dSv_danBit_cFSc.s"
 }
 #pragma pop
 
+
 /* 80034B98-80034BC0 0028 .text      onSwitch__12dSv_danBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onSwitch__12dSv_danBit_cFi() {
+extern "C" asm void onSwitch__12dSv_danBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__12dSv_danBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034BC0-80034BE8 0028 .text      offSwitch__12dSv_danBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offSwitch__12dSv_danBit_cFi() {
+extern "C" asm void offSwitch__12dSv_danBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__12dSv_danBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034BE8-80034C14 002C .text      isSwitch__12dSv_danBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isSwitch__12dSv_danBit_cCFi() {
+extern "C" asm void isSwitch__12dSv_danBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__12dSv_danBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034C14-80034C4C 0038 .text      revSwitch__12dSv_danBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void revSwitch__12dSv_danBit_cFi() {
+extern "C" asm void revSwitch__12dSv_danBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__12dSv_danBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034C4C-80034C74 0028 .text      onItem__12dSv_danBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onItem__12dSv_danBit_cFi() {
+extern "C" asm void onItem__12dSv_danBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onItem__12dSv_danBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034C74-80034CA0 002C .text      isItem__12dSv_danBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isItem__12dSv_danBit_cCFi() {
+extern "C" asm void isItem__12dSv_danBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isItem__12dSv_danBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034CA0-80034CEC 004C .text      init__13dSv_zoneBit_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13dSv_zoneBit_cFv() {
+extern "C" asm void init__13dSv_zoneBit_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__13dSv_zoneBit_cFv.s"
 }
 #pragma pop
 
+
 /* 80034CEC-80034CF8 000C .text      clearRoomSwitch__13dSv_zoneBit_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearRoomSwitch__13dSv_zoneBit_cFv() {
+extern "C" asm void clearRoomSwitch__13dSv_zoneBit_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/clearRoomSwitch__13dSv_zoneBit_cFv.s"
 }
 #pragma pop
 
+
 /* 80034CF8-80034D04 000C .text      clearRoomItem__13dSv_zoneBit_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearRoomItem__13dSv_zoneBit_cFv() {
+extern "C" asm void clearRoomItem__13dSv_zoneBit_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/clearRoomItem__13dSv_zoneBit_cFv.s"
 }
 #pragma pop
 
+
 /* 80034D04-80034D2C 0028 .text      onSwitch__13dSv_zoneBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void onSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034D2C-80034D50 0024 .text      offSwitch__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void offSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034D50-80034D78 0028 .text      isSwitch__13dSv_zoneBit_cCFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isSwitch__13dSv_zoneBit_cCFi() {
+extern "C" asm void isSwitch__13dSv_zoneBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__13dSv_zoneBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034D78-80034DAC 0034 .text      revSwitch__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void revSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void revSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034DAC-80034DC8 001C .text      onOneSwitch__13dSv_zoneBit_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onOneSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void onOneSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onOneSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034DC8-80034DE0 0018 .text      offOneSwitch__13dSv_zoneBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offOneSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void offOneSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/offOneSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034DE0-80034DFC 001C .text      isOneSwitch__13dSv_zoneBit_cCFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isOneSwitch__13dSv_zoneBit_cCFi() {
+extern "C" asm void isOneSwitch__13dSv_zoneBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isOneSwitch__13dSv_zoneBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034DFC-80034E24 0028 .text      revOneSwitch__13dSv_zoneBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void revOneSwitch__13dSv_zoneBit_cFi() {
+extern "C" asm void revOneSwitch__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/revOneSwitch__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034E24-80034E50 002C .text      onItem__13dSv_zoneBit_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onItem__13dSv_zoneBit_cFi() {
+extern "C" asm void onItem__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onItem__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034E50-80034E7C 002C .text      isItem__13dSv_zoneBit_cCFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isItem__13dSv_zoneBit_cCFi() {
+extern "C" asm void isItem__13dSv_zoneBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isItem__13dSv_zoneBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034E7C-80034E98 001C .text      onOneItem__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onOneItem__13dSv_zoneBit_cFi() {
+extern "C" asm void onOneItem__13dSv_zoneBit_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/onOneItem__13dSv_zoneBit_cFi.s"
 }
 #pragma pop
 
+
 /* 80034E98-80034EB4 001C .text      isOneItem__13dSv_zoneBit_cCFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isOneItem__13dSv_zoneBit_cCFi() {
+extern "C" asm void isOneItem__13dSv_zoneBit_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/isOneItem__13dSv_zoneBit_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034EB4-80034ED4 0020 .text      init__15dSv_zoneActor_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__15dSv_zoneActor_cFv() {
+extern "C" asm void init__15dSv_zoneActor_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__15dSv_zoneActor_cFv.s"
 }
 #pragma pop
 
+
 /* 80034ED4-80034EF8 0024 .text      on__15dSv_zoneActor_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void on__15dSv_zoneActor_cFi() {
+extern "C" asm void on__15dSv_zoneActor_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/on__15dSv_zoneActor_cFi.s"
 }
 #pragma pop
 
+
 /* 80034EF8-80034F1C 0024 .text      off__15dSv_zoneActor_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void off__15dSv_zoneActor_cFi() {
+extern "C" asm void off__15dSv_zoneActor_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/off__15dSv_zoneActor_cFi.s"
 }
 #pragma pop
 
+
 /* 80034F1C-80034F44 0028 .text      is__15dSv_zoneActor_cCFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void is__15dSv_zoneActor_cCFi() {
+extern "C" asm void is__15dSv_zoneActor_cCFi() {
 	nofralloc
 #include "asm/d/save/d_save/is__15dSv_zoneActor_cCFi.s"
 }
 #pragma pop
 
+
 /* 80034F44-80034F80 003C .text      init__10dSv_zone_cFi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__10dSv_zone_cFi() {
+extern "C" asm void init__10dSv_zone_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/init__10dSv_zone_cFi.s"
 }
 #pragma pop
 
+
 /* 80034F80-80034FA4 0024 .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setRoom__13dSv_restart_cFRC4cXyzsSc() {
+extern "C" asm void setRoom__13dSv_restart_cFRC4cXyzsSc() {
 	nofralloc
 #include "asm/d/save/d_save/setRoom__13dSv_restart_cFRC4cXyzsSc.s"
 }
 #pragma pop
 
+
 /* 80034FA4-80034FCC 0028 .text      set__17dSv_turnRestart_cFRC4cXyzsScUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__17dSv_turnRestart_cFRC4cXyzsScUl() {
+extern "C" asm void set__17dSv_turnRestart_cFRC4cXyzsScUl() {
 	nofralloc
 #include "asm/d/save/d_save/set__17dSv_turnRestart_cFRC4cXyzsScUl.s"
 }
 #pragma pop
 
+
 /* 80034FCC-8003501C 0050 .text      init__10dSv_info_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__10dSv_info_cFv() {
+extern "C" asm void init__10dSv_info_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__10dSv_info_cFv.s"
 }
 #pragma pop
 
+
 /* 8003501C-800350A8 008C .text      init__10dSv_save_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__10dSv_save_cFv() {
+extern "C" asm void init__10dSv_save_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/init__10dSv_save_cFv.s"
 }
 #pragma pop
 
+
 /* 800350A8-800350BC 0014 .text      getSave2__10dSv_save_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSave2__10dSv_save_cFi() {
+extern "C" asm void getSave2__10dSv_save_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/getSave2__10dSv_save_cFi.s"
 }
 #pragma pop
 
+
 /* 800350BC-800350F0 0034 .text      getSave__10dSv_info_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSave__10dSv_info_cFi() {
+extern "C" asm void getSave__10dSv_info_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/getSave__10dSv_info_cFi.s"
 }
 #pragma pop
 
+
 /* 800350F0-8003514C 005C .text      putSave__10dSv_info_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void putSave__10dSv_info_cFi() {
+extern "C" asm void putSave__10dSv_info_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/putSave__10dSv_info_cFi.s"
 }
 #pragma pop
 
+
 /* 8003514C-800351A4 0058 .text      initZone__10dSv_info_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initZone__10dSv_info_cFv() {
+extern "C" asm void initZone__10dSv_info_cFv() {
 	nofralloc
 #include "asm/d/save/d_save/initZone__10dSv_info_cFv.s"
 }
 #pragma pop
 
+
 /* 800351A4-80035200 005C .text      createZone__10dSv_info_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createZone__10dSv_info_cFi() {
+extern "C" asm void createZone__10dSv_info_cFi() {
 	nofralloc
 #include "asm/d/save/d_save/createZone__10dSv_info_cFi.s"
 }
 #pragma pop
 
+
 /* 80035200-800352B0 00B0 .text      onSwitch__10dSv_info_cFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onSwitch__10dSv_info_cFii() {
+extern "C" asm void onSwitch__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 800352B0-80035360 00B0 .text      offSwitch__10dSv_info_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offSwitch__10dSv_info_cFii() {
+extern "C" asm void offSwitch__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 80035360-8003542C 00CC .text      isSwitch__10dSv_info_cCFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isSwitch__10dSv_info_cCFii() {
+extern "C" asm void isSwitch__10dSv_info_cCFii() {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__10dSv_info_cCFii.s"
 }
 #pragma pop
 
+
 /* 8003542C-800354E0 00B4 .text      revSwitch__10dSv_info_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void revSwitch__10dSv_info_cFii() {
+extern "C" asm void revSwitch__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 800354E0-80035590 00B0 .text      onItem__10dSv_info_cFii                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onItem__10dSv_info_cFii() {
+extern "C" asm void onItem__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/onItem__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 80035590-80035644 00B4 .text      isItem__10dSv_info_cCFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isItem__10dSv_info_cCFii() {
+extern "C" asm void isItem__10dSv_info_cCFii() {
 	nofralloc
 #include "asm/d/save/d_save/isItem__10dSv_info_cCFii.s"
 }
 #pragma pop
 
+
 /* 80035644-800356B4 0070 .text      onActor__10dSv_info_cFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onActor__10dSv_info_cFii() {
+extern "C" asm void onActor__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/onActor__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 800356B4-80035724 0070 .text      offActor__10dSv_info_cFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offActor__10dSv_info_cFii() {
+extern "C" asm void offActor__10dSv_info_cFii() {
 	nofralloc
 #include "asm/d/save/d_save/offActor__10dSv_info_cFii.s"
 }
 #pragma pop
 
+
 /* 80035724-80035798 0074 .text      isActor__10dSv_info_cCFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isActor__10dSv_info_cCFii() {
+extern "C" asm void isActor__10dSv_info_cCFii() {
 	nofralloc
 #include "asm/d/save/d_save/isActor__10dSv_info_cCFii.s"
 }
 #pragma pop
 
+
 /* 80035798-80035A04 026C .text      memory_to_card__10dSv_info_cFPci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void memory_to_card__10dSv_info_cFPci() {
+extern "C" asm void memory_to_card__10dSv_info_cFPci() {
 	nofralloc
 #include "asm/d/save/d_save/memory_to_card__10dSv_info_cFPci.s"
 }
 #pragma pop
 
+
 /* 80035A04-80035BD0 01CC .text      card_to_memory__10dSv_info_cFPci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void card_to_memory__10dSv_info_cFPci() {
+extern "C" asm void card_to_memory__10dSv_info_cFPci() {
 	nofralloc
 #include "asm/d/save/d_save/card_to_memory__10dSv_info_cFPci.s"
 }
 #pragma pop
 
+
 /* 80035BD0-80035C88 00B8 .text      initdata_to_card__10dSv_info_cFPci                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initdata_to_card__10dSv_info_cFPci() {
+extern "C" asm void initdata_to_card__10dSv_info_cFPci() {
 	nofralloc
 #include "asm/d/save/d_save/initdata_to_card__10dSv_info_cFPci.s"
 }

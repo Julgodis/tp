@@ -37,7 +37,7 @@ lbl_801D9920:
 lbl_801D9978:
 /* 801D9978 00000000  90 1F 00 68 */	stw r0, 0x68(r31)
 /* 801D997C 00000004  80 7F 00 68 */	lwz r3, 0x68(r31)
-/* 801D9980 00000008  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D9980 00000008  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D9984 0000000C  48 07 BE 4D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D9988 00000010  38 60 00 6C */	li r3, 0x6c
 /* 801D998C 00000014  48 0F 52 C1 */	bl __nw__FUl

@@ -7,9 +7,9 @@ from intervaltree import Interval, IntervalTree
 
 def merge_symbol_from_group(group):
     if len(group) == 1:
-        return group
+        return None
 
-    if isinstance(group[0], InitData):
+    if isinstance(group[0], InitData) or isinstance(group[0], Literal):
         return [InitStruct.create(group)]
     elif isinstance(group[0], ZeroData):
         return [ZeroStruct.create(group)]
@@ -61,6 +61,8 @@ def execute(libraries):
                 curr.padding = 0
                 break
 
+    remove_list = set()
+    add_list = set()
     for lib in libraries:
         for tu in lib.translation_units:
             for sec in tu.sections:
@@ -77,10 +79,23 @@ def execute(libraries):
                             group.append(sym)
                     else:
                         if group:
-                            symbols.extend(merge_symbol_from_group(group))
+                            new_symbols = merge_symbol_from_group(group)
+                            if new_symbols != None:
+                                add_list.update(set(new_symbols))
+                                remove_list.update(set(group) - add_list)
+                                symbols.extend(new_symbols)
+                            else:
+                                symbols.extend(group)
                         group = [sym]
                 
                 if group:
-                    symbols.extend(merge_symbol_from_group(group))
+                    new_symbols = merge_symbol_from_group(group)
+                    if new_symbols != None:
+                        add_list.update(set(new_symbols))
+                        remove_list.update(set(group) - add_list)
+                        symbols.extend(new_symbols)
+                    else:
+                        symbols.extend(group)
                 sec.symbols = symbols   
+    return add_list, remove_list
         

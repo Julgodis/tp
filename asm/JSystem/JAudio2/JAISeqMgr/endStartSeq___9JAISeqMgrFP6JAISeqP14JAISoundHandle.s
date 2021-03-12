@@ -53,8 +53,8 @@ lbl_802A2084:
 /* 802A20A0 0000001C  38 63 40 CC */	addi r3, r3, data_804340CC@l
 /* 802A20A4 00000020  3C 80 80 2A */	lis r4, func_802A1AF4@ha
 /* 802A20A8 00000024  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
-/* 802A20AC 00000028  3C A0 80 43 */	lis r5, LIT_715@ha
-/* 802A20B0 0000002C  38 A5 40 C0 */	addi r5, r5, LIT_715@l
+/* 802A20AC 00000028  3C A0 80 43 */	lis r5, lit_715@ha
+/* 802A20B0 0000002C  38 A5 40 C0 */	addi r5, r5, lit_715@l
 /* 802A20B4 00000030  48 0B FB 71 */	bl __register_global_object
 /* 802A20B8 00000034  38 00 00 01 */	li r0, 1
 /* 802A20BC 00000038  98 0D 8D A0 */	stb r0, data_80451320(r13)

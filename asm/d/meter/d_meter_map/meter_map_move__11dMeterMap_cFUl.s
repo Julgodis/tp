@@ -33,9 +33,9 @@ lbl_8020E754:
 /* 8020E7D0 0000007C  38 A0 00 00 */	li r5, 0
 /* 8020E7D4 00000080  38 C0 00 00 */	li r6, 0
 /* 8020E7D8 00000084  38 E0 00 00 */	li r7, 0
-/* 8020E7DC 00000088  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E7DC 00000088  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E7E0 0000008C  FC 40 08 90 */	fmr f2, f1
-/* 8020E7E4 00000090  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E7E4 00000090  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E7E8 00000094  FC 80 18 90 */	fmr f4, f3
 /* 8020E7EC 00000098  39 00 00 00 */	li r8, 0
 /* 8020E7F0 0000009C  48 09 D1 95 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -95,9 +95,9 @@ lbl_8020E890:
 /* 8020E8B8 00000028  38 A0 00 00 */	li r5, 0
 /* 8020E8BC 0000002C  38 C0 00 00 */	li r6, 0
 /* 8020E8C0 00000030  38 E0 00 00 */	li r7, 0
-/* 8020E8C4 00000034  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E8C4 00000034  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E8C8 00000038  FC 40 08 90 */	fmr f2, f1
-/* 8020E8CC 0000003C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E8CC 0000003C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E8D0 00000040  FC 80 18 90 */	fmr f4, f3
 /* 8020E8D4 00000044  39 00 00 00 */	li r8, 0
 /* 8020E8D8 00000048  48 09 D0 AD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -152,9 +152,9 @@ lbl_8020E968:
 /* 8020E990 00000028  38 A0 00 00 */	li r5, 0
 /* 8020E994 0000002C  38 C0 00 00 */	li r6, 0
 /* 8020E998 00000030  38 E0 00 00 */	li r7, 0
-/* 8020E99C 00000034  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E99C 00000034  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E9A0 00000038  FC 40 08 90 */	fmr f2, f1
-/* 8020E9A4 0000003C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E9A4 0000003C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E9A8 00000040  FC 80 18 90 */	fmr f4, f3
 /* 8020E9AC 00000044  39 00 00 00 */	li r8, 0
 /* 8020E9B0 00000048  48 09 CF D5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

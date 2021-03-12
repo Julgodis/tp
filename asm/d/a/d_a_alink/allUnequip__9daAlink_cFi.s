@@ -56,14 +56,14 @@ lbl_800B98F0:
 /* 800B9900 00000010  38 A0 00 00 */	li r5, 0
 /* 800B9904 00000014  48 00 79 D9 */	bl deleteEquipItem__9daAlink_cFii
 /* 800B9908 00000018  80 7E 20 60 */	lwz r3, 0x2060(r30)
-/* 800B990C 0000001C  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 800B990C 0000001C  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 800B9910 00000020  38 80 00 00 */	li r4, 0
 /* 800B9914 00000024  38 A0 00 23 */	li r5, 0x23
 /* 800B9918 00000028  4B F5 5F 31 */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs
 /* 800B991C 0000002C  48 00 00 10 */	b lbl_800B992C
 lbl_800B9920:
 /* 800B9920 00000000  7F C3 F3 78 */	mr r3, r30
-/* 800B9924 00000004  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800B9924 00000004  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800B9928 00000008  4B FF FD 7D */	bl itemUnequip__9daAlink_cFUsf
 lbl_800B992C:
 /* 800B992C 00000000  38 00 00 FF */	li r0, 0xff

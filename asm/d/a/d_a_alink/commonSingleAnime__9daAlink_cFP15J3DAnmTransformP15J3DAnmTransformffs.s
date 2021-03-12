@@ -20,7 +20,7 @@ lbl_800ACD40:
 /* 800ACD88 0000002C  38 04 FF FF */	addi r0, r4, 0xFFFF /* 0x0000FFFF@l */
 /* 800ACD8C 00000030  B0 03 1F 6C */	sth r0, 0x1f6c(r3)
 /* 800ACD90 00000034  B0 03 1F A8 */	sth r0, 0x1fa8(r3)
-/* 800ACD94 00000038  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800ACD94 00000038  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800ACD98 0000003C  4B FF F9 A1 */	bl setDoubleAnimeBlendRatio__9daAlink_cFf
 /* 800ACD9C 00000040  93 9B 1F 2C */	stw r28, 0x1f2c(r27)
 /* 800ACDA0 00000044  38 00 00 00 */	li r0, 0
@@ -32,11 +32,11 @@ lbl_800ACD40:
 lbl_800ACDB8:
 /* 800ACDB8 00000000  7F DF F3 78 */	mr r31, r30
 lbl_800ACDBC:
-/* 800ACDBC 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800ACDBC 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800ACDC0 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 800ACDC4 00000000  40 80 00 28 */	bge lbl_800ACDEC
 /* 800ACDC8 00000004  7F E0 07 34 */	extsh r0, r31
-/* 800ACDCC 00000008  C8 22 92 B0 */	lfd f1, LIT_6025(r2)
+/* 800ACDCC 00000008  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800ACDD0 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800ACDD4 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 800ACDD8 00000014  3C 00 43 30 */	lis r0, 0x4330
@@ -66,7 +66,7 @@ lbl_800ACDF0:
 /* 800ACE30 00000040  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800ACE34 00000044  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
 /* 800ACE38 00000048  C0 43 00 40 */	lfs f2, 0x40(r3)
-/* 800ACE3C 0000004C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACE3C 0000004C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACE40 00000050  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 800ACE44 00000054  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACE48 00000058  EC 02 00 32 */	fmuls f0, f2, f0
@@ -80,7 +80,7 @@ lbl_800ACE54:
 /* 800ACE64 00000010  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800ACE68 00000014  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
 /* 800ACE6C 00000018  C0 43 00 28 */	lfs f2, 0x28(r3)
-/* 800ACE70 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800ACE70 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800ACE74 00000020  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 800ACE78 00000024  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACE7C 00000028  EC 02 00 32 */	fmuls f0, f2, f0
@@ -107,11 +107,11 @@ lbl_800ACE84:
 lbl_800ACECC:
 /* 800ACECC 00000000  7F C7 F3 78 */	mr r7, r30
 lbl_800ACED0:
-/* 800ACED0 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800ACED0 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800ACED4 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 800ACED8 00000000  40 80 00 28 */	bge lbl_800ACF00
 /* 800ACEDC 00000004  7C E0 07 34 */	extsh r0, r7
-/* 800ACEE0 00000008  C8 22 92 B0 */	lfd f1, LIT_6025(r2)
+/* 800ACEE0 00000008  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800ACEE4 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800ACEE8 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 800ACEEC 00000014  3C 00 43 30 */	lis r0, 0x4330

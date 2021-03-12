@@ -5,27 +5,24 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void GXSetGPMetric();
-extern void GXClearGPMetric();
-extern void GXReadXfRasMetric();
-SECTION_DATA extern void* LIT_182[23];
-SECTION_DATA extern void* LIT_181[37];
+extern "C" extern void GXSetGPMetric();
+extern "C" extern void GXClearGPMetric();
+extern "C" extern void GXReadXfRasMetric();
+SECTION_DATA extern void* lit_182[23];
+SECTION_DATA extern void* lit_181[37];
 SECTION_SBSS extern u8 __cpReg[4];
 SECTION_SDATA2 extern void* __GXData;
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803D2858-803D28B4 005C .data      @182                                                         */
-SECTION_DATA void* LIT_182[23] = {
+void* lit_182[23] = {
 	(void*)(((char*)GXSetGPMetric)+0x568),
 	(void*)(((char*)GXSetGPMetric)+0x584),
 	(void*)(((char*)GXSetGPMetric)+0x5A0),
@@ -50,8 +47,9 @@ SECTION_DATA void* LIT_182[23] = {
 	(void*)(((char*)GXSetGPMetric)+0x5F4),
 	(void*)(((char*)GXSetGPMetric)+0x838),
 };
+
 /* 803D28B4-803D2948 0090 .data      @181                                                         */
-SECTION_DATA void* LIT_181[37] = {
+void* lit_181[37] = {
 	(void*)(((char*)GXSetGPMetric)+0x13C),
 	(void*)(((char*)GXSetGPMetric)+0x15C),
 	(void*)(((char*)GXSetGPMetric)+0x17C),
@@ -91,38 +89,34 @@ SECTION_DATA void* LIT_181[37] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8036067C-80360EC4 0848 .text      GXSetGPMetric                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetGPMetric() {
+extern "C" asm void GXSetGPMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXSetGPMetric.s"
 }
 #pragma pop
 
+
 /* 80360EC4-80360ED4 0010 .text      GXClearGPMetric                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXClearGPMetric() {
+extern "C" asm void GXClearGPMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXClearGPMetric.s"
 }
 #pragma pop
 
+
 /* 80360ED4-80360F98 00C4 .text      GXReadXfRasMetric                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXReadXfRasMetric() {
+extern "C" asm void GXReadXfRasMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXReadXfRasMetric.s"
 }

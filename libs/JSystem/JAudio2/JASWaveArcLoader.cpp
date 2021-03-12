@@ -5,75 +5,111 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern void getThreadPointer__6JASDvdFv();
-extern void __ct__7JASHeapFP11JASDisposer();
-extern void alloc__7JASHeapFP7JASHeapUl();
-extern void allocTail__7JASHeapFP7JASHeapUl();
-extern void free__7JASHeapFv();
-extern void getSystemHeap__9JASKernelFv();
-extern void getAramHeap__9JASKernelFv();
-extern void onDispose__11JASDisposerFv();
-extern void onLoadDone__10JASWaveArcFv();
-extern void onEraseDone__10JASWaveArcFv();
-extern void getRootHeap__16JASWaveArcLoaderFv();
-extern void setCurrentDir__16JASWaveArcLoaderFPCc();
-extern void getCurrentDir__16JASWaveArcLoaderFv();
-extern void __ct__10JASWaveArcFv();
-extern void __dt__10JASWaveArcFv();
-extern void loadSetup__10JASWaveArcFUl();
-extern void eraseSetup__10JASWaveArcFv();
-extern void loadToAramCallback__10JASWaveArcFPv();
-extern void sendLoadCmd__10JASWaveArcFv();
-extern void load__10JASWaveArcFP7JASHeap();
-extern void loadTail__10JASWaveArcFP7JASHeap();
-extern void erase__10JASWaveArcFv();
-extern void onDispose__10JASWaveArcFv();
-extern void setEntryNum__10JASWaveArcFl();
-extern void setFileName__10JASWaveArcFPCc();
-extern void __dt__11JASDisposerFv();
-extern void __nwa__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __dla__FPv();
-extern void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl();
-extern void __dt__10JSUPtrLinkFv();
-extern void __dt__10JSUPtrListFv();
-extern void OSInitMutex();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void DVDConvertPathToEntrynum();
-extern void DVDFastOpen();
-extern void DVDClose();
-extern void _savegpr_27();
-extern void _restgpr_27();
-extern void strcat();
-extern void strcpy();
-extern void strlen();
+extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" extern void getThreadPointer__6JASDvdFv();
+extern "C" extern void __ct__7JASHeapFP11JASDisposer();
+extern "C" extern void alloc__7JASHeapFP7JASHeapUl();
+extern "C" extern void allocTail__7JASHeapFP7JASHeapUl();
+extern "C" extern void free__7JASHeapFv();
+extern "C" extern void getSystemHeap__9JASKernelFv();
+extern "C" extern void getAramHeap__9JASKernelFv();
+extern "C" extern void onDispose__11JASDisposerFv();
+extern "C" extern void onLoadDone__10JASWaveArcFv();
+extern "C" extern void onEraseDone__10JASWaveArcFv();
+extern "C" extern void getRootHeap__16JASWaveArcLoaderFv();
+extern "C" extern void setCurrentDir__16JASWaveArcLoaderFPCc();
+extern "C" extern void getCurrentDir__16JASWaveArcLoaderFv();
+extern "C" extern void __ct__10JASWaveArcFv();
+extern "C" extern void __dt__10JASWaveArcFv();
+extern "C" extern void loadSetup__10JASWaveArcFUl();
+extern "C" extern void eraseSetup__10JASWaveArcFv();
+extern "C" extern void loadToAramCallback__10JASWaveArcFPv();
+extern "C" extern void sendLoadCmd__10JASWaveArcFv();
+extern "C" extern void load__10JASWaveArcFP7JASHeap();
+extern "C" extern void loadTail__10JASWaveArcFP7JASHeap();
+extern "C" extern void erase__10JASWaveArcFv();
+extern "C" extern void onDispose__10JASWaveArcFv();
+extern "C" extern void setEntryNum__10JASWaveArcFl();
+extern "C" extern void setFileName__10JASWaveArcFPCc();
+extern "C" extern void __dt__11JASDisposerFv();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dla__FPv();
+extern "C" extern void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void OSInitMutex();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void DVDConvertPathToEntrynum();
+extern "C" extern void DVDFastOpen();
+extern "C" extern void DVDClose();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _restgpr_27();
+extern "C" extern void strcat();
+extern "C" extern void strcpy();
+extern "C" extern void strlen();
 SECTION_DATA extern u8 sCurrentDir__16JASWaveArcLoader[64];
-SECTION_DATA extern void* __vt__10JASWaveArc[6];
-SECTION_DATA extern void* __vt__11JASDisposer[4];
+SECTION_DATA extern void* const __vt__10JASWaveArc[6];
+SECTION_DATA extern void* const __vt__11JASDisposer[4];
 SECTION_SBSS extern u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80451290-80451298 0004 .sbss      sAramHeap__16JASWaveArcLoader                                */
+u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
+
+/* 8029A0A0-8029A0D0 0030 .text      getRootHeap__16JASWaveArcLoaderFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getRootHeap__16JASWaveArcLoaderFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASWaveArcLoader/getRootHeap__16JASWaveArcLoaderFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C77E0-803C7820 0040 .data      sCurrentDir__16JASWaveArcLoader                              */
-SECTION_DATA u8 sCurrentDir__16JASWaveArcLoader[64] = {
+u8 sCurrentDir__16JASWaveArcLoader[64] = {
 	0x2F, 0x41, 0x75, 0x64, 0x69, 0x6F, 0x52, 0x65, 0x73, 0x2F, 0x57, 0x61, 0x76, 0x65, 0x73, 0x2F,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
+/* 8029A0D0-8029A130 0060 .text      setCurrentDir__16JASWaveArcLoaderFPCc                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setCurrentDir__16JASWaveArcLoaderFPCc() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASWaveArcLoader/setCurrentDir__16JASWaveArcLoaderFPCc.s"
+}
+#pragma pop
+
+
+/* 8029A130-8029A13C 000C .text      getCurrentDir__16JASWaveArcLoaderFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getCurrentDir__16JASWaveArcLoaderFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASWaveArcLoader/getCurrentDir__16JASWaveArcLoaderFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803C7820-803C7838 0018 .data      __vt__10JASWaveArc                                           */
-SECTION_DATA void* __vt__10JASWaveArc[6] = {
+void* const __vt__10JASWaveArc[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JASWaveArcFv,
@@ -81,185 +117,152 @@ SECTION_DATA void* __vt__10JASWaveArc[6] = {
 	(void*)onLoadDone__10JASWaveArcFv,
 	(void*)onEraseDone__10JASWaveArcFv,
 };
+
 /* 803C7838-803C7848 0010 .data      __vt__11JASDisposer                                          */
-SECTION_DATA void* __vt__11JASDisposer[4] = {
+void* const __vt__11JASDisposer[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JASDisposerFv,
 	(void*)onDispose__11JASDisposerFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451290-80451298 0004 .sbss      sAramHeap__16JASWaveArcLoader                                */
-SECTION_SBSS u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8029A0A0-8029A0D0 0030 .text      getRootHeap__16JASWaveArcLoaderFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getRootHeap__16JASWaveArcLoaderFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASWaveArcLoader/getRootHeap__16JASWaveArcLoaderFv.s"
-}
-#pragma pop
-
-/* 8029A0D0-8029A130 0060 .text      setCurrentDir__16JASWaveArcLoaderFPCc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setCurrentDir__16JASWaveArcLoaderFPCc() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASWaveArcLoader/setCurrentDir__16JASWaveArcLoaderFPCc.s"
-}
-#pragma pop
-
-/* 8029A130-8029A13C 000C .text      getCurrentDir__16JASWaveArcLoaderFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getCurrentDir__16JASWaveArcLoaderFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASWaveArcLoader/getCurrentDir__16JASWaveArcLoaderFv.s"
-}
-#pragma pop
 
 /* 8029A13C-8029A1B4 0078 .text      __ct__10JASWaveArcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10JASWaveArcFv() {
+extern "C" asm void __ct__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/__ct__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A1B4-8029A258 00A4 .text      __dt__10JASWaveArcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10JASWaveArcFv() {
+extern "C" asm void __dt__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/__dt__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A258-8029A2EC 0094 .text      loadSetup__10JASWaveArcFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadSetup__10JASWaveArcFUl() {
+extern "C" asm void loadSetup__10JASWaveArcFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/loadSetup__10JASWaveArcFUl.s"
 }
 #pragma pop
 
+
 /* 8029A2EC-8029A378 008C .text      eraseSetup__10JASWaveArcFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void eraseSetup__10JASWaveArcFv() {
+extern "C" asm void eraseSetup__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/eraseSetup__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A378-8029A404 008C .text      loadToAramCallback__10JASWaveArcFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadToAramCallback__10JASWaveArcFPv() {
+extern "C" asm void loadToAramCallback__10JASWaveArcFPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/loadToAramCallback__10JASWaveArcFPv.s"
 }
 #pragma pop
 
+
 /* 8029A404-8029A4C0 00BC .text      sendLoadCmd__10JASWaveArcFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sendLoadCmd__10JASWaveArcFv() {
+extern "C" asm void sendLoadCmd__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/sendLoadCmd__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A4C0-8029A580 00C0 .text      load__10JASWaveArcFP7JASHeap                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load__10JASWaveArcFP7JASHeap() {
+extern "C" asm void load__10JASWaveArcFP7JASHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/load__10JASWaveArcFP7JASHeap.s"
 }
 #pragma pop
 
+
 /* 8029A580-8029A640 00C0 .text      loadTail__10JASWaveArcFP7JASHeap                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadTail__10JASWaveArcFP7JASHeap() {
+extern "C" asm void loadTail__10JASWaveArcFP7JASHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/loadTail__10JASWaveArcFP7JASHeap.s"
 }
 #pragma pop
 
+
 /* 8029A640-8029A664 0024 .text      erase__10JASWaveArcFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void erase__10JASWaveArcFv() {
+extern "C" asm void erase__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/erase__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A664-8029A6AC 0048 .text      onDispose__10JASWaveArcFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onDispose__10JASWaveArcFv() {
+extern "C" asm void onDispose__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/onDispose__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 8029A6AC-8029A70C 0060 .text      setEntryNum__10JASWaveArcFl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEntryNum__10JASWaveArcFl() {
+extern "C" asm void setEntryNum__10JASWaveArcFl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/setEntryNum__10JASWaveArcFl.s"
 }
 #pragma pop
 
+
 /* 8029A70C-8029A7B8 00AC .text      setFileName__10JASWaveArcFPCc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFileName__10JASWaveArcFPCc() {
+extern "C" asm void setFileName__10JASWaveArcFPCc() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/setFileName__10JASWaveArcFPCc.s"
 }
 #pragma pop
 
+
 /* 8029A7B8-8029A800 0048 .text      __dt__11JASDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11JASDisposerFv() {
+extern "C" asm void __dt__11JASDisposerFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWaveArcLoader/__dt__11JASDisposerFv.s"
 }

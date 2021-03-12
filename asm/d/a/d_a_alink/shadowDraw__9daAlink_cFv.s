@@ -107,12 +107,12 @@ lbl_800CBD88:
 lbl_800CBD8C:
 /* 800CBD8C 00000000  80 BD 06 50 */	lwz r5, 0x650(r29)
 /* 800CBD90 00000004  38 C1 00 14 */	addi r6, r1, 0x14
-/* 800CBD94 00000008  C0 22 93 58 */	lfs f1, LIT_8249(r2)
-/* 800CBD98 0000000C  C0 42 92 C0 */	lfs f2, LIT_6108(r2)
+/* 800CBD94 00000008  C0 22 93 58 */	lfs f1, lit_8249(r2)
+/* 800CBD98 0000000C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800CBD9C 00000010  38 FD 1A 60 */	addi r7, r29, 0x1a60
 /* 800CBDA0 00000014  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 800CBDA4 00000018  39 20 00 00 */	li r9, 0
-/* 800CBDA8 0000001C  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__LIT_6040(r2)
+/* 800CBDA8 0000001C  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__lit_6040(r2)
 /* 800CBDAC 00000020  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 800CBDB0 00000024  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 800CBDB4 00000028  4B F6 2B 5D */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
@@ -274,8 +274,8 @@ lbl_800CBFDC:
 /* 800CBFF0 00000014  38 80 00 00 */	li r4, 0
 /* 800CBFF4 00000018  80 BD 07 08 */	lwz r5, 0x708(r29)
 /* 800CBFF8 0000001C  38 DD 37 F8 */	addi r6, r29, 0x37f8
-/* 800CBFFC 00000020  C0 22 93 E0 */	lfs f1, LIT_11673(r2)
-/* 800CC000 00000024  C0 42 94 28 */	lfs f2, LIT_14621(r2)
+/* 800CBFFC 00000020  C0 22 93 E0 */	lfs f1, lit_11673(r2)
+/* 800CC000 00000024  C0 42 94 28 */	lfs f2, lit_14621(r2)
 /* 800CC004 00000028  C0 7D 38 08 */	lfs f3, 0x3808(r29)
 /* 800CC008 0000002C  C0 8D 87 50 */	lfs f4, mGroundY__11fopAcM_gc_c(r13)
 /* 800CC00C 00000030  3C E0 80 3F */	lis r7, mGndCheck__11fopAcM_gc_c@ha
@@ -283,7 +283,7 @@ lbl_800CBFDC:
 /* 800CC014 00000038  38 E7 00 14 */	addi r7, r7, 0x14
 /* 800CC018 0000003C  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 800CC01C 00000040  39 20 00 00 */	li r9, 0
-/* 800CC020 00000044  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__LIT_6040(r2)
+/* 800CC020 00000044  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__lit_6040(r2)
 /* 800CC024 00000048  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 800CC028 0000004C  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 800CC02C 00000050  4B F6 28 E5 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

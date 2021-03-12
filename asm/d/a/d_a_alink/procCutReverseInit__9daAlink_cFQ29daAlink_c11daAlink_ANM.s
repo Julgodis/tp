@@ -47,7 +47,7 @@ lbl_800D40CC:
 /* 800D4110 00000044  38 00 00 02 */	li r0, 2
 /* 800D4114 00000048  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 800D4118 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 800D411C 00000050  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800D411C 00000050  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800D4120 00000054  48 00 8E E9 */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800D4124 00000058  48 00 00 3C */	b lbl_800D4160
 lbl_800D4128:
@@ -90,9 +90,9 @@ lbl_800D41A8:
 lbl_800D41B0:
 /* 800D41B0 00000000  38 80 00 03 */	li r4, 3
 lbl_800D41B4:
-/* 800D41B4 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800D41B4 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D41B8 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800D41BC 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800D41BC 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800D41C0 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800D41C4 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800D41C8 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

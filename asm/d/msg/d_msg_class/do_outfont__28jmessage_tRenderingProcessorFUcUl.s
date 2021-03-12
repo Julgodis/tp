@@ -27,7 +27,7 @@ lbl_8022EAE4:
 /* 8022EB48 00000038  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 8022EB4C 0000003C  7D 89 03 A6 */	mtctr r12
 /* 8022EB50 00000040  4E 80 04 21 */	bctrl 
-/* 8022EB54 00000044  C0 22 B0 94 */	lfs f1, LIT_6781(r2)
+/* 8022EB54 00000044  C0 22 B0 94 */	lfs f1, lit_6781(r2)
 /* 8022EB58 00000048  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 8022EB5C 0000004C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8022EB60 00000050  C0 3F 00 58 */	lfs f1, 0x58(r31)
@@ -82,7 +82,7 @@ lbl_8022EBC4:
 /* 8022EC18 00000054  41 82 00 38 */	beq lbl_8022EC50
 /* 8022EC1C 00000058  C0 7F 00 44 */	lfs f3, 0x44(r31)
 /* 8022EC20 0000005C  7F E3 FB 78 */	mr r3, r31
-/* 8022EC24 00000060  C0 82 B0 5C */	lfs f4, d_msg_d_msg_class__LIT_4026(r2)
+/* 8022EC24 00000060  C0 82 B0 5C */	lfs f4, d_msg_d_msg_class__lit_4026(r2)
 /* 8022EC28 00000064  EC 04 07 F2 */	fmuls f0, f4, f31
 /* 8022EC2C 00000068  EC 1D 00 2A */	fadds f0, f29, f0
 /* 8022EC30 0000006C  EC 24 00 2A */	fadds f1, f4, f0
@@ -91,12 +91,12 @@ lbl_8022EBC4:
 /* 8022EC3C 00000078  EC 1C 00 2A */	fadds f0, f28, f0
 /* 8022EC40 0000007C  EC 42 00 2A */	fadds f2, f2, f0
 /* 8022EC44 00000080  FC 80 18 90 */	fmr f4, f3
-/* 8022EC48 00000084  C0 A2 B0 64 */	lfs f5, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022EC48 00000084  C0 A2 B0 64 */	lfs f5, d_msg_d_msg_class__lit_4028(r2)
 /* 8022EC4C 00000088  48 00 0B 39 */	bl getCharInfo__28jmessage_tRenderingProcessorFfffff
 lbl_8022EC50:
-/* 8022EC50 00000000  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__LIT_4026(r2)
+/* 8022EC50 00000000  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__lit_4026(r2)
 /* 8022EC54 00000004  C0 3F 00 44 */	lfs f1, 0x44(r31)
-/* 8022EC58 00000008  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022EC58 00000008  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 8022EC5C 0000000C  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 8022EC60 00000010  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8022EC64 00000014  C0 1D 04 38 */	lfs f0, 0x438(r29)
@@ -106,7 +106,7 @@ lbl_8022EC50:
 /* 8022EC74 00000024  FC 00 00 1E */	fctiwz f0, f0
 /* 8022EC78 00000028  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 8022EC7C 0000002C  80 C1 00 1C */	lwz r6, 0x1c(r1)
-/* 8022EC80 00000030  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 8022EC80 00000030  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 8022EC84 00000034  6C C0 80 00 */	xoris r0, r6, 0x8000
 /* 8022EC88 00000038  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8022EC8C 0000003C  3C 00 43 30 */	lis r0, 0x4330

@@ -5,41 +5,46 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getInstParam__12JASVoiceBankCFiiiP12JASInstParam();
-extern void __dt__12JASVoiceBankFv();
-extern void getType__12JASVoiceBankCFv();
-extern void __dl__FPv();
+extern "C" extern void getInstParam__12JASVoiceBankCFiiiP12JASInstParam();
+extern "C" extern void __dt__12JASVoiceBankFv();
+extern "C" extern void getType__12JASVoiceBankCFv();
+extern "C" extern void __dl__FPv();
 SECTION_RODATA extern const u8 sOscData__12JASVoiceBank[24];
-SECTION_DATA extern void* __vt__7JASBank[5];
-SECTION_DATA extern void* __vt__12JASVoiceBank[6];
+SECTION_DATA extern void* const __vt__7JASBank[5];
+SECTION_DATA extern void* const __vt__12JASVoiceBank[6];
 SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039B1B8-8039B1D0 0018 .rodata    sOscData__12JASVoiceBank                                     */
 SECTION_RODATA const u8 sOscData__12JASVoiceBank[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
+/* 80451268-80451270 0004 .sbss      sOscTable__12JASVoiceBank                                    */
+u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
+
+/* 80297F74-80297FAC 0038 .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getInstParam__12JASVoiceBankCFiiiP12JASInstParam() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASVoiceBank/getInstParam__12JASVoiceBankCFiiiP12JASInstParam.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C76D0-803C76E8 0014 .data      __vt__12JASVoiceBank                                         */
-SECTION_DATA void* __vt__12JASVoiceBank[6] = {
+void* const __vt__12JASVoiceBank[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JASVoiceBankFv,
@@ -48,48 +53,23 @@ SECTION_DATA void* __vt__12JASVoiceBank[6] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451268-80451270 0004 .sbss      sOscTable__12JASVoiceBank                                    */
-SECTION_SBSS u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80297F74-80297FAC 0038 .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getInstParam__12JASVoiceBankCFiiiP12JASInstParam() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASVoiceBank/getInstParam__12JASVoiceBankCFiiiP12JASInstParam.s"
-}
-#pragma pop
 
 /* 80297FAC-80298008 005C .text      __dt__12JASVoiceBankFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JASVoiceBankFv() {
+extern "C" asm void __dt__12JASVoiceBankFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASVoiceBank/__dt__12JASVoiceBankFv.s"
 }
 #pragma pop
 
+
 /* 80298008-80298014 000C .text      getType__12JASVoiceBankCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getType__12JASVoiceBankCFv() {
+extern "C" asm void getType__12JASVoiceBankCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASVoiceBank/getType__12JASVoiceBankCFv.s"
 }

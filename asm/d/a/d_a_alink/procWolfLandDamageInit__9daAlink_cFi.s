@@ -24,9 +24,9 @@ lbl_80136C5C:
 /* 80136C6C 00000010  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
 /* 80136C70 00000014  A8 03 00 2A */	lha r0, 0x2a(r3)
 /* 80136C74 00000018  B0 1F 30 08 */	sth r0, 0x3008(r31)
-/* 80136C78 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80136C78 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80136C7C 00000020  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80136C80 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 80136C80 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 80136C84 00000028  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80136C88 0000002C  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 80136C8C 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -52,9 +52,9 @@ lbl_80136CAC:
 /* 80136CD8 0000002C  38 80 00 04 */	li r4, 4
 /* 80136CDC 00000030  4B FA 07 C9 */	bl setLandDamagePoint__9daAlink_cFi
 lbl_80136CE0:
-/* 80136CE0 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80136CE0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80136CE4 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80136CE8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 80136CE8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 80136CEC 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80136CF0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80136CF4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -68,7 +68,7 @@ lbl_80136D10:
 /* 80136D10 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80136D14 00000004  38 80 01 09 */	li r4, 0x109
 /* 80136D18 00000008  4B F8 B2 55 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 80136D1C 0000000C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80136D1C 0000000C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80136D20 00000010  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 80136D24 00000014  2C 1E 00 00 */	cmpwi r30, 0
 /* 80136D28 00000018  40 82 00 14 */	bne lbl_80136D3C

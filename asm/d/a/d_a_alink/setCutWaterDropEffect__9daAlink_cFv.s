@@ -32,7 +32,7 @@ lbl_80124144:
 /* 801241BC 00000078  39 08 04 E4 */	addi r8, r8, 0x4e4
 /* 801241C0 0000007C  39 20 00 00 */	li r9, 0
 /* 801241C4 00000080  39 40 00 FF */	li r10, 0xff
-/* 801241C8 00000084  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 801241C8 00000084  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 801241CC 00000088  4B F2 88 C5 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_801241D0:
 /* 801241D0 00000000  80 01 00 34 */	lwz r0, 0x34(r1)

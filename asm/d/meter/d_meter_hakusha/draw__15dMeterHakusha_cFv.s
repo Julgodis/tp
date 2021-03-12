@@ -24,7 +24,7 @@ lbl_8020C850:
 /* 8020C8A8 00000058  7D 89 03 A6 */	mtctr r12
 /* 8020C8AC 0000005C  4E 80 04 21 */	bctrl 
 /* 8020C8B0 00000060  80 7A 00 0C */	lwz r3, 0xc(r26)
-/* 8020C8B4 00000064  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C8B4 00000064  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C8B8 00000068  FC 40 08 90 */	fmr f2, f1
 /* 8020C8BC 0000006C  7F A4 EB 78 */	mr r4, r29
 /* 8020C8C0 00000070  48 0E C6 15 */	bl draw__9J2DScreenFffPC14J2DGrafContext
@@ -79,14 +79,14 @@ lbl_8020C928:
 /* 8020C970 00000048  7D 89 03 A6 */	mtctr r12
 /* 8020C974 0000004C  4E 80 04 21 */	bctrl 
 /* 8020C978 00000050  80 7A 00 08 */	lwz r3, 8(r26)
-/* 8020C97C 00000054  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C97C 00000054  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C980 00000058  FC 40 08 90 */	fmr f2, f1
 /* 8020C984 0000005C  7F A4 EB 78 */	mr r4, r29
 /* 8020C988 00000060  48 0E C5 4D */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 8020C98C 00000064  88 1C 00 40 */	lbz r0, 0x40(r28)
 /* 8020C990 00000068  28 00 00 00 */	cmplwi r0, 0
 /* 8020C994 0000006C  41 82 00 F4 */	beq lbl_8020CA88
-/* 8020C998 00000070  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C998 00000070  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C99C 00000074  3B 99 00 C8 */	addi r28, r25, 0xc8
 /* 8020C9A0 00000078  7C 1A E4 2E */	lfsx f0, r26, r28
 /* 8020C9A4 0000007C  FC 01 00 00 */	fcmpu cr0, f1, f0

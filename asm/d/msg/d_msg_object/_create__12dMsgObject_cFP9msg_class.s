@@ -153,7 +153,7 @@ lbl_802334BC:
 /* 802334C0 00000004  90 03 00 10 */	stw r0, 0x10(r3)
 /* 802334C4 00000008  80 7E 01 18 */	lwz r3, 0x118(r30)
 /* 802334C8 0000000C  4B FF 63 49 */	bl resetCharCountBuffer__19jmessage_tReferenceFv
-/* 802334CC 00000010  C0 02 B0 BC */	lfs f0, d_msg_d_msg_object__LIT_4083(r2)
+/* 802334CC 00000010  C0 02 B0 BC */	lfs f0, d_msg_d_msg_object__lit_4083(r2)
 /* 802334D0 00000014  D0 1E 01 50 */	stfs f0, 0x150(r30)
 /* 802334D4 00000018  38 60 00 00 */	li r3, 0
 /* 802334D8 0000001C  98 7E 01 9E */	stb r3, 0x19e(r30)

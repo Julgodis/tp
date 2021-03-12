@@ -100,7 +100,7 @@ lbl_8009EE10:
 /* 8009EE14 00000004  28 00 01 4D */	cmplwi r0, 0x14d
 /* 8009EE18 00000008  40 82 00 14 */	bne lbl_8009EE2C
 /* 8009EE1C 0000000C  C0 3F 34 7C */	lfs f1, 0x347c(r31)
-/* 8009EE20 00000010  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 8009EE20 00000010  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 8009EE24 00000014  FC 60 10 90 */	fmr f3, f2
 /* 8009EE28 00000018  4B F6 E0 11 */	bl scaleM__14mDoMtx_stack_cFfff
 lbl_8009EE2C:
@@ -149,8 +149,8 @@ lbl_8009EEAC:
 /* 8009EECC 00000020  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
 /* 8009EED0 00000024  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 8009EED4 00000028  48 2A 75 DD */	bl PSMTXCopy
-/* 8009EED8 0000002C  C0 22 94 DC */	lfs f1, LIT_19240(r2)
-/* 8009EEDC 00000030  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 8009EED8 0000002C  C0 22 94 DC */	lfs f1, lit_19240(r2)
+/* 8009EEDC 00000030  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 8009EEE0 00000034  FC 60 10 90 */	fmr f3, f2
 /* 8009EEE4 00000038  4B F6 DF 55 */	bl scaleM__14mDoMtx_stack_cFfff
 /* 8009EEE8 0000003C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

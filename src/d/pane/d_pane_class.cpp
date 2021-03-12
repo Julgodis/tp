@@ -5,108 +5,106 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getCurrentHeap__Fv();
-extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern void __ct__8CPaneMgrFv();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void __dt__8CPaneMgrFv();
-extern void setAlpha__8CPaneMgrFUc();
-extern void reinit__8CPaneMgrFv();
-extern void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap();
-extern void getBlack__9J2DWindowCFv();
-extern void getWhite__9J2DWindowCFv();
-extern void childPaneGetSize__8CPaneMgrFP7J2DPane();
-extern void childPaneSetSize__8CPaneMgrFP7J2DPaneff();
-extern void getGlobalPosX__8CPaneMgrFv();
-extern void getGlobalPosY__8CPaneMgrFv();
-extern void setWhite__9J2DWindowFQ28JUtility6TColor();
-extern void setBlack__10J2DTextBoxFQ28JUtility6TColor();
-extern void setBlack__9J2DWindowFQ28JUtility6TColor();
-extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
-extern void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor();
-extern void paneTrans__8CPaneMgrFff();
-extern void paneScale__8CPaneMgrFff();
-extern void scaleAnime__8CPaneMgrFsffUc();
-extern void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
-extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern void getBounds__8CPaneMgrFP7J2DPane();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void dPaneClass_showNullPane__FP7J2DPane();
-extern void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
-extern void __dt__20JSUMemoryInputStreamFv();
-extern void __dt__20JSURandomInputStreamFv();
-extern void __dt__10JSUIosBaseFv();
-extern void __sinit_d_pane_class_cpp();
-extern void __ct__13CPaneMgrAlphaFv();
-extern void __dt__13CPaneMgrAlphaFv();
-extern void rateCalc__13CPaneMgrAlphaFssUc();
-extern void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
-extern void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
-extern void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPv();
-extern void __dl__FPv();
-extern void __dt__14JSUInputStreamFv();
-extern void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern void __ct__13J2DOrthoGraphFffffff();
-extern void func_802E980C();
-extern void getBounds__7J2DPaneFv();
-extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern void getFirstChildPane__7J2DPaneFv();
-extern void getNextChildPane__7J2DPaneFv();
-extern void getParentPane__7J2DPaneFv();
-extern void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
-extern void PSMTXCopy();
-extern void PSMTXConcat();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__10JSUIosBase[3];
-SECTION_DATA extern void* __vt__8CPaneMgr[5];
-SECTION_DATA extern void* __vt__20JSURandomInputStream[9];
-SECTION_DATA extern void* __vt__14JSUInputStream[7];
-SECTION_DATA extern void* __vt__20JSUMemoryInputStream[10];
-SECTION_DATA extern void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern void mDoExt_getCurrentHeap__Fv();
+extern "C" extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" extern void __ct__8CPaneMgrFv();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void __dt__8CPaneMgrFv();
+extern "C" extern void setAlpha__8CPaneMgrFUc();
+extern "C" extern void reinit__8CPaneMgrFv();
+extern "C" extern void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap();
+extern "C" extern void getBlack__9J2DWindowCFv();
+extern "C" extern void getWhite__9J2DWindowCFv();
+extern "C" extern void childPaneGetSize__8CPaneMgrFP7J2DPane();
+extern "C" extern void childPaneSetSize__8CPaneMgrFP7J2DPaneff();
+extern "C" extern void getGlobalPosX__8CPaneMgrFv();
+extern "C" extern void getGlobalPosY__8CPaneMgrFv();
+extern "C" extern void setWhite__9J2DWindowFQ28JUtility6TColor();
+extern "C" extern void setBlack__10J2DTextBoxFQ28JUtility6TColor();
+extern "C" extern void setBlack__9J2DWindowFQ28JUtility6TColor();
+extern "C" extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void paneTrans__8CPaneMgrFff();
+extern "C" extern void paneScale__8CPaneMgrFff();
+extern "C" extern void scaleAnime__8CPaneMgrFsffUc();
+extern "C" extern void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
+extern "C" extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" extern void getBounds__8CPaneMgrFP7J2DPane();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void dPaneClass_showNullPane__FP7J2DPane();
+extern "C" extern void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
+extern "C" extern void __dt__20JSUMemoryInputStreamFv();
+extern "C" extern void __dt__20JSURandomInputStreamFv();
+extern "C" extern void __dt__10JSUIosBaseFv();
+extern "C" extern void __sinit_d_pane_class_cpp();
+extern "C" extern void __ct__13CPaneMgrAlphaFv();
+extern "C" extern void __dt__13CPaneMgrAlphaFv();
+extern "C" extern void rateCalc__13CPaneMgrAlphaFssUc();
+extern "C" extern void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
+extern "C" extern void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
+extern "C" extern void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dt__14JSUInputStreamFv();
+extern "C" extern void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" extern void __ct__13J2DOrthoGraphFffffff();
+extern "C" extern void func_802E980C();
+extern "C" extern void getBounds__7J2DPaneFv();
+extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" extern void getFirstChildPane__7J2DPaneFv();
+extern "C" extern void getNextChildPane__7J2DPaneFv();
+extern "C" extern void getParentPane__7J2DPaneFv();
+extern "C" extern void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__10JSUIosBase[3];
+SECTION_DATA extern void* const __vt__8CPaneMgr[5];
+SECTION_DATA extern void* const __vt__20JSURandomInputStream[9];
+SECTION_DATA extern void* const __vt__14JSUInputStream[7];
+SECTION_DATA extern void* const __vt__20JSUMemoryInputStream[10];
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__13J2DOrthoGraph[10];
 SECTION_BSS extern u8 static_mBounds[16];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_3858[8];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_3860[8];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4046[8];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4349[8];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4473[4];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4474[4];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4475[4];
-SECTION_SDATA2 extern u8 d_pane_d_pane_class__LIT_4476[4];
-}
+SECTION_SDATA2 extern u8 d_pane_d_pane_class__lit_3858[8];
+SECTION_SDATA2 extern f64 d_pane_d_pane_class__lit_3860;
+SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4046;
+SECTION_SDATA2 extern f64 d_pane_d_pane_class__lit_4349;
+SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4473;
+SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4474;
+SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4475;
+SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4476;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C2DF8-803C2E04 000C .data      __vt__10JSUIosBase                                           */
-SECTION_DATA void* __vt__10JSUIosBase[3] = {
+void* const __vt__10JSUIosBase[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JSUIosBaseFv,
 };
+
 /* 803C2E04-803C2E18 0010 .data      __vt__8CPaneMgr                                              */
-SECTION_DATA void* __vt__8CPaneMgr[5] = {
+void* const __vt__8CPaneMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8CPaneMgrFv,
@@ -114,372 +112,379 @@ SECTION_DATA void* __vt__8CPaneMgr[5] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454E88-80454E90 0004 .sdata2    @3858                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_3858[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454E90-80454E98 0008 .sdata2    @3860                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_3860[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80454E98-80454EA0 0004 .sdata2    @4046                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4046[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454EA0-80454EA8 0008 .sdata2    @4349                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4349[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454EA8-80454EAC 0004 .sdata2    @4473                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4473[4] = {
-	0x44, 0x18, 0x00, 0x00,
-};
-/* 80454EAC-80454EB0 0004 .sdata2    @4474                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4474[4] = {
-	0x43, 0xE0, 0x00, 0x00,
-};
-/* 80454EB0-80454EB4 0004 .sdata2    @4475                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4475[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 80454EB4-80454EB8 0004 .sdata2    @4476                                                        */
-SECTION_SDATA2 u8 d_pane_d_pane_class__LIT_4476[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430748-80430758 0010 .bss       static_mBounds                                               */
-SECTION_BSS u8 static_mBounds[16];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80253930-80253984 0054 .text      __ct__8CPaneMgrFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8CPaneMgrFv() {
+extern "C" asm void __ct__8CPaneMgrFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__ct__8CPaneMgrFv.s"
 }
 #pragma pop
 
+
 /* 80253984-80253A18 0094 .text      __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap() {
+extern "C" asm void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap.s"
 }
 #pragma pop
 
+
 /* 80253A18-80253AB4 009C .text      __dt__8CPaneMgrFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8CPaneMgrFv() {
+extern "C" asm void __dt__8CPaneMgrFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__dt__8CPaneMgrFv.s"
 }
 #pragma pop
 
+
 /* 80253AB4-80253B2C 0078 .text      setAlpha__8CPaneMgrFUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlpha__8CPaneMgrFUc() {
+extern "C" asm void setAlpha__8CPaneMgrFUc() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setAlpha__8CPaneMgrFUc.s"
 }
 #pragma pop
 
+
 /* 80253B2C-80253C08 00DC .text      reinit__8CPaneMgrFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinit__8CPaneMgrFv() {
+extern "C" asm void reinit__8CPaneMgrFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/reinit__8CPaneMgrFv.s"
 }
 #pragma pop
 
+
 /* 80253C08-80254000 03F8 .text      initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap() {
+extern "C" asm void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap.s"
 }
 #pragma pop
 
+
 /* 80254000-8025400C 000C .text      getBlack__9J2DWindowCFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBlack__9J2DWindowCFv() {
+extern "C" asm void getBlack__9J2DWindowCFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getBlack__9J2DWindowCFv.s"
 }
 #pragma pop
 
+
 /* 8025400C-80254018 000C .text      getWhite__9J2DWindowCFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWhite__9J2DWindowCFv() {
+extern "C" asm void getWhite__9J2DWindowCFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getWhite__9J2DWindowCFv.s"
 }
 #pragma pop
 
+
 /* 80254018-80254134 011C .text      childPaneGetSize__8CPaneMgrFP7J2DPane                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void childPaneGetSize__8CPaneMgrFP7J2DPane() {
+extern "C" asm void childPaneGetSize__8CPaneMgrFP7J2DPane() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/childPaneGetSize__8CPaneMgrFP7J2DPane.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454E88-80454E90 0004 .sdata2    @3858                                                        */
+u8 d_pane_d_pane_class__lit_3858[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80454E90-80454E98 0008 .sdata2    @3860                                                        */
+f64 d_pane_d_pane_class__lit_3860 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80254134-802542E8 01B4 .text      childPaneSetSize__8CPaneMgrFP7J2DPaneff                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void childPaneSetSize__8CPaneMgrFP7J2DPaneff() {
+extern "C" asm void childPaneSetSize__8CPaneMgrFP7J2DPaneff() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/childPaneSetSize__8CPaneMgrFP7J2DPaneff.s"
 }
 #pragma pop
 
+
 /* 802542E8-80254364 007C .text      getGlobalPosX__8CPaneMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getGlobalPosX__8CPaneMgrFv() {
+extern "C" asm void getGlobalPosX__8CPaneMgrFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getGlobalPosX__8CPaneMgrFv.s"
 }
 #pragma pop
 
+
 /* 80254364-802543E0 007C .text      getGlobalPosY__8CPaneMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getGlobalPosY__8CPaneMgrFv() {
+extern "C" asm void getGlobalPosY__8CPaneMgrFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getGlobalPosY__8CPaneMgrFv.s"
 }
 #pragma pop
 
+
 /* 802543E0-80254408 0028 .text      setWhite__9J2DWindowFQ28JUtility6TColor                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWhite__9J2DWindowFQ28JUtility6TColor() {
+extern "C" asm void setWhite__9J2DWindowFQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setWhite__9J2DWindowFQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80254408-80254430 0028 .text      setBlack__10J2DTextBoxFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlack__10J2DTextBoxFQ28JUtility6TColor() {
+extern "C" asm void setBlack__10J2DTextBoxFQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setBlack__10J2DTextBoxFQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80254430-80254458 0028 .text      setBlack__9J2DWindowFQ28JUtility6TColor                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlack__9J2DWindowFQ28JUtility6TColor() {
+extern "C" asm void setBlack__9J2DWindowFQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setBlack__9J2DWindowFQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80254458-80254568 0110 .text      setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor() {
+extern "C" asm void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80254568-802545B0 0048 .text      setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor() {
+extern "C" asm void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454E98-80454EA0 0004 .sdata2    @4046                                                        */
+f32 d_pane_d_pane_class__lit_4046 = 0.5f;
+/* padding 4 bytes */
+
 /* 802545B0-80254638 0088 .text      paneTrans__8CPaneMgrFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void paneTrans__8CPaneMgrFff() {
+extern "C" asm void paneTrans__8CPaneMgrFff() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/paneTrans__8CPaneMgrFff.s"
 }
 #pragma pop
 
+
 /* 80254638-802547CC 0194 .text      paneScale__8CPaneMgrFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void paneScale__8CPaneMgrFff() {
+extern "C" asm void paneScale__8CPaneMgrFff() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/paneScale__8CPaneMgrFff.s"
 }
 #pragma pop
 
+
 /* 802547CC-802548BC 00F0 .text      scaleAnime__8CPaneMgrFsffUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void scaleAnime__8CPaneMgrFsffUc() {
+extern "C" asm void scaleAnime__8CPaneMgrFsffUc() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/scaleAnime__8CPaneMgrFsffUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454EA0-80454EA8 0008 .sdata2    @4349                                                        */
+f64 d_pane_d_pane_class__lit_4349 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 802548BC-80254C90 03D4 .text      colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc() {
+extern "C" asm void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454EA8-80454EAC 0004 .sdata2    @4473                                                        */
+f32 d_pane_d_pane_class__lit_4473 = 608.0f;
+
+/* 80454EAC-80454EB0 0004 .sdata2    @4474                                                        */
+f32 d_pane_d_pane_class__lit_4474 = 448.0f;
+
+/* 80454EB0-80454EB4 0004 .sdata2    @4475                                                        */
+f32 d_pane_d_pane_class__lit_4475 = -1.0f;
+
+/* 80454EB4-80454EB8 0004 .sdata2    @4476                                                        */
+f32 d_pane_d_pane_class__lit_4476 = 1.0f;
+
 /* 80254C90-80254EBC 022C .text      getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs() {
+extern "C" asm void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs.s"
 }
 #pragma pop
 
+
 /* 80254EBC-80254FB8 00FC .text      getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs() {
+extern "C" asm void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80430748-80430758 0010 .bss       static_mBounds                                               */
+u8 static_mBounds[16];
+
 /* 80254FB8-802550E8 0130 .text      getBounds__8CPaneMgrFP7J2DPane                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBounds__8CPaneMgrFP7J2DPane() {
+extern "C" asm void getBounds__8CPaneMgrFP7J2DPane() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getBounds__8CPaneMgrFP7J2DPane.s"
 }
 #pragma pop
 
+
 /* 802550E8-8025512C 0044 .text      dPaneClass_showNullPane__FP9J2DScreen                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaneClass_showNullPane__FP9J2DScreen() {
+extern "C" asm void dPaneClass_showNullPane__FP9J2DScreen() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/dPaneClass_showNullPane__FP9J2DScreen.s"
 }
 #pragma pop
 
+
 /* 8025512C-80255184 0058 .text      dPaneClass_showNullPane__FP7J2DPane                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaneClass_showNullPane__FP7J2DPane() {
+extern "C" asm void dPaneClass_showNullPane__FP7J2DPane() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/dPaneClass_showNullPane__FP7J2DPane.s"
 }
 #pragma pop
 
+
 /* 80255184-802552B8 0134 .text      dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive() {
+extern "C" asm void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive.s"
 }
 #pragma pop
 
+
 /* 802552B8-80255328 0070 .text      __dt__20JSUMemoryInputStreamFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__20JSUMemoryInputStreamFv() {
+extern "C" asm void __dt__20JSUMemoryInputStreamFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__dt__20JSUMemoryInputStreamFv.s"
 }
 #pragma pop
 
+
 /* 80255328-80255388 0060 .text      __dt__20JSURandomInputStreamFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__20JSURandomInputStreamFv() {
+extern "C" asm void __dt__20JSURandomInputStreamFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__dt__20JSURandomInputStreamFv.s"
 }
 #pragma pop
 
+
 /* 80255388-802553D0 0048 .text      __dt__10JSUIosBaseFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10JSUIosBaseFv() {
+extern "C" asm void __dt__10JSUIosBaseFv() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__dt__10JSUIosBaseFv.s"
 }
 #pragma pop
 
+
 /* 802553D0-802553EC 001C .text      __sinit_d_pane_class_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_pane_class_cpp() {
+extern "C" asm void __sinit_d_pane_class_cpp() {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__sinit_d_pane_class_cpp.s"
 }

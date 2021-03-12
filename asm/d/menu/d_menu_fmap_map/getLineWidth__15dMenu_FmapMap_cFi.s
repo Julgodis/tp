@@ -14,10 +14,10 @@ lbl_801CF154:
 /* 801CF158 00000004  88 A4 01 6D */	lbz r5, 0x16d(r4)
 lbl_801CF15C:
 /* 801CF15C 00000000  C0 63 00 D0 */	lfs f3, 0xd0(r3)
-/* 801CF160 00000004  C0 42 A7 84 */	lfs f2, d_menu_d_menu_fmap_map__LIT_3711(r2)
+/* 801CF160 00000004  C0 42 A7 84 */	lfs f2, d_menu_d_menu_fmap_map__lit_3711(r2)
 /* 801CF164 00000008  FC 03 10 40 */	fcmpo cr0, f3, f2
 /* 801CF168 00000000  40 81 00 38 */	ble lbl_801CF1A0
-/* 801CF16C 00000004  C8 22 A7 A8 */	lfd f1, d_menu_d_menu_fmap_map__LIT_4108(r2)
+/* 801CF16C 00000004  C8 22 A7 A8 */	lfd f1, d_menu_d_menu_fmap_map__lit_4108(r2)
 /* 801CF170 00000008  6C A0 80 00 */	xoris r0, r5, 0x8000
 /* 801CF174 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801CF178 00000010  3C 00 43 30 */	lis r0, 0x4330
@@ -35,7 +35,7 @@ lbl_801CF1A0:
 /* 801CF1A4 00000004  48 00 00 28 */	b lbl_801CF1CC
 lbl_801CF1A8:
 /* 801CF1A8 00000000  C0 23 00 D0 */	lfs f1, 0xd0(r3)
-/* 801CF1AC 00000004  C0 02 A7 C0 */	lfs f0, d_menu_d_menu_fmap_map__LIT_4152(r2)
+/* 801CF1AC 00000004  C0 02 A7 C0 */	lfs f0, d_menu_d_menu_fmap_map__lit_4152(r2)
 /* 801CF1B0 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801CF1B4 00000000  40 81 00 10 */	ble lbl_801CF1C4
 /* 801CF1B8 00000004  38 62 A7 B0 */	addi r3, r2, 0x804541B0-0x80459A00 /* data_804541B0-_SDA2_BASE_ */

@@ -1,5 +1,5 @@
 lbl_8029E5E0:
-/* 8029E5E0 00000000  C0 02 BD 70 */	lfs f0, dspproc__LIT_333(r2)
+/* 8029E5E0 00000000  C0 02 BD 70 */	lfs f0, dspproc__lit_333(r2)
 /* 8029E5E4 00000004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E5E8 00000008  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029E5EC 0000000C  FC 00 00 1E */	fctiwz f0, f0

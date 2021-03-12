@@ -1,7 +1,7 @@
 lbl_801CE068:
 /* 801CE068 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801CE06C 00000004  54 65 06 3E */	clrlwi r5, r3, 0x18
-/* 801CE070 00000008  C8 82 A7 78 */	lfd f4, d_menu_d_menu_fmap_map__LIT_3689(r2)
+/* 801CE070 00000008  C8 82 A7 78 */	lfd f4, d_menu_d_menu_fmap_map__lit_3689(r2)
 /* 801CE074 0000000C  90 A1 00 0C */	stw r5, 0xc(r1)
 /* 801CE078 00000010  3C 60 43 30 */	lis r3, 0x4330
 /* 801CE07C 00000014  90 61 00 08 */	stw r3, 8(r1)

@@ -68,7 +68,7 @@ lbl_80214FAC:
 /* 80214FB4 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80214FB8 0000000C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80214FBC 00000010  80 04 5D E0 */	lwz r0, 0x5de0(r4)
-/* 80214FC0 00000014  C8 42 AE A0 */	lfd f2, LIT_4925(r2)
+/* 80214FC0 00000014  C8 42 AE A0 */	lfd f2, lit_4925(r2)
 /* 80214FC4 00000018  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80214FC8 0000001C  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80214FCC 00000020  3C 60 43 30 */	lis r3, 0x4330
@@ -82,7 +82,7 @@ lbl_80214FAC:
 /* 80214FEC 00000040  C8 01 00 68 */	lfd f0, 0x68(r1)
 /* 80214FF0 00000044  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80214FF4 00000048  EC 21 00 24 */	fdivs f1, f1, f0
-/* 80214FF8 0000004C  C0 02 AE B4 */	lfs f0, d_meter_d_meter2_draw__LIT_6143(r2)
+/* 80214FF8 0000004C  C0 02 AE B4 */	lfs f0, d_meter_d_meter2_draw__lit_6143(r2)
 /* 80214FFC 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80215000 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 80215004 00000004  40 82 00 A4 */	bne lbl_802150A8
@@ -109,7 +109,7 @@ lbl_80214FAC:
 /* 80215058 00000058  80 9C 05 3C */	lwz r4, 0x53c(r28)
 /* 8021505C 0000005C  4B FF EE 39 */	bl playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor
 /* 80215060 00000060  C0 3E 05 FC */	lfs f1, 0x5fc(r30)
-/* 80215064 00000064  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80215064 00000064  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80215068 000000BC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8021506C 00000000  40 81 01 40 */	ble lbl_802151AC
 /* 80215070 00000004  38 00 00 2B */	li r0, 0x2b
@@ -119,15 +119,15 @@ lbl_80214FAC:
 /* 80215080 00000014  38 A0 00 00 */	li r5, 0
 /* 80215084 00000018  38 C0 00 00 */	li r6, 0
 /* 80215088 0000001C  38 E0 00 00 */	li r7, 0
-/* 8021508C 00000020  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__LIT_4183(r2)
+/* 8021508C 00000020  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__lit_4183(r2)
 /* 80215090 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80215094 00000028  C0 62 AE B0 */	lfs f3, LIT_5786(r2)
+/* 80215094 00000028  C0 62 AE B0 */	lfs f3, lit_5786(r2)
 /* 80215098 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 8021509C 00000030  39 00 00 00 */	li r8, 0
 /* 802150A0 00000034  48 09 74 6D */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 802150A4 00000038  48 00 01 08 */	b lbl_802151AC
 lbl_802150A8:
-/* 802150A8 00000000  C0 02 AE 94 */	lfs f0, d_meter_d_meter2_draw__LIT_4922(r2)
+/* 802150A8 00000000  C0 02 AE 94 */	lfs f0, d_meter_d_meter2_draw__lit_4922(r2)
 /* 802150AC 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802150B0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 802150B4 00000004  40 82 00 A8 */	bne lbl_8021515C
@@ -155,7 +155,7 @@ lbl_802150A8:
 /* 8021510C 0000005C  80 9C 05 40 */	lwz r4, 0x540(r28)
 /* 80215110 00000060  4B FF ED 85 */	bl playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor
 /* 80215114 00000064  C0 3E 05 FC */	lfs f1, 0x5fc(r30)
-/* 80215118 00000068  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80215118 00000068  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 8021511C 00000074  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80215120 00000000  40 81 00 8C */	ble lbl_802151AC
 /* 80215124 00000004  38 00 00 2A */	li r0, 0x2a
@@ -165,9 +165,9 @@ lbl_802150A8:
 /* 80215134 00000014  38 A0 00 00 */	li r5, 0
 /* 80215138 00000018  38 C0 00 00 */	li r6, 0
 /* 8021513C 0000001C  38 E0 00 00 */	li r7, 0
-/* 80215140 00000020  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__LIT_4183(r2)
+/* 80215140 00000020  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__lit_4183(r2)
 /* 80215144 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80215148 00000028  C0 62 AE B0 */	lfs f3, LIT_5786(r2)
+/* 80215148 00000028  C0 62 AE B0 */	lfs f3, lit_5786(r2)
 /* 8021514C 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 80215150 00000030  39 00 00 00 */	li r8, 0
 /* 80215154 00000034  48 09 73 B9 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -242,7 +242,7 @@ lbl_802151B8:
 /* 8021525C 000000A4  C0 44 05 F0 */	lfs f2, 0x5f0(r4)
 /* 80215260 000000A8  48 03 F3 51 */	bl paneTrans__8CPaneMgrFff
 /* 80215264 000000AC  80 7C 00 7C */	lwz r3, 0x7c(r28)
-/* 80215268 000000B0  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80215268 000000B0  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 8021526C 000000B4  FC 40 08 90 */	fmr f2, f1
 /* 80215270 000000B8  7F E4 FB 78 */	mr r4, r31
 /* 80215274 000000BC  48 0E 3C 61 */	bl draw__9J2DScreenFffPC14J2DGrafContext

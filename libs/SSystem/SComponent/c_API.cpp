@@ -5,27 +5,23 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoGph_BlankingON__Fv();
-extern void mDoGph_BlankingOFF__Fv();
-extern void mDoGph_BeforeOfDraw__Fv();
-extern void mDoGph_AfterOfDraw__Fv();
-extern void mDoGph_Painter__Fv();
-extern void mDoGph_Create__Fv();
+extern "C" extern void mDoGph_BlankingON__Fv();
+extern "C" extern void mDoGph_BlankingOFF__Fv();
+extern "C" extern void mDoGph_BeforeOfDraw__Fv();
+extern "C" extern void mDoGph_AfterOfDraw__Fv();
+extern "C" extern void mDoGph_Painter__Fv();
+extern "C" extern void mDoGph_Create__Fv();
 SECTION_DATA extern void* g_cAPI_Interface[6];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C3528-803C3540 0018 .data      g_cAPI_Interface                                             */
-SECTION_DATA void* g_cAPI_Interface[6] = {
+void* g_cAPI_Interface[6] = {
 	(void*)mDoGph_Create__Fv,
 	(void*)mDoGph_BeforeOfDraw__Fv,
 	(void*)mDoGph_AfterOfDraw__Fv,
@@ -33,5 +29,4 @@ SECTION_DATA void* g_cAPI_Interface[6] = {
 	(void*)mDoGph_BlankingON__Fv,
 	(void*)mDoGph_BlankingOFF__Fv,
 };
-}
 

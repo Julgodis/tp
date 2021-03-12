@@ -10,8 +10,8 @@ lbl_802E414C:
 /* 802E416C 00000020  38 63 45 98 */	addi r3, r3, sMapFileList__12JUTException@l
 /* 802E4170 00000024  3C 80 80 2E */	lis r4, func_802E4194@ha
 /* 802E4174 00000028  38 84 41 94 */	addi r4, r4, func_802E4194@l
-/* 802E4178 0000002C  3C A0 80 43 */	lis r5, JUTException__LIT_2182@ha
-/* 802E417C 00000030  38 A5 45 8C */	addi r5, r5, JUTException__LIT_2182@l
+/* 802E4178 0000002C  3C A0 80 43 */	lis r5, JUTException__lit_2182@ha
+/* 802E417C 00000030  38 A5 45 8C */	addi r5, r5, JUTException__lit_2182@l
 /* 802E4180 00000034  48 07 DA A5 */	bl __register_global_object
 /* 802E4184 00000038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E4188 0000003C  7C 08 03 A6 */	mtlr r0

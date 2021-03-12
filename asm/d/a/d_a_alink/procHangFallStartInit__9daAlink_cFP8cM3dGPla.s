@@ -14,7 +14,7 @@ lbl_800FAECC:
 /* 800FAEFC 0000001C  48 16 C2 2D */	bl atan2sX_Z__4cXyzCFv
 /* 800FAF00 00000020  7C 7D 1B 78 */	mr r29, r3
 /* 800FAF04 00000024  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
-/* 800FAF08 00000028  C0 42 93 2C */	lfs f2, d_a_d_a_alink__LIT_7624(r2)
+/* 800FAF08 00000028  C0 42 93 2C */	lfs f2, d_a_d_a_alink__lit_7624(r2)
 /* 800FAF0C 0000002C  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 800FAF10 00000030  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800FAF14 00000034  EC 01 00 28 */	fsubs f0, f1, f0
@@ -28,7 +28,7 @@ lbl_800FAECC:
 /* 800FAF34 00000054  7F A4 EB 78 */	mr r4, r29
 /* 800FAF38 00000058  4B FF F9 25 */	bl checkHangStartSideWall__9daAlink_cFs
 /* 800FAF3C 0000005C  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
-/* 800FAF40 00000060  C0 22 93 00 */	lfs f1, LIT_6895(r2)
+/* 800FAF40 00000060  C0 22 93 00 */	lfs f1, lit_6895(r2)
 /* 800FAF44 00000064  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 800FAF48 00000068  EC 21 00 2A */	fadds f1, f1, f0
 /* 800FAF4C 0000006C  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
@@ -45,7 +45,7 @@ lbl_800FAECC:
 /* 800FAF78 00000098  38 9F 1D 08 */	addi r4, r31, 0x1d08
 /* 800FAF7C 0000009C  4B F7 95 25 */	bl GroundCross__4cBgSFP11cBgS_GndChk
 /* 800FAF80 000000A0  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 800FAF84 000000A4  C0 02 93 A4 */	lfs f0, LIT_9138(r2)
+/* 800FAF84 000000A4  C0 02 93 A4 */	lfs f0, lit_9138(r2)
 /* 800FAF88 000000A8  FC 40 08 18 */	frsp f2, f1
 /* 800FAF8C 000000AC  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 800FAF90 000000B0  41 82 00 24 */	beq lbl_800FAFB4
@@ -61,7 +61,7 @@ lbl_800FAFB0:
 lbl_800FAFB4:
 /* 800FAFB4 00000000  7F BD 07 34 */	extsh r29, r29
 /* 800FAFB8 00000004  38 1D C0 00 */	addi r0, r29, -16384
-/* 800FAFBC 00000008  C0 22 92 9C */	lfs f1, d_a_d_a_alink__LIT_5944(r2)
+/* 800FAFBC 00000008  C0 22 92 9C */	lfs f1, d_a_d_a_alink__lit_5944(r2)
 /* 800FAFC0 0000000C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 800FAFC4 00000010  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800FAFC8 00000014  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
@@ -73,7 +73,7 @@ lbl_800FAFB4:
 /* 800FAFE0 0000002C  C0 01 00 08 */	lfs f0, 8(r1)
 /* 800FAFE4 00000030  EC 00 F8 2A */	fadds f0, f0, f31
 /* 800FAFE8 00000034  D0 01 00 08 */	stfs f0, 8(r1)
-/* 800FAFEC 00000038  C0 22 93 00 */	lfs f1, LIT_6895(r2)
+/* 800FAFEC 00000038  C0 22 93 00 */	lfs f1, lit_6895(r2)
 /* 800FAFF0 0000003C  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 800FAFF4 00000040  EC 01 00 2A */	fadds f0, f1, f0
 /* 800FAFF8 00000044  D0 01 00 0C */	stfs f0, 0xc(r1)
@@ -87,7 +87,7 @@ lbl_800FAFB4:
 /* 800FB018 00000064  38 9F 1D 08 */	addi r4, r31, 0x1d08
 /* 800FB01C 00000068  4B F7 94 85 */	bl GroundCross__4cBgSFP11cBgS_GndChk
 /* 800FB020 0000006C  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
-/* 800FB024 00000070  C0 02 93 00 */	lfs f0, LIT_6895(r2)
+/* 800FB024 00000070  C0 02 93 00 */	lfs f0, lit_6895(r2)
 /* 800FB028 00000074  EC 02 00 28 */	fsubs f0, f2, f0
 /* 800FB02C 00000078  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FB030 00000000  40 80 00 70 */	bge lbl_800FB0A0
@@ -106,7 +106,7 @@ lbl_800FAFB4:
 /* 800FB064 00000034  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 800FB068 00000038  FC 40 08 18 */	frsp f2, f1
 /* 800FB06C 0000003C  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 800FB070 00000040  C0 02 93 00 */	lfs f0, LIT_6895(r2)
+/* 800FB070 00000040  C0 02 93 00 */	lfs f0, lit_6895(r2)
 /* 800FB074 00000044  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800FB078 000000C4  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800FB07C 00000000  40 80 00 0C */	bge lbl_800FB088
@@ -135,7 +135,7 @@ lbl_800FB0A0:
 /* 800FB0D0 00000030  A0 1F 2F E8 */	lhz r0, 0x2fe8(r31)
 /* 800FB0D4 00000034  28 00 00 0E */	cmplwi r0, 0xe
 /* 800FB0D8 00000038  40 82 00 0C */	bne lbl_800FB0E4
-/* 800FB0DC 0000003C  C3 C2 92 C0 */	lfs f30, LIT_6108(r2)
+/* 800FB0DC 0000003C  C3 C2 92 C0 */	lfs f30, lit_6108(r2)
 /* 800FB0E0 00000040  48 00 00 10 */	b lbl_800FB0F0
 lbl_800FB0E4:
 /* 800FB0E4 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wallFall_c0@ha
@@ -157,7 +157,7 @@ lbl_800FB0F0:
 /* 800FB120 00000030  A8 A5 00 00 */	lha r5, 0(r5)
 /* 800FB124 00000034  FC 60 F0 90 */	fmr f3, f30
 /* 800FB128 00000038  4B FB 1E E5 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
-/* 800FB12C 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800FB12C 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FB130 00000040  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800FB134 00000044  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 800FB138 00000048  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

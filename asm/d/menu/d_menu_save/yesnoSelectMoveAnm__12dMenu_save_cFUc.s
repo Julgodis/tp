@@ -54,7 +54,7 @@ lbl_801F5BA8:
 /* 801F5BAC 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F5BB0 00000008  7C 7C 02 14 */	add r3, r28, r0
 /* 801F5BB4 0000000C  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F5BB8 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F5BB8 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F5BBC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F5BC0 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F5BC4 0000001C  3C 00 43 30 */	lis r0, 0x4330
@@ -118,7 +118,7 @@ lbl_801F5C9C:
 /* 801F5CA0 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F5CA4 00000008  7C 7C 02 14 */	add r3, r28, r0
 /* 801F5CA8 0000000C  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F5CAC 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F5CAC 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F5CB0 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F5CB4 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F5CB8 0000001C  3C 00 43 30 */	lis r0, 0x4330

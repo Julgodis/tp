@@ -46,7 +46,7 @@ lbl_8022EA30:
 lbl_8022EA6C:
 /* 8022EA6C 00000000  C0 5F 00 4C */	lfs f2, 0x4c(r31)
 /* 8022EA70 00000004  7F A0 07 34 */	extsh r0, r29
-/* 8022EA74 00000008  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 8022EA74 00000008  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 8022EA78 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8022EA7C 00000010  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 8022EA80 00000014  3C 00 43 30 */	lis r0, 0x4330
@@ -66,7 +66,7 @@ lbl_8022EA6C:
 /* 8022EAB8 0000004C  38 81 00 08 */	addi r4, r1, 8
 /* 8022EABC 00000050  38 A6 0E 1C */	addi r5, r6, 0xe1c
 /* 8022EAC0 00000054  C0 26 04 3C */	lfs f1, 0x43c(r6)
-/* 8022EAC4 00000058  C0 42 B0 60 */	lfs f2, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022EAC4 00000058  C0 42 B0 60 */	lfs f2, d_msg_d_msg_class__lit_4027(r2)
 /* 8022EAC8 0000005C  48 00 08 BD */	bl do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff
 lbl_8022EACC:
 /* 8022EACC 00000000  39 61 00 40 */	addi r11, r1, 0x40

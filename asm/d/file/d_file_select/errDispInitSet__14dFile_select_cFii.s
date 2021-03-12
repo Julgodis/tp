@@ -132,10 +132,10 @@ lbl_8018E474:
 /* 8018E48C 00000018  80 7F 00 6C */	lwz r3, 0x6c(r31)
 /* 8018E490 0000001C  48 00 3C D1 */	bl init__15dFile_warning_cFv
 /* 8018E494 00000020  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 8018E498 00000024  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018E498 00000024  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018E49C 00000028  48 00 6E 05 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018E4A0 0000002C  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 8018E4A4 00000030  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018E4A4 00000030  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018E4A8 00000034  48 00 6D F9 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018E4AC 00000038  38 00 00 16 */	li r0, 0x16
 /* 8018E4B0 0000003C  98 1F 02 71 */	stb r0, 0x271(r31)

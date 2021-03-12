@@ -5,67 +5,67 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSGetTime();
-extern void __CARDSyncCallback();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDGetDirBlock();
-extern void __CARDUpdateDir();
-extern void __CARDIsWritable();
-extern void __CARDIsReadable();
-extern void UpdateIconOffsets();
-extern void CARDGetStatus();
-extern void CARDSetStatusAsync();
-extern void CARDSetStatus();
-extern void __div2i();
-}
+extern "C" extern void OSGetTime();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void __CARDUpdateDir();
+extern "C" extern void __CARDIsWritable();
+extern "C" extern void __CARDIsReadable();
+extern "C" extern void UpdateIconOffsets();
+extern "C" extern void CARDGetStatus();
+extern "C" extern void CARDSetStatusAsync();
+extern "C" extern void CARDSetStatus();
+extern "C" extern void __div2i();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80358C90-80358E88 01F8 .text      UpdateIconOffsets                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void UpdateIconOffsets() {
+extern "C" asm void UpdateIconOffsets() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/UpdateIconOffsets.s"
 }
 #pragma pop
 
+
 /* 80358E88-80358F9C 0114 .text      CARDGetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDGetStatus() {
+extern "C" asm void CARDGetStatus() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDGetStatus.s"
 }
 #pragma pop
 
+
 /* 80358F9C-80359110 0174 .text      CARDSetStatusAsync                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDSetStatusAsync() {
+extern "C" asm void CARDSetStatusAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDSetStatusAsync.s"
 }
 #pragma pop
 
+
 /* 80359110-80359158 0048 .text      CARDSetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDSetStatus() {
+extern "C" asm void CARDSetStatus() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDSetStatus.s"
 }

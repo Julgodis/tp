@@ -12,8 +12,8 @@ lbl_800E5170:
 /* 800E5198 00000028  38 60 00 00 */	li r3, 0
 /* 800E519C 0000002C  48 00 01 F8 */	b lbl_800E5394
 lbl_800E51A0:
-/* 800E51A0 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 800E51A4 00000004  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 800E51A0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 800E51A4 00000004  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 800E51A8 00000008  4B FF FE 01 */	bl setCarryArmAngle__9daAlink_cFff
 /* 800E51AC 0000000C  80 1E 27 EC */	lwz r0, 0x27ec(r30)
 /* 800E51B0 00000010  28 00 00 00 */	cmplwi r0, 0

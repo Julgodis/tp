@@ -11,7 +11,7 @@ lbl_800F1AAC:
 /* 800F1AD0 00000024  40 82 00 14 */	bne lbl_800F1AE4
 /* 800F1AD4 00000028  7F E3 FB 78 */	mr r3, r31
 /* 800F1AD8 0000002C  38 80 00 02 */	li r4, 2
-/* 800F1ADC 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F1ADC 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F1AE0 00000034  4B FB C0 0D */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1AE4:
 /* 800F1AE4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -37,10 +37,10 @@ lbl_800F1AE4:
 /* 800F1B34 00000050  38 C0 00 03 */	li r6, 3
 /* 800F1B38 00000054  38 E0 00 01 */	li r7, 1
 /* 800F1B3C 00000058  39 00 00 03 */	li r8, 3
-/* 800F1B40 0000005C  C0 22 92 98 */	lfs f1, LIT_5943(r2)
+/* 800F1B40 0000005C  C0 22 92 98 */	lfs f1, lit_5943(r2)
 /* 800F1B44 00000060  C0 1F 34 78 */	lfs f0, 0x3478(r31)
 /* 800F1B48 00000064  EC 21 00 32 */	fmuls f1, f1, f0
-/* 800F1B4C 00000068  C0 42 93 68 */	lfs f2, LIT_8472(r2)
+/* 800F1B4C 00000068  C0 42 93 68 */	lfs f2, lit_8472(r2)
 /* 800F1B50 0000006C  4B FD F9 F1 */	bl setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff
 /* 800F1B54 00000070  3C 60 80 39 */	lis r3, m__25daAlinkHIO_hoCutCharge_c0@ha
 /* 800F1B58 00000074  38 63 DC 9C */	addi r3, r3, m__25daAlinkHIO_hoCutCharge_c0@l

@@ -5,56 +5,54 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__17JASSimpleWaveBankFv();
-extern void __dt__17JASSimpleWaveBankFv();
-extern void __dt__Q217JASSimpleWaveBank11TWaveHandleFv();
-extern void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
-extern void getWaveHandle__17JASSimpleWaveBankCFUl();
-extern void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
-extern void getWaveArc__17JASSimpleWaveBankFUl();
-extern void getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv();
-extern void __ct__Q217JASSimpleWaveBank11TWaveHandleFv();
-extern void getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv();
-extern void getArcCount__17JASSimpleWaveBankCFv();
-extern void onLoadDone__10JASWaveArcFv();
-extern void onEraseDone__10JASWaveArcFv();
-extern void func_80298FA8();
-extern void __ct__10JASWaveArcFv();
-extern void __dt__10JASWaveArcFv();
-extern void onDispose__10JASWaveArcFv();
-extern void __nwa__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __destroy_new_array();
-extern void __construct_new_array();
-extern void _savegpr_29();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__13JASWaveHandle[5];
-SECTION_DATA extern void* __vt__11JASWaveBank[6];
-SECTION_DATA extern void* __vt__Q217JASSimpleWaveBank11TWaveHandle[5];
-SECTION_DATA extern void* __vt__17JASSimpleWaveBank[13];
-SECTION_SDATA extern u8 one__11JASWaveInfo[8];
-}
+extern "C" extern void __ct__17JASSimpleWaveBankFv();
+extern "C" extern void __dt__17JASSimpleWaveBankFv();
+extern "C" extern void __dt__Q217JASSimpleWaveBank11TWaveHandleFv();
+extern "C" extern void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
+extern "C" extern void getWaveHandle__17JASSimpleWaveBankCFUl();
+extern "C" extern void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
+extern "C" extern void getWaveArc__17JASSimpleWaveBankFUl();
+extern "C" extern void getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv();
+extern "C" extern void __ct__Q217JASSimpleWaveBank11TWaveHandleFv();
+extern "C" extern void getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv();
+extern "C" extern void getArcCount__17JASSimpleWaveBankCFv();
+extern "C" extern void onLoadDone__10JASWaveArcFv();
+extern "C" extern void onEraseDone__10JASWaveArcFv();
+extern "C" extern void func_80298FA8();
+extern "C" extern void __ct__10JASWaveArcFv();
+extern "C" extern void __dt__10JASWaveArcFv();
+extern "C" extern void onDispose__10JASWaveArcFv();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __destroy_new_array();
+extern "C" extern void __construct_new_array();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__13JASWaveHandle[5];
+SECTION_DATA extern void* const __vt__11JASWaveBank[6];
+SECTION_DATA extern void* const __vt__Q217JASSimpleWaveBank11TWaveHandle[5];
+SECTION_DATA extern void* const __vt__17JASSimpleWaveBank[13];
+SECTION_SDATA extern u32 one__11JASWaveInfo;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C7798-803C77AC 0014 .data      __vt__Q217JASSimpleWaveBank11TWaveHandle                     */
-SECTION_DATA void* __vt__Q217JASSimpleWaveBank11TWaveHandle[5] = {
+void* const __vt__Q217JASSimpleWaveBank11TWaveHandle[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q217JASSimpleWaveBank11TWaveHandleFv,
 	(void*)getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv,
 	(void*)getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv,
 };
+
 /* 803C77AC-803C77E0 0030 .data      __vt__17JASSimpleWaveBank                                    */
-SECTION_DATA void* __vt__17JASSimpleWaveBank[13] = {
+void* const __vt__17JASSimpleWaveBank[13] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17JASSimpleWaveBankFv,
@@ -70,148 +68,155 @@ SECTION_DATA void* __vt__17JASSimpleWaveBank[13] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80298C94-80298CF4 0060 .text      __ct__17JASSimpleWaveBankFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__17JASSimpleWaveBankFv() {
+extern "C" asm void __ct__17JASSimpleWaveBankFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/__ct__17JASSimpleWaveBankFv.s"
 }
 #pragma pop
 
+
 /* 80298CF4-80298D84 0090 .text      __dt__17JASSimpleWaveBankFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__17JASSimpleWaveBankFv() {
+extern "C" asm void __dt__17JASSimpleWaveBankFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/__dt__17JASSimpleWaveBankFv.s"
 }
 #pragma pop
 
+
 /* 80298D84-80298DE0 005C .text      __dt__Q217JASSimpleWaveBank11TWaveHandleFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q217JASSimpleWaveBank11TWaveHandleFv() {
+extern "C" asm void __dt__Q217JASSimpleWaveBank11TWaveHandleFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/__dt__Q217JASSimpleWaveBank11TWaveHandleFv.s"
 }
 #pragma pop
 
+
 /* 80298DE0-80298E60 0080 .text      setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap() {
+extern "C" asm void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 80298E60-80298E84 0024 .text      getWaveHandle__17JASSimpleWaveBankCFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWaveHandle__17JASSimpleWaveBankCFUl() {
+extern "C" asm void getWaveHandle__17JASSimpleWaveBankCFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/getWaveHandle__17JASSimpleWaveBankCFUl.s"
 }
 #pragma pop
 
+
 /* 80298E84-80298F18 0094 .text      setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo() {
+extern "C" asm void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo.s"
 }
 #pragma pop
 
+
 /* 80298F18-80298F38 0020 .text      getWaveArc__17JASSimpleWaveBankFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWaveArc__17JASSimpleWaveBankFUl() {
+extern "C" asm void getWaveArc__17JASSimpleWaveBankFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/getWaveArc__17JASSimpleWaveBankFUl.s"
 }
 #pragma pop
 
+
 /* 80298F38-80298F5C 0024 .text      getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv() {
+extern "C" asm void getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv.s"
 }
 #pragma pop
 
+
 /* 80298F5C-80298F90 0034 .text      __ct__Q217JASSimpleWaveBank11TWaveHandleFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q217JASSimpleWaveBank11TWaveHandleFv() {
+extern "C" asm void __ct__Q217JASSimpleWaveBank11TWaveHandleFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/__ct__Q217JASSimpleWaveBank11TWaveHandleFv.s"
 }
 #pragma pop
 
+
 /* 80298F90-80298F98 0008 .text      getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv() {
+extern "C" asm void getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv.s"
 }
 #pragma pop
 
+
 /* 80298F98-80298FA0 0008 .text      getArcCount__17JASSimpleWaveBankCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getArcCount__17JASSimpleWaveBankCFv() {
+extern "C" asm void getArcCount__17JASSimpleWaveBankCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/getArcCount__17JASSimpleWaveBankCFv.s"
 }
 #pragma pop
 
+
 /* 80298FA0-80298FA4 0004 .text      onLoadDone__10JASWaveArcFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onLoadDone__10JASWaveArcFv() {
+extern "C" asm void onLoadDone__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/onLoadDone__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 80298FA4-80298FA8 0004 .text      onEraseDone__10JASWaveArcFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onEraseDone__10JASWaveArcFv() {
+extern "C" asm void onEraseDone__10JASWaveArcFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/onEraseDone__10JASWaveArcFv.s"
 }
 #pragma pop
 
+
 /* 80298FA8-80298FB0 0008 .text      @4@__dt__17JASSimpleWaveBankFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80298FA8() {
+extern "C" asm void func_80298FA8() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSimpleWaveBank/func_80298FA8.s"
 }

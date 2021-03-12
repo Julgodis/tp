@@ -5,45 +5,37 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __unregister_fragment();
-extern void __register_fragment();
+extern "C" extern void __unregister_fragment();
+extern "C" extern void __register_fragment();
 SECTION_BSS extern u8 fragmentinfo[12 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8044D430-8044D440 000C .bss       fragmentinfo                                                 */
-SECTION_BSS u8 fragmentinfo[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 fragmentinfo[12 + 4 /* padding */];
 
 /* 803628AC-803628E0 0034 .text      __unregister_fragment                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __unregister_fragment() {
+extern "C" asm void __unregister_fragment() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/Gecko_ExceptionPPC/__unregister_fragment.s"
 }
 #pragma pop
 
+
 /* 803628E0-80362914 0034 .text      __register_fragment                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __register_fragment() {
+extern "C" asm void __register_fragment() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/Gecko_ExceptionPPC/__register_fragment.s"
 }

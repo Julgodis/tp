@@ -188,13 +188,13 @@ lbl_80245ECC:
 /* 80245ED0 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80245ED4 00000008  41 82 00 60 */	beq lbl_80245F34
 /* 80245ED8 0000000C  C0 3F 00 00 */	lfs f1, 0(r31)
-/* 80245EDC 00000010  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__LIT_3869(r2)
+/* 80245EDC 00000010  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__lit_3869(r2)
 /* 80245EE0 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 80245EE4 00000018  D0 1F 00 00 */	stfs f0, 0(r31)
 /* 80245EE8 0000001C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80245EEC 00000020  A8 03 00 06 */	lha r0, 6(r3)
 /* 80245EF0 00000024  C0 5F 00 00 */	lfs f2, 0(r31)
-/* 80245EF4 00000028  C8 22 B2 E0 */	lfd f1, msg_scrn_d_msg_scrn_light__LIT_3871(r2)
+/* 80245EF4 00000028  C8 22 B2 E0 */	lfd f1, msg_scrn_d_msg_scrn_light__lit_3871(r2)
 /* 80245EF8 0000002C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80245EFC 00000030  90 01 00 7C */	stw r0, 0x7c(r1)
 /* 80245F00 00000034  3C 00 43 30 */	lis r0, 0x4330
@@ -204,7 +204,7 @@ lbl_80245ECC:
 /* 80245F10 00000044  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80245F14 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80245F18 00000004  40 82 00 0C */	bne lbl_80245F24
-/* 80245F1C 00000008  C0 02 B2 D8 */	lfs f0, msg_scrn_d_msg_scrn_light__LIT_3808(r2)
+/* 80245F1C 00000008  C0 02 B2 D8 */	lfs f0, msg_scrn_d_msg_scrn_light__lit_3808(r2)
 /* 80245F20 0000000C  D0 1F 00 00 */	stfs f0, 0(r31)
 lbl_80245F24:
 /* 80245F24 00000000  C0 1F 00 00 */	lfs f0, 0(r31)

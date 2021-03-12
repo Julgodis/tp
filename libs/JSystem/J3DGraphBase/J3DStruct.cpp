@@ -5,96 +5,91 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern void setEffectMtx__13J3DTexMtxInfoFPA4_f();
-extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern void __as__10J3DFogInfoFRC10J3DFogInfo();
-extern void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
-SECTION_SDATA2 extern u8 LIT_409[4];
-SECTION_SDATA2 extern u8 LIT_410[4];
-}
+extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" extern void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+extern "C" extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+extern "C" extern void __as__10J3DFogInfoFRC10J3DFogInfo();
+extern "C" extern void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+SECTION_SDATA2 extern f32 lit_409;
+SECTION_SDATA2 extern u8 lit_410[4];
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456410-80456414 0004 .sdata2    @409                                                         */
-SECTION_SDATA2 u8 LIT_409[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80456414-80456418 0004 .sdata2    @410                                                         */
-SECTION_SDATA2 u8 LIT_410[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803256C4-80325718 0054 .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__12J3DLightInfoFRC12J3DLightInfo() {
+extern "C" asm void __as__12J3DLightInfoFRC12J3DLightInfo() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__12J3DLightInfoFRC12J3DLightInfo.s"
 }
 #pragma pop
 
+
 /* 80325718-80325794 007C .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo() {
+extern "C" asm void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__13J3DTexMtxInfoFRC13J3DTexMtxInfo.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456410-80456414 0004 .sdata2    @409                                                         */
+f32 lit_409 = 1.0f;
+
+/* 80456414-80456418 0004 .sdata2    @410                                                         */
+u8 lit_410[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80325794-803257DC 0048 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEffectMtx__13J3DTexMtxInfoFPA4_f() {
+extern "C" asm void setEffectMtx__13J3DTexMtxInfoFPA4_f() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/setEffectMtx__13J3DTexMtxInfoFPA4_f.s"
 }
 #pragma pop
 
+
 /* 803257DC-80325800 0024 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo() {
+extern "C" asm void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo.s"
 }
 #pragma pop
 
+
 /* 80325800-8032587C 007C .text      __as__10J3DFogInfoFRC10J3DFogInfo                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__10J3DFogInfoFRC10J3DFogInfo() {
+extern "C" asm void __as__10J3DFogInfoFRC10J3DFogInfo() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__10J3DFogInfoFRC10J3DFogInfo.s"
 }
 #pragma pop
 
+
 /* 8032587C-803258A0 0024 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo() {
+extern "C" asm void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo.s"
 }

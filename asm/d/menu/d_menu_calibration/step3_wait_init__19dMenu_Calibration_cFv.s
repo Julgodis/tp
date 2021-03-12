@@ -20,7 +20,7 @@ lbl_801AF488:
 /* 801AF4D0 00000048  38 00 00 00 */	li r0, 0
 /* 801AF4D4 0000004C  B0 1F 00 FC */	sth r0, 0xfc(r31)
 /* 801AF4D8 00000050  80 7F 00 90 */	lwz r3, 0x90(r31)
-/* 801AF4DC 00000054  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF4DC 00000054  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF4E0 00000058  48 0A 62 F1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF4E4 0000005C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AF4E8 00000060  80 01 00 14 */	lwz r0, 0x14(r1)

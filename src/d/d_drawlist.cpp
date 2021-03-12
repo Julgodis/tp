@@ -5,215 +5,214 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__4cXyzFv();
-extern void mDoMtx_YrotM__FPA4_fs();
-extern void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern void scaleM__14mDoMtx_stack_cFfff();
-extern void __ct__4cXyzFv();
-extern void __dt__26mDoExt_3DlineMatSortPacketFv();
-extern void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern void setViewPort__14dDlst_window_cFffffff();
-extern void setScissor__14dDlst_window_cFffff();
-extern void draw__13dDlst_2DTri_cFv();
-extern void draw__14dDlst_2DQuad_cFv();
-extern void draw__15dDlst_2DPoint_cFv();
-extern void draw__11dDlst_2DT_cFv();
-extern void draw__12dDlst_2DT2_cFv();
-extern void __ct__12dDlst_2DT2_cFv();
-extern void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff();
-extern void draw__11dDlst_2DM_cFv();
-extern void draw__11dDlst_2Dm_cFv();
-extern void draw__12dDlst_2DMt_cFv();
-extern void getTexture__10J2DPictureCFUc();
-extern void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
-extern void draw__10dDlst_2D_cFv();
-extern void draw__11dDlst_blo_cFv();
-extern void clearAnmTransform__9J2DScreenFv();
-extern void calcMtx__7J2DPaneFv();
-extern void makeMatrix__7J2DPaneFff();
-extern void getTypeID__7J2DPaneCFv();
-extern void setWhite__10J2DPictureFQ28JUtility6TColor();
-extern void setBlack__10J2DPictureFQ28JUtility6TColor();
-extern void __dt__10J2DAnmBaseFv();
-extern void init__8cM_rnd_cFiii();
-extern void get__8cM_rnd_cFv();
-extern void getF__8cM_rnd_cFf();
-extern void getFX__8cM_rnd_cFf();
-extern void getValue__8cM_rnd_cFff();
-extern void draw__18dDlst_effectLine_cFv();
-extern void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff();
-extern void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla();
-extern void draw__18dDlst_shadowPoly_cFv();
-extern void J3DDrawBuffer__create__FUl();
-extern void reset__18dDlst_shadowReal_cFv();
-extern void imageDraw__18dDlst_shadowReal_cFPA4_f();
-extern void draw__18dDlst_shadowReal_cFv();
-extern void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla();
-extern void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c();
-extern void __dt__14ShdwDrawPoly_cFv();
-extern void setkankyoShadow__FP12dKy_tevstr_cPf();
-extern void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c();
-extern void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff();
-extern void add__18dDlst_shadowReal_cFP8J3DModel();
-extern void draw__20dDlst_shadowSimple_cFv();
-extern void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj();
-extern void init__21dDlst_shadowControl_cFv();
-extern void reset__21dDlst_shadowControl_cFv();
-extern void imageDraw__21dDlst_shadowControl_cFPA4_f();
-extern void draw__21dDlst_shadowControl_cFPA4_f();
-extern void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c();
-extern void addReal__21dDlst_shadowControl_cFUlP8J3DModel();
-extern void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
-extern void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
-extern void newData__13dDlst_peekZ_cFssPUl();
-extern void peekData__13dDlst_peekZ_cFv();
-extern void __ct__12dDlst_list_cFv();
-extern void __ct__26mDoExt_3DlineMatSortPacketFv();
-extern void __dt__18dDlst_shadowReal_cFv();
-extern void __dt__17dDlst_shadowTri_cFv();
-extern void __ct__18dDlst_shadowReal_cFv();
-extern void __ct__17dDlst_shadowTri_cFv();
-extern void __ct__20dDlst_shadowSimple_cFv();
-extern void init__12dDlst_list_cFv();
-extern void __dt__12dDlst_list_cFv();
-extern void reset__12dDlst_list_cFv();
-extern void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
-extern void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer();
-extern void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer();
-extern void drawOpaListItem3d__12dDlst_list_cFv();
-extern void drawXluListItem3d__12dDlst_list_cFv();
-extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c();
-extern void wipeIn__12dDlst_list_cFfR8_GXColor();
-extern void wipeIn__12dDlst_list_cFf();
-extern void calcWipe__12dDlst_list_cFv();
-extern void getTri__22dDlst_shadowRealPoly_cFv();
-extern void getTriMax__22dDlst_shadowRealPoly_cFv();
-extern void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
-extern void __sinit_d_drawlist_cpp();
-extern void ShdwDraw__4cBgSFP13cBgS_ShdwDraw();
-extern void dKy_plight_near_pos__Fv();
-extern void dKy_GxFog_set__Fv();
-extern void __mi__4cXyzCFRC3Vec();
-extern void normalize__4cXyzFv();
-extern void isZero__4cXyzCFv();
-extern void __ct__13cBgS_ShdwDrawFv();
-extern void __dt__13cBgS_ShdwDrawFv();
-extern void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
-extern void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
-extern void cLib_chaseUC__FPUcUcUc();
-extern void calcViewFrustum__11J3DUClipperFv();
-extern void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
-extern void __nw__FUl();
-extern void __nwa__FUli();
-extern void __dl__FPv();
-extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern void clearAnmTransform__7J2DPaneFv();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void __ct__10J2DPictureFv();
-extern void reinitGX__6J3DSysFv();
-extern void drawFast__14J3DShapePacketFv();
-extern void loadPreDrawSetting__8J3DShapeCFv();
-extern void initialize__13J3DDrawBufferFv();
-extern void allocBuffer__13J3DDrawBufferFUl();
-extern void __dt__13J3DDrawBufferFv();
-extern void frameInit__13J3DDrawBufferFv();
-extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern void draw__13J3DDrawBufferCFv();
-extern void PSMTXConcat();
-extern void PSMTXTrans();
-extern void C_MTXLightOrtho();
-extern void PSMTXMultVec();
-extern void C_MTXOrtho();
-extern void PSVECAdd();
-extern void PSVECScale();
-extern void PSVECSquareMag();
-extern void PSVECDotProduct();
-extern void GXSetVtxDesc();
-extern void GXClearVtxDesc();
-extern void GXSetVtxAttrFmt();
-extern void GXSetArray();
-extern void GXSetTexCoordGen2();
-extern void GXSetNumTexGens();
-extern void GXPixModeSync();
-extern void GXPeekZ();
-extern void GXBegin();
-extern void GXSetLineWidth();
-extern void GXSetPointSize();
-extern void GXSetCullMode();
-extern void GXSetTexCopySrc();
-extern void GXSetTexCopyDst();
-extern void GXCopyTex();
-extern void GXSetChanMatColor();
-extern void GXSetNumChans();
-extern void GXSetChanCtrl();
-extern void GXGetTexBufferSize();
-extern void GXInitTexObj();
-extern void GXInitTexObjLOD();
-extern void GXGetTexObjWidth();
-extern void GXGetTexObjHeight();
-extern void GXGetTexObjWrapS();
-extern void GXGetTexObjWrapT();
-extern void GXGetTexObjTlut();
-extern void GXLoadTexObj();
-extern void GXLoadTlut();
-extern void GXSetNumIndStages();
-extern void GXSetTevOp();
-extern void GXSetTevColorIn();
-extern void GXSetTevAlphaIn();
-extern void GXSetTevColorOp();
-extern void GXSetTevAlphaOp();
-extern void GXSetTevColor();
-extern void GXSetTevSwapModeTable();
-extern void GXSetAlphaCompare();
-extern void GXSetTevOrder();
-extern void GXSetNumTevStages();
-extern void GXSetFog();
-extern void GXSetBlendMode();
-extern void GXSetColorUpdate();
-extern void GXSetAlphaUpdate();
-extern void GXSetZMode();
-extern void GXSetZCompLoc();
-extern void GXSetDither();
-extern void GXCallDisplayList();
-extern void GXSetProjection();
-extern void GXLoadPosMtxImm();
-extern void GXSetCurrentMtx();
-extern void GXLoadTexMtxImm();
-extern void GXSetViewport();
-extern void GXSetScissor();
-extern void GXSetClipMode();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savefpr_26();
-extern void _restfpr_26();
-extern void _savegpr_22();
-extern void _savegpr_23();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_22();
-extern void _restgpr_23();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void fmod();
+extern "C" extern void __dt__4cXyzFv();
+extern "C" extern void mDoMtx_YrotM__FPA4_fs();
+extern "C" extern void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+extern "C" extern void scaleM__14mDoMtx_stack_cFfff();
+extern "C" extern void __ct__4cXyzFv();
+extern "C" extern void __dt__26mDoExt_3DlineMatSortPacketFv();
+extern "C" extern void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
+extern "C" extern void setViewPort__14dDlst_window_cFffffff();
+extern "C" extern void setScissor__14dDlst_window_cFffff();
+extern "C" extern void draw__13dDlst_2DTri_cFv();
+extern "C" extern void draw__14dDlst_2DQuad_cFv();
+extern "C" extern void draw__15dDlst_2DPoint_cFv();
+extern "C" extern void draw__11dDlst_2DT_cFv();
+extern "C" extern void draw__12dDlst_2DT2_cFv();
+extern "C" extern void __ct__12dDlst_2DT2_cFv();
+extern "C" extern void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff();
+extern "C" extern void draw__11dDlst_2DM_cFv();
+extern "C" extern void draw__11dDlst_2Dm_cFv();
+extern "C" extern void draw__12dDlst_2DMt_cFv();
+extern "C" extern void getTexture__10J2DPictureCFUc();
+extern "C" extern void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
+extern "C" extern void draw__10dDlst_2D_cFv();
+extern "C" extern void draw__11dDlst_blo_cFv();
+extern "C" extern void clearAnmTransform__9J2DScreenFv();
+extern "C" extern void calcMtx__7J2DPaneFv();
+extern "C" extern void makeMatrix__7J2DPaneFff();
+extern "C" extern void getTypeID__7J2DPaneCFv();
+extern "C" extern void setWhite__10J2DPictureFQ28JUtility6TColor();
+extern "C" extern void setBlack__10J2DPictureFQ28JUtility6TColor();
+extern "C" extern void __dt__10J2DAnmBaseFv();
+extern "C" extern void init__8cM_rnd_cFiii();
+extern "C" extern void get__8cM_rnd_cFv();
+extern "C" extern void getF__8cM_rnd_cFf();
+extern "C" extern void getFX__8cM_rnd_cFf();
+extern "C" extern void getValue__8cM_rnd_cFff();
+extern "C" extern void draw__18dDlst_effectLine_cFv();
+extern "C" extern void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff();
+extern "C" extern void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla();
+extern "C" extern void draw__18dDlst_shadowPoly_cFv();
+extern "C" extern void J3DDrawBuffer__create__FUl();
+extern "C" extern void reset__18dDlst_shadowReal_cFv();
+extern "C" extern void imageDraw__18dDlst_shadowReal_cFPA4_f();
+extern "C" extern void draw__18dDlst_shadowReal_cFv();
+extern "C" extern void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla();
+extern "C" extern void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c();
+extern "C" extern void __dt__14ShdwDrawPoly_cFv();
+extern "C" extern void setkankyoShadow__FP12dKy_tevstr_cPf();
+extern "C" extern void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c();
+extern "C" extern void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff();
+extern "C" extern void add__18dDlst_shadowReal_cFP8J3DModel();
+extern "C" extern void draw__20dDlst_shadowSimple_cFv();
+extern "C" extern void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj();
+extern "C" extern void init__21dDlst_shadowControl_cFv();
+extern "C" extern void reset__21dDlst_shadowControl_cFv();
+extern "C" extern void imageDraw__21dDlst_shadowControl_cFPA4_f();
+extern "C" extern void draw__21dDlst_shadowControl_cFPA4_f();
+extern "C" extern void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c();
+extern "C" extern void addReal__21dDlst_shadowControl_cFUlP8J3DModel();
+extern "C" extern void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
+extern "C" extern void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
+extern "C" extern void newData__13dDlst_peekZ_cFssPUl();
+extern "C" extern void peekData__13dDlst_peekZ_cFv();
+extern "C" extern void __ct__12dDlst_list_cFv();
+extern "C" extern void __ct__26mDoExt_3DlineMatSortPacketFv();
+extern "C" extern void __dt__18dDlst_shadowReal_cFv();
+extern "C" extern void __dt__17dDlst_shadowTri_cFv();
+extern "C" extern void __ct__18dDlst_shadowReal_cFv();
+extern "C" extern void __ct__17dDlst_shadowTri_cFv();
+extern "C" extern void __ct__20dDlst_shadowSimple_cFv();
+extern "C" extern void init__12dDlst_list_cFv();
+extern "C" extern void __dt__12dDlst_list_cFv();
+extern "C" extern void reset__12dDlst_list_cFv();
+extern "C" extern void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
+extern "C" extern void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer();
+extern "C" extern void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer();
+extern "C" extern void drawOpaListItem3d__12dDlst_list_cFv();
+extern "C" extern void drawXluListItem3d__12dDlst_list_cFv();
+extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" extern void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c();
+extern "C" extern void wipeIn__12dDlst_list_cFfR8_GXColor();
+extern "C" extern void wipeIn__12dDlst_list_cFf();
+extern "C" extern void calcWipe__12dDlst_list_cFv();
+extern "C" extern void getTri__22dDlst_shadowRealPoly_cFv();
+extern "C" extern void getTriMax__22dDlst_shadowRealPoly_cFv();
+extern "C" extern void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
+extern "C" extern void __sinit_d_drawlist_cpp();
+extern "C" extern void ShdwDraw__4cBgSFP13cBgS_ShdwDraw();
+extern "C" extern void dKy_plight_near_pos__Fv();
+extern "C" extern void dKy_GxFog_set__Fv();
+extern "C" extern void __mi__4cXyzCFRC3Vec();
+extern "C" extern void normalize__4cXyzFv();
+extern "C" extern void isZero__4cXyzCFv();
+extern "C" extern void __ct__13cBgS_ShdwDrawFv();
+extern "C" extern void __dt__13cBgS_ShdwDrawFv();
+extern "C" extern void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
+extern "C" extern void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+extern "C" extern void cLib_chaseUC__FPUcUcUc();
+extern "C" extern void calcViewFrustum__11J3DUClipperFv();
+extern "C" extern void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __nwa__FUli();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" extern void clearAnmTransform__7J2DPaneFv();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void __ct__10J2DPictureFv();
+extern "C" extern void reinitGX__6J3DSysFv();
+extern "C" extern void drawFast__14J3DShapePacketFv();
+extern "C" extern void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" extern void initialize__13J3DDrawBufferFv();
+extern "C" extern void allocBuffer__13J3DDrawBufferFUl();
+extern "C" extern void __dt__13J3DDrawBufferFv();
+extern "C" extern void frameInit__13J3DDrawBufferFv();
+extern "C" extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" extern void draw__13J3DDrawBufferCFv();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void PSMTXTrans();
+extern "C" extern void C_MTXLightOrtho();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void C_MTXOrtho();
+extern "C" extern void PSVECAdd();
+extern "C" extern void PSVECScale();
+extern "C" extern void PSVECSquareMag();
+extern "C" extern void PSVECDotProduct();
+extern "C" extern void GXSetVtxDesc();
+extern "C" extern void GXClearVtxDesc();
+extern "C" extern void GXSetVtxAttrFmt();
+extern "C" extern void GXSetArray();
+extern "C" extern void GXSetTexCoordGen2();
+extern "C" extern void GXSetNumTexGens();
+extern "C" extern void GXPixModeSync();
+extern "C" extern void GXPeekZ();
+extern "C" extern void GXBegin();
+extern "C" extern void GXSetLineWidth();
+extern "C" extern void GXSetPointSize();
+extern "C" extern void GXSetCullMode();
+extern "C" extern void GXSetTexCopySrc();
+extern "C" extern void GXSetTexCopyDst();
+extern "C" extern void GXCopyTex();
+extern "C" extern void GXSetChanMatColor();
+extern "C" extern void GXSetNumChans();
+extern "C" extern void GXSetChanCtrl();
+extern "C" extern void GXGetTexBufferSize();
+extern "C" extern void GXInitTexObj();
+extern "C" extern void GXInitTexObjLOD();
+extern "C" extern void GXGetTexObjWidth();
+extern "C" extern void GXGetTexObjHeight();
+extern "C" extern void GXGetTexObjWrapS();
+extern "C" extern void GXGetTexObjWrapT();
+extern "C" extern void GXGetTexObjTlut();
+extern "C" extern void GXLoadTexObj();
+extern "C" extern void GXLoadTlut();
+extern "C" extern void GXSetNumIndStages();
+extern "C" extern void GXSetTevOp();
+extern "C" extern void GXSetTevColorIn();
+extern "C" extern void GXSetTevAlphaIn();
+extern "C" extern void GXSetTevColorOp();
+extern "C" extern void GXSetTevAlphaOp();
+extern "C" extern void GXSetTevColor();
+extern "C" extern void GXSetTevSwapModeTable();
+extern "C" extern void GXSetAlphaCompare();
+extern "C" extern void GXSetTevOrder();
+extern "C" extern void GXSetNumTevStages();
+extern "C" extern void GXSetFog();
+extern "C" extern void GXSetBlendMode();
+extern "C" extern void GXSetColorUpdate();
+extern "C" extern void GXSetAlphaUpdate();
+extern "C" extern void GXSetZMode();
+extern "C" extern void GXSetZCompLoc();
+extern "C" extern void GXSetDither();
+extern "C" extern void GXCallDisplayList();
+extern "C" extern void GXSetProjection();
+extern "C" extern void GXLoadPosMtxImm();
+extern "C" extern void GXSetCurrentMtx();
+extern "C" extern void GXLoadTexMtxImm();
+extern "C" extern void GXSetViewport();
+extern "C" extern void GXSetScissor();
+extern "C" extern void GXSetClipMode();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savefpr_26();
+extern "C" extern void _restfpr_26();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void fmod();
 SECTION_RODATA extern const u8 data_8037A178[44];
 SECTION_RODATA extern const u8 data_8037A1A4[12];
 SECTION_RODATA extern const u8 d_d_drawlist__stringBase0[16];
 SECTION_DATA extern u8 g_mDoMtx_identity[72];
-SECTION_DATA extern void* __vt__26mDoExt_3DlineMatSortPacket[5];
-SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__26mDoExt_3DlineMatSortPacket[5];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 d_d_drawlist__cNullVec__6Z2Calc[32];
 SECTION_DATA extern u8 l_frontZMat[64];
 SECTION_DATA extern u8 l_frontNoZSubMat[44];
@@ -233,22 +232,22 @@ SECTION_DATA extern u8 data_803A8D00[124];
 SECTION_DATA extern u8 data_803A8D7C[16];
 SECTION_DATA extern u8 data_803A8D8C[16];
 SECTION_DATA extern u8 data_803A8D9C[48];
-SECTION_DATA extern void* __vt__18dDlst_shadowPoly_c[4];
-SECTION_DATA extern void* __vt__22dDlst_shadowRealPoly_c[4];
-SECTION_DATA extern void* __vt__14ShdwDrawPoly_c[3];
-SECTION_DATA extern void* __vt__18dDlst_effectLine_c[3];
-SECTION_DATA extern void* __vt__10J2DAnmBase[4];
-SECTION_DATA extern void* __vt__11dDlst_blo_c[3];
-SECTION_DATA extern void* __vt__10dDlst_2D_c[3];
-SECTION_DATA extern void* __vt__12dDlst_2DMt_c[3];
-SECTION_DATA extern void* __vt__11dDlst_2Dm_c[3];
-SECTION_DATA extern void* __vt__11dDlst_2DM_c[6];
-SECTION_DATA extern void* __vt__12dDlst_2DT2_c[3];
-SECTION_DATA extern void* __vt__11dDlst_2DT_c[3];
-SECTION_DATA extern void* __vt__15dDlst_2DPoint_c[3];
-SECTION_DATA extern void* __vt__14dDlst_2DQuad_c[3];
-SECTION_DATA extern void* __vt__13dDlst_2DTri_c[3];
-SECTION_DATA extern void* __vt__9J3DPacket[5];
+SECTION_DATA extern void* const __vt__18dDlst_shadowPoly_c[4];
+SECTION_DATA extern void* const __vt__22dDlst_shadowRealPoly_c[4];
+SECTION_DATA extern void* const __vt__14ShdwDrawPoly_c[3];
+SECTION_DATA extern void* const __vt__18dDlst_effectLine_c[3];
+SECTION_DATA extern void* const __vt__10J2DAnmBase[4];
+SECTION_DATA extern void* const __vt__11dDlst_blo_c[3];
+SECTION_DATA extern void* const __vt__10dDlst_2D_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_2DMt_c[3];
+SECTION_DATA extern void* const __vt__11dDlst_2Dm_c[3];
+SECTION_DATA extern void* const __vt__11dDlst_2DM_c[6];
+SECTION_DATA extern void* const __vt__12dDlst_2DT2_c[3];
+SECTION_DATA extern void* const __vt__11dDlst_2DT_c[3];
+SECTION_DATA extern void* const __vt__15dDlst_2DPoint_c[3];
+SECTION_DATA extern void* const __vt__14dDlst_2DQuad_c[3];
+SECTION_DATA extern void* const __vt__13dDlst_2DTri_c[3];
+SECTION_DATA extern void* const __vt__9J3DPacket[5];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -260,16 +259,16 @@ SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u8 mBackColor__13mDoGph_gInf_c[4];
 SECTION_SDATA extern u8 g_clearColor[4];
-SECTION_SDATA extern u8 g_blackColor[4];
-SECTION_SDATA extern u8 g_whiteColor[4];
+SECTION_SDATA extern u32 g_blackColor;
+SECTION_SDATA extern u32 g_whiteColor;
 SECTION_SDATA extern u8 data_80450648[4];
 SECTION_SDATA extern u8 data_8045064C[4];
 SECTION_SDATA extern u8 data_80450650[4];
 SECTION_SDATA extern u8 data_80450654[4];
 SECTION_SDATA extern u8 data_80450658[4];
 SECTION_SDATA extern u8 mWipeColor__12dDlst_list_c[4];
-SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SDATA extern u8 __float_max[4];
+SECTION_SDATA extern u32 __float_nan;
+SECTION_SDATA extern u32 __float_max;
 SECTION_SBSS extern u8 mSystemFar__14mDoLib_clipper[4];
 SECTION_SBSS extern u8 mFovyRate__14mDoLib_clipper[4];
 SECTION_SBSS extern u8 data_80450ED0[4];
@@ -278,100 +277,174 @@ SECTION_SBSS extern u8 mWipeSpeed__12dDlst_list_c[4 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80450EE0[8];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4072[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4073[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4074[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4076[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4079[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4270[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4284[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4360[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4791[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4792[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4793[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4794[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4806[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_4876[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5061[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5062[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5127[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5128[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5129[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5130[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5155[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5156[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5267[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5268[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5269[8];
-SECTION_SDATA2 extern u8 LIT_5270[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5271[8];
-SECTION_SDATA2 extern u8 LIT_5272[8];
-SECTION_SDATA2 extern u8 LIT_5273[4];
-SECTION_SDATA2 extern u8 LIT_5274[4];
-SECTION_SDATA2 extern u8 LIT_5275[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5375[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5376[4];
-SECTION_SDATA2 extern u8 LIT_5377[4];
-SECTION_SDATA2 extern u8 LIT_5378[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5433[4];
-SECTION_SDATA2 extern u8 LIT_5551[4];
-SECTION_SDATA2 extern u8 LIT_5552[4];
-SECTION_SDATA2 extern u8 LIT_5553[4];
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4072;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4073;
+SECTION_SDATA2 extern u8 d_d_drawlist__lit_4074[8];
+SECTION_SDATA2 extern f64 d_d_drawlist__lit_4076;
+SECTION_SDATA2 extern f64 d_d_drawlist__lit_4079;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4270;
+SECTION_SDATA2 extern u32 d_d_drawlist__lit_4284;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4360;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4791;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4792;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4793;
+SECTION_SDATA2 extern f64 d_d_drawlist__lit_4794;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4806;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_4876;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5061;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5062;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5127;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5128;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5129;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5130;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5155;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5156;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5267;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5268;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5269;
+SECTION_SDATA2 extern f64 lit_5270;
+SECTION_SDATA2 extern f64 d_d_drawlist__lit_5271;
+SECTION_SDATA2 extern u8 lit_5272[8];
+SECTION_SDATA2 extern f32 lit_5273;
+SECTION_SDATA2 extern f32 lit_5274;
+SECTION_SDATA2 extern f32 lit_5275;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5375;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5376;
+SECTION_SDATA2 extern f32 lit_5377;
+SECTION_SDATA2 extern f32 lit_5378;
+SECTION_SDATA2 extern u32 d_d_drawlist__lit_5433;
+SECTION_SDATA2 extern f32 lit_5551;
+SECTION_SDATA2 extern f32 lit_5552;
+SECTION_SDATA2 extern f32 lit_5553;
 SECTION_SDATA2 extern u8 data_804520C4[8];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5747[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5809[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5810[4];
-SECTION_SDATA2 extern u8 d_d_drawlist__LIT_5811[4];
-SECTION_SDATA2 extern u8 LIT_5838[4];
-SECTION_SBSS2 extern u8 d_d_drawlist__LIT_4275[4 + 4 /* padding */];
-}
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5747;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5809;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5810;
+SECTION_SDATA2 extern f32 d_d_drawlist__lit_5811;
+SECTION_SDATA2 extern f32 lit_5838;
+SECTION_SBSS2 extern u8 d_d_drawlist__lit_4275[4 + 4 /* padding */];
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8037A1B0-8037A1C0 000C .rodata    @stringBase0                                                 */
+/* 80051AC0-80051ADC 001C .text      setViewPort__14dDlst_window_cFffffff                         */
 #pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_8037A1B0 = "wipe_00.bti";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_8037A1BC = "\0\0\0";
-#pragma pop
-/* 8037A178-8037A1A4 002A .rodata    l_drawlistSize$5656                                          */
-SECTION_RODATA const u8 data_8037A178[44] = {
-	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80,
-	0x01, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x00, 0x20, 0x00, 0x10, 0x00, 0x10, 0x00, 0x20,
-	0x00, 0x20, 0x01, 0x00, 0x00, 0x01, 0x00, 0x04, 0x00, 0x04,
-	/* padding */
-	0x00, 0x00,
-};
-/* 8037A1A4-8037A1B0 0009 .rodata    l_nonSortId$5662                                             */
-SECTION_RODATA const u8 data_8037A1A4[12] = {
-	0x00, 0x01, 0x02, 0x04, 0x05, 0x06, 0x09, 0x12, 0x0D,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setViewPort__14dDlst_window_cFffffff() {
+	nofralloc
+#include "asm/d/d_drawlist/setViewPort__14dDlst_window_cFffffff.s"
 }
+#pragma pop
+
+
+/* 80051ADC-80051AF0 0014 .text      setScissor__14dDlst_window_cFffff                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setScissor__14dDlst_window_cFffff() {
+	nofralloc
+#include "asm/d/d_drawlist/setScissor__14dDlst_window_cFffff.s"
+}
+#pragma pop
+
+
+/* 80051AF0-80051CF0 0200 .text      draw__13dDlst_2DTri_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__13dDlst_2DTri_cFv() {
+	nofralloc
+#include "asm/d/d_drawlist/draw__13dDlst_2DTri_cFv.s"
+}
+#pragma pop
+
+
+/* 80051CF0-80051E5C 016C .text      draw__14dDlst_2DQuad_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__14dDlst_2DQuad_cFv() {
+	nofralloc
+#include "asm/d/d_drawlist/draw__14dDlst_2DQuad_cFv.s"
+}
+#pragma pop
+
+
+/* 80051E5C-80051F98 013C .text      draw__15dDlst_2DPoint_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__15dDlst_2DPoint_cFv() {
+	nofralloc
+#include "asm/d/d_drawlist/draw__15dDlst_2DPoint_cFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80450648-8045064C 0004 .sdata     l_color$4033                                                 */
+u8 data_80450648[4] = {
+	0xFF, 0xFF, 0xFF, 0xE0,
+};
 
-extern "C" {
-/* 803A87A0-803A87A0 0000 .data      ...data.0                                                    */
+/* 80452008-8045200C 0004 .sdata2    @4072                                                        */
+f32 d_d_drawlist__lit_4072 = 0.5f;
+
+/* 8045200C-80452010 0004 .sdata2    @4073                                                        */
+f32 d_d_drawlist__lit_4073 = 32768.0f;
+
+/* 80452010-80452018 0004 .sdata2    @4074                                                        */
+u8 d_d_drawlist__lit_4074[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80452018-80452020 0008 .sdata2    @4076                                                        */
+f64 d_d_drawlist__lit_4076 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 80452020-80452028 0008 .sdata2    @4079                                                        */
+f64 d_d_drawlist__lit_4079 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 80051F98-80052354 03BC .text      draw__11dDlst_2DT_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__11dDlst_2DT_cFv() {
+	nofralloc
+#include "asm/d/d_drawlist/draw__11dDlst_2DT_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80452028-8045202C 0004 .sdata2    @4270                                                        */
+f32 d_d_drawlist__lit_4270 = 1.0f;
+
+/* 80052354-80052B00 07AC .text      draw__12dDlst_2DT2_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__12dDlst_2DT2_cFv() {
+	nofralloc
+#include "asm/d/d_drawlist/draw__12dDlst_2DT2_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A87A0-803A87C0 000C .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 d_d_drawlist__cNullVec__6Z2Calc[32] = {
+u8 d_d_drawlist__cNullVec__6Z2Calc[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A87C0-803A8800 003C .data      l_frontZMat                                                  */
-SECTION_DATA u8 l_frontZMat[64] = {
+u8 l_frontZMat[64] = {
 	0x61, 0x40, 0x00, 0x00, 0x07, 0x10, 0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00,
 	0x00, 0x10, 0x09, 0x00, 0x00, 0x00, 0x01, 0x61, 0x00, 0x00, 0x40, 0x10, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -379,16 +452,18 @@ SECTION_DATA u8 l_frontZMat[64] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8800-803A882C 002A .data      l_frontNoZSubMat                                             */
-SECTION_DATA u8 l_frontNoZSubMat[44] = {
+u8 l_frontNoZSubMat[44] = {
 	0x61, 0x40, 0x00, 0x00, 0x06, 0x61, 0x41, 0x00, 0x09, 0x35, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803A882C-803A88A0 0060 .data      l_shadowVolPos                                               */
-SECTION_DATA u8 l_shadowVolPos[116] = {
+u8 l_shadowVolPos[116] = {
 	0xBF, 0x80, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0xC3, 0x96, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0xC3, 0x96, 0x00, 0x00,
@@ -399,8 +474,9 @@ SECTION_DATA u8 l_shadowVolPos[116] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A88A0-803A88E0 003B .data      l_shadowVolDL                                                */
-SECTION_DATA u8 l_shadowVolDL[64] = {
+u8 l_shadowVolDL[64] = {
 	0x80, 0x00, 0x18, 0x06, 0x02, 0x03, 0x07, 0x00, 0x04, 0x05, 0x01, 0x06, 0x04, 0x00, 0x02, 0x07,
 	0x05, 0x04, 0x06, 0x03, 0x01, 0x05, 0x07, 0x02, 0x00, 0x01, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -408,8 +484,9 @@ SECTION_DATA u8 l_shadowVolDL[64] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A88E0-803A8940 005A .data      l_shadowProjMat                                              */
-SECTION_DATA u8 l_shadowProjMat[96] = {
+u8 l_shadowProjMat[96] = {
 	0x61, 0x28, 0x38, 0x03, 0xC0, 0x61, 0xC0, 0x08, 0xFF, 0xFF, 0x61, 0xC1, 0x08, 0xE6, 0x70, 0x61,
 	0x43, 0x00, 0x00, 0x01, 0x61, 0x40, 0x00, 0x00, 0x07, 0x61, 0x41, 0x00, 0x04, 0xAD, 0x61, 0xF3,
 	0x64, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x01, 0x10, 0x00, 0x00, 0x10,
@@ -419,8 +496,9 @@ SECTION_DATA u8 l_shadowProjMat[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8940-803A89A0 005A .data      l_shadowVolMat                                               */
-SECTION_DATA u8 l_shadowVolMat[96] = {
+u8 l_shadowVolMat[96] = {
 	0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFC, 0x61, 0xC1, 0x08, 0xFF, 0x90, 0x61,
 	0x43, 0x00, 0x00, 0x41, 0x61, 0x40, 0x00, 0x00, 0x0D, 0x61, 0x41, 0x00, 0x01, 0x35, 0x61, 0xF3,
 	0x7F, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10,
@@ -430,8 +508,9 @@ SECTION_DATA u8 l_shadowVolMat[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A89A0-803A8A00 0055 .data      l_clearMat                                                   */
-SECTION_DATA u8 l_clearMat[96] = {
+u8 l_clearMat[96] = {
 	0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFF, 0x61, 0xC1, 0x08, 0xFF, 0xA0, 0x61,
 	0x40, 0x00, 0x00, 0x06, 0x61, 0x41, 0x00, 0x00, 0x14, 0x61, 0xF3, 0x7F, 0x00, 0x00, 0x10, 0x00,
 	0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x09, 0x00, 0x00, 0x00, 0x01,
@@ -441,8 +520,9 @@ SECTION_DATA u8 l_clearMat[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8A00-803A8A60 0055 .data      l_frontMat                                                   */
-SECTION_DATA u8 l_frontMat[96] = {
+u8 l_frontMat[96] = {
 	0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFF, 0x61, 0xC1, 0x08, 0xFF, 0x90, 0x61,
 	0x43, 0x00, 0x00, 0x41, 0x61, 0x40, 0x00, 0x00, 0x07, 0x61, 0x41, 0x00, 0x01, 0x15, 0x10, 0x00,
 	0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x09, 0x00, 0x00, 0x00, 0x01,
@@ -452,15 +532,17 @@ SECTION_DATA u8 l_frontMat[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8A60-803A8A9C 003C .data      l_backSubMat                                                 */
-SECTION_DATA u8 l_backSubMat[60] = {
+u8 l_backSubMat[60] = {
 	0x61, 0x41, 0x00, 0x09, 0x35, 0x10, 0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00,
 	0x00, 0x10, 0x09, 0x00, 0x00, 0x00, 0x01, 0x61, 0x00, 0x00, 0x80, 0x10, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8A9C-803A8B60 00A8 .data      l_simpleShadowPos                                            */
-SECTION_DATA u8 l_simpleShadowPos[196] = {
+u8 l_simpleShadowPos[196] = {
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00,
@@ -476,8 +558,9 @@ SECTION_DATA u8 l_simpleShadowPos[196] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8B60-803A8BC0 0058 .data      l_shadowVolumeDL                                             */
-SECTION_DATA u8 l_shadowVolumeDL[96] = {
+u8 l_shadowVolumeDL[96] = {
 	0x98, 0x00, 0x05, 0x03, 0x09, 0x01, 0x07, 0x05, 0x98, 0x00, 0x05, 0x04, 0x06, 0x00, 0x08, 0x02,
 	0x98, 0x00, 0x04, 0x04, 0x05, 0x06, 0x07, 0x98, 0x00, 0x04, 0x02, 0x03, 0x04, 0x05, 0x98, 0x00,
 	0x04, 0x08, 0x09, 0x02, 0x03, 0x98, 0x00, 0x04, 0x06, 0x07, 0x08, 0x09, 0x98, 0x00, 0x03, 0x01,
@@ -487,8 +570,9 @@ SECTION_DATA u8 l_shadowVolumeDL[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8BC0-803A8C20 0055 .data      l_shadowSealTexDL                                            */
-SECTION_DATA u8 l_shadowSealTexDL[96] = {
+u8 l_shadowSealTexDL[96] = {
 	0x61, 0x28, 0x38, 0x03, 0xC0, 0x61, 0x40, 0x00, 0x00, 0x06, 0x61, 0x41, 0x00, 0x06, 0x15, 0x10,
 	0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x01, 0x10, 0x00, 0x00, 0x10, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x61, 0x00, 0x00, 0x40, 0x01, 0x80, 0x00, 0x04, 0x0A, 0x00, 0x00, 0x0B, 0x01, 0x00, 0x0C,
@@ -498,8 +582,9 @@ SECTION_DATA u8 l_shadowSealTexDL[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8C20-803A8C80 0055 .data      l_shadowSealTex2DL                                           */
-SECTION_DATA u8 l_shadowSealTex2DL[96] = {
+u8 l_shadowSealTex2DL[96] = {
 	0x61, 0x28, 0x38, 0x03, 0xC0, 0x61, 0x40, 0x00, 0x00, 0x06, 0x61, 0x41, 0x00, 0x06, 0x15, 0x10,
 	0x00, 0x00, 0x10, 0x3F, 0x00, 0x00, 0x00, 0x01, 0x10, 0x00, 0x00, 0x10, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x61, 0x00, 0x00, 0x40, 0x01, 0x80, 0x00, 0x04, 0x0A, 0x00, 0x00, 0x0B, 0x02, 0x00, 0x0C,
@@ -509,8 +594,9 @@ SECTION_DATA u8 l_shadowSealTex2DL[96] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8C80-803A8D00 0069 .data      l_shadowSealDL                                               */
-SECTION_DATA u8 l_shadowSealDL[128] = {
+u8 l_shadowSealDL[128] = {
 	0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x05, 0x00, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00,
 	0x05, 0x00, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFF, 0x61, 0xC1, 0x08, 0xFF,
 	0xB0, 0x61, 0x40, 0x00, 0x00, 0x06, 0x61, 0x41, 0x00, 0x06, 0xED, 0x10, 0x00, 0x00, 0x10, 0x3F,
@@ -522,8 +608,9 @@ SECTION_DATA u8 l_shadowSealDL[128] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8D00-803A8D7C 007B .data      l_matDL$5404                                                 */
-SECTION_DATA u8 data_803A8D00[124] = {
+u8 data_803A8D00[124] = {
 	0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x04, 0x00, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00,
 	0x04, 0x00, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xF2, 0x61, 0xC1, 0x08, 0xFF,
 	0x90, 0x61, 0x43, 0x00, 0x00, 0x41, 0x61, 0xF3, 0x7F, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x3F,
@@ -535,79 +622,92 @@ SECTION_DATA u8 data_803A8D00[124] = {
 	/* padding */
 	0x00,
 };
+
 /* 803A8D7C-803A8D8C 0010 .data      l_imageDrawColor$5405                                        */
-SECTION_DATA u8 data_803A8D7C[16] = {
+u8 data_803A8D7C[16] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF,
 };
+
 /* 803A8D8C-803A8D9C 0010 .data      l_tevColorChan$5438                                          */
-SECTION_DATA u8 data_803A8D8C[16] = {
+u8 data_803A8D8C[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
+
 /* 803A8D9C-803A8DCC 0030 .data      mtx_adj$5842                                                 */
-SECTION_DATA u8 data_803A8D9C[48] = {
+u8 data_803A8D9C[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A8DCC-803A8DDC 0010 .data      __vt__18dDlst_shadowPoly_c                                   */
-SECTION_DATA void* __vt__18dDlst_shadowPoly_c[4] = {
+void* const __vt__18dDlst_shadowPoly_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 };
+
 /* 803A8DDC-803A8DEC 0010 .data      __vt__22dDlst_shadowRealPoly_c                               */
-SECTION_DATA void* __vt__22dDlst_shadowRealPoly_c[4] = {
+void* const __vt__22dDlst_shadowRealPoly_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getTri__22dDlst_shadowRealPoly_cFv,
 	(void*)getTriMax__22dDlst_shadowRealPoly_cFv,
 };
+
 /* 803A8DEC-803A8DF8 000C .data      __vt__14ShdwDrawPoly_c                                       */
-SECTION_DATA void* __vt__14ShdwDrawPoly_c[3] = {
+void* const __vt__14ShdwDrawPoly_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14ShdwDrawPoly_cFv,
 };
+
 /* 803A8DF8-803A8E04 000C .data      __vt__18dDlst_effectLine_c                                   */
-SECTION_DATA void* __vt__18dDlst_effectLine_c[3] = {
+void* const __vt__18dDlst_effectLine_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__18dDlst_effectLine_cFv,
 };
+
 /* 803A8E04-803A8E14 0010 .data      __vt__10J2DAnmBase                                           */
-SECTION_DATA void* __vt__10J2DAnmBase[4] = {
+void* const __vt__10J2DAnmBase[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10J2DAnmBaseFv,
 	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
 };
+
 /* 803A8E14-803A8E20 000C .data      __vt__11dDlst_blo_c                                          */
-SECTION_DATA void* __vt__11dDlst_blo_c[3] = {
+void* const __vt__11dDlst_blo_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__11dDlst_blo_cFv,
 };
+
 /* 803A8E20-803A8E2C 000C .data      __vt__10dDlst_2D_c                                           */
-SECTION_DATA void* __vt__10dDlst_2D_c[3] = {
+void* const __vt__10dDlst_2D_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__10dDlst_2D_cFv,
 };
+
 /* 803A8E2C-803A8E38 000C .data      __vt__12dDlst_2DMt_c                                         */
-SECTION_DATA void* __vt__12dDlst_2DMt_c[3] = {
+void* const __vt__12dDlst_2DMt_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__12dDlst_2DMt_cFv,
 };
+
 /* 803A8E38-803A8E44 000C .data      __vt__11dDlst_2Dm_c                                          */
-SECTION_DATA void* __vt__11dDlst_2Dm_c[3] = {
+void* const __vt__11dDlst_2Dm_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__11dDlst_2Dm_cFv,
 };
+
 /* 803A8E44-803A8E5C 000C .data      __vt__11dDlst_2DM_c                                          */
-SECTION_DATA void* __vt__11dDlst_2DM_c[6] = {
+void* const __vt__11dDlst_2DM_c[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__11dDlst_2DM_cFv,
@@ -616,1095 +716,1046 @@ SECTION_DATA void* __vt__11dDlst_2DM_c[6] = {
 	NULL,
 	NULL,
 };
+
 /* 803A8E5C-803A8E68 000C .data      __vt__12dDlst_2DT2_c                                         */
-SECTION_DATA void* __vt__12dDlst_2DT2_c[3] = {
+void* const __vt__12dDlst_2DT2_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__12dDlst_2DT2_cFv,
 };
-/* 803A8E68-803A8E74 000C .data      __vt__11dDlst_2DT_c                                          */
-SECTION_DATA void* __vt__11dDlst_2DT_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)draw__11dDlst_2DT_cFv,
-};
-/* 803A8E74-803A8E80 000C .data      __vt__15dDlst_2DPoint_c                                      */
-SECTION_DATA void* __vt__15dDlst_2DPoint_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)draw__15dDlst_2DPoint_cFv,
-};
-/* 803A8E80-803A8E8C 000C .data      __vt__14dDlst_2DQuad_c                                       */
-SECTION_DATA void* __vt__14dDlst_2DQuad_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)draw__14dDlst_2DQuad_cFv,
-};
-/* 803A8E8C-803A8E98 000C .data      __vt__13dDlst_2DTri_c                                        */
-SECTION_DATA void* __vt__13dDlst_2DTri_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)draw__13dDlst_2DTri_cFv,
-};
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450648-8045064C 0004 .sdata     l_color$4033                                                 */
-SECTION_SDATA u8 data_80450648[4] = {
-	0xFF, 0xFF, 0xFF, 0xE0,
-};
-/* 8045064C-80450650 0004 .sdata     l_color$5004                                                 */
-SECTION_SDATA u8 data_8045064C[4] = {
-	0x00, 0x00, 0x00, 0x40,
-};
-/* 80450650-80450654 0004 .sdata     l_color$5326                                                 */
-SECTION_SDATA u8 data_80450650[4] = {
-	0x00, 0x00, 0x00, 0x40,
-};
-/* 80450654-80450658 0004 .sdata     l_realImageSize$5383                                         */
-SECTION_SDATA u8 data_80450654[4] = {
-	0x00, 0xC0, 0x00, 0x40,
-};
-/* 80450658-8045065C 0004 .sdata     clearColor$5435                                              */
-SECTION_SDATA u8 data_80450658[4] = {
-	0x00, 0x00, 0x00, 0x40,
-};
-/* 8045065C-80450660 0004 .sdata     mWipeColor__12dDlst_list_c                                   */
-SECTION_SDATA u8 mWipeColor__12dDlst_list_c[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80452008-8045200C 0004 .sdata2    @4072                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4072[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 8045200C-80452010 0004 .sdata2    @4073                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4073[4] = {
-	0x47, 0x00, 0x00, 0x00,
-};
-/* 80452010-80452018 0004 .sdata2    @4074                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4074[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80452018-80452020 0008 .sdata2    @4076                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4076[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80452020-80452028 0008 .sdata2    @4079                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4079[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80452028-8045202C 0004 .sdata2    @4270                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4270[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 8045202C-80452030 0004 .sdata2    @4284                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4284[4] = {
-	0x00, 0x00, 0x00, 0xFF,
-};
-/* 80452030-80452034 0004 .sdata2    @4360                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4360[4] = {
-	0x43, 0x80, 0x00, 0x00,
-};
-/* 80452034-80452038 0004 .sdata2    @4791                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4791[4] = {
-	0x46, 0xEC, 0xE6, 0x00,
-};
-/* 80452038-8045203C 0004 .sdata2    @4792                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4792[4] = {
-	0x46, 0xEC, 0x7A, 0x00,
-};
-/* 8045203C-80452040 0004 .sdata2    @4793                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4793[4] = {
-	0x46, 0xEC, 0xC6, 0x00,
-};
-/* 80452040-80452048 0008 .sdata2    @4794                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4794[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80452048-8045204C 0004 .sdata2    @4806                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4806[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 8045204C-80452050 0004 .sdata2    @4876                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_4876[4] = {
-	0x46, 0xFF, 0xFE, 0x00,
-};
-/* 80452050-80452054 0004 .sdata2    @5061                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5061[4] = {
-	0xBE, 0x4C, 0xCC, 0xCD,
-};
-/* 80452054-80452058 0004 .sdata2    @5062                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5062[4] = {
-	0xC2, 0xB4, 0x00, 0x00,
-};
-/* 80452058-8045205C 0004 .sdata2    @5127                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5127[4] = {
-	0x3B, 0x03, 0x12, 0x6F,
-};
-/* 8045205C-80452060 0004 .sdata2    @5128                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5128[4] = {
-	0x42, 0xF0, 0x00, 0x00,
-};
-/* 80452060-80452064 0004 .sdata2    @5129                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5129[4] = {
-	0x3E, 0x19, 0x99, 0x9A,
-};
-/* 80452064-80452068 0004 .sdata2    @5130                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5130[4] = {
-	0x46, 0x1C, 0x40, 0x00,
-};
-/* 80452068-8045206C 0004 .sdata2    @5155                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5155[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-/* 8045206C-80452070 0004 .sdata2    @5156                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5156[4] = {
-	0x3F, 0x26, 0x66, 0x66,
-};
-/* 80452070-80452074 0004 .sdata2    @5267                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5267[4] = {
-	0x42, 0x48, 0x00, 0x00,
-};
-/* 80452074-80452078 0004 .sdata2    @5268                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5268[4] = {
-	0x3F, 0x4C, 0xCC, 0xCD,
-};
-/* 80452078-80452080 0004 .sdata2    @5269                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5269[8] = {
-	0x43, 0x7F, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80452080-80452088 0008 .sdata2    @5270                                                        */
-SECTION_SDATA2 u8 LIT_5270[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80452088-80452090 0008 .sdata2    @5271                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5271[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80452090-80452098 0008 .sdata2    @5272                                                        */
-SECTION_SDATA2 u8 LIT_5272[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80452098-8045209C 0004 .sdata2    @5273                                                        */
-SECTION_SDATA2 u8 LIT_5273[4] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-};
-/* 8045209C-804520A0 0004 .sdata2    @5274                                                        */
-SECTION_SDATA2 u8 LIT_5274[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 804520A0-804520A4 0004 .sdata2    @5275                                                        */
-SECTION_SDATA2 u8 LIT_5275[4] = {
-	0xBF, 0x00, 0x00, 0x00,
-};
-/* 804520A4-804520A8 0004 .sdata2    @5375                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5375[4] = {
-	0xC3, 0x7F, 0x00, 0x00,
-};
-/* 804520A8-804520AC 0004 .sdata2    @5376                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5376[4] = {
-	0x3A, 0x37, 0x80, 0x34,
-};
-/* 804520AC-804520B0 0004 .sdata2    @5377                                                        */
-SECTION_SDATA2 u8 LIT_5377[4] = {
-	0x3F, 0xB3, 0x33, 0x33,
-};
-/* 804520B0-804520B4 0004 .sdata2    @5378                                                        */
-SECTION_SDATA2 u8 LIT_5378[4] = {
-	0x41, 0x80, 0x00, 0x00,
-};
-/* 804520B4-804520B8 0004 .sdata2    @5433                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5433[4] = {
-	0x00, 0x00, 0x00, 0x20,
-};
-/* 804520B8-804520BC 0004 .sdata2    @5551                                                        */
-SECTION_SDATA2 u8 LIT_5551[4] = {
-	0x3B, 0x44, 0x9B, 0xA6,
-};
-/* 804520BC-804520C0 0004 .sdata2    @5552                                                        */
-SECTION_SDATA2 u8 LIT_5552[4] = {
-	0xC4, 0x7A, 0x00, 0x00,
-};
-/* 804520C0-804520C4 0004 .sdata2    @5553                                                        */
-SECTION_SDATA2 u8 LIT_5553[4] = {
-	0x3A, 0x83, 0x12, 0x6F,
-};
-/* 804520C4-804520CC 0006 .sdata2    l_zSortId$5668                                               */
-SECTION_SDATA2 u8 data_804520C4[8] = {
-	0x08, 0x0A, 0x0C, 0x0E, 0x10, 0x11,
-	/* padding */
-	0x00, 0x00,
-};
-/* 804520CC-804520D0 0004 .sdata2    @5747                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5747[4] = {
-	0x46, 0x1C, 0x3C, 0x00,
-};
-/* 804520D0-804520D4 0004 .sdata2    @5809                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5809[4] = {
-	0x44, 0x18, 0x00, 0x00,
-};
-/* 804520D4-804520D8 0004 .sdata2    @5810                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5810[4] = {
-	0x43, 0xE0, 0x00, 0x00,
-};
-/* 804520D8-804520DC 0004 .sdata2    @5811                                                        */
-SECTION_SDATA2 u8 d_d_drawlist__LIT_5811[4] = {
-	0x40, 0x1B, 0xE7, 0x6D,
-};
-/* 804520DC-804520E0 0004 .sdata2    @5838                                                        */
-SECTION_SDATA2 u8 LIT_5838[4] = {
-	0x3F, 0x9B, 0xE7, 0x6D,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804248D0-804248F0 0020 .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
-SECTION_BSS u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-/* 804248F0-80424938 0048 .bss       mWipeDlst__12dDlst_list_c                                    */
-SECTION_BSS u8 mWipeDlst__12dDlst_list_c[72];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450ED0-80450ED4 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450ED0[4];
-/* 80450ED4-80450ED8 0004 .sbss      mWipeRate__12dDlst_list_c                                    */
-SECTION_SBSS u8 mWipeRate__12dDlst_list_c[4];
-/* 80450ED8-80450EE0 0004 .sbss      mWipeSpeed__12dDlst_list_c                                   */
-SECTION_SBSS u8 mWipeSpeed__12dDlst_list_c[4 + 4 /* padding */];
-/* 80450EE0-80450EE8 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450EE0[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456B68-80456B70 0004 .sbss2     @4275                                                        */
-SECTION_SBSS2 u8 d_d_drawlist__LIT_4275[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80051AC0-80051ADC 001C .text      setViewPort__14dDlst_window_cFffffff                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setViewPort__14dDlst_window_cFffffff() {
-	nofralloc
-#include "asm/d/d_drawlist/setViewPort__14dDlst_window_cFffffff.s"
-}
-#pragma pop
-
-/* 80051ADC-80051AF0 0014 .text      setScissor__14dDlst_window_cFffff                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setScissor__14dDlst_window_cFffff() {
-	nofralloc
-#include "asm/d/d_drawlist/setScissor__14dDlst_window_cFffff.s"
-}
-#pragma pop
-
-/* 80051AF0-80051CF0 0200 .text      draw__13dDlst_2DTri_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__13dDlst_2DTri_cFv() {
-	nofralloc
-#include "asm/d/d_drawlist/draw__13dDlst_2DTri_cFv.s"
-}
-#pragma pop
-
-/* 80051CF0-80051E5C 016C .text      draw__14dDlst_2DQuad_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__14dDlst_2DQuad_cFv() {
-	nofralloc
-#include "asm/d/d_drawlist/draw__14dDlst_2DQuad_cFv.s"
-}
-#pragma pop
-
-/* 80051E5C-80051F98 013C .text      draw__15dDlst_2DPoint_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__15dDlst_2DPoint_cFv() {
-	nofralloc
-#include "asm/d/d_drawlist/draw__15dDlst_2DPoint_cFv.s"
-}
-#pragma pop
-
-/* 80051F98-80052354 03BC .text      draw__11dDlst_2DT_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__11dDlst_2DT_cFv() {
-	nofralloc
-#include "asm/d/d_drawlist/draw__11dDlst_2DT_cFv.s"
-}
-#pragma pop
-
-/* 80052354-80052B00 07AC .text      draw__12dDlst_2DT2_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__12dDlst_2DT2_cFv() {
-	nofralloc
-#include "asm/d/d_drawlist/draw__12dDlst_2DT2_cFv.s"
-}
-#pragma pop
+u8 d_d_drawlist__lit_4275[4 + 4 /* padding */];
 
 /* 80052B00-80052B4C 004C .text      __ct__12dDlst_2DT2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12dDlst_2DT2_cFv() {
+extern "C" asm void __ct__12dDlst_2DT2_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__12dDlst_2DT2_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045202C-80452030 0004 .sdata2    @4284                                                        */
+u32 d_d_drawlist__lit_4284 = 0x000000FF;
+
 /* 80052B4C-80052C58 010C .text      init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff() {
+extern "C" asm void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff() {
 	nofralloc
 #include "asm/d/d_drawlist/init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452030-80452034 0004 .sdata2    @4360                                                        */
+f32 d_d_drawlist__lit_4360 = 256.0f;
+
 /* 80052C58-8005312C 04D4 .text      draw__11dDlst_2DM_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__11dDlst_2DM_cFv() {
+extern "C" asm void draw__11dDlst_2DM_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__11dDlst_2DM_cFv.s"
 }
 #pragma pop
 
+
 /* 8005312C-8005364C 0520 .text      draw__11dDlst_2Dm_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__11dDlst_2Dm_cFv() {
+extern "C" asm void draw__11dDlst_2Dm_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/func_8005312C.s"
 }
 #pragma pop
 
+
 /* 8005364C-800539DC 0390 .text      draw__12dDlst_2DMt_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__12dDlst_2DMt_cFv() {
+extern "C" asm void draw__12dDlst_2DMt_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__12dDlst_2DMt_cFv.s"
 }
 #pragma pop
 
+
 /* 800539DC-80053A00 0024 .text      getTexture__10J2DPictureCFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTexture__10J2DPictureCFUc() {
+extern "C" asm void getTexture__10J2DPictureCFUc() {
 	nofralloc
 #include "asm/d/d_drawlist/getTexture__10J2DPictureCFUc.s"
 }
 #pragma pop
 
+
 /* 80053A00-80053A9C 009C .text      __ct__10dDlst_2D_cFP7ResTIMGssssUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10dDlst_2D_cFP7ResTIMGssssUc() {
+extern "C" asm void __ct__10dDlst_2D_cFP7ResTIMGssssUc() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__10dDlst_2D_cFP7ResTIMGssssUc.s"
 }
 #pragma pop
 
+
 /* 80053A9C-80053B64 00C8 .text      draw__10dDlst_2D_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__10dDlst_2D_cFv() {
+extern "C" asm void draw__10dDlst_2D_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__10dDlst_2D_cFv.s"
 }
 #pragma pop
 
+
 /* 80053B64-80053BA0 003C .text      draw__11dDlst_blo_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__11dDlst_blo_cFv() {
+extern "C" asm void draw__11dDlst_blo_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__11dDlst_blo_cFv.s"
 }
 #pragma pop
 
+
 /* 80053BA0-80053BC0 0020 .text      clearAnmTransform__9J2DScreenFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearAnmTransform__9J2DScreenFv() {
+extern "C" asm void clearAnmTransform__9J2DScreenFv() {
 	nofralloc
 #include "asm/d/d_drawlist/clearAnmTransform__9J2DScreenFv.s"
 }
 #pragma pop
 
+
 /* 80053BC0-80053C00 0040 .text      calcMtx__7J2DPaneFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcMtx__7J2DPaneFv() {
+extern "C" asm void calcMtx__7J2DPaneFv() {
 	nofralloc
 #include "asm/d/d_drawlist/calcMtx__7J2DPaneFv.s"
 }
 #pragma pop
 
+
 /* 80053C00-80053C3C 003C .text      makeMatrix__7J2DPaneFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void makeMatrix__7J2DPaneFff() {
+extern "C" asm void makeMatrix__7J2DPaneFff() {
 	nofralloc
 #include "asm/d/d_drawlist/makeMatrix__7J2DPaneFff.s"
 }
 #pragma pop
 
+
 /* 80053C3C-80053C44 0008 .text      getTypeID__7J2DPaneCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTypeID__7J2DPaneCFv() {
+extern "C" asm void getTypeID__7J2DPaneCFv() {
 	nofralloc
 #include "asm/d/d_drawlist/getTypeID__7J2DPaneCFv.s"
 }
 #pragma pop
 
+
 /* 80053C44-80053C6C 0028 .text      setWhite__10J2DPictureFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWhite__10J2DPictureFQ28JUtility6TColor() {
+extern "C" asm void setWhite__10J2DPictureFQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/d_drawlist/setWhite__10J2DPictureFQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80053C6C-80053C94 0028 .text      setBlack__10J2DPictureFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlack__10J2DPictureFQ28JUtility6TColor() {
+extern "C" asm void setBlack__10J2DPictureFQ28JUtility6TColor() {
 	nofralloc
 #include "asm/d/d_drawlist/setBlack__10J2DPictureFQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80053C94-80053CDC 0048 .text      __dt__10J2DAnmBaseFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10J2DAnmBaseFv() {
+extern "C" asm void __dt__10J2DAnmBaseFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__dt__10J2DAnmBaseFv.s"
 }
 #pragma pop
 
+
 /* 80053CDC-80053CEC 0010 .text      init__8cM_rnd_cFiii                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__8cM_rnd_cFiii() {
+extern "C" asm void init__8cM_rnd_cFiii() {
 	nofralloc
 #include "asm/d/d_drawlist/init__8cM_rnd_cFiii.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452034-80452038 0004 .sdata2    @4791                                                        */
+f32 d_d_drawlist__lit_4791 = 30323.0f;
+
+/* 80452038-8045203C 0004 .sdata2    @4792                                                        */
+f32 d_d_drawlist__lit_4792 = 30269.0f;
+
+/* 8045203C-80452040 0004 .sdata2    @4793                                                        */
+f32 d_d_drawlist__lit_4793 = 30307.0f;
+
+/* 80452040-80452048 0008 .sdata2    @4794                                                        */
+f64 d_d_drawlist__lit_4794 = 1.0;
+
 /* 80053CEC-80053DE0 00F4 .text      get__8cM_rnd_cFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get__8cM_rnd_cFv() {
+extern "C" asm void get__8cM_rnd_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/get__8cM_rnd_cFv.s"
 }
 #pragma pop
 
+
 /* 80053DE0-80053E18 0038 .text      getF__8cM_rnd_cFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getF__8cM_rnd_cFf() {
+extern "C" asm void getF__8cM_rnd_cFf() {
 	nofralloc
 #include "asm/d/d_drawlist/getF__8cM_rnd_cFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452048-8045204C 0004 .sdata2    @4806                                                        */
+f32 d_d_drawlist__lit_4806 = 2.0f;
+
 /* 80053E18-80053E60 0048 .text      getFX__8cM_rnd_cFf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFX__8cM_rnd_cFf() {
+extern "C" asm void getFX__8cM_rnd_cFf() {
 	nofralloc
 #include "asm/d/d_drawlist/getFX__8cM_rnd_cFf.s"
 }
 #pragma pop
 
+
 /* 80053E60-80053E9C 003C .text      getValue__8cM_rnd_cFff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getValue__8cM_rnd_cFff() {
+extern "C" asm void getValue__8cM_rnd_cFff() {
 	nofralloc
 #include "asm/d/d_drawlist/getValue__8cM_rnd_cFff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045204C-80452050 0004 .sdata2    @4876                                                        */
+f32 d_d_drawlist__lit_4876 = 32767.0f;
+
 /* 80053E9C-800541F4 0358 .text      draw__18dDlst_effectLine_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__18dDlst_effectLine_cFv() {
+extern "C" asm void draw__18dDlst_effectLine_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__18dDlst_effectLine_cFv.s"
 }
 #pragma pop
 
+
 /* 800541F4-80054288 0094 .text      update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff() {
+extern "C" asm void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff() {
 	nofralloc
 #include "asm/d/d_drawlist/update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff.s"
 }
 #pragma pop
 
+
 /* 80054288-800543B4 012C .text      set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla() {
+extern "C" asm void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla() {
 	nofralloc
 #include "asm/d/d_drawlist/set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla.s"
 }
 #pragma pop
 
+
 /* 800543B4-80054478 00C4 .text      draw__18dDlst_shadowPoly_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__18dDlst_shadowPoly_cFv() {
+extern "C" asm void draw__18dDlst_shadowPoly_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__18dDlst_shadowPoly_cFv.s"
 }
 #pragma pop
 
+
 /* 80054478-800544F0 0078 .text      J3DDrawBuffer__create__FUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DDrawBuffer__create__FUl() {
+extern "C" asm void J3DDrawBuffer__create__FUl() {
 	nofralloc
 #include "asm/d/d_drawlist/J3DDrawBuffer__create__FUl.s"
 }
 #pragma pop
 
+
 /* 800544F0-80054500 0010 .text      reset__18dDlst_shadowReal_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__18dDlst_shadowReal_cFv() {
+extern "C" asm void reset__18dDlst_shadowReal_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/reset__18dDlst_shadowReal_cFv.s"
 }
 #pragma pop
 
+
 /* 80054500-800545D4 00D4 .text      imageDraw__18dDlst_shadowReal_cFPA4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void imageDraw__18dDlst_shadowReal_cFPA4_f() {
+extern "C" asm void imageDraw__18dDlst_shadowReal_cFPA4_f() {
 	nofralloc
 #include "asm/d/d_drawlist/imageDraw__18dDlst_shadowReal_cFPA4_f.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045064C-80450650 0004 .sdata     l_color$5004                                                 */
+u8 data_8045064C[4] = {
+	0x00, 0x00, 0x00, 0x40,
+};
+
 /* 800545D4-80054688 00B4 .text      draw__18dDlst_shadowReal_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__18dDlst_shadowReal_cFv() {
+extern "C" asm void draw__18dDlst_shadowReal_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__18dDlst_shadowReal_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452050-80452054 0004 .sdata2    @5061                                                        */
+f32 d_d_drawlist__lit_5061 = -1.0f / 5.0f;
+
+/* 80452054-80452058 0004 .sdata2    @5062                                                        */
+f32 d_d_drawlist__lit_5062 = -90.0f;
+
 /* 80054688-80054854 01CC .text      psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla() {
+extern "C" asm void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla() {
 	nofralloc
 #include "asm/d/d_drawlist/psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452058-8045205C 0004 .sdata2    @5127                                                        */
+f32 d_d_drawlist__lit_5127 = 0.0020000000949949026f;
+
+/* 8045205C-80452060 0004 .sdata2    @5128                                                        */
+f32 d_d_drawlist__lit_5128 = 120.0f;
+
+/* 80452060-80452064 0004 .sdata2    @5129                                                        */
+f32 d_d_drawlist__lit_5129 = 3.0f / 20.0f;
+
+/* 80452064-80452068 0004 .sdata2    @5130                                                        */
+f32 d_d_drawlist__lit_5130 = 10000.0f;
+
 /* 80054854-80054A6C 0218 .text      realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c() {
+extern "C" asm void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c() {
 	nofralloc
 #include "asm/d/d_drawlist/realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c.s"
 }
 #pragma pop
 
+
 /* 80054A6C-80054ACC 0060 .text      __dt__14ShdwDrawPoly_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14ShdwDrawPoly_cFv() {
+extern "C" asm void __dt__14ShdwDrawPoly_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__dt__14ShdwDrawPoly_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452068-8045206C 0004 .sdata2    @5155                                                        */
+f32 d_d_drawlist__lit_5155 = 15.0f;
+
+/* 8045206C-80452070 0004 .sdata2    @5156                                                        */
+f32 d_d_drawlist__lit_5156 = 13.0f / 20.0f;
+
 /* 80054ACC-80054BD0 0104 .text      setkankyoShadow__FP12dKy_tevstr_cPf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setkankyoShadow__FP12dKy_tevstr_cPf() {
+extern "C" asm void setkankyoShadow__FP12dKy_tevstr_cPf() {
 	nofralloc
 #include "asm/d/d_drawlist/setkankyoShadow__FP12dKy_tevstr_cPf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452070-80452074 0004 .sdata2    @5267                                                        */
+f32 d_d_drawlist__lit_5267 = 50.0f;
+
+/* 80452074-80452078 0004 .sdata2    @5268                                                        */
+f32 d_d_drawlist__lit_5268 = 4.0f / 5.0f;
+
+/* 80452078-80452080 0004 .sdata2    @5269                                                        */
+f32 d_d_drawlist__lit_5269 = 255.0f;
+/* padding 4 bytes */
+
+/* 80452080-80452088 0008 .sdata2    @5270                                                        */
+f64 lit_5270 = 0.5;
+
+/* 80452088-80452090 0008 .sdata2    @5271                                                        */
+f64 d_d_drawlist__lit_5271 = 3.0;
+
+/* 80452090-80452098 0008 .sdata2    @5272                                                        */
+u8 lit_5272[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80452098-8045209C 0004 .sdata2    @5273                                                        */
+f32 lit_5273 = 2.0f / 5.0f;
+
+/* 8045209C-804520A0 0004 .sdata2    @5274                                                        */
+f32 lit_5274 = -1.0f;
+
+/* 804520A0-804520A4 0004 .sdata2    @5275                                                        */
+f32 lit_5275 = -0.5f;
+
 /* 80054BD0-80055028 0458 .text      setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c() {
+extern "C" asm void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/d/d_drawlist/setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
 /* 80055028-800551D4 01AC .text      set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff() {
+extern "C" asm void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff() {
 	nofralloc
 #include "asm/d/d_drawlist/set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff.s"
 }
 #pragma pop
 
+
 /* 800551D4-8005520C 0038 .text      add__18dDlst_shadowReal_cFP8J3DModel                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void add__18dDlst_shadowReal_cFP8J3DModel() {
+extern "C" asm void add__18dDlst_shadowReal_cFP8J3DModel() {
 	nofralloc
 #include "asm/d/d_drawlist/add__18dDlst_shadowReal_cFP8J3DModel.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450650-80450654 0004 .sdata     l_color$5326                                                 */
+u8 data_80450650[4] = {
+	0x00, 0x00, 0x00, 0x40,
+};
+
 /* 8005520C-800553EC 01E0 .text      draw__20dDlst_shadowSimple_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__20dDlst_shadowSimple_cFv() {
+extern "C" asm void draw__20dDlst_shadowSimple_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__20dDlst_shadowSimple_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804520A4-804520A8 0004 .sdata2    @5375                                                        */
+f32 d_d_drawlist__lit_5375 = -255.0f;
+
+/* 804520A8-804520AC 0004 .sdata2    @5376                                                        */
+f32 d_d_drawlist__lit_5376 = 0.000699999975040555f;
+
+/* 804520AC-804520B0 0004 .sdata2    @5377                                                        */
+f32 lit_5377 = 7.0f / 5.0f;
+
+/* 804520B0-804520B4 0004 .sdata2    @5378                                                        */
+f32 lit_5378 = 16.0f;
+
 /* 800553EC-80055684 0298 .text      set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj() {
+extern "C" asm void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj() {
 	nofralloc
 #include "asm/d/d_drawlist/set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450654-80450658 0004 .sdata     l_realImageSize$5383                                         */
+u8 data_80450654[4] = {
+	0x00, 0xC0, 0x00, 0x40,
+};
+
 /* 80055684-80055768 00E4 .text      init__21dDlst_shadowControl_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__21dDlst_shadowControl_cFv() {
+extern "C" asm void init__21dDlst_shadowControl_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/init__21dDlst_shadowControl_cFv.s"
 }
 #pragma pop
 
+
 /* 80055768-800557C8 0060 .text      reset__21dDlst_shadowControl_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__21dDlst_shadowControl_cFv() {
+extern "C" asm void reset__21dDlst_shadowControl_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/reset__21dDlst_shadowControl_cFv.s"
 }
 #pragma pop
 
+
 /* 800557C8-80055A14 024C .text      imageDraw__21dDlst_shadowControl_cFPA4_f                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void imageDraw__21dDlst_shadowControl_cFPA4_f() {
+extern "C" asm void imageDraw__21dDlst_shadowControl_cFPA4_f() {
 	nofralloc
 #include "asm/d/d_drawlist/imageDraw__21dDlst_shadowControl_cFPA4_f.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450658-8045065C 0004 .sdata     clearColor$5435                                              */
+u8 data_80450658[4] = {
+	0x00, 0x00, 0x00, 0x40,
+};
+
+/* 804520B4-804520B8 0004 .sdata2    @5433                                                        */
+u32 d_d_drawlist__lit_5433 = 0x00000020;
+
 /* 80055A14-80055C74 0260 .text      draw__21dDlst_shadowControl_cFPA4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__21dDlst_shadowControl_cFPA4_f() {
+extern "C" asm void draw__21dDlst_shadowControl_cFPA4_f() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__21dDlst_shadowControl_cFPA4_f.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804520B8-804520BC 0004 .sdata2    @5551                                                        */
+f32 lit_5551 = 0.003000000026077032f;
+
+/* 804520BC-804520C0 0004 .sdata2    @5552                                                        */
+f32 lit_5552 = -1000.0f;
+
+/* 804520C0-804520C4 0004 .sdata2    @5553                                                        */
+f32 lit_5553 = 0.0010000000474974513f;
+
 /* 80055C74-80055F1C 02A8 .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c() {
+extern "C" asm void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/d/d_drawlist/setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
 /* 80055F1C-80055F84 0068 .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void addReal__21dDlst_shadowControl_cFUlP8J3DModel() {
+extern "C" asm void addReal__21dDlst_shadowControl_cFUlP8J3DModel() {
 	nofralloc
 #include "asm/d/d_drawlist/addReal__21dDlst_shadowControl_cFUlP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 80055F84-80055FE8 0064 .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj() {
+extern "C" asm void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj() {
 	nofralloc
 #include "asm/d/d_drawlist/setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804248D0-804248F0 0020 .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
+u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+
 /* 80055FE8-80056018 0030 .text      setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG() {
+extern "C" asm void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG() {
 	nofralloc
 #include "asm/d/d_drawlist/setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG.s"
 }
 #pragma pop
 
+
 /* 80056018-80056080 0068 .text      newData__13dDlst_peekZ_cFssPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newData__13dDlst_peekZ_cFssPUl() {
+extern "C" asm void newData__13dDlst_peekZ_cFssPUl() {
 	nofralloc
 #include "asm/d/d_drawlist/newData__13dDlst_peekZ_cFssPUl.s"
 }
 #pragma pop
 
+
 /* 80056080-800560F0 0070 .text      peekData__13dDlst_peekZ_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void peekData__13dDlst_peekZ_cFv() {
+extern "C" asm void peekData__13dDlst_peekZ_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/peekData__13dDlst_peekZ_cFv.s"
 }
 #pragma pop
 
+
 /* 800560F0-800561C8 00D8 .text      __ct__12dDlst_list_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12dDlst_list_cFv() {
+extern "C" asm void __ct__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 800561C8-800561F8 0030 .text      __ct__26mDoExt_3DlineMatSortPacketFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__26mDoExt_3DlineMatSortPacketFv() {
+extern "C" asm void __ct__26mDoExt_3DlineMatSortPacketFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__26mDoExt_3DlineMatSortPacketFv.s"
 }
 #pragma pop
 
+
 /* 800561F8-80056270 0078 .text      __dt__18dDlst_shadowReal_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__18dDlst_shadowReal_cFv() {
+extern "C" asm void __dt__18dDlst_shadowReal_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__dt__18dDlst_shadowReal_cFv.s"
 }
 #pragma pop
 
+
 /* 80056270-800562D0 0060 .text      __dt__17dDlst_shadowTri_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__17dDlst_shadowTri_cFv() {
+extern "C" asm void __dt__17dDlst_shadowTri_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__dt__17dDlst_shadowTri_cFv.s"
 }
 #pragma pop
 
+
 /* 800562D0-80056344 0074 .text      __ct__18dDlst_shadowReal_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__18dDlst_shadowReal_cFv() {
+extern "C" asm void __ct__18dDlst_shadowReal_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__18dDlst_shadowReal_cFv.s"
 }
 #pragma pop
 
+
 /* 80056344-8005638C 0048 .text      __ct__17dDlst_shadowTri_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__17dDlst_shadowTri_cFv() {
+extern "C" asm void __ct__17dDlst_shadowTri_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__17dDlst_shadowTri_cFv.s"
 }
 #pragma pop
 
+
 /* 8005638C-80056390 0004 .text      __ct__20dDlst_shadowSimple_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__20dDlst_shadowSimple_cFv() {
+extern "C" asm void __ct__20dDlst_shadowSimple_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__20dDlst_shadowSimple_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8037A178-8037A1A4 002A .rodata    l_drawlistSize$5656                                          */
+SECTION_RODATA const u8 data_8037A178[44] = {
+	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80,
+	0x01, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x00, 0x20, 0x00, 0x10, 0x00, 0x10, 0x00, 0x20,
+	0x00, 0x20, 0x01, 0x00, 0x00, 0x01, 0x00, 0x04, 0x00, 0x04,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 8037A1A4-8037A1B0 0009 .rodata    l_nonSortId$5662                                             */
+SECTION_RODATA const u8 data_8037A1A4[12] = {
+	0x00, 0x01, 0x02, 0x04, 0x05, 0x06, 0x09, 0x12, 0x0D,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
+
+/* 804520C4-804520CC 0006 .sdata2    l_zSortId$5668                                               */
+u8 data_804520C4[8] = {
+	0x08, 0x0A, 0x0C, 0x0E, 0x10, 0x11,
+	/* padding */
+	0x00, 0x00,
+};
+
 /* 80056390-8005648C 00FC .text      init__12dDlst_list_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__12dDlst_list_cFv() {
+extern "C" asm void init__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/init__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 8005648C-80056538 00AC .text      __dt__12dDlst_list_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12dDlst_list_cFv() {
+extern "C" asm void __dt__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/__dt__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 80056538-800565EC 00B4 .text      reset__12dDlst_list_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__12dDlst_list_cFv() {
+extern "C" asm void reset__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/reset__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804520CC-804520D0 0004 .sdata2    @5747                                                        */
+f32 d_d_drawlist__lit_5747 = 9999.0f;
+
 /* 800565EC-800566D4 00E8 .text      entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz() {
+extern "C" asm void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz() {
 	nofralloc
 #include "asm/d/d_drawlist/entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz.s"
 }
 #pragma pop
 
+
 /* 800566D4-80056710 003C .text      drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer() {
+extern "C" asm void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer() {
 	nofralloc
 #include "asm/d/d_drawlist/drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer.s"
 }
 #pragma pop
 
+
 /* 80056710-8005674C 003C .text      drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer() {
+extern "C" asm void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer() {
 	nofralloc
 #include "asm/d/d_drawlist/drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer.s"
 }
 #pragma pop
 
+
 /* 8005674C-80056770 0024 .text      drawOpaListItem3d__12dDlst_list_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawOpaListItem3d__12dDlst_list_cFv() {
+extern "C" asm void drawOpaListItem3d__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/drawOpaListItem3d__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 80056770-80056794 0024 .text      drawXluListItem3d__12dDlst_list_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawXluListItem3d__12dDlst_list_cFv() {
+extern "C" asm void drawXluListItem3d__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/drawXluListItem3d__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 80056794-800567C4 0030 .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c() {
+extern "C" asm void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c() {
 	nofralloc
 #include "asm/d/d_drawlist/set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c.s"
 }
 #pragma pop
 
+
 /* 800567C4-8005681C 0058 .text      draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c() {
+extern "C" asm void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c() {
 	nofralloc
 #include "asm/d/d_drawlist/draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8037A1B0-8037A1C0 000C .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037A1B0 = "wipe_00.bti";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A1BC = "\0\0\0";
+#pragma pop
+
+/* 8045065C-80450660 0004 .sdata     mWipeColor__12dDlst_list_c                                   */
+u8 mWipeColor__12dDlst_list_c[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804520D0-804520D4 0004 .sdata2    @5809                                                        */
+f32 d_d_drawlist__lit_5809 = 608.0f;
+
+/* 804520D4-804520D8 0004 .sdata2    @5810                                                        */
+f32 d_d_drawlist__lit_5810 = 448.0f;
+
+/* 804520D8-804520DC 0004 .sdata2    @5811                                                        */
+f32 d_d_drawlist__lit_5811 = 2.436000108718872f;
+
+/* 804248F0-80424938 0048 .bss       mWipeDlst__12dDlst_list_c                                    */
+u8 mWipeDlst__12dDlst_list_c[72];
+
+/* 80450ED0-80450ED4 0004 .sbss      None                                                         */
+u8 data_80450ED0[4];
+
+/* 80450ED4-80450ED8 0004 .sbss      mWipeRate__12dDlst_list_c                                    */
+u8 mWipeRate__12dDlst_list_c[4];
+
+/* 80450ED8-80450EE0 0004 .sbss      mWipeSpeed__12dDlst_list_c                                   */
+u8 mWipeSpeed__12dDlst_list_c[4 + 4 /* padding */];
+
 /* 8005681C-800568D8 00BC .text      wipeIn__12dDlst_list_cFfR8_GXColor                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void wipeIn__12dDlst_list_cFfR8_GXColor() {
+extern "C" asm void wipeIn__12dDlst_list_cFfR8_GXColor() {
 	nofralloc
 #include "asm/d/d_drawlist/wipeIn__12dDlst_list_cFfR8_GXColor.s"
 }
 #pragma pop
 
+
 /* 800568D8-80056900 0028 .text      wipeIn__12dDlst_list_cFf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void wipeIn__12dDlst_list_cFf() {
+extern "C" asm void wipeIn__12dDlst_list_cFf() {
 	nofralloc
 #include "asm/d/d_drawlist/wipeIn__12dDlst_list_cFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804520DC-804520E0 0004 .sdata2    @5838                                                        */
+f32 lit_5838 = 1.218000054359436f;
+
 /* 80056900-800569A0 00A0 .text      calcWipe__12dDlst_list_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcWipe__12dDlst_list_cFv() {
+extern "C" asm void calcWipe__12dDlst_list_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/calcWipe__12dDlst_list_cFv.s"
 }
 #pragma pop
 
+
 /* 800569A0-800569A8 0008 .text      getTri__22dDlst_shadowRealPoly_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTri__22dDlst_shadowRealPoly_cFv() {
+extern "C" asm void getTri__22dDlst_shadowRealPoly_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/getTri__22dDlst_shadowRealPoly_cFv.s"
 }
 #pragma pop
 
+
 /* 800569A8-800569B0 0008 .text      getTriMax__22dDlst_shadowRealPoly_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTriMax__22dDlst_shadowRealPoly_cFv() {
+extern "C" asm void getTriMax__22dDlst_shadowRealPoly_cFv() {
 	nofralloc
 #include "asm/d/d_drawlist/getTriMax__22dDlst_shadowRealPoly_cFv.s"
 }
 #pragma pop
 
+
 /* 800569B0-800569B4 0004 .text      searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen() {
+extern "C" asm void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen() {
 	nofralloc
 #include "asm/d/d_drawlist/searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen.s"
 }
 #pragma pop
 
+
 /* 800569B4-800569DC 0028 .text      __sinit_d_drawlist_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_drawlist_cpp() {
+extern "C" asm void __sinit_d_drawlist_cpp() {
 	nofralloc
 #include "asm/d/d_drawlist/__sinit_d_drawlist_cpp.s"
 }
 #pragma pop
 
+
+/* 803A8E68-803A8E74 000C .data      __vt__11dDlst_2DT_c                                          */
+void* const __vt__11dDlst_2DT_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)draw__11dDlst_2DT_cFv,
+};
+
+/* 803A8E74-803A8E80 000C .data      __vt__15dDlst_2DPoint_c                                      */
+void* const __vt__15dDlst_2DPoint_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)draw__15dDlst_2DPoint_cFv,
+};
+
+/* 803A8E80-803A8E8C 000C .data      __vt__14dDlst_2DQuad_c                                       */
+void* const __vt__14dDlst_2DQuad_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)draw__14dDlst_2DQuad_cFv,
+};
+
+/* 803A8E8C-803A8E98 000C .data      __vt__13dDlst_2DTri_c                                        */
+void* const __vt__13dDlst_2DTri_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)draw__13dDlst_2DTri_cFv,
+};
+
+/* 80450EE0-80450EE8 0008 .sbss      None                                                         */
+u8 data_80450EE0[8];
 

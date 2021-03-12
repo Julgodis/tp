@@ -14,7 +14,7 @@ lbl_800B730C:
 /* 800B7310 00000004  48 0A 79 ED */	bl clearData__16daPy_actorKeep_cFv
 /* 800B7314 00000008  7F E3 FB 78 */	mr r3, r31
 /* 800B7318 0000000C  38 80 00 02 */	li r4, 2
-/* 800B731C 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800B731C 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800B7320 00000014  4B FF 64 05 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800B7324 00000018  38 00 00 FF */	li r0, 0xff
 /* 800B7328 0000001C  B0 1F 2F DC */	sth r0, 0x2fdc(r31)

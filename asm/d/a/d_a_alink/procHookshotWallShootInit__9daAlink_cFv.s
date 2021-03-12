@@ -13,17 +13,17 @@ lbl_8010D5F4:
 /* 8010D620 0000002C  40 82 00 08 */	bne lbl_8010D628
 /* 8010D624 00000030  38 80 01 3B */	li r4, 0x13b
 lbl_8010D628:
-/* 8010D628 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
-/* 8010D62C 00000004  C0 42 92 C4 */	lfs f2, LIT_6109(r2)
+/* 8010D628 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8010D62C 00000004  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8010D630 00000008  4B F9 F9 B1 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8010D634 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8010D638 00000010  4B FA 9B 31 */	bl setFastShotTimer__9daAlink_cFv
 /* 8010D63C 00000014  7F E3 FB 78 */	mr r3, r31
-/* 8010D640 00000018  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8010D640 00000018  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8010D644 0000001C  C0 5F 05 34 */	lfs f2, 0x534(r31)
 /* 8010D648 00000020  38 80 00 00 */	li r4, 0
 /* 8010D64C 00000024  4B FA E1 25 */	bl setSpecialGravity__9daAlink_cFffi
-/* 8010D650 00000028  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8010D650 00000028  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010D654 0000002C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8010D658 00000030  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 8010D65C 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

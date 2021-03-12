@@ -30,12 +30,12 @@ lbl_8023DCDC:
 lbl_8023DCE4:
 /* 8023DCE4 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8023DCE8 00000004  48 00 08 E5 */	bl getAlphaRatio__17dMsgScrnExplain_cFv
-/* 8023DCEC 00000008  C0 02 B1 B8 */	lfs f0, LIT_3978(r2)
+/* 8023DCEC 00000008  C0 02 B1 B8 */	lfs f0, lit_3978(r2)
 /* 8023DCF0 0000000C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8023DCF4 00000010  D0 1D 00 48 */	stfs f0, 0x48(r29)
 /* 8023DCF8 00000014  3B C0 00 00 */	li r30, 0
 /* 8023DCFC 00000018  3B E0 00 00 */	li r31, 0
-/* 8023DD00 0000001C  C3 E2 B1 E0 */	lfs f31, msg_scrn_d_msg_scrn_explain__LIT_4211(r2)
+/* 8023DD00 0000001C  C3 E2 B1 E0 */	lfs f31, msg_scrn_d_msg_scrn_explain__lit_4211(r2)
 lbl_8023DD04:
 /* 8023DD04 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8023DD08 00000004  48 00 08 C5 */	bl getAlphaRatio__17dMsgScrnExplain_cFv
@@ -52,9 +52,9 @@ lbl_8023DD04:
 /* 8023DD34 00000030  41 82 00 3C */	beq lbl_8023DD70
 /* 8023DD38 00000034  7F A3 EB 78 */	mr r3, r29
 /* 8023DD3C 00000038  48 00 08 91 */	bl getAlphaRatio__17dMsgScrnExplain_cFv
-/* 8023DD40 0000003C  C0 02 B1 E0 */	lfs f0, msg_scrn_d_msg_scrn_explain__LIT_4211(r2)
+/* 8023DD40 0000003C  C0 02 B1 E0 */	lfs f0, msg_scrn_d_msg_scrn_explain__lit_4211(r2)
 /* 8023DD44 00000040  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8023DD48 00000044  C0 02 B1 E4 */	lfs f0, LIT_4230(r2)
+/* 8023DD48 00000044  C0 02 B1 E4 */	lfs f0, lit_4230(r2)
 /* 8023DD4C 00000048  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8023DD50 0000004C  FC 00 00 1E */	fctiwz f0, f0
 /* 8023DD54 00000050  D8 01 00 08 */	stfd f0, 8(r1)

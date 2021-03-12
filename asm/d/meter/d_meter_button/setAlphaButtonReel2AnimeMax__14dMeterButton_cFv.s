@@ -8,7 +8,7 @@ lbl_80208A38:
 /* 80208A50 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80208A54 0000001C  41 82 00 84 */	beq lbl_80208AD8
 /* 80208A58 00000020  48 04 CD D1 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80208A5C 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__LIT_4147(r2)
+/* 80208A5C 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
 /* 80208A60 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80208A64 0000002C  41 82 00 74 */	beq lbl_80208AD8
 /* 80208A68 00000030  80 7F 00 5C */	lwz r3, 0x5c(r31)
@@ -19,7 +19,7 @@ lbl_80208A38:
 /* 80208A7C 00000044  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 80208A80 00000048  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 80208A84 0000004C  48 04 CD A5 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80208A88 00000050  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__LIT_4147(r2)
+/* 80208A88 00000050  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
 /* 80208A8C 00000054  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80208A90 00000058  40 82 00 48 */	bne lbl_80208AD8
 /* 80208A94 0000005C  88 1F 04 D0 */	lbz r0, 0x4d0(r31)
@@ -33,7 +33,7 @@ lbl_80208A38:
 /* 80208AB4 0000007C  38 C0 00 00 */	li r6, 0
 /* 80208AB8 00000080  38 E0 00 00 */	li r7, 0
 /* 80208ABC 00000084  FC 20 10 90 */	fmr f1, f2
-/* 80208AC0 00000088  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__LIT_4513(r2)
+/* 80208AC0 00000088  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
 /* 80208AC4 0000008C  FC 80 18 90 */	fmr f4, f3
 /* 80208AC8 00000090  39 00 00 00 */	li r8, 0
 /* 80208ACC 00000094  48 0A 2E B9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

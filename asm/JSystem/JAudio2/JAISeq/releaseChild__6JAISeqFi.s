@@ -33,8 +33,8 @@ lbl_802A16B4:
 /* 802A16D4 00000020  38 63 40 B0 */	addi r3, r3, data_804340B0@l
 /* 802A16D8 00000024  3C 80 80 2A */	lis r4, func_802A1268@ha
 /* 802A16DC 00000028  38 84 12 68 */	addi r4, r4, func_802A1268@l
-/* 802A16E0 0000002C  3C A0 80 43 */	lis r5, JAISeq__LIT_896@ha
-/* 802A16E4 00000030  38 A5 40 A4 */	addi r5, r5, JAISeq__LIT_896@l
+/* 802A16E0 0000002C  3C A0 80 43 */	lis r5, JAISeq__lit_896@ha
+/* 802A16E4 00000030  38 A5 40 A4 */	addi r5, r5, JAISeq__lit_896@l
 /* 802A16E8 00000034  48 0C 05 3D */	bl __register_global_object
 /* 802A16EC 00000038  38 00 00 01 */	li r0, 1
 /* 802A16F0 0000003C  98 0D 8D 98 */	stb r0, data_80451318(r13)

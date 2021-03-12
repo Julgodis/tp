@@ -5,37 +5,35 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void usr_put_initialize();
-extern void usr_puts_serial();
-extern void SetTRKConnected();
-extern void GetTRKConnected();
-}
+extern "C" extern void OSReport();
+extern "C" extern void usr_put_initialize();
+extern "C" extern void usr_puts_serial();
+extern "C" extern void SetTRKConnected();
+extern "C" extern void GetTRKConnected();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036DB10-8036DB14 0004 .text      usr_put_initialize                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void usr_put_initialize() {
+extern "C" asm void usr_put_initialize() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put/usr_put_initialize.s"
 }
 #pragma pop
 
+
 /* 8036DB14-8036DB9C 0088 .text      usr_puts_serial                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void usr_puts_serial() {
+extern "C" asm void usr_puts_serial() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put/usr_puts_serial.s"
 }

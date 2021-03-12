@@ -5,45 +5,44 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void dComIfGp_getReverb__Fi();
-extern void releaseSound__14JAISoundHandleFv();
-extern void stop__8JAISoundFv();
-extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern void movePitch__18JAISoundParamsMoveFfUl();
-extern void moveFxMix__18JAISoundParamsMoveFfUl();
-extern void movePan__18JAISoundParamsMoveFfUl();
-extern void moveDolby__18JAISoundParamsMoveFfUl();
-extern void __dt__15JAISoundStarterFv();
-extern void __ct__14Z2SoundStarterFb();
-extern void func_802AABF4();
-extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern void subBgmStart__8Z2SeqMgrFUl();
-extern void getFogDensity__10Z2EnvSeMgrFv();
-extern void __ct__12Z2SpeechMgr2Fv();
-extern void __dt__15Z2SpeechStarterFv();
-extern void setString__12Z2SpeechMgr2FPCUssUcUs();
-extern void setTextCount__12Z2SpeechMgr2Fs();
-extern void speakOneWord__12Z2SpeechMgr2Fb();
-extern void isNonVerbal__12Z2SpeechMgr2Fv();
-extern void selectUnit__12Z2SpeechMgr2Fb();
-extern void selectTail__12Z2SpeechMgr2Fv();
-extern void framework__12Z2SpeechMgr2Fv();
-extern void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
-extern void isMidnaSpeak__12Z2SpeechMgr2Fv();
-extern void __ct__15Z2SpeechStarterFv();
-extern void func_802CCFF8();
-extern void __dl__FPv();
-extern void __ct__Q25JMath13TRandom_fast_FUl();
-extern void _savegpr_26();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_28();
-extern void _restgpr_29();
+extern "C" extern void dComIfGp_getReverb__Fi();
+extern "C" extern void releaseSound__14JAISoundHandleFv();
+extern "C" extern void stop__8JAISoundFv();
+extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" extern void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" extern void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" extern void movePan__18JAISoundParamsMoveFfUl();
+extern "C" extern void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" extern void __dt__15JAISoundStarterFv();
+extern "C" extern void __ct__14Z2SoundStarterFb();
+extern "C" extern void func_802AABF4();
+extern "C" extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" extern void subBgmStart__8Z2SeqMgrFUl();
+extern "C" extern void getFogDensity__10Z2EnvSeMgrFv();
+extern "C" extern void __ct__12Z2SpeechMgr2Fv();
+extern "C" extern void __dt__15Z2SpeechStarterFv();
+extern "C" extern void setString__12Z2SpeechMgr2FPCUssUcUs();
+extern "C" extern void setTextCount__12Z2SpeechMgr2Fs();
+extern "C" extern void speakOneWord__12Z2SpeechMgr2Fb();
+extern "C" extern void isNonVerbal__12Z2SpeechMgr2Fv();
+extern "C" extern void selectUnit__12Z2SpeechMgr2Fb();
+extern "C" extern void selectTail__12Z2SpeechMgr2Fv();
+extern "C" extern void framework__12Z2SpeechMgr2Fv();
+extern "C" extern void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
+extern "C" extern void isMidnaSpeak__12Z2SpeechMgr2Fv();
+extern "C" extern void __ct__15Z2SpeechStarterFv();
+extern "C" extern void func_802CCFF8();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 sReply__8Z2MdnPrm[100];
 SECTION_RODATA extern const u8 sReplyTail__8Z2MdnPrm[12];
 SECTION_RODATA extern const u8 sJoke__8Z2MdnPrm[100];
@@ -69,10 +68,10 @@ SECTION_RODATA extern const u8 sDeside__8Z2MdnPrm[100];
 SECTION_RODATA extern const u8 sAfford__8Z2MdnPrm[104];
 SECTION_RODATA extern const u8 sAffordTail__8Z2MdnPrm[12];
 SECTION_RODATA extern const void* const sPrm__8Z2MdnPrm[51];
-SECTION_DATA extern void* __vt__14Z2SoundStarter[6];
-SECTION_DATA extern u8 LIT_3729[456];
-SECTION_DATA extern void* Z2SpeechMgr2__LIT_3839[21];
-SECTION_DATA extern void* __vt__15Z2SpeechStarter[5];
+SECTION_DATA extern void* const __vt__14Z2SoundStarter[6];
+SECTION_DATA extern void* lit_3729[114];
+SECTION_DATA extern void* Z2SpeechMgr2__lit_3839[21];
+SECTION_DATA extern void* const __vt__15Z2SpeechStarter[5];
 SECTION_SBSS extern u8 data_80450B3C[4];
 SECTION_SBSS extern u8 data_80450B70[4];
 SECTION_SBSS extern u8 data_80450B74[4];
@@ -90,24 +89,324 @@ SECTION_SDATA2 extern u8 sTiredTail__8Z2MdnPrm[8];
 SECTION_SDATA2 extern u8 sSeriousTail__8Z2MdnPrm[8];
 SECTION_SDATA2 extern u8 sReplybTail__8Z2MdnPrm[8];
 SECTION_SDATA2 extern u8 sDesideTail__8Z2MdnPrm[8];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_3836[4];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_3837[4];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_3838[4];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_3885[4];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_3887[8];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_4083[8];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_4571[4];
-SECTION_SDATA2 extern u8 Z2SpeechMgr2__LIT_4572[4];
-SECTION_SBSS2 extern u8 Z2SpeechMgr2__LIT_4003[2 + 2 /* padding */];
-SECTION_SBSS2 extern u8 Z2SpeechMgr2__LIT_4104[2 + 2 /* padding */];
+SECTION_SDATA2 extern u8 Z2SpeechMgr2__lit_3836[4];
+SECTION_SDATA2 extern f32 Z2SpeechMgr2__lit_3837;
+SECTION_SDATA2 extern f32 Z2SpeechMgr2__lit_3838;
+SECTION_SDATA2 extern f32 Z2SpeechMgr2__lit_3885;
+SECTION_SDATA2 extern f64 Z2SpeechMgr2__lit_3887;
+SECTION_SDATA2 extern f64 Z2SpeechMgr2__lit_4083;
+SECTION_SDATA2 extern f32 Z2SpeechMgr2__lit_4571;
+SECTION_SDATA2 extern f32 Z2SpeechMgr2__lit_4572;
+SECTION_SBSS2 extern u8 Z2SpeechMgr2__lit_4003[2 + 2 /* padding */];
+SECTION_SBSS2 extern u8 Z2SpeechMgr2__lit_4104[2 + 2 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 802CBC60-802CBCEC 008C .text      __ct__12Z2SpeechMgr2Fv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__12Z2SpeechMgr2Fv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/__ct__12Z2SpeechMgr2Fv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 803CBD08-803CBED0 01C8 .data      @3729                                                        */
+void* lit_3729[114] = {
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xB4),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xB4),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xB4),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xB4),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xA8),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x9C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x90),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x84),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x3C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x30),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x3C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x30),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x9C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x6C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x84),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x84),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x48),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x54),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x60),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x9C),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0x78),
+	(void*)(((char*)setString__12Z2SpeechMgr2FPCUssUcUs)+0xC0),
+};
 
-extern "C" {
+/* 803CBED0-803CBF24 0054 .data      @3839                                                        */
+void* Z2SpeechMgr2__lit_3839[21] = {
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x13C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x14C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x15C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x16C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x17C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x18C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x19C),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1AC),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1BC),
+	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1CC),
+};
+
+/* 803CBF24-803CBF38 0014 .data      __vt__15Z2SpeechStarter                                      */
+void* const __vt__15Z2SpeechStarter[5] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__15Z2SpeechStarterFv,
+	(void*)func_802AABF4,
+	(void*)func_802CCFF8,
+};
+
+/* 802CBCEC-802CBD88 009C .text      __dt__15Z2SpeechStarterFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__15Z2SpeechStarterFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/__dt__15Z2SpeechStarterFv.s"
+}
+#pragma pop
+
+
+/* 802CBD88-802CBF60 01D8 .text      setString__12Z2SpeechMgr2FPCUssUcUs                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setString__12Z2SpeechMgr2FPCUssUcUs() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/setString__12Z2SpeechMgr2FPCUssUcUs.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455EE0-80455EE8 0006 .sdata2    sBoringTail__8Z2MdnPrm                                       */
+u8 sBoringTail__8Z2MdnPrm[8] = {
+	0x92, 0x58, 0x59, 0x5B, 0x70, 0x71,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80455EE8-80455EF0 0006 .sdata2    sOrderTail__8Z2MdnPrm                                        */
+u8 sOrderTail__8Z2MdnPrm[8] = {
+	0x60, 0xA8, 0x5B, 0x4E, 0x5D, 0x87,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80455EF0-80455EF8 0005 .sdata2    sResentTail__8Z2MdnPrm                                       */
+u8 sResentTail__8Z2MdnPrm[8] = {
+	0x4A, 0x98, 0x8A, 0x7E, 0x57,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
+
+/* 80455EF8-80455F00 0008 .sdata2    sCheerfulTail__8Z2MdnPrm                                     */
+u8 sCheerfulTail__8Z2MdnPrm[8] = {
+	0x60, 0x6D, 0x4D, 0x44, 0x9C, 0x54, 0x70, 0x7B,
+};
+
+/* 80455F00-80455F08 0005 .sdata2    sConfusedTail__8Z2MdnPrm                                     */
+u8 sConfusedTail__8Z2MdnPrm[8] = {
+	0x2C, 0x42, 0x4C, 0x7C, 0x49,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
+
+/* 80455F08-80455F10 0007 .sdata2    sHostilityTail__8Z2MdnPrm                                    */
+u8 sHostilityTail__8Z2MdnPrm[8] = {
+	0x97, 0x67, 0x94, 0x6A, 0x66, 0x4F, 0x6A,
+	/* padding */
+	0x00,
+};
+
+/* 80455F10-80455F18 0008 .sdata2    sTiredTail__8Z2MdnPrm                                        */
+u8 sTiredTail__8Z2MdnPrm[8] = {
+	0x66, 0x6F, 0x3B, 0x7A, 0x49, 0x91, 0x5C, 0x6A,
+};
+
+/* 80455F18-80455F20 0007 .sdata2    sSeriousTail__8Z2MdnPrm                                      */
+u8 sSeriousTail__8Z2MdnPrm[8] = {
+	0x7B, 0x69, 0x4B, 0x61, 0x52, 0x59, 0x87,
+	/* padding */
+	0x00,
+};
+
+/* 80455F20-80455F28 0007 .sdata2    sReplybTail__8Z2MdnPrm                                       */
+u8 sReplybTail__8Z2MdnPrm[8] = {
+	0x4F, 0x4A, 0xA2, 0x4F, 0x65, 0x98, 0x5C,
+	/* padding */
+	0x00,
+};
+
+/* 80455F28-80455F30 0008 .sdata2    sDesideTail__8Z2MdnPrm                                       */
+u8 sDesideTail__8Z2MdnPrm[8] = {
+	0x64, 0x2E, 0x4A, 0x57, 0x80, 0x48, 0x7C, 0x5F,
+};
+
+/* 80455F30-80455F34 0004 .sdata2    @3836                                                        */
+u8 Z2SpeechMgr2__lit_3836[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455F34-80455F38 0004 .sdata2    @3837                                                        */
+f32 Z2SpeechMgr2__lit_3837 = 1.0f;
+
+/* 80455F38-80455F3C 0004 .sdata2    @3838                                                        */
+f32 Z2SpeechMgr2__lit_3838 = -1.0f;
+
+/* 802CBF60-802CC190 0230 .text      setTextCount__12Z2SpeechMgr2Fs                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setTextCount__12Z2SpeechMgr2Fs() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/setTextCount__12Z2SpeechMgr2Fs.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455F3C-80455F40 0004 .sdata2    @3885                                                        */
+f32 Z2SpeechMgr2__lit_3885 = 127.0f;
+
+/* 80455F40-80455F48 0008 .sdata2    @3887                                                        */
+f64 Z2SpeechMgr2__lit_3887 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 802CC190-802CC2FC 016C .text      speakOneWord__12Z2SpeechMgr2Fb                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void speakOneWord__12Z2SpeechMgr2Fb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/speakOneWord__12Z2SpeechMgr2Fb.s"
+}
+#pragma pop
+
+
+/* 802CC2FC-802CC4C0 01C4 .text      isNonVerbal__12Z2SpeechMgr2Fv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isNonVerbal__12Z2SpeechMgr2Fv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SpeechMgr2/isNonVerbal__12Z2SpeechMgr2Fv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039C260-8039C2C4 0064 .rodata    sReply__8Z2MdnPrm                                            */
 SECTION_RODATA const u8 sReply__8Z2MdnPrm[100] = {
 	0x6A, 0x8A, 0x50, 0x5F, 0x53, 0x37, 0x37, 0x4F, 0x4F, 0x5E, 0xAA, 0x46, 0x52, 0x5A, 0x5A, 0x4F,
@@ -118,12 +417,14 @@ SECTION_RODATA const u8 sReply__8Z2MdnPrm[100] = {
 	0x3E, 0x38, 0x38, 0x39, 0x35, 0x41, 0x41, 0x41, 0x41, 0x56, 0x71, 0x85, 0x85, 0xA2, 0xA2, 0x52,
 	0x52, 0x5C, 0x5C, 0x75,
 };
+
 /* 8039C2C4-8039C2D0 000A .rodata    sReplyTail__8Z2MdnPrm                                        */
 SECTION_RODATA const u8 sReplyTail__8Z2MdnPrm[12] = {
 	0x5E, 0x7F, 0x68, 0x39, 0x56, 0x75, 0x47, 0x71, 0x7D, 0x33,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C2D0-8039C334 0064 .rodata    sJoke__8Z2MdnPrm                                             */
 SECTION_RODATA const u8 sJoke__8Z2MdnPrm[100] = {
 	0x68, 0x57, 0x57, 0x55, 0x55, 0x51, 0x5B, 0x64, 0x6B, 0x7B, 0x7B, 0x5C, 0x77, 0x97, 0x8D, 0x97,
@@ -134,12 +435,14 @@ SECTION_RODATA const u8 sJoke__8Z2MdnPrm[100] = {
 	0x6D, 0x7E, 0x7A, 0x97, 0x97, 0x99, 0xA5, 0x89, 0x90, 0xA4, 0x45, 0x45, 0x29, 0x4C, 0x4B, 0x64,
 	0x64, 0x60, 0x5C, 0xB1,
 };
+
 /* 8039C334-8039C340 000A .rodata    sJokeTail__8Z2MdnPrm                                         */
 SECTION_RODATA const u8 sJokeTail__8Z2MdnPrm[12] = {
 	0x51, 0x97, 0x60, 0xB0, 0x6F, 0x5E, 0x5A, 0xA6, 0x4F, 0x4F,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C340-8039C3A4 0064 .rodata    sSexy__8Z2MdnPrm                                             */
 SECTION_RODATA const u8 sSexy__8Z2MdnPrm[100] = {
 	0x5E, 0x60, 0x5F, 0x63, 0x63, 0x72, 0x72, 0x78, 0x4D, 0x7A, 0x6E, 0x6E, 0x6E, 0x6E, 0x6E, 0x59,
@@ -150,12 +453,14 @@ SECTION_RODATA const u8 sSexy__8Z2MdnPrm[100] = {
 	0x90, 0xAB, 0x5C, 0x7D, 0x52, 0x49, 0x54, 0x57, 0x49, 0x55, 0x79, 0x65, 0x65, 0x4A, 0x5C, 0x78,
 	0x78, 0x8B, 0x8D, 0x7C,
 };
+
 /* 8039C3A4-8039C3B0 000A .rodata    sSexyTail__8Z2MdnPrm                                         */
 SECTION_RODATA const u8 sSexyTail__8Z2MdnPrm[12] = {
 	0x52, 0x79, 0x82, 0xA5, 0x62, 0x86, 0x3F, 0x7D, 0x57, 0x7C,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C3B0-8039C414 0064 .rodata    sRidicule__8Z2MdnPrm                                         */
 SECTION_RODATA const u8 sRidicule__8Z2MdnPrm[100] = {
 	0xA7, 0x5A, 0x5A, 0x52, 0x52, 0x85, 0x85, 0x8C, 0x63, 0x73, 0x73, 0x90, 0x50, 0x46, 0x74, 0x74,
@@ -166,12 +471,14 @@ SECTION_RODATA const u8 sRidicule__8Z2MdnPrm[100] = {
 	0x6C, 0x73, 0x73, 0x6E, 0x6E, 0x36, 0x3F, 0x3C, 0x56, 0x2D, 0x2D, 0x2D, 0x2D, 0x8C, 0x8C, 0x8B,
 	0x8B, 0x93, 0x93, 0x6E,
 };
+
 /* 8039C414-8039C420 000A .rodata    sRidiculeTail__8Z2MdnPrm                                     */
 SECTION_RODATA const u8 sRidiculeTail__8Z2MdnPrm[12] = {
 	0x81, 0x67, 0x6D, 0x8C, 0x90, 0x85, 0xB1, 0x4D, 0x4F, 0x6E,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C420-8039C48C 006C .rodata    sBoring__8Z2MdnPrm                                           */
 SECTION_RODATA const u8 sBoring__8Z2MdnPrm[108] = {
 	0x8E, 0x9C, 0x9C, 0x5A, 0x5A, 0x52, 0x52, 0x5B, 0x5C, 0x56, 0x5C, 0x52, 0x52, 0x2D, 0x2D, 0x5B,
@@ -182,6 +489,7 @@ SECTION_RODATA const u8 sBoring__8Z2MdnPrm[108] = {
 	0x89, 0x5A, 0x5A, 0x63, 0x66, 0x5E, 0x5E, 0x71, 0x62, 0x55, 0x55, 0x85, 0x85, 0x5B, 0x5B, 0x5B,
 	0x5B, 0x5E, 0x70, 0x56, 0x56, 0x4C, 0x4C, 0x59, 0x59, 0x5B, 0x5B, 0x71,
 };
+
 /* 8039C48C-8039C4EC 005E .rodata    sIrritated__8Z2MdnPrm                                        */
 SECTION_RODATA const u8 sIrritated__8Z2MdnPrm[96] = {
 	0x6C, 0x91, 0x67, 0x8B, 0x8B, 0xA2, 0xA2, 0xAB, 0x48, 0x64, 0x73, 0x61, 0x61, 0x64, 0x64, 0x6D,
@@ -193,12 +501,14 @@ SECTION_RODATA const u8 sIrritated__8Z2MdnPrm[96] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C4EC-8039C4F8 000A .rodata    sIrritatedTail__8Z2MdnPrm                                    */
 SECTION_RODATA const u8 sIrritatedTail__8Z2MdnPrm[12] = {
 	0x64, 0x61, 0x4E, 0x91, 0xA0, 0x85, 0x9B, 0x67, 0x6F, 0x64,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C4F8-8039C56C 0072 .rodata    sOrder__8Z2MdnPrm                                            */
 SECTION_RODATA const u8 sOrder__8Z2MdnPrm[116] = {
 	0x77, 0x5F, 0x5F, 0x73, 0x73, 0x66, 0x66, 0x6B, 0x6B, 0x7A, 0x7A, 0x60, 0x54, 0x5F, 0x5F, 0x69,
@@ -212,6 +522,7 @@ SECTION_RODATA const u8 sOrder__8Z2MdnPrm[116] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C56C-8039C5D8 006A .rodata    sResent__8Z2MdnPrm                                           */
 SECTION_RODATA const u8 sResent__8Z2MdnPrm[108] = {
 	0x6F, 0x5F, 0x5F, 0x66, 0x66, 0x66, 0x66, 0x55, 0x55, 0x55, 0x55, 0x4B, 0x4B, 0x6B, 0x6B, 0x86,
@@ -224,6 +535,7 @@ SECTION_RODATA const u8 sResent__8Z2MdnPrm[108] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C5D8-8039C644 006A .rodata    sCheerful__8Z2MdnPrm                                         */
 SECTION_RODATA const u8 sCheerful__8Z2MdnPrm[108] = {
 	0x64, 0x6D, 0x6D, 0x6D, 0x99, 0x6D, 0x40, 0x51, 0x51, 0x6F, 0x6F, 0x66, 0x66, 0x60, 0xA7, 0xAF,
@@ -236,6 +548,7 @@ SECTION_RODATA const u8 sCheerful__8Z2MdnPrm[108] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C644-8039C6B0 006A .rodata    sConfused__8Z2MdnPrm                                         */
 SECTION_RODATA const u8 sConfused__8Z2MdnPrm[108] = {
 	0x83, 0x80, 0x80, 0x82, 0x82, 0x82, 0x82, 0x5B, 0x75, 0x84, 0x84, 0x84, 0x84, 0x75, 0x75, 0x62,
@@ -248,6 +561,7 @@ SECTION_RODATA const u8 sConfused__8Z2MdnPrm[108] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C6B0-8039C718 0068 .rodata    sHostility__8Z2MdnPrm                                        */
 SECTION_RODATA const u8 sHostility__8Z2MdnPrm[104] = {
 	0x85, 0x71, 0x71, 0x73, 0x73, 0x3B, 0x62, 0x84, 0x94, 0x94, 0x94, 0xAF, 0x98, 0xAD, 0xAD, 0x5A,
@@ -258,6 +572,7 @@ SECTION_RODATA const u8 sHostility__8Z2MdnPrm[104] = {
 	0x83, 0x96, 0x3F, 0x56, 0x56, 0x56, 0x56, 0x4F, 0x5F, 0x57, 0x62, 0x6A, 0x5F, 0x72, 0x72, 0x62,
 	0x62, 0x65, 0x5E, 0x69, 0x69, 0x63, 0x63, 0x7F,
 };
+
 /* 8039C718-8039C784 006A .rodata    sTired__8Z2MdnPrm                                            */
 SECTION_RODATA const u8 sTired__8Z2MdnPrm[108] = {
 	0x70, 0x70, 0x70, 0x5C, 0x5C, 0x5C, 0x6F, 0x6F, 0x6F, 0x93, 0x8C, 0x9A, 0x9D, 0x89, 0x99, 0x7A,
@@ -270,6 +585,7 @@ SECTION_RODATA const u8 sTired__8Z2MdnPrm[108] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C784-8039C7F0 006A .rodata    sSerious__8Z2MdnPrm                                          */
 SECTION_RODATA const u8 sSerious__8Z2MdnPrm[108] = {
 	0x52, 0x65, 0x65, 0x72, 0x5A, 0x61, 0x61, 0x7B, 0x80, 0x92, 0x93, 0x9D, 0x9D, 0x70, 0x79, 0x76,
@@ -282,6 +598,7 @@ SECTION_RODATA const u8 sSerious__8Z2MdnPrm[108] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 8039C7F0-8039C844 0054 .rodata    sReplyb__8Z2MdnPrm                                           */
 SECTION_RODATA const u8 sReplyb__8Z2MdnPrm[84] = {
 	0x5C, 0x45, 0x45, 0x71, 0x9F, 0x57, 0xB4, 0xB4, 0x56, 0x62, 0x8E, 0x61, 0x61, 0xB0, 0xB0, 0x3C,
@@ -291,6 +608,7 @@ SECTION_RODATA const u8 sReplyb__8Z2MdnPrm[84] = {
 	0x4C, 0x59, 0x59, 0x79, 0x5B, 0x44, 0x44, 0x4F, 0x52, 0x58, 0x5A, 0x6F, 0x6E, 0x8A, 0x8E, 0x8E,
 	0x8E, 0x8C, 0x8C, 0x9B,
 };
+
 /* 8039C844-8039C8A8 0064 .rodata    sApologize__8Z2MdnPrm                                        */
 SECTION_RODATA const u8 sApologize__8Z2MdnPrm[100] = {
 	0x6A, 0x6A, 0x6A, 0x51, 0x51, 0x51, 0x51, 0x51, 0x51, 0x51, 0x57, 0x57, 0x57, 0x63, 0x61, 0x54,
@@ -301,12 +619,14 @@ SECTION_RODATA const u8 sApologize__8Z2MdnPrm[100] = {
 	0x72, 0x6E, 0x76, 0x6B, 0x6B, 0x58, 0x69, 0x66, 0x66, 0x64, 0x64, 0x60, 0x61, 0x63, 0x6A, 0x62,
 	0x62, 0x64, 0x65, 0x71,
 };
+
 /* 8039C8A8-8039C8B4 0009 .rodata    sApologizeTail__8Z2MdnPrm                                    */
 SECTION_RODATA const u8 sApologizeTail__8Z2MdnPrm[12] = {
 	0x7C, 0x6E, 0x63, 0x71, 0x51, 0x37, 0x75, 0x58, 0x5C,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 8039C8B4-8039C918 0064 .rodata    sDeside__8Z2MdnPrm                                           */
 SECTION_RODATA const u8 sDeside__8Z2MdnPrm[100] = {
 	0x77, 0x77, 0x77, 0x58, 0x58, 0x6F, 0x78, 0x5F, 0x66, 0x5E, 0x6E, 0x62, 0x62, 0x2E, 0x5A, 0x58,
@@ -317,6 +637,7 @@ SECTION_RODATA const u8 sDeside__8Z2MdnPrm[100] = {
 	0x62, 0x59, 0x5D, 0x55, 0x55, 0x48, 0x5F, 0x5F, 0x5F, 0x5D, 0x75, 0x6A, 0x66, 0x76, 0x69, 0x69,
 	0x69, 0x60, 0x60, 0x5F,
 };
+
 /* 8039C918-8039C980 0068 .rodata    sAfford__8Z2MdnPrm                                           */
 SECTION_RODATA const u8 sAfford__8Z2MdnPrm[104] = {
 	0x4E, 0x45, 0x52, 0x5B, 0x56, 0x5B, 0x59, 0x52, 0x52, 0x57, 0x5C, 0x50, 0x50, 0x49, 0x80, 0x6E,
@@ -327,10 +648,12 @@ SECTION_RODATA const u8 sAfford__8Z2MdnPrm[104] = {
 	0x50, 0x4C, 0x50, 0x43, 0x52, 0x51, 0x66, 0x6C, 0x64, 0x63, 0x63, 0x5D, 0x69, 0x70, 0x56, 0x50,
 	0x4B, 0x92, 0x86, 0x8F, 0x4B, 0x4F, 0x57, 0x56,
 };
+
 /* 8039C980-8039C98C 000C .rodata    sAffordTail__8Z2MdnPrm                                       */
 SECTION_RODATA const u8 sAffordTail__8Z2MdnPrm[12] = {
 	0x63, 0x8E, 0x5B, 0x59, 0x4C, 0x3A, 0x69, 0x47, 0x41, 0x59, 0x50, 0x55,
 };
+
 /* 8039C98C-8039CA58 00CC .rodata    sPrm__8Z2MdnPrm                                              */
 SECTION_RODATA const void* const sPrm__8Z2MdnPrm[51] = {
 	(void*)&sReply__8Z2MdnPrm,
@@ -385,316 +708,95 @@ SECTION_RODATA const void* const sPrm__8Z2MdnPrm[51] = {
 	(void*)&sAffordTail__8Z2MdnPrm,
 	(void*)0x34020A00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CBD08-803CBED0 01C8 .data      @3729                                                        */
-SECTION_DATA u8 LIT_3729[456] = {
-	0x80, 0x2C, 0xBE, 0x3C, 0x80, 0x2C, 0xBE, 0x3C, 0x80, 0x2C, 0xBE, 0x3C, 0x80, 0x2C, 0xBE, 0x3C,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBE, 0x30, 0x80, 0x2C, 0xBE, 0x24, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x18, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x0C, 0x80, 0x2C, 0xBE, 0x00,
-	0x80, 0x2C, 0xBE, 0x00, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xC4, 0x80, 0x2C, 0xBD, 0xB8,
-	0x80, 0x2C, 0xBD, 0xC4, 0x80, 0x2C, 0xBD, 0xB8, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBD, 0xDC,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBE, 0x24, 0x80, 0x2C, 0xBD, 0xDC,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xF4,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBE, 0x00, 0x80, 0x2C, 0xBE, 0x00, 0x80, 0x2C, 0xBE, 0x00, 0x80, 0x2C, 0xBD, 0xE8,
-	0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBD, 0xE8,
-	0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x0C, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x0C, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xD0,
-	0x80, 0x2C, 0xBD, 0xD0, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBD, 0xDC,
-	0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBD, 0xDC, 0x80, 0x2C, 0xBE, 0x48,
-	0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBD, 0xE8, 0x80, 0x2C, 0xBE, 0x48, 0x80, 0x2C, 0xBE, 0x24,
-	0x80, 0x2C, 0xBE, 0x00, 0x80, 0x2C, 0xBE, 0x48,
-};
-/* 803CBED0-803CBF24 0054 .data      @3839                                                        */
-SECTION_DATA void* Z2SpeechMgr2__LIT_3839[21] = {
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x13C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x14C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x15C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x16C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x17C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x18C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x19C),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1AC),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1D8),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1BC),
-	(void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x1CC),
-};
-/* 803CBF24-803CBF38 0014 .data      __vt__15Z2SpeechStarter                                      */
-SECTION_DATA void* __vt__15Z2SpeechStarter[5] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__15Z2SpeechStarterFv,
-	(void*)func_802AABF4,
-	(void*)func_802CCFF8,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455EE0-80455EE8 0006 .sdata2    sBoringTail__8Z2MdnPrm                                       */
-SECTION_SDATA2 u8 sBoringTail__8Z2MdnPrm[8] = {
-	0x92, 0x58, 0x59, 0x5B, 0x70, 0x71,
-	/* padding */
-	0x00, 0x00,
-};
-/* 80455EE8-80455EF0 0006 .sdata2    sOrderTail__8Z2MdnPrm                                        */
-SECTION_SDATA2 u8 sOrderTail__8Z2MdnPrm[8] = {
-	0x60, 0xA8, 0x5B, 0x4E, 0x5D, 0x87,
-	/* padding */
-	0x00, 0x00,
-};
-/* 80455EF0-80455EF8 0005 .sdata2    sResentTail__8Z2MdnPrm                                       */
-SECTION_SDATA2 u8 sResentTail__8Z2MdnPrm[8] = {
-	0x4A, 0x98, 0x8A, 0x7E, 0x57,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
-/* 80455EF8-80455F00 0008 .sdata2    sCheerfulTail__8Z2MdnPrm                                     */
-SECTION_SDATA2 u8 sCheerfulTail__8Z2MdnPrm[8] = {
-	0x60, 0x6D, 0x4D, 0x44, 0x9C, 0x54, 0x70, 0x7B,
-};
-/* 80455F00-80455F08 0005 .sdata2    sConfusedTail__8Z2MdnPrm                                     */
-SECTION_SDATA2 u8 sConfusedTail__8Z2MdnPrm[8] = {
-	0x2C, 0x42, 0x4C, 0x7C, 0x49,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
-/* 80455F08-80455F10 0007 .sdata2    sHostilityTail__8Z2MdnPrm                                    */
-SECTION_SDATA2 u8 sHostilityTail__8Z2MdnPrm[8] = {
-	0x97, 0x67, 0x94, 0x6A, 0x66, 0x4F, 0x6A,
-	/* padding */
-	0x00,
-};
-/* 80455F10-80455F18 0008 .sdata2    sTiredTail__8Z2MdnPrm                                        */
-SECTION_SDATA2 u8 sTiredTail__8Z2MdnPrm[8] = {
-	0x66, 0x6F, 0x3B, 0x7A, 0x49, 0x91, 0x5C, 0x6A,
-};
-/* 80455F18-80455F20 0007 .sdata2    sSeriousTail__8Z2MdnPrm                                      */
-SECTION_SDATA2 u8 sSeriousTail__8Z2MdnPrm[8] = {
-	0x7B, 0x69, 0x4B, 0x61, 0x52, 0x59, 0x87,
-	/* padding */
-	0x00,
-};
-/* 80455F20-80455F28 0007 .sdata2    sReplybTail__8Z2MdnPrm                                       */
-SECTION_SDATA2 u8 sReplybTail__8Z2MdnPrm[8] = {
-	0x4F, 0x4A, 0xA2, 0x4F, 0x65, 0x98, 0x5C,
-	/* padding */
-	0x00,
-};
-/* 80455F28-80455F30 0008 .sdata2    sDesideTail__8Z2MdnPrm                                       */
-SECTION_SDATA2 u8 sDesideTail__8Z2MdnPrm[8] = {
-	0x64, 0x2E, 0x4A, 0x57, 0x80, 0x48, 0x7C, 0x5F,
-};
-/* 80455F30-80455F34 0004 .sdata2    @3836                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_3836[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455F34-80455F38 0004 .sdata2    @3837                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_3837[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455F38-80455F3C 0004 .sdata2    @3838                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_3838[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 80455F3C-80455F40 0004 .sdata2    @3885                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_3885[4] = {
-	0x42, 0xFE, 0x00, 0x00,
-};
-/* 80455F40-80455F48 0008 .sdata2    @3887                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_3887[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
 /* 80455F48-80455F50 0008 .sdata2    @4083                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_4083[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455F50-80455F54 0004 .sdata2    @4571                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_4571[4] = {
-	0x3D, 0x8F, 0x5C, 0x29,
-};
-/* 80455F54-80455F58 0004 .sdata2    @4572                                                        */
-SECTION_SDATA2 u8 Z2SpeechMgr2__LIT_4572[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-}
+f64 Z2SpeechMgr2__lit_4083 = 4503599627370496.0 /* cast u32 to float */;
 
-
-/* ###################################################################################### */
-/*                                         .sbss2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456BA8-80456BAC 0002 .sbss2     @4003                                                        */
-SECTION_SBSS2 u8 Z2SpeechMgr2__LIT_4003[2 + 2 /* padding */];
-/* 80456BAC-80456BB0 0002 .sbss2     @4104                                                        */
-SECTION_SBSS2 u8 Z2SpeechMgr2__LIT_4104[2 + 2 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802CBC60-802CBCEC 008C .text      __ct__12Z2SpeechMgr2Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__12Z2SpeechMgr2Fv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/__ct__12Z2SpeechMgr2Fv.s"
-}
-#pragma pop
-
-/* 802CBCEC-802CBD88 009C .text      __dt__15Z2SpeechStarterFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__15Z2SpeechStarterFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/__dt__15Z2SpeechStarterFv.s"
-}
-#pragma pop
-
-/* 802CBD88-802CBF60 01D8 .text      setString__12Z2SpeechMgr2FPCUssUcUs                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setString__12Z2SpeechMgr2FPCUssUcUs() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/setString__12Z2SpeechMgr2FPCUssUcUs.s"
-}
-#pragma pop
-
-/* 802CBF60-802CC190 0230 .text      setTextCount__12Z2SpeechMgr2Fs                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setTextCount__12Z2SpeechMgr2Fs() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/setTextCount__12Z2SpeechMgr2Fs.s"
-}
-#pragma pop
-
-/* 802CC190-802CC2FC 016C .text      speakOneWord__12Z2SpeechMgr2Fb                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void speakOneWord__12Z2SpeechMgr2Fb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/speakOneWord__12Z2SpeechMgr2Fb.s"
-}
-#pragma pop
-
-/* 802CC2FC-802CC4C0 01C4 .text      isNonVerbal__12Z2SpeechMgr2Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isNonVerbal__12Z2SpeechMgr2Fv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SpeechMgr2/isNonVerbal__12Z2SpeechMgr2Fv.s"
-}
-#pragma pop
+u8 Z2SpeechMgr2__lit_4003[2 + 2 /* padding */];
 
 /* 802CC4C0-802CC738 0278 .text      selectUnit__12Z2SpeechMgr2Fb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void selectUnit__12Z2SpeechMgr2Fb() {
+extern "C" asm void selectUnit__12Z2SpeechMgr2Fb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/selectUnit__12Z2SpeechMgr2Fb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456BAC-80456BB0 0002 .sbss2     @4104                                                        */
+u8 Z2SpeechMgr2__lit_4104[2 + 2 /* padding */];
+
 /* 802CC738-802CC9D0 0298 .text      selectTail__12Z2SpeechMgr2Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void selectTail__12Z2SpeechMgr2Fv() {
+extern "C" asm void selectTail__12Z2SpeechMgr2Fv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/selectTail__12Z2SpeechMgr2Fv.s"
 }
 #pragma pop
 
+
 /* 802CC9D0-802CCA18 0048 .text      framework__12Z2SpeechMgr2Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void framework__12Z2SpeechMgr2Fv() {
+extern "C" asm void framework__12Z2SpeechMgr2Fv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/framework__12Z2SpeechMgr2Fv.s"
 }
 #pragma pop
 
+
 /* 802CCA18-802CCF88 0570 .text      playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc() {
+extern "C" asm void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc.s"
 }
 #pragma pop
 
+
 /* 802CCF88-802CCFB8 0030 .text      isMidnaSpeak__12Z2SpeechMgr2Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isMidnaSpeak__12Z2SpeechMgr2Fv() {
+extern "C" asm void isMidnaSpeak__12Z2SpeechMgr2Fv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/isMidnaSpeak__12Z2SpeechMgr2Fv.s"
 }
 #pragma pop
 
+
 /* 802CCFB8-802CCFF8 0040 .text      __ct__15Z2SpeechStarterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15Z2SpeechStarterFv() {
+extern "C" asm void __ct__15Z2SpeechStarterFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/__ct__15Z2SpeechStarterFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455F50-80455F54 0004 .sdata2    @4571                                                        */
+f32 Z2SpeechMgr2__lit_4571 = 7.0f / 100.0f;
+
+/* 80455F54-80455F58 0004 .sdata2    @4572                                                        */
+f32 Z2SpeechMgr2__lit_4572 = 0.5f;
+
 /* 802CCFF8-802CD248 0250 .text      startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CCFF8() {
+extern "C" asm void func_802CCFF8() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/func_802CCFF8.s"
 }

@@ -63,7 +63,7 @@ lbl_800C6B24:
 /* 800C6B28 00000004  B0 1C 30 12 */	sth r0, 0x3012(r28)
 /* 800C6B2C 00000008  2C 1D 00 01 */	cmpwi r29, 1
 /* 800C6B30 0000000C  40 82 00 6C */	bne lbl_800C6B9C
-/* 800C6B34 00000010  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800C6B34 00000010  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C6B38 00000014  D0 1C 33 98 */	stfs f0, 0x3398(r28)
 /* 800C6B3C 00000018  D0 1C 04 FC */	stfs f0, 0x4fc(r28)
 /* 800C6B40 0000001C  A8 1C 04 E6 */	lha r0, 0x4e6(r28)
@@ -76,7 +76,7 @@ lbl_800C6B24:
 /* 800C6B5C 00000038  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800C6B60 0000003C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 800C6B64 00000040  C0 3C 04 D0 */	lfs f1, 0x4d0(r28)
-/* 800C6B68 00000044  C0 42 93 3C */	lfs f2, d_a_d_a_alink__LIT_7808(r2)
+/* 800C6B68 00000044  C0 42 93 3C */	lfs f2, d_a_d_a_alink__lit_7808(r2)
 /* 800C6B6C 00000048  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800C6B70 0000004C  EC 01 00 2A */	fadds f0, f1, f0
 /* 800C6B74 00000050  D0 1C 04 D0 */	stfs f0, 0x4d0(r28)
@@ -94,9 +94,9 @@ lbl_800C6B9C:
 /* 800C6BA0 00000004  40 82 00 90 */	bne lbl_800C6C30
 /* 800C6BA4 00000008  A8 1C 2F FE */	lha r0, 0x2ffe(r28)
 /* 800C6BA8 0000000C  B0 1C 04 DE */	sth r0, 0x4de(r28)
-/* 800C6BAC 00000010  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800C6BAC 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C6BB0 00000014  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800C6BB4 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800C6BB4 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800C6BB8 0000001C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800C6BBC 00000020  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800C6BC0 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -132,7 +132,7 @@ lbl_800C6C30:
 /* 800C6C30 00000000  B3 FC 30 10 */	sth r31, 0x3010(r28)
 /* 800C6C34 00000004  7F 83 E3 78 */	mr r3, r28
 /* 800C6C38 00000008  38 80 00 33 */	li r4, 0x33
-/* 800C6C3C 0000000C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800C6C3C 0000000C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C6C40 00000010  FC 40 F8 90 */	fmr f2, f31
 /* 800C6C44 00000014  4B FE 63 9D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800C6C48 00000018  7F 83 E3 78 */	mr r3, r28
@@ -148,7 +148,7 @@ lbl_800C6C30:
 /* 800C6C70 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 800C6C74 00000044  40 82 00 2C */	bne lbl_800C6CA0
 /* 800C6C78 00000048  C0 3C 33 98 */	lfs f1, 0x3398(r28)
-/* 800C6C7C 0000004C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800C6C7C 0000004C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800C6C80 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C6C84 00000000  40 81 00 10 */	ble lbl_800C6C94
 /* 800C6C88 00000004  38 00 00 02 */	li r0, 2

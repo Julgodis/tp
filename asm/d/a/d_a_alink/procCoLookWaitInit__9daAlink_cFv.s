@@ -42,10 +42,10 @@ lbl_8011B990:
 /* 8011B9A4 00000014  40 82 00 14 */	bne lbl_8011B9B8
 /* 8011B9A8 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8011B9AC 0000001C  38 9F 20 48 */	addi r4, r31, 0x2048
-/* 8011B9B0 00000020  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 8011B9B0 00000020  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 8011B9B4 00000024  4B FE 63 41 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 lbl_8011B9B8:
-/* 8011B9B8 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8011B9B8 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011B9BC 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8011B9C0 00000008  80 1F 05 74 */	lwz r0, 0x574(r31)
 /* 8011B9C4 0000000C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6

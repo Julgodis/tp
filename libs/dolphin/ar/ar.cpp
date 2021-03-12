@@ -5,32 +5,31 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
-extern void PPCSync();
-extern void OSRegisterVersion();
-extern void DCInvalidateRange();
-extern void DCFlushRange();
-extern void OSSetCurrentContext();
-extern void OSClearContext();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __OSSetInterruptHandler();
-extern void __OSUnmaskInterrupts();
-extern void ARRegisterDMACallback();
-extern void ARGetDMAStatus();
-extern void ARStartDMA();
-extern void ARAlloc();
-extern void ARInit();
-extern void ARGetSize();
-extern void __ARHandler();
-extern void __ARClearInterrupt();
-extern void __ARGetInterruptStatus();
-extern void __ARChecksize();
-SECTION_DATA extern u8 ar__LIT_1[72];
+extern "C" extern void PPCSync();
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void DCFlushRange();
+extern "C" extern void OSSetCurrentContext();
+extern "C" extern void OSClearContext();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __OSSetInterruptHandler();
+extern "C" extern void __OSUnmaskInterrupts();
+extern "C" extern void ARRegisterDMACallback();
+extern "C" extern void ARGetDMAStatus();
+extern "C" extern void ARStartDMA();
+extern "C" extern void ARAlloc();
+extern "C" extern void ARInit();
+extern "C" extern void ARGetSize();
+extern "C" extern void __ARHandler();
+extern "C" extern void __ARClearInterrupt();
+extern "C" extern void __ARGetInterruptStatus();
+extern "C" extern void __ARChecksize();
+SECTION_DATA extern u8 ar__lit_1[72];
 SECTION_SDATA extern void* __ARVersion[2];
 SECTION_SBSS extern u8 __AR_Callback[4];
 SECTION_SBSS extern u8 __AR_Size[4];
@@ -40,17 +39,157 @@ SECTION_SBSS extern u8 __AR_StackPointer[4];
 SECTION_SBSS extern u8 __AR_FreeBlocks[4];
 SECTION_SBSS extern u8 __AR_BlockLength[4];
 SECTION_SBSS extern u8 __AR_init_flag[4];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 804518B8-804518BC 0004 .sbss      __AR_Callback                                                */
+u8 __AR_Callback[4];
+
+/* 80350554-80350598 0044 .text      ARRegisterDMACallback                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARRegisterDMACallback() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARRegisterDMACallback.s"
 }
+#pragma pop
+
+
+/* 80350598-803505D4 003C .text      ARGetDMAStatus                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARGetDMAStatus() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARGetDMAStatus.s"
+}
+#pragma pop
+
+
+/* 803505D4-803506C4 00F0 .text      ARStartDMA                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARStartDMA() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARStartDMA.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 804518BC-804518C0 0004 .sbss      __AR_Size                                                    */
+u8 __AR_Size[4];
 
-extern "C" {
-/* 803D1BE8-803D1BE8 0000 .data      ...data.0                                                    */
+/* 804518C0-804518C4 0004 .sbss      __AR_InternalSize                                            */
+u8 __AR_InternalSize[4];
+
+/* 804518C4-804518C8 0004 .sbss      __AR_ExpansionSize                                           */
+u8 __AR_ExpansionSize[4];
+
+/* 804518C8-804518CC 0004 .sbss      __AR_StackPointer                                            */
+u8 __AR_StackPointer[4];
+
+/* 804518CC-804518D0 0004 .sbss      __AR_FreeBlocks                                              */
+u8 __AR_FreeBlocks[4];
+
+/* 804518D0-804518D4 0004 .sbss      __AR_BlockLength                                             */
+u8 __AR_BlockLength[4];
+
+/* 803506C4-8035072C 0068 .text      ARAlloc                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARAlloc() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARAlloc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80450A48-80450A50 0004 .sdata     __ARVersion                                                  */
+void* __ARVersion[2] = {
+	(void*)&ar__lit_1,
+	/* padding */
+	NULL,
+};
+
+/* 804518D4-804518D8 0004 .sbss      __AR_init_flag                                               */
+u8 __AR_init_flag[4];
+
+/* 8035072C-803507F0 00C4 .text      ARInit                                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARInit() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARInit.s"
+}
+#pragma pop
+
+
+/* 803507F0-803507F8 0008 .text      ARGetSize                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARGetSize() {
+	nofralloc
+#include "asm/dolphin/ar/ar/ARGetSize.s"
+}
+#pragma pop
+
+
+/* 803507F8-80350870 0078 .text      __ARHandler                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARHandler() {
+	nofralloc
+#include "asm/dolphin/ar/ar/__ARHandler.s"
+}
+#pragma pop
+
+
+/* 80350870-80350890 0020 .text      __ARClearInterrupt                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARClearInterrupt() {
+	nofralloc
+#include "asm/dolphin/ar/ar/__ARClearInterrupt.s"
+}
+#pragma pop
+
+
+/* 80350890-803508A0 0010 .text      __ARGetInterruptStatus                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARGetInterruptStatus() {
+	nofralloc
+#include "asm/dolphin/ar/ar/__ARGetInterruptStatus.s"
+}
+#pragma pop
+
+
+/* 803508A0-80352094 17F4 .text      __ARChecksize                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARChecksize() {
+	nofralloc
+#include "asm/dolphin/ar/ar/__ARChecksize.s"
+}
+#pragma pop
+
+
 /* 803D1BE8-803D1C30 0044 .data      @1                                                           */
-SECTION_DATA u8 ar__LIT_1[72] = {
+u8 ar__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x52, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -59,149 +198,4 @@ SECTION_DATA u8 ar__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450A48-80450A50 0004 .sdata     __ARVersion                                                  */
-SECTION_SDATA void* __ARVersion[2] = {
-	(void*)&ar__LIT_1,
-	/* padding */
-	NULL,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804518B8-804518BC 0004 .sbss      __AR_Callback                                                */
-SECTION_SBSS u8 __AR_Callback[4];
-/* 804518BC-804518C0 0004 .sbss      __AR_Size                                                    */
-SECTION_SBSS u8 __AR_Size[4];
-/* 804518C0-804518C4 0004 .sbss      __AR_InternalSize                                            */
-SECTION_SBSS u8 __AR_InternalSize[4];
-/* 804518C4-804518C8 0004 .sbss      __AR_ExpansionSize                                           */
-SECTION_SBSS u8 __AR_ExpansionSize[4];
-/* 804518C8-804518CC 0004 .sbss      __AR_StackPointer                                            */
-SECTION_SBSS u8 __AR_StackPointer[4];
-/* 804518CC-804518D0 0004 .sbss      __AR_FreeBlocks                                              */
-SECTION_SBSS u8 __AR_FreeBlocks[4];
-/* 804518D0-804518D4 0004 .sbss      __AR_BlockLength                                             */
-SECTION_SBSS u8 __AR_BlockLength[4];
-/* 804518D4-804518D8 0004 .sbss      __AR_init_flag                                               */
-SECTION_SBSS u8 __AR_init_flag[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80350554-80350598 0044 .text      ARRegisterDMACallback                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARRegisterDMACallback() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARRegisterDMACallback.s"
-}
-#pragma pop
-
-/* 80350598-803505D4 003C .text      ARGetDMAStatus                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARGetDMAStatus() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARGetDMAStatus.s"
-}
-#pragma pop
-
-/* 803505D4-803506C4 00F0 .text      ARStartDMA                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARStartDMA() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARStartDMA.s"
-}
-#pragma pop
-
-/* 803506C4-8035072C 0068 .text      ARAlloc                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARAlloc() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARAlloc.s"
-}
-#pragma pop
-
-/* 8035072C-803507F0 00C4 .text      ARInit                                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARInit() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARInit.s"
-}
-#pragma pop
-
-/* 803507F0-803507F8 0008 .text      ARGetSize                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARGetSize() {
-	nofralloc
-#include "asm/dolphin/ar/ar/ARGetSize.s"
-}
-#pragma pop
-
-/* 803507F8-80350870 0078 .text      __ARHandler                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARHandler() {
-	nofralloc
-#include "asm/dolphin/ar/ar/__ARHandler.s"
-}
-#pragma pop
-
-/* 80350870-80350890 0020 .text      __ARClearInterrupt                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARClearInterrupt() {
-	nofralloc
-#include "asm/dolphin/ar/ar/__ARClearInterrupt.s"
-}
-#pragma pop
-
-/* 80350890-803508A0 0010 .text      __ARGetInterruptStatus                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARGetInterruptStatus() {
-	nofralloc
-#include "asm/dolphin/ar/ar/__ARGetInterruptStatus.s"
-}
-#pragma pop
-
-/* 803508A0-80352094 17F4 .text      __ARChecksize                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARChecksize() {
-	nofralloc
-#include "asm/dolphin/ar/ar/__ARChecksize.s"
-}
-#pragma pop
-
 

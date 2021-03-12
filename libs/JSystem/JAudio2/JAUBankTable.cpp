@@ -5,35 +5,33 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void func_802A4A80();
-extern void getBank__12JAUBankTableCFUl();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-}
+extern "C" extern void func_802A4A80();
+extern "C" extern void getBank__12JAUBankTableCFUl();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802A4A80-802A4AA0 0020 .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A4A80() {
+extern "C" asm void func_802A4A80() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUBankTable/func_802A4A80.s"
 }
 #pragma pop
 
+
 /* 802A4AA0-802A4AC4 0024 .text      getBank__12JAUBankTableCFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBank__12JAUBankTableCFUl() {
+extern "C" asm void getBank__12JAUBankTableCFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUBankTable/getBank__12JAUBankTableCFUl.s"
 }

@@ -22,7 +22,7 @@ lbl_801C2748:
 /* 801C2764 0000001C  90 1F 00 68 */	stw r0, 0x68(r31)
 /* 801C2768 00000020  90 1F 00 6C */	stw r0, 0x6c(r31)
 /* 801C276C 00000024  B0 1F 0C 72 */	sth r0, 0xc72(r31)
-/* 801C2770 00000028  C0 02 A6 D8 */	lfs f0, d_menu_d_menu_map_common__LIT_3703(r2)
+/* 801C2770 00000028  C0 02 A6 D8 */	lfs f0, d_menu_d_menu_map_common__lit_3703(r2)
 /* 801C2774 0000002C  D0 1F 0C 78 */	stfs f0, 0xc78(r31)
 /* 801C2778 00000030  B0 1F 0C 74 */	sth r0, 0xc74(r31)
 /* 801C277C 00000034  D0 1F 0C 80 */	stfs f0, 0xc80(r31)

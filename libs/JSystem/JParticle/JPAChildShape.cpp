@@ -5,75 +5,66 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
-extern void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern void __ct__13JPAChildShapeFPCUc();
-extern void GXSetTevColor();
-SECTION_SDATA2 extern u8 LIT_2318[4];
-SECTION_SDATA2 extern u8 LIT_2319[4];
-}
+extern "C" extern void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
+extern "C" extern void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" extern void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" extern void __ct__13JPAChildShapeFPCUc();
+extern "C" extern void GXSetTevColor();
+SECTION_SDATA2 extern f32 lit_2318;
+SECTION_SDATA2 extern f32 lit_2319;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455308-8045530C 0004 .sdata2    @2318                                                        */
-SECTION_SDATA2 u8 LIT_2318[4] = {
-	0x43, 0x7F, 0x00, 0x00,
-};
-/* 8045530C-80455310 0004 .sdata2    @2319                                                        */
-SECTION_SDATA2 u8 LIT_2319[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8027AEBC-8027AFDC 0120 .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPARegistChildPrmEnv__FP18JPAEmitterWorkData() {
+extern "C" asm void JPARegistChildPrmEnv__FP18JPAEmitterWorkData() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAChildShape/JPARegistChildPrmEnv__FP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455308-8045530C 0004 .sdata2    @2318                                                        */
+f32 lit_2318 = 255.0f;
+
+/* 8045530C-80455310 0004 .sdata2    @2319                                                        */
+f32 lit_2319 = 1.0f;
+
 /* 8027AFDC-8027B008 002C .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle() {
+extern "C" asm void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAChildShape/JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
+
 /* 8027B008-8027B038 0030 .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle() {
+extern "C" asm void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAChildShape/JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
+
 /* 8027B038-8027B040 0008 .text      __ct__13JPAChildShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JPAChildShapeFPCUc() {
+extern "C" asm void __ct__13JPAChildShapeFPCUc() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAChildShape/__ct__13JPAChildShapeFPCUc.s"
 }

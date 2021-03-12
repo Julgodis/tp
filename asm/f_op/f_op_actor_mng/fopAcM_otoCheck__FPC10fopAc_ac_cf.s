@@ -35,13 +35,13 @@ lbl_8001CCAC:
 /* 8001CCD8 0000002C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8001CCDC 00000030  38 61 00 18 */	addi r3, r1, 0x18
 /* 8001CCE0 00000034  48 32 A4 59 */	bl PSVECSquareMag
-/* 8001CCE4 00000038  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001CCE4 00000038  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001CCE8 0000003C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001CCEC 00000000  40 81 00 58 */	ble lbl_8001CD44
 /* 8001CCF0 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8001CCF4 00000008  C8 82 82 08 */	lfd f4, f_op_f_op_actor_mng__LIT_4745(r2)
+/* 8001CCF4 00000008  C8 82 82 08 */	lfd f4, f_op_f_op_actor_mng__lit_4745(r2)
 /* 8001CCF8 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 8001CCFC 00000010  C8 62 82 10 */	lfd f3, f_op_f_op_actor_mng__LIT_4746(r2)
+/* 8001CCFC 00000010  C8 62 82 10 */	lfd f3, f_op_f_op_actor_mng__lit_4746(r2)
 /* 8001CD00 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8001CD04 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8001CD08 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -60,7 +60,7 @@ lbl_8001CCAC:
 /* 8001CD3C 00000050  FC 20 08 18 */	frsp f1, f1
 /* 8001CD40 00000054  48 00 00 88 */	b lbl_8001CDC8
 lbl_8001CD44:
-/* 8001CD44 00000000  C8 02 82 18 */	lfd f0, f_op_f_op_actor_mng__LIT_4747(r2)
+/* 8001CD44 00000000  C8 02 82 18 */	lfd f0, f_op_f_op_actor_mng__lit_4747(r2)
 /* 8001CD48 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001CD4C 00000000  40 80 00 10 */	bge lbl_8001CD5C
 /* 8001CD50 00000004  3C 60 80 45 */	lis r3, __float_nan@ha

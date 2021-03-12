@@ -9,12 +9,12 @@ lbl_80362914:
 /* 80362930 0000001C  80 0D 84 10 */	lwz r0, __OSCurrHeap(r13)
 /* 80362934 00000020  2C 00 FF FF */	cmpwi r0, -1
 /* 80362938 00000024  40 82 00 6C */	bne lbl_803629A4
-/* 8036293C 00000028  3C 60 80 3A */	lis r3, LIT_55@ha
-/* 80362940 0000002C  38 63 21 A8 */	addi r3, r3, LIT_55@l
+/* 8036293C 00000028  3C 60 80 3A */	lis r3, lit_55@ha
+/* 80362940 0000002C  38 63 21 A8 */	addi r3, r3, lit_55@l
 /* 80362944 00000030  4C C6 31 82 */	crclr 6
 /* 80362948 00000034  4B CA 41 75 */	bl OSReport
-/* 8036294C 00000038  3C 60 80 3A */	lis r3, GCN_mem_alloc__LIT_56@ha
-/* 80362950 0000003C  38 63 21 E0 */	addi r3, r3, GCN_mem_alloc__LIT_56@l
+/* 8036294C 00000038  3C 60 80 3A */	lis r3, GCN_mem_alloc__lit_56@ha
+/* 80362950 0000003C  38 63 21 E0 */	addi r3, r3, GCN_mem_alloc__lit_56@l
 /* 80362954 00000040  4C C6 31 82 */	crclr 6
 /* 80362958 00000044  4B CA 41 65 */	bl OSReport
 /* 8036295C 00000048  4B FD 89 39 */	bl OSGetArenaLo

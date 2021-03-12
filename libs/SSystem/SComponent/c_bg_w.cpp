@@ -5,96 +5,90 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void Regist__9cBgW_BgIdFi();
-extern void Release__9cBgW_BgIdFv();
-extern void ChkUsed__9cBgW_BgIdCFv();
-extern void cBgW_CheckBGround__Ff();
-extern void cBgW_CheckBRoof__Ff();
-extern void cBgW_CheckBWall__Ff();
-SECTION_SDATA2 extern u8 c_bg_w__LIT_2242[4];
-SECTION_SDATA2 extern u8 LIT_2249[4];
-}
+extern "C" extern void Regist__9cBgW_BgIdFi();
+extern "C" extern void Release__9cBgW_BgIdFv();
+extern "C" extern void ChkUsed__9cBgW_BgIdCFv();
+extern "C" extern void cBgW_CheckBGround__Ff();
+extern "C" extern void cBgW_CheckBRoof__Ff();
+extern "C" extern void cBgW_CheckBWall__Ff();
+SECTION_SDATA2 extern f32 c_bg_w__lit_2242;
+SECTION_SDATA2 extern f32 lit_2249;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804550E8-804550EC 0004 .sdata2    @2242                                                        */
-SECTION_SDATA2 u8 c_bg_w__LIT_2242[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 804550EC-804550F0 0004 .sdata2    @2249                                                        */
-SECTION_SDATA2 u8 LIT_2249[4] = {
-	0xBF, 0x4C, 0xCC, 0xCD,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802681C0-802681C8 0008 .text      Regist__9cBgW_BgIdFi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Regist__9cBgW_BgIdFi() {
+extern "C" asm void Regist__9cBgW_BgIdFi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/Regist__9cBgW_BgIdFi.s"
 }
 #pragma pop
 
+
 /* 802681C8-802681D4 000C .text      Release__9cBgW_BgIdFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Release__9cBgW_BgIdFv() {
+extern "C" asm void Release__9cBgW_BgIdFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/Release__9cBgW_BgIdFv.s"
 }
 #pragma pop
 
+
 /* 802681D4-802681E4 0010 .text      ChkUsed__9cBgW_BgIdCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ChkUsed__9cBgW_BgIdCFv() {
+extern "C" asm void ChkUsed__9cBgW_BgIdCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/ChkUsed__9cBgW_BgIdCFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550E8-804550EC 0004 .sdata2    @2242                                                        */
+f32 c_bg_w__lit_2242 = 0.5f;
+
 /* 802681E4-802681FC 0018 .text      cBgW_CheckBGround__Ff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgW_CheckBGround__Ff() {
+extern "C" asm void cBgW_CheckBGround__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/cBgW_CheckBGround__Ff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550EC-804550F0 0004 .sdata2    @2249                                                        */
+f32 lit_2249 = -4.0f / 5.0f;
+
 /* 802681FC-80268210 0014 .text      cBgW_CheckBRoof__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgW_CheckBRoof__Ff() {
+extern "C" asm void cBgW_CheckBRoof__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/cBgW_CheckBRoof__Ff.s"
 }
 #pragma pop
 
+
 /* 80268210-80268260 0050 .text      cBgW_CheckBWall__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgW_CheckBWall__Ff() {
+extern "C" asm void cBgW_CheckBWall__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/cBgW_CheckBWall__Ff.s"
 }

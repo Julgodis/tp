@@ -11,7 +11,7 @@ lbl_80153D1C:
 /* 80153D40 00000024  7C 05 03 78 */	mr r5, r0
 /* 80153D44 00000028  38 C0 00 00 */	li r6, 0
 /* 80153D48 0000002C  48 0F 62 49 */	bl init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
-/* 80153D4C 00000030  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__LIT_4116(r2)
+/* 80153D4C 00000030  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__lit_4116(r2)
 /* 80153D50 00000034  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80153D54 00000038  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 80153D58 0000003C  D0 1F 04 FC */	stfs f0, 0x4fc(r31)

@@ -43,8 +43,8 @@ lbl_802A4B98:
 /* 802A4BC4 0000002C  38 63 1B 04 */	addi r3, r3, data_80431B04@l
 /* 802A4BC8 00000030  3C 80 80 29 */	lis r4, func_802932E0@ha
 /* 802A4BCC 00000034  38 84 32 E0 */	addi r4, r4, func_802932E0@l
-/* 802A4BD0 00000038  3C A0 80 43 */	lis r5, JAUInitializer__LIT_757@ha
-/* 802A4BD4 0000003C  38 A5 41 10 */	addi r5, r5, JAUInitializer__LIT_757@l
+/* 802A4BD0 00000038  3C A0 80 43 */	lis r5, JAUInitializer__lit_757@ha
+/* 802A4BD4 0000003C  38 A5 41 10 */	addi r5, r5, JAUInitializer__lit_757@l
 /* 802A4BD8 00000040  48 0B D0 4D */	bl __register_global_object
 /* 802A4BDC 00000044  38 00 00 01 */	li r0, 1
 /* 802A4BE0 00000048  98 0D 8C B1 */	stb r0, struct_80451230+0x1(r13)
@@ -71,8 +71,8 @@ lbl_802A4BE4:
 /* 802A4C30 0000004C  38 63 1A F4 */	addi r3, r3, data_80431AF4@l
 /* 802A4C34 00000050  3C 80 80 29 */	lis r4, func_80293334@ha
 /* 802A4C38 00000054  38 84 33 34 */	addi r4, r4, func_80293334@l
-/* 802A4C3C 00000058  3C A0 80 43 */	lis r5, JAUInitializer__LIT_763@ha
-/* 802A4C40 0000005C  38 A5 41 1C */	addi r5, r5, JAUInitializer__LIT_763@l
+/* 802A4C3C 00000058  3C A0 80 43 */	lis r5, JAUInitializer__lit_763@ha
+/* 802A4C40 0000005C  38 A5 41 1C */	addi r5, r5, JAUInitializer__lit_763@l
 /* 802A4C44 00000060  48 0B CF E1 */	bl __register_global_object
 /* 802A4C48 00000064  38 00 00 01 */	li r0, 1
 /* 802A4C4C 00000068  98 0D 8C B0 */	stb r0, struct_80451230+0x0(r13)

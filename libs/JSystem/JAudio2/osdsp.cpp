@@ -5,66 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void DSPAddTask();
-extern void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __DSP_boot_task();
-extern void __DSP_insert_task();
-SECTION_RODATA extern const u8 osdsp__LIT_81[28];
-SECTION_RODATA extern const u8 osdsp__LIT_88[36];
+extern "C" extern void OSReport();
+extern "C" extern void DSPAddTask();
+extern "C" extern void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __DSP_boot_task();
+extern "C" extern void __DSP_insert_task();
+SECTION_RODATA extern const u8 osdsp__lit_81[28];
+SECTION_RODATA extern const u8 osdsp__lit_88[36];
 SECTION_SBSS extern u8 DSP_prior_task[4];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039B8B8-8039B8D4 001A .rodata    @81                                                          */
-SECTION_RODATA const u8 osdsp__LIT_81[28] = {
+SECTION_RODATA const u8 osdsp__lit_81[28] = {
 	0x50, 0x72, 0x69, 0x6F, 0x72, 0x20, 0x54, 0x61, 0x73, 0x6B, 0x20, 0x69, 0x73, 0x20, 0x6E, 0x6F,
 	0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 8039B8D4-8039B8F8 001F .rodata    @88                                                          */
-SECTION_RODATA const u8 osdsp__LIT_88[36] = {
-	0x41, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70,
-	0x72, 0x69, 0x6F, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8029EA00-8029EA84 0084 .text      DSPAddTask                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-asm void DSPAddTask() {
+extern "C" asm void DSPAddTask() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp/DSPAddTask.s"
 }
 #pragma pop
+
+
+/* ###################################################################################### */
+/* 8039B8D4-8039B8F8 001F .rodata    @88                                                          */
+SECTION_RODATA const u8 osdsp__lit_88[36] = {
+	0x41, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70,
+	0x72, 0x69, 0x6F, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x0A, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
 /* 8029EAA0-8029EB1C 007C .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-asm void DSPAddPriorTask__FP15STRUCT_DSP_TASK() {
+extern "C" asm void DSPAddPriorTask__FP15STRUCT_DSP_TASK() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp/DSPAddPriorTask__FP15STRUCT_DSP_TASK.s"
 }

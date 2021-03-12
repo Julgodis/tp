@@ -8,7 +8,7 @@ lbl_801BDEF8:
 /* 801BDF10 00000018  48 00 2F D1 */	bl getMapBlendPer__20dMenu_StageMapCtrl_cCFv
 /* 801BDF14 0000001C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 801BDF18 00000020  80 63 0C C4 */	lwz r3, 0xcc4(r3)
-/* 801BDF1C 00000024  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801BDF1C 00000024  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801BDF20 00000028  EC 40 08 28 */	fsubs f2, f0, f1
 /* 801BDF24 0000002C  81 83 00 00 */	lwz r12, 0(r3)
 /* 801BDF28 00000030  81 8C 01 04 */	lwz r12, 0x104(r12)

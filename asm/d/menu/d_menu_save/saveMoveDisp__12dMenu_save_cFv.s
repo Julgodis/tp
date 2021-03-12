@@ -12,9 +12,9 @@ lbl_801F42FC:
 /* 801F4324 00000028  38 A0 00 00 */	li r5, 0
 /* 801F4328 0000002C  38 C0 00 00 */	li r6, 0
 /* 801F432C 00000030  38 E0 00 00 */	li r7, 0
-/* 801F4330 00000034  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__LIT_4179(r2)
+/* 801F4330 00000034  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
 /* 801F4334 00000038  FC 40 08 90 */	fmr f2, f1
-/* 801F4338 0000003C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__LIT_4879(r2)
+/* 801F4338 0000003C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
 /* 801F433C 00000040  FC 80 18 90 */	fmr f4, f3
 /* 801F4340 00000044  39 00 00 00 */	li r8, 0
 /* 801F4344 00000048  48 0B 81 C9 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

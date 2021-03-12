@@ -22,7 +22,7 @@ lbl_8024FEB4:
 /* 8024FF04 00000050  3C A0 80 43 */	lis r5, g_nmHIO@ha
 /* 8024FF08 00000054  38 A5 07 34 */	addi r5, r5, g_nmHIO@l
 /* 8024FF0C 00000058  C0 25 00 08 */	lfs f1, 8(r5)
-/* 8024FF10 0000005C  C0 42 B3 C0 */	lfs f2, d_d_name__LIT_3820(r2)
+/* 8024FF10 0000005C  C0 42 B3 C0 */	lfs f2, d_d_name__lit_3820(r2)
 /* 8024FF14 00000060  38 A0 00 00 */	li r5, 0
 /* 8024FF18 00000064  48 00 48 B5 */	bl scaleAnime__8CPaneMgrFsffUc
 lbl_8024FF1C:

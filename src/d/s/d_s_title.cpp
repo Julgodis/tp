@@ -5,24 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_DATA extern void* g_fopScn_Method[6];
 SECTION_DATA extern void* g_fpcNd_Method[6];
 SECTION_DATA extern void* g_profile_WARNING_SCENE[10];
 SECTION_DATA extern void* g_profile_WARNING2_SCENE[10];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C32B0-803C32D8 0028 .data      g_profile_WARNING_SCENE                                      */
-SECTION_DATA void* g_profile_WARNING_SCENE[10] = {
+void* g_profile_WARNING_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,
 	(void*)0x000F0000,
@@ -34,8 +30,9 @@ SECTION_DATA void* g_profile_WARNING_SCENE[10] = {
 	NULL,
 	NULL,
 };
+
 /* 803C32D8-803C3300 0028 .data      g_profile_WARNING2_SCENE                                     */
-SECTION_DATA void* g_profile_WARNING2_SCENE[10] = {
+void* g_profile_WARNING2_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,
 	(void*)0x00100000,
@@ -47,5 +44,4 @@ SECTION_DATA void* g_profile_WARNING2_SCENE[10] = {
 	NULL,
 	NULL,
 };
-}
 

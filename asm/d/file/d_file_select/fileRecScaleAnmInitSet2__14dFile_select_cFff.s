@@ -10,7 +10,7 @@ lbl_8018FE74:
 /* 8018FE80 0000000C  88 03 02 65 */	lbz r0, 0x265(r3)
 /* 8018FE84 00000010  7C 08 00 00 */	cmpw r8, r0
 /* 8018FE88 00000014  40 82 00 50 */	bne lbl_8018FED8
-/* 8018FE8C 00000018  C0 02 9F 48 */	lfs f0, d_file_d_file_select__LIT_4778(r2)
+/* 8018FE8C 00000018  C0 02 9F 48 */	lfs f0, d_file_d_file_select__lit_4778(r2)
 /* 8018FE90 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8018FE94 00000000  40 81 00 1C */	ble lbl_8018FEB0
 /* 8018FE98 00000004  54 06 15 BA */	rlwinm r6, r0, 2, 0x16, 0x1d
@@ -20,7 +20,7 @@ lbl_8018FE74:
 /* 8018FEA8 00000014  C0 05 00 10 */	lfs f0, 0x10(r5)
 /* 8018FEAC 00000018  D0 07 00 C8 */	stfs f0, 0xc8(r7)
 lbl_8018FEB0:
-/* 8018FEB0 00000000  C0 02 9F 48 */	lfs f0, d_file_d_file_select__LIT_4778(r2)
+/* 8018FEB0 00000000  C0 02 9F 48 */	lfs f0, d_file_d_file_select__lit_4778(r2)
 /* 8018FEB4 00000004  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8018FEB8 00000000  40 81 00 20 */	ble lbl_8018FED8
 /* 8018FEBC 00000004  88 03 02 65 */	lbz r0, 0x265(r3)

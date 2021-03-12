@@ -5,232 +5,184 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_pow();
-extern void ldexp();
-extern void sqrt();
+extern "C" extern void __ieee754_pow();
+extern "C" extern void ldexp();
+extern "C" extern void sqrt();
 SECTION_RODATA extern const u8 bp[16];
 SECTION_RODATA extern const u8 dp_h[16];
 SECTION_RODATA extern const u8 dp_l[16];
-SECTION_SDATA extern u8 __float_nan[4];
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_336[8];
-SECTION_SDATA2 extern u8 LIT_337[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_338[8];
-SECTION_SDATA2 extern u8 LIT_339[8];
-SECTION_SDATA2 extern u8 LIT_340[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_341[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_342[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_343[8];
-SECTION_SDATA2 extern u8 LIT_344[8];
-SECTION_SDATA2 extern u8 LIT_345[8];
-SECTION_SDATA2 extern u8 LIT_346[8];
-SECTION_SDATA2 extern u8 LIT_347[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_348[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_349[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_350[8];
-SECTION_SDATA2 extern u8 LIT_351[8];
-SECTION_SDATA2 extern u8 LIT_352[8];
-SECTION_SDATA2 extern u8 LIT_353[8];
-SECTION_SDATA2 extern u8 LIT_354[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_355[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_356[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_357[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_358[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_359[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_360[8];
-SECTION_SDATA2 extern u8 LIT_361[8];
-SECTION_SDATA2 extern u8 LIT_362[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_363[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_364[8];
-SECTION_SDATA2 extern u8 LIT_365[8];
-SECTION_SDATA2 extern u8 LIT_366[8];
-SECTION_SDATA2 extern u8 LIT_367[8];
-SECTION_SDATA2 extern u8 LIT_368[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_370[8];
-}
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_336;
+SECTION_SDATA2 extern u8 lit_337[8];
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_338;
+SECTION_SDATA2 extern f64 lit_339;
+SECTION_SDATA2 extern f64 lit_340;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_341;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_342;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_343;
+SECTION_SDATA2 extern f64 lit_344;
+SECTION_SDATA2 extern f64 lit_345;
+SECTION_SDATA2 extern f64 lit_346;
+SECTION_SDATA2 extern f64 lit_347;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_348;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_349;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_350;
+SECTION_SDATA2 extern f64 lit_351;
+SECTION_SDATA2 extern f64 lit_352;
+SECTION_SDATA2 extern f64 lit_353;
+SECTION_SDATA2 extern f64 lit_354;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_355;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_356;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_357;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_358;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_359;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_360;
+SECTION_SDATA2 extern f64 lit_361;
+SECTION_SDATA2 extern f64 lit_362;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_363;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_364;
+SECTION_SDATA2 extern f64 lit_365;
+SECTION_SDATA2 extern f64 lit_366;
+SECTION_SDATA2 extern f64 lit_367;
+SECTION_SDATA2 extern f64 lit_368;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_370;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803A2380-803A2380 0000 .rodata    ...rodata.0                                                  */
 /* 803A2380-803A2390 0010 .rodata    bp                                                           */
 SECTION_RODATA const u8 bp[16] = {
 	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A2390-803A23A0 0010 .rodata    dp_h                                                         */
-SECTION_RODATA const u8 dp_h[16] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xE2, 0xB8, 0x03, 0x40, 0x00, 0x00, 0x00,
-};
-/* 803A23A0-803A23B0 0010 .rodata    dp_l                                                         */
-SECTION_RODATA const u8 dp_l[16] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3E, 0x4C, 0xFD, 0xEB, 0x43, 0xCF, 0xD0, 0x06,
-};
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456858-80456860 0008 .sdata2    @336                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_336[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_336 = 1.0;
+
 /* 80456860-80456868 0008 .sdata2    @337                                                         */
-SECTION_SDATA2 u8 LIT_337[8] = {
+u8 lit_337[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80456868-80456870 0008 .sdata2    @338                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_338[8] = {
-	0x7F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_338 = DOUBLE_INF;
+
 /* 80456870-80456878 0008 .sdata2    @339                                                         */
-SECTION_SDATA2 u8 LIT_339[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_339 = 0.5;
+
 /* 80456878-80456880 0008 .sdata2    @340                                                         */
-SECTION_SDATA2 u8 LIT_340[8] = {
-	0x3F, 0xD5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
-};
+f64 lit_340 = 1.0 / 3.0;
+
 /* 80456880-80456888 0008 .sdata2    @341                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_341[8] = {
-	0x3F, 0xD0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_341 = 0.25;
+
 /* 80456888-80456890 0008 .sdata2    @342                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_342[8] = {
-	0x3F, 0xF7, 0x15, 0x47, 0x60, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_342 = 1.4426950216293335;
+
 /* 80456890-80456898 0008 .sdata2    @343                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_343[8] = {
-	0x3E, 0x54, 0xAE, 0x0B, 0xF8, 0x5D, 0xDF, 0x44,
-};
+f64 Math_Double_precision_e_pow__lit_343 = 1.9259629911266175e-08;
+
 /* 80456898-804568A0 0008 .sdata2    @344                                                         */
-SECTION_SDATA2 u8 LIT_344[8] = {
-	0x3F, 0xF7, 0x15, 0x47, 0x65, 0x2B, 0x82, 0xFE,
-};
+f64 lit_344 = 1.4426950408889634;
+
 /* 804568A0-804568A8 0008 .sdata2    @345                                                         */
-SECTION_SDATA2 u8 LIT_345[8] = {
-	0x43, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_345 = 9007199254740992.0;
+
 /* 804568A8-804568B0 0008 .sdata2    @346                                                         */
-SECTION_SDATA2 u8 LIT_346[8] = {
-	0x3F, 0xE3, 0x33, 0x33, 0x33, 0x33, 0x33, 0x03,
-};
+f64 lit_346 = 0.5999999999999946;
+
 /* 804568B0-804568B8 0008 .sdata2    @347                                                         */
-SECTION_SDATA2 u8 LIT_347[8] = {
-	0x3F, 0xDB, 0x6D, 0xB6, 0xDB, 0x6F, 0xAB, 0xFF,
-};
+f64 lit_347 = 0.4285714285785502;
+
 /* 804568B8-804568C0 0008 .sdata2    @348                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_348[8] = {
-	0x3F, 0xD5, 0x55, 0x55, 0x51, 0x8F, 0x26, 0x4D,
-};
+f64 Math_Double_precision_e_pow__lit_348 = 0.33333332981837743;
+
 /* 804568C0-804568C8 0008 .sdata2    @349                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_349[8] = {
-	0x3F, 0xD1, 0x74, 0x60, 0xA9, 0x1D, 0x41, 0x01,
-};
+f64 Math_Double_precision_e_pow__lit_349 = 0.272728123808534;
+
 /* 804568C8-804568D0 0008 .sdata2    @350                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_350[8] = {
-	0x3F, 0xCD, 0x86, 0x4A, 0x93, 0xC9, 0xDB, 0x65,
-};
+f64 Math_Double_precision_e_pow__lit_350 = 0.23066074577556175;
+
 /* 804568D0-804568D8 0008 .sdata2    @351                                                         */
-SECTION_SDATA2 u8 LIT_351[8] = {
-	0x3F, 0xCA, 0x7E, 0x28, 0x4A, 0x45, 0x4E, 0xEF,
-};
+f64 lit_351 = 0.20697501780033842;
+
 /* 804568D8-804568E0 0008 .sdata2    @352                                                         */
-SECTION_SDATA2 u8 LIT_352[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_352 = 3.0;
+
 /* 804568E0-804568E8 0008 .sdata2    @353                                                         */
-SECTION_SDATA2 u8 LIT_353[8] = {
-	0x3F, 0xEE, 0xC7, 0x09, 0xE0, 0x00, 0x00, 0x00,
-};
+f64 lit_353 = 0.9617967009544373;
+
 /* 804568E8-804568F0 0008 .sdata2    @354                                                         */
-SECTION_SDATA2 u8 LIT_354[8] = {
-	0xBE, 0x3E, 0x2F, 0xE0, 0x14, 0x5B, 0x01, 0xF5,
-};
+f64 lit_354 = -7.028461650952758e-09;
+
 /* 804568F0-804568F8 0008 .sdata2    @355                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_355[8] = {
-	0x3F, 0xEE, 0xC7, 0x09, 0xDC, 0x3A, 0x03, 0xFD,
-};
+f64 Math_Double_precision_e_pow__lit_355 = 0.9617966939259756;
+
 /* 804568F8-80456900 0008 .sdata2    @356                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_356[8] = {
-	0xBF, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_356 = -1.0;
+
 /* 80456900-80456908 0008 .sdata2    @357                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_357[8] = {
-	0x7E, 0x37, 0xE4, 0x3C, 0x88, 0x00, 0x75, 0x9C,
-};
+f64 Math_Double_precision_e_pow__lit_357 = 1e+300;
+
 /* 80456908-80456910 0008 .sdata2    @358                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_358[8] = {
-	0x3C, 0x97, 0x15, 0x47, 0x65, 0x2B, 0x82, 0xFE,
-};
+f64 Math_Double_precision_e_pow__lit_358 = 8.008566259537294e-17;
+
 /* 80456910-80456918 0008 .sdata2    @359                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_359[8] = {
-	0x01, 0xA5, 0x6E, 0x1F, 0xC2, 0xF8, 0xF3, 0x59,
-};
+f64 Math_Double_precision_e_pow__lit_359 = 1e-300;
+
 /* 80456918-80456920 0008 .sdata2    @360                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_360[8] = {
-	0x3F, 0xE6, 0x2E, 0x43, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_pow__lit_360 = 0.6931471824645996;
+
 /* 80456920-80456928 0008 .sdata2    @361                                                         */
-SECTION_SDATA2 u8 LIT_361[8] = {
-	0x3F, 0xE6, 0x2E, 0x42, 0xFE, 0xFA, 0x39, 0xEF,
-};
+f64 lit_361 = 0.6931471805599453;
+
 /* 80456928-80456930 0008 .sdata2    @362                                                         */
-SECTION_SDATA2 u8 LIT_362[8] = {
-	0xBE, 0x20, 0x5C, 0x61, 0x0C, 0xA8, 0x6C, 0x39,
-};
+f64 lit_362 = -1.904654299957768e-09;
+
 /* 80456930-80456938 0008 .sdata2    @363                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_363[8] = {
-	0x3F, 0xC5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x3E,
-};
+f64 Math_Double_precision_e_pow__lit_363 = 0.16666666666666602;
+
 /* 80456938-80456940 0008 .sdata2    @364                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_364[8] = {
-	0xBF, 0x66, 0xC1, 0x6C, 0x16, 0xBE, 0xBD, 0x93,
-};
+f64 Math_Double_precision_e_pow__lit_364 = -0.0027777777777015593;
+
 /* 80456940-80456948 0008 .sdata2    @365                                                         */
-SECTION_SDATA2 u8 LIT_365[8] = {
-	0x3F, 0x11, 0x56, 0x6A, 0xAF, 0x25, 0xDE, 0x2C,
-};
+f64 lit_365 = 6.613756321437934e-05;
+
 /* 80456948-80456950 0008 .sdata2    @366                                                         */
-SECTION_SDATA2 u8 LIT_366[8] = {
-	0xBE, 0xBB, 0xBD, 0x41, 0xC5, 0xD2, 0x6B, 0xF1,
-};
+f64 lit_366 = -1.6533902205465252e-06;
+
 /* 80456950-80456958 0008 .sdata2    @367                                                         */
-SECTION_SDATA2 u8 LIT_367[8] = {
-	0x3E, 0x66, 0x37, 0x69, 0x72, 0xBE, 0xA4, 0xD0,
-};
+f64 lit_367 = 4.1381367970572385e-08;
+
 /* 80456958-80456960 0008 .sdata2    @368                                                         */
-SECTION_SDATA2 u8 LIT_368[8] = {
-	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_368 = 2.0;
+
 /* 80456960-80456968 0008 .sdata2    @370                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_370[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 Math_Double_precision_e_pow__lit_370 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80369ED8-8036A708 0830 .text      __ieee754_pow                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ieee754_pow() {
+extern "C" asm void __ieee754_pow() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_pow/__ieee754_pow.s"
 }
 #pragma pop
 
+
+/* 803A2390-803A23A0 0010 .rodata    dp_h                                                         */
+SECTION_RODATA const u8 dp_h[16] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xE2, 0xB8, 0x03, 0x40, 0x00, 0x00, 0x00,
+};
+
+/* 803A23A0-803A23B0 0010 .rodata    dp_l                                                         */
+SECTION_RODATA const u8 dp_l[16] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3E, 0x4C, 0xFD, 0xEB, 0x43, 0xCF, 0xD0, 0x06,
+};
 

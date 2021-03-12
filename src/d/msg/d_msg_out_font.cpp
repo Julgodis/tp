@@ -5,70 +5,393 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopMsgM_valueIncrease__FiiUc();
-extern void dMeter2Info_getNumberTextureName__Fi();
-extern void __ct__13COutFontSet_cFv();
-extern void __dt__13COutFontSet_cFv();
-extern void initialize__13COutFontSet_cFv();
-extern void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
-extern void __ct__10COutFont_cFUc();
-extern void __dt__10COutFont_cFv();
-extern void setPane__10COutFont_cFP10J2DPicture();
-extern void createPane__10COutFont_cFv();
-extern void initialize__10COutFont_cFv();
-extern void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
-extern void setAlphaRatio__10COutFont_cFf();
-extern void draw__10COutFont_cFP10J2DTextBoxfff();
-extern void reset__10COutFont_cFP10J2DTextBox();
-extern void setBlendAnime__10COutFont_cFP10J2DPictures();
-extern void getBtiName__10COutFont_cFi();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern void getParentPane__7J2DPaneFv();
-extern void __ct__10J2DPictureFPC7ResTIMG();
-extern void _savegpr_24();
-extern void _savegpr_26();
-extern void _savegpr_29();
-extern void _restgpr_24();
-extern void _restgpr_26();
-extern void _restgpr_29();
+extern "C" extern void fopMsgM_valueIncrease__FiiUc();
+extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
+extern "C" extern void __ct__13COutFontSet_cFv();
+extern "C" extern void __dt__13COutFontSet_cFv();
+extern "C" extern void initialize__13COutFontSet_cFv();
+extern "C" extern void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
+extern "C" extern void __ct__10COutFont_cFUc();
+extern "C" extern void __dt__10COutFont_cFv();
+extern "C" extern void setPane__10COutFont_cFP10J2DPicture();
+extern "C" extern void createPane__10COutFont_cFv();
+extern "C" extern void initialize__10COutFont_cFv();
+extern "C" extern void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
+extern "C" extern void setAlphaRatio__10COutFont_cFf();
+extern "C" extern void draw__10COutFont_cFP10J2DTextBoxfff();
+extern "C" extern void reset__10COutFont_cFP10J2DTextBox();
+extern "C" extern void setBlendAnime__10COutFont_cFP10J2DPictures();
+extern "C" extern void getBtiName__10COutFont_cFi();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" extern void getParentPane__7J2DPaneFv();
+extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 d_msg_d_msg_out_font__stringBase0[632];
-SECTION_DATA extern u8 d_msg_d_msg_out_font__LIT_4395[280];
-SECTION_DATA extern u8 d_msg_d_msg_out_font__LIT_5000[260];
-SECTION_DATA extern u8 data_803BFCAC[280];
-SECTION_DATA extern void* __vt__10COutFont_c[9];
-SECTION_DATA extern void* __vt__13COutFontSet_c[4];
+SECTION_DATA extern void* d_msg_d_msg_out_font__lit_4395[70];
+SECTION_DATA extern void* d_msg_d_msg_out_font__lit_5000[65];
+SECTION_DATA extern void* data_803BFCAC[70];
+SECTION_DATA extern void* const __vt__10COutFont_c[9];
+SECTION_DATA extern void* const __vt__13COutFontSet_c[4];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
-SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__LIT_3748[4];
-SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__LIT_3749[4];
-SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__LIT_4397[8];
-SECTION_SDATA2 extern u8 LIT_4986[4];
-SECTION_SDATA2 extern u8 LIT_4987[4];
-SECTION_SDATA2 extern u8 LIT_4988[4];
-SECTION_SDATA2 extern u8 LIT_4989[4];
-SECTION_SDATA2 extern u8 LIT_4990[4];
-SECTION_SDATA2 extern u8 LIT_4991[4];
-SECTION_SDATA2 extern u8 LIT_4992[4];
-SECTION_SDATA2 extern u8 LIT_4993[4];
-SECTION_SDATA2 extern u8 LIT_4994[4];
-SECTION_SDATA2 extern u8 LIT_4995[4];
-SECTION_SDATA2 extern u8 LIT_4996[4];
-SECTION_SDATA2 extern u8 LIT_4997[4];
-SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__LIT_5001[8];
+SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__lit_3748[4];
+SECTION_SDATA2 extern f32 d_msg_d_msg_out_font__lit_3749;
+SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_4397;
+SECTION_SDATA2 extern f32 lit_4986;
+SECTION_SDATA2 extern f32 lit_4987;
+SECTION_SDATA2 extern f32 lit_4988;
+SECTION_SDATA2 extern f32 lit_4989;
+SECTION_SDATA2 extern f32 lit_4990;
+SECTION_SDATA2 extern f32 lit_4991;
+SECTION_SDATA2 extern f32 lit_4992;
+SECTION_SDATA2 extern f32 lit_4993;
+SECTION_SDATA2 extern f32 lit_4994;
+SECTION_SDATA2 extern f32 lit_4995;
+SECTION_SDATA2 extern f32 lit_4996;
+SECTION_SDATA2 extern f32 lit_4997;
+SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_5001;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 803BFA90-803BFBA8 0118 .data      @4395                                                        */
+void* d_msg_d_msg_out_font__lit_4395[70] = {
+	(void*)(((char*)createPane__10COutFont_cFv)+0xDC),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x140),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x1A0),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x200),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x200),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x200),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x200),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x2C4),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x200),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xE20),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xE20),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xE20),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xE20),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x328),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x3E0),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x440),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x4A0),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x4FC),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x558),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x5B0),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x60C),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x670),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x6CC),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x77C),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x7D8),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x870),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x8C8),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x724),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x6CC),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x978),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xAE8),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB44),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB44),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB44),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB9C),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xC54),
+	(void*)(((char*)createPane__10COutFont_cFv)+0x920),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xD0C),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB44),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xB44),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xA30),
+	(void*)(((char*)createPane__10COutFont_cFv)+0xDC4),
+};
+
+/* 803BFBA8-803BFCAC 0104 .data      @5000                                                        */
+void* d_msg_d_msg_out_font__lit_5000[65] = {
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x6F0),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x198),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x29C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x4B4),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xB8C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x824),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x8A0),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x91C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x998),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xA14),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xAD0),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xD40),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xD40),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xD40),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xC90),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xDE4),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xF48),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xC90),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xC90),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x3A0),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xF7C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x102C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x10A8),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xD0C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0xC90),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x10DC),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1204),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x13D4),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x13D4),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x13D4),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1450),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x127C),
+	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
+};
+
+/* 803BFCAC-803BFDC4 0118 .data      mpIconName$5045                                              */
+void* data_803BFCAC[70] = {
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x4B),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x57),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x63),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x6F),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x7B),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x87),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x93),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x9F),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xAB),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xDE),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xEA),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x10B),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x121),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x12D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x139),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x159),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x16D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x179),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x185),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x191),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x19D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xF),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x19D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1A9),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1B5),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1C1),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1CD),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1D9),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1E5),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1F1),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1FD),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x27),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x33),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1F1),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1FD),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x209),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x215),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x221),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x22D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x239),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x245),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x251),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x25D),
+	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x269),
+};
+
+/* 803BFDC4-803BFDE8 0024 .data      __vt__10COutFont_c                                           */
+void* const __vt__10COutFont_c[9] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__10COutFont_cFv,
+	(void*)setPane__10COutFont_cFP10J2DPicture,
+	(void*)createPane__10COutFont_cFv,
+	(void*)draw__10COutFont_cFP10J2DTextBoxfff,
+	(void*)reset__10COutFont_cFP10J2DTextBox,
+	(void*)drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc,
+	(void*)setAlphaRatio__10COutFont_cFf,
+};
+
+/* 803BFDE8-803BFDF8 000C .data      __vt__13COutFontSet_c                                        */
+void* const __vt__13COutFontSet_c[4] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__13COutFontSet_cFv,
+	/* padding */
+	NULL,
+};
+
+/* 80225BB8-80225BF4 003C .text      __ct__13COutFontSet_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__13COutFontSet_cFv() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/__ct__13COutFontSet_cFv.s"
 }
+#pragma pop
+
+
+/* 80225BF4-80225C3C 0048 .text      __dt__13COutFontSet_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__13COutFontSet_cFv() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/__dt__13COutFontSet_cFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80454A10-80454A14 0004 .sdata2    @3748                                                        */
+u8 d_msg_d_msg_out_font__lit_3748[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 80454A14-80454A18 0004 .sdata2    @3749                                                        */
+f32 d_msg_d_msg_out_font__lit_3749 = 1.0f;
+
+/* 80225C3C-80225C70 0034 .text      initialize__13COutFontSet_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initialize__13COutFontSet_cFv() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/initialize__13COutFontSet_cFv.s"
+}
+#pragma pop
+
+
+/* 80225C70-80225C94 0024 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc.s"
+}
+#pragma pop
+
+
+/* 80225C94-80225D60 00CC .text      __ct__10COutFont_cFUc                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__10COutFont_cFUc() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/__ct__10COutFont_cFUc.s"
+}
+#pragma pop
+
+
+/* 80225D60-80225E7C 011C .text      __dt__10COutFont_cFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__10COutFont_cFv() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/__dt__10COutFont_cFv.s"
+}
+#pragma pop
+
+
+/* 80225E7C-80225EA8 002C .text      setPane__10COutFont_cFP10J2DPicture                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPane__10COutFont_cFP10J2DPicture() {
+	nofralloc
+#include "asm/d/msg/d_msg_out_font/setPane__10COutFont_cFP10J2DPicture.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 80399350-803995C8 0275 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -93,8 +416,7 @@ SECTION_DEAD const char* const stringBase_80399416 = "font_10.bti";
 SECTION_DEAD const char* const stringBase_80399422 = "font_15.bti";
 SECTION_DEAD const char* const stringBase_8039942E = "font_12.bti";
 SECTION_DEAD const char* const stringBase_8039943A = 
-    "im_map_icon_port"
-    "al_4ia_40_05.bti";
+    "im_map_icon_portal_4ia_40_05.bti";
 SECTION_DEAD const char* const stringBase_8039945B = "font_16_backlight.bti";
 SECTION_DEAD const char* const stringBase_80399471 = "font_13.bti";
 SECTION_DEAD const char* const stringBase_8039947D = "font_14.bti";
@@ -126,320 +448,132 @@ SECTION_DEAD const char* const stringBase_803995B9 = "font_53.bti";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803995C5 = "\0\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803BFA90-803BFBA8 0118 .data      @4395                                                        */
-SECTION_DATA u8 d_msg_d_msg_out_font__LIT_4395[280] = {
-	0x80, 0x22, 0x5F, 0x84, 0x80, 0x22, 0x5F, 0xE8, 0x80, 0x22, 0x60, 0x48, 0x80, 0x22, 0x60, 0xA8,
-	0x80, 0x22, 0x60, 0xA8, 0x80, 0x22, 0x60, 0xA8, 0x80, 0x22, 0x60, 0xA8, 0x80, 0x22, 0x61, 0x6C,
-	0x80, 0x22, 0x60, 0xA8, 0x80, 0x22, 0x61, 0xD0, 0x80, 0x22, 0x6C, 0xC8, 0x80, 0x22, 0x6C, 0xC8,
-	0x80, 0x22, 0x6C, 0xC8, 0x80, 0x22, 0x6C, 0xC8, 0x80, 0x22, 0x61, 0xD0, 0x80, 0x22, 0x61, 0xD0,
-	0x80, 0x22, 0x61, 0xD0, 0x80, 0x22, 0x61, 0xD0, 0x80, 0x22, 0x61, 0xD0, 0x80, 0x22, 0x61, 0xD0,
-	0x80, 0x22, 0x62, 0x88, 0x80, 0x22, 0x62, 0xE8, 0x80, 0x22, 0x63, 0x48, 0x80, 0x22, 0x63, 0xA4,
-	0x80, 0x22, 0x64, 0x00, 0x80, 0x22, 0x64, 0x58, 0x80, 0x22, 0x64, 0xB4, 0x80, 0x22, 0x65, 0x18,
-	0x80, 0x22, 0x65, 0x74, 0x80, 0x22, 0x66, 0x24, 0x80, 0x22, 0x66, 0x80, 0x80, 0x22, 0x67, 0x18,
-	0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18,
-	0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x18,
-	0x80, 0x22, 0x67, 0x18, 0x80, 0x22, 0x67, 0x70, 0x80, 0x22, 0x65, 0xCC, 0x80, 0x22, 0x65, 0x74,
-	0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x67, 0xC8,
-	0x80, 0x22, 0x68, 0x20, 0x80, 0x22, 0x68, 0xD8, 0x80, 0x22, 0x68, 0xD8, 0x80, 0x22, 0x69, 0x90,
-	0x80, 0x22, 0x69, 0xEC, 0x80, 0x22, 0x69, 0xEC, 0x80, 0x22, 0x69, 0xEC, 0x80, 0x22, 0x67, 0xC8,
-	0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x6A, 0x44,
-	0x80, 0x22, 0x6A, 0xFC, 0x80, 0x22, 0x67, 0xC8, 0x80, 0x22, 0x6B, 0xB4, 0x80, 0x22, 0x69, 0xEC,
-	0x80, 0x22, 0x69, 0xEC, 0x80, 0x22, 0x68, 0xD8, 0x80, 0x22, 0x68, 0xD8, 0x80, 0x22, 0x68, 0xD8,
-	0x80, 0x22, 0x68, 0xD8, 0x80, 0x22, 0x6C, 0x6C,
-};
-/* 803BFBA8-803BFCAC 0104 .data      @5000                                                        */
-SECTION_DATA u8 d_msg_d_msg_out_font__LIT_5000[260] = {
-	0x80, 0x22, 0x73, 0x68, 0x80, 0x22, 0x73, 0x68, 0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x82, 0xBC,
-	0x80, 0x22, 0x74, 0xA0, 0x80, 0x22, 0x6F, 0x48, 0x80, 0x22, 0x70, 0x4C, 0x80, 0x22, 0x72, 0x64,
-	0x80, 0x22, 0x79, 0x3C, 0x80, 0x22, 0x75, 0xD4, 0x80, 0x22, 0x76, 0x50, 0x80, 0x22, 0x76, 0xCC,
-	0x80, 0x22, 0x77, 0x48, 0x80, 0x22, 0x77, 0xC4, 0x80, 0x22, 0x78, 0x80, 0x80, 0x22, 0x7A, 0xF0,
-	0x80, 0x22, 0x7A, 0xF0, 0x80, 0x22, 0x7A, 0xF0, 0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x7A, 0x40,
-	0x80, 0x22, 0x7B, 0x94, 0x80, 0x22, 0x7C, 0xF8, 0x80, 0x22, 0x7A, 0x40, 0x80, 0x22, 0x7A, 0x40,
-	0x80, 0x22, 0x71, 0x50, 0x80, 0x22, 0x7D, 0x2C, 0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC,
-	0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC,
-	0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC, 0x80, 0x22, 0x7D, 0xDC,
-	0x80, 0x22, 0x7E, 0x58, 0x80, 0x22, 0x7A, 0xBC, 0x80, 0x22, 0x7A, 0x40, 0x80, 0x22, 0x7E, 0x8C,
-	0x80, 0x22, 0x7F, 0xB4, 0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x81, 0x84,
-	0x80, 0x22, 0x80, 0x2C, 0x80, 0x22, 0x80, 0x2C, 0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x82, 0xBC,
-	0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x7F, 0xF8,
-	0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x81, 0x84, 0x80, 0x22, 0x81, 0x84,
-	0x80, 0x22, 0x7F, 0xF8, 0x80, 0x22, 0x82, 0x00, 0x80, 0x22, 0x82, 0xBC, 0x80, 0x22, 0x82, 0xBC,
-	0x80, 0x22, 0x80, 0x2C, 0x80, 0x22, 0x80, 0x2C, 0x80, 0x22, 0x80, 0x2C, 0x80, 0x22, 0x80, 0x2C,
-	0x80, 0x22, 0x7F, 0xF8,
-};
-/* 803BFCAC-803BFDC4 0118 .data      mpIconName$5045                                              */
-SECTION_DATA u8 data_803BFCAC[280] = {
-	0x80, 0x39, 0x93, 0x9B, 0x80, 0x39, 0x93, 0xA7, 0x80, 0x39, 0x93, 0xB3, 0x80, 0x39, 0x93, 0xBF,
-	0x80, 0x39, 0x93, 0xCB, 0x80, 0x39, 0x93, 0xD7, 0x80, 0x39, 0x93, 0xE3, 0x80, 0x39, 0x93, 0xEF,
-	0x80, 0x39, 0x93, 0xFB, 0x80, 0x39, 0x94, 0x07, 0x80, 0x39, 0x94, 0x16, 0x80, 0x39, 0x94, 0x16,
-	0x80, 0x39, 0x94, 0x16, 0x80, 0x39, 0x94, 0x16, 0x80, 0x39, 0x94, 0x07, 0x80, 0x39, 0x94, 0x07,
-	0x80, 0x39, 0x94, 0x07, 0x80, 0x39, 0x94, 0x07, 0x80, 0x39, 0x94, 0x07, 0x80, 0x39, 0x94, 0x07,
-	0x80, 0x39, 0x94, 0x22, 0x80, 0x39, 0x94, 0x22, 0x80, 0x39, 0x94, 0x22, 0x80, 0x39, 0x94, 0x2E,
-	0x80, 0x39, 0x94, 0x22, 0x80, 0x39, 0x94, 0x3A, 0x80, 0x39, 0x94, 0x5B, 0x80, 0x39, 0x94, 0x71,
-	0x80, 0x39, 0x94, 0x7D, 0x80, 0x39, 0x94, 0x16, 0x80, 0x39, 0x94, 0x89, 0x80, 0x39, 0x94, 0xA8,
-	0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8,
-	0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA8,
-	0x80, 0x39, 0x94, 0xA8, 0x80, 0x39, 0x94, 0xA9, 0x80, 0x39, 0x94, 0xBD, 0x80, 0x39, 0x94, 0xC9,
-	0x80, 0x39, 0x94, 0xD5, 0x80, 0x39, 0x94, 0xE1, 0x80, 0x39, 0x94, 0xED, 0x80, 0x39, 0x93, 0x5F,
-	0x80, 0x39, 0x94, 0xED, 0x80, 0x39, 0x94, 0xF9, 0x80, 0x39, 0x95, 0x05, 0x80, 0x39, 0x95, 0x11,
-	0x80, 0x39, 0x95, 0x1D, 0x80, 0x39, 0x95, 0x29, 0x80, 0x39, 0x95, 0x35, 0x80, 0x39, 0x95, 0x41,
-	0x80, 0x39, 0x95, 0x4D, 0x80, 0x39, 0x93, 0x77, 0x80, 0x39, 0x93, 0x83, 0x80, 0x39, 0x95, 0x41,
-	0x80, 0x39, 0x95, 0x4D, 0x80, 0x39, 0x95, 0x59, 0x80, 0x39, 0x95, 0x65, 0x80, 0x39, 0x95, 0x71,
-	0x80, 0x39, 0x95, 0x7D, 0x80, 0x39, 0x95, 0x89, 0x80, 0x39, 0x95, 0x95, 0x80, 0x39, 0x95, 0xA1,
-	0x80, 0x39, 0x95, 0xAD, 0x80, 0x39, 0x95, 0xB9,
-};
-/* 803BFDC4-803BFDE8 0024 .data      __vt__10COutFont_c                                           */
-SECTION_DATA void* __vt__10COutFont_c[9] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__10COutFont_cFv,
-	(void*)setPane__10COutFont_cFP10J2DPicture,
-	(void*)createPane__10COutFont_cFv,
-	(void*)draw__10COutFont_cFP10J2DTextBoxfff,
-	(void*)reset__10COutFont_cFP10J2DTextBox,
-	(void*)drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc,
-	(void*)setAlphaRatio__10COutFont_cFf,
-};
-/* 803BFDE8-803BFDF8 000C .data      __vt__13COutFontSet_c                                        */
-SECTION_DATA void* __vt__13COutFontSet_c[4] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__13COutFontSet_cFv,
-	/* padding */
-	NULL,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454A10-80454A14 0004 .sdata2    @3748                                                        */
-SECTION_SDATA2 u8 d_msg_d_msg_out_font__LIT_3748[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454A14-80454A18 0004 .sdata2    @3749                                                        */
-SECTION_SDATA2 u8 d_msg_d_msg_out_font__LIT_3749[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
 /* 80454A18-80454A20 0008 .sdata2    @4397                                                        */
-SECTION_SDATA2 u8 d_msg_d_msg_out_font__LIT_4397[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454A20-80454A24 0004 .sdata2    @4986                                                        */
-SECTION_SDATA2 u8 LIT_4986[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 80454A24-80454A28 0004 .sdata2    @4987                                                        */
-SECTION_SDATA2 u8 LIT_4987[4] = {
-	0x40, 0x40, 0x00, 0x00,
-};
-/* 80454A28-80454A2C 0004 .sdata2    @4988                                                        */
-SECTION_SDATA2 u8 LIT_4988[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80454A2C-80454A30 0004 .sdata2    @4989                                                        */
-SECTION_SDATA2 u8 LIT_4989[4] = {
-	0x43, 0xB4, 0x00, 0x00,
-};
-/* 80454A30-80454A34 0004 .sdata2    @4990                                                        */
-SECTION_SDATA2 u8 LIT_4990[4] = {
-	0x41, 0xE0, 0x00, 0x00,
-};
-/* 80454A34-80454A38 0004 .sdata2    @4991                                                        */
-SECTION_SDATA2 u8 LIT_4991[4] = {
-	0x42, 0x48, 0x00, 0x00,
-};
-/* 80454A38-80454A3C 0004 .sdata2    @4992                                                        */
-SECTION_SDATA2 u8 LIT_4992[4] = {
-	0x43, 0x4D, 0x00, 0x00,
-};
-/* 80454A3C-80454A40 0004 .sdata2    @4993                                                        */
-SECTION_SDATA2 u8 LIT_4993[4] = {
-	0x41, 0x10, 0x00, 0x00,
-};
-/* 80454A40-80454A44 0004 .sdata2    @4994                                                        */
-SECTION_SDATA2 u8 LIT_4994[4] = {
-	0x41, 0x90, 0x00, 0x00,
-};
-/* 80454A44-80454A48 0004 .sdata2    @4995                                                        */
-SECTION_SDATA2 u8 LIT_4995[4] = {
-	0xC0, 0x40, 0x00, 0x00,
-};
-/* 80454A48-80454A4C 0004 .sdata2    @4996                                                        */
-SECTION_SDATA2 u8 LIT_4996[4] = {
-	0x40, 0x80, 0x00, 0x00,
-};
-/* 80454A4C-80454A50 0004 .sdata2    @4997                                                        */
-SECTION_SDATA2 u8 LIT_4997[4] = {
-	0x3F, 0xA0, 0x00, 0x00,
-};
-/* 80454A50-80454A58 0008 .sdata2    @5001                                                        */
-SECTION_SDATA2 u8 d_msg_d_msg_out_font__LIT_5001[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80225BB8-80225BF4 003C .text      __ct__13COutFontSet_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__13COutFontSet_cFv() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/__ct__13COutFontSet_cFv.s"
-}
-#pragma pop
-
-/* 80225BF4-80225C3C 0048 .text      __dt__13COutFontSet_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__13COutFontSet_cFv() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/__dt__13COutFontSet_cFv.s"
-}
-#pragma pop
-
-/* 80225C3C-80225C70 0034 .text      initialize__13COutFontSet_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initialize__13COutFontSet_cFv() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/initialize__13COutFontSet_cFv.s"
-}
-#pragma pop
-
-/* 80225C70-80225C94 0024 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc.s"
-}
-#pragma pop
-
-/* 80225C94-80225D60 00CC .text      __ct__10COutFont_cFUc                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__10COutFont_cFUc() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/__ct__10COutFont_cFUc.s"
-}
-#pragma pop
-
-/* 80225D60-80225E7C 011C .text      __dt__10COutFont_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__10COutFont_cFv() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/__dt__10COutFont_cFv.s"
-}
-#pragma pop
-
-/* 80225E7C-80225EA8 002C .text      setPane__10COutFont_cFP10J2DPicture                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPane__10COutFont_cFP10J2DPicture() {
-	nofralloc
-#include "asm/d/msg/d_msg_out_font/setPane__10COutFont_cFP10J2DPicture.s"
-}
-#pragma pop
+f64 d_msg_d_msg_out_font__lit_4397 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80225EA8-80226CF8 0E50 .text      createPane__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createPane__10COutFont_cFv() {
+extern "C" asm void createPane__10COutFont_cFv() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/createPane__10COutFont_cFv.s"
 }
 #pragma pop
 
+
 /* 80226CF8-80226D4C 0054 .text      initialize__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initialize__10COutFont_cFv() {
+extern "C" asm void initialize__10COutFont_cFv() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/initialize__10COutFont_cFv.s"
 }
 #pragma pop
 
+
 /* 80226D4C-80226DA8 005C .text      drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc() {
+extern "C" asm void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc.s"
 }
 #pragma pop
 
+
 /* 80226DA8-80226DB0 0008 .text      setAlphaRatio__10COutFont_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaRatio__10COutFont_cFf() {
+extern "C" asm void setAlphaRatio__10COutFont_cFf() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/setAlphaRatio__10COutFont_cFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454A20-80454A24 0004 .sdata2    @4986                                                        */
+f32 lit_4986 = 2.0f;
+
+/* 80454A24-80454A28 0004 .sdata2    @4987                                                        */
+f32 lit_4987 = 3.0f;
+
+/* 80454A28-80454A2C 0004 .sdata2    @4988                                                        */
+f32 lit_4988 = 0.5f;
+
+/* 80454A2C-80454A30 0004 .sdata2    @4989                                                        */
+f32 lit_4989 = 360.0f;
+
+/* 80454A30-80454A34 0004 .sdata2    @4990                                                        */
+f32 lit_4990 = 28.0f;
+
+/* 80454A34-80454A38 0004 .sdata2    @4991                                                        */
+f32 lit_4991 = 50.0f;
+
+/* 80454A38-80454A3C 0004 .sdata2    @4992                                                        */
+f32 lit_4992 = 205.0f;
+
+/* 80454A3C-80454A40 0004 .sdata2    @4993                                                        */
+f32 lit_4993 = 9.0f;
+
+/* 80454A40-80454A44 0004 .sdata2    @4994                                                        */
+f32 lit_4994 = 18.0f;
+
+/* 80454A44-80454A48 0004 .sdata2    @4995                                                        */
+f32 lit_4995 = -3.0f;
+
+/* 80454A48-80454A4C 0004 .sdata2    @4996                                                        */
+f32 lit_4996 = 4.0f;
+
+/* 80454A4C-80454A50 0004 .sdata2    @4997                                                        */
+f32 lit_4997 = 1.25f;
+
+/* 80454A50-80454A58 0008 .sdata2    @5001                                                        */
+f64 d_msg_d_msg_out_font__lit_5001 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80226DB0-80228448 1698 .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__10COutFont_cFP10J2DTextBoxfff() {
+extern "C" asm void draw__10COutFont_cFP10J2DTextBoxfff() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/draw__10COutFont_cFP10J2DTextBoxfff.s"
 }
 #pragma pop
 
+
 /* 80228448-80228490 0048 .text      reset__10COutFont_cFP10J2DTextBox                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__10COutFont_cFP10J2DTextBox() {
+extern "C" asm void reset__10COutFont_cFP10J2DTextBox() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/reset__10COutFont_cFP10J2DTextBox.s"
 }
 #pragma pop
 
+
 /* 80228490-80228530 00A0 .text      setBlendAnime__10COutFont_cFP10J2DPictures                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlendAnime__10COutFont_cFP10J2DPictures() {
+extern "C" asm void setBlendAnime__10COutFont_cFP10J2DPictures() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/setBlendAnime__10COutFont_cFP10J2DPictures.s"
 }
 #pragma pop
 
+
 /* 80228530-80228578 0048 .text      getBtiName__10COutFont_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBtiName__10COutFont_cFi() {
+extern "C" asm void getBtiName__10COutFont_cFi() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/getBtiName__10COutFont_cFi.s"
 }

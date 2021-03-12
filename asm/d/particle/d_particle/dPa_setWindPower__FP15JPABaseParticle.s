@@ -14,11 +14,11 @@ lbl_8004A3AC:
 /* 8004A3DC 00000030  38 81 00 24 */	addi r4, r1, 0x24
 /* 8004A3E0 00000034  38 A1 00 08 */	addi r5, r1, 8
 /* 8004A3E4 00000038  48 01 0F 15 */	bl dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf
-/* 8004A3E8 0000003C  C0 02 85 54 */	lfs f0, d_particle_d_particle__LIT_4048(r2)
+/* 8004A3E8 0000003C  C0 02 85 54 */	lfs f0, d_particle_d_particle__lit_4048(r2)
 /* 8004A3EC 00000040  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8004A3F0 00000044  38 61 00 0C */	addi r3, r1, 0xc
 /* 8004A3F4 00000048  38 81 00 24 */	addi r4, r1, 0x24
-/* 8004A3F8 0000004C  C0 22 85 58 */	lfs f1, d_particle_d_particle__LIT_4049(r2)
+/* 8004A3F8 0000004C  C0 22 85 58 */	lfs f1, d_particle_d_particle__lit_4049(r2)
 /* 8004A3FC 00000050  C0 01 00 08 */	lfs f0, 8(r1)
 /* 8004A400 00000054  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8004A404 00000058  48 21 C7 81 */	bl __ml__4cXyzCFf

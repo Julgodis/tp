@@ -34,13 +34,13 @@ lbl_801BDDA4:
 /* 801BDE24 00000080  88 04 0D D3 */	lbz r0, 0xdd3(r4)
 /* 801BDE28 00000084  28 00 00 FF */	cmplwi r0, 0xff
 /* 801BDE2C 00000088  41 82 00 0C */	beq lbl_801BDE38
-/* 801BDE30 0000008C  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__LIT_3962(r2)
+/* 801BDE30 0000008C  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__lit_3962(r2)
 /* 801BDE34 00000090  48 00 00 08 */	b lbl_801BDE3C
 lbl_801BDE38:
-/* 801BDE38 00000000  C0 22 A6 54 */	lfs f1, d_menu_d_menu_dmap__LIT_6017(r2)
+/* 801BDE38 00000000  C0 22 A6 54 */	lfs f1, d_menu_d_menu_dmap__lit_6017(r2)
 lbl_801BDE3C:
-/* 801BDE3C 00000000  C0 42 A5 F4 */	lfs f2, d_menu_d_menu_dmap__LIT_4106(r2)
-/* 801BDE40 00000004  C0 62 A6 0C */	lfs f3, d_menu_d_menu_dmap__LIT_4249(r2)
+/* 801BDE3C 00000000  C0 42 A5 F4 */	lfs f2, d_menu_d_menu_dmap__lit_4106(r2)
+/* 801BDE40 00000004  C0 62 A6 0C */	lfs f3, d_menu_d_menu_dmap__lit_4249(r2)
 /* 801BDE44 00000008  48 0B 1B F9 */	bl cLib_addCalc2__FPffff
 /* 801BDE48 0000000C  80 7D 00 08 */	lwz r3, 8(r29)
 /* 801BDE4C 00000010  80 63 0C E4 */	lwz r3, 0xce4(r3)

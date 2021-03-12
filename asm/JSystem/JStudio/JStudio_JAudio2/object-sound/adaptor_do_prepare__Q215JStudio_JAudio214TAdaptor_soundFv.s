@@ -8,10 +8,10 @@ lbl_8028D9A4:
 /* 8028D9BC 00000018  7C 00 07 75 */	extsb. r0, r0
 /* 8028D9C0 0000001C  40 82 00 4C */	bne lbl_8028DA0C
 /* 8028D9C4 00000020  38 00 00 00 */	li r0, 0
-/* 8028D9C8 00000024  3C 60 80 43 */	lis r3, object_sound__data_80431490@ha
-/* 8028D9CC 00000028  38 A3 14 90 */	addi r5, r3, object_sound__data_80431490@l
+/* 8028D9C8 00000024  3C 60 80 43 */	lis r3, data_80431490@ha
+/* 8028D9CC 00000028  38 A3 14 90 */	addi r5, r3, data_80431490@l
 /* 8028D9D0 0000002C  90 05 00 00 */	stw r0, 0(r5)
-/* 8028D9D4 00000030  C0 02 BB 10 */	lfs f0, LIT_1470(r2)
+/* 8028D9D4 00000030  C0 02 BB 10 */	lfs f0, lit_1470(r2)
 /* 8028D9D8 00000034  D0 05 00 04 */	stfs f0, 4(r5)
 /* 8028D9DC 00000038  38 80 00 01 */	li r4, 1
 /* 8028D9E0 0000003C  90 85 00 08 */	stw r4, 8(r5)
@@ -27,8 +27,8 @@ lbl_8028D9A4:
 /* 8028DA08 00000064  98 8D 8C 78 */	stb r4, data_804511F8(r13)
 lbl_8028DA0C:
 /* 8028DA0C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8028DA10 00000004  3C 80 80 43 */	lis r4, object_sound__data_80431490@ha
-/* 8028DA14 00000008  38 84 14 90 */	addi r4, r4, object_sound__data_80431490@l
+/* 8028DA10 00000004  3C 80 80 43 */	lis r4, data_80431490@ha
+/* 8028DA14 00000008  38 84 14 90 */	addi r4, r4, data_80431490@l
 /* 8028DA18 0000000C  4B FF 87 A9 */	bl adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate
 /* 8028DA1C 00000010  3C 60 80 43 */	lis r3, saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound@ha
 /* 8028DA20 00000014  38 03 14 F8 */	addi r0, r3, saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound@l

@@ -9,7 +9,7 @@ lbl_800F7550:
 /* 800F756C 0000001C  41 82 00 2C */	beq lbl_800F7598
 /* 800F7570 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800F7574 00000024  38 80 00 02 */	li r4, 2
-/* 800F7578 00000028  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800F7578 00000028  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800F757C 0000002C  4B FB 61 A9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F7580 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800F7584 00000034  4B FC 83 01 */	bl returnKeepItemData__9daAlink_cFv

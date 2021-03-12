@@ -17,11 +17,11 @@ lbl_8022F384:
 /* 8022F3C0 00000020  4B FF A4 AD */	bl isCharSend__19jmessage_tReferenceFv
 /* 8022F3C4 00000024  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8022F3C8 00000028  41 82 01 4C */	beq lbl_8022F514
-/* 8022F3CC 0000002C  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022F3CC 0000002C  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__lit_4027(r2)
 /* 8022F3D0 00000030  FC 00 F0 00 */	fcmpu cr0, f0, f30
 /* 8022F3D4 00000034  41 82 01 34 */	beq lbl_8022F508
 /* 8022F3D8 00000038  D3 DC 01 34 */	stfs f30, 0x134(r28)
-/* 8022F3DC 0000003C  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__LIT_4026(r2)
+/* 8022F3DC 0000003C  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__lit_4026(r2)
 /* 8022F3E0 00000040  C0 3C 01 30 */	lfs f1, 0x130(r28)
 /* 8022F3E4 00000044  C0 1C 01 34 */	lfs f0, 0x134(r28)
 /* 8022F3E8 00000048  EC 01 00 2A */	fadds f0, f1, f0
@@ -31,7 +31,7 @@ lbl_8022F384:
 /* 8022F3F8 00000058  EC 21 00 28 */	fsubs f1, f1, f0
 /* 8022F3FC 0000005C  C0 1C 01 2C */	lfs f0, 0x12c(r28)
 /* 8022F400 00000060  EF C1 00 28 */	fsubs f30, f1, f0
-/* 8022F404 00000064  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022F404 00000064  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 8022F408 00000084  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 8022F40C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 8022F410 00000004  40 82 00 68 */	bne lbl_8022F478
@@ -50,7 +50,7 @@ lbl_8022F384:
 /* 8022F444 00000038  38 81 00 18 */	addi r4, r1, 0x18
 /* 8022F448 0000003C  48 13 96 75 */	bl strcat
 /* 8022F44C 00000040  C0 5C 01 2C */	lfs f2, 0x12c(r28)
-/* 8022F450 00000044  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 8022F450 00000044  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 8022F454 00000048  6F E0 80 00 */	xoris r0, r31, 0x8000
 /* 8022F458 0000004C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8022F45C 00000050  3C 00 43 30 */	lis r0, 0x4330
@@ -61,7 +61,7 @@ lbl_8022F384:
 /* 8022F470 00000064  D0 1C 01 2C */	stfs f0, 0x12c(r28)
 /* 8022F474 00000068  48 00 00 80 */	b lbl_8022F4F4
 lbl_8022F478:
-/* 8022F478 00000000  C0 02 B0 78 */	lfs f0, d_msg_d_msg_class__LIT_4291(r2)
+/* 8022F478 00000000  C0 02 B0 78 */	lfs f0, d_msg_d_msg_class__lit_4291(r2)
 /* 8022F47C 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 8022F480 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8022F484 00000004  40 82 00 70 */	bne lbl_8022F4F4
@@ -83,7 +83,7 @@ lbl_8022F478:
 /* 8022F4C4 00000044  FC 00 F0 1E */	fctiwz f0, f30
 /* 8022F4C8 00000048  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 8022F4CC 0000004C  80 01 00 2C */	lwz r0, 0x2c(r1)
-/* 8022F4D0 00000050  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 8022F4D0 00000050  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 8022F4D4 00000054  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8022F4D8 00000058  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8022F4DC 0000005C  3C 00 43 30 */	lis r0, 0x4330

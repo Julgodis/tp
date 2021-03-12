@@ -45,8 +45,8 @@ lbl_8024D0A4:
 /* 8024D0A4 00000000  88 01 00 09 */	lbz r0, 9(r1)
 /* 8024D0A8 00000004  28 00 00 0B */	cmplwi r0, 0xb
 /* 8024D0AC 00000008  41 81 02 FC */	bgt lbl_8024D3A8
-/* 8024D0B0 0000000C  3C 60 80 3C */	lis r3, d_msg_d_msg_flow__LIT_6503@ha
-/* 8024D0B4 00000010  38 63 1E F0 */	addi r3, r3, d_msg_d_msg_flow__LIT_6503@l
+/* 8024D0B0 0000000C  3C 60 80 3C */	lis r3, d_msg_d_msg_flow__lit_6503@ha
+/* 8024D0B4 00000010  38 63 1E F0 */	addi r3, r3, d_msg_d_msg_flow__lit_6503@l
 /* 8024D0B8 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 8024D0BC 00000018  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8024D0C0 0000001C  7C 09 03 A6 */	mtctr r0

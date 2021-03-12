@@ -5,61 +5,61 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcMtdTg_Do__FP24process_method_tag_class();
-extern void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
-extern void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
-extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern void cTg_SingleCut__FP16create_tag_class();
-extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern void cTg_Create__FP16create_tag_classPv();
-extern void _savegpr_29();
-extern void _restgpr_29();
-}
+extern "C" extern void fpcMtdTg_Do__FP24process_method_tag_class();
+extern "C" extern void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
+extern "C" extern void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
+extern "C" extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" extern void cTg_SingleCut__FP16create_tag_class();
+extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" extern void cTg_Create__FP16create_tag_classPv();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80023788-800237B8 0030 .text      fpcMtdTg_Do__FP24process_method_tag_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcMtdTg_Do__FP24process_method_tag_class() {
+extern "C" asm void fpcMtdTg_Do__FP24process_method_tag_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_method_tag/fpcMtdTg_Do__FP24process_method_tag_class.s"
 }
 #pragma pop
 
+
 /* 800237B8-800237D8 0020 .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class() {
+extern "C" asm void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_method_tag/fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class.s"
 }
 #pragma pop
 
+
 /* 800237D8-800237F8 0020 .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcMtdTg_MethodQTo__FP24process_method_tag_class() {
+extern "C" asm void fpcMtdTg_MethodQTo__FP24process_method_tag_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_method_tag/fpcMtdTg_MethodQTo__FP24process_method_tag_class.s"
 }
 #pragma pop
 
+
 /* 800237F8-80023844 004C .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv() {
+extern "C" asm void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_method_tag/fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv.s"
 }

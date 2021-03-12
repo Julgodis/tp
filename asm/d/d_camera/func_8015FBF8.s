@@ -58,7 +58,7 @@ lbl_8015FC60:
 /* 8015FCD0 00000070  38 61 00 88 */	addi r3, r1, 0x88
 /* 8015FCD4 00000074  38 81 00 D0 */	addi r4, r1, 0xd0
 /* 8015FCD8 00000078  A8 1B 05 4E */	lha r0, 0x54e(r27)
-/* 8015FCDC 0000007C  C8 22 9C 98 */	lfd f1, d_d_camera__LIT_4448(r2)
+/* 8015FCDC 0000007C  C8 22 9C 98 */	lfd f1, d_d_camera__lit_4448(r2)
 /* 8015FCE0 00000080  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8015FCE4 00000084  90 01 00 FC */	stw r0, 0xfc(r1)
 /* 8015FCE8 00000088  3C 00 43 30 */	lis r0, 0x4330
@@ -73,7 +73,7 @@ lbl_8015FC60:
 /* 8015FD0C 000000AC  38 61 00 7C */	addi r3, r1, 0x7c
 /* 8015FD10 000000B0  38 81 00 D0 */	addi r4, r1, 0xd0
 /* 8015FD14 000000B4  A8 1C 05 4E */	lha r0, 0x54e(r28)
-/* 8015FD18 000000B8  C8 22 9C 98 */	lfd f1, d_d_camera__LIT_4448(r2)
+/* 8015FD18 000000B8  C8 22 9C 98 */	lfd f1, d_d_camera__lit_4448(r2)
 /* 8015FD1C 000000BC  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8015FD20 000000C0  90 01 01 04 */	stw r0, 0x104(r1)
 /* 8015FD24 000000C4  3C 00 43 30 */	lis r0, 0x4330
@@ -91,7 +91,7 @@ lbl_8015FC60:
 /* 8015FD54 000000F4  48 10 6D E1 */	bl __mi__4cXyzCFRC3Vec
 /* 8015FD58 000000F8  38 61 00 64 */	addi r3, r1, 0x64
 /* 8015FD5C 000000FC  38 81 00 70 */	addi r4, r1, 0x70
-/* 8015FD60 00000100  C0 22 9C 90 */	lfs f1, d_d_camera__LIT_4445(r2)
+/* 8015FD60 00000100  C0 22 9C 90 */	lfs f1, d_d_camera__lit_4445(r2)
 /* 8015FD64 00000104  48 10 6E 21 */	bl __ml__4cXyzCFf
 /* 8015FD68 00000108  38 61 00 58 */	addi r3, r1, 0x58
 /* 8015FD6C 0000010C  38 81 00 E8 */	addi r4, r1, 0xe8
@@ -140,7 +140,7 @@ lbl_8015FDE4:
 /* 8015FE14 00000030  C3 C1 00 20 */	lfs f30, 0x20(r1)
 /* 8015FE18 00000034  38 61 00 14 */	addi r3, r1, 0x14
 /* 8015FE1C 00000038  48 11 13 05 */	bl Cos__7cSAngleCFv
-/* 8015FE20 0000003C  C0 02 9C 90 */	lfs f0, d_d_camera__LIT_4445(r2)
+/* 8015FE20 0000003C  C0 02 9C 90 */	lfs f0, d_d_camera__lit_4445(r2)
 /* 8015FE24 00000040  EC 00 07 B2 */	fmuls f0, f0, f30
 /* 8015FE28 00000044  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8015FE2C 00000048  EC 1F 00 32 */	fmuls f0, f31, f0

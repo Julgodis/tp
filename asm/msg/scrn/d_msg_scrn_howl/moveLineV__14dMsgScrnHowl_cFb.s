@@ -11,7 +11,7 @@ lbl_80243BE0:
 /* 80243C04 00000008  7C 7C 1B 78 */	mr r28, r3
 /* 80243C08 0000000C  80 A3 00 D0 */	lwz r5, 0xd0(r3)
 /* 80243C0C 00000010  C0 45 00 24 */	lfs f2, 0x24(r5)
-/* 80243C10 00000014  C0 22 B2 70 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243C10 00000014  C0 22 B2 70 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243C14 00000018  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 80243C18 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80243C1C 00000020  EC 02 00 2A */	fadds f0, f2, f0
@@ -20,7 +20,7 @@ lbl_80243BE0:
 /* 80243C28 0000002C  EF E1 00 28 */	fsubs f31, f1, f0
 /* 80243C2C 00000030  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 80243C30 00000034  41 82 00 0C */	beq lbl_80243C3C
-/* 80243C34 00000038  C3 C2 B2 50 */	lfs f30, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243C34 00000038  C3 C2 B2 50 */	lfs f30, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80243C38 0000003C  48 00 00 48 */	b lbl_80243C80
 lbl_80243C3C:
 /* 80243C3C 00000000  80 65 00 04 */	lwz r3, 4(r5)
@@ -29,7 +29,7 @@ lbl_80243C3C:
 /* 80243C48 0000000C  EF C1 00 28 */	fsubs f30, f1, f0
 /* 80243C4C 00000010  48 0B 34 B5 */	bl getBounds__7J2DPaneFv
 /* 80243C50 00000014  C0 23 00 00 */	lfs f1, 0(r3)
-/* 80243C54 00000018  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243C54 00000018  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243C58 0000001C  EC 1E 00 B2 */	fmuls f0, f30, f2
 /* 80243C5C 00000020  EC 61 00 2A */	fadds f3, f1, f0
 /* 80243C60 00000024  80 7C 00 D0 */	lwz r3, 0xd0(r28)
@@ -43,7 +43,7 @@ lbl_80243C3C:
 lbl_80243C80:
 /* 80243C80 00000000  80 7C 00 D4 */	lwz r3, 0xd4(r28)
 /* 80243C84 00000004  C0 23 00 24 */	lfs f1, 0x24(r3)
-/* 80243C88 00000008  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243C88 00000008  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243C8C 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 80243C90 00000010  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80243C94 00000014  EC 61 00 2A */	fadds f3, f1, f0
@@ -61,7 +61,7 @@ lbl_80243C80:
 /* 80243CC4 00000000  40 80 00 08 */	bge lbl_80243CCC
 /* 80243CC8 00000004  EF DE 18 28 */	fsubs f30, f30, f3
 lbl_80243CCC:
-/* 80243CCC 00000000  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243CCC 00000000  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243CD0 00000004  EC 03 00 B2 */	fmuls f0, f3, f2
 /* 80243CD4 00000008  EC 1F 00 28 */	fsubs f0, f31, f0
 /* 80243CD8 0000000C  FC 1E 00 40 */	fcmpo cr0, f30, f0
@@ -70,11 +70,11 @@ lbl_80243CCC:
 /* 80243CE4 00000008  FC 00 18 50 */	fneg f0, f3
 /* 80243CE8 0000000C  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80243CEC 00000010  EC 21 00 24 */	fdivs f1, f1, f0
-/* 80243CF0 00000014  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243CF0 00000014  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243CF4 00000018  EC 20 08 28 */	fsubs f1, f0, f1
 /* 80243CF8 0000001C  48 01 1A D9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80243CFC 00000020  80 7C 00 E8 */	lwz r3, 0xe8(r28)
-/* 80243D00 00000024  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243D00 00000024  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243D04 00000028  48 01 1A CD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80243D08 0000002C  48 00 00 2C */	b lbl_80243D34
 lbl_80243D0C:
@@ -82,14 +82,14 @@ lbl_80243D0C:
 /* 80243D10 00000004  FC 00 18 50 */	fneg f0, f3
 /* 80243D14 00000008  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80243D18 0000000C  EF E1 00 24 */	fdivs f31, f1, f0
-/* 80243D1C 00000010  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243D1C 00000010  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243D20 00000014  48 01 1A B1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80243D24 00000018  80 7C 00 E8 */	lwz r3, 0xe8(r28)
-/* 80243D28 0000001C  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243D28 0000001C  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243D2C 00000020  EC 20 F8 28 */	fsubs f1, f0, f31
 /* 80243D30 00000024  48 01 1A A1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_80243D34:
-/* 80243D34 00000000  C3 E2 B2 50 */	lfs f31, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243D34 00000000  C3 E2 B2 50 */	lfs f31, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80243D38 00000004  3B A0 00 00 */	li r29, 0
 /* 80243D3C 00000008  3B E0 00 00 */	li r31, 0
 lbl_80243D40:
@@ -99,7 +99,7 @@ lbl_80243D40:
 /* 80243D4C 0000000C  40 80 00 14 */	bge lbl_80243D60
 /* 80243D50 00000010  38 1F 00 D0 */	addi r0, r31, 0xd0
 /* 80243D54 00000014  7C 7C 00 2E */	lwzx r3, r28, r0
-/* 80243D58 00000018  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243D58 00000018  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243D5C 0000001C  48 01 1A 75 */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_80243D60:
 /* 80243D60 00000000  38 1F 00 D0 */	addi r0, r31, 0xd0

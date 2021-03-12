@@ -17,9 +17,9 @@ lbl_80189F90:
 /* 80189FA0 00000010  38 A0 00 00 */	li r5, 0
 /* 80189FA4 00000014  38 C0 00 00 */	li r6, 0
 /* 80189FA8 00000018  38 E0 00 00 */	li r7, 0
-/* 80189FAC 0000001C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 80189FAC 0000001C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 80189FB0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80189FB4 00000024  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 80189FB4 00000024  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 80189FB8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80189FBC 0000002C  39 00 00 00 */	li r8, 0
 /* 80189FC0 00000030  48 12 25 4D */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

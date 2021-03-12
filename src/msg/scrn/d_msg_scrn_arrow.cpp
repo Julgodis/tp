@@ -5,45 +5,42 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__15dMsgScrnArrow_cFv();
-extern void __dt__15dMsgScrnArrow_cFv();
-extern void draw__15dMsgScrnArrow_cFv();
-extern void setPos__15dMsgScrnArrow_cFff();
-extern void arwAnimeInit__15dMsgScrnArrow_cFv();
-extern void arwAnimeMove__15dMsgScrnArrow_cFv();
-extern void dotAnimeInit__15dMsgScrnArrow_cFv();
-extern void dotAnimeMove__15dMsgScrnArrow_cFv();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void show__13CPaneMgrAlphaFv();
-extern void hide__13CPaneMgrAlphaFv();
-extern void isVisible__13CPaneMgrAlphaFv();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void animation__9J2DScreenFv();
-extern void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" extern void __ct__15dMsgScrnArrow_cFv();
+extern "C" extern void __dt__15dMsgScrnArrow_cFv();
+extern "C" extern void draw__15dMsgScrnArrow_cFv();
+extern "C" extern void setPos__15dMsgScrnArrow_cFff();
+extern "C" extern void arwAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" extern void arwAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" extern void dotAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" extern void dotAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void show__13CPaneMgrAlphaFv();
+extern "C" extern void hide__13CPaneMgrAlphaFv();
+extern "C" extern void isVisible__13CPaneMgrAlphaFv();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void animation__9J2DScreenFv();
+extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_arrow__stringBase0[88];
-SECTION_DATA extern void* __vt__15dMsgScrnArrow_c[4];
+SECTION_DATA extern void* const __vt__15dMsgScrnArrow_c[4];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SDATA2 extern u8 LIT_3662[4];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_arrow__LIT_3761[4];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_arrow__LIT_3763[8];
-}
+SECTION_SDATA2 extern u8 lit_3662[4];
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_arrow__lit_3761;
+SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_arrow__lit_3763;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803998A0-803998F8 0051 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -54,124 +51,110 @@ SECTION_DEAD const char* const stringBase_803998D6 = "zelda_window_yajirushi.bpk
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803998F1 = "\0\0\0\0\0\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C0CF8-803C0D08 000C .data      __vt__15dMsgScrnArrow_c                                      */
-SECTION_DATA void* __vt__15dMsgScrnArrow_c[4] = {
+void* const __vt__15dMsgScrnArrow_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dMsgScrnArrow_cFv,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80454B98-80454B9C 0004 .sdata2    @3662                                                        */
-SECTION_SDATA2 u8 LIT_3662[4] = {
+u8 lit_3662[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454B9C-80454BA0 0004 .sdata2    @3761                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_arrow__LIT_3761[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454BA0-80454BA8 0008 .sdata2    @3763                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_arrow__LIT_3763[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8023B9B4-8023BC78 02C4 .text      __ct__15dMsgScrnArrow_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dMsgScrnArrow_cFv() {
+extern "C" asm void __ct__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/__ct__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
 /* 8023BC78-8023BDC0 0148 .text      __dt__15dMsgScrnArrow_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dMsgScrnArrow_cFv() {
+extern "C" asm void __dt__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/__dt__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
 /* 8023BDC0-8023BDF8 0038 .text      draw__15dMsgScrnArrow_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__15dMsgScrnArrow_cFv() {
+extern "C" asm void draw__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/draw__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
 /* 8023BDF8-8023BE34 003C .text      setPos__15dMsgScrnArrow_cFff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPos__15dMsgScrnArrow_cFff() {
+extern "C" asm void setPos__15dMsgScrnArrow_cFff() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/setPos__15dMsgScrnArrow_cFff.s"
 }
 #pragma pop
 
+
 /* 8023BE34-8023BE90 005C .text      arwAnimeInit__15dMsgScrnArrow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void arwAnimeInit__15dMsgScrnArrow_cFv() {
+extern "C" asm void arwAnimeInit__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/arwAnimeInit__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454B9C-80454BA0 0004 .sdata2    @3761                                                        */
+f32 msg_scrn_d_msg_scrn_arrow__lit_3761 = 1.0f;
+
+/* 80454BA0-80454BA8 0008 .sdata2    @3763                                                        */
+f64 msg_scrn_d_msg_scrn_arrow__lit_3763 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 8023BE90-8023BFC4 0134 .text      arwAnimeMove__15dMsgScrnArrow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void arwAnimeMove__15dMsgScrnArrow_cFv() {
+extern "C" asm void arwAnimeMove__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/arwAnimeMove__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
 /* 8023BFC4-8023C010 004C .text      dotAnimeInit__15dMsgScrnArrow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dotAnimeInit__15dMsgScrnArrow_cFv() {
+extern "C" asm void dotAnimeInit__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/dotAnimeInit__15dMsgScrnArrow_cFv.s"
 }
 #pragma pop
 
+
 /* 8023C010-8023C0DC 00CC .text      dotAnimeMove__15dMsgScrnArrow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dotAnimeMove__15dMsgScrnArrow_cFv() {
+extern "C" asm void dotAnimeMove__15dMsgScrnArrow_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_arrow/dotAnimeMove__15dMsgScrnArrow_cFv.s"
 }

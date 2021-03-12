@@ -4,12 +4,12 @@ lbl_80252F28:
 /* 80252F30 00000008  90 01 00 74 */	stw r0, 0x74(r1)
 /* 80252F34 0000000C  93 E1 00 6C */	stw r31, 0x6c(r1)
 /* 80252F38 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80252F3C 00000014  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 80252F3C 00000014  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 80252F40 00000018  FC 40 08 90 */	fmr f2, f1
-/* 80252F44 0000001C  C0 62 B4 60 */	lfs f3, d_ovlp_d_ovlp_fade3__LIT_3801(r2)
-/* 80252F48 00000020  C0 82 B4 64 */	lfs f4, d_ovlp_d_ovlp_fade3__LIT_3802(r2)
+/* 80252F44 0000001C  C0 62 B4 60 */	lfs f3, d_ovlp_d_ovlp_fade3__lit_3801(r2)
+/* 80252F48 00000020  C0 82 B4 64 */	lfs f4, d_ovlp_d_ovlp_fade3__lit_3802(r2)
 /* 80252F4C 00000024  FC A0 08 90 */	fmr f5, f1
-/* 80252F50 00000028  C0 C2 B4 68 */	lfs f6, d_ovlp_d_ovlp_fade3__LIT_3803(r2)
+/* 80252F50 00000028  C0 C2 B4 68 */	lfs f6, d_ovlp_d_ovlp_fade3__lit_3803(r2)
 /* 80252F54 0000002C  48 10 D5 11 */	bl GXSetViewport
 /* 80252F58 00000030  38 60 00 00 */	li r3, 0
 /* 80252F5C 00000034  38 80 00 00 */	li r4, 0
@@ -91,7 +91,7 @@ lbl_80252F28:
 /* 8025308C 00000164  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 80253090 00000168  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80253094 0000016C  38 60 00 00 */	li r3, 0
-/* 80253098 00000170  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 80253098 00000170  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 8025309C 00000174  FC 40 08 90 */	fmr f2, f1
 /* 802530A0 00000178  FC 60 08 90 */	fmr f3, f1
 /* 802530A4 0000017C  FC 80 08 90 */	fmr f4, f1
@@ -126,10 +126,10 @@ lbl_80252F28:
 /* 80253118 000001F0  B0 83 80 00 */	sth r4, -0x8000(r3)
 /* 8025311C 000001F4  B0 03 80 00 */	sth r0, -0x8000(r3)
 /* 80253120 000001F8  38 61 00 24 */	addi r3, r1, 0x24
-/* 80253124 000001FC  C0 22 B4 6C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3804(r2)
-/* 80253128 00000200  C0 42 B4 70 */	lfs f2, d_ovlp_d_ovlp_fade3__LIT_3805(r2)
-/* 8025312C 00000204  C0 62 B4 74 */	lfs f3, d_ovlp_d_ovlp_fade3__LIT_3806(r2)
-/* 80253130 00000208  C0 82 B4 78 */	lfs f4, d_ovlp_d_ovlp_fade3__LIT_3807(r2)
+/* 80253124 000001FC  C0 22 B4 6C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3804(r2)
+/* 80253128 00000200  C0 42 B4 70 */	lfs f2, d_ovlp_d_ovlp_fade3__lit_3805(r2)
+/* 8025312C 00000204  C0 62 B4 74 */	lfs f3, d_ovlp_d_ovlp_fade3__lit_3806(r2)
+/* 80253130 00000208  C0 82 B4 78 */	lfs f4, d_ovlp_d_ovlp_fade3__lit_3807(r2)
 /* 80253134 0000020C  48 0F 3D F5 */	bl C_MTXPerspective
 /* 80253138 00000210  38 61 00 24 */	addi r3, r1, 0x24
 /* 8025313C 00000214  38 80 00 00 */	li r4, 0
@@ -148,7 +148,7 @@ lbl_80252F28:
 /* 80253170 00000248  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
 /* 80253174 0000024C  38 80 00 01 */	li r4, 1
 /* 80253178 00000250  38 A0 00 01 */	li r5, 1
-/* 8025317C 00000254  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 8025317C 00000254  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 80253180 00000258  FC 40 08 90 */	fmr f2, f1
 /* 80253184 0000025C  FC 60 08 90 */	fmr f3, f1
 /* 80253188 00000260  38 C0 00 00 */	li r6, 0
@@ -169,7 +169,7 @@ lbl_80252F28:
 /* 802531C4 0000029C  39 00 00 00 */	li r8, 0
 /* 802531C8 000002A0  39 20 00 02 */	li r9, 2
 /* 802531CC 000002A4  48 10 A9 A1 */	bl GXSetChanCtrl
-/* 802531D0 000002A8  80 02 B4 58 */	lwz r0, d_ovlp_d_ovlp_fade3__LIT_3748(r2)
+/* 802531D0 000002A8  80 02 B4 58 */	lwz r0, d_ovlp_d_ovlp_fade3__lit_3748(r2)
 /* 802531D4 000002AC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802531D8 000002B0  38 60 00 00 */	li r3, 0
 /* 802531DC 000002B4  38 81 00 0C */	addi r4, r1, 0xc
@@ -236,7 +236,7 @@ lbl_80252F28:
 /* 802532D0 000003A8  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 802532D4 000003AC  90 01 00 08 */	stw r0, 8(r1)
 /* 802532D8 000003B0  38 60 00 00 */	li r3, 0
-/* 802532DC 000003B4  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 802532DC 000003B4  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 802532E0 000003B8  FC 40 08 90 */	fmr f2, f1
 /* 802532E4 000003BC  FC 60 08 90 */	fmr f3, f1
 /* 802532E8 000003C0  FC 80 08 90 */	fmr f4, f1
@@ -302,17 +302,17 @@ lbl_80252F28:
 /* 802533D8 000004B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802533DC 000004B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 802533E0 000004B8  83 E3 5F 50 */	lwz r31, 0x5f50(r3)
-/* 802533E4 000004BC  C0 02 B4 5C */	lfs f0, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 802533E4 000004BC  C0 02 B4 5C */	lfs f0, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 802533E8 000004C0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 802533EC 000004C4  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 802533F0 000004C8  C0 02 B4 60 */	lfs f0, d_ovlp_d_ovlp_fade3__LIT_3801(r2)
+/* 802533F0 000004C8  C0 02 B4 60 */	lfs f0, d_ovlp_d_ovlp_fade3__lit_3801(r2)
 /* 802533F4 000004CC  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 802533F8 000004D0  C0 02 B4 64 */	lfs f0, d_ovlp_d_ovlp_fade3__LIT_3802(r2)
+/* 802533F8 000004D0  C0 02 B4 64 */	lfs f0, d_ovlp_d_ovlp_fade3__lit_3802(r2)
 /* 802533FC 000004D4  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80253400 000004D8  7F E3 FB 78 */	mr r3, r31
 /* 80253404 000004DC  38 81 00 14 */	addi r4, r1, 0x14
-/* 80253408 000004E0  C0 22 B4 7C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3808(r2)
-/* 8025340C 000004E4  C0 42 B4 68 */	lfs f2, d_ovlp_d_ovlp_fade3__LIT_3803(r2)
+/* 80253408 000004E0  C0 22 B4 7C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3808(r2)
+/* 8025340C 000004E4  C0 42 B4 68 */	lfs f2, d_ovlp_d_ovlp_fade3__lit_3803(r2)
 /* 80253410 000004E8  48 09 63 FD */	bl func_802E980C
 /* 80253414 000004EC  7F E3 FB 78 */	mr r3, r31
 /* 80253418 000004F0  81 9F 00 00 */	lwz r12, 0(r31)

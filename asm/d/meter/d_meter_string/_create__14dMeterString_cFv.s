@@ -16,10 +16,10 @@ lbl_8020EE70:
 /* 8020EEA8 00000038  38 84 92 98 */	addi r4, r4, 0x9298 /* 0x00989298@l */
 /* 8020EEAC 0000003C  38 A0 00 00 */	li r5, 0
 /* 8020EEB0 00000040  38 C0 00 00 */	li r6, 0
-/* 8020EEB4 00000044  C0 22 AE 48 */	lfs f1, d_meter_d_meter_string__LIT_3758(r2)
-/* 8020EEB8 00000048  C0 42 AE 4C */	lfs f2, d_meter_d_meter_string__LIT_3759(r2)
-/* 8020EEBC 0000004C  C0 62 AE 50 */	lfs f3, d_meter_d_meter_string__LIT_3760(r2)
-/* 8020EEC0 00000050  C0 82 AE 54 */	lfs f4, d_meter_d_meter_string__LIT_3761(r2)
+/* 8020EEB4 00000044  C0 22 AE 48 */	lfs f1, d_meter_d_meter_string__lit_3758(r2)
+/* 8020EEB8 00000048  C0 42 AE 4C */	lfs f2, d_meter_d_meter_string__lit_3759(r2)
+/* 8020EEBC 0000004C  C0 62 AE 50 */	lfs f3, d_meter_d_meter_string__lit_3760(r2)
+/* 8020EEC0 00000050  C0 82 AE 54 */	lfs f4, d_meter_d_meter_string__lit_3761(r2)
 /* 8020EEC4 00000054  48 05 20 C9 */	bl dTimer_createTimer__FlUlUcUcffff
 /* 8020EEC8 00000058  38 00 00 01 */	li r0, 1
 /* 8020EECC 0000005C  98 1F 00 28 */	stb r0, 0x28(r31)
@@ -172,7 +172,7 @@ lbl_8020F014:
 /* 8020F0FC 000000E8  38 A5 00 40 */	addi r5, r5, 0x40
 /* 8020F100 000000EC  4C C6 31 82 */	crclr 6
 /* 8020F104 000000F0  48 0F 16 49 */	bl setString__10J2DTextBoxFsPCce
-/* 8020F108 000000F4  C0 22 AE 58 */	lfs f1, d_meter_d_meter_string__LIT_3762(r2)
+/* 8020F108 000000F4  C0 22 AE 58 */	lfs f1, d_meter_d_meter_string__lit_3762(r2)
 /* 8020F10C 000000F8  D0 3F 00 2C */	stfs f1, 0x2c(r31)
 /* 8020F110 000000FC  D0 3F 00 30 */	stfs f1, 0x30(r31)
 /* 8020F114 00000100  38 00 00 00 */	li r0, 0

@@ -45,7 +45,7 @@ lbl_800E72DC:
 /* 800E72F4 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800E72F8 0000001C  80 9F 27 F4 */	lwz r4, 0x27f4(r31)
 /* 800E72FC 00000020  4B F3 37 99 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 800E7300 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800E7300 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800E7304 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E7308 00000000  40 81 00 14 */	ble lbl_800E731C
 /* 800E730C 00000004  7F E3 FB 78 */	mr r3, r31
@@ -68,7 +68,7 @@ lbl_800E731C:
 /* 800E734C 00000030  D0 1F 37 CC */	stfs f0, 0x37cc(r31)
 /* 800E7350 00000034  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 800E7354 00000038  D0 1F 37 D0 */	stfs f0, 0x37d0(r31)
-/* 800E7358 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E7358 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E735C 00000040  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E7360 00000044  7F E3 FB 78 */	mr r3, r31
 /* 800E7364 00000048  4B FD 1F DD */	bl checkEquipAnime__9daAlink_cCFv
@@ -76,7 +76,7 @@ lbl_800E731C:
 /* 800E736C 00000050  41 82 00 14 */	beq lbl_800E7380
 /* 800E7370 00000054  7F E3 FB 78 */	mr r3, r31
 /* 800E7374 00000058  38 80 00 02 */	li r4, 2
-/* 800E7378 0000005C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800E7378 0000005C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800E737C 00000060  4B FC 63 A9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800E7380:
 /* 800E7380 00000000  2C 1E 02 1A */	cmpwi r30, 0x21a
@@ -89,7 +89,7 @@ lbl_800E7380:
 /* 800E739C 0000001C  4B FC 5D 59 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800E73A0 00000020  38 00 00 01 */	li r0, 1
 /* 800E73A4 00000024  B0 1F 30 0E */	sth r0, 0x300e(r31)
-/* 800E73A8 00000028  C0 02 93 74 */	lfs f0, LIT_8502(r2)
+/* 800E73A8 00000028  C0 02 93 74 */	lfs f0, lit_8502(r2)
 /* 800E73AC 0000002C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800E73B0 00000030  38 00 00 00 */	li r0, 0
 /* 800E73B4 00000034  B0 1F 30 10 */	sth r0, 0x3010(r31)
@@ -106,7 +106,7 @@ lbl_800E73C0:
 /* 800E73DC 0000001C  4B FC 5D 19 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800E73E0 00000020  38 00 00 01 */	li r0, 1
 /* 800E73E4 00000024  B0 1F 30 0E */	sth r0, 0x300e(r31)
-/* 800E73E8 00000028  C0 02 93 74 */	lfs f0, LIT_8502(r2)
+/* 800E73E8 00000028  C0 02 93 74 */	lfs f0, lit_8502(r2)
 /* 800E73EC 0000002C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800E73F0 00000030  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 800E73F4 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

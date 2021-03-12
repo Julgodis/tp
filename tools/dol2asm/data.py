@@ -208,6 +208,10 @@ class Module:
         library.module = self
         self.libraries[library.name] = library
 
+    @property
+    def base_library(self):
+        return next(iter(self.libraries.values()))
+
 #
 #
 #
@@ -219,6 +223,26 @@ class ZeroData(Symbol):
 @dataclass(eq=False)
 class ZeroStruct(Symbol):
     members: List[Symbol] = field(default_factory=list)
+
+    def cpp_reference(self, accessor, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
+
+    def asm_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"{self.identifier.label}+0x{offset:X}"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
 
     @staticmethod
     def create(group):
@@ -243,26 +267,6 @@ class ZeroStruct(Symbol):
             section = first.section,
             source = first.source)
 
-    def cpp_reference(self, accessor, addr):
-        for field in self.members:
-            if field.addr == addr:
-                offset = field.addr - self.addr
-                return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
-
-        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
-        g.LOG.error(self)
-        assert False
-
-    def asm_reference(self, addr):
-        for field in self.members:
-            if field.addr == addr:
-                offset = field.addr - self.addr
-                return f"{self.identifier.label}+0x{offset:X}"
-
-        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
-        g.LOG.error(self)
-        assert False
-
 @dataclass(eq=False)
 class Data(Symbol):
     data: bytes = field(default=None,repr=False)
@@ -282,6 +286,26 @@ class InitData(Data):
 @dataclass(eq=False)
 class InitStruct(Data):
     members: List[Symbol] = field(default_factory=list)
+
+    def cpp_reference(self, accessor, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
+
+    def asm_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                offset = field.addr - self.addr
+                return f"{self.identifier.label}+0x{offset:X}"
+
+        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        g.LOG.error(self)
+        assert False
 
     @staticmethod
     def create(group):
@@ -309,26 +333,6 @@ class InitStruct(Data):
             section = first.section,
             source = first.source)
 
-    def cpp_reference(self, accessor, addr):
-        for field in self.members:
-            if field.addr == addr:
-                offset = field.addr - self.addr
-                return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
-
-        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
-        g.LOG.error(self)
-        assert False
-
-    def asm_reference(self, addr):
-        for field in self.members:
-            if field.addr == addr:
-                offset = field.addr - self.addr
-                return f"{self.identifier.label}+0x{offset:X}"
-
-        g.LOG.error(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
-        g.LOG.error(self)
-        assert False
-
 @dataclass(eq=False)
 class VirtualTable(Data):
     functions: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
@@ -355,13 +359,26 @@ class VirtualTable(Data):
 @dataclass(eq=False)
 class ReferenceArray(Data):
     references: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
+    rsymbols: List[Symbol] = field(default_factory=list,repr=False)
 
     def resolve_references(self, ait):
         assert len(self.references) == 0
         assert len(self.data) % 4 == 0
+        self.rsymbols = []
         addresses = [ struct.unpack('>I', x)[0] for x in util.chunks(self.data, 4)]
+        relocations = self.section.relocations
+        offset = self.addr
         for addr in addresses:
-            if addr == 0:
+            if offset in relocations:
+                relocation = relocations[offset]
+                symbol = g.lookup_symbol(relocation)
+                if relocation.module != 0:
+                    addr = symbol.section.addr + relocation.addend
+                else:
+                    addr = relocation.addend
+                self.rsymbols.append(symbol)
+                self.references.append((addr, symbol))
+            elif addr == 0:
                 self.references.append((addr, None))
             else:
                 symbols = list(ait[addr])
@@ -369,9 +386,15 @@ class ReferenceArray(Data):
                     self.references.append((addr, symbols[0].data))
                 else:
                     self.references.append((addr, None))
+            offset += 4
                     
     def _get_internal_references(self):
         return set([ x[1].addr for x in self.references if x[1]])
+
+    @property
+    def relocation_symbols(self):
+        return self.rsymbols
+
 
 @dataclass(eq=False)
 class String(Data):
@@ -393,6 +416,32 @@ class StringBase(Data):
             padding_data = padding_data,
             section = section,
             strings = strings)
+
+@dataclass(eq=False)
+class Literal(Data):
+    comment: str = None
+    value_type: str = None
+    values: List[str] = field(default_factory=list)
+
+@dataclass(eq=False)
+class Integer(Literal):
+    pass
+
+@dataclass(eq=False)
+class Float32(Literal):
+    pass
+
+@dataclass(eq=False)
+class Float64(Literal):
+    pass
+
+@dataclass(eq=False)
+class FloatFraction32(Float32):
+    pass
+
+@dataclass(eq=False)
+class FloatFraction64(Float64):
+    pass
 
 @dataclass(eq=False)
 class Block(Data):
@@ -434,8 +483,14 @@ class Function(Symbol):
 
     @property
     def relocation_symbols(self):
+        first = self.section.symbols[0]
+        last = self.section.symbols[-1]
+
         symbols = set()
         for addr, relocation in self.section.relocations.items():
+            if addr < self.start or addr >= self.end:
+                continue
+
             symbol = g.lookup_symbol(relocation)
             symbols.add(symbol)
         return symbols

@@ -300,7 +300,7 @@ lbl_8018C26C:
 /* 8018C3B8 0000014C  81 8C 00 60 */	lwz r12, 0x60(r12)
 /* 8018C3BC 00000150  7D 89 03 A6 */	mtctr r12
 /* 8018C3C0 00000154  4E 80 04 21 */	bctrl 
-/* 8018C3C4 00000158  C0 02 9F 48 */	lfs f0, d_file_d_file_select__LIT_4778(r2)
+/* 8018C3C4 00000158  C0 02 9F 48 */	lfs f0, d_file_d_file_select__lit_4778(r2)
 /* 8018C3C8 0000015C  80 7F 02 9C */	lwz r3, 0x29c(r31)
 /* 8018C3CC 00000160  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8018C3D0 00000164  7F 23 CB 78 */	mr r3, r25
@@ -316,17 +316,17 @@ lbl_8018C26C:
 /* 8018C3F8 0000018C  7C 60 1B 79 */	or. r0, r3, r3
 /* 8018C3FC 00000190  41 82 00 18 */	beq lbl_8018C414
 /* 8018C400 00000194  38 80 00 00 */	li r4, 0
-/* 8018C404 00000198  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018C404 00000198  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 8018C408 0000019C  38 A0 00 00 */	li r5, 0
 /* 8018C40C 000001A0  48 00 7E 15 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 8018C410 000001A4  7C 60 1B 78 */	mr r0, r3
 lbl_8018C414:
 /* 8018C414 00000000  90 1F 00 64 */	stw r0, 0x64(r31)
 /* 8018C418 00000004  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 8018C41C 00000008  C0 22 9F 68 */	lfs f1, LIT_6069(r2)
-/* 8018C420 0000000C  C0 42 9F 88 */	lfs f2, LIT_6872(r2)
-/* 8018C424 00000010  C0 62 9F 8C */	lfs f3, LIT_6873(r2)
-/* 8018C428 00000014  C0 82 9F 90 */	lfs f4, LIT_6874(r2)
+/* 8018C41C 00000008  C0 22 9F 68 */	lfs f1, lit_6069(r2)
+/* 8018C420 0000000C  C0 42 9F 88 */	lfs f2, lit_6872(r2)
+/* 8018C424 00000010  C0 62 9F 8C */	lfs f3, lit_6873(r2)
+/* 8018C428 00000014  C0 82 9F 90 */	lfs f4, lit_6874(r2)
 /* 8018C42C 00000018  FC A0 20 90 */	fmr f5, f4
 /* 8018C430 0000001C  48 00 8D 81 */	bl setParam__16dSelect_cursor_cFfffff
 /* 8018C434 00000020  80 9F 02 A4 */	lwz r4, 0x2a4(r31)
@@ -349,7 +349,7 @@ lbl_8018C414:
 /* 8018C478 00000064  38 A0 00 01 */	li r5, 1
 /* 8018C47C 00000068  48 00 8C 79 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8018C480 0000006C  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 8018C484 00000070  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018C484 00000070  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018C488 00000074  48 00 8E 19 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018C48C 00000078  3B A0 00 00 */	li r29, 0
 /* 8018C490 0000007C  3B 20 00 00 */	li r25, 0

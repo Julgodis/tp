@@ -5,71 +5,71 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void DCStoreRange();
-extern void OSGetTime();
-extern void __CARDDefaultApiCallback();
-extern void __CARDSyncCallback();
-extern void __CARDEraseSector();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDWrite();
-extern void __CARDGetFatBlock();
-extern void __CARDGetDirBlock();
-extern void __CARDUpdateDir();
-extern void __CARDIsWritable();
-extern void __CARDSeek();
-extern void CARDWrite__WriteCallback();
-extern void CARDWrite__EraseCallback();
-extern void CARDWriteAsync();
-extern void CARDWrite();
-extern void __div2i();
+extern "C" extern void DCStoreRange();
+extern "C" extern void OSGetTime();
+extern "C" extern void __CARDDefaultApiCallback();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDEraseSector();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDWrite();
+extern "C" extern void __CARDGetFatBlock();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void __CARDUpdateDir();
+extern "C" extern void __CARDIsWritable();
+extern "C" extern void __CARDSeek();
+extern "C" extern void CARDWrite__WriteCallback();
+extern "C" extern void CARDWrite__EraseCallback();
+extern "C" extern void CARDWriteAsync();
+extern "C" extern void CARDWrite();
+extern "C" extern void __div2i();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80358914-80358A84 0170 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDWrite__WriteCallback() {
+extern "C" asm void CARDWrite__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__WriteCallback.s"
 }
 #pragma pop
 
+
 /* 80358A84-80358B34 00B0 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDWrite__EraseCallback() {
+extern "C" asm void CARDWrite__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__EraseCallback.s"
 }
 #pragma pop
 
+
 /* 80358B34-80358C48 0114 .text      CARDWriteAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDWriteAsync() {
+extern "C" asm void CARDWriteAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWriteAsync.s"
 }
 #pragma pop
 
+
 /* 80358C48-80358C90 0048 .text      CARDWrite                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDWrite() {
+extern "C" asm void CARDWrite() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite.s"
 }

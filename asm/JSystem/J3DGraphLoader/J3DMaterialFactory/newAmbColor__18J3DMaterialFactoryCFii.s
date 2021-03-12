@@ -1,6 +1,6 @@
 lbl_80331F50:
 /* 80331F50 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80331F54 00000004  81 22 CA AC */	lwz r9, J3DMaterialFactory__LIT_1798(r2)
+/* 80331F54 00000004  81 22 CA AC */	lwz r9, J3DMaterialFactory__lit_1798(r2)
 /* 80331F58 00000008  91 21 00 08 */	stw r9, 8(r1)
 /* 80331F5C 0000000C  91 21 00 0C */	stw r9, 0xc(r1)
 /* 80331F60 00000010  81 04 00 04 */	lwz r8, 4(r4)

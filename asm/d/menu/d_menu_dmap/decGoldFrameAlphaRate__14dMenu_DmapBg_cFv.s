@@ -21,14 +21,14 @@ lbl_801BAA8C:
 /* 801BAA94 00000008  88 7F 0D D7 */	lbz r3, 0xdd7(r31)
 /* 801BAA98 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801BAA9C 00000010  40 82 00 0C */	bne lbl_801BAAA8
-/* 801BAAA0 00000014  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__LIT_3962(r2)
+/* 801BAAA0 00000014  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__lit_3962(r2)
 /* 801BAAA4 00000018  48 00 00 50 */	b lbl_801BAAF4
 lbl_801BAAA8:
 /* 801BAAA8 00000000  38 03 FF FF */	addi r0, r3, -1
 /* 801BAAAC 00000004  98 1F 0D D7 */	stb r0, 0xdd7(r31)
 /* 801BAAB0 00000008  88 1F 0D D7 */	lbz r0, 0xdd7(r31)
 /* 801BAAB4 0000000C  7C 00 01 D6 */	mullw r0, r0, r0
-/* 801BAAB8 00000010  C8 42 A5 F8 */	lfd f2, d_menu_d_menu_dmap__LIT_4108(r2)
+/* 801BAAB8 00000010  C8 42 A5 F8 */	lfd f2, d_menu_d_menu_dmap__lit_4108(r2)
 /* 801BAABC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801BAAC0 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801BAAC4 0000001C  3C 60 43 30 */	lis r3, 0x4330

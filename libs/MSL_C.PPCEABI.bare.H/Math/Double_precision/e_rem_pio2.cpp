@@ -5,33 +5,30 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_rem_pio2();
-extern void __kernel_rem_pio2();
+extern "C" extern void __ieee754_rem_pio2();
+extern "C" extern void __kernel_rem_pio2();
 SECTION_RODATA extern const u8 two_over_pi[264];
 SECTION_RODATA extern const u8 npio2_hw[128];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_145[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_146[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_147[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_148[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_149[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_150[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_151[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_152[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_153[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__LIT_154[8];
-SECTION_SDATA2 extern u8 LIT_157[8];
-}
+SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__lit_145[8];
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_146;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_147;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_148;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_149;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_150;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_151;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_152;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_153;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_rem_pio2__lit_154;
+SECTION_SDATA2 extern f64 lit_157;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A23B0-803A24B8 0108 .rodata    two_over_pi                                                  */
 SECTION_RODATA const u8 two_over_pi[264] = {
 	0x00, 0xA2, 0xF9, 0x83, 0x00, 0x6E, 0x4E, 0x44, 0x00, 0x15, 0x29, 0xFC, 0x00, 0x27, 0x57, 0xD1,
@@ -52,6 +49,7 @@ SECTION_RODATA const u8 two_over_pi[264] = {
 	0x00, 0x4D, 0x73, 0x27, 0x00, 0x31, 0x06, 0x06, 0x00, 0x15, 0x56, 0xCA, 0x00, 0x73, 0xA8, 0xC9,
 	0x00, 0x60, 0xE2, 0x7B, 0x00, 0xC0, 0x8C, 0x6B,
 };
+
 /* 803A24B8-803A2538 0080 .rodata    npio2_hw                                                     */
 SECTION_RODATA const u8 npio2_hw[128] = {
 	0x3F, 0xF9, 0x21, 0xFB, 0x40, 0x09, 0x21, 0xFB, 0x40, 0x12, 0xD9, 0x7C, 0x40, 0x19, 0x21, 0xFB,
@@ -63,70 +61,47 @@ SECTION_RODATA const u8 npio2_hw[128] = {
 	0x40, 0x43, 0xA2, 0x8C, 0x40, 0x44, 0x6B, 0x9C, 0x40, 0x45, 0x34, 0xAC, 0x40, 0x45, 0xFD, 0xBB,
 	0x40, 0x46, 0xC6, 0xCB, 0x40, 0x47, 0x8F, 0xDB, 0x40, 0x48, 0x58, 0xEB, 0x40, 0x49, 0x21, 0xFB,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456968-80456970 0008 .sdata2    @145                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_145[8] = {
+u8 Math_Double_precision_e_rem_pio2__lit_145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80456970-80456978 0008 .sdata2    @146                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_146[8] = {
-	0x3F, 0xF9, 0x21, 0xFB, 0x54, 0x40, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_146 = 1.5707963267341256;
+
 /* 80456978-80456980 0008 .sdata2    @147                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_147[8] = {
-	0x3D, 0xD0, 0xB4, 0x61, 0x1A, 0x62, 0x63, 0x31,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_147 = 6.077100506506192e-11;
+
 /* 80456980-80456988 0008 .sdata2    @148                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_148[8] = {
-	0x3D, 0xD0, 0xB4, 0x61, 0x1A, 0x60, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_148 = 6.077100506303966e-11;
+
 /* 80456988-80456990 0008 .sdata2    @149                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_149[8] = {
-	0x3B, 0xA3, 0x19, 0x8A, 0x2E, 0x03, 0x70, 0x73,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_149 = 2.0222662487959506e-21;
+
 /* 80456990-80456998 0008 .sdata2    @150                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_150[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_150 = 0.5;
+
 /* 80456998-804569A0 0008 .sdata2    @151                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_151[8] = {
-	0x3F, 0xE4, 0x5F, 0x30, 0x6D, 0xC9, 0xC8, 0x83,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_151 = 0.6366197723675814;
+
 /* 804569A0-804569A8 0008 .sdata2    @152                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_152[8] = {
-	0x3B, 0xA3, 0x19, 0x8A, 0x2E, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_152 = 2.0222662487111665e-21;
+
 /* 804569A8-804569B0 0008 .sdata2    @153                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_153[8] = {
-	0x39, 0x7B, 0x83, 0x9A, 0x25, 0x20, 0x49, 0xC1,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_153 = 8.4784276603689e-32;
+
 /* 804569B0-804569B8 0008 .sdata2    @154                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_rem_pio2__LIT_154[8] = {
-	0x41, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_rem_pio2__lit_154 = 16777216.0;
+
 /* 804569B8-804569C0 0008 .sdata2    @157                                                         */
-SECTION_SDATA2 u8 LIT_157[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 lit_157 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8036A708-8036AAA8 03A0 .text      __ieee754_rem_pio2                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ieee754_rem_pio2() {
+extern "C" asm void __ieee754_rem_pio2() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_rem_pio2/__ieee754_rem_pio2.s"
 }

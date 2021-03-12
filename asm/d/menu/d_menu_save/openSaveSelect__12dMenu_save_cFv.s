@@ -66,9 +66,9 @@ lbl_801F361C:
 /* 801F3670 00000054  38 A0 00 00 */	li r5, 0
 /* 801F3674 00000058  38 C0 00 00 */	li r6, 0
 /* 801F3678 0000005C  38 E0 00 00 */	li r7, 0
-/* 801F367C 00000060  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__LIT_4179(r2)
+/* 801F367C 00000060  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
 /* 801F3680 00000064  FC 40 08 90 */	fmr f2, f1
-/* 801F3684 00000068  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__LIT_4879(r2)
+/* 801F3684 00000068  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
 /* 801F3688 0000006C  FC 80 18 90 */	fmr f4, f3
 /* 801F368C 00000070  39 00 00 00 */	li r8, 0
 /* 801F3690 00000074  48 0B 82 F5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

@@ -13,7 +13,7 @@ lbl_8001DCBC:
 /* 8001DCE8 0000002C  38 84 1C C4 */	addi r4, r4, mGndCheck__11fopAcM_gc_c@l
 /* 8001DCEC 00000030  48 05 67 B5 */	bl GroundCross__4cBgSFP11cBgS_GndChk
 /* 8001DCF0 00000034  D0 2D 87 50 */	stfs f1, mGroundY__11fopAcM_gc_c(r13)
-/* 8001DCF4 00000038  C0 42 82 58 */	lfs f2, LIT_6353(r2)
+/* 8001DCF4 00000038  C0 42 82 58 */	lfs f2, lit_6353(r2)
 /* 8001DCF8 0000003C  FC 00 08 18 */	frsp f0, f1
 /* 8001DCFC 00000040  FC 02 00 00 */	fcmpu cr0, f2, f0
 /* 8001DD00 00000044  7C 00 00 26 */	mfcr r0

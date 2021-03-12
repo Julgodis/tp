@@ -47,7 +47,7 @@ lbl_80044228:
 /* 80044240 00000018  48 00 3E AD */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 80044244 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 80044248 00000020  41 82 00 14 */	beq lbl_8004425C
-/* 8004424C 00000024  C0 22 84 D4 */	lfs f1, d_event_d_event_data__LIT_4265(r2)
+/* 8004424C 00000024  C0 22 84 D4 */	lfs f1, d_event_d_event_data__lit_4265(r2)
 /* 80044250 00000028  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80044254 0000002C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80044258 00000030  48 16 49 11 */	bl dKy_instant_timechg__Ff
@@ -81,11 +81,11 @@ lbl_80044298:
 /* 800442BC 00000024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800442C0 00000028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 800442C4 0000002C  C0 24 00 34 */	lfs f1, 0x34(r4)
-/* 800442C8 00000030  C0 02 84 E0 */	lfs f0, d_event_d_event_data__LIT_4460(r2)
+/* 800442C8 00000030  C0 02 84 E0 */	lfs f0, d_event_d_event_data__lit_4460(r2)
 /* 800442CC 00000034  EC 20 00 72 */	fmuls f1, f0, f1
 /* 800442D0 00000038  C0 03 00 00 */	lfs f0, 0(r3)
 /* 800442D4 0000003C  EC 21 00 2A */	fadds f1, f1, f0
-/* 800442D8 00000040  C8 02 84 E8 */	lfd f0, d_event_d_event_data__LIT_4461(r2)
+/* 800442D8 00000040  C8 02 84 E8 */	lfd f0, d_event_d_event_data__lit_4461(r2)
 /* 800442DC 00000044  48 00 00 0C */	b lbl_800442E8
 lbl_800442E0:
 /* 800442E0 00000000  FC 21 00 28 */	fsub f1, f1, f0
@@ -94,7 +94,7 @@ lbl_800442E8:
 /* 800442E8 00000000  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800442EC 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800442F0 00000004  41 82 FF F0 */	beq lbl_800442E0
-/* 800442F4 00000008  C0 02 84 D4 */	lfs f0, d_event_d_event_data__LIT_4265(r2)
+/* 800442F4 00000008  C0 02 84 D4 */	lfs f0, d_event_d_event_data__lit_4265(r2)
 /* 800442F8 0000000C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 800442FC 00000010  48 16 48 6D */	bl dKy_instant_timechg__Ff
 lbl_80044300:

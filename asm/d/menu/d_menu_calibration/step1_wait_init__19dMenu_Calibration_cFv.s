@@ -28,7 +28,7 @@ lbl_801AEE30:
 /* 801AEE98 00000068  80 63 00 04 */	lwz r3, 4(r3)
 /* 801AEE9C 0000006C  C0 41 00 0C */	lfs f2, 0xc(r1)
 /* 801AEEA0 00000070  C0 21 00 08 */	lfs f1, 8(r1)
-/* 801AEEA4 00000074  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AEEA4 00000074  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AEEA8 00000078  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AEEAC 00000000  40 81 00 08 */	ble lbl_801AEEB4
 /* 801AEEB0 00000004  48 00 00 08 */	b lbl_801AEEB8
@@ -36,7 +36,7 @@ lbl_801AEEB4:
 /* 801AEEB4 00000000  FC 20 00 90 */	fmr f1, f0
 lbl_801AEEB8:
 /* 801AEEB8 00000000  D0 23 01 1C */	stfs f1, 0x11c(r3)
-/* 801AEEBC 00000004  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AEEBC 00000004  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AEEC0 00000008  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 801AEEC4 00000000  40 81 00 08 */	ble lbl_801AEECC
 /* 801AEEC8 00000004  48 00 00 08 */	b lbl_801AEED0
@@ -72,7 +72,7 @@ lbl_801AEED0:
 /* 801AEF38 00000068  38 00 00 00 */	li r0, 0
 /* 801AEF3C 0000006C  B0 1F 00 FC */	sth r0, 0xfc(r31)
 /* 801AEF40 00000070  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 801AEF44 00000074  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AEF44 00000074  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AEF48 00000078  48 0A 68 89 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AEF4C 0000007C  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 801AEF50 00000080  80 01 00 34 */	lwz r0, 0x34(r1)

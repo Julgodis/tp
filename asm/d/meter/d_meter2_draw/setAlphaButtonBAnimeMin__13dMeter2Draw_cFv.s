@@ -9,7 +9,7 @@ lbl_80219324:
 /* 80219340 00000008  7C 7B 1B 78 */	mr r27, r3
 /* 80219344 0000000C  80 63 03 04 */	lwz r3, 0x304(r3)
 /* 80219348 00000010  48 03 C4 E1 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8021934C 00000014  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 8021934C 00000014  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219350 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80219354 0000001C  41 82 00 64 */	beq lbl_802193B8
 /* 80219358 00000020  80 7B 03 04 */	lwz r3, 0x304(r27)
@@ -39,7 +39,7 @@ lbl_80219324:
 lbl_802193B8:
 /* 802193B8 00000000  80 7B 03 28 */	lwz r3, 0x328(r27)
 /* 802193BC 00000004  48 03 C4 6D */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802193C0 00000008  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 802193C0 00000008  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 802193C4 0000000C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802193C8 00000010  41 82 00 30 */	beq lbl_802193F8
 /* 802193CC 00000014  80 7B 03 28 */	lwz r3, 0x328(r27)
@@ -58,7 +58,7 @@ lbl_802193F8:
 /* 802193FC 00000004  3B E0 00 00 */	li r31, 0
 /* 80219400 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80219404 0000000C  3B C3 EB C8 */	addi r30, r3, g_drawHIO@l
-/* 80219408 00000010  C3 E2 AE 80 */	lfs f31, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219408 00000010  C3 E2 AE 80 */	lfs f31, d_meter_d_meter2_draw__lit_4182(r2)
 lbl_8021940C:
 /* 8021940C 00000000  3B BF 00 D4 */	addi r29, r31, 0xd4
 /* 80219410 00000004  7C 7B E8 2E */	lwzx r3, r27, r29

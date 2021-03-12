@@ -11,8 +11,8 @@ lbl_801DFA58:
 /* 801DFA7C 00000008  39 61 00 30 */	addi r11, r1, 0x30
 /* 801DFA80 0000000C  48 18 27 49 */	bl _savegpr_24
 /* 801DFA84 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 801DFA88 00000014  3C 60 80 39 */	lis r3, d_menu_d_menu_letter__data_803969C8@ha
-/* 801DFA8C 00000018  3B C3 69 C8 */	addi r30, r3, d_menu_d_menu_letter__data_803969C8@l
+/* 801DFA88 00000014  3C 60 80 39 */	lis r3, data_803969C8@ha
+/* 801DFA8C 00000018  3B C3 69 C8 */	addi r30, r3, data_803969C8@l
 /* 801DFA90 0000001C  38 60 01 18 */	li r3, 0x118
 /* 801DFA94 00000020  48 0E F1 B9 */	bl __nw__FUl
 /* 801DFA98 00000024  7C 60 1B 79 */	or. r0, r3, r3
@@ -56,7 +56,7 @@ lbl_801DFAA8:
 lbl_801DFB2C:
 /* 801DFB2C 00000000  90 1F 02 BC */	stw r0, 0x2bc(r31)
 /* 801DFB30 00000004  80 7F 02 BC */	lwz r3, 0x2bc(r31)
-/* 801DFB34 00000008  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DFB34 00000008  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
 /* 801DFB38 0000000C  48 07 5C 99 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801DFB3C 00000010  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 801DFB40 00000014  3C 80 74 5F */	lis r4, 0x745F /* 0x745F3030@ha */
@@ -524,11 +524,11 @@ lbl_801E01E0:
 /* 801E0264 00000084  C0 3A 00 28 */	lfs f1, 0x28(r26)
 /* 801E0268 00000088  C0 1A 00 20 */	lfs f0, 0x20(r26)
 /* 801E026C 0000008C  EC 01 00 28 */	fsubs f0, f1, f0
-/* 801E0270 00000090  C0 42 A9 18 */	lfs f2, d_menu_d_menu_letter__LIT_4308(r2)
+/* 801E0270 00000090  C0 42 A9 18 */	lfs f2, d_menu_d_menu_letter__lit_4308(r2)
 /* 801E0274 00000094  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 801E0278 00000098  88 7F 03 74 */	lbz r3, 0x374(r31)
 /* 801E027C 0000009C  38 03 FF FF */	addi r0, r3, -1
-/* 801E0280 000000A0  CB E2 A9 10 */	lfd f31, d_menu_d_menu_letter__LIT_4171(r2)
+/* 801E0280 000000A0  CB E2 A9 10 */	lfd f31, d_menu_d_menu_letter__lit_4171(r2)
 /* 801E0284 000000A4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801E0288 000000A8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E028C 000000AC  3F 60 43 30 */	lis r27, 0x4330
@@ -564,3 +564,13 @@ lbl_801E02B0:
 lbl_801E0300:
 /* 801E0300 00000000  E3 E1 00 58 */	psq_l f31, 88(r1), 0, 0 /* qr0 */
 /* 801E0304 00000000  CB E1 00 50 */	lfd f31, 0x50(r1)
+/* 801E0308 00000008  E3 C1 00 48 */	psq_l f30, 72(r1), 0, 0 /* qr0 */
+/* 801E030C 00000000  CB C1 00 40 */	lfd f30, 0x40(r1)
+/* 801E0310 00000010  E3 A1 00 38 */	psq_l f29, 56(r1), 0, 0 /* qr0 */
+/* 801E0314 00000000  CB A1 00 30 */	lfd f29, 0x30(r1)
+/* 801E0318 00000004  39 61 00 30 */	addi r11, r1, 0x30
+/* 801E031C 00000008  48 18 1E F9 */	bl _restgpr_24
+/* 801E0320 0000000C  80 01 00 64 */	lwz r0, 0x64(r1)
+/* 801E0324 00000010  7C 08 03 A6 */	mtlr r0
+/* 801E0328 00000014  38 21 00 60 */	addi r1, r1, 0x60
+/* 801E032C 00000018  4E 80 00 20 */	blr 

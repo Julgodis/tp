@@ -4,10 +4,10 @@ lbl_8028C180:
 /* 8028C188 00000008  90 01 00 B4 */	stw r0, 0xb4(r1)
 /* 8028C18C 0000000C  93 E1 00 AC */	stw r31, 0xac(r1)
 /* 8028C190 00000010  93 C1 00 A8 */	stw r30, 0xa8(r1)
-/* 8028C194 00000014  3C 60 80 43 */	lis r3, LIT_1018@ha
-/* 8028C198 00000018  3B C3 12 98 */	addi r30, r3, LIT_1018@l
-/* 8028C19C 0000001C  3C 60 80 3C */	lis r3, LIT_1014@ha
-/* 8028C1A0 00000020  3B E3 58 A8 */	addi r31, r3, LIT_1014@l
+/* 8028C194 00000014  3C 60 80 43 */	lis r3, lit_1018@ha
+/* 8028C198 00000018  3B C3 12 98 */	addi r30, r3, lit_1018@l
+/* 8028C19C 0000001C  3C 60 80 3C */	lis r3, lit_1014@ha
+/* 8028C1A0 00000020  3B E3 58 A8 */	addi r31, r3, lit_1014@l
 /* 8028C1A4 00000024  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028C1A8 00000028  39 43 56 40 */	addi r10, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 8028C1AC 0000002C  91 41 00 88 */	stw r10, 0x88(r1)

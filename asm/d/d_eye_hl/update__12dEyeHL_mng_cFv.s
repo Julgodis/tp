@@ -22,10 +22,10 @@ lbl_8009CA8C:
 /* 8009CA90 00000004  40 82 FF EC */	bne lbl_8009CA7C
 /* 8009CA94 00000008  48 00 00 78 */	b lbl_8009CB0C
 lbl_8009CA98:
-/* 8009CA98 00000000  C0 42 92 10 */	lfs f2, d_d_eye_hl__LIT_3862(r2)
+/* 8009CA98 00000000  C0 42 92 10 */	lfs f2, d_d_eye_hl__lit_3862(r2)
 /* 8009CA9C 00000004  80 63 61 B0 */	lwz r3, 0x61b0(r3)
 /* 8009CAA0 00000008  C0 23 00 D0 */	lfs f1, 0xd0(r3)
-/* 8009CAA4 0000000C  C0 02 92 14 */	lfs f0, d_d_eye_hl__LIT_3863(r2)
+/* 8009CAA4 0000000C  C0 02 92 14 */	lfs f0, d_d_eye_hl__lit_3863(r2)
 /* 8009CAA8 00000010  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8009CAAC 00000014  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8009CAB0 00000018  FC 00 00 1E */	fctiwz f0, f0

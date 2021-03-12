@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcLnTg_Move__FP8line_tagi();
-extern void fpcLnTg_QueueTo__FP8line_tag();
-extern void fpcLnTg_ToQueue__FP8line_tagi();
-extern void fpcLnTg_Init__FP8line_tagPv();
-extern void cTg_SingleCutFromTree__FP16create_tag_class();
-extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern void cTg_Create__FP16create_tag_classPv();
+extern "C" extern void fpcLnTg_Move__FP8line_tagi();
+extern "C" extern void fpcLnTg_QueueTo__FP8line_tag();
+extern "C" extern void fpcLnTg_ToQueue__FP8line_tagi();
+extern "C" extern void fpcLnTg_Init__FP8line_tagPv();
+extern "C" extern void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+extern "C" extern void cTg_Create__FP16create_tag_classPv();
 SECTION_SDATA extern void* g_fpcLn_Queue[2];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 800235A8-80023600 0058 .text      fpcLnTg_Move__FP8line_tagi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_Move__FP8line_tagi() {
+extern "C" asm void fpcLnTg_Move__FP8line_tagi() {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_Move__FP8line_tagi.s"
 }
 #pragma pop
 
+
 /* 80023600-80023634 0034 .text      fpcLnTg_QueueTo__FP8line_tag                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_QueueTo__FP8line_tag() {
+extern "C" asm void fpcLnTg_QueueTo__FP8line_tag() {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_QueueTo__FP8line_tag.s"
 }
 #pragma pop
 
+
 /* 80023634-8002368C 0058 .text      fpcLnTg_ToQueue__FP8line_tagi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_ToQueue__FP8line_tagi() {
+extern "C" asm void fpcLnTg_ToQueue__FP8line_tagi() {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_ToQueue__FP8line_tagi.s"
 }
 #pragma pop
 
+
 /* 8002368C-800236C0 0034 .text      fpcLnTg_Init__FP8line_tagPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_Init__FP8line_tagPv() {
+extern "C" asm void fpcLnTg_Init__FP8line_tagPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_Init__FP8line_tagPv.s"
 }

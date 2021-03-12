@@ -88,7 +88,7 @@ lbl_801F4B38:
 /* 801F4B50 00000018  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 801F4B54 0000001C  4B F9 D6 0D */	bl init__15dFile_warning_cFv
 /* 801F4B58 00000020  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F4B5C 00000024  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__LIT_4175(r2)
+/* 801F4B5C 00000024  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
 /* 801F4B60 00000028  4B FA 07 41 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F4B64 0000002C  38 00 00 39 */	li r0, 0x39
 /* 801F4B68 00000030  98 1F 01 B2 */	stb r0, 0x1b2(r31)

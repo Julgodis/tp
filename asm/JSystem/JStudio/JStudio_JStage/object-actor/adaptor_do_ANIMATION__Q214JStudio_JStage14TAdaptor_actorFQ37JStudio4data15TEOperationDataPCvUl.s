@@ -5,8 +5,8 @@ lbl_8028A9F0:
 /* 8028A9FC 0000000C  7C 89 23 78 */	mr r9, r4
 /* 8028AA00 00000010  7C A8 2B 78 */	mr r8, r5
 /* 8028AA04 00000014  7C C7 33 78 */	mr r7, r6
-/* 8028AA08 00000018  3C 80 80 3C */	lis r4, object_actor__LIT_899@ha
-/* 8028AA0C 0000001C  38 A4 57 3C */	addi r5, r4, object_actor__LIT_899@l
+/* 8028AA08 00000018  3C 80 80 3C */	lis r4, object_actor__lit_899@ha
+/* 8028AA0C 0000001C  38 A4 57 3C */	addi r5, r4, object_actor__lit_899@l
 /* 8028AA10 00000020  80 85 00 00 */	lwz r4, 0(r5)
 /* 8028AA14 00000024  80 05 00 04 */	lwz r0, 4(r5)
 /* 8028AA18 00000028  90 81 00 08 */	stw r4, 8(r1)

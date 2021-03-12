@@ -18,11 +18,11 @@ lbl_801016AC:
 /* 801016EC 00000040  38 A5 EB FC */	addi r5, r5, m__22daAlinkHIO_roofHang_c0@l
 /* 801016F0 00000044  4B FA BA 05 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 801016F4 00000048  7F C3 F3 78 */	mr r3, r30
-/* 801016F8 0000004C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 801016F8 0000004C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 801016FC 00000050  C0 5E 05 34 */	lfs f2, 0x534(r30)
 /* 80101700 00000054  38 80 00 00 */	li r4, 0
 /* 80101704 00000058  4B FB A0 6D */	bl setSpecialGravity__9daAlink_cFffi
-/* 80101708 0000005C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80101708 0000005C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010170C 00000060  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80101710 00000064  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 80101714 00000068  38 7E 28 0C */	addi r3, r30, 0x280c

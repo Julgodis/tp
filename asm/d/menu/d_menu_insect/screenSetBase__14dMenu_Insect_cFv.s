@@ -37,7 +37,7 @@ lbl_801D9674:
 lbl_801D96CC:
 /* 801D96CC 00000000  90 1D 00 64 */	stw r0, 0x64(r29)
 /* 801D96D0 00000004  80 7D 00 64 */	lwz r3, 0x64(r29)
-/* 801D96D4 00000008  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D96D4 00000008  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D96D8 0000000C  48 07 C0 F9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D96DC 00000010  3B 60 00 00 */	li r27, 0
 /* 801D96E0 00000014  3B 80 00 00 */	li r28, 0

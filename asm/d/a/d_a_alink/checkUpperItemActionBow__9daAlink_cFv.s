@@ -35,13 +35,13 @@ lbl_800DF104:
 /* 800DF13C 00000038  7C 03 00 00 */	cmpw r3, r0
 /* 800DF140 0000003C  41 81 00 44 */	bgt lbl_800DF184
 /* 800DF144 00000040  C0 1E 00 10 */	lfs f0, 0x10(r30)
-/* 800DF148 00000044  C0 22 93 A0 */	lfs f1, LIT_9054(r2)
+/* 800DF148 00000044  C0 22 93 A0 */	lfs f1, lit_9054(r2)
 /* 800DF14C 00000048  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 800DF150 00000000  40 80 00 34 */	bge lbl_800DF184
 /* 800DF154 00000004  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 800DF158 00000054  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 800DF15C 00000000  40 80 00 28 */	bge lbl_800DF184
-/* 800DF160 00000004  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DF160 00000004  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DF164 00000008  D0 1E 00 0C */	stfs f0, 0xc(r30)
 /* 800DF168 0000000C  48 00 00 1C */	b lbl_800DF184
 lbl_800DF16C:
@@ -127,9 +127,9 @@ lbl_800DF284:
 /* 800DF294 00000010  4B FD 33 71 */	bl itemButton__9daAlink_cFv
 /* 800DF298 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 800DF29C 00000018  40 82 04 90 */	bne lbl_800DF72C
-/* 800DF2A0 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DF2A0 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DF2A4 00000020  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 800DF2A8 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DF2A8 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DF2AC 00000028  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 800DF2B0 0000002C  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 800DF2B4 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -188,9 +188,9 @@ lbl_800DF378:
 /* 800DF378 00000000  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080003@ha */
 /* 800DF37C 00000004  3B A3 00 03 */	addi r29, r3, 0x0003 /* 0x00080003@l */
 lbl_800DF380:
-/* 800DF380 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DF380 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DF384 00000004  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 800DF388 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DF388 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DF38C 0000000C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 800DF390 00000010  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 800DF394 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -260,8 +260,8 @@ lbl_800DF468:
 /* 800DF480 00000018  41 82 02 AC */	beq lbl_800DF72C
 /* 800DF484 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800DF488 00000020  38 80 00 0A */	li r4, 0xa
-/* 800DF48C 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 800DF490 00000028  C0 42 92 BC */	lfs f2, d_a_d_a_alink__LIT_6041(r2)
+/* 800DF48C 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 800DF490 00000028  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
 /* 800DF494 0000002C  4B FC DF 15 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800DF498 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800DF49C 00000034  38 80 00 09 */	li r4, 9
@@ -277,11 +277,11 @@ lbl_800DF468:
 /* 800DF4C4 0000005C  41 82 02 68 */	beq lbl_800DF72C
 /* 800DF4C8 00000060  7F E3 FB 78 */	mr r3, r31
 /* 800DF4CC 00000064  38 80 00 42 */	li r4, 0x42
-/* 800DF4D0 00000068  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DF4D0 00000068  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DF4D4 0000006C  4B FE 0B B1 */	bl changeItemBck__9daAlink_cFUsf
-/* 800DF4D8 00000070  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DF4D8 00000070  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DF4DC 00000074  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 800DF4E0 00000078  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DF4E0 00000078  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DF4E4 0000007C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 800DF4E8 00000080  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 800DF4EC 00000084  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -322,7 +322,7 @@ lbl_800DF538:
 lbl_800DF570:
 /* 800DF570 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DF574 00000004  38 80 00 02 */	li r4, 2
-/* 800DF578 00000008  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800DF578 00000008  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800DF57C 0000000C  4B FC E1 A9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800DF580 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DF584 00000014  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -384,7 +384,7 @@ lbl_800DF648:
 /* 800DF648 00000000  28 00 00 0C */	cmplwi r0, 0xc
 /* 800DF64C 00000004  40 82 00 E0 */	bne lbl_800DF72C
 /* 800DF650 00000008  C0 3F 20 58 */	lfs f1, 0x2058(r31)
-/* 800DF654 0000000C  C0 02 93 44 */	lfs f0, LIT_7977(r2)
+/* 800DF654 0000000C  C0 02 93 44 */	lfs f0, lit_7977(r2)
 /* 800DF658 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DF65C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800DF660 00000004  40 82 00 10 */	bne lbl_800DF670
@@ -392,7 +392,7 @@ lbl_800DF648:
 /* 800DF668 0000000C  98 1F 2F 97 */	stb r0, 0x2f97(r31)
 /* 800DF66C 00000010  48 00 00 1C */	b lbl_800DF688
 lbl_800DF670:
-/* 800DF670 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DF670 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DF674 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DF678 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800DF67C 00000004  40 82 00 0C */	bne lbl_800DF688
@@ -409,7 +409,7 @@ lbl_800DF688:
 /* 800DF6A4 0000001C  41 82 00 34 */	beq lbl_800DF6D8
 /* 800DF6A8 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800DF6AC 00000024  38 80 00 02 */	li r4, 2
-/* 800DF6B0 00000028  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800DF6B0 00000028  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800DF6B4 0000002C  4B FC E0 71 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800DF6B8 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DF6BC 00000034  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l

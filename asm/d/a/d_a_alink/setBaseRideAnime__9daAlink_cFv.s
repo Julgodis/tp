@@ -19,7 +19,7 @@ lbl_800EED98:
 /* 800EEDDC 00000044  4B FF ED 6D */	bl getBaseHorseAnime__9daAlink_cFPQ29daAlink_c11daAlink_ANM
 /* 800EEDE0 00000048  7F C3 F3 78 */	mr r3, r30
 /* 800EEDE4 0000004C  C0 3F 05 9C */	lfs f1, 0x59c(r31)
-/* 800EEDE8 00000050  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 800EEDE8 00000050  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 800EEDEC 00000054  FC 60 10 90 */	fmr f3, f2
 /* 800EEDF0 00000058  80 81 00 08 */	lwz r4, 8(r1)
 /* 800EEDF4 0000005C  80 A1 00 0C */	lwz r5, 0xc(r1)

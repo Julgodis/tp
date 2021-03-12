@@ -5,36 +5,27 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_fmod();
+extern "C" extern void __ieee754_fmod();
 SECTION_RODATA extern const u8 Zero[16];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A2370-803A2380 0010 .rodata    Zero                                                         */
 SECTION_RODATA const u8 Zero[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80369B9C-80369ED8 033C .text      __ieee754_fmod                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ieee754_fmod() {
+extern "C" asm void __ieee754_fmod() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_fmod/__ieee754_fmod.s"
 }

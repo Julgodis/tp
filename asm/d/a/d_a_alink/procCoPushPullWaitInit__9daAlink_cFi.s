@@ -19,7 +19,7 @@ lbl_800E8460:
 /* 800E8468 00000008  38 00 00 00 */	li r0, 0
 /* 800E846C 0000000C  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 800E8470 00000010  93 DF 31 98 */	stw r30, 0x3198(r31)
-/* 800E8474 00000014  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E8474 00000014  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E8478 00000018  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E847C 0000001C  80 1F 05 74 */	lwz r0, 0x574(r31)
 /* 800E8480 00000020  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
@@ -30,7 +30,7 @@ lbl_800E8460:
 /* 800E8494 00000034  C4 25 F1 24 */	lfsu f1, m__20daAlinkHIO_wlPush_c0@l(r5)
 /* 800E8498 00000038  C0 45 00 04 */	lfs f2, 4(r5)
 /* 800E849C 0000003C  48 04 12 3D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
-/* 800E84A0 00000040  C0 42 93 00 */	lfs f2, LIT_6895(r2)
+/* 800E84A0 00000040  C0 42 93 00 */	lfs f2, lit_6895(r2)
 /* 800E84A4 00000044  48 00 00 44 */	b lbl_800E84E8
 lbl_800E84A8:
 /* 800E84A8 00000000  7F E3 FB 78 */	mr r3, r31
@@ -39,7 +39,7 @@ lbl_800E84A8:
 /* 800E84B4 0000000C  41 82 00 14 */	beq lbl_800E84C8
 /* 800E84B8 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800E84BC 00000014  38 80 00 02 */	li r4, 2
-/* 800E84C0 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800E84C0 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800E84C4 0000001C  4B FC 52 61 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800E84C8:
 /* 800E84C8 00000000  7F E3 FB 78 */	mr r3, r31
@@ -49,7 +49,7 @@ lbl_800E84C8:
 /* 800E84D8 00000010  C0 25 00 10 */	lfs f1, 0x10(r5)
 /* 800E84DC 00000014  C0 45 00 14 */	lfs f2, 0x14(r5)
 /* 800E84E0 00000018  4B FC 4B 01 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
-/* 800E84E4 0000001C  C0 42 93 00 */	lfs f2, LIT_6895(r2)
+/* 800E84E4 0000001C  C0 42 93 00 */	lfs f2, lit_6895(r2)
 lbl_800E84E8:
 /* 800E84E8 00000000  2C 1E 00 00 */	cmpwi r30, 0
 /* 800E84EC 00000004  41 82 00 60 */	beq lbl_800E854C

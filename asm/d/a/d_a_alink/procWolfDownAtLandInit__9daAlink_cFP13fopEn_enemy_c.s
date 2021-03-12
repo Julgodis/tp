@@ -25,7 +25,7 @@ lbl_8013B964:
 /* 8013B9C0 0000005C  A0 1F 05 8E */	lhz r0, 0x58e(r31)
 /* 8013B9C4 00000060  60 00 00 14 */	ori r0, r0, 0x14
 /* 8013B9C8 00000064  B0 1F 05 8E */	sth r0, 0x58e(r31)
-/* 8013B9CC 00000068  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013B9CC 00000068  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013B9D0 0000006C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 8013B9D4 00000070  7F C3 F3 78 */	mr r3, r30
 /* 8013B9D8 00000074  4B FF D3 E9 */	bl setWolfBallModel__9daAlink_cFv
@@ -36,9 +36,9 @@ lbl_8013B964:
 /* 8013B9EC 00000088  81 8C 01 14 */	lwz r12, 0x114(r12)
 /* 8013B9F0 0000008C  7D 89 03 A6 */	mtctr r12
 /* 8013B9F4 00000090  4E 80 04 21 */	bctrl 
-/* 8013B9F8 00000094  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013B9F8 00000094  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013B9FC 00000098  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013BA00 0000009C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 8013BA00 0000009C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 8013BA04 000000A0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8013BA08 000000A4  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8013BA0C 000000A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

@@ -82,7 +82,7 @@ lbl_801D4C04:
 /* 801D4C5C 0000003C  88 9F 12 27 */	lbz r4, 0x1227(r31)
 /* 801D4C60 00000040  4B FF DF 05 */	bl getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi
 /* 801D4C64 00000044  C0 5F 0F A0 */	lfs f2, 0xfa0(r31)
-/* 801D4C68 00000048  C0 02 A7 D4 */	lfs f0, LIT_3971(r2)
+/* 801D4C68 00000048  C0 02 A7 D4 */	lfs f0, lit_3971(r2)
 /* 801D4C6C 0000004C  EC 42 00 28 */	fsubs f2, f2, f0
 /* 801D4C70 00000050  EC 1F 08 28 */	fsubs f0, f31, f1
 /* 801D4C74 00000054  EC 02 00 32 */	fmuls f0, f2, f0
@@ -99,7 +99,7 @@ lbl_801D4C98:
 /* 801D4C9C 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
 /* 801D4CA0 00000008  C0 23 00 C0 */	lfs f1, 0xc0(r3)
 lbl_801D4CA4:
-/* 801D4CA4 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4260(r2)
+/* 801D4CA4 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__lit_4260(r2)
 /* 801D4CA8 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D4CAC 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 /* 801D4CB0 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha

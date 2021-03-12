@@ -14,7 +14,7 @@ lbl_800EC564:
 /* 800EC564 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800EC568 00000004  38 80 01 5D */	li r4, 0x15d
 /* 800EC56C 00000008  4B FC 0A 15 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 800EC570 0000000C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800EC570 0000000C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800EC574 00000010  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800EC578 00000014  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800EC57C 00000018  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)

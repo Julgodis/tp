@@ -5,36 +5,34 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __msl_strnicmp();
-extern void strnicmp();
-extern void stricmp();
+extern "C" extern void __msl_strnicmp();
+extern "C" extern void strnicmp();
+extern "C" extern void stricmp();
 SECTION_DATA extern u8 __lower_map[256];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036CA74-8036CA94 0020 .text      strnicmp                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void strnicmp() {
+extern "C" asm void strnicmp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/extras/strnicmp.s"
 }
 #pragma pop
 
+
 /* 8036CA94-8036CB20 008C .text      stricmp                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stricmp() {
+extern "C" asm void stricmp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/extras/stricmp.s"
 }

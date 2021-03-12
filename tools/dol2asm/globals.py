@@ -107,8 +107,18 @@ def register_symbol(symbol):
     MODULE_SYMBOL_LOOKUP[key].addi(start_offset, end_offset, symbol)
 
 def unregister_symbol(symbol):
-    # TODO:
-    pass
+    if symbol.size <= 0:
+        return
+
+    module = symbol.section.translation_unit.library.module.index
+    section = symbol.section.index
+    key = (module, section)
+    
+    start_offset = symbol.addr
+    if module != 0:
+        start_offset -= symbol.section.addr
+    end_offset = start_offset + symbol.size + symbol.padding
+    MODULE_SYMBOL_LOOKUP[key].remove_overlap(start_offset, end_offset)
 
 def lookup_symbol(relocation):
     key = (relocation.module, relocation.section)
@@ -130,12 +140,10 @@ def lookup_symbol(relocation):
     raise Dol2ZelException(f"symbol at offset (0x{relocation.symbol_offset:04x}) for relocation not found. no module ({key[0]}) and/or section ({key[1]}) {relocation}")
     #return data.Symbol(data.Identifier("fake", 0, None), 0, 0)
 
-# 800035e4
-# 80005518
-
 ENTRY_POINT = 0x80003154
 
-# from ghidra
+# Location where the rel are located. These are of course not their run-time location, but for referencing against 
+# Ghidra this is super useful.
 REL_TEMP_LOCATION = {
     "f_pc_profile_lst.rel": 0x80456be0,
     "d_a_andsw.rel": 0x80457900,
@@ -955,6 +963,14 @@ FOLDERS = [
     ("d_kankyo", "d/kankyo/"),
     ("d_save", "d/save/"),
     ("d_shop", "d/shop/"),
+    ("d_a_kytag", "d/a/kytag/"),
+    ("d_a_door_", "d/a/door/"),
+    ("d_a_e_", "d/a/e/"),
+    ("d_a_npc_", "d/a/npc/"),
+    ("d_a_obj_mirror_", "d/a/obj/mirror/"),
+    ("d_a_obj_", "d/a/obj/"),
+    ("d_a_tag_", "d/a/tag/"),
+    ("d_a_b_", "d/a/b/"),
     ("d_a_", "d/a/"),
     ("d_s_", "d/s/"),
     ("d_", "d/"),

@@ -20,7 +20,7 @@ lbl_8004B064:
 /* 8004B0AC 00000048  88 0D 89 1E */	lbz r0, struct_80450E9C+0x2(r13)
 /* 8004B0B0 0000004C  7C 00 07 75 */	extsb. r0, r0
 /* 8004B0B4 00000050  40 82 00 20 */	bne lbl_8004B0D4
-/* 8004B0B8 00000054  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004B0B8 00000054  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004B0BC 00000058  3C 60 80 42 */	lis r3, data_80424728@ha
 /* 8004B0C0 0000005C  D4 03 47 28 */	stfsu f0, data_80424728@l(r3)
 /* 8004B0C4 00000060  D0 03 00 04 */	stfs f0, 4(r3)

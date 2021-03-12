@@ -5,118 +5,100 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__5csXyzFv();
-extern void __ct__5csXyzFsss();
-extern void __pl__5csXyzFR5csXyz();
-extern void __apl__5csXyzFR5csXyz();
-extern void __mi__5csXyzFR5csXyz();
-extern void __ml__5csXyzFf();
-extern void __sinit_c_sxyz_cpp();
-extern void __register_global_object();
-SECTION_BSS extern u8 LIT_262[12 + 4 /* padding */];
+extern "C" extern void __dt__5csXyzFv();
+extern "C" extern void __ct__5csXyzFsss();
+extern "C" extern void __pl__5csXyzFR5csXyz();
+extern "C" extern void __apl__5csXyzFR5csXyz();
+extern "C" extern void __mi__5csXyzFR5csXyz();
+extern "C" extern void __ml__5csXyzFf();
+extern "C" extern void __sinit_c_sxyz_cpp();
+extern "C" extern void __register_global_object();
+SECTION_BSS extern u8 lit_262[12 + 4 /* padding */];
 SECTION_SBSS extern u8 Zero__5csXyz[4];
 SECTION_SBSS extern u8 data_80451164[4];
-SECTION_SDATA2 extern u8 c_sxyz__LIT_151[8];
-}
+SECTION_SDATA2 extern f64 c_sxyz__lit_151;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804550A0-804550A8 0008 .sdata2    @151                                                         */
-SECTION_SDATA2 u8 c_sxyz__LIT_151[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430DA8-80430DB8 000C .bss       @262                                                         */
-SECTION_BSS u8 LIT_262[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451160-80451164 0004 .sbss      Zero__5csXyz                                                 */
-SECTION_SBSS u8 Zero__5csXyz[4];
-/* 80451164-80451168 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451164[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802673F4-80267404 0010 .text      __ct__5csXyzFsss                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__5csXyzFsss() {
+extern "C" asm void __ct__5csXyzFsss() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__ct__5csXyzFsss.s"
 }
 #pragma pop
 
+
 /* 80267404-8026745C 0058 .text      __pl__5csXyzFR5csXyz                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __pl__5csXyzFR5csXyz() {
+extern "C" asm void __pl__5csXyzFR5csXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__pl__5csXyzFR5csXyz.s"
 }
 #pragma pop
 
+
 /* 8026745C-80267490 0034 .text      __apl__5csXyzFR5csXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __apl__5csXyzFR5csXyz() {
+extern "C" asm void __apl__5csXyzFR5csXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__apl__5csXyzFR5csXyz.s"
 }
 #pragma pop
 
+
 /* 80267490-802674E8 0058 .text      __mi__5csXyzFR5csXyz                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __mi__5csXyzFR5csXyz() {
+extern "C" asm void __mi__5csXyzFR5csXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__mi__5csXyzFR5csXyz.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550A0-804550A8 0008 .sdata2    @151                                                         */
+f64 c_sxyz__lit_151 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 802674E8-8026758C 00A4 .text      __ml__5csXyzFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ml__5csXyzFf() {
+extern "C" asm void __ml__5csXyzFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__ml__5csXyzFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80430DA8-80430DB8 000C .bss       @262                                                         */
+u8 lit_262[12 + 4 /* padding */];
+
+/* 80451160-80451164 0004 .sbss      Zero__5csXyz                                                 */
+u8 Zero__5csXyz[4];
+
+/* 80451164-80451168 0004 .sbss      None                                                         */
+u8 data_80451164[4];
+
 /* 8026758C-802675E4 0058 .text      __sinit_c_sxyz_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_c_sxyz_cpp() {
+extern "C" asm void __sinit_c_sxyz_cpp() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_sxyz/__sinit_c_sxyz_cpp.s"
 }

@@ -12,7 +12,7 @@ lbl_8024414C:
 /* 80244174 00000014  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80244178 00000018  EF E1 00 28 */	fsubs f31, f1, f0
 /* 8024417C 0000001C  48 01 01 E9 */	bl getGlobalPosY__8CPaneMgrFv
-/* 80244180 00000020  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80244180 00000020  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80244184 00000024  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 80244188 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 8024418C 0000002C  D0 1F 1B 08 */	stfs f0, 0x1b08(r31)
@@ -22,7 +22,7 @@ lbl_8024414C:
 /* 8024419C 0000003C  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 802441A0 00000040  EF E1 00 28 */	fsubs f31, f1, f0
 /* 802441A4 00000044  48 01 01 C1 */	bl getGlobalPosY__8CPaneMgrFv
-/* 802441A8 00000048  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 802441A8 00000048  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 802441AC 0000004C  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 802441B0 00000050  EC 01 00 2A */	fadds f0, f1, f0
 /* 802441B4 00000054  D0 1F 1B 0C */	stfs f0, 0x1b0c(r31)
@@ -32,7 +32,7 @@ lbl_8024414C:
 /* 802441C4 00000064  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 802441C8 00000068  EF E1 00 28 */	fsubs f31, f1, f0
 /* 802441CC 0000006C  48 01 01 99 */	bl getGlobalPosY__8CPaneMgrFv
-/* 802441D0 00000070  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 802441D0 00000070  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 802441D4 00000074  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 802441D8 00000078  EC 01 00 2A */	fadds f0, f1, f0
 /* 802441DC 0000007C  D0 1F 1B 10 */	stfs f0, 0x1b10(r31)

@@ -16,7 +16,7 @@ lbl_801CEC24:
 /* 801CEC5C 00000038  90 03 00 00 */	stw r0, 0(r3)
 /* 801CEC60 0000003C  38 A0 00 00 */	li r5, 0
 /* 801CEC64 00000040  90 A3 00 04 */	stw r5, 4(r3)
-/* 801CEC68 00000044  C0 02 A7 80 */	lfs f0, d_menu_d_menu_fmap_map__LIT_3703(r2)
+/* 801CEC68 00000044  C0 02 A7 80 */	lfs f0, d_menu_d_menu_fmap_map__lit_3703(r2)
 /* 801CEC6C 00000048  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801CEC70 0000004C  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 801CEC74 00000050  D0 03 00 10 */	stfs f0, 0x10(r3)

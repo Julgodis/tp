@@ -5,146 +5,121 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSReport();
-extern void OSGetArenaHi();
-extern void OSSetArenaHi();
-extern void DVDReadAbsAsyncForBS();
-extern void DVDReadDiskID();
-extern void DVDReset();
-extern void DVDGetDriveStatus();
-extern void cb();
-extern void __fstLoad();
-SECTION_DATA extern u8 LIT_38[28];
-SECTION_DATA extern u8 LIT_39[24];
-SECTION_DATA extern u8 LIT_40[20];
-SECTION_DATA extern u8 LIT_41[20];
-SECTION_DATA extern u8 LIT_44[20];
+extern "C" extern void OSReport();
+extern "C" extern void OSGetArenaHi();
+extern "C" extern void OSSetArenaHi();
+extern "C" extern void DVDReadAbsAsyncForBS();
+extern "C" extern void DVDReadDiskID();
+extern "C" extern void DVDReset();
+extern "C" extern void DVDGetDriveStatus();
+extern "C" extern void cb();
+extern "C" extern void __fstLoad();
+SECTION_DATA extern u8 lit_38[28];
+SECTION_DATA extern u8 lit_39[24];
+SECTION_DATA extern u8 lit_40[20];
+SECTION_DATA extern u8 lit_41[20];
+SECTION_DATA extern u8 lit_44[20];
 SECTION_BSS extern u8 bb2Buf[63 + 1 /* padding */];
 SECTION_BSS extern u8 data_8044C9F8[48];
-SECTION_SDATA extern u8 LIT_37[4];
-SECTION_SDATA extern u8 LIT_42[4];
-SECTION_SDATA extern u8 LIT_43[8];
+SECTION_SDATA extern u16 lit_37;
+SECTION_SDATA extern u32 lit_42;
+SECTION_SDATA extern u8 lit_43[8];
 SECTION_SBSS extern u8 status[4];
 SECTION_SBSS extern u8 bb2[4];
 SECTION_SBSS extern u8 idTmp[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803D16F0-803D16F0 0000 .data      ...data.0                                                    */
-/* 803D16F0-803D170C 001A .data      @38                                                          */
-SECTION_DATA u8 LIT_38[28] = {
-	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x4E, 0x61, 0x6D, 0x65, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
-	0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 803D170C-803D1724 0016 .data      @39                                                          */
-SECTION_DATA u8 LIT_39[24] = {
-	0x20, 0x20, 0x43, 0x6F, 0x6D, 0x70, 0x61, 0x6E, 0x79, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
-	0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 803D1724-803D1738 0014 .data      @40                                                          */
-SECTION_DATA u8 LIT_40[20] = {
-	0x20, 0x20, 0x44, 0x69, 0x73, 0x6B, 0x20, 0x23, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
-	0x25, 0x64, 0x0A, 0x00,
-};
-/* 803D1738-803D174C 0014 .data      @41                                                          */
-SECTION_DATA u8 LIT_41[20] = {
-	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x76, 0x65, 0x72, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
-	0x25, 0x64, 0x0A, 0x00,
-};
-/* 803D174C-803D1760 0014 .data      @44                                                          */
-SECTION_DATA u8 LIT_44[20] = {
-	0x20, 0x20, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x69, 0x6E, 0x67, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
-	0x25, 0x73, 0x0A, 0x00,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450A00-80450A04 0002 .sdata     @37                                                          */
-SECTION_SDATA u8 LIT_37[4] = {
-	0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 80450A04-80450A08 0004 .sdata     @42                                                          */
-SECTION_SDATA u8 LIT_42[4] = {
-	0x4F, 0x46, 0x46, 0x00,
-};
-/* 80450A08-80450A10 0003 .sdata     @43                                                          */
-SECTION_SDATA u8 LIT_43[8] = {
-	0x4F, 0x4E, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044C9B8-8044C9F8 003F .bss       bb2Buf                                                       */
-SECTION_BSS u8 bb2Buf[63 + 1 /* padding */];
-/* 8044C9F8-8044CA28 0030 .bss       block$18                                                     */
-SECTION_BSS u8 data_8044C9F8[48];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804517D0-804517D4 0004 .sbss      status                                                       */
-SECTION_SBSS u8 status[4];
+u8 status[4];
+
 /* 804517D4-804517D8 0004 .sbss      bb2                                                          */
-SECTION_SBSS u8 bb2[4];
+u8 bb2[4];
+
 /* 804517D8-804517E0 0004 .sbss      idTmp                                                        */
-SECTION_SBSS u8 idTmp[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 idTmp[4 + 4 /* padding */];
 
 /* 8034BD2C-8034BE04 00D8 .text      cb                                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cb() {
+extern "C" asm void cb() {
 	nofralloc
 #include "asm/dolphin/dvd/fstload/cb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803D16F0-803D170C 001A .data      @38                                                          */
+u8 lit_38[28] = {
+	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x4E, 0x61, 0x6D, 0x65, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
+	0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80450A00-80450A04 0002 .sdata     @37                                                          */
+u16 lit_37 = 0x0A00;
+/* padding 2 bytes */
+
+/* 80450A04-80450A08 0004 .sdata     @42                                                          */
+u32 lit_42 = 0x4F464600;
+
+/* 80450A08-80450A10 0003 .sdata     @43                                                          */
+u8 lit_43[8] = {
+	0x4F, 0x4E, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8044C9B8-8044C9F8 003F .bss       bb2Buf                                                       */
+u8 bb2Buf[63 + 1 /* padding */];
+
+/* 8044C9F8-8044CA28 0030 .bss       block$18                                                     */
+u8 data_8044C9F8[48];
+
 /* 8034BE04-8034BF6C 0168 .text      __fstLoad                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __fstLoad() {
+extern "C" asm void __fstLoad() {
 	nofralloc
 #include "asm/dolphin/dvd/fstload/__fstLoad.s"
 }
 #pragma pop
 
+
+/* 803D170C-803D1724 0016 .data      @39                                                          */
+u8 lit_39[24] = {
+	0x20, 0x20, 0x43, 0x6F, 0x6D, 0x70, 0x61, 0x6E, 0x79, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
+	0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 803D1724-803D1738 0014 .data      @40                                                          */
+u8 lit_40[20] = {
+	0x20, 0x20, 0x44, 0x69, 0x73, 0x6B, 0x20, 0x23, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
+	0x25, 0x64, 0x0A, 0x00,
+};
+
+/* 803D1738-803D174C 0014 .data      @41                                                          */
+u8 lit_41[20] = {
+	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x76, 0x65, 0x72, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
+	0x25, 0x64, 0x0A, 0x00,
+};
+
+/* 803D174C-803D1760 0014 .data      @44                                                          */
+u8 lit_44[20] = {
+	0x20, 0x20, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x69, 0x6E, 0x67, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
+	0x25, 0x73, 0x0A, 0x00,
+};
 

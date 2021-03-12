@@ -34,8 +34,8 @@ lbl_80076350:
 /* 800763D0 00000080  48 00 2C 25 */	bl __ct__12dBgS_RoofChkFv
 /* 800763D4 00000084  3C 80 80 08 */	lis r4, __dt__12dBgS_RoofChkFv@ha
 /* 800763D8 00000088  38 84 90 90 */	addi r4, r4, __dt__12dBgS_RoofChkFv@l
-/* 800763DC 0000008C  3C A0 80 42 */	lis r5, d_bg_d_bg_s_acch__LIT_4166@ha
-/* 800763E0 00000090  38 A5 4B 20 */	addi r5, r5, d_bg_d_bg_s_acch__LIT_4166@l
+/* 800763DC 0000008C  3C A0 80 42 */	lis r5, d_bg_d_bg_s_acch__lit_4166@ha
+/* 800763E0 00000090  38 A5 4B 20 */	addi r5, r5, d_bg_d_bg_s_acch__lit_4166@l
 /* 800763E4 00000094  48 2E B8 41 */	bl __register_global_object
 /* 800763E8 00000098  38 00 00 01 */	li r0, 1
 /* 800763EC 0000009C  98 0D 89 E8 */	stb r0, data_80450F68(r13)
@@ -58,7 +58,7 @@ lbl_800763F0:
 /* 8007642C 00000000  40 81 00 08 */	ble lbl_80076434
 /* 80076430 00000004  D0 21 00 0C */	stfs f1, 0xc(r1)
 lbl_80076434:
-/* 80076434 00000000  C0 02 8C C0 */	lfs f0, d_bg_d_bg_s_acch__LIT_4025(r2)
+/* 80076434 00000000  C0 02 8C C0 */	lfs f0, d_bg_d_bg_s_acch__lit_4025(r2)
 /* 80076438 00000004  D0 1E 00 94 */	stfs f0, 0x94(r30)
 /* 8007643C 00000008  38 7E 00 DC */	addi r3, r30, 0xdc
 /* 80076440 0000000C  38 81 00 08 */	addi r4, r1, 8
@@ -67,7 +67,7 @@ lbl_80076434:
 /* 8007644C 00000018  38 9E 00 DC */	addi r4, r30, 0xdc
 /* 80076450 0000001C  4B FF E0 51 */	bl GroundCross__4cBgSFP11cBgS_GndChk
 /* 80076454 00000020  D0 3E 00 98 */	stfs f1, 0x98(r30)
-/* 80076458 00000024  C0 02 8C C4 */	lfs f0, d_bg_d_bg_s_acch__LIT_4089(r2)
+/* 80076458 00000024  C0 02 8C C4 */	lfs f0, d_bg_d_bg_s_acch__lit_4089(r2)
 /* 8007645C 00000028  C0 3E 00 98 */	lfs f1, 0x98(r30)
 /* 80076460 0000002C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80076464 00000030  41 82 00 AC */	beq lbl_80076510
@@ -86,7 +86,7 @@ lbl_80076434:
 /* 80076498 00000018  80 7E 00 38 */	lwz r3, 0x38(r30)
 /* 8007649C 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 800764A0 00000020  41 82 00 0C */	beq lbl_800764AC
-/* 800764A4 00000024  C0 02 8C C0 */	lfs f0, d_bg_d_bg_s_acch__LIT_4025(r2)
+/* 800764A4 00000024  C0 02 8C C0 */	lfs f0, d_bg_d_bg_s_acch__lit_4025(r2)
 /* 800764A8 00000028  D0 03 00 04 */	stfs f0, 4(r3)
 lbl_800764AC:
 /* 800764AC 00000000  7F E3 FB 78 */	mr r3, r31

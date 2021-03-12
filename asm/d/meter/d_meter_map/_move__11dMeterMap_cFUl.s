@@ -114,7 +114,7 @@ lbl_8020DE6C:
 /* 8020DE8C 00000020  7F C3 F3 78 */	mr r3, r30
 /* 8020DE90 00000024  4B FF F8 9D */	bl getMapDispEdgeLeftX_Layout__11dMeterMap_cFv
 /* 8020DE94 00000028  A8 1E 00 28 */	lha r0, 0x28(r30)
-/* 8020DE98 0000002C  C8 42 AE 28 */	lfd f2, d_meter_d_meter_map__LIT_4100(r2)
+/* 8020DE98 0000002C  C8 42 AE 28 */	lfd f2, d_meter_d_meter_map__lit_4100(r2)
 /* 8020DE9C 00000030  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8020DEA0 00000034  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8020DEA4 00000038  3C 00 43 30 */	lis r0, 0x4330

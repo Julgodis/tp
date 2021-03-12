@@ -6,7 +6,7 @@ lbl_801C1C40:
 /* 801C1C50 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801C1C54 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801C1C58 00000018  7C 9F 23 78 */	mr r31, r4
-/* 801C1C5C 0000001C  C0 02 A6 60 */	lfs f0, d_menu_d_menu_dmap_map__LIT_3803(r2)
+/* 801C1C5C 0000001C  C0 02 A6 60 */	lfs f0, d_menu_d_menu_dmap_map__lit_3803(r2)
 /* 801C1C60 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 801C1C64 00000024  D0 01 00 08 */	stfs f0, 8(r1)
 /* 801C1C68 00000028  38 81 00 0C */	addi r4, r1, 0xc

@@ -5,50 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__4cXyzFv();
-extern void mDoMtx_ZXYrotM__FPA4_fsss();
-extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_restoreCurrentHeap__Fv();
-extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern void __ct__11J3DLightObjFv();
-extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
-extern void fopKyM_Delete__FPv();
-extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
-extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern void dkWmark_Create__FP12kankyo_class();
-extern void __dt__9dkWmark_cFv();
-extern void dkWmark_Delete__FP9dkWmark_c();
-extern void setMatrix__9dkWmark_cFv();
-extern void dkWmark_Execute__FP9dkWmark_c();
-extern void dkWmark_Draw__FP9dkWmark_c();
-extern void atan2sX_Z__4cXyzCFv();
-extern void cM_atan2s__Fff();
-extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
-extern void __dl__FPv();
-extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern void PSMTXCopy();
-extern void PSMTXTrans();
-extern void PSVECSquareMag();
-extern void __register_global_object();
-extern void __construct_array();
-extern void _savegpr_26();
-extern void _restgpr_26();
-extern void abs();
+extern "C" extern void __dt__4cXyzFv();
+extern "C" extern void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
+extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" extern void __ct__11J3DLightObjFv();
+extern "C" extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" extern void fopKyM_Delete__FPv();
+extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" extern void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" extern void dkWmark_Create__FP12kankyo_class();
+extern "C" extern void __dt__9dkWmark_cFv();
+extern "C" extern void dkWmark_Delete__FP9dkWmark_c();
+extern "C" extern void setMatrix__9dkWmark_cFv();
+extern "C" extern void dkWmark_Execute__FP9dkWmark_c();
+extern "C" extern void dkWmark_Draw__FP9dkWmark_c();
+extern "C" extern void atan2sX_Z__4cXyzCFv();
+extern "C" extern void cM_atan2s__Fff();
+extern "C" extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXTrans();
+extern "C" extern void PSVECSquareMag();
+extern "C" extern void __register_global_object();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
+extern "C" extern void abs();
 SECTION_RODATA extern const u8 data_8039A488[12];
 SECTION_RODATA extern const u8 d_d_k_wmark__stringBase0[12];
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern void* __vt__8cM3dGPla[3];
+SECTION_DATA extern void* const __vt__8cM3dGPla[3];
 SECTION_DATA extern void* g_fopKy_Method[6];
 SECTION_DATA extern void* g_fpcLf_Method[6];
 SECTION_DATA extern void* l_dkWmark_Method[5];
@@ -58,34 +57,37 @@ SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
-SECTION_BSS extern u8 LIT_3644[12];
+SECTION_BSS extern u8 lit_3644[12];
 SECTION_BSS extern u8 data_80430C9C[12];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA extern u8 __float_nan[4];
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 mGroundY__11fopAcM_gc_c[4];
 SECTION_SBSS extern u8 struct_80450D64[4];
 SECTION_SBSS extern u8 m_nowID__9dkWmark_c[4];
 SECTION_SBSS extern u8 data_80451134[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3718[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3719[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3720[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3844[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3845[8];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3846[8];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3847[8];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3848[8];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3873[4];
-SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3906[4];
-SECTION_SDATA2 extern u8 LIT_3908[8];
-}
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3718;
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3719;
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3720;
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3844;
+SECTION_SDATA2 extern u8 d_d_k_wmark__lit_3845[8];
+SECTION_SDATA2 extern f64 d_d_k_wmark__lit_3846;
+SECTION_SDATA2 extern f64 d_d_k_wmark__lit_3847;
+SECTION_SDATA2 extern u8 d_d_k_wmark__lit_3848[8];
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3873;
+SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3906;
+SECTION_SDATA2 extern f64 lit_3908;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 8039A488-8039A494 000C .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
+SECTION_RODATA const u8 data_8039A488[12] = {
+	0x00, 0x00, 0x00, 0x82, 0x5F, 0x4B, 0x32, 0x3C, 0x64, 0x6E, 0x78, 0x28,
+};
 
-extern "C" {
 /* 8039A494-8039A4A0 0006 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -94,28 +96,138 @@ SECTION_DEAD const char* const stringBase_8039A494 = "Alink";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039A49A = "\0\0\0\0\0";
 #pragma pop
-/* 8039A488-8039A494 000C .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
-SECTION_RODATA const u8 data_8039A488[12] = {
-	0x00, 0x00, 0x00, 0x82, 0x5F, 0x4B, 0x32, 0x3C, 0x64, 0x6E, 0x78, 0x28,
-};
+
+/* 80454FB0-80454FB4 0004 .sdata2    @3718                                                        */
+f32 d_d_k_wmark__lit_3718 = 11.0f / 10.0f;
+
+/* 80454FB4-80454FB8 0004 .sdata2    @3719                                                        */
+f32 d_d_k_wmark__lit_3719 = 1.0f;
+
+/* 80454FB8-80454FBC 0004 .sdata2    @3720                                                        */
+f32 d_d_k_wmark__lit_3720 = 3.0f / 5.0f;
+
+/* 80430C90-80430C9C 000C .bss       @3644                                                        */
+u8 lit_3644[12];
+
+/* 80430C9C-80430CA8 000C .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
+u8 data_80430C9C[12];
+
+/* 80451130-80451134 0004 .sbss      m_nowID__9dkWmark_c                                          */
+u8 m_nowID__9dkWmark_c[4];
+
+/* 80451134-80451138 0004 .sbss      None                                                         */
+u8 data_80451134[4];
+
+/* 8026141C-80261640 0224 .text      dkWmark_Create__FP12kankyo_class                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWmark_Create__FP12kankyo_class() {
+	nofralloc
+#include "asm/d/d_k_wmark/dkWmark_Create__FP12kankyo_class.s"
 }
+#pragma pop
+
+
+/* 80261640-8026169C 005C .text      __dt__9dkWmark_cFv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__9dkWmark_cFv() {
+	nofralloc
+#include "asm/d/d_k_wmark/__dt__9dkWmark_cFv.s"
+}
+#pragma pop
+
+
+/* 8026169C-802616C4 0028 .text      dkWmark_Delete__FP9dkWmark_c                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWmark_Delete__FP9dkWmark_c() {
+	nofralloc
+#include "asm/d/d_k_wmark/dkWmark_Delete__FP9dkWmark_c.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80454FBC-80454FC0 0004 .sdata2    @3844                                                        */
+f32 d_d_k_wmark__lit_3844 = 100.0f;
 
-extern "C" {
+/* 80454FC0-80454FC8 0004 .sdata2    @3845                                                        */
+u8 d_d_k_wmark__lit_3845[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80454FC8-80454FD0 0008 .sdata2    @3846                                                        */
+f64 d_d_k_wmark__lit_3846 = 0.5;
+
+/* 80454FD0-80454FD8 0008 .sdata2    @3847                                                        */
+f64 d_d_k_wmark__lit_3847 = 3.0;
+
+/* 80454FD8-80454FE0 0008 .sdata2    @3848                                                        */
+u8 d_d_k_wmark__lit_3848[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 802616C4-80261964 02A0 .text      setMatrix__9dkWmark_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMatrix__9dkWmark_cFv() {
+	nofralloc
+#include "asm/d/d_k_wmark/setMatrix__9dkWmark_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454FE0-80454FE4 0004 .sdata2    @3873                                                        */
+f32 d_d_k_wmark__lit_3873 = 1.0f / 50.0f;
+
+/* 80261964-80261A18 00B4 .text      dkWmark_Execute__FP9dkWmark_c                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWmark_Execute__FP9dkWmark_c() {
+	nofralloc
+#include "asm/d/d_k_wmark/dkWmark_Execute__FP9dkWmark_c.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454FE4-80454FE8 0004 .sdata2    @3906                                                        */
+f32 d_d_k_wmark__lit_3906 = 50.0f;
+
+/* 80454FE8-80454FF0 0008 .sdata2    @3908                                                        */
+f64 lit_3908 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 80261A18-80261B54 013C .text      dkWmark_Draw__FP9dkWmark_c                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWmark_Draw__FP9dkWmark_c() {
+	nofralloc
+#include "asm/d/d_k_wmark/dkWmark_Draw__FP9dkWmark_c.s"
+}
+#pragma pop
+
+
 /* 803C3430-803C3444 0014 .data      l_dkWmark_Method                                             */
-SECTION_DATA void* l_dkWmark_Method[5] = {
+void* l_dkWmark_Method[5] = {
 	(void*)dkWmark_Create__FP12kankyo_class,
 	(void*)dkWmark_Delete__FP9dkWmark_c,
 	(void*)dkWmark_Execute__FP9dkWmark_c,
 	NULL,
 	(void*)dkWmark_Draw__FP9dkWmark_c,
 };
+
 /* 803C3444-803C3470 0028 .data      g_profile_WMARK                                              */
-SECTION_DATA void* g_profile_WMARK[11] = {
+void* g_profile_WMARK[11] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,
 	(void*)0x03030000,
@@ -129,149 +241,4 @@ SECTION_DATA void* g_profile_WMARK[11] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454FB0-80454FB4 0004 .sdata2    @3718                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3718[4] = {
-	0x3F, 0x8C, 0xCC, 0xCD,
-};
-/* 80454FB4-80454FB8 0004 .sdata2    @3719                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3719[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454FB8-80454FBC 0004 .sdata2    @3720                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3720[4] = {
-	0x3F, 0x19, 0x99, 0x9A,
-};
-/* 80454FBC-80454FC0 0004 .sdata2    @3844                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3844[4] = {
-	0x42, 0xC8, 0x00, 0x00,
-};
-/* 80454FC0-80454FC8 0004 .sdata2    @3845                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3845[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454FC8-80454FD0 0008 .sdata2    @3846                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3846[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454FD0-80454FD8 0008 .sdata2    @3847                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3847[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454FD8-80454FE0 0008 .sdata2    @3848                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3848[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454FE0-80454FE4 0004 .sdata2    @3873                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3873[4] = {
-	0x3C, 0xA3, 0xD7, 0x0A,
-};
-/* 80454FE4-80454FE8 0004 .sdata2    @3906                                                        */
-SECTION_SDATA2 u8 d_d_k_wmark__LIT_3906[4] = {
-	0x42, 0x48, 0x00, 0x00,
-};
-/* 80454FE8-80454FF0 0008 .sdata2    @3908                                                        */
-SECTION_SDATA2 u8 LIT_3908[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430C90-80430C9C 000C .bss       @3644                                                        */
-SECTION_BSS u8 LIT_3644[12];
-/* 80430C9C-80430CA8 000C .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
-SECTION_BSS u8 data_80430C9C[12];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451130-80451134 0004 .sbss      m_nowID__9dkWmark_c                                          */
-SECTION_SBSS u8 m_nowID__9dkWmark_c[4];
-/* 80451134-80451138 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451134[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8026141C-80261640 0224 .text      dkWmark_Create__FP12kankyo_class                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWmark_Create__FP12kankyo_class() {
-	nofralloc
-#include "asm/d/d_k_wmark/dkWmark_Create__FP12kankyo_class.s"
-}
-#pragma pop
-
-/* 80261640-8026169C 005C .text      __dt__9dkWmark_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__9dkWmark_cFv() {
-	nofralloc
-#include "asm/d/d_k_wmark/__dt__9dkWmark_cFv.s"
-}
-#pragma pop
-
-/* 8026169C-802616C4 0028 .text      dkWmark_Delete__FP9dkWmark_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWmark_Delete__FP9dkWmark_c() {
-	nofralloc
-#include "asm/d/d_k_wmark/dkWmark_Delete__FP9dkWmark_c.s"
-}
-#pragma pop
-
-/* 802616C4-80261964 02A0 .text      setMatrix__9dkWmark_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMatrix__9dkWmark_cFv() {
-	nofralloc
-#include "asm/d/d_k_wmark/setMatrix__9dkWmark_cFv.s"
-}
-#pragma pop
-
-/* 80261964-80261A18 00B4 .text      dkWmark_Execute__FP9dkWmark_c                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWmark_Execute__FP9dkWmark_c() {
-	nofralloc
-#include "asm/d/d_k_wmark/dkWmark_Execute__FP9dkWmark_c.s"
-}
-#pragma pop
-
-/* 80261A18-80261B54 013C .text      dkWmark_Draw__FP9dkWmark_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWmark_Draw__FP9dkWmark_c() {
-	nofralloc
-#include "asm/d/d_k_wmark/dkWmark_Draw__FP9dkWmark_c.s"
-}
-#pragma pop
-
 

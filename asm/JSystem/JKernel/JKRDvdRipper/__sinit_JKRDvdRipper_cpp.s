@@ -9,8 +9,8 @@ lbl_802DA7DC:
 /* 802DA7F8 0000001C  38 63 43 84 */	addi r3, r3, sDvdAsyncList__12JKRDvdRipper@l
 /* 802DA7FC 00000020  3C 80 80 2E */	lis r4, func_802DA820@ha
 /* 802DA800 00000024  38 84 A8 20 */	addi r4, r4, func_802DA820@l
-/* 802DA804 00000028  3C A0 80 43 */	lis r5, JKRDvdRipper__LIT_491@ha
-/* 802DA808 0000002C  38 A5 43 78 */	addi r5, r5, JKRDvdRipper__LIT_491@l
+/* 802DA804 00000028  3C A0 80 43 */	lis r5, JKRDvdRipper__lit_491@ha
+/* 802DA808 0000002C  38 A5 43 78 */	addi r5, r5, JKRDvdRipper__lit_491@l
 /* 802DA80C 00000030  48 08 74 19 */	bl __register_global_object
 /* 802DA810 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DA814 00000038  7C 08 03 A6 */	mtlr r0

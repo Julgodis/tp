@@ -52,9 +52,9 @@ lbl_801CCF50:
 /* 801CCF58 00000008  38 A1 00 08 */	addi r5, r1, 8
 /* 801CCF5C 0000000C  C0 21 00 1C */	lfs f1, 0x1c(r1)
 /* 801CCF60 00000010  C0 41 00 24 */	lfs f2, 0x24(r1)
-/* 801CCF64 00000014  C0 82 A7 64 */	lfs f4, LIT_6987(r2)
+/* 801CCF64 00000014  C0 82 A7 64 */	lfs f4, lit_6987(r2)
 /* 801CCF68 00000018  7F E0 07 34 */	extsh r0, r31
-/* 801CCF6C 0000001C  C8 62 A7 40 */	lfd f3, d_menu_d_menu_fmap__LIT_4358(r2)
+/* 801CCF6C 0000001C  C8 62 A7 40 */	lfd f3, d_menu_d_menu_fmap__lit_4358(r2)
 /* 801CCF70 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801CCF74 00000024  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 801CCF78 00000028  3C 00 43 30 */	lis r0, 0x4330

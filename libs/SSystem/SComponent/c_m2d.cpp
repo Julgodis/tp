@@ -5,68 +5,55 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
-SECTION_SDATA extern u8 __float_nan[4];
+extern "C" extern void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_2266[4];
-SECTION_SDATA2 extern u8 LIT_2267[4];
-SECTION_SDATA2 extern u8 LIT_2268[4];
-SECTION_SDATA2 extern u8 c_m2d__LIT_2269[4];
-SECTION_SDATA2 extern u8 c_m2d__LIT_2270[8];
-SECTION_SDATA2 extern u8 LIT_2271[8];
-SECTION_SDATA2 extern u8 LIT_2272[8];
-}
+SECTION_SDATA2 extern f32 lit_2266;
+SECTION_SDATA2 extern f32 lit_2267;
+SECTION_SDATA2 extern u8 lit_2268[4];
+SECTION_SDATA2 extern f32 c_m2d__lit_2269;
+SECTION_SDATA2 extern f64 c_m2d__lit_2270;
+SECTION_SDATA2 extern f64 lit_2271;
+SECTION_SDATA2 extern u8 lit_2272[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804550F0-804550F4 0004 .sdata2    @2266                                                        */
-SECTION_SDATA2 u8 LIT_2266[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
+f32 lit_2266 = 2.0f;
+
 /* 804550F4-804550F8 0004 .sdata2    @2267                                                        */
-SECTION_SDATA2 u8 LIT_2267[4] = {
-	0x40, 0x80, 0x00, 0x00,
-};
+f32 lit_2267 = 4.0f;
+
 /* 804550F8-804550FC 0004 .sdata2    @2268                                                        */
-SECTION_SDATA2 u8 LIT_2268[4] = {
+u8 lit_2268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 804550FC-80455100 0004 .sdata2    @2269                                                        */
-SECTION_SDATA2 u8 c_m2d__LIT_2269[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 c_m2d__lit_2269 = 1.0f;
+
 /* 80455100-80455108 0008 .sdata2    @2270                                                        */
-SECTION_SDATA2 u8 c_m2d__LIT_2270[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 c_m2d__lit_2270 = 0.5;
+
 /* 80455108-80455110 0008 .sdata2    @2271                                                        */
-SECTION_SDATA2 u8 LIT_2271[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_2271 = 3.0;
+
 /* 80455110-80455118 0008 .sdata2    @2272                                                        */
-SECTION_SDATA2 u8 LIT_2272[8] = {
+u8 lit_2272[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80268260-80268560 0300 .text      cM2d_CrossCirLin__FR8cM2dGCirffffPfPf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf() {
+extern "C" asm void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m2d/cM2d_CrossCirLin__FR8cM2dGCirffffPfPf.s"
 }

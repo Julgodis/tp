@@ -7,8 +7,8 @@ lbl_80246390:
 /* 802463A4 00000014  4B FF F3 B9 */	bl __ct__19dMsgScrnLight_HIO_cFv
 /* 802463A8 00000018  3C 80 80 24 */	lis r4, __dt__19dMsgScrnLight_HIO_cFv@ha
 /* 802463AC 0000001C  38 84 63 48 */	addi r4, r4, __dt__19dMsgScrnLight_HIO_cFv@l
-/* 802463B0 00000020  3C A0 80 43 */	lis r5, LIT_3735@ha
-/* 802463B4 00000024  38 A5 06 C8 */	addi r5, r5, LIT_3735@l
+/* 802463B0 00000020  3C A0 80 43 */	lis r5, lit_3735@ha
+/* 802463B4 00000024  38 A5 06 C8 */	addi r5, r5, lit_3735@l
 /* 802463B8 00000028  48 11 B8 6D */	bl __register_global_object
 /* 802463BC 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802463C0 00000030  7C 08 03 A6 */	mtlr r0

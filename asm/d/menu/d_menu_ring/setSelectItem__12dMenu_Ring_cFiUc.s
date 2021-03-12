@@ -7,7 +7,7 @@ lbl_801EDB14:
 /* 801EDB28 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 801EDB2C 00000018  7C 9E 23 78 */	mr r30, r4
 /* 801EDB30 0000001C  7C BF 2B 78 */	mr r31, r5
-/* 801EDB34 00000020  C0 62 A9 9C */	lfs f3, d_menu_d_menu_ring__LIT_4305(r2)
+/* 801EDB34 00000020  C0 62 A9 9C */	lfs f3, d_menu_d_menu_ring__lit_4305(r2)
 /* 801EDB38 00000024  54 A0 06 3E */	clrlwi r0, r5, 0x18
 /* 801EDB3C 00000028  28 00 00 FF */	cmplwi r0, 0xff
 /* 801EDB40 0000002C  41 82 00 C4 */	beq lbl_801EDC04
@@ -53,13 +53,13 @@ lbl_801EDB68:
 /* 801EDBD8 00000070  1C 00 00 18 */	mulli r0, r0, 0x18
 /* 801EDBDC 00000074  7C 63 02 14 */	add r3, r3, r0
 /* 801EDBE0 00000078  88 03 00 12 */	lbz r0, 0x12(r3)
-/* 801EDBE4 0000007C  C8 22 A9 B8 */	lfd f1, d_menu_d_menu_ring__LIT_4312(r2)
+/* 801EDBE4 0000007C  C8 22 A9 B8 */	lfd f1, d_menu_d_menu_ring__lit_4312(r2)
 /* 801EDBE8 00000080  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801EDBEC 00000084  3C 00 43 30 */	lis r0, 0x4330
 /* 801EDBF0 00000088  90 01 00 18 */	stw r0, 0x18(r1)
 /* 801EDBF4 0000008C  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 801EDBF8 00000090  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801EDBFC 00000094  C0 02 A9 A0 */	lfs f0, d_menu_d_menu_ring__LIT_4306(r2)
+/* 801EDBFC 00000094  C0 02 A9 A0 */	lfs f0, d_menu_d_menu_ring__lit_4306(r2)
 /* 801EDC00 00000098  EC 61 00 24 */	fdivs f3, f1, f0
 lbl_801EDC04:
 /* 801EDC04 00000000  1C 1E 00 18 */	mulli r0, r30, 0x18
@@ -70,13 +70,13 @@ lbl_801EDC04:
 /* 801EDC18 00000014  38 E7 01 F0 */	addi r7, r7, 0x1f0
 /* 801EDC1C 00000018  7C 67 00 2E */	lwzx r3, r7, r0
 /* 801EDC20 0000001C  A0 03 00 02 */	lhz r0, 2(r3)
-/* 801EDC24 00000020  C8 42 A9 B8 */	lfd f2, d_menu_d_menu_ring__LIT_4312(r2)
+/* 801EDC24 00000020  C8 42 A9 B8 */	lfd f2, d_menu_d_menu_ring__lit_4312(r2)
 /* 801EDC28 00000024  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801EDC2C 00000028  3C A0 43 30 */	lis r5, 0x4330
 /* 801EDC30 0000002C  90 A1 00 18 */	stw r5, 0x18(r1)
 /* 801EDC34 00000030  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 801EDC38 00000034  EC 00 10 28 */	fsubs f0, f0, f2
-/* 801EDC3C 00000038  C0 22 A9 A4 */	lfs f1, d_menu_d_menu_ring__LIT_4307(r2)
+/* 801EDC3C 00000038  C0 22 A9 A4 */	lfs f1, d_menu_d_menu_ring__lit_4307(r2)
 /* 801EDC40 0000003C  EC 00 08 24 */	fdivs f0, f0, f1
 /* 801EDC44 00000040  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 801EDC48 00000044  57 C0 10 3A */	slwi r0, r30, 2

@@ -40,7 +40,7 @@ lbl_801B8FEC:
 /* 801B9020 00000034  3B DE 00 08 */	addi r30, r30, 8
 /* 801B9024 00000038  41 80 FF C8 */	blt lbl_801B8FEC
 /* 801B9028 0000003C  80 7F 0C E8 */	lwz r3, 0xce8(r31)
-/* 801B902C 00000040  C0 22 A6 0C */	lfs f1, d_menu_d_menu_dmap__LIT_4249(r2)
+/* 801B902C 00000040  C0 22 A6 0C */	lfs f1, d_menu_d_menu_dmap__lit_4249(r2)
 /* 801B9030 00000044  48 09 C7 A1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801B9034 00000048  48 00 00 70 */	b lbl_801B90A4
 lbl_801B9038:
@@ -70,7 +70,7 @@ lbl_801B9050:
 /* 801B9090 00000040  3B DE 00 08 */	addi r30, r30, 8
 /* 801B9094 00000044  41 80 FF BC */	blt lbl_801B9050
 /* 801B9098 00000048  80 7F 0C E8 */	lwz r3, 0xce8(r31)
-/* 801B909C 0000004C  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801B909C 0000004C  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801B90A0 00000050  48 09 C7 31 */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_801B90A4:
 /* 801B90A4 00000000  39 61 00 20 */	addi r11, r1, 0x20

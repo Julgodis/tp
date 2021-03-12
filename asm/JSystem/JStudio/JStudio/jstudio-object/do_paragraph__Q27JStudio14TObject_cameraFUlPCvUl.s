@@ -6,8 +6,8 @@ lbl_80286EB8:
 /* 80286EC8 00000010  48 0D B3 15 */	bl _savegpr_29
 /* 80286ECC 00000014  7C A8 2B 78 */	mr r8, r5
 /* 80286ED0 00000018  7C C9 33 78 */	mr r9, r6
-/* 80286ED4 0000001C  3C A0 80 3C */	lis r5, LIT_742@ha
-/* 80286ED8 00000020  38 A5 4B 00 */	addi r5, r5, LIT_742@l
+/* 80286ED4 0000001C  3C A0 80 3C */	lis r5, lit_742@ha
+/* 80286ED8 00000020  38 A5 4B 00 */	addi r5, r5, lit_742@l
 /* 80286EDC 00000024  83 E3 00 34 */	lwz r31, 0x34(r3)
 /* 80286EE0 00000028  28 1F 00 00 */	cmplwi r31, 0
 /* 80286EE4 0000002C  41 82 02 80 */	beq lbl_80287164
@@ -25,8 +25,8 @@ lbl_80286EB8:
 /* 80286F14 0000005C  38 8A FF EB */	addi r4, r10, -21
 /* 80286F18 00000060  28 04 00 3F */	cmplwi r4, 0x3f
 /* 80286F1C 00000064  41 81 02 48 */	bgt lbl_80287164
-/* 80286F20 00000068  3C 60 80 3C */	lis r3, jstudio_object__LIT_1491@ha
-/* 80286F24 0000006C  38 63 4D F0 */	addi r3, r3, jstudio_object__LIT_1491@l
+/* 80286F20 00000068  3C 60 80 3C */	lis r3, jstudio_object__lit_1491@ha
+/* 80286F24 0000006C  38 63 4D F0 */	addi r3, r3, jstudio_object__lit_1491@l
 /* 80286F28 00000070  54 84 10 3A */	slwi r4, r4, 2
 /* 80286F2C 00000074  7C 63 20 2E */	lwzx r3, r3, r4
 /* 80286F30 00000078  7C 69 03 A6 */	mtctr r3

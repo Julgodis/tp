@@ -1,0 +1,16 @@
+lbl_80D679C8:
+/* 80D679C8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D679CC 00000004  7C 08 02 A6 */	mflr r0
+/* 80D679D0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D679D4 0000000C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D679D8 00000010  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D679DC 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 80D679E0 00000018  80 63 00 04 */	lwz r3, 4(r3)
+/* 80D679E4 0000001C  3C A0 00 00 */	lis r5, lit_4139@ha
+/* 80D679E8 00000020  C0 25 00 00 */	lfs f1, lit_4139@l(r5)
+/* 80D679EC 00000024  FC 40 08 90 */	fmr f2, f1
+/* 80D679F0 00000028  4B FF F0 89 */	bl draw__9J2DScreenFffPC14J2DGrafContext
+/* 80D679F4 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D679F8 00000030  7C 08 03 A6 */	mtlr r0
+/* 80D679FC 00000034  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D67A00 00000038  4E 80 00 20 */	blr 

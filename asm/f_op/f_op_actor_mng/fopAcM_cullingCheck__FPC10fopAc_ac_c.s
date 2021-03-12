@@ -45,7 +45,7 @@ lbl_8001AD7C:
 /* 8001AD80 00000004  41 82 01 14 */	beq lbl_8001AE94
 /* 8001AD84 00000008  2C 03 00 0E */	cmpwi r3, 0xe
 /* 8001AD88 0000000C  40 82 00 80 */	bne lbl_8001AE08
-/* 8001AD8C 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001AD8C 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001AD90 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AD94 00000000  40 81 00 58 */	ble lbl_8001ADEC
 /* 8001AD98 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
@@ -82,7 +82,7 @@ lbl_8001AE08:
 /* 8001AE0C 00000004  3C 60 80 3A */	lis r3, l_cullSizeBox@ha
 /* 8001AE10 00000008  38 03 35 F0 */	addi r0, r3, l_cullSizeBox@l
 /* 8001AE14 0000000C  7F C0 22 14 */	add r30, r0, r4
-/* 8001AE18 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001AE18 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001AE1C 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AE20 00000000  40 81 00 58 */	ble lbl_8001AE78
 /* 8001AE24 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
@@ -117,7 +117,7 @@ lbl_8001AE78:
 lbl_8001AE94:
 /* 8001AE94 00000000  2C 03 00 17 */	cmpwi r3, 0x17
 /* 8001AE98 00000004  40 82 00 E0 */	bne lbl_8001AF78
-/* 8001AE9C 00000008  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001AE9C 00000008  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001AEA0 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AEA4 00000000  40 81 00 88 */	ble lbl_8001AF2C
 /* 8001AEA8 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
@@ -179,7 +179,7 @@ lbl_8001AF78:
 /* 8001AF80 00000008  3C 60 80 3A */	lis r3, l_cullSizeSphere@ha
 /* 8001AF84 0000000C  38 03 37 40 */	addi r0, r3, l_cullSizeSphere@l
 /* 8001AF88 00000010  7F A0 22 14 */	add r29, r0, r4
-/* 8001AF8C 00000014  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001AF8C 00000014  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001AF90 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AF94 00000000  40 81 00 7C */	ble lbl_8001B010
 /* 8001AF98 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)

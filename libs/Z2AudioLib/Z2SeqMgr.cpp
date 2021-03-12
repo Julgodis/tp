@@ -5,105 +5,104 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void calc__9JAISeqMgrFv();
-extern void stop__9JAISeqMgrFUl();
-extern void mixOut__9JAISeqMgrFv();
-extern void releaseSound__14JAISoundHandleFv();
-extern void releaseHandle__8JAISoundFv();
-extern void lockWhenPrepared__15JAISoundStatus_Fv();
-extern void unlockIfLocked__15JAISoundStatus_Fv();
-extern void stop__8JAISoundFUl();
-extern void stop__8JAISoundFv();
-extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern void movePan__18JAISoundParamsMoveFfUl();
-extern void moveDolby__18JAISoundParamsMoveFfUl();
-extern void stop__12JAIStreamMgrFUl();
-extern void linearTransform__6Z2CalcFfffffb();
-extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
-extern void __ct__8Z2SeqMgrFv();
-extern void bgmStart__8Z2SeqMgrFUlUll();
-extern void bgmStop__8Z2SeqMgrFUll();
-extern void subBgmStart__8Z2SeqMgrFUl();
-extern void subBgmStop__8Z2SeqMgrFv();
-extern void subBgmStopInner__8Z2SeqMgrFv();
-extern void bgmStreamPrepare__8Z2SeqMgrFUl();
-extern void bgmStreamCheckReady__8Z2SeqMgrFv();
-extern void bgmStreamPlay__8Z2SeqMgrFv();
-extern void bgmStreamStop__8Z2SeqMgrFUl();
-extern void changeBgmStatus__8Z2SeqMgrFl();
-extern void changeSubBgmStatus__8Z2SeqMgrFl();
-extern void onVariantBgmJumpEnd__8Z2SeqMgrFb();
-extern void changeFishingBgm__8Z2SeqMgrFl();
-extern void talkInBgm__8Z2SeqMgrFv();
-extern void talkOutBgm__8Z2SeqMgrFv();
-extern void menuInBgm__8Z2SeqMgrFv();
-extern void menuOutBgm__8Z2SeqMgrFv();
-extern void fanfareFramework__8Z2SeqMgrFv();
-extern void stopWolfHowlSong__8Z2SeqMgrFv();
-extern void setHeightVolMod__8Z2SeqMgrFbUl();
-extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
-extern void processBgmFramework__8Z2SeqMgrFv();
-extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
-extern void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
-extern void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
-extern void resetBattleBgmParams__8Z2SeqMgrFv();
-extern void setBattleBgmOff__8Z2SeqMgrFb();
-extern void setBattleSearched__8Z2SeqMgrFb();
-extern void setBattleDistIgnore__8Z2SeqMgrFb();
-extern void setBattleGhostMute__8Z2SeqMgrFb();
-extern void setBattleDistState__8Z2SeqMgrFUc();
-extern void setBattleSeqState__8Z2SeqMgrFUc();
-extern void setBattleLastHit__8Z2SeqMgrFUc();
-extern void battleBgmFramework__8Z2SeqMgrFv();
-extern void startBattleBgm__8Z2SeqMgrFb();
-extern void stopBattleBgm__8Z2SeqMgrFUcUc();
-extern void fieldBgmStart__8Z2SeqMgrFv();
-extern void fieldRidingMute__8Z2SeqMgrFv();
-extern void onFieldBgmJumpStart__8Z2SeqMgrFv();
-extern void onFieldBgmJumpEnd__8Z2SeqMgrFv();
-extern void fieldBgmFramework__8Z2SeqMgrFv();
-extern void mbossBgmMuteProcess__8Z2SeqMgrFv();
-extern void bgmSetSwordUsing__8Z2SeqMgrFl();
-extern void bgmNowBattle__8Z2SeqMgrFf();
-extern void taktModeMute__8Z2SeqMgrFv();
-extern void taktModeMuteOff__8Z2SeqMgrFv();
-extern void setDemoName__11Z2StatusMgrFPc();
-extern void checkDayTime__11Z2StatusMgrFv();
-extern void setSceneExist__10Z2SceneMgrFb();
-extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern void searchEnemy__13Z2SoundObjMgrFv();
-extern void setBattleInit__13Z2SoundObjMgrFv();
-extern void checkBattleFinish__13Z2SoundObjMgrFv();
-extern void isTwilightBattle__13Z2SoundObjMgrFv();
-extern void _savegpr_26();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_28();
-extern void _restgpr_29();
+extern "C" extern void calc__9JAISeqMgrFv();
+extern "C" extern void stop__9JAISeqMgrFUl();
+extern "C" extern void mixOut__9JAISeqMgrFv();
+extern "C" extern void releaseSound__14JAISoundHandleFv();
+extern "C" extern void releaseHandle__8JAISoundFv();
+extern "C" extern void lockWhenPrepared__15JAISoundStatus_Fv();
+extern "C" extern void unlockIfLocked__15JAISoundStatus_Fv();
+extern "C" extern void stop__8JAISoundFUl();
+extern "C" extern void stop__8JAISoundFv();
+extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" extern void movePan__18JAISoundParamsMoveFfUl();
+extern "C" extern void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" extern void stop__12JAIStreamMgrFUl();
+extern "C" extern void linearTransform__6Z2CalcFfffffb();
+extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" extern void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+extern "C" extern void __ct__8Z2SeqMgrFv();
+extern "C" extern void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" extern void bgmStop__8Z2SeqMgrFUll();
+extern "C" extern void subBgmStart__8Z2SeqMgrFUl();
+extern "C" extern void subBgmStop__8Z2SeqMgrFv();
+extern "C" extern void subBgmStopInner__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" extern void bgmStreamCheckReady__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" extern void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" extern void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" extern void onVariantBgmJumpEnd__8Z2SeqMgrFb();
+extern "C" extern void changeFishingBgm__8Z2SeqMgrFl();
+extern "C" extern void talkInBgm__8Z2SeqMgrFv();
+extern "C" extern void talkOutBgm__8Z2SeqMgrFv();
+extern "C" extern void menuInBgm__8Z2SeqMgrFv();
+extern "C" extern void menuOutBgm__8Z2SeqMgrFv();
+extern "C" extern void fanfareFramework__8Z2SeqMgrFv();
+extern "C" extern void stopWolfHowlSong__8Z2SeqMgrFv();
+extern "C" extern void setHeightVolMod__8Z2SeqMgrFbUl();
+extern "C" extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
+extern "C" extern void processBgmFramework__8Z2SeqMgrFv();
+extern "C" extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" extern void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
+extern "C" extern void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+extern "C" extern void resetBattleBgmParams__8Z2SeqMgrFv();
+extern "C" extern void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" extern void setBattleSearched__8Z2SeqMgrFb();
+extern "C" extern void setBattleDistIgnore__8Z2SeqMgrFb();
+extern "C" extern void setBattleGhostMute__8Z2SeqMgrFb();
+extern "C" extern void setBattleDistState__8Z2SeqMgrFUc();
+extern "C" extern void setBattleSeqState__8Z2SeqMgrFUc();
+extern "C" extern void setBattleLastHit__8Z2SeqMgrFUc();
+extern "C" extern void battleBgmFramework__8Z2SeqMgrFv();
+extern "C" extern void startBattleBgm__8Z2SeqMgrFb();
+extern "C" extern void stopBattleBgm__8Z2SeqMgrFUcUc();
+extern "C" extern void fieldBgmStart__8Z2SeqMgrFv();
+extern "C" extern void fieldRidingMute__8Z2SeqMgrFv();
+extern "C" extern void onFieldBgmJumpStart__8Z2SeqMgrFv();
+extern "C" extern void onFieldBgmJumpEnd__8Z2SeqMgrFv();
+extern "C" extern void fieldBgmFramework__8Z2SeqMgrFv();
+extern "C" extern void mbossBgmMuteProcess__8Z2SeqMgrFv();
+extern "C" extern void bgmSetSwordUsing__8Z2SeqMgrFl();
+extern "C" extern void bgmNowBattle__8Z2SeqMgrFf();
+extern "C" extern void taktModeMute__8Z2SeqMgrFv();
+extern "C" extern void taktModeMuteOff__8Z2SeqMgrFv();
+extern "C" extern void setDemoName__11Z2StatusMgrFPc();
+extern "C" extern void checkDayTime__11Z2StatusMgrFv();
+extern "C" extern void setSceneExist__10Z2SceneMgrFb();
+extern "C" extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" extern void searchEnemy__13Z2SoundObjMgrFv();
+extern "C" extern void setBattleInit__13Z2SoundObjMgrFv();
+extern "C" extern void checkBattleFinish__13Z2SoundObjMgrFv();
+extern "C" extern void isTwilightBattle__13Z2SoundObjMgrFv();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 Z2SeqMgr__stringBase0[640];
-SECTION_DATA extern u8 Z2SeqMgr__LIT_3900[660];
-SECTION_DATA extern u8 LIT_3988[636];
-SECTION_DATA extern void* Z2SeqMgr__LIT_4739[13];
-SECTION_DATA extern void* LIT_5219[47];
-SECTION_DATA extern void* LIT_5218[47];
-SECTION_DATA extern void* Z2SeqMgr__LIT_6877[21];
-SECTION_SDATA extern u8 VOL_BGM_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_BGM_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_BGM_PAUSING__7Z2Param[4];
+SECTION_DATA extern void* Z2SeqMgr__lit_3900[165];
+SECTION_DATA extern void* lit_3988[159];
+SECTION_DATA extern void* Z2SeqMgr__lit_4739[13];
+SECTION_DATA extern void* lit_5219[47];
+SECTION_DATA extern void* lit_5218[47];
+SECTION_DATA extern void* Z2SeqMgr__lit_6877[21];
+SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_BGM_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_BGM_PAUSING__7Z2Param;
 SECTION_SDATA extern u8 struct_80450860[4];
 SECTION_SDATA extern u8 struct_80450864[4];
 SECTION_SDATA extern u8 struct_80450868[4];
-SECTION_SDATA extern u8 data_8045086C[4];
-SECTION_SDATA extern u8 sDeathMtBottom[4];
-SECTION_SDATA extern u8 sDeathMtTop[4];
-SECTION_SDATA extern u8 sUnderWaterDepthMax[8];
+SECTION_SDATA extern u32 data_8045086C;
+SECTION_SDATA extern f32 sDeathMtBottom;
+SECTION_SDATA extern f32 sDeathMtTop;
+SECTION_SDATA extern f32 sUnderWaterDepthMax;
 SECTION_SBSS extern u8 data_80450B48[4];
 SECTION_SBSS extern u8 data_80450B60[4];
 SECTION_SBSS extern u8 data_80450B74[4];
@@ -112,42 +111,90 @@ SECTION_SBSS extern u8 data_80450B80[4];
 SECTION_SBSS extern u8 data_80450B84[4];
 SECTION_SBSS extern u8 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param[4];
 SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_3372[4];
-SECTION_SDATA2 extern u8 LIT_3373[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_3559[8];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_3561[8];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4726[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4727[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4728[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4729[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4730[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4731[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4732[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4733[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4734[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4735[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4736[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4737[4];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4738[8];
-SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4741[8];
-SECTION_SDATA2 extern u8 LIT_5673[4];
-SECTION_SDATA2 extern u8 LIT_5674[4];
-SECTION_SDATA2 extern u8 LIT_5675[4];
-SECTION_SDATA2 extern u8 LIT_5676[4];
-SECTION_SDATA2 extern u8 LIT_5677[4];
-SECTION_SDATA2 extern u8 LIT_5678[4];
-SECTION_SDATA2 extern u8 LIT_5679[4];
-SECTION_SDATA2 extern u8 LIT_5680[4];
-SECTION_SDATA2 extern u8 LIT_5681[4];
-SECTION_SDATA2 extern u8 LIT_5913[4];
+SECTION_SDATA2 extern f32 lit_3372;
+SECTION_SDATA2 extern u8 lit_3373[4];
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_3559;
+SECTION_SDATA2 extern f64 Z2SeqMgr__lit_3561;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4726;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4727;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4728;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4729;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4730;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4731;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4732;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4733;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4734;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4735;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4736;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4737;
+SECTION_SDATA2 extern f32 Z2SeqMgr__lit_4738;
+SECTION_SDATA2 extern f64 Z2SeqMgr__lit_4741;
+SECTION_SDATA2 extern f32 lit_5673;
+SECTION_SDATA2 extern f32 lit_5674;
+SECTION_SDATA2 extern f32 lit_5675;
+SECTION_SDATA2 extern f32 lit_5676;
+SECTION_SDATA2 extern f32 lit_5677;
+SECTION_SDATA2 extern f32 lit_5678;
+SECTION_SDATA2 extern f32 lit_5679;
+SECTION_SDATA2 extern f32 lit_5680;
+SECTION_SDATA2 extern f32 lit_5681;
+SECTION_SDATA2 extern f32 lit_5913;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80455998-8045599C 0004 .sdata2    @3372                                                        */
+f32 lit_3372 = 1.0f;
+
+/* 8045599C-804559A0 0004 .sdata2    @3373                                                        */
+u8 lit_3373[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 802AEEA0-802AF010 0170 .text      __ct__8Z2SeqMgrFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/__ct__8Z2SeqMgrFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 804559A0-804559A8 0004 .sdata2    @3559                                                        */
+f32 Z2SeqMgr__lit_3559 = -10000.0f;
+/* padding 4 bytes */
 
-extern "C" {
+/* 804559A8-804559B0 0008 .sdata2    @3561                                                        */
+f64 Z2SeqMgr__lit_3561 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 802AF010-802AF408 03F8 .text      bgmStart__8Z2SeqMgrFUlUll                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStart__8Z2SeqMgrFUlUll() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStart__8Z2SeqMgrFUlUll.s"
+}
+#pragma pop
+
+
+/* 802AF408-802AF49C 0094 .text      bgmStop__8Z2SeqMgrFUll                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStop__8Z2SeqMgrFUll() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStop__8Z2SeqMgrFUll.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039BA08-8039BC88 0280 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -236,104 +283,420 @@ SECTION_DEAD const char* const stringBase_8039BC6B = "D_SB10";
 SECTION_DEAD const char* const stringBase_8039BC72 = "force_start";
 SECTION_DEAD const char* const stringBase_8039BC7E = "force_end";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9DF8-803CA08C 0294 .data      @3900                                                        */
-SECTION_DATA u8 Z2SeqMgr__LIT_3900[660] = {
-	0x80, 0x2A, 0xF5, 0xE8, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x98, 0x80, 0x2A, 0xF5, 0x28,
-	0x80, 0x2A, 0xF5, 0xD4, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x10, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C,
-	0x80, 0x2A, 0xF6, 0x10, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0xD4, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF5, 0x34,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x80, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x80,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x34, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x1C,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF5, 0xD4, 0x80, 0x2A, 0xF5, 0x6C, 0x80, 0x2A, 0xF5, 0x80, 0x80, 0x2A, 0xF5, 0x8C,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC,
-	0x80, 0x2A, 0xF6, 0x1C, 0x80, 0x2A, 0xF5, 0xD4, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C,
-	0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x28, 0x80, 0x2A, 0xF5, 0x28,
-	0x80, 0x2A, 0xF5, 0xC0, 0x80, 0x2A, 0xF5, 0xC0, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x8C, 0x80, 0x2A, 0xF5, 0x6C, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x54,
-	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF5, 0x80, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
-	0x80, 0x2A, 0xF5, 0xE8,
+void* Z2SeqMgr__lit_3900[165] = {
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xFC),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x8C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x138),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x174),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x174),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x8C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x138),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x98),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xE4),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xE4),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x98),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x180),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x138),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xD0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xE4),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x180),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x138),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x8C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x8C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x8C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x124),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x124),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xF0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xD0),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xB8),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x50),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xE4),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
+	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 };
+
+/* 802AF49C-802AF884 03E8 .text      subBgmStart__8Z2SeqMgrFUl                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void subBgmStart__8Z2SeqMgrFUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStart__8Z2SeqMgrFUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CA08C-803CA308 027C .data      @3988                                                        */
-SECTION_DATA u8 LIT_3988[636] = {
-	0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC,
-	0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xE0, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x24,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0x00, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xE0,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x48,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x60, 0x80, 0x2A, 0xF9, 0xA8,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x90, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC,
-	0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x90,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC,
-	0x80, 0x2A, 0xF9, 0xA8, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0xB4,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18,
-	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x78,
+void* lit_3988[159] = {
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x5C),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xA0),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x7C),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x5C),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xC4),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xDC),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x124),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x10C),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x10C),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x124),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x94),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x130),
+	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xF4),
 };
+
+/* 802AF884-802AF9D0 014C .text      subBgmStop__8Z2SeqMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void subBgmStop__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStop__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802AF9D0-802AFB94 01C4 .text      subBgmStopInner__8Z2SeqMgrFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void subBgmStopInner__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStopInner__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802AFB94-802AFDEC 0258 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStreamPrepare__8Z2SeqMgrFUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPrepare__8Z2SeqMgrFUl.s"
+}
+#pragma pop
+
+
+/* 802AFDEC-802AFE18 002C .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStreamCheckReady__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamCheckReady__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802AFE18-802AFEDC 00C4 .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStreamPlay__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPlay__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802AFEDC-802AFF8C 00B0 .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void bgmStreamStop__8Z2SeqMgrFUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamStop__8Z2SeqMgrFUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CA308-803CA33C 0034 .data      @4739                                                        */
-SECTION_DATA void* Z2SeqMgr__LIT_4739[13] = {
+void* Z2SeqMgr__lit_4739[13] = {
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x428),
@@ -348,8 +711,152 @@ SECTION_DATA void* Z2SeqMgr__LIT_4739[13] = {
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x3C0),
 };
+
+/* 804559B0-804559B4 0004 .sdata2    @4726                                                        */
+f32 Z2SeqMgr__lit_4726 = 13.0f / 20.0f;
+
+/* 804559B4-804559B8 0004 .sdata2    @4727                                                        */
+f32 Z2SeqMgr__lit_4727 = -1.0f;
+
+/* 804559B8-804559BC 0004 .sdata2    @4728                                                        */
+f32 Z2SeqMgr__lit_4728 = 29.0f / 100.0f;
+
+/* 804559BC-804559C0 0004 .sdata2    @4729                                                        */
+f32 Z2SeqMgr__lit_4729 = 7.0f / 20.0f;
+
+/* 804559C0-804559C4 0004 .sdata2    @4730                                                        */
+f32 Z2SeqMgr__lit_4730 = 3.0f / 5.0f;
+
+/* 804559C4-804559C8 0004 .sdata2    @4731                                                        */
+f32 Z2SeqMgr__lit_4731 = 0.5f;
+
+/* 804559C8-804559CC 0004 .sdata2    @4732                                                        */
+f32 Z2SeqMgr__lit_4732 = 3.0f / 10.0f;
+
+/* 804559CC-804559D0 0004 .sdata2    @4733                                                        */
+f32 Z2SeqMgr__lit_4733 = 3100.0f;
+
+/* 804559D0-804559D4 0004 .sdata2    @4734                                                        */
+f32 Z2SeqMgr__lit_4734 = 200.0f;
+
+/* 804559D4-804559D8 0004 .sdata2    @4735                                                        */
+f32 Z2SeqMgr__lit_4735 = 1600.0f;
+
+/* 804559D8-804559DC 0004 .sdata2    @4736                                                        */
+f32 Z2SeqMgr__lit_4736 = 4.0f / 5.0f;
+
+/* 804559DC-804559E0 0004 .sdata2    @4737                                                        */
+f32 Z2SeqMgr__lit_4737 = 3150.0f;
+
+/* 804559E0-804559E8 0004 .sdata2    @4738                                                        */
+f32 Z2SeqMgr__lit_4738 = 6150.0f;
+/* padding 4 bytes */
+
+/* 804559E8-804559F0 0008 .sdata2    @4741                                                        */
+f64 Z2SeqMgr__lit_4741 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 802AFF8C-802B1DF4 1E68 .text      changeBgmStatus__8Z2SeqMgrFl                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void changeBgmStatus__8Z2SeqMgrFl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/changeBgmStatus__8Z2SeqMgrFl.s"
+}
+#pragma pop
+
+
+/* 802B1DF4-802B299C 0BA8 .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void changeSubBgmStatus__8Z2SeqMgrFl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/changeSubBgmStatus__8Z2SeqMgrFl.s"
+}
+#pragma pop
+
+
+/* 802B299C-802B2A88 00EC .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onVariantBgmJumpEnd__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/onVariantBgmJumpEnd__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* 802B2A88-802B2CA4 021C .text      changeFishingBgm__8Z2SeqMgrFl                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void changeFishingBgm__8Z2SeqMgrFl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/changeFishingBgm__8Z2SeqMgrFl.s"
+}
+#pragma pop
+
+
+/* 802B2CA4-802B2D64 00C0 .text      talkInBgm__8Z2SeqMgrFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkInBgm__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/talkInBgm__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B2D64-802B2DAC 0048 .text      talkOutBgm__8Z2SeqMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkOutBgm__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/talkOutBgm__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B2DAC-802B2DF4 0048 .text      menuInBgm__8Z2SeqMgrFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void menuInBgm__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/menuInBgm__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B2DF4-802B2E3C 0048 .text      menuOutBgm__8Z2SeqMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void menuOutBgm__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/menuOutBgm__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B2E3C-802B327C 0440 .text      fanfareFramework__8Z2SeqMgrFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fanfareFramework__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/fanfareFramework__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CA33C-803CA3F8 00BC .data      @5219                                                        */
-SECTION_DATA void* LIT_5219[47] = {
+void* lit_5219[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
@@ -398,8 +905,9 @@ SECTION_DATA void* LIT_5219[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 };
+
 /* 803CA3F8-803CA4B4 00BC .data      @5218                                                        */
-SECTION_DATA void* LIT_5218[47] = {
+void* lit_5218[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
@@ -448,8 +956,294 @@ SECTION_DATA void* LIT_5218[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 };
+
+/* 802B327C-802B3318 009C .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stopWolfHowlSong__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/stopWolfHowlSong__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B3318-802B3398 0080 .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setHeightVolMod__8Z2SeqMgrFbUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setHeightVolMod__8Z2SeqMgrFbUl.s"
+}
+#pragma pop
+
+
+/* 802B3398-802B33A8 0010 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setTimeProcVolMod__8Z2SeqMgrFbUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setTimeProcVolMod__8Z2SeqMgrFbUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80450870-80450874 0004 .sdata     sDeathMtBottom                                               */
+f32 sDeathMtBottom = -1000.0f;
+
+/* 80450874-80450878 0004 .sdata     sDeathMtTop                                                  */
+f32 sDeathMtTop = 3650.0f;
+
+/* 80450878-80450880 0004 .sdata     sUnderWaterDepthMax                                          */
+f32 sUnderWaterDepthMax = 3500.0f;
+/* padding 4 bytes */
+
+/* 804559F0-804559F4 0004 .sdata2    @5673                                                        */
+f32 lit_5673 = -10500.0f;
+
+/* 804559F4-804559F8 0004 .sdata2    @5674                                                        */
+f32 lit_5674 = -7500.0f;
+
+/* 804559F8-804559FC 0004 .sdata2    @5675                                                        */
+f32 lit_5675 = 1.0f / 10.0f;
+
+/* 804559FC-80455A00 0004 .sdata2    @5676                                                        */
+f32 lit_5676 = -1500.0f;
+
+/* 80455A00-80455A04 0004 .sdata2    @5677                                                        */
+f32 lit_5677 = -13000.0f;
+
+/* 80455A04-80455A08 0004 .sdata2    @5678                                                        */
+f32 lit_5678 = -4500.0f;
+
+/* 80455A08-80455A0C 0004 .sdata2    @5679                                                        */
+f32 lit_5679 = -45000.0f;
+
+/* 80455A0C-80455A10 0004 .sdata2    @5680                                                        */
+f32 lit_5680 = -3000.0f;
+
+/* 80455A10-80455A14 0004 .sdata2    @5681                                                        */
+f32 lit_5681 = 900.0f;
+
+/* 802B33A8-802B3EAC 0B04 .text      processBgmFramework__8Z2SeqMgrFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void processBgmFramework__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/processBgmFramework__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B3EAC-802B3F40 0094 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void checkBgmIDPlaying__8Z2SeqMgrFUl() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/checkBgmIDPlaying__8Z2SeqMgrFUl.s"
+}
+#pragma pop
+
+
+/* 802B3F40-802B3FEC 00AC .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei.s"
+}
+#pragma pop
+
+
+/* 802B3FEC-802B4128 013C .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff.s"
+}
+#pragma pop
+
+
+/* 802B4128-802B4164 003C .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetBattleBgmParams__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/resetBattleBgmParams__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B4164-802B421C 00B8 .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleBgmOff__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleBgmOff__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* 802B421C-802B43D0 01B4 .text      setBattleSearched__8Z2SeqMgrFb                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleSearched__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleSearched__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* 802B43D0-802B43E0 0010 .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleDistIgnore__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistIgnore__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455A14-80455A18 0004 .sdata2    @5913                                                        */
+f32 lit_5913 = 2.0f / 5.0f;
+
+/* 802B43E0-802B4498 00B8 .text      setBattleGhostMute__8Z2SeqMgrFb                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleGhostMute__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleGhostMute__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* 802B4498-802B4844 03AC .text      setBattleDistState__8Z2SeqMgrFUc                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleDistState__8Z2SeqMgrFUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistState__8Z2SeqMgrFUc.s"
+}
+#pragma pop
+
+
+/* 802B4844-802B4AFC 02B8 .text      setBattleSeqState__8Z2SeqMgrFUc                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleSeqState__8Z2SeqMgrFUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleSeqState__8Z2SeqMgrFUc.s"
+}
+#pragma pop
+
+
+/* 802B4AFC-802B4BD0 00D4 .text      setBattleLastHit__8Z2SeqMgrFUc                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setBattleLastHit__8Z2SeqMgrFUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/setBattleLastHit__8Z2SeqMgrFUc.s"
+}
+#pragma pop
+
+
+/* 802B4BD0-802B4EB0 02E0 .text      battleBgmFramework__8Z2SeqMgrFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void battleBgmFramework__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/battleBgmFramework__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B4EB0-802B5204 0354 .text      startBattleBgm__8Z2SeqMgrFb                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void startBattleBgm__8Z2SeqMgrFb() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/startBattleBgm__8Z2SeqMgrFb.s"
+}
+#pragma pop
+
+
+/* 802B5204-802B545C 0258 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stopBattleBgm__8Z2SeqMgrFUcUc() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/stopBattleBgm__8Z2SeqMgrFUcUc.s"
+}
+#pragma pop
+
+
+/* 802B545C-802B556C 0110 .text      fieldBgmStart__8Z2SeqMgrFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fieldBgmStart__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/fieldBgmStart__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B556C-802B5750 01E4 .text      fieldRidingMute__8Z2SeqMgrFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fieldRidingMute__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/fieldRidingMute__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B5750-802B579C 004C .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onFieldBgmJumpStart__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpStart__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B579C-802B594C 01B0 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void onFieldBgmJumpEnd__8Z2SeqMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpEnd__8Z2SeqMgrFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CA4B4-803CA508 0054 .data      @6877                                                        */
-SECTION_DATA void* Z2SeqMgr__LIT_6877[21] = {
+void* Z2SeqMgr__lit_6877[21] = {
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1C8),
@@ -472,624 +1266,67 @@ SECTION_DATA void* Z2SeqMgr__LIT_6877[21] = {
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450870-80450874 0004 .sdata     sDeathMtBottom                                               */
-SECTION_SDATA u8 sDeathMtBottom[4] = {
-	0xC4, 0x7A, 0x00, 0x00,
-};
-/* 80450874-80450878 0004 .sdata     sDeathMtTop                                                  */
-SECTION_SDATA u8 sDeathMtTop[4] = {
-	0x45, 0x64, 0x20, 0x00,
-};
-/* 80450878-80450880 0004 .sdata     sUnderWaterDepthMax                                          */
-SECTION_SDATA u8 sUnderWaterDepthMax[8] = {
-	0x45, 0x5A, 0xC0, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455998-8045599C 0004 .sdata2    @3372                                                        */
-SECTION_SDATA2 u8 LIT_3372[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 8045599C-804559A0 0004 .sdata2    @3373                                                        */
-SECTION_SDATA2 u8 LIT_3373[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804559A0-804559A8 0004 .sdata2    @3559                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_3559[8] = {
-	0xC6, 0x1C, 0x40, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804559A8-804559B0 0008 .sdata2    @3561                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_3561[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804559B0-804559B4 0004 .sdata2    @4726                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4726[4] = {
-	0x3F, 0x26, 0x66, 0x66,
-};
-/* 804559B4-804559B8 0004 .sdata2    @4727                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4727[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 804559B8-804559BC 0004 .sdata2    @4728                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4728[4] = {
-	0x3E, 0x94, 0x7A, 0xE1,
-};
-/* 804559BC-804559C0 0004 .sdata2    @4729                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4729[4] = {
-	0x3E, 0xB3, 0x33, 0x33,
-};
-/* 804559C0-804559C4 0004 .sdata2    @4730                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4730[4] = {
-	0x3F, 0x19, 0x99, 0x9A,
-};
-/* 804559C4-804559C8 0004 .sdata2    @4731                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4731[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 804559C8-804559CC 0004 .sdata2    @4732                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4732[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
-/* 804559CC-804559D0 0004 .sdata2    @4733                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4733[4] = {
-	0x45, 0x41, 0xC0, 0x00,
-};
-/* 804559D0-804559D4 0004 .sdata2    @4734                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4734[4] = {
-	0x43, 0x48, 0x00, 0x00,
-};
-/* 804559D4-804559D8 0004 .sdata2    @4735                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4735[4] = {
-	0x44, 0xC8, 0x00, 0x00,
-};
-/* 804559D8-804559DC 0004 .sdata2    @4736                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4736[4] = {
-	0x3F, 0x4C, 0xCC, 0xCD,
-};
-/* 804559DC-804559E0 0004 .sdata2    @4737                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4737[4] = {
-	0x45, 0x44, 0xE0, 0x00,
-};
-/* 804559E0-804559E8 0004 .sdata2    @4738                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4738[8] = {
-	0x45, 0xC0, 0x30, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804559E8-804559F0 0008 .sdata2    @4741                                                        */
-SECTION_SDATA2 u8 Z2SeqMgr__LIT_4741[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 804559F0-804559F4 0004 .sdata2    @5673                                                        */
-SECTION_SDATA2 u8 LIT_5673[4] = {
-	0xC6, 0x24, 0x10, 0x00,
-};
-/* 804559F4-804559F8 0004 .sdata2    @5674                                                        */
-SECTION_SDATA2 u8 LIT_5674[4] = {
-	0xC5, 0xEA, 0x60, 0x00,
-};
-/* 804559F8-804559FC 0004 .sdata2    @5675                                                        */
-SECTION_SDATA2 u8 LIT_5675[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 804559FC-80455A00 0004 .sdata2    @5676                                                        */
-SECTION_SDATA2 u8 LIT_5676[4] = {
-	0xC4, 0xBB, 0x80, 0x00,
-};
-/* 80455A00-80455A04 0004 .sdata2    @5677                                                        */
-SECTION_SDATA2 u8 LIT_5677[4] = {
-	0xC6, 0x4B, 0x20, 0x00,
-};
-/* 80455A04-80455A08 0004 .sdata2    @5678                                                        */
-SECTION_SDATA2 u8 LIT_5678[4] = {
-	0xC5, 0x8C, 0xA0, 0x00,
-};
-/* 80455A08-80455A0C 0004 .sdata2    @5679                                                        */
-SECTION_SDATA2 u8 LIT_5679[4] = {
-	0xC7, 0x2F, 0xC8, 0x00,
-};
-/* 80455A0C-80455A10 0004 .sdata2    @5680                                                        */
-SECTION_SDATA2 u8 LIT_5680[4] = {
-	0xC5, 0x3B, 0x80, 0x00,
-};
-/* 80455A10-80455A14 0004 .sdata2    @5681                                                        */
-SECTION_SDATA2 u8 LIT_5681[4] = {
-	0x44, 0x61, 0x00, 0x00,
-};
-/* 80455A14-80455A18 0004 .sdata2    @5913                                                        */
-SECTION_SDATA2 u8 LIT_5913[4] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802AEEA0-802AF010 0170 .text      __ct__8Z2SeqMgrFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/__ct__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802AF010-802AF408 03F8 .text      bgmStart__8Z2SeqMgrFUlUll                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStart__8Z2SeqMgrFUlUll() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStart__8Z2SeqMgrFUlUll.s"
-}
-#pragma pop
-
-/* 802AF408-802AF49C 0094 .text      bgmStop__8Z2SeqMgrFUll                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStop__8Z2SeqMgrFUll() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStop__8Z2SeqMgrFUll.s"
-}
-#pragma pop
-
-/* 802AF49C-802AF884 03E8 .text      subBgmStart__8Z2SeqMgrFUl                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void subBgmStart__8Z2SeqMgrFUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStart__8Z2SeqMgrFUl.s"
-}
-#pragma pop
-
-/* 802AF884-802AF9D0 014C .text      subBgmStop__8Z2SeqMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void subBgmStop__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStop__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802AF9D0-802AFB94 01C4 .text      subBgmStopInner__8Z2SeqMgrFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void subBgmStopInner__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/subBgmStopInner__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802AFB94-802AFDEC 0258 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStreamPrepare__8Z2SeqMgrFUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPrepare__8Z2SeqMgrFUl.s"
-}
-#pragma pop
-
-/* 802AFDEC-802AFE18 002C .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStreamCheckReady__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamCheckReady__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802AFE18-802AFEDC 00C4 .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStreamPlay__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPlay__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802AFEDC-802AFF8C 00B0 .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void bgmStreamStop__8Z2SeqMgrFUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamStop__8Z2SeqMgrFUl.s"
-}
-#pragma pop
-
-/* 802AFF8C-802B1DF4 1E68 .text      changeBgmStatus__8Z2SeqMgrFl                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void changeBgmStatus__8Z2SeqMgrFl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/changeBgmStatus__8Z2SeqMgrFl.s"
-}
-#pragma pop
-
-/* 802B1DF4-802B299C 0BA8 .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void changeSubBgmStatus__8Z2SeqMgrFl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/changeSubBgmStatus__8Z2SeqMgrFl.s"
-}
-#pragma pop
-
-/* 802B299C-802B2A88 00EC .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onVariantBgmJumpEnd__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/onVariantBgmJumpEnd__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B2A88-802B2CA4 021C .text      changeFishingBgm__8Z2SeqMgrFl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void changeFishingBgm__8Z2SeqMgrFl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/changeFishingBgm__8Z2SeqMgrFl.s"
-}
-#pragma pop
-
-/* 802B2CA4-802B2D64 00C0 .text      talkInBgm__8Z2SeqMgrFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkInBgm__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/talkInBgm__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B2D64-802B2DAC 0048 .text      talkOutBgm__8Z2SeqMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkOutBgm__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/talkOutBgm__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B2DAC-802B2DF4 0048 .text      menuInBgm__8Z2SeqMgrFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void menuInBgm__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/menuInBgm__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B2DF4-802B2E3C 0048 .text      menuOutBgm__8Z2SeqMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void menuOutBgm__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/menuOutBgm__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B2E3C-802B327C 0440 .text      fanfareFramework__8Z2SeqMgrFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fanfareFramework__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/fanfareFramework__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B327C-802B3318 009C .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stopWolfHowlSong__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/stopWolfHowlSong__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B3318-802B3398 0080 .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setHeightVolMod__8Z2SeqMgrFbUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setHeightVolMod__8Z2SeqMgrFbUl.s"
-}
-#pragma pop
-
-/* 802B3398-802B33A8 0010 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setTimeProcVolMod__8Z2SeqMgrFbUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setTimeProcVolMod__8Z2SeqMgrFbUl.s"
-}
-#pragma pop
-
-/* 802B33A8-802B3EAC 0B04 .text      processBgmFramework__8Z2SeqMgrFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void processBgmFramework__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/processBgmFramework__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B3EAC-802B3F40 0094 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void checkBgmIDPlaying__8Z2SeqMgrFUl() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/checkBgmIDPlaying__8Z2SeqMgrFUl.s"
-}
-#pragma pop
-
-/* 802B3F40-802B3FEC 00AC .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei.s"
-}
-#pragma pop
-
-/* 802B3FEC-802B4128 013C .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff.s"
-}
-#pragma pop
-
-/* 802B4128-802B4164 003C .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetBattleBgmParams__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/resetBattleBgmParams__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B4164-802B421C 00B8 .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleBgmOff__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleBgmOff__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B421C-802B43D0 01B4 .text      setBattleSearched__8Z2SeqMgrFb                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleSearched__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleSearched__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B43D0-802B43E0 0010 .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleDistIgnore__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistIgnore__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B43E0-802B4498 00B8 .text      setBattleGhostMute__8Z2SeqMgrFb                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleGhostMute__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleGhostMute__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B4498-802B4844 03AC .text      setBattleDistState__8Z2SeqMgrFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleDistState__8Z2SeqMgrFUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistState__8Z2SeqMgrFUc.s"
-}
-#pragma pop
-
-/* 802B4844-802B4AFC 02B8 .text      setBattleSeqState__8Z2SeqMgrFUc                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleSeqState__8Z2SeqMgrFUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleSeqState__8Z2SeqMgrFUc.s"
-}
-#pragma pop
-
-/* 802B4AFC-802B4BD0 00D4 .text      setBattleLastHit__8Z2SeqMgrFUc                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setBattleLastHit__8Z2SeqMgrFUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/setBattleLastHit__8Z2SeqMgrFUc.s"
-}
-#pragma pop
-
-/* 802B4BD0-802B4EB0 02E0 .text      battleBgmFramework__8Z2SeqMgrFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void battleBgmFramework__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/battleBgmFramework__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B4EB0-802B5204 0354 .text      startBattleBgm__8Z2SeqMgrFb                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void startBattleBgm__8Z2SeqMgrFb() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/startBattleBgm__8Z2SeqMgrFb.s"
-}
-#pragma pop
-
-/* 802B5204-802B545C 0258 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stopBattleBgm__8Z2SeqMgrFUcUc() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/stopBattleBgm__8Z2SeqMgrFUcUc.s"
-}
-#pragma pop
-
-/* 802B545C-802B556C 0110 .text      fieldBgmStart__8Z2SeqMgrFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fieldBgmStart__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/fieldBgmStart__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B556C-802B5750 01E4 .text      fieldRidingMute__8Z2SeqMgrFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fieldRidingMute__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/fieldRidingMute__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B5750-802B579C 004C .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onFieldBgmJumpStart__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpStart__8Z2SeqMgrFv.s"
-}
-#pragma pop
-
-/* 802B579C-802B594C 01B0 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void onFieldBgmJumpEnd__8Z2SeqMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpEnd__8Z2SeqMgrFv.s"
-}
-#pragma pop
 
 /* 802B594C-802B5E80 0534 .text      fieldBgmFramework__8Z2SeqMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fieldBgmFramework__8Z2SeqMgrFv() {
+extern "C" asm void fieldBgmFramework__8Z2SeqMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/fieldBgmFramework__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B5E80-802B5E84 0004 .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mbossBgmMuteProcess__8Z2SeqMgrFv() {
+extern "C" asm void mbossBgmMuteProcess__8Z2SeqMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/mbossBgmMuteProcess__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B5E84-802B5E88 0004 .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void bgmSetSwordUsing__8Z2SeqMgrFl() {
+extern "C" asm void bgmSetSwordUsing__8Z2SeqMgrFl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmSetSwordUsing__8Z2SeqMgrFl.s"
 }
 #pragma pop
 
+
 /* 802B5E88-802B5E8C 0004 .text      bgmNowBattle__8Z2SeqMgrFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void bgmNowBattle__8Z2SeqMgrFf() {
+extern "C" asm void bgmNowBattle__8Z2SeqMgrFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmNowBattle__8Z2SeqMgrFf.s"
 }
 #pragma pop
 
+
 /* 802B5E8C-802B5ED4 0048 .text      taktModeMute__8Z2SeqMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void taktModeMute__8Z2SeqMgrFv() {
+extern "C" asm void taktModeMute__8Z2SeqMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/taktModeMute__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B5ED4-802B5F1C 0048 .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void taktModeMuteOff__8Z2SeqMgrFv() {
+extern "C" asm void taktModeMuteOff__8Z2SeqMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/taktModeMuteOff__8Z2SeqMgrFv.s"
 }

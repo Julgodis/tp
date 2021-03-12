@@ -5,104 +5,314 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoMtx_XrotS__FPA4_fs();
-extern void mDoMtx_YrotS__FPA4_fs();
-extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern void rationalBezierRatio__8dCamMathFff();
-extern void zoomFovy__8dCamMathFff();
-extern void __dt__7cDegreeFv();
-extern void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
-extern void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
-extern void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
-extern void __ct__9dCstick_cFv();
-extern void Shift__9dCstick_cFUl();
-extern void __ct__11dCamBGChk_cFv();
-extern void __ct__11dCamParam_cFl();
-extern void __dt__11dCamParam_cFv();
-extern void Change__11dCamParam_cFl();
-extern void SearchStyle__11dCamParam_cFUl();
-extern void __ct__11dCamSetup_cFv();
-extern void __dt__11dCamSetup_cFv();
-extern void CheckLatitudeRange__11dCamSetup_cFPs();
-extern void PlayerHideDist__11dCamSetup_cFv();
-extern void __dt__9dCstick_cFv();
-extern void EventRecoverNotime__9dCamera_cFv();
-extern void dCam_getBody__Fv();
-extern void cM_atan2f__Fff();
-extern void __ct__7cDegreeFf();
-extern void Sin__7cDegreeCFv();
-extern void Cos__7cDegreeCFv();
-extern void __dl__FPv();
-extern void PSMTXMultVec();
-extern void sqrt();
+extern "C" extern void mDoMtx_XrotS__FPA4_fs();
+extern "C" extern void mDoMtx_YrotS__FPA4_fs();
+extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" extern void rationalBezierRatio__8dCamMathFff();
+extern "C" extern void zoomFovy__8dCamMathFff();
+extern "C" extern void __dt__7cDegreeFv();
+extern "C" extern void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
+extern "C" extern void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
+extern "C" extern void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
+extern "C" extern void __ct__9dCstick_cFv();
+extern "C" extern void Shift__9dCstick_cFUl();
+extern "C" extern void __ct__11dCamBGChk_cFv();
+extern "C" extern void __ct__11dCamParam_cFl();
+extern "C" extern void __dt__11dCamParam_cFv();
+extern "C" extern void Change__11dCamParam_cFl();
+extern "C" extern void SearchStyle__11dCamParam_cFUl();
+extern "C" extern void __ct__11dCamSetup_cFv();
+extern "C" extern void __dt__11dCamSetup_cFv();
+extern "C" extern void CheckLatitudeRange__11dCamSetup_cFPs();
+extern "C" extern void PlayerHideDist__11dCamSetup_cFv();
+extern "C" extern void __dt__9dCstick_cFv();
+extern "C" extern void EventRecoverNotime__9dCamera_cFv();
+extern "C" extern void dCam_getBody__Fv();
+extern "C" extern void cM_atan2f__Fff();
+extern "C" extern void __ct__7cDegreeFf();
+extern "C" extern void Sin__7cDegreeCFv();
+extern "C" extern void Cos__7cDegreeCFv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void sqrt();
 SECTION_RODATA extern const u8 d_d_cam_param__stringBase0[16];
-SECTION_DATA extern void* __vt__11dCamSetup_c[3];
-SECTION_DATA extern void* __vt__11dCamParam_c[3];
-SECTION_DATA extern void* __vt__9dCstick_c[4];
+SECTION_DATA extern void* const __vt__11dCamSetup_c[3];
+SECTION_DATA extern void* const __vt__11dCamParam_c[3];
+SECTION_DATA extern void* const __vt__9dCstick_c[4];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3769[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3770[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3771[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3772[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3773[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3774[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3775[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3776[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3777[8];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3791[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3807[4];
-SECTION_SDATA2 extern u8 LIT_3991[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_3992[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4001[4];
-SECTION_SDATA2 extern u8 LIT_4002[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4003[4];
-SECTION_SDATA2 extern u8 LIT_4004[4];
-SECTION_SDATA2 extern u8 LIT_4005[4];
-SECTION_SDATA2 extern u8 LIT_4006[4];
-SECTION_SDATA2 extern u8 LIT_4007[4];
-SECTION_SDATA2 extern u8 LIT_4008[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4009[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4010[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4011[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4012[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4013[4];
-SECTION_SDATA2 extern u8 LIT_4014[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4058[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4119[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4120[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4121[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4122[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4123[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4124[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4125[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4126[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4127[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4128[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4129[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4130[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4131[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4132[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4133[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4134[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4135[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4136[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4137[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4138[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4139[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4140[4];
-SECTION_SDATA2 extern u8 d_d_cam_param__LIT_4173[4];
+SECTION_SDATA2 extern u8 d_d_cam_param__lit_3769[8];
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3770;
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3771;
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3772;
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3773;
+SECTION_SDATA2 extern u8 d_d_cam_param__lit_3774[8];
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3775;
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3776;
+SECTION_SDATA2 extern f64 d_d_cam_param__lit_3777;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_3791;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_3807;
+SECTION_SDATA2 extern f32 lit_3991;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_3992;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4001;
+SECTION_SDATA2 extern f32 lit_4002;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4003;
+SECTION_SDATA2 extern f32 lit_4004;
+SECTION_SDATA2 extern f32 lit_4005;
+SECTION_SDATA2 extern f32 lit_4006;
+SECTION_SDATA2 extern f32 lit_4007;
+SECTION_SDATA2 extern f32 lit_4008;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4009;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4010;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4011;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4012;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4013;
+SECTION_SDATA2 extern f32 lit_4014;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4058;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4119;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4120;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4121;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4122;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4123;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4124;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4125;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4126;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4127;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4128;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4129;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4130;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4131;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4132;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4133;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4134;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4135;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4136;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4137;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4138;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4139;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4140;
+SECTION_SDATA2 extern f32 d_d_cam_param__lit_4173;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 804527C8-804527D0 0004 .sdata2    @3769                                                        */
+u8 d_d_cam_param__lit_3769[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804527D0-804527D8 0008 .sdata2    @3770                                                        */
+f64 d_d_cam_param__lit_3770 = 1.0;
+
+/* 804527D8-804527E0 0008 .sdata2    @3771                                                        */
+f64 d_d_cam_param__lit_3771 = -1.0;
+
+/* 804527E0-804527E8 0008 .sdata2    @3772                                                        */
+f64 d_d_cam_param__lit_3772 = 2.0;
+
+/* 804527E8-804527F0 0008 .sdata2    @3773                                                        */
+f64 d_d_cam_param__lit_3773 = 4.0;
+
+/* 804527F0-804527F8 0008 .sdata2    @3774                                                        */
+u8 d_d_cam_param__lit_3774[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804527F8-80452800 0008 .sdata2    @3775                                                        */
+f64 d_d_cam_param__lit_3775 = 1e-07;
+
+/* 80452800-80452808 0008 .sdata2    @3776                                                        */
+f64 d_d_cam_param__lit_3776 = -1e-07;
+
+/* 80452808-80452810 0008 .sdata2    @3777                                                        */
+f64 d_d_cam_param__lit_3777 = 1.0000000116860974e-07;
+
+/* 8008813C-80088284 0148 .text      rationalBezierRatio__8dCamMathFff                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void rationalBezierRatio__8dCamMathFff() {
+	nofralloc
+#include "asm/d/d_cam_param/rationalBezierRatio__8dCamMathFff.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80452810-80452814 0004 .sdata2    @3791                                                        */
+f32 d_d_cam_param__lit_3791 = 1.0f;
 
-extern "C" {
+/* 80452814-80452818 0004 .sdata2    @3807                                                        */
+f32 d_d_cam_param__lit_3807 = 57.2957763671875f;
+
+/* 80088284-800882E0 005C .text      zoomFovy__8dCamMathFff                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void zoomFovy__8dCamMathFff() {
+	nofralloc
+#include "asm/d/d_cam_param/zoomFovy__8dCamMathFff.s"
+}
+#pragma pop
+
+
+/* 800882E0-8008831C 003C .text      __dt__7cDegreeFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__7cDegreeFv() {
+	nofralloc
+#include "asm/d/d_cam_param/__dt__7cDegreeFv.s"
+}
+#pragma pop
+
+
+/* 8008831C-80088384 0068 .text      xyzRotateX__8dCamMathFR4cXyz7cSAngle                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void xyzRotateX__8dCamMathFR4cXyz7cSAngle() {
+	nofralloc
+#include "asm/d/d_cam_param/xyzRotateX__8dCamMathFR4cXyz7cSAngle.s"
+}
+#pragma pop
+
+
+/* 80088384-800883EC 0068 .text      xyzRotateY__8dCamMathFR4cXyz7cSAngle                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void xyzRotateY__8dCamMathFR4cXyz7cSAngle() {
+	nofralloc
+#include "asm/d/d_cam_param/xyzRotateY__8dCamMathFR4cXyz7cSAngle.s"
+}
+#pragma pop
+
+
+/* 800883EC-80088434 0048 .text      xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz() {
+	nofralloc
+#include "asm/d/d_cam_param/xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 803AC500-803AC50C 000C .data      __vt__11dCamSetup_c                                          */
+void* const __vt__11dCamSetup_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__11dCamSetup_cFv,
+};
+
+/* 803AC50C-803AC518 000C .data      __vt__11dCamParam_c                                          */
+void* const __vt__11dCamParam_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__11dCamParam_cFv,
+};
+
+/* 803AC518-803AC528 000C .data      __vt__9dCstick_c                                             */
+void* const __vt__9dCstick_c[4] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__9dCstick_cFv,
+	/* padding */
+	NULL,
+};
+
+/* 80452818-8045281C 0004 .sdata2    @3991                                                        */
+f32 lit_3991 = 1.0f / 5.0f;
+
+/* 8045281C-80452820 0004 .sdata2    @3992                                                        */
+f32 d_d_cam_param__lit_3992 = 19.0f / 20.0f;
+
+/* 80088434-8008845C 0028 .text      __ct__9dCstick_cFv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__9dCstick_cFv() {
+	nofralloc
+#include "asm/d/d_cam_param/__ct__9dCstick_cFv.s"
+}
+#pragma pop
+
+
+/* 8008845C-80088464 0008 .text      Shift__9dCstick_cFUl                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void Shift__9dCstick_cFUl() {
+	nofralloc
+#include "asm/d/d_cam_param/Shift__9dCstick_cFUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80452820-80452824 0004 .sdata2    @4001                                                        */
+f32 d_d_cam_param__lit_4001 = 32.0f;
+
+/* 80452824-80452828 0004 .sdata2    @4002                                                        */
+f32 lit_4002 = 25.0f;
+
+/* 80452828-8045282C 0004 .sdata2    @4003                                                        */
+f32 d_d_cam_param__lit_4003 = 2.0f / 5.0f;
+
+/* 8045282C-80452830 0004 .sdata2    @4004                                                        */
+f32 lit_4004 = 3.0f / 5.0f;
+
+/* 80452830-80452834 0004 .sdata2    @4005                                                        */
+f32 lit_4005 = 3.0f;
+
+/* 80452834-80452838 0004 .sdata2    @4006                                                        */
+f32 lit_4006 = 15.0f;
+
+/* 80452838-8045283C 0004 .sdata2    @4007                                                        */
+f32 lit_4007 = 0.5f;
+
+/* 8045283C-80452840 0004 .sdata2    @4008                                                        */
+f32 lit_4008 = 3.0f / 10.0f;
+
+/* 80452840-80452844 0004 .sdata2    @4009                                                        */
+f32 d_d_cam_param__lit_4009 = 10.0f;
+
+/* 80452844-80452848 0004 .sdata2    @4010                                                        */
+f32 d_d_cam_param__lit_4010 = 1.0f / 10.0f;
+
+/* 80452848-8045284C 0004 .sdata2    @4011                                                        */
+f32 d_d_cam_param__lit_4011 = 0.75f;
+
+/* 8045284C-80452850 0004 .sdata2    @4012                                                        */
+f32 d_d_cam_param__lit_4012 = 80.0f;
+
+/* 80452850-80452854 0004 .sdata2    @4013                                                        */
+f32 d_d_cam_param__lit_4013 = 2.0f / 25.0f;
+
+/* 80452854-80452858 0004 .sdata2    @4014                                                        */
+f32 lit_4014 = 120.0f;
+
+/* 80088464-800884F0 008C .text      __ct__11dCamBGChk_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__11dCamBGChk_cFv() {
+	nofralloc
+#include "asm/d/d_cam_param/__ct__11dCamBGChk_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8037A7E0-8037A7F0 000D .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -111,430 +321,174 @@ SECTION_DEAD const char* const stringBase_8037A7E0 = "camstyle.dat";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8037A7ED = "\0\0";
 #pragma pop
-}
-
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803AC500-803AC50C 000C .data      __vt__11dCamSetup_c                                          */
-SECTION_DATA void* __vt__11dCamSetup_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__11dCamSetup_cFv,
-};
-/* 803AC50C-803AC518 000C .data      __vt__11dCamParam_c                                          */
-SECTION_DATA void* __vt__11dCamParam_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__11dCamParam_cFv,
-};
-/* 803AC518-803AC528 000C .data      __vt__9dCstick_c                                             */
-SECTION_DATA void* __vt__9dCstick_c[4] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__9dCstick_cFv,
-	/* padding */
-	NULL,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804527C8-804527D0 0004 .sdata2    @3769                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3769[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804527D0-804527D8 0008 .sdata2    @3770                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3770[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804527D8-804527E0 0008 .sdata2    @3771                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3771[8] = {
-	0xBF, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804527E0-804527E8 0008 .sdata2    @3772                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3772[8] = {
-	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804527E8-804527F0 0008 .sdata2    @3773                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3773[8] = {
-	0x40, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804527F0-804527F8 0008 .sdata2    @3774                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3774[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804527F8-80452800 0008 .sdata2    @3775                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3775[8] = {
-	0x3E, 0x7A, 0xD7, 0xF2, 0x9A, 0xBC, 0xAF, 0x48,
-};
-/* 80452800-80452808 0008 .sdata2    @3776                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3776[8] = {
-	0xBE, 0x7A, 0xD7, 0xF2, 0x9A, 0xBC, 0xAF, 0x48,
-};
-/* 80452808-80452810 0008 .sdata2    @3777                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3777[8] = {
-	0x3E, 0x7A, 0xD7, 0xF2, 0xA0, 0x00, 0x00, 0x00,
-};
-/* 80452810-80452814 0004 .sdata2    @3791                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3791[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80452814-80452818 0004 .sdata2    @3807                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3807[4] = {
-	0x42, 0x65, 0x2E, 0xE0,
-};
-/* 80452818-8045281C 0004 .sdata2    @3991                                                        */
-SECTION_SDATA2 u8 LIT_3991[4] = {
-	0x3E, 0x4C, 0xCC, 0xCD,
-};
-/* 8045281C-80452820 0004 .sdata2    @3992                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_3992[4] = {
-	0x3F, 0x73, 0x33, 0x33,
-};
-/* 80452820-80452824 0004 .sdata2    @4001                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4001[4] = {
-	0x42, 0x00, 0x00, 0x00,
-};
-/* 80452824-80452828 0004 .sdata2    @4002                                                        */
-SECTION_SDATA2 u8 LIT_4002[4] = {
-	0x41, 0xC8, 0x00, 0x00,
-};
-/* 80452828-8045282C 0004 .sdata2    @4003                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4003[4] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-};
-/* 8045282C-80452830 0004 .sdata2    @4004                                                        */
-SECTION_SDATA2 u8 LIT_4004[4] = {
-	0x3F, 0x19, 0x99, 0x9A,
-};
-/* 80452830-80452834 0004 .sdata2    @4005                                                        */
-SECTION_SDATA2 u8 LIT_4005[4] = {
-	0x40, 0x40, 0x00, 0x00,
-};
-/* 80452834-80452838 0004 .sdata2    @4006                                                        */
-SECTION_SDATA2 u8 LIT_4006[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-/* 80452838-8045283C 0004 .sdata2    @4007                                                        */
-SECTION_SDATA2 u8 LIT_4007[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 8045283C-80452840 0004 .sdata2    @4008                                                        */
-SECTION_SDATA2 u8 LIT_4008[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
-/* 80452840-80452844 0004 .sdata2    @4009                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4009[4] = {
-	0x41, 0x20, 0x00, 0x00,
-};
-/* 80452844-80452848 0004 .sdata2    @4010                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4010[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 80452848-8045284C 0004 .sdata2    @4011                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4011[4] = {
-	0x3F, 0x40, 0x00, 0x00,
-};
-/* 8045284C-80452850 0004 .sdata2    @4012                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4012[4] = {
-	0x42, 0xA0, 0x00, 0x00,
-};
-/* 80452850-80452854 0004 .sdata2    @4013                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4013[4] = {
-	0x3D, 0xA3, 0xD7, 0x0A,
-};
-/* 80452854-80452858 0004 .sdata2    @4014                                                        */
-SECTION_SDATA2 u8 LIT_4014[4] = {
-	0x42, 0xF0, 0x00, 0x00,
-};
-/* 80452858-8045285C 0004 .sdata2    @4058                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4058[4] = {
-	0x3E, 0x80, 0x00, 0x00,
-};
-/* 8045285C-80452860 0004 .sdata2    @4119                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4119[4] = {
-	0x47, 0xC3, 0x50, 0x00,
-};
-/* 80452860-80452864 0004 .sdata2    @4120                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4120[4] = {
-	0x3D, 0x4C, 0xCC, 0xCD,
-};
-/* 80452864-80452868 0004 .sdata2    @4121                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4121[4] = {
-	0xC2, 0x70, 0x00, 0x00,
-};
-/* 80452868-8045286C 0004 .sdata2    @4122                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4122[4] = {
-	0x3E, 0xA8, 0xF5, 0xC3,
-};
-/* 8045286C-80452870 0004 .sdata2    @4123                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4123[4] = {
-	0x3C, 0xA3, 0xD7, 0x0A,
-};
-/* 80452870-80452874 0004 .sdata2    @4124                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4124[4] = {
-	0x42, 0xC8, 0x00, 0x00,
-};
-/* 80452874-80452878 0004 .sdata2    @4125                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4125[4] = {
-	0x3E, 0x8F, 0x5C, 0x29,
-};
-/* 80452878-8045287C 0004 .sdata2    @4126                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4126[4] = {
-	0x3E, 0x19, 0x99, 0x9A,
-};
-/* 8045287C-80452880 0004 .sdata2    @4127                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4127[4] = {
-	0x3B, 0xA3, 0xD7, 0x0A,
-};
-/* 80452880-80452884 0004 .sdata2    @4128                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4128[4] = {
-	0x3D, 0x75, 0xC2, 0x8F,
-};
-/* 80452884-80452888 0004 .sdata2    @4129                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4129[4] = {
-	0x42, 0x8C, 0x00, 0x00,
-};
-/* 80452888-8045288C 0004 .sdata2    @4130                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4130[4] = {
-	0x42, 0x70, 0x00, 0x00,
-};
-/* 8045288C-80452890 0004 .sdata2    @4131                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4131[4] = {
-	0x42, 0x0C, 0x00, 0x00,
-};
-/* 80452890-80452894 0004 .sdata2    @4132                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4132[4] = {
-	0x42, 0x82, 0x00, 0x00,
-};
-/* 80452894-80452898 0004 .sdata2    @4133                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4133[4] = {
-	0x41, 0xF0, 0x00, 0x00,
-};
-/* 80452898-8045289C 0004 .sdata2    @4134                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4134[4] = {
-	0x41, 0xD8, 0x00, 0x00,
-};
-/* 8045289C-804528A0 0004 .sdata2    @4135                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4135[4] = {
-	0x42, 0x34, 0x00, 0x00,
-};
-/* 804528A0-804528A4 0004 .sdata2    @4136                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4136[4] = {
-	0x45, 0x5A, 0xC0, 0x00,
-};
-/* 804528A4-804528A8 0004 .sdata2    @4137                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4137[4] = {
-	0x40, 0x80, 0x00, 0x00,
-};
-/* 804528A8-804528AC 0004 .sdata2    @4138                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4138[4] = {
-	0x44, 0x96, 0x00, 0x00,
-};
-/* 804528AC-804528B0 0004 .sdata2    @4139                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4139[4] = {
-	0x3F, 0x59, 0x99, 0x9A,
-};
-/* 804528B0-804528B4 0004 .sdata2    @4140                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4140[4] = {
-	0x42, 0x48, 0x00, 0x00,
-};
-/* 804528B4-804528B8 0004 .sdata2    @4173                                                        */
-SECTION_SDATA2 u8 d_d_cam_param__LIT_4173[4] = {
-	0x43, 0x36, 0x0B, 0x61,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8008813C-80088284 0148 .text      rationalBezierRatio__8dCamMathFff                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void rationalBezierRatio__8dCamMathFff() {
-	nofralloc
-#include "asm/d/d_cam_param/rationalBezierRatio__8dCamMathFff.s"
-}
-#pragma pop
-
-/* 80088284-800882E0 005C .text      zoomFovy__8dCamMathFff                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void zoomFovy__8dCamMathFff() {
-	nofralloc
-#include "asm/d/d_cam_param/zoomFovy__8dCamMathFff.s"
-}
-#pragma pop
-
-/* 800882E0-8008831C 003C .text      __dt__7cDegreeFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__7cDegreeFv() {
-	nofralloc
-#include "asm/d/d_cam_param/__dt__7cDegreeFv.s"
-}
-#pragma pop
-
-/* 8008831C-80088384 0068 .text      xyzRotateX__8dCamMathFR4cXyz7cSAngle                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void xyzRotateX__8dCamMathFR4cXyz7cSAngle() {
-	nofralloc
-#include "asm/d/d_cam_param/xyzRotateX__8dCamMathFR4cXyz7cSAngle.s"
-}
-#pragma pop
-
-/* 80088384-800883EC 0068 .text      xyzRotateY__8dCamMathFR4cXyz7cSAngle                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void xyzRotateY__8dCamMathFR4cXyz7cSAngle() {
-	nofralloc
-#include "asm/d/d_cam_param/xyzRotateY__8dCamMathFR4cXyz7cSAngle.s"
-}
-#pragma pop
-
-/* 800883EC-80088434 0048 .text      xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz() {
-	nofralloc
-#include "asm/d/d_cam_param/xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz.s"
-}
-#pragma pop
-
-/* 80088434-8008845C 0028 .text      __ct__9dCstick_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__9dCstick_cFv() {
-	nofralloc
-#include "asm/d/d_cam_param/__ct__9dCstick_cFv.s"
-}
-#pragma pop
-
-/* 8008845C-80088464 0008 .text      Shift__9dCstick_cFUl                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Shift__9dCstick_cFUl() {
-	nofralloc
-#include "asm/d/d_cam_param/Shift__9dCstick_cFUl.s"
-}
-#pragma pop
-
-/* 80088464-800884F0 008C .text      __ct__11dCamBGChk_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__11dCamBGChk_cFv() {
-	nofralloc
-#include "asm/d/d_cam_param/__ct__11dCamBGChk_cFv.s"
-}
-#pragma pop
 
 /* 800884F0-8008858C 009C .text      __ct__11dCamParam_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dCamParam_cFl() {
+extern "C" asm void __ct__11dCamParam_cFl() {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__11dCamParam_cFl.s"
 }
 #pragma pop
 
+
 /* 8008858C-800885D4 0048 .text      __dt__11dCamParam_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11dCamParam_cFv() {
+extern "C" asm void __dt__11dCamParam_cFv() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__11dCamParam_cFv.s"
 }
 #pragma pop
 
+
 /* 800885D4-80088620 004C .text      Change__11dCamParam_cFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Change__11dCamParam_cFl() {
+extern "C" asm void Change__11dCamParam_cFl() {
 	nofralloc
 #include "asm/d/d_cam_param/Change__11dCamParam_cFl.s"
 }
 #pragma pop
 
+
 /* 80088620-80088668 0048 .text      SearchStyle__11dCamParam_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SearchStyle__11dCamParam_cFUl() {
+extern "C" asm void SearchStyle__11dCamParam_cFUl() {
 	nofralloc
 #include "asm/d/d_cam_param/SearchStyle__11dCamParam_cFUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452858-8045285C 0004 .sdata2    @4058                                                        */
+f32 d_d_cam_param__lit_4058 = 0.25f;
+
+/* 8045285C-80452860 0004 .sdata2    @4119                                                        */
+f32 d_d_cam_param__lit_4119 = 100000.0f;
+
+/* 80452860-80452864 0004 .sdata2    @4120                                                        */
+f32 d_d_cam_param__lit_4120 = 1.0f / 20.0f;
+
+/* 80452864-80452868 0004 .sdata2    @4121                                                        */
+f32 d_d_cam_param__lit_4121 = -60.0f;
+
+/* 80452868-8045286C 0004 .sdata2    @4122                                                        */
+f32 d_d_cam_param__lit_4122 = 33.0f / 100.0f;
+
+/* 8045286C-80452870 0004 .sdata2    @4123                                                        */
+f32 d_d_cam_param__lit_4123 = 1.0f / 50.0f;
+
+/* 80452870-80452874 0004 .sdata2    @4124                                                        */
+f32 d_d_cam_param__lit_4124 = 100.0f;
+
+/* 80452874-80452878 0004 .sdata2    @4125                                                        */
+f32 d_d_cam_param__lit_4125 = 7.0f / 25.0f;
+
+/* 80452878-8045287C 0004 .sdata2    @4126                                                        */
+f32 d_d_cam_param__lit_4126 = 3.0f / 20.0f;
+
+/* 8045287C-80452880 0004 .sdata2    @4127                                                        */
+f32 d_d_cam_param__lit_4127 = 0.004999999888241291f;
+
+/* 80452880-80452884 0004 .sdata2    @4128                                                        */
+f32 d_d_cam_param__lit_4128 = 3.0f / 50.0f;
+
+/* 80452884-80452888 0004 .sdata2    @4129                                                        */
+f32 d_d_cam_param__lit_4129 = 70.0f;
+
+/* 80452888-8045288C 0004 .sdata2    @4130                                                        */
+f32 d_d_cam_param__lit_4130 = 60.0f;
+
+/* 8045288C-80452890 0004 .sdata2    @4131                                                        */
+f32 d_d_cam_param__lit_4131 = 35.0f;
+
+/* 80452890-80452894 0004 .sdata2    @4132                                                        */
+f32 d_d_cam_param__lit_4132 = 65.0f;
+
+/* 80452894-80452898 0004 .sdata2    @4133                                                        */
+f32 d_d_cam_param__lit_4133 = 30.0f;
+
+/* 80452898-8045289C 0004 .sdata2    @4134                                                        */
+f32 d_d_cam_param__lit_4134 = 27.0f;
+
+/* 8045289C-804528A0 0004 .sdata2    @4135                                                        */
+f32 d_d_cam_param__lit_4135 = 45.0f;
+
+/* 804528A0-804528A4 0004 .sdata2    @4136                                                        */
+f32 d_d_cam_param__lit_4136 = 3500.0f;
+
+/* 804528A4-804528A8 0004 .sdata2    @4137                                                        */
+f32 d_d_cam_param__lit_4137 = 4.0f;
+
+/* 804528A8-804528AC 0004 .sdata2    @4138                                                        */
+f32 d_d_cam_param__lit_4138 = 1200.0f;
+
+/* 804528AC-804528B0 0004 .sdata2    @4139                                                        */
+f32 d_d_cam_param__lit_4139 = 17.0f / 20.0f;
+
+/* 804528B0-804528B4 0004 .sdata2    @4140                                                        */
+f32 d_d_cam_param__lit_4140 = 50.0f;
+
 /* 80088668-800888B8 0250 .text      __ct__11dCamSetup_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dCamSetup_cFv() {
+extern "C" asm void __ct__11dCamSetup_cFv() {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__11dCamSetup_cFv.s"
 }
 #pragma pop
 
+
 /* 800888B8-80088918 0060 .text      __dt__11dCamSetup_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11dCamSetup_cFv() {
+extern "C" asm void __dt__11dCamSetup_cFv() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__11dCamSetup_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804528B4-804528B8 0004 .sdata2    @4173                                                        */
+f32 d_d_cam_param__lit_4173 = 182.04444885253906f;
+
 /* 80088918-80088988 0070 .text      CheckLatitudeRange__11dCamSetup_cFPs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CheckLatitudeRange__11dCamSetup_cFPs() {
+extern "C" asm void CheckLatitudeRange__11dCamSetup_cFPs() {
 	nofralloc
 #include "asm/d/d_cam_param/CheckLatitudeRange__11dCamSetup_cFPs.s"
 }
 #pragma pop
 
+
 /* 80088988-800889B0 0028 .text      PlayerHideDist__11dCamSetup_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PlayerHideDist__11dCamSetup_cFv() {
+extern "C" asm void PlayerHideDist__11dCamSetup_cFv() {
 	nofralloc
 #include "asm/d/d_cam_param/PlayerHideDist__11dCamSetup_cFv.s"
 }
 #pragma pop
 
+
 /* 800889B0-800889F8 0048 .text      __dt__9dCstick_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9dCstick_cFv() {
+extern "C" asm void __dt__9dCstick_cFv() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__9dCstick_cFv.s"
 }

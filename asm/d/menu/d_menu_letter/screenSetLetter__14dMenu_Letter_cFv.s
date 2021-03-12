@@ -296,7 +296,7 @@ lbl_801E081C:
 /* 801E0840 00000024  48 07 48 A9 */	bl dPaneClass_showNullPane__FP9J2DScreen
 /* 801E0844 00000028  3B 60 00 00 */	li r27, 0
 /* 801E0848 0000002C  3B C0 00 00 */	li r30, 0
-/* 801E084C 00000030  C3 E2 A8 E0 */	lfs f31, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801E084C 00000030  C3 E2 A8 E0 */	lfs f31, d_menu_d_menu_letter__lit_3827(r2)
 lbl_801E0850:
 /* 801E0850 00000000  38 60 00 6C */	li r3, 0x6c
 /* 801E0854 00000004  48 0E E3 F9 */	bl __nw__FUl
@@ -323,7 +323,7 @@ lbl_801E0884:
 /* 801E08A4 00000020  7D 89 03 A6 */	mtctr r12
 /* 801E08A8 00000024  4E 80 04 21 */	bctrl 
 /* 801E08AC 00000028  7C 7F D0 2E */	lwzx r3, r31, r26
-/* 801E08B0 0000002C  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801E08B0 0000002C  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
 /* 801E08B4 00000030  48 07 4F 1D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801E08B8 00000034  3B 7B 00 01 */	addi r27, r27, 1
 /* 801E08BC 00000038  2C 1B 00 02 */	cmpwi r27, 2

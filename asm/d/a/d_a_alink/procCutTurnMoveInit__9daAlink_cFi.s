@@ -23,8 +23,8 @@ lbl_800D4E1C:
 /* 800D4E2C 00000010  4B FD 76 25 */	bl getMainBckData__9daAlink_cCFQ29daAlink_c11daAlink_ANM
 /* 800D4E30 00000014  A0 83 00 00 */	lhz r4, 0(r3)
 /* 800D4E34 00000018  7F C3 F3 78 */	mr r3, r30
-/* 800D4E38 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 800D4E3C 00000020  C0 42 92 BC */	lfs f2, d_a_d_a_alink__LIT_6041(r2)
+/* 800D4E38 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 800D4E3C 00000020  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
 /* 800D4E40 00000024  4B FD 85 69 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800D4E44 00000028  C0 1E 1F E0 */	lfs f0, 0x1fe0(r30)
 /* 800D4E48 0000002C  D0 1E 20 58 */	stfs f0, 0x2058(r30)
@@ -36,7 +36,7 @@ lbl_800D4E1C:
 lbl_800D4E60:
 /* 800D4E60 00000000  7F C3 F3 78 */	mr r3, r30
 /* 800D4E64 00000004  38 80 00 76 */	li r4, 0x76
-/* 800D4E68 00000008  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800D4E68 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D4E6C 0000000C  3C A0 80 39 */	lis r5, m__21daAlinkHIO_cutTurn_c0@ha
 /* 800D4E70 00000010  38 A5 DB 84 */	addi r5, r5, m__21daAlinkHIO_cutTurn_c0@l
 /* 800D4E74 00000014  C0 45 00 50 */	lfs f2, 0x50(r5)

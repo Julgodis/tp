@@ -5,93 +5,398 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__16JAISeCategoryMgrFv();
-extern void __ct__17JASGenericMemPoolFv();
-extern void __dt__17JASGenericMemPoolFv();
-extern void alloc__17JASGenericMemPoolFUl();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void JASReport__FPCce();
-extern void __dt__8JASTrackFv();
-extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
-extern void func_8029F03C();
-extern void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity();
-extern void JAISeCategoryMgr_calc___5JAISeFv();
-extern void func_8029F650();
-extern void isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion();
-extern void releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion();
-extern void JAISeMgr_calc___16JAISeCategoryMgrFv();
-extern void JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv();
-extern void func_8029FC34();
-extern void JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl();
-extern void sortByPriority___16JAISeCategoryMgrFv();
-extern void stop__16JAISeCategoryMgrFUl();
-extern void stop__16JAISeCategoryMgrFv();
-extern void stopSoundID__16JAISeCategoryMgrF10JAISoundID();
-extern void pause__16JAISeCategoryMgrFb();
-extern void JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity();
-extern void __ct__8JAISeMgrFb();
-extern void isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion();
-extern void releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion();
-extern void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
-extern void stop__8JAISeMgrFv();
-extern void stopSoundID__8JAISeMgrF10JAISoundID();
-extern void initParams__8JAISeMgrFv();
-extern void setAudience__8JAISeMgrFP11JAIAudience();
-extern void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
-extern void resetSeqDataMgr__8JAISeMgrFv();
-extern void newSe___8JAISeMgrFiUl();
-extern void calc__8JAISeMgrFv();
-extern void mixOut__8JAISeMgrFv();
-extern void func_802A0768();
-extern void getNumActiveSe__8JAISeMgrCFv();
-extern void __dt__8JAISeMgrFv();
-extern void __ct__16JAISeCategoryMgrFv();
-extern void __dt__14JAISeqDataUserFv();
-extern void attachHandle__8JAISoundFP14JAISoundHandle();
-extern void stop__8JAISoundFUl();
-extern void stop__8JAISoundFv();
-extern void __dl__FPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void __register_global_object();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savegpr_25();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_25();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
+extern "C" extern void __dt__16JAISeCategoryMgrFv();
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void __dt__17JASGenericMemPoolFv();
+extern "C" extern void alloc__17JASGenericMemPoolFUl();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void JASReport__FPCce();
+extern "C" extern void __dt__8JASTrackFv();
+extern "C" extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+extern "C" extern void func_8029F03C();
+extern "C" extern void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity();
+extern "C" extern void JAISeCategoryMgr_calc___5JAISeFv();
+extern "C" extern void func_8029F650();
+extern "C" extern void isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion();
+extern "C" extern void releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion();
+extern "C" extern void JAISeMgr_calc___16JAISeCategoryMgrFv();
+extern "C" extern void JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv();
+extern "C" extern void func_8029FC34();
+extern "C" extern void JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl();
+extern "C" extern void sortByPriority___16JAISeCategoryMgrFv();
+extern "C" extern void stop__16JAISeCategoryMgrFUl();
+extern "C" extern void stop__16JAISeCategoryMgrFv();
+extern "C" extern void stopSoundID__16JAISeCategoryMgrF10JAISoundID();
+extern "C" extern void pause__16JAISeCategoryMgrFb();
+extern "C" extern void JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity();
+extern "C" extern void __ct__8JAISeMgrFb();
+extern "C" extern void isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion();
+extern "C" extern void releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion();
+extern "C" extern void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
+extern "C" extern void stop__8JAISeMgrFv();
+extern "C" extern void stopSoundID__8JAISeMgrF10JAISoundID();
+extern "C" extern void initParams__8JAISeMgrFv();
+extern "C" extern void setAudience__8JAISeMgrFP11JAIAudience();
+extern "C" extern void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
+extern "C" extern void resetSeqDataMgr__8JAISeMgrFv();
+extern "C" extern void newSe___8JAISeMgrFiUl();
+extern "C" extern void calc__8JAISeMgrFv();
+extern "C" extern void mixOut__8JAISeMgrFv();
+extern "C" extern void func_802A0768();
+extern "C" extern void getNumActiveSe__8JAISeMgrCFv();
+extern "C" extern void __dt__8JAISeMgrFv();
+extern "C" extern void __ct__16JAISeCategoryMgrFv();
+extern "C" extern void __dt__14JAISeqDataUserFv();
+extern "C" extern void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" extern void stop__8JAISoundFUl();
+extern "C" extern void stop__8JAISoundFv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void __register_global_object();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 JAISeMgr__stringBase0[24];
-SECTION_DATA extern void* __vt__5JAISe[22];
-SECTION_DATA extern void* __vt__8JAISeMgr[5];
-SECTION_DATA extern void* __vt__16JAISeCategoryMgr[5];
-SECTION_DATA extern void* __vt__14JAISeqDataUser[6];
-SECTION_BSS extern u8 JAISeMgr__LIT_744[12];
+SECTION_DATA extern void* const __vt__5JAISe[22];
+SECTION_DATA extern void* const __vt__8JAISeMgr[5];
+SECTION_DATA extern void* const __vt__16JAISeCategoryMgr[5];
+SECTION_DATA extern void* const __vt__14JAISeqDataUser[6];
+SECTION_BSS extern u8 JAISeMgr__lit_744[12];
 SECTION_BSS extern u8 data_80434084[16 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80450B5C[4];
 SECTION_SBSS extern u8 data_80450B6C[4];
 SECTION_SBSS extern u8 data_80451310[8];
-SECTION_SDATA2 extern u8 LIT_822[4];
-SECTION_SDATA2 extern u8 LIT_1040[4];
-SECTION_SDATA2 extern u8 LIT_1041[4];
-SECTION_SDATA2 extern u8 JAISeMgr__LIT_1042[4];
+SECTION_SDATA2 extern f32 lit_822;
+SECTION_SDATA2 extern f32 lit_1040;
+SECTION_SDATA2 extern u8 lit_1041[4];
+SECTION_SDATA2 extern f32 JAISeMgr__lit_1042;
+
+// 
+// Functions:
+// 
+
+/* 8029F8B0-8029F91C 006C .text      isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion.s"
 }
+#pragma pop
+
+
+/* 8029F91C-8029F9C4 00A8 .text      releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion.s"
+}
+#pragma pop
+
+
+/* 8029F9C4-8029FB30 016C .text      JAISeMgr_calc___16JAISeCategoryMgrFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void JAISeMgr_calc___16JAISeCategoryMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_calc___16JAISeCategoryMgrFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80434078-80434084 000C .bss       @744                                                         */
+u8 JAISeMgr__lit_744[12];
 
-extern "C" {
+/* 80434084-80434098 0010 .bss       memPool_$localstatic3$getMemPool___26JASPoolAllocObject<5JAISe>Fv */
+u8 data_80434084[16 + 4 /* padding */];
+
+/* 8029FB30-8029FC34 0104 .text      JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv.s"
+}
+#pragma pop
+
+
+/* 8029FC34-8029FC88 0054 .text      __dt__18JASMemPool<5JAISe>Fv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_8029FC34() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/func_8029FC34.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455788-8045578C 0004 .sdata2    @822                                                         */
+f32 lit_822 = 1.0f / 100.0f;
+
+/* 8029FC88-8029FD40 00B8 .text      JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl.s"
+}
+#pragma pop
+
+
+/* 8029FD40-8029FDE0 00A0 .text      sortByPriority___16JAISeCategoryMgrFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void sortByPriority___16JAISeCategoryMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/sortByPriority___16JAISeCategoryMgrFv.s"
+}
+#pragma pop
+
+
+/* 8029FDE0-8029FE34 0054 .text      stop__16JAISeCategoryMgrFUl                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stop__16JAISeCategoryMgrFUl() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/stop__16JAISeCategoryMgrFUl.s"
+}
+#pragma pop
+
+
+/* 8029FE34-8029FE78 0044 .text      stop__16JAISeCategoryMgrFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stop__16JAISeCategoryMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/stop__16JAISeCategoryMgrFv.s"
+}
+#pragma pop
+
+
+/* 8029FE78-8029FEEC 0074 .text      stopSoundID__16JAISeCategoryMgrF10JAISoundID                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stopSoundID__16JAISeCategoryMgrF10JAISoundID() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/stopSoundID__16JAISeCategoryMgrF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 8029FEEC-8029FF18 002C .text      pause__16JAISeCategoryMgrFb                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void pause__16JAISeCategoryMgrFb() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/pause__16JAISeCategoryMgrFb.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 8045578C-80455790 0004 .sdata2    @1040                                                        */
+f32 lit_1040 = 1.0f;
+
+/* 80455790-80455794 0004 .sdata2    @1041                                                        */
+u8 lit_1041[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455794-80455798 0004 .sdata2    @1042                                                        */
+f32 JAISeMgr__lit_1042 = 0.5f;
+
+/* 8029FF18-802A0074 015C .text      JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 803C98B0-803C98C4 0014 .data      __vt__8JAISeMgr                                              */
+void* const __vt__8JAISeMgr[5] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__8JAISeMgrFv,
+	(void*)isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion,
+	(void*)releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion,
+};
+
+/* 802A0074-802A0168 00F4 .text      __ct__8JAISeMgrFb                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__8JAISeMgrFb() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/__ct__8JAISeMgrFb.s"
+}
+#pragma pop
+
+
+/* 802A0168-802A01D8 0070 .text      isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion.s"
+}
+#pragma pop
+
+
+/* 802A01D8-802A0268 0090 .text      releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion.s"
+}
+#pragma pop
+
+
+/* 802A0268-802A02A0 0038 .text      setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement.s"
+}
+#pragma pop
+
+
+/* 802A02A0-802A02F4 0054 .text      stop__8JAISeMgrFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stop__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/stop__8JAISeMgrFv.s"
+}
+#pragma pop
+
+
+/* 802A02F4-802A0358 0064 .text      stopSoundID__8JAISeMgrF10JAISoundID                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stopSoundID__8JAISeMgrF10JAISoundID() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/stopSoundID__8JAISeMgrF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802A0358-802A03D8 0080 .text      initParams__8JAISeMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initParams__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/initParams__8JAISeMgrFv.s"
+}
+#pragma pop
+
+
+/* 802A03D8-802A03E0 0008 .text      setAudience__8JAISeMgrFP11JAIAudience                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setAudience__8JAISeMgrFP11JAIAudience() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/setAudience__8JAISeMgrFP11JAIAudience.s"
+}
+#pragma pop
+
+
+/* 802A03E0-802A0434 0054 .text      setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr.s"
+}
+#pragma pop
+
+
+/* 802A0434-802A0484 0050 .text      resetSeqDataMgr__8JAISeMgrFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetSeqDataMgr__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/resetSeqDataMgr__8JAISeMgrFv.s"
+}
+#pragma pop
+
+
+/* 802A0484-802A0574 00F0 .text      newSe___8JAISeMgrFiUl                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void newSe___8JAISeMgrFiUl() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/newSe___8JAISeMgrFiUl.s"
+}
+#pragma pop
+
+
+/* 802A0574-802A0704 0190 .text      calc__8JAISeMgrFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void calc__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/calc__8JAISeMgrFv.s"
+}
+#pragma pop
+
+
+/* 802A0704-802A0768 0064 .text      mixOut__8JAISeMgrFv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void mixOut__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/mixOut__8JAISeMgrFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039B8F8-8039B910 0014 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -100,358 +405,55 @@ SECTION_DEAD const char* const stringBase_8039B8F8 = "cannot new Se %08x.";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039B90C = "\0\0\0";
 #pragma pop
+
+/* 802A0768-802A08D0 0168 .text      startSound__8JAISeMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_802A0768() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/func_802A0768.s"
 }
+#pragma pop
+
+
+/* 802A08D0-802A08FC 002C .text      getNumActiveSe__8JAISeMgrCFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getNumActiveSe__8JAISeMgrCFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/getNumActiveSe__8JAISeMgrCFv.s"
+}
+#pragma pop
+
+
+/* 802A08FC-802A0994 0098 .text      __dt__8JAISeMgrFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__8JAISeMgrFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeMgr/__dt__8JAISeMgrFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803C98B0-803C98C4 0014 .data      __vt__8JAISeMgr                                              */
-SECTION_DATA void* __vt__8JAISeMgr[5] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__8JAISeMgrFv,
-	(void*)isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion,
-	(void*)releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion,
-};
 /* 803C98C4-803C98D8 0014 .data      __vt__16JAISeCategoryMgr                                     */
-SECTION_DATA void* __vt__16JAISeCategoryMgr[5] = {
+void* const __vt__16JAISeCategoryMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16JAISeCategoryMgrFv,
 	(void*)isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
 	(void*)releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455788-8045578C 0004 .sdata2    @822                                                         */
-SECTION_SDATA2 u8 LIT_822[4] = {
-	0x3C, 0x23, 0xD7, 0x0A,
-};
-/* 8045578C-80455790 0004 .sdata2    @1040                                                        */
-SECTION_SDATA2 u8 LIT_1040[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455790-80455794 0004 .sdata2    @1041                                                        */
-SECTION_SDATA2 u8 LIT_1041[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455794-80455798 0004 .sdata2    @1042                                                        */
-SECTION_SDATA2 u8 JAISeMgr__LIT_1042[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80434078-80434084 000C .bss       @744                                                         */
-SECTION_BSS u8 JAISeMgr__LIT_744[12];
-/* 80434084-80434098 0010 .bss       memPool_$localstatic3$getMemPool___26JASPoolAllocObject<5JAISe>Fv */
-SECTION_BSS u8 data_80434084[16 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8029F8B0-8029F91C 006C .text      isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
-
-/* 8029F91C-8029F9C4 00A8 .text      releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
-
-/* 8029F9C4-8029FB30 016C .text      JAISeMgr_calc___16JAISeCategoryMgrFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeMgr_calc___16JAISeCategoryMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_calc___16JAISeCategoryMgrFv.s"
-}
-#pragma pop
-
-/* 8029FB30-8029FC34 0104 .text      JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_freeDeadSe___16JAISeCategoryMgrFv.s"
-}
-#pragma pop
-
-/* 8029FC34-8029FC88 0054 .text      __dt__18JASMemPool<5JAISe>Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_8029FC34() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/func_8029FC34.s"
-}
-#pragma pop
-
-/* 8029FC88-8029FD40 00B8 .text      JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_acceptsNewSe___16JAISeCategoryMgrCFUl.s"
-}
-#pragma pop
-
-/* 8029FD40-8029FDE0 00A0 .text      sortByPriority___16JAISeCategoryMgrFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void sortByPriority___16JAISeCategoryMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/sortByPriority___16JAISeCategoryMgrFv.s"
-}
-#pragma pop
-
-/* 8029FDE0-8029FE34 0054 .text      stop__16JAISeCategoryMgrFUl                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stop__16JAISeCategoryMgrFUl() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/stop__16JAISeCategoryMgrFUl.s"
-}
-#pragma pop
-
-/* 8029FE34-8029FE78 0044 .text      stop__16JAISeCategoryMgrFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stop__16JAISeCategoryMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/stop__16JAISeCategoryMgrFv.s"
-}
-#pragma pop
-
-/* 8029FE78-8029FEEC 0074 .text      stopSoundID__16JAISeCategoryMgrF10JAISoundID                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stopSoundID__16JAISeCategoryMgrF10JAISoundID() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/stopSoundID__16JAISeCategoryMgrF10JAISoundID.s"
-}
-#pragma pop
-
-/* 8029FEEC-8029FF18 002C .text      pause__16JAISeCategoryMgrFb                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void pause__16JAISeCategoryMgrFb() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/pause__16JAISeCategoryMgrFb.s"
-}
-#pragma pop
-
-/* 8029FF18-802A0074 015C .text      JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity.s"
-}
-#pragma pop
-
-/* 802A0074-802A0168 00F4 .text      __ct__8JAISeMgrFb                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__8JAISeMgrFb() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/__ct__8JAISeMgrFb.s"
-}
-#pragma pop
-
-/* 802A0168-802A01D8 0070 .text      isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
-
-/* 802A01D8-802A0268 0090 .text      releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
-
-/* 802A0268-802A02A0 0038 .text      setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement.s"
-}
-#pragma pop
-
-/* 802A02A0-802A02F4 0054 .text      stop__8JAISeMgrFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stop__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/stop__8JAISeMgrFv.s"
-}
-#pragma pop
-
-/* 802A02F4-802A0358 0064 .text      stopSoundID__8JAISeMgrF10JAISoundID                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stopSoundID__8JAISeMgrF10JAISoundID() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/stopSoundID__8JAISeMgrF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802A0358-802A03D8 0080 .text      initParams__8JAISeMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initParams__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/initParams__8JAISeMgrFv.s"
-}
-#pragma pop
-
-/* 802A03D8-802A03E0 0008 .text      setAudience__8JAISeMgrFP11JAIAudience                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setAudience__8JAISeMgrFP11JAIAudience() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/setAudience__8JAISeMgrFP11JAIAudience.s"
-}
-#pragma pop
-
-/* 802A03E0-802A0434 0054 .text      setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr.s"
-}
-#pragma pop
-
-/* 802A0434-802A0484 0050 .text      resetSeqDataMgr__8JAISeMgrFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetSeqDataMgr__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/resetSeqDataMgr__8JAISeMgrFv.s"
-}
-#pragma pop
-
-/* 802A0484-802A0574 00F0 .text      newSe___8JAISeMgrFiUl                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void newSe___8JAISeMgrFiUl() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/newSe___8JAISeMgrFiUl.s"
-}
-#pragma pop
-
-/* 802A0574-802A0704 0190 .text      calc__8JAISeMgrFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void calc__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/calc__8JAISeMgrFv.s"
-}
-#pragma pop
-
-/* 802A0704-802A0768 0064 .text      mixOut__8JAISeMgrFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mixOut__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/mixOut__8JAISeMgrFv.s"
-}
-#pragma pop
-
-/* 802A0768-802A08D0 0168 .text      startSound__8JAISeMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_802A0768() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/func_802A0768.s"
-}
-#pragma pop
-
-/* 802A08D0-802A08FC 002C .text      getNumActiveSe__8JAISeMgrCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getNumActiveSe__8JAISeMgrCFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/getNumActiveSe__8JAISeMgrCFv.s"
-}
-#pragma pop
-
-/* 802A08FC-802A0994 0098 .text      __dt__8JAISeMgrFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__8JAISeMgrFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeMgr/__dt__8JAISeMgrFv.s"
-}
-#pragma pop
 
 /* 802A0994-802A0A6C 00D8 .text      __ct__16JAISeCategoryMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16JAISeCategoryMgrFv() {
+extern "C" asm void __ct__16JAISeCategoryMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeMgr/__ct__16JAISeCategoryMgrFv.s"
 }

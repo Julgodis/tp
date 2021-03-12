@@ -12,9 +12,9 @@ lbl_8023CB98:
 /* 8023CBC0 00000028  7D 89 03 A6 */	mtctr r12
 /* 8023CBC4 0000002C  4E 80 04 21 */	bctrl 
 /* 8023CBC8 00000030  7F E3 FB 78 */	mr r3, r31
-/* 8023CBCC 00000034  C0 22 B1 B4 */	lfs f1, msg_scrn_d_msg_scrn_boss__LIT_3916(r2)
+/* 8023CBCC 00000034  C0 22 B1 B4 */	lfs f1, msg_scrn_d_msg_scrn_boss__lit_3916(r2)
 /* 8023CBD0 00000038  FC 40 08 90 */	fmr f2, f1
-/* 8023CBD4 0000003C  C0 62 B1 B0 */	lfs f3, msg_scrn_d_msg_scrn_boss__LIT_3854(r2)
+/* 8023CBD4 0000003C  C0 62 B1 B0 */	lfs f3, msg_scrn_d_msg_scrn_boss__lit_3854(r2)
 /* 8023CBD8 00000040  4B FF F7 55 */	bl drawOutFont__14dMsgScrnBase_cFfff
 /* 8023CBDC 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8023CBE0 00000048  80 01 00 14 */	lwz r0, 0x14(r1)

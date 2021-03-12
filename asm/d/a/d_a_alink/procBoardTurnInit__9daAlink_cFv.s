@@ -8,14 +8,14 @@ lbl_80107060:
 /* 80107078 00000018  4B FB AE F5 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 8010707C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 80107080 00000020  38 80 00 F7 */	li r4, 0xf7
-/* 80107084 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 80107088 00000028  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 80107084 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 80107088 00000028  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 8010708C 0000002C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_board_c0@ha
 /* 80107090 00000030  38 A5 E8 70 */	addi r5, r5, m__19daAlinkHIO_board_c0@l
 /* 80107094 00000034  A8 A5 00 14 */	lha r5, 0x14(r5)
-/* 80107098 00000038  C0 62 92 C4 */	lfs f3, LIT_6109(r2)
+/* 80107098 00000038  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8010709C 0000003C  4B FA 5F 71 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
-/* 801070A0 00000040  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 801070A0 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 801070A4 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 801070A8 00000048  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 801070AC 0000004C  3C 63 00 01 */	addis r3, r3, 1

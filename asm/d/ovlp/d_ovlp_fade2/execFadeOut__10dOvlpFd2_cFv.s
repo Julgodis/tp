@@ -35,8 +35,8 @@ lbl_80252A78:
 /* 80252AFC 00000084  2C 03 00 00 */	cmpwi r3, 0
 /* 80252B00 00000088  41 82 00 38 */	beq lbl_80252B38
 /* 80252B04 0000008C  4B DC B9 C1 */	bl fopOvlpM_SceneIsStart__Fv
-/* 80252B08 00000090  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__LIT_3736@ha
-/* 80252B0C 00000094  38 83 2D 08 */	addi r4, r3, d_ovlp_d_ovlp_fade2__LIT_3736@l
+/* 80252B08 00000090  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__lit_3736@ha
+/* 80252B0C 00000094  38 83 2D 08 */	addi r4, r3, d_ovlp_d_ovlp_fade2__lit_3736@l
 /* 80252B10 00000098  80 64 00 00 */	lwz r3, 0(r4)
 /* 80252B14 0000009C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80252B18 000000A0  90 7F 00 CC */	stw r3, 0xcc(r31)
@@ -76,9 +76,9 @@ lbl_80252B8C:
 /* 80252B90 00000004  38 03 08 00 */	addi r0, r3, 0x800
 /* 80252B94 00000008  B0 1F 01 14 */	sth r0, 0x114(r31)
 /* 80252B98 0000000C  38 7F 01 18 */	addi r3, r31, 0x118
-/* 80252B9C 00000010  C0 22 B4 30 */	lfs f1, LIT_3686(r2)
+/* 80252B9C 00000010  C0 22 B4 30 */	lfs f1, lit_3686(r2)
 /* 80252BA0 00000014  FC 40 08 90 */	fmr f2, f1
-/* 80252BA4 00000018  C0 62 B4 48 */	lfs f3, d_ovlp_d_ovlp_fade2__LIT_3757(r2)
+/* 80252BA4 00000018  C0 62 B4 48 */	lfs f3, d_ovlp_d_ovlp_fade2__lit_3757(r2)
 /* 80252BA8 0000001C  48 01 CE 95 */	bl cLib_addCalc2__FPffff
 /* 80252BAC 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80252BB0 00000024  80 01 00 14 */	lwz r0, 0x14(r1)

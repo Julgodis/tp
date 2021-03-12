@@ -11,9 +11,9 @@ lbl_801868EC:
 /* 80186910 00000024  38 A0 00 00 */	li r5, 0
 /* 80186914 00000028  38 C0 00 00 */	li r6, 0
 /* 80186918 0000002C  38 E0 00 00 */	li r7, 0
-/* 8018691C 00000030  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018691C 00000030  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 80186920 00000034  FC 40 08 90 */	fmr f2, f1
-/* 80186924 00000038  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 80186924 00000038  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 80186928 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 8018692C 00000040  39 00 00 00 */	li r8, 0
 /* 80186930 00000044  48 12 50 55 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -38,7 +38,7 @@ lbl_80186978:
 /* 80186978 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 8018697C 00000004  40 82 00 48 */	bne lbl_801869C4
 /* 80186980 00000008  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 80186984 0000000C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 80186984 0000000C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 80186988 00000010  48 00 E9 19 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018698C 00000014  7F E3 FB 78 */	mr r3, r31
 /* 80186990 00000018  38 80 04 73 */	li r4, 0x473
@@ -69,7 +69,7 @@ lbl_801869C4:
 /* 801869F0 0000002C  38 C0 00 00 */	li r6, 0
 /* 801869F4 00000030  48 00 66 F1 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 801869F8 00000034  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 801869FC 00000038  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 801869FC 00000038  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 80186A00 0000003C  48 00 E8 A1 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80186A04 00000040  88 1F 02 65 */	lbz r0, 0x265(r31)
 /* 80186A08 00000044  54 00 10 3A */	slwi r0, r0, 2

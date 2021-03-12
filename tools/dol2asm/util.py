@@ -86,7 +86,7 @@ def literal_name(name):
     if not match:
         return None
 
-    return "LIT_" + match.group(1)
+    return "lit_" + match.group(1)
 
 #
 # Encode/Decode labels that can be used in inline assembly. 
@@ -252,22 +252,47 @@ float32_exact: Dict[numpy.float32, Tuple[int,int]] = {}
 float64_exact: Dict[numpy.float64, Tuple[int,int]] = {}
 
 getcontext().prec = 64
-for i in range(1,32):
-    for j in range(1,32):
+for i in range(1,128):
+    for j in range(1,128):
         if i%j == 0:
             continue
         d = Decimal(i)/Decimal(j)
         f = numpy.float32(d)
-        if str(f) != str(d):
+        if f"{f}" != f"{d}":
             if not f in float32_exact:
                 float32_exact[f] = (i,j)
 
-for i in range(1,32):
-    for j in range(1,32):
+for i in range(1,128):
+    for j in range(1,128):
         if i%j == 0:
             continue
         d = Decimal(i)/Decimal(j)
         f = numpy.float64(d)
-        if str(f) != str(d):
+        if f"{f}" != f"{d}":
             if not f in float64_exact:
                 float64_exact[f] = (i,j)
+
+for value, numbers in list(float32_exact.items()):
+    float32_exact[-value] = (-numbers[0], numbers[1])
+
+for value, numbers in list(float64_exact.items()):
+    float64_exact[-value] = (-numbers[0], numbers[1])
+
+def special_float32(value):
+    if numpy.isposinf(value):
+        return "FLOAT_INF"
+    if numpy.isneginf(value):
+        return "-FLOAT_INF"
+    if numpy.isnan(value):
+        return "FLOAT_NAN"
+    return None
+
+def special_float64(value):
+    if numpy.isposinf(value):
+        return "DOUBLE_INF"
+    if numpy.isneginf(value):
+        return "-DOUBLE_INF"
+    if numpy.isnan(value):
+        return "DOUBLE_NAN"
+    return None
+

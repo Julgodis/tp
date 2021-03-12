@@ -1,7 +1,7 @@
 lbl_80295950:
 /* 80295950 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80295954 00000004  3C 60 80 3C */	lis r3, JASSeqParser__LIT_486@ha
-/* 80295958 00000008  38 C3 5B E0 */	addi r6, r3, JASSeqParser__LIT_486@l
+/* 80295954 00000004  3C 60 80 3C */	lis r3, JASSeqParser__lit_486@ha
+/* 80295958 00000008  38 C3 5B E0 */	addi r6, r3, JASSeqParser__lit_486@l
 /* 8029595C 0000000C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80295960 00000010  84 A3 21 80 */	lwzu r5, __ptmf_null@l(r3)
 /* 80295964 00000014  80 83 00 04 */	lwz r4, 4(r3)

@@ -13,7 +13,7 @@ lbl_801EB624:
 /* 801EB650 0000002C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801EB654 00000030  7D 89 03 A6 */	mtctr r12
 /* 801EB658 00000034  4E 80 04 21 */	bctrl 
-/* 801EB65C 00000038  C0 02 A9 D0 */	lfs f0, d_menu_d_menu_ring__LIT_4739(r2)
+/* 801EB65C 00000038  C0 02 A9 D0 */	lfs f0, d_menu_d_menu_ring__lit_4739(r2)
 /* 801EB660 0000003C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801EB664 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801EB668 00000004  40 82 02 18 */	bne lbl_801EB880

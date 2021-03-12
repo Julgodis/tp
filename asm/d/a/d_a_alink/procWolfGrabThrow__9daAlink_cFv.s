@@ -7,7 +7,7 @@ lbl_8013D86C:
 /* 8013D880 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8013D884 00000018  3B FE 1F D0 */	addi r31, r30, 0x1fd0
 /* 8013D888 0000001C  38 7E 33 98 */	addi r3, r30, 0x3398
-/* 8013D88C 00000020  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013D88C 00000020  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013D890 00000024  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8013D894 00000028  38 84 EF 28 */	addi r4, r4, m__23daAlinkHIO_wlMoveNoP_c0@l
 /* 8013D898 0000002C  C0 44 00 10 */	lfs f2, 0x10(r4)
@@ -18,7 +18,7 @@ lbl_8013D86C:
 /* 8013D8AC 00000040  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 8013D8B0 00000044  B0 1E 04 DE */	sth r0, 0x4de(r30)
 /* 8013D8B4 00000048  7F E3 FB 78 */	mr r3, r31
-/* 8013D8B8 0000004C  C0 22 93 30 */	lfs f1, d_a_d_a_alink__LIT_7625(r2)
+/* 8013D8B8 0000004C  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
 /* 8013D8BC 00000050  48 1E AB 71 */	bl checkPass__12J3DFrameCtrlFf
 /* 8013D8C0 00000054  2C 03 00 00 */	cmpwi r3, 0
 /* 8013D8C4 00000058  41 82 00 0C */	beq lbl_8013D8D0

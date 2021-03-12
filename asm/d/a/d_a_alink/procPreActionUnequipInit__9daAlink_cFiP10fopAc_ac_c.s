@@ -9,7 +9,7 @@ lbl_800C2DDC:
 /* 800C2DF8 0000001C  7C BF 2B 78 */	mr r31, r5
 /* 800C2DFC 00000020  38 80 00 00 */	li r4, 0
 /* 800C2E00 00000024  4B FF F1 6D */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800C2E04 00000028  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800C2E04 00000028  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C2E08 0000002C  D0 1D 33 98 */	stfs f0, 0x3398(r29)
 /* 800C2E0C 00000030  7F A3 EB 78 */	mr r3, r29
 /* 800C2E10 00000034  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha

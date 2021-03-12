@@ -18,7 +18,7 @@ lbl_80194C30:
 /* 80194C70 00000040  7D 89 03 A6 */	mtctr r12
 /* 80194C74 00000044  4E 80 04 21 */	bctrl 
 /* 80194C78 00000048  80 7E 00 04 */	lwz r3, 4(r30)
-/* 80194C7C 0000004C  C0 22 A0 50 */	lfs f1, d_d_select_cursor__LIT_3808(r2)
+/* 80194C7C 0000004C  C0 22 A0 50 */	lfs f1, d_d_select_cursor__lit_3808(r2)
 /* 80194C80 00000050  FC 40 08 90 */	fmr f2, f1
 /* 80194C84 00000054  7F E4 FB 78 */	mr r4, r31
 /* 80194C88 00000058  48 16 42 4D */	bl draw__9J2DScreenFffPC14J2DGrafContext

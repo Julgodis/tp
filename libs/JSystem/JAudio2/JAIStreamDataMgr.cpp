@@ -5,33 +5,31 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__16JAIStreamDataMgrFv();
-extern void __dt__16JAIStreamAramMgrFv();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__16JAIStreamAramMgr[5];
-SECTION_DATA extern void* __vt__16JAIStreamDataMgr[5];
-}
+extern "C" extern void __dt__16JAIStreamDataMgrFv();
+extern "C" extern void __dt__16JAIStreamAramMgrFv();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__16JAIStreamAramMgr[5];
+SECTION_DATA extern void* const __vt__16JAIStreamDataMgr[5];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9A08-803C9A1C 0014 .data      __vt__16JAIStreamAramMgr                                     */
-SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
+void* const __vt__16JAIStreamAramMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 	(void*)__dt__16JAIStreamAramMgrFv,
 };
+
 /* 803C9A1C-803C9A30 0010 .data      __vt__16JAIStreamDataMgr                                     */
-SECTION_DATA void* __vt__16JAIStreamDataMgr[5] = {
+void* const __vt__16JAIStreamDataMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -39,28 +37,23 @@ SECTION_DATA void* __vt__16JAIStreamDataMgr[5] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802A3AD8-802A3B20 0048 .text      __dt__16JAIStreamDataMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16JAIStreamDataMgrFv() {
+extern "C" asm void __dt__16JAIStreamDataMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamDataMgr/__dt__16JAIStreamDataMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A3B20-802A3B68 0048 .text      __dt__16JAIStreamAramMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16JAIStreamAramMgrFv() {
+extern "C" asm void __dt__16JAIStreamAramMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamDataMgr/__dt__16JAIStreamAramMgrFv.s"
 }

@@ -5,82 +5,81 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
-extern void __ct__6J3DSysFv();
-extern void loadPosMtxIndx__6J3DSysCFiUs();
-extern void loadNrmMtxIndx__6J3DSysCFiUs();
-extern void setTexCacheRegion__6J3DSysF15_GXTexCacheSize();
-extern void drawInit__6J3DSysFv();
-extern void reinitGX__6J3DSysFv();
-extern void reinitGenMode__6J3DSysFv();
-extern void reinitLighting__6J3DSysFv();
-extern void reinitTransform__6J3DSysFv();
-extern void reinitTexture__6J3DSysFv();
-extern void reinitTevStages__6J3DSysFv();
-extern void reinitIndStages__6J3DSysFv();
-extern void reinitPixelProc__6J3DSysFv();
-extern void __sinit_J3DSys_cpp();
-extern void makeTexCoordTable__Fv();
-extern void makeAlphaCmpTable__Fv();
-extern void makeZModeTable__Fv();
-extern void makeTevSwapTable__Fv();
-extern void PSMTXIdentity();
-extern void GXSetVtxAttrFmt();
-extern void GXInvalidateVtxCache();
-extern void GXSetTexCoordGen2();
-extern void GXSetNumTexGens();
-extern void GXFlush();
-extern void GXSetCullMode();
-extern void GXSetCoPlanar();
-extern void GXSetChanAmbColor();
-extern void GXSetChanMatColor();
-extern void GXSetNumChans();
-extern void GXSetChanCtrl();
-extern void GXInitTexObj();
-extern void GXLoadTexObj();
-extern void GXInitTexCacheRegion();
-extern void GXSetTevIndirect();
-extern void GXSetIndTexMtx();
-extern void GXSetIndTexCoordScale();
-extern void GXSetIndTexOrder();
-extern void GXSetNumIndStages();
-extern void GXSetTevDirect();
-extern void GXSetTevColorIn();
-extern void GXSetTevAlphaIn();
-extern void GXSetTevColorOp();
-extern void GXSetTevAlphaOp();
-extern void GXSetTevColor();
-extern void GXSetTevColorS10();
-extern void GXSetTevKColor();
-extern void GXSetTevKColorSel();
-extern void GXSetTevKAlphaSel();
-extern void GXSetTevSwapMode();
-extern void GXSetTevSwapModeTable();
-extern void GXSetAlphaCompare();
-extern void GXSetTevOrder();
-extern void GXSetNumTevStages();
-extern void GXSetFog();
-extern void GXSetFogRangeAdj();
-extern void GXSetBlendMode();
-extern void GXSetColorUpdate();
-extern void GXSetAlphaUpdate();
-extern void GXSetZMode();
-extern void GXSetZCompLoc();
-extern void GXSetDither();
-extern void GXSetCurrentMtx();
-extern void GXLoadTexMtxImm();
-extern void GXSetClipMode();
-extern void _savegpr_25();
-extern void _savegpr_28();
-extern void _restgpr_25();
-extern void _restgpr_28();
-SECTION_RODATA extern const u8 J3DSys__LIT_695[16];
-SECTION_RODATA extern const u8 LIT_696[16];
-SECTION_RODATA extern const u8 LIT_737[24];
+extern "C" extern void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
+extern "C" extern void __ct__6J3DSysFv();
+extern "C" extern void loadPosMtxIndx__6J3DSysCFiUs();
+extern "C" extern void loadNrmMtxIndx__6J3DSysCFiUs();
+extern "C" extern void setTexCacheRegion__6J3DSysF15_GXTexCacheSize();
+extern "C" extern void drawInit__6J3DSysFv();
+extern "C" extern void reinitGX__6J3DSysFv();
+extern "C" extern void reinitGenMode__6J3DSysFv();
+extern "C" extern void reinitLighting__6J3DSysFv();
+extern "C" extern void reinitTransform__6J3DSysFv();
+extern "C" extern void reinitTexture__6J3DSysFv();
+extern "C" extern void reinitTevStages__6J3DSysFv();
+extern "C" extern void reinitIndStages__6J3DSysFv();
+extern "C" extern void reinitPixelProc__6J3DSysFv();
+extern "C" extern void __sinit_J3DSys_cpp();
+extern "C" extern void makeTexCoordTable__Fv();
+extern "C" extern void makeAlphaCmpTable__Fv();
+extern "C" extern void makeZModeTable__Fv();
+extern "C" extern void makeTevSwapTable__Fv();
+extern "C" extern void PSMTXIdentity();
+extern "C" extern void GXSetVtxAttrFmt();
+extern "C" extern void GXInvalidateVtxCache();
+extern "C" extern void GXSetTexCoordGen2();
+extern "C" extern void GXSetNumTexGens();
+extern "C" extern void GXFlush();
+extern "C" extern void GXSetCullMode();
+extern "C" extern void GXSetCoPlanar();
+extern "C" extern void GXSetChanAmbColor();
+extern "C" extern void GXSetChanMatColor();
+extern "C" extern void GXSetNumChans();
+extern "C" extern void GXSetChanCtrl();
+extern "C" extern void GXInitTexObj();
+extern "C" extern void GXLoadTexObj();
+extern "C" extern void GXInitTexCacheRegion();
+extern "C" extern void GXSetTevIndirect();
+extern "C" extern void GXSetIndTexMtx();
+extern "C" extern void GXSetIndTexCoordScale();
+extern "C" extern void GXSetIndTexOrder();
+extern "C" extern void GXSetNumIndStages();
+extern "C" extern void GXSetTevDirect();
+extern "C" extern void GXSetTevColorIn();
+extern "C" extern void GXSetTevAlphaIn();
+extern "C" extern void GXSetTevColorOp();
+extern "C" extern void GXSetTevAlphaOp();
+extern "C" extern void GXSetTevColor();
+extern "C" extern void GXSetTevColorS10();
+extern "C" extern void GXSetTevKColor();
+extern "C" extern void GXSetTevKColorSel();
+extern "C" extern void GXSetTevKAlphaSel();
+extern "C" extern void GXSetTevSwapMode();
+extern "C" extern void GXSetTevSwapModeTable();
+extern "C" extern void GXSetAlphaCompare();
+extern "C" extern void GXSetTevOrder();
+extern "C" extern void GXSetNumTevStages();
+extern "C" extern void GXSetFog();
+extern "C" extern void GXSetFogRangeAdj();
+extern "C" extern void GXSetBlendMode();
+extern "C" extern void GXSetColorUpdate();
+extern "C" extern void GXSetAlphaUpdate();
+extern "C" extern void GXSetZMode();
+extern "C" extern void GXSetZCompLoc();
+extern "C" extern void GXSetDither();
+extern "C" extern void GXSetCurrentMtx();
+extern "C" extern void GXLoadTexMtxImm();
+extern "C" extern void GXSetClipMode();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_28();
+SECTION_RODATA extern const u8 J3DSys__lit_695[16];
+SECTION_RODATA extern const u8 lit_696[16];
+SECTION_RODATA extern const u8 lit_737[24];
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_DATA extern u8 NullTexData[16];
 SECTION_DATA extern u8 j3dIdentityMtx[48];
@@ -91,271 +90,250 @@ SECTION_BSS extern u8 mCurrentS__6J3DSys[12];
 SECTION_BSS extern u8 mParentS__6J3DSys[12];
 SECTION_BSS extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
 SECTION_SDATA extern u8 ColorBlack[4];
-SECTION_SDATA extern u8 ColorWhite[4];
+SECTION_SDATA extern u32 ColorWhite;
 SECTION_SBSS extern u8 j3dDefaultViewNo[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_892[4];
-SECTION_SDATA2 extern u8 J3DSys__LIT_893[4];
-SECTION_SDATA2 extern u8 J3DSys__LIT_894[8];
-SECTION_SDATA2 extern u8 j3dDefaultColInfo[4];
-SECTION_SDATA2 extern u8 data_804563C8[4];
-SECTION_SDATA2 extern u8 j3dDefaultTevColor[4];
-SECTION_SDATA2 extern u8 data_804563D8[4];
-SECTION_SDATA2 extern u8 j3dDefaultTevKColor[4];
-}
+SECTION_SDATA2 extern u8 lit_892[4];
+SECTION_SDATA2 extern f32 J3DSys__lit_893;
+SECTION_SDATA2 extern f32 J3DSys__lit_894;
+SECTION_SDATA2 extern u32 j3dDefaultColInfo;
+SECTION_SDATA2 extern u32 data_804563C8;
+SECTION_SDATA2 extern u32 j3dDefaultTevColor;
+SECTION_SDATA2 extern u32 data_804563D8;
+SECTION_SDATA2 extern u32 j3dDefaultTevKColor;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803A1DF8-803A1E08 0010 .rodata    @695                                                         */
-SECTION_RODATA const u8 J3DSys__LIT_695[16] = {
-	0x00, 0x00, 0x80, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803A1E08-803A1E18 0010 .rodata    @696                                                         */
-SECTION_RODATA const u8 LIT_696[16] = {
-	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803A1E18-803A1E30 0018 .rodata    @737                                                         */
-SECTION_RODATA const u8 LIT_737[24] = {
-	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CD8A0-803CD8B0 0010 .data      NullTexData                                                  */
-SECTION_DATA u8 NullTexData[16] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CD8B0-803CD8E0 0030 .data      j3dIdentityMtx                                               */
-SECTION_DATA u8 j3dIdentityMtx[48] = {
-	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CD8E0-803CD8F8 0018 .data      IndMtx                                                       */
-SECTION_DATA u8 IndMtx[24] = {
-	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450950-80450954 0004 .sdata     ColorBlack                                                   */
-SECTION_SDATA u8 ColorBlack[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80450954-80450958 0004 .sdata     ColorWhite                                                   */
-SECTION_SDATA u8 ColorWhite[4] = {
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456368-8045636C 0004 .sdata2    @892                                                         */
-SECTION_SDATA2 u8 LIT_892[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 8045636C-80456370 0004 .sdata2    @893                                                         */
-SECTION_SDATA2 u8 J3DSys__LIT_893[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80456370-80456378 0004 .sdata2    @894                                                         */
-SECTION_SDATA2 u8 J3DSys__LIT_894[8] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80434AC8-80434BE4 011C .bss       j3dSys                                                       */
-SECTION_BSS u8 j3dSys[284];
+u8 j3dSys[284];
+
 /* 80434BE4-80434C14 0030 .bss       mCurrentMtx__6J3DSys                                         */
-SECTION_BSS u8 mCurrentMtx__6J3DSys[48];
+u8 mCurrentMtx__6J3DSys[48];
+
 /* 80434C14-80434C20 000C .bss       mCurrentS__6J3DSys                                           */
-SECTION_BSS u8 mCurrentS__6J3DSys[12];
+u8 mCurrentS__6J3DSys[12];
+
 /* 80434C20-80434C2C 000C .bss       mParentS__6J3DSys                                            */
-SECTION_BSS u8 mParentS__6J3DSys[12];
+u8 mParentS__6J3DSys[12];
+
 /* 80434C2C-80434C70 0040 .bss       sTexCoordScaleTable__6J3DSys                                 */
-SECTION_BSS u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451598-804515A0 0004 .sbss      j3dDefaultViewNo                                             */
-SECTION_SBSS u8 j3dDefaultViewNo[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
 
 /* 8030FDE8-8030FEC0 00D8 .text      __ct__6J3DSysFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__6J3DSysFv() {
+extern "C" asm void __ct__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/__ct__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 8030FEC0-8030FEE4 0024 .text      loadPosMtxIndx__6J3DSysCFiUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadPosMtxIndx__6J3DSysCFiUs() {
+extern "C" asm void loadPosMtxIndx__6J3DSysCFiUs() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/loadPosMtxIndx__6J3DSysCFiUs.s"
 }
 #pragma pop
 
+
 /* 8030FEE4-8030FF0C 0028 .text      loadNrmMtxIndx__6J3DSysCFiUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadNrmMtxIndx__6J3DSysCFiUs() {
+extern "C" asm void loadNrmMtxIndx__6J3DSysCFiUs() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/loadNrmMtxIndx__6J3DSysCFiUs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803A1DF8-803A1E08 0010 .rodata    @695                                                         */
+SECTION_RODATA const u8 J3DSys__lit_695[16] = {
+	0x00, 0x00, 0x80, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A1E08-803A1E18 0010 .rodata    @696                                                         */
+SECTION_RODATA const u8 lit_696[16] = {
+	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8030FF0C-803100BC 01B0 .text      setTexCacheRegion__6J3DSysF15_GXTexCacheSize                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTexCacheRegion__6J3DSysF15_GXTexCacheSize() {
+extern "C" asm void setTexCacheRegion__6J3DSysF15_GXTexCacheSize() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/setTexCacheRegion__6J3DSysF15_GXTexCacheSize.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803A1E18-803A1E30 0018 .rodata    @737                                                         */
+SECTION_RODATA const u8 lit_737[24] = {
+	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CD8A0-803CD8B0 0010 .data      NullTexData                                                  */
+u8 NullTexData[16] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CD8B0-803CD8E0 0030 .data      j3dIdentityMtx                                               */
+u8 j3dIdentityMtx[48] = {
+	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 803100BC-8031073C 0680 .text      drawInit__6J3DSysFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawInit__6J3DSysFv() {
+extern "C" asm void drawInit__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/drawInit__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 8031073C-8031079C 0060 .text      reinitGX__6J3DSysFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitGX__6J3DSysFv() {
+extern "C" asm void reinitGX__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitGX__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 8031079C-803107E8 004C .text      reinitGenMode__6J3DSysFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitGenMode__6J3DSysFv() {
+extern "C" asm void reinitGenMode__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitGenMode__6J3DSysFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450950-80450954 0004 .sdata     ColorBlack                                                   */
+u8 ColorBlack[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80450954-80450958 0004 .sdata     ColorWhite                                                   */
+u32 ColorWhite = 0xFFFFFFFF;
+
 /* 803107E8-80310894 00AC .text      reinitLighting__6J3DSysFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitLighting__6J3DSysFv() {
+extern "C" asm void reinitLighting__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitLighting__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 80310894-80310998 0104 .text      reinitTransform__6J3DSysFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitTransform__6J3DSysFv() {
+extern "C" asm void reinitTransform__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitTransform__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 80310998-80310A3C 00A4 .text      reinitTexture__6J3DSysFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitTexture__6J3DSysFv() {
+extern "C" asm void reinitTexture__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitTexture__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 80310A3C-80310D44 0308 .text      reinitTevStages__6J3DSysFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitTevStages__6J3DSysFv() {
+extern "C" asm void reinitTevStages__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitTevStages__6J3DSysFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CD8E0-803CD8F8 0018 .data      IndMtx                                                       */
+u8 IndMtx[24] = {
+	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80310D44-80310E3C 00F8 .text      reinitIndStages__6J3DSysFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitIndStages__6J3DSysFv() {
+extern "C" asm void reinitIndStages__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitIndStages__6J3DSysFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456368-8045636C 0004 .sdata2    @892                                                         */
+u8 lit_892[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045636C-80456370 0004 .sdata2    @893                                                         */
+f32 J3DSys__lit_893 = 1.0f;
+
+/* 80456370-80456378 0004 .sdata2    @894                                                         */
+f32 J3DSys__lit_894 = 1.0f / 10.0f;
+/* padding 4 bytes */
+
 /* 80310E3C-80310ED0 0094 .text      reinitPixelProc__6J3DSysFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reinitPixelProc__6J3DSysFv() {
+extern "C" asm void reinitPixelProc__6J3DSysFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/reinitPixelProc__6J3DSysFv.s"
 }
 #pragma pop
 
+
 /* 80310ED0-80310EF8 0028 .text      __sinit_J3DSys_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_J3DSys_cpp() {
+extern "C" asm void __sinit_J3DSys_cpp() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/__sinit_J3DSys_cpp.s"
 }
 #pragma pop
 
+
+/* 80451598-804515A0 0004 .sbss      j3dDefaultViewNo                                             */
+u8 j3dDefaultViewNo[4 + 4 /* padding */];
 

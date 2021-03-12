@@ -1,0 +1,38 @@
+#
+# Generate By: dol2asm
+# Module: 59
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5D80, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5DAC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5DD8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 12, 'type': "Function"},
+	'getEventNo__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5DF8, 'size': 0x000C, 'padding': 0x00, 'name': "getEventNo__10daAndsw2_cFv", 'reference_count': 2, 'type': "Function"},
+	'getSwbit__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E04, 'size': 0x000C, 'padding': 0x00, 'name': "getSwbit__10daAndsw2_cFv", 'reference_count': 6, 'type': "Function"},
+	'getSwbit2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E10, 'size': 0x000C, 'padding': 0x00, 'name': "getSwbit2__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
+	'getType__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E1C, 'size': 0x000C, 'padding': 0x00, 'name': "getType__10daAndsw2_cFv", 'reference_count': 6, 'type': "Function"},
+	'getTimer__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E28, 'size': 0x000C, 'padding': 0x00, 'name': "getTimer__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
+	'getNum__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E34, 'size': 0x000C, 'padding': 0x00, 'name': "getNum__10daAndsw2_cFv", 'reference_count': 3, 'type': "Function"},
+	'getTopSw__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E40, 'size': 0x0070, 'padding': 0x00, 'name': "getTopSw__10daAndsw2_cFv", 'reference_count': 3, 'type': "Function"},
+	'getSwAns__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5EB0, 'size': 0x000C, 'padding': 0x00, 'name': "getSwAns__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
+	'chkAllSw2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5EBC, 'size': 0x00A8, 'padding': 0x00, 'name': "chkAllSw2__10daAndsw2_cFv", 'reference_count': 4, 'type': "Function"},
+	'chkSwStatus__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5F64, 'size': 0x00C0, 'padding': 0x00, 'name': "chkSwStatus__10daAndsw2_cFv", 'reference_count': 4, 'type': "Function"},
+	'chkSwStatus2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6024, 'size': 0x00A8, 'padding': 0x00, 'name': "chkSwStatus2__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
+	'__dt__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D60CC, 'size': 0x0054, 'padding': 0x00, 'name': "__dt__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
+	'create__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6120, 'size': 0x0284, 'padding': 0x00, 'name': "create__10daAndsw2_cFv", 'reference_count': 2, 'type': "Function"},
+	'daAndsw2_actionOnAll__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D63A4, 'size': 0x01DC, 'padding': 0x00, 'name': "daAndsw2_actionOnAll__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_actionTimer__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6580, 'size': 0x0184, 'padding': 0x00, 'name': "daAndsw2_actionTimer__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_actionOrder__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6704, 'size': 0x01A0, 'padding': 0x00, 'name': "daAndsw2_actionOrder__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_actionEvent__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D68A4, 'size': 0x00BC, 'padding': 0x00, 'name': "daAndsw2_actionEvent__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_actionOff__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6960, 'size': 0x00D4, 'padding': 0x00, 'name': "daAndsw2_actionOff__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_actionWait__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A34, 'size': 0x0008, 'padding': 0x00, 'name': "daAndsw2_actionWait__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_Execute__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A3C, 'size': 0x003C, 'padding': 0x00, 'name': "daAndsw2_Execute__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_Delete__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A78, 'size': 0x0028, 'padding': 0x00, 'name': "daAndsw2_Delete__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
+	'daAndsw2_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6AA0, 'size': 0x0020, 'padding': 0x00, 'name': "daAndsw2_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'data_804D6AC0': {'library': "d/a/d_a_andsw2", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x804D6AC0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_804D6AC4': {'library': "d/a/d_a_andsw2", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x804D6AC4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3821': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6ACC, 'size': 0x001C, 'padding': 0x00, 'name': "@3821", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_804D6AE8': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6AE8, 'size': 0x0018, 'padding': 0x00, 'name': "l_action$localstatic3$execute__10daAndsw2_cFv", 'reference_count': 0, 'type': "ReferenceArray"},
+	'l_daAndsw2_Method': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6B00, 'size': 0x0020, 'padding': 0x00, 'name': "l_daAndsw2_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_ANDSW2': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6B20, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_ANDSW2", 'reference_count': 0, 'type': "ReferenceArray"},
+}

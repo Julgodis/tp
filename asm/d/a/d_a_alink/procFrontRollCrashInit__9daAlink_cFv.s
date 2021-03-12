@@ -8,7 +8,7 @@ lbl_800C4F14:
 /* 800C4F2C 00000018  4B FF D0 41 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800C4F30 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800C4F34 00000020  38 80 00 24 */	li r4, 0x24
-/* 800C4F38 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800C4F38 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C4F3C 00000028  3C A0 80 39 */	lis r5, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C4F40 0000002C  38 C5 D7 BC */	addi r6, r5, m__23daAlinkHIO_frontRoll_c0@l
 /* 800C4F44 00000030  C0 46 00 1C */	lfs f2, 0x1c(r6)

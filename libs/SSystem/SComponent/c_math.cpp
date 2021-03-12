@@ -5,23 +5,22 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cM_rad2s__Ff();
-extern void U_GetAtanTable__Fff();
-extern void cM_atan2s__Fff();
-extern void cM_atan2f__Fff();
-extern void cM_initRnd__Fiii();
-extern void cM_rnd__Fv();
-extern void cM_rndF__Ff();
-extern void cM_rndFX__Ff();
-extern void cM_initRnd2__Fiii();
-extern void cM_rnd2__Fv();
-extern void cM_rndF2__Ff();
-extern void cM_rndFX2__Ff();
-extern void fmod();
+extern "C" extern void cM_rad2s__Ff();
+extern "C" extern void U_GetAtanTable__Fff();
+extern "C" extern void cM_atan2s__Fff();
+extern "C" extern void cM_atan2f__Fff();
+extern "C" extern void cM_initRnd__Fiii();
+extern "C" extern void cM_rnd__Fv();
+extern "C" extern void cM_rndF__Ff();
+extern "C" extern void cM_rndFX__Ff();
+extern "C" extern void cM_initRnd2__Fiii();
+extern "C" extern void cM_rnd2__Fv();
+extern "C" extern void cM_rndF2__Ff();
+extern "C" extern void cM_rndFX2__Ff();
+extern "C" extern void fmod();
 SECTION_DATA extern u8 atntable[2056];
 SECTION_SBSS extern u8 data_80451168[4];
 SECTION_SBSS extern u8 data_8045116C[4];
@@ -30,28 +29,44 @@ SECTION_SBSS extern u8 data_80451174[4];
 SECTION_SBSS extern u8 data_80451178[4];
 SECTION_SBSS extern u8 data_8045117C[4];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 c_math__LIT_2201[8];
-SECTION_SDATA2 extern u8 c_math__LIT_2215[4];
-SECTION_SDATA2 extern u8 LIT_2232[4];
-SECTION_SDATA2 extern u8 c_math__LIT_2277[4];
-SECTION_SDATA2 extern u8 LIT_2282[4];
-SECTION_SDATA2 extern u8 LIT_2284[8];
-SECTION_SDATA2 extern u8 LIT_2296[4];
-SECTION_SDATA2 extern u8 LIT_2297[4];
-SECTION_SDATA2 extern u8 LIT_2298[8];
-SECTION_SDATA2 extern u8 c_math__LIT_2299[8];
-SECTION_SDATA2 extern u8 c_math__LIT_2311[4];
-SECTION_SDATA2 extern u8 c_math__LIT_2312[4];
+SECTION_SDATA2 extern f64 c_math__lit_2201;
+SECTION_SDATA2 extern f32 c_math__lit_2215;
+SECTION_SDATA2 extern f32 lit_2232;
+SECTION_SDATA2 extern u8 c_math__lit_2277[4];
+SECTION_SDATA2 extern f32 lit_2282;
+SECTION_SDATA2 extern f64 lit_2284;
+SECTION_SDATA2 extern f32 lit_2296;
+SECTION_SDATA2 extern f32 lit_2297;
+SECTION_SDATA2 extern f32 lit_2298;
+SECTION_SDATA2 extern f64 c_math__lit_2299;
+SECTION_SDATA2 extern f32 c_math__lit_2311;
+SECTION_SDATA2 extern f32 c_math__lit_2312;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 804550A8-804550B0 0008 .sdata2    @2201                                                        */
+f64 c_math__lit_2201 = 6.2831854820251465;
+
+/* 804550B0-804550B4 0004 .sdata2    @2215                                                        */
+f32 c_math__lit_2215 = 10430.3779296875f;
+
+/* 802675E4-80267640 005C .text      cM_rad2s__Ff                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cM_rad2s__Ff() {
+	nofralloc
+#include "asm/SSystem/SComponent/c_math/cM_rad2s__Ff.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C3778-803C3F80 0802 .data      atntable                                                     */
-SECTION_DATA u8 atntable[2056] = {
+u8 atntable[2056] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x14, 0x00, 0x1F, 0x00, 0x29, 0x00, 0x33, 0x00, 0x3D, 0x00, 0x47,
 	0x00, 0x51, 0x00, 0x5C, 0x00, 0x66, 0x00, 0x70, 0x00, 0x7A, 0x00, 0x84, 0x00, 0x8F, 0x00, 0x99,
 	0x00, 0xA3, 0x00, 0xAD, 0x00, 0xB7, 0x00, 0xC2, 0x00, 0xCC, 0x00, 0xD6, 0x00, 0xE0, 0x00, 0xEA,
@@ -184,206 +199,179 @@ SECTION_DATA u8 atntable[2056] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804550A8-804550B0 0008 .sdata2    @2201                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2201[8] = {
-	0x40, 0x19, 0x21, 0xFB, 0x60, 0x00, 0x00, 0x00,
-};
-/* 804550B0-804550B4 0004 .sdata2    @2215                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2215[4] = {
-	0x46, 0x22, 0xF9, 0x83,
-};
 /* 804550B4-804550B8 0004 .sdata2    @2232                                                        */
-SECTION_SDATA2 u8 LIT_2232[4] = {
-	0x44, 0x80, 0x00, 0x00,
-};
-/* 804550B8-804550BC 0004 .sdata2    @2277                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2277[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804550BC-804550C0 0004 .sdata2    @2282                                                        */
-SECTION_SDATA2 u8 LIT_2282[4] = {
-	0x38, 0xC9, 0x0F, 0xDB,
-};
-/* 804550C0-804550C8 0008 .sdata2    @2284                                                        */
-SECTION_SDATA2 u8 LIT_2284[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 804550C8-804550CC 0004 .sdata2    @2296                                                        */
-SECTION_SDATA2 u8 LIT_2296[4] = {
-	0x46, 0xEC, 0xE6, 0x00,
-};
-/* 804550CC-804550D0 0004 .sdata2    @2297                                                        */
-SECTION_SDATA2 u8 LIT_2297[4] = {
-	0x46, 0xEC, 0x7A, 0x00,
-};
-/* 804550D0-804550D8 0004 .sdata2    @2298                                                        */
-SECTION_SDATA2 u8 LIT_2298[8] = {
-	0x46, 0xEC, 0xC6, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804550D8-804550E0 0008 .sdata2    @2299                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2299[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804550E0-804550E4 0004 .sdata2    @2311                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2311[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 804550E4-804550E8 0004 .sdata2    @2312                                                        */
-SECTION_SDATA2 u8 c_math__LIT_2312[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451168-8045116C 0004 .sbss      r0                                                           */
-SECTION_SBSS u8 data_80451168[4];
-/* 8045116C-80451170 0004 .sbss      r1                                                           */
-SECTION_SBSS u8 data_8045116C[4];
-/* 80451170-80451174 0004 .sbss      r2                                                           */
-SECTION_SBSS u8 data_80451170[4];
-/* 80451174-80451178 0004 .sbss      r02                                                          */
-SECTION_SBSS u8 data_80451174[4];
-/* 80451178-8045117C 0004 .sbss      r12                                                          */
-SECTION_SBSS u8 data_80451178[4];
-/* 8045117C-80451180 0004 .sbss      r22                                                          */
-SECTION_SBSS u8 data_8045117C[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802675E4-80267640 005C .text      cM_rad2s__Ff                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cM_rad2s__Ff() {
-	nofralloc
-#include "asm/SSystem/SComponent/c_math/cM_rad2s__Ff.s"
-}
-#pragma pop
+f32 lit_2232 = 1024.0f;
 
 /* 80267640-80267674 0034 .text      U_GetAtanTable__Fff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void U_GetAtanTable__Fff() {
+extern "C" asm void U_GetAtanTable__Fff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/U_GetAtanTable__Fff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550B8-804550BC 0004 .sdata2    @2277                                                        */
+u8 c_math__lit_2277[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80267674-80267814 01A0 .text      cM_atan2s__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_atan2s__Fff() {
+extern "C" asm void cM_atan2s__Fff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_atan2s__Fff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550BC-804550C0 0004 .sdata2    @2282                                                        */
+f32 lit_2282 = 9.58738019107841e-05f;
+
+/* 804550C0-804550C8 0008 .sdata2    @2284                                                        */
+f64 lit_2284 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80267814-8026785C 0048 .text      cM_atan2f__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_atan2f__Fff() {
+extern "C" asm void cM_atan2f__Fff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_atan2f__Fff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451168-8045116C 0004 .sbss      r0                                                           */
+u8 data_80451168[4];
+
+/* 8045116C-80451170 0004 .sbss      r1                                                           */
+u8 data_8045116C[4];
+
+/* 80451170-80451174 0004 .sbss      r2                                                           */
+u8 data_80451170[4];
+
 /* 8026785C-8026786C 0010 .text      cM_initRnd__Fiii                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_initRnd__Fiii() {
+extern "C" asm void cM_initRnd__Fiii() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd__Fiii.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550C8-804550CC 0004 .sdata2    @2296                                                        */
+f32 lit_2296 = 30323.0f;
+
+/* 804550CC-804550D0 0004 .sdata2    @2297                                                        */
+f32 lit_2297 = 30269.0f;
+
+/* 804550D0-804550D8 0004 .sdata2    @2298                                                        */
+f32 lit_2298 = 30307.0f;
+/* padding 4 bytes */
+
+/* 804550D8-804550E0 0008 .sdata2    @2299                                                        */
+f64 c_math__lit_2299 = 1.0;
+
 /* 8026786C-80267954 00E8 .text      cM_rnd__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rnd__Fv() {
+extern "C" asm void cM_rnd__Fv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rnd__Fv.s"
 }
 #pragma pop
 
+
 /* 80267954-8026798C 0038 .text      cM_rndF__Ff                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rndF__Ff() {
+extern "C" asm void cM_rndF__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndF__Ff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804550E0-804550E4 0004 .sdata2    @2311                                                        */
+f32 c_math__lit_2311 = 2.0f;
+
+/* 804550E4-804550E8 0004 .sdata2    @2312                                                        */
+f32 c_math__lit_2312 = 0.5f;
+
 /* 8026798C-802679D4 0048 .text      cM_rndFX__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rndFX__Ff() {
+extern "C" asm void cM_rndFX__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndFX__Ff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451174-80451178 0004 .sbss      r02                                                          */
+u8 data_80451174[4];
+
+/* 80451178-8045117C 0004 .sbss      r12                                                          */
+u8 data_80451178[4];
+
+/* 8045117C-80451180 0004 .sbss      r22                                                          */
+u8 data_8045117C[4];
+
 /* 802679D4-802679E4 0010 .text      cM_initRnd2__Fiii                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_initRnd2__Fiii() {
+extern "C" asm void cM_initRnd2__Fiii() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd2__Fiii.s"
 }
 #pragma pop
 
+
 /* 802679E4-80267ACC 00E8 .text      cM_rnd2__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rnd2__Fv() {
+extern "C" asm void cM_rnd2__Fv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rnd2__Fv.s"
 }
 #pragma pop
 
+
 /* 80267ACC-80267B04 0038 .text      cM_rndF2__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rndF2__Ff() {
+extern "C" asm void cM_rndF2__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndF2__Ff.s"
 }
 #pragma pop
 
+
 /* 80267B04-80267B4C 0048 .text      cM_rndFX2__Ff                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rndFX2__Ff() {
+extern "C" asm void cM_rndFX2__Ff() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndFX2__Ff.s"
 }

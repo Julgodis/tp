@@ -14,9 +14,9 @@ lbl_8018A564:
 /* 8018A594 00000030  38 A0 00 00 */	li r5, 0
 /* 8018A598 00000034  38 C0 00 00 */	li r6, 0
 /* 8018A59C 00000038  38 E0 00 00 */	li r7, 0
-/* 8018A5A0 0000003C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018A5A0 0000003C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 8018A5A4 00000040  FC 40 08 90 */	fmr f2, f1
-/* 8018A5A8 00000044  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 8018A5A8 00000044  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 8018A5AC 00000048  FC 80 18 90 */	fmr f4, f3
 /* 8018A5B0 0000004C  39 00 00 00 */	li r8, 0
 /* 8018A5B4 00000050  48 12 1F 59 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -35,9 +35,9 @@ lbl_8018A5C8:
 /* 8018A5E4 0000001C  38 A0 00 00 */	li r5, 0
 /* 8018A5E8 00000020  38 C0 00 00 */	li r6, 0
 /* 8018A5EC 00000024  38 E0 00 00 */	li r7, 0
-/* 8018A5F0 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018A5F0 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 8018A5F4 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 8018A5F8 00000030  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 8018A5F8 00000030  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 8018A5FC 00000034  FC 80 18 90 */	fmr f4, f3
 /* 8018A600 00000038  39 00 00 00 */	li r8, 0
 /* 8018A604 0000003C  48 12 13 81 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -67,9 +67,9 @@ lbl_8018A648:
 /* 8018A660 00000018  38 A0 00 00 */	li r5, 0
 /* 8018A664 0000001C  38 C0 00 00 */	li r6, 0
 /* 8018A668 00000020  38 E0 00 00 */	li r7, 0
-/* 8018A66C 00000024  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018A66C 00000024  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 8018A670 00000028  FC 40 08 90 */	fmr f2, f1
-/* 8018A674 0000002C  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 8018A674 0000002C  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 8018A678 00000030  FC 80 18 90 */	fmr f4, f3
 /* 8018A67C 00000034  39 00 00 00 */	li r8, 0
 /* 8018A680 00000038  48 12 13 05 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

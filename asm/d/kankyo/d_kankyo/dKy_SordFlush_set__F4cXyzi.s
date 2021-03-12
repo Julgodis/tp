@@ -15,7 +15,7 @@ lbl_801A8484:
 /* 801A84B8 00000034  28 00 00 0A */	cmplwi r0, 0xa
 /* 801A84BC 00000038  40 80 00 18 */	bge lbl_801A84D4
 /* 801A84C0 0000003C  C0 3F 0E DC */	lfs f1, 0xedc(r31)
-/* 801A84C4 00000040  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A84C4 00000040  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A84C8 00000044  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A84CC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 801A84D0 00000004  40 82 00 50 */	bne lbl_801A8520

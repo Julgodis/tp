@@ -5,7 +5,7 @@ lbl_801AEC44:
 /* 801AEC50 0000000C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 801AEC54 00000010  80 63 00 04 */	lwz r3, 4(r3)
 /* 801AEC58 00000014  54 A0 04 3E */	clrlwi r0, r5, 0x10
-/* 801AEC5C 00000018  C8 42 A5 00 */	lfd f2, d_d_kantera_icon_meter__LIT_3761(r2)
+/* 801AEC5C 00000018  C8 42 A5 00 */	lfd f2, d_d_kantera_icon_meter__lit_3761(r2)
 /* 801AEC60 0000001C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801AEC64 00000020  3C A0 43 30 */	lis r5, 0x4330
 /* 801AEC68 00000024  90 A1 00 08 */	stw r5, 8(r1)
@@ -18,7 +18,7 @@ lbl_801AEC44:
 /* 801AEC84 00000040  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801AEC88 00000044  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801AEC8C 00000048  D0 03 00 CC */	stfs f0, 0xcc(r3)
-/* 801AEC90 0000004C  C0 02 A4 F8 */	lfs f0, d_d_kantera_icon_meter__LIT_3759(r2)
+/* 801AEC90 0000004C  C0 02 A4 F8 */	lfs f0, d_d_kantera_icon_meter__lit_3759(r2)
 /* 801AEC94 00000050  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 801AEC98 00000054  81 83 00 00 */	lwz r12, 0(r3)
 /* 801AEC9C 00000058  81 8C 00 2C */	lwz r12, 0x2c(r12)

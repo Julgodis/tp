@@ -5,71 +5,61 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
-extern void init__13JAISoundChildFv();
-extern void mixOut__13JAISoundChildFP8JASTrack();
-extern void calc__13JAISoundChildFv();
-SECTION_SDATA2 extern u8 LIT_689[4];
-SECTION_SDATA2 extern u8 JAISoundChild__LIT_690[4];
-SECTION_SDATA2 extern u8 JAISoundChild__LIT_691[8];
-}
+extern "C" extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" extern void init__13JAISoundChildFv();
+extern "C" extern void mixOut__13JAISoundChildFP8JASTrack();
+extern "C" extern void calc__13JAISoundChildFv();
+SECTION_SDATA2 extern f32 lit_689;
+SECTION_SDATA2 extern u8 JAISoundChild__lit_690[4];
+SECTION_SDATA2 extern f32 JAISoundChild__lit_691;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804557D8-804557DC 0004 .sdata2    @689                                                         */
-SECTION_SDATA2 u8 LIT_689[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 lit_689 = 1.0f;
+
 /* 804557DC-804557E0 0004 .sdata2    @690                                                         */
-SECTION_SDATA2 u8 JAISoundChild__LIT_690[4] = {
+u8 JAISoundChild__lit_690[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 804557E0-804557E8 0004 .sdata2    @691                                                         */
-SECTION_SDATA2 u8 JAISoundChild__LIT_691[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f32 JAISoundChild__lit_691 = 0.5f;
+/* padding 4 bytes */
 
 /* 802A2AB0-802A2B28 0078 .text      init__13JAISoundChildFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13JAISoundChildFv() {
+extern "C" asm void init__13JAISoundChildFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundChild/init__13JAISoundChildFv.s"
 }
 #pragma pop
 
+
 /* 802A2B28-802A2B7C 0054 .text      mixOut__13JAISoundChildFP8JASTrack                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mixOut__13JAISoundChildFP8JASTrack() {
+extern "C" asm void mixOut__13JAISoundChildFP8JASTrack() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundChild/mixOut__13JAISoundChildFP8JASTrack.s"
 }
 #pragma pop
 
+
 /* 802A2B7C-802A2C98 011C .text      calc__13JAISoundChildFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__13JAISoundChildFv() {
+extern "C" asm void calc__13JAISoundChildFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundChild/calc__13JAISoundChildFv.s"
 }

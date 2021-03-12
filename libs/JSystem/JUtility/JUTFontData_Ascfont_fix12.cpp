@@ -5,19 +5,15 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_RODATA extern const u8 JUTResFONT_Ascfont_fix12[16736];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039DA20-803A1B80 4160 .rodata    JUTResFONT_Ascfont_fix12                                     */
 SECTION_RODATA const u8 JUTResFONT_Ascfont_fix12[16736] = {
 	0x46, 0x4F, 0x4E, 0x54, 0x62, 0x66, 0x6E, 0x31, 0x00, 0x00, 0x41, 0x60, 0x00, 0x00, 0x00, 0x04,
@@ -1067,5 +1063,4 @@ SECTION_RODATA const u8 JUTResFONT_Ascfont_fix12[16736] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
 

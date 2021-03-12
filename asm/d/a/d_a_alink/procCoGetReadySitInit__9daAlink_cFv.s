@@ -39,7 +39,7 @@ lbl_8011D5AC:
 /* 8011D5CC 00000020  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8011D5D0 00000024  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
 /* 8011D5D4 00000028  C0 25 00 70 */	lfs f1, 0x70(r5)
-/* 8011D5D8 0000002C  C0 42 92 C4 */	lfs f2, LIT_6109(r2)
+/* 8011D5D8 0000002C  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8011D5DC 00000030  48 00 C0 FD */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8011D5E0 00000034  38 00 00 01 */	li r0, 1
 /* 8011D5E4 00000038  B0 1F 30 0C */	sth r0, 0x300c(r31)
@@ -47,10 +47,10 @@ lbl_8011D5AC:
 lbl_8011D5EC:
 /* 8011D5EC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8011D5F0 00000004  38 80 00 CF */	li r4, 0xcf
-/* 8011D5F4 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
-/* 8011D5F8 0000000C  C0 42 93 80 */	lfs f2, LIT_8780(r2)
+/* 8011D5F4 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011D5F8 0000000C  C0 42 93 80 */	lfs f2, lit_8780(r2)
 /* 8011D5FC 00000010  38 A0 FF FF */	li r5, -1
-/* 8011D600 00000014  C0 62 92 C4 */	lfs f3, LIT_6109(r2)
+/* 8011D600 00000014  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8011D604 00000018  4B F8 FA 09 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 8011D608 0000001C  38 00 00 00 */	li r0, 0
 /* 8011D60C 00000020  B0 1F 30 0C */	sth r0, 0x300c(r31)

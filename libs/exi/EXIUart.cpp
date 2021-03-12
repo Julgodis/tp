@@ -5,86 +5,83 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSGetConsoleType();
-extern void EXIImm();
-extern void EXISync();
-extern void EXIAttach();
-extern void EXIDetach();
-extern void EXISelect();
-extern void EXIDeselect();
-extern void EXILock();
-extern void EXIUnlock();
-extern void EXIGetID();
-extern void ProbeBarnacle();
-extern void __OSEnableBarnacle();
-extern void InitializeUART();
-extern void WriteUARTN();
+extern "C" extern void OSGetConsoleType();
+extern "C" extern void EXIImm();
+extern "C" extern void EXISync();
+extern "C" extern void EXIAttach();
+extern "C" extern void EXIDetach();
+extern "C" extern void EXISelect();
+extern "C" extern void EXIDeselect();
+extern "C" extern void EXILock();
+extern "C" extern void EXIUnlock();
+extern "C" extern void EXIGetID();
+extern "C" extern void ProbeBarnacle();
+extern "C" extern void __OSEnableBarnacle();
+extern "C" extern void InitializeUART();
+extern "C" extern void WriteUARTN();
 SECTION_SBSS extern u8 Chan[4];
 SECTION_SBSS extern u8 Dev[4];
 SECTION_SBSS extern u8 Enabled[4];
 SECTION_SBSS extern u8 BarnacleEnabled[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804516E0-804516E4 0004 .sbss      Chan                                                         */
-SECTION_SBSS u8 Chan[4];
-/* 804516E4-804516E8 0004 .sbss      Dev                                                          */
-SECTION_SBSS u8 Dev[4];
-/* 804516E8-804516EC 0004 .sbss      Enabled                                                      */
-SECTION_SBSS u8 Enabled[4];
-/* 804516EC-804516F0 0004 .sbss      BarnacleEnabled                                              */
-SECTION_SBSS u8 BarnacleEnabled[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803445E8-80344774 018C .text      ProbeBarnacle                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ProbeBarnacle() {
+extern "C" asm void ProbeBarnacle() {
 	nofralloc
 #include "asm/exi/EXIUart/ProbeBarnacle.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804516E0-804516E4 0004 .sbss      Chan                                                         */
+u8 Chan[4];
+
+/* 804516E4-804516E8 0004 .sbss      Dev                                                          */
+u8 Dev[4];
+
+/* 804516E8-804516EC 0004 .sbss      Enabled                                                      */
+u8 Enabled[4];
+
+/* 804516EC-804516F0 0004 .sbss      BarnacleEnabled                                              */
+u8 BarnacleEnabled[4];
+
 /* 80344774-80344930 01BC .text      __OSEnableBarnacle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __OSEnableBarnacle() {
+extern "C" asm void __OSEnableBarnacle() {
 	nofralloc
 #include "asm/exi/EXIUart/__OSEnableBarnacle.s"
 }
 #pragma pop
 
+
 /* 80344930-803449A0 0070 .text      InitializeUART                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void InitializeUART() {
+extern "C" asm void InitializeUART() {
 	nofralloc
 #include "asm/exi/EXIUart/InitializeUART.s"
 }
 #pragma pop
 
+
 /* 803449A0-80344BA0 0200 .text      WriteUARTN                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void WriteUARTN() {
+extern "C" asm void WriteUARTN() {
 	nofralloc
 #include "asm/exi/EXIUart/WriteUARTN.s"
 }

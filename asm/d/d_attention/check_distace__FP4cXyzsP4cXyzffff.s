@@ -39,24 +39,24 @@ lbl_80070D28:
 lbl_80070D30:
 /* 80070D30 00000000  FC 20 E8 90 */	fmr f1, f29
 /* 80070D34 00000004  7F E3 FB 78 */	mr r3, r31
-/* 80070D38 00000008  C0 42 8C 58 */	lfs f2, d_d_attention__LIT_4073(r2)
+/* 80070D38 00000008  C0 42 8C 58 */	lfs f2, d_d_attention__lit_4073(r2)
 /* 80070D3C 0000000C  4B FF FF 05 */	bl distace_angle_adjust__Ffsf
 /* 80070D40 00000010  EF FC 08 2A */	fadds f31, f28, f1
 /* 80070D44 00000014  C0 01 00 24 */	lfs f0, 0x24(r1)
 /* 80070D48 00000018  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80070D4C 0000001C  C0 02 8C 50 */	lfs f0, d_d_attention__LIT_4071(r2)
+/* 80070D4C 0000001C  C0 02 8C 50 */	lfs f0, d_d_attention__lit_4071(r2)
 /* 80070D50 00000020  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80070D54 00000024  C0 01 00 2C */	lfs f0, 0x2c(r1)
 /* 80070D58 00000028  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80070D5C 0000002C  38 61 00 0C */	addi r3, r1, 0xc
 /* 80070D60 00000030  48 2D 63 D9 */	bl PSVECSquareMag
-/* 80070D64 00000034  C0 02 8C 50 */	lfs f0, d_d_attention__LIT_4071(r2)
+/* 80070D64 00000034  C0 02 8C 50 */	lfs f0, d_d_attention__lit_4071(r2)
 /* 80070D68 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80070D6C 00000000  40 81 00 58 */	ble lbl_80070DC4
 /* 80070D70 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80070D74 00000008  C8 82 8C 78 */	lfd f4, d_d_attention__LIT_4514(r2)
+/* 80070D74 00000008  C8 82 8C 78 */	lfd f4, d_d_attention__lit_4514(r2)
 /* 80070D78 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 80070D7C 00000010  C8 62 8C 80 */	lfd f3, d_d_attention__LIT_4515(r2)
+/* 80070D7C 00000010  C8 62 8C 80 */	lfd f3, d_d_attention__lit_4515(r2)
 /* 80070D80 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 80070D84 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 80070D88 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -75,7 +75,7 @@ lbl_80070D30:
 /* 80070DBC 00000050  FC 20 08 18 */	frsp f1, f1
 /* 80070DC0 00000054  48 00 00 88 */	b lbl_80070E48
 lbl_80070DC4:
-/* 80070DC4 00000000  C8 02 8C 88 */	lfd f0, d_d_attention__LIT_4516(r2)
+/* 80070DC4 00000000  C8 02 8C 88 */	lfd f0, d_d_attention__lit_4516(r2)
 /* 80070DC8 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80070DCC 00000000  40 80 00 10 */	bge lbl_80070DDC
 /* 80070DD0 00000004  3C 60 80 45 */	lis r3, __float_nan@ha

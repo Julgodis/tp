@@ -21,7 +21,7 @@ lbl_802852D0:
 /* 8028531C 0000004C  48 0C 15 CD */	bl PSMTXTrans
 /* 80285320 00000050  38 61 00 08 */	addi r3, r1, 8
 /* 80285324 00000054  38 80 00 79 */	li r4, 0x79
-/* 80285328 00000058  C0 22 BA 5C */	lfs f1, jstudio_control__LIT_772(r2)
+/* 80285328 00000058  C0 22 BA 5C */	lfs f1, jstudio_control__lit_772(r2)
 /* 8028532C 0000005C  FC 00 F8 50 */	fneg f0, f31
 /* 80285330 00000060  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80285334 00000064  48 0C 13 75 */	bl PSMTXRotRad

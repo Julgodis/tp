@@ -211,8 +211,8 @@ lbl_8022BE50:
 /* 8022BE6C 0000001C  88 1E 00 AE */	lbz r0, 0xae(r30)
 /* 8022BE70 00000020  28 00 00 09 */	cmplwi r0, 9
 /* 8022BE74 00000024  41 81 00 88 */	bgt lbl_8022BEFC
-/* 8022BE78 00000028  3C 60 80 3C */	lis r3, d_msg_d_msg_class__LIT_5735@ha
-/* 8022BE7C 0000002C  38 63 02 08 */	addi r3, r3, d_msg_d_msg_class__LIT_5735@l
+/* 8022BE78 00000028  3C 60 80 3C */	lis r3, d_msg_d_msg_class__lit_5735@ha
+/* 8022BE7C 0000002C  38 63 02 08 */	addi r3, r3, d_msg_d_msg_class__lit_5735@l
 /* 8022BE80 00000030  54 00 10 3A */	slwi r0, r0, 2
 /* 8022BE84 00000034  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8022BE88 00000038  7C 09 03 A6 */	mtctr r0

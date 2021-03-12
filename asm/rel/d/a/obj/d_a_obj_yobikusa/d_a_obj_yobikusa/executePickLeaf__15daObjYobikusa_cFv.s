@@ -1,0 +1,66 @@
+lbl_8059CD80:
+/* 8059CD80 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8059CD84 00000004  7C 08 02 A6 */	mflr r0
+/* 8059CD88 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 8059CD8C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 8059CD90 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 8059CD94 00000014  A8 03 07 6A */	lha r0, 0x76a(r3)
+/* 8059CD98 00000018  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
+/* 8059CD9C 0000001C  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha
+/* 8059CDA0 00000020  38 83 00 00 */	addi r4, r3, sincosTable___5JMath@l
+/* 8059CDA4 00000024  7C 24 04 2E */	lfsx f1, r4, r0
+/* 8059CDA8 00000028  C0 1F 07 48 */	lfs f0, 0x748(r31)
+/* 8059CDAC 0000002C  EC 20 00 72 */	fmuls f1, f0, f1
+/* 8059CDB0 00000030  A8 1F 07 6C */	lha r0, 0x76c(r31)
+/* 8059CDB4 00000034  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
+/* 8059CDB8 00000038  7C 64 02 14 */	add r3, r4, r0
+/* 8059CDBC 0000003C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8059CDC0 00000040  EC 01 00 32 */	fmuls f0, f1, f0
+/* 8059CDC4 00000044  FC 00 00 1E */	fctiwz f0, f0
+/* 8059CDC8 00000048  D8 01 00 08 */	stfd f0, 8(r1)
+/* 8059CDCC 0000004C  80 01 00 0C */	lwz r0, 0xc(r1)
+/* 8059CDD0 00000050  B0 1F 07 54 */	sth r0, 0x754(r31)
+/* 8059CDD4 00000054  A8 1F 07 6C */	lha r0, 0x76c(r31)
+/* 8059CDD8 00000058  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
+/* 8059CDDC 0000005C  7C 04 04 2E */	lfsx f0, r4, r0
+/* 8059CDE0 00000060  EC 01 00 32 */	fmuls f0, f1, f0
+/* 8059CDE4 00000064  FC 00 00 1E */	fctiwz f0, f0
+/* 8059CDE8 00000068  D8 01 00 10 */	stfd f0, 0x10(r1)
+/* 8059CDEC 0000006C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8059CDF0 00000070  B0 1F 07 56 */	sth r0, 0x756(r31)
+/* 8059CDF4 00000074  38 7F 07 48 */	addi r3, r31, 0x748
+/* 8059CDF8 00000078  3C 80 00 00 */	lis r4, lit_3699@ha
+/* 8059CDFC 0000007C  C0 24 00 00 */	lfs f1, lit_3699@l(r4)
+/* 8059CE00 00000080  3C 80 00 00 */	lis r4, M_attr__15daObjYobikusa_c@ha
+/* 8059CE04 00000084  38 84 00 00 */	addi r4, r4, M_attr__15daObjYobikusa_c@l
+/* 8059CE08 00000088  C0 44 00 34 */	lfs f2, 0x34(r4)
+/* 8059CE0C 0000008C  4B FF FB CD */	bl cLib_chaseF__FPfff
+/* 8059CE10 00000090  A8 9F 07 6A */	lha r4, 0x76a(r31)
+/* 8059CE14 00000094  3C 60 00 00 */	lis r3, M_attr__15daObjYobikusa_c@ha
+/* 8059CE18 00000098  38 63 00 00 */	addi r3, r3, M_attr__15daObjYobikusa_c@l
+/* 8059CE1C 0000009C  A8 03 00 3E */	lha r0, 0x3e(r3)
+/* 8059CE20 000000A0  7C 04 02 14 */	add r0, r4, r0
+/* 8059CE24 000000A4  B0 1F 07 6A */	sth r0, 0x76a(r31)
+/* 8059CE28 000000A8  3C 60 00 00 */	lis r3, lit_3699@ha
+/* 8059CE2C 000000AC  C0 23 00 00 */	lfs f1, lit_3699@l(r3)
+/* 8059CE30 000000B0  C0 1F 07 48 */	lfs f0, 0x748(r31)
+/* 8059CE34 000000B4  FC 01 00 00 */	fcmpu cr0, f1, f0
+/* 8059CE38 000000B8  40 82 00 30 */	bne lbl_8059CE68
+/* 8059CE3C 000000BC  38 7F 05 F0 */	addi r3, r31, 0x5f0
+/* 8059CE40 000000C0  4B FF FB 99 */	bl ChkCoHit__12dCcD_GObjInfFv
+/* 8059CE44 000000C4  28 03 00 00 */	cmplwi r3, 0
+/* 8059CE48 000000C8  41 82 00 14 */	beq lbl_8059CE5C
+/* 8059CE4C 000000CC  7F E3 FB 78 */	mr r3, r31
+/* 8059CE50 000000D0  38 80 00 01 */	li r4, 1
+/* 8059CE54 000000D4  4B FF FB A5 */	bl setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e
+/* 8059CE58 000000D8  48 00 00 10 */	b lbl_8059CE68
+lbl_8059CE5C:
+/* 8059CE5C 00000000  7F E3 FB 78 */	mr r3, r31
+/* 8059CE60 00000004  38 80 00 00 */	li r4, 0
+/* 8059CE64 00000008  4B FF FB 95 */	bl setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e
+lbl_8059CE68:
+/* 8059CE68 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 8059CE6C 00000004  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8059CE70 00000008  7C 08 03 A6 */	mtlr r0
+/* 8059CE74 0000000C  38 21 00 20 */	addi r1, r1, 0x20
+/* 8059CE78 00000010  4E 80 00 20 */	blr 

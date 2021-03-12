@@ -5,8 +5,8 @@ lbl_8019FB30:
 /* 8019FB3C 0000000C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019FB40 00000010  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8019FB44 00000014  48 00 00 89 */	bl getDarkDaytime__18dScnKy_env_light_cFv
-/* 8019FB48 00000018  C0 62 A2 BC */	lfs f3, LIT_5554(r2)
-/* 8019FB4C 0000001C  C0 42 A2 70 */	lfs f2, LIT_4850(r2)
+/* 8019FB48 00000018  C0 62 A2 BC */	lfs f3, lit_5554(r2)
+/* 8019FB4C 0000001C  C0 42 A2 70 */	lfs f2, lit_4850(r2)
 /* 8019FB50 00000020  EC 02 00 72 */	fmuls f0, f2, f1
 /* 8019FB54 00000024  FC 00 00 1E */	fctiwz f0, f0
 /* 8019FB58 00000028  D8 01 00 08 */	stfd f0, 8(r1)
@@ -16,7 +16,7 @@ lbl_8019FB30:
 /* 8019FB68 00000038  7C 04 1B D6 */	divw r0, r4, r3
 /* 8019FB6C 0000003C  7C 00 19 D6 */	mullw r0, r0, r3
 /* 8019FB70 00000040  7C 00 20 50 */	subf r0, r0, r4
-/* 8019FB74 00000044  C8 22 A2 30 */	lfd f1, d_kankyo_d_kankyo__LIT_4444(r2)
+/* 8019FB74 00000044  C8 22 A2 30 */	lfd f1, d_kankyo_d_kankyo__lit_4444(r2)
 /* 8019FB78 00000048  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8019FB7C 0000004C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019FB80 00000050  3C 00 43 30 */	lis r0, 0x4330
@@ -24,7 +24,7 @@ lbl_8019FB30:
 /* 8019FB88 00000058  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8019FB8C 0000005C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8019FB90 00000060  EC 20 10 24 */	fdivs f1, f0, f2
-/* 8019FB94 00000064  C0 02 A2 AC */	lfs f0, d_kankyo_d_kankyo__LIT_5347(r2)
+/* 8019FB94 00000064  C0 02 A2 AC */	lfs f0, d_kankyo_d_kankyo__lit_5347(r2)
 /* 8019FB98 00000068  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8019FB9C 0000006C  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8019FBA0 00000070  FC 00 00 1E */	fctiwz f0, f0

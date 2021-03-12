@@ -5,39 +5,27 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void wcstombs();
-extern void strncpy();
-SECTION_SDATA2 extern u8 MSL_Common_Src_mbstring__LIT_74[8];
-}
+extern "C" extern void wcstombs();
+extern "C" extern void strncpy();
+SECTION_SDATA2 extern u32 MSL_Common_Src_mbstring__lit_74;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456668-80456670 0004 .sdata2    @74                                                          */
-SECTION_SDATA2 u8 MSL_Common_Src_mbstring__LIT_74[8] = {
-	0x00, 0x00, 0xC0, 0xE0,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u32 MSL_Common_Src_mbstring__lit_74 = 0x0000C0E0;
+/* padding 4 bytes */
 
 /* 80365F74-8036608C 0118 .text      wcstombs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void wcstombs() {
+extern "C" asm void wcstombs() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mbstring/wcstombs.s"
 }

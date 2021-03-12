@@ -64,7 +64,7 @@ lbl_8024E820:
 /* 8024E8E0 000000C0  7D 89 03 A6 */	mtctr r12
 /* 8024E8E4 000000C4  4E 80 04 21 */	bctrl 
 /* 8024E8E8 000000C8  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 8024E8EC 000000CC  C0 22 B3 C0 */	lfs f1, d_d_name__LIT_3820(r2)
+/* 8024E8EC 000000CC  C0 22 B3 C0 */	lfs f1, d_d_name__lit_3820(r2)
 /* 8024E8F0 000000D0  4B F4 69 B1 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8024E8F4 000000D4  48 00 00 94 */	b lbl_8024E988
 lbl_8024E8F8:
@@ -102,7 +102,7 @@ lbl_8024E8F8:
 /* 8024E974 0000007C  7D 89 03 A6 */	mtctr r12
 /* 8024E978 00000080  4E 80 04 21 */	bctrl 
 /* 8024E97C 00000084  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 8024E980 00000088  C0 22 B3 C0 */	lfs f1, d_d_name__LIT_3820(r2)
+/* 8024E980 00000088  C0 22 B3 C0 */	lfs f1, d_d_name__lit_3820(r2)
 /* 8024E984 0000008C  4B F4 69 1D */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_8024E988:
 /* 8024E988 00000000  39 61 00 40 */	addi r11, r1, 0x40

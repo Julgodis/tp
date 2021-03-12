@@ -12,20 +12,20 @@ lbl_801E4C10:
 /* 801E4C38 00000028  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 801E4C3C 0000002C  48 00 37 FD */	bl yesnoMenuMoveAnm__14dMenu_Option_cFv
 /* 801E4C40 00000030  7C 7F 1B 78 */	mr r31, r3
-/* 801E4C44 00000034  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__LIT_4069(r2)
+/* 801E4C44 00000034  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
 /* 801E4C48 00000038  C0 1D 03 74 */	lfs f0, 0x374(r29)
 /* 801E4C4C 0000003C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801E4C50 00000040  41 82 00 38 */	beq lbl_801E4C88
 /* 801E4C54 00000044  38 7D 03 74 */	addi r3, r29, 0x374
-/* 801E4C58 00000048  C0 42 A9 64 */	lfs f2, LIT_4893(r2)
-/* 801E4C5C 0000004C  C0 62 A9 50 */	lfs f3, d_menu_d_menu_option__LIT_4471(r2)
+/* 801E4C58 00000048  C0 42 A9 64 */	lfs f2, lit_4893(r2)
+/* 801E4C5C 0000004C  C0 62 A9 50 */	lfs f3, d_menu_d_menu_option__lit_4471(r2)
 /* 801E4C60 00000050  48 08 AD DD */	bl cLib_addCalc2__FPffff
 /* 801E4C64 00000054  C0 1D 03 74 */	lfs f0, 0x374(r29)
-/* 801E4C68 00000058  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__LIT_4069(r2)
+/* 801E4C68 00000058  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
 /* 801E4C6C 0000005C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 801E4C70 00000060  FC 00 02 10 */	fabs f0, f0
 /* 801E4C74 00000064  FC 40 00 18 */	frsp f2, f0
-/* 801E4C78 00000068  C0 02 A9 68 */	lfs f0, LIT_4894(r2)
+/* 801E4C78 00000068  C0 02 A9 68 */	lfs f0, lit_4894(r2)
 /* 801E4C7C 0000006C  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 801E4C80 00000000  40 80 00 08 */	bge lbl_801E4C88
 /* 801E4C84 00000004  D0 3D 03 74 */	stfs f1, 0x374(r29)
@@ -35,7 +35,7 @@ lbl_801E4C88:
 /* 801E4C90 00000008  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 801E4C94 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 801E4C98 00000010  40 82 00 24 */	bne lbl_801E4CBC
-/* 801E4C9C 00000014  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__LIT_4069(r2)
+/* 801E4C9C 00000014  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
 /* 801E4CA0 00000018  C0 1D 03 74 */	lfs f0, 0x374(r29)
 /* 801E4CA4 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801E4CA8 00000020  40 82 00 14 */	bne lbl_801E4CBC

@@ -15,7 +15,7 @@ lbl_8012E5F4:
 /* 8012E628 00000034  38 A5 F0 10 */	addi r5, r5, m__24daAlinkHIO_wlBackJump_c0@l
 /* 8012E62C 00000038  38 A5 00 14 */	addi r5, r5, 0x14
 /* 8012E630 0000003C  4B FF B2 19 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8012E634 00000040  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8012E634 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8012E638 00000044  D0 1D 33 98 */	stfs f0, 0x3398(r29)
 /* 8012E63C 00000048  38 00 00 04 */	li r0, 4
 /* 8012E640 0000004C  98 1D 2F 9D */	stb r0, 0x2f9d(r29)

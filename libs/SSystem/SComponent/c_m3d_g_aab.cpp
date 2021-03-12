@@ -5,160 +5,157 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
-extern void CrossY__8cM3dGAabCFPC4cXyz();
-extern void UnderPlaneYUnder__8cM3dGAabCFf();
-extern void TopPlaneYUnder__8cM3dGAabCFf();
-extern void ClearForMinMax__8cM3dGAabFv();
-extern void SetMinMax__8cM3dGAabFRC4cXyz();
-extern void SetMinMax__8cM3dGAabFRC8cM3dGAab();
-extern void SetMin__8cM3dGAabFRC4cXyz();
-extern void SetMax__8cM3dGAabFRC4cXyz();
-extern void CalcCenter__8cM3dGAabCFP4cXyz();
-extern void PlusR__8cM3dGAabFf();
-extern void PSVECAdd();
-extern void PSVECScale();
-SECTION_SDATA2 extern u8 LIT_416[4];
-SECTION_SDATA2 extern u8 LIT_417[4];
-SECTION_SDATA2 extern u8 c_m3d_g_aab__LIT_493[8];
-}
+extern "C" extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+extern "C" extern void CrossY__8cM3dGAabCFPC4cXyz();
+extern "C" extern void UnderPlaneYUnder__8cM3dGAabCFf();
+extern "C" extern void TopPlaneYUnder__8cM3dGAabCFf();
+extern "C" extern void ClearForMinMax__8cM3dGAabFv();
+extern "C" extern void SetMinMax__8cM3dGAabFRC4cXyz();
+extern "C" extern void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+extern "C" extern void SetMin__8cM3dGAabFRC4cXyz();
+extern "C" extern void SetMax__8cM3dGAabFRC4cXyz();
+extern "C" extern void CalcCenter__8cM3dGAabCFP4cXyz();
+extern "C" extern void PlusR__8cM3dGAabFf();
+extern "C" extern void PSVECAdd();
+extern "C" extern void PSVECScale();
+SECTION_SDATA2 extern f32 lit_416;
+SECTION_SDATA2 extern f32 lit_417;
+SECTION_SDATA2 extern f32 c_m3d_g_aab__lit_493;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804551D0-804551D4 0004 .sdata2    @416                                                         */
-SECTION_SDATA2 u8 LIT_416[4] = {
-	0x4E, 0x6E, 0x6B, 0x28,
-};
-/* 804551D4-804551D8 0004 .sdata2    @417                                                         */
-SECTION_SDATA2 u8 LIT_417[4] = {
-	0xCE, 0x6E, 0x6B, 0x28,
-};
-/* 804551D8-804551E0 0004 .sdata2    @493                                                         */
-SECTION_SDATA2 u8 c_m3d_g_aab__LIT_493[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8026EC54-8026EC88 0034 .text      Set__8cM3dGAabFPC4cXyzPC4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Set__8cM3dGAabFPC4cXyzPC4cXyz() {
+extern "C" asm void Set__8cM3dGAabFPC4cXyzPC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/Set__8cM3dGAabFPC4cXyzPC4cXyz.s"
 }
 #pragma pop
 
+
 /* 8026EC88-8026ECD0 0048 .text      CrossY__8cM3dGAabCFPC4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CrossY__8cM3dGAabCFPC4cXyz() {
+extern "C" asm void CrossY__8cM3dGAabCFPC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/CrossY__8cM3dGAabCFPC4cXyz.s"
 }
 #pragma pop
 
+
 /* 8026ECD0-8026ECE4 0014 .text      UnderPlaneYUnder__8cM3dGAabCFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void UnderPlaneYUnder__8cM3dGAabCFf() {
+extern "C" asm void UnderPlaneYUnder__8cM3dGAabCFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/UnderPlaneYUnder__8cM3dGAabCFf.s"
 }
 #pragma pop
 
+
 /* 8026ECE4-8026ECF8 0014 .text      TopPlaneYUnder__8cM3dGAabCFf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TopPlaneYUnder__8cM3dGAabCFf() {
+extern "C" asm void TopPlaneYUnder__8cM3dGAabCFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/TopPlaneYUnder__8cM3dGAabCFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804551D0-804551D4 0004 .sdata2    @416                                                         */
+f32 lit_416 = 1000000000.0f;
+
+/* 804551D4-804551D8 0004 .sdata2    @417                                                         */
+f32 lit_417 = -1000000000.0f;
+
 /* 8026ECF8-8026ED1C 0024 .text      ClearForMinMax__8cM3dGAabFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ClearForMinMax__8cM3dGAabFv() {
+extern "C" asm void ClearForMinMax__8cM3dGAabFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/ClearForMinMax__8cM3dGAabFv.s"
 }
 #pragma pop
 
+
 /* 8026ED1C-8026ED60 0044 .text      SetMinMax__8cM3dGAabFRC4cXyz                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetMinMax__8cM3dGAabFRC4cXyz() {
+extern "C" asm void SetMinMax__8cM3dGAabFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/SetMinMax__8cM3dGAabFRC4cXyz.s"
 }
 #pragma pop
 
+
 /* 8026ED60-8026EDA4 0044 .text      SetMinMax__8cM3dGAabFRC8cM3dGAab                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetMinMax__8cM3dGAabFRC8cM3dGAab() {
+extern "C" asm void SetMinMax__8cM3dGAabFRC8cM3dGAab() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/SetMinMax__8cM3dGAabFRC8cM3dGAab.s"
 }
 #pragma pop
 
+
 /* 8026EDA4-8026EDE4 0040 .text      SetMin__8cM3dGAabFRC4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetMin__8cM3dGAabFRC4cXyz() {
+extern "C" asm void SetMin__8cM3dGAabFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/SetMin__8cM3dGAabFRC4cXyz.s"
 }
 #pragma pop
 
+
 /* 8026EDE4-8026EE24 0040 .text      SetMax__8cM3dGAabFRC4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetMax__8cM3dGAabFRC4cXyz() {
+extern "C" asm void SetMax__8cM3dGAabFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/SetMax__8cM3dGAabFRC4cXyz.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804551D8-804551E0 0004 .sdata2    @493                                                         */
+f32 c_m3d_g_aab__lit_493 = 0.5f;
+/* padding 4 bytes */
+
 /* 8026EE24-8026EE68 0044 .text      CalcCenter__8cM3dGAabCFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CalcCenter__8cM3dGAabCFP4cXyz() {
+extern "C" asm void CalcCenter__8cM3dGAabCFP4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/CalcCenter__8cM3dGAabCFP4cXyz.s"
 }
 #pragma pop
 
+
 /* 8026EE68-8026EEB4 004C .text      PlusR__8cM3dGAabFf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PlusR__8cM3dGAabFf() {
+extern "C" asm void PlusR__8cM3dGAabFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_aab/PlusR__8cM3dGAabFf.s"
 }

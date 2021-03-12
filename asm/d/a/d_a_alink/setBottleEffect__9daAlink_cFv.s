@@ -5,8 +5,8 @@ lbl_80124BA4:
 /* 80124BB0 0000000C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80124BB4 00000010  48 23 D6 29 */	bl _savegpr_29
 /* 80124BB8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80124BBC 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 80124BC0 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__LIT_3757@l
+/* 80124BBC 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 80124BC0 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
 /* 80124BC4 00000020  A0 83 2F DC */	lhz r4, 0x2fdc(r3)
 /* 80124BC8 00000024  28 04 00 6C */	cmplwi r4, 0x6c
 /* 80124BCC 00000028  40 82 00 98 */	bne lbl_80124C64
@@ -58,7 +58,7 @@ lbl_80124C64:
 /* 80124C7C 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80124C80 0000001C  41 82 01 90 */	beq lbl_80124E10
 /* 80124C84 00000020  C0 23 00 08 */	lfs f1, 8(r3)
-/* 80124C88 00000024  C0 02 93 14 */	lfs f0, LIT_7307(r2)
+/* 80124C88 00000024  C0 02 93 14 */	lfs f0, lit_7307(r2)
 /* 80124C8C 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80124C90 00000000  40 80 01 80 */	bge lbl_80124E10
 /* 80124C94 00000004  80 7F 07 08 */	lwz r3, 0x708(r31)
@@ -137,7 +137,7 @@ lbl_80124D5C:
 /* 80124DB0 00000054  39 00 00 00 */	li r8, 0
 /* 80124DB4 00000058  39 20 00 00 */	li r9, 0
 /* 80124DB8 0000005C  39 40 00 FF */	li r10, 0xff
-/* 80124DBC 00000060  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 80124DBC 00000060  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 80124DC0 00000064  4B F2 7C D1 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80124DC4 00000068  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80124DC8 0000006C  38 80 00 00 */	li r4, 0
@@ -154,7 +154,7 @@ lbl_80124D5C:
 /* 80124DF4 00000098  39 00 00 00 */	li r8, 0
 /* 80124DF8 0000009C  39 20 00 00 */	li r9, 0
 /* 80124DFC 000000A0  39 40 00 FF */	li r10, 0xff
-/* 80124E00 000000A4  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 80124E00 000000A4  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 80124E04 000000A8  4B F2 7C 8D */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80124E08 000000AC  38 00 00 01 */	li r0, 1
 /* 80124E0C 000000B0  B0 1F 27 CE */	sth r0, 0x27ce(r31)

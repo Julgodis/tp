@@ -5,42 +5,41 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
-extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
-extern void destroyManager__8JUTVideoFv();
-extern void __ct__8JUTVideoFPC16_GXRenderModeObj();
-extern void __dt__8JUTVideoFv();
-extern void preRetraceProc__8JUTVideoFUl();
-extern void drawDoneStart__8JUTVideoFv();
-extern void dummyNoDrawWait__8JUTVideoFv();
-extern void drawDoneCallback__8JUTVideoFv();
-extern void postRetraceProc__8JUTVideoFUl();
-extern void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
-extern void waitRetraceIfNeed__8JUTVideoFv();
-extern void OSInitMessageQueue();
-extern void OSSendMessage();
-extern void OSGetTick();
-extern void VISetPreRetraceCallback();
-extern void VISetPostRetraceCallback();
-extern void VIInit();
-extern void VIWaitForRetrace();
-extern void VIConfigure();
-extern void VIFlush();
-extern void VISetNextFrameBuffer();
-extern void VIGetNextFrameBuffer();
-extern void VISetBlack();
-extern void VIGetRetraceCount();
-extern void GXFlush();
-extern void GXSetDrawDone();
-extern void GXSetDrawDoneCallback();
-extern void GXCopyDisp();
-SECTION_DATA extern void* __vt__8JUTVideo[4];
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" extern void destroyManager__8JUTVideoFv();
+extern "C" extern void __ct__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" extern void __dt__8JUTVideoFv();
+extern "C" extern void preRetraceProc__8JUTVideoFUl();
+extern "C" extern void drawDoneStart__8JUTVideoFv();
+extern "C" extern void dummyNoDrawWait__8JUTVideoFv();
+extern "C" extern void drawDoneCallback__8JUTVideoFv();
+extern "C" extern void postRetraceProc__8JUTVideoFUl();
+extern "C" extern void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" extern void waitRetraceIfNeed__8JUTVideoFv();
+extern "C" extern void OSInitMessageQueue();
+extern "C" extern void OSSendMessage();
+extern "C" extern void OSGetTick();
+extern "C" extern void VISetPreRetraceCallback();
+extern "C" extern void VISetPostRetraceCallback();
+extern "C" extern void VIInit();
+extern "C" extern void VIWaitForRetrace();
+extern "C" extern void VIConfigure();
+extern "C" extern void VIFlush();
+extern "C" extern void VISetNextFrameBuffer();
+extern "C" extern void VIGetNextFrameBuffer();
+extern "C" extern void VISetBlack();
+extern "C" extern void VIGetRetraceCount();
+extern "C" extern void GXFlush();
+extern "C" extern void GXSetDrawDone();
+extern "C" extern void GXSetDrawDoneCallback();
+extern "C" extern void GXCopyDisp();
+SECTION_DATA extern void* const __vt__8JUTVideo[4];
 SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 SECTION_SBSS extern u8 sVideoLastTick__8JUTVideo[4];
@@ -49,154 +48,156 @@ SECTION_SBSS extern u8 data_80451544[4];
 SECTION_SBSS extern u8 data_80451548[4];
 SECTION_SBSS extern u8 data_8045154C[4];
 SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80451538-8045153C 0004 .sbss      sManager__8JUTVideo                                          */
+u8 sManager__8JUTVideo[4];
+
+/* 802E4C54-802E4CAC 0058 .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void createManager__8JUTVideoFPC16_GXRenderModeObj() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTVideo/createManager__8JUTVideoFPC16_GXRenderModeObj.s"
 }
+#pragma pop
+
+
+/* 802E4CAC-802E4CF4 0048 .text      destroyManager__8JUTVideoFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void destroyManager__8JUTVideoFv() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTVideo/destroyManager__8JUTVideoFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC980-803CC990 000C .data      __vt__8JUTVideo                                              */
-SECTION_DATA void* __vt__8JUTVideo[4] = {
+void* const __vt__8JUTVideo[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8JUTVideoFv,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451538-8045153C 0004 .sbss      sManager__8JUTVideo                                          */
-SECTION_SBSS u8 sManager__8JUTVideo[4];
 /* 8045153C-80451540 0004 .sbss      sVideoLastTick__8JUTVideo                                    */
-SECTION_SBSS u8 sVideoLastTick__8JUTVideo[4];
+u8 sVideoLastTick__8JUTVideo[4];
+
 /* 80451540-80451544 0004 .sbss      sVideoInterval__8JUTVideo                                    */
-SECTION_SBSS u8 sVideoInterval__8JUTVideo[4];
-/* 80451544-80451548 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451544[4];
-/* 80451548-8045154C 0004 .sbss      frameBuffer$2222                                             */
-SECTION_SBSS u8 data_80451548[4];
-/* 8045154C-80451550 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_8045154C[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802E4C54-802E4CAC 0058 .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void createManager__8JUTVideoFPC16_GXRenderModeObj() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTVideo/createManager__8JUTVideoFPC16_GXRenderModeObj.s"
-}
-#pragma pop
-
-/* 802E4CAC-802E4CF4 0048 .text      destroyManager__8JUTVideoFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void destroyManager__8JUTVideoFv() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTVideo/destroyManager__8JUTVideoFv.s"
-}
-#pragma pop
+u8 sVideoInterval__8JUTVideo[4];
 
 /* 802E4CF4-802E4DE8 00F4 .text      __ct__8JUTVideoFPC16_GXRenderModeObj                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8JUTVideoFPC16_GXRenderModeObj() {
+extern "C" asm void __ct__8JUTVideoFPC16_GXRenderModeObj() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/__ct__8JUTVideoFPC16_GXRenderModeObj.s"
 }
 #pragma pop
 
+
 /* 802E4DE8-802E4E50 0068 .text      __dt__8JUTVideoFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8JUTVideoFv() {
+extern "C" asm void __dt__8JUTVideoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/__dt__8JUTVideoFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451544-80451548 0004 .sbss      None                                                         */
+u8 data_80451544[4];
+
+/* 80451548-8045154C 0004 .sbss      frameBuffer$2222                                             */
+u8 data_80451548[4];
+
+/* 8045154C-80451550 0004 .sbss      None                                                         */
+u8 data_8045154C[4];
+
 /* 802E4E50-802E5088 0238 .text      preRetraceProc__8JUTVideoFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void preRetraceProc__8JUTVideoFUl() {
+extern "C" asm void preRetraceProc__8JUTVideoFUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/preRetraceProc__8JUTVideoFUl.s"
 }
 #pragma pop
 
+
 /* 802E5088-802E50B0 0028 .text      drawDoneStart__8JUTVideoFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawDoneStart__8JUTVideoFv() {
+extern "C" asm void drawDoneStart__8JUTVideoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/drawDoneStart__8JUTVideoFv.s"
 }
 #pragma pop
 
+
 /* 802E50B0-802E50BC 000C .text      dummyNoDrawWait__8JUTVideoFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dummyNoDrawWait__8JUTVideoFv() {
+extern "C" asm void dummyNoDrawWait__8JUTVideoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/dummyNoDrawWait__8JUTVideoFv.s"
 }
 #pragma pop
 
+
 /* 802E50BC-802E5144 0088 .text      drawDoneCallback__8JUTVideoFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawDoneCallback__8JUTVideoFv() {
+extern "C" asm void drawDoneCallback__8JUTVideoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/drawDoneCallback__8JUTVideoFv.s"
 }
 #pragma pop
 
+
 /* 802E5144-802E5198 0054 .text      postRetraceProc__8JUTVideoFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void postRetraceProc__8JUTVideoFUl() {
+extern "C" asm void postRetraceProc__8JUTVideoFUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/postRetraceProc__8JUTVideoFUl.s"
 }
 #pragma pop
 
+
 /* 802E5198-802E5210 0078 .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setRenderMode__8JUTVideoFPC16_GXRenderModeObj() {
+extern "C" asm void setRenderMode__8JUTVideoFPC16_GXRenderModeObj() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/setRenderMode__8JUTVideoFPC16_GXRenderModeObj.s"
 }
 #pragma pop
 
+
 /* 802E5210-802E5214 0004 .text      waitRetraceIfNeed__8JUTVideoFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void waitRetraceIfNeed__8JUTVideoFv() {
+extern "C" asm void waitRetraceIfNeed__8JUTVideoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTVideo/waitRetraceIfNeed__8JUTVideoFv.s"
 }

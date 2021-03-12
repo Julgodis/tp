@@ -3,8 +3,8 @@ lbl_80031DC4:
 /* 80031DC8 00000004  7C 08 02 A6 */	mflr r0
 /* 80031DCC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80031DD0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80031DD4 00000010  3C 60 80 42 */	lis r3, d_com_d_com_static__LIT_3840@ha
-/* 80031DD8 00000014  3B E3 3F F0 */	addi r31, r3, d_com_d_com_static__LIT_3840@l
+/* 80031DD4 00000010  3C 60 80 42 */	lis r3, d_com_d_com_static__lit_3840@ha
+/* 80031DD8 00000014  3B E3 3F F0 */	addi r31, r3, d_com_d_com_static__lit_3840@l
 /* 80031DDC 00000018  38 7F 00 0C */	addi r3, r31, 0xc
 /* 80031DE0 0000001C  3C 80 80 03 */	lis r4, __ct__Q27daSus_c6data_cFv@ha
 /* 80031DE4 00000020  38 84 1F 64 */	addi r4, r4, __ct__Q27daSus_c6data_cFv@l

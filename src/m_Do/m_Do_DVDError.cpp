@@ -5,94 +5,90 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getAssertHeap__Fv();
-extern void suspend__9mDoDvdThdFv();
-extern void mDoDvdErr_ThdInit__Fv();
-extern void mDoDvdErr_ThdCleanup__Fv();
-extern void mDoDvdErr_Watch__FPv();
-extern void AlarmHandler__FP7OSAlarmP9OSContext();
-extern void becomeCurrentHeap__7JKRHeapFv();
-extern void __ct__9JKRThreadFP8OSThreadi();
-extern void __dt__9JKRThreadFv();
-extern void OSCreateAlarm();
-extern void OSSetPeriodicAlarm();
-extern void OSCancelAlarm();
-extern void OSDisableInterrupts();
-extern void OSGetCurrentThread();
-extern void OSCreateThread();
-extern void OSCancelThread();
-extern void OSResumeThread();
-extern void OSSuspendThread();
-extern void OSGetThreadPriority();
-extern void OSGetTime();
-extern void DVDGetDriveStatus();
-extern void _savegpr_29();
-extern void _restgpr_29();
+extern "C" extern void mDoExt_getAssertHeap__Fv();
+extern "C" extern void suspend__9mDoDvdThdFv();
+extern "C" extern void mDoDvdErr_ThdInit__Fv();
+extern "C" extern void mDoDvdErr_ThdCleanup__Fv();
+extern "C" extern void mDoDvdErr_Watch__FPv();
+extern "C" extern void AlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
+extern "C" extern void __ct__9JKRThreadFP8OSThreadi();
+extern "C" extern void __dt__9JKRThreadFv();
+extern "C" extern void OSCreateAlarm();
+extern "C" extern void OSSetPeriodicAlarm();
+extern "C" extern void OSCancelAlarm();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void OSCreateThread();
+extern "C" extern void OSCancelThread();
+extern "C" extern void OSResumeThread();
+extern "C" extern void OSSuspendThread();
+extern "C" extern void OSGetThreadPriority();
+extern "C" extern void OSGetTime();
+extern "C" extern void DVDGetDriveStatus();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 SECTION_BSS extern u8 DvdErr_thread[792 + 8 /* padding */];
 SECTION_BSS extern u8 DvdErr_stack[3072];
 SECTION_BSS extern u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
 SECTION_SBSS extern u8 data_80450C88[8];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803DECC0-803DECC0 0000 .bss       ...bss.0                                                     */
 /* 803DECC0-803DEFE0 0318 .bss       DvdErr_thread                                                */
-SECTION_BSS u8 DvdErr_thread[792 + 8 /* padding */];
-/* 803DEFE0-803DFBE0 0C00 .bss       DvdErr_stack                                                 */
-SECTION_BSS u8 DvdErr_stack[3072];
-/* 803DFBE0-803DFC20 0028 .bss       Alarm                                                        */
-SECTION_BSS u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 DvdErr_thread[792 + 8 /* padding */];
 
 /* 8001659C-8001665C 00C0 .text      mDoDvdErr_ThdInit__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdErr_ThdInit__Fv() {
+extern "C" asm void mDoDvdErr_ThdInit__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_DVDError/mDoDvdErr_ThdInit__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803DEFE0-803DFBE0 0C00 .bss       DvdErr_stack                                                 */
+u8 DvdErr_stack[3072];
+
+/* 803DFBE0-803DFC20 0028 .bss       Alarm                                                        */
+u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
+
 /* 8001665C-800166A4 0048 .text      mDoDvdErr_ThdCleanup__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdErr_ThdCleanup__Fv() {
+extern "C" asm void mDoDvdErr_ThdCleanup__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_DVDError/mDoDvdErr_ThdCleanup__Fv.s"
 }
 #pragma pop
 
+
 /* 800166A4-80016704 0060 .text      mDoDvdErr_Watch__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdErr_Watch__FPv() {
+extern "C" asm void mDoDvdErr_Watch__FPv() {
 	nofralloc
 #include "asm/m_Do/m_Do_DVDError/mDoDvdErr_Watch__FPv.s"
 }
 #pragma pop
 
+
 /* 80016704-8001672C 0028 .text      AlarmHandler__FP7OSAlarmP9OSContext                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void AlarmHandler__FP7OSAlarmP9OSContext() {
+extern "C" asm void AlarmHandler__FP7OSAlarmP9OSContext() {
 	nofralloc
 #include "asm/m_Do/m_Do_DVDError/AlarmHandler__FP7OSAlarmP9OSContext.s"
 }

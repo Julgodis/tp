@@ -23,7 +23,7 @@ lbl_800E1290:
 /* 800E1298 00000008  41 82 00 24 */	beq lbl_800E12BC
 /* 800E129C 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800E12A0 00000010  38 80 00 02 */	li r4, 2
-/* 800E12A4 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800E12A4 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800E12A8 00000018  4B FC C4 7D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800E12AC 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800E12B0 00000020  38 80 00 00 */	li r4, 0

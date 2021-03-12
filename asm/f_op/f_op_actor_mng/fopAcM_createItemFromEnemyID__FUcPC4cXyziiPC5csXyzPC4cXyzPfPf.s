@@ -61,7 +61,7 @@ lbl_8001BEB8:
 /* 8001BEEC 00000034  7E E5 BB 78 */	mr r5, r23
 /* 8001BEF0 00000038  38 C0 00 00 */	li r6, 0
 /* 8001BEF4 0000003C  38 E0 00 00 */	li r7, 0
-/* 8001BEF8 00000040  C0 22 82 04 */	lfs f1, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001BEF8 00000040  C0 22 82 04 */	lfs f1, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001BEFC 00000044  FC 40 08 90 */	fmr f2, f1
 /* 8001BF00 00000048  48 00 02 B9 */	bl fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff
 /* 8001BF04 0000004C  28 03 00 00 */	cmplwi r3, 0

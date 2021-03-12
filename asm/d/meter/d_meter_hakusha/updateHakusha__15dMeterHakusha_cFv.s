@@ -41,7 +41,7 @@ lbl_8020CD6C:
 /* 8020CE08 00000070  C3 A1 00 30 */	lfs f29, 0x30(r1)
 /* 8020CE0C 00000074  7F 83 E3 78 */	mr r3, r28
 /* 8020CE10 00000078  48 00 06 71 */	bl getHakushaNum__15dMeterHakusha_cFv
-/* 8020CE14 0000007C  C8 22 AE 18 */	lfd f1, d_meter_d_meter_hakusha__LIT_4098(r2)
+/* 8020CE14 0000007C  C8 22 AE 18 */	lfd f1, d_meter_d_meter_hakusha__lit_4098(r2)
 /* 8020CE18 00000080  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8020CE1C 00000084  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8020CE20 00000088  3C 00 43 30 */	lis r0, 0x4330
@@ -59,7 +59,7 @@ lbl_8020CD6C:
 /* 8020CE50 000000B8  7C 06 00 00 */	cmpw r6, r0
 /* 8020CE54 000000BC  41 82 00 8C */	beq lbl_8020CEE0
 /* 8020CE58 000000C0  40 81 00 38 */	ble lbl_8020CE90
-/* 8020CE5C 000000C4  C0 22 AE 0C */	lfs f1, d_meter_d_meter_hakusha__LIT_4094(r2)
+/* 8020CE5C 000000C4  C0 22 AE 0C */	lfs f1, d_meter_d_meter_hakusha__lit_4094(r2)
 /* 8020CE60 000000C8  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020CE64 000000CC  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 8020CE68 000000D0  C0 03 04 40 */	lfs f0, 0x440(r3)
@@ -76,7 +76,7 @@ lbl_8020CE90:
 /* 8020CE90 00000000  40 80 00 48 */	bge lbl_8020CED8
 /* 8020CE94 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020CE98 00000008  38 A3 EB C8 */	addi r5, r3, g_drawHIO@l
-/* 8020CE9C 0000000C  C0 22 AE 0C */	lfs f1, d_meter_d_meter_hakusha__LIT_4094(r2)
+/* 8020CE9C 0000000C  C0 22 AE 0C */	lfs f1, d_meter_d_meter_hakusha__lit_4094(r2)
 /* 8020CEA0 00000010  38 80 00 01 */	li r4, 1
 /* 8020CEA4 00000014  54 C3 10 3A */	slwi r3, r6, 2
 /* 8020CEA8 00000018  48 00 00 24 */	b lbl_8020CECC
@@ -102,7 +102,7 @@ lbl_8020CEE0:
 /* 8020CEE8 00000008  3B 40 00 00 */	li r26, 0
 /* 8020CEEC 0000000C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020CEF0 00000010  3B E3 EB C8 */	addi r31, r3, g_drawHIO@l
-/* 8020CEF4 00000014  C3 E2 AE 00 */	lfs f31, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020CEF4 00000014  C3 E2 AE 00 */	lfs f31, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020CEF8 00000018  48 00 01 BC */	b lbl_8020D0B4
 lbl_8020CEFC:
 /* 8020CEFC 00000000  38 BA 00 C8 */	addi r5, r26, 0xc8
@@ -123,10 +123,10 @@ lbl_8020CF2C:
 /* 8020CF34 00000008  7C 1C 2D 2E */	stfsx f0, r28, r5
 lbl_8020CF38:
 /* 8020CF38 00000000  7C 3C 2C 2E */	lfsx f1, r28, r5
-/* 8020CF3C 00000004  C0 02 AE 10 */	lfs f0, d_meter_d_meter_hakusha__LIT_4095(r2)
+/* 8020CF3C 00000004  C0 02 AE 10 */	lfs f0, d_meter_d_meter_hakusha__lit_4095(r2)
 /* 8020CF40 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8020CF44 00000000  40 81 00 0C */	ble lbl_8020CF50
-/* 8020CF48 00000004  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020CF48 00000004  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020CF4C 00000008  7C 1C 2D 2E */	stfsx f0, r28, r5
 lbl_8020CF50:
 /* 8020CF50 00000000  7C 7C DA 14 */	add r3, r28, r27
@@ -145,11 +145,11 @@ lbl_8020CF80:
 /* 8020CF80 00000000  A8 1E 00 96 */	lha r0, 0x96(r30)
 /* 8020CF84 00000004  7C 1D 00 00 */	cmpw r29, r0
 /* 8020CF88 00000008  41 80 00 5C */	blt lbl_8020CFE4
-/* 8020CF8C 0000000C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020CF8C 0000000C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020CF90 00000010  7C 3C 2C 2E */	lfsx f1, r28, r5
 /* 8020CF94 00000014  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020CF98 00000018  41 82 00 24 */	beq lbl_8020CFBC
-/* 8020CF9C 0000001C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__LIT_4096(r2)
+/* 8020CF9C 0000001C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__lit_4096(r2)
 /* 8020CFA0 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8020CFA4 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8020CFA8 00000004  40 82 00 14 */	bne lbl_8020CFBC
@@ -158,10 +158,10 @@ lbl_8020CF80:
 /* 8020CFB4 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 8020CFB8 00000014  41 82 00 2C */	beq lbl_8020CFE4
 lbl_8020CFBC:
-/* 8020CFBC 00000000  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020CFBC 00000000  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020CFC0 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020CFC4 00000008  41 82 00 30 */	beq lbl_8020CFF4
-/* 8020CFC8 0000000C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__LIT_4096(r2)
+/* 8020CFC8 0000000C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__lit_4096(r2)
 /* 8020CFCC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8020CFD0 00000000  40 81 00 24 */	ble lbl_8020CFF4
 /* 8020CFD4 00000004  38 1D 01 0A */	addi r0, r29, 0x10a
@@ -191,11 +191,11 @@ lbl_8020D024:
 /* 8020D024 00000000  A8 1E 00 96 */	lha r0, 0x96(r30)
 /* 8020D028 00000004  7C 1D 00 00 */	cmpw r29, r0
 /* 8020D02C 00000008  41 80 00 5C */	blt lbl_8020D088
-/* 8020D030 0000000C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020D030 0000000C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020D034 00000010  7C 3C 2C 2E */	lfsx f1, r28, r5
 /* 8020D038 00000014  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D03C 00000018  41 82 00 24 */	beq lbl_8020D060
-/* 8020D040 0000001C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__LIT_4096(r2)
+/* 8020D040 0000001C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__lit_4096(r2)
 /* 8020D044 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8020D048 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8020D04C 00000004  40 82 00 14 */	bne lbl_8020D060
@@ -204,10 +204,10 @@ lbl_8020D024:
 /* 8020D058 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 8020D05C 00000014  41 82 00 2C */	beq lbl_8020D088
 lbl_8020D060:
-/* 8020D060 00000000  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020D060 00000000  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020D064 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D068 00000008  41 82 00 30 */	beq lbl_8020D098
-/* 8020D06C 0000000C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__LIT_4096(r2)
+/* 8020D06C 0000000C  C0 02 AE 14 */	lfs f0, d_meter_d_meter_hakusha__lit_4096(r2)
 /* 8020D070 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8020D074 00000000  40 81 00 24 */	ble lbl_8020D098
 /* 8020D078 00000004  38 1D 01 0A */	addi r0, r29, 0x10a
@@ -258,7 +258,7 @@ lbl_8020D0B4:
 /* 8020D11C 00000068  2C 03 00 00 */	cmpwi r3, 0
 /* 8020D120 0000006C  40 82 00 28 */	bne lbl_8020D148
 /* 8020D124 00000070  80 7C 00 10 */	lwz r3, 0x10(r28)
-/* 8020D128 00000074  C0 22 AE 04 */	lfs f1, d_meter_d_meter_hakusha__LIT_3794(r2)
+/* 8020D128 00000074  C0 22 AE 04 */	lfs f1, d_meter_d_meter_hakusha__lit_3794(r2)
 /* 8020D12C 00000078  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020D130 0000007C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 8020D134 00000080  C0 04 03 B0 */	lfs f0, 0x3b0(r4)

@@ -5,82 +5,255 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getGameHeap__Fv();
-extern void fopScnM_SearchByID__FUi();
-extern void fopMsgM_setStageLayer__FPv();
-extern void fopMsgM_SearchByID__FUi();
-extern void fopMsgM_GetAppend__FPv();
-extern void fopMsgM_Delete__FPv();
-extern void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi();
-extern void createTimerAppend__FiUlUcUcffffUi();
-extern void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
-extern void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
-extern void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
-extern void fopMsgM_messageSet__FUlUl();
-extern void fopMsgM_messageSetDemo__FUl();
-extern void fopMsgM_messageGet__FPcUl();
-extern void fopMsgM_setMessageID__FUi();
-extern void fopMsgM_Create__FsPFPv_iPv();
-extern void setAlpha__7J2DPaneFUc();
-extern void fopMsgM_valueIncrease__FiiUc();
-extern void setBlendRatio__10J2DPictureFff();
-extern void append__10J2DPictureFPCcf();
-extern void insert__10J2DPictureFPCcUcf();
-extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
-extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
-extern void fpcBs_Is_JustOfType__Fii();
-extern void fpcEx_SearchByID__FUi();
-extern void fpcLy_CurrentLayer__Fv();
-extern void fpcM_Delete__FPv();
-extern void fpcPi_Change__FP22process_priority_classUiUsUs();
-extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void emphasisButtonDelete__9dMeter2_cFv();
-extern void setMessageIndex__12dMsgObject_cFUlUlb();
-extern void setMessageIndexDemo__12dMsgObject_cFUlb();
-extern void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern void endFlowGroup__12dMsgObject_cFv();
-extern void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
-extern void memalignB__3cMlFiUl();
-extern void destroy__7JKRHeapFv();
-extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_DATA extern void* f_op_f_op_msg_mng__LIT_4305[8];
+extern "C" extern void mDoExt_getGameHeap__Fv();
+extern "C" extern void fopScnM_SearchByID__FUi();
+extern "C" extern void fopMsgM_setStageLayer__FPv();
+extern "C" extern void fopMsgM_SearchByID__FUi();
+extern "C" extern void fopMsgM_GetAppend__FPv();
+extern "C" extern void fopMsgM_Delete__FPv();
+extern "C" extern void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi();
+extern "C" extern void createTimerAppend__FiUlUcUcffffUi();
+extern "C" extern void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
+extern "C" extern void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
+extern "C" extern void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
+extern "C" extern void fopMsgM_messageSet__FUlUl();
+extern "C" extern void fopMsgM_messageSetDemo__FUl();
+extern "C" extern void fopMsgM_messageGet__FPcUl();
+extern "C" extern void fopMsgM_setMessageID__FUi();
+extern "C" extern void fopMsgM_Create__FsPFPv_iPv();
+extern "C" extern void setAlpha__7J2DPaneFUc();
+extern "C" extern void fopMsgM_valueIncrease__FiiUc();
+extern "C" extern void setBlendRatio__10J2DPictureFff();
+extern "C" extern void append__10J2DPictureFPCcf();
+extern "C" extern void insert__10J2DPictureFPCcUcf();
+extern "C" extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
+extern "C" extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+extern "C" extern void fpcBs_Is_JustOfType__Fii();
+extern "C" extern void fpcEx_SearchByID__FUi();
+extern "C" extern void fpcLy_CurrentLayer__Fv();
+extern "C" extern void fpcM_Delete__FPv();
+extern "C" extern void fpcPi_Change__FP22process_priority_classUiUsUs();
+extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void emphasisButtonDelete__9dMeter2_cFv();
+extern "C" extern void setMessageIndex__12dMsgObject_cFUlUlb();
+extern "C" extern void setMessageIndexDemo__12dMsgObject_cFUlb();
+extern "C" extern void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" extern void endFlowGroup__12dMsgObject_cFv();
+extern "C" extern void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" extern void memalignB__3cMlFiUl();
+extern "C" extern void destroy__7JKRHeapFv();
+extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* f_op_f_op_msg_mng__lit_4305[8];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA extern u8 i_msgID[8];
+SECTION_SDATA extern u32 i_msgID;
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 SECTION_SBSS extern u8 mProcID__20dStage_roomControl_c[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_3902[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4167[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4298[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4299[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4300[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4301[4];
-SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__LIT_4303[8];
+SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__lit_3902[4];
+SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4167;
+SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4298;
+SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4299;
+SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4300;
+SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4301;
+SECTION_SDATA2 extern f64 f_op_f_op_msg_mng__lit_4303;
+
+// 
+// Functions:
+// 
+
+/* 8001F9B4-8001FA24 0070 .text      fopMsgM_setStageLayer__FPv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_setStageLayer__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_setStageLayer__FPv.s"
 }
+#pragma pop
+
+
+/* 8001FA24-8001FA44 0020 .text      fopMsgM_SearchByID__FUi                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_SearchByID__FUi() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_SearchByID__FUi.s"
+}
+#pragma pop
+
+
+/* 8001FA44-8001FA4C 0008 .text      fopMsgM_GetAppend__FPv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_GetAppend__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_GetAppend__FPv.s"
+}
+#pragma pop
+
+
+/* 8001FA4C-8001FA6C 0020 .text      fopMsgM_Delete__FPv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_Delete__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_Delete__FPv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80451C70-80451C74 0004 .sdata2    @3902                                                        */
+u8 f_op_f_op_msg_mng__lit_3902[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 8001FA6C-8001FB50 00E4 .text      createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi.s"
+}
+#pragma pop
+
+
+/* 8001FB50-8001FC4C 00FC .text      createTimerAppend__FiUlUcUcffffUi                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void createTimerAppend__FiUlUcUcffffUi() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/createTimerAppend__FiUlUcUcffffUi.s"
+}
+#pragma pop
+
+
+/* 8001FC4C-8001FCC0 0074 .text      fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i.s"
+}
+#pragma pop
+
+
+/* 8001FCC0-8001FD34 0074 .text      fop_Timer_create__FsUcUlUcUcffffPFPv_i                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fop_Timer_create__FsUcUlUcUcffffPFPv_i() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fop_Timer_create__FsUcUlUcUcffffPFPv_i.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 804505C8-804505D0 0004 .sdata     i_msgID                                                      */
+u32 i_msgID = 0xFFFFFFFF;
+/* padding 4 bytes */
+
+/* 8001FD34-8001FE84 0150 .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_messageSet__FUlP10fopAc_ac_cUl() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSet__FUlP10fopAc_ac_cUl.s"
+}
+#pragma pop
+
+
+/* 8001FE84-8001FFC4 0140 .text      fopMsgM_messageSet__FUlUl                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_messageSet__FUlUl() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSet__FUlUl.s"
+}
+#pragma pop
+
+
+/* 8001FFC4-800200C0 00FC .text      fopMsgM_messageSetDemo__FUl                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_messageSetDemo__FUl() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSetDemo__FUl.s"
+}
+#pragma pop
+
+
+/* 800200C0-80020100 0040 .text      fopMsgM_messageGet__FPcUl                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_messageGet__FPcUl() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_messageGet__FPcUl.s"
+}
+#pragma pop
+
+
+/* 80020100-80020108 0008 .text      fopMsgM_setMessageID__FUi                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_setMessageID__FUi() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_setMessageID__FUi.s"
+}
+#pragma pop
+
+
+/* 80020108-80020158 0050 .text      fopMsgM_Create__FsPFPv_iPv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsgM_Create__FsPFPv_iPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/fopMsgM_Create__FsPFPv_iPv.s"
+}
+#pragma pop
+
+
+/* 80020158-80020160 0008 .text      setAlpha__7J2DPaneFUc                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setAlpha__7J2DPaneFUc() {
+	nofralloc
+#include "asm/f_op/f_op_msg_mng/setAlpha__7J2DPaneFUc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A3970-803A3990 001C .data      @4305                                                        */
-SECTION_DATA void* f_op_f_op_msg_mng__LIT_4305[8] = {
+void* f_op_f_op_msg_mng__lit_4305[8] = {
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x88),
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x90),
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xB4),
@@ -91,268 +264,85 @@ SECTION_DATA void* f_op_f_op_msg_mng__LIT_4305[8] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804505C8-804505D0 0004 .sdata     i_msgID                                                      */
-SECTION_SDATA u8 i_msgID[8] = {
-	0xFF, 0xFF, 0xFF, 0xFF,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451C70-80451C74 0004 .sdata2    @3902                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_3902[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
 /* 80451C74-80451C78 0004 .sdata2    @4167                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4167[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
+f32 f_op_f_op_msg_mng__lit_4167 = 0.5f;
+
 /* 80451C78-80451C7C 0004 .sdata2    @4298                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4298[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 f_op_f_op_msg_mng__lit_4298 = 1.0f;
+
 /* 80451C7C-80451C80 0004 .sdata2    @4299                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4299[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
+f32 f_op_f_op_msg_mng__lit_4299 = 2.0f;
+
 /* 80451C80-80451C84 0004 .sdata2    @4300                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4300[4] = {
-	0x47, 0x00, 0x00, 0x00,
-};
+f32 f_op_f_op_msg_mng__lit_4300 = 32768.0f;
+
 /* 80451C84-80451C88 0004 .sdata2    @4301                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4301[4] = {
-	0x47, 0x7F, 0xFF, 0x00,
-};
+f32 f_op_f_op_msg_mng__lit_4301 = 65535.0f;
+
 /* 80451C88-80451C90 0008 .sdata2    @4303                                                        */
-SECTION_SDATA2 u8 f_op_f_op_msg_mng__LIT_4303[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001F9B4-8001FA24 0070 .text      fopMsgM_setStageLayer__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_setStageLayer__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_setStageLayer__FPv.s"
-}
-#pragma pop
-
-/* 8001FA24-8001FA44 0020 .text      fopMsgM_SearchByID__FUi                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_SearchByID__FUi() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_SearchByID__FUi.s"
-}
-#pragma pop
-
-/* 8001FA44-8001FA4C 0008 .text      fopMsgM_GetAppend__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_GetAppend__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_GetAppend__FPv.s"
-}
-#pragma pop
-
-/* 8001FA4C-8001FA6C 0020 .text      fopMsgM_Delete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_Delete__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_Delete__FPv.s"
-}
-#pragma pop
-
-/* 8001FA6C-8001FB50 00E4 .text      createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi.s"
-}
-#pragma pop
-
-/* 8001FB50-8001FC4C 00FC .text      createTimerAppend__FiUlUcUcffffUi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void createTimerAppend__FiUlUcUcffffUi() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/createTimerAppend__FiUlUcUcffffUi.s"
-}
-#pragma pop
-
-/* 8001FC4C-8001FCC0 0074 .text      fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i.s"
-}
-#pragma pop
-
-/* 8001FCC0-8001FD34 0074 .text      fop_Timer_create__FsUcUlUcUcffffPFPv_i                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fop_Timer_create__FsUcUlUcUcffffPFPv_i() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fop_Timer_create__FsUcUlUcUcffffPFPv_i.s"
-}
-#pragma pop
-
-/* 8001FD34-8001FE84 0150 .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_messageSet__FUlP10fopAc_ac_cUl() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSet__FUlP10fopAc_ac_cUl.s"
-}
-#pragma pop
-
-/* 8001FE84-8001FFC4 0140 .text      fopMsgM_messageSet__FUlUl                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_messageSet__FUlUl() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSet__FUlUl.s"
-}
-#pragma pop
-
-/* 8001FFC4-800200C0 00FC .text      fopMsgM_messageSetDemo__FUl                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_messageSetDemo__FUl() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_messageSetDemo__FUl.s"
-}
-#pragma pop
-
-/* 800200C0-80020100 0040 .text      fopMsgM_messageGet__FPcUl                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_messageGet__FPcUl() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_messageGet__FPcUl.s"
-}
-#pragma pop
-
-/* 80020100-80020108 0008 .text      fopMsgM_setMessageID__FUi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_setMessageID__FUi() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_setMessageID__FUi.s"
-}
-#pragma pop
-
-/* 80020108-80020158 0050 .text      fopMsgM_Create__FsPFPv_iPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsgM_Create__FsPFPv_iPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/fopMsgM_Create__FsPFPv_iPv.s"
-}
-#pragma pop
-
-/* 80020158-80020160 0008 .text      setAlpha__7J2DPaneFUc                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setAlpha__7J2DPaneFUc() {
-	nofralloc
-#include "asm/f_op/f_op_msg_mng/setAlpha__7J2DPaneFUc.s"
-}
-#pragma pop
+f64 f_op_f_op_msg_mng__lit_4303 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80020160-800202CC 016C .text      fopMsgM_valueIncrease__FiiUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_valueIncrease__FiiUc() {
+extern "C" asm void fopMsgM_valueIncrease__FiiUc() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_valueIncrease__FiiUc.s"
 }
 #pragma pop
 
+
 /* 800202CC-80020338 006C .text      setBlendRatio__10J2DPictureFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlendRatio__10J2DPictureFff() {
+extern "C" asm void setBlendRatio__10J2DPictureFff() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/setBlendRatio__10J2DPictureFff.s"
 }
 #pragma pop
 
+
 /* 80020338-80020368 0030 .text      append__10J2DPictureFPCcf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void append__10J2DPictureFPCcf() {
+extern "C" asm void append__10J2DPictureFPCcf() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/append__10J2DPictureFPCcf.s"
 }
 #pragma pop
 
+
 /* 80020368-8002039C 0034 .text      insert__10J2DPictureFPCcUcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void insert__10J2DPictureFPCcUcf() {
+extern "C" asm void insert__10J2DPictureFPCcUcf() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/insert__10J2DPictureFPCcUcf.s"
 }
 #pragma pop
 
+
 /* 8002039C-800203E0 0044 .text      fopMsgM_createExpHeap__FUlP7JKRHeap                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_createExpHeap__FUlP7JKRHeap() {
+extern "C" asm void fopMsgM_createExpHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_createExpHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 800203E0-80020400 0020 .text      fopMsgM_destroyExpHeap__FP10JKRExpHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_destroyExpHeap__FP10JKRExpHeap() {
+extern "C" asm void fopMsgM_destroyExpHeap__FP10JKRExpHeap() {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_destroyExpHeap__FP10JKRExpHeap.s"
 }

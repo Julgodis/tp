@@ -45,7 +45,7 @@ lbl_8023B9F0:
 /* 8023BA5C 0000006C  48 09 88 15 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 8023BA60 00000070  48 0C D0 0D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 8023BA64 00000074  90 7F 00 08 */	stw r3, 8(r31)
-/* 8023BA68 00000078  C0 02 B1 98 */	lfs f0, LIT_3662(r2)
+/* 8023BA68 00000078  C0 02 B1 98 */	lfs f0, lit_3662(r2)
 /* 8023BA6C 0000007C  D0 1F 00 1C */	stfs f0, 0x1c(r31)
 /* 8023BA70 00000080  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_arrow__stringBase0@ha
 /* 8023BA74 00000084  38 84 98 A0 */	addi r4, r4, msg_scrn_d_msg_scrn_arrow__stringBase0@l
@@ -60,7 +60,7 @@ lbl_8023B9F0:
 /* 8023BA98 000000A8  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8023BA9C 000000AC  7D 89 03 A6 */	mtctr r12
 /* 8023BAA0 000000B0  4E 80 04 21 */	bctrl 
-/* 8023BAA4 000000B4  C0 02 B1 98 */	lfs f0, LIT_3662(r2)
+/* 8023BAA4 000000B4  C0 02 B1 98 */	lfs f0, lit_3662(r2)
 /* 8023BAA8 000000B8  D0 1F 00 20 */	stfs f0, 0x20(r31)
 /* 8023BAAC 000000BC  38 60 00 6C */	li r3, 0x6c
 /* 8023BAB0 000000C0  48 09 31 9D */	bl __nw__FUl

@@ -6,7 +6,7 @@ lbl_8018E0C0:
 /* 8018E0D0 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8018E0D4 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
 /* 8018E0D8 00000018  80 63 00 04 */	lwz r3, 4(r3)
-/* 8018E0DC 0000001C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018E0DC 0000001C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018E0E0 00000020  FC 40 08 90 */	fmr f2, f1
 /* 8018E0E4 00000024  48 16 AD F1 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 8018E0E8 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

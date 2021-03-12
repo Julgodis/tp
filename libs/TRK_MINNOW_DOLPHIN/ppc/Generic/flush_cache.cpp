@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRK_flush_cache();
-}
+extern "C" extern void TRK_flush_cache();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036F548-8036F580 0038 .text      TRK_flush_cache                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRK_flush_cache() {
+extern "C" asm void TRK_flush_cache() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Generic/flush_cache/TRK_flush_cache.s"
 }

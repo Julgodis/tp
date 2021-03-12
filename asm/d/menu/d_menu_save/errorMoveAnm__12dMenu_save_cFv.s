@@ -27,7 +27,7 @@ lbl_801F5FCC:
 /* 801F5FE4 00000018  90 7F 00 B8 */	stw r3, 0xb8(r31)
 lbl_801F5FE8:
 /* 801F5FE8 00000000  80 1F 00 B8 */	lwz r0, 0xb8(r31)
-/* 801F5FEC 00000004  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F5FEC 00000004  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F5FF0 00000008  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F5FF4 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F5FF8 00000010  3C 00 43 30 */	lis r0, 0x4330
@@ -41,7 +41,7 @@ lbl_801F5FE8:
 /* 801F6018 00000030  38 60 00 00 */	li r3, 0
 /* 801F601C 00000034  48 00 00 74 */	b lbl_801F6090
 lbl_801F6020:
-/* 801F6020 00000000  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F6020 00000000  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F6024 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F6028 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F602C 0000000C  3C 00 43 30 */	lis r0, 0x4330

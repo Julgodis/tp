@@ -1,0 +1,47 @@
+lbl_805A2340:
+/* 805A2340 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 805A2344 00000004  7C 08 02 A6 */	mflr r0
+/* 805A2348 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 805A234C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 805A2350 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 805A2354 00000014  4B FF FE 4D */	bl areaCheck__13daTagCstaSw_cFv
+/* 805A2358 00000018  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 805A235C 0000001C  28 00 00 01 */	cmplwi r0, 1
+/* 805A2360 00000020  40 82 00 40 */	bne lbl_805A23A0
+/* 805A2364 00000024  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A2368 00000028  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A236C 0000002C  88 9F 05 68 */	lbz r4, 0x568(r31)
+/* 805A2370 00000030  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 805A2374 00000034  7C 05 07 74 */	extsb r5, r0
+/* 805A2378 00000038  4B FF FC 21 */	bl isSwitch__10dSv_info_cCFii
+/* 805A237C 0000003C  2C 03 00 00 */	cmpwi r3, 0
+/* 805A2380 00000040  40 82 00 58 */	bne lbl_805A23D8
+/* 805A2384 00000044  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A2388 00000048  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A238C 0000004C  88 9F 05 68 */	lbz r4, 0x568(r31)
+/* 805A2390 00000050  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 805A2394 00000054  7C 05 07 74 */	extsb r5, r0
+/* 805A2398 00000058  4B FF FC 01 */	bl onSwitch__10dSv_info_cFii
+/* 805A239C 0000005C  48 00 00 3C */	b lbl_805A23D8
+lbl_805A23A0:
+/* 805A23A0 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A23A4 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A23A8 00000008  88 9F 05 68 */	lbz r4, 0x568(r31)
+/* 805A23AC 0000000C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 805A23B0 00000010  7C 05 07 74 */	extsb r5, r0
+/* 805A23B4 00000014  4B FF FB E5 */	bl isSwitch__10dSv_info_cCFii
+/* 805A23B8 00000018  2C 03 00 00 */	cmpwi r3, 0
+/* 805A23BC 0000001C  41 82 00 1C */	beq lbl_805A23D8
+/* 805A23C0 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A23C4 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A23C8 00000028  88 9F 05 68 */	lbz r4, 0x568(r31)
+/* 805A23CC 0000002C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 805A23D0 00000030  7C 05 07 74 */	extsb r5, r0
+/* 805A23D4 00000034  4B FF FB C5 */	bl offSwitch__10dSv_info_cFii
+lbl_805A23D8:
+/* 805A23D8 00000000  38 60 00 01 */	li r3, 1
+/* 805A23DC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 805A23E0 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 805A23E4 0000000C  7C 08 03 A6 */	mtlr r0
+/* 805A23E8 00000010  38 21 00 10 */	addi r1, r1, 0x10
+/* 805A23EC 00000014  4E 80 00 20 */	blr 

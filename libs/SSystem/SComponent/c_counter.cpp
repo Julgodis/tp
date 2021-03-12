@@ -5,34 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cCt_Counter__Fi();
+extern "C" extern void cCt_Counter__Fi();
 SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80430CD8-80430CE8 000C .bss       g_Counter                                                    */
-SECTION_BSS u8 g_Counter[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 g_Counter[12 + 4 /* padding */];
 
 /* 80265E1C-80265E64 0048 .text      cCt_Counter__Fi                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cCt_Counter__Fi() {
+extern "C" asm void cCt_Counter__Fi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_counter/cCt_Counter__Fi.s"
 }

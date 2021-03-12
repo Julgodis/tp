@@ -17,7 +17,7 @@ lbl_800B7090:
 /* 800B70CC 0000003C  48 00 00 88 */	b lbl_800B7154
 lbl_800B70D0:
 /* 800B70D0 00000000  38 80 00 02 */	li r4, 2
-/* 800B70D4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800B70D4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800B70D8 00000008  4B FF 66 4D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800B70DC 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800B70E0 00000010  81 9F 06 28 */	lwz r12, 0x628(r31)

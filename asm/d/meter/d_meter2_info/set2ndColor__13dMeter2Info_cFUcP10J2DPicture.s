@@ -5,8 +5,8 @@ lbl_8021D644:
 /* 8021D650 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 8021D654 00000010  48 14 4B 89 */	bl _savegpr_29
 /* 8021D658 00000014  7C BF 2B 78 */	mr r31, r5
-/* 8021D65C 00000018  3C 60 80 3A */	lis r3, d_meter_d_meter2_info__data_80398A78@ha
-/* 8021D660 0000001C  3B C3 8A 78 */	addi r30, r3, d_meter_d_meter2_info__data_80398A78@l
+/* 8021D65C 00000018  3C 60 80 3A */	lis r3, data_80398A78@ha
+/* 8021D660 0000001C  3B C3 8A 78 */	addi r30, r3, data_80398A78@l
 /* 8021D664 00000020  54 9D 15 BA */	rlwinm r29, r4, 2, 0x16, 0x1d
 /* 8021D668 00000024  38 7E 04 0C */	addi r3, r30, 0x40c
 /* 8021D66C 00000028  7C 03 E8 2E */	lwzx r0, r3, r29

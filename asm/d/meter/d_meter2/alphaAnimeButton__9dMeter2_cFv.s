@@ -229,13 +229,13 @@ lbl_80225384:
 lbl_8022542C:
 /* 8022542C 00000000  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80225430 00000004  57 64 06 3E */	clrlwi r4, r27, 0x18
-/* 80225434 00000008  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80225434 00000008  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80225438 0000000C  4B FF 5A 91 */	bl drawItemNum__13dMeter2Draw_cFUcf
 /* 8022543C 00000010  48 00 00 14 */	b lbl_80225450
 lbl_80225440:
 /* 80225440 00000000  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80225444 00000004  57 64 06 3E */	clrlwi r4, r27, 0x18
-/* 80225448 00000008  C0 22 AF C8 */	lfs f1, d_meter_d_meter2__LIT_4662(r2)
+/* 80225448 00000008  C0 22 AF C8 */	lfs f1, d_meter_d_meter2__lit_4662(r2)
 /* 8022544C 0000000C  4B FF 5A 7D */	bl drawItemNum__13dMeter2Draw_cFUcf
 lbl_80225450:
 /* 80225450 00000000  80 1E 01 28 */	lwz r0, 0x128(r30)
@@ -246,13 +246,13 @@ lbl_80225450:
 /* 80225464 00000014  40 82 00 18 */	bne lbl_8022547C
 /* 80225468 00000018  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 8022546C 0000001C  57 64 06 3E */	clrlwi r4, r27, 0x18
-/* 80225470 00000020  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80225470 00000020  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80225474 00000024  4B FF 5B 05 */	bl drawKanteraMeter__13dMeter2Draw_cFUcf
 /* 80225478 00000028  48 00 00 14 */	b lbl_8022548C
 lbl_8022547C:
 /* 8022547C 00000000  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80225480 00000004  57 64 06 3E */	clrlwi r4, r27, 0x18
-/* 80225484 00000008  C0 22 AF C8 */	lfs f1, d_meter_d_meter2__LIT_4662(r2)
+/* 80225484 00000008  C0 22 AF C8 */	lfs f1, d_meter_d_meter2__lit_4662(r2)
 /* 80225488 0000000C  4B FF 5A F1 */	bl drawKanteraMeter__13dMeter2Draw_cFUcf
 lbl_8022548C:
 /* 8022548C 00000000  3B 7B 00 01 */	addi r27, r27, 1

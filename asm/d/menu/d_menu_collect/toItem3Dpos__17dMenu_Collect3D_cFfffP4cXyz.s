@@ -11,17 +11,17 @@ lbl_801B7660:
 /* 801B7684 00000000  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 801B7688 00000004  FF E0 18 90 */	fmr f31, f3
 /* 801B768C 00000008  7C 7F 1B 78 */	mr r31, r3
-/* 801B7690 0000000C  C0 82 A5 A4 */	lfs f4, LIT_7333(r2)
-/* 801B7694 00000010  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B7690 0000000C  C0 82 A5 A4 */	lfs f4, lit_7333(r2)
+/* 801B7694 00000010  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B7698 00000014  EC 21 00 28 */	fsubs f1, f1, f0
-/* 801B769C 00000018  C0 02 A5 C4 */	lfs f0, LIT_7944(r2)
+/* 801B769C 00000018  C0 02 A5 C4 */	lfs f0, lit_7944(r2)
 /* 801B76A0 0000001C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801B76A4 00000020  EC 04 00 32 */	fmuls f0, f4, f0
-/* 801B76A8 00000024  C0 62 A5 2C */	lfs f3, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B76A8 00000024  C0 62 A5 2C */	lfs f3, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B76AC 00000028  EF A0 18 28 */	fsubs f29, f0, f3
-/* 801B76B0 0000002C  C0 02 A5 CC */	lfs f0, LIT_7946(r2)
+/* 801B76B0 0000002C  C0 02 A5 CC */	lfs f0, lit_7946(r2)
 /* 801B76B4 00000030  EC 22 00 28 */	fsubs f1, f2, f0
-/* 801B76B8 00000034  C0 02 A5 C8 */	lfs f0, d_menu_d_menu_collect__LIT_7945(r2)
+/* 801B76B8 00000034  C0 02 A5 C8 */	lfs f0, d_menu_d_menu_collect__lit_7945(r2)
 /* 801B76BC 00000038  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801B76C0 0000003C  EC 04 00 32 */	fmuls f0, f4, f0
 /* 801B76C4 00000040  EF C0 18 28 */	fsubs f30, f0, f3
@@ -30,12 +30,12 @@ lbl_801B7660:
 /* 801B76D0 0000004C  38 61 00 44 */	addi r3, r1, 0x44
 /* 801B76D4 00000050  38 81 00 14 */	addi r4, r1, 0x14
 /* 801B76D8 00000054  48 18 EE D9 */	bl PSMTXInverse
-/* 801B76DC 00000058  C8 22 A5 E0 */	lfd f1, LIT_7963(r2)
+/* 801B76DC 00000058  C8 22 A5 E0 */	lfd f1, lit_7963(r2)
 /* 801B76E0 0000005C  48 1B 4F 89 */	bl tan
 /* 801B76E4 00000060  FC 40 08 18 */	frsp f2, f1
 /* 801B76E8 00000064  FC 60 F8 50 */	fneg f3, f31
 /* 801B76EC 00000068  EC 3D 07 F2 */	fmuls f1, f29, f31
-/* 801B76F0 0000006C  C0 02 A5 D4 */	lfs f0, LIT_7948(r2)
+/* 801B76F0 0000006C  C0 02 A5 D4 */	lfs f0, lit_7948(r2)
 /* 801B76F4 00000070  EC 02 00 32 */	fmuls f0, f2, f0
 /* 801B76F8 00000074  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801B76FC 00000078  D0 01 00 08 */	stfs f0, 8(r1)

@@ -273,14 +273,14 @@ lbl_8020AE04:
 /* 8020AE14 00000010  28 00 00 15 */	cmplwi r0, 0x15
 /* 8020AE18 00000014  40 82 00 1C */	bne lbl_8020AE34
 lbl_8020AE1C:
-/* 8020AE1C 00000000  C0 22 AD 5C */	lfs f1, d_meter_d_meter_button__LIT_4514(r2)
+/* 8020AE1C 00000000  C0 22 AD 5C */	lfs f1, d_meter_d_meter_button__lit_4514(r2)
 /* 8020AE20 00000004  C0 04 0E 28 */	lfs f0, 0xe28(r4)
 /* 8020AE24 00000008  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8020AE28 0000000C  38 09 02 E8 */	addi r0, r9, 0x2e8
 /* 8020AE2C 00000010  7C 03 05 2E */	stfsx f0, r3, r0
 /* 8020AE30 00000014  48 00 00 18 */	b lbl_8020AE48
 lbl_8020AE34:
-/* 8020AE34 00000000  C0 22 AD 5C */	lfs f1, d_meter_d_meter_button__LIT_4514(r2)
+/* 8020AE34 00000000  C0 22 AD 5C */	lfs f1, d_meter_d_meter_button__lit_4514(r2)
 /* 8020AE38 00000004  C0 04 0E 10 */	lfs f0, 0xe10(r4)
 /* 8020AE3C 00000008  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8020AE40 0000000C  38 09 02 E8 */	addi r0, r9, 0x2e8

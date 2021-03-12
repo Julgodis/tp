@@ -159,9 +159,9 @@ lbl_800C096C:
 /* 800C09A4 00000038  38 A0 00 00 */	li r5, 0
 /* 800C09A8 0000003C  38 C0 00 00 */	li r6, 0
 /* 800C09AC 00000040  38 E0 00 00 */	li r7, 0
-/* 800C09B0 00000044  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800C09B0 00000044  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800C09B4 00000048  FC 40 08 90 */	fmr f2, f1
-/* 800C09B8 0000004C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__LIT_6041(r2)
+/* 800C09B8 0000004C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
 /* 800C09BC 00000050  FC 80 18 90 */	fmr f4, f3
 /* 800C09C0 00000054  39 00 00 00 */	li r8, 0
 /* 800C09C4 00000058  48 1E AF C1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -211,7 +211,7 @@ lbl_800C0A60:
 /* 800C0A64 00000004  4B FF 9C 3D */	bl commonChangeItem__9daAlink_cFv
 /* 800C0A68 00000008  7F 83 E3 78 */	mr r3, r28
 /* 800C0A6C 0000000C  38 80 00 02 */	li r4, 2
-/* 800C0A70 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800C0A70 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800C0A74 00000014  4B FE CC B1 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800C0A78 00000018  7F 83 E3 78 */	mr r3, r28
 /* 800C0A7C 0000001C  4B FF 64 AD */	bl checkItemActionInitStart__9daAlink_cFv

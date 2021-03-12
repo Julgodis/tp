@@ -5,45 +5,44 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void __kill_critical_regions();
-}
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void __kill_critical_regions();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80365464-80365468 0004 .text      __end_critical_region                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __end_critical_region() {
+extern "C" asm void __end_critical_region() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__end_critical_region.s"
 }
 #pragma pop
 
+
 /* 80365468-8036546C 0004 .text      __begin_critical_region                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __begin_critical_region() {
+extern "C" asm void __begin_critical_region() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__begin_critical_region.s"
 }
 #pragma pop
 
+
 /* 8036546C-80365470 0004 .text      __kill_critical_regions                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __kill_critical_regions() {
+extern "C" asm void __kill_critical_regions() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__kill_critical_regions.s"
 }

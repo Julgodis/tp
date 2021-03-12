@@ -20,14 +20,14 @@ lbl_8020BA4C:
 /* 8020BA94 00000048  C0 23 00 28 */	lfs f1, 0x28(r3)
 /* 8020BA98 0000004C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8020BA9C 00000050  EC 21 00 28 */	fsubs f1, f1, f0
-/* 8020BAA0 00000054  C0 02 AD C8 */	lfs f0, d_meter_d_meter_haihai__LIT_3895(r2)
+/* 8020BAA0 00000054  C0 02 AD C8 */	lfs f0, d_meter_d_meter_haihai__lit_3895(r2)
 /* 8020BAA4 00000058  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8020BAA8 0000005C  EC 42 00 32 */	fmuls f2, f2, f0
 /* 8020BAAC 00000060  38 80 00 7A */	li r4, 0x7a
-/* 8020BAB0 00000064  C0 62 AD CC */	lfs f3, d_meter_d_meter_haihai__LIT_3896(r2)
+/* 8020BAB0 00000064  C0 62 AD CC */	lfs f3, d_meter_d_meter_haihai__lit_3896(r2)
 /* 8020BAB4 00000068  48 0E B7 29 */	bl rotate__7J2DPaneFff13J2DRotateAxisf
 /* 8020BAB8 0000006C  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8020BABC 00000070  C0 22 AD B0 */	lfs f1, d_meter_d_meter_haihai__LIT_3742(r2)
+/* 8020BABC 00000070  C0 22 AD B0 */	lfs f1, d_meter_d_meter_haihai__lit_3742(r2)
 /* 8020BAC0 00000074  FC 40 08 90 */	fmr f2, f1
 /* 8020BAC4 00000078  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8020BAC8 0000007C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l

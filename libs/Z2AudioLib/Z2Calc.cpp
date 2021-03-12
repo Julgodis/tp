@@ -5,144 +5,132 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void linearTransform__6Z2CalcFfffffb();
-extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern void getRandom__6Z2CalcFfff();
-extern void getRandom_0_1__6Z2CalcFv();
-extern void setParam__Q26Z2Calc8FNoise1fFfff();
-extern void tau__Q26Z2Calc8FNoise1fFf();
-extern void calcNoise1f__Q26Z2Calc8FNoise1fFv();
-extern void __ct__Q25JMath13TRandom_fast_FUl();
-extern void exp();
-extern void pow();
+extern "C" extern void linearTransform__6Z2CalcFfffffb();
+extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" extern void getRandom__6Z2CalcFfff();
+extern "C" extern void getRandom_0_1__6Z2CalcFv();
+extern "C" extern void setParam__Q26Z2Calc8FNoise1fFfff();
+extern "C" extern void tau__Q26Z2Calc8FNoise1fFf();
+extern "C" extern void calcNoise1f__Q26Z2Calc8FNoise1fFv();
+extern "C" extern void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" extern void exp();
+extern "C" extern void pow();
 SECTION_SBSS extern u8 data_80451330[4];
 SECTION_SBSS extern u8 data_80451334[4];
-SECTION_SDATA2 extern u8 cEqualCSlope__6Z2Calc[4];
-SECTION_SDATA2 extern u8 cEqualPSlope__6Z2Calc[4];
-SECTION_SDATA2 extern u8 LIT_380[4];
-SECTION_SDATA2 extern u8 LIT_381[4];
-SECTION_SDATA2 extern u8 LIT_396[4];
-SECTION_SDATA2 extern u8 LIT_397[4];
-}
+SECTION_SDATA2 extern f32 cEqualCSlope__6Z2Calc;
+SECTION_SDATA2 extern f32 cEqualPSlope__6Z2Calc;
+SECTION_SDATA2 extern u8 lit_380[4];
+SECTION_SDATA2 extern f32 lit_381;
+SECTION_SDATA2 extern f32 lit_396;
+SECTION_SDATA2 extern f32 lit_397;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455820-80455824 0004 .sdata2    cEqualCSlope__6Z2Calc                                        */
-SECTION_SDATA2 u8 cEqualCSlope__6Z2Calc[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455824-80455828 0004 .sdata2    cEqualPSlope__6Z2Calc                                        */
-SECTION_SDATA2 u8 cEqualPSlope__6Z2Calc[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80455828-8045582C 0004 .sdata2    @380                                                         */
-SECTION_SDATA2 u8 LIT_380[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 8045582C-80455830 0004 .sdata2    @381                                                         */
-SECTION_SDATA2 u8 LIT_381[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455830-80455834 0004 .sdata2    @396                                                         */
-SECTION_SDATA2 u8 LIT_396[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 80455834-80455838 0004 .sdata2    @397                                                         */
-SECTION_SDATA2 u8 LIT_397[4] = {
-	0xC0, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451330-80451334 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451330[4];
-/* 80451334-80451338 0004 .sbss      oRandom$401                                                  */
-SECTION_SBSS u8 data_80451334[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802A968C-802A96F4 0068 .text      linearTransform__6Z2CalcFfffffb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void linearTransform__6Z2CalcFfffffb() {
+extern "C" asm void linearTransform__6Z2CalcFfffffb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/linearTransform__6Z2CalcFfffffb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455820-80455824 0004 .sdata2    cEqualCSlope__6Z2Calc                                        */
+f32 cEqualCSlope__6Z2Calc = 1.0f;
+
+/* 80455824-80455828 0004 .sdata2    cEqualPSlope__6Z2Calc                                        */
+f32 cEqualPSlope__6Z2Calc = 0.5f;
+
+/* 80455828-8045582C 0004 .sdata2    @380                                                         */
+u8 lit_380[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045582C-80455830 0004 .sdata2    @381                                                         */
+f32 lit_381 = 1.0f;
+
 /* 802A96F4-802A9814 0120 .text      getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign() {
+extern "C" asm void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455830-80455834 0004 .sdata2    @396                                                         */
+f32 lit_396 = 2.0f;
+
+/* 80455834-80455838 0004 .sdata2    @397                                                         */
+f32 lit_397 = -2.0f;
+
 /* 802A9814-802A98D4 00C0 .text      getRandom__6Z2CalcFfff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getRandom__6Z2CalcFfff() {
+extern "C" asm void getRandom__6Z2CalcFfff() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/getRandom__6Z2CalcFfff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451330-80451334 0004 .sbss      None                                                         */
+u8 data_80451330[4];
+
+/* 80451334-80451338 0004 .sbss      oRandom$401                                                  */
+u8 data_80451334[4];
+
 /* 802A98D4-802A9944 0070 .text      getRandom_0_1__6Z2CalcFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getRandom_0_1__6Z2CalcFv() {
+extern "C" asm void getRandom_0_1__6Z2CalcFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/getRandom_0_1__6Z2CalcFv.s"
 }
 #pragma pop
 
+
 /* 802A9944-802A9958 0014 .text      setParam__Q26Z2Calc8FNoise1fFfff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setParam__Q26Z2Calc8FNoise1fFfff() {
+extern "C" asm void setParam__Q26Z2Calc8FNoise1fFfff() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/setParam__Q26Z2Calc8FNoise1fFfff.s"
 }
 #pragma pop
 
+
 /* 802A9958-802A99A0 0048 .text      tau__Q26Z2Calc8FNoise1fFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void tau__Q26Z2Calc8FNoise1fFf() {
+extern "C" asm void tau__Q26Z2Calc8FNoise1fFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/tau__Q26Z2Calc8FNoise1fFf.s"
 }
 #pragma pop
 
+
 /* 802A99A0-802A9A34 0094 .text      calcNoise1f__Q26Z2Calc8FNoise1fFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcNoise1f__Q26Z2Calc8FNoise1fFv() {
+extern "C" asm void calcNoise1f__Q26Z2Calc8FNoise1fFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Calc/calcNoise1f__Q26Z2Calc8FNoise1fFv.s"
 }

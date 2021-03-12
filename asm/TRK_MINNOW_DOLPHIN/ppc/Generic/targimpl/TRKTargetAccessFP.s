@@ -41,9 +41,9 @@ lbl_803707BC:
 lbl_80370820:
 /* 80370820 00000000  2C 1F 00 00 */	cmpwi r31, 0
 /* 80370824 00000004  41 82 01 FC */	beq lbl_80370A20
-/* 80370828 00000008  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_290@ha
+/* 80370828 00000008  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_290@ha
 /* 8037082C 0000000C  28 15 00 20 */	cmplwi r21, 0x20
-/* 80370830 00000010  39 83 2B C0 */	addi r12, r3, ppc_Generic_targimpl__LIT_290@l
+/* 80370830 00000010  39 83 2B C0 */	addi r12, r3, ppc_Generic_targimpl__lit_290@l
 /* 80370834 00000014  81 6C 00 00 */	lwz r11, 0(r12)
 /* 80370838 00000018  81 4C 00 04 */	lwz r10, 4(r12)
 /* 8037083C 0000001C  81 2C 00 08 */	lwz r9, 8(r12)
@@ -112,9 +112,9 @@ lbl_80370914:
 /* 80370924 00000010  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80370928 00000014  90 01 00 08 */	stw r0, 8(r1)
 lbl_8037092C:
-/* 8037092C 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_276@ha
+/* 8037092C 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_276@ha
 /* 80370930 00000004  2C 1F 00 00 */	cmpwi r31, 0
-/* 80370934 00000008  39 83 2B 70 */	addi r12, r3, ppc_Generic_targimpl__LIT_276@l
+/* 80370934 00000008  39 83 2B 70 */	addi r12, r3, ppc_Generic_targimpl__lit_276@l
 /* 80370938 0000000C  81 6C 00 00 */	lwz r11, 0(r12)
 /* 8037093C 00000010  81 4C 00 04 */	lwz r10, 4(r12)
 /* 80370940 00000014  81 2C 00 08 */	lwz r9, 8(r12)
@@ -180,9 +180,9 @@ lbl_80370A20:
 /* 80370A20 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80370A24 00000004  38 81 00 08 */	addi r4, r1, 8
 /* 80370A28 00000008  4B FF C7 7D */	bl TRKReadBuffer1_ui64
-/* 80370A2C 0000000C  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_290@ha
+/* 80370A2C 0000000C  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_290@ha
 /* 80370A30 00000010  28 15 00 20 */	cmplwi r21, 0x20
-/* 80370A34 00000014  39 83 2B C0 */	addi r12, r3, ppc_Generic_targimpl__LIT_290@l
+/* 80370A34 00000014  39 83 2B C0 */	addi r12, r3, ppc_Generic_targimpl__lit_290@l
 /* 80370A38 00000018  3A 80 00 00 */	li r20, 0
 /* 80370A3C 0000001C  81 6C 00 00 */	lwz r11, 0(r12)
 /* 80370A40 00000020  81 4C 00 04 */	lwz r10, 4(r12)
@@ -253,9 +253,9 @@ lbl_80370B20:
 /* 80370B30 00000010  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80370B34 00000014  90 01 00 08 */	stw r0, 8(r1)
 lbl_80370B38:
-/* 80370B38 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_276@ha
+/* 80370B38 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_276@ha
 /* 80370B3C 00000004  2C 1F 00 00 */	cmpwi r31, 0
-/* 80370B40 00000008  39 83 2B 70 */	addi r12, r3, ppc_Generic_targimpl__LIT_276@l
+/* 80370B40 00000008  39 83 2B 70 */	addi r12, r3, ppc_Generic_targimpl__lit_276@l
 /* 80370B44 0000000C  81 6C 00 00 */	lwz r11, 0(r12)
 /* 80370B48 00000010  81 4C 00 04 */	lwz r10, 4(r12)
 /* 80370B4C 00000014  81 2C 00 08 */	lwz r9, 8(r12)

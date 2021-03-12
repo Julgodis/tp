@@ -11,27 +11,27 @@ lbl_801E4FB0:
 /* 801E4FD4 00000024  7C 00 21 10 */	subfe r0, r0, r4
 /* 801E4FD8 00000028  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 801E4FDC 0000002C  48 00 34 5D */	bl yesnoMenuMoveAnm__14dMenu_Option_cFv
-/* 801E4FE0 00000030  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__LIT_4068(r2)
+/* 801E4FE0 00000030  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__lit_4068(r2)
 /* 801E4FE4 00000034  C0 1F 03 74 */	lfs f0, 0x374(r31)
 /* 801E4FE8 00000038  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801E4FEC 0000003C  41 82 00 34 */	beq lbl_801E5020
 /* 801E4FF0 00000040  38 7F 03 74 */	addi r3, r31, 0x374
-/* 801E4FF4 00000044  C0 42 A9 64 */	lfs f2, LIT_4893(r2)
-/* 801E4FF8 00000048  C0 62 A9 50 */	lfs f3, d_menu_d_menu_option__LIT_4471(r2)
+/* 801E4FF4 00000044  C0 42 A9 64 */	lfs f2, lit_4893(r2)
+/* 801E4FF8 00000048  C0 62 A9 50 */	lfs f3, d_menu_d_menu_option__lit_4471(r2)
 /* 801E4FFC 0000004C  48 08 AA 41 */	bl cLib_addCalc2__FPffff
 /* 801E5000 00000050  C0 1F 03 74 */	lfs f0, 0x374(r31)
 /* 801E5004 00000054  FC 00 02 10 */	fabs f0, f0
 /* 801E5008 00000058  FC 20 00 18 */	frsp f1, f0
-/* 801E500C 0000005C  C0 02 A9 68 */	lfs f0, LIT_4894(r2)
+/* 801E500C 0000005C  C0 02 A9 68 */	lfs f0, lit_4894(r2)
 /* 801E5010 00000060  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801E5014 00000000  40 80 00 0C */	bge lbl_801E5020
-/* 801E5018 00000004  C0 02 A9 2C */	lfs f0, d_menu_d_menu_option__LIT_4068(r2)
+/* 801E5018 00000004  C0 02 A9 2C */	lfs f0, d_menu_d_menu_option__lit_4068(r2)
 /* 801E501C 00000008  D0 1F 03 74 */	stfs f0, 0x374(r31)
 lbl_801E5020:
 /* 801E5020 00000000  28 1E 00 01 */	cmplwi r30, 1
 /* 801E5024 00000004  40 82 01 80 */	bne lbl_801E51A4
 /* 801E5028 00000008  40 82 01 7C */	bne lbl_801E51A4
-/* 801E502C 0000000C  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__LIT_4068(r2)
+/* 801E502C 0000000C  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__lit_4068(r2)
 /* 801E5030 00000010  C0 1F 03 74 */	lfs f0, 0x374(r31)
 /* 801E5034 00000014  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801E5038 00000018  40 82 01 6C */	bne lbl_801E51A4
@@ -73,10 +73,10 @@ lbl_801E508C:
 /* 801E50C4 00000038  48 00 00 E0 */	b lbl_801E51A4
 lbl_801E50C8:
 /* 801E50C8 00000000  80 7F 00 44 */	lwz r3, 0x44(r31)
-/* 801E50CC 00000004  C0 22 A9 6C */	lfs f1, d_menu_d_menu_option__LIT_5026(r2)
-/* 801E50D0 00000008  C0 42 A9 70 */	lfs f2, d_menu_d_menu_option__LIT_5027(r2)
-/* 801E50D4 0000000C  C0 62 A9 74 */	lfs f3, d_menu_d_menu_option__LIT_5028(r2)
-/* 801E50D8 00000010  C0 82 A9 50 */	lfs f4, d_menu_d_menu_option__LIT_4471(r2)
+/* 801E50CC 00000004  C0 22 A9 6C */	lfs f1, d_menu_d_menu_option__lit_5026(r2)
+/* 801E50D0 00000008  C0 42 A9 70 */	lfs f2, d_menu_d_menu_option__lit_5027(r2)
+/* 801E50D4 0000000C  C0 62 A9 74 */	lfs f3, d_menu_d_menu_option__lit_5028(r2)
+/* 801E50D8 00000010  C0 82 A9 50 */	lfs f4, d_menu_d_menu_option__lit_4471(r2)
 /* 801E50DC 00000014  FC A0 20 90 */	fmr f5, f4
 /* 801E50E0 00000018  4B FB 00 D1 */	bl setParam__16dSelect_cursor_cFfffff
 /* 801E50E4 0000001C  88 1F 03 F5 */	lbz r0, 0x3f5(r31)
@@ -122,10 +122,10 @@ lbl_801E516C:
 /* 801E517C 00000010  48 00 00 28 */	b lbl_801E51A4
 lbl_801E5180:
 /* 801E5180 00000000  80 7F 00 44 */	lwz r3, 0x44(r31)
-/* 801E5184 00000004  C0 22 A9 6C */	lfs f1, d_menu_d_menu_option__LIT_5026(r2)
-/* 801E5188 00000008  C0 42 A9 70 */	lfs f2, d_menu_d_menu_option__LIT_5027(r2)
-/* 801E518C 0000000C  C0 62 A9 74 */	lfs f3, d_menu_d_menu_option__LIT_5028(r2)
-/* 801E5190 00000010  C0 82 A9 50 */	lfs f4, d_menu_d_menu_option__LIT_4471(r2)
+/* 801E5184 00000004  C0 22 A9 6C */	lfs f1, d_menu_d_menu_option__lit_5026(r2)
+/* 801E5188 00000008  C0 42 A9 70 */	lfs f2, d_menu_d_menu_option__lit_5027(r2)
+/* 801E518C 0000000C  C0 62 A9 74 */	lfs f3, d_menu_d_menu_option__lit_5028(r2)
+/* 801E5190 00000010  C0 82 A9 50 */	lfs f4, d_menu_d_menu_option__lit_4471(r2)
 /* 801E5194 00000014  FC A0 20 90 */	fmr f5, f4
 /* 801E5198 00000018  4B FB 00 19 */	bl setParam__16dSelect_cursor_cFfffff
 /* 801E519C 0000001C  88 1F 03 F5 */	lbz r0, 0x3f5(r31)

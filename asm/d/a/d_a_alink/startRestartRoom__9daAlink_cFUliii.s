@@ -62,13 +62,13 @@ lbl_800BE030:
 /* 800BE044 00000014  38 83 0D BC */	addi r4, r3, 0xdbc
 /* 800BE048 00000018  38 7C 37 80 */	addi r3, r28, 0x3780
 /* 800BE04C 0000001C  48 28 93 51 */	bl PSVECSquareDistance
-/* 800BE050 00000020  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800BE050 00000020  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800BE054 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BE058 00000000  40 81 00 58 */	ble lbl_800BE0B0
 /* 800BE05C 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800BE060 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__LIT_6846(r2)
+/* 800BE060 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
 /* 800BE064 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 800BE068 00000010  C8 62 92 F0 */	lfd f3, LIT_6847(r2)
+/* 800BE068 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800BE06C 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 800BE070 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 800BE074 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -87,7 +87,7 @@ lbl_800BE030:
 /* 800BE0A8 00000050  FC 20 08 18 */	frsp f1, f1
 /* 800BE0AC 00000054  48 00 00 88 */	b lbl_800BE134
 lbl_800BE0B0:
-/* 800BE0B0 00000000  C8 02 92 F8 */	lfd f0, LIT_6848(r2)
+/* 800BE0B0 00000000  C8 02 92 F8 */	lfd f0, lit_6848(r2)
 /* 800BE0B4 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BE0B8 00000000  40 80 00 10 */	bge lbl_800BE0C8
 /* 800BE0BC 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -128,7 +128,7 @@ lbl_800BE124:
 /* 800BE12C 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 800BE130 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_800BE134:
-/* 800BE134 00000000  C0 02 93 A0 */	lfs f0, LIT_9054(r2)
+/* 800BE134 00000000  C0 02 93 A0 */	lfs f0, lit_9054(r2)
 /* 800BE138 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BE13C 00000000  40 81 00 08 */	ble lbl_800BE144
 lbl_800BE140:
@@ -197,9 +197,9 @@ lbl_800BE1CC:
 /* 800BE224 00000058  38 A0 00 00 */	li r5, 0
 /* 800BE228 0000005C  38 C0 00 00 */	li r6, 0
 /* 800BE22C 00000060  38 E0 00 00 */	li r7, 0
-/* 800BE230 00000064  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800BE230 00000064  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800BE234 00000068  FC 40 08 90 */	fmr f2, f1
-/* 800BE238 0000006C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__LIT_6041(r2)
+/* 800BE238 0000006C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
 /* 800BE23C 00000070  FC 80 18 90 */	fmr f4, f3
 /* 800BE240 00000074  39 00 00 00 */	li r8, 0
 /* 800BE244 00000078  48 1E D7 41 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

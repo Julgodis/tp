@@ -11,7 +11,7 @@ lbl_800D6238:
 /* 800D625C 00000024  3C A0 80 39 */	lis r5, m__26daAlinkHIO_cutLargeJump_c0@ha
 /* 800D6260 00000028  38 A5 DE 18 */	addi r5, r5, m__26daAlinkHIO_cutLargeJump_c0@l
 /* 800D6264 0000002C  4B FD 6E 91 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800D6268 00000030  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800D6268 00000030  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800D626C 00000034  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800D6270 00000038  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800D6274 0000003C  B0 1F 04 DE */	sth r0, 0x4de(r31)

@@ -72,7 +72,7 @@ lbl_80238DDC:
 /* 80238DF0 00000014  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80238DF4 00000018  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80238DF8 0000001C  4B F6 6C 11 */	bl getDaytime__18dScnKy_env_light_cFv
-/* 80238DFC 00000020  C0 62 B1 40 */	lfs f3, d_msg_d_msg_unit__LIT_3702(r2)
+/* 80238DFC 00000020  C0 62 B1 40 */	lfs f3, d_msg_d_msg_unit__lit_3702(r2)
 /* 80238E00 00000024  EC 03 00 72 */	fmuls f0, f3, f1
 /* 80238E04 00000028  FC 00 00 1E */	fctiwz f0, f0
 /* 80238E08 0000002C  D8 01 00 30 */	stfd f0, 0x30(r1)
@@ -82,7 +82,7 @@ lbl_80238DDC:
 /* 80238E18 0000003C  7C 04 1B D6 */	divw r0, r4, r3
 /* 80238E1C 00000040  7C 00 19 D6 */	mullw r0, r0, r3
 /* 80238E20 00000044  7C 00 20 50 */	subf r0, r0, r4
-/* 80238E24 00000048  C8 42 B1 50 */	lfd f2, LIT_3707(r2)
+/* 80238E24 00000048  C8 42 B1 50 */	lfd f2, lit_3707(r2)
 /* 80238E28 0000004C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80238E2C 00000050  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 80238E30 00000054  3C 00 43 30 */	lis r0, 0x4330
@@ -90,8 +90,8 @@ lbl_80238DDC:
 /* 80238E38 0000005C  C8 01 00 38 */	lfd f0, 0x38(r1)
 /* 80238E3C 00000060  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80238E40 00000064  EC 00 18 24 */	fdivs f0, f0, f3
-/* 80238E44 00000068  C0 62 B1 44 */	lfs f3, d_msg_d_msg_unit__LIT_3703(r2)
-/* 80238E48 0000006C  C0 42 B1 48 */	lfs f2, d_msg_d_msg_unit__LIT_3704(r2)
+/* 80238E44 00000068  C0 62 B1 44 */	lfs f3, d_msg_d_msg_unit__lit_3703(r2)
+/* 80238E48 0000006C  C0 42 B1 48 */	lfs f2, d_msg_d_msg_unit__lit_3704(r2)
 /* 80238E4C 00000070  EC 00 10 24 */	fdivs f0, f0, f2
 /* 80238E50 00000074  EC 63 00 32 */	fmuls f3, f3, f0
 /* 80238E54 00000078  7F C3 F3 78 */	mr r3, r30

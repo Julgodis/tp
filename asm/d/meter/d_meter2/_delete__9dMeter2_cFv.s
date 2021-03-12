@@ -20,9 +20,9 @@ lbl_8021F49C:
 /* 8021F4E4 00000048  38 A0 00 00 */	li r5, 0
 /* 8021F4E8 0000004C  38 C0 00 00 */	li r6, 0
 /* 8021F4EC 00000050  38 E0 00 00 */	li r7, 0
-/* 8021F4F0 00000054  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 8021F4F0 00000054  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 8021F4F4 00000058  FC 40 08 90 */	fmr f2, f1
-/* 8021F4F8 0000005C  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 8021F4F8 0000005C  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 8021F4FC 00000060  FC 80 18 90 */	fmr f4, f3
 /* 8021F500 00000064  39 00 00 00 */	li r8, 0
 /* 8021F504 00000068  48 08 C4 81 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -37,9 +37,9 @@ lbl_8021F508:
 /* 8021F524 0000001C  38 A0 00 00 */	li r5, 0
 /* 8021F528 00000020  38 C0 00 00 */	li r6, 0
 /* 8021F52C 00000024  38 E0 00 00 */	li r7, 0
-/* 8021F530 00000028  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 8021F530 00000028  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 8021F534 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 8021F538 00000030  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 8021F538 00000030  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 8021F53C 00000034  FC 80 18 90 */	fmr f4, f3
 /* 8021F540 00000038  39 00 00 00 */	li r8, 0
 /* 8021F544 0000003C  48 08 C4 41 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -67,9 +67,9 @@ lbl_8021F574:
 /* 8021F594 00000020  38 A0 00 00 */	li r5, 0
 /* 8021F598 00000024  38 C0 00 00 */	li r6, 0
 /* 8021F59C 00000028  38 E0 00 00 */	li r7, 0
-/* 8021F5A0 0000002C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 8021F5A0 0000002C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 8021F5A4 00000030  FC 40 08 90 */	fmr f2, f1
-/* 8021F5A8 00000034  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 8021F5A8 00000034  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 8021F5AC 00000038  FC 80 18 90 */	fmr f4, f3
 /* 8021F5B0 0000003C  39 00 00 00 */	li r8, 0
 /* 8021F5B4 00000040  48 08 C3 D1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

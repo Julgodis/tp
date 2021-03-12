@@ -5,47 +5,94 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSReport();
-extern void __nw__FUl();
-extern void __nwa__FUl();
-extern void __nwa__FUli();
-extern void __dl__FPv();
-extern void __ct__10JUTNameTabFPC7ResNTAB();
-extern void func_802F42C0();
-extern void func_8030A530();
-extern void func_8030A560();
-extern void __ct__13J3DDeformDataFv();
-extern void __ct__11J3DDeformerFP13J3DDeformData();
-extern void load__24J3DClusterLoaderDataBaseFPCv();
-extern void __ct__20J3DClusterLoader_v15Fv();
-extern void __dt__20J3DClusterLoader_v15Fv();
-extern void load__20J3DClusterLoader_v15FPCv();
-extern void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock();
-extern void __dt__16J3DClusterLoaderFv();
-extern void func_80334644();
-extern void func_8033465C();
-extern void func_80334674();
-extern void DCStoreRange();
-extern void _savegpr_23();
-extern void _savegpr_26();
-extern void _restgpr_23();
-extern void _restgpr_26();
+extern "C" extern void OSReport();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __nwa__FUl();
+extern "C" extern void __nwa__FUli();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" extern void func_802F42C0();
+extern "C" extern void func_8030A530();
+extern "C" extern void func_8030A560();
+extern "C" extern void __ct__13J3DDeformDataFv();
+extern "C" extern void __ct__11J3DDeformerFP13J3DDeformData();
+extern "C" extern void load__24J3DClusterLoaderDataBaseFPCv();
+extern "C" extern void __ct__20J3DClusterLoader_v15Fv();
+extern "C" extern void __dt__20J3DClusterLoader_v15Fv();
+extern "C" extern void load__20J3DClusterLoader_v15FPCv();
+extern "C" extern void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock();
+extern "C" extern void __dt__16J3DClusterLoaderFv();
+extern "C" extern void func_80334644();
+extern "C" extern void func_8033465C();
+extern "C" extern void func_80334674();
+extern "C" extern void DCStoreRange();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_26();
 SECTION_RODATA extern const u8 J3DClusterLoader__stringBase0[24];
-SECTION_DATA extern void* __vt__20J3DClusterLoader_v15[4];
-SECTION_DATA extern void* __vt__16J3DClusterLoader[4];
+SECTION_DATA extern void* const __vt__20J3DClusterLoader_v15[4];
+SECTION_DATA extern void* const __vt__16J3DClusterLoader[4];
+
+// 
+// Functions:
+// 
+
+/* 80334130-803341CC 009C .text      load__24J3DClusterLoaderDataBaseFPCv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void load__24J3DClusterLoaderDataBaseFPCv() {
+	nofralloc
+#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/load__24J3DClusterLoaderDataBaseFPCv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 803CF0E8-803CF0F8 0010 .data      __vt__20J3DClusterLoader_v15                                 */
+void* const __vt__20J3DClusterLoader_v15[4] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)load__20J3DClusterLoader_v15FPCv,
+	(void*)__dt__20J3DClusterLoader_v15Fv,
+};
 
-extern "C" {
+/* 803CF0F8-803CF108 0010 .data      __vt__16J3DClusterLoader                                     */
+void* const __vt__16J3DClusterLoader[4] = {
+	NULL, /* RTTI */
+	NULL,
+	NULL,
+	(void*)__dt__16J3DClusterLoaderFv,
+};
+
+/* 803341CC-803341E8 001C .text      __ct__20J3DClusterLoader_v15Fv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__20J3DClusterLoader_v15Fv() {
+	nofralloc
+#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/__ct__20J3DClusterLoader_v15Fv.s"
+}
+#pragma pop
+
+
+/* 803341E8-80334244 005C .text      __dt__20J3DClusterLoader_v15Fv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__20J3DClusterLoader_v15Fv() {
+	nofralloc
+#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/__dt__20J3DClusterLoader_v15Fv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A2098-803A20B0 0014 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -54,120 +101,67 @@ SECTION_DEAD const char* const stringBase_803A2098 = "Unknown data block\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803A20AC = "\0\0\0";
 #pragma pop
-}
-
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CF0E8-803CF0F8 0010 .data      __vt__20J3DClusterLoader_v15                                 */
-SECTION_DATA void* __vt__20J3DClusterLoader_v15[4] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)load__20J3DClusterLoader_v15FPCv,
-	(void*)__dt__20J3DClusterLoader_v15Fv,
-};
-/* 803CF0F8-803CF108 0010 .data      __vt__16J3DClusterLoader                                     */
-SECTION_DATA void* __vt__16J3DClusterLoader[4] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
-	(void*)__dt__16J3DClusterLoaderFv,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80334130-803341CC 009C .text      load__24J3DClusterLoaderDataBaseFPCv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void load__24J3DClusterLoaderDataBaseFPCv() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/load__24J3DClusterLoaderDataBaseFPCv.s"
-}
-#pragma pop
-
-/* 803341CC-803341E8 001C .text      __ct__20J3DClusterLoader_v15Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__20J3DClusterLoader_v15Fv() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/__ct__20J3DClusterLoader_v15Fv.s"
-}
-#pragma pop
-
-/* 803341E8-80334244 005C .text      __dt__20J3DClusterLoader_v15Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__20J3DClusterLoader_v15Fv() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/__dt__20J3DClusterLoader_v15Fv.s"
-}
-#pragma pop
 
 /* 80334244-803342F8 00B4 .text      load__20J3DClusterLoader_v15FPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load__20J3DClusterLoader_v15FPCv() {
+extern "C" asm void load__20J3DClusterLoader_v15FPCv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/load__20J3DClusterLoader_v15FPCv.s"
 }
 #pragma pop
 
+
 /* 803342F8-803345FC 0304 .text      readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock() {
+extern "C" asm void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock.s"
 }
 #pragma pop
 
+
 /* 803345FC-80334644 0048 .text      __dt__16J3DClusterLoaderFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16J3DClusterLoaderFv() {
+extern "C" asm void __dt__16J3DClusterLoaderFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/__dt__16J3DClusterLoaderFv.s"
 }
 #pragma pop
 
+
 /* 80334644-8033465C 0018 .text      JSUConvertOffsetToPtr<16J3DClusterVertex>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80334644() {
+extern "C" asm void func_80334644() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/func_80334644.s"
 }
 #pragma pop
 
+
 /* 8033465C-80334674 0018 .text      JSUConvertOffsetToPtr<13J3DClusterKey>__FPCvPCv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8033465C() {
+extern "C" asm void func_8033465C() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/func_8033465C.s"
 }
 #pragma pop
 
+
 /* 80334674-8033468C 0018 .text      JSUConvertOffsetToPtr<10J3DCluster>__FPCvPCv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80334674() {
+extern "C" asm void func_80334674() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DClusterLoader/func_80334674.s"
 }

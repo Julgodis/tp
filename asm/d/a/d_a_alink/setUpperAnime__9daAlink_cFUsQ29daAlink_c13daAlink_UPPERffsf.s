@@ -68,7 +68,7 @@ lbl_800AD4CC:
 /* 800AD4CC 00000000  57 80 18 38 */	slwi r0, r28, 3
 /* 800AD4D0 00000004  7C 7A 02 14 */	add r3, r26, r0
 /* 800AD4D4 00000008  93 C3 1F 44 */	stw r30, 0x1f44(r3)
-/* 800AD4D8 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800AD4D8 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800AD4DC 00000010  D0 03 1F 40 */	stfs f0, 0x1f40(r3)
 /* 800AD4E0 00000014  7C 7A CA 14 */	add r3, r26, r25
 /* 800AD4E4 00000018  B3 63 1F 94 */	sth r27, 0x1f94(r3)
@@ -76,11 +76,11 @@ lbl_800AD4CC:
 /* 800AD4EC 00000020  40 80 00 08 */	bge lbl_800AD4F4
 /* 800AD4F0 00000024  AB BE 00 06 */	lha r29, 6(r30)
 lbl_800AD4F4:
-/* 800AD4F4 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800AD4F4 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800AD4F8 00000004  FC 1C 00 40 */	fcmpo cr0, f28, f0
 /* 800AD4FC 00000000  40 80 00 28 */	bge lbl_800AD524
 /* 800AD500 00000004  7F A0 07 34 */	extsh r0, r29
-/* 800AD504 00000008  C8 22 92 B0 */	lfd f1, LIT_6025(r2)
+/* 800AD504 00000008  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800AD508 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800AD50C 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 800AD510 00000014  3C 00 43 30 */	lis r0, 0x4330
@@ -113,7 +113,7 @@ lbl_800AD56C:
 /* 800AD56C 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800AD570 00000004  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
 /* 800AD574 00000008  C0 43 00 28 */	lfs f2, 0x28(r3)
-/* 800AD578 0000000C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800AD578 0000000C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800AD57C 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 800AD580 00000014  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800AD584 00000018  EC 02 00 32 */	fmuls f0, f2, f0

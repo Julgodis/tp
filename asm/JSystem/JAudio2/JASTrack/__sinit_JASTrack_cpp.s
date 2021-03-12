@@ -4,8 +4,8 @@ lbl_80293388:
 /* 80293390 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80293394 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293398 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 8029339C 00000014  3C 60 80 43 */	lis r3, JASTrack__LIT_431@ha
-/* 802933A0 00000018  3B E3 16 A8 */	addi r31, r3, JASTrack__LIT_431@l
+/* 8029339C 00000014  3C 60 80 43 */	lis r3, JASTrack__lit_431@ha
+/* 802933A0 00000018  3B E3 16 A8 */	addi r31, r3, JASTrack__lit_431@l
 /* 802933A4 0000001C  3B DF 00 0C */	addi r30, r31, 0xc
 /* 802933A8 00000020  3C 60 80 3C */	lis r3, __vt__11JASBankList@ha
 /* 802933AC 00000024  38 03 5B 80 */	addi r0, r3, __vt__11JASBankList@l

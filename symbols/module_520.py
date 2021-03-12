@@ -1,0 +1,32 @@
+#
+# Generate By: dol2asm
+# Module: 520
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5B500, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5B52C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5B558, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
+	'daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B578, 'size': 0x01A4, 'padding': 0x00, 'name': "daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class", 'reference_count': 1, 'type': "Function"},
+	'action__FP19obj_lv3WaterB_class': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B71C, 'size': 0x0180, 'padding': 0x00, 'name': "action__FP19obj_lv3WaterB_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B89C, 'size': 0x0024, 'padding': 0x00, 'name': "daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class", 'reference_count': 2, 'type': "Function"},
+	'daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B8C0, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B8C8, 'size': 0x0084, 'padding': 0x00, 'name': "daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class", 'reference_count': 1, 'type': "Function"},
+	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5B94C, 'size': 0x0240, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
+	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5BB8C, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
+	'daObj_Lv3waterB_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".text", 'addr': 0x80C5BBD4, 'size': 0x0174, 'padding': 0x00, 'name': "daObj_Lv3waterB_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'data_80C5BD48': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80C5BD48, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80C5BD4C': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80C5BD4C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3724': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD54, 'size': 0x0004, 'padding': 0x00, 'name': "@3724", 'reference_count': 0, 'type': "Integer"},
+	'lit_3725': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD58, 'size': 0x0004, 'padding': 0x00, 'name': "@3725", 'reference_count': 0, 'type': "Integer"},
+	'lit_3726': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD5C, 'size': 0x0004, 'padding': 0x00, 'name': "@3726", 'reference_count': 0, 'type': "InitData"},
+	'lit_3751': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD60, 'size': 0x0004, 'padding': 0x00, 'name': "@3751", 'reference_count': 0, 'type': "Integer"},
+	'lit_3752': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD64, 'size': 0x0004, 'padding': 0x00, 'name': "@3752", 'reference_count': 0, 'type': "Integer"},
+	'lit_3753': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD68, 'size': 0x0004, 'padding': 0x00, 'name': "@3753", 'reference_count': 0, 'type': "Integer"},
+	'lit_3754': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD6C, 'size': 0x0004, 'padding': 0x00, 'name': "@3754", 'reference_count': 0, 'type': "Integer"},
+	'lit_3755': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD70, 'size': 0x0004, 'padding': 0x00, 'name': "@3755", 'reference_count': 0, 'type': "Integer"},
+	'stringBase0': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".rodata", 'addr': 0x80C5BD74, 'size': 0x0014, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
+	'l_daObj_Lv3waterB_Method': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".data", 'addr': 0x80C5BD8C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Lv3waterB_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_OBJ_LV3WATERB': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".data", 'addr': 0x80C5BDAC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_LV3WATERB", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/d_a_obj_lv3WaterB", 'translation_unit': "d_a_obj_lv3WaterB", 'section': ".data", 'addr': 0x80C5BDDC, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+}

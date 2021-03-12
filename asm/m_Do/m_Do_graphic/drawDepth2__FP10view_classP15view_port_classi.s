@@ -37,7 +37,7 @@ lbl_800086B4:
 /* 800086B8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800086BC 00000008  3A E3 5D 74 */	addi r23, r3, 0x5d74
 /* 800086C0 0000000C  82 23 5D 74 */	lwz r17, 0x5d74(r3)
-/* 800086C4 00000010  C3 C2 80 48 */	lfs f30, m_Do_m_Do_graphic__LIT_4422(r2)
+/* 800086C4 00000010  C3 C2 80 48 */	lfs f30, m_Do_m_Do_graphic__lit_4422(r2)
 /* 800086C8 00000014  48 17 8F 79 */	bl dCam_getBody__Fv
 /* 800086CC 00000018  80 03 01 A4 */	lwz r0, 0x1a4(r3)
 /* 800086D0 0000001C  2C 00 00 04 */	cmpwi r0, 4
@@ -53,13 +53,13 @@ lbl_800086B4:
 /* 800086F8 00000044  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 800086FC 00000048  7C 97 00 2E */	lwzx r4, r23, r0
 /* 80008700 0000004C  38 75 56 B8 */	addi r3, r21, 0x56b8
-/* 80008704 00000050  C0 22 80 4C */	lfs f1, m_Do_m_Do_graphic__LIT_4423(r2)
+/* 80008704 00000050  C0 22 80 4C */	lfs f1, m_Do_m_Do_graphic__lit_4423(r2)
 /* 80008708 00000054  28 04 00 00 */	cmplwi r4, 0
 /* 8000870C 00000058  41 82 00 0C */	beq lbl_80008718
 /* 80008710 0000005C  C0 04 00 D0 */	lfs f0, 0xd0(r4)
 /* 80008714 00000060  48 00 00 08 */	b lbl_8000871C
 lbl_80008718:
-/* 80008718 00000000  C0 02 80 50 */	lfs f0, m_Do_m_Do_graphic__LIT_4424(r2)
+/* 80008718 00000000  C0 02 80 50 */	lfs f0, m_Do_m_Do_graphic__lit_4424(r2)
 lbl_8000871C:
 /* 8000871C 00000000  EF E1 00 24 */	fdivs f31, f1, f0
 /* 80008720 00000004  48 06 B0 C5 */	bl LockonTruth__12dAttention_cFv
@@ -87,7 +87,7 @@ lbl_8000871C:
 /* 80008778 0000005C  EC 02 08 28 */	fsubs f0, f2, f1
 /* 8000877C 00000060  FC 00 02 10 */	fabs f0, f0
 /* 80008780 00000064  FC 40 00 18 */	frsp f2, f0
-/* 80008784 00000068  C0 02 80 54 */	lfs f0, m_Do_m_Do_graphic__LIT_4425(r2)
+/* 80008784 00000068  C0 02 80 54 */	lfs f0, m_Do_m_Do_graphic__lit_4425(r2)
 /* 80008788 0000006C  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8000878C 00000000  40 80 00 08 */	bge lbl_80008794
 /* 80008790 00000004  D0 21 00 2C */	stfs f1, 0x2c(r1)
@@ -95,13 +95,13 @@ lbl_80008794:
 /* 80008794 00000000  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 80008798 00000004  38 91 00 D8 */	addi r4, r17, 0xd8
 /* 8000879C 00000008  48 33 EC 01 */	bl PSVECSquareDistance
-/* 800087A0 0000000C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 800087A0 0000000C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 800087A4 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800087A8 00000000  40 81 00 58 */	ble lbl_80008800
 /* 800087AC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800087B0 00000008  C8 82 80 58 */	lfd f4, m_Do_m_Do_graphic__LIT_4426(r2)
+/* 800087B0 00000008  C8 82 80 58 */	lfd f4, m_Do_m_Do_graphic__lit_4426(r2)
 /* 800087B4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 800087B8 00000010  C8 62 80 60 */	lfd f3, m_Do_m_Do_graphic__LIT_4427(r2)
+/* 800087B8 00000010  C8 62 80 60 */	lfd f3, m_Do_m_Do_graphic__lit_4427(r2)
 /* 800087BC 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 800087C0 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 800087C4 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -120,7 +120,7 @@ lbl_80008794:
 /* 800087F8 00000050  FC 20 08 18 */	frsp f1, f1
 /* 800087FC 00000054  48 00 00 88 */	b lbl_80008884
 lbl_80008800:
-/* 80008800 00000000  C8 02 80 68 */	lfd f0, m_Do_m_Do_graphic__LIT_4428(r2)
+/* 80008800 00000000  C8 02 80 68 */	lfd f0, m_Do_m_Do_graphic__lit_4428(r2)
 /* 80008804 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80008808 00000000  40 80 00 10 */	bge lbl_80008818
 /* 8000880C 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -161,24 +161,24 @@ lbl_80008874:
 /* 8000887C 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 80008880 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80008884:
-/* 80008884 00000000  C0 02 80 70 */	lfs f0, m_Do_m_Do_graphic__LIT_4429(r2)
+/* 80008884 00000000  C0 02 80 70 */	lfs f0, m_Do_m_Do_graphic__lit_4429(r2)
 /* 80008888 00000004  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8000888C 00000008  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80008890 0000000C  C0 02 80 74 */	lfs f0, m_Do_m_Do_graphic__LIT_4430(r2)
+/* 80008890 0000000C  C0 02 80 74 */	lfs f0, m_Do_m_Do_graphic__lit_4430(r2)
 /* 80008894 00000010  EC 42 00 28 */	fsubs f2, f2, f0
-/* 80008898 00000014  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008898 00000014  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000889C 00000018  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800088A0 00000000  40 80 00 0C */	bge lbl_800088AC
 /* 800088A4 00000004  FC 40 00 90 */	fmr f2, f0
 /* 800088A8 00000008  48 00 00 14 */	b lbl_800088BC
 lbl_800088AC:
-/* 800088AC 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 800088AC 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__lit_4063(r2)
 /* 800088B0 00000004  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800088B4 00000000  40 81 00 08 */	ble lbl_800088BC
 /* 800088B8 00000004  FC 40 00 90 */	fmr f2, f0
 lbl_800088BC:
-/* 800088BC 00000000  C0 22 80 78 */	lfs f1, m_Do_m_Do_graphic__LIT_4431(r2)
-/* 800088C0 00000004  C0 02 80 7C */	lfs f0, m_Do_m_Do_graphic__LIT_4432(r2)
+/* 800088BC 00000000  C0 22 80 78 */	lfs f1, m_Do_m_Do_graphic__lit_4431(r2)
+/* 800088C0 00000004  C0 02 80 7C */	lfs f0, m_Do_m_Do_graphic__lit_4432(r2)
 /* 800088C4 00000008  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 800088C8 0000000C  EF C1 00 28 */	fsubs f30, f1, f0
 /* 800088CC 00000010  48 00 00 7C */	b lbl_80008948
@@ -186,33 +186,33 @@ lbl_800088D0:
 /* 800088D0 00000000  88 15 4F AD */	lbz r0, 0x4fad(r21)
 /* 800088D4 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 800088D8 00000008  41 82 00 70 */	beq lbl_80008948
-/* 800088DC 0000000C  C0 02 80 80 */	lfs f0, m_Do_m_Do_graphic__LIT_4433(r2)
+/* 800088DC 0000000C  C0 02 80 80 */	lfs f0, m_Do_m_Do_graphic__lit_4433(r2)
 /* 800088E0 00000010  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800088E4 00000000  40 80 00 64 */	bge lbl_80008948
 /* 800088E8 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800088EC 00000008  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 800088F0 0000000C  C0 23 12 6C */	lfs f1, 0x126c(r3)
-/* 800088F4 00000010  C0 02 80 84 */	lfs f0, m_Do_m_Do_graphic__LIT_4434(r2)
+/* 800088F4 00000010  C0 02 80 84 */	lfs f0, m_Do_m_Do_graphic__lit_4434(r2)
 /* 800088F8 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800088FC 00000000  40 80 00 4C */	bge lbl_80008948
-/* 80008900 00000004  C0 02 80 88 */	lfs f0, m_Do_m_Do_graphic__LIT_4435(r2)
+/* 80008900 00000004  C0 02 80 88 */	lfs f0, m_Do_m_Do_graphic__lit_4435(r2)
 /* 80008904 00000008  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 80008908 0000000C  EC 41 00 24 */	fdivs f2, f1, f0
-/* 8000890C 00000010  C0 02 80 74 */	lfs f0, m_Do_m_Do_graphic__LIT_4430(r2)
+/* 8000890C 00000010  C0 02 80 74 */	lfs f0, m_Do_m_Do_graphic__lit_4430(r2)
 /* 80008910 00000014  EC 42 00 28 */	fsubs f2, f2, f0
-/* 80008914 00000018  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008914 00000018  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008918 00000048  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8000891C 00000000  40 80 00 0C */	bge lbl_80008928
 /* 80008920 00000004  FC 40 00 90 */	fmr f2, f0
 /* 80008924 00000008  48 00 00 14 */	b lbl_80008938
 lbl_80008928:
-/* 80008928 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 80008928 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000892C 00000004  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80008930 00000000  40 81 00 08 */	ble lbl_80008938
 /* 80008934 00000004  FC 40 00 90 */	fmr f2, f0
 lbl_80008938:
-/* 80008938 00000000  C0 22 80 78 */	lfs f1, m_Do_m_Do_graphic__LIT_4431(r2)
-/* 8000893C 00000004  C0 02 80 7C */	lfs f0, m_Do_m_Do_graphic__LIT_4432(r2)
+/* 80008938 00000000  C0 22 80 78 */	lfs f1, m_Do_m_Do_graphic__lit_4431(r2)
+/* 8000893C 00000004  C0 02 80 7C */	lfs f0, m_Do_m_Do_graphic__lit_4432(r2)
 /* 80008940 00000008  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80008944 0000000C  EF C1 00 28 */	fsubs f30, f1, f0
 lbl_80008948:
@@ -221,9 +221,9 @@ lbl_80008948:
 /* 80008950 00000008  3A A3 12 64 */	addi r21, r3, 0x1264
 /* 80008954 0000000C  7E A3 AB 78 */	mr r3, r21
 /* 80008958 00000010  FC 20 F0 90 */	fmr f1, f30
-/* 8000895C 00000014  C0 42 80 8C */	lfs f2, m_Do_m_Do_graphic__LIT_4436(r2)
-/* 80008960 00000018  C0 62 80 90 */	lfs f3, m_Do_m_Do_graphic__LIT_4437(r2)
-/* 80008964 0000001C  C0 82 80 94 */	lfs f4, m_Do_m_Do_graphic__LIT_4438(r2)
+/* 8000895C 00000014  C0 42 80 8C */	lfs f2, m_Do_m_Do_graphic__lit_4436(r2)
+/* 80008960 00000018  C0 62 80 90 */	lfs f3, m_Do_m_Do_graphic__lit_4437(r2)
+/* 80008964 0000001C  C0 82 80 94 */	lfs f4, m_Do_m_Do_graphic__lit_4438(r2)
 /* 80008968 00000020  48 26 70 15 */	bl cLib_addCalc__FPfffff
 /* 8000896C 00000024  C0 15 00 00 */	lfs f0, 0(r21)
 /* 80008970 00000028  FC 00 00 1E */	fctiwz f0, f0
@@ -344,7 +344,7 @@ lbl_80008A5C:
 /* 80008B34 000000D8  38 63 D4 08 */	addi r3, r3, mZbufferTexObj__13mDoGph_gInf_c@l
 /* 80008B38 000000DC  38 80 00 00 */	li r4, 0
 /* 80008B3C 000000E0  38 A0 00 00 */	li r5, 0
-/* 80008B40 000000E4  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008B40 000000E4  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008B44 000000E8  FC 40 08 90 */	fmr f2, f1
 /* 80008B48 000000EC  FC 60 08 90 */	fmr f3, f1
 /* 80008B4C 000000F0  38 C0 00 00 */	li r6, 0
@@ -366,7 +366,7 @@ lbl_80008A5C:
 /* 80008B8C 00000130  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
 /* 80008B90 00000134  38 80 00 01 */	li r4, 1
 /* 80008B94 00000138  38 A0 00 01 */	li r5, 1
-/* 80008B98 0000013C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008B98 0000013C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008B9C 00000140  FC 40 08 90 */	fmr f2, f1
 /* 80008BA0 00000144  FC 60 08 90 */	fmr f3, f1
 /* 80008BA4 00000148  38 C0 00 00 */	li r6, 0
@@ -383,7 +383,7 @@ lbl_80008A5C:
 /* 80008BD0 00000174  38 63 D4 08 */	addi r3, r3, mZbufferTexObj__13mDoGph_gInf_c@l
 /* 80008BD4 00000178  38 80 00 00 */	li r4, 0
 /* 80008BD8 0000017C  48 35 58 3D */	bl GXLoadTexObj
-/* 80008BDC 00000180  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008BDC 00000180  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008BE0 00000184  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80008BE4 00000188  3A A3 CA 54 */	addi r21, r3, g_env_light@l
 /* 80008BE8 0000018C  C0 75 12 70 */	lfs f3, 0x1270(r21)
@@ -392,8 +392,8 @@ lbl_80008A5C:
 /* 80008BF4 00000198  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 80008BF8 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80008BFC 00000004  40 82 00 28 */	bne lbl_80008C24
-/* 80008C00 00000008  C0 22 80 98 */	lfs f1, m_Do_m_Do_graphic__LIT_4439(r2)
-/* 80008C04 0000000C  C0 02 80 9C */	lfs f0, m_Do_m_Do_graphic__LIT_4440(r2)
+/* 80008C00 00000008  C0 22 80 98 */	lfs f1, m_Do_m_Do_graphic__lit_4439(r2)
+/* 80008C04 0000000C  C0 02 80 9C */	lfs f0, m_Do_m_Do_graphic__lit_4440(r2)
 /* 80008C08 00000010  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 80008C0C 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 80008C10 00000018  FC 00 00 1E */	fctiwz f0, f0
@@ -402,9 +402,9 @@ lbl_80008A5C:
 /* 80008C1C 00000024  B0 1E 00 06 */	sth r0, 6(r30)
 /* 80008C20 00000028  48 00 00 2C */	b lbl_80008C4C
 lbl_80008C24:
-/* 80008C24 00000000  C0 42 80 98 */	lfs f2, m_Do_m_Do_graphic__LIT_4439(r2)
-/* 80008C28 00000004  C0 22 80 9C */	lfs f1, m_Do_m_Do_graphic__LIT_4440(r2)
-/* 80008C2C 00000008  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 80008C24 00000000  C0 42 80 98 */	lfs f2, m_Do_m_Do_graphic__lit_4439(r2)
+/* 80008C28 00000004  C0 22 80 9C */	lfs f1, m_Do_m_Do_graphic__lit_4440(r2)
+/* 80008C2C 00000008  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__lit_4063(r2)
 /* 80008C30 0000000C  EC 00 18 2A */	fadds f0, f0, f3
 /* 80008C34 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80008C38 00000014  EC 02 00 2A */	fadds f0, f2, f0
@@ -564,7 +564,7 @@ lbl_80008C4C:
 /* 80008E9C 00000250  38 A0 00 00 */	li r5, 0
 /* 80008EA0 00000254  48 35 6D FD */	bl GXSetZMode
 /* 80008EA4 00000258  C0 35 12 70 */	lfs f1, 0x1270(r21)
-/* 80008EA8 0000025C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008EA8 0000025C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008EAC 00000260  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80008EB0 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80008EB4 00000004  40 82 00 34 */	bne lbl_80008EE8
@@ -596,7 +596,7 @@ lbl_80008F14:
 /* 80008F14 00000000  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 80008F18 00000004  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80008F1C 00000008  38 60 00 00 */	li r3, 0
-/* 80008F20 0000000C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008F20 0000000C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008F24 00000010  FC 40 08 90 */	fmr f2, f1
 /* 80008F28 00000014  FC 60 08 90 */	fmr f3, f1
 /* 80008F2C 00000018  FC 80 08 90 */	fmr f4, f1
@@ -615,8 +615,8 @@ lbl_80008F14:
 /* 80008F60 0000004C  EC 41 00 2A */	fadds f2, f1, f0
 /* 80008F64 00000050  C0 19 00 08 */	lfs f0, 8(r25)
 /* 80008F68 00000054  EC 83 00 2A */	fadds f4, f3, f0
-/* 80008F6C 00000058  C0 A2 80 38 */	lfs f5, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 80008F70 0000005C  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__LIT_4105(r2)
+/* 80008F6C 00000058  C0 A2 80 38 */	lfs f5, m_Do_m_Do_graphic__lit_4062(r2)
+/* 80008F70 0000005C  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__lit_4105(r2)
 /* 80008F74 00000060  48 33 E0 85 */	bl C_MTXOrtho
 /* 80008F78 00000064  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
 /* 80008F7C 00000068  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l
@@ -624,9 +624,9 @@ lbl_80008F14:
 /* 80008F84 00000070  48 35 72 C9 */	bl GXLoadPosMtxImm
 /* 80008F88 00000074  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80008F8C 00000078  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80008F90 0000007C  C0 22 80 A0 */	lfs f1, m_Do_m_Do_graphic__LIT_4441(r2)
+/* 80008F90 0000007C  C0 22 80 A0 */	lfs f1, m_Do_m_Do_graphic__lit_4441(r2)
 /* 80008F94 00000080  FC 40 08 90 */	fmr f2, f1
-/* 80008F98 00000084  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008F98 00000084  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008F9C 00000088  48 33 D9 4D */	bl PSMTXTrans
 /* 80008FA0 0000008C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80008FA4 00000090  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
@@ -635,9 +635,9 @@ lbl_80008F14:
 /* 80008FB0 0000009C  48 35 73 71 */	bl GXLoadTexMtxImm
 /* 80008FB4 000000A0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80008FB8 000000A4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80008FBC 000000A8  C0 22 80 A4 */	lfs f1, m_Do_m_Do_graphic__LIT_4442(r2)
+/* 80008FBC 000000A8  C0 22 80 A4 */	lfs f1, m_Do_m_Do_graphic__lit_4442(r2)
 /* 80008FC0 000000AC  FC 40 08 90 */	fmr f2, f1
-/* 80008FC4 000000B0  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008FC4 000000B0  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80008FC8 000000B4  48 33 D9 21 */	bl PSMTXTrans
 /* 80008FCC 000000B8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80008FD0 000000BC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

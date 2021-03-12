@@ -5,66 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __kernel_sin();
-SECTION_SDATA2 extern u8 LIT_60[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_61[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_62[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_63[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_64[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_65[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_66[8];
-}
+extern "C" extern void __kernel_sin();
+SECTION_SDATA2 extern f64 lit_60;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_61;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_62;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_63;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_64;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_65;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_66;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456A48-80456A50 0008 .sdata2    @60                                                          */
-SECTION_SDATA2 u8 LIT_60[8] = {
-	0x3F, 0x81, 0x11, 0x11, 0x11, 0x10, 0xF8, 0xA6,
-};
+f64 lit_60 = 0.00833333333332249;
+
 /* 80456A50-80456A58 0008 .sdata2    @61                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_61[8] = {
-	0xBF, 0x2A, 0x01, 0xA0, 0x19, 0xC1, 0x61, 0xD5,
-};
+f64 Math_Double_precision_k_sin__lit_61 = -0.0001984126982985795;
+
 /* 80456A58-80456A60 0008 .sdata2    @62                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_62[8] = {
-	0x3E, 0xC7, 0x1D, 0xE3, 0x57, 0xB1, 0xFE, 0x7D,
-};
+f64 Math_Double_precision_k_sin__lit_62 = 2.7557313707070068e-06;
+
 /* 80456A60-80456A68 0008 .sdata2    @63                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_63[8] = {
-	0xBE, 0x5A, 0xE5, 0xE6, 0x8A, 0x2B, 0x9C, 0xEB,
-};
+f64 Math_Double_precision_k_sin__lit_63 = -2.5050760253406863e-08;
+
 /* 80456A68-80456A70 0008 .sdata2    @64                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_64[8] = {
-	0x3D, 0xE5, 0xD9, 0x3A, 0x5A, 0xCF, 0xD5, 0x7C,
-};
+f64 Math_Double_precision_k_sin__lit_64 = 1.58969099521155e-10;
+
 /* 80456A70-80456A78 0008 .sdata2    @65                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_65[8] = {
-	0xBF, 0xC5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x49,
-};
+f64 Math_Double_precision_k_sin__lit_65 = -0.16666666666666632;
+
 /* 80456A78-80456A80 0008 .sdata2    @66                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_66[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 Math_Double_precision_k_sin__lit_66 = 0.5;
 
 /* 8036B9F0-8036BA90 00A0 .text      __kernel_sin                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __kernel_sin() {
+extern "C" asm void __kernel_sin() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/k_sin/__kernel_sin.s"
 }

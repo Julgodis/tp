@@ -5,134 +5,133 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSReport();
-extern void OSPanic();
-extern void __nw__FUl();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __ct__9JKRThreadFUlii();
-extern void __dt__9JKRThreadFv();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __ct__10JSUPtrListFb();
-extern void __dt__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
-extern void __dt__10JUTGamePadFv();
-extern void read__10JUTGamePadFv();
-extern void checkResetCallback__10JUTGamePadFx();
-extern void __ct__12JUTExceptionFP14JUTDirectPrint();
-extern void create__12JUTExceptionFP14JUTDirectPrint();
-extern void run__12JUTExceptionFv();
-extern void errorHandler__12JUTExceptionFUsP9OSContextUlUl();
-extern void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct();
-extern void panic_f__12JUTExceptionFPCciPCce();
-extern void setFPException__12JUTExceptionFUl();
-extern void showFloatSub__12JUTExceptionFif();
-extern void showFloat__12JUTExceptionFP9OSContext();
-extern void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl();
-extern void search_name_part__FPUcPUci();
-extern void showStack__12JUTExceptionFP9OSContext();
-extern void showMainInfo__12JUTExceptionFUsP9OSContextUlUl();
-extern void showGPR__12JUTExceptionFP9OSContext();
-extern void showMapInfo_subroutine__12JUTExceptionFUlb();
-extern void showGPRMap__12JUTExceptionFP9OSContext();
-extern void showSRR0Map__12JUTExceptionFP9OSContext();
-extern void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl();
-extern void isEnablePad__12JUTExceptionCFv();
-extern void readPad__12JUTExceptionFPUlPUl();
-extern void printContext__12JUTExceptionFUsP9OSContextUlUl();
-extern void waitTime__12JUTExceptionFl();
-extern void createFB__12JUTExceptionFv();
-extern void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern void appendMapFile__12JUTExceptionFPCc();
-extern void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb();
-extern void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb();
-extern void createConsole__12JUTExceptionFPvUl();
-extern void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl();
-extern void __dt__12JUTExceptionFv();
-extern void __sinit_JUTException_cpp();
-extern void func_802E4194();
-extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
-extern void create__10JUTConsoleFUiPvUl();
-extern void getLineFromObjectSize__10JUTConsoleFUlUi();
-extern void print_f__10JUTConsoleFPCce();
-extern void print__10JUTConsoleFPCc();
-extern void scroll__10JUTConsoleFi();
-extern void getUsedLine__10JUTConsoleCFv();
-extern void getLineOffset__10JUTConsoleCFv();
-extern void drawDirect__17JUTConsoleManagerCFb();
-extern void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
-extern void __ct__13JUTDirectFileFv();
-extern void __dt__13JUTDirectFileFv();
-extern void fopen__13JUTDirectFileFPCc();
-extern void fclose__13JUTDirectFileFv();
-extern void fgets__13JUTDirectFileFPvi();
-extern void PPCMfmsr();
-extern void PPCMtmsr();
-extern void OSGetArenaHi();
-extern void OSGetCurrentContext();
-extern void OSGetStackPointer();
-extern void OSFillFPUContext();
-extern void OSSetErrorHandler();
-extern void OSDisableInterrupts();
-extern void OSEnableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSInitMessageQueue();
-extern void OSSendMessage();
-extern void OSReceiveMessage();
-extern void OSProtectRange();
-extern void OSGetCurrentThread();
-extern void OSEnableScheduler();
-extern void OSYieldThread();
-extern void OSResumeThread();
-extern void OSSuspendThread();
-extern void OSGetTime();
-extern void VISetPreRetraceCallback();
-extern void VISetPostRetraceCallback();
-extern void VIConfigure();
-extern void VIFlush();
-extern void VISetNextFrameBuffer();
-extern void VIGetCurrentFrameBuffer();
-extern void VISetBlack();
-extern void VIGetRetraceCount();
-extern void __register_global_object();
-extern void _savegpr_16();
-extern void _savegpr_22();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_28();
-extern void _restgpr_16();
-extern void _restgpr_22();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_28();
-extern void __div2i();
-extern void vsnprintf();
-extern void strcmp();
-extern void strcat();
-extern void strcpy();
-extern void strtol();
+extern "C" extern void OSReport();
+extern "C" extern void OSPanic();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__9JKRThreadFUlii();
+extern "C" extern void __dt__9JKRThreadFv();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __ct__10JSUPtrListFb();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern "C" extern void __dt__10JUTGamePadFv();
+extern "C" extern void read__10JUTGamePadFv();
+extern "C" extern void checkResetCallback__10JUTGamePadFx();
+extern "C" extern void __ct__12JUTExceptionFP14JUTDirectPrint();
+extern "C" extern void create__12JUTExceptionFP14JUTDirectPrint();
+extern "C" extern void run__12JUTExceptionFv();
+extern "C" extern void errorHandler__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" extern void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct();
+extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
+extern "C" extern void setFPException__12JUTExceptionFUl();
+extern "C" extern void showFloatSub__12JUTExceptionFif();
+extern "C" extern void showFloat__12JUTExceptionFP9OSContext();
+extern "C" extern void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl();
+extern "C" extern void search_name_part__FPUcPUci();
+extern "C" extern void showStack__12JUTExceptionFP9OSContext();
+extern "C" extern void showMainInfo__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" extern void showGPR__12JUTExceptionFP9OSContext();
+extern "C" extern void showMapInfo_subroutine__12JUTExceptionFUlb();
+extern "C" extern void showGPRMap__12JUTExceptionFP9OSContext();
+extern "C" extern void showSRR0Map__12JUTExceptionFP9OSContext();
+extern "C" extern void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl();
+extern "C" extern void isEnablePad__12JUTExceptionCFv();
+extern "C" extern void readPad__12JUTExceptionFPUlPUl();
+extern "C" extern void printContext__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" extern void waitTime__12JUTExceptionFl();
+extern "C" extern void createFB__12JUTExceptionFv();
+extern "C" extern void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" extern void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" extern void appendMapFile__12JUTExceptionFPCc();
+extern "C" extern void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb();
+extern "C" extern void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb();
+extern "C" extern void createConsole__12JUTExceptionFPvUl();
+extern "C" extern void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl();
+extern "C" extern void __dt__12JUTExceptionFv();
+extern "C" extern void __sinit_JUTException_cpp();
+extern "C" extern void func_802E4194();
+extern "C" extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" extern void create__10JUTConsoleFUiPvUl();
+extern "C" extern void getLineFromObjectSize__10JUTConsoleFUlUi();
+extern "C" extern void print_f__10JUTConsoleFPCce();
+extern "C" extern void print__10JUTConsoleFPCc();
+extern "C" extern void scroll__10JUTConsoleFi();
+extern "C" extern void getUsedLine__10JUTConsoleCFv();
+extern "C" extern void getLineOffset__10JUTConsoleCFv();
+extern "C" extern void drawDirect__17JUTConsoleManagerCFb();
+extern "C" extern void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" extern void __ct__13JUTDirectFileFv();
+extern "C" extern void __dt__13JUTDirectFileFv();
+extern "C" extern void fopen__13JUTDirectFileFPCc();
+extern "C" extern void fclose__13JUTDirectFileFv();
+extern "C" extern void fgets__13JUTDirectFileFPvi();
+extern "C" extern void PPCMfmsr();
+extern "C" extern void PPCMtmsr();
+extern "C" extern void OSGetArenaHi();
+extern "C" extern void OSGetCurrentContext();
+extern "C" extern void OSGetStackPointer();
+extern "C" extern void OSFillFPUContext();
+extern "C" extern void OSSetErrorHandler();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSEnableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSInitMessageQueue();
+extern "C" extern void OSSendMessage();
+extern "C" extern void OSReceiveMessage();
+extern "C" extern void OSProtectRange();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void OSEnableScheduler();
+extern "C" extern void OSYieldThread();
+extern "C" extern void OSResumeThread();
+extern "C" extern void OSSuspendThread();
+extern "C" extern void OSGetTime();
+extern "C" extern void VISetPreRetraceCallback();
+extern "C" extern void VISetPostRetraceCallback();
+extern "C" extern void VIConfigure();
+extern "C" extern void VIFlush();
+extern "C" extern void VISetNextFrameBuffer();
+extern "C" extern void VIGetCurrentFrameBuffer();
+extern "C" extern void VISetBlack();
+extern "C" extern void VIGetRetraceCount();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_16();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_16();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_28();
+extern "C" extern void __div2i();
+extern "C" extern void vsnprintf();
+extern "C" extern void strcmp();
+extern "C" extern void strcat();
+extern "C" extern void strcpy();
+extern "C" extern void strtol();
 SECTION_RODATA extern const u8 JUTException__stringBase0[1296];
 SECTION_DATA extern u8 sMessageQueue__12JUTException[32];
 SECTION_DATA extern u8 c3bcnt[32];
 SECTION_DATA extern void* sCpuExpName__12JUTException[17];
-SECTION_DATA extern void* __vt__12JUTException[5];
+SECTION_DATA extern void* const __vt__12JUTException[5];
 SECTION_DATA extern u8 GXNtsc480Int[60];
 SECTION_BSS extern u8 exCallbackObject[20];
-SECTION_BSS extern u8 JUTException__LIT_2182[12];
+SECTION_BSS extern u8 JUTException__lit_2182[12];
 SECTION_BSS extern u8 sMapFileList__12JUTException[12 + 4 /* padding */];
 SECTION_BSS extern u8 data_804345A8[712];
 SECTION_SDATA extern u8 sMessageBuffer__12JUTException[8];
 SECTION_SDATA extern u8 data_804508F8[8];
-SECTION_SDATA extern u8 __OSFpscrEnableBits[4];
+SECTION_SDATA extern u32 __OSFpscrEnableBits;
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sErrorManager__12JUTException[4];
 SECTION_SBSS extern u8 sPreUserCallback__12JUTException[4];
@@ -143,17 +142,139 @@ SECTION_SBSS extern u8 sConsole__12JUTException[4];
 SECTION_SBSS extern u8 msr__12JUTException[4];
 SECTION_SBSS extern u8 fpscr__12JUTException[4];
 SECTION_SBSS extern u8 sManager__17JUTConsoleManager[4];
-SECTION_SDATA2 extern u8 LIT_2293[4];
-SECTION_SDATA2 extern u8 LIT_3034[4];
-SECTION_SDATA2 extern u8 LIT_3035[8];
+SECTION_SDATA2 extern u8 lit_2293[4];
+SECTION_SDATA2 extern f32 lit_3034;
+SECTION_SDATA2 extern f32 lit_3035;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 803CC620-803CC640 0020 .data      sMessageQueue__12JUTException                                */
+u8 sMessageQueue__12JUTException[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CC640-803CC660 0020 .data      c3bcnt                                                       */
+u8 c3bcnt[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CC660-803CC6A4 0044 .data      sCpuExpName__12JUTException                                  */
+void* sCpuExpName__12JUTException[17] = {
+	(void*)&JUTException__stringBase0,
+	(void*)(((char*)&JUTException__stringBase0)+0xD),
+	(void*)(((char*)&JUTException__stringBase0)+0x1B),
+	(void*)(((char*)&JUTException__stringBase0)+0x1F),
+	(void*)(((char*)&JUTException__stringBase0)+0x23),
+	(void*)(((char*)&JUTException__stringBase0)+0x36),
+	(void*)(((char*)&JUTException__stringBase0)+0x40),
+	(void*)(((char*)&JUTException__stringBase0)+0x48),
+	(void*)(((char*)&JUTException__stringBase0)+0x57),
+	(void*)(((char*)&JUTException__stringBase0)+0x63),
+	(void*)(((char*)&JUTException__stringBase0)+0x6F),
+	(void*)(((char*)&JUTException__stringBase0)+0x75),
+	(void*)(((char*)&JUTException__stringBase0)+0x88),
+	(void*)(((char*)&JUTException__stringBase0)+0x94),
+	(void*)(((char*)&JUTException__stringBase0)+0xA5),
+	(void*)(((char*)&JUTException__stringBase0)+0xB7),
+	(void*)(((char*)&JUTException__stringBase0)+0x48),
+};
+
+/* 803CC6A4-803CC6B8 0010 .data      __vt__12JUTException                                         */
+void* const __vt__12JUTException[5] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__12JUTExceptionFv,
+	(void*)run__12JUTExceptionFv,
+	/* padding */
+	NULL,
+};
+
+/* 80451508-8045150C 0004 .sbss      sErrorManager__12JUTException                                */
+u8 sErrorManager__12JUTException[4];
+
+/* 8045150C-80451510 0004 .sbss      sPreUserCallback__12JUTException                             */
+u8 sPreUserCallback__12JUTException[4];
+
+/* 80451510-80451514 0004 .sbss      sPostUserCallback__12JUTException                            */
+u8 sPostUserCallback__12JUTException[4];
+
+/* 802E1D5C-802E1E40 00E4 .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__12JUTExceptionFP14JUTDirectPrint() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTException/__ct__12JUTExceptionFP14JUTDirectPrint.s"
 }
+#pragma pop
+
+
+/* 802E1E40-802E1EA8 0068 .text      create__12JUTExceptionFP14JUTDirectPrint                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void create__12JUTExceptionFP14JUTDirectPrint() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTException/create__12JUTExceptionFP14JUTDirectPrint.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 804508F0-804508F8 0004 .sdata     sMessageBuffer__12JUTException                               */
+u8 sMessageBuffer__12JUTException[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 802E1EA8-802E1FCC 0124 .text      run__12JUTExceptionFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void run__12JUTExceptionFv() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTException/run__12JUTExceptionFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80434578-8043458C 0014 .bss       exCallbackObject                                             */
+u8 exCallbackObject[20];
+
+/* 80451514-80451518 0004 .sbss      sConsoleBuffer__12JUTException                               */
+u8 sConsoleBuffer__12JUTException[4];
+
+/* 80451518-8045151C 0004 .sbss      sConsoleBufferSize__12JUTException                           */
+u8 sConsoleBufferSize__12JUTException[4];
+
+/* 8045151C-80451520 0004 .sbss      sConsole__12JUTException                                     */
+u8 sConsole__12JUTException[4];
+
+/* 80451520-80451524 0004 .sbss      msr__12JUTException                                          */
+u8 msr__12JUTException[4];
+
+/* 80451524-80451528 0004 .sbss      fpscr__12JUTException                                        */
+u8 fpscr__12JUTException[4];
+
+/* 802E1FCC-802E20C0 00F4 .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void errorHandler__12JUTExceptionFUsP9OSContextUlUl() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTException/errorHandler__12JUTExceptionFUsP9OSContextUlUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039D490-8039D9A0 050E .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -236,468 +357,351 @@ SECTION_DEAD const char* const stringBase_8039D97E = "  [%08X]: .%s [%08X: %XH]\
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039D99E = "\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CC620-803CC640 0020 .data      sMessageQueue__12JUTException                                */
-SECTION_DATA u8 sMessageQueue__12JUTException[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CC640-803CC660 0020 .data      c3bcnt                                                       */
-SECTION_DATA u8 c3bcnt[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CC660-803CC6A4 0044 .data      sCpuExpName__12JUTException                                  */
-SECTION_DATA void* sCpuExpName__12JUTException[17] = {
-	(void*)&JUTException__stringBase0,
-	(void*)(((char*)&JUTException__stringBase0)+0xD),
-	(void*)(((char*)&JUTException__stringBase0)+0x1B),
-	(void*)(((char*)&JUTException__stringBase0)+0x1F),
-	(void*)(((char*)&JUTException__stringBase0)+0x23),
-	(void*)(((char*)&JUTException__stringBase0)+0x36),
-	(void*)(((char*)&JUTException__stringBase0)+0x40),
-	(void*)(((char*)&JUTException__stringBase0)+0x48),
-	(void*)(((char*)&JUTException__stringBase0)+0x57),
-	(void*)(((char*)&JUTException__stringBase0)+0x63),
-	(void*)(((char*)&JUTException__stringBase0)+0x6F),
-	(void*)(((char*)&JUTException__stringBase0)+0x75),
-	(void*)(((char*)&JUTException__stringBase0)+0x88),
-	(void*)(((char*)&JUTException__stringBase0)+0x94),
-	(void*)(((char*)&JUTException__stringBase0)+0xA5),
-	(void*)(((char*)&JUTException__stringBase0)+0xB7),
-	(void*)(((char*)&JUTException__stringBase0)+0x48),
-};
-/* 803CC6A4-803CC6B8 0010 .data      __vt__12JUTException                                         */
-SECTION_DATA void* __vt__12JUTException[5] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__12JUTExceptionFv,
-	(void*)run__12JUTExceptionFv,
-	/* padding */
-	NULL,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804508F0-804508F8 0004 .sdata     sMessageBuffer__12JUTException                               */
-SECTION_SDATA u8 sMessageBuffer__12JUTException[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804508F8-80450900 0008 .sdata     None                                                         */
-SECTION_SDATA u8 data_804508F8[8] = {
-	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456050-80456054 0004 .sdata2    @2293                                                        */
-SECTION_SDATA2 u8 LIT_2293[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456054-80456058 0004 .sdata2    @3034                                                        */
-SECTION_SDATA2 u8 LIT_3034[4] = {
-	0x41, 0x20, 0x00, 0x00,
-};
-/* 80456058-80456060 0004 .sdata2    @3035                                                        */
-SECTION_SDATA2 u8 LIT_3035[8] = {
-	0x40, 0xC0, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80434578-8043458C 0014 .bss       exCallbackObject                                             */
-SECTION_BSS u8 exCallbackObject[20];
 /* 8043458C-80434598 000C .bss       @2182                                                        */
-SECTION_BSS u8 JUTException__LIT_2182[12];
+u8 JUTException__lit_2182[12];
+
 /* 80434598-804345A8 000C .bss       sMapFileList__12JUTException                                 */
-SECTION_BSS u8 sMapFileList__12JUTException[12 + 4 /* padding */];
+u8 sMapFileList__12JUTException[12 + 4 /* padding */];
+
 /* 804345A8-80434870 02C8 .bss       context$2230                                                 */
-SECTION_BSS u8 data_804345A8[712];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451508-8045150C 0004 .sbss      sErrorManager__12JUTException                                */
-SECTION_SBSS u8 sErrorManager__12JUTException[4];
-/* 8045150C-80451510 0004 .sbss      sPreUserCallback__12JUTException                             */
-SECTION_SBSS u8 sPreUserCallback__12JUTException[4];
-/* 80451510-80451514 0004 .sbss      sPostUserCallback__12JUTException                            */
-SECTION_SBSS u8 sPostUserCallback__12JUTException[4];
-/* 80451514-80451518 0004 .sbss      sConsoleBuffer__12JUTException                               */
-SECTION_SBSS u8 sConsoleBuffer__12JUTException[4];
-/* 80451518-8045151C 0004 .sbss      sConsoleBufferSize__12JUTException                           */
-SECTION_SBSS u8 sConsoleBufferSize__12JUTException[4];
-/* 8045151C-80451520 0004 .sbss      sConsole__12JUTException                                     */
-SECTION_SBSS u8 sConsole__12JUTException[4];
-/* 80451520-80451524 0004 .sbss      msr__12JUTException                                          */
-SECTION_SBSS u8 msr__12JUTException[4];
-/* 80451524-80451528 0004 .sbss      fpscr__12JUTException                                        */
-SECTION_SBSS u8 fpscr__12JUTException[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802E1D5C-802E1E40 00E4 .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__12JUTExceptionFP14JUTDirectPrint() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTException/__ct__12JUTExceptionFP14JUTDirectPrint.s"
-}
-#pragma pop
-
-/* 802E1E40-802E1EA8 0068 .text      create__12JUTExceptionFP14JUTDirectPrint                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void create__12JUTExceptionFP14JUTDirectPrint() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTException/create__12JUTExceptionFP14JUTDirectPrint.s"
-}
-#pragma pop
-
-/* 802E1EA8-802E1FCC 0124 .text      run__12JUTExceptionFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void run__12JUTExceptionFv() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTException/run__12JUTExceptionFv.s"
-}
-#pragma pop
-
-/* 802E1FCC-802E20C0 00F4 .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void errorHandler__12JUTExceptionFUsP9OSContextUlUl() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTException/errorHandler__12JUTExceptionFUsP9OSContextUlUl.s"
-}
-#pragma pop
+u8 data_804345A8[712];
 
 /* 802E20C0-802E21FC 013C .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct() {
+extern "C" asm void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct.s"
 }
 #pragma pop
 
+
 /* 802E21FC-802E227C 0080 .text      panic_f__12JUTExceptionFPCciPCce                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void panic_f__12JUTExceptionFPCciPCce() {
+extern "C" asm void panic_f__12JUTExceptionFPCciPCce() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/panic_f__12JUTExceptionFPCciPCce.s"
 }
 #pragma pop
 
+
 /* 802E227C-802E22C4 0048 .text      setFPException__12JUTExceptionFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFPException__12JUTExceptionFUl() {
+extern "C" asm void setFPException__12JUTExceptionFUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/setFPException__12JUTExceptionFUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456050-80456054 0004 .sdata2    @2293                                                        */
+u8 lit_2293[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 802E22C4-802E2454 0190 .text      showFloatSub__12JUTExceptionFif                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showFloatSub__12JUTExceptionFif() {
+extern "C" asm void showFloatSub__12JUTExceptionFif() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showFloatSub__12JUTExceptionFif.s"
 }
 #pragma pop
 
+
 /* 802E2454-802E2578 0124 .text      showFloat__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showFloat__12JUTExceptionFP9OSContext() {
+extern "C" asm void showFloat__12JUTExceptionFP9OSContext() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showFloat__12JUTExceptionFP9OSContext.s"
 }
 #pragma pop
 
+
 /* 802E2578-802E2638 00C0 .text      searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl() {
+extern "C" asm void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl.s"
 }
 #pragma pop
 
+
 /* 802E2638-802E26B0 0078 .text      search_name_part__FPUcPUci                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void search_name_part__FPUcPUci() {
+extern "C" asm void search_name_part__FPUcPUci() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/search_name_part__FPUcPUci.s"
 }
 #pragma pop
 
+
 /* 802E26B0-802E27B0 0100 .text      showStack__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showStack__12JUTExceptionFP9OSContext() {
+extern "C" asm void showStack__12JUTExceptionFP9OSContext() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showStack__12JUTExceptionFP9OSContext.s"
 }
 #pragma pop
 
+
 /* 802E27B0-802E2A84 02D4 .text      showMainInfo__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showMainInfo__12JUTExceptionFUsP9OSContextUlUl() {
+extern "C" asm void showMainInfo__12JUTExceptionFUsP9OSContextUlUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showMainInfo__12JUTExceptionFUsP9OSContextUlUl.s"
 }
 #pragma pop
 
+
 /* 802E2A84-802E2B44 00C0 .text      showGPR__12JUTExceptionFP9OSContext                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showGPR__12JUTExceptionFP9OSContext() {
+extern "C" asm void showGPR__12JUTExceptionFP9OSContext() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showGPR__12JUTExceptionFP9OSContext.s"
 }
 #pragma pop
 
+
 /* 802E2B44-802E2CA0 015C .text      showMapInfo_subroutine__12JUTExceptionFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showMapInfo_subroutine__12JUTExceptionFUlb() {
+extern "C" asm void showMapInfo_subroutine__12JUTExceptionFUlb() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showMapInfo_subroutine__12JUTExceptionFUlb.s"
 }
 #pragma pop
 
+
 /* 802E2CA0-802E2DAC 010C .text      showGPRMap__12JUTExceptionFP9OSContext                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showGPRMap__12JUTExceptionFP9OSContext() {
+extern "C" asm void showGPRMap__12JUTExceptionFP9OSContext() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showGPRMap__12JUTExceptionFP9OSContext.s"
 }
 #pragma pop
 
+
 /* 802E2DAC-802E2E70 00C4 .text      showSRR0Map__12JUTExceptionFP9OSContext                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void showSRR0Map__12JUTExceptionFP9OSContext() {
+extern "C" asm void showSRR0Map__12JUTExceptionFP9OSContext() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showSRR0Map__12JUTExceptionFP9OSContext.s"
 }
 #pragma pop
 
+
 /* 802E2E70-802E2F18 00A8 .text      printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl() {
+extern "C" asm void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl.s"
 }
 #pragma pop
 
+
 /* 802E2F18-802E2F54 003C .text      isEnablePad__12JUTExceptionCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isEnablePad__12JUTExceptionCFv() {
+extern "C" asm void isEnablePad__12JUTExceptionCFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/isEnablePad__12JUTExceptionCFv.s"
 }
 #pragma pop
 
+
 /* 802E2F54-802E34C0 056C .text      readPad__12JUTExceptionFPUlPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readPad__12JUTExceptionFPUlPUl() {
+extern "C" asm void readPad__12JUTExceptionFPUlPUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/readPad__12JUTExceptionFPUlPUl.s"
 }
 #pragma pop
 
+
 /* 802E34C0-802E3980 04C0 .text      printContext__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void printContext__12JUTExceptionFUsP9OSContextUlUl() {
+extern "C" asm void printContext__12JUTExceptionFUsP9OSContextUlUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/printContext__12JUTExceptionFUsP9OSContextUlUl.s"
 }
 #pragma pop
 
+
 /* 802E3980-802E3A08 0088 .text      waitTime__12JUTExceptionFl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void waitTime__12JUTExceptionFl() {
+extern "C" asm void waitTime__12JUTExceptionFl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/waitTime__12JUTExceptionFl.s"
 }
 #pragma pop
 
+
 /* 802E3A08-802E3AEC 00E4 .text      createFB__12JUTExceptionFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createFB__12JUTExceptionFv() {
+extern "C" asm void createFB__12JUTExceptionFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/createFB__12JUTExceptionFv.s"
 }
 #pragma pop
 
+
 /* 802E3AEC-802E3AFC 0010 .text      setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
+extern "C" asm void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v.s"
 }
 #pragma pop
 
+
 /* 802E3AFC-802E3B0C 0010 .text      setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
+extern "C" asm void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v.s"
 }
 #pragma pop
 
+
 /* 802E3B0C-802E3BA0 0094 .text      appendMapFile__12JUTExceptionFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void appendMapFile__12JUTExceptionFPCc() {
+extern "C" asm void appendMapFile__12JUTExceptionFPCc() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/appendMapFile__12JUTExceptionFPCc.s"
 }
 #pragma pop
 
+
 /* 802E3BA0-802E3C90 00F0 .text      queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb() {
+extern "C" asm void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb.s"
 }
 #pragma pop
 
+
 /* 802E3C90-802E3FEC 035C .text      queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb() {
+extern "C" asm void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456054-80456058 0004 .sdata2    @3034                                                        */
+f32 lit_3034 = 10.0f;
+
+/* 80456058-80456060 0004 .sdata2    @3035                                                        */
+f32 lit_3035 = 6.0f;
+/* padding 4 bytes */
+
 /* 802E3FEC-802E40CC 00E0 .text      createConsole__12JUTExceptionFPvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createConsole__12JUTExceptionFPvUl() {
+extern "C" asm void createConsole__12JUTExceptionFPvUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/createConsole__12JUTExceptionFPvUl.s"
 }
 #pragma pop
 
+
 /* 802E40CC-802E40EC 0020 .text      __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl() {
+extern "C" asm void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/__ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl.s"
 }
 #pragma pop
 
+
 /* 802E40EC-802E414C 0060 .text      __dt__12JUTExceptionFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JUTExceptionFv() {
+extern "C" asm void __dt__12JUTExceptionFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/__dt__12JUTExceptionFv.s"
 }
 #pragma pop
 
+
 /* 802E414C-802E4194 0048 .text      __sinit_JUTException_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_JUTException_cpp() {
+extern "C" asm void __sinit_JUTException_cpp() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/__sinit_JUTException_cpp.s"
 }
 #pragma pop
 
+
 /* 802E4194-802E41E8 0054 .text      __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802E4194() {
+extern "C" asm void func_802E4194() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/func_802E4194.s"
 }
 #pragma pop
 
+
+/* 804508F8-80450900 0008 .sdata     None                                                         */
+u8 data_804508F8[8] = {
+	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 

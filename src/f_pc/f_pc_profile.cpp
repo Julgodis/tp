@@ -5,34 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcPf_Get__Fs();
+extern "C" extern void fpcPf_Get__Fs();
 SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450D50-80450D58 0004 .sbss      g_fpcPf_ProfileList_p                                        */
-SECTION_SBSS u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
 /* 80023564-80023578 0014 .text      fpcPf_Get__Fs                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPf_Get__Fs() {
+extern "C" asm void fpcPf_Get__Fs() {
 	nofralloc
 #include "asm/f_pc/f_pc_profile/fpcPf_Get__Fs.s"
 }

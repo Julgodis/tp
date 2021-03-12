@@ -11,15 +11,15 @@ lbl_8021AF78:
 /* 8021AF9C 00000010  54 9E 15 BA */	rlwinm r30, r4, 2, 0x16, 0x1d
 /* 8021AFA0 00000014  7C 7D F2 14 */	add r3, r29, r30
 /* 8021AFA4 00000018  83 E3 03 2C */	lwz r31, 0x32c(r3)
-/* 8021AFA8 0000001C  80 62 D1 90 */	lwz r3, d_meter_d_meter2_draw__LIT_8746(r2)
+/* 8021AFA8 0000001C  80 62 D1 90 */	lwz r3, d_meter_d_meter2_draw__lit_8746(r2)
 /* 8021AFAC 00000020  80 02 D1 94 */	lwz r0, data_80456B94(r2)
 /* 8021AFB0 00000024  90 61 00 10 */	stw r3, 0x10(r1)
 /* 8021AFB4 00000028  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8021AFB8 0000002C  80 62 D1 98 */	lwz r3, d_meter_d_meter2_draw__LIT_8747(r2)
+/* 8021AFB8 0000002C  80 62 D1 98 */	lwz r3, d_meter_d_meter2_draw__lit_8747(r2)
 /* 8021AFBC 00000030  80 02 D1 9C */	lwz r0, data_80456B9C(r2)
 /* 8021AFC0 00000034  90 61 00 08 */	stw r3, 8(r1)
 /* 8021AFC4 00000038  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8021AFC8 0000003C  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__LIT_4183(r2)
+/* 8021AFC8 0000003C  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__lit_4183(r2)
 /* 8021AFCC 00000040  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 8021AFD0 00000044  40 82 00 10 */	bne lbl_8021AFE0
 /* 8021AFD4 00000048  7F E3 FB 78 */	mr r3, r31
@@ -48,8 +48,8 @@ lbl_8021AFE0:
 /* 8021B02C 0000004C  90 01 00 38 */	stw r0, 0x38(r1)
 /* 8021B030 00000050  7F FD F2 14 */	add r31, r29, r30
 /* 8021B034 00000054  80 7F 00 AC */	lwz r3, 0xac(r31)
-/* 8021B038 00000058  C0 62 AE E0 */	lfs f3, LIT_8774(r2)
-/* 8021B03C 0000005C  C0 42 AE 94 */	lfs f2, d_meter_d_meter2_draw__LIT_4922(r2)
+/* 8021B038 00000058  C0 62 AE E0 */	lfs f3, lit_8774(r2)
+/* 8021B03C 0000005C  C0 42 AE 94 */	lfs f2, d_meter_d_meter2_draw__lit_4922(r2)
 /* 8021B040 00000060  C0 21 00 3C */	lfs f1, 0x3c(r1)
 /* 8021B044 00000064  C0 01 00 30 */	lfs f0, 0x30(r1)
 /* 8021B048 00000068  EC 01 00 2A */	fadds f0, f1, f0
@@ -64,7 +64,7 @@ lbl_8021AFE0:
 /* 8021B06C 0000008C  EC 42 00 2A */	fadds f2, f2, f0
 /* 8021B070 00000090  4B F9 3B 31 */	bl setPos__15dKantera_icon_cFff
 /* 8021B074 00000094  80 7F 00 AC */	lwz r3, 0xac(r31)
-/* 8021B078 00000098  C0 22 AE E4 */	lfs f1, LIT_8775(r2)
+/* 8021B078 00000098  C0 22 AE E4 */	lfs f1, lit_8775(r2)
 /* 8021B07C 0000009C  FC 40 08 90 */	fmr f2, f1
 /* 8021B080 000000A0  4B F9 3B 75 */	bl setScale__15dKantera_icon_cFff
 /* 8021B084 000000A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

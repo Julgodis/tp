@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__7JASHeapFP11JASDisposer();
-extern void __defctor__7JASHeapFv();
-}
+extern "C" extern void __ct__7JASHeapFP11JASDisposer();
+extern "C" extern void __defctor__7JASHeapFv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802A4A5C-802A4A80 0024 .text      __defctor__7JASHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __defctor__7JASHeapFv() {
+extern "C" asm void __defctor__7JASHeapFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUAudioMgr/__defctor__7JASHeapFv.s"
 }

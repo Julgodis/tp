@@ -8,11 +8,11 @@ lbl_80252C68:
 /* 80252C80 00000018  38 03 F8 00 */	addi r0, r3, -2048
 /* 80252C84 0000001C  B0 1F 01 14 */	sth r0, 0x114(r31)
 /* 80252C88 00000020  38 7F 01 18 */	addi r3, r31, 0x118
-/* 80252C8C 00000024  C0 22 B4 30 */	lfs f1, LIT_3686(r2)
-/* 80252C90 00000028  C0 42 B4 4C */	lfs f2, d_ovlp_d_ovlp_fade2__LIT_3794(r2)
+/* 80252C8C 00000024  C0 22 B4 30 */	lfs f1, lit_3686(r2)
+/* 80252C90 00000028  C0 42 B4 4C */	lfs f2, d_ovlp_d_ovlp_fade2__lit_3794(r2)
 /* 80252C94 0000002C  48 01 CD ED */	bl cLib_addCalc0__FPfff
 /* 80252C98 00000030  C0 3F 01 18 */	lfs f1, 0x118(r31)
-/* 80252C9C 00000034  C0 02 B4 50 */	lfs f0, d_ovlp_d_ovlp_fade2__LIT_3795(r2)
+/* 80252C9C 00000034  C0 02 B4 50 */	lfs f0, d_ovlp_d_ovlp_fade2__lit_3795(r2)
 /* 80252CA0 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80252CA4 00000000  40 80 00 40 */	bge lbl_80252CE4
 /* 80252CA8 00000004  88 1F 01 1E */	lbz r0, 0x11e(r31)

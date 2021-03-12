@@ -5,230 +5,231 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __ct__9JKRThreadFUlii();
-extern void __dt__9JKRThreadFv();
-extern void sendCommand__12JKRAramPieceFP12JKRAMCommand();
-extern void create__9JKRDecompFl();
-extern void __ct__9JKRDecompFl();
-extern void __dt__9JKRDecompFv();
-extern void run__9JKRDecompFv();
-extern void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v();
-extern void sendCommand__9JKRDecompFP16JKRDecompCommand();
-extern void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v();
-extern void sync__9JKRDecompFP16JKRDecompCommandi();
-extern void orderSync__9JKRDecompFPUcPUcUlUl();
-extern void decode__9JKRDecompFPUcPUcUlUl();
-extern void decodeSZP__9JKRDecompFPUcPUcUlUl();
-extern void decodeSZS__9JKRDecompFPUcPUcUlUl();
-extern void checkCompressed__9JKRDecompFPUc();
-extern void __ct__16JKRDecompCommandFv();
-extern void __dt__16JKRDecompCommandFv();
-extern void OSInitMessageQueue();
-extern void OSSendMessage();
-extern void OSReceiveMessage();
-extern void OSResumeThread();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _restgpr_27();
-extern void _restgpr_28();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__9JKRThreadFUlii();
+extern "C" extern void __dt__9JKRThreadFv();
+extern "C" extern void sendCommand__12JKRAramPieceFP12JKRAMCommand();
+extern "C" extern void create__9JKRDecompFl();
+extern "C" extern void __ct__9JKRDecompFl();
+extern "C" extern void __dt__9JKRDecompFv();
+extern "C" extern void run__9JKRDecompFv();
+extern "C" extern void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v();
+extern "C" extern void sendCommand__9JKRDecompFP16JKRDecompCommand();
+extern "C" extern void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v();
+extern "C" extern void sync__9JKRDecompFP16JKRDecompCommandi();
+extern "C" extern void orderSync__9JKRDecompFPUcPUcUlUl();
+extern "C" extern void decode__9JKRDecompFPUcPUcUlUl();
+extern "C" extern void decodeSZP__9JKRDecompFPUcPUcUlUl();
+extern "C" extern void decodeSZS__9JKRDecompFPUcPUcUlUl();
+extern "C" extern void checkCompressed__9JKRDecompFPUc();
+extern "C" extern void __ct__16JKRDecompCommandFv();
+extern "C" extern void __dt__16JKRDecompCommandFv();
+extern "C" extern void OSInitMessageQueue();
+extern "C" extern void OSSendMessage();
+extern "C" extern void OSReceiveMessage();
+extern "C" extern void OSResumeThread();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
 SECTION_DATA extern u8 sMessageBuffer__9JKRDecomp[32];
 SECTION_DATA extern u8 sMessageQueue__9JKRDecomp[32];
-SECTION_DATA extern void* __vt__9JKRDecomp[4];
+SECTION_DATA extern void* const __vt__9JKRDecomp[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CC460-803CC480 0020 .data      sMessageBuffer__9JKRDecomp                                   */
-SECTION_DATA u8 sMessageBuffer__9JKRDecomp[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CC480-803CC4A0 0020 .data      sMessageQueue__9JKRDecomp                                    */
-SECTION_DATA u8 sMessageQueue__9JKRDecomp[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803CC4A0-803CC4B0 0010 .data      __vt__9JKRDecomp                                             */
-SECTION_DATA void* __vt__9JKRDecomp[4] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__9JKRDecompFv,
-	(void*)run__9JKRDecompFv,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804514B0-804514B8 0004 .sbss      sDecompObject__9JKRDecomp                                    */
-SECTION_SBSS u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
 
 /* 802DB680-802DB6E0 0060 .text      create__9JKRDecompFl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void create__9JKRDecompFl() {
+extern "C" asm void create__9JKRDecompFl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/create__9JKRDecompFl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CC460-803CC480 0020 .data      sMessageBuffer__9JKRDecomp                                   */
+u8 sMessageBuffer__9JKRDecomp[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CC480-803CC4A0 0020 .data      sMessageQueue__9JKRDecomp                                    */
+u8 sMessageQueue__9JKRDecomp[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803CC4A0-803CC4B0 0010 .data      __vt__9JKRDecomp                                             */
+void* const __vt__9JKRDecomp[4] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__9JKRDecompFv,
+	(void*)run__9JKRDecompFv,
+};
+
 /* 802DB6E0-802DB730 0050 .text      __ct__9JKRDecompFl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9JKRDecompFl() {
+extern "C" asm void __ct__9JKRDecompFl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/__ct__9JKRDecompFl.s"
 }
 #pragma pop
 
+
 /* 802DB730-802DB790 0060 .text      __dt__9JKRDecompFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9JKRDecompFv() {
+extern "C" asm void __dt__9JKRDecompFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/__dt__9JKRDecompFv.s"
 }
 #pragma pop
 
+
 /* 802DB790-802DB858 00C8 .text      run__9JKRDecompFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void run__9JKRDecompFv() {
+extern "C" asm void run__9JKRDecompFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/run__9JKRDecompFv.s"
 }
 #pragma pop
 
+
 /* 802DB858-802DB8D0 0078 .text      prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v() {
+extern "C" asm void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v.s"
 }
 #pragma pop
 
+
 /* 802DB8D0-802DB900 0030 .text      sendCommand__9JKRDecompFP16JKRDecompCommand                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sendCommand__9JKRDecompFP16JKRDecompCommand() {
+extern "C" asm void sendCommand__9JKRDecompFP16JKRDecompCommand() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/sendCommand__9JKRDecompFP16JKRDecompCommand.s"
 }
 #pragma pop
 
+
 /* 802DB900-802DB934 0034 .text      orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v() {
+extern "C" asm void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v.s"
 }
 #pragma pop
 
+
 /* 802DB934-802DB988 0054 .text      sync__9JKRDecompFP16JKRDecompCommandi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sync__9JKRDecompFP16JKRDecompCommandi() {
+extern "C" asm void sync__9JKRDecompFP16JKRDecompCommandi() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/sync__9JKRDecompFP16JKRDecompCommandi.s"
 }
 #pragma pop
 
+
 /* 802DB988-802DB9DC 0054 .text      orderSync__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void orderSync__9JKRDecompFPUcPUcUlUl() {
+extern "C" asm void orderSync__9JKRDecompFPUcPUcUlUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/orderSync__9JKRDecompFPUcPUcUlUl.s"
 }
 #pragma pop
 
+
 /* 802DB9DC-802DBA58 007C .text      decode__9JKRDecompFPUcPUcUlUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decode__9JKRDecompFPUcPUcUlUl() {
+extern "C" asm void decode__9JKRDecompFPUcPUcUlUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decode__9JKRDecompFPUcPUcUlUl.s"
 }
 #pragma pop
 
+
 /* 802DBA58-802DBC14 01BC .text      decodeSZP__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decodeSZP__9JKRDecompFPUcPUcUlUl() {
+extern "C" asm void decodeSZP__9JKRDecompFPUcPUcUlUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decodeSZP__9JKRDecompFPUcPUcUlUl.s"
 }
 #pragma pop
 
+
 /* 802DBC14-802DBCF8 00E4 .text      decodeSZS__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decodeSZS__9JKRDecompFPUcPUcUlUl() {
+extern "C" asm void decodeSZS__9JKRDecompFPUcPUcUlUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decodeSZS__9JKRDecompFPUcPUcUlUl.s"
 }
 #pragma pop
 
+
 /* 802DBCF8-802DBD70 0078 .text      checkCompressed__9JKRDecompFPUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkCompressed__9JKRDecompFPUc() {
+extern "C" asm void checkCompressed__9JKRDecompFPUc() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/checkCompressed__9JKRDecompFPUc.s"
 }
 #pragma pop
 
+
 /* 802DBD70-802DBDC0 0050 .text      __ct__16JKRDecompCommandFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16JKRDecompCommandFv() {
+extern "C" asm void __ct__16JKRDecompCommandFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/__ct__16JKRDecompCommandFv.s"
 }
 #pragma pop
 
+
 /* 802DBDC0-802DBDFC 003C .text      __dt__16JKRDecompCommandFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16JKRDecompCommandFv() {
+extern "C" asm void __dt__16JKRDecompCommandFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/__dt__16JKRDecompCommandFv.s"
 }

@@ -1,10 +1,10 @@
 lbl_802A2AB0:
-/* 802A2AB0 00000000  C0 42 BD D8 */	lfs f2, LIT_689(r2)
+/* 802A2AB0 00000000  C0 42 BD D8 */	lfs f2, lit_689(r2)
 /* 802A2AB4 00000004  D0 43 00 00 */	stfs f2, 0(r3)
 /* 802A2AB8 00000008  D0 43 00 08 */	stfs f2, 8(r3)
-/* 802A2ABC 0000000C  C0 22 BD DC */	lfs f1, JAISoundChild__LIT_690(r2)
+/* 802A2ABC 0000000C  C0 22 BD DC */	lfs f1, JAISoundChild__lit_690(r2)
 /* 802A2AC0 00000010  D0 23 00 04 */	stfs f1, 4(r3)
-/* 802A2AC4 00000014  C0 02 BD E0 */	lfs f0, JAISoundChild__LIT_691(r2)
+/* 802A2AC4 00000014  C0 02 BD E0 */	lfs f0, JAISoundChild__lit_691(r2)
 /* 802A2AC8 00000018  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 802A2ACC 0000001C  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 802A2AD0 00000020  D0 23 00 14 */	stfs f1, 0x14(r3)

@@ -46,14 +46,14 @@ lbl_80130798:
 /* 801307A0 00000008  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 801307A4 0000000C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 801307A8 00000010  7C 23 04 2E */	lfsx f1, r3, r0
-/* 801307AC 00000014  C0 02 93 68 */	lfs f0, LIT_8472(r2)
+/* 801307AC 00000014  C0 02 93 68 */	lfs f0, lit_8472(r2)
 /* 801307B0 00000018  EF E0 00 72 */	fmuls f31, f0, f1
 /* 801307B4 0000001C  7C 63 02 14 */	add r3, r3, r0
 /* 801307B8 00000020  C0 23 00 04 */	lfs f1, 4(r3)
 /* 801307BC 00000024  EF C0 00 72 */	fmuls f30, f0, f1
 /* 801307C0 00000028  C0 5E 05 58 */	lfs f2, 0x558(r30)
 /* 801307C4 0000002C  C0 3E 05 54 */	lfs f1, 0x554(r30)
-/* 801307C8 00000030  C0 02 93 00 */	lfs f0, LIT_6895(r2)
+/* 801307C8 00000030  C0 02 93 00 */	lfs f0, lit_6895(r2)
 /* 801307CC 00000034  EC 21 00 28 */	fsubs f1, f1, f0
 /* 801307D0 00000038  C0 1E 05 50 */	lfs f0, 0x550(r30)
 /* 801307D4 0000003C  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -222,7 +222,7 @@ lbl_80130A2C:
 /* 80130A34 00000008  38 A0 00 00 */	li r5, 0
 /* 80130A38 0000000C  48 19 A6 C9 */	bl setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData
 lbl_80130A3C:
-/* 80130A3C 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80130A3C 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80130A40 00000004  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 80130A44 00000008  7F C3 F3 78 */	mr r3, r30
 /* 80130A48 0000000C  38 80 00 0E */	li r4, 0xe
@@ -244,11 +244,11 @@ lbl_80130A3C:
 /* 80130A88 0000004C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_wlLie_c0@ha
 /* 80130A8C 00000050  38 A5 F1 38 */	addi r5, r5, m__19daAlinkHIO_wlLie_c0@l
 /* 80130A90 00000054  4B FF 8D B9 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 80130A94 00000058  C0 02 92 BC */	lfs f0, d_a_d_a_alink__LIT_6041(r2)
+/* 80130A94 00000058  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
 /* 80130A98 0000005C  D0 1E 34 7C */	stfs f0, 0x347c(r30)
 /* 80130A9C 00000060  48 00 00 50 */	b lbl_80130AEC
 lbl_80130AA0:
-/* 80130AA0 00000000  C0 02 93 30 */	lfs f0, d_a_d_a_alink__LIT_7625(r2)
+/* 80130AA0 00000000  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
 /* 80130AA4 00000004  D0 1E 34 7C */	stfs f0, 0x347c(r30)
 /* 80130AA8 00000008  A8 1E 30 10 */	lha r0, 0x3010(r30)
 /* 80130AAC 0000000C  2C 00 00 00 */	cmpwi r0, 0

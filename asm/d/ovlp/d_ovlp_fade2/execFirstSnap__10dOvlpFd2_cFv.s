@@ -11,8 +11,8 @@ lbl_802529F4:
 /* 80252A18 00000024  48 00 04 59 */	bl func_80252E70
 /* 80252A1C 00000028  7C 60 07 75 */	extsb. r0, r3
 /* 80252A20 0000002C  40 82 00 34 */	bne lbl_80252A54
-/* 80252A24 00000030  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__LIT_3721@ha
-/* 80252A28 00000034  38 83 2C FC */	addi r4, r3, d_ovlp_d_ovlp_fade2__LIT_3721@l
+/* 80252A24 00000030  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__lit_3721@ha
+/* 80252A28 00000034  38 83 2C FC */	addi r4, r3, d_ovlp_d_ovlp_fade2__lit_3721@l
 /* 80252A2C 00000038  80 64 00 00 */	lwz r3, 0(r4)
 /* 80252A30 0000003C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80252A34 00000040  90 7F 00 CC */	stw r3, 0xcc(r31)

@@ -17,8 +17,8 @@ lbl_801FA13C:
 /* 801FA178 0000003C  38 03 FF FD */	addi r0, r3, -3
 /* 801FA17C 00000040  28 00 00 1F */	cmplwi r0, 0x1f
 /* 801FA180 00000044  41 81 00 78 */	bgt lbl_801FA1F8
-/* 801FA184 00000048  3C 60 80 3C */	lis r3, d_menu_d_menu_window__LIT_4360@ha
-/* 801FA188 0000004C  38 63 EF 94 */	addi r3, r3, d_menu_d_menu_window__LIT_4360@l
+/* 801FA184 00000048  3C 60 80 3C */	lis r3, d_menu_d_menu_window__lit_4360@ha
+/* 801FA188 0000004C  38 63 EF 94 */	addi r3, r3, d_menu_d_menu_window__lit_4360@l
 /* 801FA18C 00000050  54 00 10 3A */	slwi r0, r0, 2
 /* 801FA190 00000054  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801FA194 00000058  7C 09 03 A6 */	mtctr r0

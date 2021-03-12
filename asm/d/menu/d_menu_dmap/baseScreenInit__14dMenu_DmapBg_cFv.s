@@ -85,21 +85,21 @@ lbl_801B930C:
 /* 801B9318 0000000C  7C 60 1B 79 */	or. r0, r3, r3
 /* 801B931C 00000010  41 82 00 18 */	beq lbl_801B9334
 /* 801B9320 00000014  38 80 00 02 */	li r4, 2
-/* 801B9324 00000018  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801B9324 00000018  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801B9328 0000001C  38 A0 00 00 */	li r5, 0
 /* 801B932C 00000020  4B FD AE F5 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 801B9330 00000024  7C 60 1B 78 */	mr r0, r3
 lbl_801B9334:
 /* 801B9334 00000000  90 1F 0C C0 */	stw r0, 0xcc0(r31)
 /* 801B9338 00000004  80 7F 0C C0 */	lwz r3, 0xcc0(r31)
-/* 801B933C 00000008  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801B933C 00000008  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801B9340 0000000C  4B FD BF 61 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801B9344 00000010  80 7F 0C C0 */	lwz r3, 0xcc0(r31)
-/* 801B9348 00000014  C0 22 A6 10 */	lfs f1, d_menu_d_menu_dmap__LIT_4312(r2)
-/* 801B934C 00000018  C0 42 A6 14 */	lfs f2, d_menu_d_menu_dmap__LIT_4313(r2)
-/* 801B9350 0000001C  C0 62 A6 18 */	lfs f3, d_menu_d_menu_dmap__LIT_4314(r2)
-/* 801B9354 00000020  C0 82 A6 1C */	lfs f4, d_menu_d_menu_dmap__LIT_4315(r2)
-/* 801B9358 00000024  C0 A2 A6 0C */	lfs f5, d_menu_d_menu_dmap__LIT_4249(r2)
+/* 801B9348 00000014  C0 22 A6 10 */	lfs f1, d_menu_d_menu_dmap__lit_4312(r2)
+/* 801B934C 00000018  C0 42 A6 14 */	lfs f2, d_menu_d_menu_dmap__lit_4313(r2)
+/* 801B9350 0000001C  C0 62 A6 18 */	lfs f3, d_menu_d_menu_dmap__lit_4314(r2)
+/* 801B9354 00000020  C0 82 A6 1C */	lfs f4, d_menu_d_menu_dmap__lit_4315(r2)
+/* 801B9358 00000024  C0 A2 A6 0C */	lfs f5, d_menu_d_menu_dmap__lit_4249(r2)
 /* 801B935C 00000028  4B FD BE 55 */	bl setParam__16dSelect_cursor_cFfffff
 /* 801B9360 0000002C  80 7F 0C A4 */	lwz r3, 0xca4(r31)
 /* 801B9364 00000030  3C 80 74 5F */	lis r4, 0x745F /* 0x745F3030@ha */

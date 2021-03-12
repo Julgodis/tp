@@ -17,7 +17,7 @@ lbl_8012FB18:
 /* 8012FB54 0000003C  C0 1F 1F E0 */	lfs f0, 0x1fe0(r31)
 /* 8012FB58 00000040  EC 41 00 2A */	fadds f2, f1, f0
 /* 8012FB5C 00000044  4B F7 C8 39 */	bl setFrameCtrl__9daAlink_cFP16daPy_frameCtrl_cUcssff
-/* 8012FB60 00000048  C0 22 94 E0 */	lfs f1, LIT_19379(r2)
+/* 8012FB60 00000048  C0 22 94 E0 */	lfs f1, lit_19379(r2)
 /* 8012FB64 0000004C  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8012FB68 00000050  38 63 EF 28 */	addi r3, r3, m__23daAlinkHIO_wlMoveNoP_c0@l
 /* 8012FB6C 00000054  C0 03 00 08 */	lfs f0, 8(r3)

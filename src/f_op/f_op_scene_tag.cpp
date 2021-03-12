@@ -5,63 +5,56 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopScnTg_QueueTo__FP15scene_tag_class();
-extern void fopScnTg_ToQueue__FP15scene_tag_class();
-extern void fopScnTg_Init__FP15scene_tag_classPv();
-extern void cTg_SingleCut__FP16create_tag_class();
-extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern void cTg_Create__FP16create_tag_classPv();
+extern "C" extern void fopScnTg_QueueTo__FP15scene_tag_class();
+extern "C" extern void fopScnTg_ToQueue__FP15scene_tag_class();
+extern "C" extern void fopScnTg_Init__FP15scene_tag_classPv();
+extern "C" extern void cTg_SingleCut__FP16create_tag_class();
+extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" extern void cTg_Create__FP16create_tag_classPv();
 SECTION_DATA extern u8 g_fopScnTg_SceneList[16];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803A3918-803A3928 000C .data      g_fopScnTg_SceneList                                         */
-SECTION_DATA u8 g_fopScnTg_SceneList[16] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8001F13C-8001F15C 0020 .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnTg_QueueTo__FP15scene_tag_class() {
+extern "C" asm void fopScnTg_QueueTo__FP15scene_tag_class() {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_QueueTo__FP15scene_tag_class.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803A3918-803A3928 000C .data      g_fopScnTg_SceneList                                         */
+u8 g_fopScnTg_SceneList[16] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8001F15C-8001F188 002C .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnTg_ToQueue__FP15scene_tag_class() {
+extern "C" asm void fopScnTg_ToQueue__FP15scene_tag_class() {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_ToQueue__FP15scene_tag_class.s"
 }
 #pragma pop
 
+
 /* 8001F188-8001F1A8 0020 .text      fopScnTg_Init__FP15scene_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnTg_Init__FP15scene_tag_classPv() {
+extern "C" asm void fopScnTg_Init__FP15scene_tag_classPv() {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_Init__FP15scene_tag_classPv.s"
 }

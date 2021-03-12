@@ -5,67 +5,67 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void DCInvalidateRange();
-extern void __CARDDefaultApiCallback();
-extern void __CARDSyncCallback();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDRead();
-extern void __CARDGetFatBlock();
-extern void __CARDGetDirBlock();
-extern void __CARDIsReadable();
-extern void __CARDSeek();
-extern void ReadCallback();
-extern void CARDReadAsync();
-extern void CARDRead();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void __CARDDefaultApiCallback();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDRead();
+extern "C" extern void __CARDGetFatBlock();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void __CARDIsReadable();
+extern "C" extern void __CARDSeek();
+extern "C" extern void ReadCallback();
+extern "C" extern void CARDReadAsync();
+extern "C" extern void CARDRead();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803584A0-80358658 01B8 .text      __CARDSeek                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDSeek() {
+extern "C" asm void __CARDSeek() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/__CARDSeek.s"
 }
 #pragma pop
 
+
 /* 80358658-80358788 0130 .text      ReadCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ReadCallback() {
+extern "C" asm void ReadCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/ReadCallback.s"
 }
 #pragma pop
 
+
 /* 80358788-803588CC 0144 .text      CARDReadAsync                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDReadAsync() {
+extern "C" asm void CARDReadAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/CARDReadAsync.s"
 }
 #pragma pop
 
+
 /* 803588CC-80358914 0048 .text      CARDRead                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDRead() {
+extern "C" asm void CARDRead() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/CARDRead.s"
 }

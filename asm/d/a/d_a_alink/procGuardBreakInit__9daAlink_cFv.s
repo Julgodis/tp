@@ -20,7 +20,7 @@ lbl_800DDE58:
 /* 800DDEA0 00000048  38 A0 00 00 */	li r5, 0
 /* 800DDEA4 0000004C  4B FE 34 39 */	bl deleteEquipItem__9daAlink_cFii
 lbl_800DDEA8:
-/* 800DDEA8 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DDEA8 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DDEAC 00000004  D0 3F 33 98 */	stfs f1, 0x3398(r31)
 /* 800DDEB0 00000008  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800DDEB4 0000000C  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
@@ -30,7 +30,7 @@ lbl_800DDEA8:
 /* 800DDEC4 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 800DDEC8 00000020  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800DDECC 00000024  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DDED0 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DDED0 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DDED4 0000002C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DDED8 00000030  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DDEDC 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

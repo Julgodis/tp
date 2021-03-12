@@ -8,8 +8,8 @@ lbl_800D34D8:
 /* 800D34F0 00000018  48 28 EC DD */	bl _savegpr_25
 /* 800D34F4 0000001C  7C 7C 1B 78 */	mr r28, r3
 /* 800D34F8 00000020  7C 9D 23 78 */	mr r29, r4
-/* 800D34FC 00000024  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800D3500 00000028  3B 64 D6 58 */	addi r27, r4, d_a_d_a_alink__LIT_3757@l
+/* 800D34FC 00000024  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800D3500 00000028  3B 64 D6 58 */	addi r27, r4, d_a_d_a_alink__lit_3757@l
 /* 800D3504 0000002C  57 A0 20 36 */	slwi r0, r29, 4
 /* 800D3508 00000030  3B FB 42 00 */	addi r31, r27, 0x4200
 /* 800D350C 00000034  7F FF 02 14 */	add r31, r31, r0

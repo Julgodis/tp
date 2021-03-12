@@ -5,253 +5,211 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getCurrentHeap__Fv();
-extern void mDoExt_getMesgFont__Fv();
-extern void getLayerNo__14dComIfG_play_cFi();
-extern void dComIfGs_isOneZoneSwitch__Fii();
-extern void getItem__17dSv_player_item_cCFib();
-extern void isEventBit__11dSv_event_cCFUs();
-extern void __ct__14dMeterButton_cFv();
-extern void __dt__14dMeterButton_cFv();
-extern void _create__14dMeterButton_cFv();
-extern void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
-extern void draw__14dMeterButton_cFv();
-extern void _delete__14dMeterButton_cFv();
-extern void alphaAnimeButtonA__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonB__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonR__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonZ__14dMeterButton_cFUlb();
-extern void alphaAnimeButton3D__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonC__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonS__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonX__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonY__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonNun__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonRemo__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonRemo2__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonAR__14dMeterButton_cFUlb();
-extern void alphaAnimeButton3DB__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonNURE__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonReel__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonReel2__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonAB__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonTate__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonNunZ__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonNunC__14dMeterButton_cFUlb();
-extern void alphaAnimeButtonBin__14dMeterButton_cFUlb();
-extern void screenInitButton__14dMeterButton_cFv();
-extern void screenInitText__14dMeterButton_cFv();
-extern void updateButton__14dMeterButton_cFv();
-extern void updateText__14dMeterButton_cFUl();
-extern void setAlphaButtonAAnimeMin__14dMeterButton_cFv();
-extern void isFastSet__14dMeterButton_cFi();
-extern void setAlphaButtonAAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonBAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonBAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonRAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonRAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonZAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonZAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButton3DAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButton3DAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButton3DVAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButton3DVAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonCAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonCAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonSAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonSAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonXAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonXAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonYAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonYAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonNunAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonNunAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonARAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonARAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButton3DBAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButton3DBAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonReelAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonReelAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonABAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonABAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonTateAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonTateAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonBinAnimeMin__14dMeterButton_cFv();
-extern void setAlphaButtonBinAnimeMax__14dMeterButton_cFv();
-extern void setAlphaButtonOAnimeMin__14dMeterButton_cFi();
-extern void setAlphaButtonOAnimeMax__14dMeterButton_cFi();
-extern void setAlphaIconAnimeMin__14dMeterButton_cFv();
-extern void setAlphaIconAnimeMax__14dMeterButton_cFv();
-extern void isClose__14dMeterButton_cFv();
-extern void setString__14dMeterButton_cFPcUcUcUc();
-extern void hideAll__14dMeterButton_cFv();
-extern void getCenterPosCalc__14dMeterButton_cFUcPci();
-extern void trans_button__14dMeterButton_cFif();
-extern void hide_button__14dMeterButton_cFUc();
-extern void pikariCheck__14dMeterButton_cFv();
-extern void paneTrans__14dMeterButton_cFP8CPaneMgrffUc();
-extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern void getCanoeFishing__13dMeter2Draw_cFv();
-extern void decFloatingMessageTimer__13dMeter2Info_cFv();
-extern void resetFloatingMessage__13dMeter2Info_cFv();
-extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
-extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern void __ct__10COutFont_cFUc();
-extern void isGetItemMessage__12dMsgObject_cFv();
-extern void isKanbanMessage__12dMsgObject_cFv();
-extern void isHowlMessage__12dMsgObject_cFv();
-extern void isMidonaTalkWait__12dMsgObject_cFv();
-extern void isPlaceMessage__12dMsgObject_cFv();
-extern void isBossMessage__12dMsgObject_cFv();
-extern void isBookMessage__12dMsgObject_cFv();
-extern void isStaffMessage__12dMsgObject_cFv();
-extern void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern void getStatus__12dMsgObject_cFv();
-extern void getScrnDrawPtr__12dMsgObject_cFv();
-extern void __ct__12dMsgString_cFv();
-extern void __dt__12dMsgString_cFv();
-extern void __ct__8CPaneMgrFv();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void __dt__8CPaneMgrFv();
-extern void paneTrans__8CPaneMgrFff();
-extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void show__13CPaneMgrAlphaFv();
-extern void hide__13CPaneMgrAlphaFv();
-extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern void cLib_addCalc2__FPffff();
-extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPv();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void getBounds__7J2DPaneFv();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void getStringPtr__10J2DTextBoxCFv();
-extern void setString__10J2DTextBoxFsPCce();
-extern void __save_gpr();
-extern void _savegpr_21();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_29();
-extern void __restore_gpr();
-extern void _restgpr_21();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_29();
-extern void strcmp();
-extern void strcpy();
+extern "C" extern void mDoExt_getCurrentHeap__Fv();
+extern "C" extern void mDoExt_getMesgFont__Fv();
+extern "C" extern void getLayerNo__14dComIfG_play_cFi();
+extern "C" extern void dComIfGs_isOneZoneSwitch__Fii();
+extern "C" extern void getItem__17dSv_player_item_cCFib();
+extern "C" extern void isEventBit__11dSv_event_cCFUs();
+extern "C" extern void __ct__14dMeterButton_cFv();
+extern "C" extern void __dt__14dMeterButton_cFv();
+extern "C" extern void _create__14dMeterButton_cFv();
+extern "C" extern void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
+extern "C" extern void draw__14dMeterButton_cFv();
+extern "C" extern void _delete__14dMeterButton_cFv();
+extern "C" extern void alphaAnimeButtonA__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonB__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonR__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonZ__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButton3D__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonC__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonS__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonX__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonY__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonNun__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonRemo__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonRemo2__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonAR__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButton3DB__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonNURE__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonReel__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonReel2__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonAB__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonTate__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonNunZ__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonNunC__14dMeterButton_cFUlb();
+extern "C" extern void alphaAnimeButtonBin__14dMeterButton_cFUlb();
+extern "C" extern void screenInitButton__14dMeterButton_cFv();
+extern "C" extern void screenInitText__14dMeterButton_cFv();
+extern "C" extern void updateButton__14dMeterButton_cFv();
+extern "C" extern void updateText__14dMeterButton_cFUl();
+extern "C" extern void setAlphaButtonAAnimeMin__14dMeterButton_cFv();
+extern "C" extern void isFastSet__14dMeterButton_cFi();
+extern "C" extern void setAlphaButtonAAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonBAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonBAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonZAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonZAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DVAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DVAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonCAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonCAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonSAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonSAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonXAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonXAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonYAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonYAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonARAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonARAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DBAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButton3DBAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonReelAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonReelAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonABAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonABAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonTateAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonTateAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonBinAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonBinAnimeMax__14dMeterButton_cFv();
+extern "C" extern void setAlphaButtonOAnimeMin__14dMeterButton_cFi();
+extern "C" extern void setAlphaButtonOAnimeMax__14dMeterButton_cFi();
+extern "C" extern void setAlphaIconAnimeMin__14dMeterButton_cFv();
+extern "C" extern void setAlphaIconAnimeMax__14dMeterButton_cFv();
+extern "C" extern void isClose__14dMeterButton_cFv();
+extern "C" extern void setString__14dMeterButton_cFPcUcUcUc();
+extern "C" extern void hideAll__14dMeterButton_cFv();
+extern "C" extern void getCenterPosCalc__14dMeterButton_cFUcPci();
+extern "C" extern void trans_button__14dMeterButton_cFif();
+extern "C" extern void hide_button__14dMeterButton_cFUc();
+extern "C" extern void pikariCheck__14dMeterButton_cFv();
+extern "C" extern void paneTrans__14dMeterButton_cFP8CPaneMgrffUc();
+extern "C" extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" extern void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
+extern "C" extern void getCanoeFishing__13dMeter2Draw_cFv();
+extern "C" extern void decFloatingMessageTimer__13dMeter2Info_cFv();
+extern "C" extern void resetFloatingMessage__13dMeter2Info_cFv();
+extern "C" extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
+extern "C" extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" extern void __ct__10COutFont_cFUc();
+extern "C" extern void isGetItemMessage__12dMsgObject_cFv();
+extern "C" extern void isKanbanMessage__12dMsgObject_cFv();
+extern "C" extern void isHowlMessage__12dMsgObject_cFv();
+extern "C" extern void isMidonaTalkWait__12dMsgObject_cFv();
+extern "C" extern void isPlaceMessage__12dMsgObject_cFv();
+extern "C" extern void isBossMessage__12dMsgObject_cFv();
+extern "C" extern void isBookMessage__12dMsgObject_cFv();
+extern "C" extern void isStaffMessage__12dMsgObject_cFv();
+extern "C" extern void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
+extern "C" extern void getStatus__12dMsgObject_cFv();
+extern "C" extern void getScrnDrawPtr__12dMsgObject_cFv();
+extern "C" extern void __ct__12dMsgString_cFv();
+extern "C" extern void __dt__12dMsgString_cFv();
+extern "C" extern void __ct__8CPaneMgrFv();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void __dt__8CPaneMgrFv();
+extern "C" extern void paneTrans__8CPaneMgrFff();
+extern "C" extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void show__13CPaneMgrAlphaFv();
+extern "C" extern void hide__13CPaneMgrAlphaFv();
+extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" extern void cLib_addCalc2__FPffff();
+extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPv();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getBounds__7J2DPaneFv();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void getStringPtr__10J2DTextBoxCFv();
+extern "C" extern void setString__10J2DTextBoxFsPCce();
+extern "C" extern void __save_gpr();
+extern "C" extern void _savegpr_21();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_29();
+extern "C" extern void __restore_gpr();
+extern "C" extern void _restgpr_21();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcmp();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
 SECTION_RODATA extern const u8 data_80398048[80];
 SECTION_RODATA extern const u8 data_80398098[80];
 SECTION_RODATA extern const u8 d_meter_d_meter_button__stringBase0[112];
-SECTION_DATA extern void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern void* d_meter_d_meter_button__LIT_7807[22];
-SECTION_DATA extern void* LIT_7858[22];
-SECTION_DATA extern void* __vt__14dMeterButton_c[4];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* d_meter_d_meter_button__lit_7807[22];
+SECTION_DATA extern void* lit_7858[22];
+SECTION_DATA extern void* const __vt__14dMeterButton_c[4];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4146[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4147[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4148[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4149[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4513[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4514[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4515[8];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_4517[8];
-SECTION_SDATA2 extern u8 LIT_5628[4];
-SECTION_SDATA2 extern u8 LIT_5629[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_5630[4];
-SECTION_SDATA2 extern u8 LIT_5631[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_5632[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_5633[4];
-SECTION_SDATA2 extern u8 LIT_5634[4];
-SECTION_SDATA2 extern u8 LIT_5635[4];
-SECTION_SDATA2 extern u8 LIT_5636[4];
-SECTION_SDATA2 extern u8 LIT_6012[4];
-SECTION_SDATA2 extern u8 LIT_6013[4];
-SECTION_SDATA2 extern u8 LIT_6014[4];
-SECTION_SDATA2 extern u8 LIT_6015[4];
-SECTION_SDATA2 extern u8 LIT_6016[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter_button__LIT_6017[4];
-SECTION_SDATA2 extern u8 LIT_7857[4];
-}
+SECTION_SDATA2 extern u8 d_meter_d_meter_button__lit_4146[4];
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4147;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4148;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4149;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4513;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4514;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_4515;
+SECTION_SDATA2 extern f64 d_meter_d_meter_button__lit_4517;
+SECTION_SDATA2 extern f32 lit_5628;
+SECTION_SDATA2 extern f32 lit_5629;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_5630;
+SECTION_SDATA2 extern f32 lit_5631;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_5632;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_5633;
+SECTION_SDATA2 extern f32 lit_5634;
+SECTION_SDATA2 extern f32 lit_5635;
+SECTION_SDATA2 extern f32 lit_5636;
+SECTION_SDATA2 extern f32 lit_6012;
+SECTION_SDATA2 extern f32 lit_6013;
+SECTION_SDATA2 extern f32 lit_6014;
+SECTION_SDATA2 extern f32 lit_6015;
+SECTION_SDATA2 extern f32 lit_6016;
+SECTION_SDATA2 extern f32 d_meter_d_meter_button__lit_6017;
+SECTION_SDATA2 extern f32 lit_7857;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803980E8-80398158 006C .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_803980E8 = 
-    "zelda_game_image"
-    "_button_info.blo";
-SECTION_DEAD const char* const stringBase_80398109 = "";
-SECTION_DEAD const char* const stringBase_8039810A = "zelda_message_window_new.blo";
-SECTION_DEAD const char* const stringBase_80398127 = "zelda_message_window_text.blo";
-SECTION_DEAD const char* const stringBase_80398145 = "F_SP00";
-SECTION_DEAD const char* const stringBase_8039814C = "R_SP161";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_80398154 = "\0\0\0";
-#pragma pop
-/* 80398048-80398098 0050 .rodata    text_tag$5461                                                */
-SECTION_RODATA const u8 data_80398048[80] = {
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x34, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x35,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
-};
-/* 80398098-803980E8 0050 .rodata    ftext_tag$5462                                               */
-SECTION_RODATA const u8 data_80398098[80] = {
-	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
-	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
-	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x34, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x35,
-	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
-	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803BF1A8-803BF200 0058 .data      @7807                                                        */
-SECTION_DATA void* d_meter_d_meter_button__LIT_7807[22] = {
+void* d_meter_d_meter_button__lit_7807[22] = {
 	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x12C),
 	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x178),
 	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x1C4),
@@ -275,8 +233,9 @@ SECTION_DATA void* d_meter_d_meter_button__LIT_7807[22] = {
 	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
 	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x6D0),
 };
+
 /* 803BF200-803BF258 0058 .data      @7858                                                        */
-SECTION_DATA void* LIT_7858[22] = {
+void* lit_7858[22] = {
 	(void*)(((char*)trans_button__14dMeterButton_cFif)+0xBC),
 	(void*)(((char*)trans_button__14dMeterButton_cFif)+0xE4),
 	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x10C),
@@ -300,1031 +259,1123 @@ SECTION_DATA void* LIT_7858[22] = {
 	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
 	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x268),
 };
+
 /* 803BF258-803BF268 0010 .data      __vt__14dMeterButton_c                                       */
-SECTION_DATA void* __vt__14dMeterButton_c[4] = {
+void* const __vt__14dMeterButton_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMeterButton_cFv,
 	(void*)__dt__14dMeterButton_cFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454748-8045474C 0004 .sdata2    @4146                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4146[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 8045474C-80454750 0004 .sdata2    @4147                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4147[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454750-80454754 0004 .sdata2    @4148                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4148[4] = {
-	0x41, 0x20, 0x00, 0x00,
-};
-/* 80454754-80454758 0004 .sdata2    @4149                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4149[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 80454758-8045475C 0004 .sdata2    @4513                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4513[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 8045475C-80454760 0004 .sdata2    @4514                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4514[4] = {
-	0x41, 0x90, 0x00, 0x00,
-};
-/* 80454760-80454768 0004 .sdata2    @4515                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4515[8] = {
-	0x3F, 0xE6, 0x66, 0x66,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454768-80454770 0008 .sdata2    @4517                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_4517[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80454770-80454774 0004 .sdata2    @5628                                                        */
-SECTION_SDATA2 u8 LIT_5628[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80454774-80454778 0004 .sdata2    @5629                                                        */
-SECTION_SDATA2 u8 LIT_5629[4] = {
-	0x43, 0x98, 0x00, 0x00,
-};
-/* 80454778-8045477C 0004 .sdata2    @5630                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_5630[4] = {
-	0x41, 0x00, 0x00, 0x00,
-};
-/* 8045477C-80454780 0004 .sdata2    @5631                                                        */
-SECTION_SDATA2 u8 LIT_5631[4] = {
-	0x43, 0x99, 0xA0, 0x00,
-};
-/* 80454780-80454784 0004 .sdata2    @5632                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_5632[4] = {
-	0x43, 0x99, 0xE0, 0x00,
-};
-/* 80454784-80454788 0004 .sdata2    @5633                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_5633[4] = {
-	0x43, 0x96, 0x00, 0x00,
-};
-/* 80454788-8045478C 0004 .sdata2    @5634                                                        */
-SECTION_SDATA2 u8 LIT_5634[4] = {
-	0x43, 0x98, 0x40, 0x00,
-};
-/* 8045478C-80454790 0004 .sdata2    @5635                                                        */
-SECTION_SDATA2 u8 LIT_5635[4] = {
-	0x43, 0xAD, 0xC0, 0x00,
-};
-/* 80454790-80454794 0004 .sdata2    @5636                                                        */
-SECTION_SDATA2 u8 LIT_5636[4] = {
-	0x43, 0xB7, 0xA0, 0x00,
-};
-/* 80454794-80454798 0004 .sdata2    @6012                                                        */
-SECTION_SDATA2 u8 LIT_6012[4] = {
-	0xC1, 0xC8, 0x00, 0x00,
-};
-/* 80454798-8045479C 0004 .sdata2    @6013                                                        */
-SECTION_SDATA2 u8 LIT_6013[4] = {
-	0x3F, 0x4C, 0xCC, 0xCD,
-};
-/* 8045479C-804547A0 0004 .sdata2    @6014                                                        */
-SECTION_SDATA2 u8 LIT_6014[4] = {
-	0xC1, 0x20, 0x00, 0x00,
-};
-/* 804547A0-804547A4 0004 .sdata2    @6015                                                        */
-SECTION_SDATA2 u8 LIT_6015[4] = {
-	0x41, 0xC8, 0x00, 0x00,
-};
-/* 804547A4-804547A8 0004 .sdata2    @6016                                                        */
-SECTION_SDATA2 u8 LIT_6016[4] = {
-	0x3F, 0x66, 0x66, 0x66,
-};
-/* 804547A8-804547AC 0004 .sdata2    @6017                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter_button__LIT_6017[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 804547AC-804547B0 0004 .sdata2    @7857                                                        */
-SECTION_SDATA2 u8 LIT_7857[4] = {
-	0x41, 0xA0, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80201328-80201370 0048 .text      __ct__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14dMeterButton_cFv() {
+extern "C" asm void __ct__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/__ct__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80201370-802013CC 005C .text      __dt__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14dMeterButton_cFv() {
+extern "C" asm void __dt__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/__dt__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802013CC-80201404 0038 .text      _create__14dMeterButton_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _create__14dMeterButton_cFv() {
+extern "C" asm void _create__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/_create__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454748-8045474C 0004 .sdata2    @4146                                                        */
+u8 d_meter_d_meter_button__lit_4146[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045474C-80454750 0004 .sdata2    @4147                                                        */
+f32 d_meter_d_meter_button__lit_4147 = 1.0f;
+
+/* 80454750-80454754 0004 .sdata2    @4148                                                        */
+f32 d_meter_d_meter_button__lit_4148 = 10.0f;
+
+/* 80454754-80454758 0004 .sdata2    @4149                                                        */
+f32 d_meter_d_meter_button__lit_4149 = 1.0f / 10.0f;
+
 /* 80201404-80202240 0E3C .text      _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb() {
+extern "C" asm void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/_execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454758-8045475C 0004 .sdata2    @4513                                                        */
+f32 d_meter_d_meter_button__lit_4513 = -1.0f;
+
+/* 8045475C-80454760 0004 .sdata2    @4514                                                        */
+f32 d_meter_d_meter_button__lit_4514 = 18.0f;
+
+/* 80454760-80454768 0004 .sdata2    @4515                                                        */
+f32 d_meter_d_meter_button__lit_4515 = 9.0f / 5.0f;
+/* padding 4 bytes */
+
+/* 80454768-80454770 0008 .sdata2    @4517                                                        */
+f64 d_meter_d_meter_button__lit_4517 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80202240-80202A9C 085C .text      draw__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__14dMeterButton_cFv() {
+extern "C" asm void draw__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/draw__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80202A9C-802032C4 0828 .text      _delete__14dMeterButton_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _delete__14dMeterButton_cFv() {
+extern "C" asm void _delete__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/_delete__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802032C4-8020339C 00D8 .text      alphaAnimeButtonA__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonA__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonA__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonA__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 8020339C-802034A8 010C .text      alphaAnimeButtonB__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonB__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonB__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonB__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802034A8-802035AC 0104 .text      alphaAnimeButtonR__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonR__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonR__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonR__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802035AC-802036C0 0114 .text      alphaAnimeButtonZ__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonZ__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonZ__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonZ__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802036C0-802037B8 00F8 .text      alphaAnimeButton3D__14dMeterButton_cFUlb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButton3D__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButton3D__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButton3D__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802037B8-80203878 00C0 .text      alphaAnimeButtonC__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonC__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonC__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonC__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203878-802038F4 007C .text      alphaAnimeButtonS__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonS__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonS__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonS__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802038F4-80203A08 0114 .text      alphaAnimeButtonX__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonX__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonX__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonX__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203A08-80203B1C 0114 .text      alphaAnimeButtonY__14dMeterButton_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonY__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonY__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonY__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203B1C-80203C30 0114 .text      alphaAnimeButtonNun__14dMeterButton_cFUlb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonNun__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonNun__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonNun__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203C30-80203D44 0114 .text      alphaAnimeButtonRemo__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonRemo__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonRemo__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonRemo__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203D44-80203E58 0114 .text      alphaAnimeButtonRemo2__14dMeterButton_cFUlb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonRemo2__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonRemo2__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonRemo2__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203E58-80203F60 0108 .text      alphaAnimeButtonAR__14dMeterButton_cFUlb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonAR__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonAR__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonAR__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80203F60-80204068 0108 .text      alphaAnimeButton3DB__14dMeterButton_cFUlb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButton3DB__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButton3DB__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButton3DB__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204068-80204170 0108 .text      alphaAnimeButtonNURE__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonNURE__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonNURE__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonNURE__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204170-80204278 0108 .text      alphaAnimeButtonReel__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonReel__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonReel__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonReel__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204278-80204368 00F0 .text      alphaAnimeButtonReel2__14dMeterButton_cFUlb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonReel2__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonReel2__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonReel2__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204368-80204458 00F0 .text      alphaAnimeButtonAB__14dMeterButton_cFUlb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonAB__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonAB__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonAB__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204458-80204548 00F0 .text      alphaAnimeButtonTate__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonTate__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonTate__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonTate__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204548-80204620 00D8 .text      alphaAnimeButtonNunZ__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonNunZ__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonNunZ__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonNunZ__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 80204620-802046F8 00D8 .text      alphaAnimeButtonNunC__14dMeterButton_cFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonNunC__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonNunC__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonNunC__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
 /* 802046F8-802047E8 00F0 .text      alphaAnimeButtonBin__14dMeterButton_cFUlb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alphaAnimeButtonBin__14dMeterButton_cFUlb() {
+extern "C" asm void alphaAnimeButtonBin__14dMeterButton_cFUlb() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/alphaAnimeButtonBin__14dMeterButton_cFUlb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80398048-80398098 0050 .rodata    text_tag$5461                                                */
+SECTION_RODATA const u8 data_80398048[80] = {
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x34, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x35,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
+};
+
+/* 80398098-803980E8 0050 .rodata    ftext_tag$5462                                               */
+SECTION_RODATA const u8 data_80398098[80] = {
+	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
+	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
+	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x34, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x35,
+	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
+	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
+};
+
+/* 803980E8-80398158 006C .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803980E8 = 
+    "zelda_game_image_button_info.blo";
+SECTION_DEAD const char* const stringBase_80398109 = "";
+SECTION_DEAD const char* const stringBase_8039810A = "zelda_message_window_new.blo";
+SECTION_DEAD const char* const stringBase_80398127 = "zelda_message_window_text.blo";
+SECTION_DEAD const char* const stringBase_80398145 = "F_SP00";
+SECTION_DEAD const char* const stringBase_8039814C = "R_SP161";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80398154 = "\0\0\0";
+#pragma pop
+
+/* 80454770-80454774 0004 .sdata2    @5628                                                        */
+f32 lit_5628 = 0.5f;
+
+/* 80454774-80454778 0004 .sdata2    @5629                                                        */
+f32 lit_5629 = 304.0f;
+
+/* 80454778-8045477C 0004 .sdata2    @5630                                                        */
+f32 d_meter_d_meter_button__lit_5630 = 8.0f;
+
+/* 8045477C-80454780 0004 .sdata2    @5631                                                        */
+f32 lit_5631 = 307.25f;
+
+/* 80454780-80454784 0004 .sdata2    @5632                                                        */
+f32 d_meter_d_meter_button__lit_5632 = 307.75f;
+
+/* 80454784-80454788 0004 .sdata2    @5633                                                        */
+f32 d_meter_d_meter_button__lit_5633 = 300.0f;
+
+/* 80454788-8045478C 0004 .sdata2    @5634                                                        */
+f32 lit_5634 = 304.5f;
+
+/* 8045478C-80454790 0004 .sdata2    @5635                                                        */
+f32 lit_5635 = 347.5f;
+
+/* 80454790-80454794 0004 .sdata2    @5636                                                        */
+f32 lit_5636 = 367.25f;
+
 /* 802047E8-80205834 104C .text      screenInitButton__14dMeterButton_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void screenInitButton__14dMeterButton_cFv() {
+extern "C" asm void screenInitButton__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/screenInitButton__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80205834-80205CA0 046C .text      screenInitText__14dMeterButton_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void screenInitText__14dMeterButton_cFv() {
+extern "C" asm void screenInitText__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/screenInitText__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454794-80454798 0004 .sdata2    @6012                                                        */
+f32 lit_6012 = -25.0f;
+
+/* 80454798-8045479C 0004 .sdata2    @6013                                                        */
+f32 lit_6013 = 4.0f / 5.0f;
+
+/* 8045479C-804547A0 0004 .sdata2    @6014                                                        */
+f32 lit_6014 = -10.0f;
+
+/* 804547A0-804547A4 0004 .sdata2    @6015                                                        */
+f32 lit_6015 = 25.0f;
+
+/* 804547A4-804547A8 0004 .sdata2    @6016                                                        */
+f32 lit_6016 = 9.0f / 10.0f;
+
+/* 804547A8-804547AC 0004 .sdata2    @6017                                                        */
+f32 d_meter_d_meter_button__lit_6017 = 2.0f;
+
 /* 80205CA0-80206978 0CD8 .text      updateButton__14dMeterButton_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateButton__14dMeterButton_cFv() {
+extern "C" asm void updateButton__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/updateButton__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80206978-80206CE0 0368 .text      updateText__14dMeterButton_cFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateText__14dMeterButton_cFUl() {
+extern "C" asm void updateText__14dMeterButton_cFUl() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/updateText__14dMeterButton_cFUl.s"
 }
 #pragma pop
 
+
 /* 80206CE0-80206D70 0090 .text      setAlphaButtonAAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonAAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonAAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonAAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80206D70-80207060 02F0 .text      isFastSet__14dMeterButton_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isFastSet__14dMeterButton_cFi() {
+extern "C" asm void isFastSet__14dMeterButton_cFi() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/isFastSet__14dMeterButton_cFi.s"
 }
 #pragma pop
 
+
 /* 80207060-8020714C 00EC .text      setAlphaButtonAAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonAAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonAAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonAAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 8020714C-802071DC 0090 .text      setAlphaButtonBAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonBAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonBAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonBAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802071DC-802072C8 00EC .text      setAlphaButtonBAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonBAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonBAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonBAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802072C8-80207358 0090 .text      setAlphaButtonRAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207358-80207444 00EC .text      setAlphaButtonRAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207444-802074D4 0090 .text      setAlphaButtonZAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonZAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonZAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonZAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802074D4-802075C0 00EC .text      setAlphaButtonZAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonZAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonZAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonZAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802075C0-80207654 0094 .text      setAlphaButton3DAnimeMin__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207654-80207740 00EC .text      setAlphaButton3DAnimeMax__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207740-80207744 0004 .text      setAlphaButton3DVAnimeMin__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DVAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DVAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DVAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207744-80207748 0004 .text      setAlphaButton3DVAnimeMax__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DVAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DVAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DVAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207748-802077EC 00A4 .text      setAlphaButtonCAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonCAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonCAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonCAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802077EC-80207A28 023C .text      setAlphaButtonCAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonCAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonCAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonCAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207A28-80207AB8 0090 .text      setAlphaButtonSAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonSAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonSAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonSAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207AB8-80207BA4 00EC .text      setAlphaButtonSAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonSAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonSAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonSAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207BA4-80207C34 0090 .text      setAlphaButtonXAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonXAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonXAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonXAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207C34-80207D20 00EC .text      setAlphaButtonXAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonXAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonXAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonXAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207D20-80207DB0 0090 .text      setAlphaButtonYAnimeMin__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonYAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonYAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonYAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207DB0-80207E9C 00EC .text      setAlphaButtonYAnimeMax__14dMeterButton_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonYAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonYAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonYAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207E9C-80207F34 0098 .text      setAlphaButtonNunAnimeMin__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80207F34-80208028 00F4 .text      setAlphaButtonNunAnimeMax__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208028-802080C0 0098 .text      setAlphaButtonRemoAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRemoAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802080C0-802081B4 00F4 .text      setAlphaButtonRemoAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRemoAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802081B4-8020824C 0098 .text      setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 8020824C-80208340 00F4 .text      setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208340-802083D8 0098 .text      setAlphaButtonARAnimeMin__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonARAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonARAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonARAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802083D8-802084D8 0100 .text      setAlphaButtonARAnimeMax__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonARAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonARAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonARAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802084D8-80208570 0098 .text      setAlphaButton3DBAnimeMin__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DBAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DBAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DBAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208570-80208670 0100 .text      setAlphaButton3DBAnimeMax__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButton3DBAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButton3DBAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButton3DBAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208670-80208708 0098 .text      setAlphaButtonNUREAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNUREAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208708-80208808 0100 .text      setAlphaButtonNUREAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNUREAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208808-802088A0 0098 .text      setAlphaButtonReelAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonReelAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonReelAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonReelAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802088A0-802089A0 0100 .text      setAlphaButtonReelAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonReelAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonReelAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonReelAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802089A0-80208A38 0098 .text      setAlphaButtonReel2AnimeMin__14dMeterButton_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonReel2AnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208A38-80208AEC 00B4 .text      setAlphaButtonReel2AnimeMax__14dMeterButton_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonReel2AnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208AEC-80208B84 0098 .text      setAlphaButtonABAnimeMin__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonABAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonABAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonABAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208B84-80208C38 00B4 .text      setAlphaButtonABAnimeMax__14dMeterButton_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonABAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonABAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonABAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208C38-80208CD0 0098 .text      setAlphaButtonTateAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonTateAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonTateAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonTateAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208CD0-80208D84 00B4 .text      setAlphaButtonTateAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonTateAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonTateAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonTateAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208D84-80208E1C 0098 .text      setAlphaButtonNunZAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunZAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208E1C-80208F1C 0100 .text      setAlphaButtonNunZAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunZAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208F1C-80208FB4 0098 .text      setAlphaButtonNunCAnimeMin__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunCAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80208FB4-802090B4 0100 .text      setAlphaButtonNunCAnimeMax__14dMeterButton_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonNunCAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802090B4-8020914C 0098 .text      setAlphaButtonBinAnimeMin__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonBinAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonBinAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonBinAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 8020914C-8020924C 0100 .text      setAlphaButtonBinAnimeMax__14dMeterButton_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonBinAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaButtonBinAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonBinAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 8020924C-802092C0 0074 .text      setAlphaButtonOAnimeMin__14dMeterButton_cFi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonOAnimeMin__14dMeterButton_cFi() {
+extern "C" asm void setAlphaButtonOAnimeMin__14dMeterButton_cFi() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonOAnimeMin__14dMeterButton_cFi.s"
 }
 #pragma pop
 
+
 /* 802092C0-80209368 00A8 .text      setAlphaButtonOAnimeMax__14dMeterButton_cFi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaButtonOAnimeMax__14dMeterButton_cFi() {
+extern "C" asm void setAlphaButtonOAnimeMax__14dMeterButton_cFi() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonOAnimeMax__14dMeterButton_cFi.s"
 }
 #pragma pop
 
+
 /* 80209368-802093D8 0070 .text      setAlphaIconAnimeMin__14dMeterButton_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaIconAnimeMin__14dMeterButton_cFv() {
+extern "C" asm void setAlphaIconAnimeMin__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaIconAnimeMin__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802093D8-80209474 009C .text      setAlphaIconAnimeMax__14dMeterButton_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaIconAnimeMax__14dMeterButton_cFv() {
+extern "C" asm void setAlphaIconAnimeMax__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaIconAnimeMax__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80209474-802095C0 014C .text      isClose__14dMeterButton_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isClose__14dMeterButton_cFv() {
+extern "C" asm void isClose__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/isClose__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 802095C0-80209CEC 072C .text      setString__14dMeterButton_cFPcUcUcUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setString__14dMeterButton_cFPcUcUcUc() {
+extern "C" asm void setString__14dMeterButton_cFPcUcUcUc() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setString__14dMeterButton_cFPcUcUcUc.s"
 }
 #pragma pop
 
+
 /* 80209CEC-80209D7C 0090 .text      hideAll__14dMeterButton_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void hideAll__14dMeterButton_cFv() {
+extern "C" asm void hideAll__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/hideAll__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 80209D7C-8020A540 07C4 .text      getCenterPosCalc__14dMeterButton_cFUcPci                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getCenterPosCalc__14dMeterButton_cFUcPci() {
+extern "C" asm void getCenterPosCalc__14dMeterButton_cFUcPci() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/getCenterPosCalc__14dMeterButton_cFUcPci.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804547AC-804547B0 0004 .sdata2    @7857                                                        */
+f32 lit_7857 = 20.0f;
+
 /* 8020A540-8020A94C 040C .text      trans_button__14dMeterButton_cFif                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void trans_button__14dMeterButton_cFif() {
+extern "C" asm void trans_button__14dMeterButton_cFif() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/trans_button__14dMeterButton_cFif.s"
 }
 #pragma pop
 
+
 /* 8020A94C-8020AA84 0138 .text      hide_button__14dMeterButton_cFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void hide_button__14dMeterButton_cFUc() {
+extern "C" asm void hide_button__14dMeterButton_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/hide_button__14dMeterButton_cFUc.s"
 }
 #pragma pop
 
+
 /* 8020AA84-8020AE68 03E4 .text      pikariCheck__14dMeterButton_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void pikariCheck__14dMeterButton_cFv() {
+extern "C" asm void pikariCheck__14dMeterButton_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/pikariCheck__14dMeterButton_cFv.s"
 }
 #pragma pop
 
+
 /* 8020AE68-8020AE8C 0024 .text      paneTrans__14dMeterButton_cFP8CPaneMgrffUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void paneTrans__14dMeterButton_cFP8CPaneMgrffUc() {
+extern "C" asm void paneTrans__14dMeterButton_cFP8CPaneMgrffUc() {
 	nofralloc
 #include "asm/d/meter/d_meter_button/paneTrans__14dMeterButton_cFP8CPaneMgrffUc.s"
 }

@@ -5,50 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern void seMoveVolumeAll__7Z2SeMgrFfUl();
-extern void talkInSe__7Z2SeMgrFv();
-extern void talkOutSe__7Z2SeMgrFv();
-extern void menuInSe__7Z2SeMgrFv();
-extern void subBgmStart__8Z2SeqMgrFUl();
-extern void subBgmStop__8Z2SeqMgrFv();
-extern void bgmStreamPrepare__8Z2SeqMgrFUl();
-extern void bgmStreamPlay__8Z2SeqMgrFv();
-extern void bgmStreamStop__8Z2SeqMgrFUl();
-extern void talkInBgm__8Z2SeqMgrFv();
-extern void talkOutBgm__8Z2SeqMgrFv();
-extern void menuInBgm__8Z2SeqMgrFv();
-extern void menuOutBgm__8Z2SeqMgrFv();
-extern void setBattleBgmOff__8Z2SeqMgrFb();
-extern void __ct__11Z2StatusMgrFv();
-extern void heartGaugeOn__11Z2StatusMgrFv();
-extern void processHeartGaugeSound__11Z2StatusMgrFv();
-extern void talkIn__11Z2StatusMgrFv();
-extern void talkOut__11Z2StatusMgrFv();
-extern void menuIn__11Z2StatusMgrFv();
-extern void menuOut__11Z2StatusMgrFv();
-extern void isMovieDemo__11Z2StatusMgrFv();
-extern void setDemoName__11Z2StatusMgrFPc();
-extern void processTime__11Z2StatusMgrFv();
-extern void checkDayTime__11Z2StatusMgrFv();
-extern void setEventBit__11Z2StatusMgrFPv();
-extern void setCameraPolygonPos__11Z2StatusMgrFP3Vec();
-extern void setCameraGroupInfo__11Z2StatusMgrFUc();
-extern void setCameraInWaterDepth__11Z2StatusMgrFf();
-extern void sceneBgmStart__10Z2SceneMgrFv();
-extern void setUnderWaterFx__11Z2FxLineMgrFb();
-extern void _savegpr_29();
-extern void _restgpr_29();
-extern void strncmp();
-extern void strcmp();
+extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" extern void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" extern void talkInSe__7Z2SeMgrFv();
+extern "C" extern void talkOutSe__7Z2SeMgrFv();
+extern "C" extern void menuInSe__7Z2SeMgrFv();
+extern "C" extern void subBgmStart__8Z2SeqMgrFUl();
+extern "C" extern void subBgmStop__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" extern void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" extern void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" extern void talkInBgm__8Z2SeqMgrFv();
+extern "C" extern void talkOutBgm__8Z2SeqMgrFv();
+extern "C" extern void menuInBgm__8Z2SeqMgrFv();
+extern "C" extern void menuOutBgm__8Z2SeqMgrFv();
+extern "C" extern void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" extern void __ct__11Z2StatusMgrFv();
+extern "C" extern void heartGaugeOn__11Z2StatusMgrFv();
+extern "C" extern void processHeartGaugeSound__11Z2StatusMgrFv();
+extern "C" extern void talkIn__11Z2StatusMgrFv();
+extern "C" extern void talkOut__11Z2StatusMgrFv();
+extern "C" extern void menuIn__11Z2StatusMgrFv();
+extern "C" extern void menuOut__11Z2StatusMgrFv();
+extern "C" extern void isMovieDemo__11Z2StatusMgrFv();
+extern "C" extern void setDemoName__11Z2StatusMgrFPc();
+extern "C" extern void processTime__11Z2StatusMgrFv();
+extern "C" extern void checkDayTime__11Z2StatusMgrFv();
+extern "C" extern void setEventBit__11Z2StatusMgrFPv();
+extern "C" extern void setCameraPolygonPos__11Z2StatusMgrFP3Vec();
+extern "C" extern void setCameraGroupInfo__11Z2StatusMgrFUc();
+extern "C" extern void setCameraInWaterDepth__11Z2StatusMgrFf();
+extern "C" extern void sceneBgmStart__10Z2SceneMgrFv();
+extern "C" extern void setUnderWaterFx__11Z2FxLineMgrFb();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strncmp();
+extern "C" extern void strcmp();
 SECTION_RODATA extern const u8 Z2StatusMgr__stringBase0[800];
-SECTION_DATA extern void* Z2StatusMgr__LIT_3732[46];
+SECTION_DATA extern void* Z2StatusMgr__lit_3732[46];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u8 struct_80450860[4];
 SECTION_SBSS extern u8 data_80450B40[4];
@@ -59,21 +58,123 @@ SECTION_SBSS extern u8 data_80450B84[4];
 SECTION_SBSS extern u8 data_80450B88[4];
 SECTION_SBSS extern u8 struct_80451124[4];
 SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_3395[4];
-SECTION_SDATA2 extern u8 LIT_3396[4];
-SECTION_SDATA2 extern u8 LIT_3467[4];
-SECTION_SDATA2 extern u8 LIT_3468[4];
-SECTION_SDATA2 extern u8 Z2StatusMgr__LIT_3731[8];
-SECTION_SDATA2 extern u8 Z2StatusMgr__LIT_3798[4];
-SECTION_SDATA2 extern u8 Z2StatusMgr__LIT_3799[4];
+SECTION_SDATA2 extern f32 lit_3395;
+SECTION_SDATA2 extern u8 lit_3396[4];
+SECTION_SDATA2 extern f32 lit_3467;
+SECTION_SDATA2 extern f32 lit_3468;
+SECTION_SDATA2 extern f64 Z2StatusMgr__lit_3731;
+SECTION_SDATA2 extern f32 Z2StatusMgr__lit_3798;
+SECTION_SDATA2 extern f32 Z2StatusMgr__lit_3799;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80455A18-80455A1C 0004 .sdata2    @3395                                                        */
+f32 lit_3395 = 10000000.0f;
+
+/* 80455A1C-80455A20 0004 .sdata2    @3396                                                        */
+u8 lit_3396[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 802B5F1C-802B5F70 0054 .text      __ct__11Z2StatusMgrFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/__ct__11Z2StatusMgrFv.s"
 }
+#pragma pop
+
+
+/* 802B5F70-802B5F7C 000C .text      heartGaugeOn__11Z2StatusMgrFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void heartGaugeOn__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/heartGaugeOn__11Z2StatusMgrFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80455A20-80455A24 0004 .sdata2    @3467                                                        */
+f32 lit_3467 = 1.0f;
 
-extern "C" {
+/* 80455A24-80455A28 0004 .sdata2    @3468                                                        */
+f32 lit_3468 = -1.0f;
+
+/* 802B5F7C-802B60CC 0150 .text      processHeartGaugeSound__11Z2StatusMgrFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void processHeartGaugeSound__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/processHeartGaugeSound__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B60CC-802B6104 0038 .text      talkIn__11Z2StatusMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkIn__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/talkIn__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B6104-802B613C 0038 .text      talkOut__11Z2StatusMgrFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkOut__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/talkOut__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B613C-802B617C 0040 .text      menuIn__11Z2StatusMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void menuIn__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/menuIn__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B617C-802B61BC 0040 .text      menuOut__11Z2StatusMgrFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void menuOut__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/menuOut__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* 802B61BC-802B61E8 002C .text      isMovieDemo__11Z2StatusMgrFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isMovieDemo__11Z2StatusMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2StatusMgr/isMovieDemo__11Z2StatusMgrFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 8039BC88-8039BFA8 0319 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -180,16 +281,9 @@ SECTION_DEAD const char* const stringBase_8039BF98 = "LV3R00OP";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039BFA1 = "\0\0\0\0\0\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CA508-803CA5C0 00B8 .data      @3732                                                        */
-SECTION_DATA void* Z2StatusMgr__LIT_3732[46] = {
+void* Z2StatusMgr__lit_3732[46] = {
 	(void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x438),
 	(void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x3F8),
 	(void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x4E8),
@@ -237,194 +331,88 @@ SECTION_DATA void* Z2StatusMgr__LIT_3732[46] = {
 	(void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x4E8),
 	(void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x4C8),
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455A18-80455A1C 0004 .sdata2    @3395                                                        */
-SECTION_SDATA2 u8 LIT_3395[4] = {
-	0x4B, 0x18, 0x96, 0x80,
-};
-/* 80455A1C-80455A20 0004 .sdata2    @3396                                                        */
-SECTION_SDATA2 u8 LIT_3396[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A20-80455A24 0004 .sdata2    @3467                                                        */
-SECTION_SDATA2 u8 LIT_3467[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455A24-80455A28 0004 .sdata2    @3468                                                        */
-SECTION_SDATA2 u8 LIT_3468[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
 /* 80455A28-80455A30 0008 .sdata2    @3731                                                        */
-SECTION_SDATA2 u8 Z2StatusMgr__LIT_3731[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A30-80455A34 0004 .sdata2    @3798                                                        */
-SECTION_SDATA2 u8 Z2StatusMgr__LIT_3798[4] = {
-	0x44, 0xFA, 0x00, 0x00,
-};
-/* 80455A34-80455A38 0004 .sdata2    @3799                                                        */
-SECTION_SDATA2 u8 Z2StatusMgr__LIT_3799[4] = {
-	0x3E, 0x4C, 0xCC, 0xCD,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802B5F1C-802B5F70 0054 .text      __ct__11Z2StatusMgrFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/__ct__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B5F70-802B5F7C 000C .text      heartGaugeOn__11Z2StatusMgrFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void heartGaugeOn__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/heartGaugeOn__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B5F7C-802B60CC 0150 .text      processHeartGaugeSound__11Z2StatusMgrFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void processHeartGaugeSound__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/processHeartGaugeSound__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B60CC-802B6104 0038 .text      talkIn__11Z2StatusMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkIn__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/talkIn__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B6104-802B613C 0038 .text      talkOut__11Z2StatusMgrFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkOut__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/talkOut__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B613C-802B617C 0040 .text      menuIn__11Z2StatusMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void menuIn__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/menuIn__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B617C-802B61BC 0040 .text      menuOut__11Z2StatusMgrFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void menuOut__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/menuOut__11Z2StatusMgrFv.s"
-}
-#pragma pop
-
-/* 802B61BC-802B61E8 002C .text      isMovieDemo__11Z2StatusMgrFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isMovieDemo__11Z2StatusMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/isMovieDemo__11Z2StatusMgrFv.s"
-}
-#pragma pop
+f64 Z2StatusMgr__lit_3731 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802B61E8-802B671C 0534 .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setDemoName__11Z2StatusMgrFPc() {
+extern "C" asm void setDemoName__11Z2StatusMgrFPc() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/setDemoName__11Z2StatusMgrFPc.s"
 }
 #pragma pop
 
+
 /* 802B671C-802B6734 0018 .text      processTime__11Z2StatusMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void processTime__11Z2StatusMgrFv() {
+extern "C" asm void processTime__11Z2StatusMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/processTime__11Z2StatusMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B6734-802B6758 0024 .text      checkDayTime__11Z2StatusMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkDayTime__11Z2StatusMgrFv() {
+extern "C" asm void checkDayTime__11Z2StatusMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/checkDayTime__11Z2StatusMgrFv.s"
 }
 #pragma pop
 
+
 /* 802B6758-802B6760 0008 .text      setEventBit__11Z2StatusMgrFPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEventBit__11Z2StatusMgrFPv() {
+extern "C" asm void setEventBit__11Z2StatusMgrFPv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/setEventBit__11Z2StatusMgrFPv.s"
 }
 #pragma pop
 
+
 /* 802B6760-802B6784 0024 .text      setCameraPolygonPos__11Z2StatusMgrFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCameraPolygonPos__11Z2StatusMgrFP3Vec() {
+extern "C" asm void setCameraPolygonPos__11Z2StatusMgrFP3Vec() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/setCameraPolygonPos__11Z2StatusMgrFP3Vec.s"
 }
 #pragma pop
 
+
 /* 802B6784-802B6788 0004 .text      setCameraGroupInfo__11Z2StatusMgrFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCameraGroupInfo__11Z2StatusMgrFUc() {
+extern "C" asm void setCameraGroupInfo__11Z2StatusMgrFUc() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/setCameraGroupInfo__11Z2StatusMgrFUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455A30-80455A34 0004 .sdata2    @3798                                                        */
+f32 Z2StatusMgr__lit_3798 = 2000.0f;
+
+/* 80455A34-80455A38 0004 .sdata2    @3799                                                        */
+f32 Z2StatusMgr__lit_3799 = 1.0f / 5.0f;
+
 /* 802B6788-802B6840 00B8 .text      setCameraInWaterDepth__11Z2StatusMgrFf                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCameraInWaterDepth__11Z2StatusMgrFf() {
+extern "C" asm void setCameraInWaterDepth__11Z2StatusMgrFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2StatusMgr/setCameraInWaterDepth__11Z2StatusMgrFf.s"
 }

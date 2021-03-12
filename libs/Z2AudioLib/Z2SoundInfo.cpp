@@ -5,70 +5,250 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__12JAISoundInfoFv();
-extern void __dt__16JAIStreamDataMgrFv();
-extern void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern void getData__13JAUSoundTableCF10JAISoundID();
-extern void linearTransform__6Z2CalcFfffffb();
-extern void getRandom_0_1__6Z2CalcFv();
-extern void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID();
-extern void getSoundType__11Z2SoundInfoCF10JAISoundID();
-extern void getCategory__11Z2SoundInfoCF10JAISoundID();
-extern void getPriority__11Z2SoundInfoCF10JAISoundID();
-extern void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
-extern void getAudibleSw__11Z2SoundInfoCF10JAISoundID();
-extern void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe();
-extern void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq();
-extern void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream();
-extern void getStreamFilePath__11Z2SoundInfoF10JAISoundID();
-extern void getStreamFileEntry__11Z2SoundInfoF10JAISoundID();
-extern void getSwBit__11Z2SoundInfoCF10JAISoundID();
-extern void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound();
-extern void __dt__11Z2SoundInfoFv();
-extern void func_802BBCBC();
-extern void func_802BBCC4();
-extern void func_802BBCCC();
-extern void func_802BBCD4();
-extern void __dl__FPv();
-extern void DVDConvertPathToEntrynum();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__12JAUSoundInfo[5];
-SECTION_DATA extern void* __vt__11Z2SoundInfo[20];
+extern "C" extern void __dt__12JAISoundInfoFv();
+extern "C" extern void __dt__16JAIStreamDataMgrFv();
+extern "C" extern void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" extern void getData__13JAUSoundTableCF10JAISoundID();
+extern "C" extern void linearTransform__6Z2CalcFfffffb();
+extern "C" extern void getRandom_0_1__6Z2CalcFv();
+extern "C" extern void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getSoundType__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getCategory__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getPriority__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
+extern "C" extern void getAudibleSw__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe();
+extern "C" extern void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq();
+extern "C" extern void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream();
+extern "C" extern void getStreamFilePath__11Z2SoundInfoF10JAISoundID();
+extern "C" extern void getStreamFileEntry__11Z2SoundInfoF10JAISoundID();
+extern "C" extern void getSwBit__11Z2SoundInfoCF10JAISoundID();
+extern "C" extern void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound();
+extern "C" extern void __dt__11Z2SoundInfoFv();
+extern "C" extern void func_802BBCBC();
+extern "C" extern void func_802BBCC4();
+extern "C" extern void func_802BBCCC();
+extern "C" extern void func_802BBCD4();
+extern "C" extern void __dl__FPv();
+extern "C" extern void DVDConvertPathToEntrynum();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__12JAUSoundInfo[5];
+SECTION_DATA extern void* const __vt__11Z2SoundInfo[20];
 SECTION_SBSS extern u8 data_80450B4C[4];
 SECTION_SBSS extern u8 data_80450B50[4];
 SECTION_SBSS extern u8 data_80450B58[4];
-SECTION_SDATA2 extern u8 LIT_963[4];
-SECTION_SDATA2 extern u8 LIT_964[4];
-SECTION_SDATA2 extern u8 LIT_965[4];
-SECTION_SDATA2 extern u8 LIT_966[4];
-SECTION_SDATA2 extern u8 LIT_967[4];
-SECTION_SDATA2 extern u8 LIT_968[4];
-SECTION_SDATA2 extern u8 Z2SoundInfo__LIT_969[8];
-SECTION_SDATA2 extern u8 Z2SoundInfo__LIT_973[8];
-SECTION_SDATA2 extern u8 STRM_CH_SHIFT__20JAUStdSoundTableType[4];
-SECTION_SDATA2 extern u8 LIT_1010[4];
-SECTION_SDATA2 extern u8 Z2SoundInfo__LIT_1070[8];
+SECTION_SDATA2 extern f32 lit_963;
+SECTION_SDATA2 extern f32 lit_964;
+SECTION_SDATA2 extern f32 lit_965;
+SECTION_SDATA2 extern f32 lit_966;
+SECTION_SDATA2 extern f32 lit_967;
+SECTION_SDATA2 extern u8 lit_968[4];
+SECTION_SDATA2 extern f32 Z2SoundInfo__lit_969;
+SECTION_SDATA2 extern f64 Z2SoundInfo__lit_973;
+SECTION_SDATA2 extern u32 STRM_CH_SHIFT__20JAUStdSoundTableType;
+SECTION_SDATA2 extern f32 lit_1010;
+SECTION_SDATA2 extern f32 Z2SoundInfo__lit_1070;
+
+// 
+// Functions:
+// 
+
+/* 802BB00C-802BB090 0084 .text      getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID.s"
 }
+#pragma pop
+
+
+/* 802BB090-802BB0D8 0048 .text      getSoundType__11Z2SoundInfoCF10JAISoundID                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundType__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getSoundType__11Z2SoundInfoCF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BB0D8-802BB0E0 0008 .text      getCategory__11Z2SoundInfoCF10JAISoundID                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getCategory__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getCategory__11Z2SoundInfoCF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BB0E0-802BB158 0078 .text      getPriority__11Z2SoundInfoCF10JAISoundID                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPriority__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getPriority__11Z2SoundInfoCF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BB158-802BB448 02F0 .text      getAudibleSwFull__11Z2SoundInfoF10JAISoundID                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getAudibleSwFull__11Z2SoundInfoF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getAudibleSwFull__11Z2SoundInfoF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BB448-802BB6DC 0294 .text      getAudibleSw__11Z2SoundInfoCF10JAISoundID                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getAudibleSw__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getAudibleSw__11Z2SoundInfoCF10JAISoundID.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80455A68-80455A6C 0004 .sdata2    @963                                                         */
+f32 lit_963 = 8.0f;
 
-extern "C" {
+/* 80455A6C-80455A70 0004 .sdata2    @964                                                         */
+f32 lit_964 = 15.0f;
+
+/* 80455A70-80455A74 0004 .sdata2    @965                                                         */
+f32 lit_965 = 16.0f;
+
+/* 80455A74-80455A78 0004 .sdata2    @966                                                         */
+f32 lit_966 = 24.0f;
+
+/* 80455A78-80455A7C 0004 .sdata2    @967                                                         */
+f32 lit_967 = 48.0f;
+
+/* 80455A7C-80455A80 0004 .sdata2    @968                                                         */
+u8 lit_968[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455A80-80455A88 0004 .sdata2    @969                                                         */
+f32 Z2SoundInfo__lit_969 = 1.0f;
+/* padding 4 bytes */
+
+/* 80455A88-80455A90 0008 .sdata2    @973                                                         */
+f64 Z2SoundInfo__lit_973 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 802BB6DC-802BB8B4 01D8 .text      getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe.s"
+}
+#pragma pop
+
+
+/* 802BB8B4-802BB8E0 002C .text      getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455A90-80455A94 0004 .sdata2    STRM_CH_SHIFT__20JAUStdSoundTableType                        */
+u32 STRM_CH_SHIFT__20JAUStdSoundTableType = 0x00000002;
+
+/* 80455A94-80455A98 0004 .sdata2    @1010                                                        */
+f32 lit_1010 = 0.5f;
+
+/* 802BB8E0-802BBA10 0130 .text      getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream.s"
+}
+#pragma pop
+
+
+/* 802BBA10-802BBA88 0078 .text      getStreamFilePath__11Z2SoundInfoF10JAISoundID                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStreamFilePath__11Z2SoundInfoF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getStreamFilePath__11Z2SoundInfoF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BBA88-802BBAC8 0040 .text      getStreamFileEntry__11Z2SoundInfoF10JAISoundID               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStreamFileEntry__11Z2SoundInfoF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getStreamFileEntry__11Z2SoundInfoF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* 802BBAC8-802BBB48 0080 .text      getSwBit__11Z2SoundInfoCF10JAISoundID                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSwBit__11Z2SoundInfoCF10JAISoundID() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getSwBit__11Z2SoundInfoCF10JAISoundID.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455A98-80455AA0 0004 .sdata2    @1070                                                        */
+f32 Z2SoundInfo__lit_1070 = 1.0f / 127.0f;
+/* padding 4 bytes */
+
+/* 802BBB48-802BBBE0 0098 .text      getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundInfo/getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CAC48-803CAC98 0050 .data      __vt__11Z2SoundInfo                                          */
-SECTION_DATA void* __vt__11Z2SoundInfo[20] = {
+void* const __vt__11Z2SoundInfo[20] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getSoundType__11Z2SoundInfoCF10JAISoundID,
@@ -90,244 +270,56 @@ SECTION_DATA void* __vt__11Z2SoundInfo[20] = {
 	(void*)getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID,
 	(void*)getStreamFileEntry__11Z2SoundInfoF10JAISoundID,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455A68-80455A6C 0004 .sdata2    @963                                                         */
-SECTION_SDATA2 u8 LIT_963[4] = {
-	0x41, 0x00, 0x00, 0x00,
-};
-/* 80455A6C-80455A70 0004 .sdata2    @964                                                         */
-SECTION_SDATA2 u8 LIT_964[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-/* 80455A70-80455A74 0004 .sdata2    @965                                                         */
-SECTION_SDATA2 u8 LIT_965[4] = {
-	0x41, 0x80, 0x00, 0x00,
-};
-/* 80455A74-80455A78 0004 .sdata2    @966                                                         */
-SECTION_SDATA2 u8 LIT_966[4] = {
-	0x41, 0xC0, 0x00, 0x00,
-};
-/* 80455A78-80455A7C 0004 .sdata2    @967                                                         */
-SECTION_SDATA2 u8 LIT_967[4] = {
-	0x42, 0x40, 0x00, 0x00,
-};
-/* 80455A7C-80455A80 0004 .sdata2    @968                                                         */
-SECTION_SDATA2 u8 LIT_968[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A80-80455A88 0004 .sdata2    @969                                                         */
-SECTION_SDATA2 u8 Z2SoundInfo__LIT_969[8] = {
-	0x3F, 0x80, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A88-80455A90 0008 .sdata2    @973                                                         */
-SECTION_SDATA2 u8 Z2SoundInfo__LIT_973[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455A90-80455A94 0004 .sdata2    STRM_CH_SHIFT__20JAUStdSoundTableType                        */
-SECTION_SDATA2 u8 STRM_CH_SHIFT__20JAUStdSoundTableType[4] = {
-	0x00, 0x00, 0x00, 0x02,
-};
-/* 80455A94-80455A98 0004 .sdata2    @1010                                                        */
-SECTION_SDATA2 u8 LIT_1010[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80455A98-80455AA0 0004 .sdata2    @1070                                                        */
-SECTION_SDATA2 u8 Z2SoundInfo__LIT_1070[8] = {
-	0x3C, 0x01, 0x02, 0x04,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802BB00C-802BB090 0084 .text      getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB090-802BB0D8 0048 .text      getSoundType__11Z2SoundInfoCF10JAISoundID                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundType__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getSoundType__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB0D8-802BB0E0 0008 .text      getCategory__11Z2SoundInfoCF10JAISoundID                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getCategory__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getCategory__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB0E0-802BB158 0078 .text      getPriority__11Z2SoundInfoCF10JAISoundID                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPriority__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getPriority__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB158-802BB448 02F0 .text      getAudibleSwFull__11Z2SoundInfoF10JAISoundID                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getAudibleSwFull__11Z2SoundInfoF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getAudibleSwFull__11Z2SoundInfoF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB448-802BB6DC 0294 .text      getAudibleSw__11Z2SoundInfoCF10JAISoundID                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getAudibleSw__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getAudibleSw__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BB6DC-802BB8B4 01D8 .text      getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe.s"
-}
-#pragma pop
-
-/* 802BB8B4-802BB8E0 002C .text      getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq.s"
-}
-#pragma pop
-
-/* 802BB8E0-802BBA10 0130 .text      getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream.s"
-}
-#pragma pop
-
-/* 802BBA10-802BBA88 0078 .text      getStreamFilePath__11Z2SoundInfoF10JAISoundID                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStreamFilePath__11Z2SoundInfoF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getStreamFilePath__11Z2SoundInfoF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BBA88-802BBAC8 0040 .text      getStreamFileEntry__11Z2SoundInfoF10JAISoundID               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStreamFileEntry__11Z2SoundInfoF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getStreamFileEntry__11Z2SoundInfoF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BBAC8-802BBB48 0080 .text      getSwBit__11Z2SoundInfoCF10JAISoundID                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSwBit__11Z2SoundInfoCF10JAISoundID() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getSwBit__11Z2SoundInfoCF10JAISoundID.s"
-}
-#pragma pop
-
-/* 802BBB48-802BBBE0 0098 .text      getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundInfo/getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound.s"
-}
-#pragma pop
 
 /* 802BBBE0-802BBCBC 00DC .text      __dt__11Z2SoundInfoFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11Z2SoundInfoFv() {
+extern "C" asm void __dt__11Z2SoundInfoFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundInfo/__dt__11Z2SoundInfoFv.s"
 }
 #pragma pop
 
+
 /* 802BBCBC-802BBCC4 0008 .text      @4@getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BBCBC() {
+extern "C" asm void func_802BBCBC() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundInfo/func_802BBCBC.s"
 }
 #pragma pop
 
+
 /* 802BBCC4-802BBCCC 0008 .text      @4@getAudibleSw__11Z2SoundInfoCF10JAISoundID                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BBCC4() {
+extern "C" asm void func_802BBCC4() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundInfo/func_802BBCC4.s"
 }
 #pragma pop
 
+
 /* 802BBCCC-802BBCD4 0008 .text      @8@__dt__11Z2SoundInfoFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BBCCC() {
+extern "C" asm void func_802BBCCC() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundInfo/func_802BBCCC.s"
 }
 #pragma pop
 
+
 /* 802BBCD4-802BBCDC 0008 .text      @8@getStreamFileEntry__11Z2SoundInfoF10JAISoundID            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BBCD4() {
+extern "C" asm void func_802BBCD4() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundInfo/func_802BBCD4.s"
 }

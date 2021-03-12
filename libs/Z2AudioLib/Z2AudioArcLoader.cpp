@@ -5,50 +5,47 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__22JAUAudioArcInterpreterFv();
-extern void __ct__17JAUAudioArcLoaderFP10JAUSection();
-extern void readWS__17JAUAudioArcLoaderFUlPCvUl();
-extern void readBNK__17JAUAudioArcLoaderFUlPCv();
-extern void readBSC__17JAUAudioArcLoaderFPCvUl();
-extern void readBST__17JAUAudioArcLoaderFPCvUl();
-extern void readBMS__17JAUAudioArcLoaderFUlPCvUl();
-extern void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
-extern void newVoiceBank__17JAUAudioArcLoaderFUlUl();
-extern void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
-extern void readBSFT__17JAUAudioArcLoaderFPCv();
-extern void beginBNKList__17JAUAudioArcLoaderFUlUl();
-extern void endBNKList__17JAUAudioArcLoaderFv();
-extern void readMaxSeCategory__17JAUAudioArcLoaderFiii();
-extern void getOpenSection__14JAUSectionHeapFv();
-extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
-extern void readCommandMore__16Z2AudioArcLoaderFUl();
-extern void readBFCA__16Z2AudioArcLoaderFPCv();
-extern void readBSTN__16Z2AudioArcLoaderFPCvUl();
-extern void __dt__16Z2AudioArcLoaderFv();
-extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern void __dl__FPv();
-extern void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
-extern void _savegpr_29();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__17JAUAudioArcLoader[18];
-SECTION_DATA extern void* __vt__16Z2AudioArcLoader[18];
+extern "C" extern void __dt__22JAUAudioArcInterpreterFv();
+extern "C" extern void __ct__17JAUAudioArcLoaderFP10JAUSection();
+extern "C" extern void readWS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" extern void readBNK__17JAUAudioArcLoaderFUlPCv();
+extern "C" extern void readBSC__17JAUAudioArcLoaderFPCvUl();
+extern "C" extern void readBST__17JAUAudioArcLoaderFPCvUl();
+extern "C" extern void readBMS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" extern void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
+extern "C" extern void newVoiceBank__17JAUAudioArcLoaderFUlUl();
+extern "C" extern void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
+extern "C" extern void readBSFT__17JAUAudioArcLoaderFPCv();
+extern "C" extern void beginBNKList__17JAUAudioArcLoaderFUlUl();
+extern "C" extern void endBNKList__17JAUAudioArcLoaderFv();
+extern "C" extern void readMaxSeCategory__17JAUAudioArcLoaderFiii();
+extern "C" extern void getOpenSection__14JAUSectionHeapFv();
+extern "C" extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
+extern "C" extern void readCommandMore__16Z2AudioArcLoaderFUl();
+extern "C" extern void readBFCA__16Z2AudioArcLoaderFPCv();
+extern "C" extern void readBSTN__16Z2AudioArcLoaderFPCvUl();
+extern "C" extern void __dt__16Z2AudioArcLoaderFv();
+extern "C" extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" extern void __dl__FPv();
+extern "C" extern void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__17JAUAudioArcLoader[18];
+SECTION_DATA extern void* const __vt__16Z2AudioArcLoader[18];
 SECTION_SBSS extern u8 data_80450B40[4];
 SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9CD0-803C9D18 0044 .data      __vt__16Z2AudioArcLoader                                     */
-SECTION_DATA void* __vt__16Z2AudioArcLoader[18] = {
+void* const __vt__16Z2AudioArcLoader[18] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16Z2AudioArcLoaderFv,
@@ -69,58 +66,56 @@ SECTION_DATA void* __vt__16Z2AudioArcLoader[18] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802A9A34-802A9A70 003C .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16Z2AudioArcLoaderFP10JAUSection() {
+extern "C" asm void __ct__16Z2AudioArcLoaderFP10JAUSection() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/__ct__16Z2AudioArcLoaderFP10JAUSection.s"
 }
 #pragma pop
 
+
 /* 802A9A70-802A9AC8 0058 .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readCommandMore__16Z2AudioArcLoaderFUl() {
+extern "C" asm void readCommandMore__16Z2AudioArcLoaderFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/readCommandMore__16Z2AudioArcLoaderFUl.s"
 }
 #pragma pop
 
+
 /* 802A9AC8-802A9B54 008C .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readBFCA__16Z2AudioArcLoaderFPCv() {
+extern "C" asm void readBFCA__16Z2AudioArcLoaderFPCv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/readBFCA__16Z2AudioArcLoaderFPCv.s"
 }
 #pragma pop
 
+
 /* 802A9B54-802A9B58 0004 .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readBSTN__16Z2AudioArcLoaderFPCvUl() {
+extern "C" asm void readBSTN__16Z2AudioArcLoaderFPCvUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/readBSTN__16Z2AudioArcLoaderFPCvUl.s"
 }
 #pragma pop
 
+
 /* 802A9B58-802A9BC8 0070 .text      __dt__16Z2AudioArcLoaderFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16Z2AudioArcLoaderFv() {
+extern "C" asm void __dt__16Z2AudioArcLoaderFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/__dt__16Z2AudioArcLoaderFv.s"
 }

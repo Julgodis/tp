@@ -32,24 +32,24 @@ lbl_8009D194:
 /* 8009D20C 00000078  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 8009D210 0000007C  48 27 2E AD */	bl drawInit__6J3DSysFv
 /* 8009D214 00000080  38 61 00 24 */	addi r3, r1, 0x24
-/* 8009D218 00000084  C0 22 92 18 */	lfs f1, d_d_error_msg__LIT_3758(r2)
+/* 8009D218 00000084  C0 22 92 18 */	lfs f1, d_d_error_msg__lit_3758(r2)
 /* 8009D21C 00000088  FC 40 08 90 */	fmr f2, f1
-/* 8009D220 0000008C  C0 62 92 1C */	lfs f3, d_d_error_msg__LIT_3759(r2)
-/* 8009D224 00000090  C0 82 92 24 */	lfs f4, d_d_error_msg__LIT_3761(r2)
-/* 8009D228 00000094  C0 A2 92 48 */	lfs f5, d_d_error_msg__LIT_3835(r2)
-/* 8009D22C 00000098  C0 C2 92 30 */	lfs f6, d_d_error_msg__LIT_3764(r2)
+/* 8009D220 0000008C  C0 62 92 1C */	lfs f3, d_d_error_msg__lit_3759(r2)
+/* 8009D224 00000090  C0 82 92 24 */	lfs f4, d_d_error_msg__lit_3761(r2)
+/* 8009D228 00000094  C0 A2 92 48 */	lfs f5, d_d_error_msg__lit_3835(r2)
+/* 8009D22C 00000098  C0 C2 92 30 */	lfs f6, d_d_error_msg__lit_3764(r2)
 /* 8009D230 0000009C  48 24 C4 A1 */	bl __ct__13J2DOrthoGraphFffffff
-/* 8009D234 000000A0  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009D234 000000A0  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009D238 000000A4  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8009D23C 000000A8  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8009D240 000000AC  C0 02 92 1C */	lfs f0, d_d_error_msg__LIT_3759(r2)
+/* 8009D240 000000AC  C0 02 92 1C */	lfs f0, d_d_error_msg__lit_3759(r2)
 /* 8009D244 000000B0  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8009D248 000000B4  C0 02 92 24 */	lfs f0, d_d_error_msg__LIT_3761(r2)
+/* 8009D248 000000B4  C0 02 92 24 */	lfs f0, d_d_error_msg__lit_3761(r2)
 /* 8009D24C 000000B8  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8009D250 000000BC  38 61 00 24 */	addi r3, r1, 0x24
 /* 8009D254 000000C0  38 81 00 14 */	addi r4, r1, 0x14
-/* 8009D258 000000C4  C0 22 92 48 */	lfs f1, d_d_error_msg__LIT_3835(r2)
-/* 8009D25C 000000C8  C0 42 92 30 */	lfs f2, d_d_error_msg__LIT_3764(r2)
+/* 8009D258 000000C4  C0 22 92 48 */	lfs f1, d_d_error_msg__lit_3835(r2)
+/* 8009D25C 000000C8  C0 42 92 30 */	lfs f2, d_d_error_msg__lit_3764(r2)
 /* 8009D260 000000CC  48 24 C5 AD */	bl func_802E980C
 /* 8009D264 000000D0  38 61 00 24 */	addi r3, r1, 0x24
 /* 8009D268 000000D4  48 24 C5 4D */	bl setPort__13J2DOrthoGraphFv

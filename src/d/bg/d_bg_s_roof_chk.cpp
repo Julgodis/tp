@@ -5,39 +5,36 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8dBgS_ChkFv();
-extern void __dt__8dBgS_ChkFv();
-extern void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern void __ct__12dBgS_RoofChkFv();
-extern void __dt__12dBgS_RoofChkFv();
-extern void Init__12dBgS_RoofChkFv();
-extern void func_8007914C();
-extern void func_80079154();
-extern void func_8007915C();
-extern void __ct__8cBgS_ChkFv();
-extern void __dt__8cBgS_ChkFv();
-extern void __ct__13cBgS_PolyInfoFv();
-extern void __dt__13cBgS_PolyInfoFv();
-extern void ClearPi__13cBgS_PolyInfoFv();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__12dBgS_RoofChk[12];
-SECTION_SDATA2 extern u8 LIT_316[4];
-SECTION_SDATA2 extern u8 d_bg_d_bg_s_roof_chk__LIT_333[4];
-}
+extern "C" extern void __ct__8dBgS_ChkFv();
+extern "C" extern void __dt__8dBgS_ChkFv();
+extern "C" extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void __ct__12dBgS_RoofChkFv();
+extern "C" extern void __dt__12dBgS_RoofChkFv();
+extern "C" extern void Init__12dBgS_RoofChkFv();
+extern "C" extern void func_8007914C();
+extern "C" extern void func_80079154();
+extern "C" extern void func_8007915C();
+extern "C" extern void __ct__8cBgS_ChkFv();
+extern "C" extern void __dt__8cBgS_ChkFv();
+extern "C" extern void __ct__13cBgS_PolyInfoFv();
+extern "C" extern void __dt__13cBgS_PolyInfoFv();
+extern "C" extern void ClearPi__13cBgS_PolyInfoFv();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__12dBgS_RoofChk[12];
+SECTION_SDATA2 extern u8 lit_316[4];
+SECTION_SDATA2 extern f32 d_bg_d_bg_s_roof_chk__lit_333;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803ABA50-803ABA80 0030 .data      __vt__12dBgS_RoofChk                                         */
-SECTION_DATA void* __vt__12dBgS_RoofChk[12] = {
+void* const __vt__12dBgS_RoofChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dBgS_RoofChkFv,
@@ -51,84 +48,76 @@ SECTION_DATA void* __vt__12dBgS_RoofChk[12] = {
 	NULL,
 	(void*)func_80079154,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804526F0-804526F4 0004 .sdata2    @316                                                         */
-SECTION_SDATA2 u8 LIT_316[4] = {
+u8 lit_316[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804526F4-804526F8 0004 .sdata2    @333                                                         */
-SECTION_SDATA2 u8 d_bg_d_bg_s_roof_chk__LIT_333[4] = {
-	0x4E, 0x6E, 0x6B, 0x28,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80078FF4-80079090 009C .text      __ct__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12dBgS_RoofChkFv() {
+extern "C" asm void __ct__12dBgS_RoofChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/__ct__12dBgS_RoofChkFv.s"
 }
 #pragma pop
 
+
 /* 80079090-80079124 0094 .text      __dt__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12dBgS_RoofChkFv() {
+extern "C" asm void __dt__12dBgS_RoofChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/__dt__12dBgS_RoofChkFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804526F4-804526F8 0004 .sdata2    @333                                                         */
+f32 d_bg_d_bg_s_roof_chk__lit_333 = 1000000000.0f;
+
 /* 80079124-8007914C 0028 .text      Init__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Init__12dBgS_RoofChkFv() {
+extern "C" asm void Init__12dBgS_RoofChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/Init__12dBgS_RoofChkFv.s"
 }
 #pragma pop
 
+
 /* 8007914C-80079154 0008 .text      @16@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007914C() {
+extern "C" asm void func_8007914C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/func_8007914C.s"
 }
 #pragma pop
 
+
 /* 80079154-8007915C 0008 .text      @52@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80079154() {
+extern "C" asm void func_80079154() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/func_80079154.s"
 }
 #pragma pop
 
+
 /* 8007915C-80079164 0008 .text      @36@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007915C() {
+extern "C" asm void func_8007915C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_roof_chk/func_8007915C.s"
 }

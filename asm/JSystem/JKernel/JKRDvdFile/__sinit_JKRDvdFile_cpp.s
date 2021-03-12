@@ -9,8 +9,8 @@ lbl_802D9B00:
 /* 802D9B1C 0000001C  38 63 43 6C */	addi r3, r3, sDvdList__10JKRDvdFile@l
 /* 802D9B20 00000020  3C 80 80 2E */	lis r4, func_802D9B44@ha
 /* 802D9B24 00000024  38 84 9B 44 */	addi r4, r4, func_802D9B44@l
-/* 802D9B28 00000028  3C A0 80 43 */	lis r5, LIT_657@ha
-/* 802D9B2C 0000002C  38 A5 43 60 */	addi r5, r5, LIT_657@l
+/* 802D9B28 00000028  3C A0 80 43 */	lis r5, lit_657@ha
+/* 802D9B2C 0000002C  38 A5 43 60 */	addi r5, r5, lit_657@l
 /* 802D9B30 00000030  48 08 80 F5 */	bl __register_global_object
 /* 802D9B34 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D9B38 00000038  7C 08 03 A6 */	mtlr r0

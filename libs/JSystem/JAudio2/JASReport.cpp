@@ -5,65 +5,53 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void JASReport__FPCce();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void vsnprintf();
+extern "C" extern void JASReport__FPCce();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void vsnprintf();
 SECTION_BSS extern u8 sMutex[24];
 SECTION_SBSS extern u8 sBuffer[4];
 SECTION_SBSS extern u8 sLineMax[4];
 SECTION_SBSS extern u8 sLineCount[4];
 SECTION_SBSS extern u8 sTop[4];
 SECTION_SBSS extern u8 struct_80451230[8];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80431660-80431678 0018 .bss       sMutex                                                       */
-SECTION_BSS u8 sMutex[24];
-}
+u8 sMutex[24];
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451220-80451224 0004 .sbss      sBuffer                                                      */
-SECTION_SBSS u8 sBuffer[4];
+u8 sBuffer[4];
+
 /* 80451224-80451228 0004 .sbss      sLineMax                                                     */
-SECTION_SBSS u8 sLineMax[4];
+u8 sLineMax[4];
+
 /* 80451228-8045122C 0004 .sbss      sLineCount                                                   */
-SECTION_SBSS u8 sLineCount[4];
+u8 sLineCount[4];
+
 /* 8045122C-80451230 0004 .sbss      sTop                                                         */
-SECTION_SBSS u8 sTop[4];
-/* 80451230-80451238 0008 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80451230[8];
-/* 80451230 0001 data_80451230 */
-/* 80451231 0007 data_80451231 */
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sTop[4];
 
 /* 80290F64-80291060 00FC .text      JASReport__FPCce                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASReport__FPCce() {
+extern "C" asm void JASReport__FPCce() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASReport/JASReport__FPCce.s"
 }
 #pragma pop
 
+
+/* 80451230-80451238 0008 .sbss      None                                                         */
+u8 struct_80451230[8];
+/* 80451230 0001 data_80451230 */
+/* 80451231 0007 data_80451231 */
 

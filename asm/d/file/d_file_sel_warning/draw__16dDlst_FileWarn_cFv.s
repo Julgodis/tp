@@ -6,7 +6,7 @@ lbl_80192354:
 /* 80192364 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80192368 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
 /* 8019236C 00000018  80 63 00 04 */	lwz r3, 4(r3)
-/* 80192370 0000001C  C0 22 9F D8 */	lfs f1, d_file_d_file_sel_warning__LIT_3741(r2)
+/* 80192370 0000001C  C0 22 9F D8 */	lfs f1, d_file_d_file_sel_warning__lit_3741(r2)
 /* 80192374 00000020  FC 40 08 90 */	fmr f2, f1
 /* 80192378 00000024  48 16 6B 5D */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 8019237C 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

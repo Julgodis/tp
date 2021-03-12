@@ -5,136 +5,144 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
 SECTION_INIT extern void memcpy();
-extern void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
-extern void createWaveBank__11JASWSParserFPCvP7JKRHeap();
-extern void createBank__12JASBNKParserFPCvP7JKRHeap();
-extern void load__10JASWaveArcFP7JASHeap();
-extern void __dt__13JAISeqDataMgrFv();
-extern void __dt__16JAIStreamDataMgrFv();
-extern void func_802A4A80();
-extern void getBank__12JAUBankTableCFUl();
-extern void __ct__Q210JAUSection12TSectionDataFv();
-extern void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv();
-extern void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv();
-extern void __ct__10JAUSectionFP14JAUSectionHeapUll();
-extern void finishBuild__10JAUSectionFv();
-extern void dispose__10JAUSectionFv();
-extern void newSoundTable__10JAUSectionFPCvUlb();
-extern void newSoundNameTable__10JAUSectionFPCvUlb();
-extern void newStreamFileTable__10JAUSectionFPCvb();
-extern void newSeSeqCollection__10JAUSectionFPCvUl();
-extern void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl();
-extern void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl();
-extern void newStaticSeqData__10JAUSectionF10JAISoundID();
-extern void newCopy__10JAUSectionFPCvUll();
-extern void newWaveBank__10JAUSectionFUlPCv();
-extern void loadWaveArc__10JAUSectionFUlUl();
-extern void newBank__10JAUSectionFPCvUl();
-extern void newVoiceBank__10JAUSectionFUlUl();
-extern void beginNewBankTable__10JAUSectionFUlUl();
-extern void endNewBankTable__10JAUSectionFv();
-extern void __ct__Q214JAUSectionHeap16TSectionHeapDataFv();
-extern void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
-extern void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
-extern void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
-extern void JAUNewSectionHeap__FP12JKRSolidHeapb();
-extern void JAUNewSectionHeap__Fb();
-extern void __ct__14JAUSectionHeapFP12JKRSolidHeapbl();
-extern void getOpenSection__14JAUSectionHeapFv();
-extern void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser();
-extern void newDynamicSeqBlock__14JAUSectionHeapFUl();
-extern void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData();
-extern void releaseSeqData__14JAUSectionHeapFv();
-extern void __dt__14JAUSectionHeapFv();
-extern void func_802A6440();
-extern void __dt__10JAUSectionFv();
-extern void func_802A6574();
-extern void func_802A65D4();
-extern void func_802A6614();
-extern void func_802A6634();
-extern void func_802A665C();
-extern void func_802A6680();
-extern void func_802A6688();
-extern void func_802A6690();
-extern void func_802A6698();
-extern void init__16JAUSeqCollectionFPCv();
-extern void __ct__27JAUSeqDataMgr_SeqCollectionFv();
-extern void __ct__15JAUSeqDataBlockFv();
-extern void __ct__23JAUDynamicSeqDataBlocksFv();
-extern void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
-extern void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
-extern void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
-extern void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
-extern void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
-extern void init__13JAUSoundTableFPCv();
-extern void init__17JAUSoundNameTableFPCv();
-extern void __ct__18JAUStreamFileTableFv();
-extern void init__18JAUStreamFileTableFPCv();
-extern void getNumFiles__18JAUStreamFileTableCFv();
-extern void getFilePath__18JAUStreamFileTableCFi();
-extern void becomeCurrentHeap__7JKRHeapFv();
-extern void freeTail__7JKRHeapFv();
-extern void getFreeSize__7JKRHeapFv();
-extern void __nw__FUl();
-extern void __nwa__FUl();
-extern void __nwa__FUli();
-extern void __nwa__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern void __ct__11JKRDisposerFv();
-extern void __dt__11JKRDisposerFv();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void __dt__10JSUPtrListFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void DVDConvertPathToEntrynum();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void abort();
-extern void fprintf();
+extern "C" extern void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+extern "C" extern void createWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" extern void createBank__12JASBNKParserFPCvP7JKRHeap();
+extern "C" extern void load__10JASWaveArcFP7JASHeap();
+extern "C" extern void __dt__13JAISeqDataMgrFv();
+extern "C" extern void __dt__16JAIStreamDataMgrFv();
+extern "C" extern void func_802A4A80();
+extern "C" extern void getBank__12JAUBankTableCFUl();
+extern "C" extern void __ct__Q210JAUSection12TSectionDataFv();
+extern "C" extern void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv();
+extern "C" extern void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv();
+extern "C" extern void __ct__10JAUSectionFP14JAUSectionHeapUll();
+extern "C" extern void finishBuild__10JAUSectionFv();
+extern "C" extern void dispose__10JAUSectionFv();
+extern "C" extern void newSoundTable__10JAUSectionFPCvUlb();
+extern "C" extern void newSoundNameTable__10JAUSectionFPCvUlb();
+extern "C" extern void newStreamFileTable__10JAUSectionFPCvb();
+extern "C" extern void newSeSeqCollection__10JAUSectionFPCvUl();
+extern "C" extern void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl();
+extern "C" extern void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl();
+extern "C" extern void newStaticSeqData__10JAUSectionF10JAISoundID();
+extern "C" extern void newCopy__10JAUSectionFPCvUll();
+extern "C" extern void newWaveBank__10JAUSectionFUlPCv();
+extern "C" extern void loadWaveArc__10JAUSectionFUlUl();
+extern "C" extern void newBank__10JAUSectionFPCvUl();
+extern "C" extern void newVoiceBank__10JAUSectionFUlUl();
+extern "C" extern void beginNewBankTable__10JAUSectionFUlUl();
+extern "C" extern void endNewBankTable__10JAUSectionFv();
+extern "C" extern void __ct__Q214JAUSectionHeap16TSectionHeapDataFv();
+extern "C" extern void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
+extern "C" extern void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
+extern "C" extern void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
+extern "C" extern void JAUNewSectionHeap__FP12JKRSolidHeapb();
+extern "C" extern void JAUNewSectionHeap__Fb();
+extern "C" extern void __ct__14JAUSectionHeapFP12JKRSolidHeapbl();
+extern "C" extern void getOpenSection__14JAUSectionHeapFv();
+extern "C" extern void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser();
+extern "C" extern void newDynamicSeqBlock__14JAUSectionHeapFUl();
+extern "C" extern void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData();
+extern "C" extern void releaseSeqData__14JAUSectionHeapFv();
+extern "C" extern void __dt__14JAUSectionHeapFv();
+extern "C" extern void func_802A6440();
+extern "C" extern void __dt__10JAUSectionFv();
+extern "C" extern void func_802A6574();
+extern "C" extern void func_802A65D4();
+extern "C" extern void func_802A6614();
+extern "C" extern void func_802A6634();
+extern "C" extern void func_802A665C();
+extern "C" extern void func_802A6680();
+extern "C" extern void func_802A6688();
+extern "C" extern void func_802A6690();
+extern "C" extern void func_802A6698();
+extern "C" extern void init__16JAUSeqCollectionFPCv();
+extern "C" extern void __ct__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" extern void __ct__15JAUSeqDataBlockFv();
+extern "C" extern void __ct__23JAUDynamicSeqDataBlocksFv();
+extern "C" extern void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
+extern "C" extern void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
+extern "C" extern void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
+extern "C" extern void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
+extern "C" extern void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
+extern "C" extern void init__13JAUSoundTableFPCv();
+extern "C" extern void init__17JAUSoundNameTableFPCv();
+extern "C" extern void __ct__18JAUStreamFileTableFv();
+extern "C" extern void init__18JAUStreamFileTableFPCv();
+extern "C" extern void getNumFiles__18JAUStreamFileTableCFv();
+extern "C" extern void getFilePath__18JAUStreamFileTableCFi();
+extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
+extern "C" extern void freeTail__7JKRHeapFv();
+extern "C" extern void getFreeSize__7JKRHeapFv();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __nwa__FUl();
+extern "C" extern void __nwa__FUli();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void create__12JKRSolidHeapFUlP7JKRHeapb();
+extern "C" extern void __ct__11JKRDisposerFv();
+extern "C" extern void __dt__11JKRDisposerFv();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void DVDConvertPathToEntrynum();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void abort();
+extern "C" extern void fprintf();
 SECTION_RODATA extern const u8 JAUSectionHeap__stringBase0[112];
-SECTION_DATA extern void* __vt__11JASBankList[4];
-SECTION_DATA extern void* __vt__7JASBank[5];
-SECTION_DATA extern void* __vt__12JASVoiceBank[6];
-SECTION_DATA extern void* __vt__13JAISeqDataMgr[6];
-SECTION_DATA extern void* __vt__16JAIStreamDataMgr[5];
-SECTION_DATA extern void* __vt__14JAUSectionHeap[13];
-SECTION_DATA extern void* __vt__16JAUBankTableLink[5];
-SECTION_DATA extern void* __vt__12JAUBankTable[3];
-SECTION_DATA extern void* data_803C9B14[4];
-SECTION_DATA extern void* __vt__10JAUSection[5];
-SECTION_DATA extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
-SECTION_DATA extern u8 __files[320];
-SECTION_SDATA extern u8 LIT_2588[8];
+SECTION_DATA extern void* const __vt__11JASBankList[4];
+SECTION_DATA extern void* const __vt__7JASBank[5];
+SECTION_DATA extern void* const __vt__12JASVoiceBank[6];
+SECTION_DATA extern void* const __vt__13JAISeqDataMgr[6];
+SECTION_DATA extern void* const __vt__16JAIStreamDataMgr[5];
+SECTION_DATA extern void* const __vt__14JAUSectionHeap[13];
+SECTION_DATA extern void* const __vt__16JAUBankTableLink[5];
+SECTION_DATA extern void* const __vt__12JAUBankTable[3];
+SECTION_DATA extern void* const data_803C9B14[4];
+SECTION_DATA extern void* const __vt__10JAUSection[5];
+SECTION_DATA extern void* const __vt__32JAUStreamDataMgr_StreamFileTable[4];
+SECTION_DATA extern void* __files[80];
+SECTION_SDATA extern u8 lit_2588[8];
 SECTION_SBSS extern u8 data_80450B50[4];
 SECTION_SBSS extern u8 data_80450B54[4];
 SECTION_SBSS extern u8 data_80450B58[4];
 SECTION_SBSS extern u8 data_80450B90[4 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
 SECTION_SBSS extern u8 JASDram[4];
+
+// 
+// Functions:
+// 
+
+/* 802A4EE8-802A4F68 0080 .text      __ct__Q210JAUSection12TSectionDataFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__Q210JAUSection12TSectionDataFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAUSectionHeap/__ct__Q210JAUSection12TSectionDataFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039B950-8039B9C0 0069 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -148,16 +156,32 @@ SECTION_DEAD const char* const stringBase_8039B997 =
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039B9B9 = "\0\0\0\0\0\0";
 #pragma pop
+
+/* 802A4F68-802A4FE4 007C .text      resetRegisteredBankTables__Q210JAUSection12TSectionDataFv    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAUSectionHeap/resetRegisteredBankTables__Q210JAUSection12TSectionDataFv.s"
 }
+#pragma pop
+
+
+/* 802A4FE4-802A5060 007C .text      resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAUSectionHeap/resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9AC0-803C9AF4 0034 .data      __vt__14JAUSectionHeap                                       */
-SECTION_DATA void* __vt__14JAUSectionHeap[13] = {
+void* const __vt__14JAUSectionHeap[13] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JAUSectionHeapFv,
@@ -172,29 +196,33 @@ SECTION_DATA void* __vt__14JAUSectionHeap[13] = {
 	(void*)getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData,
 	(void*)releaseSeqData__14JAUSectionHeapFv,
 };
+
 /* 803C9AF4-803C9B08 0014 .data      __vt__16JAUBankTableLink                                     */
-SECTION_DATA void* __vt__16JAUBankTableLink[5] = {
+void* const __vt__16JAUBankTableLink[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 	(void*)getBank__12JAUBankTableCFUl,
 };
+
 /* 803C9B08-803C9B14 000C .data      __vt__12JAUBankTable                                         */
-SECTION_DATA void* __vt__12JAUBankTable[3] = {
+void* const __vt__12JAUBankTable[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getBank__12JAUBankTableCFUl,
 };
+
 /* 803C9B14-803C9B24 0010 .data      __vt__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgr       */
-SECTION_DATA void* data_803C9B14[4] = {
+void* const data_803C9B14[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_802A6440,
 	(void*)func_802A6574,
 };
+
 /* 803C9B24-803C9B38 0010 .data      __vt__10JAUSection                                           */
-SECTION_DATA void* __vt__10JAUSection[5] = {
+void* const __vt__10JAUSection[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JAUSectionFv,
@@ -202,462 +230,460 @@ SECTION_DATA void* __vt__10JAUSection[5] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804507D0-804507D8 0004 .sdata     @2588                                                        */
-SECTION_SDATA u8 LIT_2588[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802A4EE8-802A4F68 0080 .text      __ct__Q210JAUSection12TSectionDataFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__Q210JAUSection12TSectionDataFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAUSectionHeap/__ct__Q210JAUSection12TSectionDataFv.s"
-}
-#pragma pop
-
-/* 802A4F68-802A4FE4 007C .text      resetRegisteredBankTables__Q210JAUSection12TSectionDataFv    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAUSectionHeap/resetRegisteredBankTables__Q210JAUSection12TSectionDataFv.s"
-}
-#pragma pop
-
-/* 802A4FE4-802A5060 007C .text      resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAUSectionHeap/resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv.s"
-}
-#pragma pop
 
 /* 802A5060-802A50F8 0098 .text      __ct__10JAUSectionFP14JAUSectionHeapUll                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10JAUSectionFP14JAUSectionHeapUll() {
+extern "C" asm void __ct__10JAUSectionFP14JAUSectionHeapUll() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/__ct__10JAUSectionFP14JAUSectionHeapUll.s"
 }
 #pragma pop
 
+
 /* 802A50F8-802A5160 0068 .text      finishBuild__10JAUSectionFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void finishBuild__10JAUSectionFv() {
+extern "C" asm void finishBuild__10JAUSectionFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/finishBuild__10JAUSectionFv.s"
 }
 #pragma pop
 
+
 /* 802A5160-802A51E4 0084 .text      dispose__10JAUSectionFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dispose__10JAUSectionFv() {
+extern "C" asm void dispose__10JAUSectionFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/dispose__10JAUSectionFv.s"
 }
 #pragma pop
 
+
 /* 802A51E4-802A52A0 00BC .text      newSoundTable__10JAUSectionFPCvUlb                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newSoundTable__10JAUSectionFPCvUlb() {
+extern "C" asm void newSoundTable__10JAUSectionFPCvUlb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newSoundTable__10JAUSectionFPCvUlb.s"
 }
 #pragma pop
 
+
 /* 802A52A0-802A535C 00BC .text      newSoundNameTable__10JAUSectionFPCvUlb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newSoundNameTable__10JAUSectionFPCvUlb() {
+extern "C" asm void newSoundNameTable__10JAUSectionFPCvUlb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newSoundNameTable__10JAUSectionFPCvUlb.s"
 }
 #pragma pop
 
+
 /* 802A535C-802A5500 01A4 .text      newStreamFileTable__10JAUSectionFPCvb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newStreamFileTable__10JAUSectionFPCvb() {
+extern "C" asm void newStreamFileTable__10JAUSectionFPCvb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newStreamFileTable__10JAUSectionFPCvb.s"
 }
 #pragma pop
 
+
 /* 802A5500-802A5598 0098 .text      newSeSeqCollection__10JAUSectionFPCvUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newSeSeqCollection__10JAUSectionFPCvUl() {
+extern "C" asm void newSeSeqCollection__10JAUSectionFPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newSeSeqCollection__10JAUSectionFPCvUl.s"
 }
 #pragma pop
 
+
 /* 802A5598-802A56C8 0130 .text      newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl() {
+extern "C" asm void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl.s"
 }
 #pragma pop
 
+
 /* 802A56C8-802A5730 0068 .text      newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl() {
+extern "C" asm void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl.s"
 }
 #pragma pop
 
+
 /* 802A5730-802A57F0 00C0 .text      newStaticSeqData__10JAUSectionF10JAISoundID                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newStaticSeqData__10JAUSectionF10JAISoundID() {
+extern "C" asm void newStaticSeqData__10JAUSectionF10JAISoundID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newStaticSeqData__10JAUSectionF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802A57F0-802A5854 0064 .text      newCopy__10JAUSectionFPCvUll                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newCopy__10JAUSectionFPCvUll() {
+extern "C" asm void newCopy__10JAUSectionFPCvUll() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newCopy__10JAUSectionFPCvUll.s"
 }
 #pragma pop
 
+
 /* 802A5854-802A5948 00F4 .text      newWaveBank__10JAUSectionFUlPCv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newWaveBank__10JAUSectionFUlPCv() {
+extern "C" asm void newWaveBank__10JAUSectionFUlPCv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newWaveBank__10JAUSectionFUlPCv.s"
 }
 #pragma pop
 
+
 /* 802A5948-802A5A50 0108 .text      loadWaveArc__10JAUSectionFUlUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadWaveArc__10JAUSectionFUlUl() {
+extern "C" asm void loadWaveArc__10JAUSectionFUlUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/loadWaveArc__10JAUSectionFUlUl.s"
 }
 #pragma pop
 
+
 /* 802A5A50-802A5B84 0134 .text      newBank__10JAUSectionFPCvUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newBank__10JAUSectionFPCvUl() {
+extern "C" asm void newBank__10JAUSectionFPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newBank__10JAUSectionFPCvUl.s"
 }
 #pragma pop
 
+
 /* 802A5B84-802A5CAC 0128 .text      newVoiceBank__10JAUSectionFUlUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newVoiceBank__10JAUSectionFUlUl() {
+extern "C" asm void newVoiceBank__10JAUSectionFUlUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newVoiceBank__10JAUSectionFUlUl.s"
 }
 #pragma pop
 
+
 /* 802A5CAC-802A5D9C 00F0 .text      beginNewBankTable__10JAUSectionFUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void beginNewBankTable__10JAUSectionFUlUl() {
+extern "C" asm void beginNewBankTable__10JAUSectionFUlUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/beginNewBankTable__10JAUSectionFUlUl.s"
 }
 #pragma pop
 
+
 /* 802A5D9C-802A5DF4 0058 .text      endNewBankTable__10JAUSectionFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void endNewBankTable__10JAUSectionFv() {
+extern "C" asm void endNewBankTable__10JAUSectionFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/endNewBankTable__10JAUSectionFv.s"
 }
 #pragma pop
 
+
 /* 802A5DF4-802A5E60 006C .text      __ct__Q214JAUSectionHeap16TSectionHeapDataFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q214JAUSectionHeap16TSectionHeapDataFv() {
+extern "C" asm void __ct__Q214JAUSectionHeap16TSectionHeapDataFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/__ct__Q214JAUSectionHeap16TSectionHeapDataFv.s"
 }
 #pragma pop
 
+
 /* 802A5E60-802A5EC0 0060 .text      setSeqDataArchive__14JAUSectionHeapFP10JKRArchive            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive() {
+extern "C" asm void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/setSeqDataArchive__14JAUSectionHeapFP10JKRArchive.s"
 }
 #pragma pop
 
+
 /* 802A5EC0-802A5EF8 0038 .text      loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb() {
+extern "C" asm void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb.s"
 }
 #pragma pop
 
+
 /* 802A5EF8-802A5F24 002C .text      releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv() {
+extern "C" asm void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv.s"
 }
 #pragma pop
 
+
 /* 802A5F24-802A5F9C 0078 .text      JAUNewSectionHeap__FP12JKRSolidHeapb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAUNewSectionHeap__FP12JKRSolidHeapb() {
+extern "C" asm void JAUNewSectionHeap__FP12JKRSolidHeapb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/JAUNewSectionHeap__FP12JKRSolidHeapb.s"
 }
 #pragma pop
 
+
 /* 802A5F9C-802A5FE0 0044 .text      JAUNewSectionHeap__Fb                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAUNewSectionHeap__Fb() {
+extern "C" asm void JAUNewSectionHeap__Fb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/JAUNewSectionHeap__Fb.s"
 }
 #pragma pop
 
+
 /* 802A5FE0-802A6094 00B4 .text      __ct__14JAUSectionHeapFP12JKRSolidHeapbl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14JAUSectionHeapFP12JKRSolidHeapbl() {
+extern "C" asm void __ct__14JAUSectionHeapFP12JKRSolidHeapbl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/__ct__14JAUSectionHeapFP12JKRSolidHeapbl.s"
 }
 #pragma pop
 
+
 /* 802A6094-802A60A0 000C .text      getOpenSection__14JAUSectionHeapFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getOpenSection__14JAUSectionHeapFv() {
+extern "C" asm void getOpenSection__14JAUSectionHeapFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/getOpenSection__14JAUSectionHeapFv.s"
 }
 #pragma pop
 
+
 /* 802A60A0-802A60AC 000C .text      setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser() {
+extern "C" asm void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser.s"
 }
 #pragma pop
 
+
 /* 802A60AC-802A61D0 0124 .text      newDynamicSeqBlock__14JAUSectionHeapFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newDynamicSeqBlock__14JAUSectionHeapFUl() {
+extern "C" asm void newDynamicSeqBlock__14JAUSectionHeapFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/newDynamicSeqBlock__14JAUSectionHeapFUl.s"
 }
 #pragma pop
 
+
 /* 802A61D0-802A6270 00A0 .text      getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData() {
+extern "C" asm void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData.s"
 }
 #pragma pop
 
+
 /* 802A6270-802A6278 0008 .text      releaseSeqData__14JAUSectionHeapFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void releaseSeqData__14JAUSectionHeapFv() {
+extern "C" asm void releaseSeqData__14JAUSectionHeapFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/releaseSeqData__14JAUSectionHeapFv.s"
 }
 #pragma pop
 
+
 /* 802A6278-802A6440 01C8 .text      __dt__14JAUSectionHeapFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14JAUSectionHeapFv() {
+extern "C" asm void __dt__14JAUSectionHeapFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/__dt__14JAUSectionHeapFv.s"
 }
 #pragma pop
 
+
 /* 802A6440-802A6468 0028 .text      getStreamFileEntry__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrF10JAISoundID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6440() {
+extern "C" asm void func_802A6440() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6440.s"
 }
 #pragma pop
 
+
 /* 802A6468-802A6574 010C .text      __dt__10JAUSectionFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10JAUSectionFv() {
+extern "C" asm void __dt__10JAUSectionFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/__dt__10JAUSectionFv.s"
 }
 #pragma pop
 
+
 /* 802A6574-802A65D4 0060 .text      __dt__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6574() {
+extern "C" asm void func_802A6574() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6574.s"
 }
 #pragma pop
 
+
 /* 802A65D4-802A6614 0040 .text      set__Q23std16__bitset_base<8>FUlb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A65D4() {
+extern "C" asm void func_802A65D4() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A65D4.s"
 }
 #pragma pop
 
+
 /* 802A6614-802A6634 0020 .text      reset__Q23std16__bitset_base<8>FUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6614() {
+extern "C" asm void func_802A6614() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6614.s"
 }
 #pragma pop
 
+
 /* 802A6634-802A665C 0028 .text      test__Q23std16__bitset_base<8>CFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6634() {
+extern "C" asm void func_802A6634() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6634.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804507D0-804507D8 0004 .sdata     @2588                                                        */
+u8 lit_2588[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 802A665C-802A6680 0024 .text      __ct__Q23std16__bitset_base<8>Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A665C() {
+extern "C" asm void func_802A665C() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A665C.s"
 }
 #pragma pop
 
+
 /* 802A6680-802A6688 0008 .text      @220@setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6680() {
+extern "C" asm void func_802A6680() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6680.s"
 }
 #pragma pop
 
+
 /* 802A6688-802A6690 0008 .text      @220@releaseSeqData__14JAUSectionHeapFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6688() {
+extern "C" asm void func_802A6688() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6688.s"
 }
 #pragma pop
 
+
 /* 802A6690-802A6698 0008 .text      @220@getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6690() {
+extern "C" asm void func_802A6690() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6690.s"
 }
 #pragma pop
 
+
 /* 802A6698-802A66A0 0008 .text      @220@__dt__14JAUSectionHeapFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A6698() {
+extern "C" asm void func_802A6698() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6698.s"
 }

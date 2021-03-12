@@ -45,8 +45,8 @@ lbl_800171D8:
 /* 800171E0 00000008  38 03 00 0D */	addi r0, r3, 0xd
 /* 800171E4 0000000C  28 00 00 0D */	cmplwi r0, 0xd
 /* 800171E8 00000010  41 81 00 74 */	bgt lbl_8001725C
-/* 800171EC 00000014  3C 60 80 3A */	lis r3, m_Do_m_Do_MemCard__LIT_3850@ha
-/* 800171F0 00000018  38 63 35 30 */	addi r3, r3, m_Do_m_Do_MemCard__LIT_3850@l
+/* 800171EC 00000014  3C 60 80 3A */	lis r3, m_Do_m_Do_MemCard__lit_3850@ha
+/* 800171F0 00000018  38 63 35 30 */	addi r3, r3, m_Do_m_Do_MemCard__lit_3850@l
 /* 800171F4 0000001C  54 00 10 3A */	slwi r0, r0, 2
 /* 800171F8 00000020  7C 03 00 2E */	lwzx r0, r3, r0
 /* 800171FC 00000024  7C 09 03 A6 */	mtctr r0

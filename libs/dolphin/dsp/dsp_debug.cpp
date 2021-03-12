@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __DSP_debug_printf();
-}
+extern "C" extern void __DSP_debug_printf();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80352580-803525D0 0050 .text      __DSP_debug_printf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DSP_debug_printf() {
+extern "C" asm void __DSP_debug_printf() {
 	nofralloc
 #include "asm/dolphin/dsp/dsp_debug/__DSP_debug_printf.s"
 }

@@ -5,104 +5,107 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
 SECTION_INIT extern void memcpy();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __OSLockSramEx();
-extern void __OSUnlockSramEx();
-extern void __CARDSyncCallback();
-extern void __CARDGetFontEncode();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDUpdateFatBlock();
-extern void __CARDUpdateDir();
-extern void __CARDCheckSum();
-extern void VerifyID();
-extern void VerifyDir();
-extern void VerifyFAT();
-extern void __CARDVerify();
-extern void CARDCheckExAsync();
-extern void CARDCheck();
-extern void __shr2i();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __OSLockSramEx();
+extern "C" extern void __OSUnlockSramEx();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDGetFontEncode();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDUpdateFatBlock();
+extern "C" extern void __CARDUpdateDir();
+extern "C" extern void __CARDCheckSum();
+extern "C" extern void VerifyID();
+extern "C" extern void VerifyDir();
+extern "C" extern void VerifyFAT();
+extern "C" extern void __CARDVerify();
+extern "C" extern void CARDCheckExAsync();
+extern "C" extern void CARDCheck();
+extern "C" extern void __shr2i();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803559E0-80355B90 01B0 .text      __CARDCheckSum                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDCheckSum() {
+extern "C" asm void __CARDCheckSum() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/__CARDCheckSum.s"
 }
 #pragma pop
 
+
 /* 80355B90-80355E14 0284 .text      VerifyID                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void VerifyID() {
+extern "C" asm void VerifyID() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyID.s"
 }
 #pragma pop
 
+
 /* 80355E14-80356054 0240 .text      VerifyDir                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void VerifyDir() {
+extern "C" asm void VerifyDir() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyDir.s"
 }
 #pragma pop
 
+
 /* 80356054-803562D8 0284 .text      VerifyFAT                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void VerifyFAT() {
+extern "C" asm void VerifyFAT() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyFAT.s"
 }
 #pragma pop
 
+
 /* 803562D8-80356364 008C .text      __CARDVerify                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDVerify() {
+extern "C" asm void __CARDVerify() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/__CARDVerify.s"
 }
 #pragma pop
 
+
 /* 80356364-803568F4 0590 .text      CARDCheckExAsync                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDCheckExAsync() {
+extern "C" asm void CARDCheckExAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/CARDCheckExAsync.s"
 }
 #pragma pop
 
+
 /* 803568F4-80356948 0054 .text      CARDCheck                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDCheck() {
+extern "C" asm void CARDCheck() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/CARDCheck.s"
 }

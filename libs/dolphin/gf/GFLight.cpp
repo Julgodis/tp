@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void GFSetChanAmbColor__F12_GXChannelID8_GXColor();
-}
+extern "C" extern void GFSetChanAmbColor__F12_GXChannelID8_GXColor();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802CDE54-802CDE9C 0048 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetChanAmbColor__F12_GXChannelID8_GXColor() {
+extern "C" asm void GFSetChanAmbColor__F12_GXChannelID8_GXColor() {
 	nofralloc
 #include "asm/dolphin/gf/GFLight/GFSetChanAmbColor__F12_GXChannelID8_GXColor.s"
 }

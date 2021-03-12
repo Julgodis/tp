@@ -14,7 +14,7 @@ lbl_802CD34C:
 /* 802CD37C 00000030  93 01 00 4C */	stw r24, 0x4c(r1)
 /* 802CD380 00000034  38 00 00 8C */	li r0, 0x8c
 /* 802CD384 00000038  90 01 00 64 */	stw r0, 0x64(r1)
-/* 802CD388 0000003C  C0 02 C5 58 */	lfs f0, LIT_3931(r2)
+/* 802CD388 0000003C  C0 02 C5 58 */	lfs f0, lit_3931(r2)
 /* 802CD38C 00000040  D0 01 00 74 */	stfs f0, 0x74(r1)
 /* 802CD390 00000044  3C 60 80 3A */	lis r3, Z2AudioMgr__stringBase0@ha
 /* 802CD394 00000048  38 03 CA 58 */	addi r0, r3, Z2AudioMgr__stringBase0@l
@@ -107,7 +107,7 @@ lbl_802CD34C:
 /* 802CD4F0 000001A4  38 80 00 00 */	li r4, 0
 /* 802CD4F4 000001A8  4B FD 58 C1 */	bl moveVolume__18JAISoundParamsMoveFfUl
 /* 802CD4F8 000001AC  38 7F 06 D4 */	addi r3, r31, 0x6d4
-/* 802CD4FC 000001B0  C0 22 C5 5C */	lfs f1, LIT_3932(r2)
+/* 802CD4FC 000001B0  C0 22 C5 5C */	lfs f1, lit_3932(r2)
 /* 802CD500 000001B4  38 80 00 00 */	li r4, 0
 /* 802CD504 000001B8  4B FD 58 B1 */	bl moveVolume__18JAISoundParamsMoveFfUl
 /* 802CD508 000001BC  3B BE 0C 58 */	addi r29, r30, 0xc58
@@ -187,8 +187,8 @@ lbl_802CD5F4:
 /* 802CD624 00000030  38 63 41 E4 */	addi r3, r3, data_804341E4@l
 /* 802CD628 00000034  3C 80 80 2C */	lis r4, func_802BD288@ha
 /* 802CD62C 00000038  38 84 D2 88 */	addi r4, r4, func_802BD288@l
-/* 802CD630 0000003C  3C A0 80 43 */	lis r5, Z2AudioMgr__LIT_3779@ha
-/* 802CD634 00000040  38 A5 42 68 */	addi r5, r5, Z2AudioMgr__LIT_3779@l
+/* 802CD630 0000003C  3C A0 80 43 */	lis r5, Z2AudioMgr__lit_3779@ha
+/* 802CD634 00000040  38 A5 42 68 */	addi r5, r5, Z2AudioMgr__lit_3779@l
 /* 802CD638 00000044  48 09 45 ED */	bl __register_global_object
 /* 802CD63C 00000048  38 00 00 01 */	li r0, 1
 /* 802CD640 0000004C  98 0D 8D D4 */	stb r0, data_80451354(r13)
@@ -213,8 +213,8 @@ lbl_802CD644:
 /* 802CD688 00000044  38 63 41 C4 */	addi r3, r3, data_804341C4@l
 /* 802CD68C 00000048  3C 80 80 2B */	lis r4, func_802AB200@ha
 /* 802CD690 0000004C  38 84 B2 00 */	addi r4, r4, func_802AB200@l
-/* 802CD694 00000050  3C A0 80 43 */	lis r5, LIT_3783@ha
-/* 802CD698 00000054  38 A5 42 74 */	addi r5, r5, LIT_3783@l
+/* 802CD694 00000050  3C A0 80 43 */	lis r5, lit_3783@ha
+/* 802CD698 00000054  38 A5 42 74 */	addi r5, r5, lit_3783@l
 /* 802CD69C 00000058  48 09 45 89 */	bl __register_global_object
 /* 802CD6A0 0000005C  38 00 00 01 */	li r0, 1
 /* 802CD6A4 00000060  98 0D 8D C8 */	stb r0, data_80451348(r13)

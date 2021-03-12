@@ -15,10 +15,10 @@ lbl_801B77A4:
 /* 801B77D8 00000034  4E 80 04 21 */	bctrl 
 /* 801B77DC 00000038  80 7E 00 04 */	lwz r3, 4(r30)
 /* 801B77E0 0000003C  80 63 00 8C */	lwz r3, 0x8c(r3)
-/* 801B77E4 00000040  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B77E4 00000040  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B77E8 00000044  FC 40 08 90 */	fmr f2, f1
-/* 801B77EC 00000048  C0 62 A5 C4 */	lfs f3, LIT_7944(r2)
-/* 801B77F0 0000004C  C0 82 A5 C8 */	lfs f4, d_menu_d_menu_collect__LIT_7945(r2)
+/* 801B77EC 00000048  C0 62 A5 C4 */	lfs f3, lit_7944(r2)
+/* 801B77F0 0000004C  C0 82 A5 C8 */	lfs f4, d_menu_d_menu_collect__lit_7945(r2)
 /* 801B77F4 00000050  38 80 00 00 */	li r4, 0
 /* 801B77F8 00000054  38 A0 00 00 */	li r5, 0
 /* 801B77FC 00000058  38 C0 00 00 */	li r6, 0
@@ -66,7 +66,7 @@ lbl_801B7888:
 /* 801B788C 00000004  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 801B7890 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 801B7894 0000000C  41 82 00 14 */	beq lbl_801B78A8
-/* 801B7898 00000010  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B7898 00000010  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B789C 00000014  FC 40 08 90 */	fmr f2, f1
 /* 801B78A0 00000018  7F E4 FB 78 */	mr r4, r31
 /* 801B78A4 0000001C  48 14 16 31 */	bl draw__9J2DScreenFffPC14J2DGrafContext

@@ -25,7 +25,7 @@ lbl_8005B780:
 /* 8005B7DC 00000040  C0 01 00 0C */	lfs f0, 0xc(r1)
 /* 8005B7E0 00000044  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8005B7E4 00000048  EC 21 00 2A */	fadds f1, f1, f0
-/* 8005B7E8 0000004C  C0 02 87 BC */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3970(r2)
+/* 8005B7E8 0000004C  C0 02 87 BC */	lfs f0, d_kankyo_d_kankyo_rain__lit_3970(r2)
 /* 8005B7EC 00000050  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8005B7F0 00000054  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 8005B7F4 00000058  C0 3E 00 E0 */	lfs f1, 0xe0(r30)

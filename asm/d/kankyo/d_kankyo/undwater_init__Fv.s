@@ -63,7 +63,7 @@ lbl_8019EB58:
 /* 8019EB90 00000038  38 9B 00 58 */	addi r4, r27, 0x58
 /* 8019EB94 0000003C  38 C0 00 01 */	li r6, 1
 /* 8019EB98 00000040  38 E0 00 02 */	li r7, 2
-/* 8019EB9C 00000044  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 8019EB9C 00000044  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
 /* 8019EBA0 00000048  39 00 00 00 */	li r8, 0
 /* 8019EBA4 0000004C  39 20 FF FF */	li r9, -1
 /* 8019EBA8 00000050  4B E6 EA 95 */	bl init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss

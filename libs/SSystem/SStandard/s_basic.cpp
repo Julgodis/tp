@@ -5,34 +5,32 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void sBs_FillArea_s__FPvUls();
-extern void sBs_ClearArea__FPvUl();
-}
+extern "C" extern void sBs_FillArea_s__FPvUls();
+extern "C" extern void sBs_ClearArea__FPvUl();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80271C8C-80271CAC 0020 .text      sBs_FillArea_s__FPvUls                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sBs_FillArea_s__FPvUls() {
+extern "C" asm void sBs_FillArea_s__FPvUls() {
 	nofralloc
 #include "asm/SSystem/SStandard/s_basic/sBs_FillArea_s__FPvUls.s"
 }
 #pragma pop
 
+
 /* 80271CAC-80271CD0 0024 .text      sBs_ClearArea__FPvUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sBs_ClearArea__FPvUl() {
+extern "C" asm void sBs_ClearArea__FPvUl() {
 	nofralloc
 #include "asm/SSystem/SStandard/s_basic/sBs_ClearArea__FPvUl.s"
 }

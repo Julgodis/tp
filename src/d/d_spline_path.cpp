@@ -5,113 +5,107 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void Init__14d2DBSplinePathFll();
-extern void Step__14d2DBSplinePathFv();
-extern void Calc__14d2DBSplinePathFP4cXyz();
-extern void Calc__14d2DBSplinePathFPf();
-extern void Spot__14d2DBSplinePathFPff();
-extern void Init__10dPathCurveFP5dPath();
-extern void bSpline2__10dPathCurveFf();
-extern void PSVECAdd();
-SECTION_SDATA2 extern u8 LIT_3632[8];
-SECTION_SDATA2 extern u8 d_d_spline_path__LIT_3684[4];
-SECTION_SDATA2 extern u8 d_d_spline_path__LIT_3685[4];
-}
+extern "C" extern void Init__14d2DBSplinePathFll();
+extern "C" extern void Step__14d2DBSplinePathFv();
+extern "C" extern void Calc__14d2DBSplinePathFP4cXyz();
+extern "C" extern void Calc__14d2DBSplinePathFPf();
+extern "C" extern void Spot__14d2DBSplinePathFPff();
+extern "C" extern void Init__10dPathCurveFP5dPath();
+extern "C" extern void bSpline2__10dPathCurveFf();
+extern "C" extern void PSVECAdd();
+SECTION_SDATA2 extern f64 lit_3632;
+SECTION_SDATA2 extern f32 d_d_spline_path__lit_3684;
+SECTION_SDATA2 extern f32 d_d_spline_path__lit_3685;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80452BC8-80452BD0 0008 .sdata2    @3632                                                        */
-SECTION_SDATA2 u8 LIT_3632[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80452BD0-80452BD4 0004 .sdata2    @3684                                                        */
-SECTION_SDATA2 u8 d_d_spline_path__LIT_3684[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80452BD4-80452BD8 0004 .sdata2    @3685                                                        */
-SECTION_SDATA2 u8 d_d_spline_path__LIT_3685[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 lit_3632 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80097878-80097904 008C .text      Init__14d2DBSplinePathFll                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Init__14d2DBSplinePathFll() {
+extern "C" asm void Init__14d2DBSplinePathFll() {
 	nofralloc
 #include "asm/d/d_spline_path/Init__14d2DBSplinePathFll.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452BD0-80452BD4 0004 .sdata2    @3684                                                        */
+f32 d_d_spline_path__lit_3684 = 1.0f;
+
+/* 80452BD4-80452BD8 0004 .sdata2    @3685                                                        */
+f32 d_d_spline_path__lit_3685 = 0.5f;
+
 /* 80097904-80097A6C 0168 .text      Step__14d2DBSplinePathFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Step__14d2DBSplinePathFv() {
+extern "C" asm void Step__14d2DBSplinePathFv() {
 	nofralloc
 #include "asm/d/d_spline_path/Step__14d2DBSplinePathFv.s"
 }
 #pragma pop
 
+
 /* 80097A6C-80097B20 00B4 .text      Calc__14d2DBSplinePathFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Calc__14d2DBSplinePathFP4cXyz() {
+extern "C" asm void Calc__14d2DBSplinePathFP4cXyz() {
 	nofralloc
 #include "asm/d/d_spline_path/Calc__14d2DBSplinePathFP4cXyz.s"
 }
 #pragma pop
 
+
 /* 80097B20-80097B68 0048 .text      Calc__14d2DBSplinePathFPf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Calc__14d2DBSplinePathFPf() {
+extern "C" asm void Calc__14d2DBSplinePathFPf() {
 	nofralloc
 #include "asm/d/d_spline_path/Calc__14d2DBSplinePathFPf.s"
 }
 #pragma pop
 
+
 /* 80097B68-80097C5C 00F4 .text      Spot__14d2DBSplinePathFPff                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Spot__14d2DBSplinePathFPff() {
+extern "C" asm void Spot__14d2DBSplinePathFPff() {
 	nofralloc
 #include "asm/d/d_spline_path/Spot__14d2DBSplinePathFPff.s"
 }
 #pragma pop
 
+
 /* 80097C5C-80097C74 0018 .text      Init__10dPathCurveFP5dPath                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Init__10dPathCurveFP5dPath() {
+extern "C" asm void Init__10dPathCurveFP5dPath() {
 	nofralloc
 #include "asm/d/d_spline_path/Init__10dPathCurveFP5dPath.s"
 }
 #pragma pop
 
+
 /* 80097C74-80097E8C 0218 .text      bSpline2__10dPathCurveFf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void bSpline2__10dPathCurveFf() {
+extern "C" asm void bSpline2__10dPathCurveFf() {
 	nofralloc
 #include "asm/d/d_spline_path/bSpline2__10dPathCurveFf.s"
 }

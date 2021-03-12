@@ -15,8 +15,8 @@ lbl_8002FD18:
 /* 8002FD4C 00000034  48 00 04 F9 */	bl __ct__13dComIfG_inf_cFv
 /* 8002FD50 00000038  3C 80 80 03 */	lis r4, __dt__13dComIfG_inf_cFv@ha
 /* 8002FD54 0000003C  38 84 FD 74 */	addi r4, r4, __dt__13dComIfG_inf_cFv@l
-/* 8002FD58 00000040  3C A0 80 40 */	lis r5, d_com_d_com_inf_game__LIT_5065@ha
-/* 8002FD5C 00000044  38 A5 61 B4 */	addi r5, r5, d_com_d_com_inf_game__LIT_5065@l
+/* 8002FD58 00000040  3C A0 80 40 */	lis r5, d_com_d_com_inf_game__lit_5065@ha
+/* 8002FD5C 00000044  38 A5 61 B4 */	addi r5, r5, d_com_d_com_inf_game__lit_5065@l
 /* 8002FD60 00000048  48 33 1E C5 */	bl __register_global_object
 /* 8002FD64 0000004C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8002FD68 00000050  7C 08 03 A6 */	mtlr r0

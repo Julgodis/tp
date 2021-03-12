@@ -5,20 +5,15 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804519A8-804519B0 0004 .sbss      errno                                                        */
-SECTION_SBSS u8 errno[4 + 4 /* padding */];
-}
+u8 errno[4 + 4 /* padding */];
 

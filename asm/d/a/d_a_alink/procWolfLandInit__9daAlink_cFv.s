@@ -6,7 +6,7 @@ lbl_8012F138:
 /* 8012F148 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8012F14C 00000014  38 80 00 FE */	li r4, 0xfe
 /* 8012F150 00000018  4B F9 2E 1D */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 8012F154 0000001C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8012F154 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8012F158 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8012F15C 00000024  38 00 00 0C */	li r0, 0xc
 /* 8012F160 00000028  98 1F 2F 99 */	stb r0, 0x2f99(r31)
@@ -27,9 +27,9 @@ lbl_8012F138:
 /* 8012F19C 00000064  7F E3 FB 78 */	mr r3, r31
 /* 8012F1A0 00000068  38 80 00 04 */	li r4, 4
 /* 8012F1A4 0000006C  4B FF 20 1D */	bl setFootEffectProcType__9daAlink_cFi
-/* 8012F1A8 00000070  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8012F1A8 00000070  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8012F1AC 00000074  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8012F1B0 00000078  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 8012F1B0 00000078  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 8012F1B4 0000007C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8012F1B8 00000080  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8012F1BC 00000084  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

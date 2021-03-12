@@ -9,8 +9,8 @@ lbl_80259324:
 /* 80259340 0000001C  4B FF F4 4D */	bl __ct__9dSn_HIO_cFv
 /* 80259344 00000020  3C 80 80 26 */	lis r4, __dt__9dSn_HIO_cFv@ha
 /* 80259348 00000024  38 84 92 DC */	addi r4, r4, __dt__9dSn_HIO_cFv@l
-/* 8025934C 00000028  3C A0 80 43 */	lis r5, d_s_d_s_name__LIT_3822@ha
-/* 80259350 0000002C  38 A5 07 68 */	addi r5, r5, d_s_d_s_name__LIT_3822@l
+/* 8025934C 00000028  3C A0 80 43 */	lis r5, d_s_d_s_name__lit_3822@ha
+/* 80259350 0000002C  38 A5 07 68 */	addi r5, r5, d_s_d_s_name__lit_3822@l
 /* 80259354 00000030  48 10 88 D1 */	bl __register_global_object
 /* 80259358 00000034  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8025935C 00000038  80 1F 00 10 */	lwz r0, 0x10(r31)

@@ -5,90 +5,102 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern void changeBgmStatus__8Z2SeqMgrFl();
-extern void changeSubBgmStatus__8Z2SeqMgrFl();
-extern void setBattleSearched__8Z2SeqMgrFb();
-extern void setBattleGhostMute__8Z2SeqMgrFb();
-extern void setBattleDistState__8Z2SeqMgrFUc();
-extern void stopBattleBgm__8Z2SeqMgrFUcUc();
-extern void __ct__13Z2SoundObjMgrFv();
-extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern void searchEnemy__13Z2SoundObjMgrFv();
-extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
-extern void func_802C0074();
-extern void setBattleInit__13Z2SoundObjMgrFv();
-extern void checkBattleFinish__13Z2SoundObjMgrFv();
-extern void deleteEnemyAll__13Z2SoundObjMgrFv();
-extern void func_802C0190();
-extern void isTwilightBattle__13Z2SoundObjMgrFv();
-extern void __sinit_Z2SoundObjMgr_cpp();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void PSVECSubtract();
-extern void PSVECMag();
-extern void _savegpr_23();
-extern void _savegpr_27();
-extern void _restgpr_23();
-extern void _restgpr_27();
-extern void strcmp();
-SECTION_RODATA extern const u8 LIT_3380[16];
+extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" extern void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" extern void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" extern void setBattleSearched__8Z2SeqMgrFb();
+extern "C" extern void setBattleGhostMute__8Z2SeqMgrFb();
+extern "C" extern void setBattleDistState__8Z2SeqMgrFUc();
+extern "C" extern void stopBattleBgm__8Z2SeqMgrFUcUc();
+extern "C" extern void __ct__13Z2SoundObjMgrFv();
+extern "C" extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" extern void searchEnemy__13Z2SoundObjMgrFv();
+extern "C" extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
+extern "C" extern void func_802C0074();
+extern "C" extern void setBattleInit__13Z2SoundObjMgrFv();
+extern "C" extern void checkBattleFinish__13Z2SoundObjMgrFv();
+extern "C" extern void deleteEnemyAll__13Z2SoundObjMgrFv();
+extern "C" extern void func_802C0190();
+extern "C" extern void isTwilightBattle__13Z2SoundObjMgrFv();
+extern "C" extern void __sinit_Z2SoundObjMgr_cpp();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void PSVECSubtract();
+extern "C" extern void PSVECMag();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_27();
+extern "C" extern void strcmp();
+SECTION_RODATA extern const u8 lit_3380[16];
 SECTION_DATA extern u8 Z2SoundObjMgr__mEnemyInfo[1024];
-SECTION_DATA extern void* Z2SoundObjMgr__LIT_3704[48];
+SECTION_DATA extern void* Z2SoundObjMgr__lit_3704[48];
 SECTION_SBSS extern u8 data_80450B48[4];
 SECTION_SBSS extern u8 data_80450B80[4];
 SECTION_SBSS extern u8 data_80450B84[4];
 SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaDefault[4];
-SECTION_SDATA2 extern u8 data_80455B84[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaFloating[4];
-SECTION_SDATA2 extern u8 data_80455B8C[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaWide[4];
-SECTION_SDATA2 extern u8 data_80455B94[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaWideFloating[4];
-SECTION_SDATA2 extern u8 data_80455B9C[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaSmall[4];
-SECTION_SDATA2 extern u8 data_80455BA4[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__sAreaSmallFloating[4];
-SECTION_SDATA2 extern u8 data_80455BAC[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3694[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3695[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3696[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3697[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3698[4];
-SECTION_SDATA2 extern u8 LIT_3699[4];
-SECTION_SDATA2 extern u8 LIT_3700[4];
-SECTION_SDATA2 extern u8 LIT_3701[4];
-SECTION_SDATA2 extern u8 Z2SoundObjMgr__LIT_3703[8];
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaDefault;
+SECTION_SDATA2 extern u32 data_80455B84;
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaFloating;
+SECTION_SDATA2 extern u32 data_80455B8C;
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaWide;
+SECTION_SDATA2 extern u32 data_80455B94;
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaWideFloating;
+SECTION_SDATA2 extern u32 data_80455B9C;
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaSmall;
+SECTION_SDATA2 extern u32 data_80455BA4;
+SECTION_SDATA2 extern u32 Z2SoundObjMgr__sAreaSmallFloating;
+SECTION_SDATA2 extern u32 data_80455BAC;
+SECTION_SDATA2 extern u8 Z2SoundObjMgr__lit_3694[4];
+SECTION_SDATA2 extern f32 Z2SoundObjMgr__lit_3695;
+SECTION_SDATA2 extern f32 Z2SoundObjMgr__lit_3696;
+SECTION_SDATA2 extern f32 Z2SoundObjMgr__lit_3697;
+SECTION_SDATA2 extern f32 Z2SoundObjMgr__lit_3698;
+SECTION_SDATA2 extern f32 lit_3699;
+SECTION_SDATA2 extern f32 lit_3700;
+SECTION_SDATA2 extern f32 lit_3701;
+SECTION_SDATA2 extern f64 Z2SoundObjMgr__lit_3703;
+
+// 
+// Functions:
+// 
+
+/* 802BF920-802BF980 0060 .text      __ct__13Z2SoundObjMgrFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__13Z2SoundObjMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundObjMgr/__ct__13Z2SoundObjMgrFv.s"
 }
+#pragma pop
+
+
+/* 802BF980-802BF994 0014 .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SoundObjMgr/setForceBattleArea__13Z2SoundObjMgrFbUsUsUs.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039C240-8039C250 000C .rodata    @3380                                                        */
-SECTION_RODATA const u8 LIT_3380[16] = {
+SECTION_RODATA const u8 lit_3380[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CAD70-803CB170 0400 .data      mEnemyInfo                                                   */
-SECTION_DATA u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
+u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
 	0x44, 0x75, 0x6D, 0x6D, 0x79, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x45, 0x5F, 0x73, 0x31, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0xBC, 0x04, 0xB0, 0x07, 0xD0,
 	0x45, 0x5F, 0x79, 0x6B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -154,8 +166,9 @@ SECTION_DATA u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
 	0x45, 0x5F, 0x7A, 0x6D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x42, 0x5F, 0x74, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803CB170-803CB230 00C0 .data      @3704                                                        */
-SECTION_DATA void* Z2SoundObjMgr__LIT_3704[48] = {
+void* Z2SoundObjMgr__lit_3704[48] = {
 	(void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
 	(void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
 	(void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1EC),
@@ -205,210 +218,165 @@ SECTION_DATA void* Z2SoundObjMgr__LIT_3704[48] = {
 	(void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x208),
 	(void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1D0),
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80455B80-80455B84 0004 .sdata2    sAreaDefault                                                 */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaDefault[4] = {
-	0x01, 0x00, 0x02, 0xBC,
-};
+u32 Z2SoundObjMgr__sAreaDefault = 0x010002BC;
+
 /* 80455B84-80455B88 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455B84[4] = {
-	0x04, 0x4C, 0x05, 0xDC,
-};
+u32 data_80455B84 = 0x044C05DC;
+
 /* 80455B88-80455B8C 0004 .sdata2    sAreaFloating                                                */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaFloating[4] = {
-	0x00, 0x00, 0x02, 0xBC,
-};
+u32 Z2SoundObjMgr__sAreaFloating = 0x000002BC;
+
 /* 80455B8C-80455B90 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455B8C[4] = {
-	0x04, 0x4C, 0x05, 0xDC,
-};
+u32 data_80455B8C = 0x044C05DC;
+
 /* 80455B90-80455B94 0004 .sdata2    sAreaWide                                                    */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaWide[4] = {
-	0x01, 0x00, 0x02, 0xBC,
-};
+u32 Z2SoundObjMgr__sAreaWide = 0x010002BC;
+
 /* 80455B94-80455B98 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455B94[4] = {
-	0x05, 0xDC, 0x0C, 0xE4,
-};
+u32 data_80455B94 = 0x05DC0CE4;
+
 /* 80455B98-80455B9C 0004 .sdata2    sAreaWideFloating                                            */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaWideFloating[4] = {
-	0x00, 0x00, 0x02, 0xBC,
-};
+u32 Z2SoundObjMgr__sAreaWideFloating = 0x000002BC;
+
 /* 80455B9C-80455BA0 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455B9C[4] = {
-	0x05, 0xDC, 0x0C, 0xE4,
-};
+u32 data_80455B9C = 0x05DC0CE4;
+
 /* 80455BA0-80455BA4 0004 .sdata2    sAreaSmall                                                   */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaSmall[4] = {
-	0x01, 0x00, 0x01, 0x2C,
-};
+u32 Z2SoundObjMgr__sAreaSmall = 0x0100012C;
+
 /* 80455BA4-80455BA8 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455BA4[4] = {
-	0x02, 0xBC, 0x03, 0xE8,
-};
+u32 data_80455BA4 = 0x02BC03E8;
+
 /* 80455BA8-80455BAC 0004 .sdata2    sAreaSmallFloating                                           */
-SECTION_SDATA2 u8 Z2SoundObjMgr__sAreaSmallFloating[4] = {
-	0x00, 0x00, 0x01, 0xF4,
-};
+u32 Z2SoundObjMgr__sAreaSmallFloating = 0x000001F4;
+
 /* 80455BAC-80455BB0 0004 .sdata2    None                                                         */
-SECTION_SDATA2 u8 data_80455BAC[4] = {
-	0x03, 0x20, 0x04, 0xB0,
-};
+u32 data_80455BAC = 0x032004B0;
+
 /* 80455BB0-80455BB4 0004 .sdata2    @3694                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3694[4] = {
+u8 Z2SoundObjMgr__lit_3694[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80455BB4-80455BB8 0004 .sdata2    @3695                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3695[4] = {
-	0x42, 0xC8, 0x00, 0x00,
-};
+f32 Z2SoundObjMgr__lit_3695 = 100.0f;
+
 /* 80455BB8-80455BBC 0004 .sdata2    @3696                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3696[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
+f32 Z2SoundObjMgr__lit_3696 = 3.0f / 10.0f;
+
 /* 80455BBC-80455BC0 0004 .sdata2    @3697                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3697[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 Z2SoundObjMgr__lit_3697 = 1.0f;
+
 /* 80455BC0-80455BC4 0004 .sdata2    @3698                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3698[4] = {
-	0x40, 0x20, 0x00, 0x00,
-};
+f32 Z2SoundObjMgr__lit_3698 = 2.5f;
+
 /* 80455BC4-80455BC8 0004 .sdata2    @3699                                                        */
-SECTION_SDATA2 u8 LIT_3699[4] = {
-	0x45, 0x9C, 0x40, 0x00,
-};
+f32 lit_3699 = 5000.0f;
+
 /* 80455BC8-80455BCC 0004 .sdata2    @3700                                                        */
-SECTION_SDATA2 u8 LIT_3700[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
+f32 lit_3700 = 2.0f;
+
 /* 80455BCC-80455BD0 0004 .sdata2    @3701                                                        */
-SECTION_SDATA2 u8 LIT_3701[4] = {
-	0x40, 0x80, 0x00, 0x00,
-};
+f32 lit_3701 = 4.0f;
+
 /* 80455BD0-80455BD8 0008 .sdata2    @3703                                                        */
-SECTION_SDATA2 u8 Z2SoundObjMgr__LIT_3703[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802BF920-802BF980 0060 .text      __ct__13Z2SoundObjMgrFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__13Z2SoundObjMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundObjMgr/__ct__13Z2SoundObjMgrFv.s"
-}
-#pragma pop
-
-/* 802BF980-802BF994 0014 .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SoundObjMgr/setForceBattleArea__13Z2SoundObjMgrFbUsUsUs.s"
-}
-#pragma pop
+f64 Z2SoundObjMgr__lit_3703 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802BF994-802BFFEC 0658 .text      searchEnemy__13Z2SoundObjMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchEnemy__13Z2SoundObjMgrFv() {
+extern "C" asm void searchEnemy__13Z2SoundObjMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/searchEnemy__13Z2SoundObjMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BFFEC-802C0074 0088 .text      setGhostEnemyState__13Z2SoundObjMgrFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setGhostEnemyState__13Z2SoundObjMgrFUc() {
+extern "C" asm void setGhostEnemyState__13Z2SoundObjMgrFUc() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/setGhostEnemyState__13Z2SoundObjMgrFUc.s"
 }
 #pragma pop
 
+
 /* 802C0074-802C0100 008C .text      getEnemyID__13Z2SoundObjMgrFPCcP26JSULink<15Z2CreatureEnemy> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802C0074() {
+extern "C" asm void func_802C0074() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/func_802C0074.s"
 }
 #pragma pop
 
+
 /* 802C0100-802C0120 0020 .text      setBattleInit__13Z2SoundObjMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBattleInit__13Z2SoundObjMgrFv() {
+extern "C" asm void setBattleInit__13Z2SoundObjMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/setBattleInit__13Z2SoundObjMgrFv.s"
 }
 #pragma pop
 
+
 /* 802C0120-802C013C 001C .text      checkBattleFinish__13Z2SoundObjMgrFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkBattleFinish__13Z2SoundObjMgrFv() {
+extern "C" asm void checkBattleFinish__13Z2SoundObjMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/checkBattleFinish__13Z2SoundObjMgrFv.s"
 }
 #pragma pop
 
+
 /* 802C013C-802C0190 0054 .text      deleteEnemyAll__13Z2SoundObjMgrFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void deleteEnemyAll__13Z2SoundObjMgrFv() {
+extern "C" asm void deleteEnemyAll__13Z2SoundObjMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/deleteEnemyAll__13Z2SoundObjMgrFv.s"
 }
 #pragma pop
 
+
 /* 802C0190-802C01E4 0054 .text      removeEnemy__13Z2SoundObjMgrFP26JSULink<15Z2CreatureEnemy>   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802C0190() {
+extern "C" asm void func_802C0190() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/func_802C0190.s"
 }
 #pragma pop
 
+
 /* 802C01E4-802C01EC 0008 .text      isTwilightBattle__13Z2SoundObjMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isTwilightBattle__13Z2SoundObjMgrFv() {
+extern "C" asm void isTwilightBattle__13Z2SoundObjMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/isTwilightBattle__13Z2SoundObjMgrFv.s"
 }
 #pragma pop
 
+
 /* 802C01EC-802C03C8 01DC .text      __sinit_Z2SoundObjMgr_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_Z2SoundObjMgr_cpp() {
+extern "C" asm void __sinit_Z2SoundObjMgr_cpp() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/__sinit_Z2SoundObjMgr_cpp.s"
 }

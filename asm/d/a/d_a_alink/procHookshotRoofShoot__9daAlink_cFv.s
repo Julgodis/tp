@@ -71,7 +71,7 @@ lbl_8010CE48:
 /* 8010CE60 00000018  4B FF BB B9 */	bl checkHookshotWait__9daAlink_cCFv
 /* 8010CE64 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 8010CE68 00000020  41 82 00 40 */	beq lbl_8010CEA8
-/* 8010CE6C 00000024  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8010CE6C 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010CE70 00000028  D0 1F 1F DC */	stfs f0, 0x1fdc(r31)
 /* 8010CE74 0000002C  D0 1F 1F E0 */	stfs f0, 0x1fe0(r31)
 /* 8010CE78 00000030  80 7F 1F 2C */	lwz r3, 0x1f2c(r31)
@@ -112,7 +112,7 @@ lbl_8010CEF0:
 /* 8010CEF4 00000004  4B FF BB 25 */	bl checkHookshotWait__9daAlink_cCFv
 /* 8010CEF8 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 8010CEFC 0000000C  41 82 00 3C */	beq lbl_8010CF38
-/* 8010CF00 00000010  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 8010CF00 00000010  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 8010CF04 00000014  D0 1F 1F DC */	stfs f0, 0x1fdc(r31)
 /* 8010CF08 00000018  A8 1F 30 0C */	lha r0, 0x300c(r31)
 /* 8010CF0C 0000001C  2C 00 00 00 */	cmpwi r0, 0

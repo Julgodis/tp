@@ -47,7 +47,7 @@ lbl_8001FDAC:
 /* 8001FDE0 00000034  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8001FDE4 00000038  48 00 00 14 */	b lbl_8001FDF8
 lbl_8001FDE8:
-/* 8001FDE8 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__LIT_3902(r2)
+/* 8001FDE8 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__lit_3902(r2)
 /* 8001FDEC 00000004  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8001FDF0 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8001FDF4 0000000C  D0 01 00 10 */	stfs f0, 0x10(r1)

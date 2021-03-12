@@ -11,8 +11,8 @@ lbl_80018388:
 /* 800183AC 00000024  38 6D 87 24 */	addi r3, r13, 0x80450CA4-0x80458580 /* JPTracePCB4-_SDA_BASE_ */
 /* 800183B0 00000028  3C 80 80 02 */	lis r4, __dt__24JPTraceParticleCallBack4Fv@ha
 /* 800183B4 0000002C  38 84 83 28 */	addi r4, r4, __dt__24JPTraceParticleCallBack4Fv@l
-/* 800183B8 00000030  3C A0 80 3F */	lis r5, c_c_damagereaction__LIT_3741@ha
-/* 800183BC 00000034  38 A5 0F 40 */	addi r5, r5, c_c_damagereaction__LIT_3741@l
+/* 800183B8 00000030  3C A0 80 3F */	lis r5, c_c_damagereaction__lit_3741@ha
+/* 800183BC 00000034  38 A5 0F 40 */	addi r5, r5, c_c_damagereaction__lit_3741@l
 /* 800183C0 00000038  48 34 98 65 */	bl __register_global_object
 /* 800183C4 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800183C8 00000040  7C 08 03 A6 */	mtlr r0

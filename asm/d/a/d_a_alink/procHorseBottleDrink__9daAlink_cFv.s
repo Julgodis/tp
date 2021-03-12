@@ -9,7 +9,7 @@ lbl_800F2AD8:
 /* 800F2AF4 0000001C  40 82 00 2C */	bne lbl_800F2B20
 /* 800F2AF8 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800F2AFC 00000024  38 80 00 02 */	li r4, 2
-/* 800F2B00 00000028  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800F2B00 00000028  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800F2B04 0000002C  4B FB AC 21 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F2B08 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800F2B0C 00000034  4B FC CD 79 */	bl returnKeepItemData__9daAlink_cFv

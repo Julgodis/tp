@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void MWTRACE();
-}
+extern "C" extern void MWTRACE();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80372C54-80372CA4 0050 .text      MWTRACE                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MWTRACE() {
+extern "C" asm void MWTRACE() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/common/MWTrace/MWTRACE.s"
 }

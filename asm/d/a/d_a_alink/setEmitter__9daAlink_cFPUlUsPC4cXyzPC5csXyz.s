@@ -27,7 +27,7 @@ lbl_80120580:
 /* 801205E4 00000064  7D 07 43 78 */	mr r7, r8
 /* 801205E8 00000068  39 0B 01 0C */	addi r8, r11, 0x10c
 /* 801205EC 0000006C  39 40 00 00 */	li r10, 0
-/* 801205F0 00000070  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 801205F0 00000070  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 801205F4 00000074  4B F2 CE D9 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 801205F8 00000078  90 7E 00 00 */	stw r3, 0(r30)
 /* 801205FC 0000007C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)

@@ -5,45 +5,44 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRKReleaseMutex();
-extern void TRKAcquireMutex();
-extern void TRKInitializeMutex();
-}
+extern "C" extern void TRKReleaseMutex();
+extern "C" extern void TRKAcquireMutex();
+extern "C" extern void TRKInitializeMutex();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036F498-8036F4A0 0008 .text      TRKReleaseMutex                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKReleaseMutex() {
+extern "C" asm void TRKReleaseMutex() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKReleaseMutex.s"
 }
 #pragma pop
 
+
 /* 8036F4A0-8036F4A8 0008 .text      TRKAcquireMutex                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKAcquireMutex() {
+extern "C" asm void TRKAcquireMutex() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKAcquireMutex.s"
 }
 #pragma pop
 
+
 /* 8036F4A8-8036F4B0 0008 .text      TRKInitializeMutex                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKInitializeMutex() {
+extern "C" asm void TRKInitializeMutex() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKInitializeMutex.s"
 }

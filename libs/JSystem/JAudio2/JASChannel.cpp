@@ -5,115 +5,237 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void pow2__7JASCalcFf();
-extern void __ct__17JASGenericMemPoolFv();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void func_802978DC();
-extern void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern void __dt__10JASChannelFv();
-extern void play__10JASChannelFv();
-extern void playForce__10JASChannelFv();
-extern void release__10JASChannelFUs();
-extern void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
-extern void setMixConfig__10JASChannelFUlUs();
-extern void calcEffect__10JASChannelFPCQ210JASChannel9PanVector();
-extern void calcPan__10JASChannelFPCQ210JASChannel9PanVector();
-extern void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams();
-extern void setKeySweepTarget__10JASChannelFlUl();
-extern void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams();
-extern void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv();
-extern void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
-extern void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
-extern void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff();
-extern void updateMixer__10JASChannelFffffPUs();
-extern void free__10JASChannelFv();
-extern void initBankDisposeMsgQueue__10JASChannelFv();
-extern void receiveBankDisposeMsg__10JASChannelFv();
-extern void checkBankDispose__10JASChannelCFv();
-extern void __ct__6JASLfoFv();
-extern void getValue__6JASLfoCFv();
-extern void incCounter__6JASLfoFf();
-extern void resetCounter__6JASLfoFv();
-extern void __ct__13JASOscillatorFv();
-extern void initStart__13JASOscillatorFPCQ213JASOscillator4Data();
-extern void incCounter__13JASOscillatorFf();
-extern void getValue__13JASOscillatorCFv();
-extern void release__13JASOscillatorFv();
-extern void update__13JASOscillatorFv();
-extern void getDacRate__9JASDriverFv();
-extern void free__13JASDSPChannelFv();
-extern void start__13JASDSPChannelFv();
-extern void drop__13JASDSPChannelFv();
-extern void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern void setPriority__13JASDSPChannelFUc();
-extern void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
-extern void setOscInfo__Q26JASDsp8TChannelFUl();
-extern void initAutoMixer__Q26JASDsp8TChannelFv();
-extern void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
-extern void setPitch__Q26JASDsp8TChannelFUs();
-extern void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
-extern void setMixerVolume__Q26JASDsp8TChannelFUcs();
-extern void setPauseFlag__Q26JASDsp8TChannelFUc();
-extern void setBusConnect__Q26JASDsp8TChannelFUcUc();
-extern void getChannelLevel_dsp__9JASDriverFv();
-extern void getOutputMode__9JASDriverFv();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSInitMessageQueue();
-extern void OSReceiveMessage();
-extern void __register_global_object();
-extern void __construct_array();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_DATA extern void* LIT_662[7];
-SECTION_DATA extern void* LIT_977[8];
-SECTION_DATA extern void* LIT_974[9];
+extern "C" extern void pow2__7JASCalcFf();
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void func_802978DC();
+extern "C" extern void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" extern void __dt__10JASChannelFv();
+extern "C" extern void play__10JASChannelFv();
+extern "C" extern void playForce__10JASChannelFv();
+extern "C" extern void release__10JASChannelFUs();
+extern "C" extern void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
+extern "C" extern void setMixConfig__10JASChannelFUlUs();
+extern "C" extern void calcEffect__10JASChannelFPCQ210JASChannel9PanVector();
+extern "C" extern void calcPan__10JASChannelFPCQ210JASChannel9PanVector();
+extern "C" extern void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams();
+extern "C" extern void setKeySweepTarget__10JASChannelFlUl();
+extern "C" extern void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams();
+extern "C" extern void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv();
+extern "C" extern void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
+extern "C" extern void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
+extern "C" extern void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff();
+extern "C" extern void updateMixer__10JASChannelFffffPUs();
+extern "C" extern void free__10JASChannelFv();
+extern "C" extern void initBankDisposeMsgQueue__10JASChannelFv();
+extern "C" extern void receiveBankDisposeMsg__10JASChannelFv();
+extern "C" extern void checkBankDispose__10JASChannelCFv();
+extern "C" extern void __ct__6JASLfoFv();
+extern "C" extern void getValue__6JASLfoCFv();
+extern "C" extern void incCounter__6JASLfoFf();
+extern "C" extern void resetCounter__6JASLfoFv();
+extern "C" extern void __ct__13JASOscillatorFv();
+extern "C" extern void initStart__13JASOscillatorFPCQ213JASOscillator4Data();
+extern "C" extern void incCounter__13JASOscillatorFf();
+extern "C" extern void getValue__13JASOscillatorCFv();
+extern "C" extern void release__13JASOscillatorFv();
+extern "C" extern void update__13JASOscillatorFv();
+extern "C" extern void getDacRate__9JASDriverFv();
+extern "C" extern void free__13JASDSPChannelFv();
+extern "C" extern void start__13JASDSPChannelFv();
+extern "C" extern void drop__13JASDSPChannelFv();
+extern "C" extern void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" extern void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" extern void setPriority__13JASDSPChannelFUc();
+extern "C" extern void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
+extern "C" extern void setOscInfo__Q26JASDsp8TChannelFUl();
+extern "C" extern void initAutoMixer__Q26JASDsp8TChannelFv();
+extern "C" extern void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
+extern "C" extern void setPitch__Q26JASDsp8TChannelFUs();
+extern "C" extern void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
+extern "C" extern void setMixerVolume__Q26JASDsp8TChannelFUcs();
+extern "C" extern void setPauseFlag__Q26JASDsp8TChannelFUc();
+extern "C" extern void setBusConnect__Q26JASDsp8TChannelFUcUc();
+extern "C" extern void getChannelLevel_dsp__9JASDriverFv();
+extern "C" extern void getOutputMode__9JASDriverFv();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSInitMessageQueue();
+extern "C" extern void OSReceiveMessage();
+extern "C" extern void __register_global_object();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* lit_662[7];
+SECTION_DATA extern void* lit_977[8];
+SECTION_DATA extern void* lit_974[9];
 SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
 SECTION_BSS extern u8 sBankDisposeMsgQ__10JASChannel[32];
 SECTION_BSS extern u8 sBankDisposeMsg__10JASChannel[64];
 SECTION_BSS extern u8 sBankDisposeList__10JASChannel[64];
-SECTION_BSS extern u8 LIT_556[12 + 4 /* padding */];
+SECTION_BSS extern u8 lit_556[12 + 4 /* padding */];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA extern u8 one__11JASWaveInfo[8];
+SECTION_SDATA extern u32 one__11JASWaveInfo;
 SECTION_SBSS extern u8 struct_80451260[8];
 SECTION_SBSS extern u8 sBankDisposeListSize__10JASChannel[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_544[4];
-SECTION_SDATA2 extern u8 LIT_545[4];
-SECTION_SDATA2 extern u8 LIT_546[8];
-SECTION_SDATA2 extern u8 LIT_661[8];
-SECTION_SDATA2 extern u8 LIT_685[8];
-SECTION_SDATA2 extern u8 LIT_711[8];
-SECTION_SDATA2 extern u8 LIT_714[8];
-SECTION_SDATA2 extern u8 JASChannel__LIT_775[4];
-SECTION_SDATA2 extern u8 LIT_776[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_832[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_833[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_846[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_847[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_969[4];
-SECTION_SDATA2 extern u8 LIT_970[4];
-SECTION_SDATA2 extern u8 LIT_971[4];
-SECTION_SDATA2 extern u8 LIT_972[4];
-SECTION_SDATA2 extern u8 JASChannel__LIT_973[8];
+SECTION_SDATA2 extern f32 lit_544;
+SECTION_SDATA2 extern u8 lit_545[4];
+SECTION_SDATA2 extern f32 lit_546;
+SECTION_SDATA2 extern f64 lit_661;
+SECTION_SDATA2 extern f64 lit_685;
+SECTION_SDATA2 extern f32 lit_711;
+SECTION_SDATA2 extern f64 lit_714;
+SECTION_SDATA2 extern f32 JASChannel__lit_775;
+SECTION_SDATA2 extern f32 lit_776;
+SECTION_SDATA2 extern f32 JASChannel__lit_832;
+SECTION_SDATA2 extern f32 JASChannel__lit_833;
+SECTION_SDATA2 extern f32 JASChannel__lit_846;
+SECTION_SDATA2 extern f32 JASChannel__lit_847;
+SECTION_SDATA2 extern f32 JASChannel__lit_969;
+SECTION_SDATA2 extern f32 lit_970;
+SECTION_SDATA2 extern f32 lit_971;
+SECTION_SDATA2 extern f32 lit_972;
+SECTION_SDATA2 extern f32 JASChannel__lit_973;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80455680-80455684 0004 .sdata2    @544                                                         */
+f32 lit_544 = 1.0f;
+
+/* 80455684-80455688 0004 .sdata2    @545                                                         */
+u8 lit_545[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455688-80455690 0004 .sdata2    @546                                                         */
+f32 lit_546 = 0.5f;
+/* padding 4 bytes */
+
+/* 8029A800-8029A918 0118 .text      __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/__ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80431B90-80431BB0 0020 .bss       sBankDisposeMsgQ__10JASChannel                               */
+u8 sBankDisposeMsgQ__10JASChannel[32];
 
-extern "C" {
+/* 80431BB0-80431BF0 0040 .bss       sBankDisposeMsg__10JASChannel                                */
+u8 sBankDisposeMsg__10JASChannel[64];
+
+/* 80431BF0-80431C30 0040 .bss       sBankDisposeList__10JASChannel                               */
+u8 sBankDisposeList__10JASChannel[64];
+
+/* 80431C30-80431C40 000C .bss       @556                                                         */
+u8 lit_556[12 + 4 /* padding */];
+
+/* 8029A918-8029A9F0 00D8 .text      __dt__10JASChannelFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__10JASChannelFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/__dt__10JASChannelFv.s"
+}
+#pragma pop
+
+
+/* 8029A9F0-8029AA60 0070 .text      play__10JASChannelFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void play__10JASChannelFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/play__10JASChannelFv.s"
+}
+#pragma pop
+
+
+/* 8029AA60-8029AAD0 0070 .text      playForce__10JASChannelFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void playForce__10JASChannelFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/playForce__10JASChannelFv.s"
+}
+#pragma pop
+
+
+/* 8029AAD0-8029AB64 0094 .text      release__10JASChannelFUs                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void release__10JASChannelFUs() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/release__10JASChannelFUs.s"
+}
+#pragma pop
+
+
+/* 8029AB64-8029AB98 0034 .text      setOscInit__10JASChannelFUlPCQ213JASOscillator4Data          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/setOscInit__10JASChannelFUlPCQ213JASOscillator4Data.s"
+}
+#pragma pop
+
+
+/* 8029AB98-8029ABA8 0010 .text      setMixConfig__10JASChannelFUlUs                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMixConfig__10JASChannelFUlUs() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/setMixConfig__10JASChannelFUlUs.s"
+}
+#pragma pop
+
+
+/* 8029ABA8-8029ABC0 0018 .text      calcEffect__10JASChannelFPCQ210JASChannel9PanVector          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void calcEffect__10JASChannelFPCQ210JASChannel9PanVector() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/calcEffect__10JASChannelFPCQ210JASChannel9PanVector.s"
+}
+#pragma pop
+
+
+/* 8029ABC0-8029ABEC 002C .text      calcPan__10JASChannelFPCQ210JASChannel9PanVector             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void calcPan__10JASChannelFPCQ210JASChannel9PanVector() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/calcPan__10JASChannelFPCQ210JASChannel9PanVector.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803C7848-803C7864 001C .data      @662                                                         */
-SECTION_DATA void* LIT_662[7] = {
+void* lit_662[7] = {
 	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x68),
 	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x58),
 	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x78),
@@ -122,8 +244,123 @@ SECTION_DATA void* LIT_662[7] = {
 	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xB4),
 	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xC4),
 };
+
+/* 80455690-80455698 0008 .sdata2    @661                                                         */
+f64 lit_661 = 0.5;
+
+/* 8029ABEC-8029ACD4 00E8 .text      effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80455698-804556A0 0008 .sdata2    @685                                                         */
+f64 lit_685 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 8029ACD4-8029AD38 0064 .text      setKeySweepTarget__10JASChannelFlUl                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setKeySweepTarget__10JASChannelFlUl() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/setKeySweepTarget__10JASChannelFlUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 804556A0-804556A8 0004 .sdata2    @711                                                         */
+f32 lit_711 = 127.0f;
+/* padding 4 bytes */
+
+/* 804556A8-804556B0 0008 .sdata2    @714                                                         */
+f64 lit_714 = 4503599627370496.0 /* cast u32 to float */;
+
+/* 8029AD38-8029AF78 0240 .text      updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams.s"
+}
+#pragma pop
+
+
+/* 8029AF78-8029B004 008C .text      dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 804556B0-804556B4 0004 .sdata2    @775                                                         */
+f32 JASChannel__lit_775 = 12.0f;
+
+/* 804556B4-804556B8 0004 .sdata2    @776                                                         */
+f32 lit_776 = 4096.0f;
+
+/* 8029B004-8029B324 0320 .text      initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 804556B8-804556BC 0004 .sdata2    @832                                                         */
+f32 JASChannel__lit_832 = 32028.5f;
+
+/* 804556BC-804556C0 0004 .sdata2    @833                                                         */
+f32 JASChannel__lit_833 = 48000.0f;
+
+/* 8029B324-8029B6A0 037C .text      updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 804556C0-804556C4 0004 .sdata2    @846                                                         */
+f32 JASChannel__lit_846 = 0.7070000171661377f;
+
+/* 804556C4-804556C8 0004 .sdata2    @847                                                         */
+f32 JASChannel__lit_847 = 127.5f;
+
+/* 8029B6A0-8029B7D8 0138 .text      updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASChannel/updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803C7864-803C7884 0020 .data      @977                                                         */
-SECTION_DATA void* LIT_977[8] = {
+void* lit_977[8] = {
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x210),
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1E4),
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1EC),
@@ -133,8 +370,9 @@ SECTION_DATA void* LIT_977[8] = {
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x204),
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x20C),
 };
+
 /* 803C7884-803C78A8 0020 .data      @974                                                         */
-SECTION_DATA void* LIT_974[9] = {
+void* lit_974[9] = {
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x114),
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xE8),
 	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xF0),
@@ -146,330 +384,76 @@ SECTION_DATA void* LIT_974[9] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455680-80455684 0004 .sdata2    @544                                                         */
-SECTION_SDATA2 u8 LIT_544[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455684-80455688 0004 .sdata2    @545                                                         */
-SECTION_SDATA2 u8 LIT_545[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455688-80455690 0004 .sdata2    @546                                                         */
-SECTION_SDATA2 u8 LIT_546[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455690-80455698 0008 .sdata2    @661                                                         */
-SECTION_SDATA2 u8 LIT_661[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455698-804556A0 0008 .sdata2    @685                                                         */
-SECTION_SDATA2 u8 LIT_685[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 804556A0-804556A8 0004 .sdata2    @711                                                         */
-SECTION_SDATA2 u8 LIT_711[8] = {
-	0x42, 0xFE, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804556A8-804556B0 0008 .sdata2    @714                                                         */
-SECTION_SDATA2 u8 LIT_714[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804556B0-804556B4 0004 .sdata2    @775                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_775[4] = {
-	0x41, 0x40, 0x00, 0x00,
-};
-/* 804556B4-804556B8 0004 .sdata2    @776                                                         */
-SECTION_SDATA2 u8 LIT_776[4] = {
-	0x45, 0x80, 0x00, 0x00,
-};
-/* 804556B8-804556BC 0004 .sdata2    @832                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_832[4] = {
-	0x46, 0xFA, 0x39, 0x00,
-};
-/* 804556BC-804556C0 0004 .sdata2    @833                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_833[4] = {
-	0x47, 0x3B, 0x80, 0x00,
-};
-/* 804556C0-804556C4 0004 .sdata2    @846                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_846[4] = {
-	0x3F, 0x34, 0xFD, 0xF4,
-};
-/* 804556C4-804556C8 0004 .sdata2    @847                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_847[4] = {
-	0x42, 0xFF, 0x00, 0x00,
-};
 /* 804556C8-804556CC 0004 .sdata2    @969                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_969[4] = {
-	0xC4, 0xA2, 0xF9, 0x83,
-};
+f32 JASChannel__lit_969 = -1303.7972412109375f;
+
 /* 804556CC-804556D0 0004 .sdata2    @970                                                         */
-SECTION_SDATA2 u8 LIT_970[4] = {
-	0x44, 0xA2, 0xF9, 0x83,
-};
+f32 lit_970 = 1303.7972412109375f;
+
 /* 804556D0-804556D4 0004 .sdata2    @971                                                         */
-SECTION_SDATA2 u8 LIT_971[4] = {
-	0x40, 0x49, 0x0F, 0xDB,
-};
+f32 lit_971 = 3.1415927410125732f;
+
 /* 804556D4-804556D8 0004 .sdata2    @972                                                         */
-SECTION_SDATA2 u8 LIT_972[4] = {
-	0x3E, 0xA6, 0xF9, 0x33,
-};
+f32 lit_972 = 0.326119989156723f;
+
 /* 804556D8-804556E0 0004 .sdata2    @973                                                         */
-SECTION_SDATA2 u8 JASChannel__LIT_973[8] = {
-	0x3E, 0xB2, 0x0D, 0x99,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80431B90-80431BB0 0020 .bss       sBankDisposeMsgQ__10JASChannel                               */
-SECTION_BSS u8 sBankDisposeMsgQ__10JASChannel[32];
-/* 80431BB0-80431BF0 0040 .bss       sBankDisposeMsg__10JASChannel                                */
-SECTION_BSS u8 sBankDisposeMsg__10JASChannel[64];
-/* 80431BF0-80431C30 0040 .bss       sBankDisposeList__10JASChannel                               */
-SECTION_BSS u8 sBankDisposeList__10JASChannel[64];
-/* 80431C30-80431C40 000C .bss       @556                                                         */
-SECTION_BSS u8 LIT_556[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451298-804512A0 0004 .sbss      sBankDisposeListSize__10JASChannel                           */
-SECTION_SBSS u8 sBankDisposeListSize__10JASChannel[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8029A800-8029A918 0118 .text      __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/__ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
-}
-#pragma pop
-
-/* 8029A918-8029A9F0 00D8 .text      __dt__10JASChannelFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__10JASChannelFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/__dt__10JASChannelFv.s"
-}
-#pragma pop
-
-/* 8029A9F0-8029AA60 0070 .text      play__10JASChannelFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void play__10JASChannelFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/play__10JASChannelFv.s"
-}
-#pragma pop
-
-/* 8029AA60-8029AAD0 0070 .text      playForce__10JASChannelFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void playForce__10JASChannelFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/playForce__10JASChannelFv.s"
-}
-#pragma pop
-
-/* 8029AAD0-8029AB64 0094 .text      release__10JASChannelFUs                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void release__10JASChannelFUs() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/release__10JASChannelFUs.s"
-}
-#pragma pop
-
-/* 8029AB64-8029AB98 0034 .text      setOscInit__10JASChannelFUlPCQ213JASOscillator4Data          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/setOscInit__10JASChannelFUlPCQ213JASOscillator4Data.s"
-}
-#pragma pop
-
-/* 8029AB98-8029ABA8 0010 .text      setMixConfig__10JASChannelFUlUs                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMixConfig__10JASChannelFUlUs() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/setMixConfig__10JASChannelFUlUs.s"
-}
-#pragma pop
-
-/* 8029ABA8-8029ABC0 0018 .text      calcEffect__10JASChannelFPCQ210JASChannel9PanVector          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void calcEffect__10JASChannelFPCQ210JASChannel9PanVector() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/calcEffect__10JASChannelFPCQ210JASChannel9PanVector.s"
-}
-#pragma pop
-
-/* 8029ABC0-8029ABEC 002C .text      calcPan__10JASChannelFPCQ210JASChannel9PanVector             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void calcPan__10JASChannelFPCQ210JASChannel9PanVector() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/calcPan__10JASChannelFPCQ210JASChannel9PanVector.s"
-}
-#pragma pop
-
-/* 8029ABEC-8029ACD4 00E8 .text      effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams.s"
-}
-#pragma pop
-
-/* 8029ACD4-8029AD38 0064 .text      setKeySweepTarget__10JASChannelFlUl                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setKeySweepTarget__10JASChannelFlUl() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/setKeySweepTarget__10JASChannelFlUl.s"
-}
-#pragma pop
-
-/* 8029AD38-8029AF78 0240 .text      updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams.s"
-}
-#pragma pop
-
-/* 8029AF78-8029B004 008C .text      dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv.s"
-}
-#pragma pop
-
-/* 8029B004-8029B324 0320 .text      initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel.s"
-}
-#pragma pop
-
-/* 8029B324-8029B6A0 037C .text      updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel.s"
-}
-#pragma pop
-
-/* 8029B6A0-8029B7D8 0138 .text      updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff.s"
-}
-#pragma pop
+f32 JASChannel__lit_973 = 0.34775999188423157f;
+/* padding 4 bytes */
 
 /* 8029B7D8-8029BBFC 0424 .text      updateMixer__10JASChannelFffffPUs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateMixer__10JASChannelFffffPUs() {
+extern "C" asm void updateMixer__10JASChannelFffffPUs() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/updateMixer__10JASChannelFffffPUs.s"
 }
 #pragma pop
 
+
 /* 8029BBFC-8029BC0C 0010 .text      free__10JASChannelFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void free__10JASChannelFv() {
+extern "C" asm void free__10JASChannelFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/free__10JASChannelFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451298-804512A0 0004 .sbss      sBankDisposeListSize__10JASChannel                           */
+u8 sBankDisposeListSize__10JASChannel[4 + 4 /* padding */];
+
 /* 8029BC0C-8029BC48 003C .text      initBankDisposeMsgQueue__10JASChannelFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initBankDisposeMsgQueue__10JASChannelFv() {
+extern "C" asm void initBankDisposeMsgQueue__10JASChannelFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/initBankDisposeMsgQueue__10JASChannelFv.s"
 }
 #pragma pop
 
+
 /* 8029BC48-8029BCC0 0078 .text      receiveBankDisposeMsg__10JASChannelFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void receiveBankDisposeMsg__10JASChannelFv() {
+extern "C" asm void receiveBankDisposeMsg__10JASChannelFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/receiveBankDisposeMsg__10JASChannelFv.s"
 }
 #pragma pop
 
+
 /* 8029BCC0-8029BD14 0054 .text      checkBankDispose__10JASChannelCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkBankDispose__10JASChannelCFv() {
+extern "C" asm void checkBankDispose__10JASChannelCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/checkBankDispose__10JASChannelCFv.s"
 }

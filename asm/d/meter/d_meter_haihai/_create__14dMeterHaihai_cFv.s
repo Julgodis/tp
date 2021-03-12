@@ -56,7 +56,7 @@ lbl_8020AFF8:
 /* 8020B03C 00000044  48 0C 92 35 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 8020B040 00000048  48 0F DA 2D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 8020B044 0000004C  90 7F 00 0C */	stw r3, 0xc(r31)
-/* 8020B048 00000050  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__LIT_3742(r2)
+/* 8020B048 00000050  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__lit_3742(r2)
 /* 8020B04C 00000054  D0 1F 00 18 */	stfs f0, 0x18(r31)
 /* 8020B050 00000058  3C 80 80 3A */	lis r4, d_meter_d_meter_haihai__stringBase0@ha
 /* 8020B054 0000005C  38 84 81 58 */	addi r4, r4, d_meter_d_meter_haihai__stringBase0@l
@@ -71,7 +71,7 @@ lbl_8020AFF8:
 /* 8020B078 00000080  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8020B07C 00000084  7D 89 03 A6 */	mtctr r12
 /* 8020B080 00000088  4E 80 04 21 */	bctrl 
-/* 8020B084 0000008C  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__LIT_3742(r2)
+/* 8020B084 0000008C  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__lit_3742(r2)
 /* 8020B088 00000090  D0 1F 00 1C */	stfs f0, 0x1c(r31)
 /* 8020B08C 00000094  3C 80 80 3A */	lis r4, d_meter_d_meter_haihai__stringBase0@ha
 /* 8020B090 00000098  38 84 81 58 */	addi r4, r4, d_meter_d_meter_haihai__stringBase0@l
@@ -86,7 +86,7 @@ lbl_8020AFF8:
 /* 8020B0B4 000000BC  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8020B0B8 000000C0  7D 89 03 A6 */	mtctr r12
 /* 8020B0BC 000000C4  4E 80 04 21 */	bctrl 
-/* 8020B0C0 000000C8  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__LIT_3742(r2)
+/* 8020B0C0 000000C8  C0 02 AD B0 */	lfs f0, d_meter_d_meter_haihai__lit_3742(r2)
 /* 8020B0C4 000000CC  D0 1F 00 20 */	stfs f0, 0x20(r31)
 /* 8020B0C8 000000D0  38 00 00 00 */	li r0, 0
 /* 8020B0CC 000000D4  90 1F 00 24 */	stw r0, 0x24(r31)

@@ -5,89 +5,91 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cLs_Init__FP15node_list_class();
-extern void cLs_SingleCut__FP10node_class();
-extern void cLs_Addition__FP15node_list_classP10node_class();
-extern void cLs_Insert__FP15node_list_classiP10node_class();
-extern void cLs_GetFirst__FP15node_list_class();
-extern void cLs_Create__FP15node_list_class();
-extern void cNd_LengthOf__FP10node_class();
-extern void cNd_First__FP10node_class();
-extern void cNd_Last__FP10node_class();
-extern void cNd_Order__FP10node_classi();
-extern void cNd_SingleCut__FP10node_class();
-extern void cNd_Addition__FP10node_classP10node_class();
-extern void cNd_Insert__FP10node_classP10node_class();
-extern void cNd_SetObject__FP10node_classPv();
-extern void cNd_ClearObject__FP10node_class();
-extern void _savegpr_29();
-extern void _restgpr_29();
-}
+extern "C" extern void cLs_Init__FP15node_list_class();
+extern "C" extern void cLs_SingleCut__FP10node_class();
+extern "C" extern void cLs_Addition__FP15node_list_classP10node_class();
+extern "C" extern void cLs_Insert__FP15node_list_classiP10node_class();
+extern "C" extern void cLs_GetFirst__FP15node_list_class();
+extern "C" extern void cLs_Create__FP15node_list_class();
+extern "C" extern void cNd_LengthOf__FP10node_class();
+extern "C" extern void cNd_First__FP10node_class();
+extern "C" extern void cNd_Last__FP10node_class();
+extern "C" extern void cNd_Order__FP10node_classi();
+extern "C" extern void cNd_SingleCut__FP10node_class();
+extern "C" extern void cNd_Addition__FP10node_classP10node_class();
+extern "C" extern void cNd_Insert__FP10node_classP10node_class();
+extern "C" extern void cNd_SetObject__FP10node_classPv();
+extern "C" extern void cNd_ClearObject__FP10node_class();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80265E64-80265E78 0014 .text      cLs_Init__FP15node_list_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_Init__FP15node_list_class() {
+extern "C" asm void cLs_Init__FP15node_list_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_Init__FP15node_list_class.s"
 }
 #pragma pop
 
+
 /* 80265E78-80265EFC 0084 .text      cLs_SingleCut__FP10node_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_SingleCut__FP10node_class() {
+extern "C" asm void cLs_SingleCut__FP10node_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_SingleCut__FP10node_class.s"
 }
 #pragma pop
 
+
 /* 80265EFC-80265F70 0074 .text      cLs_Addition__FP15node_list_classP10node_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_Addition__FP15node_list_classP10node_class() {
+extern "C" asm void cLs_Addition__FP15node_list_classP10node_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_Addition__FP15node_list_classP10node_class.s"
 }
 #pragma pop
 
+
 /* 80265F70-80265FF8 0088 .text      cLs_Insert__FP15node_list_classiP10node_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_Insert__FP15node_list_classiP10node_class() {
+extern "C" asm void cLs_Insert__FP15node_list_classiP10node_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_Insert__FP15node_list_classiP10node_class.s"
 }
 #pragma pop
 
+
 /* 80265FF8-80266040 0048 .text      cLs_GetFirst__FP15node_list_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_GetFirst__FP15node_list_class() {
+extern "C" asm void cLs_GetFirst__FP15node_list_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_GetFirst__FP15node_list_class.s"
 }
 #pragma pop
 
+
 /* 80266040-80266060 0020 .text      cLs_Create__FP15node_list_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_Create__FP15node_list_class() {
+extern "C" asm void cLs_Create__FP15node_list_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_Create__FP15node_list_class.s"
 }

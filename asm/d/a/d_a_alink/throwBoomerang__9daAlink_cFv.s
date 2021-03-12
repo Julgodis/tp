@@ -128,7 +128,7 @@ lbl_800E0890:
 /* 800E0894 00000004  4B FE 31 59 */	bl procAtnActorMoveInit__9daAlink_cFv
 lbl_800E0898:
 /* 800E0898 00000000  80 7D 20 60 */	lwz r3, 0x2060(r29)
-/* 800E089C 00000004  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800E089C 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800E08A0 00000008  38 80 00 00 */	li r4, 0
 /* 800E08A4 0000000C  38 A0 00 23 */	li r5, 0x23
 /* 800E08A8 00000010  4B F2 EF A1 */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs

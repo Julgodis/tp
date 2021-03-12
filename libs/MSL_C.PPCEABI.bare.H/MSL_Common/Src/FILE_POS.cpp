@@ -5,49 +5,48 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __flush_buffer();
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void fseek();
-extern void _fseek();
-extern void ftell();
+extern "C" extern void __flush_buffer();
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void fseek();
+extern "C" extern void _fseek();
+extern "C" extern void ftell();
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80365BB4-80365C20 006C .text      fseek                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fseek() {
+extern "C" asm void fseek() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/fseek.s"
 }
 #pragma pop
 
+
 /* 80365C20-80365E90 0270 .text      _fseek                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _fseek() {
+extern "C" asm void _fseek() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/_fseek.s"
 }
 #pragma pop
 
+
 /* 80365E90-80365F74 00E4 .text      ftell                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ftell() {
+extern "C" asm void ftell() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/ftell.s"
 }

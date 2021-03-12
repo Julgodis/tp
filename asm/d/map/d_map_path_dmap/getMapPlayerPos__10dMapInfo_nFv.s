@@ -18,7 +18,7 @@ lbl_8003EE5C:
 /* 8003EE9C 00000040  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8003EEA0 00000044  48 00 00 14 */	b lbl_8003EEB4
 lbl_8003EEA4:
-/* 8003EEA4 00000000  C0 02 84 28 */	lfs f0, d_map_d_map_path_dmap__LIT_3796(r2)
+/* 8003EEA4 00000000  C0 02 84 28 */	lfs f0, d_map_d_map_path_dmap__lit_3796(r2)
 /* 8003EEA8 00000004  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8003EEAC 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8003EEB0 0000000C  D0 01 00 10 */	stfs f0, 0x10(r1)

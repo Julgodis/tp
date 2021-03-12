@@ -8,15 +8,15 @@ lbl_800956E4:
 /* 800956FC 00000018  88 0D 8A 0B */	lbz r0, struct_80450F88+0x3(r13)
 /* 80095700 0000001C  7C 00 07 75 */	extsb. r0, r0
 /* 80095704 00000020  40 82 00 34 */	bne lbl_80095738
-/* 80095708 00000024  C0 02 8E B8 */	lfs f0, d_d_ev_camera__LIT_5141(r2)
+/* 80095708 00000024  C0 02 8E B8 */	lfs f0, d_d_ev_camera__lit_5141(r2)
 /* 8009570C 00000028  3C 60 80 42 */	lis r3, data_8042542C@ha
 /* 80095710 0000002C  D4 03 54 2C */	stfsu f0, data_8042542C@l(r3)
 /* 80095714 00000030  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80095718 00000034  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8009571C 00000038  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 80095720 0000003C  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
-/* 80095724 00000040  3C A0 80 42 */	lis r5, LIT_10516@ha
-/* 80095728 00000044  38 A5 54 20 */	addi r5, r5, LIT_10516@l
+/* 80095724 00000040  3C A0 80 42 */	lis r5, lit_10516@ha
+/* 80095728 00000044  38 A5 54 20 */	addi r5, r5, lit_10516@l
 /* 8009572C 00000048  48 2C C4 F9 */	bl __register_global_object
 /* 80095730 0000004C  38 00 00 01 */	li r0, 1
 /* 80095734 00000050  98 0D 8A 0B */	stb r0, struct_80450F88+0x3(r13)
@@ -84,63 +84,63 @@ lbl_800957CC:
 /* 80095810 00000044  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 80095814 00000048  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80095818 0000004C  38 A5 01 C3 */	addi r5, r5, 0x1c3
-/* 8009581C 00000050  C0 22 91 98 */	lfs f1, LIT_10780(r2)
+/* 8009581C 00000050  C0 22 91 98 */	lfs f1, lit_10780(r2)
 /* 80095820 00000054  4B FF 39 35 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80095824 00000058  7F C3 F3 78 */	mr r3, r30
 /* 80095828 0000005C  38 9E 03 FC */	addi r4, r30, 0x3fc
 /* 8009582C 00000060  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 80095830 00000064  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80095834 00000068  38 A5 00 54 */	addi r5, r5, 0x54
-/* 80095838 0000006C  C0 22 8E DC */	lfs f1, d_d_ev_camera__LIT_5346(r2)
+/* 80095838 0000006C  C0 22 8E DC */	lfs f1, d_d_ev_camera__lit_5346(r2)
 /* 8009583C 00000070  4B FF 39 19 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80095840 00000074  7F C3 F3 78 */	mr r3, r30
 /* 80095844 00000078  38 9E 04 00 */	addi r4, r30, 0x400
 /* 80095848 0000007C  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 8009584C 00000080  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80095850 00000084  38 A5 00 4D */	addi r5, r5, 0x4d
-/* 80095854 00000088  C0 22 8E DC */	lfs f1, d_d_ev_camera__LIT_5346(r2)
+/* 80095854 00000088  C0 22 8E DC */	lfs f1, d_d_ev_camera__lit_5346(r2)
 /* 80095858 0000008C  4B FF 38 FD */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 8009585C 00000090  7F C3 F3 78 */	mr r3, r30
 /* 80095860 00000094  38 9E 04 04 */	addi r4, r30, 0x404
 /* 80095864 00000098  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 80095868 0000009C  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 8009586C 000000A0  38 A5 01 CC */	addi r5, r5, 0x1cc
-/* 80095870 000000A4  C0 22 8F 94 */	lfs f1, LIT_8198(r2)
+/* 80095870 000000A4  C0 22 8F 94 */	lfs f1, lit_8198(r2)
 /* 80095874 000000A8  4B FF 38 E1 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80095878 000000AC  7F C3 F3 78 */	mr r3, r30
 /* 8009587C 000000B0  38 9E 04 08 */	addi r4, r30, 0x408
 /* 80095880 000000B4  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 80095884 000000B8  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80095888 000000BC  38 A5 01 D6 */	addi r5, r5, 0x1d6
-/* 8009588C 000000C0  C0 22 91 9C */	lfs f1, LIT_10781(r2)
+/* 8009588C 000000C0  C0 22 91 9C */	lfs f1, lit_10781(r2)
 /* 80095890 000000C4  4B FF 38 C5 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80095894 000000C8  7F C3 F3 78 */	mr r3, r30
 /* 80095898 000000CC  38 9E 04 0C */	addi r4, r30, 0x40c
 /* 8009589C 000000D0  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 800958A0 000000D4  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 800958A4 000000D8  38 A5 01 E0 */	addi r5, r5, 0x1e0
-/* 800958A8 000000DC  C0 22 8F 98 */	lfs f1, LIT_8199(r2)
+/* 800958A8 000000DC  C0 22 8F 98 */	lfs f1, lit_8199(r2)
 /* 800958AC 000000E0  4B FF 38 A9 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 800958B0 000000E4  7F C3 F3 78 */	mr r3, r30
 /* 800958B4 000000E8  38 9E 04 10 */	addi r4, r30, 0x410
 /* 800958B8 000000EC  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 800958BC 000000F0  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 800958C0 000000F4  38 A5 01 EC */	addi r5, r5, 0x1ec
-/* 800958C4 000000F8  C0 22 8F 5C */	lfs f1, LIT_8184(r2)
+/* 800958C4 000000F8  C0 22 8F 5C */	lfs f1, lit_8184(r2)
 /* 800958C8 000000FC  4B FF 38 8D */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 800958CC 00000100  7F C3 F3 78 */	mr r3, r30
 /* 800958D0 00000104  38 9E 04 14 */	addi r4, r30, 0x414
 /* 800958D4 00000108  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 800958D8 0000010C  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 800958DC 00000110  38 A5 01 F8 */	addi r5, r5, 0x1f8
-/* 800958E0 00000114  C0 22 8F B4 */	lfs f1, LIT_8206(r2)
+/* 800958E0 00000114  C0 22 8F B4 */	lfs f1, lit_8206(r2)
 /* 800958E4 00000118  4B FF 38 71 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 800958E8 0000011C  7F C3 F3 78 */	mr r3, r30
 /* 800958EC 00000120  38 9E 04 18 */	addi r4, r30, 0x418
 /* 800958F0 00000124  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 800958F4 00000128  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 800958F8 0000012C  38 A5 02 05 */	addi r5, r5, 0x205
-/* 800958FC 00000130  C0 22 8F 84 */	lfs f1, LIT_8194(r2)
+/* 800958FC 00000130  C0 22 8F 84 */	lfs f1, lit_8194(r2)
 /* 80095900 00000134  4B FF 38 55 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 80095904 00000138  7F C3 F3 78 */	mr r3, r30
 /* 80095908 0000013C  38 9E 04 1C */	addi r4, r30, 0x41c
@@ -154,7 +154,7 @@ lbl_800957CC:
 /* 80095928 0000015C  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 8009592C 00000160  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80095930 00000164  38 A5 00 1E */	addi r5, r5, 0x1e
-/* 80095934 00000168  C0 22 8F 5C */	lfs f1, LIT_8184(r2)
+/* 80095934 00000168  C0 22 8F 5C */	lfs f1, lit_8184(r2)
 /* 80095938 0000016C  4B FF 38 1D */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 8009593C 00000170  C0 1E 00 5C */	lfs f0, 0x5c(r30)
 /* 80095940 00000174  D0 1E 04 34 */	stfs f0, 0x434(r30)
@@ -209,11 +209,11 @@ lbl_800959D8:
 /* 800959FC 00000024  48 00 04 68 */	b lbl_80095E64
 lbl_80095A00:
 /* 80095A00 00000000  C0 3E 04 24 */	lfs f1, 0x424(r30)
-/* 80095A04 00000004  C0 02 8E B8 */	lfs f0, d_d_ev_camera__LIT_5141(r2)
+/* 80095A04 00000004  C0 02 8E B8 */	lfs f0, d_d_ev_camera__lit_5141(r2)
 /* 80095A08 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80095A0C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80095A10 00000004  40 82 00 14 */	bne lbl_80095A24
-/* 80095A14 00000008  C0 02 8E DC */	lfs f0, d_d_ev_camera__LIT_5346(r2)
+/* 80095A14 00000008  C0 02 8E DC */	lfs f0, d_d_ev_camera__lit_5346(r2)
 /* 80095A18 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80095A1C 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 80095A20 00000004  41 82 00 3C */	beq lbl_80095A5C
@@ -223,7 +223,7 @@ lbl_80095A24:
 /* 80095A2C 00000008  80 BE 03 E8 */	lwz r5, 0x3e8(r30)
 /* 80095A30 0000000C  80 DE 03 EC */	lwz r6, 0x3ec(r30)
 /* 80095A34 00000010  38 FE 04 28 */	addi r7, r30, 0x428
-/* 80095A38 00000014  C0 22 91 A0 */	lfs f1, LIT_10782(r2)
+/* 80095A38 00000014  C0 22 91 A0 */	lfs f1, lit_10782(r2)
 /* 80095A3C 00000018  48 0C F3 E5 */	bl relationalPos__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzf
 /* 80095A40 0000001C  C0 01 00 E4 */	lfs f0, 0xe4(r1)
 /* 80095A44 00000020  D0 01 01 20 */	stfs f0, 0x120(r1)

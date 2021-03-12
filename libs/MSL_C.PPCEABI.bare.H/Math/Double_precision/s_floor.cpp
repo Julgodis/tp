@@ -5,41 +5,31 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void floor();
-SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__LIT_124[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__LIT_125[8];
-}
+extern "C" extern void floor();
+SECTION_SDATA2 extern f64 Math_Double_precision_s_floor__lit_124;
+SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__lit_125[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456AF8-80456B00 0008 .sdata2    @124                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_s_floor__LIT_124[8] = {
-	0x7E, 0x37, 0xE4, 0x3C, 0x88, 0x00, 0x75, 0x9C,
-};
+f64 Math_Double_precision_s_floor__lit_124 = 1e+300;
+
 /* 80456B00-80456B08 0008 .sdata2    @125                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_s_floor__LIT_125[8] = {
+u8 Math_Double_precision_s_floor__lit_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8036C0FC-8036C244 0148 .text      floor                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void floor() {
+extern "C" asm void floor() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_floor/floor.s"
 }

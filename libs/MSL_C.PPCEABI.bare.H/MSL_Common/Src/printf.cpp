@@ -5,56 +5,141 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void __va_arg();
-extern void __div2u();
-extern void __mod2u();
-extern void __num2dec();
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void fwrite();
-extern void wcstombs();
-extern void memchr();
-extern void sprintf();
-extern void snprintf();
-extern void vsnprintf();
-extern void vprintf();
-extern void fprintf();
-extern void printf();
-extern void __StringWrite();
-extern void __FileWrite();
-extern void __pformatter();
-extern void float2str();
-extern void round_decimal();
-extern void double2hex();
-extern void longlong2str();
-extern void long2str();
-extern void parse_format();
-extern void strchr();
-extern void strcpy();
-extern void strlen();
-extern void fwide();
+extern "C" extern void __va_arg();
+extern "C" extern void __div2u();
+extern "C" extern void __mod2u();
+extern "C" extern void __num2dec();
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void fwrite();
+extern "C" extern void wcstombs();
+extern "C" extern void memchr();
+extern "C" extern void sprintf();
+extern "C" extern void snprintf();
+extern "C" extern void vsnprintf();
+extern "C" extern void vprintf();
+extern "C" extern void fprintf();
+extern "C" extern void printf();
+extern "C" extern void __StringWrite();
+extern "C" extern void __FileWrite();
+extern "C" extern void __pformatter();
+extern "C" extern void float2str();
+extern "C" extern void round_decimal();
+extern "C" extern void double2hex();
+extern "C" extern void longlong2str();
+extern "C" extern void long2str();
+extern "C" extern void parse_format();
+extern "C" extern void strchr();
+extern "C" extern void strcpy();
+extern "C" extern void strlen();
+extern "C" extern void fwide();
 SECTION_RODATA extern const u8 MSL_Common_Src_printf__stringBase0[40];
-SECTION_DATA extern u8 __files[320];
+SECTION_DATA extern void* __files[80];
 SECTION_DATA extern u8 __ctype_map[256];
-SECTION_DATA extern void* LIT_1248[33];
-SECTION_DATA extern void* LIT_1307[33];
-SECTION_DATA extern void* LIT_1443[56];
-SECTION_DATA extern void* LIT_1442[18];
+SECTION_DATA extern void* lit_1248[33];
+SECTION_DATA extern void* lit_1307[33];
+SECTION_DATA extern void* lit_1443[56];
+SECTION_DATA extern void* lit_1442[18];
 SECTION_SDATA extern u8 data_80450AD8[8];
-SECTION_SDATA2 extern u8 MSL_Common_Src_printf__LIT_1089[8];
+SECTION_SDATA2 extern u8 MSL_Common_Src_printf__lit_1089[8];
+
+// 
+// Functions:
+// 
+
+/* 803664DC-803665BC 00E0 .text      sprintf                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void sprintf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/sprintf.s"
 }
+#pragma pop
+
+
+/* 803665BC-80366690 00D4 .text      snprintf                                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void snprintf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/snprintf.s"
+}
+#pragma pop
+
+
+/* 80366690-80366704 0074 .text      vsnprintf                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void vsnprintf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/vsnprintf.s"
+}
+#pragma pop
+
+
+/* 80366704-8036679C 0098 .text      vprintf                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void vprintf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/vprintf.s"
+}
+#pragma pop
+
+
+/* 8036679C-8036687C 00E0 .text      fprintf                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fprintf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/fprintf.s"
+}
+#pragma pop
+
+
+/* 8036687C-80366964 00E8 .text      printf                                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void printf() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/printf.s"
+}
+#pragma pop
+
+
+/* 80366964-803669D0 006C .text      __StringWrite                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __StringWrite() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__StringWrite.s"
+}
+#pragma pop
+
+
+/* 803669D0-80366A28 0058 .text      __FileWrite                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __FileWrite() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__FileWrite.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A2318-803A2340 0025 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -71,16 +156,67 @@ SECTION_DEAD const char* const stringBase_803A2339 = "nan";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_803A233D = "\0\0";
 #pragma pop
+
+/* 80450AD8-80450AE0 0002 .sdata     @wstringBase0                                                */
+u8 data_80450AD8[8] = {
+	0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80366A28-8036719C 0774 .text      __pformatter                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __pformatter() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__pformatter.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80456670-80456678 0008 .sdata2    @1089                                                        */
+u8 MSL_Common_Src_printf__lit_1089[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 8036719C-803678B8 071C .text      float2str                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void float2str() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/float2str.s"
+}
+#pragma pop
+
+
+/* 803678B8-803679E4 012C .text      round_decimal                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void round_decimal() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/round_decimal.s"
+}
+#pragma pop
+
+
+/* 803679E4-80367D1C 0338 .text      double2hex                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void double2hex() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/double2hex.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D2F18-803D2F9C 0084 .data      @1248                                                        */
-SECTION_DATA void* LIT_1248[33] = {
+void* lit_1248[33] = {
 	(void*)(((char*)longlong2str)+0xF8),
 	(void*)(((char*)longlong2str)+0x108),
 	(void*)(((char*)longlong2str)+0x108),
@@ -115,8 +251,21 @@ SECTION_DATA void* LIT_1248[33] = {
 	(void*)(((char*)longlong2str)+0x108),
 	(void*)(((char*)longlong2str)+0xF8),
 };
+
+/* 80367D1C-80368030 0314 .text      longlong2str                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void longlong2str() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/longlong2str.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D2F9C-803D3020 0084 .data      @1307                                                        */
-SECTION_DATA void* LIT_1307[33] = {
+void* lit_1307[33] = {
 	(void*)(((char*)long2str)+0xA8),
 	(void*)(((char*)long2str)+0xB4),
 	(void*)(((char*)long2str)+0xB4),
@@ -151,8 +300,21 @@ SECTION_DATA void* LIT_1307[33] = {
 	(void*)(((char*)long2str)+0xB4),
 	(void*)(((char*)long2str)+0xA8),
 };
+
+/* 80368030-80368288 0258 .text      long2str                                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void long2str() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/long2str.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D3020-803D3100 00E0 .data      @1443                                                        */
-SECTION_DATA void* LIT_1443[56] = {
+void* lit_1443[56] = {
 	(void*)(((char*)parse_format)+0x38C),
 	(void*)(((char*)parse_format)+0x4BC),
 	(void*)(((char*)parse_format)+0x4BC),
@@ -210,8 +372,9 @@ SECTION_DATA void* LIT_1443[56] = {
 	(void*)(((char*)parse_format)+0x4BC),
 	(void*)(((char*)parse_format)+0x30C),
 };
+
 /* 803D3100-803D3148 0044 .data      @1442                                                        */
-SECTION_DATA void* LIT_1442[18] = {
+void* lit_1442[18] = {
 	(void*)(((char*)parse_format)+0xBC),
 	(void*)(((char*)parse_format)+0xF8),
 	(void*)(((char*)parse_format)+0xF8),
@@ -232,184 +395,12 @@ SECTION_DATA void* LIT_1442[18] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450AD8-80450AE0 0002 .sdata     @wstringBase0                                                */
-SECTION_SDATA u8 data_80450AD8[8] = {
-	0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456670-80456678 0008 .sdata2    @1089                                                        */
-SECTION_SDATA2 u8 MSL_Common_Src_printf__LIT_1089[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 803664DC-803665BC 00E0 .text      sprintf                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void sprintf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/sprintf.s"
-}
-#pragma pop
-
-/* 803665BC-80366690 00D4 .text      snprintf                                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void snprintf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/snprintf.s"
-}
-#pragma pop
-
-/* 80366690-80366704 0074 .text      vsnprintf                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void vsnprintf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/vsnprintf.s"
-}
-#pragma pop
-
-/* 80366704-8036679C 0098 .text      vprintf                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void vprintf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/vprintf.s"
-}
-#pragma pop
-
-/* 8036679C-8036687C 00E0 .text      fprintf                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fprintf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/fprintf.s"
-}
-#pragma pop
-
-/* 8036687C-80366964 00E8 .text      printf                                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void printf() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/printf.s"
-}
-#pragma pop
-
-/* 80366964-803669D0 006C .text      __StringWrite                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __StringWrite() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__StringWrite.s"
-}
-#pragma pop
-
-/* 803669D0-80366A28 0058 .text      __FileWrite                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __FileWrite() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__FileWrite.s"
-}
-#pragma pop
-
-/* 80366A28-8036719C 0774 .text      __pformatter                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __pformatter() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__pformatter.s"
-}
-#pragma pop
-
-/* 8036719C-803678B8 071C .text      float2str                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void float2str() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/float2str.s"
-}
-#pragma pop
-
-/* 803678B8-803679E4 012C .text      round_decimal                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void round_decimal() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/round_decimal.s"
-}
-#pragma pop
-
-/* 803679E4-80367D1C 0338 .text      double2hex                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void double2hex() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/double2hex.s"
-}
-#pragma pop
-
-/* 80367D1C-80368030 0314 .text      longlong2str                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void longlong2str() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/longlong2str.s"
-}
-#pragma pop
-
-/* 80368030-80368288 0258 .text      long2str                                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void long2str() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/long2str.s"
-}
-#pragma pop
 
 /* 80368288-8036878C 0504 .text      parse_format                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parse_format() {
+extern "C" asm void parse_format() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/parse_format.s"
 }

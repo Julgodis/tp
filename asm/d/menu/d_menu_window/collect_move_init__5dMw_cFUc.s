@@ -8,8 +8,8 @@ lbl_801FA2D0:
 /* 801FA2E8 00000018  38 03 FF FC */	addi r0, r3, -4
 /* 801FA2EC 0000001C  28 00 00 1A */	cmplwi r0, 0x1a
 /* 801FA2F0 00000020  41 81 01 68 */	bgt lbl_801FA458
-/* 801FA2F4 00000024  3C 60 80 3C */	lis r3, d_menu_d_menu_window__LIT_4418@ha
-/* 801FA2F8 00000028  38 63 F0 14 */	addi r3, r3, d_menu_d_menu_window__LIT_4418@l
+/* 801FA2F4 00000024  3C 60 80 3C */	lis r3, d_menu_d_menu_window__lit_4418@ha
+/* 801FA2F8 00000028  38 63 F0 14 */	addi r3, r3, d_menu_d_menu_window__lit_4418@l
 /* 801FA2FC 0000002C  54 00 10 3A */	slwi r0, r0, 2
 /* 801FA300 00000030  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801FA304 00000034  7C 09 03 A6 */	mtctr r0

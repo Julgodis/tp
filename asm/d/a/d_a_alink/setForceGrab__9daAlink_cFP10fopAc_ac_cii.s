@@ -67,7 +67,7 @@ lbl_800E3B70:
 /* 800E3B80 00000010  7F A3 EB 78 */	mr r3, r29
 /* 800E3B84 00000014  7F C4 F3 78 */	mr r4, r30
 /* 800E3B88 00000018  48 00 20 2D */	bl setGrabItemActor__9daAlink_cFP10fopAc_ac_c
-/* 800E3B8C 0000001C  C0 02 93 94 */	lfs f0, LIT_8785(r2)
+/* 800E3B8C 0000001C  C0 02 93 94 */	lfs f0, lit_8785(r2)
 /* 800E3B90 00000020  D0 1D 33 E4 */	stfs f0, 0x33e4(r29)
 /* 800E3B94 00000024  7F A3 EB 78 */	mr r3, r29
 /* 800E3B98 00000028  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha

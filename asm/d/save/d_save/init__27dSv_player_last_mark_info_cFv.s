@@ -8,7 +8,7 @@ lbl_80032EB0:
 /* 80032EC8 00000018  3C 80 80 38 */	lis r4, d_save_d_save__stringBase0@ha
 /* 80032ECC 0000001C  38 84 92 34 */	addi r4, r4, d_save_d_save__stringBase0@l
 /* 80032ED0 00000020  48 33 5C 5D */	bl strcpy
-/* 80032ED4 00000024  C0 02 83 5C */	lfs f0, LIT_3813(r2)
+/* 80032ED4 00000024  C0 02 83 5C */	lfs f0, lit_3813(r2)
 /* 80032ED8 00000028  D0 1F 00 00 */	stfs f0, 0(r31)
 /* 80032EDC 0000002C  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 80032EE0 00000030  D0 1F 00 08 */	stfs f0, 8(r31)

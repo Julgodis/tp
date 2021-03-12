@@ -1,6 +1,6 @@
 lbl_803147EC:
-/* 803147EC 00000000  3C 60 80 3D */	lis r3, J3DShapeMtx__LIT_832@ha
-/* 803147F0 00000004  38 63 D9 90 */	addi r3, r3, J3DShapeMtx__LIT_832@l
+/* 803147EC 00000000  3C 60 80 3D */	lis r3, J3DShapeMtx__lit_832@ha
+/* 803147F0 00000004  38 63 D9 90 */	addi r3, r3, J3DShapeMtx__lit_832@l
 /* 803147F4 00000008  80 83 00 00 */	lwz r4, 0(r3)
 /* 803147F8 0000000C  80 03 00 04 */	lwz r0, 4(r3)
 /* 803147FC 00000010  90 83 00 30 */	stw r4, 0x30(r3)

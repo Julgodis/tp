@@ -30,7 +30,7 @@ lbl_8001FEC4:
 /* 8001FEF0 0000002C  38 60 FF FF */	li r3, -1
 /* 8001FEF4 00000030  48 00 00 B8 */	b lbl_8001FFAC
 lbl_8001FEF8:
-/* 8001FEF8 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__LIT_3902(r2)
+/* 8001FEF8 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__lit_3902(r2)
 /* 8001FEFC 00000004  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8001FF00 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8001FF04 0000000C  D0 01 00 08 */	stfs f0, 8(r1)

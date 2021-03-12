@@ -47,7 +47,7 @@ lbl_80108FF8:
 lbl_80109008:
 /* 80109008 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8010900C 00000004  38 80 00 02 */	li r4, 2
-/* 80109010 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 80109010 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 80109014 0000000C  4B FA 47 11 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80109018 00000010  38 60 00 01 */	li r3, 1
 /* 8010901C 00000014  48 00 00 08 */	b lbl_80109024

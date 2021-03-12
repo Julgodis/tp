@@ -5,49 +5,48 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dl__FPv();
-extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
-extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
-extern void _savegpr_26();
-extern void _restgpr_26();
-SECTION_DATA extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
-}
+extern "C" extern void __dl__FPv();
+extern "C" extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+extern "C" extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
+SECTION_DATA extern void* const __vt__Q37JGadget6binary19TParse_header_block[5];
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802DC864-802DC8C8 0064 .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit() {
+extern "C" asm void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit() {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit.s"
 }
 #pragma pop
 
+
 /* 802DC8C8-802DC910 0048 .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q37JGadget6binary19TParse_header_blockFv() {
+extern "C" asm void __dt__Q37JGadget6binary19TParse_header_blockFv() {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/__dt__Q37JGadget6binary19TParse_header_blockFv.s"
 }
 #pragma pop
 
+
 /* 802DC910-802DCA1C 010C .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl() {
+extern "C" asm void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl() {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl.s"
 }

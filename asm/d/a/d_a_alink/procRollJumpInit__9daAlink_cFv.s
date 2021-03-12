@@ -8,7 +8,7 @@ lbl_800C6850:
 /* 800C6868 00000018  4B FF B7 05 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800C686C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800C6870 00000020  38 80 00 EF */	li r4, 0xef
-/* 800C6874 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800C6874 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C6878 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C687C 0000002C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
 /* 800C6880 00000030  C0 45 00 80 */	lfs f2, 0x80(r5)
@@ -28,7 +28,7 @@ lbl_800C6850:
 /* 800C68B8 00000068  80 1F 19 9C */	lwz r0, 0x199c(r31)
 /* 800C68BC 0000006C  54 00 06 F2 */	rlwinm r0, r0, 0, 0x1b, 0x19
 /* 800C68C0 00000070  90 1F 19 9C */	stw r0, 0x199c(r31)
-/* 800C68C4 00000074  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800C68C4 00000074  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C68C8 00000078  D0 1F 34 7C */	stfs f0, 0x347c(r31)
 /* 800C68CC 0000007C  38 00 00 01 */	li r0, 1
 /* 800C68D0 00000080  B0 1F 04 E4 */	sth r0, 0x4e4(r31)

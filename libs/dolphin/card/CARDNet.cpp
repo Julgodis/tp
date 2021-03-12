@@ -5,44 +5,34 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void CARDGetSerialNo();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void CARDGetSerialNo();
 SECTION_SDATA extern u8 struct_80450A70[8];
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450A70-80450A78 0008 .sdata     None                                                         */
-SECTION_SDATA u8 struct_80450A70[8] = {
-	/* data_80450A70 */
-	0xFF, 0xFF,
-	/* data_80450A72 */
-	0x1C, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80359158-8035921C 00C4 .text      CARDGetSerialNo                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDGetSerialNo() {
+extern "C" asm void CARDGetSerialNo() {
 	nofralloc
 #include "asm/dolphin/card/CARDNet/CARDGetSerialNo.s"
 }
 #pragma pop
 
+
+/* 80450A70-80450A78 0008 .sdata     None                                                         */
+u8 struct_80450A70[8] = {
+	/* data_80450A70 */
+	0xFF, 0xFF,
+	/* data_80450A72 */
+	0x1C, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 

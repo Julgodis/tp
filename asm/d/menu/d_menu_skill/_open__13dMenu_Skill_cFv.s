@@ -58,7 +58,7 @@ lbl_801F7AE8:
 /* 801F7B10 00000028  98 1F 02 04 */	stb r0, 0x204(r31)
 /* 801F7B14 0000002C  80 7F 01 5C */	lwz r3, 0x15c(r31)
 /* 801F7B18 00000030  80 63 00 04 */	lwz r3, 4(r3)
-/* 801F7B1C 00000034  C0 02 AA 8C */	lfs f0, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7B1C 00000034  C0 02 AA 8C */	lfs f0, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7B20 00000038  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 801F7B24 0000003C  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 801F7B28 00000040  81 83 00 00 */	lwz r12, 0(r3)
@@ -66,15 +66,15 @@ lbl_801F7AE8:
 /* 801F7B30 00000048  7D 89 03 A6 */	mtctr r12
 /* 801F7B34 0000004C  4E 80 04 21 */	bctrl 
 /* 801F7B38 00000050  80 7F 01 5C */	lwz r3, 0x15c(r31)
-/* 801F7B3C 00000054  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7B3C 00000054  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7B40 00000058  48 05 DC 91 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F7B44 0000005C  7F E3 FB 78 */	mr r3, r31
 /* 801F7B48 00000060  48 00 13 55 */	bl setCursorPos__13dMenu_Skill_cFv
 /* 801F7B4C 00000064  80 7F 01 98 */	lwz r3, 0x198(r31)
-/* 801F7B50 00000068  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7B50 00000068  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7B54 0000006C  4B F9 D7 4D */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F7B58 00000070  80 7F 01 98 */	lwz r3, 0x198(r31)
-/* 801F7B5C 00000074  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7B5C 00000074  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7B60 00000078  4B F9 D6 69 */	bl setScale__16dSelect_cursor_cFf
 /* 801F7B64 0000007C  80 7F 01 98 */	lwz r3, 0x198(r31)
 /* 801F7B68 00000080  88 03 00 B4 */	lbz r0, 0xb4(r3)
@@ -83,7 +83,7 @@ lbl_801F7AE8:
 /* 801F7B74 0000008C  38 60 00 01 */	li r3, 1
 /* 801F7B78 00000090  48 00 00 88 */	b lbl_801F7C00
 lbl_801F7B7C:
-/* 801F7B7C 00000000  C8 42 AA B0 */	lfd f2, LIT_4016(r2)
+/* 801F7B7C 00000000  C8 42 AA B0 */	lfd f2, lit_4016(r2)
 /* 801F7B80 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F7B84 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F7B88 0000000C  3C 60 43 30 */	lis r3, 0x4330

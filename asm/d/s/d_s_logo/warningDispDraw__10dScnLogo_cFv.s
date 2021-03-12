@@ -21,7 +21,7 @@ lbl_80256C68:
 /* 80256CB4 0000004C  80 DF 01 E0 */	lwz r6, 0x1e0(r31)
 /* 80256CB8 00000050  4B DF FA DD */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
 /* 80256CBC 00000054  A0 1F 02 10 */	lhz r0, 0x210(r31)
-/* 80256CC0 00000058  C8 42 B4 F0 */	lfd f2, d_s_d_s_logo__LIT_3940(r2)
+/* 80256CC0 00000058  C8 42 B4 F0 */	lfd f2, d_s_d_s_logo__lit_3940(r2)
 /* 80256CC4 0000005C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80256CC8 00000060  3C 60 43 30 */	lis r3, 0x4330
 /* 80256CCC 00000064  90 61 00 08 */	stw r3, 8(r1)
@@ -36,10 +36,10 @@ lbl_80256C68:
 /* 80256CF0 00000088  A0 1F 02 12 */	lhz r0, 0x212(r31)
 /* 80256CF4 0000008C  28 00 00 00 */	cmplwi r0, 0
 /* 80256CF8 00000090  41 82 00 0C */	beq lbl_80256D04
-/* 80256CFC 00000094  C0 02 B4 DC */	lfs f0, LIT_3934(r2)
+/* 80256CFC 00000094  C0 02 B4 DC */	lfs f0, lit_3934(r2)
 /* 80256D00 00000098  EC 20 08 28 */	fsubs f1, f0, f1
 lbl_80256D04:
-/* 80256D04 00000000  C0 02 B4 E8 */	lfs f0, d_s_d_s_logo__LIT_3937(r2)
+/* 80256D04 00000000  C0 02 B4 E8 */	lfs f0, d_s_d_s_logo__lit_3937(r2)
 /* 80256D08 00000004  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80256D0C 00000008  FC 00 00 1E */	fctiwz f0, f0
 /* 80256D10 0000000C  D8 01 00 18 */	stfd f0, 0x18(r1)

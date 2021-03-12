@@ -50,7 +50,7 @@ lbl_801F3EE8:
 /* 801F3EEC 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3EF0 00000008  7C 7A 02 14 */	add r3, r26, r0
 /* 801F3EF4 0000000C  80 03 00 74 */	lwz r0, 0x74(r3)
-/* 801F3EF8 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F3EF8 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F3EFC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F3F00 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F3F04 0000001C  3C 00 43 30 */	lis r0, 0x4330
@@ -107,7 +107,7 @@ lbl_801F3FC4:
 /* 801F3FC8 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3FCC 00000008  7C 7A 02 14 */	add r3, r26, r0
 /* 801F3FD0 0000000C  80 03 00 74 */	lwz r0, 0x74(r3)
-/* 801F3FD4 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__LIT_4185(r2)
+/* 801F3FD4 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
 /* 801F3FD8 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F3FDC 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F3FE0 0000001C  3C 00 43 30 */	lis r0, 0x4330

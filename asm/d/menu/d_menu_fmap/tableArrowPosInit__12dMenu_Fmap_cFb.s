@@ -77,14 +77,14 @@ lbl_801CD6AC:
 /* 801CD6DC 00000030  38 E1 00 08 */	addi r7, r1, 8
 /* 801CD6E0 00000034  4B FF F9 21 */	bl searchIcon__12dMenu_Fmap_cFUciPfPf
 /* 801CD6E4 00000038  80 7E 00 14 */	lwz r3, 0x14(r30)
-/* 801CD6E8 0000003C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CD6E8 0000003C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CD6EC 00000040  FC 40 08 90 */	fmr f2, f1
 /* 801CD6F0 00000044  38 81 00 18 */	addi r4, r1, 0x18
 /* 801CD6F4 00000048  38 A1 00 10 */	addi r5, r1, 0x10
 /* 801CD6F8 0000004C  48 00 38 85 */	bl calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf
 /* 801CD6FC 00000050  80 7E 00 14 */	lwz r3, 0x14(r30)
-/* 801CD700 00000054  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__LIT_4158(r2)
-/* 801CD704 00000058  C0 42 A7 6C */	lfs f2, LIT_7348(r2)
+/* 801CD700 00000054  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CD704 00000058  C0 42 A7 6C */	lfs f2, lit_7348(r2)
 /* 801CD708 0000005C  38 81 00 1C */	addi r4, r1, 0x1c
 /* 801CD70C 00000060  38 A1 00 14 */	addi r5, r1, 0x14
 /* 801CD710 00000064  48 00 38 6D */	bl calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf

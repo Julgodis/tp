@@ -28,8 +28,8 @@ lbl_80252BC0:
 /* 80252C28 00000068  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80252C2C 0000006C  98 03 5D 44 */	stb r0, 0x5d44(r3)
 /* 80252C30 00000070  98 83 5E B8 */	stb r4, 0x5eb8(r3)
-/* 80252C34 00000074  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__LIT_3765@ha
-/* 80252C38 00000078  38 83 2D 14 */	addi r4, r3, d_ovlp_d_ovlp_fade2__LIT_3765@l
+/* 80252C34 00000074  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__lit_3765@ha
+/* 80252C38 00000078  38 83 2D 14 */	addi r4, r3, d_ovlp_d_ovlp_fade2__lit_3765@l
 /* 80252C3C 0000007C  80 64 00 00 */	lwz r3, 0(r4)
 /* 80252C40 00000080  80 04 00 04 */	lwz r0, 4(r4)
 /* 80252C44 00000084  90 7F 00 CC */	stw r3, 0xcc(r31)

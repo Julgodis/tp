@@ -64,10 +64,10 @@ lbl_801DCDC0:
 /* 801DCEB8 000000F8  98 1F 03 71 */	stb r0, 0x371(r31)
 /* 801DCEBC 000000FC  7F E3 FB 78 */	mr r3, r31
 /* 801DCEC0 00000100  48 00 0A 9D */	bl letter_init_calc__14dMenu_Letter_cFv
-/* 801DCEC4 00000104  C0 02 A8 E0 */	lfs f0, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DCEC4 00000104  C0 02 A8 E0 */	lfs f0, d_menu_d_menu_letter__lit_3827(r2)
 /* 801DCEC8 00000108  D0 1F 03 58 */	stfs f0, 0x358(r31)
 /* 801DCECC 0000010C  D0 1F 03 5C */	stfs f0, 0x35c(r31)
-/* 801DCED0 00000110  C0 02 A8 E4 */	lfs f0, d_menu_d_menu_letter__LIT_3828(r2)
+/* 801DCED0 00000110  C0 02 A8 E4 */	lfs f0, d_menu_d_menu_letter__lit_3828(r2)
 /* 801DCED4 00000114  D0 1F 03 64 */	stfs f0, 0x364(r31)
 /* 801DCED8 00000118  D0 1F 03 60 */	stfs f0, 0x360(r31)
 /* 801DCEDC 0000011C  38 C0 00 00 */	li r6, 0

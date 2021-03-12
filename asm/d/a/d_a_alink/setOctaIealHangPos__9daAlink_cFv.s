@@ -17,9 +17,9 @@ lbl_800FC6DC:
 /* 800FC6EC 00000010  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
 /* 800FC6F0 00000014  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 800FC6F4 00000018  48 24 9D BD */	bl PSMTXCopy
-/* 800FC6F8 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
-/* 800FC6FC 00000020  C0 42 95 5C */	lfs f2, LIT_24400(r2)
-/* 800FC700 00000024  C0 62 95 60 */	lfs f3, LIT_24401(r2)
+/* 800FC6F8 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
+/* 800FC6FC 00000020  C0 42 95 5C */	lfs f2, lit_24400(r2)
+/* 800FC700 00000024  C0 62 95 60 */	lfs f3, lit_24401(r2)
 /* 800FC704 00000028  4B F1 06 99 */	bl transM__14mDoMtx_stack_cFfff
 /* 800FC708 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800FC70C 00000030  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

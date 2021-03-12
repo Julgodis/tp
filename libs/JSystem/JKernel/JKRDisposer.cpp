@@ -5,57 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void findFromRoot__7JKRHeapFPv();
-extern void __dl__FPv();
-extern void __ct__11JKRDisposerFv();
-extern void __dt__11JKRDisposerFv();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-SECTION_DATA extern void* __vt__11JKRDisposer[4];
-}
+extern "C" extern void findFromRoot__7JKRHeapFPv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__11JKRDisposerFv();
+extern "C" extern void __dt__11JKRDisposerFv();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+SECTION_DATA extern void* const __vt__11JKRDisposer[4];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC0F0-803CC100 000C .data      __vt__11JKRDisposer                                          */
-SECTION_DATA void* __vt__11JKRDisposer[4] = {
+void* const __vt__11JKRDisposer[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JKRDisposerFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802D147C-802D14E4 0068 .text      __ct__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11JKRDisposerFv() {
+extern "C" asm void __ct__11JKRDisposerFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDisposer/__ct__11JKRDisposerFv.s"
 }
 #pragma pop
 
+
 /* 802D14E4-802D1568 0084 .text      __dt__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11JKRDisposerFv() {
+extern "C" asm void __dt__11JKRDisposerFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDisposer/__dt__11JKRDisposerFv.s"
 }

@@ -26,7 +26,7 @@ lbl_800F9240:
 /* 800F926C 0000002C  3C A0 80 39 */	lis r5, m__20daAlinkHIO_crouch_c0@ha
 /* 800F9270 00000030  38 A5 E0 1C */	addi r5, r5, m__20daAlinkHIO_crouch_c0@l
 /* 800F9274 00000034  4B FB 3E 81 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800F9278 00000038  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800F9278 00000038  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800F927C 0000003C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800F9280 00000040  A8 7F 30 6E */	lha r3, 0x306e(r31)
 /* 800F9284 00000044  3C 63 00 01 */	addis r3, r3, 1
@@ -40,7 +40,7 @@ lbl_800F9240:
 /* 800F92A4 00000064  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800F92A8 00000068  7C 03 04 2E */	lfsx f0, r3, r0
 /* 800F92AC 0000006C  C0 3F 34 EC */	lfs f1, 0x34ec(r31)
-/* 800F92B0 00000070  C0 42 93 BC */	lfs f2, LIT_10042(r2)
+/* 800F92B0 00000070  C0 42 93 BC */	lfs f2, lit_10042(r2)
 /* 800F92B4 00000074  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800F92B8 00000078  EC 01 00 2A */	fadds f0, f1, f0
 /* 800F92BC 0000007C  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
@@ -56,7 +56,7 @@ lbl_800F9240:
 /* 800F92E4 000000A4  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
 /* 800F92E8 000000A8  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 800F92EC 000000AC  A8 03 00 00 */	lha r0, 0(r3)
-/* 800F92F0 000000B0  C8 22 92 B0 */	lfd f1, LIT_6025(r2)
+/* 800F92F0 000000B0  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800F92F4 000000B4  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 800F92F8 000000B8  90 61 00 0C */	stw r3, 0xc(r1)
 /* 800F92FC 000000BC  3C 00 43 30 */	lis r0, 0x4330
@@ -74,7 +74,7 @@ lbl_800F9240:
 lbl_800F932C:
 /* 800F932C 00000000  D0 5F 34 7C */	stfs f2, 0x347c(r31)
 lbl_800F9330:
-/* 800F9330 00000000  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
+/* 800F9330 00000000  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
 /* 800F9334 00000004  C0 3F 34 7C */	lfs f1, 0x347c(r31)
 /* 800F9338 00000008  3C 60 80 39 */	lis r3, m__20daAlinkHIO_crouch_c0@ha
 /* 800F933C 0000000C  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
@@ -82,7 +82,7 @@ lbl_800F9330:
 /* 800F9344 00000014  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800F9348 00000018  EC 02 00 24 */	fdivs f0, f2, f0
 /* 800F934C 0000001C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
-/* 800F9350 00000020  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800F9350 00000020  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800F9354 00000024  D0 1F 33 CC */	stfs f0, 0x33cc(r31)
 /* 800F9358 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F935C 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

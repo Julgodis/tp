@@ -31,7 +31,7 @@ lbl_801CD814:
 /* 801CD888 00000074  38 BE 02 50 */	addi r5, r30, 0x250
 /* 801CD88C 00000078  C0 21 00 0C */	lfs f1, 0xc(r1)
 /* 801CD890 0000007C  C0 41 00 08 */	lfs f2, 8(r1)
-/* 801CD894 00000080  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CD894 00000080  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CD898 00000084  48 00 81 29 */	bl setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff
 lbl_801CD89C:
 /* 801CD89C 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

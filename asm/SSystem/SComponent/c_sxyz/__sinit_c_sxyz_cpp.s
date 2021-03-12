@@ -14,8 +14,8 @@ lbl_8026758C:
 /* 802675BC 00000030  38 6D 8B E0 */	addi r3, r13, 0x80451160-0x80458580 /* Zero__5csXyz-_SDA_BASE_ */
 /* 802675C0 00000034  3C 80 80 02 */	lis r4, __dt__5csXyzFv@ha
 /* 802675C4 00000038  38 84 8B D0 */	addi r4, r4, __dt__5csXyzFv@l
-/* 802675C8 0000003C  3C A0 80 43 */	lis r5, LIT_262@ha
-/* 802675CC 00000040  38 A5 0D A8 */	addi r5, r5, LIT_262@l
+/* 802675C8 0000003C  3C A0 80 43 */	lis r5, lit_262@ha
+/* 802675CC 00000040  38 A5 0D A8 */	addi r5, r5, lit_262@l
 /* 802675D0 00000044  48 0F A6 55 */	bl __register_global_object
 /* 802675D4 00000048  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802675D8 0000004C  7C 08 03 A6 */	mtlr r0

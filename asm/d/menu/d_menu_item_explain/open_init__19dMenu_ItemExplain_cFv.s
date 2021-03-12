@@ -165,9 +165,9 @@ lbl_801DBA68:
 /* 801DBA78 00000010  38 A0 00 00 */	li r5, 0
 /* 801DBA7C 00000014  38 C0 00 00 */	li r6, 0
 /* 801DBA80 00000018  38 E0 00 00 */	li r7, 0
-/* 801DBA84 0000001C  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__LIT_4348(r2)
+/* 801DBA84 0000001C  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__lit_4348(r2)
 /* 801DBA88 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801DBA8C 00000024  C0 62 A8 B0 */	lfs f3, d_menu_d_menu_item_explain__LIT_4304(r2)
+/* 801DBA8C 00000024  C0 62 A8 B0 */	lfs f3, d_menu_d_menu_item_explain__lit_4304(r2)
 /* 801DBA90 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801DBA94 0000002C  39 00 00 00 */	li r8, 0
 /* 801DBA98 00000030  48 0C FE ED */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

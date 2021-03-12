@@ -25,7 +25,7 @@ lbl_800ED044:
 /* 800ED048 00000004  30 1F FF FF */	addic r0, r31, -1
 /* 800ED04C 00000008  7C 80 01 10 */	subfe r4, r0, r0
 /* 800ED050 0000000C  38 84 02 4D */	addi r4, r4, 0x24d
-/* 800ED054 00000010  C0 22 93 24 */	lfs f1, LIT_7450(r2)
+/* 800ED054 00000010  C0 22 93 24 */	lfs f1, lit_7450(r2)
 /* 800ED058 00000014  4B FC 03 1D */	bl setUpperAnimeBaseMorf__9daAlink_cFUsf
 lbl_800ED05C:
 /* 800ED05C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -36,8 +36,8 @@ lbl_801ED9AC:
 /* 801ED9B8 0000000C  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 801ED9BC 00000010  48 06 7E 15 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801ED9C0 00000014  80 7F 01 B8 */	lwz r3, 0x1b8(r31)
-/* 801ED9C4 00000018  C0 22 AA 10 */	lfs f1, LIT_5683(r2)
-/* 801ED9C8 0000001C  C0 02 A9 9C */	lfs f0, d_menu_d_menu_ring__LIT_4305(r2)
+/* 801ED9C4 00000018  C0 22 AA 10 */	lfs f1, lit_5683(r2)
+/* 801ED9C8 0000001C  C0 02 A9 9C */	lfs f0, d_menu_d_menu_ring__lit_4305(r2)
 /* 801ED9CC 00000020  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 801ED9D0 00000024  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801ED9D4 00000028  FC 00 00 1E */	fctiwz f0, f0

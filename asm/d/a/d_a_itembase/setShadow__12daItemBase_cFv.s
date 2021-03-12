@@ -11,7 +11,7 @@ lbl_80144D70:
 /* 80144D94 00000010  7D 89 03 A6 */	mtctr r12
 /* 80144D98 00000014  4E 80 04 21 */	bctrl 
 /* 80144D9C 00000018  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80144DA0 0000001C  C8 22 99 B8 */	lfd f1, LIT_3955(r2)
+/* 80144DA0 0000001C  C8 22 99 B8 */	lfd f1, lit_3955(r2)
 /* 80144DA4 00000020  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80144DA8 00000024  3C 00 43 30 */	lis r0, 0x4330
 /* 80144DAC 00000028  90 01 00 08 */	stw r0, 8(r1)
@@ -33,13 +33,13 @@ lbl_80144D70:
 /* 80144DEC 00000068  7D 89 03 A6 */	mtctr r12
 /* 80144DF0 0000006C  4E 80 04 21 */	bctrl 
 /* 80144DF4 00000070  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80144DF8 00000074  C8 22 99 B8 */	lfd f1, LIT_3955(r2)
+/* 80144DF8 00000074  C8 22 99 B8 */	lfd f1, lit_3955(r2)
 /* 80144DFC 00000078  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80144E00 0000007C  3C 00 43 30 */	lis r0, 0x4330
 /* 80144E04 00000080  90 01 00 08 */	stw r0, 8(r1)
 /* 80144E08 00000084  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80144E0C 00000088  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80144E10 0000008C  C0 02 99 AC */	lfs f0, LIT_3952(r2)
+/* 80144E10 0000008C  C0 02 99 AC */	lfs f0, lit_3952(r2)
 /* 80144E14 00000090  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80144E18 00000094  41 82 00 A8 */	beq lbl_80144EC0
 /* 80144E1C 00000098  38 7F 04 D0 */	addi r3, r31, 0x4d0
@@ -47,7 +47,7 @@ lbl_80144D70:
 /* 80144E24 000000A0  FC 40 F8 90 */	fmr f2, f31
 /* 80144E28 000000A4  38 9F 06 7C */	addi r4, r31, 0x67c
 /* 80144E2C 000000A8  38 A0 00 00 */	li r5, 0
-/* 80144E30 000000AC  C0 62 99 A8 */	lfs f3, d_a_d_a_itembase__LIT_3881(r2)
+/* 80144E30 000000AC  C0 62 99 A8 */	lfs f3, d_a_d_a_itembase__lit_3881(r2)
 /* 80144E34 000000B0  3C C0 80 42 */	lis r6, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80144E38 000000B4  38 C6 48 D0 */	addi r6, r6, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80144E3C 000000B8  4B EE 82 79 */	bl dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj
@@ -59,28 +59,28 @@ lbl_80144E44:
 /* 80144E50 0000000C  7D 89 03 A6 */	mtctr r12
 /* 80144E54 00000010  4E 80 04 21 */	bctrl 
 /* 80144E58 00000014  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80144E5C 00000018  C8 22 99 B8 */	lfd f1, LIT_3955(r2)
+/* 80144E5C 00000018  C8 22 99 B8 */	lfd f1, lit_3955(r2)
 /* 80144E60 0000001C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80144E64 00000020  3C 00 43 30 */	lis r0, 0x4330
 /* 80144E68 00000024  90 01 00 08 */	stw r0, 8(r1)
 /* 80144E6C 00000028  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80144E70 0000002C  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80144E74 00000030  C0 02 99 AC */	lfs f0, LIT_3952(r2)
+/* 80144E74 00000030  C0 02 99 AC */	lfs f0, lit_3952(r2)
 /* 80144E78 00000034  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80144E7C 00000038  40 82 00 08 */	bne lbl_80144E84
-/* 80144E80 0000003C  C0 22 99 B0 */	lfs f1, d_a_d_a_itembase__LIT_3953(r2)
+/* 80144E80 0000003C  C0 22 99 B0 */	lfs f1, d_a_d_a_itembase__lit_3953(r2)
 lbl_80144E84:
 /* 80144E84 00000000  80 7F 09 1C */	lwz r3, 0x91c(r31)
 /* 80144E88 00000004  38 80 00 03 */	li r4, 3
 /* 80144E8C 00000008  80 BF 05 74 */	lwz r5, 0x574(r31)
 /* 80144E90 0000000C  38 DF 04 D0 */	addi r6, r31, 0x4d0
-/* 80144E94 00000010  C0 42 99 AC */	lfs f2, LIT_3952(r2)
+/* 80144E94 00000010  C0 42 99 AC */	lfs f2, lit_3952(r2)
 /* 80144E98 00000014  C0 7F 04 D4 */	lfs f3, 0x4d4(r31)
 /* 80144E9C 00000018  C0 9F 06 24 */	lfs f4, 0x624(r31)
 /* 80144EA0 0000001C  38 FF 06 7C */	addi r7, r31, 0x67c
 /* 80144EA4 00000020  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 80144EA8 00000024  39 20 00 00 */	li r9, 0
-/* 80144EAC 00000028  C0 A2 99 A8 */	lfs f5, d_a_d_a_itembase__LIT_3881(r2)
+/* 80144EAC 00000028  C0 A2 99 A8 */	lfs f5, d_a_d_a_itembase__lit_3881(r2)
 /* 80144EB0 0000002C  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80144EB4 00000030  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80144EB8 00000034  4B EE 9A 59 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

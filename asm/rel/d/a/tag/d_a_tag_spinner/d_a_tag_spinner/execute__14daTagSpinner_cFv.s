@@ -1,0 +1,49 @@
+lbl_80D61A00:
+/* 80D61A00 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D61A04 00000004  7C 08 02 A6 */	mflr r0
+/* 80D61A08 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D61A0C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D61A10 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80D61A14 00000014  3C 60 00 00 */	lis r3, search_spinner_sub__FPvPv@ha
+/* 80D61A18 00000018  38 63 00 00 */	addi r3, r3, search_spinner_sub__FPvPv@l
+/* 80D61A1C 0000001C  7F E4 FB 78 */	mr r4, r31
+/* 80D61A20 00000020  4B FF FC B9 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80D61A24 00000024  28 03 00 00 */	cmplwi r3, 0
+/* 80D61A28 00000028  41 82 00 58 */	beq lbl_80D61A80
+/* 80D61A2C 0000002C  88 03 0A 6F */	lbz r0, 0xa6f(r3)
+/* 80D61A30 00000030  28 00 00 00 */	cmplwi r0, 0
+/* 80D61A34 00000034  40 82 00 0C */	bne lbl_80D61A40
+/* 80D61A38 00000038  38 00 00 01 */	li r0, 1
+/* 80D61A3C 0000003C  98 03 0A 6F */	stb r0, 0xa6f(r3)
+lbl_80D61A40:
+/* 80D61A40 00000000  38 00 00 00 */	li r0, 0
+/* 80D61A44 00000004  90 03 0A 64 */	stw r0, 0xa64(r3)
+/* 80D61A48 00000008  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
+/* 80D61A4C 0000000C  D0 03 0A A4 */	stfs f0, 0xaa4(r3)
+/* 80D61A50 00000010  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
+/* 80D61A54 00000014  D0 03 0A A8 */	stfs f0, 0xaa8(r3)
+/* 80D61A58 00000018  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
+/* 80D61A5C 0000001C  D0 03 0A AC */	stfs f0, 0xaac(r3)
+/* 80D61A60 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D61A64 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D61A68 00000028  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80D61A6C 0000002C  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 80D61A70 00000030  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 80D61A74 00000034  7C 05 07 74 */	extsb r5, r0
+/* 80D61A78 00000038  4B FF FC 61 */	bl onSwitch__10dSv_info_cFii
+/* 80D61A7C 0000003C  48 00 00 20 */	b lbl_80D61A9C
+lbl_80D61A80:
+/* 80D61A80 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D61A84 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D61A88 00000008  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80D61A8C 0000000C  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 80D61A90 00000010  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 80D61A94 00000014  7C 05 07 74 */	extsb r5, r0
+/* 80D61A98 00000018  4B FF FC 41 */	bl offSwitch__10dSv_info_cFii
+lbl_80D61A9C:
+/* 80D61A9C 00000000  38 60 00 01 */	li r3, 1
+/* 80D61AA0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D61AA4 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D61AA8 0000000C  7C 08 03 A6 */	mtlr r0
+/* 80D61AAC 00000010  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D61AB0 00000014  4E 80 00 20 */	blr 

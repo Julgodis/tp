@@ -29,7 +29,7 @@ lbl_800E7C80:
 /* 800E7C94 00000014  3C A0 80 39 */	lis r5, m__21daAlinkHIO_fmChain_c0@ha
 /* 800E7C98 00000018  38 A5 E7 CC */	addi r5, r5, m__21daAlinkHIO_fmChain_c0@l
 /* 800E7C9C 0000001C  4B FC 54 59 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E7CA0 00000020  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E7CA0 00000020  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E7CA4 00000024  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E7CA8 00000028  38 60 00 01 */	li r3, 1
 lbl_800E7CAC:

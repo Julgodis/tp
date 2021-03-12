@@ -58,9 +58,9 @@ lbl_801EB374:
 /* 801EB384 00000010  38 A0 00 00 */	li r5, 0
 /* 801EB388 00000014  38 C0 00 00 */	li r6, 0
 /* 801EB38C 00000018  38 E0 00 00 */	li r7, 0
-/* 801EB390 0000001C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__LIT_4305(r2)
+/* 801EB390 0000001C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__lit_4305(r2)
 /* 801EB394 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801EB398 00000024  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__LIT_4465(r2)
+/* 801EB398 00000024  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__lit_4465(r2)
 /* 801EB39C 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801EB3A0 0000002C  39 00 00 00 */	li r8, 0
 /* 801EB3A4 00000030  48 0C 05 E1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

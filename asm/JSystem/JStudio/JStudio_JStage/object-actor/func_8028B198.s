@@ -4,10 +4,10 @@ lbl_8028B198:
 /* 8028B1A0 00000008  90 01 01 04 */	stw r0, 0x104(r1)
 /* 8028B1A4 0000000C  39 61 01 00 */	addi r11, r1, 0x100
 /* 8028B1A8 00000010  48 0D 70 2D */	bl _savegpr_27
-/* 8028B1AC 00000014  3C 60 80 3C */	lis r3, LIT_890@ha
-/* 8028B1B0 00000018  3B C3 57 30 */	addi r30, r3, LIT_890@l
-/* 8028B1B4 0000001C  3C 60 80 43 */	lis r3, LIT_1087@ha
-/* 8028B1B8 00000020  3B E3 11 88 */	addi r31, r3, LIT_1087@l
+/* 8028B1AC 00000014  3C 60 80 3C */	lis r3, lit_890@ha
+/* 8028B1B0 00000018  3B C3 57 30 */	addi r30, r3, lit_890@l
+/* 8028B1B4 0000001C  3C 60 80 43 */	lis r3, lit_1087@ha
+/* 8028B1B8 00000020  3B E3 11 88 */	addi r31, r3, lit_1087@l
 /* 8028B1BC 00000024  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028B1C0 00000028  39 43 56 40 */	addi r10, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 8028B1C4 0000002C  91 41 00 34 */	stw r10, 0x34(r1)

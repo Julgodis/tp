@@ -11,7 +11,7 @@ lbl_8001A738:
 /* 8001A75C 00000024  EC 22 00 B2 */	fmuls f1, f2, f2
 /* 8001A760 00000028  EC 00 00 32 */	fmuls f0, f0, f0
 /* 8001A764 0000002C  EC 41 00 2A */	fadds f2, f1, f0
-/* 8001A768 00000030  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001A768 00000030  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001A76C 00000034  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8001A770 00000000  40 81 00 0C */	ble lbl_8001A77C
 /* 8001A774 00000004  FC 00 10 34 */	frsqrte f0, f2

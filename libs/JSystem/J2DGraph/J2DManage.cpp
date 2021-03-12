@@ -5,71 +5,65 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void read__14JSUInputStreamFPvl();
-extern void get__13J2DDataManageFPCc();
-extern void get__13J2DDataManageFP14JSUInputStream();
-extern void getResReference__15J2DResReferenceCFUs();
-extern void getName__15J2DResReferenceCFUs();
-extern void _savegpr_29();
-extern void _restgpr_29();
-extern void strcmp();
+extern "C" extern void read__14JSUInputStreamFPvl();
+extern "C" extern void get__13J2DDataManageFPCc();
+extern "C" extern void get__13J2DDataManageFP14JSUInputStream();
+extern "C" extern void getResReference__15J2DResReferenceCFUs();
+extern "C" extern void getName__15J2DResReferenceCFUs();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcmp();
 SECTION_BSS extern u8 data_804349C0[257 + 7 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804349C0-80434AC8 0101 .bss       p_name$494                                                   */
-SECTION_BSS u8 data_804349C0[257 + 7 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8030CE18-8030CE7C 0064 .text      get__13J2DDataManageFPCc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get__13J2DDataManageFPCc() {
+extern "C" asm void get__13J2DDataManageFPCc() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/get__13J2DDataManageFPCc.s"
 }
 #pragma pop
 
+
 /* 8030CE7C-8030CF10 0094 .text      get__13J2DDataManageFP14JSUInputStream                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get__13J2DDataManageFP14JSUInputStream() {
+extern "C" asm void get__13J2DDataManageFP14JSUInputStream() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/get__13J2DDataManageFP14JSUInputStream.s"
 }
 #pragma pop
 
+
 /* 8030CF10-8030CF44 0034 .text      getResReference__15J2DResReferenceCFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getResReference__15J2DResReferenceCFUs() {
+extern "C" asm void getResReference__15J2DResReferenceCFUs() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/getResReference__15J2DResReferenceCFUs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804349C0-80434AC8 0101 .bss       p_name$494                                                   */
+u8 data_804349C0[257 + 7 /* padding */];
+
 /* 8030CF44-8030D098 0154 .text      getName__15J2DResReferenceCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getName__15J2DResReferenceCFUs() {
+extern "C" asm void getName__15J2DResReferenceCFUs() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/getName__15J2DResReferenceCFUs.s"
 }

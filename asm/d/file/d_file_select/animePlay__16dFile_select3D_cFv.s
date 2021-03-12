@@ -8,12 +8,12 @@ lbl_80190A14:
 /* 80190A2C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80190A30 0000001C  41 82 00 7C */	beq lbl_80190AAC
 /* 80190A34 00000020  C0 3F 03 C4 */	lfs f1, 0x3c4(r31)
-/* 80190A38 00000024  C0 02 9F 40 */	lfs f0, d_file_d_file_select__LIT_4611(r2)
+/* 80190A38 00000024  C0 02 9F 40 */	lfs f0, d_file_d_file_select__lit_4611(r2)
 /* 80190A3C 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 80190A40 0000002C  D0 1F 03 C4 */	stfs f0, 0x3c4(r31)
 /* 80190A44 00000030  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 80190A48 00000034  A8 83 00 08 */	lha r4, 8(r3)
-/* 80190A4C 00000038  C8 42 9F 38 */	lfd f2, d_file_d_file_select__LIT_4342(r2)
+/* 80190A4C 00000038  C8 42 9F 38 */	lfd f2, d_file_d_file_select__lit_4342(r2)
 /* 80190A50 0000003C  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 80190A54 00000040  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80190A58 00000044  3C 60 43 30 */	lis r3, 0x4330
@@ -43,12 +43,12 @@ lbl_80190AAC:
 /* 80190AB0 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80190AB4 00000008  41 82 00 7C */	beq lbl_80190B30
 /* 80190AB8 0000000C  C0 3F 03 C8 */	lfs f1, 0x3c8(r31)
-/* 80190ABC 00000010  C0 02 9F 40 */	lfs f0, d_file_d_file_select__LIT_4611(r2)
+/* 80190ABC 00000010  C0 02 9F 40 */	lfs f0, d_file_d_file_select__lit_4611(r2)
 /* 80190AC0 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 80190AC4 00000018  D0 1F 03 C8 */	stfs f0, 0x3c8(r31)
 /* 80190AC8 0000001C  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 80190ACC 00000020  A8 83 00 08 */	lha r4, 8(r3)
-/* 80190AD0 00000024  C8 42 9F 38 */	lfd f2, d_file_d_file_select__LIT_4342(r2)
+/* 80190AD0 00000024  C8 42 9F 38 */	lfd f2, d_file_d_file_select__lit_4342(r2)
 /* 80190AD4 00000028  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 80190AD8 0000002C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80190ADC 00000030  3C 60 43 30 */	lis r3, 0x4330

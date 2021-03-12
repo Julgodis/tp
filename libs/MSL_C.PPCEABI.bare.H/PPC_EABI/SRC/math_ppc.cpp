@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cos();
-extern void sin();
-extern void tan();
-extern void acos();
-extern void tanf();
-extern void sinf();
-extern void cosf();
-extern void acosf();
-}
+extern "C" extern void cos();
+extern "C" extern void sin();
+extern "C" extern void tan();
+extern "C" extern void acos();
+extern "C" extern void tanf();
+extern "C" extern void sinf();
+extern "C" extern void cosf();
+extern "C" extern void acosf();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C9C4-8036C9E8 0024 .text      tanf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void tanf() {
+extern "C" asm void tanf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc/tanf.s"
 }
 #pragma pop
 
+
 /* 8036C9E8-8036CA0C 0024 .text      sinf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sinf() {
+extern "C" asm void sinf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc/sinf.s"
 }
 #pragma pop
 
+
 /* 8036CA0C-8036CA30 0024 .text      cosf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cosf() {
+extern "C" asm void cosf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc/cosf.s"
 }
 #pragma pop
 
+
 /* 8036CA30-8036CA54 0024 .text      acosf                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void acosf() {
+extern "C" asm void acosf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc/acosf.s"
 }

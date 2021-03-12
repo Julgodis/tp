@@ -5,215 +5,189 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__19dMsgScrnLight_HIO_cFv();
-extern void updateColor__19dMsgScrnLight_HIO_cFUc();
-extern void __ct__15dMsgScrnLight_cFUcUc();
-extern void __dt__15dMsgScrnLight_cFv();
-extern void draw__15dMsgScrnLight_cFPffffffUc();
-extern void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
-extern void drawCommon__15dMsgScrnLight_cFfffff();
-extern void __dt__19dMsgScrnLight_HIO_cFv();
-extern void __sinit_d_msg_scrn_light_cpp();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern void animationTransform__7J2DPaneFv();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void animation__9J2DScreenFv();
-extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern void __register_global_object();
+extern "C" extern void __ct__19dMsgScrnLight_HIO_cFv();
+extern "C" extern void updateColor__19dMsgScrnLight_HIO_cFUc();
+extern "C" extern void __ct__15dMsgScrnLight_cFUcUc();
+extern "C" extern void __dt__15dMsgScrnLight_cFv();
+extern "C" extern void draw__15dMsgScrnLight_cFPffffffUc();
+extern "C" extern void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void drawCommon__15dMsgScrnLight_cFfffff();
+extern "C" extern void __dt__19dMsgScrnLight_HIO_cFv();
+extern "C" extern void __sinit_d_msg_scrn_light_cpp();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" extern void animationTransform__7J2DPaneFv();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void animation__9J2DScreenFv();
+extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" extern void __register_global_object();
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_light__stringBase0[112];
-SECTION_DATA extern void* __vt__15dMsgScrnLight_c[3];
-SECTION_DATA extern void* __vt__19dMsgScrnLight_HIO_c[3];
+SECTION_DATA extern void* const __vt__15dMsgScrnLight_c[3];
+SECTION_DATA extern void* const __vt__19dMsgScrnLight_HIO_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 LIT_3735[12];
+SECTION_BSS extern u8 lit_3735[12];
 SECTION_BSS extern u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
 SECTION_SBSS extern u8 data_804510D8[8];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_light__LIT_3808[4];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_light__LIT_3869[4];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_light__LIT_3871[8];
-}
+SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_light__lit_3808[4];
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_light__lit_3869;
+SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_light__lit_3871;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80399B08-80399B78 006C .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80399B08 = 
-    "zelda_message_wi"
-    "ndow_text_light."
-    "blo";
-SECTION_DEAD const char* const stringBase_80399B2C = 
-    "zelda_message_wi"
-    "ndow_text_light."
-    "bck";
-SECTION_DEAD const char* const stringBase_80399B50 = 
-    "zelda_message_wi"
-    "ndow_text_light."
-    "bpk";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_80399B74 = "\0\0\0";
-#pragma pop
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C1298-803C12A4 000C .data      __vt__15dMsgScrnLight_c                                      */
-SECTION_DATA void* __vt__15dMsgScrnLight_c[3] = {
+void* const __vt__15dMsgScrnLight_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dMsgScrnLight_cFv,
 };
+
 /* 803C12A4-803C12B0 000C .data      __vt__19dMsgScrnLight_HIO_c                                  */
-SECTION_DATA void* __vt__19dMsgScrnLight_HIO_c[3] = {
+void* const __vt__19dMsgScrnLight_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dMsgScrnLight_HIO_cFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454CD8-80454CDC 0004 .sdata2    @3808                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_light__LIT_3808[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454CDC-80454CE0 0004 .sdata2    @3869                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_light__LIT_3869[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454CE0-80454CE8 0008 .sdata2    @3871                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_light__LIT_3871[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804306C8-804306D4 000C .bss       @3735                                                        */
-SECTION_BSS u8 LIT_3735[12];
-/* 804306D4-80430728 0050 .bss       g_MsgScrnLight_HIO_c                                         */
-SECTION_BSS u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8024575C-802457C4 0068 .text      __ct__19dMsgScrnLight_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19dMsgScrnLight_HIO_cFv() {
+extern "C" asm void __ct__19dMsgScrnLight_HIO_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__ct__19dMsgScrnLight_HIO_cFv.s"
 }
 #pragma pop
 
+
 /* 802457C4-80245934 0170 .text      updateColor__19dMsgScrnLight_HIO_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateColor__19dMsgScrnLight_HIO_cFUc() {
+extern "C" asm void updateColor__19dMsgScrnLight_HIO_cFUc() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/updateColor__19dMsgScrnLight_HIO_cFUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80399B08-80399B78 006C .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399B08 = 
+    "zelda_message_window_text_light.blo";
+SECTION_DEAD const char* const stringBase_80399B2C = 
+    "zelda_message_window_text_light.bck";
+SECTION_DEAD const char* const stringBase_80399B50 = 
+    "zelda_message_window_text_light.bpk";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399B74 = "\0\0\0";
+#pragma pop
+
+/* 80454CD8-80454CDC 0004 .sdata2    @3808                                                        */
+u8 msg_scrn_d_msg_scrn_light__lit_3808[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804306C8-804306D4 000C .bss       @3735                                                        */
+u8 lit_3735[12];
+
+/* 804306D4-80430728 0050 .bss       g_MsgScrnLight_HIO_c                                         */
+u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
+
 /* 80245934-80245B00 01CC .text      __ct__15dMsgScrnLight_cFUcUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dMsgScrnLight_cFUcUc() {
+extern "C" asm void __ct__15dMsgScrnLight_cFUcUc() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__ct__15dMsgScrnLight_cFUcUc.s"
 }
 #pragma pop
 
+
 /* 80245B00-80245C04 0104 .text      __dt__15dMsgScrnLight_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dMsgScrnLight_cFv() {
+extern "C" asm void __dt__15dMsgScrnLight_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__dt__15dMsgScrnLight_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454CDC-80454CE0 0004 .sdata2    @3869                                                        */
+f32 msg_scrn_d_msg_scrn_light__lit_3869 = 1.0f;
+
+/* 80454CE0-80454CE8 0008 .sdata2    @3871                                                        */
+f64 msg_scrn_d_msg_scrn_light__lit_3871 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80245C04-80245F90 038C .text      draw__15dMsgScrnLight_cFPffffffUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__15dMsgScrnLight_cFPffffffUc() {
+extern "C" asm void draw__15dMsgScrnLight_cFPffffffUc() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/draw__15dMsgScrnLight_cFPffffffUc.s"
 }
 #pragma pop
 
+
 /* 80245F90-802460DC 014C .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor() {
+extern "C" asm void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 802460DC-80246348 026C .text      drawCommon__15dMsgScrnLight_cFfffff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawCommon__15dMsgScrnLight_cFfffff() {
+extern "C" asm void drawCommon__15dMsgScrnLight_cFfffff() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/drawCommon__15dMsgScrnLight_cFfffff.s"
 }
 #pragma pop
 
+
 /* 80246348-80246390 0048 .text      __dt__19dMsgScrnLight_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19dMsgScrnLight_HIO_cFv() {
+extern "C" asm void __dt__19dMsgScrnLight_HIO_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__dt__19dMsgScrnLight_HIO_cFv.s"
 }
 #pragma pop
 
+
 /* 80246390-802463CC 003C .text      __sinit_d_msg_scrn_light_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_msg_scrn_light_cpp() {
+extern "C" asm void __sinit_d_msg_scrn_light_cpp() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__sinit_d_msg_scrn_light_cpp.s"
 }

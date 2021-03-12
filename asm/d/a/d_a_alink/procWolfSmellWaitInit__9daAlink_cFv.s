@@ -20,7 +20,7 @@ lbl_8011D0CC:
 /* 8011D0E4 00000018  48 00 C5 F5 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8011D0E8 0000001C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 8011D0EC 00000020  B0 1F 04 DE */	sth r0, 0x4de(r31)
-/* 8011D0F0 00000024  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8011D0F0 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011D0F4 00000028  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8011D0F8 0000002C  38 60 00 01 */	li r3, 1
 lbl_8011D0FC:

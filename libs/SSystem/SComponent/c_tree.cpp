@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cLs_SingleCut__FP10node_class();
-extern void cLs_Addition__FP15node_list_classP10node_class();
-extern void cLs_Insert__FP15node_list_classiP10node_class();
-extern void cLs_Create__FP15node_list_class();
-extern void cTr_SingleCut__FP10node_class();
-extern void cTr_Addition__FP21node_lists_tree_classiP10node_class();
-extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
-extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
-}
+extern "C" extern void cLs_SingleCut__FP10node_class();
+extern "C" extern void cLs_Addition__FP15node_list_classP10node_class();
+extern "C" extern void cLs_Insert__FP15node_list_classiP10node_class();
+extern "C" extern void cLs_Create__FP15node_list_class();
+extern "C" extern void cTr_SingleCut__FP10node_class();
+extern "C" extern void cTr_Addition__FP21node_lists_tree_classiP10node_class();
+extern "C" extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
+extern "C" extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80266440-80266460 0020 .text      cTr_SingleCut__FP10node_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_SingleCut__FP10node_class() {
+extern "C" asm void cTr_SingleCut__FP10node_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_SingleCut__FP10node_class.s"
 }
 #pragma pop
 
+
 /* 80266460-802664A4 0044 .text      cTr_Addition__FP21node_lists_tree_classiP10node_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Addition__FP21node_lists_tree_classiP10node_class() {
+extern "C" asm void cTr_Addition__FP21node_lists_tree_classiP10node_class() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Addition__FP21node_lists_tree_classiP10node_class.s"
 }
 #pragma pop
 
+
 /* 802664A4-802664E8 0044 .text      cTr_Insert__FP21node_lists_tree_classiP10node_classi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Insert__FP21node_lists_tree_classiP10node_classi() {
+extern "C" asm void cTr_Insert__FP21node_lists_tree_classiP10node_classi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Insert__FP21node_lists_tree_classiP10node_classi.s"
 }
 #pragma pop
 
+
 /* 802664E8-80266540 0058 .text      cTr_Create__FP21node_lists_tree_classP15node_list_classi     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Create__FP21node_lists_tree_classP15node_list_classi() {
+extern "C" asm void cTr_Create__FP21node_lists_tree_classP15node_list_classi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Create__FP21node_lists_tree_classP15node_list_classi.s"
 }

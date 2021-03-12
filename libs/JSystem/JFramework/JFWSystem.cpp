@@ -5,48 +5,47 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void firstInit__9JFWSystemFv();
-extern void init__9JFWSystemFv();
-extern void alloc__7JKRHeapFUli();
-extern void __nw__FUl();
-extern void createRoot__10JKRExpHeapFib();
-extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern void __ct__9JKRThreadFP8OSThreadi();
-extern void create__7JKRAramFUlUllll();
-extern void __ct__12JUTGraphFifoFUl();
-extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern void changeFont__10JUTDbPrintFP7JUTFont();
-extern void init__10JUTGamePadFv();
-extern void create__12JUTExceptionFP14JUTDirectPrint();
-extern void createConsole__12JUTExceptionFPvUl();
-extern void start__14JUTDirectPrintFv();
-extern void create__12JUTAssertionFv();
-extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
-extern void create__10JUTConsoleFUiUiP7JKRHeap();
-extern void createManager__17JUTConsoleManagerFP7JKRHeap();
-extern void JUTSetReportConsole();
-extern void JUTSetWarningConsole();
-extern void OSInit();
-extern void OSGetCurrentThread();
-extern void DVDInit();
+extern "C" extern void firstInit__9JFWSystemFv();
+extern "C" extern void init__9JFWSystemFv();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void __nw__FUl();
+extern "C" extern void createRoot__10JKRExpHeapFib();
+extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" extern void __ct__9JKRThreadFP8OSThreadi();
+extern "C" extern void create__7JKRAramFUlUllll();
+extern "C" extern void __ct__12JUTGraphFifoFUl();
+extern "C" extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" extern void changeFont__10JUTDbPrintFP7JUTFont();
+extern "C" extern void init__10JUTGamePadFv();
+extern "C" extern void create__12JUTExceptionFP14JUTDirectPrint();
+extern "C" extern void createConsole__12JUTExceptionFPvUl();
+extern "C" extern void start__14JUTDirectPrintFv();
+extern "C" extern void create__12JUTAssertionFv();
+extern "C" extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" extern void create__10JUTConsoleFUiUiP7JKRHeap();
+extern "C" extern void createManager__17JUTConsoleManagerFP7JKRHeap();
+extern "C" extern void JUTSetReportConsole();
+extern "C" extern void JUTSetWarningConsole();
+extern "C" extern void OSInit();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void DVDInit();
 SECTION_RODATA extern const u8 JUTResFONT_Ascfont_fix12[16736];
 SECTION_DATA extern u8 GXNtsc480IntDf[60];
-SECTION_SDATA extern u8 maxStdHeaps__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 sysHeapSize__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 fifoBufSize__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 aramAudioBufSize__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 aramGraphBufSize__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 streamPriority__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 decompPriority__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 aPiecePriority__Q29JFWSystem11CSetUpParam[4];
+SECTION_SDATA extern u32 maxStdHeaps__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 sysHeapSize__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 fifoBufSize__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 aramAudioBufSize__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 streamPriority__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 decompPriority__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 aPiecePriority__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern void* systemFontRes__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern void* renderMode__Q29JFWSystem11CSetUpParam;
-SECTION_SDATA extern u8 exConsoleBufferSize__Q29JFWSystem11CSetUpParam[8];
+SECTION_SDATA extern u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam;
 SECTION_SBSS extern u8 rootHeap__9JFWSystem[4];
 SECTION_SBSS extern u8 systemHeap__9JFWSystem[4];
 SECTION_SBSS extern u8 mainThread__9JFWSystem[4];
@@ -55,125 +54,99 @@ SECTION_SBSS extern u8 systemFont__9JFWSystem[4];
 SECTION_SBSS extern u8 systemConsoleManager__9JFWSystem[4];
 SECTION_SBSS extern u8 systemConsole__9JFWSystem[4];
 SECTION_SBSS extern u8 data_804511BC[4];
-SECTION_SDATA2 extern u8 JFWSystem__LIT_2242[4];
-SECTION_SDATA2 extern u8 LIT_2243[4];
-SECTION_SDATA2 extern u8 LIT_2245[8];
-}
+SECTION_SDATA2 extern f32 JFWSystem__lit_2242;
+SECTION_SDATA2 extern f32 lit_2243;
+SECTION_SDATA2 extern f64 lit_2245;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450770-80450774 0004 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam                       */
-SECTION_SDATA u8 maxStdHeaps__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x00, 0x00, 0x02,
-};
+u32 maxStdHeaps__Q29JFWSystem11CSetUpParam = 0x00000002;
+
 /* 80450774-80450778 0004 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam                       */
-SECTION_SDATA u8 sysHeapSize__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x40, 0x00, 0x00,
-};
-/* 80450778-8045077C 0004 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
-SECTION_SDATA u8 fifoBufSize__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x04, 0x00, 0x00,
-};
-/* 8045077C-80450780 0004 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
-SECTION_SDATA u8 aramAudioBufSize__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x80, 0x00, 0x00,
-};
-/* 80450780-80450784 0004 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
-SECTION_SDATA u8 aramGraphBufSize__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x60, 0x00, 0x00,
-};
-/* 80450784-80450788 0004 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
-SECTION_SDATA u8 streamPriority__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x00, 0x00, 0x08,
-};
-/* 80450788-8045078C 0004 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
-SECTION_SDATA u8 decompPriority__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x00, 0x00, 0x07,
-};
-/* 8045078C-80450790 0004 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
-SECTION_SDATA u8 aPiecePriority__Q29JFWSystem11CSetUpParam[4] = {
-	0x00, 0x00, 0x00, 0x06,
-};
-/* 80450790-80450794 0004 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
-SECTION_SDATA void* systemFontRes__Q29JFWSystem11CSetUpParam = (void*)&JUTResFONT_Ascfont_fix12;
-/* 80450794-80450798 0004 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
-SECTION_SDATA void* renderMode__Q29JFWSystem11CSetUpParam = (void*)&GXNtsc480IntDf;
-/* 80450798-804507A0 0004 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
-SECTION_SDATA u8 exConsoleBufferSize__Q29JFWSystem11CSetUpParam[8] = {
-	0x00, 0x00, 0x24, 0xFC,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
+u32 sysHeapSize__Q29JFWSystem11CSetUpParam = 0x00400000;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455240-80455244 0004 .sdata2    @2242                                                        */
-SECTION_SDATA2 u8 JFWSystem__LIT_2242[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80455244-80455248 0004 .sdata2    @2243                                                        */
-SECTION_SDATA2 u8 LIT_2243[4] = {
-	0x3F, 0x59, 0x99, 0x9A,
-};
-/* 80455248-80455250 0008 .sdata2    @2245                                                        */
-SECTION_SDATA2 u8 LIT_2245[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804511A0-804511A4 0004 .sbss      rootHeap__9JFWSystem                                         */
-SECTION_SBSS u8 rootHeap__9JFWSystem[4];
+u8 rootHeap__9JFWSystem[4];
+
 /* 804511A4-804511A8 0004 .sbss      systemHeap__9JFWSystem                                       */
-SECTION_SBSS u8 systemHeap__9JFWSystem[4];
-/* 804511A8-804511AC 0004 .sbss      mainThread__9JFWSystem                                       */
-SECTION_SBSS u8 mainThread__9JFWSystem[4];
-/* 804511AC-804511B0 0004 .sbss      debugPrint__9JFWSystem                                       */
-SECTION_SBSS u8 debugPrint__9JFWSystem[4];
-/* 804511B0-804511B4 0004 .sbss      systemFont__9JFWSystem                                       */
-SECTION_SBSS u8 systemFont__9JFWSystem[4];
-/* 804511B4-804511B8 0004 .sbss      systemConsoleManager__9JFWSystem                             */
-SECTION_SBSS u8 systemConsoleManager__9JFWSystem[4];
-/* 804511B8-804511BC 0004 .sbss      systemConsole__9JFWSystem                                    */
-SECTION_SBSS u8 systemConsole__9JFWSystem[4];
-/* 804511BC-804511C0 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_804511BC[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 systemHeap__9JFWSystem[4];
 
 /* 80271CD0-80271D18 0048 .text      firstInit__9JFWSystemFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void firstInit__9JFWSystemFv() {
+extern "C" asm void firstInit__9JFWSystemFv() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWSystem/firstInit__9JFWSystemFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450778-8045077C 0004 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
+u32 fifoBufSize__Q29JFWSystem11CSetUpParam = 0x00040000;
+
+/* 8045077C-80450780 0004 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
+u32 aramAudioBufSize__Q29JFWSystem11CSetUpParam = 0x00800000;
+
+/* 80450780-80450784 0004 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
+u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam = 0x00600000;
+
+/* 80450784-80450788 0004 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
+u32 streamPriority__Q29JFWSystem11CSetUpParam = 0x00000008;
+
+/* 80450788-8045078C 0004 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
+u32 decompPriority__Q29JFWSystem11CSetUpParam = 0x00000007;
+
+/* 8045078C-80450790 0004 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
+u32 aPiecePriority__Q29JFWSystem11CSetUpParam = 0x00000006;
+
+/* 80450790-80450794 0004 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
+void* systemFontRes__Q29JFWSystem11CSetUpParam = (void*)&JUTResFONT_Ascfont_fix12;
+
+/* 80450794-80450798 0004 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
+void* renderMode__Q29JFWSystem11CSetUpParam = (void*)&GXNtsc480IntDf;
+
+/* 80450798-804507A0 0004 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
+u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam = 0x000024FC;
+/* padding 4 bytes */
+
+/* 80455240-80455244 0004 .sdata2    @2242                                                        */
+f32 JFWSystem__lit_2242 = 0.5f;
+
+/* 80455244-80455248 0004 .sdata2    @2243                                                        */
+f32 lit_2243 = 17.0f / 20.0f;
+
+/* 80455248-80455250 0008 .sdata2    @2245                                                        */
+f64 lit_2245 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 804511A8-804511AC 0004 .sbss      mainThread__9JFWSystem                                       */
+u8 mainThread__9JFWSystem[4];
+
+/* 804511AC-804511B0 0004 .sbss      debugPrint__9JFWSystem                                       */
+u8 debugPrint__9JFWSystem[4];
+
+/* 804511B0-804511B4 0004 .sbss      systemFont__9JFWSystem                                       */
+u8 systemFont__9JFWSystem[4];
+
+/* 804511B4-804511B8 0004 .sbss      systemConsoleManager__9JFWSystem                             */
+u8 systemConsoleManager__9JFWSystem[4];
+
+/* 804511B8-804511BC 0004 .sbss      systemConsole__9JFWSystem                                    */
+u8 systemConsole__9JFWSystem[4];
+
+/* 804511BC-804511C0 0004 .sbss      None                                                         */
+u8 data_804511BC[4];
+
 /* 80271D18-80272040 0328 .text      init__9JFWSystemFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__9JFWSystemFv() {
+extern "C" asm void init__9JFWSystemFv() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWSystem/init__9JFWSystemFv.s"
 }

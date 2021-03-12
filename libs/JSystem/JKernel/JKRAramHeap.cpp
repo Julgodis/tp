@@ -5,170 +5,164 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void findFromRoot__7JKRHeapFPv();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __ct__11JKRDisposerFv();
-extern void __dt__11JKRDisposerFv();
-extern void __ct__11JKRAramHeapFUlUl();
-extern void __dt__11JKRAramHeapFv();
-extern void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
-extern void allocFromHead__11JKRAramHeapFUl();
-extern void allocFromTail__11JKRAramHeapFUl();
-extern void getFreeSize__11JKRAramHeapFv();
-extern void getTotalFreeSize__11JKRAramHeapFv();
-extern void dump__11JKRAramHeapFv();
-extern void __sinit_JKRAramHeap_cpp();
-extern void func_802D32B0();
-extern void __ct__12JKRAramBlockFUlUlUlUcb();
-extern void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
-extern void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
-extern void __dt__10JSUPtrListFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void OSInitMutex();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void __register_global_object();
-extern void _savegpr_29();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__11JKRAramHeap[4];
-SECTION_BSS extern u8 JKRAramHeap__LIT_297[12];
+extern "C" extern void findFromRoot__7JKRHeapFPv();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__11JKRDisposerFv();
+extern "C" extern void __dt__11JKRDisposerFv();
+extern "C" extern void __ct__11JKRAramHeapFUlUl();
+extern "C" extern void __dt__11JKRAramHeapFv();
+extern "C" extern void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
+extern "C" extern void allocFromHead__11JKRAramHeapFUl();
+extern "C" extern void allocFromTail__11JKRAramHeapFUl();
+extern "C" extern void getFreeSize__11JKRAramHeapFv();
+extern "C" extern void getTotalFreeSize__11JKRAramHeapFv();
+extern "C" extern void dump__11JKRAramHeapFv();
+extern "C" extern void __sinit_JKRAramHeap_cpp();
+extern "C" extern void func_802D32B0();
+extern "C" extern void __ct__12JKRAramBlockFUlUlUlUcb();
+extern "C" extern void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" extern void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void OSInitMutex();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__11JKRAramHeap[4];
+SECTION_BSS extern u8 JKRAramHeap__lit_297[12];
 SECTION_BSS extern u8 sAramList__11JKRAramHeap[12];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC168-803CC178 000C .data      __vt__11JKRAramHeap                                          */
-SECTION_DATA void* __vt__11JKRAramHeap[4] = {
+void* const __vt__11JKRAramHeap[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JKRAramHeapFv,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80434300-8043430C 000C .bss       @297                                                         */
-SECTION_BSS u8 JKRAramHeap__LIT_297[12];
+u8 JKRAramHeap__lit_297[12];
+
 /* 8043430C-80434318 000C .bss       sAramList__11JKRAramHeap                                     */
-SECTION_BSS u8 sAramList__11JKRAramHeap[12];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sAramList__11JKRAramHeap[12];
 
 /* 802D2E44-802D2F14 00D0 .text      __ct__11JKRAramHeapFUlUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11JKRAramHeapFUlUl() {
+extern "C" asm void __ct__11JKRAramHeapFUlUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/__ct__11JKRAramHeapFUlUl.s"
 }
 #pragma pop
 
+
 /* 802D2F14-802D2FBC 00A8 .text      __dt__11JKRAramHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11JKRAramHeapFv() {
+extern "C" asm void __dt__11JKRAramHeapFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/__dt__11JKRAramHeapFv.s"
 }
 #pragma pop
 
+
 /* 802D2FBC-802D3034 0078 .text      alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode() {
+extern "C" asm void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode.s"
 }
 #pragma pop
 
+
 /* 802D3034-802D30BC 0088 .text      allocFromHead__11JKRAramHeapFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocFromHead__11JKRAramHeapFUl() {
+extern "C" asm void allocFromHead__11JKRAramHeapFUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/allocFromHead__11JKRAramHeapFUl.s"
 }
 #pragma pop
 
+
 /* 802D30BC-802D3134 0078 .text      allocFromTail__11JKRAramHeapFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocFromTail__11JKRAramHeapFUl() {
+extern "C" asm void allocFromTail__11JKRAramHeapFUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/allocFromTail__11JKRAramHeapFUl.s"
 }
 #pragma pop
 
+
 /* 802D3134-802D31AC 0078 .text      getFreeSize__11JKRAramHeapFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFreeSize__11JKRAramHeapFv() {
+extern "C" asm void getFreeSize__11JKRAramHeapFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/getFreeSize__11JKRAramHeapFv.s"
 }
 #pragma pop
 
+
 /* 802D31AC-802D3218 006C .text      getTotalFreeSize__11JKRAramHeapFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTotalFreeSize__11JKRAramHeapFv() {
+extern "C" asm void getTotalFreeSize__11JKRAramHeapFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/getTotalFreeSize__11JKRAramHeapFv.s"
 }
 #pragma pop
 
+
 /* 802D3218-802D326C 0054 .text      dump__11JKRAramHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dump__11JKRAramHeapFv() {
+extern "C" asm void dump__11JKRAramHeapFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/dump__11JKRAramHeapFv.s"
 }
 #pragma pop
 
+
 /* 802D326C-802D32B0 0044 .text      __sinit_JKRAramHeap_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_JKRAramHeap_cpp() {
+extern "C" asm void __sinit_JKRAramHeap_cpp() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/__sinit_JKRAramHeap_cpp.s"
 }
 #pragma pop
 
+
 /* 802D32B0-802D3304 0054 .text      __dt__23JSUList<12JKRAramBlock>Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802D32B0() {
+extern "C" asm void func_802D32B0() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/func_802D32B0.s"
 }

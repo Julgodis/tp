@@ -5,8 +5,8 @@ lbl_801C55D8:
 /* 801C55E4 0000000C  39 61 00 50 */	addi r11, r1, 0x50
 /* 801C55E8 00000010  48 19 CB C9 */	bl _savegpr_18
 /* 801C55EC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801C55F0 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_fishing__data_80395D90@ha
-/* 801C55F4 0000001C  3B C3 5D 90 */	addi r30, r3, d_menu_d_menu_fishing__data_80395D90@l
+/* 801C55F0 00000018  3C 60 80 39 */	lis r3, data_80395D90@ha
+/* 801C55F4 0000001C  3B C3 5D 90 */	addi r30, r3, data_80395D90@l
 /* 801C55F8 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801C55FC 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801C5600 00000028  80 63 5D 30 */	lwz r3, 0x5d30(r3)
@@ -82,7 +82,7 @@ lbl_801C56B8:
 lbl_801C5710:
 /* 801C5710 00000000  90 1F 00 48 */	stw r0, 0x48(r31)
 /* 801C5714 00000004  80 7F 00 48 */	lwz r3, 0x48(r31)
-/* 801C5718 00000008  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__LIT_3904(r2)
+/* 801C5718 00000008  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__lit_3904(r2)
 /* 801C571C 0000000C  48 09 00 B5 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801C5720 00000010  3B 80 00 00 */	li r28, 0
 /* 801C5724 00000014  3B 60 00 00 */	li r27, 0

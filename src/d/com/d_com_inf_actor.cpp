@@ -5,29 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_SDATA extern u8 g_dComIfAc_gameInfo[8];
 SECTION_SDATA extern u8 g_dComIfGoat_gameInfo[8];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450610-80450618 0008 .sdata     g_dComIfAc_gameInfo                                          */
-SECTION_SDATA u8 g_dComIfAc_gameInfo[8] = {
+u8 g_dComIfAc_gameInfo[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80450618-80450620 0004 .sdata     g_dComIfGoat_gameInfo                                        */
-SECTION_SDATA u8 g_dComIfGoat_gameInfo[8] = {
+u8 g_dComIfGoat_gameInfo[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
 

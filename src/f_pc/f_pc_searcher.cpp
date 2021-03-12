@@ -5,34 +5,32 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcSch_JudgeForPName__FPvPv();
-extern void fpcSch_JudgeByID__FPvPv();
-}
+extern "C" extern void fpcSch_JudgeForPName__FPvPv();
+extern "C" extern void fpcSch_JudgeByID__FPvPv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80023578-80023590 0018 .text      fpcSch_JudgeForPName__FPvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcSch_JudgeForPName__FPvPv() {
+extern "C" asm void fpcSch_JudgeForPName__FPvPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_searcher/fpcSch_JudgeForPName__FPvPv.s"
 }
 #pragma pop
 
+
 /* 80023590-800235A8 0018 .text      fpcSch_JudgeByID__FPvPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcSch_JudgeByID__FPvPv() {
+extern "C" asm void fpcSch_JudgeByID__FPvPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_searcher/fpcSch_JudgeByID__FPvPv.s"
 }

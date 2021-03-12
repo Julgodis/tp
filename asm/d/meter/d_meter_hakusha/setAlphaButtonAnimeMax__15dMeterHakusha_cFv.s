@@ -6,7 +6,7 @@ lbl_8020D41C:
 /* 8020D42C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8020D430 00000014  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 8020D434 00000018  48 04 83 F5 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8020D438 0000001C  C0 02 AE 08 */	lfs f0, d_meter_d_meter_hakusha__LIT_3936(r2)
+/* 8020D438 0000001C  C0 02 AE 08 */	lfs f0, d_meter_d_meter_hakusha__lit_3936(r2)
 /* 8020D43C 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D440 00000024  41 82 00 2C */	beq lbl_8020D46C
 /* 8020D444 00000028  80 7F 00 34 */	lwz r3, 0x34(r31)

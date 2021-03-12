@@ -5,74 +5,75 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void DCStoreRange();
-extern void __CARDEraseSector();
-extern void __CARDPutControlBlock();
-extern void __CARDWrite();
-extern void __CARDGetFatBlock();
-extern void CARDBlock__WriteCallback();
-extern void CARDBlock__EraseCallback();
-extern void __CARDAllocBlock();
-extern void __CARDUpdateFatBlock();
-extern void __CARDCheckSum();
+extern "C" extern void DCStoreRange();
+extern "C" extern void __CARDEraseSector();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDWrite();
+extern "C" extern void __CARDGetFatBlock();
+extern "C" extern void CARDBlock__WriteCallback();
+extern "C" extern void CARDBlock__EraseCallback();
+extern "C" extern void __CARDAllocBlock();
+extern "C" extern void __CARDUpdateFatBlock();
+extern "C" extern void __CARDCheckSum();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80355414-8035541C 0008 .text      __CARDGetFatBlock                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDGetFatBlock() {
+extern "C" asm void __CARDGetFatBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDBlock/__CARDGetFatBlock.s"
 }
 #pragma pop
 
+
 /* 8035541C-803554F0 00D4 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDBlock__WriteCallback() {
+extern "C" asm void CARDBlock__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDBlock/CARDBlock__WriteCallback.s"
 }
 #pragma pop
 
+
 /* 803554F0-803555B8 00C8 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDBlock__EraseCallback() {
+extern "C" asm void CARDBlock__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDBlock/CARDBlock__EraseCallback.s"
 }
 #pragma pop
 
+
 /* 803555B8-803556D0 0118 .text      __CARDAllocBlock                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDAllocBlock() {
+extern "C" asm void __CARDAllocBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDBlock/__CARDAllocBlock.s"
 }
 #pragma pop
 
+
 /* 803556D0-8035577C 00AC .text      __CARDUpdateFatBlock                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDUpdateFatBlock() {
+extern "C" asm void __CARDUpdateFatBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDBlock/__CARDUpdateFatBlock.s"
 }

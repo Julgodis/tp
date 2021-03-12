@@ -18,7 +18,7 @@ lbl_800FB328:
 /* 800FB368 00000040  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800FB36C 00000044  7C 03 04 2E */	lfsx f0, r3, r0
 /* 800FB370 00000048  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
-/* 800FB374 0000004C  C0 42 93 8C */	lfs f2, LIT_8783(r2)
+/* 800FB374 0000004C  C0 42 93 8C */	lfs f2, lit_8783(r2)
 /* 800FB378 00000050  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800FB37C 00000054  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800FB380 00000058  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)

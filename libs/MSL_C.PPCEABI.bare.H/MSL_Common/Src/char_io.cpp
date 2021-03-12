@@ -5,41 +5,39 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __flush_buffer();
-extern void __prep_buffer();
-extern void fputs();
-extern void __put_char();
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void fseek();
-extern void __stdio_atexit();
-extern void fwide();
-}
+extern "C" extern void __flush_buffer();
+extern "C" extern void __prep_buffer();
+extern "C" extern void fputs();
+extern "C" extern void __put_char();
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void fseek();
+extern "C" extern void __stdio_atexit();
+extern "C" extern void fwide();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803651D8-803652AC 00D4 .text      fputs                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fputs() {
+extern "C" asm void fputs() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/char_io/fputs.s"
 }
 #pragma pop
 
+
 /* 803652AC-80365464 01B8 .text      __put_char                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __put_char() {
+extern "C" asm void __put_char() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/char_io/__put_char.s"
 }

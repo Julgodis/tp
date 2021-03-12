@@ -119,7 +119,7 @@ lbl_80044E58:
 /* 80044E70 00000018  48 00 32 7D */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 80044E74 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 80044E78 00000020  40 82 00 18 */	bne lbl_80044E90
-/* 80044E7C 00000024  C0 02 84 F0 */	lfs f0, d_event_d_event_data__LIT_4668(r2)
+/* 80044E7C 00000024  C0 02 84 F0 */	lfs f0, d_event_d_event_data__lit_4668(r2)
 /* 80044E80 00000028  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80044E84 0000002C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80044E88 00000030  D0 01 00 18 */	stfs f0, 0x18(r1)

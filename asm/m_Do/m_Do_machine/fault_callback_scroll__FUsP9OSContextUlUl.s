@@ -86,9 +86,9 @@ lbl_8000BA84:
 /* 8000BA9C 00000018  7C 00 20 40 */	cmplw r0, r4
 /* 8000BAA0 0000001C  41 82 00 58 */	beq lbl_8000BAF8
 /* 8000BAA4 00000020  7C 9E 23 78 */	mr r30, r4
-/* 8000BAA8 00000024  C0 02 81 00 */	lfs f0, m_Do_m_Do_machine__LIT_3940(r2)
+/* 8000BAA8 00000024  C0 02 81 00 */	lfs f0, m_Do_m_Do_machine__lit_3940(r2)
 /* 8000BAAC 00000028  D0 04 00 50 */	stfs f0, 0x50(r4)
-/* 8000BAB0 0000002C  C0 02 81 04 */	lfs f0, m_Do_m_Do_machine__LIT_3941(r2)
+/* 8000BAB0 0000002C  C0 02 81 04 */	lfs f0, m_Do_m_Do_machine__lit_3941(r2)
 /* 8000BAB4 00000030  D0 04 00 54 */	stfs f0, 0x54(r4)
 /* 8000BAB8 00000034  38 00 00 08 */	li r0, 8
 /* 8000BABC 00000038  90 04 00 40 */	stw r0, 0x40(r4)

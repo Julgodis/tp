@@ -27,17 +27,17 @@ lbl_800FDF7C:
 /* 800FDFB0 00000034  4B FF F2 FD */	bl changeLadderMoveProc__9daAlink_cFi
 /* 800FDFB4 00000038  48 00 00 40 */	b lbl_800FDFF4
 lbl_800FDFB8:
-/* 800FDFB8 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800FDFB8 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800FDFBC 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 800FDFC0 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 800FDFC4 0000000C  41 82 00 30 */	beq lbl_800FDFF4
 /* 800FDFC8 00000010  7F C3 F3 78 */	mr r3, r30
 /* 800FDFCC 00000014  4B FF F2 BD */	bl getLadderMoveAnmSpeed__9daAlink_cFv
 /* 800FDFD0 00000018  C0 5F 00 0C */	lfs f2, 0xc(r31)
-/* 800FDFD4 0000001C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800FDFD4 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FDFD8 00000020  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800FDFDC 00000000  40 80 00 0C */	bge lbl_800FDFE8
-/* 800FDFE0 00000004  C0 02 92 BC */	lfs f0, d_a_d_a_alink__LIT_6041(r2)
+/* 800FDFE0 00000004  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
 /* 800FDFE4 00000008  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_800FDFE8:
 /* 800FDFE8 00000000  7F C3 F3 78 */	mr r3, r30

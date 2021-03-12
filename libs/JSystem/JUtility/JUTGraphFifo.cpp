@@ -5,79 +5,67 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPv();
-extern void __dl__FPv();
-extern void __ct__12JUTGraphFifoFUl();
-extern void __dt__12JUTGraphFifoFv();
-extern void GXInit();
-extern void GXInitFifoBase();
-extern void GXInitFifoPtrs();
-extern void GXSaveCPUFifo();
-extern void GXGetGPStatus();
-extern void _savegpr_26();
-extern void _restgpr_26();
-SECTION_DATA extern void* __vt__12JUTGraphFifo[4];
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__12JUTGraphFifoFUl();
+extern "C" extern void __dt__12JUTGraphFifoFv();
+extern "C" extern void GXInit();
+extern "C" extern void GXInitFifoBase();
+extern "C" extern void GXInitFifoPtrs();
+extern "C" extern void GXSaveCPUFifo();
+extern "C" extern void GXGetGPStatus();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
+SECTION_DATA extern void* const __vt__12JUTGraphFifo[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 data_804514B8[4];
 SECTION_SBSS extern u8 sCurrentFifo__12JUTGraphFifo[4];
 SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC590-803CC5A0 000C .data      __vt__12JUTGraphFifo                                         */
-SECTION_DATA void* __vt__12JUTGraphFifo[4] = {
+void* const __vt__12JUTGraphFifo[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JUTGraphFifoFv,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804514B8-804514BC 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_804514B8[4];
+u8 data_804514B8[4];
+
 /* 804514BC-804514C0 0004 .sbss      sCurrentFifo__12JUTGraphFifo                                 */
-SECTION_SBSS u8 sCurrentFifo__12JUTGraphFifo[4];
-/* 804514C0-804514C8 0005 .sbss      mGpStatus__12JUTGraphFifo                                    */
-SECTION_SBSS u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sCurrentFifo__12JUTGraphFifo[4];
 
 /* 802DEB58-802DEC34 00DC .text      __ct__12JUTGraphFifoFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12JUTGraphFifoFUl() {
+extern "C" asm void __ct__12JUTGraphFifoFUl() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGraphFifo/__ct__12JUTGraphFifoFUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804514C0-804514C8 0005 .sbss      mGpStatus__12JUTGraphFifo                                    */
+u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
+
 /* 802DEC34-802DECF8 00C4 .text      __dt__12JUTGraphFifoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JUTGraphFifoFv() {
+extern "C" asm void __dt__12JUTGraphFifoFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGraphFifo/__dt__12JUTGraphFifoFv.s"
 }

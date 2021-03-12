@@ -23,12 +23,12 @@ lbl_801DEA94:
 lbl_801DEAE8:
 /* 801DEAE8 00000000  7F BF F2 14 */	add r29, r31, r30
 /* 801DEAEC 00000004  80 7D 02 EC */	lwz r3, 0x2ec(r29)
-/* 801DEAF0 00000008  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DEAF0 00000008  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
 /* 801DEAF4 0000000C  48 07 6C DD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801DEAF8 00000010  80 7D 02 F4 */	lwz r3, 0x2f4(r29)
 /* 801DEAFC 00000014  28 03 00 00 */	cmplwi r3, 0
 /* 801DEB00 00000018  41 82 00 0C */	beq lbl_801DEB0C
-/* 801DEB04 0000001C  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__LIT_3827(r2)
+/* 801DEB04 0000001C  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
 /* 801DEB08 00000020  48 07 6C C9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_801DEB0C:
 /* 801DEB0C 00000000  3B 9C 00 01 */	addi r28, r28, 1
@@ -48,7 +48,7 @@ lbl_801DEB38:
 /* 801DEB40 00000008  98 1F 03 E3 */	stb r0, 0x3e3(r31)
 /* 801DEB44 0000000C  48 00 00 74 */	b lbl_801DEBB8
 lbl_801DEB48:
-/* 801DEB48 00000000  C8 42 A9 10 */	lfd f2, d_menu_d_menu_letter__LIT_4171(r2)
+/* 801DEB48 00000000  C8 42 A9 10 */	lfd f2, d_menu_d_menu_letter__lit_4171(r2)
 /* 801DEB4C 00000004  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 801DEB50 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801DEB54 0000000C  3C 60 43 30 */	lis r3, 0x4330

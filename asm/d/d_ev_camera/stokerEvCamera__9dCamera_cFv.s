@@ -41,14 +41,14 @@ lbl_8008A510:
 /* 8008A5AC 0000009C  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 8008A5B0 000000A0  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 8008A5B4 000000A4  38 A5 00 4D */	addi r5, r5, 0x4d
-/* 8008A5B8 000000A8  C0 22 8E DC */	lfs f1, d_d_ev_camera__LIT_5346(r2)
+/* 8008A5B8 000000A8  C0 22 8E DC */	lfs f1, d_d_ev_camera__lit_5346(r2)
 /* 8008A5BC 000000AC  4B FF EB 99 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 8008A5C0 000000B0  7F E3 FB 78 */	mr r3, r31
 /* 8008A5C4 000000B4  38 9F 04 04 */	addi r4, r31, 0x404
 /* 8008A5C8 000000B8  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 8008A5CC 000000BC  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 8008A5D0 000000C0  38 A5 00 54 */	addi r5, r5, 0x54
-/* 8008A5D4 000000C4  C0 22 8E DC */	lfs f1, d_d_ev_camera__LIT_5346(r2)
+/* 8008A5D4 000000C4  C0 22 8E DC */	lfs f1, d_d_ev_camera__lit_5346(r2)
 /* 8008A5D8 000000C8  4B FF EB 7D */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 8008A5DC 000000CC  7F E3 FB 78 */	mr r3, r31
 /* 8008A5E0 000000D0  38 9F 04 0C */	addi r4, r31, 0x40c
@@ -62,7 +62,7 @@ lbl_8008A510:
 /* 8008A600 000000F0  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
 /* 8008A604 000000F4  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 8008A608 000000F8  38 A5 00 23 */	addi r5, r5, 0x23
-/* 8008A60C 000000FC  C0 22 8E B8 */	lfs f1, d_d_ev_camera__LIT_5141(r2)
+/* 8008A60C 000000FC  C0 22 8E B8 */	lfs f1, d_d_ev_camera__lit_5141(r2)
 /* 8008A610 00000100  4B FF EB 45 */	bl getEvFloatData__9dCamera_cFPfPcf
 /* 8008A614 00000104  98 7F 03 E9 */	stb r3, 0x3e9(r31)
 /* 8008A618 00000108  7F E3 FB 78 */	mr r3, r31
@@ -262,7 +262,7 @@ lbl_8008A8D0:
 /* 8008A8F4 00000024  88 1F 03 E9 */	lbz r0, 0x3e9(r31)
 /* 8008A8F8 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8008A8FC 0000002C  41 82 00 38 */	beq lbl_8008A934
-/* 8008A900 00000030  C0 22 8E D8 */	lfs f1, d_d_ev_camera__LIT_5145(r2)
+/* 8008A900 00000030  C0 22 8E D8 */	lfs f1, d_d_ev_camera__lit_5145(r2)
 /* 8008A904 00000034  C0 1F 04 10 */	lfs f0, 0x410(r31)
 /* 8008A908 00000038  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8008A90C 0000003C  FC 00 00 1E */	fctiwz f0, f0

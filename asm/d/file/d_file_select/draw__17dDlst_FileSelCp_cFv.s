@@ -27,7 +27,7 @@ lbl_8018DFFC:
 /* 8018E060 00000064  38 61 00 08 */	addi r3, r1, 8
 /* 8018E064 00000068  EC 20 20 24 */	fdivs f1, f0, f4
 /* 8018E068 0000006C  EC 43 10 24 */	fdivs f2, f3, f2
-/* 8018E06C 00000070  C0 62 9F 40 */	lfs f3, d_file_d_file_select__LIT_4611(r2)
+/* 8018E06C 00000070  C0 62 9F 40 */	lfs f3, d_file_d_file_select__lit_4611(r2)
 /* 8018E070 00000074  48 1B 88 F9 */	bl PSMTXScale
 /* 8018E074 00000078  7F C3 F3 78 */	mr r3, r30
 /* 8018E078 0000007C  38 81 00 08 */	addi r4, r1, 8
@@ -38,7 +38,7 @@ lbl_8018DFFC:
 /* 8018E08C 00000090  38 84 00 50 */	addi r4, r4, 0x50
 /* 8018E090 00000094  48 1B 84 21 */	bl PSMTXCopy
 /* 8018E094 00000098  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8018E098 0000009C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018E098 0000009C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018E09C 000000A0  FC 40 08 90 */	fmr f2, f1
 /* 8018E0A0 000000A4  7F E4 FB 78 */	mr r4, r31
 /* 8018E0A4 000000A8  48 16 AE 31 */	bl draw__9J2DScreenFffPC14J2DGrafContext

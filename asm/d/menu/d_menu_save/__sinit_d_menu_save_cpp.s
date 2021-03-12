@@ -10,8 +10,8 @@ lbl_801F6C1C:
 /* 801F6C3C 00000020  4B FF 8A 19 */	bl __ct__9dMs_HIO_cFv
 /* 801F6C40 00000024  3C 80 80 1F */	lis r4, __dt__9dMs_HIO_cFv@ha
 /* 801F6C44 00000028  38 84 6B D4 */	addi r4, r4, __dt__9dMs_HIO_cFv@l
-/* 801F6C48 0000002C  3C A0 80 43 */	lis r5, d_menu_d_menu_save__LIT_3785@ha
-/* 801F6C4C 00000030  38 A5 E8 40 */	addi r5, r5, d_menu_d_menu_save__LIT_3785@l
+/* 801F6C48 0000002C  3C A0 80 43 */	lis r5, d_menu_d_menu_save__lit_3785@ha
+/* 801F6C4C 00000030  38 A5 E8 40 */	addi r5, r5, d_menu_d_menu_save__lit_3785@l
 /* 801F6C50 00000034  48 16 AF D5 */	bl __register_global_object
 /* 801F6C54 00000038  80 7F 01 D0 */	lwz r3, 0x1d0(r31)
 /* 801F6C58 0000003C  80 1F 01 D4 */	lwz r0, 0x1d4(r31)

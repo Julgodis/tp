@@ -10,7 +10,7 @@ lbl_800EAC4C:
 /* 800EAC6C 00000020  4B FD 73 01 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800EAC70 00000024  38 00 00 0C */	li r0, 0xc
 /* 800EAC74 00000028  98 1F 2F 99 */	stb r0, 0x2f99(r31)
-/* 800EAC78 0000002C  C0 02 93 B8 */	lfs f0, LIT_10041(r2)
+/* 800EAC78 0000002C  C0 02 93 B8 */	lfs f0, lit_10041(r2)
 /* 800EAC7C 00000030  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800EAC80 00000034  88 1F 05 6A */	lbz r0, 0x56a(r31)
 /* 800EAC84 00000038  28 00 00 0F */	cmplwi r0, 0xf
@@ -27,7 +27,7 @@ lbl_800EACA8:
 /* 800EACA8 00000000  7C 9E 23 78 */	mr r30, r4
 /* 800EACAC 00000004  7F E3 FB 78 */	mr r3, r31
 /* 800EACB0 00000008  4B FC 22 D1 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 800EACB4 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800EACB4 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800EACB8 00000010  D0 1F 33 9C */	stfs f0, 0x339c(r31)
 /* 800EACBC 00000014  38 00 00 07 */	li r0, 7
 /* 800EACC0 00000018  98 1F 05 6A */	stb r0, 0x56a(r31)
@@ -35,7 +35,7 @@ lbl_800EACA8:
 /* 800EACC8 00000020  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800EACCC 00000024  38 00 00 0A */	li r0, 0xa
 /* 800EACD0 00000028  B0 1F 30 08 */	sth r0, 0x3008(r31)
-/* 800EACD4 0000002C  C0 02 93 3C */	lfs f0, d_a_d_a_alink__LIT_7808(r2)
+/* 800EACD4 0000002C  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
 /* 800EACD8 00000030  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800EACDC 00000034  3C 60 00 01 */	lis r3, 0x0001 /* 0x0001004D@ha */
 /* 800EACE0 00000038  38 03 00 4D */	addi r0, r3, 0x004D /* 0x0001004D@l */
@@ -51,7 +51,7 @@ lbl_800EAD00:
 /* 800EAD00 00000000  7C 9E 23 78 */	mr r30, r4
 /* 800EAD04 00000004  7F E3 FB 78 */	mr r3, r31
 /* 800EAD08 00000008  4B FC 22 79 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 800EAD0C 0000000C  C0 02 92 BC */	lfs f0, d_a_d_a_alink__LIT_6041(r2)
+/* 800EAD0C 0000000C  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
 /* 800EAD10 00000010  D0 1F 33 9C */	stfs f0, 0x339c(r31)
 /* 800EAD14 00000014  38 00 00 08 */	li r0, 8
 /* 800EAD18 00000018  98 1F 05 6A */	stb r0, 0x56a(r31)
@@ -68,7 +68,7 @@ lbl_800EAD34:
 /* 800EAD40 0000000C  38 00 00 00 */	li r0, 0
 /* 800EAD44 00000010  B0 1F 30 0E */	sth r0, 0x300e(r31)
 /* 800EAD48 00000014  B0 1F 30 10 */	sth r0, 0x3010(r31)
-/* 800EAD4C 00000018  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800EAD4C 00000018  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800EAD50 0000001C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800EAD54 00000020  38 00 00 4B */	li r0, 0x4b
 /* 800EAD58 00000024  B0 1F 30 0A */	sth r0, 0x300a(r31)

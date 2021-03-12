@@ -289,7 +289,7 @@ lbl_800452E0:
 /* 80045314 00000034  38 C0 00 03 */	li r6, 3
 /* 80045318 00000038  48 00 2D D5 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 8004531C 0000003C  C0 39 00 00 */	lfs f1, 0(r25)
-/* 80045320 00000040  C0 02 84 D0 */	lfs f0, d_event_d_event_data__LIT_4264(r2)
+/* 80045320 00000040  C0 02 84 D0 */	lfs f0, d_event_d_event_data__lit_4264(r2)
 /* 80045324 00000044  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80045328 00000000  40 81 00 08 */	ble lbl_80045330
 /* 8004532C 00000004  D0 0D 86 5C */	stfs f0, mFadeRate__13mDoGph_gInf_c(r13)
@@ -332,9 +332,9 @@ lbl_80045374:
 /* 800453B4 00000040  38 C0 00 03 */	li r6, 3
 /* 800453B8 00000044  48 00 2D 35 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 800453BC 00000048  7C 66 1B 78 */	mr r6, r3
-/* 800453C0 0000004C  C0 22 84 D0 */	lfs f1, d_event_d_event_data__LIT_4264(r2)
+/* 800453C0 0000004C  C0 22 84 D0 */	lfs f1, d_event_d_event_data__lit_4264(r2)
 /* 800453C4 00000050  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 800453C8 00000054  C0 02 84 F0 */	lfs f0, d_event_d_event_data__LIT_4668(r2)
+/* 800453C8 00000054  C0 02 84 F0 */	lfs f0, d_event_d_event_data__lit_4668(r2)
 /* 800453CC 00000058  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 800453D0 0000005C  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 800453D4 00000060  38 7B 5B D4 */	addi r3, r27, 0x5bd4
@@ -357,7 +357,7 @@ lbl_800453F0:
 /* 80045414 00000024  FC 20 00 50 */	fneg f1, f0
 /* 80045418 00000028  48 01 14 C1 */	bl wipeIn__12dDlst_list_cFf
 /* 8004541C 0000002C  C0 39 00 00 */	lfs f1, 0(r25)
-/* 80045420 00000030  C0 02 84 D0 */	lfs f0, d_event_d_event_data__LIT_4264(r2)
+/* 80045420 00000030  C0 02 84 D0 */	lfs f0, d_event_d_event_data__lit_4264(r2)
 /* 80045424 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80045428 00000000  40 81 00 10 */	ble lbl_80045438
 /* 8004542C 00000004  38 00 00 00 */	li r0, 0
@@ -388,9 +388,9 @@ lbl_80045474:
 /* 80045484 00000010  38 A0 00 00 */	li r5, 0
 /* 80045488 00000014  38 C0 00 00 */	li r6, 0
 /* 8004548C 00000018  38 E0 00 00 */	li r7, 0
-/* 80045490 0000001C  C0 22 84 F0 */	lfs f1, d_event_d_event_data__LIT_4668(r2)
+/* 80045490 0000001C  C0 22 84 F0 */	lfs f1, d_event_d_event_data__lit_4668(r2)
 /* 80045494 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80045498 00000024  C0 62 84 F4 */	lfs f3, d_event_d_event_data__LIT_4669(r2)
+/* 80045498 00000024  C0 62 84 F4 */	lfs f3, d_event_d_event_data__lit_4669(r2)
 /* 8004549C 00000028  FC 80 18 90 */	fmr f4, f3
 /* 800454A0 0000002C  39 00 00 00 */	li r8, 0
 /* 800454A4 00000030  48 26 64 E1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -580,7 +580,7 @@ lbl_80045730:
 /* 80045748 00000018  48 00 01 18 */	b lbl_80045860
 lbl_8004574C:
 /* 8004574C 00000000  C0 2D 86 5C */	lfs f1, mFadeRate__13mDoGph_gInf_c(r13)
-/* 80045750 00000004  C0 02 84 F0 */	lfs f0, d_event_d_event_data__LIT_4668(r2)
+/* 80045750 00000004  C0 02 84 F0 */	lfs f0, d_event_d_event_data__lit_4668(r2)
 /* 80045754 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80045758 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 8004575C 00000004  40 82 01 04 */	bne lbl_80045860
@@ -592,7 +592,7 @@ lbl_8004574C:
 /* 80045774 0000001C  38 C0 00 00 */	li r6, 0
 /* 80045778 00000020  48 00 29 75 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 8004577C 00000024  C0 23 00 00 */	lfs f1, 0(r3)
-/* 80045780 00000028  C0 02 84 D0 */	lfs f0, d_event_d_event_data__LIT_4264(r2)
+/* 80045780 00000028  C0 02 84 D0 */	lfs f0, d_event_d_event_data__lit_4264(r2)
 /* 80045784 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80045788 00000000  40 81 00 D8 */	ble lbl_80045860
 /* 8004578C 00000004  7F C3 F3 78 */	mr r3, r30
@@ -621,7 +621,7 @@ lbl_800457DC:
 /* 800457DC 00000000  A8 1D 00 42 */	lha r0, 0x42(r29)
 /* 800457E0 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 800457E4 00000008  41 82 00 24 */	beq lbl_80045808
-/* 800457E8 0000000C  C0 22 84 D0 */	lfs f1, d_event_d_event_data__LIT_4264(r2)
+/* 800457E8 0000000C  C0 22 84 D0 */	lfs f1, d_event_d_event_data__lit_4264(r2)
 /* 800457EC 00000010  C0 0D 89 54 */	lfs f0, mWipeRate__12dDlst_list_c(r13)
 /* 800457F0 00000014  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 800457F4 00000018  40 82 00 6C */	bne lbl_80045860
@@ -631,7 +631,7 @@ lbl_800457DC:
 /* 80045804 00000028  48 00 00 5C */	b lbl_80045860
 lbl_80045808:
 /* 80045808 00000000  C0 2D 89 54 */	lfs f1, mWipeRate__12dDlst_list_c(r13)
-/* 8004580C 00000004  C0 02 84 F0 */	lfs f0, d_event_d_event_data__LIT_4668(r2)
+/* 8004580C 00000004  C0 02 84 F0 */	lfs f0, d_event_d_event_data__lit_4668(r2)
 /* 80045810 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80045814 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80045818 00000004  40 82 00 48 */	bne lbl_80045860

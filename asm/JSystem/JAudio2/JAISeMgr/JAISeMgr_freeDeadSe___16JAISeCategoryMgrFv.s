@@ -48,8 +48,8 @@ lbl_8029FBC0:
 /* 8029FBDC 0000001C  38 63 40 84 */	addi r3, r3, data_80434084@l
 /* 8029FBE0 00000020  3C 80 80 2A */	lis r4, func_8029FC34@ha
 /* 8029FBE4 00000024  38 84 FC 34 */	addi r4, r4, func_8029FC34@l
-/* 8029FBE8 00000028  3C A0 80 43 */	lis r5, JAISeMgr__LIT_744@ha
-/* 8029FBEC 0000002C  38 A5 40 78 */	addi r5, r5, JAISeMgr__LIT_744@l
+/* 8029FBE8 00000028  3C A0 80 43 */	lis r5, JAISeMgr__lit_744@ha
+/* 8029FBEC 0000002C  38 A5 40 78 */	addi r5, r5, JAISeMgr__lit_744@l
 /* 8029FBF0 00000030  48 0C 20 35 */	bl __register_global_object
 /* 8029FBF4 00000034  38 00 00 01 */	li r0, 1
 /* 8029FBF8 00000038  98 0D 8D 90 */	stb r0, data_80451310(r13)

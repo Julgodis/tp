@@ -38,7 +38,7 @@ lbl_8018EDF0:
 /* 8018EE0C 0000001C  38 C0 00 00 */	li r6, 0
 /* 8018EE10 00000020  4B FF E2 D5 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 8018EE14 00000024  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 8018EE18 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 8018EE18 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 8018EE1C 0000002C  48 00 64 85 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018EE20 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8018EE24 00000034  38 63 01 88 */	addi r3, r3, g_meter2_info@l

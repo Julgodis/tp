@@ -15,7 +15,7 @@ lbl_8020BEA4:
 /* 8020BED8 00000034  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8020BEDC 00000038  48 0E D7 B5 */	bl animation__9J2DScreenFv
 /* 8020BEE0 0000003C  7F E3 FB 78 */	mr r3, r31
-/* 8020BEE4 00000040  C0 22 AD F0 */	lfs f1, d_meter_d_meter_haihai__LIT_4165(r2)
+/* 8020BEE4 00000040  C0 22 AD F0 */	lfs f1, d_meter_d_meter_haihai__lit_4165(r2)
 /* 8020BEE8 00000044  4B FF FD 39 */	bl setScale__14dMeterHaihai_cFf
 /* 8020BEEC 00000048  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020BEF0 0000004C  80 01 00 14 */	lwz r0, 0x14(r1)

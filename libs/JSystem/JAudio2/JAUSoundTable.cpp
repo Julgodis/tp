@@ -5,56 +5,56 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void init__13JAUSoundTableFPCv();
-extern void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern void getData__13JAUSoundTableCF10JAISoundID();
-extern void init__17JAUSoundNameTableFPCv();
-}
+extern "C" extern void init__13JAUSoundTableFPCv();
+extern "C" extern void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" extern void getData__13JAUSoundTableCF10JAISoundID();
+extern "C" extern void init__17JAUSoundNameTableFPCv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802A7114-802A7160 004C .text      init__13JAUSoundTableFPCv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13JAUSoundTableFPCv() {
+extern "C" asm void init__13JAUSoundTableFPCv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/init__13JAUSoundTableFPCv.s"
 }
 #pragma pop
 
+
 /* 802A7160-802A728C 012C .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTypeID__13JAUSoundTableCF10JAISoundID() {
+extern "C" asm void getTypeID__13JAUSoundTableCF10JAISoundID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/getTypeID__13JAUSoundTableCF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802A728C-802A73D4 0148 .text      getData__13JAUSoundTableCF10JAISoundID                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getData__13JAUSoundTableCF10JAISoundID() {
+extern "C" asm void getData__13JAUSoundTableCF10JAISoundID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/getData__13JAUSoundTableCF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802A73D4-802A7420 004C .text      init__17JAUSoundNameTableFPCv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__17JAUSoundNameTableFPCv() {
+extern "C" asm void init__17JAUSoundNameTableFPCv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/init__17JAUSoundNameTableFPCv.s"
 }

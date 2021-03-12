@@ -5,118 +5,117 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void alloc__7JASHeapFP7JASHeapUl();
-extern void free__7JASHeapFv();
-extern void __ct__17JASGenericMemPoolFv();
-extern void newMemPool__17JASGenericMemPoolFUli();
-extern void getAramHeap__9JASKernelFv();
-extern void __dt__7JASHeapFv();
-extern void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
-extern void getSubFrames__9JASDriverFv();
-extern void __ct__15JASAudioReseterFv();
-extern void start__15JASAudioReseterFUlb();
-extern void resume__15JASAudioReseterFv();
-extern void checkDone__15JASAudioReseterCFv();
-extern void setOutputMode__9JASDriverFUl();
-extern void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
-extern void setAudience__8JAISeMgrFP11JAIAudience();
-extern void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
-extern void getNumActiveSe__8JAISeMgrCFv();
-extern void __ct__12JAISoundInfoFb();
-extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern void __dt__16JAIStreamAramMgrFv();
-extern void __dt__22JAUAudioArcInterpreterFv();
-extern void load__17JAUAudioArcLoaderFPCv();
-extern void __defctor__7JASHeapFv();
-extern void __ct__18JAU_JASInitializerFv();
-extern void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
-extern void __ct__18JAU_JAIInitializerFv();
-extern void initJAInterface__18JAU_JAIInitializerFv();
-extern void finishBuild__10JAUSectionFv();
-extern void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
-extern void JAUNewSectionHeap__Fb();
-extern void newDynamicSeqBlock__14JAUSectionHeapFUl();
-extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
-extern void seqCallback__FP8JASTrackUs();
-extern void __ct__10Z2SoundMgrFv();
-extern void framework__10Z2SoundMgrFv();
-extern void stopSync__10Z2SoundMgrFv();
-extern void initParams__10Z2SoundMgrFv();
-extern void __ct__14Z2SoundStarterFb();
-extern void func_802AB200();
-extern void __ct__7Z2SeMgrFv();
-extern void initSe__7Z2SeMgrFv();
-extern void processSeFramework__7Z2SeMgrFv();
-extern void __ct__8Z2SeqMgrFv();
-extern void processBgmFramework__8Z2SeqMgrFv();
-extern void __ct__11Z2StatusMgrFv();
-extern void processHeartGaugeSound__11Z2StatusMgrFv();
-extern void menuOut__11Z2StatusMgrFv();
-extern void processTime__11Z2StatusMgrFv();
-extern void __ct__10Z2SceneMgrFv();
-extern void framework__10Z2SceneMgrFv();
-extern void __ct__11Z2FxLineMgrFv();
-extern void __ct__10Z2AudienceFv();
-extern void func_802BD288();
-extern void __ct__13Z2SoundObjMgrFv();
-extern void __ct__12Z2SpeechMgr2Fv();
-extern void framework__12Z2SpeechMgr2Fv();
-extern void __ct__10Z2AudioMgrFv();
-extern void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
-extern void func_802CD7F8();
-extern void setOutputMode__10Z2AudioMgrFUl();
-extern void zeldaGFrameWork__10Z2AudioMgrFv();
-extern void gframeProcess__10Z2AudioMgrFv();
-extern void resetProcess__10Z2AudioMgrFUlb();
-extern void resetRecover__10Z2AudioMgrFv();
-extern void hasReset__10Z2AudioMgrCFv();
-extern void func_802CDB1C();
-extern void func_802CDB68();
-extern void func_802CDC08();
-extern void func_802CDCEC();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __register_global_object();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void abort();
-extern void fprintf();
+extern "C" extern void alloc__7JASHeapFP7JASHeapUl();
+extern "C" extern void free__7JASHeapFv();
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void newMemPool__17JASGenericMemPoolFUli();
+extern "C" extern void getAramHeap__9JASKernelFv();
+extern "C" extern void __dt__7JASHeapFv();
+extern "C" extern void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
+extern "C" extern void getSubFrames__9JASDriverFv();
+extern "C" extern void __ct__15JASAudioReseterFv();
+extern "C" extern void start__15JASAudioReseterFUlb();
+extern "C" extern void resume__15JASAudioReseterFv();
+extern "C" extern void checkDone__15JASAudioReseterCFv();
+extern "C" extern void setOutputMode__9JASDriverFUl();
+extern "C" extern void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
+extern "C" extern void setAudience__8JAISeMgrFP11JAIAudience();
+extern "C" extern void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
+extern "C" extern void getNumActiveSe__8JAISeMgrCFv();
+extern "C" extern void __ct__12JAISoundInfoFb();
+extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" extern void __dt__16JAIStreamAramMgrFv();
+extern "C" extern void __dt__22JAUAudioArcInterpreterFv();
+extern "C" extern void load__17JAUAudioArcLoaderFPCv();
+extern "C" extern void __defctor__7JASHeapFv();
+extern "C" extern void __ct__18JAU_JASInitializerFv();
+extern "C" extern void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
+extern "C" extern void __ct__18JAU_JAIInitializerFv();
+extern "C" extern void initJAInterface__18JAU_JAIInitializerFv();
+extern "C" extern void finishBuild__10JAUSectionFv();
+extern "C" extern void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
+extern "C" extern void JAUNewSectionHeap__Fb();
+extern "C" extern void newDynamicSeqBlock__14JAUSectionHeapFUl();
+extern "C" extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
+extern "C" extern void seqCallback__FP8JASTrackUs();
+extern "C" extern void __ct__10Z2SoundMgrFv();
+extern "C" extern void framework__10Z2SoundMgrFv();
+extern "C" extern void stopSync__10Z2SoundMgrFv();
+extern "C" extern void initParams__10Z2SoundMgrFv();
+extern "C" extern void __ct__14Z2SoundStarterFb();
+extern "C" extern void func_802AB200();
+extern "C" extern void __ct__7Z2SeMgrFv();
+extern "C" extern void initSe__7Z2SeMgrFv();
+extern "C" extern void processSeFramework__7Z2SeMgrFv();
+extern "C" extern void __ct__8Z2SeqMgrFv();
+extern "C" extern void processBgmFramework__8Z2SeqMgrFv();
+extern "C" extern void __ct__11Z2StatusMgrFv();
+extern "C" extern void processHeartGaugeSound__11Z2StatusMgrFv();
+extern "C" extern void menuOut__11Z2StatusMgrFv();
+extern "C" extern void processTime__11Z2StatusMgrFv();
+extern "C" extern void __ct__10Z2SceneMgrFv();
+extern "C" extern void framework__10Z2SceneMgrFv();
+extern "C" extern void __ct__11Z2FxLineMgrFv();
+extern "C" extern void __ct__10Z2AudienceFv();
+extern "C" extern void func_802BD288();
+extern "C" extern void __ct__13Z2SoundObjMgrFv();
+extern "C" extern void __ct__12Z2SpeechMgr2Fv();
+extern "C" extern void framework__12Z2SpeechMgr2Fv();
+extern "C" extern void __ct__10Z2AudioMgrFv();
+extern "C" extern void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
+extern "C" extern void func_802CD7F8();
+extern "C" extern void setOutputMode__10Z2AudioMgrFUl();
+extern "C" extern void zeldaGFrameWork__10Z2AudioMgrFv();
+extern "C" extern void gframeProcess__10Z2AudioMgrFv();
+extern "C" extern void resetProcess__10Z2AudioMgrFUlb();
+extern "C" extern void resetRecover__10Z2AudioMgrFv();
+extern "C" extern void hasReset__10Z2AudioMgrCFv();
+extern "C" extern void func_802CDB1C();
+extern "C" extern void func_802CDB68();
+extern "C" extern void func_802CDC08();
+extern "C" extern void func_802CDCEC();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __register_global_object();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void abort();
+extern "C" extern void fprintf();
 SECTION_RODATA extern const u8 Z2AudioMgr__stringBase0[128];
-SECTION_DATA extern void* __vt__12JAUSoundInfo[5];
-SECTION_DATA extern void* __vt__16JAIStreamAramMgr[5];
-SECTION_DATA extern void* __vt__16JAIStreamDataMgr[5];
-SECTION_DATA extern void* __vt__17JAUAudioArcLoader[18];
-SECTION_DATA extern void* __vt__16Z2AudioArcLoader[18];
-SECTION_DATA extern void* __vt__11Z2SoundInfo[20];
-SECTION_DATA extern void* __vt__10Z2AudioMgr[3];
-SECTION_DATA extern void* data_803CBF44[5];
-SECTION_DATA extern void* data_803CBF58[6];
-SECTION_DATA extern u8 __files[320];
+SECTION_DATA extern void* const __vt__12JAUSoundInfo[5];
+SECTION_DATA extern void* const __vt__16JAIStreamAramMgr[5];
+SECTION_DATA extern void* const __vt__16JAIStreamDataMgr[5];
+SECTION_DATA extern void* const __vt__17JAUAudioArcLoader[18];
+SECTION_DATA extern void* const __vt__16Z2AudioArcLoader[18];
+SECTION_DATA extern void* const __vt__11Z2SoundInfo[20];
+SECTION_DATA extern void* const __vt__10Z2AudioMgr[3];
+SECTION_DATA extern void* const data_803CBF44[5];
+SECTION_DATA extern void* const data_803CBF58[6];
+SECTION_DATA extern void* __files[80];
 SECTION_BSS extern u8 data_804341C4[16 + 4 /* padding */];
 SECTION_BSS extern u8 data_804341E4[16 + 4 /* padding */];
-SECTION_BSS extern u8 Z2AudioMgr__LIT_3779[12];
-SECTION_BSS extern u8 LIT_3783[12];
-SECTION_SDATA extern u8 VOL_BGM_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_SYSTEM_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_OBJECT_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param[4];
+SECTION_BSS extern u8 Z2AudioMgr__lit_3779[12];
+SECTION_BSS extern u8 lit_3783[12];
+SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_OBJECT_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param;
 SECTION_SBSS extern u8 data_80450B4C[4];
 SECTION_SBSS extern u8 data_80450B50[4];
 SECTION_SBSS extern u8 sCallBackFunc__12JASSeqParser[4];
@@ -124,17 +123,37 @@ SECTION_SBSS extern u8 sBlockSize__13JASAramStream[4];
 SECTION_SBSS extern u8 data_80451348[8];
 SECTION_SBSS extern u8 data_80451354[4];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 LIT_3931[4];
-SECTION_SDATA2 extern u8 LIT_3932[4];
-SECTION_SDATA2 extern u8 Z2AudioMgr__LIT_4035[8];
+SECTION_SDATA2 extern f32 lit_3931;
+SECTION_SDATA2 extern f32 lit_3932;
+SECTION_SDATA2 extern u8 Z2AudioMgr__lit_4035[8];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 803CBF38-803CBF44 000C .data      __vt__10Z2AudioMgr                                           */
+void* const __vt__10Z2AudioMgr[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)func_802CDB1C,
+};
+
+/* 80451368-80451370 0004 .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+
+/* 802CD248-802CD34C 0104 .text      __ct__10Z2AudioMgrFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__10Z2AudioMgrFv() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2AudioMgr/__ct__10Z2AudioMgrFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039CA58-8039CAD8 0079 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -149,30 +168,18 @@ SECTION_DEAD const char* const stringBase_8039CAAF =
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039CAD1 = "\0\0\0\0\0\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CBF38-803CBF44 000C .data      __vt__10Z2AudioMgr                                           */
-SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)func_802CDB1C,
-};
 /* 803CBF44-803CBF58 0014 .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
-SECTION_DATA void* data_803CBF44[5] = {
+void* const data_803CBF44[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_802CDCEC,
 	(void*)func_802CDC08,
 	(void*)func_802CDB68,
 };
+
 /* 803CBF58-803CBF70 0014 .data      __vt__24JAUStreamAramMgrBase_<1>                             */
-SECTION_DATA void* data_803CBF58[6] = {
+void* const data_803CBF58[6] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -181,182 +188,153 @@ SECTION_DATA void* data_803CBF58[6] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80455F58-80455F5C 0004 .sdata2    @3931                                                        */
-SECTION_SDATA2 u8 LIT_3931[4] = {
-	0x3F, 0xA6, 0x66, 0x66,
-};
+f32 lit_3931 = 13.0f / 10.0f;
+
 /* 80455F5C-80455F60 0004 .sdata2    @3932                                                        */
-SECTION_SDATA2 u8 LIT_3932[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80455F60-80455F68 0004 .sdata2    @4035                                                        */
-SECTION_SDATA2 u8 Z2AudioMgr__LIT_4035[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
+f32 lit_3932 = 1.0f;
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80434268-80434274 000C .bss       @3779                                                        */
-SECTION_BSS u8 Z2AudioMgr__LIT_3779[12];
+u8 Z2AudioMgr__lit_3779[12];
+
 /* 80434274-80434280 000C .bss       @3783                                                        */
-SECTION_BSS u8 LIT_3783[12];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451368-80451370 0004 .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
-SECTION_SBSS u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802CD248-802CD34C 0104 .text      __ct__10Z2AudioMgrFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__10Z2AudioMgrFv() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2AudioMgr/__ct__10Z2AudioMgrFv.s"
-}
-#pragma pop
+u8 lit_3783[12];
 
 /* 802CD34C-802CD7F8 04AC .text      init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive() {
+extern "C" asm void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive.s"
 }
 #pragma pop
 
+
 /* 802CD7F8-802CD888 0090 .text      __dt__24JAUStreamAramMgrBase_<1>Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CD7F8() {
+extern "C" asm void func_802CD7F8() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CD7F8.s"
 }
 #pragma pop
 
+
 /* 802CD888-802CD8B4 002C .text      setOutputMode__10Z2AudioMgrFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setOutputMode__10Z2AudioMgrFUl() {
+extern "C" asm void setOutputMode__10Z2AudioMgrFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/setOutputMode__10Z2AudioMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802CD8B4-802CD904 0050 .text      zeldaGFrameWork__10Z2AudioMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void zeldaGFrameWork__10Z2AudioMgrFv() {
+extern "C" asm void zeldaGFrameWork__10Z2AudioMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/zeldaGFrameWork__10Z2AudioMgrFv.s"
 }
 #pragma pop
 
+
 /* 802CD904-802CD974 0070 .text      gframeProcess__10Z2AudioMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void gframeProcess__10Z2AudioMgrFv() {
+extern "C" asm void gframeProcess__10Z2AudioMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/gframeProcess__10Z2AudioMgrFv.s"
 }
 #pragma pop
 
+
 /* 802CD974-802CD9CC 0058 .text      resetProcess__10Z2AudioMgrFUlb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetProcess__10Z2AudioMgrFUlb() {
+extern "C" asm void resetProcess__10Z2AudioMgrFUlb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/resetProcess__10Z2AudioMgrFUlb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455F60-80455F68 0004 .sdata2    @4035                                                        */
+u8 Z2AudioMgr__lit_4035[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 802CD9CC-802CDA6C 00A0 .text      resetRecover__10Z2AudioMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetRecover__10Z2AudioMgrFv() {
+extern "C" asm void resetRecover__10Z2AudioMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/resetRecover__10Z2AudioMgrFv.s"
 }
 #pragma pop
 
+
 /* 802CDA6C-802CDB1C 00B0 .text      hasReset__10Z2AudioMgrCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void hasReset__10Z2AudioMgrCFv() {
+extern "C" asm void hasReset__10Z2AudioMgrCFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/hasReset__10Z2AudioMgrCFv.s"
 }
 #pragma pop
 
+
 /* 802CDB1C-802CDB68 004C .text      startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CDB1C() {
+extern "C" asm void func_802CDB1C() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDB1C.s"
 }
 #pragma pop
 
+
 /* 802CDB68-802CDC08 00A0 .text      __dt__26JAUStreamStaticAramMgr_<1>Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CDB68() {
+extern "C" asm void func_802CDB68() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDB68.s"
 }
 #pragma pop
 
+
 /* 802CDC08-802CDCEC 00E4 .text      deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CDC08() {
+extern "C" asm void func_802CDC08() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDC08.s"
 }
 #pragma pop
 
+
 /* 802CDCEC-802CDDC8 00DC .text      newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802CDCEC() {
+extern "C" asm void func_802CDCEC() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDCEC.s"
 }

@@ -29,7 +29,7 @@ lbl_8019ACF8:
 /* 8019AD64 0000006C  38 61 00 0C */	addi r3, r1, 0xc
 /* 8019AD68 00000070  38 80 00 01 */	li r4, 1
 /* 8019AD6C 00000074  38 A0 00 01 */	li r5, 1
-/* 8019AD70 00000078  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
+/* 8019AD70 00000078  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
 /* 8019AD74 0000007C  FC 40 08 90 */	fmr f2, f1
 /* 8019AD78 00000080  FC 60 08 90 */	fmr f3, f1
 /* 8019AD7C 00000084  38 C0 00 00 */	li r6, 0
@@ -103,7 +103,7 @@ lbl_8019ACF8:
 /* 8019AE8C 00000194  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 8019AE90 00000198  90 01 00 08 */	stw r0, 8(r1)
 /* 8019AE94 0000019C  38 60 00 00 */	li r3, 0
-/* 8019AE98 000001A0  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
+/* 8019AE98 000001A0  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
 /* 8019AE9C 000001A4  FC 40 08 90 */	fmr f2, f1
 /* 8019AEA0 000001A8  FC 60 08 90 */	fmr f3, f1
 /* 8019AEA4 000001AC  FC 80 08 90 */	fmr f4, f1
@@ -118,12 +118,12 @@ lbl_8019ACF8:
 /* 8019AEC8 000001D0  38 60 00 01 */	li r3, 1
 /* 8019AECC 000001D4  48 1C 4F 0D */	bl GXSetDither
 /* 8019AED0 000001D8  38 61 00 2C */	addi r3, r1, 0x2c
-/* 8019AED4 000001DC  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
-/* 8019AED8 000001E0  C0 42 A1 84 */	lfs f2, d_d_gameover__LIT_3869(r2)
+/* 8019AED4 000001DC  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
+/* 8019AED8 000001E0  C0 42 A1 84 */	lfs f2, d_d_gameover__lit_3869(r2)
 /* 8019AEDC 000001E4  FC 60 08 90 */	fmr f3, f1
 /* 8019AEE0 000001E8  FC 80 10 90 */	fmr f4, f2
 /* 8019AEE4 000001EC  FC A0 08 90 */	fmr f5, f1
-/* 8019AEE8 000001F0  C0 C2 A1 88 */	lfs f6, LIT_3870(r2)
+/* 8019AEE8 000001F0  C0 C2 A1 88 */	lfs f6, lit_3870(r2)
 /* 8019AEEC 000001F4  48 1A C1 0D */	bl C_MTXOrtho
 /* 8019AEF0 000001F8  38 61 00 2C */	addi r3, r1, 0x2c
 /* 8019AEF4 000001FC  38 80 00 01 */	li r4, 1

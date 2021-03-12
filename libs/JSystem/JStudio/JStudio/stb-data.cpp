@@ -5,38 +5,23 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
-SECTION_SDATA2 extern u8 ga4cSignature__Q37JStudio3stb4data[8];
-}
+SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3stb4data;
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039AB88-8039ABA8 0020 .rodata    gauDataSize_TEParagraph_data__Q37JStudio3stb4data            */
 SECTION_RODATA const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x04,
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804554D8-804554E0 0004 .sdata2    ga4cSignature__Q37JStudio3stb4data                           */
-SECTION_SDATA2 u8 ga4cSignature__Q37JStudio3stb4data[8] = {
-	0x53, 0x54, 0x42, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
+u32 ga4cSignature__Q37JStudio3stb4data = 0x53544200;
+/* padding 4 bytes */
 

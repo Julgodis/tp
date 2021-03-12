@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void setCode__5dBgPcFR5sBgPc();
-}
+extern "C" extern void setCode__5dBgPcFR5sBgPc();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80074048-80074074 002C .text      setCode__5dBgPcFR5sBgPc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCode__5dBgPcFR5sBgPc() {
+extern "C" asm void setCode__5dBgPcFR5sBgPc() {
 	nofralloc
 #include "asm/d/bg/d_bg_pc/setCode__5dBgPcFR5sBgPc.s"
 }

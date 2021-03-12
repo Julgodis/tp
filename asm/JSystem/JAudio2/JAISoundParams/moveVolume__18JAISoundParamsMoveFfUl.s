@@ -11,7 +11,7 @@ lbl_802A2DD0:
 /* 802A2DD4 00000004  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 802A2DD8 00000008  EC 61 00 28 */	fsubs f3, f1, f0
 /* 802A2DDC 0000000C  80 03 00 1C */	lwz r0, 0x1c(r3)
-/* 802A2DE0 00000010  C8 42 BD E8 */	lfd f2, JAISoundParams__LIT_292(r2)
+/* 802A2DE0 00000010  C8 42 BD E8 */	lfd f2, JAISoundParams__lit_292(r2)
 /* 802A2DE4 00000014  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802A2DE8 00000018  3C 00 43 30 */	lis r0, 0x4330
 /* 802A2DEC 0000001C  90 01 00 08 */	stw r0, 8(r1)

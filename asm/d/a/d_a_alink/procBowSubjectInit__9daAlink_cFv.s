@@ -13,12 +13,12 @@ lbl_800DFD6C:
 lbl_800DFD98:
 /* 800DFD98 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DFD9C 00000004  38 80 00 11 */	li r4, 0x11
-/* 800DFDA0 00000008  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DFDA0 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DFDA4 0000000C  3C A0 80 39 */	lis r5, m__17daAlinkHIO_bow_c0@ha
 /* 800DFDA8 00000010  38 A5 E6 58 */	addi r5, r5, m__17daAlinkHIO_bow_c0@l
 /* 800DFDAC 00000014  C0 45 00 30 */	lfs f2, 0x30(r5)
 /* 800DFDB0 00000018  4B FC D2 31 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
-/* 800DFDB4 0000001C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800DFDB4 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800DFDB8 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800DFDBC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 800DFDC0 00000028  4B FF ED CD */	bl setBowOrSlingStatus__9daAlink_cFv

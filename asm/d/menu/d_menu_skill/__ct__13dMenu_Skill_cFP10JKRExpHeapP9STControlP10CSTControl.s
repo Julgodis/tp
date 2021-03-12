@@ -60,9 +60,9 @@ lbl_801F7224:
 /* 801F730C 000000E8  98 1F 02 0A */	stb r0, 0x20a(r31)
 /* 801F7310 000000EC  7F E3 FB 78 */	mr r3, r31
 /* 801F7314 000000F0  48 00 06 65 */	bl skill_init_calc__13dMenu_Skill_cFv
-/* 801F7318 000000F4  C0 02 AA 88 */	lfs f0, d_menu_d_menu_skill__LIT_3808(r2)
+/* 801F7318 000000F4  C0 02 AA 88 */	lfs f0, d_menu_d_menu_skill__lit_3808(r2)
 /* 801F731C 000000F8  D0 1F 01 F0 */	stfs f0, 0x1f0(r31)
-/* 801F7320 000000FC  C0 02 AA 8C */	lfs f0, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7320 000000FC  C0 02 AA 8C */	lfs f0, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7324 00000100  D0 1F 01 F8 */	stfs f0, 0x1f8(r31)
 /* 801F7328 00000104  D0 1F 01 F4 */	stfs f0, 0x1f4(r31)
 /* 801F732C 00000108  7F E3 FB 78 */	mr r3, r31

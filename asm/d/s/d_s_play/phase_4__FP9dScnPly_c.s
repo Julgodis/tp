@@ -86,18 +86,18 @@ lbl_8025A788:
 /* 8025A794 0000000C  42 00 FF F4 */	bdnz lbl_8025A788
 /* 8025A798 00000010  3B 9E 4E 10 */	addi r28, r30, 0x4e10
 /* 8025A79C 00000014  7F 83 E3 78 */	mr r3, r28
-/* 8025A7A0 00000018  C0 22 B5 28 */	lfs f1, d_s_d_s_play__LIT_4068(r2)
+/* 8025A7A0 00000018  C0 22 B5 28 */	lfs f1, d_s_d_s_play__lit_4068(r2)
 /* 8025A7A4 0000001C  FC 40 08 90 */	fmr f2, f1
-/* 8025A7A8 00000020  C0 62 B5 30 */	lfs f3, d_s_d_s_play__LIT_4804(r2)
-/* 8025A7AC 00000024  C0 82 B5 34 */	lfs f4, d_s_d_s_play__LIT_4805(r2)
+/* 8025A7A8 00000020  C0 62 B5 30 */	lfs f3, d_s_d_s_play__lit_4804(r2)
+/* 8025A7AC 00000024  C0 82 B5 34 */	lfs f4, d_s_d_s_play__lit_4805(r2)
 /* 8025A7B0 00000028  FC A0 08 90 */	fmr f5, f1
-/* 8025A7B4 0000002C  C0 C2 B5 38 */	lfs f6, d_s_d_s_play__LIT_4806(r2)
+/* 8025A7B4 0000002C  C0 C2 B5 38 */	lfs f6, d_s_d_s_play__lit_4806(r2)
 /* 8025A7B8 00000030  4B DF 73 09 */	bl setViewPort__14dDlst_window_cFffffff
 /* 8025A7BC 00000034  7F 83 E3 78 */	mr r3, r28
-/* 8025A7C0 00000038  C0 22 B5 28 */	lfs f1, d_s_d_s_play__LIT_4068(r2)
+/* 8025A7C0 00000038  C0 22 B5 28 */	lfs f1, d_s_d_s_play__lit_4068(r2)
 /* 8025A7C4 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 8025A7C8 00000040  C0 62 B5 30 */	lfs f3, d_s_d_s_play__LIT_4804(r2)
-/* 8025A7CC 00000044  C0 82 B5 34 */	lfs f4, d_s_d_s_play__LIT_4805(r2)
+/* 8025A7C8 00000040  C0 62 B5 30 */	lfs f3, d_s_d_s_play__lit_4804(r2)
+/* 8025A7CC 00000044  C0 82 B5 34 */	lfs f4, d_s_d_s_play__lit_4805(r2)
 /* 8025A7D0 00000048  4B DF 73 0D */	bl setScissor__14dDlst_window_cFffff
 /* 8025A7D4 0000004C  38 80 00 00 */	li r4, 0
 /* 8025A7D8 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

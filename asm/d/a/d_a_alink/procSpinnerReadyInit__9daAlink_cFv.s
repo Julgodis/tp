@@ -33,16 +33,16 @@ lbl_8010DCBC:
 /* 8010DCDC 00000020  3C A0 80 39 */	lis r5, m__23daAlinkHIO_smallJump_c0@ha
 /* 8010DCE0 00000024  38 C5 E1 1C */	addi r6, r5, m__23daAlinkHIO_smallJump_c0@l
 /* 8010DCE4 00000028  C0 26 00 04 */	lfs f1, 4(r6)
-/* 8010DCE8 0000002C  C0 42 93 44 */	lfs f2, LIT_7977(r2)
+/* 8010DCE8 0000002C  C0 42 93 44 */	lfs f2, lit_7977(r2)
 /* 8010DCEC 00000030  A8 A6 00 00 */	lha r5, 0(r6)
 /* 8010DCF0 00000034  C0 66 00 0C */	lfs f3, 0xc(r6)
 /* 8010DCF4 00000038  4B F9 F3 19 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
-/* 8010DCF8 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8010DCF8 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010DCFC 00000040  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 8010DD00 00000044  7F C3 F3 78 */	mr r3, r30
 /* 8010DD04 00000048  38 80 00 00 */	li r4, 0
 /* 8010DD08 0000004C  4B FD 48 79 */	bl setHeavyBoots__9daAlink_cFi
-/* 8010DD0C 00000050  C0 02 93 28 */	lfs f0, LIT_7451(r2)
+/* 8010DD0C 00000050  C0 02 93 28 */	lfs f0, lit_7451(r2)
 /* 8010DD10 00000054  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 8010DD14 00000058  7F C3 F3 78 */	mr r3, r30
 /* 8010DD18 0000005C  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010005@ha */

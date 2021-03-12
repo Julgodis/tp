@@ -5,97 +5,94 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8dBgS_ChkFv();
-extern void __dt__8dBgS_ChkFv();
-extern void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern void __ct__11dBgS_LinChkFv();
-extern void __dt__11dBgS_LinChkFv();
-extern void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
-extern void __ct__14dBgS_CamLinChkFv();
-extern void __dt__14dBgS_CamLinChkFv();
-extern void __ct__21dBgS_CamLinChk_NorWtrFv();
-extern void __dt__21dBgS_CamLinChk_NorWtrFv();
-extern void __ct__14dBgS_ObjLinChkFv();
-extern void __dt__14dBgS_ObjLinChkFv();
-extern void __ct__15dBgS_LinkLinChkFv();
-extern void __dt__15dBgS_LinkLinChkFv();
-extern void __ct__15dBgS_BombLinChkFv();
-extern void __dt__15dBgS_BombLinChkFv();
-extern void __ct__16dBgS_ArrowLinChkFv();
-extern void __dt__16dBgS_ArrowLinChkFv();
-extern void __ct__20dBgS_BoomerangLinChkFv();
-extern void __dt__20dBgS_BoomerangLinChkFv();
-extern void __ct__15dBgS_RopeLinChkFv();
-extern void __dt__15dBgS_RopeLinChkFv();
-extern void __ct__16dBgS_HorseLinChkFv();
-extern void __dt__16dBgS_HorseLinChkFv();
-extern void func_80078534();
-extern void func_8007853C();
-extern void func_80078544();
-extern void func_8007854C();
-extern void func_80078554();
-extern void func_8007855C();
-extern void func_80078564();
-extern void func_8007856C();
-extern void func_80078574();
-extern void func_8007857C();
-extern void func_80078584();
-extern void func_8007858C();
-extern void func_80078594();
-extern void func_8007859C();
-extern void func_800785A4();
-extern void func_800785AC();
-extern void func_800785B4();
-extern void func_800785BC();
-extern void func_800785C4();
-extern void func_800785CC();
-extern void func_800785D4();
-extern void func_800785DC();
-extern void func_800785E4();
-extern void func_800785EC();
-extern void func_800785F4();
-extern void func_800785FC();
-extern void func_80078604();
-extern void func_8007860C();
-extern void func_80078614();
-extern void func_8007861C();
-extern void SetObj__16dBgS_PolyPassChkFv();
-extern void SetCam__16dBgS_PolyPassChkFv();
-extern void SetLink__16dBgS_PolyPassChkFv();
-extern void SetArrow__16dBgS_PolyPassChkFv();
-extern void SetBomb__16dBgS_PolyPassChkFv();
-extern void SetBoomerang__16dBgS_PolyPassChkFv();
-extern void SetRope__16dBgS_PolyPassChkFv();
-extern void SetHorse__16dBgS_PolyPassChkFv();
-extern void __ct__11cBgS_LinChkFv();
-extern void __dt__11cBgS_LinChkFv();
-extern void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__16dBgS_HorseLinChk[12];
-SECTION_DATA extern void* __vt__15dBgS_RopeLinChk[12];
-SECTION_DATA extern void* __vt__20dBgS_BoomerangLinChk[12];
-SECTION_DATA extern void* __vt__16dBgS_ArrowLinChk[12];
-SECTION_DATA extern void* __vt__15dBgS_BombLinChk[12];
-SECTION_DATA extern void* __vt__15dBgS_LinkLinChk[12];
-SECTION_DATA extern void* __vt__14dBgS_ObjLinChk[12];
-SECTION_DATA extern void* __vt__21dBgS_CamLinChk_NorWtr[12];
-SECTION_DATA extern void* __vt__14dBgS_CamLinChk[12];
-SECTION_DATA extern void* __vt__11dBgS_LinChk[12];
-}
+extern "C" extern void __ct__8dBgS_ChkFv();
+extern "C" extern void __dt__8dBgS_ChkFv();
+extern "C" extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void __ct__11dBgS_LinChkFv();
+extern "C" extern void __dt__11dBgS_LinChkFv();
+extern "C" extern void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" extern void __ct__14dBgS_CamLinChkFv();
+extern "C" extern void __dt__14dBgS_CamLinChkFv();
+extern "C" extern void __ct__21dBgS_CamLinChk_NorWtrFv();
+extern "C" extern void __dt__21dBgS_CamLinChk_NorWtrFv();
+extern "C" extern void __ct__14dBgS_ObjLinChkFv();
+extern "C" extern void __dt__14dBgS_ObjLinChkFv();
+extern "C" extern void __ct__15dBgS_LinkLinChkFv();
+extern "C" extern void __dt__15dBgS_LinkLinChkFv();
+extern "C" extern void __ct__15dBgS_BombLinChkFv();
+extern "C" extern void __dt__15dBgS_BombLinChkFv();
+extern "C" extern void __ct__16dBgS_ArrowLinChkFv();
+extern "C" extern void __dt__16dBgS_ArrowLinChkFv();
+extern "C" extern void __ct__20dBgS_BoomerangLinChkFv();
+extern "C" extern void __dt__20dBgS_BoomerangLinChkFv();
+extern "C" extern void __ct__15dBgS_RopeLinChkFv();
+extern "C" extern void __dt__15dBgS_RopeLinChkFv();
+extern "C" extern void __ct__16dBgS_HorseLinChkFv();
+extern "C" extern void __dt__16dBgS_HorseLinChkFv();
+extern "C" extern void func_80078534();
+extern "C" extern void func_8007853C();
+extern "C" extern void func_80078544();
+extern "C" extern void func_8007854C();
+extern "C" extern void func_80078554();
+extern "C" extern void func_8007855C();
+extern "C" extern void func_80078564();
+extern "C" extern void func_8007856C();
+extern "C" extern void func_80078574();
+extern "C" extern void func_8007857C();
+extern "C" extern void func_80078584();
+extern "C" extern void func_8007858C();
+extern "C" extern void func_80078594();
+extern "C" extern void func_8007859C();
+extern "C" extern void func_800785A4();
+extern "C" extern void func_800785AC();
+extern "C" extern void func_800785B4();
+extern "C" extern void func_800785BC();
+extern "C" extern void func_800785C4();
+extern "C" extern void func_800785CC();
+extern "C" extern void func_800785D4();
+extern "C" extern void func_800785DC();
+extern "C" extern void func_800785E4();
+extern "C" extern void func_800785EC();
+extern "C" extern void func_800785F4();
+extern "C" extern void func_800785FC();
+extern "C" extern void func_80078604();
+extern "C" extern void func_8007860C();
+extern "C" extern void func_80078614();
+extern "C" extern void func_8007861C();
+extern "C" extern void SetObj__16dBgS_PolyPassChkFv();
+extern "C" extern void SetCam__16dBgS_PolyPassChkFv();
+extern "C" extern void SetLink__16dBgS_PolyPassChkFv();
+extern "C" extern void SetArrow__16dBgS_PolyPassChkFv();
+extern "C" extern void SetBomb__16dBgS_PolyPassChkFv();
+extern "C" extern void SetBoomerang__16dBgS_PolyPassChkFv();
+extern "C" extern void SetRope__16dBgS_PolyPassChkFv();
+extern "C" extern void SetHorse__16dBgS_PolyPassChkFv();
+extern "C" extern void __ct__11cBgS_LinChkFv();
+extern "C" extern void __dt__11cBgS_LinChkFv();
+extern "C" extern void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__16dBgS_HorseLinChk[12];
+SECTION_DATA extern void* const __vt__15dBgS_RopeLinChk[12];
+SECTION_DATA extern void* const __vt__20dBgS_BoomerangLinChk[12];
+SECTION_DATA extern void* const __vt__16dBgS_ArrowLinChk[12];
+SECTION_DATA extern void* const __vt__15dBgS_BombLinChk[12];
+SECTION_DATA extern void* const __vt__15dBgS_LinkLinChk[12];
+SECTION_DATA extern void* const __vt__14dBgS_ObjLinChk[12];
+SECTION_DATA extern void* const __vt__21dBgS_CamLinChk_NorWtr[12];
+SECTION_DATA extern void* const __vt__14dBgS_CamLinChk[12];
+SECTION_DATA extern void* const __vt__11dBgS_LinChk[12];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803AB7C0-803AB7F0 0030 .data      __vt__16dBgS_HorseLinChk                                     */
-SECTION_DATA void* __vt__16dBgS_HorseLinChk[12] = {
+void* const __vt__16dBgS_HorseLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dBgS_HorseLinChkFv,
@@ -109,8 +106,9 @@ SECTION_DATA void* __vt__16dBgS_HorseLinChk[12] = {
 	NULL,
 	(void*)func_80078614,
 };
+
 /* 803AB7F0-803AB820 0030 .data      __vt__15dBgS_RopeLinChk                                      */
-SECTION_DATA void* __vt__15dBgS_RopeLinChk[12] = {
+void* const __vt__15dBgS_RopeLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_RopeLinChkFv,
@@ -124,8 +122,9 @@ SECTION_DATA void* __vt__15dBgS_RopeLinChk[12] = {
 	NULL,
 	(void*)func_800785FC,
 };
+
 /* 803AB820-803AB850 0030 .data      __vt__20dBgS_BoomerangLinChk                                 */
-SECTION_DATA void* __vt__20dBgS_BoomerangLinChk[12] = {
+void* const __vt__20dBgS_BoomerangLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20dBgS_BoomerangLinChkFv,
@@ -139,8 +138,9 @@ SECTION_DATA void* __vt__20dBgS_BoomerangLinChk[12] = {
 	NULL,
 	(void*)func_800785E4,
 };
+
 /* 803AB850-803AB880 0030 .data      __vt__16dBgS_ArrowLinChk                                     */
-SECTION_DATA void* __vt__16dBgS_ArrowLinChk[12] = {
+void* const __vt__16dBgS_ArrowLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dBgS_ArrowLinChkFv,
@@ -154,8 +154,9 @@ SECTION_DATA void* __vt__16dBgS_ArrowLinChk[12] = {
 	NULL,
 	(void*)func_800785CC,
 };
+
 /* 803AB880-803AB8B0 0030 .data      __vt__15dBgS_BombLinChk                                      */
-SECTION_DATA void* __vt__15dBgS_BombLinChk[12] = {
+void* const __vt__15dBgS_BombLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_BombLinChkFv,
@@ -169,8 +170,9 @@ SECTION_DATA void* __vt__15dBgS_BombLinChk[12] = {
 	NULL,
 	(void*)func_800785B4,
 };
+
 /* 803AB8B0-803AB8E0 0030 .data      __vt__15dBgS_LinkLinChk                                      */
-SECTION_DATA void* __vt__15dBgS_LinkLinChk[12] = {
+void* const __vt__15dBgS_LinkLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_LinkLinChkFv,
@@ -184,8 +186,9 @@ SECTION_DATA void* __vt__15dBgS_LinkLinChk[12] = {
 	NULL,
 	(void*)func_8007859C,
 };
+
 /* 803AB8E0-803AB910 0030 .data      __vt__14dBgS_ObjLinChk                                       */
-SECTION_DATA void* __vt__14dBgS_ObjLinChk[12] = {
+void* const __vt__14dBgS_ObjLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14dBgS_ObjLinChkFv,
@@ -199,8 +202,9 @@ SECTION_DATA void* __vt__14dBgS_ObjLinChk[12] = {
 	NULL,
 	(void*)func_80078584,
 };
+
 /* 803AB910-803AB940 0030 .data      __vt__21dBgS_CamLinChk_NorWtr                                */
-SECTION_DATA void* __vt__21dBgS_CamLinChk_NorWtr[12] = {
+void* const __vt__21dBgS_CamLinChk_NorWtr[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21dBgS_CamLinChk_NorWtrFv,
@@ -214,8 +218,9 @@ SECTION_DATA void* __vt__21dBgS_CamLinChk_NorWtr[12] = {
 	NULL,
 	(void*)func_8007856C,
 };
+
 /* 803AB940-803AB970 0030 .data      __vt__14dBgS_CamLinChk                                       */
-SECTION_DATA void* __vt__14dBgS_CamLinChk[12] = {
+void* const __vt__14dBgS_CamLinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14dBgS_CamLinChkFv,
@@ -229,8 +234,9 @@ SECTION_DATA void* __vt__14dBgS_CamLinChk[12] = {
 	NULL,
 	(void*)func_80078554,
 };
+
 /* 803AB970-803AB9A0 0030 .data      __vt__11dBgS_LinChk                                          */
-SECTION_DATA void* __vt__11dBgS_LinChk[12] = {
+void* const __vt__11dBgS_LinChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dBgS_LinChkFv,
@@ -244,518 +250,562 @@ SECTION_DATA void* __vt__11dBgS_LinChk[12] = {
 	NULL,
 	(void*)func_8007853C,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80077C68-80077CDC 0074 .text      __ct__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dBgS_LinChkFv() {
+extern "C" asm void __ct__11dBgS_LinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__11dBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80077CDC-80077D64 0088 .text      __dt__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11dBgS_LinChkFv() {
+extern "C" asm void __dt__11dBgS_LinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__11dBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80077D64-80077DA4 0040 .text      Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c() {
+extern "C" asm void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 80077DA4-80077E00 005C .text      __ct__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14dBgS_CamLinChkFv() {
+extern "C" asm void __ct__14dBgS_CamLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__14dBgS_CamLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80077E00-80077E78 0078 .text      __dt__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14dBgS_CamLinChkFv() {
+extern "C" asm void __dt__14dBgS_CamLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__14dBgS_CamLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80077E78-80077EE4 006C .text      __ct__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__21dBgS_CamLinChk_NorWtrFv() {
+extern "C" asm void __ct__21dBgS_CamLinChk_NorWtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__21dBgS_CamLinChk_NorWtrFv.s"
 }
 #pragma pop
 
+
 /* 80077EE4-80077F5C 0078 .text      __dt__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__21dBgS_CamLinChk_NorWtrFv() {
+extern "C" asm void __dt__21dBgS_CamLinChk_NorWtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__21dBgS_CamLinChk_NorWtrFv.s"
 }
 #pragma pop
 
+
 /* 80077F5C-80077FB8 005C .text      __ct__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14dBgS_ObjLinChkFv() {
+extern "C" asm void __ct__14dBgS_ObjLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__14dBgS_ObjLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80077FB8-80078030 0078 .text      __dt__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14dBgS_ObjLinChkFv() {
+extern "C" asm void __dt__14dBgS_ObjLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__14dBgS_ObjLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078030-8007808C 005C .text      __ct__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dBgS_LinkLinChkFv() {
+extern "C" asm void __ct__15dBgS_LinkLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__15dBgS_LinkLinChkFv.s"
 }
 #pragma pop
 
+
 /* 8007808C-80078104 0078 .text      __dt__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dBgS_LinkLinChkFv() {
+extern "C" asm void __dt__15dBgS_LinkLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__15dBgS_LinkLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078104-80078160 005C .text      __ct__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dBgS_BombLinChkFv() {
+extern "C" asm void __ct__15dBgS_BombLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__15dBgS_BombLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078160-800781D8 0078 .text      __dt__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dBgS_BombLinChkFv() {
+extern "C" asm void __dt__15dBgS_BombLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__15dBgS_BombLinChkFv.s"
 }
 #pragma pop
 
+
 /* 800781D8-80078240 0068 .text      __ct__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16dBgS_ArrowLinChkFv() {
+extern "C" asm void __ct__16dBgS_ArrowLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__16dBgS_ArrowLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078240-800782B8 0078 .text      __dt__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16dBgS_ArrowLinChkFv() {
+extern "C" asm void __dt__16dBgS_ArrowLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__16dBgS_ArrowLinChkFv.s"
 }
 #pragma pop
 
+
 /* 800782B8-80078314 005C .text      __ct__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__20dBgS_BoomerangLinChkFv() {
+extern "C" asm void __ct__20dBgS_BoomerangLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__20dBgS_BoomerangLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078314-8007838C 0078 .text      __dt__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__20dBgS_BoomerangLinChkFv() {
+extern "C" asm void __dt__20dBgS_BoomerangLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__20dBgS_BoomerangLinChkFv.s"
 }
 #pragma pop
 
+
 /* 8007838C-800783E8 005C .text      __ct__15dBgS_RopeLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dBgS_RopeLinChkFv() {
+extern "C" asm void __ct__15dBgS_RopeLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__15dBgS_RopeLinChkFv.s"
 }
 #pragma pop
 
+
 /* 800783E8-80078460 0078 .text      __dt__15dBgS_RopeLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dBgS_RopeLinChkFv() {
+extern "C" asm void __dt__15dBgS_RopeLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__15dBgS_RopeLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078460-800784BC 005C .text      __ct__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16dBgS_HorseLinChkFv() {
+extern "C" asm void __ct__16dBgS_HorseLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__ct__16dBgS_HorseLinChkFv.s"
 }
 #pragma pop
 
+
 /* 800784BC-80078534 0078 .text      __dt__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16dBgS_HorseLinChkFv() {
+extern "C" asm void __dt__16dBgS_HorseLinChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/__dt__16dBgS_HorseLinChkFv.s"
 }
 #pragma pop
 
+
 /* 80078534-8007853C 0008 .text      @20@__dt__11dBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078534() {
+extern "C" asm void func_80078534() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078534.s"
 }
 #pragma pop
 
+
 /* 8007853C-80078544 0008 .text      @104@__dt__11dBgS_LinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007853C() {
+extern "C" asm void func_8007853C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007853C.s"
 }
 #pragma pop
 
+
 /* 80078544-8007854C 0008 .text      @88@__dt__11dBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078544() {
+extern "C" asm void func_80078544() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078544.s"
 }
 #pragma pop
 
+
 /* 8007854C-80078554 0008 .text      @20@__dt__14dBgS_CamLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007854C() {
+extern "C" asm void func_8007854C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007854C.s"
 }
 #pragma pop
 
+
 /* 80078554-8007855C 0008 .text      @104@__dt__14dBgS_CamLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078554() {
+extern "C" asm void func_80078554() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078554.s"
 }
 #pragma pop
 
+
 /* 8007855C-80078564 0008 .text      @88@__dt__14dBgS_CamLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007855C() {
+extern "C" asm void func_8007855C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007855C.s"
 }
 #pragma pop
 
+
 /* 80078564-8007856C 0008 .text      @20@__dt__21dBgS_CamLinChk_NorWtrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078564() {
+extern "C" asm void func_80078564() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078564.s"
 }
 #pragma pop
 
+
 /* 8007856C-80078574 0008 .text      @104@__dt__21dBgS_CamLinChk_NorWtrFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007856C() {
+extern "C" asm void func_8007856C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007856C.s"
 }
 #pragma pop
 
+
 /* 80078574-8007857C 0008 .text      @88@__dt__21dBgS_CamLinChk_NorWtrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078574() {
+extern "C" asm void func_80078574() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078574.s"
 }
 #pragma pop
 
+
 /* 8007857C-80078584 0008 .text      @20@__dt__14dBgS_ObjLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007857C() {
+extern "C" asm void func_8007857C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007857C.s"
 }
 #pragma pop
 
+
 /* 80078584-8007858C 0008 .text      @104@__dt__14dBgS_ObjLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078584() {
+extern "C" asm void func_80078584() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078584.s"
 }
 #pragma pop
 
+
 /* 8007858C-80078594 0008 .text      @88@__dt__14dBgS_ObjLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007858C() {
+extern "C" asm void func_8007858C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007858C.s"
 }
 #pragma pop
 
+
 /* 80078594-8007859C 0008 .text      @20@__dt__15dBgS_LinkLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078594() {
+extern "C" asm void func_80078594() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078594.s"
 }
 #pragma pop
 
+
 /* 8007859C-800785A4 0008 .text      @104@__dt__15dBgS_LinkLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007859C() {
+extern "C" asm void func_8007859C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007859C.s"
 }
 #pragma pop
 
+
 /* 800785A4-800785AC 0008 .text      @88@__dt__15dBgS_LinkLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785A4() {
+extern "C" asm void func_800785A4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785A4.s"
 }
 #pragma pop
 
+
 /* 800785AC-800785B4 0008 .text      @20@__dt__15dBgS_BombLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785AC() {
+extern "C" asm void func_800785AC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785AC.s"
 }
 #pragma pop
 
+
 /* 800785B4-800785BC 0008 .text      @104@__dt__15dBgS_BombLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785B4() {
+extern "C" asm void func_800785B4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785B4.s"
 }
 #pragma pop
 
+
 /* 800785BC-800785C4 0008 .text      @88@__dt__15dBgS_BombLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785BC() {
+extern "C" asm void func_800785BC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785BC.s"
 }
 #pragma pop
 
+
 /* 800785C4-800785CC 0008 .text      @20@__dt__16dBgS_ArrowLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785C4() {
+extern "C" asm void func_800785C4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785C4.s"
 }
 #pragma pop
 
+
 /* 800785CC-800785D4 0008 .text      @104@__dt__16dBgS_ArrowLinChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785CC() {
+extern "C" asm void func_800785CC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785CC.s"
 }
 #pragma pop
 
+
 /* 800785D4-800785DC 0008 .text      @88@__dt__16dBgS_ArrowLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785D4() {
+extern "C" asm void func_800785D4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785D4.s"
 }
 #pragma pop
 
+
 /* 800785DC-800785E4 0008 .text      @20@__dt__20dBgS_BoomerangLinChkFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785DC() {
+extern "C" asm void func_800785DC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785DC.s"
 }
 #pragma pop
 
+
 /* 800785E4-800785EC 0008 .text      @104@__dt__20dBgS_BoomerangLinChkFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785E4() {
+extern "C" asm void func_800785E4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785E4.s"
 }
 #pragma pop
 
+
 /* 800785EC-800785F4 0008 .text      @88@__dt__20dBgS_BoomerangLinChkFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785EC() {
+extern "C" asm void func_800785EC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785EC.s"
 }
 #pragma pop
 
+
 /* 800785F4-800785FC 0008 .text      @20@__dt__15dBgS_RopeLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785F4() {
+extern "C" asm void func_800785F4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785F4.s"
 }
 #pragma pop
 
+
 /* 800785FC-80078604 0008 .text      @104@__dt__15dBgS_RopeLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800785FC() {
+extern "C" asm void func_800785FC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785FC.s"
 }
 #pragma pop
 
+
 /* 80078604-8007860C 0008 .text      @88@__dt__15dBgS_RopeLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078604() {
+extern "C" asm void func_80078604() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078604.s"
 }
 #pragma pop
 
+
 /* 8007860C-80078614 0008 .text      @20@__dt__16dBgS_HorseLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007860C() {
+extern "C" asm void func_8007860C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007860C.s"
 }
 #pragma pop
 
+
 /* 80078614-8007861C 0008 .text      @104@__dt__16dBgS_HorseLinChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80078614() {
+extern "C" asm void func_80078614() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078614.s"
 }
 #pragma pop
 
+
 /* 8007861C-80078624 0008 .text      @88@__dt__16dBgS_HorseLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8007861C() {
+extern "C" asm void func_8007861C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007861C.s"
 }

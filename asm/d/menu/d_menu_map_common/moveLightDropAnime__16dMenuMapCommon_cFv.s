@@ -2,7 +2,7 @@ lbl_801C4600:
 /* 801C4600 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801C4604 00000004  38 C0 00 00 */	li r6, 0
 /* 801C4608 00000008  C0 23 0C 88 */	lfs f1, 0xc88(r3)
-/* 801C460C 0000000C  C0 02 A6 DC */	lfs f0, d_menu_d_menu_map_common__LIT_3882(r2)
+/* 801C460C 0000000C  C0 02 A6 DC */	lfs f0, d_menu_d_menu_map_common__lit_3882(r2)
 /* 801C4610 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C4614 00000000  40 81 00 08 */	ble lbl_801C461C
 /* 801C4618 00000004  38 C0 00 01 */	li r6, 1
@@ -27,7 +27,7 @@ lbl_801C461C:
 /* 801C4660 00000044  B0 03 0C 74 */	sth r0, 0xc74(r3)
 lbl_801C4664:
 /* 801C4664 00000000  A8 03 0C 74 */	lha r0, 0xc74(r3)
-/* 801C4668 00000004  C8 62 A6 F8 */	lfd f3, d_menu_d_menu_map_common__LIT_4119(r2)
+/* 801C4668 00000004  C8 62 A6 F8 */	lfd f3, d_menu_d_menu_map_common__lit_4119(r2)
 /* 801C466C 00000008  6C 05 80 00 */	xoris r5, r0, 0x8000
 /* 801C4670 0000000C  90 A1 00 0C */	stw r5, 0xc(r1)
 /* 801C4674 00000010  3C 80 43 30 */	lis r4, 0x4330
@@ -39,7 +39,7 @@ lbl_801C4664:
 /* 801C468C 00000028  90 81 00 10 */	stw r4, 0x10(r1)
 /* 801C4690 0000002C  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 801C4694 00000030  EC 20 18 28 */	fsubs f1, f0, f3
-/* 801C4698 00000034  C0 02 A6 E8 */	lfs f0, d_menu_d_menu_map_common__LIT_4012(r2)
+/* 801C4698 00000034  C0 02 A6 E8 */	lfs f0, d_menu_d_menu_map_common__lit_4012(r2)
 /* 801C469C 00000038  EC 21 00 32 */	fmuls f1, f1, f0
 /* 801C46A0 0000003C  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 801C46A4 00000000  4C 40 13 82 */	cror 2, 0, 2
@@ -59,14 +59,14 @@ lbl_801C46C8:
 /* 801C46D8 00000010  EC 00 08 28 */	fsubs f0, f0, f1
 /* 801C46DC 00000014  EC 60 08 24 */	fdivs f3, f0, f1
 lbl_801C46E0:
-/* 801C46E0 00000000  C8 22 A7 00 */	lfd f1, d_menu_d_menu_map_common__LIT_4140(r2)
+/* 801C46E0 00000000  C8 22 A7 00 */	lfd f1, d_menu_d_menu_map_common__lit_4140(r2)
 /* 801C46E4 00000004  90 C1 00 2C */	stw r6, 0x2c(r1)
 /* 801C46E8 00000008  3C 80 43 30 */	lis r4, 0x4330
 /* 801C46EC 0000000C  90 81 00 28 */	stw r4, 0x28(r1)
 /* 801C46F0 00000010  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 801C46F4 00000014  EC 40 08 28 */	fsubs f2, f0, f1
 /* 801C46F8 00000018  7C 06 40 50 */	subf r0, r6, r8
-/* 801C46FC 0000001C  C8 22 A6 F8 */	lfd f1, d_menu_d_menu_map_common__LIT_4119(r2)
+/* 801C46FC 0000001C  C8 22 A6 F8 */	lfd f1, d_menu_d_menu_map_common__lit_4119(r2)
 /* 801C4700 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801C4704 00000024  90 01 00 34 */	stw r0, 0x34(r1)
 /* 801C4708 00000028  90 81 00 30 */	stw r4, 0x30(r1)

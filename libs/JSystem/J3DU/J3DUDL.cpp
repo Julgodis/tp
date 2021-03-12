@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getUseMtxNum__11J3DShapeMtxCFv();
-}
+extern "C" extern void getUseMtxNum__11J3DShapeMtxCFv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80273E08-80273E10 0008 .text      getUseMtxNum__11J3DShapeMtxCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getUseMtxNum__11J3DShapeMtxCFv() {
+extern "C" asm void getUseMtxNum__11J3DShapeMtxCFv() {
 	nofralloc
 #include "asm/JSystem/J3DU/J3DUDL/getUseMtxNum__11J3DShapeMtxCFv.s"
 }

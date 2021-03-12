@@ -41,8 +41,8 @@ lbl_8012FFA4:
 /* 80130040 0000009C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlSlide_c0@ha
 /* 80130044 000000A0  38 63 F3 F0 */	addi r3, r3, m__21daAlinkHIO_wlSlide_c0@l
 /* 80130048 000000A4  C0 63 00 58 */	lfs f3, 0x58(r3)
-/* 8013004C 000000A8  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__LIT_6040(r2)
-/* 80130050 000000AC  C0 22 92 98 */	lfs f1, LIT_5943(r2)
+/* 8013004C 000000A8  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 80130050 000000AC  C0 22 92 98 */	lfs f1, lit_5943(r2)
 /* 80130054 000000B0  C0 01 00 0C */	lfs f0, 0xc(r1)
 /* 80130058 000000B4  EC 02 00 28 */	fsubs f0, f2, f0
 /* 8013005C 000000B8  EC 01 00 32 */	fmuls f0, f1, f0

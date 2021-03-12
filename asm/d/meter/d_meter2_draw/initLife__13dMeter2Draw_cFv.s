@@ -5,8 +5,8 @@ lbl_80211BEC:
 /* 80211BF8 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80211BFC 00000010  48 15 05 D1 */	bl _savegpr_25
 /* 80211C00 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 80211C04 00000018  3C 60 80 3A */	lis r3, d_meter_d_meter2_draw__data_80398258@ha
-/* 80211C08 0000001C  3B C3 82 58 */	addi r30, r3, d_meter_d_meter2_draw__data_80398258@l
+/* 80211C04 00000018  3C 60 80 3A */	lis r3, data_80398258@ha
+/* 80211C08 0000001C  3B C3 82 58 */	addi r30, r3, data_80398258@l
 /* 80211C0C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80211C10 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80211C14 00000028  A3 5F 00 02 */	lhz r26, 2(r31)
@@ -134,12 +134,12 @@ lbl_80211D94:
 lbl_80211DDC:
 /* 80211DDC 00000000  90 1C 01 C8 */	stw r0, 0x1c8(r28)
 /* 80211DE0 00000004  80 7C 01 24 */	lwz r3, 0x124(r28)
-/* 80211DE4 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80211DE4 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80211DE8 0000000C  48 04 39 E9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80211DEC 00000010  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80211DF0 00000014  38 A3 EB C8 */	addi r5, r3, g_drawHIO@l
 /* 80211DF4 00000018  C0 25 00 08 */	lfs f1, 8(r5)
-/* 80211DF8 0000001C  C0 42 AE 80 */	lfs f2, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80211DF8 0000001C  C0 42 AE 80 */	lfs f2, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80211DFC 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80211E00 00000024  A0 83 61 C0 */	lhz r4, g_dComIfG_gameInfo@l(r3)
 /* 80211E04 00000028  54 80 04 3E */	clrlwi r0, r4, 0x10

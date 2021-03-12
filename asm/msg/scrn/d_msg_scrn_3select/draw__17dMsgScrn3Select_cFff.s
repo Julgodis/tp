@@ -117,20 +117,20 @@ lbl_80239F50:
 /* 80239F8C 0000003C  7C 7D 02 14 */	add r3, r29, r0
 /* 80239F90 00000040  80 83 00 B8 */	lwz r4, 0xb8(r3)
 /* 80239F94 00000044  C0 44 00 24 */	lfs f2, 0x24(r4)
-/* 80239F98 00000048  C0 22 B1 64 */	lfs f1, LIT_4154(r2)
+/* 80239F98 00000048  C0 22 B1 64 */	lfs f1, lit_4154(r2)
 /* 80239F9C 0000004C  C0 04 00 34 */	lfs f0, 0x34(r4)
 /* 80239FA0 00000050  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80239FA4 00000054  EC 02 00 2A */	fadds f0, f2, f0
 /* 80239FA8 00000058  80 63 00 70 */	lwz r3, 0x70(r3)
 /* 80239FAC 0000005C  C0 63 00 24 */	lfs f3, 0x24(r3)
 /* 80239FB0 00000060  C0 9D 01 04 */	lfs f4, 0x104(r29)
-/* 80239FB4 00000064  C0 42 B1 60 */	lfs f2, msg_scrn_d_msg_scrn_3select__LIT_3911(r2)
+/* 80239FB4 00000064  C0 42 B1 60 */	lfs f2, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
 /* 80239FB8 00000068  EC 24 10 28 */	fsubs f1, f4, f2
 /* 80239FBC 0000006C  EC 00 18 28 */	fsubs f0, f0, f3
 /* 80239FC0 00000070  EF E1 00 32 */	fmuls f31, f1, f0
 /* 80239FC4 00000074  FC 02 20 00 */	fcmpu cr0, f2, f4
 /* 80239FC8 00000078  40 82 00 0C */	bne lbl_80239FD4
-/* 80239FCC 0000007C  C0 02 B1 68 */	lfs f0, LIT_4155(r2)
+/* 80239FCC 0000007C  C0 02 B1 68 */	lfs f0, lit_4155(r2)
 /* 80239FD0 00000080  EF FF 00 28 */	fsubs f31, f31, f0
 lbl_80239FD4:
 /* 80239FD4 00000000  38 61 00 18 */	addi r3, r1, 0x18
@@ -160,10 +160,10 @@ lbl_80239FD4:
 /* 8023A034 00000060  38 A0 00 01 */	li r5, 1
 /* 8023A038 00000064  4B F5 B0 BD */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8023A03C 00000068  80 7D 00 14 */	lwz r3, 0x14(r29)
-/* 8023A040 0000006C  C0 22 B1 6C */	lfs f1, LIT_4156(r2)
-/* 8023A044 00000070  C0 42 B1 70 */	lfs f2, msg_scrn_d_msg_scrn_3select__LIT_4157(r2)
-/* 8023A048 00000074  C0 62 B1 74 */	lfs f3, msg_scrn_d_msg_scrn_3select__LIT_4158(r2)
-/* 8023A04C 00000078  C0 82 B1 64 */	lfs f4, LIT_4154(r2)
+/* 8023A040 0000006C  C0 22 B1 6C */	lfs f1, lit_4156(r2)
+/* 8023A044 00000070  C0 42 B1 70 */	lfs f2, msg_scrn_d_msg_scrn_3select__lit_4157(r2)
+/* 8023A048 00000074  C0 62 B1 74 */	lfs f3, msg_scrn_d_msg_scrn_3select__lit_4158(r2)
+/* 8023A04C 00000078  C0 82 B1 64 */	lfs f4, lit_4154(r2)
 /* 8023A050 0000007C  FC A0 20 90 */	fmr f5, f4
 /* 8023A054 00000080  4B F5 B1 5D */	bl setParam__16dSelect_cursor_cFfffff
 /* 8023A058 00000084  80 7D 00 14 */	lwz r3, 0x14(r29)

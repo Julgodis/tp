@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __copy();
-}
+extern "C" extern void __copy();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80361C3C-80361C6C 0030 .text      __copy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __copy() {
+extern "C" asm void __copy() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/CPlusLibPPC/__copy.s"
 }

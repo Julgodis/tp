@@ -5,91 +5,86 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void __nwa__FUli();
-extern void __dl__FPv();
-extern void countVertex__12J3DShapeDrawFUl();
-extern void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
-extern void __ct__12J3DShapeDrawFPCUcUl();
-extern void draw__12J3DShapeDrawCFv();
-extern void __dt__12J3DShapeDrawFv();
-extern void DCStoreRange();
-extern void GXCallDisplayList();
-extern void _savegpr_18();
-extern void _restgpr_18();
-SECTION_DATA extern void* __vt__12J3DShapeDraw[4];
+extern "C" extern void __nwa__FUli();
+extern "C" extern void __dl__FPv();
+extern "C" extern void countVertex__12J3DShapeDrawFUl();
+extern "C" extern void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
+extern "C" extern void __ct__12J3DShapeDrawFPCUcUl();
+extern "C" extern void draw__12J3DShapeDrawCFv();
+extern "C" extern void __dt__12J3DShapeDrawFv();
+extern "C" extern void DCStoreRange();
+extern "C" extern void GXCallDisplayList();
+extern "C" extern void _savegpr_18();
+extern "C" extern void _restgpr_18();
+SECTION_DATA extern void* const __vt__12J3DShapeDraw[4];
+
+// 
+// Functions:
+// 
+
+/* 80314924-80314974 0050 .text      countVertex__12J3DShapeDrawFUl                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void countVertex__12J3DShapeDrawFUl() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DShapeDraw/countVertex__12J3DShapeDrawFUl.s"
 }
+#pragma pop
+
+
+/* 80314974-80314ABC 0148 .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DShapeDraw/addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CDC68-803CDC78 000C .data      __vt__12J3DShapeDraw                                         */
-SECTION_DATA void* __vt__12J3DShapeDraw[4] = {
+void* const __vt__12J3DShapeDraw[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J3DShapeDrawFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80314924-80314974 0050 .text      countVertex__12J3DShapeDrawFUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void countVertex__12J3DShapeDrawFUl() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DShapeDraw/countVertex__12J3DShapeDrawFUl.s"
-}
-#pragma pop
-
-/* 80314974-80314ABC 0148 .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DShapeDraw/addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl.s"
-}
-#pragma pop
 
 /* 80314ABC-80314AD4 0018 .text      __ct__12J3DShapeDrawFPCUcUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12J3DShapeDrawFPCUcUl() {
+extern "C" asm void __ct__12J3DShapeDrawFPCUcUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeDraw/__ct__12J3DShapeDrawFPCUcUl.s"
 }
 #pragma pop
 
+
 /* 80314AD4-80314B00 002C .text      draw__12J3DShapeDrawCFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__12J3DShapeDrawCFv() {
+extern "C" asm void draw__12J3DShapeDrawCFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeDraw/draw__12J3DShapeDrawCFv.s"
 }
 #pragma pop
 
+
 /* 80314B00-80314B48 0048 .text      __dt__12J3DShapeDrawFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12J3DShapeDrawFv() {
+extern "C" asm void __dt__12J3DShapeDrawFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeDraw/__dt__12J3DShapeDrawFv.s"
 }

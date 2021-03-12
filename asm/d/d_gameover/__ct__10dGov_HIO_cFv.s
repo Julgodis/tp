@@ -5,11 +5,11 @@ lbl_8019AFE0:
 /* 8019AFEC 0000000C  3C 80 80 3C */	lis r4, __vt__10dGov_HIO_c@ha
 /* 8019AFF0 00000010  38 04 BD 90 */	addi r0, r4, __vt__10dGov_HIO_c@l
 /* 8019AFF4 00000014  90 03 00 00 */	stw r0, 0(r3)
-/* 8019AFF8 00000018  C0 02 A1 8C */	lfs f0, d_d_gameover__LIT_3878(r2)
+/* 8019AFF8 00000018  C0 02 A1 8C */	lfs f0, d_d_gameover__lit_3878(r2)
 /* 8019AFFC 0000001C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8019B000 00000020  C0 02 A1 84 */	lfs f0, d_d_gameover__LIT_3869(r2)
+/* 8019B000 00000020  C0 02 A1 84 */	lfs f0, d_d_gameover__lit_3869(r2)
 /* 8019B004 00000024  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 8019B008 00000028  C0 02 A1 90 */	lfs f0, d_d_gameover__LIT_3879(r2)
+/* 8019B008 00000028  C0 02 A1 90 */	lfs f0, d_d_gameover__lit_3879(r2)
 /* 8019B00C 0000002C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8019B010 00000030  38 00 00 00 */	li r0, 0
 /* 8019B014 00000034  98 03 00 14 */	stb r0, 0x14(r3)

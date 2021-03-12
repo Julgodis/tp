@@ -58,7 +58,7 @@ lbl_80019BD0:
 lbl_80019BEC:
 /* 80019BEC 00000000  28 1C 00 00 */	cmplwi r28, 0
 /* 80019BF0 00000004  41 82 00 54 */	beq lbl_80019C44
-/* 80019BF4 00000008  C0 22 82 00 */	lfs f1, f_op_f_op_actor_mng__LIT_4263(r2)
+/* 80019BF4 00000008  C0 22 82 00 */	lfs f1, f_op_f_op_actor_mng__lit_4263(r2)
 /* 80019BF8 0000000C  C0 1C 00 00 */	lfs f0, 0(r28)
 /* 80019BFC 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80019C00 00000014  FC 00 00 1E */	fctiwz f0, f0

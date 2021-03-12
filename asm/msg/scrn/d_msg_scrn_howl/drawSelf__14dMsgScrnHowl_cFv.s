@@ -36,7 +36,7 @@ lbl_80241C9C:
 /* 80241CAC 00000010  48 00 04 ED */	bl drawWave__14dMsgScrnHowl_cFv
 lbl_80241CB0:
 /* 80241CB0 00000000  80 1E 21 20 */	lwz r0, 0x2120(r30)
-/* 80241CB4 00000004  C8 22 B2 80 */	lfd f1, msg_scrn_d_msg_scrn_howl__LIT_4587(r2)
+/* 80241CB4 00000004  C8 22 B2 80 */	lfd f1, msg_scrn_d_msg_scrn_howl__lit_4587(r2)
 /* 80241CB8 00000008  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80241CBC 0000000C  3C 60 43 30 */	lis r3, 0x4330
 /* 80241CC0 00000010  90 61 00 18 */	stw r3, 0x18(r1)

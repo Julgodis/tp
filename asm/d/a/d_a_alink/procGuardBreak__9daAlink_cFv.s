@@ -6,7 +6,7 @@ lbl_800DDF2C:
 /* 800DDF3C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800DDF40 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800DDF44 00000018  3B FE 1F D0 */	addi r31, r30, 0x1fd0
-/* 800DDF48 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DDF48 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DDF4C 00000020  4B FF F0 BD */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800DDF50 00000024  80 1E 05 88 */	lwz r0, 0x588(r30)
 /* 800DDF54 00000028  64 00 08 00 */	oris r0, r0, 0x800

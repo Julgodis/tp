@@ -6,12 +6,12 @@ lbl_800DDBA8:
 /* 800DDBB8 00000010  48 28 46 25 */	bl _savegpr_29
 /* 800DDBBC 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800DDBC0 00000018  3B FE 1F D0 */	addi r31, r30, 0x1fd0
-/* 800DDBC4 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DDBC4 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DDBC8 00000020  4B FF F4 41 */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800DDBCC 00000024  38 00 00 04 */	li r0, 4
 /* 800DDBD0 00000028  98 1E 2F 99 */	stb r0, 0x2f99(r30)
 /* 800DDBD4 0000002C  38 7E 33 98 */	addi r3, r30, 0x3398
-/* 800DDBD8 00000030  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DDBD8 00000030  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DDBDC 00000034  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800DDBE0 00000038  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
 /* 800DDBE4 0000003C  C0 44 00 38 */	lfs f2, 0x38(r4)
@@ -53,9 +53,9 @@ lbl_800DDC50:
 /* 800DDC68 00000018  41 82 00 3C */	beq lbl_800DDCA4
 /* 800DDC6C 0000001C  38 00 00 01 */	li r0, 1
 /* 800DDC70 00000020  B0 1E 30 08 */	sth r0, 0x3008(r30)
-/* 800DDC74 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DDC74 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DDC78 00000028  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DDC7C 0000002C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DDC7C 0000002C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DDC80 00000030  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DDC84 00000034  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DDC88 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -89,7 +89,7 @@ lbl_800DDCA4:
 /* 800DDCF4 00000050  3C 80 00 04 */	lis r4, 0x0004 /* 0x00040002@ha */
 /* 800DDCF8 00000054  38 84 00 02 */	addi r4, r4, 0x0002 /* 0x00040002@l */
 /* 800DDCFC 00000058  38 C0 00 00 */	li r6, 0
-/* 800DDD00 0000005C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DDD00 0000005C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DDD04 00000060  48 1E 6B 11 */	bl startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef
 /* 800DDD08 00000064  7F C3 F3 78 */	mr r3, r30
 /* 800DDD0C 00000068  38 80 00 2F */	li r4, 0x2f

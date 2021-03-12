@@ -5,63 +5,54 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRKSetBufferPosition();
-extern void TRKDispatchMessage();
-extern void TRKInitializeDispatcher();
-extern void TRKDoSetOption();
-extern void TRKDoStop();
-extern void TRKDoStep();
-extern void TRKDoContinue();
-extern void TRKDoWriteRegisters();
-extern void TRKDoReadRegisters();
-extern void TRKDoWriteMemory();
-extern void TRKDoReadMemory();
-extern void TRKDoSupportMask();
-extern void TRKDoVersions();
-extern void TRKDoOverride();
-extern void TRKDoReset();
-extern void TRKDoDisconnect();
-extern void TRKDoConnect();
-extern void MWTRACE();
-SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__LIT_126[28];
-SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__LIT_127[36];
-SECTION_DATA extern void* MetroTRK_Portable_dispatch__LIT_128[28];
-}
+extern "C" extern void TRKSetBufferPosition();
+extern "C" extern void TRKDispatchMessage();
+extern "C" extern void TRKInitializeDispatcher();
+extern "C" extern void TRKDoSetOption();
+extern "C" extern void TRKDoStop();
+extern "C" extern void TRKDoStep();
+extern "C" extern void TRKDoContinue();
+extern "C" extern void TRKDoWriteRegisters();
+extern "C" extern void TRKDoReadRegisters();
+extern "C" extern void TRKDoWriteMemory();
+extern "C" extern void TRKDoReadMemory();
+extern "C" extern void TRKDoSupportMask();
+extern "C" extern void TRKDoVersions();
+extern "C" extern void TRKDoOverride();
+extern "C" extern void TRKDoReset();
+extern "C" extern void TRKDoDisconnect();
+extern "C" extern void TRKDoConnect();
+extern "C" extern void MWTRACE();
+SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_126[28];
+SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_127[36];
+SECTION_DATA extern void* MetroTRK_Portable_dispatch__lit_128[28];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A2890-803A28AC 0019 .rodata    @126                                                         */
-SECTION_RODATA const u8 MetroTRK_Portable_dispatch__LIT_126[28] = {
+SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_126[28] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803A28AC-803A28D0 001D .rodata    @127                                                         */
-SECTION_RODATA const u8 MetroTRK_Portable_dispatch__LIT_127[36] = {
+SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_127[36] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74,
 	0x65, 0x20, 0x65, 0x72, 0x72, 0x20, 0x3D, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803D3190-803D3200 006C .data      @128                                                         */
-SECTION_DATA void* MetroTRK_Portable_dispatch__LIT_128[28] = {
+void* MetroTRK_Portable_dispatch__lit_128[28] = {
 	(void*)(((char*)TRKDispatchMessage)+0x13C),
 	(void*)(((char*)TRKDispatchMessage)+0x60),
 	(void*)(((char*)TRKDispatchMessage)+0x70),
@@ -92,28 +83,23 @@ SECTION_DATA void* MetroTRK_Portable_dispatch__LIT_128[28] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8036DB9C-8036DD0C 0170 .text      TRKDispatchMessage                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKDispatchMessage() {
+extern "C" asm void TRKDispatchMessage() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/dispatch/TRKDispatchMessage.s"
 }
 #pragma pop
 
+
 /* 8036DD0C-8036DD14 0008 .text      TRKInitializeDispatcher                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKInitializeDispatcher() {
+extern "C" asm void TRKInitializeDispatcher() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/dispatch/TRKInitializeDispatcher.s"
 }

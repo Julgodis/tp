@@ -120,7 +120,7 @@ lbl_801AFFF0:
 /* 801B0068 00000078  7C 60 1B 79 */	or. r0, r3, r3
 /* 801B006C 0000007C  41 82 00 18 */	beq lbl_801B0084
 /* 801B0070 00000080  38 80 00 02 */	li r4, 2
-/* 801B0074 00000084  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B0074 00000084  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B0078 00000088  38 A0 00 00 */	li r5, 0
 /* 801B007C 0000008C  4B FE 41 A5 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 801B0080 00000090  7C 60 1B 78 */	mr r0, r3

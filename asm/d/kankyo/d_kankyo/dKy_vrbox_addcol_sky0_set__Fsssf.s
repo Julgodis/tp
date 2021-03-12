@@ -1,7 +1,7 @@
 lbl_801A7F20:
 /* 801A7F20 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801A7F24 00000004  7C 60 07 34 */	extsh r0, r3
-/* 801A7F28 00000008  C8 42 A2 30 */	lfd f2, d_kankyo_d_kankyo__LIT_4444(r2)
+/* 801A7F28 00000008  C8 42 A2 30 */	lfd f2, d_kankyo_d_kankyo__lit_4444(r2)
 /* 801A7F2C 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801A7F30 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801A7F34 00000014  3C C0 43 30 */	lis r6, 0x4330

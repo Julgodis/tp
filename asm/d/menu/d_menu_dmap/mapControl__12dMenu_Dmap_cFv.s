@@ -36,7 +36,7 @@ lbl_801BDFC8:
 /* 801BDFF0 00000028  88 03 00 EC */	lbz r0, 0xec(r3)
 /* 801BDFF4 0000002C  7C 1F 07 74 */	extsb r31, r0
 /* 801BDFF8 00000030  48 00 2E E9 */	bl getMapBlendPer__20dMenu_StageMapCtrl_cCFv
-/* 801BDFFC 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801BDFFC 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801BE000 00000038  EC 20 08 28 */	fsubs f1, f0, f1
 /* 801BE004 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 801BE008 00000040  7F E4 FB 78 */	mr r4, r31
@@ -117,7 +117,7 @@ lbl_801BE110:
 /* 801BE114 00000004  38 84 FC 60 */	addi r4, r4, g_fmapHIO@l
 /* 801BE118 00000008  C0 24 00 CC */	lfs f1, 0xcc(r4)
 lbl_801BE11C:
-/* 801BE11C 00000000  C0 02 A6 58 */	lfs f0, d_menu_d_menu_dmap__LIT_6180(r2)
+/* 801BE11C 00000000  C0 02 A6 58 */	lfs f0, d_menu_d_menu_dmap__lit_6180(r2)
 /* 801BE120 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801BE124 00000008  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 801BE128 0000000C  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
@@ -147,7 +147,7 @@ lbl_801BE15C:
 /* 801BE184 00000028  88 03 00 EC */	lbz r0, 0xec(r3)
 /* 801BE188 0000002C  7C 1D 07 74 */	extsb r29, r0
 /* 801BE18C 00000030  48 00 2D 55 */	bl getMapBlendPer__20dMenu_StageMapCtrl_cCFv
-/* 801BE190 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801BE190 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801BE194 00000038  EC 20 08 28 */	fsubs f1, f0, f1
 /* 801BE198 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 801BE19C 00000040  7F A4 EB 78 */	mr r4, r29
@@ -169,9 +169,9 @@ lbl_801BE1C8:
 /* 801BE1D8 00000010  38 A0 00 00 */	li r5, 0
 /* 801BE1DC 00000014  38 C0 00 00 */	li r6, 0
 /* 801BE1E0 00000018  38 E0 00 00 */	li r7, 0
-/* 801BE1E4 0000001C  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801BE1E4 0000001C  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801BE1E8 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801BE1EC 00000024  C0 62 A6 5C */	lfs f3, LIT_6181(r2)
+/* 801BE1EC 00000024  C0 62 A6 5C */	lfs f3, lit_6181(r2)
 /* 801BE1F0 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801BE1F4 0000002C  39 00 00 00 */	li r8, 0
 /* 801BE1F8 00000030  48 0E E3 15 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

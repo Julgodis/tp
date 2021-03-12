@@ -18,7 +18,7 @@ lbl_801D8B2C:
 /* 801D8B6C 0000002C  98 7F 00 F2 */	stb r3, 0xf2(r31)
 /* 801D8B70 00000030  80 7F 00 64 */	lwz r3, 0x64(r31)
 /* 801D8B74 00000034  80 63 00 04 */	lwz r3, 4(r3)
-/* 801D8B78 00000038  C0 02 A8 44 */	lfs f0, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D8B78 00000038  C0 02 A8 44 */	lfs f0, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D8B7C 0000003C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 801D8B80 00000040  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 801D8B84 00000044  81 83 00 00 */	lwz r12, 0(r3)
@@ -26,20 +26,20 @@ lbl_801D8B2C:
 /* 801D8B8C 0000004C  7D 89 03 A6 */	mtctr r12
 /* 801D8B90 00000050  4E 80 04 21 */	bctrl 
 /* 801D8B94 00000054  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 801D8B98 00000058  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D8B98 00000058  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D8B9C 0000005C  48 07 CC 35 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D8BA0 00000060  7F E3 FB 78 */	mr r3, r31
 /* 801D8BA4 00000064  48 00 16 49 */	bl setCursorPos__14dMenu_Insect_cFv
 /* 801D8BA8 00000068  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801D8BAC 0000006C  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D8BAC 0000006C  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D8BB0 00000070  4B FB C6 F1 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801D8BB4 00000074  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801D8BB8 00000078  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__LIT_3837(r2)
+/* 801D8BB8 00000078  C0 22 A8 44 */	lfs f1, d_menu_d_menu_insect__lit_3837(r2)
 /* 801D8BBC 0000007C  4B FB C6 0D */	bl setScale__16dSelect_cursor_cFf
 /* 801D8BC0 00000080  38 60 00 01 */	li r3, 1
 /* 801D8BC4 00000084  48 00 00 88 */	b lbl_801D8C4C
 lbl_801D8BC8:
-/* 801D8BC8 00000000  C8 42 A8 60 */	lfd f2, d_menu_d_menu_insect__LIT_4020(r2)
+/* 801D8BC8 00000000  C8 42 A8 60 */	lfd f2, d_menu_d_menu_insect__lit_4020(r2)
 /* 801D8BCC 00000004  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 801D8BD0 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801D8BD4 0000000C  3C 60 43 30 */	lis r3, 0x4330

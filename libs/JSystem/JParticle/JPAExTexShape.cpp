@@ -5,36 +5,34 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void JPALoadExTex__FP18JPAEmitterWorkData();
-extern void __ct__13JPAExTexShapeFPCUc();
-extern void load__10JUTTextureF11_GXTexMapID();
-extern void GXSetTexCoordGen2();
-}
+extern "C" extern void JPALoadExTex__FP18JPAEmitterWorkData();
+extern "C" extern void __ct__13JPAExTexShapeFPCUc();
+extern "C" extern void load__10JUTTextureF11_GXTexMapID();
+extern "C" extern void GXSetTexCoordGen2();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8027B040-8027B13C 00FC .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPALoadExTex__FP18JPAEmitterWorkData() {
+extern "C" asm void JPALoadExTex__FP18JPAEmitterWorkData() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExTexShape/JPALoadExTex__FP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
+
 /* 8027B13C-8027B144 0008 .text      __ct__13JPAExTexShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JPAExTexShapeFPCUc() {
+extern "C" asm void __ct__13JPAExTexShapeFPCUc() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExTexShape/__ct__13JPAExTexShapeFPCUc.s"
 }

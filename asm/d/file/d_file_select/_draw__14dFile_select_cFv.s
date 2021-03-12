@@ -83,10 +83,10 @@ lbl_8018DE1C:
 /* 8018DE6C 00000050  80 DA 00 64 */	lwz r6, 0x64(r26)
 /* 8018DE70 00000054  4B EC 89 25 */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
 /* 8018DE74 00000058  80 7A 23 78 */	lwz r3, 0x2378(r26)
-/* 8018DE78 0000005C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018DE78 0000005C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018DE7C 00000060  FC 40 08 90 */	fmr f2, f1
-/* 8018DE80 00000064  C0 62 9F A4 */	lfs f3, LIT_6879(r2)
-/* 8018DE84 00000068  C0 82 9F A8 */	lfs f4, LIT_6880(r2)
+/* 8018DE80 00000064  C0 62 9F A4 */	lfs f3, lit_6879(r2)
+/* 8018DE84 00000068  C0 82 9F A8 */	lfs f4, lit_6880(r2)
 /* 8018DE88 0000006C  38 80 00 00 */	li r4, 0
 /* 8018DE8C 00000070  38 A0 00 00 */	li r5, 0
 /* 8018DE90 00000074  38 C0 00 00 */	li r6, 0

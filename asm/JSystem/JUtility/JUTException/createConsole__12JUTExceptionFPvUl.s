@@ -27,9 +27,9 @@ lbl_802E4018:
 /* 802E404C 00000034  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager(r13)
 /* 802E4050 00000038  48 00 44 75 */	bl setDirectConsole__17JUTConsoleManagerFP10JUTConsole
 /* 802E4054 0000003C  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
-/* 802E4058 00000040  C0 02 C6 54 */	lfs f0, LIT_3034(r2)
+/* 802E4058 00000040  C0 02 C6 54 */	lfs f0, lit_3034(r2)
 /* 802E405C 00000044  D0 03 00 50 */	stfs f0, 0x50(r3)
-/* 802E4060 00000048  C0 02 C6 58 */	lfs f0, LIT_3035(r2)
+/* 802E4060 00000048  C0 02 C6 58 */	lfs f0, lit_3035(r2)
 /* 802E4064 0000004C  D0 03 00 54 */	stfs f0, 0x54(r3)
 /* 802E4068 00000050  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
 /* 802E406C 00000054  38 00 00 0F */	li r0, 0xf

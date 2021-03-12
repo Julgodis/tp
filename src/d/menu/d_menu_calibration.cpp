@@ -5,195 +5,190 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern void setAlphaRate__16dSelect_cursor_cFf();
-extern void __dt__19dMenu_Calibration_cFv();
-extern void _move__19dMenu_Calibration_cFv();
-extern void _draw__19dMenu_Calibration_cFv();
-extern void step1_wait_init__19dMenu_Calibration_cFv();
-extern void step1_wait_move__19dMenu_Calibration_cFv();
-extern void step1_move_init__19dMenu_Calibration_cFv();
-extern void step1_move_move__19dMenu_Calibration_cFv();
-extern void step2_wait_init__19dMenu_Calibration_cFv();
-extern void step2_wait_move__19dMenu_Calibration_cFv();
-extern void step2_move_init__19dMenu_Calibration_cFv();
-extern void step2_move_move__19dMenu_Calibration_cFv();
-extern void step3_wait_init__19dMenu_Calibration_cFv();
-extern void step3_wait_move__19dMenu_Calibration_cFv();
-extern void step3_move_init__19dMenu_Calibration_cFv();
-extern void step3_move_move__19dMenu_Calibration_cFv();
-extern void setCalibrationValue__19dMenu_Calibration_cFv();
-extern void setAButtonString__19dMenu_Calibration_cFUs();
-extern void setBButtonString__19dMenu_Calibration_cFUs();
-extern void setStepString__19dMenu_Calibration_cFUs();
-extern void setExplainString__19dMenu_Calibration_cFUs();
-extern void setHIO__19dMenu_Calibration_cFb();
-extern void draw__19dMenu_Calibration_cFv();
-extern void __sinit_d_menu_calibration_cpp();
-extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void dMeter2Info_set2DVibration__Fv();
-extern void paneTrans__8CPaneMgrFff();
-extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern void __dl__FPv();
-extern void getStringPtr__10J2DTextBoxCFv();
-extern void __ptmf_scall();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void strcpy();
+extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" extern void __dt__19dMenu_Calibration_cFv();
+extern "C" extern void _move__19dMenu_Calibration_cFv();
+extern "C" extern void _draw__19dMenu_Calibration_cFv();
+extern "C" extern void step1_wait_init__19dMenu_Calibration_cFv();
+extern "C" extern void step1_wait_move__19dMenu_Calibration_cFv();
+extern "C" extern void step1_move_init__19dMenu_Calibration_cFv();
+extern "C" extern void step1_move_move__19dMenu_Calibration_cFv();
+extern "C" extern void step2_wait_init__19dMenu_Calibration_cFv();
+extern "C" extern void step2_wait_move__19dMenu_Calibration_cFv();
+extern "C" extern void step2_move_init__19dMenu_Calibration_cFv();
+extern "C" extern void step2_move_move__19dMenu_Calibration_cFv();
+extern "C" extern void step3_wait_init__19dMenu_Calibration_cFv();
+extern "C" extern void step3_wait_move__19dMenu_Calibration_cFv();
+extern "C" extern void step3_move_init__19dMenu_Calibration_cFv();
+extern "C" extern void step3_move_move__19dMenu_Calibration_cFv();
+extern "C" extern void setCalibrationValue__19dMenu_Calibration_cFv();
+extern "C" extern void setAButtonString__19dMenu_Calibration_cFUs();
+extern "C" extern void setBButtonString__19dMenu_Calibration_cFUs();
+extern "C" extern void setStepString__19dMenu_Calibration_cFUs();
+extern "C" extern void setExplainString__19dMenu_Calibration_cFUs();
+extern "C" extern void setHIO__19dMenu_Calibration_cFb();
+extern "C" extern void draw__19dMenu_Calibration_cFv();
+extern "C" extern void __sinit_d_menu_calibration_cpp();
+extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void dMeter2Info_set2DVibration__Fv();
+extern "C" extern void paneTrans__8CPaneMgrFff();
+extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getStringPtr__10J2DTextBoxCFv();
+extern "C" extern void __ptmf_scall();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 d_menu_d_menu_calibration__stringBase0[8];
 SECTION_DATA extern u8 d_menu_d_menu_calibration__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3799[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3800[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3801[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3802[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3803[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3804[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3799[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3800[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3801[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3802[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3803[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3804[3];
 SECTION_DATA extern u8 d_menu_d_menu_calibration__map_init_process[72];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3805[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3806[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3807[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3808[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3809[3];
-SECTION_DATA extern void* d_menu_d_menu_calibration__LIT_3810[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3805[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3806[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3807[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3808[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3809[3];
+SECTION_DATA extern void* d_menu_d_menu_calibration__lit_3810[3];
 SECTION_DATA extern u8 d_menu_d_menu_calibration__map_move_process[72];
-SECTION_DATA extern void* __vt__19dMenu_Calibration_c[7];
+SECTION_DATA extern void* const __vt__19dMenu_Calibration_c[7];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 d_menu_d_menu_calibration__LIT_3847[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_calibration__LIT_3885[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_calibration__LIT_3887[8];
-SECTION_SDATA2 extern u8 d_menu_d_menu_calibration__LIT_3911[8];
-}
+SECTION_SDATA2 extern u8 d_menu_d_menu_calibration__lit_3847[4];
+SECTION_SDATA2 extern f32 d_menu_d_menu_calibration__lit_3885;
+SECTION_SDATA2 extern f64 d_menu_d_menu_calibration__lit_3887;
+SECTION_SDATA2 extern f32 d_menu_d_menu_calibration__lit_3911;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80394F70-80394F78 0001 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80394F70 = "";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_80394F71 = "\0\0\0\0\0\0";
-#pragma pop
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803BC238-803BC238 0000 .data      ...data.0                                                    */
 /* 803BC238-803BC244 000C .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 d_menu_d_menu_calibration__cNullVec__6Z2Calc[12] = {
+u8 d_menu_d_menu_calibration__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BC244-803BC250 000C .data      @3799                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3799[3] = {
+void* d_menu_d_menu_calibration__lit_3799[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step1_wait_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC250-803BC25C 000C .data      @3800                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3800[3] = {
+void* d_menu_d_menu_calibration__lit_3800[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step1_move_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC25C-803BC268 000C .data      @3801                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3801[3] = {
+void* d_menu_d_menu_calibration__lit_3801[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step2_wait_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC268-803BC274 000C .data      @3802                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3802[3] = {
+void* d_menu_d_menu_calibration__lit_3802[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step2_move_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC274-803BC280 000C .data      @3803                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3803[3] = {
+void* d_menu_d_menu_calibration__lit_3803[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step3_wait_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC280-803BC28C 000C .data      @3804                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3804[3] = {
+void* d_menu_d_menu_calibration__lit_3804[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step3_move_init__19dMenu_Calibration_cFv,
 };
+
 /* 803BC28C-803BC2D4 0048 .data      map_init_process                                             */
-SECTION_DATA u8 d_menu_d_menu_calibration__map_init_process[72] = {
+u8 d_menu_d_menu_calibration__map_init_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BC2D4-803BC2E0 000C .data      @3805                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3805[3] = {
+void* d_menu_d_menu_calibration__lit_3805[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step1_wait_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC2E0-803BC2EC 000C .data      @3806                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3806[3] = {
+void* d_menu_d_menu_calibration__lit_3806[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step1_move_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC2EC-803BC2F8 000C .data      @3807                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3807[3] = {
+void* d_menu_d_menu_calibration__lit_3807[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step2_wait_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC2F8-803BC304 000C .data      @3808                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3808[3] = {
+void* d_menu_d_menu_calibration__lit_3808[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step2_move_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC304-803BC310 000C .data      @3809                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3809[3] = {
+void* d_menu_d_menu_calibration__lit_3809[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step3_wait_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC310-803BC31C 000C .data      @3810                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__LIT_3810[3] = {
+void* d_menu_d_menu_calibration__lit_3810[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)step3_move_move__19dMenu_Calibration_cFv,
 };
+
 /* 803BC31C-803BC364 0048 .data      map_move_process                                             */
-SECTION_DATA u8 d_menu_d_menu_calibration__map_move_process[72] = {
+u8 d_menu_d_menu_calibration__map_move_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BC364-803BC380 0010 .data      __vt__19dMenu_Calibration_c                                  */
-SECTION_DATA void* __vt__19dMenu_Calibration_c[7] = {
+void* const __vt__19dMenu_Calibration_c[7] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__19dMenu_Calibration_cFv,
@@ -203,264 +198,282 @@ SECTION_DATA void* __vt__19dMenu_Calibration_c[7] = {
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80453F10-80453F14 0004 .sdata2    @3847                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_calibration__LIT_3847[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80453F14-80453F18 0004 .sdata2    @3885                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_calibration__LIT_3885[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80453F18-80453F20 0008 .sdata2    @3887                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_calibration__LIT_3887[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80453F20-80453F28 0004 .sdata2    @3911                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_calibration__LIT_3911[8] = {
-	0xBF, 0x80, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 801AED64-801AEDAC 0048 .text      __dt__19dMenu_Calibration_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19dMenu_Calibration_cFv() {
+extern "C" asm void __dt__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/__dt__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AEDAC-801AEE2C 0080 .text      _move__19dMenu_Calibration_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _move__19dMenu_Calibration_cFv() {
+extern "C" asm void _move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AEE2C-801AEE30 0004 .text      _draw__19dMenu_Calibration_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _draw__19dMenu_Calibration_cFv() {
+extern "C" asm void _draw__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/_draw__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80453F10-80453F14 0004 .sdata2    @3847                                                        */
+u8 d_menu_d_menu_calibration__lit_3847[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 801AEE30-801AEF60 0130 .text      step1_wait_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step1_wait_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step1_wait_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step1_wait_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80453F14-80453F18 0004 .sdata2    @3885                                                        */
+f32 d_menu_d_menu_calibration__lit_3885 = 1.0f;
+
+/* 80453F18-80453F20 0008 .sdata2    @3887                                                        */
+f64 d_menu_d_menu_calibration__lit_3887 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 801AEF60-801AF084 0124 .text      step1_wait_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step1_wait_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step1_wait_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step1_wait_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF084-801AF0C0 003C .text      step1_move_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step1_move_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step1_move_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step1_move_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80453F20-80453F28 0004 .sdata2    @3911                                                        */
+f32 d_menu_d_menu_calibration__lit_3911 = -1.0f;
+/* padding 4 bytes */
+
 /* 801AF0C0-801AF188 00C8 .text      step1_move_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step1_move_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step1_move_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step1_move_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF188-801AF1F4 006C .text      step2_wait_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step2_wait_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step2_wait_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step2_wait_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF1F4-801AF380 018C .text      step2_wait_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step2_wait_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step2_wait_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step2_wait_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF380-801AF3BC 003C .text      step2_move_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step2_move_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step2_move_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step2_move_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF3BC-801AF488 00CC .text      step2_move_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step2_move_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step2_move_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step2_move_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF488-801AF4F8 0070 .text      step3_wait_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step3_wait_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step3_wait_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step3_wait_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF4F8-801AF5F4 00FC .text      step3_wait_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step3_wait_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step3_wait_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step3_wait_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF5F4-801AF630 003C .text      step3_move_init__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step3_move_init__19dMenu_Calibration_cFv() {
+extern "C" asm void step3_move_init__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step3_move_init__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF630-801AF710 00E0 .text      step3_move_move__19dMenu_Calibration_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void step3_move_move__19dMenu_Calibration_cFv() {
+extern "C" asm void step3_move_move__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/step3_move_move__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AF710-801AF738 0028 .text      setCalibrationValue__19dMenu_Calibration_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCalibrationValue__19dMenu_Calibration_cFv() {
+extern "C" asm void setCalibrationValue__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setCalibrationValue__19dMenu_Calibration_cFv.s"
 }
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80394F70-80394F78 0001 .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80394F70 = "";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80394F71 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 801AF738-801AF7E8 00B0 .text      setAButtonString__19dMenu_Calibration_cFUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAButtonString__19dMenu_Calibration_cFUs() {
+extern "C" asm void setAButtonString__19dMenu_Calibration_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setAButtonString__19dMenu_Calibration_cFUs.s"
 }
 #pragma pop
 
+
 /* 801AF7E8-801AF898 00B0 .text      setBButtonString__19dMenu_Calibration_cFUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBButtonString__19dMenu_Calibration_cFUs() {
+extern "C" asm void setBButtonString__19dMenu_Calibration_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setBButtonString__19dMenu_Calibration_cFUs.s"
 }
 #pragma pop
 
+
 /* 801AF898-801AF948 00B0 .text      setStepString__19dMenu_Calibration_cFUs                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setStepString__19dMenu_Calibration_cFUs() {
+extern "C" asm void setStepString__19dMenu_Calibration_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setStepString__19dMenu_Calibration_cFUs.s"
 }
 #pragma pop
 
+
 /* 801AF948-801AFA00 00B8 .text      setExplainString__19dMenu_Calibration_cFUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setExplainString__19dMenu_Calibration_cFUs() {
+extern "C" asm void setExplainString__19dMenu_Calibration_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setExplainString__19dMenu_Calibration_cFUs.s"
 }
 #pragma pop
 
+
 /* 801AFA00-801AFBF4 01F4 .text      setHIO__19dMenu_Calibration_cFb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setHIO__19dMenu_Calibration_cFb() {
+extern "C" asm void setHIO__19dMenu_Calibration_cFb() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/setHIO__19dMenu_Calibration_cFb.s"
 }
 #pragma pop
 
+
 /* 801AFBF4-801AFC14 0020 .text      draw__19dMenu_Calibration_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__19dMenu_Calibration_cFv() {
+extern "C" asm void draw__19dMenu_Calibration_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/draw__19dMenu_Calibration_cFv.s"
 }
 #pragma pop
 
+
 /* 801AFC14-801AFD48 0134 .text      __sinit_d_menu_calibration_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_menu_calibration_cpp() {
+extern "C" asm void __sinit_d_menu_calibration_cpp() {
 	nofralloc
 #include "asm/d/menu/d_menu_calibration/__sinit_d_menu_calibration_cpp.s"
 }

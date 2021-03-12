@@ -14,7 +14,7 @@ lbl_800C5A54:
 /* 800C5A84 00000030  38 A5 D8 2C */	addi r5, r5, m__22daAlinkHIO_backJump_c0@l
 /* 800C5A88 00000034  38 A5 00 14 */	addi r5, r5, 0x14
 /* 800C5A8C 00000038  4B FE 76 69 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800C5A90 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800C5A90 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C5A94 00000040  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800C5A98 00000044  38 00 00 04 */	li r0, 4
 /* 800C5A9C 00000048  98 1E 2F 9D */	stb r0, 0x2f9d(r30)

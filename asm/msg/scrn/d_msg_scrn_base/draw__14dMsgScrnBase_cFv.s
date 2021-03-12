@@ -14,7 +14,7 @@ lbl_8023C274:
 /* 8023C2A4 00000030  7D 89 03 A6 */	mtctr r12
 /* 8023C2A8 00000034  4E 80 04 21 */	bctrl 
 /* 8023C2AC 00000038  80 7E 00 04 */	lwz r3, 4(r30)
-/* 8023C2B0 0000003C  C0 22 B1 A8 */	lfs f1, msg_scrn_d_msg_scrn_base__LIT_3820(r2)
+/* 8023C2B0 0000003C  C0 22 B1 A8 */	lfs f1, msg_scrn_d_msg_scrn_base__lit_3820(r2)
 /* 8023C2B4 00000040  FC 40 08 90 */	fmr f2, f1
 /* 8023C2B8 00000044  7F E4 FB 78 */	mr r4, r31
 /* 8023C2BC 00000048  48 0B CC 19 */	bl draw__9J2DScreenFffPC14J2DGrafContext

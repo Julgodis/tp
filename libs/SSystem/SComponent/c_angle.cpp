@@ -5,720 +5,756 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__7cSAngleFv();
-extern void cM_atan2f__Fff();
-extern void __ct__7cSAngleFRC7cSAngle();
-extern void __ct__7cSAngleFs();
-extern void __ct__7cSAngleFf();
-extern void Val__7cSAngleFRC7cSAngle();
-extern void Val__7cSAngleFs();
-extern void Val__7cSAngleFf();
-extern void Degree__7cSAngleCFv();
-extern void Radian__7cSAngleCFv();
-extern void Norm__7cSAngleCFv();
-extern void Abs__7cSAngleCFv();
-extern void Inv__7cSAngleCFv();
-extern void Sin__7cSAngleCFv();
-extern void Cos__7cSAngleCFv();
-extern void __mi__7cSAngleCFv();
-extern void __pl__7cSAngleCFRC7cSAngle();
-extern void __mi__7cSAngleCFRC7cSAngle();
-extern void __apl__7cSAngleFRC7cSAngle();
-extern void __ami__7cSAngleFRC7cSAngle();
-extern void __pl__7cSAngleCFs();
-extern void __mi__7cSAngleCFs();
-extern void __apl__7cSAngleFs();
-extern void __ml__7cSAngleCFf();
-extern void __amu__7cSAngleFf();
-extern void __pl__FsRC7cSAngle();
-extern void __mi__FsRC7cSAngle();
-extern void __ct__7cDegreeFf();
-extern void Formal__7cDegreeFv();
-extern void Val__7cDegreeFf();
-extern void Radian__7cDegreeCFv();
-extern void Sin__7cDegreeCFv();
-extern void Cos__7cDegreeCFv();
-extern void Tan__7cDegreeCFv();
-extern void __ct__7cSPolarFRC4cXyz();
-extern void Formal__7cSPolarFv();
-extern void Val__7cSPolarFfss();
-extern void Val__7cSPolarFRC4cXyz();
-extern void Xyz__7cSPolarCFv();
-extern void Globe__7cSPolarCFP7cSGlobe();
-extern void __ct__7cSGlobeFRC7cSGlobe();
-extern void __ct__7cSGlobeFfss();
-extern void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern void __ct__7cSGlobeFRC4cXyz();
-extern void Formal__7cSGlobeFv();
-extern void Val__7cSGlobeFRC7cSGlobe();
-extern void Val__7cSGlobeFfss();
-extern void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern void Val__7cSGlobeFRC4cXyz();
-extern void Xyz__7cSGlobeCFv();
-extern void Polar__7cSGlobeCFP7cSPolar();
-extern void Norm__7cSGlobeCFv();
-extern void Invert__7cSGlobeFv();
-extern void func_80271BA8();
-extern void __sinit_c_angle_cpp();
-extern void __register_global_object();
-extern void cos();
-extern void sin();
-extern void tan();
-extern void sqrt();
-SECTION_BSS extern u8 LIT_2401[12];
-SECTION_BSS extern u8 LIT_2402[12];
-SECTION_BSS extern u8 LIT_2403[12];
-SECTION_BSS extern u8 LIT_2404[12];
-SECTION_BSS extern u8 c_angle__LIT_2405[12 + 4 /* padding */];
+extern "C" extern void __dt__7cSAngleFv();
+extern "C" extern void cM_atan2f__Fff();
+extern "C" extern void __ct__7cSAngleFRC7cSAngle();
+extern "C" extern void __ct__7cSAngleFs();
+extern "C" extern void __ct__7cSAngleFf();
+extern "C" extern void Val__7cSAngleFRC7cSAngle();
+extern "C" extern void Val__7cSAngleFs();
+extern "C" extern void Val__7cSAngleFf();
+extern "C" extern void Degree__7cSAngleCFv();
+extern "C" extern void Radian__7cSAngleCFv();
+extern "C" extern void Norm__7cSAngleCFv();
+extern "C" extern void Abs__7cSAngleCFv();
+extern "C" extern void Inv__7cSAngleCFv();
+extern "C" extern void Sin__7cSAngleCFv();
+extern "C" extern void Cos__7cSAngleCFv();
+extern "C" extern void __mi__7cSAngleCFv();
+extern "C" extern void __pl__7cSAngleCFRC7cSAngle();
+extern "C" extern void __mi__7cSAngleCFRC7cSAngle();
+extern "C" extern void __apl__7cSAngleFRC7cSAngle();
+extern "C" extern void __ami__7cSAngleFRC7cSAngle();
+extern "C" extern void __pl__7cSAngleCFs();
+extern "C" extern void __mi__7cSAngleCFs();
+extern "C" extern void __apl__7cSAngleFs();
+extern "C" extern void __ml__7cSAngleCFf();
+extern "C" extern void __amu__7cSAngleFf();
+extern "C" extern void __pl__FsRC7cSAngle();
+extern "C" extern void __mi__FsRC7cSAngle();
+extern "C" extern void __ct__7cDegreeFf();
+extern "C" extern void Formal__7cDegreeFv();
+extern "C" extern void Val__7cDegreeFf();
+extern "C" extern void Radian__7cDegreeCFv();
+extern "C" extern void Sin__7cDegreeCFv();
+extern "C" extern void Cos__7cDegreeCFv();
+extern "C" extern void Tan__7cDegreeCFv();
+extern "C" extern void __ct__7cSPolarFRC4cXyz();
+extern "C" extern void Formal__7cSPolarFv();
+extern "C" extern void Val__7cSPolarFfss();
+extern "C" extern void Val__7cSPolarFRC4cXyz();
+extern "C" extern void Xyz__7cSPolarCFv();
+extern "C" extern void Globe__7cSPolarCFP7cSGlobe();
+extern "C" extern void __ct__7cSGlobeFRC7cSGlobe();
+extern "C" extern void __ct__7cSGlobeFfss();
+extern "C" extern void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
+extern "C" extern void __ct__7cSGlobeFRC4cXyz();
+extern "C" extern void Formal__7cSGlobeFv();
+extern "C" extern void Val__7cSGlobeFRC7cSGlobe();
+extern "C" extern void Val__7cSGlobeFfss();
+extern "C" extern void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
+extern "C" extern void Val__7cSGlobeFRC4cXyz();
+extern "C" extern void Xyz__7cSGlobeCFv();
+extern "C" extern void Polar__7cSGlobeCFP7cSPolar();
+extern "C" extern void Norm__7cSGlobeCFv();
+extern "C" extern void Invert__7cSGlobeFv();
+extern "C" extern void func_80271BA8();
+extern "C" extern void __sinit_c_angle_cpp();
+extern "C" extern void __register_global_object();
+extern "C" extern void cos();
+extern "C" extern void sin();
+extern "C" extern void tan();
+extern "C" extern void sqrt();
+SECTION_BSS extern u8 lit_2401[12];
+SECTION_BSS extern u8 lit_2402[12];
+SECTION_BSS extern u8 lit_2403[12];
+SECTION_BSS extern u8 lit_2404[12];
+SECTION_BSS extern u8 c_angle__lit_2405[12 + 4 /* padding */];
 SECTION_SBSS extern u8 _0__7cSAngle[2 + 2 /* padding */];
 SECTION_SBSS extern u8 _1__7cSAngle[2 + 2 /* padding */];
 SECTION_SBSS extern u8 _90__7cSAngle[2 + 2 /* padding */];
 SECTION_SBSS extern u8 _180__7cSAngle[2 + 2 /* padding */];
 SECTION_SBSS extern u8 _270__7cSAngle[2 + 6 /* padding */];
-SECTION_SDATA2 extern u8 LIT_2248[4];
-SECTION_SDATA2 extern u8 LIT_2260[4];
-SECTION_SDATA2 extern u8 LIT_2263[8];
-SECTION_SDATA2 extern u8 c_angle__LIT_2269[4];
-SECTION_SDATA2 extern u8 c_angle__LIT_2277[4];
-SECTION_SDATA2 extern u8 c_angle__LIT_2440[4];
-SECTION_SDATA2 extern u8 c_angle__LIT_2441[4];
-SECTION_SDATA2 extern u8 LIT_2474[4];
-SECTION_SDATA2 extern u8 LIT_2491[4];
-SECTION_SDATA2 extern u8 LIT_2671[8];
-SECTION_SDATA2 extern u8 LIT_2672[4];
-SECTION_SDATA2 extern u8 c_angle__LIT_2744[4];
-}
+SECTION_SDATA2 extern f32 lit_2248;
+SECTION_SDATA2 extern f32 lit_2260;
+SECTION_SDATA2 extern f64 lit_2263;
+SECTION_SDATA2 extern f32 c_angle__lit_2269;
+SECTION_SDATA2 extern f32 c_angle__lit_2277;
+SECTION_SDATA2 extern f32 c_angle__lit_2440;
+SECTION_SDATA2 extern f32 c_angle__lit_2441;
+SECTION_SDATA2 extern f32 lit_2474;
+SECTION_SDATA2 extern u8 lit_2491[4];
+SECTION_SDATA2 extern u8 lit_2671[8];
+SECTION_SDATA2 extern f32 lit_2672;
+SECTION_SDATA2 extern f32 c_angle__lit_2744;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455208-8045520C 0004 .sdata2    @2248                                                        */
-SECTION_SDATA2 u8 LIT_2248[4] = {
-	0x43, 0x36, 0x0B, 0x61,
-};
-/* 8045520C-80455210 0004 .sdata2    @2260                                                        */
-SECTION_SDATA2 u8 LIT_2260[4] = {
-	0x3B, 0xB4, 0x00, 0x00,
-};
-/* 80455210-80455218 0008 .sdata2    @2263                                                        */
-SECTION_SDATA2 u8 LIT_2263[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80455218-8045521C 0004 .sdata2    @2269                                                        */
-SECTION_SDATA2 u8 c_angle__LIT_2269[4] = {
-	0x38, 0xC9, 0x0F, 0xDB,
-};
-/* 8045521C-80455220 0004 .sdata2    @2277                                                        */
-SECTION_SDATA2 u8 c_angle__LIT_2277[4] = {
-	0x38, 0x00, 0x00, 0x00,
-};
-/* 80455220-80455224 0004 .sdata2    @2440                                                        */
-SECTION_SDATA2 u8 c_angle__LIT_2440[4] = {
-	0xC3, 0x34, 0x00, 0x00,
-};
-/* 80455224-80455228 0004 .sdata2    @2441                                                        */
-SECTION_SDATA2 u8 c_angle__LIT_2441[4] = {
-	0x43, 0x34, 0x00, 0x00,
-};
-/* 80455228-8045522C 0004 .sdata2    @2474                                                        */
-SECTION_SDATA2 u8 LIT_2474[4] = {
-	0x3C, 0x8E, 0xFA, 0x35,
-};
-/* 8045522C-80455230 0004 .sdata2    @2491                                                        */
-SECTION_SDATA2 u8 LIT_2491[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455230-80455238 0008 .sdata2    @2671                                                        */
-SECTION_SDATA2 u8 LIT_2671[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455238-8045523C 0004 .sdata2    @2672                                                        */
-SECTION_SDATA2 u8 LIT_2672[4] = {
-	0x46, 0x22, 0xF9, 0x83,
-};
-/* 8045523C-80455240 0004 .sdata2    @2744                                                        */
-SECTION_SDATA2 u8 c_angle__LIT_2744[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430F98-80430F98 0000 .bss       ...bss.0                                                     */
-/* 80430F98-80430FA4 000C .bss       @2401                                                        */
-SECTION_BSS u8 LIT_2401[12];
-/* 80430FA4-80430FB0 000C .bss       @2402                                                        */
-SECTION_BSS u8 LIT_2402[12];
-/* 80430FB0-80430FBC 000C .bss       @2403                                                        */
-SECTION_BSS u8 LIT_2403[12];
-/* 80430FBC-80430FC8 000C .bss       @2404                                                        */
-SECTION_BSS u8 LIT_2404[12];
-/* 80430FC8-80430FD8 000C .bss       @2405                                                        */
-SECTION_BSS u8 c_angle__LIT_2405[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451188-8045118C 0002 .sbss      _0__7cSAngle                                                 */
-SECTION_SBSS u8 _0__7cSAngle[2 + 2 /* padding */];
-/* 8045118C-80451190 0002 .sbss      _1__7cSAngle                                                 */
-SECTION_SBSS u8 _1__7cSAngle[2 + 2 /* padding */];
-/* 80451190-80451194 0002 .sbss      _90__7cSAngle                                                */
-SECTION_SBSS u8 _90__7cSAngle[2 + 2 /* padding */];
-/* 80451194-80451198 0002 .sbss      _180__7cSAngle                                               */
-SECTION_SBSS u8 _180__7cSAngle[2 + 2 /* padding */];
-/* 80451198-804511A0 0002 .sbss      _270__7cSAngle                                               */
-SECTION_SBSS u8 _270__7cSAngle[2 + 6 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80270F68-80270F98 0030 .text      __ct__7cSAngleFRC7cSAngle                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSAngleFRC7cSAngle() {
+extern "C" asm void __ct__7cSAngleFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSAngleFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 80270F98-80270FC8 0030 .text      __ct__7cSAngleFs                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSAngleFs() {
+extern "C" asm void __ct__7cSAngleFs() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSAngleFs.s"
 }
 #pragma pop
 
+
 /* 80270FC8-80270FF8 0030 .text      __ct__7cSAngleFf                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSAngleFf() {
+extern "C" asm void __ct__7cSAngleFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSAngleFf.s"
 }
 #pragma pop
 
+
 /* 80270FF8-80271004 000C .text      Val__7cSAngleFRC7cSAngle                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSAngleFRC7cSAngle() {
+extern "C" asm void Val__7cSAngleFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSAngleFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 80271004-8027100C 0008 .text      Val__7cSAngleFs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSAngleFs() {
+extern "C" asm void Val__7cSAngleFs() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSAngleFs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455208-8045520C 0004 .sdata2    @2248                                                        */
+f32 lit_2248 = 182.04444885253906f;
+
 /* 8027100C-80271030 0024 .text      Val__7cSAngleFf                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSAngleFf() {
+extern "C" asm void Val__7cSAngleFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSAngleFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045520C-80455210 0004 .sdata2    @2260                                                        */
+f32 lit_2260 = 0.0054931640625f;
+
+/* 80455210-80455218 0008 .sdata2    @2263                                                        */
+f64 lit_2263 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80271030-80271064 0034 .text      Degree__7cSAngleCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Degree__7cSAngleCFv() {
+extern "C" asm void Degree__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Degree__7cSAngleCFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455218-8045521C 0004 .sdata2    @2269                                                        */
+f32 c_angle__lit_2269 = 9.58738019107841e-05f;
+
 /* 80271064-80271098 0034 .text      Radian__7cSAngleCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Radian__7cSAngleCFv() {
+extern "C" asm void Radian__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Radian__7cSAngleCFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045521C-80455220 0004 .sdata2    @2277                                                        */
+f32 c_angle__lit_2277 = 3.0517578125e-05f;
+
 /* 80271098-802710CC 0034 .text      Norm__7cSAngleCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Norm__7cSAngleCFv() {
+extern "C" asm void Norm__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Norm__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 802710CC-802710E8 001C .text      Abs__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Abs__7cSAngleCFv() {
+extern "C" asm void Abs__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Abs__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 802710E8-802710F8 0010 .text      Inv__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Inv__7cSAngleCFv() {
+extern "C" asm void Inv__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Inv__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 802710F8-80271120 0028 .text      Sin__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Sin__7cSAngleCFv() {
+extern "C" asm void Sin__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Sin__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 80271120-80271148 0028 .text      Cos__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Cos__7cSAngleCFv() {
+extern "C" asm void Cos__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Cos__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 80271148-80271174 002C .text      __mi__7cSAngleCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __mi__7cSAngleCFv() {
+extern "C" asm void __mi__7cSAngleCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFv.s"
 }
 #pragma pop
 
+
 /* 80271174-802711A4 0030 .text      __pl__7cSAngleCFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __pl__7cSAngleCFRC7cSAngle() {
+extern "C" asm void __pl__7cSAngleCFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__pl__7cSAngleCFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 802711A4-802711D4 0030 .text      __mi__7cSAngleCFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __mi__7cSAngleCFRC7cSAngle() {
+extern "C" asm void __mi__7cSAngleCFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 802711D4-802711E8 0014 .text      __apl__7cSAngleFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __apl__7cSAngleFRC7cSAngle() {
+extern "C" asm void __apl__7cSAngleFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__apl__7cSAngleFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 802711E8-802711FC 0014 .text      __ami__7cSAngleFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ami__7cSAngleFRC7cSAngle() {
+extern "C" asm void __ami__7cSAngleFRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ami__7cSAngleFRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 802711FC-80271228 002C .text      __pl__7cSAngleCFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __pl__7cSAngleCFs() {
+extern "C" asm void __pl__7cSAngleCFs() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__pl__7cSAngleCFs.s"
 }
 #pragma pop
 
+
 /* 80271228-80271254 002C .text      __mi__7cSAngleCFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __mi__7cSAngleCFs() {
+extern "C" asm void __mi__7cSAngleCFs() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFs.s"
 }
 #pragma pop
 
+
 /* 80271254-80271264 0010 .text      __apl__7cSAngleFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __apl__7cSAngleFs() {
+extern "C" asm void __apl__7cSAngleFs() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__apl__7cSAngleFs.s"
 }
 #pragma pop
 
+
 /* 80271264-802712B4 0050 .text      __ml__7cSAngleCFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ml__7cSAngleCFf() {
+extern "C" asm void __ml__7cSAngleCFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ml__7cSAngleCFf.s"
 }
 #pragma pop
 
+
 /* 802712B4-802712F4 0040 .text      __amu__7cSAngleFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __amu__7cSAngleFf() {
+extern "C" asm void __amu__7cSAngleFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__amu__7cSAngleFf.s"
 }
 #pragma pop
 
+
 /* 802712F4-80271320 002C .text      __pl__FsRC7cSAngle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __pl__FsRC7cSAngle() {
+extern "C" asm void __pl__FsRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__pl__FsRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 80271320-8027134C 002C .text      __mi__FsRC7cSAngle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __mi__FsRC7cSAngle() {
+extern "C" asm void __mi__FsRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__mi__FsRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 8027134C-8027137C 0030 .text      __ct__7cDegreeFf                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cDegreeFf() {
+extern "C" asm void __ct__7cDegreeFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cDegreeFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455220-80455224 0004 .sdata2    @2440                                                        */
+f32 c_angle__lit_2440 = -180.0f;
+
+/* 80455224-80455228 0004 .sdata2    @2441                                                        */
+f32 c_angle__lit_2441 = 180.0f;
+
 /* 8027137C-802713BC 0040 .text      Formal__7cDegreeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Formal__7cDegreeFv() {
+extern "C" asm void Formal__7cDegreeFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Formal__7cDegreeFv.s"
 }
 #pragma pop
 
+
 /* 802713BC-802713E0 0024 .text      Val__7cDegreeFf                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cDegreeFf() {
+extern "C" asm void Val__7cDegreeFf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cDegreeFf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455228-8045522C 0004 .sdata2    @2474                                                        */
+f32 lit_2474 = 0.01745329238474369f;
+
 /* 802713E0-802713F0 0010 .text      Radian__7cDegreeCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Radian__7cDegreeCFv() {
+extern "C" asm void Radian__7cDegreeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Radian__7cDegreeCFv.s"
 }
 #pragma pop
 
+
 /* 802713F0-80271418 0028 .text      Sin__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Sin__7cDegreeCFv() {
+extern "C" asm void Sin__7cDegreeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Sin__7cDegreeCFv.s"
 }
 #pragma pop
 
+
 /* 80271418-80271440 0028 .text      Cos__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Cos__7cDegreeCFv() {
+extern "C" asm void Cos__7cDegreeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Cos__7cDegreeCFv.s"
 }
 #pragma pop
 
+
 /* 80271440-80271468 0028 .text      Tan__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Tan__7cDegreeCFv() {
+extern "C" asm void Tan__7cDegreeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Tan__7cDegreeCFv.s"
 }
 #pragma pop
 
+
 /* 80271468-80271498 0030 .text      __ct__7cSPolarFRC4cXyz                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSPolarFRC4cXyz() {
+extern "C" asm void __ct__7cSPolarFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSPolarFRC4cXyz.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045522C-80455230 0004 .sdata2    @2491                                                        */
+u8 lit_2491[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80271498-80271558 00C0 .text      Formal__7cSPolarFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Formal__7cSPolarFv() {
+extern "C" asm void Formal__7cSPolarFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Formal__7cSPolarFv.s"
 }
 #pragma pop
 
+
 /* 80271558-802715BC 0064 .text      Val__7cSPolarFfss                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSPolarFfss() {
+extern "C" asm void Val__7cSPolarFfss() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSPolarFfss.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455230-80455238 0008 .sdata2    @2671                                                        */
+u8 lit_2671[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455238-8045523C 0004 .sdata2    @2672                                                        */
+f32 lit_2672 = 10430.3779296875f;
+
 /* 802715BC-802716EC 0130 .text      Val__7cSPolarFRC4cXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSPolarFRC4cXyz() {
+extern "C" asm void Val__7cSPolarFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSPolarFRC4cXyz.s"
 }
 #pragma pop
 
+
 /* 802716EC-802717B4 00C8 .text      Xyz__7cSPolarCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Xyz__7cSPolarCFv() {
+extern "C" asm void Xyz__7cSPolarCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Xyz__7cSPolarCFv.s"
 }
 #pragma pop
 
+
 /* 802717B4-802717F0 003C .text      Globe__7cSPolarCFP7cSGlobe                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Globe__7cSPolarCFP7cSGlobe() {
+extern "C" asm void Globe__7cSPolarCFP7cSGlobe() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Globe__7cSPolarCFP7cSGlobe.s"
 }
 #pragma pop
 
+
 /* 802717F0-80271820 0030 .text      __ct__7cSGlobeFRC7cSGlobe                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSGlobeFRC7cSGlobe() {
+extern "C" asm void __ct__7cSGlobeFRC7cSGlobe() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFRC7cSGlobe.s"
 }
 #pragma pop
 
+
 /* 80271820-80271850 0030 .text      __ct__7cSGlobeFfss                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSGlobeFfss() {
+extern "C" asm void __ct__7cSGlobeFfss() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFfss.s"
 }
 #pragma pop
 
+
 /* 80271850-80271880 0030 .text      __ct__7cSGlobeFfRC7cSAngleRC7cSAngle                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle() {
+extern "C" asm void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFfRC7cSAngleRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 80271880-802718B0 0030 .text      __ct__7cSGlobeFRC4cXyz                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__7cSGlobeFRC4cXyz() {
+extern "C" asm void __ct__7cSGlobeFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFRC4cXyz.s"
 }
 #pragma pop
 
+
 /* 802718B0-8027196C 00BC .text      Formal__7cSGlobeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Formal__7cSGlobeFv() {
+extern "C" asm void Formal__7cSGlobeFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Formal__7cSGlobeFv.s"
 }
 #pragma pop
 
+
 /* 8027196C-802719A4 0038 .text      Val__7cSGlobeFRC7cSGlobe                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSGlobeFRC7cSGlobe() {
+extern "C" asm void Val__7cSGlobeFRC7cSGlobe() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSGlobeFRC7cSGlobe.s"
 }
 #pragma pop
 
+
 /* 802719A4-80271A08 0064 .text      Val__7cSGlobeFfss                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSGlobeFfss() {
+extern "C" asm void Val__7cSGlobeFfss() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSGlobeFfss.s"
 }
 #pragma pop
 
+
 /* 80271A08-80271A70 0068 .text      Val__7cSGlobeFfRC7cSAngleRC7cSAngle                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSGlobeFfRC7cSAngleRC7cSAngle() {
+extern "C" asm void Val__7cSGlobeFfRC7cSAngleRC7cSAngle() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSGlobeFfRC7cSAngleRC7cSAngle.s"
 }
 #pragma pop
 
+
 /* 80271A70-80271AB4 0044 .text      Val__7cSGlobeFRC4cXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Val__7cSGlobeFRC4cXyz() {
+extern "C" asm void Val__7cSGlobeFRC4cXyz() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Val__7cSGlobeFRC4cXyz.s"
 }
 #pragma pop
 
+
 /* 80271AB4-80271AF4 0040 .text      Xyz__7cSGlobeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Xyz__7cSGlobeCFv() {
+extern "C" asm void Xyz__7cSGlobeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Xyz__7cSGlobeCFv.s"
 }
 #pragma pop
 
+
 /* 80271AF4-80271B30 003C .text      Polar__7cSGlobeCFP7cSPolar                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Polar__7cSGlobeCFP7cSPolar() {
+extern "C" asm void Polar__7cSGlobeCFP7cSPolar() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Polar__7cSGlobeCFP7cSPolar.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045523C-80455240 0004 .sdata2    @2744                                                        */
+f32 c_angle__lit_2744 = 1.0f;
+
 /* 80271B30-80271B7C 004C .text      Norm__7cSGlobeCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Norm__7cSGlobeCFv() {
+extern "C" asm void Norm__7cSGlobeCFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Norm__7cSGlobeCFv.s"
 }
 #pragma pop
 
+
 /* 80271B7C-80271BA8 002C .text      Invert__7cSGlobeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Invert__7cSGlobeFv() {
+extern "C" asm void Invert__7cSGlobeFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/Invert__7cSGlobeFv.s"
 }
 #pragma pop
 
+
 /* 80271BA8-80271BD4 002C .text      Adjust<f>__6cAngleFfff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80271BA8() {
+extern "C" asm void func_80271BA8() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/func_80271BA8.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80430F98-80430FA4 000C .bss       @2401                                                        */
+u8 lit_2401[12];
+
+/* 80451188-8045118C 0002 .sbss      _0__7cSAngle                                                 */
+u8 _0__7cSAngle[2 + 2 /* padding */];
+
+/* 8045118C-80451190 0002 .sbss      _1__7cSAngle                                                 */
+u8 _1__7cSAngle[2 + 2 /* padding */];
+
+/* 80451190-80451194 0002 .sbss      _90__7cSAngle                                                */
+u8 _90__7cSAngle[2 + 2 /* padding */];
+
+/* 80451194-80451198 0002 .sbss      _180__7cSAngle                                               */
+u8 _180__7cSAngle[2 + 2 /* padding */];
+
+/* 80451198-804511A0 0002 .sbss      _270__7cSAngle                                               */
+u8 _270__7cSAngle[2 + 6 /* padding */];
+
 /* 80271BD4-80271C8C 00B8 .text      __sinit_c_angle_cpp                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_c_angle_cpp() {
+extern "C" asm void __sinit_c_angle_cpp() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/__sinit_c_angle_cpp.s"
 }
 #pragma pop
 
+
+/* 80430FA4-80430FB0 000C .bss       @2402                                                        */
+u8 lit_2402[12];
+
+/* 80430FB0-80430FBC 000C .bss       @2403                                                        */
+u8 lit_2403[12];
+
+/* 80430FBC-80430FC8 000C .bss       @2404                                                        */
+u8 lit_2404[12];
+
+/* 80430FC8-80430FD8 000C .bss       @2405                                                        */
+u8 c_angle__lit_2405[12 + 4 /* padding */];
 

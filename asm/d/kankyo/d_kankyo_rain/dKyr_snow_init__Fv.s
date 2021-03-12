@@ -69,7 +69,7 @@ lbl_8005FCB0:
 /* 8005FCE0 00000030  D0 03 6D 78 */	stfs f0, 0x6d78(r3)
 /* 8005FCE4 00000034  C0 1E 00 E0 */	lfs f0, 0xe0(r30)
 /* 8005FCE8 00000038  D0 03 6D 7C */	stfs f0, 0x6d7c(r3)
-/* 8005FCEC 0000003C  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3954(r2)
+/* 8005FCEC 0000003C  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
 /* 8005FCF0 00000040  80 7F 0E 94 */	lwz r3, 0xe94(r31)
 /* 8005FCF4 00000044  D0 03 6D 80 */	stfs f0, 0x6d80(r3)
 /* 8005FCF8 00000048  80 7F 0E 94 */	lwz r3, 0xe94(r31)

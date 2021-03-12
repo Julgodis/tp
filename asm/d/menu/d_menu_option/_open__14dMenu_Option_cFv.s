@@ -80,7 +80,7 @@ lbl_801E3C9C:
 /* 801E3CBC 00000020  7D 89 03 A6 */	mtctr r12
 /* 801E3CC0 00000024  4E 80 04 21 */	bctrl 
 /* 801E3CC4 00000028  7C 7F E8 2E */	lwzx r3, r31, r29
-/* 801E3CC8 0000002C  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__LIT_4069(r2)
+/* 801E3CC8 0000002C  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
 /* 801E3CCC 00000030  48 07 1B 05 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801E3CD0 00000034  3B 9C 00 01 */	addi r28, r28, 1
 /* 801E3CD4 00000038  2C 1C 00 05 */	cmpwi r28, 5
@@ -92,7 +92,7 @@ lbl_801E3C9C:
 /* 801E3CEC 00000050  7F E3 FB 78 */	mr r3, r31
 /* 801E3CF0 00000054  48 00 36 25 */	bl setCursorPos__14dMenu_Option_cFUc
 /* 801E3CF4 00000058  7F E3 FB 78 */	mr r3, r31
-/* 801E3CF8 0000005C  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__LIT_4069(r2)
+/* 801E3CF8 0000005C  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
 /* 801E3CFC 00000060  48 00 40 1D */	bl cursorAnime__14dMenu_Option_cFf
 /* 801E3D00 00000064  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 801E3D04 00000068  88 03 00 B4 */	lbz r0, 0xb4(r3)
@@ -101,7 +101,7 @@ lbl_801E3C9C:
 /* 801E3D10 00000074  38 60 00 01 */	li r3, 1
 /* 801E3D14 00000078  48 00 00 AC */	b lbl_801E3DC0
 lbl_801E3D18:
-/* 801E3D18 00000000  C8 42 A9 58 */	lfd f2, d_menu_d_menu_option__LIT_4520(r2)
+/* 801E3D18 00000000  C8 42 A9 58 */	lfd f2, d_menu_d_menu_option__lit_4520(r2)
 /* 801E3D1C 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801E3D20 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E3D24 0000000C  3C 60 43 30 */	lis r3, 0x4330

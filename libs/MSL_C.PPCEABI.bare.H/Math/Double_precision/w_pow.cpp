@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_pow();
-extern void pow();
-}
+extern "C" extern void __ieee754_pow();
+extern "C" extern void pow();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C780-8036C7A0 0020 .text      pow                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void pow() {
+extern "C" asm void pow() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_pow/pow.s"
 }

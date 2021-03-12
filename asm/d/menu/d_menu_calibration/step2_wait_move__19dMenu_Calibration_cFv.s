@@ -18,32 +18,32 @@ lbl_801AF1F4:
 /* 801AF234 00000024  7C 00 20 00 */	cmpw r0, r4
 /* 801AF238 00000028  41 80 00 64 */	blt lbl_801AF29C
 /* 801AF23C 0000002C  80 7F 00 5C */	lwz r3, 0x5c(r31)
-/* 801AF240 00000030  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__LIT_3885(r2)
+/* 801AF240 00000030  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__lit_3885(r2)
 /* 801AF244 00000034  48 0A 65 8D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF248 00000038  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 801AF24C 0000003C  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF24C 0000003C  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF250 00000040  48 0A 65 81 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF254 00000044  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 801AF258 00000048  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF258 00000048  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF25C 0000004C  48 0A 65 75 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF260 00000050  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 801AF264 00000054  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF264 00000054  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF268 00000058  48 0A 65 69 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF26C 0000005C  80 7F 00 90 */	lwz r3, 0x90(r31)
-/* 801AF270 00000060  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF270 00000060  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF274 00000064  48 0A 65 5D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF278 00000068  88 1F 00 FF */	lbz r0, 0xff(r31)
 /* 801AF27C 0000006C  28 00 00 00 */	cmplwi r0, 0
 /* 801AF280 00000070  40 82 00 10 */	bne lbl_801AF290
 /* 801AF284 00000074  80 7F 00 A8 */	lwz r3, 0xa8(r31)
-/* 801AF288 00000078  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF288 00000078  C0 22 A5 10 */	lfs f1, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF28C 0000007C  4B FE 60 15 */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_801AF290:
 /* 801AF290 00000000  38 00 00 03 */	li r0, 3
 /* 801AF294 00000004  98 1F 01 00 */	stb r0, 0x100(r31)
 /* 801AF298 00000008  48 00 00 C4 */	b lbl_801AF35C
 lbl_801AF29C:
-/* 801AF29C 00000000  C8 42 A5 18 */	lfd f2, d_menu_d_menu_calibration__LIT_3887(r2)
+/* 801AF29C 00000000  C8 42 A5 18 */	lfd f2, d_menu_d_menu_calibration__lit_3887(r2)
 /* 801AF2A0 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801AF2A4 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801AF2A8 0000000C  3C 60 43 30 */	lis r3, 0x4330
@@ -61,11 +61,11 @@ lbl_801AF29C:
 /* 801AF2D8 0000003C  48 0A 64 F9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF2DC 00000040  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801AF2E0 00000044  48 0A 65 49 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 801AF2E4 00000048  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF2E4 00000048  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF2E8 0000004C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801AF2EC 00000050  41 82 00 24 */	beq lbl_801AF310
 /* 801AF2F0 00000054  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 801AF2F4 00000058  C0 02 A5 14 */	lfs f0, d_menu_d_menu_calibration__LIT_3885(r2)
+/* 801AF2F4 00000058  C0 02 A5 14 */	lfs f0, d_menu_d_menu_calibration__lit_3885(r2)
 /* 801AF2F8 0000005C  EF E0 F0 28 */	fsubs f31, f0, f30
 /* 801AF2FC 00000060  FC 20 F8 90 */	fmr f1, f31
 /* 801AF300 00000064  48 0A 64 D1 */	bl setAlphaRate__13CPaneMgrAlphaFf
@@ -75,11 +75,11 @@ lbl_801AF29C:
 lbl_801AF310:
 /* 801AF310 00000000  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 801AF314 00000004  48 0A 65 15 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 801AF318 00000008  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__LIT_3847(r2)
+/* 801AF318 00000008  C0 02 A5 10 */	lfs f0, d_menu_d_menu_calibration__lit_3847(r2)
 /* 801AF31C 0000000C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801AF320 00000010  41 82 00 24 */	beq lbl_801AF344
 /* 801AF324 00000014  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 801AF328 00000018  C0 02 A5 14 */	lfs f0, d_menu_d_menu_calibration__LIT_3885(r2)
+/* 801AF328 00000018  C0 02 A5 14 */	lfs f0, d_menu_d_menu_calibration__lit_3885(r2)
 /* 801AF32C 0000001C  EF E0 F0 28 */	fsubs f31, f0, f30
 /* 801AF330 00000020  FC 20 F8 90 */	fmr f1, f31
 /* 801AF334 00000024  48 0A 64 9D */	bl setAlphaRate__13CPaneMgrAlphaFf

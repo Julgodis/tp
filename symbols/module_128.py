@@ -1,0 +1,33 @@
+#
+# Generate By: dol2asm
+# Module: 128
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4BE0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4C0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4C38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
+	'Create__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4C58, 'size': 0x0084, 'padding': 0x00, 'name': "Create__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'create__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4CDC, 'size': 0x0068, 'padding': 0x00, 'name': "create__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'execute__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4D44, 'size': 0x0024, 'padding': 0x00, 'name': "execute__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'action__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4D68, 'size': 0x008C, 'padding': 0x00, 'name': "action__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionCheck__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4DF4, 'size': 0x049C, 'padding': 0x00, 'name': "actionCheck__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionEnd__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A5290, 'size': 0x0004, 'padding': 0x00, 'name': "actionEnd__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'seStartWrong__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A5294, 'size': 0x0060, 'padding': 0x00, 'name': "seStartWrong__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'_delete__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A52F4, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
+	'daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A52FC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
+	'daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A531C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
+	'daTagLv2PrChk_Create__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A533C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Create__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
+	'data_805A535C': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805A535C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_805A5360': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805A5360, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3844': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".rodata", 'addr': 0x805A5364, 'size': 0x0004, 'padding': 0x00, 'name': "@3844", 'reference_count': 0, 'type': "Integer"},
+	'lit_3845': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".rodata", 'addr': 0x805A5368, 'size': 0x0004, 'padding': 0x00, 'name': "@3845", 'reference_count': 0, 'type': "Integer"},
+	'cNullVec__6Z2Calc': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A536C, 'size': 0x000C, 'padding': 0x00, 'name': "cNullVec__6Z2Calc", 'reference_count': 0, 'type': "InitData"},
+	'lit_1787': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A5378, 'size': 0x0004, 'padding': 0x10, 'name': "@1787", 'reference_count': 0, 'type': "Integer"},
+	'lit_3667': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A538C, 'size': 0x000C, 'padding': 0x00, 'name': "@3667", 'reference_count': 0, 'type': "ReferenceArray"},
+	'lit_3668': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A5398, 'size': 0x000C, 'padding': 0x00, 'name': "@3668", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_805A53A4': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53A4, 'size': 0x0018, 'padding': 0x00, 'name': "l_func$3666", 'reference_count': 0, 'type': "InitData"},
+	'l_daTagLv2PrChk_Method': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53BC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagLv2PrChk_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_Tag_Lv2PrChk': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53DC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Lv2PrChk", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_805A541C': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_bss", 'section': ".bss", 'addr': 0x805A541C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "ZeroData"},
+}

@@ -5,82 +5,141 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void mDoExt_getAssertHeap__Fv();
-extern void __ct__15mDoMemCd_Ctrl_cFv();
-extern void ThdInit__15mDoMemCd_Ctrl_cFv();
-extern void main__15mDoMemCd_Ctrl_cFv();
-extern void update__15mDoMemCd_Ctrl_cFv();
-extern void load__15mDoMemCd_Ctrl_cFv();
-extern void restore__15mDoMemCd_Ctrl_cFv();
-extern void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
-extern void save__15mDoMemCd_Ctrl_cFPvUlUl();
-extern void store__15mDoMemCd_Ctrl_cFv();
-extern void SaveSync__15mDoMemCd_Ctrl_cFv();
-extern void getStatus__15mDoMemCd_Ctrl_cFUl();
-extern void command_format__15mDoMemCd_Ctrl_cFv();
-extern void format__15mDoMemCd_Ctrl_cFv();
-extern void FormatSync__15mDoMemCd_Ctrl_cFv();
-extern void attach__15mDoMemCd_Ctrl_cFv();
-extern void command_attach__15mDoMemCd_Ctrl_cFv();
-extern void detach__15mDoMemCd_Ctrl_cFv();
-extern void mount__15mDoMemCd_Ctrl_cFv();
-extern void loadfile__15mDoMemCd_Ctrl_cFv();
-extern void checkspace__15mDoMemCd_Ctrl_cFv();
-extern void setCardState__15mDoMemCd_Ctrl_cFl();
-extern void mDoMemCd_main__FPv();
-extern void __sinit_m_Do_MemCard_cpp();
-extern void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
-extern void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
-extern void becomeCurrentHeap__7JKRHeapFv();
-extern void __ct__9JKRThreadFP8OSThreadi();
-extern void __dt__9JKRThreadFv();
-extern void OSInitMutex();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void OSTryLockMutex();
-extern void OSInitCond();
-extern void OSWaitCond();
-extern void OSSignalCond();
-extern void OSGetCurrentThread();
-extern void OSCreateThread();
-extern void OSResumeThread();
-extern void OSGetThreadPriority();
-extern void CARDInit();
-extern void CARDFreeBlocks();
-extern void CARDCheck();
-extern void CARDProbe();
-extern void CARDProbeEx();
-extern void CARDMount();
-extern void CARDUnmount();
-extern void CARDFormat();
-extern void CARDOpen();
-extern void CARDClose();
-extern void CARDCreate();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _restgpr_27();
-extern void _restgpr_28();
+extern "C" extern void mDoExt_getAssertHeap__Fv();
+extern "C" extern void __ct__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void ThdInit__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void main__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void update__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void load__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void restore__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" extern void save__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" extern void store__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void SaveSync__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void getStatus__15mDoMemCd_Ctrl_cFUl();
+extern "C" extern void command_format__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void format__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void FormatSync__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void attach__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void command_attach__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void detach__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void mount__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void loadfile__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void checkspace__15mDoMemCd_Ctrl_cFv();
+extern "C" extern void setCardState__15mDoMemCd_Ctrl_cFl();
+extern "C" extern void mDoMemCd_main__FPv();
+extern "C" extern void __sinit_m_Do_MemCard_cpp();
+extern "C" extern void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
+extern "C" extern void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
+extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
+extern "C" extern void __ct__9JKRThreadFP8OSThreadi();
+extern "C" extern void __dt__9JKRThreadFv();
+extern "C" extern void OSInitMutex();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void OSTryLockMutex();
+extern "C" extern void OSInitCond();
+extern "C" extern void OSWaitCond();
+extern "C" extern void OSSignalCond();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void OSCreateThread();
+extern "C" extern void OSResumeThread();
+extern "C" extern void OSGetThreadPriority();
+extern "C" extern void CARDInit();
+extern "C" extern void CARDFreeBlocks();
+extern "C" extern void CARDCheck();
+extern "C" extern void CARDProbe();
+extern "C" extern void CARDProbeEx();
+extern "C" extern void CARDMount();
+extern "C" extern void CARDUnmount();
+extern "C" extern void CARDFormat();
+extern "C" extern void CARDOpen();
+extern "C" extern void CARDClose();
+extern "C" extern void CARDCreate();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
 SECTION_RODATA extern const u8 m_Do_m_Do_MemCard__stringBase0[16];
-SECTION_DATA extern void* m_Do_m_Do_MemCard__LIT_3770[14];
-SECTION_DATA extern void* m_Do_m_Do_MemCard__LIT_3850[14];
+SECTION_DATA extern void* m_Do_m_Do_MemCard__lit_3770[14];
+SECTION_DATA extern void* m_Do_m_Do_MemCard__lit_3850[14];
 SECTION_BSS extern u8 MemCardStack[4096];
 SECTION_BSS extern u8 MemCardThread[792 + 8 /* padding */];
 SECTION_BSS extern u8 MemCardWorkArea0[40960];
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
 SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 8001672C-80016730 0004 .text      __ct__15mDoMemCd_Ctrl_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/__ct__15mDoMemCd_Ctrl_cFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 803DFC20-803E0C20 1000 .bss       MemCardStack                                                 */
+u8 MemCardStack[4096];
 
-extern "C" {
+/* 803E0C20-803E0F40 0318 .bss       MemCardThread                                                */
+u8 MemCardThread[792 + 8 /* padding */];
+
+/* 80016730-800167D0 00A0 .text      ThdInit__15mDoMemCd_Ctrl_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ThdInit__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/ThdInit__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 800167D0-80016894 00C4 .text      main__15mDoMemCd_Ctrl_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void main__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/main__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80016894-800169B4 0120 .text      update__15mDoMemCd_Ctrl_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void update__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/update__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 800169B4-80016A0C 0058 .text      load__15mDoMemCd_Ctrl_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void load__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/load__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803743F8-80374408 0009 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -89,16 +148,65 @@ SECTION_DEAD const char* const stringBase_803743F8 = "gczelda2";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80374401 = "\0\0\0\0\0\0";
 #pragma pop
+
+/* 80016A0C-80016AB0 00A4 .text      restore__15mDoMemCd_Ctrl_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void restore__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/restore__15mDoMemCd_Ctrl_cFv.s"
 }
+#pragma pop
+
+
+/* 80016AB0-80016B58 00A8 .text      LoadSync__15mDoMemCd_Ctrl_cFPvUlUl                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/LoadSync__15mDoMemCd_Ctrl_cFPvUlUl.s"
+}
+#pragma pop
+
+
+/* 80016B58-80016BD4 007C .text      save__15mDoMemCd_Ctrl_cFPvUlUl                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void save__15mDoMemCd_Ctrl_cFPvUlUl() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/save__15mDoMemCd_Ctrl_cFPvUlUl.s"
+}
+#pragma pop
+
+
+/* 80016BD4-80016CE0 010C .text      store__15mDoMemCd_Ctrl_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void store__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/store__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80016CE0-80016D74 0094 .text      SaveSync__15mDoMemCd_Ctrl_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void SaveSync__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/SaveSync__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A34F8-803A3530 0038 .data      @3770                                                        */
-SECTION_DATA void* m_Do_m_Do_MemCard__LIT_3770[14] = {
+void* m_Do_m_Do_MemCard__lit_3770[14] = {
 	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x74),
 	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x4C),
 	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x54),
@@ -114,8 +222,87 @@ SECTION_DATA void* m_Do_m_Do_MemCard__LIT_3770[14] = {
 	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xAC),
 	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xB4),
 };
+
+/* 80016D74-80016E58 00E4 .text      getStatus__15mDoMemCd_Ctrl_cFUl                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStatus__15mDoMemCd_Ctrl_cFUl() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/getStatus__15mDoMemCd_Ctrl_cFUl.s"
+}
+#pragma pop
+
+
+/* 80016E58-80016EA8 0050 .text      command_format__15mDoMemCd_Ctrl_cFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void command_format__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/command_format__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80016EA8-80016F2C 0084 .text      format__15mDoMemCd_Ctrl_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void format__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/format__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80016F2C-80016FB8 008C .text      FormatSync__15mDoMemCd_Ctrl_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void FormatSync__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/FormatSync__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80016FB8-800170B8 0100 .text      attach__15mDoMemCd_Ctrl_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void attach__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/attach__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 800170B8-80017110 0058 .text      command_attach__15mDoMemCd_Ctrl_cFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void command_attach__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/command_attach__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* 80017110-80017148 0038 .text      detach__15mDoMemCd_Ctrl_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void detach__15mDoMemCd_Ctrl_cFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/detach__15mDoMemCd_Ctrl_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A3530-803A3568 0038 .data      @3850                                                        */
-SECTION_DATA void* m_Do_m_Do_MemCard__LIT_3850[14] = {
+void* m_Do_m_Do_MemCard__lit_3850[14] = {
 	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xF4),
 	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
 	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
@@ -131,254 +318,74 @@ SECTION_DATA void* m_Do_m_Do_MemCard__LIT_3850[14] = {
 	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
 	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xBC),
 };
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803DFC20-803E0C20 1000 .bss       MemCardStack                                                 */
-SECTION_BSS u8 MemCardStack[4096];
-/* 803E0C20-803E0F40 0318 .bss       MemCardThread                                                */
-SECTION_BSS u8 MemCardThread[792 + 8 /* padding */];
 /* 803E0F40-803EAF40 A000 .bss       MemCardWorkArea0                                             */
-SECTION_BSS u8 MemCardWorkArea0[40960];
-/* 803EAF40-803ECF40 2000 .bss       g_mDoMemCd_control                                           */
-SECTION_BSS u8 g_mDoMemCd_control[8192];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001672C-80016730 0004 .text      __ct__15mDoMemCd_Ctrl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/__ct__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016730-800167D0 00A0 .text      ThdInit__15mDoMemCd_Ctrl_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ThdInit__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/ThdInit__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 800167D0-80016894 00C4 .text      main__15mDoMemCd_Ctrl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void main__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/main__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016894-800169B4 0120 .text      update__15mDoMemCd_Ctrl_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void update__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/update__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 800169B4-80016A0C 0058 .text      load__15mDoMemCd_Ctrl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void load__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/load__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016A0C-80016AB0 00A4 .text      restore__15mDoMemCd_Ctrl_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void restore__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/restore__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016AB0-80016B58 00A8 .text      LoadSync__15mDoMemCd_Ctrl_cFPvUlUl                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/LoadSync__15mDoMemCd_Ctrl_cFPvUlUl.s"
-}
-#pragma pop
-
-/* 80016B58-80016BD4 007C .text      save__15mDoMemCd_Ctrl_cFPvUlUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void save__15mDoMemCd_Ctrl_cFPvUlUl() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/save__15mDoMemCd_Ctrl_cFPvUlUl.s"
-}
-#pragma pop
-
-/* 80016BD4-80016CE0 010C .text      store__15mDoMemCd_Ctrl_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void store__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/store__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016CE0-80016D74 0094 .text      SaveSync__15mDoMemCd_Ctrl_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void SaveSync__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/SaveSync__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016D74-80016E58 00E4 .text      getStatus__15mDoMemCd_Ctrl_cFUl                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStatus__15mDoMemCd_Ctrl_cFUl() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/getStatus__15mDoMemCd_Ctrl_cFUl.s"
-}
-#pragma pop
-
-/* 80016E58-80016EA8 0050 .text      command_format__15mDoMemCd_Ctrl_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void command_format__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/command_format__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016EA8-80016F2C 0084 .text      format__15mDoMemCd_Ctrl_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void format__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/format__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016F2C-80016FB8 008C .text      FormatSync__15mDoMemCd_Ctrl_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void FormatSync__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/FormatSync__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80016FB8-800170B8 0100 .text      attach__15mDoMemCd_Ctrl_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void attach__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/attach__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 800170B8-80017110 0058 .text      command_attach__15mDoMemCd_Ctrl_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void command_attach__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/command_attach__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
-
-/* 80017110-80017148 0038 .text      detach__15mDoMemCd_Ctrl_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void detach__15mDoMemCd_Ctrl_cFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCard/detach__15mDoMemCd_Ctrl_cFv.s"
-}
-#pragma pop
+u8 MemCardWorkArea0[40960];
 
 /* 80017148-80017274 012C .text      mount__15mDoMemCd_Ctrl_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mount__15mDoMemCd_Ctrl_cFv() {
+extern "C" asm void mount__15mDoMemCd_Ctrl_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/mount__15mDoMemCd_Ctrl_cFv.s"
 }
 #pragma pop
 
+
 /* 80017274-800172D4 0060 .text      loadfile__15mDoMemCd_Ctrl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadfile__15mDoMemCd_Ctrl_cFv() {
+extern "C" asm void loadfile__15mDoMemCd_Ctrl_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/loadfile__15mDoMemCd_Ctrl_cFv.s"
 }
 #pragma pop
 
+
 /* 800172D4-80017360 008C .text      checkspace__15mDoMemCd_Ctrl_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkspace__15mDoMemCd_Ctrl_cFv() {
+extern "C" asm void checkspace__15mDoMemCd_Ctrl_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/checkspace__15mDoMemCd_Ctrl_cFv.s"
 }
 #pragma pop
 
+
 /* 80017360-8001741C 00BC .text      setCardState__15mDoMemCd_Ctrl_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCardState__15mDoMemCd_Ctrl_cFl() {
+extern "C" asm void setCardState__15mDoMemCd_Ctrl_cFl() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/setCardState__15mDoMemCd_Ctrl_cFl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803EAF40-803ECF40 2000 .bss       g_mDoMemCd_control                                           */
+u8 g_mDoMemCd_control[8192];
+
 /* 8001741C-80017470 0054 .text      mDoMemCd_main__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCd_main__FPv() {
+extern "C" asm void mDoMemCd_main__FPv() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/mDoMemCd_main__FPv.s"
 }
 #pragma pop
 
+
 /* 80017470-80017498 0028 .text      __sinit_m_Do_MemCard_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_m_Do_MemCard_cpp() {
+extern "C" asm void __sinit_m_Do_MemCard_cpp() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCard/__sinit_m_Do_MemCard_cpp.s"
 }

@@ -29,7 +29,7 @@ lbl_800FA388:
 /* 800FA39C 00000014  38 A1 00 38 */	addi r5, r1, 0x38
 /* 800FA3A0 00000018  4B F7 A3 A5 */	bl GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 800FA3A4 0000001C  C0 21 00 3C */	lfs f1, 0x3c(r1)
-/* 800FA3A8 00000020  C0 02 95 4C */	lfs f0, LIT_23542(r2)
+/* 800FA3A8 00000020  C0 02 95 4C */	lfs f0, lit_23542(r2)
 /* 800FA3AC 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FA3B0 00000000  40 80 00 18 */	bge lbl_800FA3C8
 /* 800FA3B4 00000004  3C 60 80 3A */	lis r3, __vt__8cM3dGPla@ha
@@ -55,7 +55,7 @@ lbl_800FA3F8:
 /* 800FA3F8 00000000  AB 9E 04 DE */	lha r28, 0x4de(r30)
 lbl_800FA3FC:
 /* 800FA3FC 00000000  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)
-/* 800FA400 00000004  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 800FA400 00000004  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 800FA404 00000008  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 800FA408 0000000C  EC 21 00 2A */	fadds f1, f1, f0
 /* 800FA40C 00000010  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
@@ -65,10 +65,10 @@ lbl_800FA3FC:
 /* 800FA41C 00000020  80 1E 05 78 */	lwz r0, 0x578(r30)
 /* 800FA420 00000024  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 800FA424 00000028  41 82 00 0C */	beq lbl_800FA430
-/* 800FA428 0000002C  C0 42 93 D4 */	lfs f2, LIT_11442(r2)
+/* 800FA428 0000002C  C0 42 93 D4 */	lfs f2, lit_11442(r2)
 /* 800FA42C 00000030  48 00 00 08 */	b lbl_800FA434
 lbl_800FA430:
-/* 800FA430 00000000  C0 42 92 9C */	lfs f2, d_a_d_a_alink__LIT_5944(r2)
+/* 800FA430 00000000  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
 lbl_800FA434:
 /* 800FA434 00000000  C0 21 00 2C */	lfs f1, 0x2c(r1)
 /* 800FA438 00000004  57 80 04 38 */	rlwinm r0, r28, 0, 0x10, 0x1c
@@ -108,7 +108,7 @@ lbl_800FA4A0:
 /* 800FA4BC 0000001C  EC 01 10 28 */	fsubs f0, f1, f2
 /* 800FA4C0 00000020  FC 00 02 10 */	fabs f0, f0
 /* 800FA4C4 00000024  FC 20 00 18 */	frsp f1, f0
-/* 800FA4C8 00000028  C0 02 93 3C */	lfs f0, d_a_d_a_alink__LIT_7808(r2)
+/* 800FA4C8 00000028  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
 /* 800FA4CC 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FA4D0 00000000  40 81 00 BC */	ble lbl_800FA58C
 /* 800FA4D4 00000004  EC 42 00 28 */	fsubs f2, f2, f0
@@ -123,7 +123,7 @@ lbl_800FA4A0:
 /* 800FA4F8 00000028  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800FA4FC 0000002C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800FA500 00000030  7C 03 04 2E */	lfsx f0, r3, r0
-/* 800FA504 00000034  C0 22 94 80 */	lfs f1, LIT_16036(r2)
+/* 800FA504 00000034  C0 22 94 80 */	lfs f1, lit_16036(r2)
 /* 800FA508 00000038  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800FA50C 0000003C  EC 04 00 2A */	fadds f0, f4, f0
 /* 800FA510 00000040  D0 01 00 08 */	stfs f0, 8(r1)

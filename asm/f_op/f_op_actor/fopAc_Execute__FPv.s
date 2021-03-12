@@ -88,14 +88,14 @@ lbl_80018F14:
 /* 80018F20 0000000C  C0 3F 04 AC */	lfs f1, 0x4ac(r31)
 /* 80018F24 00000010  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 80018F28 00000014  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80018F2C 00000018  C0 02 81 C8 */	lfs f0, f_op_f_op_actor__LIT_4324(r2)
+/* 80018F2C 00000018  C0 02 81 C8 */	lfs f0, f_op_f_op_actor__lit_4324(r2)
 /* 80018F30 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80018F34 00000000  40 81 00 0C */	ble lbl_80018F40
 /* 80018F38 00000004  7F E3 FB 78 */	mr r3, r31
 /* 80018F3C 00000008  48 00 0D 41 */	bl fopAcM_delete__FP10fopAc_ac_c
 lbl_80018F40:
 /* 80018F40 00000000  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 80018F44 00000004  C0 02 81 CC */	lfs f0, f_op_f_op_actor__LIT_4325(r2)
+/* 80018F44 00000004  C0 02 81 CC */	lfs f0, f_op_f_op_actor__lit_4325(r2)
 /* 80018F48 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80018F4C 00000000  40 80 00 08 */	bge lbl_80018F54
 /* 80018F50 00000004  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)

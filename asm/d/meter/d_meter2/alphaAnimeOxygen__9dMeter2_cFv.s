@@ -93,7 +93,7 @@ lbl_80224CE4:
 /* 80224CFC 00000018  98 1E 01 E1 */	stb r0, 0x1e1(r30)
 /* 80224D00 0000001C  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80224D04 00000020  C0 23 06 04 */	lfs f1, 0x604(r3)
-/* 80224D08 00000024  C0 02 AF C8 */	lfs f0, d_meter_d_meter2__LIT_4662(r2)
+/* 80224D08 00000024  C0 02 AF C8 */	lfs f0, d_meter_d_meter2__lit_4662(r2)
 /* 80224D0C 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80224D10 00000000  40 81 00 38 */	ble lbl_80224D48
 /* 80224D14 00000004  38 00 00 28 */	li r0, 0x28
@@ -103,9 +103,9 @@ lbl_80224CE4:
 /* 80224D24 00000014  38 A0 00 00 */	li r5, 0
 /* 80224D28 00000018  38 C0 00 00 */	li r6, 0
 /* 80224D2C 0000001C  38 E0 00 00 */	li r7, 0
-/* 80224D30 00000020  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80224D30 00000020  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80224D34 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80224D38 00000028  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 80224D38 00000028  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 80224D3C 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 80224D40 00000030  39 00 00 00 */	li r8, 0
 /* 80224D44 00000034  48 08 6C 41 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

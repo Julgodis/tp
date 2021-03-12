@@ -26,12 +26,12 @@ lbl_800096A0:
 /* 800096AC 0000000C  57 80 06 3F */	clrlwi. r0, r28, 0x18
 /* 800096B0 00000010  41 82 0A 80 */	beq lbl_8000A130
 lbl_800096B4:
-/* 800096B4 00000000  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 800096B4 00000000  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 800096B8 00000004  FC 40 08 90 */	fmr f2, f1
-/* 800096BC 00000008  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__LIT_4481(r2)
-/* 800096C0 0000000C  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 800096BC 00000008  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__lit_4481(r2)
+/* 800096C0 0000000C  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__lit_4480(r2)
 /* 800096C4 00000010  FC A0 08 90 */	fmr f5, f1
-/* 800096C8 00000014  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 800096C8 00000014  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__lit_4063(r2)
 /* 800096CC 00000018  48 35 6D 99 */	bl GXSetViewport
 /* 800096D0 0000001C  38 60 00 00 */	li r3, 0
 /* 800096D4 00000020  38 80 00 00 */	li r4, 0
@@ -80,7 +80,7 @@ lbl_800096B4:
 /* 80009780 000000CC  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 80009784 000000D0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80009788 000000D4  38 60 00 00 */	li r3, 0
-/* 8000978C 000000D8  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000978C 000000D8  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009790 000000DC  FC 40 08 90 */	fmr f2, f1
 /* 80009794 000000E0  FC 60 08 90 */	fmr f3, f1
 /* 80009798 000000E4  FC 80 08 90 */	fmr f4, f1
@@ -95,12 +95,12 @@ lbl_800096B4:
 /* 800097BC 00000108  38 60 00 01 */	li r3, 1
 /* 800097C0 0000010C  48 35 66 19 */	bl GXSetDither
 /* 800097C4 00000110  38 61 00 6C */	addi r3, r1, 0x6c
-/* 800097C8 00000114  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 800097CC 00000118  C0 42 80 BC */	lfs f2, m_Do_m_Do_graphic__LIT_4592(r2)
+/* 800097C8 00000114  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
+/* 800097CC 00000118  C0 42 80 BC */	lfs f2, m_Do_m_Do_graphic__lit_4592(r2)
 /* 800097D0 0000011C  FC 60 08 90 */	fmr f3, f1
 /* 800097D4 00000120  FC 80 10 90 */	fmr f4, f2
 /* 800097D8 00000124  FC A0 08 90 */	fmr f5, f1
-/* 800097DC 00000128  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__LIT_4105(r2)
+/* 800097DC 00000128  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__lit_4105(r2)
 /* 800097E0 0000012C  48 33 D8 19 */	bl C_MTXOrtho
 /* 800097E4 00000130  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
 /* 800097E8 00000134  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l
@@ -307,7 +307,7 @@ lbl_80009928:
 /* 80009B08 000001E0  38 A0 00 00 */	li r5, 0
 /* 80009B0C 000001E4  38 C0 00 07 */	li r6, 7
 /* 80009B10 000001E8  48 35 60 E1 */	bl GXSetBlendMode
-/* 80009B14 000001EC  80 62 80 B4 */	lwz r3, m_Do_m_Do_graphic__LIT_4528(r2)
+/* 80009B14 000001EC  80 62 80 B4 */	lwz r3, m_Do_m_Do_graphic__lit_4528(r2)
 /* 80009B18 000001F0  80 02 80 B8 */	lwz r0, data_80451AB8(r2)
 /* 80009B1C 000001F4  90 61 00 24 */	stw r3, 0x24(r1)
 /* 80009B20 000001F8  90 01 00 28 */	stw r0, 0x28(r1)
@@ -323,7 +323,7 @@ lbl_80009928:
 /* 80009B48 00000220  38 60 00 01 */	li r3, 1
 /* 80009B4C 00000224  38 81 00 1C */	addi r4, r1, 0x1c
 /* 80009B50 00000228  48 35 58 8D */	bl GXSetTevColorS10
-/* 80009B54 0000022C  80 02 D1 60 */	lwz r0, m_Do_m_Do_graphic__LIT_4530(r2)
+/* 80009B54 0000022C  80 02 D1 60 */	lwz r0, m_Do_m_Do_graphic__lit_4530(r2)
 /* 80009B58 00000230  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80009B5C 00000234  88 1F 00 0C */	lbz r0, 0xc(r31)
 /* 80009B60 00000238  98 01 00 18 */	stb r0, 0x18(r1)
@@ -379,7 +379,7 @@ lbl_80009928:
 /* 80009C28 00000300  38 61 00 4C */	addi r3, r1, 0x4c
 /* 80009C2C 00000304  38 80 00 01 */	li r4, 1
 /* 80009C30 00000308  38 A0 00 01 */	li r5, 1
-/* 80009C34 0000030C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80009C34 0000030C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009C38 00000310  FC 40 08 90 */	fmr f2, f1
 /* 80009C3C 00000314  FC 60 08 90 */	fmr f3, f1
 /* 80009C40 00000318  38 C0 00 00 */	li r6, 0
@@ -401,14 +401,14 @@ lbl_80009928:
 /* 80009C80 00000358  39 00 00 7D */	li r8, 0x7d
 /* 80009C84 0000035C  48 35 1E F9 */	bl GXSetTexCoordGen2
 /* 80009C88 00000360  3B 00 00 01 */	li r24, 1
-/* 80009C8C 00000364  C3 A2 80 C0 */	lfs f29, m_Do_m_Do_graphic__LIT_4593(r2)
-/* 80009C90 00000368  CB C2 80 C8 */	lfd f30, m_Do_m_Do_graphic__LIT_4595(r2)
+/* 80009C8C 00000364  C3 A2 80 C0 */	lfs f29, m_Do_m_Do_graphic__lit_4593(r2)
+/* 80009C90 00000368  CB C2 80 C8 */	lfd f30, m_Do_m_Do_graphic__lit_4595(r2)
 /* 80009C94 0000036C  3F 80 43 30 */	lis r28, 0x4330
 /* 80009C98 00000370  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80009C9C 00000374  3B A3 9A 20 */	addi r29, r3, sincosTable___5JMath@l
 /* 80009CA0 00000378  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80009CA4 0000037C  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80009CA8 00000380  C3 E2 80 3C */	lfs f31, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 80009CA8 00000380  C3 E2 80 3C */	lfs f31, m_Do_m_Do_graphic__lit_4063(r2)
 lbl_80009CAC:
 /* 80009CAC 00000000  7F 03 C3 78 */	mr r3, r24
 /* 80009CB0 00000004  38 80 00 01 */	li r4, 1
@@ -431,7 +431,7 @@ lbl_80009CAC:
 /* 80009CF4 00000048  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 80009CF8 0000004C  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80009CFC 00000050  EC 42 00 32 */	fmuls f2, f2, f0
-/* 80009D00 00000054  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80009D00 00000054  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009D04 00000058  48 33 CB E5 */	bl PSMTXTrans
 /* 80009D08 0000005C  7F C3 F3 78 */	mr r3, r30
 /* 80009D0C 00000060  7F 44 D3 78 */	mr r4, r26
@@ -540,7 +540,7 @@ lbl_80009DB4:
 /* 80009EA4 000000F0  38 61 00 4C */	addi r3, r1, 0x4c
 /* 80009EA8 000000F4  38 80 00 01 */	li r4, 1
 /* 80009EAC 000000F8  38 A0 00 01 */	li r5, 1
-/* 80009EB0 000000FC  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80009EB0 000000FC  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009EB4 00000100  FC 40 08 90 */	fmr f2, f1
 /* 80009EB8 00000104  FC 60 08 90 */	fmr f3, f1
 /* 80009EBC 00000108  38 C0 00 00 */	li r6, 0
@@ -585,7 +585,7 @@ lbl_80009DB4:
 /* 80009F58 000001A4  38 61 00 2C */	addi r3, r1, 0x2c
 /* 80009F5C 000001A8  38 80 00 01 */	li r4, 1
 /* 80009F60 000001AC  38 A0 00 01 */	li r5, 1
-/* 80009F64 000001B0  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80009F64 000001B0  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 80009F68 000001B4  FC 40 08 90 */	fmr f2, f1
 /* 80009F6C 000001B8  FC 60 08 90 */	fmr f3, f1
 /* 80009F70 000001BC  38 C0 00 00 */	li r6, 0

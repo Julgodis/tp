@@ -13,9 +13,9 @@ lbl_80348F80:
 /* 80348FAC 0000002C  38 81 00 10 */	addi r4, r1, 0x10
 /* 80348FB0 00000030  38 A0 00 80 */	li r5, 0x80
 /* 80348FB4 00000034  4B FF FB 29 */	bl DVDConvertEntrynumToPath
-/* 80348FB8 00000038  3C 60 80 3D */	lis r3, dvdfs__LIT_311@ha
+/* 80348FB8 00000038  3C 60 80 3D */	lis r3, dvdfs__lit_311@ha
 /* 80348FBC 0000003C  4C C6 31 82 */	crclr 6
-/* 80348FC0 00000040  38 63 14 E4 */	addi r3, r3, dvdfs__LIT_311@l
+/* 80348FC0 00000040  38 63 14 E4 */	addi r3, r3, dvdfs__lit_311@l
 /* 80348FC4 00000044  38 9E 00 00 */	addi r4, r30, 0
 /* 80348FC8 00000048  38 A1 00 10 */	addi r5, r1, 0x10
 /* 80348FCC 0000004C  4B CB DA F1 */	bl OSReport

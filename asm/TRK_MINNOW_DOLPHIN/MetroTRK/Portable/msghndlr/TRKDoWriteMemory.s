@@ -7,8 +7,8 @@ lbl_8036E6A4:
 /* 8036E6B8 00000014  90 0C 00 04 */	stw r0, 4(r12)
 /* 8036E6BC 00000018  BF 6C FF EC */	stmw r27, -0x14(r12)
 /* 8036E6C0 0000001C  7C 7B 1B 78 */	mr r27, r3
-/* 8036E6C4 00000020  3C 60 80 3A */	lis r3, LIT_321@ha
-/* 8036E6C8 00000024  3B E3 28 D0 */	addi r31, r3, LIT_321@l
+/* 8036E6C4 00000020  3C 60 80 3A */	lis r3, lit_321@ha
+/* 8036E6C8 00000024  3B E3 28 D0 */	addi r31, r3, lit_321@l
 /* 8036E6CC 00000028  38 9F 01 80 */	addi r4, r31, 0x180
 /* 8036E6D0 0000002C  38 60 00 01 */	li r3, 1
 /* 8036E6D4 00000030  83 9B 00 20 */	lwz r28, 0x20(r27)
@@ -96,9 +96,9 @@ lbl_8036E804:
 /* 8036E80C 00000008  38 1E F9 00 */	addi r0, r30, -1792
 /* 8036E810 0000000C  28 00 00 06 */	cmplwi r0, 6
 /* 8036E814 00000010  41 81 00 44 */	bgt lbl_8036E858
-/* 8036E818 00000014  3C 60 80 3D */	lis r3, MetroTRK_Portable_msghndlr__LIT_499@ha
+/* 8036E818 00000014  3C 60 80 3D */	lis r3, MetroTRK_Portable_msghndlr__lit_499@ha
 /* 8036E81C 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 8036E820 0000001C  38 63 32 00 */	addi r3, r3, MetroTRK_Portable_msghndlr__LIT_499@l
+/* 8036E820 0000001C  38 63 32 00 */	addi r3, r3, MetroTRK_Portable_msghndlr__lit_499@l
 /* 8036E824 00000020  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8036E828 00000024  7C 09 03 A6 */	mtctr r0
 /* 8036E82C 00000028  4E 80 04 20 */	bctr 

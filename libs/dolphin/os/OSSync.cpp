@@ -5,49 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void DCFlushRangeNoSync();
-extern void ICInvalidateRange();
-extern void SystemCallVector();
-extern void __OSSystemCallVectorEnd();
-extern void __OSInitSystemCall();
-}
+extern "C" extern void DCFlushRangeNoSync();
+extern "C" extern void ICInvalidateRange();
+extern "C" extern void SystemCallVector();
+extern "C" extern void __OSSystemCallVectorEnd();
+extern "C" extern void __OSInitSystemCall();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80340A20-80340A20 0000 .text      __OSSystemCallVectorStart                                    */
+
 /* 80340A20-80340A3C 001C .text      SystemCallVector                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SystemCallVector() {
+extern "C" asm void SystemCallVector() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/SystemCallVector.s"
 }
 #pragma pop
 
+
 /* 80340A3C-80340A40 0004 .text      __OSSystemCallVectorEnd                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __OSSystemCallVectorEnd() {
+extern "C" asm void __OSSystemCallVectorEnd() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/__OSSystemCallVectorEnd.s"
 }
 #pragma pop
 
+
 /* 80340A40-80340AA4 0064 .text      __OSInitSystemCall                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __OSInitSystemCall() {
+extern "C" asm void __OSInitSystemCall() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/__OSInitSystemCall.s"
 }

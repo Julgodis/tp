@@ -28,7 +28,7 @@ lbl_8005A340:
 /* 8005A3A8 00000068  48 30 E5 ED */	bl strcmp
 /* 8005A3AC 0000006C  2C 03 00 00 */	cmpwi r3, 0
 /* 8005A3B0 00000070  40 82 01 3C */	bne lbl_8005A4EC
-/* 8005A3B4 00000074  C0 22 86 E0 */	lfs f1, LIT_4378(r2)
+/* 8005A3B4 00000074  C0 22 86 E0 */	lfs f1, lit_4378(r2)
 /* 8005A3B8 00000078  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8005A3BC 0000007C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8005A3C0 00000080  C0 03 11 D8 */	lfs f0, 0x11d8(r3)
@@ -48,11 +48,11 @@ lbl_8005A3CC:
 /* 8005A3F4 00000028  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8005A3F8 0000002C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8005A3FC 00000030  C0 23 12 44 */	lfs f1, 0x1244(r3)
-/* 8005A400 00000034  C0 02 87 10 */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4765(r2)
+/* 8005A400 00000034  C0 02 87 10 */	lfs f0, d_kankyo_d_kankyo_wether__lit_4765(r2)
 /* 8005A404 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8005A408 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 8005A40C 00000004  40 82 00 14 */	bne lbl_8005A420
-/* 8005A410 00000008  C0 02 87 64 */	lfs f0, LIT_5361(r2)
+/* 8005A410 00000008  C0 02 87 64 */	lfs f0, lit_5361(r2)
 /* 8005A414 00000048  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8005A418 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8005A41C 00000004  41 82 00 40 */	beq lbl_8005A45C
@@ -76,10 +76,10 @@ lbl_8005A45C:
 /* 8005A45C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8005A460 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8005A464 00000008  38 63 0E BC */	addi r3, r3, 0xebc
-/* 8005A468 0000000C  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__LIT_4379(r2)
-/* 8005A46C 00000010  C0 42 87 68 */	lfs f2, LIT_5362(r2)
-/* 8005A470 00000014  C0 62 87 6C */	lfs f3, LIT_5363(r2)
-/* 8005A474 00000018  C0 82 87 24 */	lfs f4, d_kankyo_d_kankyo_wether__LIT_4770(r2)
+/* 8005A468 0000000C  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__lit_4379(r2)
+/* 8005A46C 00000010  C0 42 87 68 */	lfs f2, lit_5362(r2)
+/* 8005A470 00000014  C0 62 87 6C */	lfs f3, lit_5363(r2)
+/* 8005A474 00000018  C0 82 87 24 */	lfs f4, d_kankyo_d_kankyo_wether__lit_4770(r2)
 /* 8005A478 0000001C  48 21 55 05 */	bl cLib_addCalc__FPfffff
 /* 8005A47C 00000020  38 00 00 07 */	li r0, 7
 /* 8005A480 00000024  3C 60 80 43 */	lis r3, g_env_light@ha
@@ -93,13 +93,13 @@ lbl_8005A498:
 /* 8005A49C 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8005A4A0 00000008  3B C3 0E BC */	addi r30, r3, 0xebc
 /* 8005A4A4 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 8005A4A8 00000010  C0 22 86 E0 */	lfs f1, LIT_4378(r2)
-/* 8005A4AC 00000014  C0 42 87 68 */	lfs f2, LIT_5362(r2)
-/* 8005A4B0 00000018  C0 62 87 6C */	lfs f3, LIT_5363(r2)
-/* 8005A4B4 0000001C  C0 82 87 70 */	lfs f4, LIT_5364(r2)
+/* 8005A4A8 00000010  C0 22 86 E0 */	lfs f1, lit_4378(r2)
+/* 8005A4AC 00000014  C0 42 87 68 */	lfs f2, lit_5362(r2)
+/* 8005A4B0 00000018  C0 62 87 6C */	lfs f3, lit_5363(r2)
+/* 8005A4B4 0000001C  C0 82 87 70 */	lfs f4, lit_5364(r2)
 /* 8005A4B8 00000020  48 21 54 C5 */	bl cLib_addCalc__FPfffff
 /* 8005A4BC 00000024  C0 3E 00 00 */	lfs f1, 0(r30)
-/* 8005A4C0 00000028  C0 02 87 20 */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4769(r2)
+/* 8005A4C0 00000028  C0 02 87 20 */	lfs f0, d_kankyo_d_kankyo_wether__lit_4769(r2)
 /* 8005A4C4 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8005A4C8 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8005A4CC 00000004  40 82 00 20 */	bne lbl_8005A4EC

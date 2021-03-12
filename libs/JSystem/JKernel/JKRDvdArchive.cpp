@@ -5,96 +5,71 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
-extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void free__7JKRHeapFPv();
-extern void copyMemory__7JKRHeapFPvPvUl();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void unmount__13JKRFileLoaderFv();
-extern void becomeCurrent__10JKRArchiveFPCc();
-extern void getResource__10JKRArchiveFPCc();
-extern void getResource__10JKRArchiveFUlPCc();
-extern void readResource__10JKRArchiveFPvUlUlPCc();
-extern void readResource__10JKRArchiveFPvUlPCc();
-extern void removeResourceAll__10JKRArchiveFv();
-extern void removeResource__10JKRArchiveFPv();
-extern void detachResource__10JKRArchiveFPv();
-extern void getResSize__10JKRArchiveCFPCv();
-extern void countFile__10JKRArchiveCFPCc();
-extern void getFirstFile__10JKRArchiveCFPCc();
-extern void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
-extern void __dt__10JKRArchiveFv();
-extern void findPtrResource__10JKRArchiveCFPCv();
-extern void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
-extern void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
-extern void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
-extern void __dt__13JKRDvdArchiveFv();
-extern void open__13JKRDvdArchiveFl();
-extern void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl();
-extern void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl();
-extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii();
-extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc();
-extern void getExpandedResSize__13JKRDvdArchiveCFPCv();
-extern void __ct__10JKRDvdFileFl();
-extern void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern void prepend__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void panic_f__12JUTExceptionFPCciPCce();
-extern void DCInvalidateRange();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void abs();
+extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void free__7JKRHeapFPv();
+extern "C" extern void copyMemory__7JKRHeapFPvPvUl();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void unmount__13JKRFileLoaderFv();
+extern "C" extern void becomeCurrent__10JKRArchiveFPCc();
+extern "C" extern void getResource__10JKRArchiveFPCc();
+extern "C" extern void getResource__10JKRArchiveFUlPCc();
+extern "C" extern void readResource__10JKRArchiveFPvUlUlPCc();
+extern "C" extern void readResource__10JKRArchiveFPvUlPCc();
+extern "C" extern void removeResourceAll__10JKRArchiveFv();
+extern "C" extern void removeResource__10JKRArchiveFPv();
+extern "C" extern void detachResource__10JKRArchiveFPv();
+extern "C" extern void getResSize__10JKRArchiveCFPCv();
+extern "C" extern void countFile__10JKRArchiveCFPCc();
+extern "C" extern void getFirstFile__10JKRArchiveCFPCc();
+extern "C" extern void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
+extern "C" extern void __dt__10JKRArchiveFv();
+extern "C" extern void findPtrResource__10JKRArchiveCFPCv();
+extern "C" extern void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+extern "C" extern void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+extern "C" extern void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" extern void __dt__13JKRDvdArchiveFv();
+extern "C" extern void open__13JKRDvdArchiveFl();
+extern "C" extern void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" extern void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii();
+extern "C" extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc();
+extern "C" extern void getExpandedResSize__13JKRDvdArchiveCFPCv();
+extern "C" extern void __ct__10JKRDvdFileFl();
+extern "C" extern void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" extern void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void abs();
 SECTION_RODATA extern const u8 JKRDvdArchive__stringBase0[112];
-SECTION_DATA extern void* __vt__13JKRDvdArchive[20];
+SECTION_DATA extern void* const __vt__13JKRDvdArchive[20];
 SECTION_BSS extern u8 sVolumeList__13JKRFileLoader[12];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-}
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8039D1B0-8039D220 006D .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_8039D1B0 = "JKRDvdArchive.cpp";
-SECTION_DEAD const char* const stringBase_8039D1C2 = "%s";
-SECTION_DEAD const char* const stringBase_8039D1C5 = 
-    "Sorry, not applied for SZP archive.\n";
-SECTION_DEAD const char* const stringBase_8039D1EA = "??? bad sequence\n";
-SECTION_DEAD const char* const stringBase_8039D1FC = 
-    "Sorry, not applied SZP archive.\n";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_8039D21D = "\0\0";
-#pragma pop
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC398-803CC3E8 0050 .data      __vt__13JKRDvdArchive                                        */
-SECTION_DATA void* __vt__13JKRDvdArchive[20] = {
+void* const __vt__13JKRDvdArchive[20] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JKRDvdArchiveFv,
@@ -116,88 +91,105 @@ SECTION_DATA void* __vt__13JKRDvdArchive[20] = {
 	(void*)setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl,
 	(void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802D7BF0-802D7C98 00A8 .text      __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection() {
+extern "C" asm void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/__ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection.s"
 }
 #pragma pop
 
+
 /* 802D7C98-802D7DB4 011C .text      __dt__13JKRDvdArchiveFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13JKRDvdArchiveFv() {
+extern "C" asm void __dt__13JKRDvdArchiveFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/__dt__13JKRDvdArchiveFv.s"
 }
 #pragma pop
 
+
 /* 802D7DB4-802D8050 029C .text      open__13JKRDvdArchiveFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void open__13JKRDvdArchiveFl() {
+extern "C" asm void open__13JKRDvdArchiveFl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/open__13JKRDvdArchiveFl.s"
 }
 #pragma pop
 
+
 /* 802D8050-802D8168 0118 .text      fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl() {
+extern "C" asm void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl.s"
 }
 #pragma pop
 
+
 /* 802D8168-802D826C 0104 .text      fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl() {
+extern "C" asm void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl.s"
 }
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 8039D1B0-8039D220 006D .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D1B0 = "JKRDvdArchive.cpp";
+SECTION_DEAD const char* const stringBase_8039D1C2 = "%s";
+SECTION_DEAD const char* const stringBase_8039D1C5 = 
+    "Sorry, not applied for SZP archive.\n";
+SECTION_DEAD const char* const stringBase_8039D1EA = "??? bad sequence\n";
+SECTION_DEAD const char* const stringBase_8039D1FC = 
+    "Sorry, not applied SZP archive.\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D21D = "\0\0";
 #pragma pop
 
 /* 802D826C-802D8474 0208 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii() {
+extern "C" asm void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii.s"
 }
 #pragma pop
 
+
 /* 802D8474-802D8698 0224 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc() {
+extern "C" asm void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc.s"
 }
 #pragma pop
 
+
 /* 802D8698-802D87D4 013C .text      getExpandedResSize__13JKRDvdArchiveCFPCv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getExpandedResSize__13JKRDvdArchiveCFPCv() {
+extern "C" asm void getExpandedResSize__13JKRDvdArchiveCFPCv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/getExpandedResSize__13JKRDvdArchiveCFPCv.s"
 }

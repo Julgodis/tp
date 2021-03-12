@@ -7,17 +7,17 @@ lbl_801AE000:
 /* 801AE014 00000014  88 0D 8A F0 */	lbz r0, struct_80451070+0x0(r13)
 /* 801AE018 00000018  7C 00 07 75 */	extsb. r0, r0
 /* 801AE01C 0000001C  40 82 00 3C */	bne lbl_801AE058
-/* 801AE020 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882(r2)
+/* 801AE020 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__lit_3882(r2)
 /* 801AE024 00000024  3C 60 80 43 */	lis r3, data_8042E808@ha
 /* 801AE028 00000028  D4 03 E8 08 */	stfsu f0, data_8042E808@l(r3)
-/* 801AE02C 0000002C  C0 02 A4 74 */	lfs f0, d_d_ky_thunder__LIT_3883(r2)
+/* 801AE02C 0000002C  C0 02 A4 74 */	lfs f0, d_d_ky_thunder__lit_3883(r2)
 /* 801AE030 00000030  D0 03 00 04 */	stfs f0, 4(r3)
-/* 801AE034 00000034  C0 02 A4 78 */	lfs f0, d_d_ky_thunder__LIT_3884(r2)
+/* 801AE034 00000034  C0 02 A4 78 */	lfs f0, d_d_ky_thunder__lit_3884(r2)
 /* 801AE038 00000038  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801AE03C 0000003C  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 801AE040 00000040  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
-/* 801AE044 00000044  3C A0 80 43 */	lis r5, d_d_ky_thunder__LIT_3816@ha
-/* 801AE048 00000048  38 A5 E7 F0 */	addi r5, r5, d_d_ky_thunder__LIT_3816@l
+/* 801AE044 00000044  3C A0 80 43 */	lis r5, d_d_ky_thunder__lit_3816@ha
+/* 801AE048 00000048  38 A5 E7 F0 */	addi r5, r5, d_d_ky_thunder__lit_3816@l
 /* 801AE04C 0000004C  48 1B 3B D9 */	bl __register_global_object
 /* 801AE050 00000050  38 00 00 01 */	li r0, 1
 /* 801AE054 00000054  98 0D 8A F0 */	stb r0, struct_80451070+0x0(r13)
@@ -25,15 +25,15 @@ lbl_801AE058:
 /* 801AE058 00000000  88 0D 8A F1 */	lbz r0, struct_80451070+0x1(r13)
 /* 801AE05C 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 801AE060 00000008  40 82 00 34 */	bne lbl_801AE094
-/* 801AE064 0000000C  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE064 0000000C  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__lit_3885(r2)
 /* 801AE068 00000010  3C 60 80 43 */	lis r3, data_8042E814@ha
 /* 801AE06C 00000014  D4 03 E8 14 */	stfsu f0, data_8042E814@l(r3)
 /* 801AE070 00000018  D0 03 00 04 */	stfs f0, 4(r3)
 /* 801AE074 0000001C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801AE078 00000020  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 801AE07C 00000024  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
-/* 801AE080 00000028  3C A0 80 43 */	lis r5, d_d_ky_thunder__LIT_3818@ha
-/* 801AE084 0000002C  38 A5 E7 FC */	addi r5, r5, d_d_ky_thunder__LIT_3818@l
+/* 801AE080 00000028  3C A0 80 43 */	lis r5, d_d_ky_thunder__lit_3818@ha
+/* 801AE084 0000002C  38 A5 E7 FC */	addi r5, r5, d_d_ky_thunder__lit_3818@l
 /* 801AE088 00000030  48 1B 3B 9D */	bl __register_global_object
 /* 801AE08C 00000034  38 00 00 01 */	li r0, 1
 /* 801AE090 00000038  98 0D 8A F1 */	stb r0, struct_80451070+0x1(r13)

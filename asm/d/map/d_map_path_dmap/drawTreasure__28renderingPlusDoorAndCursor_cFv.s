@@ -104,7 +104,7 @@ lbl_80040BBC:
 /* 80040C94 000000D8  48 31 E6 E9 */	bl GXSetTevColor
 /* 80040C98 000000DC  3A 80 00 00 */	li r20, 0
 /* 80040C9C 000000E0  56 BD 06 3E */	clrlwi r29, r21, 0x18
-/* 80040CA0 000000E4  C3 E2 84 A8 */	lfs f31, d_map_d_map_path_dmap__LIT_4600(r2)
+/* 80040CA0 000000E4  C3 E2 84 A8 */	lfs f31, d_map_d_map_path_dmap__lit_4600(r2)
 /* 80040CA4 000000E8  48 00 01 90 */	b lbl_80040E34
 lbl_80040CA8:
 /* 80040CA8 00000000  7F E3 FB 78 */	mr r3, r31

@@ -5,8 +5,8 @@ lbl_801B7014:
 /* 801B7020 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 801B7024 00000010  48 1A B1 B9 */	bl _savegpr_29
 /* 801B7028 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801B702C 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_collect__LIT_3778@ha
-/* 801B7030 0000001C  3B A3 4F 78 */	addi r29, r3, d_menu_d_menu_collect__LIT_3778@l
+/* 801B702C 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_collect__lit_3778@ha
+/* 801B7030 0000001C  3B A3 4F 78 */	addi r29, r3, d_menu_d_menu_collect__lit_3778@l
 /* 801B7034 00000020  48 00 04 01 */	bl getCrystalNum__17dMenu_Collect3D_cFv
 /* 801B7038 00000024  54 7E 06 3F */	clrlwi. r30, r3, 0x18
 /* 801B703C 00000028  54 67 15 BA */	rlwinm r7, r3, 2, 0x16, 0x1d
@@ -19,7 +19,7 @@ lbl_801B7014:
 /* 801B7058 00000044  38 7D 03 68 */	addi r3, r29, 0x368
 /* 801B705C 00000048  7C 03 3C 2E */	lfsx f0, r3, r7
 /* 801B7060 0000004C  D0 1F 03 CC */	stfs f0, 0x3cc(r31)
-/* 801B7064 00000050  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B7064 00000050  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B7068 00000054  D0 1F 03 B0 */	stfs f0, 0x3b0(r31)
 /* 801B706C 00000058  D0 1F 03 B4 */	stfs f0, 0x3b4(r31)
 /* 801B7070 0000005C  D0 1F 03 B8 */	stfs f0, 0x3b8(r31)

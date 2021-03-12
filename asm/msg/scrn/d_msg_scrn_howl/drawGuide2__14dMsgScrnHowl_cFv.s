@@ -28,7 +28,7 @@ lbl_80242FE4:
 /* 8024304C 00000024  48 00 05 71 */	bl drawEffect__14dMsgScrnHowl_cFv
 /* 80243050 00000028  48 00 00 0C */	b lbl_8024305C
 lbl_80243054:
-/* 80243054 00000000  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243054 00000000  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80243058 00000004  D0 1A 19 9C */	stfs f0, 0x199c(r26)
 lbl_8024305C:
 /* 8024305C 00000000  80 7A 01 28 */	lwz r3, 0x128(r26)
@@ -44,7 +44,7 @@ lbl_8024305C:
 /* 80243084 00000028  80 1A 01 48 */	lwz r0, 0x148(r26)
 /* 80243088 0000002C  90 01 00 58 */	stw r0, 0x58(r1)
 /* 8024308C 00000030  80 1A 21 20 */	lwz r0, 0x2120(r26)
-/* 80243090 00000034  C8 22 B2 80 */	lfd f1, msg_scrn_d_msg_scrn_howl__LIT_4587(r2)
+/* 80243090 00000034  C8 22 B2 80 */	lfd f1, msg_scrn_d_msg_scrn_howl__lit_4587(r2)
 /* 80243094 00000038  90 01 00 6C */	stw r0, 0x6c(r1)
 /* 80243098 0000003C  3C 60 43 30 */	lis r3, 0x4330
 /* 8024309C 00000040  90 61 00 68 */	stw r3, 0x68(r1)
@@ -56,9 +56,9 @@ lbl_8024305C:
 /* 802430B4 00000058  C8 01 00 70 */	lfd f0, 0x70(r1)
 /* 802430B8 0000005C  EC 80 08 28 */	fsubs f4, f0, f1
 /* 802430BC 00000060  C0 41 00 5C */	lfs f2, 0x5c(r1)
-/* 802430C0 00000064  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 802430C0 00000064  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 802430C4 00000068  EC 02 00 28 */	fsubs f0, f2, f0
-/* 802430C8 0000006C  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 802430C8 0000006C  C0 22 B2 60 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 802430CC 00000070  EC 60 08 24 */	fdivs f3, f0, f1
 /* 802430D0 00000074  D0 61 00 40 */	stfs f3, 0x40(r1)
 /* 802430D4 00000078  D0 81 00 44 */	stfs f4, 0x44(r1)
@@ -93,7 +93,7 @@ lbl_8024305C:
 /* 80243148 000000EC  7F DA E2 14 */	add r30, r26, r28
 /* 8024314C 000000F0  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80243150 000000F4  3B E3 02 8C */	addi r31, r3, g_MsgObject_HIO_c@l
-/* 80243154 000000F8  C3 E2 B2 50 */	lfs f31, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243154 000000F8  C3 E2 B2 50 */	lfs f31, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 lbl_80243158:
 /* 80243158 00000000  FF 40 F0 90 */	fmr f26, f30
 /* 8024315C 00000004  7F A4 07 34 */	extsh r4, r29
@@ -120,7 +120,7 @@ lbl_80243158:
 /* 802431B0 00000000  40 81 03 20 */	ble lbl_802434D0
 /* 802431B4 00000004  FC 1D 00 00 */	fcmpu cr0, f29, f0
 /* 802431B8 00000008  40 82 03 18 */	bne lbl_802434D0
-/* 802431BC 0000000C  C0 22 B2 70 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 802431BC 0000000C  C0 22 B2 70 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 802431C0 00000010  EC 1A F0 2A */	fadds f0, f26, f30
 /* 802431C4 00000014  EF 81 00 32 */	fmuls f28, f1, f0
 /* 802431C8 00000018  C0 1A 19 88 */	lfs f0, 0x1988(r26)
@@ -134,7 +134,7 @@ lbl_80243158:
 /* 802431E8 00000038  7C 80 22 14 */	add r4, r0, r4
 /* 802431EC 0000003C  48 00 0D 01 */	bl getOnLineNum__14dMsgScrnHowl_cFi
 /* 802431F0 00000040  7C 60 07 75 */	extsb. r0, r3
-/* 802431F4 00000044  C3 22 B2 50 */	lfs f25, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 802431F4 00000044  C3 22 B2 50 */	lfs f25, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 802431F8 00000048  41 80 01 70 */	blt lbl_80243368
 /* 802431FC 0000004C  28 18 00 00 */	cmplwi r24, 0
 /* 80243200 00000050  41 82 01 68 */	beq lbl_80243368
@@ -233,7 +233,7 @@ lbl_80243338:
 /* 80243360 00000028  4E 80 04 21 */	bctrl 
 /* 80243364 0000002C  48 00 00 08 */	b lbl_8024336C
 lbl_80243368:
-/* 80243368 00000000  C3 22 B2 50 */	lfs f25, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243368 00000000  C3 22 B2 50 */	lfs f25, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 lbl_8024336C:
 /* 8024336C 00000000  88 1A 27 98 */	lbz r0, 0x2798(r26)
 /* 80243370 00000004  28 00 00 03 */	cmplwi r0, 3
@@ -264,7 +264,7 @@ lbl_8024336C:
 /* 802433D4 00000068  54 03 10 3A */	slwi r3, r0, 2
 /* 802433D8 0000006C  38 03 1A 18 */	addi r0, r3, 0x1a18
 /* 802433DC 00000070  7F BA 05 2E */	stfsx f29, r26, r0
-/* 802433E0 00000074  C0 22 B2 A0 */	lfs f1, LIT_5203(r2)
+/* 802433E0 00000074  C0 22 B2 A0 */	lfs f1, lit_5203(r2)
 /* 802433E4 00000078  C0 1F 03 88 */	lfs f0, 0x388(r31)
 /* 802433E8 0000007C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 802433EC 00000080  88 1A 27 9B */	lbz r0, 0x279b(r26)
@@ -275,7 +275,7 @@ lbl_8024336C:
 /* 80243400 00000094  38 03 00 01 */	addi r0, r3, 1
 /* 80243404 00000098  98 1A 27 9B */	stb r0, 0x279b(r26)
 lbl_80243408:
-/* 80243408 00000000  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243408 00000000  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 8024340C 00000004  FC 19 00 40 */	fcmpo cr0, f25, f0
 /* 80243410 00000000  40 81 00 C0 */	ble lbl_802434D0
 /* 80243414 00000004  80 7A 00 04 */	lwz r3, 4(r26)
@@ -290,7 +290,7 @@ lbl_80243408:
 /* 80243438 00000028  80 7A 00 08 */	lwz r3, 8(r26)
 /* 8024343C 0000002C  48 01 23 ED */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 80243440 00000030  57 20 06 3E */	clrlwi r0, r25, 0x18
-/* 80243444 00000034  C8 42 B2 80 */	lfd f2, msg_scrn_d_msg_scrn_howl__LIT_4587(r2)
+/* 80243444 00000034  C8 42 B2 80 */	lfd f2, msg_scrn_d_msg_scrn_howl__lit_4587(r2)
 /* 80243448 00000038  90 01 00 74 */	stw r0, 0x74(r1)
 /* 8024344C 0000003C  3C 00 43 30 */	lis r0, 0x4330
 /* 80243450 00000040  90 01 00 70 */	stw r0, 0x70(r1)
@@ -298,7 +298,7 @@ lbl_80243408:
 /* 80243458 00000048  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8024345C 0000004C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80243460 00000050  EC 39 00 32 */	fmuls f1, f25, f0
-/* 80243464 00000054  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80243464 00000054  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 80243468 00000058  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8024346C 0000005C  FC 00 00 1E */	fctiwz f0, f0
 /* 80243470 00000060  D8 01 00 68 */	stfd f0, 0x68(r1)
@@ -309,8 +309,8 @@ lbl_80243408:
 /* 80243484 00000074  7D 89 03 A6 */	mtctr r12
 /* 80243488 00000078  4E 80 04 21 */	bctrl 
 /* 8024348C 0000007C  80 7A 01 20 */	lwz r3, 0x120(r26)
-/* 80243490 00000080  C0 22 B2 94 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4827(r2)
-/* 80243494 00000084  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243490 00000080  C0 22 B2 94 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4827(r2)
+/* 80243494 00000084  C0 42 B2 70 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243498 00000088  EC 1B 00 B2 */	fmuls f0, f27, f2
 /* 8024349C 0000008C  EC 1C 00 28 */	fsubs f0, f28, f0
 /* 802434A0 00000090  EC 21 00 2A */	fadds f1, f1, f0
@@ -335,7 +335,7 @@ lbl_802434D0:
 /* 802434E8 00000018  3B A3 02 8C */	addi r29, r3, g_MsgObject_HIO_c@l
 /* 802434EC 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 802434F0 00000020  3B 83 01 88 */	addi r28, r3, g_meter2_info@l
-/* 802434F4 00000024  C3 42 B2 50 */	lfs f26, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 802434F4 00000024  C3 42 B2 50 */	lfs f26, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 lbl_802434F8:
 /* 802434F8 00000000  7C 9A DA 14 */	add r4, r26, r27
 /* 802434FC 00000004  C0 04 1A 90 */	lfs f0, 0x1a90(r4)

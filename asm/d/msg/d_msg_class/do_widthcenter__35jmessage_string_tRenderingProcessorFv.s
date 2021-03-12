@@ -28,8 +28,8 @@ lbl_80231DC0:
 /* 80231DD4 00000014  7C 64 07 34 */	extsh r4, r3
 /* 80231DD8 00000018  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 80231DDC 0000001C  4B FF DC 5D */	bl getLineLength__26jmessage_string_tReferenceFi
-/* 80231DE0 00000020  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__LIT_4026(r2)
-/* 80231DE4 00000024  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 80231DE0 00000020  C0 42 B0 5C */	lfs f2, d_msg_d_msg_class__lit_4026(r2)
+/* 80231DE4 00000024  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 80231DE8 00000028  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 80231DEC 0000002C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80231DF0 00000030  EC 00 00 B2 */	fmuls f0, f0, f2
@@ -58,7 +58,7 @@ lbl_80231DC0:
 /* 80231E4C 0000008C  38 81 00 08 */	addi r4, r1, 8
 /* 80231E50 00000090  48 00 01 F5 */	bl do_strcat__35jmessage_string_tRenderingProcessorFPc
 lbl_80231E54:
-/* 80231E54 00000000  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 80231E54 00000000  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 80231E58 00000004  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 80231E5C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80231E60 00000004  40 82 00 74 */	bne lbl_80231ED4
@@ -66,7 +66,7 @@ lbl_80231E54:
 /* 80231E68 0000000C  FC 00 F8 1E */	fctiwz f0, f31
 /* 80231E6C 00000010  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 80231E70 00000014  80 C1 00 1C */	lwz r6, 0x1c(r1)
-/* 80231E74 00000018  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 80231E74 00000018  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 80231E78 0000001C  6C C0 80 00 */	xoris r0, r6, 0x8000
 /* 80231E7C 00000020  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80231E80 00000024  3C 00 43 30 */	lis r0, 0x4330

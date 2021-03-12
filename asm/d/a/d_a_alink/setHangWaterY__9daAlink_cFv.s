@@ -103,7 +103,7 @@ lbl_800B16A0:
 /* 800B16C8 0000001C  3C A0 80 3F */	lis r5, mWaterCheck__11fopAcM_wt_c@ha
 /* 800B16CC 00000020  38 A5 1D 80 */	addi r5, r5, mWaterCheck__11fopAcM_wt_c@l
 /* 800B16D0 00000024  38 C1 00 08 */	addi r6, r1, 8
-/* 800B16D4 00000028  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800B16D4 00000028  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800B16D8 0000002C  38 FF 01 0C */	addi r7, r31, 0x10c
 /* 800B16DC 00000030  39 00 00 00 */	li r8, 0
 /* 800B16E0 00000034  4B F9 B1 59 */	bl setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc
@@ -113,7 +113,7 @@ lbl_800B16E4:
 /* 800B16EC 00000008  48 05 F0 D1 */	bl checkWaterInKandelaar__9daAlink_cFf
 /* 800B16F0 0000000C  48 00 00 1C */	b lbl_800B170C
 lbl_800B16F4:
-/* 800B16F4 00000000  C0 02 93 A4 */	lfs f0, LIT_9138(r2)
+/* 800B16F4 00000000  C0 02 93 A4 */	lfs f0, lit_9138(r2)
 /* 800B16F8 00000004  D0 1F 33 B8 */	stfs f0, 0x33b8(r31)
 /* 800B16FC 00000008  38 00 00 10 */	li r0, 0x10
 /* 800B1700 0000000C  98 1F 2F C5 */	stb r0, 0x2fc5(r31)

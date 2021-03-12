@@ -1,0 +1,41 @@
+#
+# Generate By: dol2asm
+# Module: 604
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CBDC20, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CBDC4C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CBDC78, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 12, 'type': "Function"},
+	'daObj_Rock_Draw__FP14obj_rock_class': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDC98, 'size': 0x0088, 'padding': 0x00, 'name': "daObj_Rock_Draw__FP14obj_rock_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Rock_Execute__FP14obj_rock_class': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDD20, 'size': 0x0128, 'padding': 0x00, 'name': "daObj_Rock_Execute__FP14obj_rock_class", 'reference_count': 2, 'type': "Function"},
+	'daObj_Rock_IsDelete__FP14obj_rock_class': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDE48, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Rock_IsDelete__FP14obj_rock_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Rock_Delete__FP14obj_rock_class': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDE50, 'size': 0x0088, 'padding': 0x00, 'name': "daObj_Rock_Delete__FP14obj_rock_class", 'reference_count': 1, 'type': "Function"},
+	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDED8, 'size': 0x00AC, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
+	'set_pos_check__FP14obj_rock_classi': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBDF84, 'size': 0x01B4, 'padding': 0x00, 'name': "set_pos_check__FP14obj_rock_classi", 'reference_count': 1, 'type': "Function"},
+	'daObj_Rock_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBE138, 'size': 0x046C, 'padding': 0x00, 'name': "daObj_Rock_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'__dt__7rock_ssFv': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBE5A4, 'size': 0x00D4, 'padding': 0x00, 'name': "__dt__7rock_ssFv", 'reference_count': 0, 'type': "Function"},
+	'__ct__7rock_ssFv': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBE678, 'size': 0x0094, 'padding': 0x00, 'name': "__ct__7rock_ssFv", 'reference_count': 0, 'type': "Function"},
+	'__dt__8cM3dGSphFv': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBE70C, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGSphFv", 'reference_count': 0, 'type': "Function"},
+	'__dt__8cM3dGAabFv': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".text", 'addr': 0x80CBE754, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGAabFv", 'reference_count': 0, 'type': "Function"},
+	'data_80CBE79C': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80CBE79C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80CBE7A0': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80CBE7A0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3814': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7A4, 'size': 0x0004, 'padding': 0x00, 'name': "@3814", 'reference_count': 0, 'type': "Integer"},
+	'lit_3894': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7A8, 'size': 0x0004, 'padding': 0x00, 'name': "@3894", 'reference_count': 0, 'type': "InitData"},
+	'lit_3895': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7AC, 'size': 0x0008, 'padding': 0x00, 'name': "@3895", 'reference_count': 0, 'type': "InitData"},
+	'lit_3896': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7B4, 'size': 0x0008, 'padding': 0x00, 'name': "@3896", 'reference_count': 0, 'type': "InitData"},
+	'lit_3897': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7BC, 'size': 0x0008, 'padding': 0x00, 'name': "@3897", 'reference_count': 0, 'type': "InitData"},
+	'lit_3898': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7C4, 'size': 0x0004, 'padding': 0x00, 'name': "@3898", 'reference_count': 0, 'type': "Integer"},
+	'lit_4012': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7C8, 'size': 0x0004, 'padding': 0x00, 'name': "@4012", 'reference_count': 0, 'type': "Integer"},
+	'lit_4013': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7CC, 'size': 0x0004, 'padding': 0x00, 'name': "@4013", 'reference_count': 0, 'type': "Integer"},
+	'lit_4014': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7D0, 'size': 0x0004, 'padding': 0x00, 'name': "@4014", 'reference_count': 0, 'type': "Integer"},
+	'lit_4015': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7D4, 'size': 0x0004, 'padding': 0x00, 'name': "@4015", 'reference_count': 0, 'type': "Integer"},
+	'lit_4016': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7D8, 'size': 0x0004, 'padding': 0x00, 'name': "@4016", 'reference_count': 0, 'type': "Integer"},
+	'lit_4018': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7DC, 'size': 0x0008, 'padding': 0x00, 'name': "@4018", 'reference_count': 0, 'type': "InitData"},
+	'stringBase0': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".rodata", 'addr': 0x80CBE7E4, 'size': 0x0009, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
+	'data_80CBE7F4': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".data", 'addr': 0x80CBE7F4, 'size': 0x0040, 'padding': 0x00, 'name': "cc_sph_src$3926", 'reference_count': 0, 'type': "InitData"},
+	'l_daObj_Rock_Method': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".data", 'addr': 0x80CBE834, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Rock_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_OBJ_ROCK': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".data", 'addr': 0x80CBE854, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_ROCK", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__8cM3dGAab': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".data", 'addr': 0x80CBE884, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGAab", 'reference_count': 0, 'type': "VirtualTable"},
+	'__vt__8cM3dGSph': {'library': "d/a/obj/d_a_obj_rock", 'translation_unit': "d_a_obj_rock", 'section': ".data", 'addr': 0x80CBE890, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGSph", 'reference_count': 0, 'type': "VirtualTable"},
+}

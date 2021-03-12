@@ -8,18 +8,18 @@ lbl_8036DB9C:
 /* 8036DBB4 00000018  93 C1 00 08 */	stw r30, 8(r1)
 /* 8036DBB8 0000001C  7C 7E 1B 78 */	mr r30, r3
 /* 8036DBBC 00000020  4B FF FA 61 */	bl TRKSetBufferPosition
-/* 8036DBC0 00000024  3C 60 80 3A */	lis r3, MetroTRK_Portable_dispatch__LIT_126@ha
+/* 8036DBC0 00000024  3C 60 80 3A */	lis r3, MetroTRK_Portable_dispatch__lit_126@ha
 /* 8036DBC4 00000028  88 BE 00 14 */	lbz r5, 0x14(r30)
-/* 8036DBC8 0000002C  38 83 28 90 */	addi r4, r3, MetroTRK_Portable_dispatch__LIT_126@l
+/* 8036DBC8 0000002C  38 83 28 90 */	addi r4, r3, MetroTRK_Portable_dispatch__lit_126@l
 /* 8036DBCC 00000030  38 60 00 01 */	li r3, 1
 /* 8036DBD0 00000034  4C C6 31 82 */	crclr 6
 /* 8036DBD4 00000038  48 00 50 81 */	bl MWTRACE
 /* 8036DBD8 0000003C  88 1E 00 14 */	lbz r0, 0x14(r30)
 /* 8036DBDC 00000040  28 00 00 1A */	cmplwi r0, 0x1a
 /* 8036DBE0 00000044  41 81 00 F8 */	bgt lbl_8036DCD8
-/* 8036DBE4 00000048  3C 60 80 3D */	lis r3, MetroTRK_Portable_dispatch__LIT_128@ha
+/* 8036DBE4 00000048  3C 60 80 3D */	lis r3, MetroTRK_Portable_dispatch__lit_128@ha
 /* 8036DBE8 0000004C  54 00 10 3A */	slwi r0, r0, 2
-/* 8036DBEC 00000050  38 63 31 90 */	addi r3, r3, MetroTRK_Portable_dispatch__LIT_128@l
+/* 8036DBEC 00000050  38 63 31 90 */	addi r3, r3, MetroTRK_Portable_dispatch__lit_128@l
 /* 8036DBF0 00000054  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8036DBF4 00000058  7C 09 03 A6 */	mtctr r0
 /* 8036DBF8 0000005C  4E 80 04 20 */	bctr 
@@ -79,9 +79,9 @@ lbl_8036DB9C:
 /* 8036DCD0 00000134  48 00 00 45 */	bl TRKDoSetOption
 /* 8036DCD4 00000138  7C 7F 1B 78 */	mr r31, r3
 lbl_8036DCD8:
-/* 8036DCD8 00000000  3C 60 80 3A */	lis r3, MetroTRK_Portable_dispatch__LIT_127@ha
+/* 8036DCD8 00000000  3C 60 80 3A */	lis r3, MetroTRK_Portable_dispatch__lit_127@ha
 /* 8036DCDC 00000004  7F E5 FB 78 */	mr r5, r31
-/* 8036DCE0 00000008  38 83 28 AC */	addi r4, r3, MetroTRK_Portable_dispatch__LIT_127@l
+/* 8036DCE0 00000008  38 83 28 AC */	addi r4, r3, MetroTRK_Portable_dispatch__lit_127@l
 /* 8036DCE4 0000000C  38 60 00 01 */	li r3, 1
 /* 8036DCE8 00000010  4C C6 31 82 */	crclr 6
 /* 8036DCEC 00000014  48 00 4F 69 */	bl MWTRACE

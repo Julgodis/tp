@@ -38,7 +38,7 @@ lbl_8025E8E4:
 lbl_8025E944:
 /* 8025E944 00000000  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 8025E948 00000004  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 8025E94C 00000008  C0 22 B5 40 */	lfs f1, d_d_timer__LIT_3919(r2)
+/* 8025E94C 00000008  C0 22 B5 40 */	lfs f1, d_d_timer__lit_3919(r2)
 /* 8025E950 0000000C  4B FF 6E 81 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8025E954 00000010  38 00 00 00 */	li r0, 0
 /* 8025E958 00000014  90 1F 00 18 */	stw r0, 0x18(r31)
@@ -58,7 +58,7 @@ lbl_8025E944:
 lbl_8025E990:
 /* 8025E990 00000000  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 8025E994 00000004  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 8025E998 00000008  C0 22 B5 40 */	lfs f1, d_d_timer__LIT_3919(r2)
+/* 8025E998 00000008  C0 22 B5 40 */	lfs f1, d_d_timer__lit_3919(r2)
 /* 8025E99C 0000000C  4B FF 6E 35 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8025E9A0 00000010  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8025E9A4 00000014  3C 80 5F 6E */	lis r4, 0x5F6E /* 0x5F6E5F32@ha */

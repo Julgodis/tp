@@ -60,7 +60,7 @@ lbl_8018E890:
 /* 8018E894 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8018E898 00000008  41 82 00 20 */	beq lbl_8018E8B8
 /* 8018E89C 0000000C  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 8018E8A0 00000010  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 8018E8A0 00000010  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 8018E8A4 00000014  48 00 69 FD */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018E8A8 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8018E8AC 0000001C  38 80 0D 29 */	li r4, 0xd29

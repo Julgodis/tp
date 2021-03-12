@@ -7,7 +7,7 @@ lbl_801D2880:
 /* 801D2894 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2898 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 801D289C 00000008  4B FF FF C5 */	bl getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv
-/* 801D28A0 0000000C  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4202(r2)
+/* 801D28A0 0000000C  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__lit_4202(r2)
 /* 801D28A4 00000010  EF E1 00 32 */	fmuls f31, f1, f0
 /* 801D28A8 00000014  7F E3 FB 78 */	mr r3, r31
 /* 801D28AC 00000018  4B FF FE 8D */	bl getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv

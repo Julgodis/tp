@@ -1,8 +1,8 @@
 lbl_801C2004:
-/* 801C2004 00000000  C0 22 A6 60 */	lfs f1, d_menu_d_menu_dmap_map__LIT_3803(r2)
+/* 801C2004 00000000  C0 22 A6 60 */	lfs f1, d_menu_d_menu_dmap_map__lit_3803(r2)
 /* 801C2008 00000004  D0 23 00 B4 */	stfs f1, 0xb4(r3)
 /* 801C200C 00000008  D0 23 00 B8 */	stfs f1, 0xb8(r3)
-/* 801C2010 0000000C  C0 02 A6 98 */	lfs f0, d_menu_d_menu_dmap_map__LIT_3946(r2)
+/* 801C2010 0000000C  C0 02 A6 98 */	lfs f0, d_menu_d_menu_dmap_map__lit_3946(r2)
 /* 801C2014 00000010  D0 03 00 D8 */	stfs f0, 0xd8(r3)
 /* 801C2018 00000014  D0 23 00 90 */	stfs f1, 0x90(r3)
 /* 801C201C 00000018  88 03 00 E7 */	lbz r0, 0xe7(r3)

@@ -32,11 +32,11 @@ lbl_80079AC0:
 /* 80079AD8 00000018  4B FF FE B5 */	bl MakeBlckTransMinMax__4cBgWFP4cXyzP4cXyz
 /* 80079ADC 0000001C  48 00 00 E8 */	b lbl_80079BC4
 lbl_80079AE0:
-/* 80079AE0 00000000  C0 02 8C FC */	lfs f0, d_bg_d_bg_w__LIT_3935(r2)
+/* 80079AE0 00000000  C0 02 8C FC */	lfs f0, d_bg_d_bg_w__lit_3935(r2)
 /* 80079AE4 00000004  D0 1E 00 08 */	stfs f0, 8(r30)
 /* 80079AE8 00000008  D0 1E 00 04 */	stfs f0, 4(r30)
 /* 80079AEC 0000000C  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 80079AF0 00000010  C0 02 8D 00 */	lfs f0, d_bg_d_bg_w__LIT_3936(r2)
+/* 80079AF0 00000010  C0 02 8D 00 */	lfs f0, d_bg_d_bg_w__lit_3936(r2)
 /* 80079AF4 00000014  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 80079AF8 00000018  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 80079AFC 0000001C  D0 1F 00 00 */	stfs f0, 0(r31)
@@ -73,7 +73,7 @@ lbl_80079B70:
 /* 80079B70 00000000  7C 1A D8 00 */	cmpw r26, r27
 /* 80079B74 00000004  40 81 FF 98 */	ble lbl_80079B0C
 /* 80079B78 00000008  C0 1E 00 00 */	lfs f0, 0(r30)
-/* 80079B7C 0000000C  C0 22 8D 04 */	lfs f1, d_bg_d_bg_w__LIT_3937(r2)
+/* 80079B7C 0000000C  C0 22 8D 04 */	lfs f1, d_bg_d_bg_w__lit_3937(r2)
 /* 80079B80 00000010  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80079B84 00000014  D0 1E 00 00 */	stfs f0, 0(r30)
 /* 80079B88 00000018  C0 1E 00 04 */	lfs f0, 4(r30)

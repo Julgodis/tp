@@ -12,7 +12,7 @@ lbl_8008FA94:
 /* 8008FABC 00000028  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8008FAC0 0000002C  7D 64 5B 78 */	mr r4, r11
 /* 8008FAC4 00000030  7D 45 53 78 */	mr r5, r10
-/* 8008FAC8 00000034  C0 22 8F 40 */	lfs f1, d_d_ev_camera__LIT_7357(r2)
+/* 8008FAC8 00000034  C0 22 8F 40 */	lfs f1, d_d_ev_camera__lit_7357(r2)
 /* 8008FACC 00000038  7D 26 4B 78 */	mr r6, r9
 /* 8008FAD0 0000003C  7C 07 03 78 */	mr r7, r0
 /* 8008FAD4 00000040  4B FF 72 B9 */	bl ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c

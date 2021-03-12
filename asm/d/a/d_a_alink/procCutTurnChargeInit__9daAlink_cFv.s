@@ -25,7 +25,7 @@ lbl_800D4CA8:
 /* 800D4CC0 00000018  38 A5 DB 84 */	addi r5, r5, m__21daAlinkHIO_cutTurn_c0@l
 /* 800D4CC4 0000001C  38 A5 00 14 */	addi r5, r5, 0x14
 /* 800D4CC8 00000020  4B FD 84 2D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800D4CCC 00000024  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800D4CCC 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800D4CD0 00000028  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800D4CD4 0000002C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800D4CD8 00000030  B0 1F 04 DE */	sth r0, 0x4de(r31)

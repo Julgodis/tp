@@ -27,7 +27,7 @@ lbl_8032ED30:
 /* 8032ED94 00000064  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 8032ED98 00000068  7F A4 EB 78 */	mr r4, r29
 /* 8032ED9C 0000006C  4B FE 2B C9 */	bl J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f
-/* 8032EDA0 00000070  C0 22 CA A0 */	lfs f1, LIT_922(r2)
+/* 8032EDA0 00000070  C0 22 CA A0 */	lfs f1, lit_922(r2)
 /* 8032EDA4 00000074  3C 60 80 43 */	lis r3, mCurrentS__6J3DSys@ha
 /* 8032EDA8 00000078  C0 03 4C 14 */	lfs f0, mCurrentS__6J3DSys@l(r3)
 /* 8032EDAC 0000007C  FC 01 00 00 */	fcmpu cr0, f1, f0

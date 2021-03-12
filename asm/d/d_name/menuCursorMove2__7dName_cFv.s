@@ -64,7 +64,7 @@ lbl_80250428:
 /* 80250474 0000004C  38 A0 00 01 */	li r5, 1
 /* 80250478 00000050  4B F4 4C 7D */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8025047C 00000054  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 80250480 00000058  C0 22 B3 C0 */	lfs f1, d_d_name__LIT_3820(r2)
+/* 80250480 00000058  C0 22 B3 C0 */	lfs f1, d_d_name__lit_3820(r2)
 /* 80250484 0000005C  4B F4 4E 1D */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80250488 00000060  39 61 00 40 */	addi r11, r1, 0x40
 /* 8025048C 00000064  48 11 1D 9D */	bl _restgpr_29

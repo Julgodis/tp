@@ -1,0 +1,43 @@
+#
+# Generate By: dol2asm
+# Module: 276
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80860BE0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80860C0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80860C38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
+	'daKytag16_Draw__FP13kytag16_class': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".text", 'addr': 0x80860C58, 'size': 0x0008, 'padding': 0x00, 'name': "daKytag16_Draw__FP13kytag16_class", 'reference_count': 1, 'type': "Function"},
+	'daKytag16_Execute__FP13kytag16_class': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".text", 'addr': 0x80860C60, 'size': 0x023C, 'padding': 0x00, 'name': "daKytag16_Execute__FP13kytag16_class", 'reference_count': 1, 'type': "Function"},
+	'daKytag16_IsDelete__FP13kytag16_class': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".text", 'addr': 0x80860E9C, 'size': 0x0008, 'padding': 0x00, 'name': "daKytag16_IsDelete__FP13kytag16_class", 'reference_count': 1, 'type': "Function"},
+	'daKytag16_Delete__FP13kytag16_class': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".text", 'addr': 0x80860EA4, 'size': 0x0008, 'padding': 0x00, 'name': "daKytag16_Delete__FP13kytag16_class", 'reference_count': 1, 'type': "Function"},
+	'daKytag16_Create__FP10fopAc_ac_c': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".text", 'addr': 0x80860EAC, 'size': 0x0280, 'padding': 0x00, 'name': "daKytag16_Create__FP10fopAc_ac_c", 'reference_count': 2, 'type': "Function"},
+	'data_8086112C': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x8086112C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80861130': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80861130, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3839': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861134, 'size': 0x0004, 'padding': 0x00, 'name': "@3839", 'reference_count': 0, 'type': "InitData"},
+	'lit_3840': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861138, 'size': 0x0004, 'padding': 0x00, 'name': "@3840", 'reference_count': 0, 'type': "Integer"},
+	'lit_3841': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086113C, 'size': 0x0004, 'padding': 0x00, 'name': "@3841", 'reference_count': 0, 'type': "Integer"},
+	'lit_3842': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861140, 'size': 0x0004, 'padding': 0x00, 'name': "@3842", 'reference_count': 0, 'type': "Integer"},
+	'lit_3843': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861144, 'size': 0x0004, 'padding': 0x00, 'name': "@3843", 'reference_count': 0, 'type': "Integer"},
+	'lit_3844': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861148, 'size': 0x0004, 'padding': 0x00, 'name': "@3844", 'reference_count': 0, 'type': "Integer"},
+	'lit_3845': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086114C, 'size': 0x0004, 'padding': 0x00, 'name': "@3845", 'reference_count': 0, 'type': "Integer"},
+	'lit_3846': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861150, 'size': 0x0004, 'padding': 0x00, 'name': "@3846", 'reference_count': 0, 'type': "Integer"},
+	'lit_3847': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861154, 'size': 0x0004, 'padding': 0x00, 'name': "@3847", 'reference_count': 0, 'type': "Integer"},
+	'lit_3848': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861158, 'size': 0x0004, 'padding': 0x00, 'name': "@3848", 'reference_count': 0, 'type': "Integer"},
+	'lit_3849': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086115C, 'size': 0x0004, 'padding': 0x00, 'name': "@3849", 'reference_count': 0, 'type': "Integer"},
+	'lit_3902': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861160, 'size': 0x0004, 'padding': 0x00, 'name': "@3902", 'reference_count': 0, 'type': "Integer"},
+	'lit_3903': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861164, 'size': 0x0004, 'padding': 0x00, 'name': "@3903", 'reference_count': 0, 'type': "Integer"},
+	'lit_3904': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861168, 'size': 0x0004, 'padding': 0x00, 'name': "@3904", 'reference_count': 0, 'type': "Integer"},
+	'lit_3905': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086116C, 'size': 0x0004, 'padding': 0x00, 'name': "@3905", 'reference_count': 0, 'type': "Integer"},
+	'lit_3906': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861170, 'size': 0x0004, 'padding': 0x00, 'name': "@3906", 'reference_count': 0, 'type': "Integer"},
+	'lit_3907': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861174, 'size': 0x0004, 'padding': 0x00, 'name': "@3907", 'reference_count': 0, 'type': "Integer"},
+	'lit_3908': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861178, 'size': 0x0004, 'padding': 0x00, 'name': "@3908", 'reference_count': 0, 'type': "Integer"},
+	'lit_3909': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086117C, 'size': 0x0004, 'padding': 0x00, 'name': "@3909", 'reference_count': 0, 'type': "Integer"},
+	'lit_3910': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861180, 'size': 0x0004, 'padding': 0x00, 'name': "@3910", 'reference_count': 0, 'type': "Integer"},
+	'lit_3911': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861184, 'size': 0x0004, 'padding': 0x04, 'name': "@3911", 'reference_count': 0, 'type': "Integer"},
+	'lit_3913': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x8086118C, 'size': 0x0008, 'padding': 0x00, 'name': "@3913", 'reference_count': 0, 'type': "InitData"},
+	'stringBase0': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".rodata", 'addr': 0x80861194, 'size': 0x0008, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
+	'lit_3917': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".data", 'addr': 0x8086119C, 'size': 0x0020, 'padding': 0x00, 'name': "@3917", 'reference_count': 0, 'type': "ReferenceArray"},
+	'l_daKytag16_Method': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".data", 'addr': 0x808611BC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daKytag16_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_KYTAG16': {'library': "d/a/kytag/d_a_kytag16", 'translation_unit': "d_a_kytag16", 'section': ".data", 'addr': 0x808611DC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_KYTAG16", 'reference_count': 0, 'type': "ReferenceArray"},
+}

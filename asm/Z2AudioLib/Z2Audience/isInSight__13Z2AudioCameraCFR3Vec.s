@@ -1,6 +1,6 @@
 lbl_802BCCC0:
 /* 802BCCC0 00000000  C0 24 00 08 */	lfs f1, 8(r4)
-/* 802BCCC4 00000004  C0 02 C0 A0 */	lfs f0, Z2Audience__LIT_848(r2)
+/* 802BCCC4 00000004  C0 02 C0 A0 */	lfs f0, Z2Audience__lit_848(r2)
 /* 802BCCC8 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802BCCCC 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 802BCCD0 00000004  40 82 00 0C */	bne lbl_802BCCDC

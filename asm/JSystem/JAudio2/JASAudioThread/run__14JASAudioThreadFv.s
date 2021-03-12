@@ -34,8 +34,8 @@ lbl_8029CDEC:
 /* 8029CE6C 00000080  38 64 1B 34 */	addi r3, r4, data_80431B34@l
 /* 8029CE70 00000084  3C 80 80 29 */	lis r4, func_802978DC@ha
 /* 8029CE74 00000088  38 84 78 DC */	addi r4, r4, func_802978DC@l
-/* 8029CE78 0000008C  3C A0 80 43 */	lis r5, LIT_205@ha
-/* 8029CE7C 00000090  38 A5 1C 68 */	addi r5, r5, LIT_205@l
+/* 8029CE78 0000008C  3C A0 80 43 */	lis r5, lit_205@ha
+/* 8029CE7C 00000090  38 A5 1C 68 */	addi r5, r5, lit_205@l
 /* 8029CE80 00000094  48 0C 4D A5 */	bl __register_global_object
 /* 8029CE84 00000098  38 00 00 01 */	li r0, 1
 /* 8029CE88 0000009C  98 0D 8C E2 */	stb r0, struct_80451260+0x2(r13)

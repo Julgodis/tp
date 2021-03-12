@@ -8,7 +8,7 @@ lbl_8001AA94:
 /* 8001AAAC 00000018  48 24 C0 89 */	bl __mi__4cXyzCFRC3Vec
 /* 8001AAB0 0000001C  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 8001AAB4 00000020  D0 01 00 08 */	stfs f0, 8(r1)
-/* 8001AAB8 00000024  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001AAB8 00000024  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001AABC 00000028  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8001AAC0 0000002C  C0 01 00 1C */	lfs f0, 0x1c(r1)
 /* 8001AAC4 00000030  D0 01 00 10 */	stfs f0, 0x10(r1)

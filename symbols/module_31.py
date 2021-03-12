@@ -1,0 +1,41 @@
+#
+# Generate By: dol2asm
+# Module: 31
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048B8A0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048B8CC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048B8F8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
+	'create__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048B918, 'size': 0x00C0, 'padding': 0x00, 'name': "create__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'destroy__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048B9D8, 'size': 0x0034, 'padding': 0x00, 'name': "destroy__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'execute__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048BA0C, 'size': 0x0438, 'padding': 0x00, 'name': "execute__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'draw__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048BE44, 'size': 0x0008, 'padding': 0x00, 'name': "draw__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'getParam__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048BE4C, 'size': 0x0118, 'padding': 0x00, 'name': "getParam__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'isDelete__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048BF64, 'size': 0x012C, 'padding': 0x00, 'name': "isDelete__11daTag_Evt_cFv", 'reference_count': 1, 'type': "Function"},
+	'doEvtCutWait__11daTag_Evt_cFi': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C090, 'size': 0x0094, 'padding': 0x00, 'name': "doEvtCutWait__11daTag_Evt_cFi", 'reference_count': 1, 'type': "Function"},
+	'doEvtCutTalk__11daTag_Evt_cFi': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C124, 'size': 0x00A4, 'padding': 0x00, 'name': "doEvtCutTalk__11daTag_Evt_cFi", 'reference_count': 1, 'type': "Function"},
+	'doEvtCutNext__11daTag_Evt_cFi': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C1C8, 'size': 0x00B4, 'padding': 0x00, 'name': "doEvtCutNext__11daTag_Evt_cFi", 'reference_count': 1, 'type': "Function"},
+	'daTag_Evt_Create__FPv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C27C, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Evt_Create__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_Evt_Delete__FPv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C29C, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Evt_Delete__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_Evt_Execute__FPv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C2BC, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Evt_Execute__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_Evt_Draw__FPv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C2DC, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Evt_Draw__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_Evt_IsDelete__FPv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C2FC, 'size': 0x0008, 'padding': 0x00, 'name': "daTag_Evt_IsDelete__FPv", 'reference_count': 1, 'type': "Function"},
+	'__dt__11daTag_Evt_cFv': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C304, 'size': 0x0070, 'padding': 0x00, 'name': "__dt__11daTag_Evt_cFv", 'reference_count': 0, 'type': "Function"},
+	'func_8048C374': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".text", 'addr': 0x8048C374, 'size': 0x001C, 'padding': 0x00, 'name': "cLib_calcTimer<i>__FPi", 'reference_count': 2, 'type': "Function"},
+	'data_8048C390': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x8048C390, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_8048C394': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8048C394, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3784': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C39C, 'size': 0x0004, 'padding': 0x00, 'name': "@3784", 'reference_count': 0, 'type': "Integer"},
+	'lit_3785': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3A0, 'size': 0x0004, 'padding': 0x00, 'name': "@3785", 'reference_count': 0, 'type': "InitData"},
+	'lit_3786': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3A4, 'size': 0x0008, 'padding': 0x00, 'name': "@3786", 'reference_count': 0, 'type': "InitData"},
+	'lit_3787': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3AC, 'size': 0x0008, 'padding': 0x00, 'name': "@3787", 'reference_count': 0, 'type': "InitData"},
+	'lit_3788': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3B4, 'size': 0x0008, 'padding': 0x00, 'name': "@3788", 'reference_count': 0, 'type': "InitData"},
+	'lit_3815': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3BC, 'size': 0x0004, 'padding': 0x00, 'name': "@3815", 'reference_count': 0, 'type': "Integer"},
+	'stringBase0': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".rodata", 'addr': 0x8048C3C0, 'size': 0x003D, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 3, 'type': "StringBase"},
+	'l_evtNameList': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C404, 'size': 0x0008, 'padding': 0x00, 'name': "l_evtNameList", 'reference_count': 0, 'type': "ReferenceArray"},
+	'l_resFileName': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C40C, 'size': 0x0004, 'padding': 0x00, 'name': "l_resFileName", 'reference_count': 0, 'type': "ReferenceArray"},
+	'mEvtCutList__11daTag_Evt_c': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C410, 'size': 0x000C, 'padding': 0x00, 'name': "mEvtCutList__11daTag_Evt_c", 'reference_count': 0, 'type': "ReferenceArray"},
+	'daTag_Evt_MethodTable': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C41C, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Evt_MethodTable", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_TAG_EVT': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C43C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_EVT", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__11daTag_Evt_c': {'library': "d/a/tag/d_a_tag_evt", 'translation_unit': "d_a_tag_evt", 'section': ".data", 'addr': 0x8048C46C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__11daTag_Evt_c", 'reference_count': 0, 'type': "VirtualTable"},
+}

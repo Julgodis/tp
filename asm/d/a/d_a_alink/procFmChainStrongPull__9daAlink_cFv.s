@@ -21,7 +21,7 @@ lbl_800E7E50:
 /* 800E7E9C 0000004C  4B F6 02 E1 */	bl cutEnd__16dEvent_manager_cFi
 /* 800E7EA0 00000050  48 00 00 18 */	b lbl_800E7EB8
 lbl_800E7EA4:
-/* 800E7EA4 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800E7EA4 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800E7EA8 00000004  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 /* 800E7EAC 00000008  7F E3 FB 78 */	mr r3, r31
 /* 800E7EB0 0000000C  38 80 00 00 */	li r4, 0

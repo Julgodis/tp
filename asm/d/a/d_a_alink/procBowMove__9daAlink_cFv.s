@@ -22,7 +22,7 @@ lbl_800DFEC0:
 /* 800DFF10 0000003C  40 82 00 14 */	bne lbl_800DFF24
 /* 800DFF14 00000040  7F E3 FB 78 */	mr r3, r31
 /* 800DFF18 00000044  38 80 00 02 */	li r4, 2
-/* 800DFF1C 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DFF1C 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DFF20 0000004C  4B FC D8 05 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800DFF24:
 /* 800DFF24 00000000  38 00 00 01 */	li r0, 1
@@ -35,7 +35,7 @@ lbl_800DFF24:
 /* 800DFF40 0000001C  4B FD A1 91 */	bl checkNextAction__9daAlink_cFi
 /* 800DFF44 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800DFF48 00000024  40 82 00 78 */	bne lbl_800DFFC0
-/* 800DFF4C 00000028  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__LIT_6041(r2)
+/* 800DFF4C 00000028  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__lit_6041(r2)
 /* 800DFF50 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800DFF54 00000030  4B FD 39 B1 */	bl checkZeroSpeedF__9daAlink_cCFv
 /* 800DFF58 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18

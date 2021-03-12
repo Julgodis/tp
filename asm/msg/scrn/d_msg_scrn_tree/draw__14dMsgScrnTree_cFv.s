@@ -14,15 +14,15 @@ lbl_80249270:
 /* 802492A0 00000030  7D 89 03 A6 */	mtctr r12
 /* 802492A4 00000034  4E 80 04 21 */	bctrl 
 /* 802492A8 00000038  80 7E 00 04 */	lwz r3, 4(r30)
-/* 802492AC 0000003C  C0 22 B3 58 */	lfs f1, msg_scrn_d_msg_scrn_tree__LIT_3949(r2)
+/* 802492AC 0000003C  C0 22 B3 58 */	lfs f1, msg_scrn_d_msg_scrn_tree__lit_3949(r2)
 /* 802492B0 00000040  FC 40 08 90 */	fmr f2, f1
 /* 802492B4 00000044  7F E4 FB 78 */	mr r4, r31
 /* 802492B8 00000048  48 0A FC 1D */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 802492BC 0000004C  80 7E 00 44 */	lwz r3, 0x44(r30)
 /* 802492C0 00000050  38 80 00 00 */	li r4, 0
-/* 802492C4 00000054  C0 22 B3 58 */	lfs f1, msg_scrn_d_msg_scrn_tree__LIT_3949(r2)
+/* 802492C4 00000054  C0 22 B3 58 */	lfs f1, msg_scrn_d_msg_scrn_tree__lit_3949(r2)
 /* 802492C8 00000058  FC 40 08 90 */	fmr f2, f1
-/* 802492CC 0000005C  C0 62 B3 5C */	lfs f3, msg_scrn_d_msg_scrn_tree__LIT_3950(r2)
+/* 802492CC 0000005C  C0 62 B3 5C */	lfs f3, msg_scrn_d_msg_scrn_tree__lit_3950(r2)
 /* 802492D0 00000060  81 83 00 00 */	lwz r12, 0(r3)
 /* 802492D4 00000064  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 802492D8 00000068  7D 89 03 A6 */	mtctr r12

@@ -5,173 +5,184 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__17JASGenericMemPoolFv();
-extern void __dt__17JASGenericMemPoolFv();
-extern void alloc__17JASGenericMemPoolFUl();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void clamp__14JASSoundParamsFv();
-extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
-extern void __dt__10JAIAudibleFv();
-extern void __dt__11JAIAudienceFv();
-extern void linearTransform__6Z2CalcFfffffb();
-extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
-extern void func_802BBCDC();
-extern void func_802BBD18();
-extern void func_802BBD94();
-extern void __ct__16Z2AudibleChannelFv();
-extern void calc__9Z2AudibleFv();
-extern void getOuterParams__9Z2AudibleFi();
-extern void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi();
-extern void getChannel__9Z2AudibleFi();
-extern void getDistVolBit__9Z2AudibleFv();
-extern void __ct__19Z2Audience3DSettingFv();
-extern void init__19Z2Audience3DSettingFv();
-extern void initVolumeDist__19Z2Audience3DSettingFv();
-extern void updateVolumeDist__19Z2Audience3DSettingFf();
-extern void initDolbyDist__19Z2Audience3DSettingFv();
-extern void updateDolbyDist__19Z2Audience3DSettingFff();
-extern void __ct__13Z2AudioCameraFv();
-extern void init__13Z2AudioCameraFv();
-extern void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb();
-extern void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb();
-extern void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei();
-extern void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec();
-extern void isInSight__13Z2AudioCameraCFR3Vec();
-extern void __ct__9Z2SpotMicFv();
-extern void clearMicState__9Z2SpotMicFi();
-extern void calcVolumeFactor__9Z2SpotMicFi();
-extern void setMicState__9Z2SpotMicFP13Z2AudioCamerai();
-extern void calcMicDist__9Z2SpotMicFP9Z2Audible();
-extern void calcMicPriority__9Z2SpotMicFf();
-extern void calcMicVolume__9Z2SpotMicFfif();
-extern void __ct__10Z2AudienceFv();
-extern void __dt__10Z2AudienceFv();
-extern void func_802BD288();
-extern void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
-extern void func_802BD338();
-extern void deleteAudible__10Z2AudienceFP10JAIAudible();
-extern void __dt__9Z2AudibleFv();
-extern void calcPriority__10Z2AudienceFP10JAIAudible();
-extern void calcOffMicSound__10Z2AudienceFf();
-extern void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei();
-extern void setTargetVolume__10Z2AudienceFfi();
-extern void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
-extern void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
-extern void calcRelPosPan__10Z2AudienceFRC3Veci();
-extern void calcRelPosDolby__10Z2AudienceFRC3Veci();
-extern void calcVolume___10Z2AudienceCFfi();
-extern void calcDeltaPriority___10Z2AudienceCFfib();
-extern void func_802BDCB0();
-extern void calcFxMix___10Z2AudienceCFfi();
-extern void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera();
-extern void getMaxChannels__10Z2AudienceFv();
-extern void __sinit_Z2Audience_cpp();
-extern void __dl__FPv();
-extern void PSMTXIdentity();
-extern void PSMTXRotAxisRad();
-extern void PSMTXMultVec();
-extern void PSVECSubtract();
-extern void PSVECMag();
-extern void __register_global_object();
-extern void __construct_array();
-extern void __cvt_fp2unsigned();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_RODATA extern const u8 LIT_1193[16];
-SECTION_DATA extern void* __vt__10JAIAudible[6];
-SECTION_DATA extern void* __vt__11JAIAudience[8];
-SECTION_DATA extern void* __vt__10Z2Audience[8];
-SECTION_DATA extern void* __vt__9Z2Audible[6];
-SECTION_BSS extern u8 Z2Audience__LIT_1539[12];
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void __dt__17JASGenericMemPoolFv();
+extern "C" extern void alloc__17JASGenericMemPoolFUl();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void clamp__14JASSoundParamsFv();
+extern "C" extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+extern "C" extern void __dt__10JAIAudibleFv();
+extern "C" extern void __dt__11JAIAudienceFv();
+extern "C" extern void linearTransform__6Z2CalcFfffffb();
+extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" extern void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
+extern "C" extern void func_802BBCDC();
+extern "C" extern void func_802BBD18();
+extern "C" extern void func_802BBD94();
+extern "C" extern void __ct__16Z2AudibleChannelFv();
+extern "C" extern void calc__9Z2AudibleFv();
+extern "C" extern void getOuterParams__9Z2AudibleFi();
+extern "C" extern void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi();
+extern "C" extern void getChannel__9Z2AudibleFi();
+extern "C" extern void getDistVolBit__9Z2AudibleFv();
+extern "C" extern void __ct__19Z2Audience3DSettingFv();
+extern "C" extern void init__19Z2Audience3DSettingFv();
+extern "C" extern void initVolumeDist__19Z2Audience3DSettingFv();
+extern "C" extern void updateVolumeDist__19Z2Audience3DSettingFf();
+extern "C" extern void initDolbyDist__19Z2Audience3DSettingFv();
+extern "C" extern void updateDolbyDist__19Z2Audience3DSettingFff();
+extern "C" extern void __ct__13Z2AudioCameraFv();
+extern "C" extern void init__13Z2AudioCameraFv();
+extern "C" extern void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb();
+extern "C" extern void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb();
+extern "C" extern void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei();
+extern "C" extern void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec();
+extern "C" extern void isInSight__13Z2AudioCameraCFR3Vec();
+extern "C" extern void __ct__9Z2SpotMicFv();
+extern "C" extern void clearMicState__9Z2SpotMicFi();
+extern "C" extern void calcVolumeFactor__9Z2SpotMicFi();
+extern "C" extern void setMicState__9Z2SpotMicFP13Z2AudioCamerai();
+extern "C" extern void calcMicDist__9Z2SpotMicFP9Z2Audible();
+extern "C" extern void calcMicPriority__9Z2SpotMicFf();
+extern "C" extern void calcMicVolume__9Z2SpotMicFfif();
+extern "C" extern void __ct__10Z2AudienceFv();
+extern "C" extern void __dt__10Z2AudienceFv();
+extern "C" extern void func_802BD288();
+extern "C" extern void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
+extern "C" extern void func_802BD338();
+extern "C" extern void deleteAudible__10Z2AudienceFP10JAIAudible();
+extern "C" extern void __dt__9Z2AudibleFv();
+extern "C" extern void calcPriority__10Z2AudienceFP10JAIAudible();
+extern "C" extern void calcOffMicSound__10Z2AudienceFf();
+extern "C" extern void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei();
+extern "C" extern void setTargetVolume__10Z2AudienceFfi();
+extern "C" extern void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+extern "C" extern void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+extern "C" extern void calcRelPosPan__10Z2AudienceFRC3Veci();
+extern "C" extern void calcRelPosDolby__10Z2AudienceFRC3Veci();
+extern "C" extern void calcVolume___10Z2AudienceCFfi();
+extern "C" extern void calcDeltaPriority___10Z2AudienceCFfib();
+extern "C" extern void func_802BDCB0();
+extern "C" extern void calcFxMix___10Z2AudienceCFfi();
+extern "C" extern void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera();
+extern "C" extern void getMaxChannels__10Z2AudienceFv();
+extern "C" extern void __sinit_Z2Audience_cpp();
+extern "C" extern void __dl__FPv();
+extern "C" extern void PSMTXIdentity();
+extern "C" extern void PSMTXRotAxisRad();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void PSVECSubtract();
+extern "C" extern void PSVECMag();
+extern "C" extern void __register_global_object();
+extern "C" extern void __construct_array();
+extern "C" extern void __cvt_fp2unsigned();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_RODATA extern const u8 lit_1193[16];
+SECTION_DATA extern void* const __vt__10JAIAudible[6];
+SECTION_DATA extern void* const __vt__11JAIAudience[8];
+SECTION_DATA extern void* const __vt__10Z2Audience[8];
+SECTION_DATA extern void* const __vt__9Z2Audible[6];
+SECTION_BSS extern u8 Z2Audience__lit_1539[12];
 SECTION_BSS extern u8 data_804341E4[16 + 4 /* padding */];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA extern u8 DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 MAX_VOLUME_DISTANCE__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_CENTER_VALUE__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_FLONT_DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 DISTANCE_FX_PARAM__7Z2Param[4];
-SECTION_SDATA extern u8 SONIC_SPEED__7Z2Param[4];
-SECTION_SDATA extern u8 __float_epsilon[4];
+SECTION_SDATA extern f32 DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 MAX_VOLUME_DISTANCE__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_CENTER_VALUE__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_FLONT_DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 DISTANCE_FX_PARAM__7Z2Param;
+SECTION_SDATA extern f32 SONIC_SPEED__7Z2Param;
+SECTION_SDATA extern u32 __float_epsilon;
 SECTION_SBSS extern u8 data_80450B44[4];
 SECTION_SBSS extern u8 data_80450B4C[4];
 SECTION_SBSS extern u8 MIN_DISTANCE_VOLUME__7Z2Param[4];
 SECTION_SBSS extern u8 cNearFarRatio[4];
 SECTION_SBSS extern u8 data_80451354[4];
 SECTION_SBSS extern u8 struct_80451358[8];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_848[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_894[4];
-SECTION_SDATA2 extern u8 LIT_895[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_896[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_998[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_999[4];
-SECTION_SDATA2 extern u8 LIT_1000[4];
-SECTION_SDATA2 extern u8 LIT_1001[4];
-SECTION_SDATA2 extern u8 LIT_1002[4];
-SECTION_SDATA2 extern u8 LIT_1003[4];
-SECTION_SDATA2 extern u8 LIT_1004[8];
-SECTION_SDATA2 extern u8 LIT_1008[8];
-SECTION_SDATA2 extern u8 LIT_1036[4];
-SECTION_SDATA2 extern u8 LIT_1058[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_1059[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_1060[4];
-SECTION_SDATA2 extern u8 LIT_1061[4];
-SECTION_SDATA2 extern u8 LIT_1062[4];
-SECTION_SDATA2 extern u8 LIT_1063[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_1064[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_1065[4];
-SECTION_SDATA2 extern u8 LIT_1066[4];
-SECTION_SDATA2 extern u8 LIT_1067[4];
-SECTION_SDATA2 extern u8 LIT_1135[4];
-SECTION_SDATA2 extern u8 LIT_1267[4];
-SECTION_SDATA2 extern u8 LIT_1268[4];
-SECTION_SDATA2 extern u8 LIT_1269[4];
-SECTION_SDATA2 extern u8 Z2Audience__LIT_1270[4];
-SECTION_SDATA2 extern u8 LIT_1271[4];
-SECTION_SDATA2 extern u8 LIT_1272[4];
-SECTION_SDATA2 extern u8 LIT_1273[4];
-SECTION_SDATA2 extern u8 LIT_1334[4];
-SECTION_SDATA2 extern u8 LIT_1335[4];
-SECTION_SDATA2 extern u8 LIT_1336[4];
-SECTION_SDATA2 extern u8 LIT_1337[4];
-SECTION_SDATA2 extern u8 LIT_1988[4];
+SECTION_SDATA2 extern u8 Z2Audience__lit_848[4];
+SECTION_SDATA2 extern f32 Z2Audience__lit_894;
+SECTION_SDATA2 extern f32 lit_895;
+SECTION_SDATA2 extern f32 Z2Audience__lit_896;
+SECTION_SDATA2 extern f32 Z2Audience__lit_998;
+SECTION_SDATA2 extern f32 Z2Audience__lit_999;
+SECTION_SDATA2 extern f32 lit_1000;
+SECTION_SDATA2 extern f32 lit_1001;
+SECTION_SDATA2 extern f32 lit_1002;
+SECTION_SDATA2 extern f32 lit_1003;
+SECTION_SDATA2 extern f32 lit_1004;
+SECTION_SDATA2 extern f64 lit_1008;
+SECTION_SDATA2 extern f32 lit_1036;
+SECTION_SDATA2 extern f32 lit_1058;
+SECTION_SDATA2 extern f32 Z2Audience__lit_1059;
+SECTION_SDATA2 extern f32 Z2Audience__lit_1060;
+SECTION_SDATA2 extern f32 lit_1061;
+SECTION_SDATA2 extern f32 lit_1062;
+SECTION_SDATA2 extern f32 lit_1063;
+SECTION_SDATA2 extern f32 Z2Audience__lit_1064;
+SECTION_SDATA2 extern f32 Z2Audience__lit_1065;
+SECTION_SDATA2 extern f32 lit_1066;
+SECTION_SDATA2 extern f32 lit_1067;
+SECTION_SDATA2 extern f32 lit_1135;
+SECTION_SDATA2 extern f32 lit_1267;
+SECTION_SDATA2 extern f32 lit_1268;
+SECTION_SDATA2 extern f32 lit_1269;
+SECTION_SDATA2 extern f32 Z2Audience__lit_1270;
+SECTION_SDATA2 extern f32 lit_1271;
+SECTION_SDATA2 extern f32 lit_1272;
+SECTION_SDATA2 extern f32 lit_1273;
+SECTION_SDATA2 extern f32 lit_1334;
+SECTION_SDATA2 extern f32 lit_1335;
+SECTION_SDATA2 extern f32 lit_1336;
+SECTION_SDATA2 extern f32 lit_1337;
+SECTION_SDATA2 extern f32 lit_1988;
+
+// 
+// Functions:
+// 
+
+/* 802BBCDC-802BBD18 003C .text      calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_802BBCDC() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2Audience/func_802BBCDC.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8039C220-8039C230 000C .rodata    @1193                                                        */
-SECTION_RODATA const u8 LIT_1193[16] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	/* padding */
+/* 80455AA0-80455AA4 0004 .sdata2    @848                                                         */
+u8 Z2Audience__lit_848[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
+/* 802BBD18-802BBD94 007C .text      init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f> */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_802BBD18() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2Audience/func_802BBD18.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CAC98-803CACB8 0020 .data      __vt__10Z2Audience                                           */
-SECTION_DATA void* __vt__10Z2Audience[8] = {
+void* const __vt__10Z2Audience[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10Z2AudienceFv,
@@ -181,8 +192,9 @@ SECTION_DATA void* __vt__10Z2Audience[8] = {
 	(void*)calcPriority__10Z2AudienceFP10JAIAudible,
 	(void*)mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei,
 };
+
 /* 803CACB8-803CACD0 0014 .data      __vt__9Z2Audible                                             */
-SECTION_DATA void* __vt__9Z2Audible[6] = {
+void* const __vt__9Z2Audible[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9Z2AudibleFv,
@@ -191,703 +203,682 @@ SECTION_DATA void* __vt__9Z2Audible[6] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455AA0-80455AA4 0004 .sdata2    @848                                                         */
-SECTION_SDATA2 u8 Z2Audience__LIT_848[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
 /* 80455AA4-80455AA8 0004 .sdata2    @894                                                         */
-SECTION_SDATA2 u8 Z2Audience__LIT_894[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 Z2Audience__lit_894 = 1.0f;
+
 /* 80455AA8-80455AAC 0004 .sdata2    @895                                                         */
-SECTION_SDATA2 u8 LIT_895[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
+f32 lit_895 = 0.5f;
+
 /* 80455AAC-80455AB0 0004 .sdata2    @896                                                         */
-SECTION_SDATA2 u8 Z2Audience__LIT_896[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 80455AB0-80455AB4 0004 .sdata2    @998                                                         */
-SECTION_SDATA2 u8 Z2Audience__LIT_998[4] = {
-	0x40, 0x40, 0x00, 0x00,
-};
-/* 80455AB4-80455AB8 0004 .sdata2    @999                                                         */
-SECTION_SDATA2 u8 Z2Audience__LIT_999[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-/* 80455AB8-80455ABC 0004 .sdata2    @1000                                                        */
-SECTION_SDATA2 u8 LIT_1000[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
-/* 80455ABC-80455AC0 0004 .sdata2    @1001                                                        */
-SECTION_SDATA2 u8 LIT_1001[4] = {
-	0x3A, 0x83, 0x12, 0x6F,
-};
-/* 80455AC0-80455AC4 0004 .sdata2    @1002                                                        */
-SECTION_SDATA2 u8 LIT_1002[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 80455AC4-80455AC8 0004 .sdata2    @1003                                                        */
-SECTION_SDATA2 u8 LIT_1003[4] = {
-	0x3D, 0x08, 0x88, 0x89,
-};
-/* 80455AC8-80455AD0 0004 .sdata2    @1004                                                        */
-SECTION_SDATA2 u8 LIT_1004[8] = {
-	0x3E, 0xAA, 0xAA, 0xAB,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80455AD0-80455AD8 0008 .sdata2    @1008                                                        */
-SECTION_SDATA2 u8 LIT_1008[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80455AD8-80455ADC 0004 .sdata2    @1036                                                        */
-SECTION_SDATA2 u8 LIT_1036[4] = {
-	0x3F, 0xC0, 0x00, 0x00,
-};
-/* 80455ADC-80455AE0 0004 .sdata2    @1058                                                        */
-SECTION_SDATA2 u8 LIT_1058[4] = {
-	0x3F, 0xA0, 0x00, 0x00,
-};
-/* 80455AE0-80455AE4 0004 .sdata2    @1059                                                        */
-SECTION_SDATA2 u8 Z2Audience__LIT_1059[4] = {
-	0x40, 0x00, 0x00, 0x00,
-};
-/* 80455AE4-80455AE8 0004 .sdata2    @1060                                                        */
-SECTION_SDATA2 u8 Z2Audience__LIT_1060[4] = {
-	0x40, 0x80, 0x00, 0x00,
-};
-/* 80455AE8-80455AEC 0004 .sdata2    @1061                                                        */
-SECTION_SDATA2 u8 LIT_1061[4] = {
-	0x40, 0xC0, 0x00, 0x00,
-};
-/* 80455AEC-80455AF0 0004 .sdata2    @1062                                                        */
-SECTION_SDATA2 u8 LIT_1062[4] = {
-	0x41, 0x00, 0x00, 0x00,
-};
-/* 80455AF0-80455AF4 0004 .sdata2    @1063                                                        */
-SECTION_SDATA2 u8 LIT_1063[4] = {
-	0x3F, 0x66, 0x66, 0x66,
-};
-/* 80455AF4-80455AF8 0004 .sdata2    @1064                                                        */
-SECTION_SDATA2 u8 Z2Audience__LIT_1064[4] = {
-	0x3F, 0x4C, 0xCC, 0xCD,
-};
-/* 80455AF8-80455AFC 0004 .sdata2    @1065                                                        */
-SECTION_SDATA2 u8 Z2Audience__LIT_1065[4] = {
-	0x3F, 0x33, 0x33, 0x33,
-};
-/* 80455AFC-80455B00 0004 .sdata2    @1066                                                        */
-SECTION_SDATA2 u8 LIT_1066[4] = {
-	0x3F, 0x19, 0x99, 0x9A,
-};
-/* 80455B00-80455B04 0004 .sdata2    @1067                                                        */
-SECTION_SDATA2 u8 LIT_1067[4] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-};
-/* 80455B04-80455B08 0004 .sdata2    @1135                                                        */
-SECTION_SDATA2 u8 LIT_1135[4] = {
-	0x47, 0xC3, 0x50, 0x00,
-};
-/* 80455B08-80455B0C 0004 .sdata2    @1267                                                        */
-SECTION_SDATA2 u8 LIT_1267[4] = {
-	0xC1, 0xB6, 0x0B, 0x61,
-};
-/* 80455B0C-80455B10 0004 .sdata2    @1268                                                        */
-SECTION_SDATA2 u8 LIT_1268[4] = {
-	0x41, 0xB6, 0x0B, 0x61,
-};
-/* 80455B10-80455B14 0004 .sdata2    @1269                                                        */
-SECTION_SDATA2 u8 LIT_1269[4] = {
-	0x42, 0x48, 0x00, 0x00,
-};
-/* 80455B14-80455B18 0004 .sdata2    @1270                                                        */
-SECTION_SDATA2 u8 Z2Audience__LIT_1270[4] = {
-	0x40, 0x09, 0x3F, 0x9A,
-};
-/* 80455B18-80455B1C 0004 .sdata2    @1271                                                        */
-SECTION_SDATA2 u8 LIT_1271[4] = {
-	0x42, 0x00, 0x00, 0x00,
-};
-/* 80455B1C-80455B20 0004 .sdata2    @1272                                                        */
-SECTION_SDATA2 u8 LIT_1272[4] = {
-	0xC2, 0xC8, 0x00, 0x00,
-};
-/* 80455B20-80455B24 0004 .sdata2    @1273                                                        */
-SECTION_SDATA2 u8 LIT_1273[4] = {
-	0x3C, 0x8E, 0xFA, 0x35,
-};
-/* 80455B24-80455B28 0004 .sdata2    @1334                                                        */
-SECTION_SDATA2 u8 LIT_1334[4] = {
-	0x43, 0x48, 0x00, 0x00,
-};
-/* 80455B28-80455B2C 0004 .sdata2    @1335                                                        */
-SECTION_SDATA2 u8 LIT_1335[4] = {
-	0x43, 0xC8, 0x00, 0x00,
-};
-/* 80455B2C-80455B30 0004 .sdata2    @1336                                                        */
-SECTION_SDATA2 u8 LIT_1336[4] = {
-	0x3E, 0x4C, 0xCC, 0xCD,
-};
-/* 80455B30-80455B34 0004 .sdata2    @1337                                                        */
-SECTION_SDATA2 u8 LIT_1337[4] = {
-	0x43, 0x7F, 0x00, 0x00,
-};
-/* 80455B34-80455B38 0004 .sdata2    @1988                                                        */
-SECTION_SDATA2 u8 LIT_1988[4] = {
-	0x3D, 0x88, 0x88, 0x89,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804341D8-804341E4 000C .bss       @1539                                                        */
-SECTION_BSS u8 Z2Audience__LIT_1539[12];
-/* 804341E4-804341F8 0010 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9Z2Audible>Fv */
-SECTION_BSS u8 data_804341E4[16 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451350-80451354 0004 .sbss      cNearFarRatio                                                */
-SECTION_SBSS u8 cNearFarRatio[4];
-/* 80451354-80451358 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451354[4];
-/* 80451358-80451360 0008 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80451358[8];
-/* 80451358 0001 data_80451358 */
-/* 80451359 0007 data_80451359 */
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802BBCDC-802BBD18 003C .text      calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_802BBCDC() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2Audience/func_802BBCDC.s"
-}
-#pragma pop
-
-/* 802BBD18-802BBD94 007C .text      init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f> */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_802BBD18() {
-	nofralloc
-#include "asm/Z2AudioLib/Z2Audience/func_802BBD18.s"
-}
-#pragma pop
+f32 Z2Audience__lit_896 = -1.0f;
 
 /* 802BBD94-802BBE74 00E0 .text      __ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BBD94() {
+extern "C" asm void func_802BBD94() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BBD94.s"
 }
 #pragma pop
 
+
 /* 802BBE74-802BBE98 0024 .text      __ct__16Z2AudibleChannelFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16Z2AudibleChannelFv() {
+extern "C" asm void __ct__16Z2AudibleChannelFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__ct__16Z2AudibleChannelFv.s"
 }
 #pragma pop
 
+
 /* 802BBE98-802BBED0 0038 .text      calc__9Z2AudibleFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__9Z2AudibleFv() {
+extern "C" asm void calc__9Z2AudibleFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calc__9Z2AudibleFv.s"
 }
 #pragma pop
 
+
 /* 802BBED0-802BBEE4 0014 .text      getOuterParams__9Z2AudibleFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getOuterParams__9Z2AudibleFi() {
+extern "C" asm void getOuterParams__9Z2AudibleFi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/getOuterParams__9Z2AudibleFi.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455AB0-80455AB4 0004 .sdata2    @998                                                         */
+f32 Z2Audience__lit_998 = 3.0f;
+
+/* 80455AB4-80455AB8 0004 .sdata2    @999                                                         */
+f32 Z2Audience__lit_999 = 15.0f;
+
+/* 80455AB8-80455ABC 0004 .sdata2    @1000                                                        */
+f32 lit_1000 = 3.0f / 10.0f;
+
+/* 80455ABC-80455AC0 0004 .sdata2    @1001                                                        */
+f32 lit_1001 = 0.0010000000474974513f;
+
+/* 80455AC0-80455AC4 0004 .sdata2    @1002                                                        */
+f32 lit_1002 = 1.0f / 10.0f;
+
+/* 80455AC4-80455AC8 0004 .sdata2    @1003                                                        */
+f32 lit_1003 = 1.0f / 30.0f;
+
+/* 80455AC8-80455AD0 0004 .sdata2    @1004                                                        */
+f32 lit_1004 = 1.0f / 3.0f;
+/* padding 4 bytes */
+
+/* 80455AD0-80455AD8 0008 .sdata2    @1008                                                        */
+f64 lit_1008 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 802BBEE4-802BC204 0320 .text      setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi() {
+extern "C" asm void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi.s"
 }
 #pragma pop
 
+
 /* 802BC204-802BC218 0014 .text      getChannel__9Z2AudibleFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getChannel__9Z2AudibleFi() {
+extern "C" asm void getChannel__9Z2AudibleFi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/getChannel__9Z2AudibleFi.s"
 }
 #pragma pop
 
+
 /* 802BC218-802BC248 0030 .text      getDistVolBit__9Z2AudibleFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getDistVolBit__9Z2AudibleFv() {
+extern "C" asm void getDistVolBit__9Z2AudibleFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/getDistVolBit__9Z2AudibleFv.s"
 }
 #pragma pop
 
+
 /* 802BC248-802BC284 003C .text      __ct__19Z2Audience3DSettingFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19Z2Audience3DSettingFv() {
+extern "C" asm void __ct__19Z2Audience3DSettingFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__ct__19Z2Audience3DSettingFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455AD8-80455ADC 0004 .sdata2    @1036                                                        */
+f32 lit_1036 = 1.5f;
+
 /* 802BC284-802BC308 0084 .text      init__19Z2Audience3DSettingFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__19Z2Audience3DSettingFv() {
+extern "C" asm void init__19Z2Audience3DSettingFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/init__19Z2Audience3DSettingFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455ADC-80455AE0 0004 .sdata2    @1058                                                        */
+f32 lit_1058 = 1.25f;
+
+/* 80455AE0-80455AE4 0004 .sdata2    @1059                                                        */
+f32 Z2Audience__lit_1059 = 2.0f;
+
+/* 80455AE4-80455AE8 0004 .sdata2    @1060                                                        */
+f32 Z2Audience__lit_1060 = 4.0f;
+
+/* 80455AE8-80455AEC 0004 .sdata2    @1061                                                        */
+f32 lit_1061 = 6.0f;
+
+/* 80455AEC-80455AF0 0004 .sdata2    @1062                                                        */
+f32 lit_1062 = 8.0f;
+
+/* 80455AF0-80455AF4 0004 .sdata2    @1063                                                        */
+f32 lit_1063 = 9.0f / 10.0f;
+
+/* 80455AF4-80455AF8 0004 .sdata2    @1064                                                        */
+f32 Z2Audience__lit_1064 = 4.0f / 5.0f;
+
+/* 80455AF8-80455AFC 0004 .sdata2    @1065                                                        */
+f32 Z2Audience__lit_1065 = 7.0f / 10.0f;
+
+/* 80455AFC-80455B00 0004 .sdata2    @1066                                                        */
+f32 lit_1066 = 3.0f / 5.0f;
+
+/* 80455B00-80455B04 0004 .sdata2    @1067                                                        */
+f32 lit_1067 = 2.0f / 5.0f;
+
 /* 802BC308-802BC4D0 01C8 .text      initVolumeDist__19Z2Audience3DSettingFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initVolumeDist__19Z2Audience3DSettingFv() {
+extern "C" asm void initVolumeDist__19Z2Audience3DSettingFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/initVolumeDist__19Z2Audience3DSettingFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451350-80451354 0004 .sbss      cNearFarRatio                                                */
+u8 cNearFarRatio[4];
+
 /* 802BC4D0-802BC6A4 01D4 .text      updateVolumeDist__19Z2Audience3DSettingFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateVolumeDist__19Z2Audience3DSettingFf() {
+extern "C" asm void updateVolumeDist__19Z2Audience3DSettingFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/updateVolumeDist__19Z2Audience3DSettingFf.s"
 }
 #pragma pop
 
+
 /* 802BC6A4-802BC6F8 0054 .text      initDolbyDist__19Z2Audience3DSettingFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initDolbyDist__19Z2Audience3DSettingFv() {
+extern "C" asm void initDolbyDist__19Z2Audience3DSettingFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/initDolbyDist__19Z2Audience3DSettingFv.s"
 }
 #pragma pop
 
+
 /* 802BC6F8-802BC758 0060 .text      updateDolbyDist__19Z2Audience3DSettingFff                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateDolbyDist__19Z2Audience3DSettingFff() {
+extern "C" asm void updateDolbyDist__19Z2Audience3DSettingFff() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/updateDolbyDist__19Z2Audience3DSettingFff.s"
 }
 #pragma pop
 
+
 /* 802BC758-802BC788 0030 .text      __ct__13Z2AudioCameraFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13Z2AudioCameraFv() {
+extern "C" asm void __ct__13Z2AudioCameraFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__ct__13Z2AudioCameraFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455B04-80455B08 0004 .sdata2    @1135                                                        */
+f32 lit_1135 = 100000.0f;
+
 /* 802BC788-802BC7DC 0054 .text      init__13Z2AudioCameraFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13Z2AudioCameraFv() {
+extern "C" asm void init__13Z2AudioCameraFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/init__13Z2AudioCameraFv.s"
 }
 #pragma pop
 
+
 /* 802BC7DC-802BC8AC 00D0 .text      setCameraState__13Z2AudioCameraFPA4_CfR3Vecb                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb() {
+extern "C" asm void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setCameraState__13Z2AudioCameraFPA4_CfR3Vecb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8039C220-8039C230 000C .rodata    @1193                                                        */
+SECTION_RODATA const u8 lit_1193[16] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80455B08-80455B0C 0004 .sdata2    @1267                                                        */
+f32 lit_1267 = -22.755556106567383f;
+
+/* 80455B0C-80455B10 0004 .sdata2    @1268                                                        */
+f32 lit_1268 = 22.755556106567383f;
+
+/* 80455B10-80455B14 0004 .sdata2    @1269                                                        */
+f32 lit_1269 = 50.0f;
+
+/* 80455B14-80455B18 0004 .sdata2    @1270                                                        */
+f32 Z2Audience__lit_1270 = 2.1445069313049316f;
+
+/* 80455B18-80455B1C 0004 .sdata2    @1271                                                        */
+f32 lit_1271 = 32.0f;
+
+/* 80455B1C-80455B20 0004 .sdata2    @1272                                                        */
+f32 lit_1272 = -100.0f;
+
+/* 80455B20-80455B24 0004 .sdata2    @1273                                                        */
+f32 lit_1273 = 0.01745329238474369f;
+
 /* 802BC8AC-802BCBEC 0340 .text      setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb() {
+extern "C" asm void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb.s"
 }
 #pragma pop
 
+
 /* 802BCBEC-802BCC7C 0090 .text      convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei() {
+extern "C" asm void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei.s"
 }
 #pragma pop
 
+
 /* 802BCC7C-802BCCC0 0044 .text      convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec() {
+extern "C" asm void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec.s"
 }
 #pragma pop
 
+
 /* 802BCCC0-802BCD28 0068 .text      isInSight__13Z2AudioCameraCFR3Vec                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isInSight__13Z2AudioCameraCFR3Vec() {
+extern "C" asm void isInSight__13Z2AudioCameraCFR3Vec() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/isInSight__13Z2AudioCameraCFR3Vec.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455B24-80455B28 0004 .sdata2    @1334                                                        */
+f32 lit_1334 = 200.0f;
+
+/* 80455B28-80455B2C 0004 .sdata2    @1335                                                        */
+f32 lit_1335 = 400.0f;
+
+/* 80455B2C-80455B30 0004 .sdata2    @1336                                                        */
+f32 lit_1336 = 1.0f / 5.0f;
+
+/* 80455B30-80455B34 0004 .sdata2    @1337                                                        */
+f32 lit_1337 = 255.0f;
+
 /* 802BCD28-802BCDA8 0080 .text      __ct__9Z2SpotMicFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9Z2SpotMicFv() {
+extern "C" asm void __ct__9Z2SpotMicFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__ct__9Z2SpotMicFv.s"
 }
 #pragma pop
 
+
 /* 802BCDA8-802BCDE8 0040 .text      clearMicState__9Z2SpotMicFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearMicState__9Z2SpotMicFi() {
+extern "C" asm void clearMicState__9Z2SpotMicFi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/clearMicState__9Z2SpotMicFi.s"
 }
 #pragma pop
 
+
 /* 802BCDE8-802BCE14 002C .text      calcVolumeFactor__9Z2SpotMicFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcVolumeFactor__9Z2SpotMicFi() {
+extern "C" asm void calcVolumeFactor__9Z2SpotMicFi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcVolumeFactor__9Z2SpotMicFi.s"
 }
 #pragma pop
 
+
 /* 802BCE14-802BCF5C 0148 .text      setMicState__9Z2SpotMicFP13Z2AudioCamerai                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMicState__9Z2SpotMicFP13Z2AudioCamerai() {
+extern "C" asm void setMicState__9Z2SpotMicFP13Z2AudioCamerai() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setMicState__9Z2SpotMicFP13Z2AudioCamerai.s"
 }
 #pragma pop
 
+
 /* 802BCF5C-802BCFE4 0088 .text      calcMicDist__9Z2SpotMicFP9Z2Audible                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcMicDist__9Z2SpotMicFP9Z2Audible() {
+extern "C" asm void calcMicDist__9Z2SpotMicFP9Z2Audible() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcMicDist__9Z2SpotMicFP9Z2Audible.s"
 }
 #pragma pop
 
+
 /* 802BCFE4-802BD03C 0058 .text      calcMicPriority__9Z2SpotMicFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcMicPriority__9Z2SpotMicFf() {
+extern "C" asm void calcMicPriority__9Z2SpotMicFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcMicPriority__9Z2SpotMicFf.s"
 }
 #pragma pop
 
+
 /* 802BD03C-802BD130 00F4 .text      calcMicVolume__9Z2SpotMicFfif                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcMicVolume__9Z2SpotMicFfif() {
+extern "C" asm void calcMicVolume__9Z2SpotMicFfif() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcMicVolume__9Z2SpotMicFfif.s"
 }
 #pragma pop
 
+
 /* 802BD130-802BD1FC 00CC .text      __ct__10Z2AudienceFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10Z2AudienceFv() {
+extern "C" asm void __ct__10Z2AudienceFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__ct__10Z2AudienceFv.s"
 }
 #pragma pop
 
+
 /* 802BD1FC-802BD288 008C .text      __dt__10Z2AudienceFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10Z2AudienceFv() {
+extern "C" asm void __dt__10Z2AudienceFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__dt__10Z2AudienceFv.s"
 }
 #pragma pop
 
+
 /* 802BD288-802BD2DC 0054 .text      __dt__22JASMemPool<9Z2Audible>Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BD288() {
+extern "C" asm void func_802BD288() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BD288.s"
 }
 #pragma pop
 
+
 /* 802BD2DC-802BD338 005C .text      setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib() {
+extern "C" asm void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804341D8-804341E4 000C .bss       @1539                                                        */
+u8 Z2Audience__lit_1539[12];
+
+/* 804341E4-804341F8 0010 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9Z2Audible>Fv */
+u8 data_804341E4[16 + 4 /* padding */];
+
+/* 80451354-80451358 0004 .sbss      None                                                         */
+u8 data_80451354[4];
+
 /* 802BD338-802BD4D4 019C .text      newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BD338() {
+extern "C" asm void func_802BD338() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BD338.s"
 }
 #pragma pop
 
+
 /* 802BD4D4-802BD510 003C .text      deleteAudible__10Z2AudienceFP10JAIAudible                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void deleteAudible__10Z2AudienceFP10JAIAudible() {
+extern "C" asm void deleteAudible__10Z2AudienceFP10JAIAudible() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/deleteAudible__10Z2AudienceFP10JAIAudible.s"
 }
 #pragma pop
 
+
 /* 802BD510-802BD5B8 00A8 .text      __dt__9Z2AudibleFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9Z2AudibleFv() {
+extern "C" asm void __dt__9Z2AudibleFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__dt__9Z2AudibleFv.s"
 }
 #pragma pop
 
+
 /* 802BD5B8-802BD704 014C .text      calcPriority__10Z2AudienceFP10JAIAudible                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcPriority__10Z2AudienceFP10JAIAudible() {
+extern "C" asm void calcPriority__10Z2AudienceFP10JAIAudible() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcPriority__10Z2AudienceFP10JAIAudible.s"
 }
 #pragma pop
 
+
 /* 802BD704-802BD71C 0018 .text      calcOffMicSound__10Z2AudienceFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcOffMicSound__10Z2AudienceFf() {
+extern "C" asm void calcOffMicSound__10Z2AudienceFf() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcOffMicSound__10Z2AudienceFf.s"
 }
 #pragma pop
 
+
 /* 802BD71C-802BD90C 01F0 .text      mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei() {
+extern "C" asm void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei.s"
 }
 #pragma pop
 
+
 /* 802BD90C-802BD92C 0020 .text      setTargetVolume__10Z2AudienceFfi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTargetVolume__10Z2AudienceFfi() {
+extern "C" asm void setTargetVolume__10Z2AudienceFfi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/setTargetVolume__10Z2AudienceFfi.s"
 }
 #pragma pop
 
+
 /* 802BD92C-802BD95C 0030 .text      convertAbsToRel__10Z2AudienceFR3VecP3Veci                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void convertAbsToRel__10Z2AudienceFR3VecP3Veci() {
+extern "C" asm void convertAbsToRel__10Z2AudienceFR3VecP3Veci() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/convertAbsToRel__10Z2AudienceFR3VecP3Veci.s"
 }
 #pragma pop
 
+
 /* 802BD95C-802BDA44 00E8 .text      calcRelPosVolume__10Z2AudienceFRC3Vecfi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcRelPosVolume__10Z2AudienceFRC3Vecfi() {
+extern "C" asm void calcRelPosVolume__10Z2AudienceFRC3Vecfi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcRelPosVolume__10Z2AudienceFRC3Vecfi.s"
 }
 #pragma pop
 
+
 /* 802BDA44-802BDB44 0100 .text      calcRelPosPan__10Z2AudienceFRC3Veci                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcRelPosPan__10Z2AudienceFRC3Veci() {
+extern "C" asm void calcRelPosPan__10Z2AudienceFRC3Veci() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcRelPosPan__10Z2AudienceFRC3Veci.s"
 }
 #pragma pop
 
+
 /* 802BDB44-802BDBDC 0098 .text      calcRelPosDolby__10Z2AudienceFRC3Veci                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcRelPosDolby__10Z2AudienceFRC3Veci() {
+extern "C" asm void calcRelPosDolby__10Z2AudienceFRC3Veci() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcRelPosDolby__10Z2AudienceFRC3Veci.s"
 }
 #pragma pop
 
+
 /* 802BDBDC-802BDC44 0068 .text      calcVolume___10Z2AudienceCFfi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcVolume___10Z2AudienceCFfi() {
+extern "C" asm void calcVolume___10Z2AudienceCFfi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcVolume___10Z2AudienceCFfi.s"
 }
 #pragma pop
 
+
 /* 802BDC44-802BDCB0 006C .text      calcDeltaPriority___10Z2AudienceCFfib                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcDeltaPriority___10Z2AudienceCFfib() {
+extern "C" asm void calcDeltaPriority___10Z2AudienceCFfib() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcDeltaPriority___10Z2AudienceCFfib.s"
 }
 #pragma pop
 
+
 /* 802BDCB0-802BDD00 0050 .text      calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802BDCB0() {
+extern "C" asm void func_802BDCB0() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BDCB0.s"
 }
 #pragma pop
 
+
 /* 802BDD00-802BDD48 0048 .text      calcFxMix___10Z2AudienceCFfi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcFxMix___10Z2AudienceCFfi() {
+extern "C" asm void calcFxMix___10Z2AudienceCFfi() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcFxMix___10Z2AudienceCFfi.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455B34-80455B38 0004 .sdata2    @1988                                                        */
+f32 lit_1988 = 1.0f / 15.0f;
+
 /* 802BDD48-802BDED4 018C .text      calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera() {
+extern "C" asm void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera.s"
 }
 #pragma pop
 
+
 /* 802BDED4-802BDEDC 0008 .text      getMaxChannels__10Z2AudienceFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMaxChannels__10Z2AudienceFv() {
+extern "C" asm void getMaxChannels__10Z2AudienceFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/getMaxChannels__10Z2AudienceFv.s"
 }
 #pragma pop
 
+
 /* 802BDEDC-802BDEF0 0014 .text      __sinit_Z2Audience_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_Z2Audience_cpp() {
+extern "C" asm void __sinit_Z2Audience_cpp() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/__sinit_Z2Audience_cpp.s"
 }
 #pragma pop
 
+
+/* 80451358-80451360 0008 .sbss      None                                                         */
+u8 struct_80451358[8];
+/* 80451358 0001 data_80451358 */
+/* 80451359 0007 data_80451359 */
 

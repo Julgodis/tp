@@ -5,138 +5,192 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
-extern void __ct__11Z2FxLineMgrFv();
-extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern void setLineID__11Z2FxLineMgrFScbb();
-extern void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
-extern void setFxForceOff__11Z2FxLineMgrFb();
-extern void setUnderWaterFx__11Z2FxLineMgrFb();
-extern void setSceneFx__11Z2FxLineMgrFl();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void __nwa__FUlP7JKRHeapi();
-extern void getResource__10JKRArchiveFUs();
-extern void countResource__10JKRArchiveCFv();
-extern void __dt__14JSUInputStreamFv();
-extern void read__14JSUInputStreamFPvl();
-extern void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern void _savegpr_22();
-extern void _savegpr_28();
-extern void _restgpr_22();
-extern void _restgpr_28();
-SECTION_DATA extern void* __vt__10JSUIosBase[3];
-SECTION_DATA extern u8 LIT_3566[304];
-SECTION_DATA extern void* __vt__20JSURandomInputStream[9];
-SECTION_DATA extern void* __vt__14JSUInputStream[7];
-SECTION_DATA extern void* __vt__20JSUMemoryInputStream[10];
+extern "C" extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+extern "C" extern void __ct__11Z2FxLineMgrFv();
+extern "C" extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" extern void setLineID__11Z2FxLineMgrFScbb();
+extern "C" extern void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
+extern "C" extern void setFxForceOff__11Z2FxLineMgrFb();
+extern "C" extern void setUnderWaterFx__11Z2FxLineMgrFb();
+extern "C" extern void setSceneFx__11Z2FxLineMgrFl();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void getResource__10JKRArchiveFUs();
+extern "C" extern void countResource__10JKRArchiveCFv();
+extern "C" extern void __dt__14JSUInputStreamFv();
+extern "C" extern void read__14JSUInputStreamFPvl();
+extern "C" extern void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_28();
+SECTION_DATA extern void* const __vt__10JSUIosBase[3];
+SECTION_DATA extern void* lit_3566[76];
+SECTION_DATA extern void* const __vt__20JSURandomInputStream[9];
+SECTION_DATA extern void* const __vt__14JSUInputStream[7];
+SECTION_DATA extern void* const __vt__20JSUMemoryInputStream[10];
 SECTION_SBSS extern u8 data_80450B40[4];
 SECTION_SBSS extern u8 data_80450B80[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CAB18-803CAC48 0130 .data      @3566                                                        */
-SECTION_DATA u8 LIT_3566[304] = {
-	0x80, 0x2B, 0xAF, 0x40, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x34, 0x80, 0x2B, 0xAF, 0x20,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x20, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x20, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x68,
-	0x80, 0x2B, 0xAF, 0x20, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x20, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0x0C, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x34,
-	0x80, 0x2B, 0xAF, 0x34, 0x80, 0x2B, 0xAF, 0x34, 0x80, 0x2B, 0xAF, 0x54, 0x80, 0x2B, 0xAF, 0x54,
-	0x80, 0x2B, 0xAF, 0x54, 0x80, 0x2B, 0xAF, 0x68, 0x80, 0x2B, 0xAF, 0x68, 0x80, 0x2B, 0xAF, 0x68,
-	0x80, 0x2B, 0xAF, 0x88, 0x80, 0x2B, 0xAF, 0x88, 0x80, 0x2B, 0xAF, 0x88, 0x80, 0x2B, 0xAF, 0x9C,
-	0x80, 0x2B, 0xAF, 0x9C, 0x80, 0x2B, 0xAF, 0x9C, 0x80, 0x2B, 0xAF, 0xB0, 0x80, 0x2B, 0xAF, 0xB0,
-	0x80, 0x2B, 0xAF, 0xB0, 0x80, 0x2B, 0xAF, 0xC4, 0x80, 0x2B, 0xAF, 0xC4, 0x80, 0x2B, 0xAF, 0xC4,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xD8, 0x80, 0x2B, 0xAF, 0xD8, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x9C, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x34,
-	0x80, 0x2B, 0xAF, 0x34, 0x80, 0x2B, 0xAF, 0x54, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC,
-	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x34,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802BA7DC-802BA7FC 0020 .text      __ct__11Z2FxLineMgrFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11Z2FxLineMgrFv() {
+extern "C" asm void __ct__11Z2FxLineMgrFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/__ct__11Z2FxLineMgrFv.s"
 }
 #pragma pop
 
+
 /* 802BA7FC-802BAC28 042C .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap() {
+extern "C" asm void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 802BAC28-802BAC74 004C .text      setLineID__11Z2FxLineMgrFScbb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setLineID__11Z2FxLineMgrFScbb() {
+extern "C" asm void setLineID__11Z2FxLineMgrFScbb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setLineID__11Z2FxLineMgrFScbb.s"
 }
 #pragma pop
 
+
 /* 802BAC74-802BAE1C 01A8 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb() {
+extern "C" asm void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb.s"
 }
 #pragma pop
 
+
 /* 802BAE1C-802BAE48 002C .text      setFxForceOff__11Z2FxLineMgrFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFxForceOff__11Z2FxLineMgrFb() {
+extern "C" asm void setFxForceOff__11Z2FxLineMgrFb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setFxForceOff__11Z2FxLineMgrFb.s"
 }
 #pragma pop
 
+
 /* 802BAE48-802BAEB8 0070 .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setUnderWaterFx__11Z2FxLineMgrFb() {
+extern "C" asm void setUnderWaterFx__11Z2FxLineMgrFb() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setUnderWaterFx__11Z2FxLineMgrFb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CAB18-803CAC48 0130 .data      @3566                                                        */
+void* lit_3566[76] = {
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x88),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x54),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+};
+
 /* 802BAEB8-802BB00C 0154 .text      setSceneFx__11Z2FxLineMgrFl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSceneFx__11Z2FxLineMgrFl() {
+extern "C" asm void setSceneFx__11Z2FxLineMgrFl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setSceneFx__11Z2FxLineMgrFl.s"
 }

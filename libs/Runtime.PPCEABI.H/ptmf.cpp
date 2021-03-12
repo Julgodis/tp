@@ -5,63 +5,55 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ptmf_test();
-extern void __ptmf_cmpr();
-extern void __ptmf_scall();
+extern "C" extern void __ptmf_test();
+extern "C" extern void __ptmf_cmpr();
+extern "C" extern void __ptmf_scall();
 SECTION_RODATA extern const u8 __ptmf_null[16];
+
+// 
+// Functions:
+// 
+
+/* 80362018-80362048 0030 .text      __ptmf_test                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ptmf_test() {
+	nofralloc
+#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_test.s"
 }
+#pragma pop
 
 
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80362048-80362084 003C .text      __ptmf_cmpr                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ptmf_cmpr() {
+	nofralloc
+#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_cmpr.s"
+}
+#pragma pop
 
-extern "C" {
+
+/* 80362084-803620AC 0028 .text      __ptmf_scall                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ptmf_scall() {
+	nofralloc
+#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_scall.s"
+}
+#pragma pop
+
+
 /* 803A2180-803A2190 000C .rodata    __ptmf_null                                                  */
 SECTION_RODATA const u8 __ptmf_null[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80362018-80362048 0030 .text      __ptmf_test                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ptmf_test() {
-	nofralloc
-#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_test.s"
-}
-#pragma pop
-
-/* 80362048-80362084 003C .text      __ptmf_cmpr                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ptmf_cmpr() {
-	nofralloc
-#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_cmpr.s"
-}
-#pragma pop
-
-/* 80362084-803620AC 0028 .text      __ptmf_scall                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ptmf_scall() {
-	nofralloc
-#include "asm/Runtime.PPCEABI.H/ptmf/__ptmf_scall.s"
-}
-#pragma pop
-
 

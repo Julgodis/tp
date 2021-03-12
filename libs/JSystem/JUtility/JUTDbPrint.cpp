@@ -5,166 +5,155 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void __nw__FUl();
-extern void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern void drawString_size_scale__7JUTFontFffffPCcUlb();
-extern void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern void changeFont__10JUTDbPrintFP7JUTFont();
-extern void enter__10JUTDbPrintFiiiPCci();
-extern void flush__10JUTDbPrintFv();
-extern void flush__10JUTDbPrintFiiii();
-extern void drawString__10JUTDbPrintFiiiPCUc();
-extern void JUTReport__FiiPCce();
-extern void JUTReport__FiiiPCce();
-extern void __ct__13J2DOrthoGraphFffffff();
-extern void setPort__13J2DOrthoGraphFv();
-extern void _savegpr_25();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_25();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void vsnprintf();
-extern void strcpy();
-SECTION_DATA extern void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void __nw__FUl();
+extern "C" extern void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" extern void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" extern void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" extern void changeFont__10JUTDbPrintFP7JUTFont();
+extern "C" extern void enter__10JUTDbPrintFiiiPCci();
+extern "C" extern void flush__10JUTDbPrintFv();
+extern "C" extern void flush__10JUTDbPrintFiiii();
+extern "C" extern void drawString__10JUTDbPrintFiiiPCUc();
+extern "C" extern void JUTReport__FiiPCce();
+extern "C" extern void JUTReport__FiiiPCce();
+extern "C" extern void __ct__13J2DOrthoGraphFffffff();
+extern "C" extern void setPort__13J2DOrthoGraphFv();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void vsnprintf();
+extern "C" extern void strcpy();
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__13J2DOrthoGraph[10];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
-SECTION_SDATA2 extern u8 JUTDbPrint__LIT_835[4];
-SECTION_SDATA2 extern u8 JUTDbPrint__LIT_836[4];
-SECTION_SDATA2 extern u8 JUTDbPrint__LIT_838[8];
-}
+SECTION_SDATA2 extern f32 JUTDbPrint__lit_835;
+SECTION_SDATA2 extern f32 JUTDbPrint__lit_836;
+SECTION_SDATA2 extern f64 JUTDbPrint__lit_838;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456008-8045600C 0004 .sdata2    @835                                                         */
-SECTION_SDATA2 u8 JUTDbPrint__LIT_835[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 8045600C-80456010 0004 .sdata2    @836                                                         */
-SECTION_SDATA2 u8 JUTDbPrint__LIT_836[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80456010-80456018 0008 .sdata2    @838                                                         */
-SECTION_SDATA2 u8 JUTDbPrint__LIT_838[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804514C8-804514D0 0004 .sbss      sDebugPrint__10JUTDbPrint                                    */
-SECTION_SBSS u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802E0148-802E0190 0048 .text      __ct__10JUTDbPrintFP7JUTFontP7JKRHeap                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap() {
+extern "C" asm void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/__ct__10JUTDbPrintFP7JUTFontP7JKRHeap.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804514C8-804514D0 0004 .sbss      sDebugPrint__10JUTDbPrint                                    */
+u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+
 /* 802E0190-802E0204 0074 .text      start__10JUTDbPrintFP7JUTFontP7JKRHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void start__10JUTDbPrintFP7JUTFontP7JKRHeap() {
+extern "C" asm void start__10JUTDbPrintFP7JUTFontP7JKRHeap() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/start__10JUTDbPrintFP7JUTFontP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 802E0204-802E021C 0018 .text      changeFont__10JUTDbPrintFP7JUTFont                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void changeFont__10JUTDbPrintFP7JUTFont() {
+extern "C" asm void changeFont__10JUTDbPrintFP7JUTFont() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/changeFont__10JUTDbPrintFP7JUTFont.s"
 }
 #pragma pop
 
+
 /* 802E021C-802E02A4 0088 .text      enter__10JUTDbPrintFiiiPCci                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void enter__10JUTDbPrintFiiiPCci() {
+extern "C" asm void enter__10JUTDbPrintFiiiPCci() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/enter__10JUTDbPrintFiiiPCci.s"
 }
 #pragma pop
 
+
 /* 802E02A4-802E02DC 0038 .text      flush__10JUTDbPrintFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void flush__10JUTDbPrintFv() {
+extern "C" asm void flush__10JUTDbPrintFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/flush__10JUTDbPrintFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456008-8045600C 0004 .sdata2    @835                                                         */
+f32 JUTDbPrint__lit_835 = -1.0f;
+
+/* 8045600C-80456010 0004 .sdata2    @836                                                         */
+f32 JUTDbPrint__lit_836 = 1.0f;
+
+/* 80456010-80456018 0008 .sdata2    @838                                                         */
+f64 JUTDbPrint__lit_838 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 802E02DC-802E0440 0164 .text      flush__10JUTDbPrintFiiii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void flush__10JUTDbPrintFiiii() {
+extern "C" asm void flush__10JUTDbPrintFiiii() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/flush__10JUTDbPrintFiiii.s"
 }
 #pragma pop
 
+
 /* 802E0440-802E0530 00F0 .text      drawString__10JUTDbPrintFiiiPCUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawString__10JUTDbPrintFiiiPCUc() {
+extern "C" asm void drawString__10JUTDbPrintFiiiPCUc() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/drawString__10JUTDbPrintFiiiPCUc.s"
 }
 #pragma pop
 
+
 /* 802E0530-802E0600 00D0 .text      JUTReport__FiiPCce                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTReport__FiiPCce() {
+extern "C" asm void JUTReport__FiiPCce() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/JUTReport__FiiPCce.s"
 }
 #pragma pop
 
+
 /* 802E0600-802E06DC 00DC .text      JUTReport__FiiiPCce                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTReport__FiiiPCce() {
+extern "C" asm void JUTReport__FiiiPCce() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/JUTReport__FiiiPCce.s"
 }

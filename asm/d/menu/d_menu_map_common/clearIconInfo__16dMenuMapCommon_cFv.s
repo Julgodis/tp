@@ -2,8 +2,8 @@ lbl_801C443C:
 /* 801C443C 00000000  38 E0 00 00 */	li r7, 0
 /* 801C4440 00000004  B0 E3 0C 70 */	sth r7, 0xc70(r3)
 /* 801C4444 00000008  7C E4 3B 78 */	mr r4, r7
-/* 801C4448 0000000C  C0 22 A6 D8 */	lfs f1, d_menu_d_menu_map_common__LIT_3703(r2)
-/* 801C444C 00000010  C0 02 A6 DC */	lfs f0, d_menu_d_menu_map_common__LIT_3882(r2)
+/* 801C4448 0000000C  C0 22 A6 D8 */	lfs f1, d_menu_d_menu_map_common__lit_3703(r2)
+/* 801C444C 00000010  C0 02 A6 DC */	lfs f0, d_menu_d_menu_map_common__lit_3882(r2)
 /* 801C4450 00000014  38 C0 00 17 */	li r6, 0x17
 /* 801C4454 00000018  38 00 00 80 */	li r0, 0x80
 /* 801C4458 0000001C  7C 09 03 A6 */	mtctr r0

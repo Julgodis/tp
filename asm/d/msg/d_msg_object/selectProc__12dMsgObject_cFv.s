@@ -359,9 +359,9 @@ lbl_8023582C:
 /* 80235840 00000014  38 A0 00 00 */	li r5, 0
 /* 80235844 00000018  38 C0 00 00 */	li r6, 0
 /* 80235848 0000001C  38 E0 00 00 */	li r7, 0
-/* 8023584C 00000020  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__LIT_4084(r2)
+/* 8023584C 00000020  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__lit_4084(r2)
 /* 80235850 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80235854 00000028  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__LIT_4145(r2)
+/* 80235854 00000028  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__lit_4145(r2)
 /* 80235858 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 8023585C 00000030  39 00 00 00 */	li r8, 0
 /* 80235860 00000034  48 07 61 25 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

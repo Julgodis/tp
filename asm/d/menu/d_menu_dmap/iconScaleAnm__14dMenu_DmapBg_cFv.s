@@ -19,13 +19,13 @@ lbl_801B8988:
 /* 801B8994 0000000C  C0 1E 0D B0 */	lfs f0, 0xdb0(r30)
 /* 801B8998 00000010  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 801B899C 00000000  40 81 00 18 */	ble lbl_801B89B4
-/* 801B89A0 00000004  C0 02 A6 00 */	lfs f0, d_menu_d_menu_dmap__LIT_4133(r2)
+/* 801B89A0 00000004  C0 02 A6 00 */	lfs f0, d_menu_d_menu_dmap__lit_4133(r2)
 /* 801B89A4 00000008  EC 40 00 72 */	fmuls f2, f0, f1
-/* 801B89A8 0000000C  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801B89A8 0000000C  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801B89AC 00000010  EC 60 08 28 */	fsubs f3, f0, f1
 /* 801B89B0 00000014  48 00 00 14 */	b lbl_801B89C4
 lbl_801B89B4:
-/* 801B89B4 00000000  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801B89B4 00000000  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801B89B8 00000004  EC 20 08 28 */	fsubs f1, f0, f1
 /* 801B89BC 00000008  FC 40 08 90 */	fmr f2, f1
 /* 801B89C0 0000000C  EC 60 08 28 */	fsubs f3, f0, f1

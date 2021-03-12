@@ -1,0 +1,50 @@
+lbl_80D0E228:
+/* 80D0E228 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D0E22C 00000004  7C 08 02 A6 */	mflr r0
+/* 80D0E230 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D0E234 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D0E238 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D0E23C 00000014  7C 7F 1B 78 */	mr r31, r3
+/* 80D0E240 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
+/* 80D0E244 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80D0E248 00000020  40 82 00 7C */	bne lbl_80D0E2C4
+/* 80D0E24C 00000024  7F E0 FB 79 */	or. r0, r31, r31
+/* 80D0E250 00000028  41 82 00 68 */	beq lbl_80D0E2B8
+/* 80D0E254 0000002C  7C 1E 03 78 */	mr r30, r0
+/* 80D0E258 00000030  4B FF F2 81 */	bl __ct__16dBgS_MoveBgActorFv
+/* 80D0E25C 00000034  3C 60 00 00 */	lis r3, __vt__13daObjThDoor_c@ha
+/* 80D0E260 00000038  38 03 00 00 */	addi r0, r3, __vt__13daObjThDoor_c@l
+/* 80D0E264 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
+/* 80D0E268 00000040  38 7E 05 BC */	addi r3, r30, 0x5bc
+/* 80D0E26C 00000044  4B FF F2 6D */	bl __ct__10dMsgFlow_cFv
+/* 80D0E270 00000048  3C 60 00 00 */	lis r3, __vt__9cCcD_Stts@ha
+/* 80D0E274 0000004C  38 03 00 00 */	addi r0, r3, __vt__9cCcD_Stts@l
+/* 80D0E278 00000050  90 1E 06 24 */	stw r0, 0x624(r30)
+/* 80D0E27C 00000054  38 7E 06 28 */	addi r3, r30, 0x628
+/* 80D0E280 00000058  4B FF F2 59 */	bl __ct__10dCcD_GSttsFv
+/* 80D0E284 0000005C  3C 60 00 00 */	lis r3, __vt__9dCcD_Stts@ha
+/* 80D0E288 00000060  38 63 00 00 */	addi r3, r3, __vt__9dCcD_Stts@l
+/* 80D0E28C 00000064  90 7E 06 24 */	stw r3, 0x624(r30)
+/* 80D0E290 00000068  38 03 00 20 */	addi r0, r3, 0x20
+/* 80D0E294 0000006C  90 1E 06 28 */	stw r0, 0x628(r30)
+/* 80D0E298 00000070  38 7E 06 48 */	addi r3, r30, 0x648
+/* 80D0E29C 00000074  3C 80 00 00 */	lis r4, __ct__8dCcD_CylFv@ha
+/* 80D0E2A0 00000078  38 84 00 00 */	addi r4, r4, __ct__8dCcD_CylFv@l
+/* 80D0E2A4 0000007C  3C A0 00 00 */	lis r5, __dt__8dCcD_CylFv@ha
+/* 80D0E2A8 00000080  38 A5 00 00 */	addi r5, r5, __dt__8dCcD_CylFv@l
+/* 80D0E2AC 00000084  38 C0 01 3C */	li r6, 0x13c
+/* 80D0E2B0 00000088  38 E0 00 02 */	li r7, 2
+/* 80D0E2B4 0000008C  4B FF F2 25 */	bl __construct_array
+lbl_80D0E2B8:
+/* 80D0E2B8 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
+/* 80D0E2BC 00000004  60 00 00 08 */	ori r0, r0, 8
+/* 80D0E2C0 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
+lbl_80D0E2C4:
+/* 80D0E2C4 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80D0E2C8 00000004  4B FF F5 A1 */	bl create1st__13daObjThDoor_cFv
+/* 80D0E2CC 00000008  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D0E2D0 0000000C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D0E2D4 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D0E2D8 00000014  7C 08 03 A6 */	mtlr r0
+/* 80D0E2DC 00000018  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D0E2E0 0000001C  4E 80 00 20 */	blr 

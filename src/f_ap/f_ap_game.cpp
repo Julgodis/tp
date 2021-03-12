@@ -5,140 +5,121 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__11fapGm_HIO_cFv();
-extern void fapGm_After__Fv();
-extern void fapGm_Execute__Fv();
-extern void fapGm_Create__Fv();
-extern void __dt__11fapGm_HIO_cFv();
-extern void __sinit_f_ap_game_cpp();
-extern void fopCamM_Management__Fv();
-extern void fopCamM_Init__Fv();
-extern void fopOvlpM_Management__Fv();
-extern void fopOvlpM_Init__Fv();
-extern void fopScnM_Management__Fv();
-extern void fopScnM_Init__Fv();
-extern void fopDwTg_CreateQueue__Fv();
-extern void fpcM_Management__FPFv_vPFv_v();
-extern void fpcM_Init__Fv();
-extern void cCt_Counter__Fi();
-extern void __dl__FPv();
-extern void __register_global_object();
-SECTION_DATA extern void* __vt__11fapGm_HIO_c[4];
-SECTION_BSS extern u8 f_ap_f_ap_game__LIT_3691[12];
+extern "C" extern void __ct__11fapGm_HIO_cFv();
+extern "C" extern void fapGm_After__Fv();
+extern "C" extern void fapGm_Execute__Fv();
+extern "C" extern void fapGm_Create__Fv();
+extern "C" extern void __dt__11fapGm_HIO_cFv();
+extern "C" extern void __sinit_f_ap_game_cpp();
+extern "C" extern void fopCamM_Management__Fv();
+extern "C" extern void fopCamM_Init__Fv();
+extern "C" extern void fopOvlpM_Management__Fv();
+extern "C" extern void fopOvlpM_Init__Fv();
+extern "C" extern void fopScnM_Management__Fv();
+extern "C" extern void fopScnM_Init__Fv();
+extern "C" extern void fopDwTg_CreateQueue__Fv();
+extern "C" extern void fpcM_Management__FPFv_vPFv_v();
+extern "C" extern void fpcM_Init__Fv();
+extern "C" extern void cCt_Counter__Fi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __register_global_object();
+SECTION_DATA extern void* const __vt__11fapGm_HIO_c[4];
+SECTION_BSS extern u8 f_ap_f_ap_game__lit_3691[12];
 SECTION_BSS extern u8 g_HIO[64 + 4 /* padding */];
-SECTION_SDATA extern u8 data_80450580[4];
-SECTION_SDATA2 extern u8 f_ap_f_ap_game__LIT_3689[4];
-SECTION_SDATA2 extern u8 f_ap_f_ap_game__LIT_3690[4];
-}
+SECTION_SDATA extern u32 data_80450580;
+SECTION_SDATA2 extern f32 f_ap_f_ap_game__lit_3689;
+SECTION_SDATA2 extern f32 f_ap_f_ap_game__lit_3690;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A35A0-803A35B0 000C .data      __vt__11fapGm_HIO_c                                          */
-SECTION_DATA void* __vt__11fapGm_HIO_c[4] = {
+void* const __vt__11fapGm_HIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11fapGm_HIO_cFv,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451BC0-80451BC4 0004 .sdata2    @3689                                                        */
-SECTION_SDATA2 u8 f_ap_f_ap_game__LIT_3689[4] = {
-	0x3F, 0x66, 0x66, 0x66,
-};
+f32 f_ap_f_ap_game__lit_3689 = 9.0f / 10.0f;
+
 /* 80451BC4-80451BC8 0004 .sdata2    @3690                                                        */
-SECTION_SDATA2 u8 f_ap_f_ap_game__LIT_3690[4] = {
-	0x3F, 0x19, 0x99, 0x9A,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803F1BB0-803F1BBC 000C .bss       @3691                                                        */
-SECTION_BSS u8 f_ap_f_ap_game__LIT_3691[12];
-/* 803F1BBC-803F1C00 0040 .bss       g_HIO                                                        */
-SECTION_BSS u8 g_HIO[64 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f32 f_ap_f_ap_game__lit_3690 = 3.0f / 5.0f;
 
 /* 80018944-80018A44 0100 .text      __ct__11fapGm_HIO_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11fapGm_HIO_cFv() {
+extern "C" asm void __ct__11fapGm_HIO_cFv() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/__ct__11fapGm_HIO_cFv.s"
 }
 #pragma pop
 
+
 /* 80018A44-80018A6C 0028 .text      fapGm_After__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fapGm_After__Fv() {
+extern "C" asm void fapGm_After__Fv() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/fapGm_After__Fv.s"
 }
 #pragma pop
 
+
 /* 80018A6C-80018AA0 0034 .text      fapGm_Execute__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fapGm_Execute__Fv() {
+extern "C" asm void fapGm_Execute__Fv() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/fapGm_Execute__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803F1BB0-803F1BBC 000C .bss       @3691                                                        */
+u8 f_ap_f_ap_game__lit_3691[12];
+
+/* 803F1BBC-803F1C00 0040 .bss       g_HIO                                                        */
+u8 g_HIO[64 + 4 /* padding */];
+
 /* 80018AA0-80018AE0 0040 .text      fapGm_Create__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fapGm_Create__Fv() {
+extern "C" asm void fapGm_Create__Fv() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/fapGm_Create__Fv.s"
 }
 #pragma pop
 
+
 /* 80018AE0-80018B28 0048 .text      __dt__11fapGm_HIO_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11fapGm_HIO_cFv() {
+extern "C" asm void __dt__11fapGm_HIO_cFv() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/__dt__11fapGm_HIO_cFv.s"
 }
 #pragma pop
 
+
 /* 80018B28-80018B64 003C .text      __sinit_f_ap_game_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_f_ap_game_cpp() {
+extern "C" asm void __sinit_f_ap_game_cpp() {
 	nofralloc
 #include "asm/f_ap/f_ap_game/__sinit_f_ap_game_cpp.s"
 }

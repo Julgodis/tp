@@ -29,7 +29,7 @@ lbl_80048520:
 /* 8004858C 0000006C  A8 63 04 B6 */	lha r3, 0x4b6(r3)
 /* 80048590 00000070  3C 63 00 01 */	addis r3, r3, 1
 /* 80048594 00000074  38 03 80 00 */	addi r0, r3, -32768
-/* 80048598 00000078  C0 22 85 34 */	lfs f1, d_event_d_event_manager__LIT_5055(r2)
+/* 80048598 00000078  C0 22 85 34 */	lfs f1, d_event_d_event_manager__lit_5055(r2)
 /* 8004859C 0000007C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 800485A0 00000080  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800485A4 00000084  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l

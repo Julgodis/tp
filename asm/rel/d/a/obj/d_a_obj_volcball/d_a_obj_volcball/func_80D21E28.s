@@ -1,0 +1,104 @@
+lbl_80D21E28:
+/* 80D21E28 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D21E2C 00000004  7C 08 02 A6 */	mflr r0
+/* 80D21E30 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D21E34 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D21E38 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D21E3C 00000014  7C 7F 1B 78 */	mr r31, r3
+/* 80D21E40 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
+/* 80D21E44 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80D21E48 00000020  40 82 00 9C */	bne lbl_80D21EE4
+/* 80D21E4C 00000024  7F E0 FB 79 */	or. r0, r31, r31
+/* 80D21E50 00000028  41 82 00 88 */	beq lbl_80D21ED8
+/* 80D21E54 0000002C  7C 1E 03 78 */	mr r30, r0
+/* 80D21E58 00000030  4B FF FC A1 */	bl __ct__10fopAc_ac_cFv
+/* 80D21E5C 00000034  3C 60 00 00 */	lis r3, __vt__17dEvLib_callback_c@ha
+/* 80D21E60 00000038  38 03 00 00 */	addi r0, r3, __vt__17dEvLib_callback_c@l
+/* 80D21E64 0000003C  90 1E 05 68 */	stw r0, 0x568(r30)
+/* 80D21E68 00000040  93 DE 05 6C */	stw r30, 0x56c(r30)
+/* 80D21E6C 00000044  38 00 00 00 */	li r0, 0
+/* 80D21E70 00000048  90 1E 05 70 */	stw r0, 0x570(r30)
+/* 80D21E74 0000004C  3C 60 00 00 */	lis r3, __vt__15daObjVolcBall_c@ha
+/* 80D21E78 00000050  38 63 00 00 */	addi r3, r3, __vt__15daObjVolcBall_c@l
+/* 80D21E7C 00000054  90 7E 05 78 */	stw r3, 0x578(r30)
+/* 80D21E80 00000058  38 03 00 08 */	addi r0, r3, 8
+/* 80D21E84 0000005C  90 1E 05 68 */	stw r0, 0x568(r30)
+/* 80D21E88 00000060  38 7E 05 84 */	addi r3, r30, 0x584
+/* 80D21E8C 00000064  4B FF FC 6D */	bl __ct__12dBgS_AcchCirFv
+/* 80D21E90 00000068  3C 60 00 00 */	lis r3, __vt__9cCcD_Stts@ha
+/* 80D21E94 0000006C  38 03 00 00 */	addi r0, r3, __vt__9cCcD_Stts@l
+/* 80D21E98 00000070  90 1E 05 DC */	stw r0, 0x5dc(r30)
+/* 80D21E9C 00000074  38 7E 05 E0 */	addi r3, r30, 0x5e0
+/* 80D21EA0 00000078  4B FF FC 59 */	bl __ct__10dCcD_GSttsFv
+/* 80D21EA4 0000007C  3C 60 00 00 */	lis r3, __vt__9dCcD_Stts@ha
+/* 80D21EA8 00000080  38 63 00 00 */	addi r3, r3, __vt__9dCcD_Stts@l
+/* 80D21EAC 00000084  90 7E 05 DC */	stw r3, 0x5dc(r30)
+/* 80D21EB0 00000088  38 03 00 20 */	addi r0, r3, 0x20
+/* 80D21EB4 0000008C  90 1E 05 E0 */	stw r0, 0x5e0(r30)
+/* 80D21EB8 00000090  38 7E 06 0C */	addi r3, r30, 0x60c
+/* 80D21EBC 00000094  3C 80 00 00 */	lis r4, __ct__Q215daObjVolcBall_c7vball_sFv@ha
+/* 80D21EC0 00000098  38 84 00 00 */	addi r4, r4, __ct__Q215daObjVolcBall_c7vball_sFv@l
+/* 80D21EC4 0000009C  3C A0 00 00 */	lis r5, __dt__Q215daObjVolcBall_c7vball_sFv@ha
+/* 80D21EC8 000000A0  38 A5 00 00 */	addi r5, r5, __dt__Q215daObjVolcBall_c7vball_sFv@l
+/* 80D21ECC 000000A4  38 C0 03 E0 */	li r6, 0x3e0
+/* 80D21ED0 000000A8  38 E0 00 09 */	li r7, 9
+/* 80D21ED4 000000AC  4B FF FC 25 */	bl __construct_array
+lbl_80D21ED8:
+/* 80D21ED8 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
+/* 80D21EDC 00000004  60 00 00 08 */	ori r0, r0, 8
+/* 80D21EE0 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
+lbl_80D21EE4:
+/* 80D21EE4 00000000  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80D21EE8 00000004  54 00 0F FE */	srwi r0, r0, 0x1f
+/* 80D21EEC 00000008  98 1F 06 00 */	stb r0, 0x600(r31)
+/* 80D21EF0 0000000C  88 1F 06 00 */	lbz r0, 0x600(r31)
+/* 80D21EF4 00000010  28 00 00 01 */	cmplwi r0, 1
+/* 80D21EF8 00000014  40 82 00 38 */	bne lbl_80D21F30
+/* 80D21EFC 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D21F00 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D21F04 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80D21F08 00000024  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
+/* 80D21F0C 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 80D21F10 0000002C  7C 05 07 74 */	extsb r5, r0
+/* 80D21F14 00000030  4B FF FB E5 */	bl isSwitch__10dSv_info_cCFii
+/* 80D21F18 00000034  2C 03 00 00 */	cmpwi r3, 0
+/* 80D21F1C 00000038  41 82 00 0C */	beq lbl_80D21F28
+/* 80D21F20 0000003C  38 60 00 05 */	li r3, 5
+/* 80D21F24 00000040  48 00 00 6C */	b lbl_80D21F90
+lbl_80D21F28:
+/* 80D21F28 00000000  38 00 00 01 */	li r0, 1
+/* 80D21F2C 00000004  98 1F 29 26 */	stb r0, 0x2926(r31)
+lbl_80D21F30:
+/* 80D21F30 00000000  38 7F 05 7C */	addi r3, r31, 0x57c
+/* 80D21F34 00000004  3C 80 00 00 */	lis r4, l_arcName@ha
+/* 80D21F38 00000008  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80D21F3C 0000000C  80 84 00 00 */	lwz r4, 0(r4)
+/* 80D21F40 00000010  4B FF FB B9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80D21F44 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 80D21F48 00000018  2C 1E 00 04 */	cmpwi r30, 4
+/* 80D21F4C 0000001C  40 82 00 40 */	bne lbl_80D21F8C
+/* 80D21F50 00000020  7F E3 FB 78 */	mr r3, r31
+/* 80D21F54 00000024  3C 80 00 00 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 80D21F58 00000028  38 84 00 00 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
+/* 80D21F5C 0000002C  38 A0 49 00 */	li r5, 0x4900
+/* 80D21F60 00000030  4B FF FB 99 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80D21F64 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80D21F68 00000038  40 82 00 0C */	bne lbl_80D21F74
+/* 80D21F6C 0000003C  38 60 00 05 */	li r3, 5
+/* 80D21F70 00000040  48 00 00 20 */	b lbl_80D21F90
+lbl_80D21F74:
+/* 80D21F74 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80D21F78 00000004  4B FF FC C9 */	bl Create__15daObjVolcBall_cFv
+/* 80D21F7C 00000008  2C 03 00 00 */	cmpwi r3, 0
+/* 80D21F80 0000000C  40 82 00 0C */	bne lbl_80D21F8C
+/* 80D21F84 00000010  38 60 00 05 */	li r3, 5
+/* 80D21F88 00000014  48 00 00 08 */	b lbl_80D21F90
+lbl_80D21F8C:
+/* 80D21F8C 00000000  7F C3 F3 78 */	mr r3, r30
+lbl_80D21F90:
+/* 80D21F90 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D21F94 00000004  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D21F98 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D21F9C 0000000C  7C 08 03 A6 */	mtlr r0
+/* 80D21FA0 00000010  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D21FA4 00000014  4E 80 00 20 */	blr 

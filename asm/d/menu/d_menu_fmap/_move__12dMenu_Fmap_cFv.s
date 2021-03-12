@@ -83,20 +83,20 @@ lbl_801C75A4:
 /* 801C75E0 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 801C75E4 00000040  48 00 5E 0D */	bl drawDebugStage__12dMenu_Fmap_cFv
 lbl_801C75E8:
-/* 801C75E8 00000000  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C75E8 00000000  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C75EC 00000004  C0 1F 01 A8 */	lfs f0, 0x1a8(r31)
 /* 801C75F0 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801C75F4 0000000C  41 82 00 44 */	beq lbl_801C7638
 /* 801C75F8 00000010  38 7F 01 A8 */	addi r3, r31, 0x1a8
-/* 801C75FC 00000014  C0 42 A7 48 */	lfs f2, d_menu_d_menu_fmap__LIT_4397(r2)
-/* 801C7600 00000018  C0 62 A7 4C */	lfs f3, d_menu_d_menu_fmap__LIT_4398(r2)
+/* 801C75FC 00000014  C0 42 A7 48 */	lfs f2, d_menu_d_menu_fmap__lit_4397(r2)
+/* 801C7600 00000018  C0 62 A7 4C */	lfs f3, d_menu_d_menu_fmap__lit_4398(r2)
 /* 801C7604 0000001C  48 0A 84 39 */	bl cLib_addCalc2__FPffff
 /* 801C7608 00000020  C0 1F 01 A8 */	lfs f0, 0x1a8(r31)
-/* 801C760C 00000024  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C760C 00000024  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7610 00000028  EC 00 08 28 */	fsubs f0, f0, f1
 /* 801C7614 0000002C  FC 00 02 10 */	fabs f0, f0
 /* 801C7618 00000030  FC 40 00 18 */	frsp f2, f0
-/* 801C761C 00000034  C0 02 A7 50 */	lfs f0, d_menu_d_menu_fmap__LIT_4399(r2)
+/* 801C761C 00000034  C0 02 A7 50 */	lfs f0, d_menu_d_menu_fmap__lit_4399(r2)
 /* 801C7620 00000038  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 801C7624 00000000  40 80 00 08 */	bge lbl_801C762C
 /* 801C7628 00000004  D0 3F 01 A8 */	stfs f1, 0x1a8(r31)

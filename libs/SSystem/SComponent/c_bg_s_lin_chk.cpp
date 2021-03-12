@@ -5,38 +5,35 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8cBgS_ChkFv();
-extern void __dt__8cBgS_ChkFv();
-extern void __ct__11cBgS_LinChkFv();
-extern void __dt__11cBgS_LinChkFv();
-extern void ct__11cBgS_LinChkFv();
-extern void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
-extern void PreCalc__11cBgS_LinChkFv();
-extern void func_80267F80();
-extern void __ct__13cBgS_PolyInfoFv();
-extern void __dt__13cBgS_PolyInfoFv();
-extern void ClearPi__13cBgS_PolyInfoFv();
-extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern void __dl__FPv();
-extern void _savegpr_29();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__8cM3dGLin[3];
-SECTION_DATA extern void* __vt__11cBgS_LinChk[6];
+extern "C" extern void __ct__8cBgS_ChkFv();
+extern "C" extern void __dt__8cBgS_ChkFv();
+extern "C" extern void __ct__11cBgS_LinChkFv();
+extern "C" extern void __dt__11cBgS_LinChkFv();
+extern "C" extern void ct__11cBgS_LinChkFv();
+extern "C" extern void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
+extern "C" extern void PreCalc__11cBgS_LinChkFv();
+extern "C" extern void func_80267F80();
+extern "C" extern void __ct__13cBgS_PolyInfoFv();
+extern "C" extern void __dt__13cBgS_PolyInfoFv();
+extern "C" extern void ClearPi__13cBgS_PolyInfoFv();
+extern "C" extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" extern void __dl__FPv();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__8cM3dGLin[3];
+SECTION_DATA extern void* const __vt__11cBgS_LinChk[6];
 SECTION_BSS extern u8 Zero__4cXyz[12];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C3FA8-803C3FC0 0018 .data      __vt__11cBgS_LinChk                                          */
-SECTION_DATA void* __vt__11cBgS_LinChk[6] = {
+void* const __vt__11cBgS_LinChk[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11cBgS_LinChkFv,
@@ -44,68 +41,67 @@ SECTION_DATA void* __vt__11cBgS_LinChk[6] = {
 	NULL,
 	(void*)func_80267F80,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80267D5C-80267DBC 0060 .text      __ct__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11cBgS_LinChkFv() {
+extern "C" asm void __ct__11cBgS_LinChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/__ct__11cBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80267DBC-80267E48 008C .text      __dt__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11cBgS_LinChkFv() {
+extern "C" asm void __dt__11cBgS_LinChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/__dt__11cBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80267E48-80267ED0 0088 .text      ct__11cBgS_LinChkFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ct__11cBgS_LinChkFv() {
+extern "C" asm void ct__11cBgS_LinChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/ct__11cBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80267ED0-80267F40 0070 .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi() {
+extern "C" asm void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi.s"
 }
 #pragma pop
 
+
 /* 80267F40-80267F80 0040 .text      PreCalc__11cBgS_LinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void PreCalc__11cBgS_LinChkFv() {
+extern "C" asm void PreCalc__11cBgS_LinChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/PreCalc__11cBgS_LinChkFv.s"
 }
 #pragma pop
 
+
 /* 80267F80-80267F88 0008 .text      @20@__dt__11cBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80267F80() {
+extern "C" asm void func_80267F80() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/func_80267F80.s"
 }

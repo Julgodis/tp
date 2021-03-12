@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__10JAIAudibleFv();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__10JAIAudible[6];
-}
+extern "C" extern void __dt__10JAIAudibleFv();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__10JAIAudible[6];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9820-803C9838 0014 .data      __vt__10JAIAudible                                           */
-SECTION_DATA void* __vt__10JAIAudible[6] = {
+void* const __vt__10JAIAudible[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JAIAudibleFv,
@@ -30,18 +27,12 @@ SECTION_DATA void* __vt__10JAIAudible[6] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8029EFAC-8029EFF4 0048 .text      __dt__10JAIAudibleFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10JAIAudibleFv() {
+extern "C" asm void __dt__10JAIAudibleFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIAudible/__dt__10JAIAudibleFv.s"
 }

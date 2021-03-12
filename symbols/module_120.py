@@ -1,0 +1,42 @@
+#
+# Generate By: dol2asm
+# Module: 120
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/d_a_swc00", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A1380, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/d_a_swc00", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A13AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/d_a_swc00", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A13D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
+	'hitCheck__FP9daSwc00_c': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A13F8, 'size': 0x01E4, 'padding': 0x00, 'name': "hitCheck__FP9daSwc00_c", 'reference_count': 1, 'type': "Function"},
+	'daSwc00_Execute__FP9daSwc00_c': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A15DC, 'size': 0x0020, 'padding': 0x00, 'name': "daSwc00_Execute__FP9daSwc00_c", 'reference_count': 1, 'type': "Function"},
+	'execute__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A15FC, 'size': 0x02EC, 'padding': 0x00, 'name': "execute__9daSwc00_cFv", 'reference_count': 2, 'type': "Function"},
+	'event_proc_call__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A18E8, 'size': 0x00BC, 'padding': 0x00, 'name': "event_proc_call__9daSwc00_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionWait__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A19A4, 'size': 0x0084, 'padding': 0x00, 'name': "actionWait__9daSwc00_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionOrderEvent__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1A28, 'size': 0x006C, 'padding': 0x00, 'name': "actionOrderEvent__9daSwc00_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionEvent__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1A94, 'size': 0x005C, 'padding': 0x00, 'name': "actionEvent__9daSwc00_cFv", 'reference_count': 1, 'type': "Function"},
+	'actionDead__9daSwc00_cFv': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1AF0, 'size': 0x002C, 'padding': 0x00, 'name': "actionDead__9daSwc00_cFv", 'reference_count': 1, 'type': "Function"},
+	'daSwc00_IsDelete__FP9daSwc00_c': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1B1C, 'size': 0x0008, 'padding': 0x00, 'name': "daSwc00_IsDelete__FP9daSwc00_c", 'reference_count': 1, 'type': "Function"},
+	'daSwc00_Delete__FP9daSwc00_c': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1B24, 'size': 0x0008, 'padding': 0x00, 'name': "daSwc00_Delete__FP9daSwc00_c", 'reference_count': 1, 'type': "Function"},
+	'daSwc00_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".text", 'addr': 0x805A1B2C, 'size': 0x0260, 'padding': 0x00, 'name': "daSwc00_Create__FP10fopAc_ac_c", 'reference_count': 2, 'type': "Function"},
+	'data_805A1D8C': {'library': "d/a/d_a_swc00", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805A1D8C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_805A1D90': {'library': "d/a/d_a_swc00", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805A1D90, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3708': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1D94, 'size': 0x0004, 'padding': 0x00, 'name': "@3708", 'reference_count': 0, 'type': "Integer"},
+	'lit_3991': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1D98, 'size': 0x0004, 'padding': 0x00, 'name': "@3991", 'reference_count': 0, 'type': "Integer"},
+	'lit_3992': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1D9C, 'size': 0x0004, 'padding': 0x00, 'name': "@3992", 'reference_count': 0, 'type': "Integer"},
+	'lit_3993': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1DA0, 'size': 0x0004, 'padding': 0x00, 'name': "@3993", 'reference_count': 0, 'type': "Integer"},
+	'lit_3994': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1DA4, 'size': 0x0004, 'padding': 0x00, 'name': "@3994", 'reference_count': 0, 'type': "Integer"},
+	'lit_3995': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1DA8, 'size': 0x0004, 'padding': 0x00, 'name': "@3995", 'reference_count': 0, 'type': "Integer"},
+	'stringBase0': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".rodata", 'addr': 0x805A1DAC, 'size': 0x0026, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
+	'cNullVec__6Z2Calc': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1DD4, 'size': 0x000C, 'padding': 0x00, 'name': "cNullVec__6Z2Calc", 'reference_count': 0, 'type': "InitData"},
+	'lit_1787': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1DE0, 'size': 0x0004, 'padding': 0x10, 'name': "@1787", 'reference_count': 0, 'type': "Integer"},
+	'lit_3812': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1DF4, 'size': 0x0040, 'padding': 0x00, 'name': "@3812", 'reference_count': 0, 'type': "ReferenceArray"},
+	'lit_3820': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E34, 'size': 0x000C, 'padding': 0x00, 'name': "@3820", 'reference_count': 0, 'type': "ReferenceArray"},
+	'lit_3821': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E40, 'size': 0x000C, 'padding': 0x00, 'name': "@3821", 'reference_count': 0, 'type': "ReferenceArray"},
+	'lit_3822': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E4C, 'size': 0x000C, 'padding': 0x00, 'name': "@3822", 'reference_count': 0, 'type': "ReferenceArray"},
+	'lit_3823': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E58, 'size': 0x000C, 'padding': 0x00, 'name': "@3823", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_805A1E64': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E64, 'size': 0x0030, 'padding': 0x00, 'name': "l_func$3819", 'reference_count': 0, 'type': "InitData"},
+	'lit_3996': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1E94, 'size': 0x0040, 'padding': 0x00, 'name': "@3996", 'reference_count': 0, 'type': "ReferenceArray"},
+	'l_daSwc00_Method': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1ED4, 'size': 0x0020, 'padding': 0x00, 'name': "l_daSwc00_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_SWC00': {'library': "d/a/d_a_swc00", 'translation_unit': "d_a_swc00", 'section': ".data", 'addr': 0x805A1EF4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_SWC00", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_805A1F3C': {'library': "d/a/d_a_swc00", 'translation_unit': "unknown_translation_unit_bss", 'section': ".bss", 'addr': 0x805A1F3C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "ZeroData"},
+}

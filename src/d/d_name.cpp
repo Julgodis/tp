@@ -5,129 +5,128 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getMesgFont__Fv();
-extern void mDoExt_removeMesgFont__Fv();
-extern void fopMsgM_messageGet__FPcUl();
-extern void __ct__9STControlFssssffss();
-extern void checkTrigger__9STControlFv();
-extern void checkLeftTrigger__9STControlFv();
-extern void checkRightTrigger__9STControlFv();
-extern void checkUpTrigger__9STControlFv();
-extern void checkDownTrigger__9STControlFv();
-extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern void setParam__16dSelect_cursor_cFfffff();
-extern void setAlphaRate__16dSelect_cursor_cFf();
-extern void __ct__9dNm_HIO_cFv();
-extern void __ct__7dName_cFP7J2DPane();
-extern void __dt__7dName_cFv();
-extern void _create__7dName_cFv();
-extern void init__7dName_cFv();
-extern void initial__7dName_cFv();
-extern void showIcon__7dName_cFv();
-extern void _move__7dName_cFv();
-extern void nameCheck__7dName_cFv();
-extern void playNameSet__7dName_cFi();
-extern void cursorAnm__7dName_cFv();
-extern void Wait__7dName_cFv();
-extern void MojiSelect__7dName_cFv();
-extern void MojiSelectAnmInit__7dName_cFv();
-extern void MojiSelectAnm__7dName_cFv();
-extern void MojiSelectAnm2__7dName_cFv();
-extern void MojiSelectAnm3__7dName_cFv();
-extern void mojiChange__7dName_cFUc();
-extern void selectMojiSet__7dName_cFv();
-extern void getMoji__7dName_cFv();
-extern void setMoji__7dName_cFi();
-extern void setNameText__7dName_cFv();
-extern void nameCursorMove__7dName_cFv();
-extern void selectCursorMove__7dName_cFv();
-extern void menuCursorPosSet__7dName_cFv();
-extern void MenuSelect__7dName_cFv();
-extern void MenuSelectAnmInit__7dName_cFv();
-extern void MenuSelectAnm__7dName_cFv();
-extern void MenuSelectAnm2__7dName_cFv();
-extern void MenuSelectAnm3__7dName_cFv();
-extern void menuAbtnSelect__7dName_cFv();
-extern void backSpace__7dName_cFv();
-extern void mojiListChange__7dName_cFv();
-extern void menuCursorMove__7dName_cFv();
-extern void menuCursorMove2__7dName_cFv();
-extern void selectCursorPosSet__7dName_cFi();
-extern void _draw__7dName_cFv();
-extern void screenSet__7dName_cFv();
-extern void displayInit__7dName_cFv();
-extern void NameStrSet__7dName_cFv();
-extern void getMenuPosIdx__7dName_cFUc();
-extern void draw__14dDlst_NameIN_cFv();
-extern void __dt__14dDlst_NameIN_cFv();
-extern void __dt__9dNm_HIO_cFv();
-extern void __sinit_d_name_cpp();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void scaleAnime__8CPaneMgrFsffUc();
-extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern void show__13CPaneMgrAlphaFv();
-extern void hide__13CPaneMgrAlphaFv();
-extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void animation__9J2DScreenFv();
-extern void getStringPtr__10J2DTextBoxCFv();
-extern void setString__10J2DTextBoxFPCce();
-extern void setString__10J2DTextBoxFsPCce();
-extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern void PSMTXCopy();
-extern void PSMTXConcat();
-extern void PSMTXScale();
-extern void __register_global_object();
-extern void __ptmf_scall();
-extern void _savegpr_19();
-extern void _savegpr_24();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_19();
-extern void _restgpr_24();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void sprintf();
-extern void strcat();
-extern void strcpy();
+extern "C" extern void mDoExt_getMesgFont__Fv();
+extern "C" extern void mDoExt_removeMesgFont__Fv();
+extern "C" extern void fopMsgM_messageGet__FPcUl();
+extern "C" extern void __ct__9STControlFssssffss();
+extern "C" extern void checkTrigger__9STControlFv();
+extern "C" extern void checkLeftTrigger__9STControlFv();
+extern "C" extern void checkRightTrigger__9STControlFv();
+extern "C" extern void checkUpTrigger__9STControlFv();
+extern "C" extern void checkDownTrigger__9STControlFv();
+extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" extern void setParam__16dSelect_cursor_cFfffff();
+extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" extern void __ct__9dNm_HIO_cFv();
+extern "C" extern void __ct__7dName_cFP7J2DPane();
+extern "C" extern void __dt__7dName_cFv();
+extern "C" extern void _create__7dName_cFv();
+extern "C" extern void init__7dName_cFv();
+extern "C" extern void initial__7dName_cFv();
+extern "C" extern void showIcon__7dName_cFv();
+extern "C" extern void _move__7dName_cFv();
+extern "C" extern void nameCheck__7dName_cFv();
+extern "C" extern void playNameSet__7dName_cFi();
+extern "C" extern void cursorAnm__7dName_cFv();
+extern "C" extern void Wait__7dName_cFv();
+extern "C" extern void MojiSelect__7dName_cFv();
+extern "C" extern void MojiSelectAnmInit__7dName_cFv();
+extern "C" extern void MojiSelectAnm__7dName_cFv();
+extern "C" extern void MojiSelectAnm2__7dName_cFv();
+extern "C" extern void MojiSelectAnm3__7dName_cFv();
+extern "C" extern void mojiChange__7dName_cFUc();
+extern "C" extern void selectMojiSet__7dName_cFv();
+extern "C" extern void getMoji__7dName_cFv();
+extern "C" extern void setMoji__7dName_cFi();
+extern "C" extern void setNameText__7dName_cFv();
+extern "C" extern void nameCursorMove__7dName_cFv();
+extern "C" extern void selectCursorMove__7dName_cFv();
+extern "C" extern void menuCursorPosSet__7dName_cFv();
+extern "C" extern void MenuSelect__7dName_cFv();
+extern "C" extern void MenuSelectAnmInit__7dName_cFv();
+extern "C" extern void MenuSelectAnm__7dName_cFv();
+extern "C" extern void MenuSelectAnm2__7dName_cFv();
+extern "C" extern void MenuSelectAnm3__7dName_cFv();
+extern "C" extern void menuAbtnSelect__7dName_cFv();
+extern "C" extern void backSpace__7dName_cFv();
+extern "C" extern void mojiListChange__7dName_cFv();
+extern "C" extern void menuCursorMove__7dName_cFv();
+extern "C" extern void menuCursorMove2__7dName_cFv();
+extern "C" extern void selectCursorPosSet__7dName_cFi();
+extern "C" extern void _draw__7dName_cFv();
+extern "C" extern void screenSet__7dName_cFv();
+extern "C" extern void displayInit__7dName_cFv();
+extern "C" extern void NameStrSet__7dName_cFv();
+extern "C" extern void getMenuPosIdx__7dName_cFUc();
+extern "C" extern void draw__14dDlst_NameIN_cFv();
+extern "C" extern void __dt__14dDlst_NameIN_cFv();
+extern "C" extern void __dt__9dNm_HIO_cFv();
+extern "C" extern void __sinit_d_name_cpp();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void scaleAnime__8CPaneMgrFsffUc();
+extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void show__13CPaneMgrAlphaFv();
+extern "C" extern void hide__13CPaneMgrAlphaFv();
+extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void animation__9J2DScreenFv();
+extern "C" extern void getStringPtr__10J2DTextBoxCFv();
+extern "C" extern void setString__10J2DTextBoxFPCce();
+extern "C" extern void setString__10J2DTextBoxFsPCce();
+extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void PSMTXScale();
+extern "C" extern void __register_global_object();
+extern "C" extern void __ptmf_scall();
+extern "C" extern void _savegpr_19();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_19();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void sprintf();
+extern "C" extern void strcat();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 d_d_name__stringBase0[792];
-SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 d_d_name__cNullVec__6Z2Calc[12];
-SECTION_DATA extern u8 l_mojiHira[260];
-SECTION_DATA extern u8 l_mojiHira2[260];
-SECTION_DATA extern u8 l_mojiHira3[260];
-SECTION_DATA extern u8 l_mojikata[260];
-SECTION_DATA extern u8 l_mojikata2[260];
-SECTION_DATA extern u8 l_mojikata3[260];
-SECTION_DATA extern u8 l_mojiEisu[260];
-SECTION_DATA extern void* d_d_name__LIT_3825[3];
-SECTION_DATA extern void* d_d_name__LIT_3826[3];
-SECTION_DATA extern void* d_d_name__LIT_3827[3];
-SECTION_DATA extern void* d_d_name__LIT_3828[3];
-SECTION_DATA extern void* d_d_name__LIT_3829[3];
-SECTION_DATA extern void* d_d_name__LIT_3830[3];
-SECTION_DATA extern void* d_d_name__LIT_3831[3];
-SECTION_DATA extern void* d_d_name__LIT_3832[3];
-SECTION_DATA extern void* d_d_name__LIT_3833[3];
+SECTION_DATA extern void* l_mojiHira[65];
+SECTION_DATA extern void* l_mojiHira2[65];
+SECTION_DATA extern void* l_mojiHira3[65];
+SECTION_DATA extern void* l_mojikata[65];
+SECTION_DATA extern void* l_mojikata2[65];
+SECTION_DATA extern void* l_mojikata3[65];
+SECTION_DATA extern void* l_mojiEisu[65];
+SECTION_DATA extern void* d_d_name__lit_3825[3];
+SECTION_DATA extern void* d_d_name__lit_3826[3];
+SECTION_DATA extern void* d_d_name__lit_3827[3];
+SECTION_DATA extern void* d_d_name__lit_3828[3];
+SECTION_DATA extern void* d_d_name__lit_3829[3];
+SECTION_DATA extern void* d_d_name__lit_3830[3];
+SECTION_DATA extern void* d_d_name__lit_3831[3];
+SECTION_DATA extern void* d_d_name__lit_3832[3];
+SECTION_DATA extern void* d_d_name__lit_3833[3];
 SECTION_DATA extern u8 SelProc[108];
-SECTION_DATA extern void* d_d_name__LIT_4121[14];
+SECTION_DATA extern void* d_d_name__lit_4121[14];
 SECTION_DATA extern u8 data_803C2788[64];
 SECTION_DATA extern u8 data_803C27C8[64];
 SECTION_DATA extern u8 data_803C2808[32];
@@ -136,34 +135,1008 @@ SECTION_DATA extern u8 data_803C28A0[16];
 SECTION_DATA extern u8 data_803C28B0[520];
 SECTION_DATA extern u8 data_803C2AB8[64];
 SECTION_DATA extern u8 data_803C2AF8[64];
-SECTION_DATA extern void* __vt__14dDlst_NameIN_c[11];
-SECTION_DATA extern void* __vt__7dName_c[6];
-SECTION_DATA extern void* __vt__9dNm_HIO_c[3];
+SECTION_DATA extern void* const __vt__14dDlst_NameIN_c[11];
+SECTION_DATA extern void* const __vt__7dName_c[6];
+SECTION_DATA extern void* const __vt__9dNm_HIO_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 LIT_3660[12];
+SECTION_BSS extern u8 lit_3660[12];
 SECTION_BSS extern u8 g_nmHIO[20];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3665[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3666[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3755[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3756[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3820[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3886[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_3936[8];
-SECTION_SDATA2 extern u8 d_d_name__LIT_4009[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_4722[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_4723[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_4724[4];
-SECTION_SDATA2 extern u8 d_d_name__LIT_4725[8];
+SECTION_SDATA2 extern f32 d_d_name__lit_3665;
+SECTION_SDATA2 extern f32 d_d_name__lit_3666;
+SECTION_SDATA2 extern f32 d_d_name__lit_3755;
+SECTION_SDATA2 extern f32 d_d_name__lit_3756;
+SECTION_SDATA2 extern f32 d_d_name__lit_3820;
+SECTION_SDATA2 extern f32 d_d_name__lit_3886;
+SECTION_SDATA2 extern f64 d_d_name__lit_3936;
+SECTION_SDATA2 extern u8 d_d_name__lit_4009[4];
+SECTION_SDATA2 extern f32 d_d_name__lit_4722;
+SECTION_SDATA2 extern f32 d_d_name__lit_4723;
+SECTION_SDATA2 extern f32 d_d_name__lit_4724;
+SECTION_SDATA2 extern f32 d_d_name__lit_4725;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 803C1F50-803C1F5C 000C .data      cNullVec__6Z2Calc                                            */
+u8 d_d_name__cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803C1F5C-803C2060 0104 .data      l_mojiHira                                                   */
+void* l_mojiHira[65] = {
+	(void*)&d_d_name__stringBase0,
+	(void*)(((char*)&d_d_name__stringBase0)+0x3),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6),
+	(void*)(((char*)&d_d_name__stringBase0)+0x9),
+	(void*)(((char*)&d_d_name__stringBase0)+0xC),
+	(void*)(((char*)&d_d_name__stringBase0)+0xF),
+	(void*)(((char*)&d_d_name__stringBase0)+0x12),
+	(void*)(((char*)&d_d_name__stringBase0)+0x15),
+	(void*)(((char*)&d_d_name__stringBase0)+0x18),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x21),
+	(void*)(((char*)&d_d_name__stringBase0)+0x24),
+	(void*)(((char*)&d_d_name__stringBase0)+0x27),
+	(void*)(((char*)&d_d_name__stringBase0)+0x2A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x2D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x30),
+	(void*)(((char*)&d_d_name__stringBase0)+0x33),
+	(void*)(((char*)&d_d_name__stringBase0)+0x36),
+	(void*)(((char*)&d_d_name__stringBase0)+0x39),
+	(void*)(((char*)&d_d_name__stringBase0)+0x3C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x3F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x42),
+	(void*)(((char*)&d_d_name__stringBase0)+0x45),
+	(void*)(((char*)&d_d_name__stringBase0)+0x48),
+	(void*)(((char*)&d_d_name__stringBase0)+0x4B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x4E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x51),
+	(void*)(((char*)&d_d_name__stringBase0)+0x54),
+	(void*)(((char*)&d_d_name__stringBase0)+0x57),
+	(void*)(((char*)&d_d_name__stringBase0)+0x5A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x5D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x60),
+	(void*)(((char*)&d_d_name__stringBase0)+0x63),
+	(void*)(((char*)&d_d_name__stringBase0)+0x66),
+	(void*)(((char*)&d_d_name__stringBase0)+0x69),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x72),
+	(void*)(((char*)&d_d_name__stringBase0)+0x75),
+	(void*)(((char*)&d_d_name__stringBase0)+0x78),
+	(void*)(((char*)&d_d_name__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x7E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x81),
+	(void*)(((char*)&d_d_name__stringBase0)+0x84),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x87),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x8A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x8D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x90),
+	(void*)(((char*)&d_d_name__stringBase0)+0x93),
+	(void*)(((char*)&d_d_name__stringBase0)+0x96),
+	(void*)(((char*)&d_d_name__stringBase0)+0x99),
+	(void*)(((char*)&d_d_name__stringBase0)+0x9C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x9F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0xA2),
+	(void*)(((char*)&d_d_name__stringBase0)+0xA5),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0xA8),
+	(void*)(((char*)&d_d_name__stringBase0)+0xAB),
+	(void*)(((char*)&d_d_name__stringBase0)+0xAE),
+};
+
+/* 803C2060-803C2164 0104 .data      l_mojiHira2                                                  */
+void* l_mojiHira2[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB4),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB7),
+	(void*)(((char*)&d_d_name__stringBase0)+0xBA),
+	(void*)(((char*)&d_d_name__stringBase0)+0xBD),
+	(void*)(((char*)&d_d_name__stringBase0)+0xC0),
+	(void*)(((char*)&d_d_name__stringBase0)+0xC3),
+	(void*)(((char*)&d_d_name__stringBase0)+0xC6),
+	(void*)(((char*)&d_d_name__stringBase0)+0xC9),
+	(void*)(((char*)&d_d_name__stringBase0)+0xCC),
+	(void*)(((char*)&d_d_name__stringBase0)+0xCF),
+	(void*)(((char*)&d_d_name__stringBase0)+0xD2),
+	(void*)(((char*)&d_d_name__stringBase0)+0xD5),
+	(void*)(((char*)&d_d_name__stringBase0)+0xD8),
+	(void*)(((char*)&d_d_name__stringBase0)+0xDB),
+	(void*)(((char*)&d_d_name__stringBase0)+0xDE),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xE1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xE4),
+	(void*)(((char*)&d_d_name__stringBase0)+0xE7),
+	(void*)(((char*)&d_d_name__stringBase0)+0xEA),
+	(void*)(((char*)&d_d_name__stringBase0)+0xED),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+};
+
+/* 803C2164-803C2268 0104 .data      l_mojiHira3                                                  */
+void* l_mojiHira3[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xF0),
+	(void*)(((char*)&d_d_name__stringBase0)+0xF3),
+	(void*)(((char*)&d_d_name__stringBase0)+0xF6),
+	(void*)(((char*)&d_d_name__stringBase0)+0xF9),
+	(void*)(((char*)&d_d_name__stringBase0)+0xFC),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+};
+
+/* 803C2268-803C236C 0104 .data      l_mojikata                                                   */
+void* l_mojikata[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0xFF),
+	(void*)(((char*)&d_d_name__stringBase0)+0x102),
+	(void*)(((char*)&d_d_name__stringBase0)+0x105),
+	(void*)(((char*)&d_d_name__stringBase0)+0x108),
+	(void*)(((char*)&d_d_name__stringBase0)+0x10B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x10E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x111),
+	(void*)(((char*)&d_d_name__stringBase0)+0x114),
+	(void*)(((char*)&d_d_name__stringBase0)+0x117),
+	(void*)(((char*)&d_d_name__stringBase0)+0x11A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x11D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x120),
+	(void*)(((char*)&d_d_name__stringBase0)+0x123),
+	(void*)(((char*)&d_d_name__stringBase0)+0x126),
+	(void*)(((char*)&d_d_name__stringBase0)+0x129),
+	(void*)(((char*)&d_d_name__stringBase0)+0x12C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x12F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x132),
+	(void*)(((char*)&d_d_name__stringBase0)+0x135),
+	(void*)(((char*)&d_d_name__stringBase0)+0x138),
+	(void*)(((char*)&d_d_name__stringBase0)+0x13B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x13E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x141),
+	(void*)(((char*)&d_d_name__stringBase0)+0x144),
+	(void*)(((char*)&d_d_name__stringBase0)+0x147),
+	(void*)(((char*)&d_d_name__stringBase0)+0x14A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x14D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x150),
+	(void*)(((char*)&d_d_name__stringBase0)+0x153),
+	(void*)(((char*)&d_d_name__stringBase0)+0x156),
+	(void*)(((char*)&d_d_name__stringBase0)+0x159),
+	(void*)(((char*)&d_d_name__stringBase0)+0x15C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x15F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x162),
+	(void*)(((char*)&d_d_name__stringBase0)+0x165),
+	(void*)(((char*)&d_d_name__stringBase0)+0x168),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x16B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x16E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x171),
+	(void*)(((char*)&d_d_name__stringBase0)+0x174),
+	(void*)(((char*)&d_d_name__stringBase0)+0x177),
+	(void*)(((char*)&d_d_name__stringBase0)+0x17A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x17D),
+	(void*)(((char*)&d_d_name__stringBase0)+0x180),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x183),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x186),
+	(void*)(((char*)&d_d_name__stringBase0)+0x189),
+	(void*)(((char*)&d_d_name__stringBase0)+0x18C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x18F),
+	(void*)(((char*)&d_d_name__stringBase0)+0x192),
+	(void*)(((char*)&d_d_name__stringBase0)+0x195),
+	(void*)(((char*)&d_d_name__stringBase0)+0x198),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x19B),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x19E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1A1),
+	(void*)(((char*)&d_d_name__stringBase0)+0x6C),
+	(void*)(((char*)&d_d_name__stringBase0)+0xA8),
+	(void*)(((char*)&d_d_name__stringBase0)+0xAB),
+	(void*)(((char*)&d_d_name__stringBase0)+0xAE),
+};
+
+/* 803C236C-803C2470 0104 .data      l_mojikata2                                                  */
+void* l_mojikata2[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1A4),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1A7),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1AA),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1AD),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1B0),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1B3),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1B6),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1B9),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1BC),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1BF),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1C2),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1C5),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1C8),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1CB),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1CE),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1D1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1D4),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1D7),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1DA),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1DD),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1E0),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+};
+
+/* 803C2470-803C2574 0104 .data      l_mojikata3                                                  */
+void* l_mojikata3[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1E3),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1E6),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1E9),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1EC),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1EF),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+	(void*)(((char*)&d_d_name__stringBase0)+0xB1),
+};
+
+/* 803C2574-803C2678 0104 .data      l_mojiEisu                                                   */
+void* l_mojiEisu[65] = {
+	(void*)(((char*)&d_d_name__stringBase0)+0x1F2),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1F4),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1F6),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1F8),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1FA),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1FC),
+	(void*)(((char*)&d_d_name__stringBase0)+0x1FE),
+	(void*)(((char*)&d_d_name__stringBase0)+0x200),
+	(void*)(((char*)&d_d_name__stringBase0)+0x202),
+	(void*)(((char*)&d_d_name__stringBase0)+0x204),
+	(void*)(((char*)&d_d_name__stringBase0)+0x206),
+	(void*)(((char*)&d_d_name__stringBase0)+0x208),
+	(void*)(((char*)&d_d_name__stringBase0)+0x20A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x20C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x20E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x210),
+	(void*)(((char*)&d_d_name__stringBase0)+0x212),
+	(void*)(((char*)&d_d_name__stringBase0)+0x214),
+	(void*)(((char*)&d_d_name__stringBase0)+0x216),
+	(void*)(((char*)&d_d_name__stringBase0)+0x218),
+	(void*)(((char*)&d_d_name__stringBase0)+0x21A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x21C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x21E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x220),
+	(void*)(((char*)&d_d_name__stringBase0)+0x222),
+	(void*)(((char*)&d_d_name__stringBase0)+0x224),
+	(void*)(((char*)&d_d_name__stringBase0)+0x226),
+	(void*)(((char*)&d_d_name__stringBase0)+0x228),
+	(void*)(((char*)&d_d_name__stringBase0)+0x22A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x22C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x22E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x230),
+	(void*)(((char*)&d_d_name__stringBase0)+0x232),
+	(void*)(((char*)&d_d_name__stringBase0)+0x234),
+	(void*)(((char*)&d_d_name__stringBase0)+0x236),
+	(void*)(((char*)&d_d_name__stringBase0)+0x238),
+	(void*)(((char*)&d_d_name__stringBase0)+0x23A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x23C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x23E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x240),
+	(void*)(((char*)&d_d_name__stringBase0)+0x242),
+	(void*)(((char*)&d_d_name__stringBase0)+0x244),
+	(void*)(((char*)&d_d_name__stringBase0)+0x246),
+	(void*)(((char*)&d_d_name__stringBase0)+0x248),
+	(void*)(((char*)&d_d_name__stringBase0)+0x24A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x24C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x24E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x250),
+	(void*)(((char*)&d_d_name__stringBase0)+0x252),
+	(void*)(((char*)&d_d_name__stringBase0)+0x254),
+	(void*)(((char*)&d_d_name__stringBase0)+0x256),
+	(void*)(((char*)&d_d_name__stringBase0)+0x258),
+	(void*)(((char*)&d_d_name__stringBase0)+0x25A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x25C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x25E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x260),
+	(void*)(((char*)&d_d_name__stringBase0)+0x262),
+	(void*)(((char*)&d_d_name__stringBase0)+0x264),
+	(void*)(((char*)&d_d_name__stringBase0)+0x266),
+	(void*)(((char*)&d_d_name__stringBase0)+0x268),
+	(void*)(((char*)&d_d_name__stringBase0)+0x26A),
+	(void*)(((char*)&d_d_name__stringBase0)+0x26C),
+	(void*)(((char*)&d_d_name__stringBase0)+0x26E),
+	(void*)(((char*)&d_d_name__stringBase0)+0x270),
+	(void*)(((char*)&d_d_name__stringBase0)+0x272),
+};
+
+/* 803C2678-803C2684 000C .data      @3825                                                        */
+void* d_d_name__lit_3825[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MojiSelect__7dName_cFv,
+};
+
+/* 803C2684-803C2690 000C .data      @3826                                                        */
+void* d_d_name__lit_3826[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MojiSelectAnm__7dName_cFv,
+};
+
+/* 803C2690-803C269C 000C .data      @3827                                                        */
+void* d_d_name__lit_3827[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MojiSelectAnm2__7dName_cFv,
+};
+
+/* 803C269C-803C26A8 000C .data      @3828                                                        */
+void* d_d_name__lit_3828[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MojiSelectAnm3__7dName_cFv,
+};
+
+/* 803C26A8-803C26B4 000C .data      @3829                                                        */
+void* d_d_name__lit_3829[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MenuSelect__7dName_cFv,
+};
+
+/* 803C26B4-803C26C0 000C .data      @3830                                                        */
+void* d_d_name__lit_3830[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MenuSelectAnm__7dName_cFv,
+};
+
+/* 803C26C0-803C26CC 000C .data      @3831                                                        */
+void* d_d_name__lit_3831[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MenuSelectAnm2__7dName_cFv,
+};
+
+/* 803C26CC-803C26D8 000C .data      @3832                                                        */
+void* d_d_name__lit_3832[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)MenuSelectAnm3__7dName_cFv,
+};
+
+/* 803C26D8-803C26E4 000C .data      @3833                                                        */
+void* d_d_name__lit_3833[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)Wait__7dName_cFv,
+};
+
+/* 803C26E4-803C2750 006C .data      SelProc                                                      */
+u8 SelProc[108] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803C2750-803C2788 0034 .data      @4121                                                        */
+void* d_d_name__lit_4121[14] = {
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x8C),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x130),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x170),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x1B0),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x2D4),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x31C),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x8C),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x31C),
+	(void*)(((char*)mojiChange__7dName_cFUc)+0x1B0),
+	/* padding */
+	NULL,
+};
+
+/* 803C2788-803C27C8 0040 .data      l_cur0TagName$4610                                           */
+u8 data_803C2788[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31,
+	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33,
+	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x34, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x35,
+	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37,
+};
+
+/* 803C27C8-803C2808 0040 .data      l_cur1TagName$4611                                           */
+u8 data_803C27C8[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31, 0x72,
+	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33, 0x72,
+	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x34, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x35, 0x72,
+	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37, 0x72,
+};
+
+/* 803C2808-803C2828 0020 .data      l_menu_icon_tag$4617                                         */
+u8 data_803C2808[32] = {
+	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x6E,
+	0x6A, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x6E,
+};
+
+/* 803C2828-803C28A0 0078 .data      l_menu_tag$4618                                              */
+u8 data_803C2828[120] = {
+	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x30, 0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x31,
+	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x32, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x30,
+	0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x31, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x32,
+	0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x30, 0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x31,
+	0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x32, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x30,
+	0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x31, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x32,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803C28A0-803C28B0 0010 .data      l_menu_msg$4619                                              */
+u8 data_803C28A0[16] = {
+	0x00, 0x00, 0x03, 0x8B, 0x00, 0x00, 0x03, 0x8C, 0x00, 0x00, 0x03, 0x88, 0x00, 0x00, 0x03, 0x8E,
+};
+
+/* 803C28B0-803C2AB8 0208 .data      l_tagName$4635                                               */
+u8 data_803C28B0[520] = {
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x30,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x32,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x34,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x34, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x30,
+	0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x31, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x32,
+	0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x33, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x34,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x30,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x32,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x34,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x30,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x32,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x34,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x30,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x32,
+	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x34,
+	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x31,
+	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x33,
+	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x30,
+	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x32,
+	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x34,
+	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x30, 0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x31,
+	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x32, 0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x33,
+	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x34,
+};
+
+/* 803C2AB8-803C2AF8 0040 .data      l_nameTagName$4642                                           */
+u8 data_803C2AB8[64] = {
+	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x30, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x31,
+	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x32, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x33,
+	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x34, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x35,
+	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x36, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x37,
+};
+
+/* 803C2AF8-803C2B38 0040 .data      l_nameCurTagName$4643                                        */
+u8 data_803C2AF8[64] = {
+	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x30, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x31,
+	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x32, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x33,
+	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x34, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x35,
+	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x36, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x37,
+};
+
+/* 803C2B38-803C2B64 0010 .data      __vt__14dDlst_NameIN_c                                       */
+void* const __vt__14dDlst_NameIN_c[11] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)draw__14dDlst_NameIN_cFv,
+	(void*)__dt__14dDlst_NameIN_cFv,
+	/* padding */
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
+
+/* 803C2B64-803C2B7C 000C .data      __vt__7dName_c                                               */
+void* const __vt__7dName_c[6] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__7dName_cFv,
+	/* padding */
+	NULL,
+	NULL,
+	NULL,
+};
+
+/* 803C2B7C-803C2B88 000C .data      __vt__9dNm_HIO_c                                             */
+void* const __vt__9dNm_HIO_c[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__9dNm_HIO_cFv,
+};
+
+/* 80454DB0-80454DB4 0004 .sdata2    @3665                                                        */
+f32 d_d_name__lit_3665 = 13.0f / 10.0f;
+
+/* 80454DB4-80454DB8 0004 .sdata2    @3666                                                        */
+f32 d_d_name__lit_3666 = 7.0f / 5.0f;
+
+/* 8024E3E0-8024E408 0028 .text      __ct__9dNm_HIO_cFv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__9dNm_HIO_cFv() {
+	nofralloc
+#include "asm/d/d_name/__ct__9dNm_HIO_cFv.s"
 }
+#pragma pop
+
+
+/* 8024E408-8024E468 0060 .text      __ct__7dName_cFP7J2DPane                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__7dName_cFP7J2DPane() {
+	nofralloc
+#include "asm/d/d_name/__ct__7dName_cFP7J2DPane.s"
+}
+#pragma pop
+
+
+/* 8024E468-8024E62C 01C4 .text      __dt__7dName_cFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/__dt__7dName_cFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80454DB8-80454DBC 0004 .sdata2    @3755                                                        */
+f32 d_d_name__lit_3755 = 9.0f / 10.0f;
 
-extern "C" {
+/* 80454DBC-80454DC0 0004 .sdata2    @3756                                                        */
+f32 d_d_name__lit_3756 = 0.5f;
+
+/* 80430728-80430734 000C .bss       @3660                                                        */
+u8 lit_3660[12];
+
+/* 80430734-80430748 0014 .bss       g_nmHIO                                                      */
+u8 g_nmHIO[20];
+
+/* 8024E62C-8024E6D4 00A8 .text      _create__7dName_cFv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void _create__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/_create__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024E6D4-8024E7A4 00D0 .text      init__7dName_cFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/init__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024E7A4-8024E7EC 0048 .text      initial__7dName_cFv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initial__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/initial__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454DC0-80454DC4 0004 .sdata2    @3820                                                        */
+f32 d_d_name__lit_3820 = 1.0f;
+
+/* 8024E7EC-8024E9A0 01B4 .text      showIcon__7dName_cFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void showIcon__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/showIcon__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454DC4-80454DC8 0004 .sdata2    @3886                                                        */
+f32 d_d_name__lit_3886 = -1.0f;
+
+/* 8024E9A0-8024EC10 0270 .text      _move__7dName_cFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void _move__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/_move__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024EC10-8024EC4C 003C .text      nameCheck__7dName_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void nameCheck__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/nameCheck__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024EC4C-8024EC84 0038 .text      playNameSet__7dName_cFi                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void playNameSet__7dName_cFi() {
+	nofralloc
+#include "asm/d/d_name/playNameSet__7dName_cFi.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454DC8-80454DD0 0008 .sdata2    @3936                                                        */
+f64 d_d_name__lit_3936 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 8024EC84-8024ED48 00C4 .text      cursorAnm__7dName_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void cursorAnm__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/cursorAnm__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024ED48-8024ED4C 0004 .text      Wait__7dName_cFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void Wait__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/Wait__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024ED4C-8024F034 02E8 .text      MojiSelect__7dName_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void MojiSelect__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/MojiSelect__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80454DD0-80454DD4 0004 .sdata2    @4009                                                        */
+u8 d_d_name__lit_4009[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8024F034-8024F0E0 00AC .text      MojiSelectAnmInit__7dName_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void MojiSelectAnmInit__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/MojiSelectAnmInit__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F0E0-8024F164 0084 .text      MojiSelectAnm__7dName_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void MojiSelectAnm__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/MojiSelectAnm__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F164-8024F1E8 0084 .text      MojiSelectAnm2__7dName_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void MojiSelectAnm2__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/MojiSelectAnm2__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F1E8-8024F1EC 0004 .text      MojiSelectAnm3__7dName_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void MojiSelectAnm3__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/MojiSelectAnm3__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F1EC-8024F55C 0370 .text      mojiChange__7dName_cFUc                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void mojiChange__7dName_cFUc() {
+	nofralloc
+#include "asm/d/d_name/mojiChange__7dName_cFUc.s"
+}
+#pragma pop
+
+
+/* 8024F55C-8024F59C 0040 .text      selectMojiSet__7dName_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void selectMojiSet__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/selectMojiSet__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F59C-8024F634 0098 .text      getMoji__7dName_cFv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMoji__7dName_cFv() {
+	nofralloc
+#include "asm/d/d_name/getMoji__7dName_cFv.s"
+}
+#pragma pop
+
+
+/* 8024F634-8024F88C 0258 .text      setMoji__7dName_cFi                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMoji__7dName_cFi() {
+	nofralloc
+#include "asm/d/d_name/setMoji__7dName_cFi.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 80399CC8-80399FE0 0314 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -402,9 +1375,7 @@ SECTION_DEAD const char* const stringBase_80399F36 = "m";
 SECTION_DEAD const char* const stringBase_80399F38 = "z";
 SECTION_DEAD const char* const stringBase_80399F3A = " ";
 SECTION_DEAD const char* const stringBase_80399F3C = 
-    """\x1B""CD""\x1B""CR""\x1B""CC[000000"
-    "]""\x1B""GM[0]%c""\x1B""HM""\x1B""CC["
-    "ffffff]""\x1B""GM[0]%c";
+    """\x1B""CD""\x1B""CR""\x1B""CC[000000]""\x1B""GM[0]%c""\x1B""HM""\x1B""CC[ffffff]""\x1B""GM[0]%c";
 SECTION_DEAD const char* const stringBase_80399F6C = """\x1B""CD""\x1B""CR""\x1B""CC[000000]""\x1B""GM[0]";
 SECTION_DEAD const char* const stringBase_80399F84 = """\x1B""HM""\x1B""CC[ffffff]""\x1B""GM[0]";
 SECTION_DEAD const char* const stringBase_80399F99 = "zelda_player_name.blo";
@@ -414,878 +1385,279 @@ SECTION_DEAD const char* const stringBase_80399FDB = "";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80399FDC = "\0\0\0";
 #pragma pop
-}
-
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803C1F50-803C1F50 0000 .data      ...data.0                                                    */
-/* 803C1F50-803C1F5C 000C .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 d_d_name__cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803C1F5C-803C2060 0104 .data      l_mojiHira                                                   */
-SECTION_DATA u8 l_mojiHira[260] = {
-	0x80, 0x39, 0x9C, 0xC8, 0x80, 0x39, 0x9C, 0xCB, 0x80, 0x39, 0x9C, 0xCE, 0x80, 0x39, 0x9C, 0xD1,
-	0x80, 0x39, 0x9C, 0xD4, 0x80, 0x39, 0x9C, 0xD7, 0x80, 0x39, 0x9C, 0xDA, 0x80, 0x39, 0x9C, 0xDD,
-	0x80, 0x39, 0x9C, 0xE0, 0x80, 0x39, 0x9C, 0xE3, 0x80, 0x39, 0x9C, 0xE6, 0x80, 0x39, 0x9C, 0xE9,
-	0x80, 0x39, 0x9C, 0xEC, 0x80, 0x39, 0x9C, 0xEF, 0x80, 0x39, 0x9C, 0xF2, 0x80, 0x39, 0x9C, 0xF5,
-	0x80, 0x39, 0x9C, 0xF8, 0x80, 0x39, 0x9C, 0xFB, 0x80, 0x39, 0x9C, 0xFE, 0x80, 0x39, 0x9D, 0x01,
-	0x80, 0x39, 0x9D, 0x04, 0x80, 0x39, 0x9D, 0x07, 0x80, 0x39, 0x9D, 0x0A, 0x80, 0x39, 0x9D, 0x0D,
-	0x80, 0x39, 0x9D, 0x10, 0x80, 0x39, 0x9D, 0x13, 0x80, 0x39, 0x9D, 0x16, 0x80, 0x39, 0x9D, 0x19,
-	0x80, 0x39, 0x9D, 0x1C, 0x80, 0x39, 0x9D, 0x1F, 0x80, 0x39, 0x9D, 0x22, 0x80, 0x39, 0x9D, 0x25,
-	0x80, 0x39, 0x9D, 0x28, 0x80, 0x39, 0x9D, 0x2B, 0x80, 0x39, 0x9D, 0x2E, 0x80, 0x39, 0x9D, 0x31,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x37, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x3A,
-	0x80, 0x39, 0x9D, 0x3D, 0x80, 0x39, 0x9D, 0x40, 0x80, 0x39, 0x9D, 0x43, 0x80, 0x39, 0x9D, 0x46,
-	0x80, 0x39, 0x9D, 0x49, 0x80, 0x39, 0x9D, 0x4C, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x4F,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x52, 0x80, 0x39, 0x9D, 0x55, 0x80, 0x39, 0x9D, 0x58,
-	0x80, 0x39, 0x9D, 0x5B, 0x80, 0x39, 0x9D, 0x5E, 0x80, 0x39, 0x9D, 0x61, 0x80, 0x39, 0x9D, 0x64,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x67, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x6A,
-	0x80, 0x39, 0x9D, 0x6D, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x70, 0x80, 0x39, 0x9D, 0x73,
-	0x80, 0x39, 0x9D, 0x76,
-};
-/* 803C2060-803C2164 0104 .data      l_mojiHira2                                                  */
-SECTION_DATA u8 l_mojiHira2[260] = {
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x7C, 0x80, 0x39, 0x9D, 0x7F, 0x80, 0x39, 0x9D, 0x82,
-	0x80, 0x39, 0x9D, 0x85, 0x80, 0x39, 0x9D, 0x88, 0x80, 0x39, 0x9D, 0x8B, 0x80, 0x39, 0x9D, 0x8E,
-	0x80, 0x39, 0x9D, 0x91, 0x80, 0x39, 0x9D, 0x94, 0x80, 0x39, 0x9D, 0x97, 0x80, 0x39, 0x9D, 0x9A,
-	0x80, 0x39, 0x9D, 0x9D, 0x80, 0x39, 0x9D, 0xA0, 0x80, 0x39, 0x9D, 0xA3, 0x80, 0x39, 0x9D, 0xA6,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0xA9, 0x80, 0x39, 0x9D, 0xAC, 0x80, 0x39, 0x9D, 0xAF,
-	0x80, 0x39, 0x9D, 0xB2, 0x80, 0x39, 0x9D, 0xB5, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79,
-};
-/* 803C2164-803C2268 0104 .data      l_mojiHira3                                                  */
-SECTION_DATA u8 l_mojiHira3[260] = {
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0xB8, 0x80, 0x39, 0x9D, 0xBB, 0x80, 0x39, 0x9D, 0xBE,
-	0x80, 0x39, 0x9D, 0xC1, 0x80, 0x39, 0x9D, 0xC4, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79,
-};
-/* 803C2268-803C236C 0104 .data      l_mojikata                                                   */
-SECTION_DATA u8 l_mojikata[260] = {
-	0x80, 0x39, 0x9D, 0xC7, 0x80, 0x39, 0x9D, 0xCA, 0x80, 0x39, 0x9D, 0xCD, 0x80, 0x39, 0x9D, 0xD0,
-	0x80, 0x39, 0x9D, 0xD3, 0x80, 0x39, 0x9D, 0xD6, 0x80, 0x39, 0x9D, 0xD9, 0x80, 0x39, 0x9D, 0xDC,
-	0x80, 0x39, 0x9D, 0xDF, 0x80, 0x39, 0x9D, 0xE2, 0x80, 0x39, 0x9D, 0xE5, 0x80, 0x39, 0x9D, 0xE8,
-	0x80, 0x39, 0x9D, 0xEB, 0x80, 0x39, 0x9D, 0xEE, 0x80, 0x39, 0x9D, 0xF1, 0x80, 0x39, 0x9D, 0xF4,
-	0x80, 0x39, 0x9D, 0xF7, 0x80, 0x39, 0x9D, 0xFA, 0x80, 0x39, 0x9D, 0xFD, 0x80, 0x39, 0x9E, 0x00,
-	0x80, 0x39, 0x9E, 0x03, 0x80, 0x39, 0x9E, 0x06, 0x80, 0x39, 0x9E, 0x09, 0x80, 0x39, 0x9E, 0x0C,
-	0x80, 0x39, 0x9E, 0x0F, 0x80, 0x39, 0x9E, 0x12, 0x80, 0x39, 0x9E, 0x15, 0x80, 0x39, 0x9E, 0x18,
-	0x80, 0x39, 0x9E, 0x1B, 0x80, 0x39, 0x9E, 0x1E, 0x80, 0x39, 0x9E, 0x21, 0x80, 0x39, 0x9E, 0x24,
-	0x80, 0x39, 0x9E, 0x27, 0x80, 0x39, 0x9E, 0x2A, 0x80, 0x39, 0x9E, 0x2D, 0x80, 0x39, 0x9E, 0x30,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x33, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x36,
-	0x80, 0x39, 0x9E, 0x39, 0x80, 0x39, 0x9E, 0x3C, 0x80, 0x39, 0x9E, 0x3F, 0x80, 0x39, 0x9E, 0x42,
-	0x80, 0x39, 0x9E, 0x45, 0x80, 0x39, 0x9E, 0x48, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x4B,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x4E, 0x80, 0x39, 0x9E, 0x51, 0x80, 0x39, 0x9E, 0x54,
-	0x80, 0x39, 0x9E, 0x57, 0x80, 0x39, 0x9E, 0x5A, 0x80, 0x39, 0x9E, 0x5D, 0x80, 0x39, 0x9E, 0x60,
-	0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x63, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9E, 0x66,
-	0x80, 0x39, 0x9E, 0x69, 0x80, 0x39, 0x9D, 0x34, 0x80, 0x39, 0x9D, 0x70, 0x80, 0x39, 0x9D, 0x73,
-	0x80, 0x39, 0x9D, 0x76,
-};
-/* 803C236C-803C2470 0104 .data      l_mojikata2                                                  */
-SECTION_DATA u8 l_mojikata2[260] = {
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0x6C, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0x6F, 0x80, 0x39, 0x9E, 0x72, 0x80, 0x39, 0x9E, 0x75,
-	0x80, 0x39, 0x9E, 0x78, 0x80, 0x39, 0x9E, 0x7B, 0x80, 0x39, 0x9E, 0x7E, 0x80, 0x39, 0x9E, 0x81,
-	0x80, 0x39, 0x9E, 0x84, 0x80, 0x39, 0x9E, 0x87, 0x80, 0x39, 0x9E, 0x8A, 0x80, 0x39, 0x9E, 0x8D,
-	0x80, 0x39, 0x9E, 0x90, 0x80, 0x39, 0x9E, 0x93, 0x80, 0x39, 0x9E, 0x96, 0x80, 0x39, 0x9E, 0x99,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0x9C, 0x80, 0x39, 0x9E, 0x9F, 0x80, 0x39, 0x9E, 0xA2,
-	0x80, 0x39, 0x9E, 0xA5, 0x80, 0x39, 0x9E, 0xA8, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79,
-};
-/* 803C2470-803C2574 0104 .data      l_mojikata3                                                  */
-SECTION_DATA u8 l_mojikata3[260] = {
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0xAB, 0x80, 0x39, 0x9E, 0xAE, 0x80, 0x39, 0x9E, 0xB1,
-	0x80, 0x39, 0x9E, 0xB4, 0x80, 0x39, 0x9E, 0xB7, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
-	0x80, 0x39, 0x9D, 0x79,
-};
-/* 803C2574-803C2678 0104 .data      l_mojiEisu                                                   */
-SECTION_DATA u8 l_mojiEisu[260] = {
-	0x80, 0x39, 0x9E, 0xBA, 0x80, 0x39, 0x9E, 0xBC, 0x80, 0x39, 0x9E, 0xBE, 0x80, 0x39, 0x9E, 0xC0,
-	0x80, 0x39, 0x9E, 0xC2, 0x80, 0x39, 0x9E, 0xC4, 0x80, 0x39, 0x9E, 0xC6, 0x80, 0x39, 0x9E, 0xC8,
-	0x80, 0x39, 0x9E, 0xCA, 0x80, 0x39, 0x9E, 0xCC, 0x80, 0x39, 0x9E, 0xCE, 0x80, 0x39, 0x9E, 0xD0,
-	0x80, 0x39, 0x9E, 0xD2, 0x80, 0x39, 0x9E, 0xD4, 0x80, 0x39, 0x9E, 0xD6, 0x80, 0x39, 0x9E, 0xD8,
-	0x80, 0x39, 0x9E, 0xDA, 0x80, 0x39, 0x9E, 0xDC, 0x80, 0x39, 0x9E, 0xDE, 0x80, 0x39, 0x9E, 0xE0,
-	0x80, 0x39, 0x9E, 0xE2, 0x80, 0x39, 0x9E, 0xE4, 0x80, 0x39, 0x9E, 0xE6, 0x80, 0x39, 0x9E, 0xE8,
-	0x80, 0x39, 0x9E, 0xEA, 0x80, 0x39, 0x9E, 0xEC, 0x80, 0x39, 0x9E, 0xEE, 0x80, 0x39, 0x9E, 0xF0,
-	0x80, 0x39, 0x9E, 0xF2, 0x80, 0x39, 0x9E, 0xF4, 0x80, 0x39, 0x9E, 0xF6, 0x80, 0x39, 0x9E, 0xF8,
-	0x80, 0x39, 0x9E, 0xFA, 0x80, 0x39, 0x9E, 0xFC, 0x80, 0x39, 0x9E, 0xFE, 0x80, 0x39, 0x9F, 0x00,
-	0x80, 0x39, 0x9F, 0x02, 0x80, 0x39, 0x9F, 0x04, 0x80, 0x39, 0x9F, 0x06, 0x80, 0x39, 0x9F, 0x08,
-	0x80, 0x39, 0x9F, 0x0A, 0x80, 0x39, 0x9F, 0x0C, 0x80, 0x39, 0x9F, 0x0E, 0x80, 0x39, 0x9F, 0x10,
-	0x80, 0x39, 0x9F, 0x12, 0x80, 0x39, 0x9F, 0x14, 0x80, 0x39, 0x9F, 0x16, 0x80, 0x39, 0x9F, 0x18,
-	0x80, 0x39, 0x9F, 0x1A, 0x80, 0x39, 0x9F, 0x1C, 0x80, 0x39, 0x9F, 0x1E, 0x80, 0x39, 0x9F, 0x20,
-	0x80, 0x39, 0x9F, 0x22, 0x80, 0x39, 0x9F, 0x24, 0x80, 0x39, 0x9F, 0x26, 0x80, 0x39, 0x9F, 0x28,
-	0x80, 0x39, 0x9F, 0x2A, 0x80, 0x39, 0x9F, 0x2C, 0x80, 0x39, 0x9F, 0x2E, 0x80, 0x39, 0x9F, 0x30,
-	0x80, 0x39, 0x9F, 0x32, 0x80, 0x39, 0x9F, 0x34, 0x80, 0x39, 0x9F, 0x36, 0x80, 0x39, 0x9F, 0x38,
-	0x80, 0x39, 0x9F, 0x3A,
-};
-/* 803C2678-803C2684 000C .data      @3825                                                        */
-SECTION_DATA void* d_d_name__LIT_3825[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MojiSelect__7dName_cFv,
-};
-/* 803C2684-803C2690 000C .data      @3826                                                        */
-SECTION_DATA void* d_d_name__LIT_3826[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MojiSelectAnm__7dName_cFv,
-};
-/* 803C2690-803C269C 000C .data      @3827                                                        */
-SECTION_DATA void* d_d_name__LIT_3827[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MojiSelectAnm2__7dName_cFv,
-};
-/* 803C269C-803C26A8 000C .data      @3828                                                        */
-SECTION_DATA void* d_d_name__LIT_3828[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MojiSelectAnm3__7dName_cFv,
-};
-/* 803C26A8-803C26B4 000C .data      @3829                                                        */
-SECTION_DATA void* d_d_name__LIT_3829[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MenuSelect__7dName_cFv,
-};
-/* 803C26B4-803C26C0 000C .data      @3830                                                        */
-SECTION_DATA void* d_d_name__LIT_3830[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MenuSelectAnm__7dName_cFv,
-};
-/* 803C26C0-803C26CC 000C .data      @3831                                                        */
-SECTION_DATA void* d_d_name__LIT_3831[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MenuSelectAnm2__7dName_cFv,
-};
-/* 803C26CC-803C26D8 000C .data      @3832                                                        */
-SECTION_DATA void* d_d_name__LIT_3832[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)MenuSelectAnm3__7dName_cFv,
-};
-/* 803C26D8-803C26E4 000C .data      @3833                                                        */
-SECTION_DATA void* d_d_name__LIT_3833[3] = {
-	NULL,
-	(void*)0xFFFFFFFF,
-	(void*)Wait__7dName_cFv,
-};
-/* 803C26E4-803C2750 006C .data      SelProc                                                      */
-SECTION_DATA u8 SelProc[108] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803C2750-803C2788 0034 .data      @4121                                                        */
-SECTION_DATA void* d_d_name__LIT_4121[14] = {
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x8C),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x130),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x170),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x1B0),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x2D4),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x31C),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x358),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x8C),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x31C),
-	(void*)(((char*)mojiChange__7dName_cFUc)+0x1B0),
-	/* padding */
-	NULL,
-};
-/* 803C2788-803C27C8 0040 .data      l_cur0TagName$4610                                           */
-SECTION_DATA u8 data_803C2788[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31,
-	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33,
-	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x34, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x35,
-	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37,
-};
-/* 803C27C8-803C2808 0040 .data      l_cur1TagName$4611                                           */
-SECTION_DATA u8 data_803C27C8[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31, 0x72,
-	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33, 0x72,
-	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x34, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x35, 0x72,
-	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37, 0x72,
-};
-/* 803C2808-803C2828 0020 .data      l_menu_icon_tag$4617                                         */
-SECTION_DATA u8 data_803C2808[32] = {
-	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x6E,
-	0x6A, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x6E,
-};
-/* 803C2828-803C28A0 0078 .data      l_menu_tag$4618                                              */
-SECTION_DATA u8 data_803C2828[120] = {
-	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x30, 0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x31,
-	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x32, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x30,
-	0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x31, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x32,
-	0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x30, 0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x31,
-	0x6D, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x32, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x30,
-	0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x31, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x32,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 803C28A0-803C28B0 0010 .data      l_menu_msg$4619                                              */
-SECTION_DATA u8 data_803C28A0[16] = {
-	0x00, 0x00, 0x03, 0x8B, 0x00, 0x00, 0x03, 0x8C, 0x00, 0x00, 0x03, 0x88, 0x00, 0x00, 0x03, 0x8E,
-};
-/* 803C28B0-803C2AB8 0208 .data      l_tagName$4635                                               */
-SECTION_DATA u8 data_803C28B0[520] = {
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x30,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x32,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x31, 0x5F, 0x34,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x32, 0x5F, 0x34, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x30,
-	0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x31, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x32,
-	0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x33, 0x00, 0x00, 0x00, 0x6D, 0x30, 0x33, 0x5F, 0x34,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x34, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x30,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x32,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x35, 0x5F, 0x34,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x36, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x30,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x32,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x37, 0x5F, 0x34,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x38, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x30,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x32,
-	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x39, 0x5F, 0x34,
-	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x31,
-	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x33,
-	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x30, 0x5F, 0x34, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x30,
-	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x31, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x32,
-	0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x33, 0x00, 0x00, 0x6D, 0x5F, 0x31, 0x31, 0x5F, 0x34,
-	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x30, 0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x31,
-	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x32, 0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x33,
-	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x34,
-};
-/* 803C2AB8-803C2AF8 0040 .data      l_nameTagName$4642                                           */
-SECTION_DATA u8 data_803C2AB8[64] = {
-	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x30, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x31,
-	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x32, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x33,
-	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x34, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x35,
-	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x36, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x37,
-};
-/* 803C2AF8-803C2B38 0040 .data      l_nameCurTagName$4643                                        */
-SECTION_DATA u8 data_803C2AF8[64] = {
-	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x30, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x31,
-	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x32, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x33,
-	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x34, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x35,
-	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x36, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x37,
-};
-/* 803C2B38-803C2B64 0010 .data      __vt__14dDlst_NameIN_c                                       */
-SECTION_DATA void* __vt__14dDlst_NameIN_c[11] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)draw__14dDlst_NameIN_cFv,
-	(void*)__dt__14dDlst_NameIN_cFv,
-	/* padding */
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-};
-/* 803C2B64-803C2B7C 000C .data      __vt__7dName_c                                               */
-SECTION_DATA void* __vt__7dName_c[6] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__7dName_cFv,
-	/* padding */
-	NULL,
-	NULL,
-	NULL,
-};
-/* 803C2B7C-803C2B88 000C .data      __vt__9dNm_HIO_c                                             */
-SECTION_DATA void* __vt__9dNm_HIO_c[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__9dNm_HIO_cFv,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454DB0-80454DB4 0004 .sdata2    @3665                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3665[4] = {
-	0x3F, 0xA6, 0x66, 0x66,
-};
-/* 80454DB4-80454DB8 0004 .sdata2    @3666                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3666[4] = {
-	0x3F, 0xB3, 0x33, 0x33,
-};
-/* 80454DB8-80454DBC 0004 .sdata2    @3755                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3755[4] = {
-	0x3F, 0x66, 0x66, 0x66,
-};
-/* 80454DBC-80454DC0 0004 .sdata2    @3756                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3756[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80454DC0-80454DC4 0004 .sdata2    @3820                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3820[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454DC4-80454DC8 0004 .sdata2    @3886                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3886[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 80454DC8-80454DD0 0008 .sdata2    @3936                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_3936[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80454DD0-80454DD4 0004 .sdata2    @4009                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_4009[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454DD4-80454DD8 0004 .sdata2    @4722                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_4722[4] = {
-	0x3F, 0x51, 0xEB, 0x85,
-};
-/* 80454DD8-80454DDC 0004 .sdata2    @4723                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_4723[4] = {
-	0x3F, 0x45, 0x1E, 0xB8,
-};
-/* 80454DDC-80454DE0 0004 .sdata2    @4724                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_4724[4] = {
-	0x3D, 0x4C, 0xCC, 0xCD,
-};
-/* 80454DE0-80454DE8 0004 .sdata2    @4725                                                        */
-SECTION_SDATA2 u8 d_d_name__LIT_4725[8] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430728-80430734 000C .bss       @3660                                                        */
-SECTION_BSS u8 LIT_3660[12];
-/* 80430734-80430748 0014 .bss       g_nmHIO                                                      */
-SECTION_BSS u8 g_nmHIO[20];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8024E3E0-8024E408 0028 .text      __ct__9dNm_HIO_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__9dNm_HIO_cFv() {
-	nofralloc
-#include "asm/d/d_name/__ct__9dNm_HIO_cFv.s"
-}
-#pragma pop
-
-/* 8024E408-8024E468 0060 .text      __ct__7dName_cFP7J2DPane                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__7dName_cFP7J2DPane() {
-	nofralloc
-#include "asm/d/d_name/__ct__7dName_cFP7J2DPane.s"
-}
-#pragma pop
-
-/* 8024E468-8024E62C 01C4 .text      __dt__7dName_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/__dt__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024E62C-8024E6D4 00A8 .text      _create__7dName_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void _create__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/_create__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024E6D4-8024E7A4 00D0 .text      init__7dName_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/init__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024E7A4-8024E7EC 0048 .text      initial__7dName_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initial__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/initial__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024E7EC-8024E9A0 01B4 .text      showIcon__7dName_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void showIcon__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/showIcon__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024E9A0-8024EC10 0270 .text      _move__7dName_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void _move__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/_move__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024EC10-8024EC4C 003C .text      nameCheck__7dName_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void nameCheck__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/nameCheck__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024EC4C-8024EC84 0038 .text      playNameSet__7dName_cFi                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void playNameSet__7dName_cFi() {
-	nofralloc
-#include "asm/d/d_name/playNameSet__7dName_cFi.s"
-}
-#pragma pop
-
-/* 8024EC84-8024ED48 00C4 .text      cursorAnm__7dName_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cursorAnm__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/cursorAnm__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024ED48-8024ED4C 0004 .text      Wait__7dName_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Wait__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/Wait__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024ED4C-8024F034 02E8 .text      MojiSelect__7dName_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void MojiSelect__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/MojiSelect__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F034-8024F0E0 00AC .text      MojiSelectAnmInit__7dName_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void MojiSelectAnmInit__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/MojiSelectAnmInit__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F0E0-8024F164 0084 .text      MojiSelectAnm__7dName_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void MojiSelectAnm__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/MojiSelectAnm__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F164-8024F1E8 0084 .text      MojiSelectAnm2__7dName_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void MojiSelectAnm2__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/MojiSelectAnm2__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F1E8-8024F1EC 0004 .text      MojiSelectAnm3__7dName_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void MojiSelectAnm3__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/MojiSelectAnm3__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F1EC-8024F55C 0370 .text      mojiChange__7dName_cFUc                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mojiChange__7dName_cFUc() {
-	nofralloc
-#include "asm/d/d_name/mojiChange__7dName_cFUc.s"
-}
-#pragma pop
-
-/* 8024F55C-8024F59C 0040 .text      selectMojiSet__7dName_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void selectMojiSet__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/selectMojiSet__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F59C-8024F634 0098 .text      getMoji__7dName_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMoji__7dName_cFv() {
-	nofralloc
-#include "asm/d/d_name/getMoji__7dName_cFv.s"
-}
-#pragma pop
-
-/* 8024F634-8024F88C 0258 .text      setMoji__7dName_cFi                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMoji__7dName_cFi() {
-	nofralloc
-#include "asm/d/d_name/setMoji__7dName_cFi.s"
-}
-#pragma pop
 
 /* 8024F88C-8024F914 0088 .text      setNameText__7dName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setNameText__7dName_cFv() {
+extern "C" asm void setNameText__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/setNameText__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024F914-8024F994 0080 .text      nameCursorMove__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void nameCursorMove__7dName_cFv() {
+extern "C" asm void nameCursorMove__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/nameCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024F994-8024FAF4 0160 .text      selectCursorMove__7dName_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void selectCursorMove__7dName_cFv() {
+extern "C" asm void selectCursorMove__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/selectCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FAF4-8024FB08 0014 .text      menuCursorPosSet__7dName_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void menuCursorPosSet__7dName_cFv() {
+extern "C" asm void menuCursorPosSet__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/menuCursorPosSet__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FB08-8024FDA0 0298 .text      MenuSelect__7dName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MenuSelect__7dName_cFv() {
+extern "C" asm void MenuSelect__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/MenuSelect__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FDA0-8024FDF4 0054 .text      MenuSelectAnmInit__7dName_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MenuSelectAnmInit__7dName_cFv() {
+extern "C" asm void MenuSelectAnmInit__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnmInit__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FDF4-8024FEB4 00C0 .text      MenuSelectAnm__7dName_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MenuSelectAnm__7dName_cFv() {
+extern "C" asm void MenuSelectAnm__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnm__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FEB4-8024FFA0 00EC .text      MenuSelectAnm2__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MenuSelectAnm2__7dName_cFv() {
+extern "C" asm void MenuSelectAnm2__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnm2__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FFA0-8024FFA4 0004 .text      MenuSelectAnm3__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MenuSelectAnm3__7dName_cFv() {
+extern "C" asm void MenuSelectAnm3__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnm3__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 8024FFA4-80250074 00D0 .text      menuAbtnSelect__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void menuAbtnSelect__7dName_cFv() {
+extern "C" asm void menuAbtnSelect__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/menuAbtnSelect__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80250074-802501B0 013C .text      backSpace__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void backSpace__7dName_cFv() {
+extern "C" asm void backSpace__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/backSpace__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 802501B0-80250284 00D4 .text      mojiListChange__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mojiListChange__7dName_cFv() {
+extern "C" asm void mojiListChange__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/mojiListChange__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80250284-80250380 00FC .text      menuCursorMove__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void menuCursorMove__7dName_cFv() {
+extern "C" asm void menuCursorMove__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/menuCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80250380-802504A0 0120 .text      menuCursorMove2__7dName_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void menuCursorMove2__7dName_cFv() {
+extern "C" asm void menuCursorMove2__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/menuCursorMove2__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 802504A0-80250560 00C0 .text      selectCursorPosSet__7dName_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void selectCursorPosSet__7dName_cFi() {
+extern "C" asm void selectCursorPosSet__7dName_cFi() {
 	nofralloc
 #include "asm/d/d_name/selectCursorPosSet__7dName_cFi.s"
 }
 #pragma pop
 
+
 /* 80250560-802505CC 006C .text      _draw__7dName_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _draw__7dName_cFv() {
+extern "C" asm void _draw__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/_draw__7dName_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454DD4-80454DD8 0004 .sdata2    @4722                                                        */
+f32 d_d_name__lit_4722 = 41.0f / 50.0f;
+
+/* 80454DD8-80454DDC 0004 .sdata2    @4723                                                        */
+f32 d_d_name__lit_4723 = 77.0f / 100.0f;
+
+/* 80454DDC-80454DE0 0004 .sdata2    @4724                                                        */
+f32 d_d_name__lit_4724 = 1.0f / 20.0f;
+
+/* 80454DE0-80454DE8 0004 .sdata2    @4725                                                        */
+f32 d_d_name__lit_4725 = 2.0f / 5.0f;
+/* padding 4 bytes */
+
 /* 802505CC-80250CEC 0720 .text      screenSet__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void screenSet__7dName_cFv() {
+extern "C" asm void screenSet__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/screenSet__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80250CEC-80250E54 0168 .text      displayInit__7dName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void displayInit__7dName_cFv() {
+extern "C" asm void displayInit__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/displayInit__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80250E54-80251048 01F4 .text      NameStrSet__7dName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void NameStrSet__7dName_cFv() {
+extern "C" asm void NameStrSet__7dName_cFv() {
 	nofralloc
 #include "asm/d/d_name/NameStrSet__7dName_cFv.s"
 }
 #pragma pop
 
+
 /* 80251048-80251094 004C .text      getMenuPosIdx__7dName_cFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMenuPosIdx__7dName_cFUc() {
+extern "C" asm void getMenuPosIdx__7dName_cFUc() {
 	nofralloc
 #include "asm/d/d_name/getMenuPosIdx__7dName_cFUc.s"
 }
 #pragma pop
 
+
 /* 80251094-8025115C 00C8 .text      draw__14dDlst_NameIN_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__14dDlst_NameIN_cFv() {
+extern "C" asm void draw__14dDlst_NameIN_cFv() {
 	nofralloc
 #include "asm/d/d_name/draw__14dDlst_NameIN_cFv.s"
 }
 #pragma pop
 
+
 /* 8025115C-802511A4 0048 .text      __dt__14dDlst_NameIN_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14dDlst_NameIN_cFv() {
+extern "C" asm void __dt__14dDlst_NameIN_cFv() {
 	nofralloc
 #include "asm/d/d_name/__dt__14dDlst_NameIN_cFv.s"
 }
 #pragma pop
 
+
 /* 802511A4-802511EC 0048 .text      __dt__9dNm_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9dNm_HIO_cFv() {
+extern "C" asm void __dt__9dNm_HIO_cFv() {
 	nofralloc
 #include "asm/d/d_name/__dt__9dNm_HIO_cFv.s"
 }
 #pragma pop
 
+
 /* 802511EC-80251314 0128 .text      __sinit_d_name_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_name_cpp() {
+extern "C" asm void __sinit_d_name_cpp() {
 	nofralloc
 #include "asm/d/d_name/__sinit_d_name_cpp.s"
 }

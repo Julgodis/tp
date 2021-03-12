@@ -5,41 +5,38 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__Q26JStage7TObjectFv();
-extern void JSGGetName__Q26JStage7TObjectCFv();
-extern void JSGUpdate__Q26JStage7TObjectFv();
-extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern void __dt__Q26JStage7TSystemFv();
-extern void JSGFGetType__Q26JStage7TSystemCFv();
-extern void JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
-extern void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
-extern void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
-extern void JSGGetSystemData__Q26JStage7TSystemFUl();
-extern void JSGSetSystemData__Q26JStage7TSystemFUlUl();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__Q26JStage7TSystem[20];
-}
+extern "C" extern void __dt__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
+extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" extern void __dt__Q26JStage7TSystemFv();
+extern "C" extern void JSGFGetType__Q26JStage7TSystemCFv();
+extern "C" extern void JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
+extern "C" extern void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+extern "C" extern void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
+extern "C" extern void JSGGetSystemData__Q26JStage7TSystemFUl();
+extern "C" extern void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__Q26JStage7TSystem[20];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C4828-803C4878 0050 .data      __vt__Q26JStage7TSystem                                      */
-SECTION_DATA void* __vt__Q26JStage7TSystem[20] = {
+void* const __vt__Q26JStage7TSystem[20] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -61,78 +58,78 @@ SECTION_DATA void* __vt__Q26JStage7TSystem[20] = {
 	(void*)JSGGetSystemData__Q26JStage7TSystemFUl,
 	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80280E90-80280EF0 0060 .text      __dt__Q26JStage7TSystemFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q26JStage7TSystemFv() {
+extern "C" asm void __dt__Q26JStage7TSystemFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/__dt__Q26JStage7TSystemFv.s"
 }
 #pragma pop
 
+
 /* 80280EF0-80280EF8 0008 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGFGetType__Q26JStage7TSystemCFv() {
+extern "C" asm void JSGFGetType__Q26JStage7TSystemCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGFGetType__Q26JStage7TSystemCFv.s"
 }
 #pragma pop
 
+
 /* 80280EF8-80280F00 0008 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject() {
+extern "C" asm void JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject.s"
 }
 #pragma pop
 
+
 /* 80280F00-80280F08 0008 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl() {
+extern "C" asm void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl.s"
 }
 #pragma pop
 
+
 /* 80280F08-80280F0C 0004 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject() {
+extern "C" asm void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject.s"
 }
 #pragma pop
 
+
 /* 80280F0C-80280F14 0008 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetSystemData__Q26JStage7TSystemFUl() {
+extern "C" asm void JSGGetSystemData__Q26JStage7TSystemFUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGGetSystemData__Q26JStage7TSystemFUl.s"
 }
 #pragma pop
 
+
 /* 80280F14-80280F18 0004 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetSystemData__Q26JStage7TSystemFUlUl() {
+extern "C" asm void JSGSetSystemData__Q26JStage7TSystemFUlUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/JSGSetSystemData__Q26JStage7TSystemFUlUl.s"
 }

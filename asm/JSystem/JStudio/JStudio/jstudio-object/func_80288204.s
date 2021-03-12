@@ -4,10 +4,10 @@ lbl_80288204:
 /* 8028820C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80288210 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80288214 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80288218 00000014  3C 60 80 43 */	lis r3, jstudio_object__LIT_744@ha
-/* 8028821C 00000018  3B E3 10 10 */	addi r31, r3, jstudio_object__LIT_744@l
-/* 80288220 0000001C  3C 60 80 3C */	lis r3, LIT_742@ha
-/* 80288224 00000020  3B C3 4B 00 */	addi r30, r3, LIT_742@l
+/* 80288218 00000014  3C 60 80 43 */	lis r3, jstudio_object__lit_744@ha
+/* 8028821C 00000018  3B E3 10 10 */	addi r31, r3, jstudio_object__lit_744@l
+/* 80288220 0000001C  3C 60 80 3C */	lis r3, lit_742@ha
+/* 80288224 00000020  3B C3 4B 00 */	addi r30, r3, lit_742@l
 /* 80288228 00000024  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028822C 00000028  38 03 56 40 */	addi r0, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 80288230 0000002C  90 1F 00 0C */	stw r0, 0xc(r31)

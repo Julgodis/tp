@@ -58,24 +58,24 @@ lbl_8000A640:
 /* 8000A6E0 000000A0  38 60 00 01 */	li r3, 1
 /* 8000A6E4 000000A4  48 35 56 F5 */	bl GXSetDither
 /* 8000A6E8 000000A8  38 61 02 A8 */	addi r3, r1, 0x2a8
-/* 8000A6EC 000000AC  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000A6EC 000000AC  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000A6F0 000000B0  FC 40 08 90 */	fmr f2, f1
-/* 8000A6F4 000000B4  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__LIT_4481(r2)
-/* 8000A6F8 000000B8  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__LIT_4480(r2)
-/* 8000A6FC 000000BC  C0 A2 80 D8 */	lfs f5, m_Do_m_Do_graphic__LIT_5023(r2)
-/* 8000A700 000000C0  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 8000A6F4 000000B4  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__lit_4481(r2)
+/* 8000A6F8 000000B8  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__lit_4480(r2)
+/* 8000A6FC 000000BC  C0 A2 80 D8 */	lfs f5, m_Do_m_Do_graphic__lit_5023(r2)
+/* 8000A700 000000C0  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000A704 000000C4  48 2D EF CD */	bl __ct__13J2DOrthoGraphFffffff
-/* 8000A708 000000C8  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000A708 000000C8  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000A70C 000000CC  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 8000A710 000000D0  D0 01 00 3C */	stfs f0, 0x3c(r1)
-/* 8000A714 000000D4  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__LIT_4481(r2)
+/* 8000A714 000000D4  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__lit_4481(r2)
 /* 8000A718 000000D8  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 8000A71C 000000DC  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000A71C 000000DC  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000A720 000000E0  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 8000A724 000000E4  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000A728 000000E8  38 81 00 38 */	addi r4, r1, 0x38
-/* 8000A72C 000000EC  C0 22 80 D8 */	lfs f1, m_Do_m_Do_graphic__LIT_5023(r2)
-/* 8000A730 000000F0  C0 42 80 3C */	lfs f2, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 8000A72C 000000EC  C0 22 80 D8 */	lfs f1, m_Do_m_Do_graphic__lit_5023(r2)
+/* 8000A730 000000F0  C0 42 80 3C */	lfs f2, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000A734 000000F4  48 2D F0 D9 */	bl func_802E980C
 /* 8000A738 000000F8  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000A73C 000000FC  48 2D F0 79 */	bl setPort__13J2DOrthoGraphFv
@@ -106,7 +106,7 @@ lbl_8000A640:
 /* 8000A7A0 00000160  38 9E 01 40 */	addi r4, r30, 0x140
 /* 8000A7A4 00000164  48 04 B0 25 */	bl imageDraw__21dDlst_shadowControl_cFPA4_f
 /* 8000A7A8 00000168  7E BD AB 78 */	mr r29, r21
-/* 8000A7AC 0000016C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000A7AC 0000016C  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000A7B0 00000170  C0 15 00 00 */	lfs f0, 0(r21)
 /* 8000A7B4 00000174  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8000A7B8 00000178  40 82 00 10 */	bne lbl_8000A7C8
@@ -114,12 +114,12 @@ lbl_8000A640:
 /* 8000A7C0 00000180  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8000A7C4 00000184  41 82 00 54 */	beq lbl_8000A818
 lbl_8000A7C8:
-/* 8000A7C8 00000000  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000A7C8 00000000  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000A7CC 00000004  D0 01 01 60 */	stfs f0, 0x160(r1)
 /* 8000A7D0 00000008  D0 01 01 64 */	stfs f0, 0x164(r1)
-/* 8000A7D4 0000000C  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__LIT_4481(r2)
+/* 8000A7D4 0000000C  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__lit_4481(r2)
 /* 8000A7D8 00000010  D0 01 01 68 */	stfs f0, 0x168(r1)
-/* 8000A7DC 00000014  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000A7DC 00000014  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000A7E0 00000018  D0 01 01 6C */	stfs f0, 0x16c(r1)
 /* 8000A7E4 0000001C  C0 15 00 10 */	lfs f0, 0x10(r21)
 /* 8000A7E8 00000020  D0 01 01 70 */	stfs f0, 0x170(r1)
@@ -165,8 +165,8 @@ lbl_8000A818:
 /* 8000A884 0000006C  38 61 02 78 */	addi r3, r1, 0x278
 /* 8000A888 00000070  FC 20 F8 90 */	fmr f1, f31
 /* 8000A88C 00000074  FC 40 F0 90 */	fmr f2, f30
-/* 8000A890 00000078  C0 62 80 DC */	lfs f3, m_Do_m_Do_graphic__LIT_5024(r2)
-/* 8000A894 0000007C  C0 82 80 E0 */	lfs f4, m_Do_m_Do_graphic__LIT_5025(r2)
+/* 8000A890 00000078  C0 62 80 DC */	lfs f3, m_Do_m_Do_graphic__lit_5024(r2)
+/* 8000A894 0000007C  C0 82 80 E0 */	lfs f4, m_Do_m_Do_graphic__lit_5025(r2)
 /* 8000A898 00000080  FC A0 18 90 */	fmr f5, f3
 /* 8000A89C 00000084  FC C0 18 90 */	fmr f6, f3
 /* 8000A8A0 00000088  48 33 C3 79 */	bl C_MTXLightPerspective
@@ -445,29 +445,29 @@ lbl_8000AC58:
 /* 8000ACA4 0000004C  80 A1 03 84 */	lwz r5, 0x384(r1)
 /* 8000ACA8 00000050  4B FF F4 B9 */	bl retry_captue_frame__FP10view_classP15view_port_classi
 lbl_8000ACAC:
-/* 8000ACAC 00000000  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000ACAC 00000000  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000ACB0 00000004  FC 40 08 90 */	fmr f2, f1
-/* 8000ACB4 00000008  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__LIT_4481(r2)
-/* 8000ACB8 0000000C  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000ACB4 00000008  C0 62 80 AC */	lfs f3, m_Do_m_Do_graphic__lit_4481(r2)
+/* 8000ACB8 0000000C  C0 82 80 A8 */	lfs f4, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000ACBC 00000010  FC A0 08 90 */	fmr f5, f1
-/* 8000ACC0 00000014  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 8000ACC0 00000014  C0 C2 80 3C */	lfs f6, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000ACC4 00000018  48 35 57 A1 */	bl GXSetViewport
 /* 8000ACC8 0000001C  38 61 00 F0 */	addi r3, r1, 0xf0
-/* 8000ACCC 00000020  C0 22 80 4C */	lfs f1, m_Do_m_Do_graphic__LIT_4423(r2)
-/* 8000ACD0 00000024  C0 42 80 E4 */	lfs f2, m_Do_m_Do_graphic__LIT_5026(r2)
-/* 8000ACD4 00000028  C0 62 80 3C */	lfs f3, m_Do_m_Do_graphic__LIT_4063(r2)
-/* 8000ACD8 0000002C  C0 82 80 E8 */	lfs f4, m_Do_m_Do_graphic__LIT_5027(r2)
+/* 8000ACCC 00000020  C0 22 80 4C */	lfs f1, m_Do_m_Do_graphic__lit_4423(r2)
+/* 8000ACD0 00000024  C0 42 80 E4 */	lfs f2, m_Do_m_Do_graphic__lit_5026(r2)
+/* 8000ACD4 00000028  C0 62 80 3C */	lfs f3, m_Do_m_Do_graphic__lit_4063(r2)
+/* 8000ACD8 0000002C  C0 82 80 E8 */	lfs f4, m_Do_m_Do_graphic__lit_5027(r2)
 /* 8000ACDC 00000030  48 33 C2 4D */	bl C_MTXPerspective
 /* 8000ACE0 00000034  38 61 00 F0 */	addi r3, r1, 0xf0
 /* 8000ACE4 00000038  38 80 00 00 */	li r4, 0
 /* 8000ACE8 0000003C  48 35 53 ED */	bl GXSetProjection
-/* 8000ACEC 00000040  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000ACEC 00000040  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000ACF0 00000044  D0 21 00 54 */	stfs f1, 0x54(r1)
 /* 8000ACF4 00000048  D0 21 00 58 */	stfs f1, 0x58(r1)
-/* 8000ACF8 0000004C  C0 02 80 EC */	lfs f0, m_Do_m_Do_graphic__LIT_5028(r2)
+/* 8000ACF8 0000004C  C0 02 80 EC */	lfs f0, m_Do_m_Do_graphic__lit_5028(r2)
 /* 8000ACFC 00000050  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 8000AD00 00000054  D0 21 00 48 */	stfs f1, 0x48(r1)
-/* 8000AD04 00000058  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 8000AD04 00000058  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000AD08 0000005C  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 8000AD0C 00000060  D0 21 00 50 */	stfs f1, 0x50(r1)
 /* 8000AD10 00000064  38 61 01 30 */	addi r3, r1, 0x130
@@ -543,34 +543,34 @@ lbl_8000ADEC:
 /* 8000AE1C 00000030  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8000AE20 00000034  80 84 5F B4 */	lwz r4, 0x5fb4(r4)
 /* 8000AE24 00000038  48 04 B8 B1 */	bl drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer
-/* 8000AE28 0000003C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000AE28 0000003C  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000AE2C 00000040  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8000AE30 00000044  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 8000AE34 00000048  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__LIT_4481(r2)
+/* 8000AE34 00000048  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__lit_4481(r2)
 /* 8000AE38 0000004C  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 8000AE3C 00000050  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000AE3C 00000050  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000AE40 00000054  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 8000AE44 00000058  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000AE48 0000005C  38 81 00 28 */	addi r4, r1, 0x28
-/* 8000AE4C 00000060  C0 22 80 E8 */	lfs f1, m_Do_m_Do_graphic__LIT_5027(r2)
-/* 8000AE50 00000064  C0 42 80 F0 */	lfs f2, m_Do_m_Do_graphic__LIT_5029(r2)
+/* 8000AE4C 00000060  C0 22 80 E8 */	lfs f1, m_Do_m_Do_graphic__lit_5027(r2)
+/* 8000AE50 00000064  C0 42 80 F0 */	lfs f2, m_Do_m_Do_graphic__lit_5029(r2)
 /* 8000AE54 00000068  48 2D E9 B9 */	bl func_802E980C
 /* 8000AE58 0000006C  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000AE5C 00000070  48 2D E9 59 */	bl setPort__13J2DOrthoGraphFv
 /* 8000AE60 00000074  38 61 00 C0 */	addi r3, r1, 0xc0
-/* 8000AE64 00000078  C0 22 80 F4 */	lfs f1, m_Do_m_Do_graphic__LIT_5030(r2)
-/* 8000AE68 0000007C  C0 42 80 F8 */	lfs f2, m_Do_m_Do_graphic__LIT_5031(r2)
-/* 8000AE6C 00000080  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000AE64 00000078  C0 22 80 F4 */	lfs f1, m_Do_m_Do_graphic__lit_5030(r2)
+/* 8000AE68 0000007C  C0 42 80 F8 */	lfs f2, m_Do_m_Do_graphic__lit_5031(r2)
+/* 8000AE6C 00000080  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000AE70 00000084  48 33 BA 79 */	bl PSMTXTrans
 /* 8000AE74 00000088  38 61 00 C0 */	addi r3, r1, 0xc0
 /* 8000AE78 0000008C  38 81 01 E8 */	addi r4, r1, 0x1e8
 /* 8000AE7C 00000090  48 33 B6 35 */	bl PSMTXCopy
 /* 8000AE80 00000094  38 61 02 18 */	addi r3, r1, 0x218
-/* 8000AE84 00000098  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 8000AE88 0000009C  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000AE84 00000098  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
+/* 8000AE88 0000009C  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000AE8C 000000A0  FC 60 08 90 */	fmr f3, f1
-/* 8000AE90 000000A4  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__LIT_4481(r2)
-/* 8000AE94 000000A8  C0 A2 80 DC */	lfs f5, m_Do_m_Do_graphic__LIT_5024(r2)
+/* 8000AE90 000000A4  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__lit_4481(r2)
+/* 8000AE94 000000A8  C0 A2 80 DC */	lfs f5, m_Do_m_Do_graphic__lit_5024(r2)
 /* 8000AE98 000000AC  FC C0 28 90 */	fmr f6, f5
 /* 8000AE9C 000000B0  FC E0 28 90 */	fmr f7, f5
 /* 8000AEA0 000000B4  FD 00 28 90 */	fmr f8, f5
@@ -603,17 +603,17 @@ lbl_8000AEF8:
 /* 8000AF04 0000000C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8000AF08 00000010  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 8000AF0C 00000014  48 30 58 31 */	bl reinitGX__6J3DSysFv
-/* 8000AF10 00000018  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000AF10 00000018  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000AF14 0000001C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8000AF18 00000020  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8000AF1C 00000024  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__LIT_4481(r2)
+/* 8000AF1C 00000024  C0 02 80 AC */	lfs f0, m_Do_m_Do_graphic__lit_4481(r2)
 /* 8000AF20 00000028  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8000AF24 0000002C  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000AF24 0000002C  C0 02 80 A8 */	lfs f0, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000AF28 00000030  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8000AF2C 00000034  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000AF30 00000038  38 81 00 18 */	addi r4, r1, 0x18
-/* 8000AF34 0000003C  C0 22 80 E8 */	lfs f1, m_Do_m_Do_graphic__LIT_5027(r2)
-/* 8000AF38 00000040  C0 42 80 F0 */	lfs f2, m_Do_m_Do_graphic__LIT_5029(r2)
+/* 8000AF34 0000003C  C0 22 80 E8 */	lfs f1, m_Do_m_Do_graphic__lit_5027(r2)
+/* 8000AF38 00000040  C0 42 80 F0 */	lfs f2, m_Do_m_Do_graphic__lit_5029(r2)
 /* 8000AF3C 00000044  48 2D E8 D1 */	bl func_802E980C
 /* 8000AF40 00000048  38 61 02 A8 */	addi r3, r1, 0x2a8
 /* 8000AF44 0000004C  48 2D E8 71 */	bl setPort__13J2DOrthoGraphFv
@@ -622,19 +622,19 @@ lbl_8000AEF8:
 /* 8000AF50 00000058  38 81 00 90 */	addi r4, r1, 0x90
 /* 8000AF54 0000005C  48 33 B5 5D */	bl PSMTXCopy
 /* 8000AF58 00000060  38 61 00 60 */	addi r3, r1, 0x60
-/* 8000AF5C 00000064  C0 22 80 F4 */	lfs f1, m_Do_m_Do_graphic__LIT_5030(r2)
-/* 8000AF60 00000068  C0 42 80 F8 */	lfs f2, m_Do_m_Do_graphic__LIT_5031(r2)
-/* 8000AF64 0000006C  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000AF5C 00000064  C0 22 80 F4 */	lfs f1, m_Do_m_Do_graphic__lit_5030(r2)
+/* 8000AF60 00000068  C0 42 80 F8 */	lfs f2, m_Do_m_Do_graphic__lit_5031(r2)
+/* 8000AF64 0000006C  C0 62 80 38 */	lfs f3, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000AF68 00000070  48 33 B9 81 */	bl PSMTXTrans
 /* 8000AF6C 00000074  38 61 00 60 */	addi r3, r1, 0x60
 /* 8000AF70 00000078  38 81 01 88 */	addi r4, r1, 0x188
 /* 8000AF74 0000007C  48 33 B5 3D */	bl PSMTXCopy
 /* 8000AF78 00000080  38 61 01 B8 */	addi r3, r1, 0x1b8
-/* 8000AF7C 00000084  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 8000AF80 00000088  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__LIT_4480(r2)
+/* 8000AF7C 00000084  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
+/* 8000AF80 00000088  C0 42 80 A8 */	lfs f2, m_Do_m_Do_graphic__lit_4480(r2)
 /* 8000AF84 0000008C  FC 60 08 90 */	fmr f3, f1
-/* 8000AF88 00000090  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__LIT_4481(r2)
-/* 8000AF8C 00000094  C0 A2 80 DC */	lfs f5, m_Do_m_Do_graphic__LIT_5024(r2)
+/* 8000AF88 00000090  C0 82 80 AC */	lfs f4, m_Do_m_Do_graphic__lit_4481(r2)
+/* 8000AF8C 00000094  C0 A2 80 DC */	lfs f5, m_Do_m_Do_graphic__lit_5024(r2)
 /* 8000AF90 00000098  FC C0 28 90 */	fmr f6, f5
 /* 8000AF94 0000009C  FC E0 28 90 */	fmr f7, f5
 /* 8000AF98 000000A0  FD 00 28 90 */	fmr f8, f5

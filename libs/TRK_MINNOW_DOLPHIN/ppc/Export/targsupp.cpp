@@ -5,57 +5,57 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRKAccessFile();
-extern void TRKOpenFile();
-extern void TRKCloseFile();
-extern void TRKPositionFile();
-}
+extern "C" extern void TRKAccessFile();
+extern "C" extern void TRKOpenFile();
+extern "C" extern void TRKCloseFile();
+extern "C" extern void TRKPositionFile();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803711D0-803711D8 0008 .text      TRKAccessFile                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 16
-asm void TRKAccessFile() {
+extern "C" asm void TRKAccessFile() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Export/targsupp/TRKAccessFile.s"
 }
 #pragma pop
 
+
 /* 803711D8-803711E0 0008 .text      TRKOpenFile                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKOpenFile() {
+extern "C" asm void TRKOpenFile() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Export/targsupp/TRKOpenFile.s"
 }
 #pragma pop
 
+
 /* 803711E0-803711E8 0008 .text      TRKCloseFile                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKCloseFile() {
+extern "C" asm void TRKCloseFile() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Export/targsupp/TRKCloseFile.s"
 }
 #pragma pop
 
+
 /* 803711E8-803711F0 0008 .text      TRKPositionFile                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKPositionFile() {
+extern "C" asm void TRKPositionFile() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Export/targsupp/TRKPositionFile.s"
 }

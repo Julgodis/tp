@@ -13,7 +13,7 @@ lbl_801D49E0:
 /* 801D4A0C 0000002C  80 7F 0C E4 */	lwz r3, 0xce4(r31)
 /* 801D4A10 00000030  A8 03 00 06 */	lha r0, 6(r3)
 /* 801D4A14 00000034  C0 5F 0F AC */	lfs f2, 0xfac(r31)
-/* 801D4A18 00000038  C8 22 A8 08 */	lfd f1, d_menu_d_menu_fmap2D__LIT_4496(r2)
+/* 801D4A18 00000038  C8 22 A8 08 */	lfd f1, d_menu_d_menu_fmap2D__lit_4496(r2)
 /* 801D4A1C 0000003C  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 801D4A20 00000040  90 61 00 0C */	stw r3, 0xc(r1)
 /* 801D4A24 00000044  3C 00 43 30 */	lis r0, 0x4330
@@ -35,7 +35,7 @@ lbl_801D4A58:
 /* 801D4A60 00000008  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801D4A64 0000000C  48 00 00 0C */	b lbl_801D4A70
 lbl_801D4A68:
-/* 801D4A68 00000000  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D4A68 00000000  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801D4A6C 00000004  D0 1F 0F AC */	stfs f0, 0xfac(r31)
 lbl_801D4A70:
 /* 801D4A70 00000000  80 7F 0C 9C */	lwz r3, 0xc9c(r31)

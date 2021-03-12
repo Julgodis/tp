@@ -10,14 +10,14 @@ lbl_801CE188:
 /* 801CE1A8 00000020  D0 63 00 18 */	stfs f3, 0x18(r3)
 /* 801CE1AC 00000024  C0 23 00 18 */	lfs f1, 0x18(r3)
 /* 801CE1B0 00000028  A0 03 00 20 */	lhz r0, 0x20(r3)
-/* 801CE1B4 0000002C  C8 42 A7 78 */	lfd f2, d_menu_d_menu_fmap_map__LIT_3689(r2)
+/* 801CE1B4 0000002C  C8 42 A7 78 */	lfd f2, d_menu_d_menu_fmap_map__lit_3689(r2)
 /* 801CE1B8 00000030  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801CE1BC 00000034  3C 60 43 30 */	lis r3, 0x4330
 /* 801CE1C0 00000038  90 61 00 08 */	stw r3, 8(r1)
 /* 801CE1C4 0000003C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801CE1C8 00000040  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801CE1CC 00000044  EC 21 00 32 */	fmuls f1, f1, f0
-/* 801CE1D0 00000048  C0 02 A7 84 */	lfs f0, d_menu_d_menu_fmap_map__LIT_3711(r2)
+/* 801CE1D0 00000048  C0 02 A7 84 */	lfs f0, d_menu_d_menu_fmap_map__lit_3711(r2)
 /* 801CE1D4 0000004C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801CE1D8 00000050  D0 06 00 08 */	stfs f0, 8(r6)
 /* 801CE1DC 00000054  C0 26 00 18 */	lfs f1, 0x18(r6)

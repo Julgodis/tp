@@ -5,26 +5,23 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __GXSetDirtyState();
-extern void __GXSendFlushPrim();
-extern void GXCallDisplayList();
+extern "C" extern void __GXSetDirtyState();
+extern "C" extern void __GXSendFlushPrim();
+extern "C" extern void GXCallDisplayList();
 SECTION_SDATA2 extern void* __GXData;
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8035FEF0-8035FF60 0070 .text      GXCallDisplayList                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXCallDisplayList() {
+extern "C" asm void GXCallDisplayList() {
 	nofralloc
 #include "asm/dolphin/gx/GXDisplayList/GXCallDisplayList.s"
 }

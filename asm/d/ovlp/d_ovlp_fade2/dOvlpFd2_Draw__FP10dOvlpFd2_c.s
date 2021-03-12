@@ -25,15 +25,15 @@ lbl_80252D54:
 /* 80252D64 00000010  40 82 00 84 */	bne lbl_80252DE8
 /* 80252D68 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80252D6C 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80252D70 0000001C  C0 22 B4 24 */	lfs f1, LIT_3683(r2)
+/* 80252D70 0000001C  C0 22 B4 24 */	lfs f1, lit_3683(r2)
 /* 80252D74 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80252D78 00000024  C0 62 B4 54 */	lfs f3, d_ovlp_d_ovlp_fade2__LIT_3822(r2)
+/* 80252D78 00000024  C0 62 B4 54 */	lfs f3, d_ovlp_d_ovlp_fade2__lit_3822(r2)
 /* 80252D7C 00000028  48 0F 3B 6D */	bl PSMTXTrans
 /* 80252D80 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80252D84 00000030  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80252D88 00000034  A8 9F 01 14 */	lha r4, 0x114(r31)
 /* 80252D8C 00000038  4B DB 97 41 */	bl mDoMtx_ZrotM__FPA4_fs
-/* 80252D90 0000003C  C0 22 B4 30 */	lfs f1, LIT_3686(r2)
+/* 80252D90 0000003C  C0 22 B4 30 */	lfs f1, lit_3686(r2)
 /* 80252D94 00000040  C0 1F 01 18 */	lfs f0, 0x118(r31)
 /* 80252D98 00000044  EC 41 00 2A */	fadds f2, f1, f0
 /* 80252D9C 00000048  FC 60 08 90 */	fmr f3, f1

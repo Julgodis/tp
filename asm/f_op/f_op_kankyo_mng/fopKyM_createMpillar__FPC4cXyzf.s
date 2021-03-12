@@ -29,7 +29,7 @@ lbl_8001F940:
 /* 8001F974 00000034  39 00 00 00 */	li r8, 0
 /* 8001F978 00000038  39 21 00 20 */	addi r9, r1, 0x20
 /* 8001F97C 0000003C  39 40 00 FF */	li r10, 0xff
-/* 8001F980 00000040  C0 22 82 68 */	lfs f1, f_op_f_op_kankyo_mng__LIT_3713(r2)
+/* 8001F980 00000040  C0 22 82 68 */	lfs f1, f_op_f_op_kankyo_mng__lit_3713(r2)
 /* 8001F984 00000044  48 02 D1 0D */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8001F988 00000048  3B BD 00 01 */	addi r29, r29, 1
 /* 8001F98C 0000004C  2C 1D 00 02 */	cmpwi r29, 2

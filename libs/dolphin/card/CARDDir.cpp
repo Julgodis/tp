@@ -5,63 +5,63 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void DCStoreRange();
-extern void __CARDEraseSector();
-extern void __CARDPutControlBlock();
-extern void __CARDWrite();
-extern void __CARDGetDirBlock();
-extern void CARDDir__WriteCallback();
-extern void CARDDir__EraseCallback();
-extern void __CARDUpdateDir();
-extern void __CARDCheckSum();
+extern "C" extern void DCStoreRange();
+extern "C" extern void __CARDEraseSector();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDWrite();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void CARDDir__WriteCallback();
+extern "C" extern void CARDDir__EraseCallback();
+extern "C" extern void __CARDUpdateDir();
+extern "C" extern void __CARDCheckSum();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8035577C-80355784 0008 .text      __CARDGetDirBlock                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDGetDirBlock() {
+extern "C" asm void __CARDGetDirBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/__CARDGetDirBlock.s"
 }
 #pragma pop
 
+
 /* 80355784-80355854 00D0 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDDir__WriteCallback() {
+extern "C" asm void CARDDir__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/CARDDir__WriteCallback.s"
 }
 #pragma pop
 
+
 /* 80355854-8035591C 00C8 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDDir__EraseCallback() {
+extern "C" asm void CARDDir__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/CARDDir__EraseCallback.s"
 }
 #pragma pop
 
+
 /* 8035591C-803559E0 00C4 .text      __CARDUpdateDir                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDUpdateDir() {
+extern "C" asm void __CARDUpdateDir() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/__CARDUpdateDir.s"
 }

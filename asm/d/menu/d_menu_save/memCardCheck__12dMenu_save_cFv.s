@@ -12,8 +12,8 @@ lbl_801F1720:
 /* 801F1748 00000028  41 82 01 C0 */	beq lbl_801F1908
 /* 801F174C 0000002C  28 03 00 0C */	cmplwi r3, 0xc
 /* 801F1750 00000030  41 81 01 B8 */	bgt lbl_801F1908
-/* 801F1754 00000034  3C 80 80 3C */	lis r4, d_menu_d_menu_save__LIT_4802@ha
-/* 801F1758 00000038  38 84 E7 24 */	addi r4, r4, d_menu_d_menu_save__LIT_4802@l
+/* 801F1754 00000034  3C 80 80 3C */	lis r4, d_menu_d_menu_save__lit_4802@ha
+/* 801F1758 00000038  38 84 E7 24 */	addi r4, r4, d_menu_d_menu_save__lit_4802@l
 /* 801F175C 0000003C  54 60 10 3A */	slwi r0, r3, 2
 /* 801F1760 00000040  7C 04 00 2E */	lwzx r0, r4, r0
 /* 801F1764 00000044  7C 09 03 A6 */	mtctr r0
@@ -83,8 +83,8 @@ lbl_801F1720:
 /* 801F1864 00000144  48 00 31 AD */	bl errDispInitSet__12dMenu_save_cFi
 /* 801F1868 00000148  38 00 00 00 */	li r0, 0
 /* 801F186C 0000014C  98 1F 00 9E */	stb r0, 0x9e(r31)
-/* 801F1870 00000150  3C 60 80 3C */	lis r3, d_menu_d_menu_save__LIT_4794@ha
-/* 801F1874 00000154  38 83 E7 0C */	addi r4, r3, d_menu_d_menu_save__LIT_4794@l
+/* 801F1870 00000150  3C 60 80 3C */	lis r3, d_menu_d_menu_save__lit_4794@ha
+/* 801F1874 00000154  38 83 E7 0C */	addi r4, r3, d_menu_d_menu_save__lit_4794@l
 /* 801F1878 00000158  80 64 00 00 */	lwz r3, 0(r4)
 /* 801F187C 0000015C  80 04 00 04 */	lwz r0, 4(r4)
 /* 801F1880 00000160  90 7F 01 C4 */	stw r3, 0x1c4(r31)
@@ -109,8 +109,8 @@ lbl_801F1720:
 /* 801F18CC 000001AC  48 00 31 45 */	bl errDispInitSet__12dMenu_save_cFi
 /* 801F18D0 000001B0  38 00 00 00 */	li r0, 0
 /* 801F18D4 000001B4  98 1F 00 9E */	stb r0, 0x9e(r31)
-/* 801F18D8 000001B8  3C 60 80 3C */	lis r3, d_menu_d_menu_save__LIT_4797@ha
-/* 801F18DC 000001BC  38 83 E7 18 */	addi r4, r3, d_menu_d_menu_save__LIT_4797@l
+/* 801F18D8 000001B8  3C 60 80 3C */	lis r3, d_menu_d_menu_save__lit_4797@ha
+/* 801F18DC 000001BC  38 83 E7 18 */	addi r4, r3, d_menu_d_menu_save__lit_4797@l
 /* 801F18E0 000001C0  80 64 00 00 */	lwz r3, 0(r4)
 /* 801F18E4 000001C4  80 04 00 04 */	lwz r0, 4(r4)
 /* 801F18E8 000001C8  90 7F 01 C4 */	stw r3, 0x1c4(r31)

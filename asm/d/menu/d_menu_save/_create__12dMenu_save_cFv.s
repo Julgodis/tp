@@ -13,8 +13,8 @@ lbl_801EF7AC:
 /* 801EF7D8 0000002C  38 A0 00 02 */	li r5, 2
 /* 801EF7DC 00000030  38 C0 00 01 */	li r6, 1
 /* 801EF7E0 00000034  38 E0 00 01 */	li r7, 1
-/* 801EF7E4 00000038  C0 22 AA 38 */	lfs f1, d_menu_d_menu_save__LIT_3849(r2)
-/* 801EF7E8 0000003C  C0 42 AA 3C */	lfs f2, d_menu_d_menu_save__LIT_3850(r2)
+/* 801EF7E4 00000038  C0 22 AA 38 */	lfs f1, d_menu_d_menu_save__lit_3849(r2)
+/* 801EF7E8 0000003C  C0 42 AA 3C */	lfs f2, d_menu_d_menu_save__lit_3850(r2)
 /* 801EF7EC 00000040  39 00 00 00 */	li r8, 0
 /* 801EF7F0 00000044  39 20 20 00 */	li r9, 0x2000
 /* 801EF7F4 00000048  4B E4 28 51 */	bl __ct__9STControlFssssffss

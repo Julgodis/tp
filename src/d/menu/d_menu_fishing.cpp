@@ -5,68 +5,67 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern void mDoExt_getMesgFont__Fv();
-extern void mDoExt_getSubFont__Fv();
-extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern void __dt__15dMenu_Fishing_cFv();
-extern void _create__15dMenu_Fishing_cFv();
-extern void _move__15dMenu_Fishing_cFv();
-extern void _draw__15dMenu_Fishing_cFv();
-extern void isSync__15dMenu_Fishing_cFv();
-extern void init__15dMenu_Fishing_cFv();
-extern void _open__15dMenu_Fishing_cFv();
-extern void _close__15dMenu_Fishing_cFv();
-extern void wait_init__15dMenu_Fishing_cFv();
-extern void wait_move__15dMenu_Fishing_cFv();
-extern void screenSetBase__15dMenu_Fishing_cFv();
-extern void screenSetDoIcon__15dMenu_Fishing_cFv();
-extern void setAButtonString__15dMenu_Fishing_cFUs();
-extern void setBButtonString__15dMenu_Fishing_cFUs();
-extern void getFigure__15dMenu_Fishing_cFi();
-extern void setFishParam__15dMenu_Fishing_cFiUsUc();
-extern void setHIO__15dMenu_Fishing_cFb();
-extern void draw__15dMenu_Fishing_cFv();
-extern void __sinit_d_menu_fishing_cpp();
-extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void __ct__12dMsgString_cFv();
-extern void __dt__12dMsgString_cFv();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void paneTrans__8CPaneMgrFff();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void show__13CPaneMgrAlphaFv();
-extern void hide__13CPaneMgrAlphaFv();
-extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern void __ct__10J2DPictureFPC7ResTIMG();
-extern void getStringPtr__10J2DTextBoxCFv();
-extern void setString__10J2DTextBoxFsPCce();
-extern void __ptmf_scall();
-extern void _savegpr_18();
-extern void _savegpr_23();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_18();
-extern void _restgpr_23();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void strcpy();
-SECTION_RODATA extern const u8 d_menu_d_menu_fishing__data_80395D90[48];
+extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" extern void mDoExt_getMesgFont__Fv();
+extern "C" extern void mDoExt_getSubFont__Fv();
+extern "C" extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" extern void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" extern void __dt__15dMenu_Fishing_cFv();
+extern "C" extern void _create__15dMenu_Fishing_cFv();
+extern "C" extern void _move__15dMenu_Fishing_cFv();
+extern "C" extern void _draw__15dMenu_Fishing_cFv();
+extern "C" extern void isSync__15dMenu_Fishing_cFv();
+extern "C" extern void init__15dMenu_Fishing_cFv();
+extern "C" extern void _open__15dMenu_Fishing_cFv();
+extern "C" extern void _close__15dMenu_Fishing_cFv();
+extern "C" extern void wait_init__15dMenu_Fishing_cFv();
+extern "C" extern void wait_move__15dMenu_Fishing_cFv();
+extern "C" extern void screenSetBase__15dMenu_Fishing_cFv();
+extern "C" extern void screenSetDoIcon__15dMenu_Fishing_cFv();
+extern "C" extern void setAButtonString__15dMenu_Fishing_cFUs();
+extern "C" extern void setBButtonString__15dMenu_Fishing_cFUs();
+extern "C" extern void getFigure__15dMenu_Fishing_cFi();
+extern "C" extern void setFishParam__15dMenu_Fishing_cFiUsUc();
+extern "C" extern void setHIO__15dMenu_Fishing_cFb();
+extern "C" extern void draw__15dMenu_Fishing_cFv();
+extern "C" extern void __sinit_d_menu_fishing_cpp();
+extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void __ct__12dMsgString_cFv();
+extern "C" extern void __dt__12dMsgString_cFv();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void paneTrans__8CPaneMgrFff();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void show__13CPaneMgrAlphaFv();
+extern "C" extern void hide__13CPaneMgrAlphaFv();
+extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" extern void getStringPtr__10J2DTextBoxCFv();
+extern "C" extern void setString__10J2DTextBoxFsPCce();
+extern "C" extern void __ptmf_scall();
+extern "C" extern void _savegpr_18();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_18();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcpy();
+SECTION_RODATA extern const u8 data_80395D90[48];
 SECTION_RODATA extern const u8 data_80395DC0[48];
 SECTION_RODATA extern const u8 data_80395DF0[48];
 SECTION_RODATA extern const u8 data_80395E20[48];
@@ -83,177 +82,60 @@ SECTION_RODATA extern const u8 data_80396000[24];
 SECTION_RODATA extern const u8 data_80396018[40];
 SECTION_RODATA extern const u8 data_80396040[40];
 SECTION_RODATA extern const u8 d_menu_d_menu_fishing__stringBase0[104];
-SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 d_menu_d_menu_fishing__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void* d_menu_d_menu_fishing__LIT_3790[3];
+SECTION_DATA extern void* d_menu_d_menu_fishing__lit_3790[3];
 SECTION_DATA extern u8 d_menu_d_menu_fishing__map_init_process[12];
-SECTION_DATA extern void* d_menu_d_menu_fishing__LIT_3791[3];
+SECTION_DATA extern void* d_menu_d_menu_fishing__lit_3791[3];
 SECTION_DATA extern u8 d_menu_d_menu_fishing__map_move_process[12];
-SECTION_DATA extern void* __vt__15dMenu_Fishing_c[7];
+SECTION_DATA extern void* const __vt__15dMenu_Fishing_c[7];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 mFader__13mDoGph_gInf_c[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__LIT_3904[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__LIT_3905[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__LIT_3906[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__LIT_4010[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__LIT_4012[8];
-}
+SECTION_SDATA2 extern u8 d_menu_d_menu_fishing__lit_3904[4];
+SECTION_SDATA2 extern f32 d_menu_d_menu_fishing__lit_3905;
+SECTION_SDATA2 extern f32 d_menu_d_menu_fishing__lit_3906;
+SECTION_SDATA2 extern f32 d_menu_d_menu_fishing__lit_4010;
+SECTION_SDATA2 extern f64 d_menu_d_menu_fishing__lit_4012;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80396068-803960D0 0065 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80396068 = "/res/Layout/fishres.arc";
-SECTION_DEAD const char* const stringBase_80396080 = "tt_block8x8.bti";
-SECTION_DEAD const char* const stringBase_80396090 = "zelda_fish_window.blo";
-SECTION_DEAD const char* const stringBase_803960A6 = "";
-SECTION_DEAD const char* const stringBase_803960A7 = 
-    "zelda_collect_so"
-    "ubi_do_icon_part"
-    "s.blo";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_803960CD = "\0\0";
-#pragma pop
-/* 80395D90-80395D90 0000 .rodata    ...rodata.0                                                  */
-/* 80395D90-80395DC0 0030 .rodata    fish_n$4060                                                  */
-SECTION_RODATA const u8 d_menu_d_menu_fishing__data_80395D90[48] = {
-	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x36, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x35,
-	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x33, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x31,
-	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x32, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x34,
-};
-/* 80395DC0-80395DF0 0030 .rodata    fish_p0$4061                                                 */
-SECTION_RODATA const u8 data_80395DC0[48] = {
-	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x35, 0x6E,
-	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x31, 0x6E,
-	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x34, 0x6E,
-};
-/* 80395DF0-80395E20 0030 .rodata    fish_p1$4062                                                 */
-SECTION_RODATA const u8 data_80395DF0[48] = {
-	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x35, 0x6E,
-	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x31, 0x6E,
-	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x34, 0x6E,
-};
-/* 80395E20-80395E50 0030 .rodata    fish_p2$4063                                                 */
-SECTION_RODATA const u8 data_80395E20[48] = {
-	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x35, 0x6E,
-	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x31, 0x6E,
-	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x34, 0x6E,
-};
-/* 80395E50-80395E80 0030 .rodata    fish_p3$4064                                                 */
-SECTION_RODATA const u8 data_80395E50[48] = {
-	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
-	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
-	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
-};
-/* 80395E80-80395EB0 0030 .rodata    fish_p4$4065                                                 */
-SECTION_RODATA const u8 data_80395E80[48] = {
-	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
-	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
-	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
-};
-/* 80395EB0-80395EE0 0030 .rodata    fish_p5$4066                                                 */
-SECTION_RODATA const u8 data_80395EB0[48] = {
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x36, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x35, 0x5F, 0x6E,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x33, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x31, 0x5F, 0x6E,
-	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x32, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x34, 0x5F, 0x6E,
-};
-/* 80395EE0-80395F10 0030 .rodata    size_1$4081                                                  */
-SECTION_RODATA const u8 data_80395EE0[48] = {
-	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x36, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x35,
-	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x33, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x31,
-	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x32, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x34,
-};
-/* 80395F10-80395F40 0030 .rodata    size_unit_1$4082                                             */
-SECTION_RODATA const u8 data_80395F10[48] = {
-	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x35,
-	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x31,
-	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x34,
-};
-/* 80395F40-80395F70 0030 .rodata    count_1$4083                                                 */
-SECTION_RODATA const u8 data_80395F40[48] = {
-	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x36, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x35,
-	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x33, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x31,
-	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x32, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x34,
-};
-/* 80395F70-80395FA0 0030 .rodata    count_unit_1$4084                                            */
-SECTION_RODATA const u8 data_80395F70[48] = {
-	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x35,
-	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x31,
-	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x34,
-};
-/* 80395FA0-80395FD0 0030 .rodata    name_0$4085                                                  */
-SECTION_RODATA const u8 data_80395FA0[48] = {
-	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
-	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
-	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
-};
-/* 80395FD0-80396000 0030 .rodata    fname_0$4086                                                 */
-SECTION_RODATA const u8 data_80395FD0[48] = {
-	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
-	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
-	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
-};
-/* 80396000-80396018 0018 .rodata    name_id$4087                                                 */
-SECTION_RODATA const u8 data_80396000[24] = {
-	0x00, 0x00, 0x05, 0x9E, 0x00, 0x00, 0x05, 0x9D, 0x00, 0x00, 0x05, 0x9B, 0x00, 0x00, 0x05, 0x99,
-	0x00, 0x00, 0x05, 0x9A, 0x00, 0x00, 0x05, 0x9C,
-};
-/* 80396018-80396040 0028 .rodata    text_a_tag$4167                                              */
-SECTION_RODATA const u8 data_80396018[40] = {
-	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
-	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
-	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
-};
-/* 80396040-80396068 0028 .rodata    text_b_tag$4168                                              */
-SECTION_RODATA const u8 data_80396040[40] = {
-	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
-	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
-	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803BD038-803BD038 0000 .data      ...data.0                                                    */
 /* 803BD038-803BD044 000C .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 d_menu_d_menu_fishing__cNullVec__6Z2Calc[12] = {
+u8 d_menu_d_menu_fishing__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BD044-803BD050 000C .data      @3790                                                        */
-SECTION_DATA void* d_menu_d_menu_fishing__LIT_3790[3] = {
+void* d_menu_d_menu_fishing__lit_3790[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)wait_init__15dMenu_Fishing_cFv,
 };
+
 /* 803BD050-803BD05C 000C .data      map_init_process                                             */
-SECTION_DATA u8 d_menu_d_menu_fishing__map_init_process[12] = {
+u8 d_menu_d_menu_fishing__map_init_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BD05C-803BD068 000C .data      @3791                                                        */
-SECTION_DATA void* d_menu_d_menu_fishing__LIT_3791[3] = {
+void* d_menu_d_menu_fishing__lit_3791[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)wait_move__15dMenu_Fishing_cFv,
 };
+
 /* 803BD068-803BD074 000C .data      map_move_process                                             */
-SECTION_DATA u8 d_menu_d_menu_fishing__map_move_process[12] = {
+u8 d_menu_d_menu_fishing__map_move_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BD074-803BD090 0010 .data      __vt__15dMenu_Fishing_c                                      */
-SECTION_DATA void* __vt__15dMenu_Fishing_c[7] = {
+void* const __vt__15dMenu_Fishing_c[7] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15dMenu_Fishing_cFv,
@@ -263,236 +145,365 @@ SECTION_DATA void* __vt__15dMenu_Fishing_c[7] = {
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454108-8045410C 0004 .sdata2    @3904                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_fishing__LIT_3904[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 8045410C-80454110 0004 .sdata2    @3905                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_fishing__LIT_3905[4] = {
-	0x44, 0x18, 0x00, 0x00,
-};
-/* 80454110-80454114 0004 .sdata2    @3906                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_fishing__LIT_3906[4] = {
-	0x43, 0xE0, 0x00, 0x00,
-};
-/* 80454114-80454118 0004 .sdata2    @4010                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_fishing__LIT_4010[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454118-80454120 0008 .sdata2    @4012                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_fishing__LIT_4012[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 801C4D54-801C4D98 0044 .text      __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl() {
+extern "C" asm void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/__ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl.s"
 }
 #pragma pop
 
+
 /* 801C4D98-801C504C 02B4 .text      __dt__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dMenu_Fishing_cFv() {
+extern "C" asm void __dt__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/__dt__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C504C-801C50B4 0068 .text      _create__15dMenu_Fishing_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _create__15dMenu_Fishing_cFv() {
+extern "C" asm void _create__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/_create__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C50B4-801C514C 0098 .text      _move__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _move__15dMenu_Fishing_cFv() {
+extern "C" asm void _move__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/_move__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454108-8045410C 0004 .sdata2    @3904                                                        */
+u8 d_menu_d_menu_fishing__lit_3904[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045410C-80454110 0004 .sdata2    @3905                                                        */
+f32 d_menu_d_menu_fishing__lit_3905 = 608.0f;
+
+/* 80454110-80454114 0004 .sdata2    @3906                                                        */
+f32 d_menu_d_menu_fishing__lit_3906 = 448.0f;
+
 /* 801C514C-801C5204 00B8 .text      _draw__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _draw__15dMenu_Fishing_cFv() {
+extern "C" asm void _draw__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/_draw__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C5204-801C522C 0028 .text      isSync__15dMenu_Fishing_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isSync__15dMenu_Fishing_cFv() {
+extern "C" asm void isSync__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/isSync__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C522C-801C52E4 00B8 .text      init__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__15dMenu_Fishing_cFv() {
+extern "C" asm void init__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/init__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80395D90-80395DC0 0030 .rodata    fish_n$4060                                                  */
+SECTION_RODATA const u8 data_80395D90[48] = {
+	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x36, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x35,
+	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x33, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x31,
+	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x32, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x34,
+};
+
+/* 80395DC0-80395DF0 0030 .rodata    fish_p0$4061                                                 */
+SECTION_RODATA const u8 data_80395DC0[48] = {
+	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x35, 0x6E,
+	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x31, 0x6E,
+	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x34, 0x6E,
+};
+
+/* 80395DF0-80395E20 0030 .rodata    fish_p1$4062                                                 */
+SECTION_RODATA const u8 data_80395DF0[48] = {
+	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x35, 0x6E,
+	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x31, 0x6E,
+	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x34, 0x6E,
+};
+
+/* 80395E20-80395E50 0030 .rodata    fish_p2$4063                                                 */
+SECTION_RODATA const u8 data_80395E20[48] = {
+	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x35, 0x6E,
+	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x31, 0x6E,
+	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x34, 0x6E,
+};
+
+/* 80395E50-80395E80 0030 .rodata    fish_p3$4064                                                 */
+SECTION_RODATA const u8 data_80395E50[48] = {
+	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
+	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
+	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
+};
+
+/* 80395E80-80395EB0 0030 .rodata    fish_p4$4065                                                 */
+SECTION_RODATA const u8 data_80395E80[48] = {
+	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
+	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
+	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
+};
+
+/* 80395EB0-80395EE0 0030 .rodata    fish_p5$4066                                                 */
+SECTION_RODATA const u8 data_80395EB0[48] = {
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x36, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x35, 0x5F, 0x6E,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x33, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x31, 0x5F, 0x6E,
+	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x32, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x34, 0x5F, 0x6E,
+};
+
+/* 80395EE0-80395F10 0030 .rodata    size_1$4081                                                  */
+SECTION_RODATA const u8 data_80395EE0[48] = {
+	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x36, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x35,
+	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x33, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x31,
+	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x32, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x34,
+};
+
+/* 80395F10-80395F40 0030 .rodata    size_unit_1$4082                                             */
+SECTION_RODATA const u8 data_80395F10[48] = {
+	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x35,
+	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x31,
+	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x34,
+};
+
+/* 80395F40-80395F70 0030 .rodata    count_1$4083                                                 */
+SECTION_RODATA const u8 data_80395F40[48] = {
+	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x36, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x35,
+	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x33, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x31,
+	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x32, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x34,
+};
+
+/* 80395F70-80395FA0 0030 .rodata    count_unit_1$4084                                            */
+SECTION_RODATA const u8 data_80395F70[48] = {
+	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x35,
+	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x31,
+	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x34,
+};
+
+/* 80395FA0-80395FD0 0030 .rodata    name_0$4085                                                  */
+SECTION_RODATA const u8 data_80395FA0[48] = {
+	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
+	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
+	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
+};
+
+/* 80395FD0-80396000 0030 .rodata    fname_0$4086                                                 */
+SECTION_RODATA const u8 data_80395FD0[48] = {
+	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
+	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
+	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
+};
+
+/* 80396000-80396018 0018 .rodata    name_id$4087                                                 */
+SECTION_RODATA const u8 data_80396000[24] = {
+	0x00, 0x00, 0x05, 0x9E, 0x00, 0x00, 0x05, 0x9D, 0x00, 0x00, 0x05, 0x9B, 0x00, 0x00, 0x05, 0x99,
+	0x00, 0x00, 0x05, 0x9A, 0x00, 0x00, 0x05, 0x9C,
+};
+
+/* 80396018-80396040 0028 .rodata    text_a_tag$4167                                              */
+SECTION_RODATA const u8 data_80396018[40] = {
+	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
+	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
+	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
+};
+
+/* 80396040-80396068 0028 .rodata    text_b_tag$4168                                              */
+SECTION_RODATA const u8 data_80396040[40] = {
+	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
+	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
+	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
+};
+
+/* 80396068-803960D0 0065 .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80396068 = "/res/Layout/fishres.arc";
+SECTION_DEAD const char* const stringBase_80396080 = "tt_block8x8.bti";
+SECTION_DEAD const char* const stringBase_80396090 = "zelda_fish_window.blo";
+SECTION_DEAD const char* const stringBase_803960A6 = "";
+SECTION_DEAD const char* const stringBase_803960A7 = 
+    "zelda_collect_soubi_do_icon_parts.blo";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803960CD = "\0\0";
+#pragma pop
+
+/* 80454114-80454118 0004 .sdata2    @4010                                                        */
+f32 d_menu_d_menu_fishing__lit_4010 = 1.0f;
+
+/* 80454118-80454120 0008 .sdata2    @4012                                                        */
+f64 d_menu_d_menu_fishing__lit_4012 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 801C52E4-801C5470 018C .text      _open__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _open__15dMenu_Fishing_cFv() {
+extern "C" asm void _open__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/_open__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C5470-801C556C 00FC .text      _close__15dMenu_Fishing_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void _close__15dMenu_Fishing_cFv() {
+extern "C" asm void _close__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/_close__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C556C-801C55A8 003C .text      wait_init__15dMenu_Fishing_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void wait_init__15dMenu_Fishing_cFv() {
+extern "C" asm void wait_init__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/wait_init__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C55A8-801C55D8 0030 .text      wait_move__15dMenu_Fishing_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void wait_move__15dMenu_Fishing_cFv() {
+extern "C" asm void wait_move__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/wait_move__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C55D8-801C5D3C 0764 .text      screenSetBase__15dMenu_Fishing_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void screenSetBase__15dMenu_Fishing_cFv() {
+extern "C" asm void screenSetBase__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/screenSetBase__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C5D3C-801C5EB8 017C .text      screenSetDoIcon__15dMenu_Fishing_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void screenSetDoIcon__15dMenu_Fishing_cFv() {
+extern "C" asm void screenSetDoIcon__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/screenSetDoIcon__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C5EB8-801C5F68 00B0 .text      setAButtonString__15dMenu_Fishing_cFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAButtonString__15dMenu_Fishing_cFUs() {
+extern "C" asm void setAButtonString__15dMenu_Fishing_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/setAButtonString__15dMenu_Fishing_cFUs.s"
 }
 #pragma pop
 
+
 /* 801C5F68-801C6018 00B0 .text      setBButtonString__15dMenu_Fishing_cFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBButtonString__15dMenu_Fishing_cFUs() {
+extern "C" asm void setBButtonString__15dMenu_Fishing_cFUs() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/setBButtonString__15dMenu_Fishing_cFUs.s"
 }
 #pragma pop
 
+
 /* 801C6018-801C605C 0044 .text      getFigure__15dMenu_Fishing_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFigure__15dMenu_Fishing_cFi() {
+extern "C" asm void getFigure__15dMenu_Fishing_cFi() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/getFigure__15dMenu_Fishing_cFi.s"
 }
 #pragma pop
 
+
 /* 801C605C-801C6210 01B4 .text      setFishParam__15dMenu_Fishing_cFiUsUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFishParam__15dMenu_Fishing_cFiUsUc() {
+extern "C" asm void setFishParam__15dMenu_Fishing_cFiUsUc() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/setFishParam__15dMenu_Fishing_cFiUsUc.s"
 }
 #pragma pop
 
+
 /* 801C6210-801C659C 038C .text      setHIO__15dMenu_Fishing_cFb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setHIO__15dMenu_Fishing_cFb() {
+extern "C" asm void setHIO__15dMenu_Fishing_cFb() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/setHIO__15dMenu_Fishing_cFb.s"
 }
 #pragma pop
 
+
 /* 801C659C-801C65BC 0020 .text      draw__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__15dMenu_Fishing_cFv() {
+extern "C" asm void draw__15dMenu_Fishing_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/draw__15dMenu_Fishing_cFv.s"
 }
 #pragma pop
 
+
 /* 801C65BC-801C65F8 003C .text      __sinit_d_menu_fishing_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_menu_fishing_cpp() {
+extern "C" asm void __sinit_d_menu_fishing_cpp() {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/__sinit_d_menu_fishing_cpp.s"
 }

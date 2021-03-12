@@ -27,9 +27,9 @@ lbl_801D9554:
 /* 801D9564 00000010  38 A0 00 00 */	li r5, 0
 /* 801D9568 00000014  38 C0 00 00 */	li r6, 0
 /* 801D956C 00000018  38 E0 00 00 */	li r7, 0
-/* 801D9570 0000001C  C0 22 A8 38 */	lfs f1, d_menu_d_menu_insect__LIT_3834(r2)
+/* 801D9570 0000001C  C0 22 A8 38 */	lfs f1, d_menu_d_menu_insect__lit_3834(r2)
 /* 801D9574 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801D9578 00000024  C0 62 A8 68 */	lfs f3, d_menu_d_menu_insect__LIT_4089(r2)
+/* 801D9578 00000024  C0 62 A8 68 */	lfs f3, d_menu_d_menu_insect__lit_4089(r2)
 /* 801D957C 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801D9580 0000002C  39 00 00 00 */	li r8, 0
 /* 801D9584 00000030  48 0D 24 01 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

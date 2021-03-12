@@ -9,7 +9,7 @@ lbl_800F7684:
 /* 800F76A0 0000001C  41 82 00 2C */	beq lbl_800F76CC
 /* 800F76A4 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800F76A8 00000024  38 80 00 02 */	li r4, 2
-/* 800F76AC 00000028  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800F76AC 00000028  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800F76B0 0000002C  4B FB 60 75 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F76B4 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800F76B8 00000034  48 01 98 D1 */	bl resetOilBottleModel__9daAlink_cFv
@@ -25,7 +25,7 @@ lbl_800F76CC:
 /* 800F76DC 00000010  41 82 00 14 */	beq lbl_800F76F0
 /* 800F76E0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 800F76E4 00000018  38 80 02 68 */	li r4, 0x268
-/* 800F76E8 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F76E8 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F76EC 00000020  4B FB 5C 89 */	bl setUpperAnimeBaseMorf__9daAlink_cFUsf
 lbl_800F76F0:
 /* 800F76F0 00000000  38 60 00 01 */	li r3, 1

@@ -47,7 +47,7 @@ lbl_801CC930:
 /* 801CC98C 0000005C  EC 00 F0 28 */	fsubs f0, f0, f30
 /* 801CC990 00000060  EC 00 00 32 */	fmuls f0, f0, f0
 /* 801CC994 00000064  EC 21 00 2A */	fadds f1, f1, f0
-/* 801CC998 00000068  C0 02 A7 60 */	lfs f0, LIT_6855(r2)
+/* 801CC998 00000068  C0 02 A7 60 */	lfs f0, lit_6855(r2)
 /* 801CC99C 0000006C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801CC9A0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 801CC9A4 00000004  40 82 00 40 */	bne lbl_801CC9E4
@@ -86,9 +86,9 @@ lbl_801CC9EC:
 /* 801CCA20 00000034  38 A0 00 00 */	li r5, 0
 /* 801CCA24 00000038  38 C0 00 00 */	li r6, 0
 /* 801CCA28 0000003C  38 E0 00 00 */	li r7, 0
-/* 801CCA2C 00000040  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801CCA2C 00000040  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801CCA30 00000044  FC 40 08 90 */	fmr f2, f1
-/* 801CCA34 00000048  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801CCA34 00000048  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801CCA38 0000004C  FC 80 18 90 */	fmr f4, f3
 /* 801CCA3C 00000050  39 00 00 00 */	li r8, 0
 /* 801CCA40 00000054  48 0D EF 45 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

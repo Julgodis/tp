@@ -5,26 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void dKyw_wether_init__Fv();
-extern void dKyw_wether_delete__Fv();
-extern void dKyw_wether_move__Fv();
-extern void dKyw_wether_move_draw__Fv();
-extern void dKyw_wether_draw__Fv();
-extern void dKy_FiveSenses_fullthrottle_dark__Fv();
-extern void dKyeff_Draw__FP8dKyeff_c();
-extern void execute__8dKyeff_cFv();
-extern void dKyeff_Execute__FP8dKyeff_c();
-extern void dKyeff_IsDelete__FP8dKyeff_c();
-extern void dKyeff_Delete__FP8dKyeff_c();
-extern void dKyeff_Create__FP12kankyo_class();
-extern void framework__10Z2EnvSeMgrFv();
-extern void OSGetTime();
-extern void OSTicksToCalendarTime();
-extern void strcmp();
+extern "C" extern void dKyw_wether_init__Fv();
+extern "C" extern void dKyw_wether_delete__Fv();
+extern "C" extern void dKyw_wether_move__Fv();
+extern "C" extern void dKyw_wether_move_draw__Fv();
+extern "C" extern void dKyw_wether_draw__Fv();
+extern "C" extern void dKy_FiveSenses_fullthrottle_dark__Fv();
+extern "C" extern void dKyeff_Draw__FP8dKyeff_c();
+extern "C" extern void execute__8dKyeff_cFv();
+extern "C" extern void dKyeff_Execute__FP8dKyeff_c();
+extern "C" extern void dKyeff_IsDelete__FP8dKyeff_c();
+extern "C" extern void dKyeff_Delete__FP8dKyeff_c();
+extern "C" extern void dKyeff_Create__FP12kankyo_class();
+extern "C" extern void framework__10Z2EnvSeMgrFv();
+extern "C" extern void OSGetTime();
+extern "C" extern void OSTicksToCalendarTime();
+extern "C" extern void strcmp();
 SECTION_RODATA extern const u8 d_d_kyeff__stringBase0[8];
 SECTION_DATA extern void* g_fopKy_Method[6];
 SECTION_DATA extern void* g_fpcLf_Method[6];
@@ -33,19 +32,28 @@ SECTION_DATA extern void* g_profile_KYEFF[11];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
-SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3804[4];
-SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3805[4];
-SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3812[8];
-SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3843[4];
-SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3844[4];
+SECTION_SDATA2 extern u8 d_d_kyeff__lit_3804[4];
+SECTION_SDATA2 extern f32 d_d_kyeff__lit_3805;
+SECTION_SDATA2 extern f64 d_d_kyeff__lit_3812;
+SECTION_SDATA2 extern f32 d_d_kyeff__lit_3843;
+SECTION_SDATA2 extern f32 d_d_kyeff__lit_3844;
+
+// 
+// Functions:
+// 
+
+/* 801ADD38-801ADD5C 0024 .text      dKyeff_Draw__FP8dKyeff_c                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKyeff_Draw__FP8dKyeff_c() {
+	nofralloc
+#include "asm/d/d_kyeff/dKyeff_Draw__FP8dKyeff_c.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80394F38-80394F40 0005 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -54,24 +62,91 @@ SECTION_DEAD const char* const stringBase_80394F38 = "Name";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80394F3D = "\0\0";
 #pragma pop
+
+/* 801ADD5C-801ADDB4 0058 .text      execute__8dKyeff_cFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void execute__8dKyeff_cFv() {
+	nofralloc
+#include "asm/d/d_kyeff/execute__8dKyeff_cFv.s"
 }
+#pragma pop
+
+
+/* 801ADDB4-801ADDD4 0020 .text      dKyeff_Execute__FP8dKyeff_c                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKyeff_Execute__FP8dKyeff_c() {
+	nofralloc
+#include "asm/d/d_kyeff/dKyeff_Execute__FP8dKyeff_c.s"
+}
+#pragma pop
+
+
+/* 801ADDD4-801ADDDC 0008 .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKyeff_IsDelete__FP8dKyeff_c() {
+	nofralloc
+#include "asm/d/d_kyeff/dKyeff_IsDelete__FP8dKyeff_c.s"
+}
+#pragma pop
+
+
+/* 801ADDDC-801ADE00 0024 .text      dKyeff_Delete__FP8dKyeff_c                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKyeff_Delete__FP8dKyeff_c() {
+	nofralloc
+#include "asm/d/d_kyeff/dKyeff_Delete__FP8dKyeff_c.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80453E58-80453E5C 0004 .sdata2    @3804                                                        */
+u8 d_d_kyeff__lit_3804[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 80453E5C-80453E60 0004 .sdata2    @3805                                                        */
+f32 d_d_kyeff__lit_3805 = 1.0f;
+
+/* 80453E60-80453E68 0008 .sdata2    @3812                                                        */
+f64 d_d_kyeff__lit_3812 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 80453E68-80453E6C 0004 .sdata2    @3843                                                        */
+f32 d_d_kyeff__lit_3843 = 7.0f / 10.0f;
+
+/* 80453E6C-80453E70 0004 .sdata2    @3844                                                        */
+f32 d_d_kyeff__lit_3844 = 15.0f;
+
+/* 801ADE00-801ADEA0 00A0 .text      dKyeff_Create__FP12kankyo_class                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKyeff_Create__FP12kankyo_class() {
+	nofralloc
+#include "asm/d/d_kyeff/dKyeff_Create__FP12kankyo_class.s"
+}
+#pragma pop
+
+
 /* 803BC158-803BC16C 0014 .data      l_dKyeff_Method                                              */
-SECTION_DATA void* l_dKyeff_Method[5] = {
+void* l_dKyeff_Method[5] = {
 	(void*)dKyeff_Create__FP12kankyo_class,
 	(void*)dKyeff_Delete__FP8dKyeff_c,
 	(void*)dKyeff_Execute__FP8dKyeff_c,
 	(void*)dKyeff_IsDelete__FP8dKyeff_c,
 	(void*)dKyeff_Draw__FP8dKyeff_c,
 };
+
 /* 803BC16C-803BC198 0028 .data      g_profile_KYEFF                                              */
-SECTION_DATA void* g_profile_KYEFF[11] = {
+void* g_profile_KYEFF[11] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,
 	(void*)0x03110000,
@@ -85,99 +160,4 @@ SECTION_DATA void* g_profile_KYEFF[11] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80453E58-80453E5C 0004 .sdata2    @3804                                                        */
-SECTION_SDATA2 u8 d_d_kyeff__LIT_3804[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80453E5C-80453E60 0004 .sdata2    @3805                                                        */
-SECTION_SDATA2 u8 d_d_kyeff__LIT_3805[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80453E60-80453E68 0008 .sdata2    @3812                                                        */
-SECTION_SDATA2 u8 d_d_kyeff__LIT_3812[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80453E68-80453E6C 0004 .sdata2    @3843                                                        */
-SECTION_SDATA2 u8 d_d_kyeff__LIT_3843[4] = {
-	0x3F, 0x33, 0x33, 0x33,
-};
-/* 80453E6C-80453E70 0004 .sdata2    @3844                                                        */
-SECTION_SDATA2 u8 d_d_kyeff__LIT_3844[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 801ADD38-801ADD5C 0024 .text      dKyeff_Draw__FP8dKyeff_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKyeff_Draw__FP8dKyeff_c() {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_Draw__FP8dKyeff_c.s"
-}
-#pragma pop
-
-/* 801ADD5C-801ADDB4 0058 .text      execute__8dKyeff_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void execute__8dKyeff_cFv() {
-	nofralloc
-#include "asm/d/d_kyeff/execute__8dKyeff_cFv.s"
-}
-#pragma pop
-
-/* 801ADDB4-801ADDD4 0020 .text      dKyeff_Execute__FP8dKyeff_c                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKyeff_Execute__FP8dKyeff_c() {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_Execute__FP8dKyeff_c.s"
-}
-#pragma pop
-
-/* 801ADDD4-801ADDDC 0008 .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKyeff_IsDelete__FP8dKyeff_c() {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_IsDelete__FP8dKyeff_c.s"
-}
-#pragma pop
-
-/* 801ADDDC-801ADE00 0024 .text      dKyeff_Delete__FP8dKyeff_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKyeff_Delete__FP8dKyeff_c() {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_Delete__FP8dKyeff_c.s"
-}
-#pragma pop
-
-/* 801ADE00-801ADEA0 00A0 .text      dKyeff_Create__FP12kankyo_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKyeff_Create__FP12kankyo_class() {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_Create__FP12kankyo_class.s"
-}
-#pragma pop
-
 

@@ -5,126 +5,124 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__Q28JMessage8TControlFv();
-extern void __dt__Q28JMessage8TControlFv();
-extern void reset__Q28JMessage8TControlFv();
-extern void update__Q28JMessage8TControlFv();
-extern void render__Q28JMessage8TControlFv();
-extern void setMessageCode__Q28JMessage8TControlFUsUs();
-extern void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
-extern void reset__Q28JMessage10TProcessorFv();
-extern void getResource_groupID__Q28JMessage10TProcessorCFUs();
-extern void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
-extern void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
-extern void process__Q28JMessage18TSequenceProcessorFPCc();
-extern void process__Q28JMessage19TRenderingProcessorFPCc();
-extern void __dl__FPv();
-extern void _savegpr_28();
-extern void _restgpr_28();
-SECTION_DATA extern void* __vt__Q28JMessage8TControl[4];
-}
+extern "C" extern void __ct__Q28JMessage8TControlFv();
+extern "C" extern void __dt__Q28JMessage8TControlFv();
+extern "C" extern void reset__Q28JMessage8TControlFv();
+extern "C" extern void update__Q28JMessage8TControlFv();
+extern "C" extern void render__Q28JMessage8TControlFv();
+extern "C" extern void setMessageCode__Q28JMessage8TControlFUsUs();
+extern "C" extern void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" extern void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
+extern "C" extern void reset__Q28JMessage10TProcessorFv();
+extern "C" extern void getResource_groupID__Q28JMessage10TProcessorCFUs();
+extern "C" extern void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
+extern "C" extern void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" extern void process__Q28JMessage18TSequenceProcessorFPCc();
+extern "C" extern void process__Q28JMessage19TRenderingProcessorFPCc();
+extern "C" extern void __dl__FPv();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
+SECTION_DATA extern void* const __vt__Q28JMessage8TControl[4];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9B60-803C9B70 000C .data      __vt__Q28JMessage8TControl                                   */
-SECTION_DATA void* __vt__Q28JMessage8TControl[4] = {
+void* const __vt__Q28JMessage8TControl[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q28JMessage8TControlFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802A7548-802A758C 0044 .text      __ct__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q28JMessage8TControlFv() {
+extern "C" asm void __ct__Q28JMessage8TControlFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/__ct__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
+
 /* 802A758C-802A75D4 0048 .text      __dt__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q28JMessage8TControlFv() {
+extern "C" asm void __dt__Q28JMessage8TControlFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/__dt__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
+
 /* 802A75D4-802A7634 0060 .text      reset__Q28JMessage8TControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__Q28JMessage8TControlFv() {
+extern "C" asm void reset__Q28JMessage8TControlFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/reset__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
+
 /* 802A7634-802A76BC 0088 .text      update__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__Q28JMessage8TControlFv() {
+extern "C" asm void update__Q28JMessage8TControlFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/update__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
+
 /* 802A76BC-802A77E8 012C .text      render__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void render__Q28JMessage8TControlFv() {
+extern "C" asm void render__Q28JMessage8TControlFv() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/render__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
+
 /* 802A77E8-802A78F4 010C .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMessageCode__Q28JMessage8TControlFUsUs() {
+extern "C" asm void setMessageCode__Q28JMessage8TControlFUsUs() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageCode__Q28JMessage8TControlFUsUs.s"
 }
 #pragma pop
 
+
 /* 802A78F4-802A7A20 012C .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMessageID__Q28JMessage8TControlFUlUlPb() {
+extern "C" asm void setMessageID__Q28JMessage8TControlFUlUlPb() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageID__Q28JMessage8TControlFUlUlPb.s"
 }
 #pragma pop
 
+
 /* 802A7A20-802A7AF8 00D8 .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs() {
+extern "C" asm void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs.s"
 }

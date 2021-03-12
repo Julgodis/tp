@@ -8,8 +8,8 @@ lbl_80290B14:
 /* 80290B2C 00000018  4B FF F6 15 */	bl __ct__7JASHeapFP11JASDisposer
 /* 80290B30 0000001C  3C 80 80 29 */	lis r4, __dt__7JASHeapFv@ha
 /* 80290B34 00000020  38 84 0B 54 */	addi r4, r4, __dt__7JASHeapFv@l
-/* 80290B38 00000024  3C A0 80 43 */	lis r5, LIT_313@ha
-/* 80290B3C 00000028  38 A5 15 D0 */	addi r5, r5, LIT_313@l
+/* 80290B38 00000024  3C A0 80 43 */	lis r5, lit_313@ha
+/* 80290B3C 00000028  38 A5 15 D0 */	addi r5, r5, lit_313@l
 /* 80290B40 0000002C  48 0D 10 E5 */	bl __register_global_object
 /* 80290B44 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80290B48 00000034  7C 08 03 A6 */	mtlr r0

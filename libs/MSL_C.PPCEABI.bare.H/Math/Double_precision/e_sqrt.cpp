@@ -5,38 +5,27 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_sqrt();
-SECTION_SDATA extern u8 __float_nan[4];
+extern "C" extern void __ieee754_sqrt();
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_sqrt__LIT_164[8];
-}
+SECTION_SDATA2 extern f64 Math_Double_precision_e_sqrt__lit_164;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456B48-80456B50 0008 .sdata2    @164                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_e_sqrt__LIT_164[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 Math_Double_precision_e_sqrt__lit_164 = 1.0;
 
 /* 8036C7A0-8036C9C4 0224 .text      __ieee754_sqrt                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ieee754_sqrt() {
+extern "C" asm void __ieee754_sqrt() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_sqrt/__ieee754_sqrt.s"
 }

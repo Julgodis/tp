@@ -5,55 +5,54 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode();
-extern void J3DGDSetGenMode_3Param__FUcUcUc();
-extern void J3DGDSetLightAttn__F10_GXLightIDffffff();
-extern void J3DGDSetLightColor__F10_GXLightID8_GXColor();
-extern void J3DGDSetLightPos__F10_GXLightIDfff();
-extern void J3DGDSetLightDir__F10_GXLightIDfff();
-extern void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb();
-extern void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc();
-extern void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc();
-extern void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy();
-extern void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt();
-extern void J3DGDSetTexImgPtr__F11_GXTexMapIDPv();
-extern void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl();
-extern void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt();
-extern void J3DGDLoadTlut__FPvUl11_GXTlutSize();
-extern void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
-extern void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale();
-extern void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID();
-extern void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID();
-extern void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor();
-extern void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10();
-extern void J3DGDSetFog__F10_GXFogTypeffff8_GXColor();
-extern void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable();
-extern void J3DFifoLoadPosMtxImm__FPA4_fUl();
-extern void J3DFifoLoadNrmMtxImm__FPA4_fUl();
-extern void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
-extern void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
-extern void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
-extern void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
-extern void GDOverflowed();
-extern void __cvt_fp2unsigned();
-extern void __save_gpr();
-extern void _savegpr_23();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_27();
-extern void _savegpr_29();
-extern void __restore_gpr();
-extern void _restgpr_23();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_27();
-extern void _restgpr_29();
-SECTION_DATA extern void* J3DGD__LIT_899[17];
-SECTION_DATA extern void* LIT_951[21];
+extern "C" extern void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode();
+extern "C" extern void J3DGDSetGenMode_3Param__FUcUcUc();
+extern "C" extern void J3DGDSetLightAttn__F10_GXLightIDffffff();
+extern "C" extern void J3DGDSetLightColor__F10_GXLightID8_GXColor();
+extern "C" extern void J3DGDSetLightPos__F10_GXLightIDfff();
+extern "C" extern void J3DGDSetLightDir__F10_GXLightIDfff();
+extern "C" extern void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb();
+extern "C" extern void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc();
+extern "C" extern void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc();
+extern "C" extern void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy();
+extern "C" extern void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt();
+extern "C" extern void J3DGDSetTexImgPtr__F11_GXTexMapIDPv();
+extern "C" extern void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl();
+extern "C" extern void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt();
+extern "C" extern void J3DGDLoadTlut__FPvUl11_GXTlutSize();
+extern "C" extern void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
+extern "C" extern void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale();
+extern "C" extern void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID();
+extern "C" extern void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID();
+extern "C" extern void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor();
+extern "C" extern void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+extern "C" extern void J3DGDSetFog__F10_GXFogTypeffff8_GXColor();
+extern "C" extern void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable();
+extern "C" extern void J3DFifoLoadPosMtxImm__FPA4_fUl();
+extern "C" extern void J3DFifoLoadNrmMtxImm__FPA4_fUl();
+extern "C" extern void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
+extern "C" extern void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
+extern "C" extern void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
+extern "C" extern void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
+extern "C" extern void GDOverflowed();
+extern "C" extern void __cvt_fp2unsigned();
+extern "C" extern void __save_gpr();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_29();
+extern "C" extern void __restore_gpr();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* J3DGD__lit_899[17];
+SECTION_DATA extern void* lit_951[21];
 SECTION_DATA extern u8 data_803CD880[32];
 SECTION_SDATA extern u8 data_80450908[4];
 SECTION_SDATA extern u8 J3DGDTexMode0Ids[8];
@@ -65,26 +64,96 @@ SECTION_SDATA extern u8 J3DGD__GX2HWFiltConv[8];
 SECTION_SDATA extern u8 J3DTexImage1Ids[8];
 SECTION_SDATA extern u8 J3DTexImage2Ids[12];
 SECTION_SBSS extern u8 __GDCurrentDL[4];
-SECTION_SDATA2 extern u8 J3DGD__LIT_1050[4];
-SECTION_SDATA2 extern u8 LIT_1051[4];
-SECTION_SDATA2 extern u8 LIT_1233[4];
-SECTION_SDATA2 extern u8 LIT_1460[4];
-SECTION_SDATA2 extern u8 LIT_1461[8];
-SECTION_SDATA2 extern u8 LIT_1462[8];
-SECTION_SDATA2 extern u8 J3DGD__LIT_1463[8];
-SECTION_SDATA2 extern u8 LIT_1464[8];
-SECTION_SDATA2 extern u8 LIT_1465[8];
-SECTION_SDATA2 extern u8 LIT_1468[8];
+SECTION_SDATA2 extern f32 J3DGD__lit_1050;
+SECTION_SDATA2 extern f32 lit_1051;
+SECTION_SDATA2 extern f32 lit_1233;
+SECTION_SDATA2 extern u8 lit_1460[4];
+SECTION_SDATA2 extern f32 lit_1461;
+SECTION_SDATA2 extern f64 lit_1462;
+SECTION_SDATA2 extern f32 J3DGD__lit_1463;
+SECTION_SDATA2 extern f64 lit_1464;
+SECTION_SDATA2 extern f32 lit_1465;
+SECTION_SDATA2 extern f64 lit_1468;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80450908-8045090C 0004 .sdata     cm2hw$552                                                    */
+u8 data_80450908[4] = {
+	0x00, 0x02, 0x01, 0x03,
+};
+
+/* 8030D098-8030D210 0178 .text      J3DGDSetGenMode__FUcUcUcUc11_GXCullMode                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode__FUcUcUcUc11_GXCullMode.s"
 }
+#pragma pop
+
+
+/* 8030D210-8030D364 0154 .text      J3DGDSetGenMode_3Param__FUcUcUc                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetGenMode_3Param__FUcUcUc() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode_3Param__FUcUcUc.s"
+}
+#pragma pop
+
+
+/* 8030D364-8030D65C 02F8 .text      J3DGDSetLightAttn__F10_GXLightIDffffff                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetLightAttn__F10_GXLightIDffffff() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightAttn__F10_GXLightIDffffff.s"
+}
+#pragma pop
+
+
+/* 8030D65C-8030D76C 0110 .text      J3DGDSetLightColor__F10_GXLightID8_GXColor                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetLightColor__F10_GXLightID8_GXColor() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightColor__F10_GXLightID8_GXColor.s"
+}
+#pragma pop
+
+
+/* 8030D76C-8030D938 01CC .text      J3DGDSetLightPos__F10_GXLightIDfff                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetLightPos__F10_GXLightIDfff() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightPos__F10_GXLightIDfff.s"
+}
+#pragma pop
+
+
+/* 8030D938-8030DB04 01CC .text      J3DGDSetLightDir__F10_GXLightIDfff                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetLightDir__F10_GXLightIDfff() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightDir__F10_GXLightIDfff.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CD7E8-803CD82C 0044 .data      @899                                                         */
-SECTION_DATA void* J3DGD__LIT_899[17] = {
+void* J3DGD__lit_899[17] = {
 	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x10C),
 	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
 	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x164),
@@ -103,8 +172,21 @@ SECTION_DATA void* J3DGD__LIT_899[17] = {
 	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
 	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
 };
+
+/* 8030DB04-8030E064 0560 .text      J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb() {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CD82C-803CD880 0054 .data      @951                                                         */
-SECTION_DATA void* LIT_951[21] = {
+void* lit_951[21] = {
 	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x34),
 	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x40),
 	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x4C),
@@ -127,406 +209,334 @@ SECTION_DATA void* LIT_951[21] = {
 	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x64),
 	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x6C),
 };
-/* 803CD880-803CD8A0 0010 .data      c2r$1302                                                     */
-SECTION_DATA u8 data_803CD880[32] = {
-	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x07, 0x05, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450908-8045090C 0004 .sdata     cm2hw$552                                                    */
-SECTION_SDATA u8 data_80450908[4] = {
-	0x00, 0x02, 0x01, 0x03,
-};
-/* 8045090C-80450914 0008 .sdata     J3DGDTexMode0Ids                                             */
-SECTION_SDATA u8 J3DGDTexMode0Ids[8] = {
-	0x80, 0x81, 0x82, 0x83, 0xA0, 0xA1, 0xA2, 0xA3,
-};
-/* 80450914-8045091C 0008 .sdata     J3DGDTexMode1Ids                                             */
-SECTION_SDATA u8 J3DGDTexMode1Ids[8] = {
-	0x84, 0x85, 0x86, 0x87, 0xA4, 0xA5, 0xA6, 0xA7,
-};
-/* 8045091C-80450924 0008 .sdata     J3DGDTexImage0Ids                                            */
-SECTION_SDATA u8 J3DGDTexImage0Ids[8] = {
-	0x88, 0x89, 0x8A, 0x8B, 0xA8, 0xA9, 0xAA, 0xAB,
-};
-/* 80450924-8045092C 0008 .sdata     J3DGDTexImage3Ids                                            */
-SECTION_SDATA u8 J3DGDTexImage3Ids[8] = {
-	0x94, 0x95, 0x96, 0x97, 0xB4, 0xB5, 0xB6, 0xB7,
-};
-/* 8045092C-80450934 0008 .sdata     J3DGDTexTlutIds                                              */
-SECTION_SDATA u8 J3DGDTexTlutIds[8] = {
-	0x98, 0x99, 0x9A, 0x9B, 0xB8, 0xB9, 0xBA, 0xBB,
-};
-/* 80450934-8045093C 0006 .sdata     GX2HWFiltConv                                                */
-SECTION_SDATA u8 J3DGD__GX2HWFiltConv[8] = {
-	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
-	/* padding */
-	0x00, 0x00,
-};
-/* 8045093C-80450944 0008 .sdata     J3DTexImage1Ids                                              */
-SECTION_SDATA u8 J3DTexImage1Ids[8] = {
-	0x8C, 0x8D, 0x8E, 0x8F, 0xAC, 0xAD, 0xAE, 0xAF,
-};
-/* 80450944-80450950 0008 .sdata     J3DTexImage2Ids                                              */
-SECTION_SDATA u8 J3DTexImage2Ids[12] = {
-	0x90, 0x91, 0x92, 0x93, 0xB0, 0xB1, 0xB2, 0xB3,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456328-8045632C 0004 .sdata2    @1050                                                        */
-SECTION_SDATA2 u8 J3DGD__LIT_1050[4] = {
-	0x42, 0x00, 0x00, 0x00,
-};
-/* 8045632C-80456330 0004 .sdata2    @1051                                                        */
-SECTION_SDATA2 u8 LIT_1051[4] = {
-	0x41, 0x80, 0x00, 0x00,
-};
-/* 80456330-80456334 0004 .sdata2    @1233                                                        */
-SECTION_SDATA2 u8 LIT_1233[4] = {
-	0x44, 0x80, 0x00, 0x00,
-};
-/* 80456334-80456338 0004 .sdata2    @1460                                                        */
-SECTION_SDATA2 u8 LIT_1460[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456338-80456340 0004 .sdata2    @1461                                                        */
-SECTION_SDATA2 u8 LIT_1461[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456340-80456348 0008 .sdata2    @1462                                                        */
-SECTION_SDATA2 u8 LIT_1462[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80456348-80456350 0004 .sdata2    @1463                                                        */
-SECTION_SDATA2 u8 J3DGD__LIT_1463[8] = {
-	0x40, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456350-80456358 0008 .sdata2    @1464                                                        */
-SECTION_SDATA2 u8 LIT_1464[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80456358-80456360 0004 .sdata2    @1465                                                        */
-SECTION_SDATA2 u8 LIT_1465[8] = {
-	0x4B, 0x00, 0x00, 0x1E,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456360-80456368 0008 .sdata2    @1468                                                        */
-SECTION_SDATA2 u8 LIT_1468[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8030D098-8030D210 0178 .text      J3DGDSetGenMode__FUcUcUcUc11_GXCullMode                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode__FUcUcUcUc11_GXCullMode.s"
-}
-#pragma pop
-
-/* 8030D210-8030D364 0154 .text      J3DGDSetGenMode_3Param__FUcUcUc                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetGenMode_3Param__FUcUcUc() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode_3Param__FUcUcUc.s"
-}
-#pragma pop
-
-/* 8030D364-8030D65C 02F8 .text      J3DGDSetLightAttn__F10_GXLightIDffffff                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetLightAttn__F10_GXLightIDffffff() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightAttn__F10_GXLightIDffffff.s"
-}
-#pragma pop
-
-/* 8030D65C-8030D76C 0110 .text      J3DGDSetLightColor__F10_GXLightID8_GXColor                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetLightColor__F10_GXLightID8_GXColor() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightColor__F10_GXLightID8_GXColor.s"
-}
-#pragma pop
-
-/* 8030D76C-8030D938 01CC .text      J3DGDSetLightPos__F10_GXLightIDfff                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetLightPos__F10_GXLightIDfff() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightPos__F10_GXLightIDfff.s"
-}
-#pragma pop
-
-/* 8030D938-8030DB04 01CC .text      J3DGDSetLightDir__F10_GXLightIDfff                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetLightDir__F10_GXLightIDfff() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetLightDir__F10_GXLightIDfff.s"
-}
-#pragma pop
-
-/* 8030DB04-8030E064 0560 .text      J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb.s"
-}
-#pragma pop
 
 /* 8030E064-8030E234 01D0 .text      J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc() {
+extern "C" asm void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc.s"
 }
 #pragma pop
 
+
 /* 8030E234-8030E438 0204 .text      J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc() {
+extern "C" asm void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045090C-80450914 0008 .sdata     J3DGDTexMode0Ids                                             */
+u8 J3DGDTexMode0Ids[8] = {
+	0x80, 0x81, 0x82, 0x83, 0xA0, 0xA1, 0xA2, 0xA3,
+};
+
+/* 80450914-8045091C 0008 .sdata     J3DGDTexMode1Ids                                             */
+u8 J3DGDTexMode1Ids[8] = {
+	0x84, 0x85, 0x86, 0x87, 0xA4, 0xA5, 0xA6, 0xA7,
+};
+
+/* 8045091C-80450924 0008 .sdata     J3DGDTexImage0Ids                                            */
+u8 J3DGDTexImage0Ids[8] = {
+	0x88, 0x89, 0x8A, 0x8B, 0xA8, 0xA9, 0xAA, 0xAB,
+};
+
+/* 80450924-8045092C 0008 .sdata     J3DGDTexImage3Ids                                            */
+u8 J3DGDTexImage3Ids[8] = {
+	0x94, 0x95, 0x96, 0x97, 0xB4, 0xB5, 0xB6, 0xB7,
+};
+
+/* 8045092C-80450934 0008 .sdata     J3DGDTexTlutIds                                              */
+u8 J3DGDTexTlutIds[8] = {
+	0x98, 0x99, 0x9A, 0x9B, 0xB8, 0xB9, 0xBA, 0xBB,
+};
+
+/* 80450934-8045093C 0006 .sdata     GX2HWFiltConv                                                */
+u8 J3DGD__GX2HWFiltConv[8] = {
+	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80456328-8045632C 0004 .sdata2    @1050                                                        */
+f32 J3DGD__lit_1050 = 32.0f;
+
+/* 8045632C-80456330 0004 .sdata2    @1051                                                        */
+f32 lit_1051 = 16.0f;
+
 /* 8030E438-8030E5D4 019C .text      J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy() {
+extern "C" asm void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy.s"
 }
 #pragma pop
 
+
 /* 8030E5D4-8030E67C 00A8 .text      J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt() {
+extern "C" asm void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt.s"
 }
 #pragma pop
 
+
 /* 8030E67C-8030E70C 0090 .text      J3DGDSetTexImgPtr__F11_GXTexMapIDPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexImgPtr__F11_GXTexMapIDPv() {
+extern "C" asm void J3DGDSetTexImgPtr__F11_GXTexMapIDPv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexImgPtr__F11_GXTexMapIDPv.s"
 }
 #pragma pop
 
+
 /* 8030E70C-8030E7E0 00D4 .text      J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl() {
+extern "C" asm void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl.s"
 }
 #pragma pop
 
+
 /* 8030E7E0-8030E878 0098 .text      J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt() {
+extern "C" asm void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt.s"
 }
 #pragma pop
 
+
 /* 8030E878-8030EB30 02B8 .text      J3DGDLoadTlut__FPvUl11_GXTlutSize                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDLoadTlut__FPvUl11_GXTlutSize() {
+extern "C" asm void J3DGDLoadTlut__FPvUl11_GXTlutSize() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDLoadTlut__FPvUl11_GXTlutSize.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456330-80456334 0004 .sdata2    @1233                                                        */
+f32 lit_1233 = 1024.0f;
+
 /* 8030EB30-8030EE10 02E0 .text      J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc() {
+extern "C" asm void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc.s"
 }
 #pragma pop
 
+
 /* 8030EE10-8030EF08 00F8 .text      J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale() {
+extern "C" asm void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale.s"
 }
 #pragma pop
 
+
 /* 8030EF08-8030F108 0200 .text      J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID() {
+extern "C" asm void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CD880-803CD8A0 0010 .data      c2r$1302                                                     */
+u8 data_803CD880[32] = {
+	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x07, 0x05, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8030F108-8030F294 018C .text      J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID() {
+extern "C" asm void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID.s"
 }
 #pragma pop
 
+
 /* 8030F294-8030F3FC 0168 .text      J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor() {
+extern "C" asm void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor.s"
 }
 #pragma pop
 
+
 /* 8030F3FC-8030F630 0234 .text      J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10() {
+extern "C" asm void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80456334-80456338 0004 .sdata2    @1460                                                        */
+u8 lit_1460[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80456338-80456340 0004 .sdata2    @1461                                                        */
+f32 lit_1461 = 0.5f;
+/* padding 4 bytes */
+
+/* 80456340-80456348 0008 .sdata2    @1462                                                        */
+f64 lit_1462 = 1.0;
+
+/* 80456348-80456350 0004 .sdata2    @1463                                                        */
+f32 J3DGD__lit_1463 = 2.0f;
+/* padding 4 bytes */
+
+/* 80456350-80456358 0008 .sdata2    @1464                                                        */
+f64 lit_1464 = 0.5;
+
+/* 80456358-80456360 0004 .sdata2    @1465                                                        */
+f32 lit_1465 = 8388638.0f;
+/* padding 4 bytes */
+
+/* 80456360-80456368 0008 .sdata2    @1468                                                        */
+f64 lit_1468 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 8030F630-8030F994 0364 .text      J3DGDSetFog__F10_GXFogTypeffff8_GXColor                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetFog__F10_GXFogTypeffff8_GXColor() {
+extern "C" asm void J3DGDSetFog__F10_GXFogTypeffff8_GXColor() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetFog__F10_GXFogTypeffff8_GXColor.s"
 }
 #pragma pop
 
+
 /* 8030F994-8030FAE0 014C .text      J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable() {
+extern "C" asm void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable.s"
 }
 #pragma pop
 
+
 /* 8030FAE0-8030FB60 0080 .text      J3DFifoLoadPosMtxImm__FPA4_fUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadPosMtxImm__FPA4_fUl() {
+extern "C" asm void J3DFifoLoadPosMtxImm__FPA4_fUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadPosMtxImm__FPA4_fUl.s"
 }
 #pragma pop
 
+
 /* 8030FB60-8030FBCC 006C .text      J3DFifoLoadNrmMtxImm__FPA4_fUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadNrmMtxImm__FPA4_fUl() {
+extern "C" asm void J3DFifoLoadNrmMtxImm__FPA4_fUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxImm__FPA4_fUl.s"
 }
 #pragma pop
 
+
 /* 8030FBCC-8030FC38 006C .text      J3DFifoLoadNrmMtxImm3x3__FPA3_fUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl() {
+extern "C" asm void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxImm3x3__FPA3_fUl.s"
 }
 #pragma pop
 
+
 /* 8030FC38-8030FCD0 0098 .text      J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl() {
+extern "C" asm void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl.s"
 }
 #pragma pop
 
+
 /* 8030FCD0-8030FD68 0098 .text      J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl() {
+extern "C" asm void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045093C-80450944 0008 .sdata     J3DTexImage1Ids                                              */
+u8 J3DTexImage1Ids[8] = {
+	0x8C, 0x8D, 0x8E, 0x8F, 0xAC, 0xAD, 0xAE, 0xAF,
+};
+
+/* 80450944-80450950 0008 .sdata     J3DTexImage2Ids                                              */
+u8 J3DTexImage2Ids[12] = {
+	0x90, 0x91, 0x92, 0x93, 0xB0, 0xB1, 0xB2, 0xB3,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8030FD68-8030FDE8 0080 .text      J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize() {
+extern "C" asm void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize.s"
 }

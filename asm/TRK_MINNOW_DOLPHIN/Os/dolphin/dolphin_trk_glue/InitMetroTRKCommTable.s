@@ -1,14 +1,14 @@
 lbl_80371EA8:
 /* 80371EA8 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371EAC 00000004  7C 08 02 A6 */	mflr r0
-/* 80371EB0 00000008  3C 80 80 3A */	lis r4, Os_dolphin_dolphin_trk_glue__data_803A2C08@ha
+/* 80371EB0 00000008  3C 80 80 3A */	lis r4, data_803A2C08@ha
 /* 80371EB4 0000000C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80371EB8 00000010  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80371EBC 00000014  3B E0 00 01 */	li r31, 1
 /* 80371EC0 00000018  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80371EC4 0000001C  7C 7E 1B 78 */	mr r30, r3
 /* 80371EC8 00000020  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80371ECC 00000024  3B A4 2C 08 */	addi r29, r4, Os_dolphin_dolphin_trk_glue__data_803A2C08@l
+/* 80371ECC 00000024  3B A4 2C 08 */	addi r29, r4, data_803A2C08@l
 /* 80371ED0 00000028  7F C4 F3 78 */	mr r4, r30
 /* 80371ED4 0000002C  38 7D 00 08 */	addi r3, r29, 8
 /* 80371ED8 00000030  4C C6 31 82 */	crclr 6

@@ -68,9 +68,9 @@ lbl_801ED3E8:
 /* 801ED418 00000030  38 A0 00 00 */	li r5, 0
 /* 801ED41C 00000034  38 C0 00 00 */	li r6, 0
 /* 801ED420 00000038  38 E0 00 00 */	li r7, 0
-/* 801ED424 0000003C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__LIT_4305(r2)
+/* 801ED424 0000003C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__lit_4305(r2)
 /* 801ED428 00000040  FC 40 08 90 */	fmr f2, f1
-/* 801ED42C 00000044  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__LIT_4465(r2)
+/* 801ED42C 00000044  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__lit_4465(r2)
 /* 801ED430 00000048  FC 80 18 90 */	fmr f4, f3
 /* 801ED434 0000004C  39 00 00 00 */	li r8, 0
 /* 801ED438 00000050  48 0B E5 4D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

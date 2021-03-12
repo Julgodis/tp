@@ -185,9 +185,9 @@ lbl_800DFA70:
 /* 800DFAA8 00000038  38 A0 00 00 */	li r5, 0
 /* 800DFAAC 0000003C  38 C0 00 00 */	li r6, 0
 /* 800DFAB0 00000040  38 E0 00 00 */	li r7, 0
-/* 800DFAB4 00000044  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800DFAB4 00000044  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800DFAB8 00000048  FC 40 08 90 */	fmr f2, f1
-/* 800DFABC 0000004C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__LIT_6041(r2)
+/* 800DFABC 0000004C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
 /* 800DFAC0 00000050  FC 80 18 90 */	fmr f4, f3
 /* 800DFAC4 00000054  39 00 00 00 */	li r8, 0
 /* 800DFAC8 00000058  48 1C BE BD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

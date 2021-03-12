@@ -5,179 +5,181 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
-extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
-extern void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
-extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
-extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
-extern void clear__16J3DMaterialTableFv();
-extern void __ct__16J3DMaterialTableFv();
-extern void __dt__16J3DMaterialTableFv();
-extern void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
-extern void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
-extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern void _savegpr_22();
-extern void _savegpr_24();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _restgpr_22();
-extern void _restgpr_24();
-extern void _restgpr_26();
-extern void _restgpr_27();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" extern void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+extern "C" extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+extern "C" extern void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+extern "C" extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+extern "C" extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+extern "C" extern void clear__16J3DMaterialTableFv();
+extern "C" extern void __ct__16J3DMaterialTableFv();
+extern "C" extern void __dt__16J3DMaterialTableFv();
+extern "C" extern void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" extern void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" extern void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" extern void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" extern void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" extern void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
 SECTION_RODATA extern const u8 j3dDefaultTexMtxInfo[100];
-SECTION_DATA extern void* __vt__11J3DTexNoAnm[3];
-SECTION_DATA extern void* __vt__16J3DMaterialTable[4];
+SECTION_DATA extern void* const __vt__11J3DTexNoAnm[3];
+SECTION_DATA extern void* const __vt__16J3DMaterialTable[4];
+
+// 
+// Functions:
+// 
+
+/* 8032F5A8-8032F5D0 0028 .text      clear__16J3DMaterialTableFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void clear__16J3DMaterialTableFv() {
+	nofralloc
+#include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/clear__16J3DMaterialTableFv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CEE80-803CEE90 000C .data      __vt__16J3DMaterialTable                                     */
-SECTION_DATA void* __vt__16J3DMaterialTable[4] = {
+void* const __vt__16J3DMaterialTable[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16J3DMaterialTableFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8032F5A8-8032F5D0 0028 .text      clear__16J3DMaterialTableFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void clear__16J3DMaterialTableFv() {
-	nofralloc
-#include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/clear__16J3DMaterialTableFv.s"
-}
-#pragma pop
 
 /* 8032F5D0-8032F604 0034 .text      __ct__16J3DMaterialTableFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16J3DMaterialTableFv() {
+extern "C" asm void __ct__16J3DMaterialTableFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/__ct__16J3DMaterialTableFv.s"
 }
 #pragma pop
 
+
 /* 8032F604-8032F64C 0048 .text      __dt__16J3DMaterialTableFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16J3DMaterialTableFv() {
+extern "C" asm void __dt__16J3DMaterialTableFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/__dt__16J3DMaterialTableFv.s"
 }
 #pragma pop
 
+
 /* 8032F64C-8032F6F8 00AC .text      removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
+extern "C" asm void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor.s"
 }
 #pragma pop
 
+
 /* 8032F6F8-8032F7B4 00BC .text      removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
+extern "C" asm void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern.s"
 }
 #pragma pop
 
+
 /* 8032F7B4-8032F880 00CC .text      removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
+extern "C" asm void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey.s"
 }
 #pragma pop
 
+
 /* 8032F880-8032F9C0 0140 .text      removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey() {
+extern "C" asm void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey.s"
 }
 #pragma pop
 
+
 /* 8032F9C0-8032FAF4 0134 .text      createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
+extern "C" asm void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey.s"
 }
 #pragma pop
 
+
 /* 8032FAF4-8032FBC8 00D4 .text      entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
+extern "C" asm void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor.s"
 }
 #pragma pop
 
+
 /* 8032FBC8-8032FCC4 00FC .text      entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
+extern "C" asm void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern.s"
 }
 #pragma pop
 
+
 /* 8032FCC4-8032FE70 01AC .text      entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
+extern "C" asm void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey.s"
 }
 #pragma pop
 
+
 /* 8032FE70-8032FFEC 017C .text      entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey() {
+extern "C" asm void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAttach/entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey.s"
 }

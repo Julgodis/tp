@@ -7,8 +7,8 @@ lbl_800ED0D4:
 /* 800ED0E8 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 800ED0EC 00000018  7C 9D 23 78 */	mr r29, r4
 /* 800ED0F0 0000001C  7C BE 2B 78 */	mr r30, r5
-/* 800ED0F4 00000020  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800ED0F8 00000024  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__LIT_3757@l
+/* 800ED0F4 00000020  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800ED0F8 00000024  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
 /* 800ED0FC 00000028  4B FF FD 15 */	bl getReinHandType__9daAlink_cCFv
 /* 800ED100 0000002C  2C 03 00 02 */	cmpwi r3, 2
 /* 800ED104 00000030  40 82 00 48 */	bne lbl_800ED14C

@@ -142,7 +142,7 @@ lbl_801F8B74:
 lbl_801F8C38:
 /* 801F8C38 00000000  90 1F 01 7C */	stw r0, 0x17c(r31)
 /* 801F8C3C 00000004  80 7F 01 7C */	lwz r3, 0x17c(r31)
-/* 801F8C40 00000008  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__LIT_3808(r2)
+/* 801F8C40 00000008  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
 /* 801F8C44 0000000C  48 05 CB 8D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F8C48 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F8C4C 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

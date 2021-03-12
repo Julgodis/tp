@@ -5,21 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSRegisterVersion();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void ARRegisterDMACallback();
-extern void ARStartDMA();
-extern void __ARQServiceQueueLo();
-extern void __ARQCallbackHack();
-extern void __ARQInterruptServiceRoutine();
-extern void ARQInit();
-extern void ARQPostRequest();
-SECTION_DATA extern u8 arq__LIT_1[72];
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void ARRegisterDMACallback();
+extern "C" extern void ARStartDMA();
+extern "C" extern void __ARQServiceQueueLo();
+extern "C" extern void __ARQCallbackHack();
+extern "C" extern void __ARQInterruptServiceRoutine();
+extern "C" extern void ARQInit();
+extern "C" extern void ARQPostRequest();
+SECTION_DATA extern u8 arq__lit_1[72];
 SECTION_SDATA extern void* __ARQVersion[2];
 SECTION_SBSS extern u8 __ARQRequestQueueHi[4];
 SECTION_SBSS extern u8 __ARQRequestTailHi[4];
@@ -31,17 +30,107 @@ SECTION_SBSS extern u8 __ARQCallbackHi[4];
 SECTION_SBSS extern u8 __ARQCallbackLo[4];
 SECTION_SBSS extern u8 __ARQChunkSize[4];
 SECTION_SBSS extern u8 __ARQ_init_flag[4];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 804518D8-804518DC 0004 .sbss      __ARQRequestQueueHi                                          */
+u8 __ARQRequestQueueHi[4];
+
+/* 804518DC-804518E0 0004 .sbss      __ARQRequestTailHi                                           */
+u8 __ARQRequestTailHi[4];
+
+/* 804518E0-804518E4 0004 .sbss      __ARQRequestQueueLo                                          */
+u8 __ARQRequestQueueLo[4];
+
+/* 804518E4-804518E8 0004 .sbss      __ARQRequestTailLo                                           */
+u8 __ARQRequestTailLo[4];
+
+/* 804518E8-804518EC 0004 .sbss      __ARQRequestPendingHi                                        */
+u8 __ARQRequestPendingHi[4];
+
+/* 804518EC-804518F0 0004 .sbss      __ARQRequestPendingLo                                        */
+u8 __ARQRequestPendingLo[4];
+
+/* 804518F0-804518F4 0004 .sbss      __ARQCallbackHi                                              */
+u8 __ARQCallbackHi[4];
+
+/* 804518F4-804518F8 0004 .sbss      __ARQCallbackLo                                              */
+u8 __ARQCallbackLo[4];
+
+/* 804518F8-804518FC 0004 .sbss      __ARQChunkSize                                               */
+u8 __ARQChunkSize[4];
+
+/* 80352094-80352194 0100 .text      __ARQServiceQueueLo                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARQServiceQueueLo() {
+	nofralloc
+#include "asm/dolphin/ar/arq/__ARQServiceQueueLo.s"
 }
+#pragma pop
+
+
+/* 80352194-80352198 0004 .text      __ARQCallbackHack                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARQCallbackHack() {
+	nofralloc
+#include "asm/dolphin/ar/arq/__ARQCallbackHack.s"
+}
+#pragma pop
+
+
+/* 80352198-80352264 00CC .text      __ARQInterruptServiceRoutine                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ARQInterruptServiceRoutine() {
+	nofralloc
+#include "asm/dolphin/ar/arq/__ARQInterruptServiceRoutine.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80450A50-80450A58 0004 .sdata     __ARQVersion                                                 */
+void* __ARQVersion[2] = {
+	(void*)&arq__lit_1,
+	/* padding */
+	NULL,
+};
 
-extern "C" {
-/* 803D1C30-803D1C30 0000 .data      ...data.0                                                    */
+/* 804518FC-80451900 0004 .sbss      __ARQ_init_flag                                              */
+u8 __ARQ_init_flag[4];
+
+/* 80352264-803522D4 0070 .text      ARQInit                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARQInit() {
+	nofralloc
+#include "asm/dolphin/ar/arq/ARQInit.s"
+}
+#pragma pop
+
+
+/* 803522D4-80352430 015C .text      ARQPostRequest                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ARQPostRequest() {
+	nofralloc
+#include "asm/dolphin/ar/arq/ARQPostRequest.s"
+}
+#pragma pop
+
+
 /* 803D1C30-803D1C78 0045 .data      @1                                                           */
-SECTION_DATA u8 arq__LIT_1[72] = {
+u8 arq__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x52, 0x51, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -50,103 +139,4 @@ SECTION_DATA u8 arq__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450A50-80450A58 0004 .sdata     __ARQVersion                                                 */
-SECTION_SDATA void* __ARQVersion[2] = {
-	(void*)&arq__LIT_1,
-	/* padding */
-	NULL,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804518D8-804518DC 0004 .sbss      __ARQRequestQueueHi                                          */
-SECTION_SBSS u8 __ARQRequestQueueHi[4];
-/* 804518DC-804518E0 0004 .sbss      __ARQRequestTailHi                                           */
-SECTION_SBSS u8 __ARQRequestTailHi[4];
-/* 804518E0-804518E4 0004 .sbss      __ARQRequestQueueLo                                          */
-SECTION_SBSS u8 __ARQRequestQueueLo[4];
-/* 804518E4-804518E8 0004 .sbss      __ARQRequestTailLo                                           */
-SECTION_SBSS u8 __ARQRequestTailLo[4];
-/* 804518E8-804518EC 0004 .sbss      __ARQRequestPendingHi                                        */
-SECTION_SBSS u8 __ARQRequestPendingHi[4];
-/* 804518EC-804518F0 0004 .sbss      __ARQRequestPendingLo                                        */
-SECTION_SBSS u8 __ARQRequestPendingLo[4];
-/* 804518F0-804518F4 0004 .sbss      __ARQCallbackHi                                              */
-SECTION_SBSS u8 __ARQCallbackHi[4];
-/* 804518F4-804518F8 0004 .sbss      __ARQCallbackLo                                              */
-SECTION_SBSS u8 __ARQCallbackLo[4];
-/* 804518F8-804518FC 0004 .sbss      __ARQChunkSize                                               */
-SECTION_SBSS u8 __ARQChunkSize[4];
-/* 804518FC-80451900 0004 .sbss      __ARQ_init_flag                                              */
-SECTION_SBSS u8 __ARQ_init_flag[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80352094-80352194 0100 .text      __ARQServiceQueueLo                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARQServiceQueueLo() {
-	nofralloc
-#include "asm/dolphin/ar/arq/__ARQServiceQueueLo.s"
-}
-#pragma pop
-
-/* 80352194-80352198 0004 .text      __ARQCallbackHack                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARQCallbackHack() {
-	nofralloc
-#include "asm/dolphin/ar/arq/__ARQCallbackHack.s"
-}
-#pragma pop
-
-/* 80352198-80352264 00CC .text      __ARQInterruptServiceRoutine                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ARQInterruptServiceRoutine() {
-	nofralloc
-#include "asm/dolphin/ar/arq/__ARQInterruptServiceRoutine.s"
-}
-#pragma pop
-
-/* 80352264-803522D4 0070 .text      ARQInit                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARQInit() {
-	nofralloc
-#include "asm/dolphin/ar/arq/ARQInit.s"
-}
-#pragma pop
-
-/* 803522D4-80352430 015C .text      ARQPostRequest                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void ARQPostRequest() {
-	nofralloc
-#include "asm/dolphin/ar/arq/ARQPostRequest.s"
-}
-#pragma pop
-
 

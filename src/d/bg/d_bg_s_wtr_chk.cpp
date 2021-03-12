@@ -5,25 +5,22 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__14dBgS_SplGrpChkFv();
-extern void __ct__11dBgS_WtrChkFv();
-SECTION_DATA extern void* __vt__11dBgS_WtrChk[12];
-}
+extern "C" extern void __ct__14dBgS_SplGrpChkFv();
+extern "C" extern void __ct__11dBgS_WtrChkFv();
+SECTION_DATA extern void* const __vt__11dBgS_WtrChk[12];
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80079164-800791C4 0060 .text      __ct__11dBgS_WtrChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dBgS_WtrChkFv() {
+extern "C" asm void __ct__11dBgS_WtrChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_wtr_chk/__ct__11dBgS_WtrChkFv.s"
 }

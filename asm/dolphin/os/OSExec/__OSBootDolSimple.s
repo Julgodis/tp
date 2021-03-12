@@ -122,8 +122,8 @@ lbl_8033CF28:
 /* 8033CF70 00000048  38 04 00 1F */	addi r0, r4, 0x1f
 /* 8033CF74 0000004C  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
 /* 8033CF78 00000050  4B FF E7 19 */	bl ICInvalidateRange
-/* 8033CF7C 00000054  3C 60 80 3D */	lis r3, OSExec__LIT_115@ha
-/* 8033CF80 00000058  38 83 FC 38 */	addi r4, r3, OSExec__LIT_115@l
+/* 8033CF7C 00000054  3C 60 80 3D */	lis r3, OSExec__lit_115@ha
+/* 8033CF80 00000058  38 83 FC 38 */	addi r4, r3, OSExec__lit_115@l
 /* 8033CF84 0000005C  7F C3 F3 78 */	mr r3, r30
 /* 8033CF88 00000060  38 A0 00 0A */	li r5, 0xa
 /* 8033CF8C 00000064  48 02 B9 C9 */	bl strncmp

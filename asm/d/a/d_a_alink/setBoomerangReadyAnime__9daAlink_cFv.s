@@ -25,9 +25,9 @@ lbl_800E059C:
 /* 800E05B4 00000018  C0 25 00 2C */	lfs f1, 0x2c(r5)
 /* 800E05B8 0000001C  48 00 00 08 */	b lbl_800E05C0
 lbl_800E05BC:
-/* 800E05BC 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800E05BC 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 lbl_800E05C0:
-/* 800E05C0 00000000  C0 42 92 C4 */	lfs f2, LIT_6109(r2)
+/* 800E05C0 00000000  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 800E05C4 00000004  4B FC CD E5 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800E05C8 00000008  7F A3 EB 78 */	mr r3, r29
 /* 800E05CC 0000000C  4B FF FF 1D */	bl setBoomerangReadyQuake__9daAlink_cFv

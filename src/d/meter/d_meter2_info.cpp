@@ -5,115 +5,114 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void dComIfGs_setSelectItemIndex__FiUc();
-extern void dComIfGs_setMixItemIndex__FiUc();
-extern void dComIfGs_getMixItemIndex__Fi();
-extern void dComIfGp_setSelectItem__Fi();
-extern void dComIfGs_setSelectEquipClothes__FUc();
-extern void dComIfGs_setSelectEquipSword__FUc();
-extern void dComIfGs_setSelectEquipShield__FUc();
-extern void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
-extern void dComIfGs_setWarpMarkFlag__FUc();
-extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern void setItem__17dSv_player_item_cFiUc();
-extern void getItem__17dSv_player_item_cCFib();
-extern void offFirstBit__21dSv_player_get_item_cFUc();
-extern void setBombNum__24dSv_player_item_record_cFUcUc();
-extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern void onLetterGetFlag__17dSv_letter_info_cFi();
-extern void isLetterGetFlag__17dSv_letter_info_cCFi();
-extern void isEventBit__11dSv_event_cCFUs();
-extern void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
-extern void isMapOpenCheck__11dMeterMap_cFv();
-extern void __ct__13dMeter2Info_cFv();
-extern void __dt__13dMeter2Info_cFv();
-extern void init__13dMeter2Info_cFv();
-extern void setFloatingMessage__13dMeter2Info_cFUssb();
-extern void setFloatingFlow__13dMeter2Info_cFUssb();
-extern void isFloatingMessageVisible__13dMeter2Info_cFv();
-extern void decFloatingMessageTimer__13dMeter2Info_cFv();
-extern void resetFloatingMessage__13dMeter2Info_cFv();
-extern void decMsgKeyWaitTimer__13dMeter2Info_cFv();
-extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
-extern void getFont__10J2DTextBoxCFv();
-extern void getStringLength__13dMeter2Info_cFP7JUTFontffPc();
-extern void onDirectUseItem__13dMeter2Info_cFi();
-extern void isDirectUseItem__13dMeter2Info_cFi();
-extern void setMeterString__13dMeter2Info_cFl();
-extern void resetWarpStatus__13dMeter2Info_cFv();
-extern void warpInProc__13dMeter2Info_cFv();
-extern void warpOutProc__13dMeter2Info_cFv();
-extern void resetMeterString__13dMeter2Info_cFv();
-extern void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc();
-extern void getItemType__13dMeter2Info_cFUc();
-extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
-extern void get2ndTexture__13dMeter2Info_cFUc();
-extern void get3rdTexture__13dMeter2Info_cFUc();
-extern void get4thTexture__13dMeter2Info_cFUc();
-extern void set1stColor__13dMeter2Info_cFUcP10J2DPicture();
-extern void set2ndColor__13dMeter2Info_cFUcP10J2DPicture();
-extern void set3rdColor__13dMeter2Info_cFUcP10J2DPicture();
-extern void set4thColor__13dMeter2Info_cFUcP10J2DPicture();
-extern void setHotSpringTimer__13dMeter2Info_cFUc();
-extern void decHotSpringTimer__13dMeter2Info_cFv();
-extern void changeWater__13dMeter2Info_cFUc();
-extern void setMiniGameItem__13dMeter2Info_cFUc();
-extern void resetMiniGameItem__13dMeter2Info_cFb();
-extern void setMiniGameCount__13dMeter2Info_cFSc();
-extern void setSaveStageName__13dMeter2Info_cFPCc();
-extern void dMeter2Info_getNowLifeGauge__Fv();
-extern void dMeter2Info_getNumberTextureName__Fi();
-extern void dMeter2Info_getPlusTextureName__Fv();
-extern void dMeter2Info_getPixel__FffffffPC7ResTIMG();
-extern void dMeter2Info_setCloth__FUcb();
-extern void dMeter2Info_setSword__FUcb();
-extern void dMeter2Info_setShield__FUcb();
-extern void dMeter2Info_is2DActiveTouchArea__Fv();
-extern void dMeter2Info_isMapOpenCheck__Fv();
-extern void dMeter2Info_isItemOpenCheck__Fv();
-extern void dMeter2Info_getRecieveLetterNum__Fv();
-extern void dMeter2Info_getNewLetterNum__Fv();
-extern void dMeter2Info_setNewLetterSender__Fv();
-extern void dMeter2Info_recieveLetter__Fv();
-extern void dMeter2Info_set2DVibration__Fv();
-extern void dMeter2Info_set2DVibrationM__Fv();
-extern void __sinit_d_meter2_info_cpp();
-extern void setLetterNameID__12dMsgObject_cFUs();
-extern void __ct__10dMsgFlow_cFv();
-extern void __dt__10dMsgFlow_cFv();
-extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
-extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
-extern void getMsgNo__10dMsgFlow_cFv();
-extern void __ct__5csXyzFsss();
-extern void __dl__FPv();
-extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern void readIdxResource__10JKRArchiveFPvUlUl();
-extern void DCStoreRangeNoSync();
-extern void __register_global_object();
-extern void __cvt_fp2unsigned();
-extern void _savegpr_19();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_19();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void strcmp();
-extern void strcpy();
-SECTION_RODATA extern const u8 d_meter_d_meter2_info__data_80398A78[148];
+extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" extern void dComIfGs_setMixItemIndex__FiUc();
+extern "C" extern void dComIfGs_getMixItemIndex__Fi();
+extern "C" extern void dComIfGp_setSelectItem__Fi();
+extern "C" extern void dComIfGs_setSelectEquipClothes__FUc();
+extern "C" extern void dComIfGs_setSelectEquipSword__FUc();
+extern "C" extern void dComIfGs_setSelectEquipShield__FUc();
+extern "C" extern void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
+extern "C" extern void dComIfGs_setWarpMarkFlag__FUc();
+extern "C" extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" extern void setItem__17dSv_player_item_cFiUc();
+extern "C" extern void getItem__17dSv_player_item_cCFib();
+extern "C" extern void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" extern void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" extern void onLetterGetFlag__17dSv_letter_info_cFi();
+extern "C" extern void isLetterGetFlag__17dSv_letter_info_cCFi();
+extern "C" extern void isEventBit__11dSv_event_cCFUs();
+extern "C" extern void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
+extern "C" extern void isMapOpenCheck__11dMeterMap_cFv();
+extern "C" extern void __ct__13dMeter2Info_cFv();
+extern "C" extern void __dt__13dMeter2Info_cFv();
+extern "C" extern void init__13dMeter2Info_cFv();
+extern "C" extern void setFloatingMessage__13dMeter2Info_cFUssb();
+extern "C" extern void setFloatingFlow__13dMeter2Info_cFUssb();
+extern "C" extern void isFloatingMessageVisible__13dMeter2Info_cFv();
+extern "C" extern void decFloatingMessageTimer__13dMeter2Info_cFv();
+extern "C" extern void resetFloatingMessage__13dMeter2Info_cFv();
+extern "C" extern void decMsgKeyWaitTimer__13dMeter2Info_cFv();
+extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
+extern "C" extern void getFont__10J2DTextBoxCFv();
+extern "C" extern void getStringLength__13dMeter2Info_cFP7JUTFontffPc();
+extern "C" extern void onDirectUseItem__13dMeter2Info_cFi();
+extern "C" extern void isDirectUseItem__13dMeter2Info_cFi();
+extern "C" extern void setMeterString__13dMeter2Info_cFl();
+extern "C" extern void resetWarpStatus__13dMeter2Info_cFv();
+extern "C" extern void warpInProc__13dMeter2Info_cFv();
+extern "C" extern void warpOutProc__13dMeter2Info_cFv();
+extern "C" extern void resetMeterString__13dMeter2Info_cFv();
+extern "C" extern void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc();
+extern "C" extern void getItemType__13dMeter2Info_cFUc();
+extern "C" extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" extern void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
+extern "C" extern void get2ndTexture__13dMeter2Info_cFUc();
+extern "C" extern void get3rdTexture__13dMeter2Info_cFUc();
+extern "C" extern void get4thTexture__13dMeter2Info_cFUc();
+extern "C" extern void set1stColor__13dMeter2Info_cFUcP10J2DPicture();
+extern "C" extern void set2ndColor__13dMeter2Info_cFUcP10J2DPicture();
+extern "C" extern void set3rdColor__13dMeter2Info_cFUcP10J2DPicture();
+extern "C" extern void set4thColor__13dMeter2Info_cFUcP10J2DPicture();
+extern "C" extern void setHotSpringTimer__13dMeter2Info_cFUc();
+extern "C" extern void decHotSpringTimer__13dMeter2Info_cFv();
+extern "C" extern void changeWater__13dMeter2Info_cFUc();
+extern "C" extern void setMiniGameItem__13dMeter2Info_cFUc();
+extern "C" extern void resetMiniGameItem__13dMeter2Info_cFb();
+extern "C" extern void setMiniGameCount__13dMeter2Info_cFSc();
+extern "C" extern void setSaveStageName__13dMeter2Info_cFPCc();
+extern "C" extern void dMeter2Info_getNowLifeGauge__Fv();
+extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
+extern "C" extern void dMeter2Info_getPlusTextureName__Fv();
+extern "C" extern void dMeter2Info_getPixel__FffffffPC7ResTIMG();
+extern "C" extern void dMeter2Info_setCloth__FUcb();
+extern "C" extern void dMeter2Info_setSword__FUcb();
+extern "C" extern void dMeter2Info_setShield__FUcb();
+extern "C" extern void dMeter2Info_is2DActiveTouchArea__Fv();
+extern "C" extern void dMeter2Info_isMapOpenCheck__Fv();
+extern "C" extern void dMeter2Info_isItemOpenCheck__Fv();
+extern "C" extern void dMeter2Info_getRecieveLetterNum__Fv();
+extern "C" extern void dMeter2Info_getNewLetterNum__Fv();
+extern "C" extern void dMeter2Info_setNewLetterSender__Fv();
+extern "C" extern void dMeter2Info_recieveLetter__Fv();
+extern "C" extern void dMeter2Info_set2DVibration__Fv();
+extern "C" extern void dMeter2Info_set2DVibrationM__Fv();
+extern "C" extern void __sinit_d_meter2_info_cpp();
+extern "C" extern void setLetterNameID__12dMsgObject_cFUs();
+extern "C" extern void __ct__10dMsgFlow_cFv();
+extern "C" extern void __dt__10dMsgFlow_cFv();
+extern "C" extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" extern void getMsgNo__10dMsgFlow_cFv();
+extern "C" extern void __ct__5csXyzFsss();
+extern "C" extern void __dl__FPv();
+extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" extern void readIdxResource__10JKRArchiveFPvUlUl();
+extern "C" extern void DCStoreRangeNoSync();
+extern "C" extern void __register_global_object();
+extern "C" extern void __cvt_fp2unsigned();
+extern "C" extern void _savegpr_19();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_19();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcmp();
+extern "C" extern void strcpy();
+SECTION_RODATA extern const u8 data_80398A78[148];
 SECTION_RODATA extern const u8 data_80398B0C[148];
 SECTION_RODATA extern const u8 data_80398BA0[148];
 SECTION_RODATA extern const u8 data_80398C34[148];
@@ -127,250 +126,33 @@ SECTION_RODATA extern const u8 data_80399040[148];
 SECTION_RODATA extern const u8 data_803990D4[148];
 SECTION_RODATA extern const u8 d_meter_d_meter2_info__stringBase0[464];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern u8 item_resource__10dItem_data[6120];
-SECTION_DATA extern void* d_meter_d_meter2_info__LIT_4572[37];
+SECTION_DATA extern void* item_resource__10dItem_data[1530];
+SECTION_DATA extern void* d_meter_d_meter2_info__lit_4572[37];
 SECTION_DATA extern void* data_803BF7F4[10];
 SECTION_DATA extern u8 letter_data__12dMenu_Letter[512];
-SECTION_DATA extern void* __vt__13dMeter2Info_c[3];
+SECTION_DATA extern void* const __vt__13dMeter2Info_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 d_meter_d_meter2_info__LIT_3846[12 + 4 /* padding */];
+SECTION_BSS extern u8 d_meter_d_meter2_info__lit_3846[12 + 4 /* padding */];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 data_804510B8[4];
 SECTION_SBSS extern u8 data_804510BC[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3916[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3917[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3918[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3919[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3920[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3921[4];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_3922[8];
-SECTION_SDATA2 extern u8 d_meter_d_meter2_info__LIT_4108[8];
-SECTION_SDATA2 extern u8 LIT_5206[8];
-}
+SECTION_SDATA2 extern u8 d_meter_d_meter2_info__lit_3916[4];
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3917;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3918;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3919;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3920;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3921;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3922;
+SECTION_SDATA2 extern f64 d_meter_d_meter2_info__lit_4108;
+SECTION_SDATA2 extern f64 lit_5206;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80399168-80399338 01D0 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80399168 = "";
-SECTION_DEAD const char* const stringBase_80399169 = "zel_00.bmg";
-SECTION_DEAD const char* const stringBase_80399174 = "D_MN01";
-SECTION_DEAD const char* const stringBase_8039917B = "D_MN07";
-SECTION_DEAD const char* const stringBase_80399182 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "0_02.bti";
-SECTION_DEAD const char* const stringBase_803991AB = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "1_02.bti";
-SECTION_DEAD const char* const stringBase_803991D4 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "2_02.bti";
-SECTION_DEAD const char* const stringBase_803991FD = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "3_02.bti";
-SECTION_DEAD const char* const stringBase_80399226 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "4_03.bti";
-SECTION_DEAD const char* const stringBase_8039924F = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "5_02.bti";
-SECTION_DEAD const char* const stringBase_80399278 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "6_02.bti";
-SECTION_DEAD const char* const stringBase_803992A1 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "7_02.bti";
-SECTION_DEAD const char* const stringBase_803992CA = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "8_02.bti";
-SECTION_DEAD const char* const stringBase_803992F3 = 
-    "im_font_number_3"
-    "2_32_ganshinkyo_"
-    "9_02.bti";
-SECTION_DEAD const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
-#pragma pop
-/* 80398A78-80398A78 0000 .rodata    ...rodata.0                                                  */
-/* 80398A78-80398B0C 0094 .rodata    black_color$4634                                             */
-SECTION_RODATA const u8 d_meter_d_meter2_info__data_80398A78[148] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0xA0, 0x60, 0x00, 0x00,
-	0xA0, 0x00, 0x00, 0x00, 0x40, 0x00, 0x60, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x40, 0x40, 0x40, 0x00,
-	0x6E, 0x6E, 0x64, 0x00, 0x32, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00,
-	0xAF, 0x9B, 0x6E, 0x00, 0xAA, 0x9B, 0x6E, 0x00, 0x55, 0x37, 0x14, 0x00, 0x6E, 0x6E, 0x6E, 0x00,
-	0x6E, 0x6E, 0x6E, 0x00, 0xFF, 0x58, 0x00, 0x00, 0x6C, 0x3E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x32, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x55, 0x37, 0x14, 0x00,
-	0x00, 0x00, 0x22, 0x00, 0x2B, 0x18, 0x22, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x46, 0x41, 0x00,
-	0x46, 0x46, 0x41, 0x00, 0x46, 0x46, 0x41, 0x00, 0x46, 0x46, 0x41, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80398B0C-80398BA0 0094 .rodata    white_color$4635                                             */
-SECTION_RODATA const u8 data_80398B0C[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0x60, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
-	0xFF, 0x80, 0x80, 0xFF, 0xBE, 0x40, 0xFF, 0xFF, 0xFF, 0xC0, 0x00, 0xFF, 0xC0, 0xC0, 0xC0, 0xFF,
-	0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xD2, 0xAA, 0xFF, 0xEF, 0xF5, 0xC9, 0xFF, 0xB0, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xF0, 0xFF, 0xFF, 0xFF, 0xF0, 0xFF, 0xFF, 0xFF, 0xD7, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF,
-	0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xFF, 0xC2, 0xFF, 0xFF, 0x9D, 0x00, 0xFF, 0xC8, 0xC8, 0xC8, 0xFF,
-	0xFF, 0xD2, 0xAA, 0xFF, 0xB0, 0xFF, 0xFF, 0xFF, 0xEF, 0xF5, 0xC9, 0xFF, 0xFF, 0xFF, 0xD7, 0xFF,
-	0xD7, 0xCF, 0xF5, 0xFF, 0xFF, 0xFF, 0x33, 0xFF, 0xC8, 0xC8, 0xC8, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF,
-	0xF5, 0xF5, 0xFF, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398BA0-80398C34 0094 .rodata    vertex_color_lu$4636                                         */
-SECTION_RODATA const u8 data_80398BA0[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0x78, 0xAF, 0xFF, 0x5C, 0xB4, 0x16, 0xFF, 0xA4, 0xFF, 0x00, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0x78, 0xAF, 0xFF, 0xA4, 0xFF, 0x00, 0xFF, 0x5C, 0xB4, 0x16, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
-	0xC9, 0xB4, 0xFF, 0xFF, 0x3C, 0x0A, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
-	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xA0, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398C34-80398CC8 0094 .rodata    vertex_color_ru$4637                                         */
-SECTION_RODATA const u8 data_80398C34[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0x73, 0xFF, 0xFF, 0xFF, 0x2A, 0xFF, 0x98, 0xFF, 0x00, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0x73, 0xFF, 0x98, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x2A, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0x39, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
-	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xA0, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398CC8-80398D5C 0094 .rodata    vertex_color_ld$4638                                         */
-SECTION_RODATA const u8 data_80398CC8[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x00, 0x00, 0xFF, 0x3C, 0x32, 0x50, 0xFF, 0x00, 0x00, 0x74, 0xFF,
-	0xFA, 0xC8, 0x9B, 0xFF, 0xFA, 0xC8, 0x9B, 0xFF, 0x46, 0x87, 0x00, 0xFF, 0x5A, 0xB4, 0xB4, 0xFF,
-	0x5A, 0xB4, 0xB4, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0xFF,
-	0xFF, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x74, 0xFF, 0x3C, 0x32, 0x50, 0xFF, 0x46, 0x87, 0x00, 0xFF,
-	0x3C, 0x32, 0x50, 0x49, 0xFF, 0xFF, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF,
-	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0xE0, 0x00, 0xE0, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398D5C-80398DF0 0094 .rodata    vertex_color_rd$4639                                         */
-SECTION_RODATA const u8 data_80398D5C[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x96, 0x00, 0xFF, 0x55, 0x42, 0x00, 0xFF, 0x61, 0x48, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xAA, 0xFF, 0xFF, 0xFF, 0xAA, 0xFF, 0xAF, 0x91, 0x23, 0xFF, 0xE6, 0xFA, 0xFF, 0xFF,
-	0xE6, 0xFA, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0xFF,
-	0xFF, 0x96, 0x00, 0xFF, 0x61, 0x48, 0xFF, 0xFF, 0x55, 0x42, 0x00, 0xFF, 0xAF, 0x91, 0x23, 0xFF,
-	0x3C, 0x09, 0x4E, 0xFF, 0xBA, 0x98, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF,
-	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0xE0, 0x00, 0xE0, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398DF0-80398E84 0094 .rodata    black_color$4675                                             */
-SECTION_RODATA const u8 data_80398DF0[148] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x86, 0xD4, 0x00,
-	0xE6, 0x1E, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80398E84-80398F18 0094 .rodata    white_color$4676                                             */
-SECTION_RODATA const u8 data_80398E84[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xF5, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xC8, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398F18-80398FAC 0094 .rodata    vertex_color_lu$4677                                         */
-SECTION_RODATA const u8 data_80398F18[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80398FAC-80399040 0094 .rodata    vertex_color_ru$4678                                         */
-SECTION_RODATA const u8 data_80398FAC[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0x58,
-	0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80399040-803990D4 0094 .rodata    vertex_color_ld$4679                                         */
-SECTION_RODATA const u8 data_80399040[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 803990D4-80399168 0094 .rodata    vertex_color_rd$4680                                         */
-SECTION_RODATA const u8 data_803990D4[148] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xCD, 0xFF, 0xFF, 0xFF, 0xCD, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803BF760-803BF7F4 0094 .data      @4572                                                        */
-SECTION_DATA void* d_meter_d_meter2_info__LIT_4572[37] = {
+void* d_meter_d_meter2_info__lit_4572[37] = {
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
@@ -409,8 +191,9 @@ SECTION_DATA void* d_meter_d_meter2_info__LIT_4572[37] = {
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x5C),
 };
+
 /* 803BF7F4-803BF81C 0028 .data      tex_name$5183                                                */
-SECTION_DATA void* data_803BF7F4[10] = {
+void* data_803BF7F4[10] = {
 	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x1A),
 	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x43),
 	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x6C),
@@ -422,8 +205,9 @@ SECTION_DATA void* data_803BF7F4[10] = {
 	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x162),
 	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x18B),
 };
+
 /* 803BF81C-803BFA1C 0200 .data      letter_data__12dMenu_Letter                                  */
-SECTION_DATA u8 letter_data__12dMenu_Letter[512] = {
+u8 letter_data__12dMenu_Letter[512] = {
 	0x09, 0xC5, 0x0A, 0x29, 0x0A, 0x8D, 0x01, 0x0B, 0x09, 0xC6, 0x0A, 0x2A, 0x0A, 0x8E, 0x02, 0x37,
 	0x09, 0xC7, 0x0A, 0x2B, 0x0A, 0x8F, 0x02, 0x36, 0x09, 0xC8, 0x0A, 0x2C, 0x0A, 0x90, 0x00, 0x37,
 	0x09, 0xC9, 0x0A, 0x2D, 0x0A, 0x91, 0x00, 0x39, 0x09, 0xCA, 0x0A, 0x2E, 0x0A, 0x92, 0x00, 0x67,
@@ -457,654 +241,881 @@ SECTION_DATA u8 letter_data__12dMenu_Letter[512] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803BFA1C-803BFA28 000C .data      __vt__13dMeter2Info_c                                        */
-SECTION_DATA void* __vt__13dMeter2Info_c[3] = {
+void* const __vt__13dMeter2Info_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13dMeter2Info_cFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454998-8045499C 0004 .sdata2    @3916                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3916[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 8045499C-804549A0 0004 .sdata2    @3917                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3917[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 804549A0-804549A4 0004 .sdata2    @3918                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3918[4] = {
-	0x41, 0xF0, 0x00, 0x00,
-};
-/* 804549A4-804549A8 0004 .sdata2    @3919                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3919[4] = {
-	0x43, 0x98, 0x00, 0x00,
-};
-/* 804549A8-804549AC 0004 .sdata2    @3920                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3920[4] = {
-	0x43, 0x60, 0x00, 0x00,
-};
-/* 804549AC-804549B0 0004 .sdata2    @3921                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3921[4] = {
-	0x44, 0x18, 0x00, 0x00,
-};
-/* 804549B0-804549B8 0004 .sdata2    @3922                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_3922[8] = {
-	0x43, 0xE0, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804549B8-804549C0 0008 .sdata2    @4108                                                        */
-SECTION_SDATA2 u8 d_meter_d_meter2_info__LIT_4108[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 804549C0-804549C8 0008 .sdata2    @5206                                                        */
-SECTION_SDATA2 u8 LIT_5206[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80430178-80430188 000C .bss       @3846                                                        */
-SECTION_BSS u8 d_meter_d_meter2_info__LIT_3846[12 + 4 /* padding */];
-/* 80430188-80430280 00F8 .bss       g_meter2_info                                                */
-SECTION_BSS u8 g_meter2_info[248];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804510B8-804510BC 0004 .sbss      tex_name$5188                                                */
-SECTION_SBSS u8 data_804510B8[4];
-/* 804510BC-804510C0 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_804510BC[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8021BDDC-8021BE20 0044 .text      __ct__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13dMeter2Info_cFv() {
+extern "C" asm void __ct__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/__ct__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021BE20-8021BE68 0048 .text      __dt__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13dMeter2Info_cFv() {
+extern "C" asm void __dt__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/__dt__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80398A78-80398B0C 0094 .rodata    black_color$4634                                             */
+SECTION_RODATA const u8 data_80398A78[148] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0xA0, 0x60, 0x00, 0x00,
+	0xA0, 0x00, 0x00, 0x00, 0x40, 0x00, 0x60, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x40, 0x40, 0x40, 0x00,
+	0x6E, 0x6E, 0x64, 0x00, 0x32, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00,
+	0xAF, 0x9B, 0x6E, 0x00, 0xAA, 0x9B, 0x6E, 0x00, 0x55, 0x37, 0x14, 0x00, 0x6E, 0x6E, 0x6E, 0x00,
+	0x6E, 0x6E, 0x6E, 0x00, 0xFF, 0x58, 0x00, 0x00, 0x6C, 0x3E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x32, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x55, 0x37, 0x14, 0x00,
+	0x00, 0x00, 0x22, 0x00, 0x2B, 0x18, 0x22, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x46, 0x41, 0x00,
+	0x46, 0x46, 0x41, 0x00, 0x46, 0x46, 0x41, 0x00, 0x46, 0x46, 0x41, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80398B0C-80398BA0 0094 .rodata    white_color$4635                                             */
+SECTION_RODATA const u8 data_80398B0C[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0x60, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
+	0xFF, 0x80, 0x80, 0xFF, 0xBE, 0x40, 0xFF, 0xFF, 0xFF, 0xC0, 0x00, 0xFF, 0xC0, 0xC0, 0xC0, 0xFF,
+	0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xD2, 0xAA, 0xFF, 0xEF, 0xF5, 0xC9, 0xFF, 0xB0, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xF0, 0xFF, 0xFF, 0xFF, 0xF0, 0xFF, 0xFF, 0xFF, 0xD7, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF,
+	0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xFF, 0xC2, 0xFF, 0xFF, 0x9D, 0x00, 0xFF, 0xC8, 0xC8, 0xC8, 0xFF,
+	0xFF, 0xD2, 0xAA, 0xFF, 0xB0, 0xFF, 0xFF, 0xFF, 0xEF, 0xF5, 0xC9, 0xFF, 0xFF, 0xFF, 0xD7, 0xFF,
+	0xD7, 0xCF, 0xF5, 0xFF, 0xFF, 0xFF, 0x33, 0xFF, 0xC8, 0xC8, 0xC8, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF,
+	0xF5, 0xF5, 0xFF, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF, 0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398BA0-80398C34 0094 .rodata    vertex_color_lu$4636                                         */
+SECTION_RODATA const u8 data_80398BA0[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0x78, 0xAF, 0xFF, 0x5C, 0xB4, 0x16, 0xFF, 0xA4, 0xFF, 0x00, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0x78, 0xAF, 0xFF, 0xA4, 0xFF, 0x00, 0xFF, 0x5C, 0xB4, 0x16, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
+	0xC9, 0xB4, 0xFF, 0xFF, 0x3C, 0x0A, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
+	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xA0, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398C34-80398CC8 0094 .rodata    vertex_color_ru$4637                                         */
+SECTION_RODATA const u8 data_80398C34[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0x73, 0xFF, 0xFF, 0xFF, 0x2A, 0xFF, 0x98, 0xFF, 0x00, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0x73, 0xFF, 0x98, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x2A, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0x39, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
+	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xA0, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398CC8-80398D5C 0094 .rodata    vertex_color_ld$4638                                         */
+SECTION_RODATA const u8 data_80398CC8[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x00, 0x00, 0xFF, 0x3C, 0x32, 0x50, 0xFF, 0x00, 0x00, 0x74, 0xFF,
+	0xFA, 0xC8, 0x9B, 0xFF, 0xFA, 0xC8, 0x9B, 0xFF, 0x46, 0x87, 0x00, 0xFF, 0x5A, 0xB4, 0xB4, 0xFF,
+	0x5A, 0xB4, 0xB4, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0xFF,
+	0xFF, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x74, 0xFF, 0x3C, 0x32, 0x50, 0xFF, 0x46, 0x87, 0x00, 0xFF,
+	0x3C, 0x32, 0x50, 0x49, 0xFF, 0xFF, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF,
+	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0xE0, 0x00, 0xE0, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398D5C-80398DF0 0094 .rodata    vertex_color_rd$4639                                         */
+SECTION_RODATA const u8 data_80398D5C[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x96, 0x00, 0xFF, 0x55, 0x42, 0x00, 0xFF, 0x61, 0x48, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xAA, 0xFF, 0xFF, 0xFF, 0xAA, 0xFF, 0xAF, 0x91, 0x23, 0xFF, 0xE6, 0xFA, 0xFF, 0xFF,
+	0xE6, 0xFA, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0xFF,
+	0xFF, 0x96, 0x00, 0xFF, 0x61, 0x48, 0xFF, 0xFF, 0x55, 0x42, 0x00, 0xFF, 0xAF, 0x91, 0x23, 0xFF,
+	0x3C, 0x09, 0x4E, 0xFF, 0xBA, 0x98, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF,
+	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0xFF, 0xE0, 0x00, 0xE0, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398DF0-80398E84 0094 .rodata    black_color$4675                                             */
+SECTION_RODATA const u8 data_80398DF0[148] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x86, 0xD4, 0x00,
+	0xE6, 0x1E, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80398E84-80398F18 0094 .rodata    white_color$4676                                             */
+SECTION_RODATA const u8 data_80398E84[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xF5, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xC8, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398F18-80398FAC 0094 .rodata    vertex_color_lu$4677                                         */
+SECTION_RODATA const u8 data_80398F18[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80398FAC-80399040 0094 .rodata    vertex_color_ru$4678                                         */
+SECTION_RODATA const u8 data_80398FAC[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0x58,
+	0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0x58, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80399040-803990D4 0094 .rodata    vertex_color_ld$4679                                         */
+SECTION_RODATA const u8 data_80399040[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 803990D4-80399168 0094 .rodata    vertex_color_rd$4680                                         */
+SECTION_RODATA const u8 data_803990D4[148] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xCD, 0xFF, 0xFF, 0xFF, 0xCD, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+	0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+/* 80399168-80399338 01D0 .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399168 = "";
+SECTION_DEAD const char* const stringBase_80399169 = "zel_00.bmg";
+SECTION_DEAD const char* const stringBase_80399174 = "D_MN01";
+SECTION_DEAD const char* const stringBase_8039917B = "D_MN07";
+SECTION_DEAD const char* const stringBase_80399182 = 
+    "im_font_number_32_32_ganshinkyo_0_02.bti";
+SECTION_DEAD const char* const stringBase_803991AB = 
+    "im_font_number_32_32_ganshinkyo_1_02.bti";
+SECTION_DEAD const char* const stringBase_803991D4 = 
+    "im_font_number_32_32_ganshinkyo_2_02.bti";
+SECTION_DEAD const char* const stringBase_803991FD = 
+    "im_font_number_32_32_ganshinkyo_3_02.bti";
+SECTION_DEAD const char* const stringBase_80399226 = 
+    "im_font_number_32_32_ganshinkyo_4_03.bti";
+SECTION_DEAD const char* const stringBase_8039924F = 
+    "im_font_number_32_32_ganshinkyo_5_02.bti";
+SECTION_DEAD const char* const stringBase_80399278 = 
+    "im_font_number_32_32_ganshinkyo_6_02.bti";
+SECTION_DEAD const char* const stringBase_803992A1 = 
+    "im_font_number_32_32_ganshinkyo_7_02.bti";
+SECTION_DEAD const char* const stringBase_803992CA = 
+    "im_font_number_32_32_ganshinkyo_8_02.bti";
+SECTION_DEAD const char* const stringBase_803992F3 = 
+    "im_font_number_32_32_ganshinkyo_9_02.bti";
+SECTION_DEAD const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
+#pragma pop
+
+/* 80454998-8045499C 0004 .sdata2    @3916                                                        */
+u8 d_meter_d_meter2_info__lit_3916[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045499C-804549A0 0004 .sdata2    @3917                                                        */
+f32 d_meter_d_meter2_info__lit_3917 = 1.0f;
+
+/* 804549A0-804549A4 0004 .sdata2    @3918                                                        */
+f32 d_meter_d_meter2_info__lit_3918 = 30.0f;
+
+/* 804549A4-804549A8 0004 .sdata2    @3919                                                        */
+f32 d_meter_d_meter2_info__lit_3919 = 304.0f;
+
+/* 804549A8-804549AC 0004 .sdata2    @3920                                                        */
+f32 d_meter_d_meter2_info__lit_3920 = 224.0f;
+
+/* 804549AC-804549B0 0004 .sdata2    @3921                                                        */
+f32 d_meter_d_meter2_info__lit_3921 = 608.0f;
+
+/* 804549B0-804549B8 0004 .sdata2    @3922                                                        */
+f32 d_meter_d_meter2_info__lit_3922 = 448.0f;
+/* padding 4 bytes */
+
 /* 8021BE68-8021C0E0 0278 .text      init__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13dMeter2Info_cFv() {
+extern "C" asm void init__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/init__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021C0E0-8021C11C 003C .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFloatingMessage__13dMeter2Info_cFUssb() {
+extern "C" asm void setFloatingMessage__13dMeter2Info_cFUssb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setFloatingMessage__13dMeter2Info_cFUssb.s"
 }
 #pragma pop
 
+
 /* 8021C11C-8021C1DC 00C0 .text      setFloatingFlow__13dMeter2Info_cFUssb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setFloatingFlow__13dMeter2Info_cFUssb() {
+extern "C" asm void setFloatingFlow__13dMeter2Info_cFUssb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setFloatingFlow__13dMeter2Info_cFUssb.s"
 }
 #pragma pop
 
+
 /* 8021C1DC-8021C1F0 0014 .text      isFloatingMessageVisible__13dMeter2Info_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isFloatingMessageVisible__13dMeter2Info_cFv() {
+extern "C" asm void isFloatingMessageVisible__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/isFloatingMessageVisible__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021C1F0-8021C218 0028 .text      decFloatingMessageTimer__13dMeter2Info_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decFloatingMessageTimer__13dMeter2Info_cFv() {
+extern "C" asm void decFloatingMessageTimer__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/decFloatingMessageTimer__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021C218-8021C238 0020 .text      resetFloatingMessage__13dMeter2Info_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetFloatingMessage__13dMeter2Info_cFv() {
+extern "C" asm void resetFloatingMessage__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/resetFloatingMessage__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021C238-8021C250 0018 .text      decMsgKeyWaitTimer__13dMeter2Info_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decMsgKeyWaitTimer__13dMeter2Info_cFv() {
+extern "C" asm void decMsgKeyWaitTimer__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/decMsgKeyWaitTimer__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021C250-8021C370 0120 .text      getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
+extern "C" asm void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c.s"
 }
 #pragma pop
 
+
 /* 8021C370-8021C544 01D4 .text      getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
+extern "C" asm void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c.s"
 }
 #pragma pop
 
+
 /* 8021C544-8021C6A4 0160 .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
+extern "C" asm void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804549B8-804549C0 0008 .sdata2    @4108                                                        */
+f64 d_meter_d_meter2_info__lit_4108 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 8021C6A4-8021C7F4 0150 .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc() {
+extern "C" asm void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getStringLength__13dMeter2Info_cFP10J2DTextBoxPc.s"
 }
 #pragma pop
 
+
 /* 8021C7F4-8021C7FC 0008 .text      getFont__10J2DTextBoxCFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFont__10J2DTextBoxCFv() {
+extern "C" asm void getFont__10J2DTextBoxCFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getFont__10J2DTextBoxCFv.s"
 }
 #pragma pop
 
+
 /* 8021C7FC-8021C934 0138 .text      getStringLength__13dMeter2Info_cFP7JUTFontffPc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStringLength__13dMeter2Info_cFP7JUTFontffPc() {
+extern "C" asm void getStringLength__13dMeter2Info_cFP7JUTFontffPc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getStringLength__13dMeter2Info_cFP7JUTFontffPc.s"
 }
 #pragma pop
 
+
 /* 8021C934-8021C950 001C .text      onDirectUseItem__13dMeter2Info_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onDirectUseItem__13dMeter2Info_cFi() {
+extern "C" asm void onDirectUseItem__13dMeter2Info_cFi() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/onDirectUseItem__13dMeter2Info_cFi.s"
 }
 #pragma pop
 
+
 /* 8021C950-8021C970 0020 .text      isDirectUseItem__13dMeter2Info_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isDirectUseItem__13dMeter2Info_cFi() {
+extern "C" asm void isDirectUseItem__13dMeter2Info_cFi() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/isDirectUseItem__13dMeter2Info_cFi.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80430178-80430188 000C .bss       @3846                                                        */
+u8 d_meter_d_meter2_info__lit_3846[12 + 4 /* padding */];
+
+/* 80430188-80430280 00F8 .bss       g_meter2_info                                                */
+u8 g_meter2_info[248];
+
 /* 8021C970-8021C9DC 006C .text      setMeterString__13dMeter2Info_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMeterString__13dMeter2Info_cFl() {
+extern "C" asm void setMeterString__13dMeter2Info_cFl() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setMeterString__13dMeter2Info_cFl.s"
 }
 #pragma pop
 
+
 /* 8021C9DC-8021CA04 0028 .text      resetWarpStatus__13dMeter2Info_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetWarpStatus__13dMeter2Info_cFv() {
+extern "C" asm void resetWarpStatus__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/resetWarpStatus__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021CA04-8021CA70 006C .text      warpInProc__13dMeter2Info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void warpInProc__13dMeter2Info_cFv() {
+extern "C" asm void warpInProc__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/warpInProc__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021CA70-8021CC00 0190 .text      warpOutProc__13dMeter2Info_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void warpOutProc__13dMeter2Info_cFv() {
+extern "C" asm void warpOutProc__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/warpOutProc__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021CC00-8021CC0C 000C .text      resetMeterString__13dMeter2Info_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetMeterString__13dMeter2Info_cFv() {
+extern "C" asm void resetMeterString__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/resetMeterString__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021CC0C-8021CC80 0074 .text      setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc() {
+extern "C" asm void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc.s"
 }
 #pragma pop
 
+
 /* 8021CC80-8021CF08 0288 .text      getItemType__13dMeter2Info_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getItemType__13dMeter2Info_cFUc() {
+extern "C" asm void getItemType__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getItemType__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021CF08-8021D36C 0464 .text      readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei() {
+extern "C" asm void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei.s"
 }
 #pragma pop
 
+
 /* 8021D36C-8021D44C 00E0 .text      setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture() {
+extern "C" asm void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture.s"
 }
 #pragma pop
 
+
 /* 8021D44C-8021D4B8 006C .text      get2ndTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get2ndTexture__13dMeter2Info_cFUc() {
+extern "C" asm void get2ndTexture__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get2ndTexture__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021D4B8-8021D4FC 0044 .text      get3rdTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get3rdTexture__13dMeter2Info_cFUc() {
+extern "C" asm void get3rdTexture__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get3rdTexture__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021D4FC-8021D524 0028 .text      get4thTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void get4thTexture__13dMeter2Info_cFUc() {
+extern "C" asm void get4thTexture__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get4thTexture__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021D524-8021D644 0120 .text      set1stColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set1stColor__13dMeter2Info_cFUcP10J2DPicture() {
+extern "C" asm void set1stColor__13dMeter2Info_cFUcP10J2DPicture() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set1stColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
 #pragma pop
 
+
 /* 8021D644-8021D764 0120 .text      set2ndColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set2ndColor__13dMeter2Info_cFUcP10J2DPicture() {
+extern "C" asm void set2ndColor__13dMeter2Info_cFUcP10J2DPicture() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set2ndColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
 #pragma pop
 
+
 /* 8021D764-8021DB64 0400 .text      set3rdColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set3rdColor__13dMeter2Info_cFUcP10J2DPicture() {
+extern "C" asm void set3rdColor__13dMeter2Info_cFUcP10J2DPicture() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set3rdColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
 #pragma pop
 
+
 /* 8021DB64-8021DCC4 0160 .text      set4thColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set4thColor__13dMeter2Info_cFUcP10J2DPicture() {
+extern "C" asm void set4thColor__13dMeter2Info_cFUcP10J2DPicture() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set4thColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
 #pragma pop
 
+
 /* 8021DCC4-8021DCE0 001C .text      setHotSpringTimer__13dMeter2Info_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setHotSpringTimer__13dMeter2Info_cFUc() {
+extern "C" asm void setHotSpringTimer__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setHotSpringTimer__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021DCE0-8021DD5C 007C .text      decHotSpringTimer__13dMeter2Info_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decHotSpringTimer__13dMeter2Info_cFv() {
+extern "C" asm void decHotSpringTimer__13dMeter2Info_cFv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/decHotSpringTimer__13dMeter2Info_cFv.s"
 }
 #pragma pop
 
+
 /* 8021DD5C-8021DE18 00BC .text      changeWater__13dMeter2Info_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void changeWater__13dMeter2Info_cFUc() {
+extern "C" asm void changeWater__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/changeWater__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021DE18-8021E0C4 02AC .text      setMiniGameItem__13dMeter2Info_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMiniGameItem__13dMeter2Info_cFUc() {
+extern "C" asm void setMiniGameItem__13dMeter2Info_cFUc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setMiniGameItem__13dMeter2Info_cFUc.s"
 }
 #pragma pop
 
+
 /* 8021E0C4-8021E268 01A4 .text      resetMiniGameItem__13dMeter2Info_cFb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resetMiniGameItem__13dMeter2Info_cFb() {
+extern "C" asm void resetMiniGameItem__13dMeter2Info_cFb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/resetMiniGameItem__13dMeter2Info_cFb.s"
 }
 #pragma pop
 
+
 /* 8021E268-8021E290 0028 .text      setMiniGameCount__13dMeter2Info_cFSc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMiniGameCount__13dMeter2Info_cFSc() {
+extern "C" asm void setMiniGameCount__13dMeter2Info_cFSc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setMiniGameCount__13dMeter2Info_cFSc.s"
 }
 #pragma pop
 
+
 /* 8021E290-8021E2B4 0024 .text      setSaveStageName__13dMeter2Info_cFPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSaveStageName__13dMeter2Info_cFPCc() {
+extern "C" asm void setSaveStageName__13dMeter2Info_cFPCc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setSaveStageName__13dMeter2Info_cFPCc.s"
 }
 #pragma pop
 
+
 /* 8021E2B4-8021E2C8 0014 .text      dMeter2Info_getNowLifeGauge__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getNowLifeGauge__Fv() {
+extern "C" asm void dMeter2Info_getNowLifeGauge__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getNowLifeGauge__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E2C8-8021E2DC 0014 .text      dMeter2Info_getNumberTextureName__Fi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getNumberTextureName__Fi() {
+extern "C" asm void dMeter2Info_getNumberTextureName__Fi() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getNumberTextureName__Fi.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804510B8-804510BC 0004 .sbss      tex_name$5188                                                */
+u8 data_804510B8[4];
+
+/* 804510BC-804510C0 0004 .sbss      None                                                         */
+u8 data_804510BC[4];
+
 /* 8021E2DC-8021E308 002C .text      dMeter2Info_getPlusTextureName__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getPlusTextureName__Fv() {
+extern "C" asm void dMeter2Info_getPlusTextureName__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getPlusTextureName__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804549C0-804549C8 0008 .sdata2    @5206                                                        */
+f64 lit_5206 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 8021E308-8021E4B0 01A8 .text      dMeter2Info_getPixel__FffffffPC7ResTIMG                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getPixel__FffffffPC7ResTIMG() {
+extern "C" asm void dMeter2Info_getPixel__FffffffPC7ResTIMG() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getPixel__FffffffPC7ResTIMG.s"
 }
 #pragma pop
 
+
 /* 8021E4B0-8021E530 0080 .text      dMeter2Info_setCloth__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setCloth__FUcb() {
+extern "C" asm void dMeter2Info_setCloth__FUcb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setCloth__FUcb.s"
 }
 #pragma pop
 
+
 /* 8021E530-8021E5D4 00A4 .text      dMeter2Info_setSword__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setSword__FUcb() {
+extern "C" asm void dMeter2Info_setSword__FUcb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setSword__FUcb.s"
 }
 #pragma pop
 
+
 /* 8021E5D4-8021E660 008C .text      dMeter2Info_setShield__FUcb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setShield__FUcb() {
+extern "C" asm void dMeter2Info_setShield__FUcb() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setShield__FUcb.s"
 }
 #pragma pop
 
+
 /* 8021E660-8021E668 0008 .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_is2DActiveTouchArea__Fv() {
+extern "C" asm void dMeter2Info_is2DActiveTouchArea__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_is2DActiveTouchArea__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E668-8021E688 0020 .text      dMeter2Info_isMapOpenCheck__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_isMapOpenCheck__Fv() {
+extern "C" asm void dMeter2Info_isMapOpenCheck__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_isMapOpenCheck__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E688-8021E6E4 005C .text      dMeter2Info_isItemOpenCheck__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_isItemOpenCheck__Fv() {
+extern "C" asm void dMeter2Info_isItemOpenCheck__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_isItemOpenCheck__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E6E4-8021E754 0070 .text      dMeter2Info_getRecieveLetterNum__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getRecieveLetterNum__Fv() {
+extern "C" asm void dMeter2Info_getRecieveLetterNum__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getRecieveLetterNum__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E754-8021E804 00B0 .text      dMeter2Info_getNewLetterNum__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getNewLetterNum__Fv() {
+extern "C" asm void dMeter2Info_getNewLetterNum__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getNewLetterNum__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E804-8021E8DC 00D8 .text      dMeter2Info_setNewLetterSender__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setNewLetterSender__Fv() {
+extern "C" asm void dMeter2Info_setNewLetterSender__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setNewLetterSender__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E8DC-8021E9D0 00F4 .text      dMeter2Info_recieveLetter__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_recieveLetter__Fv() {
+extern "C" asm void dMeter2Info_recieveLetter__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_recieveLetter__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E9D0-8021E9D4 0004 .text      dMeter2Info_set2DVibration__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_set2DVibration__Fv() {
+extern "C" asm void dMeter2Info_set2DVibration__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibration__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E9D4-8021E9D8 0004 .text      dMeter2Info_set2DVibrationM__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_set2DVibrationM__Fv() {
+extern "C" asm void dMeter2Info_set2DVibrationM__Fv() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibrationM__Fv.s"
 }
 #pragma pop
 
+
 /* 8021E9D8-8021EA14 003C .text      __sinit_d_meter2_info_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_d_meter2_info_cpp() {
+extern "C" asm void __sinit_d_meter2_info_cpp() {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/__sinit_d_meter2_info_cpp.s"
 }

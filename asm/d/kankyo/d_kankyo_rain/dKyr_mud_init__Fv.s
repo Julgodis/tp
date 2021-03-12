@@ -39,12 +39,12 @@ lbl_8006C7F0:
 /* 8006C820 00000030  4B FC 81 15 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8006C824 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 8006C828 00000038  40 82 00 14 */	bne lbl_8006C83C
-/* 8006C82C 0000003C  C0 02 88 14 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_4354(r2)
+/* 8006C82C 0000003C  C0 02 88 14 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4354(r2)
 /* 8006C830 00000040  80 7F 10 4C */	lwz r3, 0x104c(r31)
 /* 8006C834 00000044  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 /* 8006C838 00000048  48 00 00 10 */	b lbl_8006C848
 lbl_8006C83C:
-/* 8006C83C 00000000  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3954(r2)
+/* 8006C83C 00000000  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
 /* 8006C840 00000004  80 7F 10 4C */	lwz r3, 0x104c(r31)
 /* 8006C844 00000008  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 lbl_8006C848:

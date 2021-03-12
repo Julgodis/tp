@@ -5,100 +5,104 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void EXI2_Init();
-extern void EXI2_EnableInterrupts();
-extern void EXI2_Poll();
-extern void EXI2_ReadN();
-extern void EXI2_WriteN();
-extern void EXI2_Reserve();
-extern void EXI2_Unreserve();
-extern void AMC_IsStub();
-}
+extern "C" extern void EXI2_Init();
+extern "C" extern void EXI2_EnableInterrupts();
+extern "C" extern void EXI2_Poll();
+extern "C" extern void EXI2_ReadN();
+extern "C" extern void EXI2_WriteN();
+extern "C" extern void EXI2_Reserve();
+extern "C" extern void EXI2_Unreserve();
+extern "C" extern void AMC_IsStub();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80372CFC-80372D00 0004 .text      EXI2_Init                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_Init() {
+extern "C" asm void EXI2_Init() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_Init.s"
 }
 #pragma pop
 
+
 /* 80372D00-80372D04 0004 .text      EXI2_EnableInterrupts                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_EnableInterrupts() {
+extern "C" asm void EXI2_EnableInterrupts() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_EnableInterrupts.s"
 }
 #pragma pop
 
+
 /* 80372D04-80372D0C 0008 .text      EXI2_Poll                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_Poll() {
+extern "C" asm void EXI2_Poll() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_Poll.s"
 }
 #pragma pop
 
+
 /* 80372D0C-80372D14 0008 .text      EXI2_ReadN                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_ReadN() {
+extern "C" asm void EXI2_ReadN() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_ReadN.s"
 }
 #pragma pop
 
+
 /* 80372D14-80372D1C 0008 .text      EXI2_WriteN                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_WriteN() {
+extern "C" asm void EXI2_WriteN() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_WriteN.s"
 }
 #pragma pop
 
+
 /* 80372D1C-80372D20 0004 .text      EXI2_Reserve                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_Reserve() {
+extern "C" asm void EXI2_Reserve() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_Reserve.s"
 }
 #pragma pop
 
+
 /* 80372D20-80372D24 0004 .text      EXI2_Unreserve                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void EXI2_Unreserve() {
+extern "C" asm void EXI2_Unreserve() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/EXI2_Unreserve.s"
 }
 #pragma pop
 
+
 /* 80372D24-80372D2C 0008 .text      AMC_IsStub                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void AMC_IsStub() {
+extern "C" asm void AMC_IsStub() {
 	nofralloc
 #include "asm/amcstubs/AmcExi2Stubs/AMC_IsStub.s"
 }

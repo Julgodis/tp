@@ -5,26 +5,45 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__16JASRegisterParamFv();
-extern void init__16JASRegisterParamFv();
-extern void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
-extern void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
-SECTION_DATA extern void* JASRegisterParam__LIT_56[10];
-SECTION_DATA extern void* JASRegisterParam__LIT_87[10];
+extern "C" extern void __ct__16JASRegisterParamFv();
+extern "C" extern void init__16JASRegisterParamFv();
+extern "C" extern void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
+extern "C" extern void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
+SECTION_DATA extern void* JASRegisterParam__lit_56[10];
+SECTION_DATA extern void* JASRegisterParam__lit_87[10];
+
+// 
+// Functions:
+// 
+
+/* 80293644-80293664 0020 .text      __ct__16JASRegisterParamFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__16JASRegisterParamFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASRegisterParam/__ct__16JASRegisterParamFv.s"
 }
+#pragma pop
+
+
+/* 80293664-80293684 0020 .text      init__16JASRegisterParamFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__16JASRegisterParamFv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASRegisterParam/init__16JASRegisterParamFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C5B90-803C5BB8 0028 .data      @56                                                          */
-SECTION_DATA void* JASRegisterParam__LIT_56[10] = {
+void* JASRegisterParam__lit_56[10] = {
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x74),
@@ -36,8 +55,21 @@ SECTION_DATA void* JASRegisterParam__LIT_56[10] = {
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x114),
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x124),
 };
+
+/* 80293684-802937B8 0134 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASRegisterParam/write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803C5BB8-803C5BE0 0028 .data      @87                                                          */
-SECTION_DATA void* JASRegisterParam__LIT_87[10] = {
+void* JASRegisterParam__lit_87[10] = {
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x68),
@@ -49,48 +81,12 @@ SECTION_DATA void* JASRegisterParam__LIT_87[10] = {
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xD8),
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xEC),
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80293644-80293664 0020 .text      __ct__16JASRegisterParamFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__16JASRegisterParamFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASRegisterParam/__ct__16JASRegisterParamFv.s"
-}
-#pragma pop
-
-/* 80293664-80293684 0020 .text      init__16JASRegisterParamFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__16JASRegisterParamFv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASRegisterParam/init__16JASRegisterParamFv.s"
-}
-#pragma pop
-
-/* 80293684-802937B8 0134 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASRegisterParam/write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl.s"
-}
-#pragma pop
 
 /* 802937B8-802938BC 0104 .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void read__16JASRegisterParamFQ216JASRegisterParam5RegID() {
+extern "C" asm void read__16JASRegisterParamFQ216JASRegisterParam5RegID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASRegisterParam/read__16JASRegisterParamFQ216JASRegisterParam5RegID.s"
 }

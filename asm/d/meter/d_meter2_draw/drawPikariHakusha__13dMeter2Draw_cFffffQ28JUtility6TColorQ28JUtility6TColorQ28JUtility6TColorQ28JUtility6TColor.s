@@ -83,7 +83,7 @@ lbl_8021462C:
 /* 80214770 00000120  7D 89 03 A6 */	mtctr r12
 /* 80214774 00000124  4E 80 04 21 */	bctrl 
 /* 80214778 00000128  80 7B 00 80 */	lwz r3, 0x80(r27)
-/* 8021477C 0000012C  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 8021477C 0000012C  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80214780 00000130  FC 40 08 90 */	fmr f2, f1
 /* 80214784 00000134  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80214788 00000138  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l

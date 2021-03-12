@@ -2,7 +2,7 @@ lbl_8035CFA4:
 /* 8035CFA4 00000000  7C 08 02 A6 */	mflr r0
 /* 8035CFA8 00000004  90 01 00 04 */	stw r0, 4(r1)
 /* 8035CFAC 00000008  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8035CFB0 0000000C  C0 02 CB A8 */	lfs f0, LIT_179(r2)
+/* 8035CFB0 0000000C  C0 02 CB A8 */	lfs f0, lit_179(r2)
 /* 8035CFB4 00000010  EC 20 08 24 */	fdivs f1, f0, f1
 /* 8035CFB8 00000014  48 00 50 F5 */	bl __cvt_fp2unsigned
 /* 8035CFBC 00000018  54 67 05 FE */	clrlwi r7, r3, 0x17

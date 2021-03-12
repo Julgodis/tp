@@ -31,7 +31,7 @@ lbl_8011C7C4:
 /* 8011C7C8 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 8011C7CC 00000008  41 82 00 34 */	beq lbl_8011C800
 /* 8011C7D0 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 8011C7D4 00000010  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 8011C7D4 00000010  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 8011C7D8 00000014  48 20 BC 55 */	bl checkPass__12J3DFrameCtrlFf
 /* 8011C7DC 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 8011C7E0 0000001C  41 82 00 20 */	beq lbl_8011C800

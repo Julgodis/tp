@@ -14,8 +14,8 @@ lbl_802A1F58:
 /* 802A1F88 00000030  38 63 40 CC */	addi r3, r3, data_804340CC@l
 /* 802A1F8C 00000034  3C 80 80 2A */	lis r4, func_802A1AF4@ha
 /* 802A1F90 00000038  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
-/* 802A1F94 0000003C  3C A0 80 43 */	lis r5, LIT_715@ha
-/* 802A1F98 00000040  38 A5 40 C0 */	addi r5, r5, LIT_715@l
+/* 802A1F94 0000003C  3C A0 80 43 */	lis r5, lit_715@ha
+/* 802A1F98 00000040  38 A5 40 C0 */	addi r5, r5, lit_715@l
 /* 802A1F9C 00000044  48 0B FC 89 */	bl __register_global_object
 /* 802A1FA0 00000048  38 00 00 01 */	li r0, 1
 /* 802A1FA4 0000004C  98 0D 8D A0 */	stb r0, data_80451320(r13)

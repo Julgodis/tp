@@ -6,8 +6,8 @@ lbl_80195C64:
 /* 80195C74 00000010  4B FF FD B9 */	bl __ct__9dSi_HIO_cFv
 /* 80195C78 00000014  3C 80 80 19 */	lis r4, __dt__9dSi_HIO_cFv@ha
 /* 80195C7C 00000018  38 84 5C 1C */	addi r4, r4, __dt__9dSi_HIO_cFv@l
-/* 80195C80 0000001C  3C A0 80 43 */	lis r5, LIT_3648@ha
-/* 80195C84 00000020  38 A5 CA 10 */	addi r5, r5, LIT_3648@l
+/* 80195C80 0000001C  3C A0 80 43 */	lis r5, lit_3648@ha
+/* 80195C84 00000020  38 A5 CA 10 */	addi r5, r5, lit_3648@l
 /* 80195C88 00000024  48 1C BF 9D */	bl __register_global_object
 /* 80195C8C 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80195C90 0000002C  7C 08 03 A6 */	mtlr r0

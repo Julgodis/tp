@@ -122,9 +122,9 @@ lbl_80184FB4:
 /* 80185004 00000050  38 A0 00 00 */	li r5, 0
 /* 80185008 00000054  38 C0 00 00 */	li r6, 0
 /* 8018500C 00000058  38 E0 00 00 */	li r7, 0
-/* 80185010 0000005C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 80185010 0000005C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 80185014 00000060  FC 40 08 90 */	fmr f2, f1
-/* 80185018 00000064  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 80185018 00000064  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 8018501C 00000068  FC 80 18 90 */	fmr f4, f3
 /* 80185020 0000006C  39 00 00 00 */	li r8, 0
 /* 80185024 00000070  48 12 69 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

@@ -16,9 +16,9 @@ lbl_801F8150:
 /* 801F8188 00000038  38 A0 00 00 */	li r5, 0
 /* 801F818C 0000003C  38 C0 00 00 */	li r6, 0
 /* 801F8190 00000040  38 E0 00 00 */	li r7, 0
-/* 801F8194 00000044  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F8194 00000044  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F8198 00000048  FC 40 08 90 */	fmr f2, f1
-/* 801F819C 0000004C  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__LIT_3946(r2)
+/* 801F819C 0000004C  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__lit_3946(r2)
 /* 801F81A0 00000050  FC 80 18 90 */	fmr f4, f3
 /* 801F81A4 00000054  39 00 00 00 */	li r8, 0
 /* 801F81A8 00000058  48 0B 37 DD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -36,9 +36,9 @@ lbl_801F81BC:
 /* 801F81D4 00000018  38 A0 00 00 */	li r5, 0
 /* 801F81D8 0000001C  38 C0 00 00 */	li r6, 0
 /* 801F81DC 00000020  38 E0 00 00 */	li r7, 0
-/* 801F81E0 00000024  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F81E0 00000024  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F81E4 00000028  FC 40 08 90 */	fmr f2, f1
-/* 801F81E8 0000002C  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__LIT_3946(r2)
+/* 801F81E8 0000002C  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__lit_3946(r2)
 /* 801F81EC 00000030  FC 80 18 90 */	fmr f4, f3
 /* 801F81F0 00000034  39 00 00 00 */	li r8, 0
 /* 801F81F4 00000038  48 0B 37 91 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

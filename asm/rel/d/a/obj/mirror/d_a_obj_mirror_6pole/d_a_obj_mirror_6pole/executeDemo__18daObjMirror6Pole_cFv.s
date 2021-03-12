@@ -1,0 +1,30 @@
+lbl_80C95E8C:
+/* 80C95E8C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80C95E90 00000004  7C 08 02 A6 */	mflr r0
+/* 80C95E94 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80C95E98 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80C95E9C 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80C95EA0 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C95EA4 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C95EA8 0000001C  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 80C95EAC 00000020  28 00 00 00 */	cmplwi r0, 0
+/* 80C95EB0 00000024  40 82 00 30 */	bne lbl_80C95EE0
+/* 80C95EB4 00000028  38 00 00 00 */	li r0, 0
+/* 80C95EB8 0000002C  90 1F 05 7C */	stw r0, 0x57c(r31)
+/* 80C95EBC 00000030  80 1F 05 7C */	lwz r0, 0x57c(r31)
+/* 80C95EC0 00000034  1C A0 00 18 */	mulli r5, r0, 0x18
+/* 80C95EC4 00000038  3C 80 00 00 */	lis r4, ActionTable__18daObjMirror6Pole_c@ha
+/* 80C95EC8 0000003C  38 04 00 00 */	addi r0, r4, ActionTable__18daObjMirror6Pole_c@l
+/* 80C95ECC 00000040  7C 00 2A 14 */	add r0, r0, r5
+/* 80C95ED0 00000044  90 1F 05 78 */	stw r0, 0x578(r31)
+/* 80C95ED4 00000048  81 9F 05 78 */	lwz r12, 0x578(r31)
+/* 80C95ED8 0000004C  4B FF FF 21 */	bl __ptmf_scall
+/* 80C95EDC 00000050  60 00 00 00 */	nop 
+lbl_80C95EE0:
+/* 80C95EE0 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80C95EE4 00000004  48 00 00 19 */	bl setBaseMtx__18daObjMirror6Pole_cFv
+/* 80C95EE8 00000008  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80C95EEC 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80C95EF0 00000010  7C 08 03 A6 */	mtlr r0
+/* 80C95EF4 00000014  38 21 00 10 */	addi r1, r1, 0x10
+/* 80C95EF8 00000018  4E 80 00 20 */	blr 

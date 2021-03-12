@@ -42,9 +42,9 @@ lbl_801B2F20:
 /* 801B2F7C 0000005C  38 A0 00 00 */	li r5, 0
 /* 801B2F80 00000060  38 C0 00 00 */	li r6, 0
 /* 801B2F84 00000064  38 E0 00 00 */	li r7, 0
-/* 801B2F88 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B2F88 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B2F8C 0000006C  FC 40 08 90 */	fmr f2, f1
-/* 801B2F90 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__LIT_5531(r2)
+/* 801B2F90 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
 /* 801B2F94 00000074  FC 80 18 90 */	fmr f4, f3
 /* 801B2F98 00000078  39 00 00 00 */	li r8, 0
 /* 801B2F9C 0000007C  48 0F 89 E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -77,9 +77,9 @@ lbl_801B2FA8:
 /* 801B3004 0000005C  38 A0 00 00 */	li r5, 0
 /* 801B3008 00000060  38 C0 00 00 */	li r6, 0
 /* 801B300C 00000064  38 E0 00 00 */	li r7, 0
-/* 801B3010 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B3010 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B3014 0000006C  FC 40 08 90 */	fmr f2, f1
-/* 801B3018 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__LIT_5531(r2)
+/* 801B3018 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
 /* 801B301C 00000074  FC 80 18 90 */	fmr f4, f3
 /* 801B3020 00000078  39 00 00 00 */	li r8, 0
 /* 801B3024 0000007C  48 0F 89 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -112,9 +112,9 @@ lbl_801B3030:
 /* 801B308C 0000005C  38 A0 00 00 */	li r5, 0
 /* 801B3090 00000060  38 C0 00 00 */	li r6, 0
 /* 801B3094 00000064  38 E0 00 00 */	li r7, 0
-/* 801B3098 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B3098 00000068  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B309C 0000006C  FC 40 08 90 */	fmr f2, f1
-/* 801B30A0 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__LIT_5531(r2)
+/* 801B30A0 00000070  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
 /* 801B30A4 00000074  FC 80 18 90 */	fmr f4, f3
 /* 801B30A8 00000078  39 00 00 00 */	li r8, 0
 /* 801B30AC 0000007C  48 0F 88 D9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

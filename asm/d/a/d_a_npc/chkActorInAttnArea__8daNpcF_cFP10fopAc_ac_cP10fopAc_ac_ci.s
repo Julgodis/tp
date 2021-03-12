@@ -16,12 +16,12 @@ lbl_80153BDC:
 /* 80153C14 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 80153C18 00000020  4B FF 73 F9 */	bl getDistTable__12dAttention_cFi
 /* 80153C1C 00000024  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80153C20 00000028  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__LIT_4148(r2)
+/* 80153C20 00000028  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
 /* 80153C24 0000002C  EF E0 00 72 */	fmuls f31, f0, f1
 /* 80153C28 00000030  7F C3 F3 78 */	mr r3, r30
 /* 80153C2C 00000034  4B FF 73 E5 */	bl getDistTable__12dAttention_cFi
 /* 80153C30 00000038  C0 23 00 0C */	lfs f1, 0xc(r3)
-/* 80153C34 0000003C  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__LIT_4148(r2)
+/* 80153C34 0000003C  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
 /* 80153C38 00000040  EF C0 00 72 */	fmuls f30, f0, f1
 /* 80153C3C 00000044  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80153C40 00000048  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -38,7 +38,7 @@ lbl_80153BDC:
 /* 80153C6C 00000074  FC 20 08 18 */	frsp f1, f1
 /* 80153C70 00000078  FC 00 00 18 */	frsp f0, f0
 /* 80153C74 0000007C  EC 21 00 2A */	fadds f1, f1, f0
-/* 80153C78 00000080  C0 02 9A AC */	lfs f0, LIT_11253(r2)
+/* 80153C78 00000080  C0 02 9A AC */	lfs f0, lit_11253(r2)
 /* 80153C7C 00000084  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80153C80 00000088  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80153C84 0000008C  7F C3 F3 78 */	mr r3, r30

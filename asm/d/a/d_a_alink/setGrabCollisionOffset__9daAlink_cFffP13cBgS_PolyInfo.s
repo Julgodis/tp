@@ -19,7 +19,7 @@ lbl_800E39D4:
 /* 800E39D4 00000000  38 7F 1E 4C */	addi r3, r31, 0x1e4c
 /* 800E39D8 00000004  48 18 47 49 */	bl ClearPi__13cBgS_PolyInfoFv
 lbl_800E39DC:
-/* 800E39DC 00000000  C0 22 94 08 */	lfs f1, d_a_d_a_alink__LIT_14064(r2)
+/* 800E39DC 00000000  C0 22 94 08 */	lfs f1, d_a_d_a_alink__lit_14064(r2)
 /* 800E39E0 00000004  EC 01 07 B2 */	fmuls f0, f1, f30
 /* 800E39E4 00000008  D0 1F 34 2C */	stfs f0, 0x342c(r31)
 /* 800E39E8 0000000C  EC 01 07 F2 */	fmuls f0, f1, f31

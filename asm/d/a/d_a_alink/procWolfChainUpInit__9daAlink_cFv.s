@@ -22,7 +22,7 @@ lbl_8013DE2C:
 /* 8013DE44 00000018  38 A5 F9 5C */	addi r5, r5, m__20daAlinkHIO_wlGrab_c0@l
 /* 8013DE48 0000001C  38 A5 00 28 */	addi r5, r5, 0x28
 /* 8013DE4C 00000020  4B FE B9 FD */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013DE50 00000024  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013DE50 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013DE54 00000028  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8013DE58 0000002C  38 60 00 01 */	li r3, 1
 lbl_8013DE5C:

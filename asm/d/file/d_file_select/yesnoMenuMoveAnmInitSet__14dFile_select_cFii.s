@@ -56,7 +56,7 @@ lbl_80188BF8:
 /* 80188C90 00000098  4E 80 04 21 */	bctrl 
 lbl_80188C94:
 /* 80188C94 00000000  80 7D 00 60 */	lwz r3, 0x60(r29)
-/* 80188C98 00000004  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 80188C98 00000004  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 80188C9C 00000008  48 00 C6 05 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80188CA0 0000000C  80 7D 00 F0 */	lwz r3, 0xf0(r29)
 /* 80188CA4 00000010  80 63 00 04 */	lwz r3, 4(r3)
@@ -75,7 +75,7 @@ lbl_80188C94:
 /* 80188CD8 00000044  93 DD 01 00 */	stw r30, 0x100(r29)
 /* 80188CDC 00000048  93 FD 01 04 */	stw r31, 0x104(r29)
 /* 80188CE0 0000004C  80 1D 01 00 */	lwz r0, 0x100(r29)
-/* 80188CE4 00000050  C8 22 9F 38 */	lfd f1, d_file_d_file_select__LIT_4342(r2)
+/* 80188CE4 00000050  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
 /* 80188CE8 00000054  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80188CEC 00000058  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80188CF0 0000005C  3C 00 43 30 */	lis r0, 0x4330

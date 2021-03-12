@@ -31,7 +31,7 @@ lbl_8020C224:
 lbl_8020C23C:
 /* 8020C23C 00000000  C0 5E 00 20 */	lfs f2, 0x20(r30)
 /* 8020C240 00000004  A8 9F 00 06 */	lha r4, 6(r31)
-/* 8020C244 00000008  C8 22 AD F8 */	lfd f1, d_meter_d_meter_haihai__LIT_4189(r2)
+/* 8020C244 00000008  C8 22 AD F8 */	lfd f1, d_meter_d_meter_haihai__lit_4189(r2)
 /* 8020C248 0000000C  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 8020C24C 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8020C250 00000014  3C 60 43 30 */	lis r3, 0x4330
@@ -51,7 +51,7 @@ lbl_8020C23C:
 /* 8020C288 00000024  D0 1E 00 20 */	stfs f0, 0x20(r30)
 /* 8020C28C 00000028  48 00 00 0C */	b lbl_8020C298
 lbl_8020C290:
-/* 8020C290 00000000  C0 02 AD F0 */	lfs f0, d_meter_d_meter_haihai__LIT_4165(r2)
+/* 8020C290 00000000  C0 02 AD F0 */	lfs f0, d_meter_d_meter_haihai__lit_4165(r2)
 /* 8020C294 00000004  D0 1E 00 20 */	stfs f0, 0x20(r30)
 lbl_8020C298:
 /* 8020C298 00000000  C0 1E 00 20 */	lfs f0, 0x20(r30)

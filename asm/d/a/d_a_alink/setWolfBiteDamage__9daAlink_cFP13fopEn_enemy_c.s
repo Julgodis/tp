@@ -26,9 +26,9 @@ lbl_801396F8:
 /* 80139758 00000060  39 08 56 F8 */	addi r8, r8, l_wolfBiteHitMarkScale@l
 /* 8013975C 00000064  39 20 00 00 */	li r9, 0
 /* 80139760 00000068  4B F1 2A B9 */	bl setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl
-/* 80139764 0000006C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80139764 0000006C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80139768 00000070  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013976C 00000074  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 8013976C 00000074  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 80139770 00000078  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80139774 0000007C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80139778 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

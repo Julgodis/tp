@@ -5,63 +5,56 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcCtTg_ToCreateQ__FP10create_tag();
-extern void fpcCtTg_CreateQTo__FP10create_tag();
-extern void fpcCtTg_Init__FP10create_tagPv();
-extern void cTg_SingleCut__FP16create_tag_class();
-extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern void cTg_Create__FP16create_tag_classPv();
+extern "C" extern void fpcCtTg_ToCreateQ__FP10create_tag();
+extern "C" extern void fpcCtTg_CreateQTo__FP10create_tag();
+extern "C" extern void fpcCtTg_Init__FP10create_tagPv();
+extern "C" extern void cTg_SingleCut__FP16create_tag_class();
+extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" extern void cTg_Create__FP16create_tag_classPv();
 SECTION_DATA extern u8 g_fpcCtTg_Queue[16];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A3990-803A39A0 000C .data      g_fpcCtTg_Queue                                              */
-SECTION_DATA u8 g_fpcCtTg_Queue[16] = {
+u8 g_fpcCtTg_Queue[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80020E38-80020E64 002C .text      fpcCtTg_ToCreateQ__FP10create_tag                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtTg_ToCreateQ__FP10create_tag() {
+extern "C" asm void fpcCtTg_ToCreateQ__FP10create_tag() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_tag/fpcCtTg_ToCreateQ__FP10create_tag.s"
 }
 #pragma pop
 
+
 /* 80020E64-80020E84 0020 .text      fpcCtTg_CreateQTo__FP10create_tag                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtTg_CreateQTo__FP10create_tag() {
+extern "C" asm void fpcCtTg_CreateQTo__FP10create_tag() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_tag/fpcCtTg_CreateQTo__FP10create_tag.s"
 }
 #pragma pop
 
+
 /* 80020E84-80020EA8 0024 .text      fpcCtTg_Init__FP10create_tagPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtTg_Init__FP10create_tagPv() {
+extern "C" asm void fpcCtTg_Init__FP10create_tagPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_tag/fpcCtTg_Init__FP10create_tagPv.s"
 }

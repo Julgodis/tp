@@ -11,7 +11,7 @@ lbl_801CAC30:
 /* 801CAC54 00000024  38 A0 00 FF */	li r5, 0xff
 /* 801CAC58 00000028  48 00 C6 7D */	bl setAButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801CAC5C 0000002C  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 801CAC60 00000030  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CAC60 00000030  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CAC64 00000034  48 00 68 15 */	bl zoomMapCalc2__18dMenu_Fmap2DBack_cFf
 /* 801CAC68 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801CAC6C 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)

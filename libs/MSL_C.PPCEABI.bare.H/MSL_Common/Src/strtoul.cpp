@@ -5,28 +5,47 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __StringRead();
-extern void strtol();
-extern void strtoul();
-extern void __strtoul();
+extern "C" extern void __StringRead();
+extern "C" extern void strtol();
+extern "C" extern void strtoul();
+extern "C" extern void __strtoul();
 SECTION_DATA extern u8 __ctype_map[256];
 SECTION_DATA extern u8 __upper_map[256];
-SECTION_DATA extern void* MSL_Common_Src_strtoul__LIT_431[18];
+SECTION_DATA extern void* MSL_Common_Src_strtoul__lit_431[18];
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 80368C00-80368CF0 00F0 .text      strtol                                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void strtol() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/strtol.s"
 }
+#pragma pop
+
+
+/* 80368CF0-80368D9C 00AC .text      strtoul                                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void strtoul() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/strtoul.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803D3148-803D3190 0044 .data      @431                                                         */
-SECTION_DATA void* MSL_Common_Src_strtoul__LIT_431[18] = {
+void* MSL_Common_Src_strtoul__lit_431[18] = {
 	(void*)(((char*)__strtoul)+0x310),
 	(void*)(((char*)__strtoul)+0xC4),
 	(void*)(((char*)__strtoul)+0x164),
@@ -47,38 +66,12 @@ SECTION_DATA void* MSL_Common_Src_strtoul__LIT_431[18] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80368C00-80368CF0 00F0 .text      strtol                                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void strtol() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/strtol.s"
-}
-#pragma pop
-
-/* 80368CF0-80368D9C 00AC .text      strtoul                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void strtoul() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/strtoul.s"
-}
-#pragma pop
 
 /* 80368D9C-80369114 0378 .text      __strtoul                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __strtoul() {
+extern "C" asm void __strtoul() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/__strtoul.s"
 }

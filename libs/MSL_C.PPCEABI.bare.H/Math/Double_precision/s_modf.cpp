@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void modf();
-}
+extern "C" extern void modf();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C494-8036C590 00FC .text      modf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void modf() {
+extern "C" asm void modf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_modf/modf.s"
 }

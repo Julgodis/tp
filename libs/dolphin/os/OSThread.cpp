@@ -5,101 +5,400 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void OSPanic();
-extern void OSSetCurrentContext();
-extern void OSGetCurrentContext();
-extern void OSSaveContext();
-extern void OSLoadContext();
-extern void OSGetStackPointer();
-extern void OSClearContext();
-extern void OSInitContext();
-extern void OSDisableInterrupts();
-extern void OSEnableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __OSUnlockAllMutex();
-extern void __OSCheckDeadLock();
-extern void __OSCheckMutexes();
-extern void DefaultSwitchThreadCallback();
-extern void OSSetSwitchThreadCallback();
-extern void __OSThreadInit();
-extern void OSInitThreadQueue();
-extern void OSGetCurrentThread();
-extern void OSIsThreadTerminated();
-extern void OSDisableScheduler();
-extern void OSEnableScheduler();
-extern void UnsetRun();
-extern void __OSGetEffectivePriority();
-extern void SetEffectivePriority();
-extern void __OSPromoteThread();
-extern void SelectThread();
-extern void __OSReschedule();
-extern void OSYieldThread();
-extern void OSCreateThread();
-extern void OSExitThread();
-extern void OSCancelThread();
-extern void OSDetachThread();
-extern void OSResumeThread();
-extern void OSSuspendThread();
-extern void OSSleepThread();
-extern void OSWakeupThread();
-extern void OSSetThreadPriority();
-extern void OSGetThreadPriority();
-extern void CheckThreadQueue();
-extern void OSCheckActiveThreads();
-extern void OSClearStack();
-SECTION_DATA extern u8 LIT_831[96];
-SECTION_DATA extern u8 OSThread__LIT_832[12];
-SECTION_DATA extern u8 OSThread__LIT_834[96];
-SECTION_DATA extern u8 OSThread__LIT_835[72];
-SECTION_DATA extern u8 OSThread__LIT_836[128];
-SECTION_DATA extern u8 OSThread__LIT_837[128];
-SECTION_DATA extern u8 OSThread__LIT_838[124];
-SECTION_DATA extern u8 OSThread__LIT_839[124];
-SECTION_DATA extern u8 OSThread__LIT_840[84];
-SECTION_DATA extern u8 OSThread__LIT_841[116];
-SECTION_DATA extern u8 OSThread__LIT_842[60];
-SECTION_DATA extern u8 OSThread__LIT_843[76];
-SECTION_DATA extern u8 OSThread__LIT_844[84];
-SECTION_DATA extern u8 OSThread__LIT_845[84];
-SECTION_DATA extern u8 OSThread__LIT_846[92];
-SECTION_DATA extern u8 OSThread__LIT_847[68];
-SECTION_DATA extern u8 OSThread__LIT_848[60];
-SECTION_DATA extern u8 OSThread__LIT_849[60];
-SECTION_DATA extern u8 OSThread__LIT_850[68];
-SECTION_DATA extern u8 LIT_851[68];
-SECTION_DATA extern u8 OSThread__LIT_852[60];
-SECTION_DATA extern u8 OSThread__LIT_853[64];
-SECTION_DATA extern u8 OSThread__LIT_854[104];
-SECTION_DATA extern u8 OSThread__LIT_855[72];
-SECTION_DATA extern u8 LIT_856[64];
+extern "C" extern void OSReport();
+extern "C" extern void OSPanic();
+extern "C" extern void OSSetCurrentContext();
+extern "C" extern void OSGetCurrentContext();
+extern "C" extern void OSSaveContext();
+extern "C" extern void OSLoadContext();
+extern "C" extern void OSGetStackPointer();
+extern "C" extern void OSClearContext();
+extern "C" extern void OSInitContext();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSEnableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __OSUnlockAllMutex();
+extern "C" extern void __OSCheckDeadLock();
+extern "C" extern void __OSCheckMutexes();
+extern "C" extern void DefaultSwitchThreadCallback();
+extern "C" extern void OSSetSwitchThreadCallback();
+extern "C" extern void __OSThreadInit();
+extern "C" extern void OSInitThreadQueue();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void OSIsThreadTerminated();
+extern "C" extern void OSDisableScheduler();
+extern "C" extern void OSEnableScheduler();
+extern "C" extern void UnsetRun();
+extern "C" extern void __OSGetEffectivePriority();
+extern "C" extern void SetEffectivePriority();
+extern "C" extern void __OSPromoteThread();
+extern "C" extern void SelectThread();
+extern "C" extern void __OSReschedule();
+extern "C" extern void OSYieldThread();
+extern "C" extern void OSCreateThread();
+extern "C" extern void OSExitThread();
+extern "C" extern void OSCancelThread();
+extern "C" extern void OSDetachThread();
+extern "C" extern void OSResumeThread();
+extern "C" extern void OSSuspendThread();
+extern "C" extern void OSSleepThread();
+extern "C" extern void OSWakeupThread();
+extern "C" extern void OSSetThreadPriority();
+extern "C" extern void OSGetThreadPriority();
+extern "C" extern void CheckThreadQueue();
+extern "C" extern void OSCheckActiveThreads();
+extern "C" extern void OSClearStack();
+SECTION_DATA extern u8 lit_831[96];
+SECTION_DATA extern u8 OSThread__lit_832[12];
+SECTION_DATA extern u8 OSThread__lit_834[96];
+SECTION_DATA extern u8 OSThread__lit_835[72];
+SECTION_DATA extern u8 OSThread__lit_836[128];
+SECTION_DATA extern u8 OSThread__lit_837[128];
+SECTION_DATA extern u8 OSThread__lit_838[124];
+SECTION_DATA extern u8 OSThread__lit_839[124];
+SECTION_DATA extern u8 OSThread__lit_840[84];
+SECTION_DATA extern u8 OSThread__lit_841[116];
+SECTION_DATA extern u8 OSThread__lit_842[60];
+SECTION_DATA extern u8 OSThread__lit_843[76];
+SECTION_DATA extern u8 OSThread__lit_844[84];
+SECTION_DATA extern u8 OSThread__lit_845[84];
+SECTION_DATA extern u8 OSThread__lit_846[92];
+SECTION_DATA extern u8 OSThread__lit_847[68];
+SECTION_DATA extern u8 OSThread__lit_848[60];
+SECTION_DATA extern u8 OSThread__lit_849[60];
+SECTION_DATA extern u8 OSThread__lit_850[68];
+SECTION_DATA extern u8 lit_851[68];
+SECTION_DATA extern u8 OSThread__lit_852[60];
+SECTION_DATA extern u8 OSThread__lit_853[64];
+SECTION_DATA extern u8 OSThread__lit_854[104];
+SECTION_DATA extern u8 OSThread__lit_855[72];
+SECTION_DATA extern u8 lit_856[64];
 SECTION_BSS extern u8 __OSErrorTable[68 + 12 /* padding */];
 SECTION_BSS extern u8 RunQueue[256];
 SECTION_BSS extern u8 IdleThread[792];
 SECTION_BSS extern u8 DefaultThread[792];
 SECTION_BSS extern u8 IdleContext[712];
-SECTION_SDATA extern u8 __OSFpscrEnableBits[4];
+SECTION_SDATA extern u32 __OSFpscrEnableBits;
 SECTION_SDATA extern void* SwitchThreadCallback;
-SECTION_SDATA extern u8 OSThread__LIT_833[4];
+SECTION_SDATA extern u8 OSThread__lit_833[4];
 SECTION_SBSS extern u8 RunQueueBits[4];
 SECTION_SBSS extern u8 RunQueueHint[4];
 SECTION_SBSS extern u8 Reschedule[4 + 4 /* padding */];
 SECTION_SBSS extern u8 data_804516D0[8];
+
+// 
+// Functions:
+// 
+
+/* 80340AA4-80340AA8 0004 .text      DefaultSwitchThreadCallback                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DefaultSwitchThreadCallback() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/DefaultSwitchThreadCallback.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 804509B8-804509BC 0004 .sdata     SwitchThreadCallback                                         */
+void* SwitchThreadCallback = (void*)DefaultSwitchThreadCallback;
 
-extern "C" {
-/* 803D0838-803D0838 0000 .data      ...data.0                                                    */
+/* 80340AA8-80340B1C 0074 .text      OSSetSwitchThreadCallback                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSSetSwitchThreadCallback() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSSetSwitchThreadCallback.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 8044BB78-8044BC78 0100 .bss       RunQueue                                                     */
+u8 RunQueue[256];
+
+/* 804516C0-804516C4 0004 .sbss      RunQueueBits                                                 */
+u8 RunQueueBits[4];
+
+/* 804516C4-804516C8 0004 .sbss      RunQueueHint                                                 */
+u8 RunQueueHint[4];
+
+/* 804516C8-804516D0 0004 .sbss      Reschedule                                                   */
+u8 Reschedule[4 + 4 /* padding */];
+
+/* 80340B1C-80340C74 0158 .text      __OSThreadInit                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSThreadInit() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/__OSThreadInit.s"
+}
+#pragma pop
+
+
+/* 80340C74-80340C84 0010 .text      OSInitThreadQueue                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSInitThreadQueue() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSInitThreadQueue.s"
+}
+#pragma pop
+
+
+/* 80340C84-80340C90 000C .text      OSGetCurrentThread                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSGetCurrentThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSGetCurrentThread.s"
+}
+#pragma pop
+
+
+/* 80340C90-80340CC4 0034 .text      OSIsThreadTerminated                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSIsThreadTerminated() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSIsThreadTerminated.s"
+}
+#pragma pop
+
+
+/* 80340CC4-80340D04 0040 .text      OSDisableScheduler                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSDisableScheduler() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSDisableScheduler.s"
+}
+#pragma pop
+
+
+/* 80340D04-80340D44 0040 .text      OSEnableScheduler                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSEnableScheduler() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSEnableScheduler.s"
+}
+#pragma pop
+
+
+/* 80340D44-80340DAC 0068 .text      UnsetRun                                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void UnsetRun() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/UnsetRun.s"
+}
+#pragma pop
+
+
+/* 80340DAC-80340DE8 003C .text      __OSGetEffectivePriority                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSGetEffectivePriority() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/__OSGetEffectivePriority.s"
+}
+#pragma pop
+
+
+/* 80340DE8-80340FA8 01C0 .text      SetEffectivePriority                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void SetEffectivePriority() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/SetEffectivePriority.s"
+}
+#pragma pop
+
+
+/* 80340FA8-80340FF8 0050 .text      __OSPromoteThread                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSPromoteThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/__OSPromoteThread.s"
+}
+#pragma pop
+
+
+/* 80340FF8-80341220 0228 .text      SelectThread                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void SelectThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/SelectThread.s"
+}
+#pragma pop
+
+
+/* 80341220-80341250 0030 .text      __OSReschedule                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSReschedule() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/__OSReschedule.s"
+}
+#pragma pop
+
+
+/* 80341250-8034128C 003C .text      OSYieldThread                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSYieldThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSYieldThread.s"
+}
+#pragma pop
+
+
+/* 8034128C-80341474 01E8 .text      OSCreateThread                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSCreateThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSCreateThread.s"
+}
+#pragma pop
+
+
+/* 80341474-80341558 00E4 .text      OSExitThread                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSExitThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSExitThread.s"
+}
+#pragma pop
+
+
+/* 80341558-80341714 01BC .text      OSCancelThread                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSCancelThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSCancelThread.s"
+}
+#pragma pop
+
+
+/* 80341714-803417B4 00A0 .text      OSDetachThread                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSDetachThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSDetachThread.s"
+}
+#pragma pop
+
+
+/* 803417B4-80341A3C 0288 .text      OSResumeThread                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSResumeThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSResumeThread.s"
+}
+#pragma pop
+
+
+/* 80341A3C-80341BAC 0170 .text      OSSuspendThread                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSSuspendThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSSuspendThread.s"
+}
+#pragma pop
+
+
+/* 80341BAC-80341C98 00EC .text      OSSleepThread                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSSleepThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSSleepThread.s"
+}
+#pragma pop
+
+
+/* 80341C98-80341D9C 0104 .text      OSWakeupThread                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSWakeupThread() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSWakeupThread.s"
+}
+#pragma pop
+
+
+/* 80341D9C-80341E5C 00C0 .text      OSSetThreadPriority                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSSetThreadPriority() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSSetThreadPriority.s"
+}
+#pragma pop
+
+
+/* 80341E5C-80341E64 0008 .text      OSGetThreadPriority                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSGetThreadPriority() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSGetThreadPriority.s"
+}
+#pragma pop
+
+
+/* 80341E64-80341F00 009C .text      CheckThreadQueue                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void CheckThreadQueue() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/CheckThreadQueue.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D0838-803D0898 005F .data      @831                                                         */
-SECTION_DATA u8 LIT_831[96] = {
+u8 lit_831[96] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6E,
 	0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x68, 0x65, 0x61, 0x64,
@@ -109,14 +408,45 @@ SECTION_DATA u8 LIT_831[96] = {
 	/* padding */
 	0x00,
 };
+
+/* 804509BC-804509C0 0001 .sdata     @833                                                         */
+u8 OSThread__lit_833[4] = {
+	0x00,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
+
+/* 80341F00-80342650 0750 .text      OSCheckActiveThreads                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSCheckActiveThreads() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSCheckActiveThreads.s"
+}
+#pragma pop
+
+
+/* 80342650-803426FC 00AC .text      OSClearStack                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSClearStack() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/OSClearStack.s"
+}
+#pragma pop
+
+
 /* 803D0898-803D08A4 000B .data      @832                                                         */
-SECTION_DATA u8 OSThread__LIT_832[12] = {
+u8 OSThread__lit_832[12] = {
 	0x4F, 0x53, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2E, 0x63, 0x00,
 	/* padding */
 	0x00,
 };
+
 /* 803D08A4-803D0904 005F .data      @834                                                         */
-SECTION_DATA u8 OSThread__LIT_834[96] = {
+u8 OSThread__lit_834[96] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6E,
 	0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x68, 0x65, 0x61, 0x64,
@@ -126,8 +456,9 @@ SECTION_DATA u8 OSThread__LIT_834[96] = {
 	/* padding */
 	0x00,
 };
+
 /* 803D0904-803D094C 0046 .data      @835                                                         */
-SECTION_DATA u8 OSThread__LIT_835[72] = {
+u8 OSThread__lit_835[72] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,
 	0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x52,
@@ -136,8 +467,9 @@ SECTION_DATA u8 OSThread__LIT_835[72] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D094C-803D09CC 007E .data      @836                                                         */
-SECTION_DATA u8 OSThread__LIT_836[128] = {
+u8 OSThread__lit_836[128] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,
 	0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65,
@@ -149,8 +481,9 @@ SECTION_DATA u8 OSThread__LIT_836[128] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D09CC-803D0A4C 007E .data      @837                                                         */
-SECTION_DATA u8 OSThread__LIT_837[128] = {
+u8 OSThread__lit_837[128] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,
 	0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65,
@@ -162,8 +495,9 @@ SECTION_DATA u8 OSThread__LIT_837[128] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0A4C-803D0AC8 007A .data      @838                                                         */
-SECTION_DATA u8 OSThread__LIT_838[124] = {
+u8 OSThread__lit_838[124] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E,
@@ -175,8 +509,9 @@ SECTION_DATA u8 OSThread__LIT_838[124] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0AC8-803D0B44 007A .data      @839                                                         */
-SECTION_DATA u8 OSThread__LIT_839[124] = {
+u8 OSThread__lit_839[124] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E,
@@ -188,8 +523,9 @@ SECTION_DATA u8 OSThread__LIT_839[124] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0B44-803D0B98 0051 .data      @840                                                         */
-SECTION_DATA u8 OSThread__LIT_840[84] = {
+u8 OSThread__lit_840[84] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x2A, 0x28, 0x74,
 	0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x73, 0x74, 0x61, 0x63, 0x6B, 0x45, 0x6E, 0x64, 0x29,
@@ -199,8 +535,9 @@ SECTION_DATA u8 OSThread__LIT_840[84] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0B98-803D0C0C 0071 .data      @841                                                         */
-SECTION_DATA u8 OSThread__LIT_841[116] = {
+u8 OSThread__lit_841[116] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x4F, 0x53, 0x5F,
 	0x50, 0x52, 0x49, 0x4F, 0x52, 0x49, 0x54, 0x59, 0x5F, 0x4D, 0x49, 0x4E, 0x20, 0x3C, 0x3D, 0x20,
@@ -212,8 +549,9 @@ SECTION_DATA u8 OSThread__LIT_841[116] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0C0C-803D0C48 0039 .data      @842                                                         */
-SECTION_DATA u8 OSThread__LIT_842[60] = {
+u8 OSThread__lit_842[60] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x30, 0x20, 0x3C,
 	0x3D, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x73, 0x75, 0x73, 0x70, 0x65, 0x6E,
@@ -221,8 +559,9 @@ SECTION_DATA u8 OSThread__LIT_842[60] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0C48-803D0C94 0049 .data      @843                                                         */
-SECTION_DATA u8 OSThread__LIT_843[76] = {
+u8 OSThread__lit_843[76] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,
 	0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x74,
@@ -231,8 +570,9 @@ SECTION_DATA u8 OSThread__LIT_843[76] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0C94-803D0CE8 0051 .data      @844                                                         */
-SECTION_DATA u8 OSThread__LIT_844[84] = {
+u8 OSThread__lit_844[84] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3D, 0x3D, 0x20, 0x26, 0x52,
@@ -242,8 +582,9 @@ SECTION_DATA u8 OSThread__LIT_844[84] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0CE8-803D0D3C 0052 .data      @845                                                         */
-SECTION_DATA u8 OSThread__LIT_845[84] = {
+u8 OSThread__lit_845[84] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4D,
 	0x65, 0x6D, 0x62, 0x65, 0x72, 0x28, 0x26, 0x52, 0x75, 0x6E, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5B,
@@ -253,8 +594,9 @@ SECTION_DATA u8 OSThread__LIT_845[84] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0D3C-803D0D98 0059 .data      @846                                                         */
-SECTION_DATA u8 OSThread__LIT_846[92] = {
+u8 OSThread__lit_846[92] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3D, 0x3D,
@@ -264,8 +606,9 @@ SECTION_DATA u8 OSThread__LIT_846[92] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D0D98-803D0DDC 0042 .data      @847                                                         */
-SECTION_DATA u8 OSThread__LIT_847[68] = {
+u8 OSThread__lit_847[68] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x21, 0x49, 0x73,
 	0x53, 0x75, 0x73, 0x70, 0x65, 0x6E, 0x64, 0x65, 0x64, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,
@@ -274,8 +617,9 @@ SECTION_DATA u8 OSThread__LIT_847[68] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0DDC-803D0E18 003A .data      @848                                                         */
-SECTION_DATA u8 OSThread__LIT_848[60] = {
+u8 OSThread__lit_848[60] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55,
@@ -283,8 +627,9 @@ SECTION_DATA u8 OSThread__LIT_848[60] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0E18-803D0E54 003A .data      @849                                                         */
-SECTION_DATA u8 OSThread__LIT_849[60] = {
+u8 OSThread__lit_849[60] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x21, 0x3D, 0x20, 0x4E, 0x55,
@@ -292,24 +637,27 @@ SECTION_DATA u8 OSThread__LIT_849[60] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D0E54-803D0E98 0044 .data      @850                                                         */
-SECTION_DATA u8 OSThread__LIT_850[68] = {
+u8 OSThread__lit_850[68] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,
 	0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x74, 0x68,
 	0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x29, 0x20, 0x69, 0x6E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
+
 /* 803D0E98-803D0EDC 0044 .data      @851                                                         */
-SECTION_DATA u8 LIT_851[68] = {
+u8 lit_851[68] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4D,
 	0x65, 0x6D, 0x62, 0x65, 0x72, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75,
 	0x65, 0x75, 0x65, 0x2C, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
+
 /* 803D0EDC-803D0F18 003B .data      @852                                                         */
-SECTION_DATA u8 OSThread__LIT_852[60] = {
+u8 OSThread__lit_852[60] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3D, 0x3D,
@@ -317,8 +665,9 @@ SECTION_DATA u8 OSThread__LIT_852[60] = {
 	/* padding */
 	0x00,
 };
+
 /* 803D0F18-803D0F58 003F .data      @853                                                         */
-SECTION_DATA u8 OSThread__LIT_853[64] = {
+u8 OSThread__lit_853[64] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x21, 0x5F, 0x5F,
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x44, 0x65, 0x61, 0x64, 0x4C, 0x6F, 0x63, 0x6B, 0x28,
@@ -326,8 +675,9 @@ SECTION_DATA u8 OSThread__LIT_853[64] = {
 	/* padding */
 	0x00,
 };
+
 /* 803D0F58-803D0FC0 0067 .data      @854                                                         */
-SECTION_DATA u8 OSThread__LIT_854[104] = {
+u8 OSThread__lit_854[104] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4D, 0x75, 0x74, 0x65, 0x78, 0x2E,
@@ -338,8 +688,9 @@ SECTION_DATA u8 OSThread__LIT_854[104] = {
 	/* padding */
 	0x00,
 };
+
 /* 803D0FC0-803D1008 0045 .data      @855                                                         */
-SECTION_DATA u8 OSThread__LIT_855[72] = {
+u8 OSThread__lit_855[72] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x2E, 0x20, 0x75, 0x6E,
 	0x6B, 0x6F, 0x77, 0x6E, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x73, 0x74, 0x61, 0x74,
@@ -348,8 +699,9 @@ SECTION_DATA u8 OSThread__LIT_855[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803D1008-803D1048 003D .data      @856                                                         */
-SECTION_DATA u8 LIT_856[64] = {
+u8 lit_856[64] = {
 	0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,
 	0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,
 	0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x4D, 0x75, 0x74, 0x65, 0x78, 0x65, 0x73, 0x28, 0x74, 0x68,
@@ -357,340 +709,16 @@ SECTION_DATA u8 LIT_856[64] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804509B8-804509BC 0004 .sdata     SwitchThreadCallback                                         */
-SECTION_SDATA void* SwitchThreadCallback = (void*)DefaultSwitchThreadCallback;
-/* 804509BC-804509C0 0001 .sdata     @833                                                         */
-SECTION_SDATA u8 OSThread__LIT_833[4] = {
-	0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044BB78-8044BB78 0000 .bss       ...bss.0                                                     */
-/* 8044BB78-8044BC78 0100 .bss       RunQueue                                                     */
-SECTION_BSS u8 RunQueue[256];
 /* 8044BC78-8044BF90 0318 .bss       IdleThread                                                   */
-SECTION_BSS u8 IdleThread[792];
+u8 IdleThread[792];
+
 /* 8044BF90-8044C2A8 0318 .bss       DefaultThread                                                */
-SECTION_BSS u8 DefaultThread[792];
+u8 DefaultThread[792];
+
 /* 8044C2A8-8044C570 02C8 .bss       IdleContext                                                  */
-SECTION_BSS u8 IdleContext[712];
-}
+u8 IdleContext[712];
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804516C0-804516C4 0004 .sbss      RunQueueBits                                                 */
-SECTION_SBSS u8 RunQueueBits[4];
-/* 804516C4-804516C8 0004 .sbss      RunQueueHint                                                 */
-SECTION_SBSS u8 RunQueueHint[4];
-/* 804516C8-804516D0 0004 .sbss      Reschedule                                                   */
-SECTION_SBSS u8 Reschedule[4 + 4 /* padding */];
 /* 804516D0-804516D8 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_804516D0[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80340AA4-80340AA8 0004 .text      DefaultSwitchThreadCallback                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DefaultSwitchThreadCallback() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/DefaultSwitchThreadCallback.s"
-}
-#pragma pop
-
-/* 80340AA8-80340B1C 0074 .text      OSSetSwitchThreadCallback                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSSetSwitchThreadCallback() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSSetSwitchThreadCallback.s"
-}
-#pragma pop
-
-/* 80340B1C-80340C74 0158 .text      __OSThreadInit                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSThreadInit() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/__OSThreadInit.s"
-}
-#pragma pop
-
-/* 80340C74-80340C84 0010 .text      OSInitThreadQueue                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSInitThreadQueue() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSInitThreadQueue.s"
-}
-#pragma pop
-
-/* 80340C84-80340C90 000C .text      OSGetCurrentThread                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSGetCurrentThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSGetCurrentThread.s"
-}
-#pragma pop
-
-/* 80340C90-80340CC4 0034 .text      OSIsThreadTerminated                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSIsThreadTerminated() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSIsThreadTerminated.s"
-}
-#pragma pop
-
-/* 80340CC4-80340D04 0040 .text      OSDisableScheduler                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSDisableScheduler() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSDisableScheduler.s"
-}
-#pragma pop
-
-/* 80340D04-80340D44 0040 .text      OSEnableScheduler                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSEnableScheduler() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSEnableScheduler.s"
-}
-#pragma pop
-
-/* 80340D44-80340DAC 0068 .text      UnsetRun                                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void UnsetRun() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/UnsetRun.s"
-}
-#pragma pop
-
-/* 80340DAC-80340DE8 003C .text      __OSGetEffectivePriority                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSGetEffectivePriority() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/__OSGetEffectivePriority.s"
-}
-#pragma pop
-
-/* 80340DE8-80340FA8 01C0 .text      SetEffectivePriority                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void SetEffectivePriority() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/SetEffectivePriority.s"
-}
-#pragma pop
-
-/* 80340FA8-80340FF8 0050 .text      __OSPromoteThread                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSPromoteThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/__OSPromoteThread.s"
-}
-#pragma pop
-
-/* 80340FF8-80341220 0228 .text      SelectThread                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void SelectThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/SelectThread.s"
-}
-#pragma pop
-
-/* 80341220-80341250 0030 .text      __OSReschedule                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSReschedule() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/__OSReschedule.s"
-}
-#pragma pop
-
-/* 80341250-8034128C 003C .text      OSYieldThread                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSYieldThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSYieldThread.s"
-}
-#pragma pop
-
-/* 8034128C-80341474 01E8 .text      OSCreateThread                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSCreateThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSCreateThread.s"
-}
-#pragma pop
-
-/* 80341474-80341558 00E4 .text      OSExitThread                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSExitThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSExitThread.s"
-}
-#pragma pop
-
-/* 80341558-80341714 01BC .text      OSCancelThread                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSCancelThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSCancelThread.s"
-}
-#pragma pop
-
-/* 80341714-803417B4 00A0 .text      OSDetachThread                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSDetachThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSDetachThread.s"
-}
-#pragma pop
-
-/* 803417B4-80341A3C 0288 .text      OSResumeThread                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSResumeThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSResumeThread.s"
-}
-#pragma pop
-
-/* 80341A3C-80341BAC 0170 .text      OSSuspendThread                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSSuspendThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSSuspendThread.s"
-}
-#pragma pop
-
-/* 80341BAC-80341C98 00EC .text      OSSleepThread                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSSleepThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSSleepThread.s"
-}
-#pragma pop
-
-/* 80341C98-80341D9C 0104 .text      OSWakeupThread                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSWakeupThread() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSWakeupThread.s"
-}
-#pragma pop
-
-/* 80341D9C-80341E5C 00C0 .text      OSSetThreadPriority                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSSetThreadPriority() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSSetThreadPriority.s"
-}
-#pragma pop
-
-/* 80341E5C-80341E64 0008 .text      OSGetThreadPriority                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSGetThreadPriority() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSGetThreadPriority.s"
-}
-#pragma pop
-
-/* 80341E64-80341F00 009C .text      CheckThreadQueue                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void CheckThreadQueue() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/CheckThreadQueue.s"
-}
-#pragma pop
-
-/* 80341F00-80342650 0750 .text      OSCheckActiveThreads                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSCheckActiveThreads() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSCheckActiveThreads.s"
-}
-#pragma pop
-
-/* 80342650-803426FC 00AC .text      OSClearStack                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSClearStack() {
-	nofralloc
-#include "asm/dolphin/os/OSThread/OSClearStack.s"
-}
-#pragma pop
-
+u8 data_804516D0[8];
 

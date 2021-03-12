@@ -3,7 +3,7 @@ lbl_801C0C10:
 /* 801C0C14 00000004  7C 08 02 A6 */	mflr r0
 /* 801C0C18 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801C0C1C 0000000C  C0 23 00 34 */	lfs f1, 0x34(r3)
-/* 801C0C20 00000010  C0 02 A6 94 */	lfs f0, d_menu_d_menu_dmap_map__LIT_3837(r2)
+/* 801C0C20 00000010  C0 02 A6 94 */	lfs f0, d_menu_d_menu_dmap_map__lit_3837(r2)
 /* 801C0C24 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C0C28 00000000  40 81 00 0C */	ble lbl_801C0C34
 /* 801C0C2C 00000004  4B FF FF 1D */	bl getLineWidthZoomBig__15renderingDmap_cFi

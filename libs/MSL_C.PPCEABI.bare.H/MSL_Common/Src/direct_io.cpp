@@ -5,43 +5,41 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void __flush_buffer();
-extern void __prep_buffer();
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void __fwrite();
-extern void fwrite();
-extern void fseek();
-extern void __memrchr();
-extern void __stdio_atexit();
-extern void fwide();
-}
+extern "C" extern void __flush_buffer();
+extern "C" extern void __prep_buffer();
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void __fwrite();
+extern "C" extern void fwrite();
+extern "C" extern void fseek();
+extern "C" extern void __memrchr();
+extern "C" extern void __stdio_atexit();
+extern "C" extern void fwide();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80365494-803657A0 030C .text      __fwrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __fwrite() {
+extern "C" asm void __fwrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io/__fwrite.s"
 }
 #pragma pop
 
+
 /* 803657A0-8036581C 007C .text      fwrite                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fwrite() {
+extern "C" asm void fwrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io/fwrite.s"
 }

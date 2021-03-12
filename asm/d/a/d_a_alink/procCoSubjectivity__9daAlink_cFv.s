@@ -58,9 +58,9 @@ lbl_800CEEC4:
 /* 800CEED4 00000010  38 A0 00 00 */	li r5, 0
 /* 800CEED8 00000014  38 C0 00 00 */	li r6, 0
 /* 800CEEDC 00000018  38 E0 00 00 */	li r7, 0
-/* 800CEEE0 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800CEEE0 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800CEEE4 00000020  FC 40 08 90 */	fmr f2, f1
-/* 800CEEE8 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__LIT_6041(r2)
+/* 800CEEE8 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
 /* 800CEEEC 00000028  FC 80 18 90 */	fmr f4, f3
 /* 800CEEF0 0000002C  39 00 00 00 */	li r8, 0
 /* 800CEEF4 00000030  48 1D CA 91 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

@@ -5,46 +5,38 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
+extern "C" extern void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
 SECTION_SDATA extern u8 data_804508A8[8];
 SECTION_SDATA extern u8 data_804508B0[8];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804508A8-804508B0 0004 .sdata     cm2hw$539                                                    */
-SECTION_SDATA u8 data_804508A8[8] = {
+u8 data_804508A8[8] = {
 	0x00, 0x02, 0x01, 0x03,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804508B0-804508B8 0008 .sdata     None                                                         */
-SECTION_SDATA u8 data_804508B0[8] = {
-	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802CDDC8-802CDE54 008C .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetGenMode2__FUcUcUcUc11_GXCullMode() {
+extern "C" asm void GFSetGenMode2__FUcUcUcUc11_GXCullMode() {
 	nofralloc
 #include "asm/dolphin/gf/GFGeometry/GFSetGenMode2__FUcUcUcUc11_GXCullMode.s"
 }
 #pragma pop
 
+
+/* 804508B0-804508B8 0008 .sdata     None                                                         */
+u8 data_804508B0[8] = {
+	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 

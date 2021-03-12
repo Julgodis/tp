@@ -57,7 +57,7 @@ lbl_8023CA88:
 /* 8023CB64 000000DC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8023CB68 000000E0  41 82 00 1C */	beq lbl_8023CB84
 /* 8023CB6C 000000E4  7F E3 FB 78 */	mr r3, r31
-/* 8023CB70 000000E8  C0 22 B1 B0 */	lfs f1, msg_scrn_d_msg_scrn_boss__LIT_3854(r2)
+/* 8023CB70 000000E8  C0 22 B1 B0 */	lfs f1, msg_scrn_d_msg_scrn_boss__lit_3854(r2)
 /* 8023CB74 000000EC  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8023CB78 000000F0  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 8023CB7C 000000F4  7D 89 03 A6 */	mtctr r12

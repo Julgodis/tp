@@ -26,18 +26,18 @@ lbl_800BB084:
 /* 800BB0E4 00000060  38 81 00 18 */	addi r4, r1, 0x18
 /* 800BB0E8 00000064  48 02 73 95 */	bl multVecMagneBootInvMtx__9daAlink_cFP4cXyz
 /* 800BB0EC 00000068  C0 21 00 1C */	lfs f1, 0x1c(r1)
-/* 800BB0F0 0000006C  C0 02 93 D4 */	lfs f0, LIT_11442(r2)
+/* 800BB0F0 0000006C  C0 02 93 D4 */	lfs f0, lit_11442(r2)
 /* 800BB0F4 00000070  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800BB0F8 00000074  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 800BB0FC 00000078  38 61 00 18 */	addi r3, r1, 0x18
 /* 800BB100 0000007C  48 28 C0 39 */	bl PSVECSquareMag
-/* 800BB104 00000080  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800BB104 00000080  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800BB108 00000084  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BB10C 00000000  40 81 00 58 */	ble lbl_800BB164
 /* 800BB110 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800BB114 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__LIT_6846(r2)
+/* 800BB114 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
 /* 800BB118 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 800BB11C 00000010  C8 62 92 F0 */	lfd f3, LIT_6847(r2)
+/* 800BB11C 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800BB120 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 800BB124 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 800BB128 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -56,7 +56,7 @@ lbl_800BB084:
 /* 800BB15C 00000050  FC 20 08 18 */	frsp f1, f1
 /* 800BB160 00000054  48 00 00 88 */	b lbl_800BB1E8
 lbl_800BB164:
-/* 800BB164 00000000  C8 02 92 F8 */	lfd f0, LIT_6848(r2)
+/* 800BB164 00000000  C8 02 92 F8 */	lfd f0, lit_6848(r2)
 /* 800BB168 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BB16C 00000000  40 80 00 10 */	bge lbl_800BB17C
 /* 800BB170 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -97,7 +97,7 @@ lbl_800BB1D8:
 /* 800BB1E0 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 800BB1E4 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_800BB1E8:
-/* 800BB1E8 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800BB1E8 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800BB1EC 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BB1F0 00000000  40 80 00 0C */	bge lbl_800BB1FC
 /* 800BB1F4 00000004  3B C0 00 00 */	li r30, 0

@@ -132,6 +132,7 @@ async def dol2zel(debug, game_path, symbol_info_path):
                 rel.map = g.MAPS[rel_filepath.name.lower().replace(".rel", ".map")]
                 g.RELS[rel.index] = rel
 
+        found_rel_count = 0
         with rels_archive_path.open('rb') as file:
             rarc = arclib.read(file.read())
             for depth, file in rarc.files_and_folders:
@@ -143,6 +144,9 @@ async def dol2zel(debug, game_path, symbol_info_path):
                     rel.path = Path(file.name)
                     rel.map = g.MAPS[file.name.lower().replace(".rel", ".map")]
                     g.RELS[rel.index] = rel
+                    found_rel_count += 1
+            
+        g.LOG.debug(f"found {found_rel_count} RELs in '{rels_archive_path}'")
 
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
@@ -170,9 +174,10 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
     g.OPEN_FILES_SEMAPHORE = asyncio.Semaphore(g.MAX_FILE_COUNT)
 
     if not select_modules:
-        gen_modules = [ x for x in g.RELS.keys() ]
+        gen_modules = [0] + [ x for x in g.RELS.keys() ]
     else:
         gen_modules = [ int(x) for x in select_modules ]
+    gen_modules.sort()
 
     try:
         g.LOG.debug(f"command: 'rel'")
@@ -196,7 +201,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
             rel_path.mkdir(parents=True)
             g.LOG.debug(f"create new path: '{rel_path}'")
 
-        cache_path = Path("cache.dump")
+        cache_path = Path("build/generate/symbol_cache.dump")
         if not cache_path.exists():
             # symbol_finder expects the first section to be a "null" section
             executable_sections = [g.ExecutableSection(
@@ -249,19 +254,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                         ".rel", ".o"),  rel.map, executable_sections, relocations)
                     modules.append(module)
 
-            """
-            for module in modules:
-                if module.index == 245:
-                    for lib in module.libraries.values():
-                        for tu in lib.translation_units:
-                            g.LOG.error(tu.id)
-                            for x in tu.sections:
-                                g.LOG.debug(x.id)
-                                for y in x.symbols:
-                                    g.LOG.debug(f"{type(y).__name__:<15} {y.section.id} {y.identifier} {y.source}")
-            sys.exit(1)
-            """
-
+            util._create_dirs_for_file(cache_path)
             with cache_path.open('wb') as file:
                 pickle.dump(modules, file)
         else:
@@ -277,7 +270,11 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
 
         for module in modules:
             libs = list(module.libraries.values())
-            merge_symbols.execute(libs)
+            add_list, remove_list = merge_symbols.execute(libs)
+            for symbol in remove_list:
+                g.unregister_symbol(symbol)
+            for symbol in add_list:
+                g.register_symbol(symbol)
 
         for module in modules:
             libs = list(module.libraries.values())
@@ -308,22 +305,22 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                 for tu in lib.translation_units:
                     for sec in tu.sections:
                         for symbol in sec.symbols:
-                            if not isinstance(symbol, InitData):
+                            if not isinstance(symbol, InitData) and not isinstance(symbol, Integer):
                                 continue
 
                             if len(symbol.data) % 4 != 0:
-                                continue
-                            # TODO: Is this limit still required?
-                            if len(symbol.data) > 4 * 64:
                                 continue
 
                             section = symbol.section
                             count = len(symbol.data) // 4
                             values = list(struct.unpack(
                                 ">" + "I" * count, symbol.data))
-                            is_all_symbols = [ait.overlaps(x) for x in values]
-                            if not any(is_all_symbols):
-                                continue
+                            is_symbols = [ait.overlaps(x) for x in values]
+                            if not any(is_symbols):
+                                relocations = sec.relocations
+                                is_relocations = [x in relocations for x in range(symbol.start, symbol.end, 4)]
+                                if not any(is_relocations):
+                                    continue
 
                             new_symbol = ReferenceArray(
                                 symbol.identifier,
@@ -334,14 +331,14 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                                 padding_data=symbol.padding_data,
                                 section=symbol.section,
                                 source=symbol.source)
+
                             section.replace_symbol(symbol, new_symbol)
                             g.unregister_symbol(symbol)
-                            g.register_symbol(symbol)
+                            g.register_symbol(new_symbol)
 
                             symbol_map[symbol.addr] = new_symbol
                             ait.remove_overlap(symbol.start, symbol.end)
-                            ait.add(Interval(new_symbol.start,
-                                             new_symbol.end, new_symbol))
+                            ait.addi(new_symbol.start,new_symbol.end, new_symbol)
                             require_resolve.append(new_symbol)
 
             for symbol in require_resolve:
@@ -365,6 +362,11 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                                                     symbol_map, ait, cpp_gen)
             else:
                 rel_name = g.RELS[module.index].path.name.replace(".rel", "")
+                for k, v in g.FOLDERS:
+                    if rel_name.startswith(k):
+                        rel_name = v + rel_name
+                        break
+
                 for lib in module.libraries.values():
                     if lib.name != None:
                         lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
@@ -387,14 +389,16 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
 
         if mk_gen:
             for module in modules:
-                if module.index == 0:
-                    for name, lib in module.libraries.items():
-                        if name != None:
-                            await makefile.create_library(lib)
-                else:
-                    await makefile.create_rel(module)
+                if module.index in gen_modules:
+                    if module.index == 0:
+                        for name, lib in module.libraries.items():
+                            if name != None:
+                                await makefile.create_library(lib)
+                    else:
+                        await makefile.create_rel(module)
 
-            await makefile.create_obj_files(modules[0].libraries[None])
+            await makefile.create_obj_files(modules)
+            await makefile.create_include_link(modules)
 
         with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
             task = progress.add_task("")
@@ -456,15 +460,23 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                 return "\"" + name.replace('"', '\\"') + "\""
 
             with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+
+                total = 0
                 for module in modules:
-                    total = 0
+                    if not module.index in gen_modules:
+                        continue 
+
                     for lib in module.libraries.values():
                         for tu in lib.translation_units:
                             for sec in tu.sections:
                                 total += len(sec.symbols)
+                    total += 1
 
-                    task = progress.add_task(
-                        f"module {module.index}", total=total+1)
+                task = progress.add_task(f"generate symbols", total=total)
+
+                for module in modules:
+                    if not module.index in gen_modules:
+                        continue 
 
                     symbols = []
                     reference_count = defaultdict(int)
@@ -508,7 +520,6 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                                                 f"'type': {escape_text(type(symbol).__name__)}}},")
                         await builder.write(f"}}")
                     progress.update(task, advance=1)
-                    progress.remove_task(task)
 
         g.CONSOLE.print("complete")
 

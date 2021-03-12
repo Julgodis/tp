@@ -9,7 +9,7 @@ lbl_80219174:
 /* 80219190 00000008  7C 7B 1B 78 */	mr r27, r3
 /* 80219194 0000000C  80 63 03 00 */	lwz r3, 0x300(r3)
 /* 80219198 00000010  48 03 C6 91 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8021919C 00000014  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 8021919C 00000014  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 802191A0 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802191A4 0000001C  41 82 00 38 */	beq lbl_802191DC
 /* 802191A8 00000020  80 7B 03 00 */	lwz r3, 0x300(r27)
@@ -30,7 +30,7 @@ lbl_802191DC:
 /* 802191E0 00000004  3B E0 00 00 */	li r31, 0
 /* 802191E4 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 802191E8 0000000C  3B C3 EB C8 */	addi r30, r3, g_drawHIO@l
-/* 802191EC 00000010  C3 E2 AE 80 */	lfs f31, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 802191EC 00000010  C3 E2 AE 80 */	lfs f31, d_meter_d_meter2_draw__lit_4182(r2)
 lbl_802191F0:
 /* 802191F0 00000000  3B BF 00 C0 */	addi r29, r31, 0xc0
 /* 802191F4 00000004  7C 7B E8 2E */	lwzx r3, r27, r29

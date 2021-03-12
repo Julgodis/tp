@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void setInitEventBit__Fv();
-}
+extern "C" extern void setInitEventBit__Fv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80035C88-80035C8C 0004 .text      setInitEventBit__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setInitEventBit__Fv() {
+extern "C" asm void setInitEventBit__Fv() {
 	nofralloc
 #include "asm/d/save/d_save_init/setInitEventBit__Fv.s"
 }

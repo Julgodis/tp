@@ -28,9 +28,9 @@ lbl_800DB47C:
 /* 800DB47C 00000000  A8 1F 30 0E */	lha r0, 0x300e(r31)
 /* 800DB480 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 800DB484 00000008  41 82 00 40 */	beq lbl_800DB4C4
-/* 800DB488 0000000C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800DB488 0000000C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DB48C 00000010  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DB490 00000014  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800DB490 00000014  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800DB494 00000018  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DB498 0000001C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DB49C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

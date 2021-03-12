@@ -5,146 +5,58 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern void setScale__16dSelect_cursor_cFf();
-extern void setAlphaRate__16dSelect_cursor_cFf();
-extern void __ct__16dMenuMapCommon_cFv();
-extern void __dt__16dMenuMapCommon_cFv();
-extern void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern void drawIcon__16dMenuMapCommon_cFffff();
-extern void iconScale__16dMenuMapCommon_cFifff();
-extern void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern void clearIconInfo__16dMenuMapCommon_cFv();
-extern void setBlendRatio__16dMenuMapCommon_cFUcff();
-extern void blinkMove__16dMenuMapCommon_cFs();
-extern void moveLightDropAnime__16dMenuMapCommon_cFv();
-extern void getIconSizeX__16dMenuMapCommon_cFUc();
-extern void getIconSizeY__16dMenuMapCommon_cFUc();
-extern void debugIcon__16dMenuMapCommon_cFv();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern void setInfluencedAlpha__7J2DPaneFbb();
-extern void __ct__10J2DPictureFPC7ResTIMG();
-extern void _savegpr_26();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_29();
+extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" extern void setScale__16dSelect_cursor_cFf();
+extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" extern void __ct__16dMenuMapCommon_cFv();
+extern "C" extern void __dt__16dMenuMapCommon_cFv();
+extern "C" extern void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" extern void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" extern void iconScale__16dMenuMapCommon_cFifff();
+extern "C" extern void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" extern void clearIconInfo__16dMenuMapCommon_cFv();
+extern "C" extern void setBlendRatio__16dMenuMapCommon_cFUcff();
+extern "C" extern void blinkMove__16dMenuMapCommon_cFs();
+extern "C" extern void moveLightDropAnime__16dMenuMapCommon_cFv();
+extern "C" extern void getIconSizeX__16dMenuMapCommon_cFUc();
+extern "C" extern void getIconSizeY__16dMenuMapCommon_cFUc();
+extern "C" extern void debugIcon__16dMenuMapCommon_cFv();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" extern void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" extern void setInfluencedAlpha__7J2DPaneFbb();
+extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 d_menu_d_menu_map_common__stringBase0[976];
 SECTION_DATA extern u8 map_icon_size[276];
-SECTION_DATA extern void* __vt__16dMenuMapCommon_c[3];
+SECTION_DATA extern void* const __vt__16dMenuMapCommon_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_fmapHIO[1188];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_3703[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_3882[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4010[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4011[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4012[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4013[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4072[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4073[4];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4119[8];
-SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__LIT_4140[8];
-}
+SECTION_SDATA2 extern u8 d_menu_d_menu_map_common__lit_3703[4];
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_3882;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4010;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4011;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4012;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4013;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4072;
+SECTION_SDATA2 extern f32 d_menu_d_menu_map_common__lit_4073;
+SECTION_SDATA2 extern f64 d_menu_d_menu_map_common__lit_4119;
+SECTION_SDATA2 extern f64 d_menu_d_menu_map_common__lit_4140;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803959C0-80395D90 03CF .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_803959C0 = 
-    "tt_map_icon_boss"
-    "_s_ci8_16_00.bti";
-SECTION_DEAD const char* const stringBase_803959E1 = "tt_map_icon_boss_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395A00 = "im_map_icon_enter_ci8_24_02.bti";
-SECTION_DEAD const char* const stringBase_80395A20 = "im_map_icon_enter_ci8_02.bti";
-SECTION_DEAD const char* const stringBase_80395A3D = 
-    "tt_map_icon_ente"
-    "r_s_ci8_24_00.bt"
-    "i";
-SECTION_DEAD const char* const stringBase_80395A5F = "tt_map_icon_enter_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395A7F = "im_map_icon_warp_24_ci8_00.bti";
-SECTION_DEAD const char* const stringBase_80395A9E = "im_map_icon_warp_32_ci8_00.bti";
-SECTION_DEAD const char* const stringBase_80395ABD = "tt_map_icon_box_s_ci8_24_00.bti";
-SECTION_DEAD const char* const stringBase_80395ADD = "tt_map_icon_box_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395AFB = 
-    "tt_map_icon_s_si"
-    "ze_circle_ci4_gr"
-    "ay_00.bti";
-SECTION_DEAD const char* const stringBase_80395B25 = "tt_map_icon_key_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395B43 = 
-    "tt_map_icon_s_si"
-    "ze_circle_ci4_00"
-    ".bti";
-SECTION_DEAD const char* const stringBase_80395B68 = "st_yuki_M.bti";
-SECTION_DEAD const char* const stringBase_80395B76 = "st_yuki_W.bti";
-SECTION_DEAD const char* const stringBase_80395B84 = 
-    "tt_map_icon_s_si"
-    "ze_circle_ci4_ye"
-    "llow_00.bti";
-SECTION_DEAD const char* const stringBase_80395BB0 = "st_gold_wolf.bti";
-SECTION_DEAD const char* const stringBase_80395BC1 = 
-    "tt_map_icon_monk"
-    "ey_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395BE2 = 
-    "tt_map_icon_s_si"
-    "ze_circle_ci4_bl"
-    "ue_00.bti";
-SECTION_DEAD const char* const stringBase_80395C0C = "ni_obacyan.bti";
-SECTION_DEAD const char* const stringBase_80395C1B = 
-    "im_zelda_map_ico"
-    "n_copy_stone_sta"
-    "tue_snup_try_00_"
-    "04.bti";
-SECTION_DEAD const char* const stringBase_80395C52 = 
-    "tt_map_icon_link"
-    "_s_ci8_24_00.bti";
-SECTION_DEAD const char* const stringBase_80395C73 = "tt_map_icon_link_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395C92 = 
-    "tt_map_icon_pena"
-    "nt_s_ci8_24_00.b"
-    "ti";
-SECTION_DEAD const char* const stringBase_80395CB5 = 
-    "tt_map_icon_pena"
-    "nt_ci8_32_00.bti";
-SECTION_DEAD const char* const stringBase_80395CD6 = "im_black_32.bti";
-SECTION_DEAD const char* const stringBase_80395CE6 = 
-    "im_hikari_no_shi"
-    "zuku_try_10_00_2"
-    "4x24.bti";
-SECTION_DEAD const char* const stringBase_80395D0F = 
-    "im_zelda_map_ico"
-    "n_hikari_ball_03"
-    ".bti";
-SECTION_DEAD const char* const stringBase_80395D34 = 
-    "im_map_icon_iron"
-    "_ball_ci8_32_00."
-    "bti";
-SECTION_DEAD const char* const stringBase_80395D58 = "im_map_icon_basha_ci8.bti";
-SECTION_DEAD const char* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.bti";
-/* @stringBase0 padding */
-SECTION_DEAD const char* const pad_80395D8F = "";
-#pragma pop
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803BCF18-803BD02C 0114 .data      map_icon_size                                                */
-SECTION_DATA u8 map_icon_size[276] = {
+u8 map_icon_size[276] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 	0x11, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,
@@ -164,192 +76,242 @@ SECTION_DATA u8 map_icon_size[276] = {
 	0x42, 0x20, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 	0x16, 0x00, 0x00, 0x00,
 };
+
 /* 803BD02C-803BD038 000C .data      __vt__16dMenuMapCommon_c                                     */
-SECTION_DATA void* __vt__16dMenuMapCommon_c[3] = {
+void* const __vt__16dMenuMapCommon_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dMenuMapCommon_cFv,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804540D8-804540DC 0004 .sdata2    @3703                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_3703[4] = {
+u8 d_menu_d_menu_map_common__lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804540DC-804540E0 0004 .sdata2    @3882                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_3882[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 804540E0-804540E4 0004 .sdata2    @4010                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4010[4] = {
-	0x43, 0x7F, 0x00, 0x00,
-};
-/* 804540E4-804540E8 0004 .sdata2    @4011                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4011[4] = {
-	0x3F, 0x12, 0x49, 0x25,
-};
-/* 804540E8-804540EC 0004 .sdata2    @4012                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4012[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 804540EC-804540F0 0004 .sdata2    @4013                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4013[4] = {
-	0x43, 0x34, 0x00, 0x00,
-};
-/* 804540F0-804540F4 0004 .sdata2    @4072                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4072[4] = {
-	0x3F, 0x17, 0xB4, 0x26,
-};
-/* 804540F4-804540F8 0004 .sdata2    @4073                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4073[4] = {
-	0x3E, 0xD0, 0x97, 0xB4,
-};
-/* 804540F8-80454100 0008 .sdata2    @4119                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4119[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80454100-80454108 0008 .sdata2    @4140                                                        */
-SECTION_SDATA2 u8 d_menu_d_menu_map_common__LIT_4140[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 801C2718-801C27B4 009C .text      __ct__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16dMenuMapCommon_cFv() {
+extern "C" asm void __ct__16dMenuMapCommon_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/__ct__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
+
 /* 801C27B4-801C28D8 0124 .text      __dt__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16dMenuMapCommon_cFv() {
+extern "C" asm void __dt__16dMenuMapCommon_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/__dt__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803959C0-80395D90 03CF .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803959C0 = 
+    "tt_map_icon_boss_s_ci8_16_00.bti";
+SECTION_DEAD const char* const stringBase_803959E1 = "tt_map_icon_boss_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395A00 = "im_map_icon_enter_ci8_24_02.bti";
+SECTION_DEAD const char* const stringBase_80395A20 = "im_map_icon_enter_ci8_02.bti";
+SECTION_DEAD const char* const stringBase_80395A3D = 
+    "tt_map_icon_enter_s_ci8_24_00.bti";
+SECTION_DEAD const char* const stringBase_80395A5F = "tt_map_icon_enter_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395A7F = "im_map_icon_warp_24_ci8_00.bti";
+SECTION_DEAD const char* const stringBase_80395A9E = "im_map_icon_warp_32_ci8_00.bti";
+SECTION_DEAD const char* const stringBase_80395ABD = "tt_map_icon_box_s_ci8_24_00.bti";
+SECTION_DEAD const char* const stringBase_80395ADD = "tt_map_icon_box_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395AFB = 
+    "tt_map_icon_s_size_circle_ci4_gray_00.bti";
+SECTION_DEAD const char* const stringBase_80395B25 = "tt_map_icon_key_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395B43 = 
+    "tt_map_icon_s_size_circle_ci4_00.bti";
+SECTION_DEAD const char* const stringBase_80395B68 = "st_yuki_M.bti";
+SECTION_DEAD const char* const stringBase_80395B76 = "st_yuki_W.bti";
+SECTION_DEAD const char* const stringBase_80395B84 = 
+    "tt_map_icon_s_size_circle_ci4_yellow_00.bti";
+SECTION_DEAD const char* const stringBase_80395BB0 = "st_gold_wolf.bti";
+SECTION_DEAD const char* const stringBase_80395BC1 = 
+    "tt_map_icon_monkey_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395BE2 = 
+    "tt_map_icon_s_size_circle_ci4_blue_00.bti";
+SECTION_DEAD const char* const stringBase_80395C0C = "ni_obacyan.bti";
+SECTION_DEAD const char* const stringBase_80395C1B = 
+    "im_zelda_map_icon_copy_stone_statue_snup_try_00_"
+    "04.bti";
+SECTION_DEAD const char* const stringBase_80395C52 = 
+    "tt_map_icon_link_s_ci8_24_00.bti";
+SECTION_DEAD const char* const stringBase_80395C73 = "tt_map_icon_link_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395C92 = 
+    "tt_map_icon_penant_s_ci8_24_00.bti";
+SECTION_DEAD const char* const stringBase_80395CB5 = 
+    "tt_map_icon_penant_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395CD6 = "im_black_32.bti";
+SECTION_DEAD const char* const stringBase_80395CE6 = 
+    "im_hikari_no_shizuku_try_10_00_24x24.bti";
+SECTION_DEAD const char* const stringBase_80395D0F = 
+    "im_zelda_map_icon_hikari_ball_03.bti";
+SECTION_DEAD const char* const stringBase_80395D34 = 
+    "im_map_icon_iron_ball_ci8_32_00.bti";
+SECTION_DEAD const char* const stringBase_80395D58 = "im_map_icon_basha_ci8.bti";
+SECTION_DEAD const char* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.bti";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80395D8F = "";
+#pragma pop
+
+/* 804540DC-804540E0 0004 .sdata2    @3882                                                        */
+f32 d_menu_d_menu_map_common__lit_3882 = 1.0f;
+
 /* 801C28D8-801C38E4 100C .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initiate__16dMenuMapCommon_cFP10JKRArchive() {
+extern "C" asm void initiate__16dMenuMapCommon_cFP10JKRArchive() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/initiate__16dMenuMapCommon_cFP10JKRArchive.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804540E0-804540E4 0004 .sdata2    @4010                                                        */
+f32 d_menu_d_menu_map_common__lit_4010 = 255.0f;
+
+/* 804540E4-804540E8 0004 .sdata2    @4011                                                        */
+f32 d_menu_d_menu_map_common__lit_4011 = 4.0f / 7.0f;
+
+/* 804540E8-804540EC 0004 .sdata2    @4012                                                        */
+f32 d_menu_d_menu_map_common__lit_4012 = 0.5f;
+
+/* 804540EC-804540F0 0004 .sdata2    @4013                                                        */
+f32 d_menu_d_menu_map_common__lit_4013 = 180.0f;
+
 /* 801C38E4-801C3EC4 05E0 .text      drawIcon__16dMenuMapCommon_cFffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawIcon__16dMenuMapCommon_cFffff() {
+extern "C" asm void drawIcon__16dMenuMapCommon_cFffff() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/drawIcon__16dMenuMapCommon_cFffff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804540F0-804540F4 0004 .sdata2    @4072                                                        */
+f32 d_menu_d_menu_map_common__lit_4072 = 16.0f / 27.0f;
+
+/* 804540F4-804540F8 0004 .sdata2    @4073                                                        */
+f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
+
 /* 801C3EC4-801C43A8 04E4 .text      iconScale__16dMenuMapCommon_cFifff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void iconScale__16dMenuMapCommon_cFifff() {
+extern "C" asm void iconScale__16dMenuMapCommon_cFifff() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/iconScale__16dMenuMapCommon_cFifff.s"
 }
 #pragma pop
 
+
 /* 801C43A8-801C443C 0094 .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setIconInfo__16dMenuMapCommon_cFUcfffffUc() {
+extern "C" asm void setIconInfo__16dMenuMapCommon_cFUcfffffUc() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setIconInfo__16dMenuMapCommon_cFUcfffffUc.s"
 }
 #pragma pop
 
+
 /* 801C443C-801C4494 0058 .text      clearIconInfo__16dMenuMapCommon_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearIconInfo__16dMenuMapCommon_cFv() {
+extern "C" asm void clearIconInfo__16dMenuMapCommon_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/clearIconInfo__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
+
 /* 801C4494-801C452C 0098 .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlendRatio__16dMenuMapCommon_cFUcff() {
+extern "C" asm void setBlendRatio__16dMenuMapCommon_cFUcff() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setBlendRatio__16dMenuMapCommon_cFUcff.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804540F8-80454100 0008 .sdata2    @4119                                                        */
+f64 d_menu_d_menu_map_common__lit_4119 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 801C452C-801C4600 00D4 .text      blinkMove__16dMenuMapCommon_cFs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void blinkMove__16dMenuMapCommon_cFs() {
+extern "C" asm void blinkMove__16dMenuMapCommon_cFs() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/blinkMove__16dMenuMapCommon_cFs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454100-80454108 0008 .sdata2    @4140                                                        */
+f64 d_menu_d_menu_map_common__lit_4140 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 801C4600-801C4738 0138 .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void moveLightDropAnime__16dMenuMapCommon_cFv() {
+extern "C" asm void moveLightDropAnime__16dMenuMapCommon_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/moveLightDropAnime__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
+
 /* 801C4738-801C4778 0040 .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIconSizeX__16dMenuMapCommon_cFUc() {
+extern "C" asm void getIconSizeX__16dMenuMapCommon_cFUc() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeX__16dMenuMapCommon_cFUc.s"
 }
 #pragma pop
 
+
 /* 801C4778-801C47C4 004C .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIconSizeY__16dMenuMapCommon_cFUc() {
+extern "C" asm void getIconSizeY__16dMenuMapCommon_cFUc() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeY__16dMenuMapCommon_cFUc.s"
 }
 #pragma pop
 
+
 /* 801C47C4-801C4D54 0590 .text      debugIcon__16dMenuMapCommon_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void debugIcon__16dMenuMapCommon_cFv() {
+extern "C" asm void debugIcon__16dMenuMapCommon_cFv() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/debugIcon__16dMenuMapCommon_cFv.s"
 }

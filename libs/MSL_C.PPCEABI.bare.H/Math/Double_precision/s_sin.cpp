@@ -5,39 +5,30 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_rem_pio2();
-extern void __kernel_cos();
-extern void __kernel_sin();
-extern void sin();
-SECTION_SDATA2 extern u8 Math_Double_precision_s_sin__LIT_67[8];
-}
+extern "C" extern void __ieee754_rem_pio2();
+extern "C" extern void __kernel_cos();
+extern "C" extern void __kernel_sin();
+extern "C" extern void sin();
+SECTION_SDATA2 extern u8 Math_Double_precision_s_sin__lit_67[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456B38-80456B40 0008 .sdata2    @67                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_s_sin__LIT_67[8] = {
+u8 Math_Double_precision_s_sin__lit_67[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8036C590-8036C668 00D8 .text      sin                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sin() {
+extern "C" asm void sin() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_sin/sin.s"
 }

@@ -32,7 +32,7 @@ lbl_800EF8E8:
 lbl_800EF8F8:
 /* 800EF8F8 00000000  7F A3 EB 78 */	mr r3, r29
 /* 800EF8FC 00000004  38 80 00 02 */	li r4, 2
-/* 800EF900 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800EF900 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800EF904 0000000C  4B FB DE 21 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800EF908 00000010  7F A3 EB 78 */	mr r3, r29
 /* 800EF90C 00000014  38 80 00 00 */	li r4, 0

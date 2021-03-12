@@ -10,8 +10,8 @@ lbl_80191428:
 /* 80191448 00000020  4B FF 21 B1 */	bl __ct__9dFs_HIO_cFv
 /* 8019144C 00000024  3C 80 80 19 */	lis r4, __dt__9dFs_HIO_cFv@ha
 /* 80191450 00000028  38 84 13 E0 */	addi r4, r4, __dt__9dFs_HIO_cFv@l
-/* 80191454 0000002C  3C A0 80 43 */	lis r5, d_file_d_file_select__LIT_3807@ha
-/* 80191458 00000030  38 A5 C9 E0 */	addi r5, r5, d_file_d_file_select__LIT_3807@l
+/* 80191454 0000002C  3C A0 80 43 */	lis r5, d_file_d_file_select__lit_3807@ha
+/* 80191458 00000030  38 A5 C9 E0 */	addi r5, r5, d_file_d_file_select__lit_3807@l
 /* 8019145C 00000034  48 1D 07 C9 */	bl __register_global_object
 /* 80191460 00000038  80 7F 00 70 */	lwz r3, 0x70(r31)
 /* 80191464 0000003C  80 1F 00 74 */	lwz r0, 0x74(r31)

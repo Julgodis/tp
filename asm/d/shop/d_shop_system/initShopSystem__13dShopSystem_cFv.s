@@ -48,8 +48,8 @@ lbl_801973A8:
 /* 801973E8 00000040  38 A0 00 0F */	li r5, 0xf
 /* 801973EC 00000044  38 C0 00 00 */	li r6, 0
 /* 801973F0 00000048  38 E0 00 00 */	li r7, 0
-/* 801973F4 0000004C  C0 22 A1 00 */	lfs f1, d_shop_d_shop_system__LIT_4097(r2)
-/* 801973F8 00000050  C0 42 A1 04 */	lfs f2, d_shop_d_shop_system__LIT_4098(r2)
+/* 801973F4 0000004C  C0 22 A1 00 */	lfs f1, d_shop_d_shop_system__lit_4097(r2)
+/* 801973F8 00000050  C0 42 A1 04 */	lfs f2, d_shop_d_shop_system__lit_4098(r2)
 /* 801973FC 00000054  39 00 00 00 */	li r8, 0
 /* 80197400 00000058  39 20 20 00 */	li r9, 0x2000
 /* 80197404 0000005C  4B E9 AC 85 */	bl setWaitParm__9STControlFssssffss
@@ -66,17 +66,17 @@ lbl_80197414:
 /* 80197428 00000014  7C 60 1B 79 */	or. r0, r3, r3
 /* 8019742C 00000018  41 82 00 18 */	beq lbl_80197444
 /* 80197430 0000001C  38 80 00 01 */	li r4, 1
-/* 80197434 00000020  C0 22 A1 08 */	lfs f1, d_shop_d_shop_system__LIT_4099(r2)
+/* 80197434 00000020  C0 22 A1 08 */	lfs f1, d_shop_d_shop_system__lit_4099(r2)
 /* 80197438 00000024  38 A0 00 00 */	li r5, 0
 /* 8019743C 00000028  4B FF CD E5 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 80197440 0000002C  7C 60 1B 78 */	mr r0, r3
 lbl_80197444:
 /* 80197444 00000000  90 1F 0E 44 */	stw r0, 0xe44(r31)
 /* 80197448 00000004  80 7F 0E 44 */	lwz r3, 0xe44(r31)
-/* 8019744C 00000008  C0 22 A1 08 */	lfs f1, d_shop_d_shop_system__LIT_4099(r2)
+/* 8019744C 00000008  C0 22 A1 08 */	lfs f1, d_shop_d_shop_system__lit_4099(r2)
 /* 80197450 0000000C  FC 40 08 90 */	fmr f2, f1
-/* 80197454 00000010  C0 62 A1 0C */	lfs f3, d_shop_d_shop_system__LIT_4100(r2)
-/* 80197458 00000014  C0 82 A1 10 */	lfs f4, d_shop_d_shop_system__LIT_4101(r2)
+/* 80197454 00000010  C0 62 A1 0C */	lfs f3, d_shop_d_shop_system__lit_4100(r2)
+/* 80197458 00000014  C0 82 A1 10 */	lfs f4, d_shop_d_shop_system__lit_4101(r2)
 /* 8019745C 00000018  FC A0 20 90 */	fmr f5, f4
 /* 80197460 0000001C  4B FF DD 51 */	bl setParam__16dSelect_cursor_cFfffff
 lbl_80197464:

@@ -24,13 +24,13 @@ lbl_80133DC0:
 /* 80133DC0 00000000  48 00 01 31 */	bl checkMidnaLockJumpPoint__9daAlink_cCFv
 /* 80133DC4 00000004  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80133DC8 00000008  48 21 35 D5 */	bl PSVECSquareDistance
-/* 80133DCC 0000000C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80133DCC 0000000C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80133DD0 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80133DD4 00000000  40 81 00 58 */	ble lbl_80133E2C
 /* 80133DD8 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80133DDC 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__LIT_6846(r2)
+/* 80133DDC 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
 /* 80133DE0 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 80133DE4 00000010  C8 62 92 F0 */	lfd f3, LIT_6847(r2)
+/* 80133DE4 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 80133DE8 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 80133DEC 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 80133DF0 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -49,7 +49,7 @@ lbl_80133DC0:
 /* 80133E24 00000050  FC 20 08 18 */	frsp f1, f1
 /* 80133E28 00000054  48 00 00 88 */	b lbl_80133EB0
 lbl_80133E2C:
-/* 80133E2C 00000000  C8 02 92 F8 */	lfd f0, LIT_6848(r2)
+/* 80133E2C 00000000  C8 02 92 F8 */	lfd f0, lit_6848(r2)
 /* 80133E30 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80133E34 00000000  40 80 00 10 */	bge lbl_80133E44
 /* 80133E38 00000004  3C 60 80 45 */	lis r3, __float_nan@ha

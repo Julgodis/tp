@@ -9,8 +9,8 @@ lbl_802D326C:
 /* 802D3288 0000001C  38 63 43 0C */	addi r3, r3, sAramList__11JKRAramHeap@l
 /* 802D328C 00000020  3C 80 80 2D */	lis r4, func_802D32B0@ha
 /* 802D3290 00000024  38 84 32 B0 */	addi r4, r4, func_802D32B0@l
-/* 802D3294 00000028  3C A0 80 43 */	lis r5, JKRAramHeap__LIT_297@ha
-/* 802D3298 0000002C  38 A5 43 00 */	addi r5, r5, JKRAramHeap__LIT_297@l
+/* 802D3294 00000028  3C A0 80 43 */	lis r5, JKRAramHeap__lit_297@ha
+/* 802D3298 0000002C  38 A5 43 00 */	addi r5, r5, JKRAramHeap__lit_297@l
 /* 802D329C 00000030  48 08 E9 89 */	bl __register_global_object
 /* 802D32A0 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D32A4 00000038  7C 08 03 A6 */	mtlr r0

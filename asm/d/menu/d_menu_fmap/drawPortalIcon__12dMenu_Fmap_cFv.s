@@ -27,7 +27,7 @@ lbl_801CD294:
 /* 801CD2B4 00000020  38 80 00 01 */	li r4, 1
 /* 801CD2B8 00000024  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 801CD2BC 00000028  C0 5D 00 18 */	lfs f2, 0x18(r29)
-/* 801CD2C0 0000002C  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CD2C0 0000002C  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CD2C4 00000030  38 A0 00 00 */	li r5, 0
 /* 801CD2C8 00000034  38 C0 00 00 */	li r6, 0
 /* 801CD2CC 00000038  48 00 4E 35 */	bl setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb

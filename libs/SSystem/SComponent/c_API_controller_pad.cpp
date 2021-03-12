@@ -5,36 +5,34 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void recalibrate__8mDoCPd_cFv();
-extern void cAPICPad_recalibrate__Fv();
-extern void cAPICPad_ANY_BUTTON__FUl();
+extern "C" extern void recalibrate__8mDoCPd_cFv();
+extern "C" extern void cAPICPad_recalibrate__Fv();
+extern "C" extern void cAPICPad_ANY_BUTTON__FUl();
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8026328C-802632AC 0020 .text      cAPICPad_recalibrate__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cAPICPad_recalibrate__Fv() {
+extern "C" asm void cAPICPad_recalibrate__Fv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_controller_pad/cAPICPad_recalibrate__Fv.s"
 }
 #pragma pop
 
+
 /* 802632AC-802632C8 001C .text      cAPICPad_ANY_BUTTON__FUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cAPICPad_ANY_BUTTON__FUl() {
+extern "C" asm void cAPICPad_ANY_BUTTON__FUl() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_controller_pad/cAPICPad_ANY_BUTTON__FUl.s"
 }

@@ -62,10 +62,10 @@ lbl_801BB414:
 /* 801BB418 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 801BB41C 00000008  41 82 00 30 */	beq lbl_801BB44C
 /* 801BB420 0000000C  C0 5F 0D BC */	lfs f2, 0xdbc(r31)
-/* 801BB424 00000010  C0 22 A6 20 */	lfs f1, d_menu_d_menu_dmap__LIT_4643(r2)
+/* 801BB424 00000010  C0 22 A6 20 */	lfs f1, d_menu_d_menu_dmap__lit_4643(r2)
 /* 801BB428 00000014  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 801BB42C 00000000  40 80 00 20 */	bge lbl_801BB44C
-/* 801BB430 00000004  C0 02 A6 40 */	lfs f0, LIT_4848(r2)
+/* 801BB430 00000004  C0 02 A6 40 */	lfs f0, lit_4848(r2)
 /* 801BB434 00000008  EC 02 00 2A */	fadds f0, f2, f0
 /* 801BB438 0000000C  D0 1F 0D BC */	stfs f0, 0xdbc(r31)
 /* 801BB43C 00000010  C0 1F 0D BC */	lfs f0, 0xdbc(r31)

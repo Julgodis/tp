@@ -5,68 +5,94 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern void dComIfGp_getReverb__Fi();
-extern void dPath_GetRoomPath__Fii();
-extern void dPath_GetNextRoomPath__FPC5dPathi();
-extern void Eye__9dCamera_cFv();
-extern void dEnvSe_Draw__FP8dEnvSe_c();
-extern void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
-extern void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc();
-extern void execute__8dEnvSe_cFv();
-extern void dEnvSe_Execute__FP8dEnvSe_c();
-extern void dEnvSe_IsDelete__FP8dEnvSe_c();
-extern void dEnvSe_Delete__FP8dEnvSe_c();
-extern void dEnvSe_Create__FP8dEnvSe_c();
-extern void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
-extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
-extern void startStaticEnvSe__10Z2EnvSeMgrFSc();
-extern void registWindowPos__10Z2EnvSeMgrFP3Vec();
-extern void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
-extern void registRiverSePos__10Z2EnvSeMgrFP3Vec();
-extern void startRiverSe__10Z2EnvSeMgrFSc();
-extern void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
-extern void registFallSePos__10Z2EnvSeMgrFP3Vec();
-extern void startFallSe__10Z2EnvSeMgrFSc();
-extern void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
-extern void registEtcSePos__10Z2EnvSeMgrFP3Vec();
-extern void startEtcSe__10Z2EnvSeMgrFSc();
-extern void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
-extern void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
-extern void startLv3WaterSe__10Z2EnvSeMgrFSc();
-extern void PSVECSquareDistance();
-extern void _savegpr_22();
-extern void _savegpr_26();
-extern void _savegpr_28();
-extern void _restgpr_22();
-extern void _restgpr_26();
-extern void _restgpr_28();
-extern void memcmp();
+extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" extern void dComIfGp_getReverb__Fi();
+extern "C" extern void dPath_GetRoomPath__Fii();
+extern "C" extern void dPath_GetNextRoomPath__FPC5dPathi();
+extern "C" extern void Eye__9dCamera_cFv();
+extern "C" extern void dEnvSe_Draw__FP8dEnvSe_c();
+extern "C" extern void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
+extern "C" extern void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc();
+extern "C" extern void execute__8dEnvSe_cFv();
+extern "C" extern void dEnvSe_Execute__FP8dEnvSe_c();
+extern "C" extern void dEnvSe_IsDelete__FP8dEnvSe_c();
+extern "C" extern void dEnvSe_Delete__FP8dEnvSe_c();
+extern "C" extern void dEnvSe_Create__FP8dEnvSe_c();
+extern "C" extern void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
+extern "C" extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" extern void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
+extern "C" extern void startStaticEnvSe__10Z2EnvSeMgrFSc();
+extern "C" extern void registWindowPos__10Z2EnvSeMgrFP3Vec();
+extern "C" extern void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" extern void registRiverSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" extern void startRiverSe__10Z2EnvSeMgrFSc();
+extern "C" extern void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" extern void registFallSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" extern void startFallSe__10Z2EnvSeMgrFSc();
+extern "C" extern void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" extern void registEtcSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" extern void startEtcSe__10Z2EnvSeMgrFSc();
+extern "C" extern void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" extern void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
+extern "C" extern void startLv3WaterSe__10Z2EnvSeMgrFSc();
+extern "C" extern void PSVECSquareDistance();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_28();
+extern "C" extern void memcmp();
 SECTION_RODATA extern const u8 d_d_envse__stringBase0[8];
 SECTION_DATA extern void* g_fopKy_Method[6];
 SECTION_DATA extern void* g_fpcLf_Method[6];
-SECTION_DATA extern void* __vt__8cM3dGLin[3];
+SECTION_DATA extern void* const __vt__8cM3dGLin[3];
 SECTION_DATA extern void* l_dEnvSe_Method[5];
 SECTION_DATA extern void* g_profile_ENVSE[11];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
-SECTION_SDATA extern u8 __float_max[4];
+SECTION_SDATA extern u32 __float_max;
 SECTION_SBSS extern u8 struct_80450D64[4];
-SECTION_SBSS2 extern u8 d_d_envse__LIT_3752[4];
+SECTION_SBSS2 extern u8 d_d_envse__lit_3752[4];
 SECTION_SBSS2 extern u8 data_80456B84[4];
+
+// 
+// Functions:
+// 
+
+/* 80182DD4-80182DDC 0008 .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_Draw__FP8dEnvSe_c() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_Draw__FP8dEnvSe_c.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80456B80-80456B84 0004 .sbss2     @3752                                                        */
+u8 d_d_envse__lit_3752[4];
 
-extern "C" {
+/* 80456B84-80456B88 0004 .sbss2     None                                                         */
+u8 data_80456B84[4];
+
+/* 80182DDC-80182FD8 01FC .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 80394308-80394310 0007 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -75,24 +101,84 @@ SECTION_DEAD const char* const stringBase_80394308 = "sndtag";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039430F = "";
 #pragma pop
+
+/* 80182FD8-80183480 04A8 .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc() {
+	nofralloc
+#include "asm/d/d_envse/execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc.s"
 }
+#pragma pop
 
 
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80183480-801835A0 0120 .text      execute__8dEnvSe_cFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void execute__8dEnvSe_cFv() {
+	nofralloc
+#include "asm/d/d_envse/execute__8dEnvSe_cFv.s"
+}
+#pragma pop
 
-extern "C" {
+
+/* 801835A0-801835C0 0020 .text      dEnvSe_Execute__FP8dEnvSe_c                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_Execute__FP8dEnvSe_c() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_Execute__FP8dEnvSe_c.s"
+}
+#pragma pop
+
+
+/* 801835C0-801835C8 0008 .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_IsDelete__FP8dEnvSe_c() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_IsDelete__FP8dEnvSe_c.s"
+}
+#pragma pop
+
+
+/* 801835C8-801835D0 0008 .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_Delete__FP8dEnvSe_c() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_Delete__FP8dEnvSe_c.s"
+}
+#pragma pop
+
+
+/* 801835D0-801835F8 0028 .text      dEnvSe_Create__FP8dEnvSe_c                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dEnvSe_Create__FP8dEnvSe_c() {
+	nofralloc
+#include "asm/d/d_envse/dEnvSe_Create__FP8dEnvSe_c.s"
+}
+#pragma pop
+
+
 /* 803BA808-803BA81C 0014 .data      l_dEnvSe_Method                                              */
-SECTION_DATA void* l_dEnvSe_Method[5] = {
+void* l_dEnvSe_Method[5] = {
 	(void*)dEnvSe_Create__FP8dEnvSe_c,
 	(void*)dEnvSe_Delete__FP8dEnvSe_c,
 	(void*)dEnvSe_Execute__FP8dEnvSe_c,
 	(void*)dEnvSe_IsDelete__FP8dEnvSe_c,
 	(void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
+
 /* 803BA81C-803BA848 0028 .data      g_profile_ENVSE                                              */
-SECTION_DATA void* g_profile_ENVSE[11] = {
+void* g_profile_ENVSE[11] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0002FFFD,
 	(void*)0x00150000,
@@ -106,103 +192,4 @@ SECTION_DATA void* g_profile_ENVSE[11] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456B80-80456B84 0004 .sbss2     @3752                                                        */
-SECTION_SBSS2 u8 d_d_envse__LIT_3752[4];
-/* 80456B84-80456B88 0004 .sbss2     None                                                         */
-SECTION_SBSS2 u8 data_80456B84[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80182DD4-80182DDC 0008 .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_Draw__FP8dEnvSe_c() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Draw__FP8dEnvSe_c.s"
-}
-#pragma pop
-
-/* 80182DDC-80182FD8 01FC .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath.s"
-}
-#pragma pop
-
-/* 80182FD8-80183480 04A8 .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc() {
-	nofralloc
-#include "asm/d/d_envse/execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc.s"
-}
-#pragma pop
-
-/* 80183480-801835A0 0120 .text      execute__8dEnvSe_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void execute__8dEnvSe_cFv() {
-	nofralloc
-#include "asm/d/d_envse/execute__8dEnvSe_cFv.s"
-}
-#pragma pop
-
-/* 801835A0-801835C0 0020 .text      dEnvSe_Execute__FP8dEnvSe_c                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_Execute__FP8dEnvSe_c() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Execute__FP8dEnvSe_c.s"
-}
-#pragma pop
-
-/* 801835C0-801835C8 0008 .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_IsDelete__FP8dEnvSe_c() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_IsDelete__FP8dEnvSe_c.s"
-}
-#pragma pop
-
-/* 801835C8-801835D0 0008 .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_Delete__FP8dEnvSe_c() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Delete__FP8dEnvSe_c.s"
-}
-#pragma pop
-
-/* 801835D0-801835F8 0028 .text      dEnvSe_Create__FP8dEnvSe_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEnvSe_Create__FP8dEnvSe_c() {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Create__FP8dEnvSe_c.s"
-}
-#pragma pop
-
 

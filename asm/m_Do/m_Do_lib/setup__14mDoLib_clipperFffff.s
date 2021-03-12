@@ -13,7 +13,7 @@ lbl_8001528C:
 /* 800152B8 00000018  D0 83 00 58 */	stfs f4, 0x58(r3)
 /* 800152BC 0000001C  D0 8D 86 F0 */	stfs f4, mSystemFar__14mDoLib_clipper(r13)
 /* 800152C0 00000020  48 25 E4 CD */	bl calcViewFrustum__11J3DUClipperFv
-/* 800152C4 00000024  C0 02 81 80 */	lfs f0, m_Do_m_Do_lib__LIT_3739(r2)
+/* 800152C4 00000024  C0 02 81 80 */	lfs f0, m_Do_m_Do_lib__lit_3739(r2)
 /* 800152C8 00000028  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 800152CC 0000002C  FC 00 00 1E */	fctiwz f0, f0
 /* 800152D0 00000030  D8 01 00 08 */	stfd f0, 8(r1)

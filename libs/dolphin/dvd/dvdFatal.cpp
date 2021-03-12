@@ -5,34 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __DVDPrintFatalMessage();
+extern "C" extern void __DVDPrintFatalMessage();
 SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804517C8-804517D0 0004 .sbss      FatalFunc                                                    */
-SECTION_SBSS u8 FatalFunc[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 FatalFunc[4 + 4 /* padding */];
 
 /* 8034BCFC-8034BD2C 0030 .text      __DVDPrintFatalMessage                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DVDPrintFatalMessage() {
+extern "C" asm void __DVDPrintFatalMessage() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdFatal/__DVDPrintFatalMessage.s"
 }

@@ -7,7 +7,7 @@ lbl_80281D5C:
 /* 80281D70 00000014  4B FF F9 21 */	bl __ct__Q27JStudio14TFunctionValueFv
 /* 80281D74 00000018  38 7F 00 04 */	addi r3, r31, 4
 /* 80281D78 0000001C  38 81 00 08 */	addi r4, r1, 8
-/* 80281D7C 00000020  88 0D 8C 68 */	lbz r0, LIT_569(r13)
+/* 80281D7C 00000020  88 0D 8C 68 */	lbz r0, lit_569(r13)
 /* 80281D80 00000024  98 01 00 08 */	stb r0, 8(r1)
 /* 80281D84 00000028  48 05 AF 4D */	bl func_802DCCD0
 /* 80281D88 0000002C  3C 60 80 3C */	lis r3, __vt__Q27JStudio24TFunctionValue_composite@ha

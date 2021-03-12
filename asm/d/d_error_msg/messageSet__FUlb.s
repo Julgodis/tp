@@ -19,12 +19,12 @@ lbl_8009CB88:
 /* 8009CBCC 00000044  7C 64 02 14 */	add r3, r4, r0
 /* 8009CBD0 00000048  3B E3 00 08 */	addi r31, r3, 8
 /* 8009CBD4 0000004C  7F E5 FA 14 */	add r31, r5, r31
-/* 8009CBD8 00000050  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CBD8 00000050  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CBDC 00000054  D0 01 00 9C */	stfs f0, 0x9c(r1)
 /* 8009CBE0 00000058  D0 01 00 A0 */	stfs f0, 0xa0(r1)
-/* 8009CBE4 0000005C  C0 02 92 1C */	lfs f0, d_d_error_msg__LIT_3759(r2)
+/* 8009CBE4 0000005C  C0 02 92 1C */	lfs f0, d_d_error_msg__lit_3759(r2)
 /* 8009CBE8 00000060  D0 01 00 A4 */	stfs f0, 0xa4(r1)
-/* 8009CBEC 00000064  C0 02 92 20 */	lfs f0, d_d_error_msg__LIT_3760(r2)
+/* 8009CBEC 00000064  C0 02 92 20 */	lfs f0, d_d_error_msg__lit_3760(r2)
 /* 8009CBF0 00000068  D0 01 00 A8 */	stfs f0, 0xa8(r1)
 /* 8009CBF4 0000006C  38 00 00 00 */	li r0, 0
 /* 8009CBF8 00000070  90 01 00 08 */	stw r0, 8(r1)
@@ -39,12 +39,12 @@ lbl_8009CB88:
 /* 8009CC1C 00000094  7F E9 FB 78 */	mr r9, r31
 /* 8009CC20 00000098  39 40 02 00 */	li r10, 0x200
 /* 8009CC24 0000009C  48 26 2F A1 */	bl func_802FFBC4
-/* 8009CC28 000000A0  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CC28 000000A0  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CC2C 000000A4  D0 01 00 8C */	stfs f0, 0x8c(r1)
 /* 8009CC30 000000A8  D0 01 00 90 */	stfs f0, 0x90(r1)
-/* 8009CC34 000000AC  C0 02 92 1C */	lfs f0, d_d_error_msg__LIT_3759(r2)
+/* 8009CC34 000000AC  C0 02 92 1C */	lfs f0, d_d_error_msg__lit_3759(r2)
 /* 8009CC38 000000B0  D0 01 00 94 */	stfs f0, 0x94(r1)
-/* 8009CC3C 000000B4  C0 02 92 20 */	lfs f0, d_d_error_msg__LIT_3760(r2)
+/* 8009CC3C 000000B4  C0 02 92 20 */	lfs f0, d_d_error_msg__lit_3760(r2)
 /* 8009CC40 000000B8  D0 01 00 98 */	stfs f0, 0x98(r1)
 /* 8009CC44 000000BC  38 00 00 00 */	li r0, 0
 /* 8009CC48 000000C0  90 01 00 08 */	stw r0, 8(r1)
@@ -59,12 +59,12 @@ lbl_8009CB88:
 /* 8009CC6C 000000E4  7F E9 FB 78 */	mr r9, r31
 /* 8009CC70 000000E8  39 40 02 00 */	li r10, 0x200
 /* 8009CC74 000000EC  48 26 2F 51 */	bl func_802FFBC4
-/* 8009CC78 000000F0  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CC78 000000F0  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CC7C 000000F4  D0 01 00 7C */	stfs f0, 0x7c(r1)
 /* 8009CC80 000000F8  D0 01 00 80 */	stfs f0, 0x80(r1)
-/* 8009CC84 000000FC  C0 02 92 1C */	lfs f0, d_d_error_msg__LIT_3759(r2)
+/* 8009CC84 000000FC  C0 02 92 1C */	lfs f0, d_d_error_msg__lit_3759(r2)
 /* 8009CC88 00000100  D0 01 00 84 */	stfs f0, 0x84(r1)
-/* 8009CC8C 00000104  C0 02 92 24 */	lfs f0, d_d_error_msg__LIT_3761(r2)
+/* 8009CC8C 00000104  C0 02 92 24 */	lfs f0, d_d_error_msg__lit_3761(r2)
 /* 8009CC90 00000108  D0 01 00 88 */	stfs f0, 0x88(r1)
 /* 8009CC94 0000010C  38 61 01 48 */	addi r3, r1, 0x148
 /* 8009CC98 00000110  3C 80 49 43 */	lis r4, 0x4943 /* 0x49435431@ha */
@@ -117,9 +117,9 @@ lbl_8009CB88:
 /* 8009CD54 000001CC  98 01 00 45 */	stb r0, 0x45(r1)
 /* 8009CD58 000001D0  98 01 00 46 */	stb r0, 0x46(r1)
 /* 8009CD5C 000001D4  98 01 00 47 */	stb r0, 0x47(r1)
-/* 8009CD60 000001D8  C0 02 92 28 */	lfs f0, d_d_error_msg__LIT_3762(r2)
+/* 8009CD60 000001D8  C0 02 92 28 */	lfs f0, d_d_error_msg__lit_3762(r2)
 /* 8009CD64 000001DC  D0 01 00 74 */	stfs f0, 0x74(r1)
-/* 8009CD68 000001E0  C0 02 92 2C */	lfs f0, d_d_error_msg__LIT_3763(r2)
+/* 8009CD68 000001E0  C0 02 92 2C */	lfs f0, d_d_error_msg__lit_3763(r2)
 /* 8009CD6C 000001E4  D0 01 00 78 */	stfs f0, 0x78(r1)
 /* 8009CD70 000001E8  80 61 00 74 */	lwz r3, 0x74(r1)
 /* 8009CD74 000001EC  80 01 00 78 */	lwz r0, 0x78(r1)
@@ -127,7 +127,7 @@ lbl_8009CB88:
 /* 8009CD7C 000001F4  90 01 00 70 */	stw r0, 0x70(r1)
 /* 8009CD80 000001F8  C0 41 00 70 */	lfs f2, 0x70(r1)
 /* 8009CD84 000001FC  C0 21 00 6C */	lfs f1, 0x6c(r1)
-/* 8009CD88 00000200  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CD88 00000200  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CD8C 00000204  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8009CD90 00000000  40 81 00 08 */	ble lbl_8009CD98
 /* 8009CD94 00000004  48 00 00 08 */	b lbl_8009CD9C
@@ -135,7 +135,7 @@ lbl_8009CD98:
 /* 8009CD98 00000000  FC 20 00 90 */	fmr f1, f0
 lbl_8009CD9C:
 /* 8009CD9C 00000000  D0 21 04 EC */	stfs f1, 0x4ec(r1)
-/* 8009CDA0 00000004  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CDA0 00000004  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CDA4 00000008  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8009CDA8 00000000  40 81 00 08 */	ble lbl_8009CDB0
 /* 8009CDAC 00000004  48 00 00 08 */	b lbl_8009CDB4
@@ -143,9 +143,9 @@ lbl_8009CDB0:
 /* 8009CDB0 00000000  FC 40 00 90 */	fmr f2, f0
 lbl_8009CDB4:
 /* 8009CDB4 00000000  D0 41 04 F0 */	stfs f2, 0x4f0(r1)
-/* 8009CDB8 00000004  C0 02 92 30 */	lfs f0, d_d_error_msg__LIT_3764(r2)
+/* 8009CDB8 00000004  C0 02 92 30 */	lfs f0, d_d_error_msg__lit_3764(r2)
 /* 8009CDBC 00000008  D0 01 04 E4 */	stfs f0, 0x4e4(r1)
-/* 8009CDC0 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__LIT_3762(r2)
+/* 8009CDC0 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__lit_3762(r2)
 /* 8009CDC4 00000010  D0 01 04 E8 */	stfs f0, 0x4e8(r1)
 /* 8009CDC8 00000014  80 01 00 60 */	lwz r0, 0x60(r1)
 /* 8009CDCC 00000018  90 01 00 40 */	stw r0, 0x40(r1)
@@ -195,7 +195,7 @@ lbl_8009CDB4:
 /* 8009CE7C 000000C8  90 01 00 68 */	stw r0, 0x68(r1)
 /* 8009CE80 000000CC  C0 41 00 68 */	lfs f2, 0x68(r1)
 /* 8009CE84 000000D0  C0 21 00 64 */	lfs f1, 0x64(r1)
-/* 8009CE88 000000D4  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CE88 000000D4  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CE8C 000000D8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8009CE90 00000000  40 81 00 08 */	ble lbl_8009CE98
 /* 8009CE94 00000004  48 00 00 08 */	b lbl_8009CE9C
@@ -203,7 +203,7 @@ lbl_8009CE98:
 /* 8009CE98 00000000  FC 20 00 90 */	fmr f1, f0
 lbl_8009CE9C:
 /* 8009CE9C 00000000  D0 21 03 B4 */	stfs f1, 0x3b4(r1)
-/* 8009CEA0 00000004  C0 02 92 18 */	lfs f0, d_d_error_msg__LIT_3758(r2)
+/* 8009CEA0 00000004  C0 02 92 18 */	lfs f0, d_d_error_msg__lit_3758(r2)
 /* 8009CEA4 00000008  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8009CEA8 00000000  40 81 00 08 */	ble lbl_8009CEB0
 /* 8009CEAC 00000004  48 00 00 08 */	b lbl_8009CEB4
@@ -211,9 +211,9 @@ lbl_8009CEB0:
 /* 8009CEB0 00000000  FC 40 00 90 */	fmr f2, f0
 lbl_8009CEB4:
 /* 8009CEB4 00000000  D0 41 03 B8 */	stfs f2, 0x3b8(r1)
-/* 8009CEB8 00000004  C0 02 92 30 */	lfs f0, d_d_error_msg__LIT_3764(r2)
+/* 8009CEB8 00000004  C0 02 92 30 */	lfs f0, d_d_error_msg__lit_3764(r2)
 /* 8009CEBC 00000008  D0 01 03 AC */	stfs f0, 0x3ac(r1)
-/* 8009CEC0 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__LIT_3762(r2)
+/* 8009CEC0 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__lit_3762(r2)
 /* 8009CEC4 00000010  D0 01 03 B0 */	stfs f0, 0x3b0(r1)
 /* 8009CEC8 00000014  80 01 00 5C */	lwz r0, 0x5c(r1)
 /* 8009CECC 00000018  90 01 00 30 */	stw r0, 0x30(r1)
@@ -258,7 +258,7 @@ lbl_8009CEB4:
 /* 8009CF68 000000B4  88 01 00 27 */	lbz r0, 0x27(r1)
 /* 8009CF6C 000000B8  98 01 03 C3 */	stb r0, 0x3c3(r1)
 /* 8009CF70 000000BC  FF E0 00 90 */	fmr f31, f0
-/* 8009CF74 000000C0  C3 C2 92 18 */	lfs f30, d_d_error_msg__LIT_3758(r2)
+/* 8009CF74 000000C0  C3 C2 92 18 */	lfs f30, d_d_error_msg__lit_3758(r2)
 /* 8009CF78 000000C4  3B 80 00 00 */	li r28, 0
 /* 8009CF7C 000000C8  38 60 00 00 */	li r3, 0
 /* 8009CF80 000000CC  38 81 00 AC */	addi r4, r1, 0xac
@@ -273,7 +273,7 @@ lbl_8009CF9C:
 /* 8009CF9C 00000000  7C 60 07 74 */	extsb r0, r3
 /* 8009CFA0 00000004  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8009CFA4 00000008  40 82 00 14 */	bne lbl_8009CFB8
-/* 8009CFA8 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__LIT_3762(r2)
+/* 8009CFA8 0000000C  C0 02 92 28 */	lfs f0, d_d_error_msg__lit_3762(r2)
 /* 8009CFAC 00000010  EF FF 00 2A */	fadds f31, f31, f0
 /* 8009CFB0 00000014  3B 9C 00 04 */	addi r28, r28, 4
 /* 8009CFB4 00000018  48 00 00 C4 */	b lbl_8009D078
@@ -309,7 +309,7 @@ lbl_8009CFF4:
 /* 8009D018 00000024  81 8C 00 30 */	lwz r12, 0x30(r12)
 /* 8009D01C 00000028  7D 89 03 A6 */	mtctr r12
 /* 8009D020 0000002C  4E 80 04 21 */	bctrl 
-/* 8009D024 00000030  C8 42 92 40 */	lfd f2, d_d_error_msg__LIT_3769(r2)
+/* 8009D024 00000030  C8 42 92 40 */	lfd f2, d_d_error_msg__lit_3769(r2)
 /* 8009D028 00000034  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8009D02C 00000038  90 01 05 0C */	stw r0, 0x50c(r1)
 /* 8009D030 0000003C  3C 60 43 30 */	lis r3, 0x4330
@@ -324,7 +324,7 @@ lbl_8009CFF4:
 /* 8009D054 00000060  EC 20 08 24 */	fdivs f1, f0, f1
 /* 8009D058 00000064  C0 01 00 74 */	lfs f0, 0x74(r1)
 /* 8009D05C 00000068  EC 20 00 72 */	fmuls f1, f0, f1
-/* 8009D060 0000006C  C0 02 92 30 */	lfs f0, d_d_error_msg__LIT_3764(r2)
+/* 8009D060 0000006C  C0 02 92 30 */	lfs f0, d_d_error_msg__lit_3764(r2)
 /* 8009D064 00000070  EC 20 08 2A */	fadds f1, f0, f1
 /* 8009D068 00000074  38 61 00 AC */	addi r3, r1, 0xac
 /* 8009D06C 00000078  7C 03 E4 2E */	lfsx f0, r3, r28
@@ -348,13 +348,13 @@ lbl_8009D098:
 lbl_8009D0A8:
 /* 8009D0A8 00000000  38 63 00 04 */	addi r3, r3, 4
 /* 8009D0AC 00000004  42 00 FF EC */	bdnz lbl_8009D098
-/* 8009D0B0 00000008  C0 22 92 18 */	lfs f1, d_d_error_msg__LIT_3758(r2)
-/* 8009D0B4 0000000C  C0 62 92 1C */	lfs f3, d_d_error_msg__LIT_3759(r2)
+/* 8009D0B0 00000008  C0 22 92 18 */	lfs f1, d_d_error_msg__lit_3758(r2)
+/* 8009D0B4 0000000C  C0 62 92 1C */	lfs f3, d_d_error_msg__lit_3759(r2)
 /* 8009D0B8 00000010  EC 03 F0 28 */	fsubs f0, f3, f30
-/* 8009D0BC 00000014  C0 42 92 34 */	lfs f2, d_d_error_msg__LIT_3765(r2)
+/* 8009D0BC 00000014  C0 42 92 34 */	lfs f2, d_d_error_msg__lit_3765(r2)
 /* 8009D0C0 00000018  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 8009D0C4 0000001C  EF C1 00 2A */	fadds f30, f1, f0
-/* 8009D0C8 00000020  C0 82 92 24 */	lfs f4, d_d_error_msg__LIT_3761(r2)
+/* 8009D0C8 00000020  C0 82 92 24 */	lfs f4, d_d_error_msg__lit_3761(r2)
 /* 8009D0CC 00000024  EC 04 F8 28 */	fsubs f0, f4, f31
 /* 8009D0D0 00000028  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 8009D0D4 0000002C  EF E1 00 2A */	fadds f31, f1, f0
@@ -370,18 +370,18 @@ lbl_8009D0A8:
 /* 8009D0FC 00000054  48 26 0B 75 */	bl draw__10J2DPictureFffffbbb
 lbl_8009D100:
 /* 8009D100 00000000  38 61 02 98 */	addi r3, r1, 0x298
-/* 8009D104 00000004  C0 42 92 38 */	lfs f2, d_d_error_msg__LIT_3766(r2)
+/* 8009D104 00000004  C0 42 92 38 */	lfs f2, d_d_error_msg__lit_3766(r2)
 /* 8009D108 00000008  EC 22 F0 2A */	fadds f1, f2, f30
-/* 8009D10C 0000000C  C0 02 92 3C */	lfs f0, d_d_error_msg__LIT_3767(r2)
+/* 8009D10C 0000000C  C0 02 92 3C */	lfs f0, d_d_error_msg__lit_3767(r2)
 /* 8009D110 00000010  EF E0 F8 2A */	fadds f31, f0, f31
 /* 8009D114 00000014  EC 42 F8 2A */	fadds f2, f2, f31
-/* 8009D118 00000018  C0 62 92 1C */	lfs f3, d_d_error_msg__LIT_3759(r2)
+/* 8009D118 00000018  C0 62 92 1C */	lfs f3, d_d_error_msg__lit_3759(r2)
 /* 8009D11C 0000001C  38 80 00 02 */	li r4, 2
 /* 8009D120 00000020  48 26 33 71 */	bl draw__10J2DTextBoxFfff18J2DTextBoxHBinding
 /* 8009D124 00000024  38 61 03 D0 */	addi r3, r1, 0x3d0
 /* 8009D128 00000028  FC 20 F0 90 */	fmr f1, f30
 /* 8009D12C 0000002C  FC 40 F8 90 */	fmr f2, f31
-/* 8009D130 00000030  C0 62 92 1C */	lfs f3, d_d_error_msg__LIT_3759(r2)
+/* 8009D130 00000030  C0 62 92 1C */	lfs f3, d_d_error_msg__lit_3759(r2)
 /* 8009D134 00000034  38 80 00 02 */	li r4, 2
 /* 8009D138 00000038  48 26 33 59 */	bl draw__10J2DTextBoxFfff18J2DTextBoxHBinding
 /* 8009D13C 0000003C  38 61 00 D4 */	addi r3, r1, 0xd4

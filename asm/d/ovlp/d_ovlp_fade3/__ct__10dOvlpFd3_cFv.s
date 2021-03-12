@@ -14,8 +14,8 @@ lbl_8025343C:
 /* 8025346C 00000030  3C 60 80 3C */	lis r3, __vt__15dOvlpFd3_dlst_c@ha
 /* 80253470 00000034  38 03 2D DC */	addi r0, r3, __vt__15dOvlpFd3_dlst_c@l
 /* 80253474 00000038  90 1F 00 DC */	stw r0, 0xdc(r31)
-/* 80253478 0000003C  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__LIT_3812@ha
-/* 8025347C 00000040  38 83 2D 70 */	addi r4, r3, d_ovlp_d_ovlp_fade3__LIT_3812@l
+/* 80253478 0000003C  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__lit_3812@ha
+/* 8025347C 00000040  38 83 2D 70 */	addi r4, r3, d_ovlp_d_ovlp_fade3__lit_3812@l
 /* 80253480 00000044  80 64 00 00 */	lwz r3, 0(r4)
 /* 80253484 00000048  80 04 00 04 */	lwz r0, 4(r4)
 /* 80253488 0000004C  90 7F 00 CC */	stw r3, 0xcc(r31)

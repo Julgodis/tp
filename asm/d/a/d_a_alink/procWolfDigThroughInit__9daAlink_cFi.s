@@ -91,7 +91,7 @@ lbl_8013F5C4:
 /* 8013F5E8 00000024  4C C6 31 82 */	crclr 6
 /* 8013F5EC 00000028  4B F4 94 91 */	bl StartEventCamera__9dCamera_cFiie
 /* 8013F5F0 0000002C  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
-/* 8013F5F4 00000030  C0 22 92 E0 */	lfs f1, LIT_6845(r2)
+/* 8013F5F4 00000030  C0 22 92 E0 */	lfs f1, lit_6845(r2)
 /* 8013F5F8 00000034  80 7D 27 F4 */	lwz r3, 0x27f4(r29)
 /* 8013F5FC 00000038  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 8013F600 0000003C  EC 21 00 2A */	fadds f1, f1, f0
@@ -122,7 +122,7 @@ lbl_8013F648:
 /* 8013F660 00000018  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8013F664 0000001C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8013F668 00000020  C0 3D 04 D0 */	lfs f1, 0x4d0(r29)
-/* 8013F66C 00000024  C0 42 92 E0 */	lfs f2, LIT_6845(r2)
+/* 8013F66C 00000024  C0 42 92 E0 */	lfs f2, lit_6845(r2)
 /* 8013F670 00000028  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8013F674 0000002C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8013F678 00000030  D0 1D 04 D0 */	stfs f0, 0x4d0(r29)
@@ -161,7 +161,7 @@ lbl_8013F6C0:
 /* 8013F6F0 00000030  39 1D 04 E4 */	addi r8, r29, 0x4e4
 /* 8013F6F4 00000034  39 20 00 00 */	li r9, 0
 /* 8013F6F8 00000038  39 40 00 FF */	li r10, 0xff
-/* 8013F6FC 0000003C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 8013F6FC 0000003C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 8013F700 00000040  4B F0 D3 91 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8013F704 00000044  3B FF 00 01 */	addi r31, r31, 1
 /* 8013F708 00000048  2C 1F 00 04 */	cmpwi r31, 4
@@ -180,7 +180,7 @@ lbl_8013F6C0:
 /* 8013F73C 0000007C  7F A3 EB 78 */	mr r3, r29
 /* 8013F740 00000080  38 80 00 99 */	li r4, 0x99
 /* 8013F744 00000084  4B F7 01 5D */	bl setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM
-/* 8013F748 00000088  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013F748 00000088  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013F74C 0000008C  D0 3D 33 98 */	stfs f1, 0x3398(r29)
 /* 8013F750 00000090  D0 3D 04 FC */	stfs f1, 0x4fc(r29)
 /* 8013F754 00000094  7F A3 EB 78 */	mr r3, r29

@@ -26,7 +26,7 @@ lbl_801EACC8:
 /* 801EAD28 0000004C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 801EAD2C 00000050  48 06 AA A5 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801EAD30 00000054  80 7E 00 5C */	lwz r3, 0x5c(r30)
-/* 801EAD34 00000058  C0 22 A9 88 */	lfs f1, d_menu_d_menu_ring__LIT_4300(r2)
+/* 801EAD34 00000058  C0 22 A9 88 */	lfs f1, d_menu_d_menu_ring__lit_4300(r2)
 /* 801EAD38 0000005C  FC 40 08 90 */	fmr f2, f1
 /* 801EAD3C 00000060  7F E4 FB 78 */	mr r4, r31
 /* 801EAD40 00000064  48 10 E1 95 */	bl draw__9J2DScreenFffPC14J2DGrafContext
@@ -171,7 +171,7 @@ lbl_801EAF28:
 /* 801EAF40 00000018  28 00 00 02 */	cmplwi r0, 2
 /* 801EAF44 0000001C  41 82 00 C4 */	beq lbl_801EB008
 /* 801EAF48 00000020  C0 3E 05 70 */	lfs f1, 0x570(r30)
-/* 801EAF4C 00000024  C0 02 A9 88 */	lfs f0, d_menu_d_menu_ring__LIT_4300(r2)
+/* 801EAF4C 00000024  C0 02 A9 88 */	lfs f0, d_menu_d_menu_ring__lit_4300(r2)
 /* 801EAF50 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801EAF54 00000000  40 81 00 B4 */	ble lbl_801EB008
 /* 801EAF58 00000004  38 61 00 24 */	addi r3, r1, 0x24

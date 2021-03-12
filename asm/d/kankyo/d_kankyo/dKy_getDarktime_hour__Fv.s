@@ -5,7 +5,7 @@ lbl_8019FAF4:
 /* 8019FB00 0000000C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019FB04 00000010  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8019FB08 00000014  48 00 00 C5 */	bl getDarkDaytime__18dScnKy_env_light_cFv
-/* 8019FB0C 00000018  C0 02 A2 AC */	lfs f0, d_kankyo_d_kankyo__LIT_5347(r2)
+/* 8019FB0C 00000018  C0 02 A2 AC */	lfs f0, d_kankyo_d_kankyo__lit_5347(r2)
 /* 8019FB10 0000001C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8019FB14 00000020  FC 00 00 1E */	fctiwz f0, f0
 /* 8019FB18 00000024  D8 01 00 08 */	stfd f0, 8(r1)

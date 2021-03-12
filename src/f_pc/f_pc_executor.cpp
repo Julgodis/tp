@@ -5,112 +5,116 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcBs_Is_JustOfType__Fii();
-extern void fpcBs_Execute__FP18base_process_class();
-extern void fpcEx_Search__FPFPvPv_PvPv();
-extern void fpcEx_SearchByID__FUi();
-extern void fpcEx_IsExist__FUi();
-extern void fpcEx_Execute__FP18base_process_class();
-extern void fpcEx_ToLineQ__FP18base_process_class();
-extern void fpcEx_ExecuteQTo__FP18base_process_class();
-extern void fpcEx_ToExecuteQ__FP18base_process_class();
-extern void fpcEx_Handler__FPFPvPv_i();
-extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern void fpcLyIt_AllJudge__FPFPvPv_PvPv();
-extern void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
-extern void fpcLyTg_QueueTo__FP26layer_management_tag_class();
-extern void fpcSch_JudgeByID__FPvPv();
-extern void fpcLnTg_ToQueue__FP8line_tagi();
-extern void fpcLnIt_Queue__FPFPvPv_i();
-extern void fpcPause_IsEnable__FPvUc();
-extern void cTg_IsUse__FP16create_tag_class();
+extern "C" extern void fpcBs_Is_JustOfType__Fii();
+extern "C" extern void fpcBs_Execute__FP18base_process_class();
+extern "C" extern void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" extern void fpcEx_SearchByID__FUi();
+extern "C" extern void fpcEx_IsExist__FUi();
+extern "C" extern void fpcEx_Execute__FP18base_process_class();
+extern "C" extern void fpcEx_ToLineQ__FP18base_process_class();
+extern "C" extern void fpcEx_ExecuteQTo__FP18base_process_class();
+extern "C" extern void fpcEx_ToExecuteQ__FP18base_process_class();
+extern "C" extern void fpcEx_Handler__FPFPvPv_i();
+extern "C" extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" extern void fpcLyIt_AllJudge__FPFPvPv_PvPv();
+extern "C" extern void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+extern "C" extern void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+extern "C" extern void fpcSch_JudgeByID__FPvPv();
+extern "C" extern void fpcLnTg_ToQueue__FP8line_tagi();
+extern "C" extern void fpcLnIt_Queue__FPFPvPv_i();
+extern "C" extern void fpcPause_IsEnable__FPvUc();
+extern "C" extern void cTg_IsUse__FP16create_tag_class();
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80021338-80021358 0020 .text      fpcEx_Search__FPFPvPv_PvPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_Search__FPFPvPv_PvPv() {
+extern "C" asm void fpcEx_Search__FPFPvPv_PvPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Search__FPFPvPv_PvPv.s"
 }
 #pragma pop
 
+
 /* 80021358-8002139C 0044 .text      fpcEx_SearchByID__FUi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_SearchByID__FUi() {
+extern "C" asm void fpcEx_SearchByID__FUi() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_SearchByID__FUi.s"
 }
 #pragma pop
 
+
 /* 8002139C-800213C4 0028 .text      fpcEx_IsExist__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_IsExist__FUi() {
+extern "C" asm void fpcEx_IsExist__FUi() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_IsExist__FUi.s"
 }
 #pragma pop
 
+
 /* 800213C4-80021418 0054 .text      fpcEx_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_Execute__FP18base_process_class() {
+extern "C" asm void fpcEx_Execute__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Execute__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80021418-800214C4 00AC .text      fpcEx_ToLineQ__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_ToLineQ__FP18base_process_class() {
+extern "C" asm void fpcEx_ToLineQ__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ToLineQ__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 800214C4-80021510 004C .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_ExecuteQTo__FP18base_process_class() {
+extern "C" asm void fpcEx_ExecuteQTo__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ExecuteQTo__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80021510-80021568 0058 .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_ToExecuteQ__FP18base_process_class() {
+extern "C" asm void fpcEx_ToExecuteQ__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ToExecuteQ__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80021568-80021588 0020 .text      fpcEx_Handler__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_Handler__FPFPvPv_i() {
+extern "C" asm void fpcEx_Handler__FPFPvPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Handler__FPFPvPv_i.s"
 }

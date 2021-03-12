@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void Hu_IsStub();
-}
+extern "C" extern void Hu_IsStub();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803737AC-803737B4 0008 .text      Hu_IsStub                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Hu_IsStub() {
+extern "C" asm void Hu_IsStub() {
 	nofralloc
 #include "asm/odenotstub/odenotstub/Hu_IsStub.s"
 }

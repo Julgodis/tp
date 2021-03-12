@@ -47,7 +47,7 @@ lbl_80246184:
 /* 80246188 00000004  41 82 00 74 */	beq lbl_802461FC
 /* 8024618C 00000008  28 00 00 05 */	cmplwi r0, 5
 /* 80246190 0000000C  41 82 00 6C */	beq lbl_802461FC
-/* 80246194 00000010  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__LIT_3869(r2)
+/* 80246194 00000010  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__lit_3869(r2)
 /* 80246198 00000014  FC 00 F0 00 */	fcmpu cr0, f0, f30
 /* 8024619C 00000018  41 82 00 60 */	beq lbl_802461FC
 lbl_802461A0:
@@ -132,11 +132,11 @@ lbl_80246280:
 /* 802462C8 00000048  7D 89 03 A6 */	mtctr r12
 /* 802462CC 0000004C  4E 80 04 21 */	bctrl 
 /* 802462D0 00000050  80 7E 00 04 */	lwz r3, 4(r30)
-/* 802462D4 00000054  C0 22 B2 D8 */	lfs f1, msg_scrn_d_msg_scrn_light__LIT_3808(r2)
+/* 802462D4 00000054  C0 22 B2 D8 */	lfs f1, msg_scrn_d_msg_scrn_light__lit_3808(r2)
 /* 802462D8 00000058  FC 40 08 90 */	fmr f2, f1
 /* 802462DC 0000005C  7F E4 FB 78 */	mr r4, r31
 /* 802462E0 00000060  48 0B 2B F5 */	bl draw__9J2DScreenFffPC14J2DGrafContext
-/* 802462E4 00000064  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__LIT_3869(r2)
+/* 802462E4 00000064  C0 02 B2 DC */	lfs f0, msg_scrn_d_msg_scrn_light__lit_3869(r2)
 /* 802462E8 00000068  FC 00 F0 00 */	fcmpu cr0, f0, f30
 /* 802462EC 0000006C  41 82 00 10 */	beq lbl_802462FC
 /* 802462F0 00000070  80 7E 00 10 */	lwz r3, 0x10(r30)

@@ -6,7 +6,7 @@ lbl_800C3B1C:
 /* 800C3B2C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800C3B30 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800C3B34 00000018  38 7E 33 98 */	addi r3, r30, 0x3398
-/* 800C3B38 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800C3B38 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C3B3C 00000020  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800C3B40 00000024  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
 /* 800C3B44 00000028  C0 44 00 38 */	lfs f2, 0x38(r4)

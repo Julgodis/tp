@@ -38,8 +38,8 @@ lbl_8003E768:
 /* 8003E76C 00000004  88 1B 00 30 */	lbz r0, 0x30(r27)
 /* 8003E770 00000008  28 00 00 0E */	cmplwi r0, 0xe
 /* 8003E774 0000000C  41 81 03 80 */	bgt lbl_8003EAF4
-/* 8003E778 00000010  3C 60 80 3A */	lis r3, d_map_d_map_path_fmap__LIT_4467@ha
-/* 8003E77C 00000014  38 63 7D 38 */	addi r3, r3, d_map_d_map_path_fmap__LIT_4467@l
+/* 8003E778 00000010  3C 60 80 3A */	lis r3, d_map_d_map_path_fmap__lit_4467@ha
+/* 8003E77C 00000014  38 63 7D 38 */	addi r3, r3, d_map_d_map_path_fmap__lit_4467@l
 /* 8003E780 00000018  54 00 10 3A */	slwi r0, r0, 2
 /* 8003E784 0000001C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8003E788 00000020  7C 09 03 A6 */	mtctr r0

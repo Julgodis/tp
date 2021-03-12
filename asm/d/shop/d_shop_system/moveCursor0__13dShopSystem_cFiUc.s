@@ -125,12 +125,12 @@ lbl_80198640:
 /* 80198648 00000008  4B FF EF 79 */	bl onFlag__13dShopSystem_cFi
 /* 8019864C 0000000C  88 1D 0F 6E */	lbz r0, 0xf6e(r29)
 /* 80198650 00000010  B0 1D 0F 4C */	sth r0, 0xf4c(r29)
-/* 80198654 00000014  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__LIT_4494(r2)
+/* 80198654 00000014  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__lit_4494(r2)
 /* 80198658 00000018  D0 3D 0F 38 */	stfs f1, 0xf38(r29)
-/* 8019865C 0000001C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__LIT_4495(r2)
+/* 8019865C 0000001C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__lit_4495(r2)
 /* 80198660 00000020  D0 1D 0F 3C */	stfs f0, 0xf3c(r29)
 /* 80198664 00000024  D0 3D 0F 40 */	stfs f1, 0xf40(r29)
-/* 80198668 00000028  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__LIT_4496(r2)
+/* 80198668 00000028  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__lit_4496(r2)
 /* 8019866C 0000002C  D0 1D 0F 44 */	stfs f0, 0xf44(r29)
 /* 80198670 00000030  88 9D 0F 6E */	lbz r4, 0xf6e(r29)
 /* 80198674 00000034  28 04 00 00 */	cmplwi r4, 0

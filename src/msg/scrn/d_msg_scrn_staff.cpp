@@ -5,64 +5,61 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoExt_getMesgFont__Fv();
-extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
-extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern void selectAnimeMove__14dMsgScrnBase_cFUcUcb();
-extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
-extern void arwAnimeMove__14dMsgScrnBase_cFv();
-extern void arwAnimeInit__14dMsgScrnBase_cFv();
-extern void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern void isSelect__14dMsgScrnBase_cFv();
-extern void selectAnimeEnd__14dMsgScrnBase_cFv();
-extern void dotAnimeMove__14dMsgScrnBase_cFv();
-extern void dotAnimeInit__14dMsgScrnBase_cFv();
-extern void __ct__14dMsgScrnBase_cFv();
-extern void __dt__14dMsgScrnBase_cFv();
-extern void init__14dMsgScrnBase_cFv();
-extern void multiDraw__14dMsgScrnBase_cFv();
-extern void draw__14dMsgScrnBase_cFv();
-extern void drawOutFont__14dMsgScrnBase_cFfff();
-extern void isTalkNow__14dMsgScrnBase_cFv();
-extern void __ct__15dMsgScrnStaff_cFUc();
-extern void __dt__15dMsgScrnStaff_cFv();
-extern void exec__15dMsgScrnStaff_cFv();
-extern void drawSelf__15dMsgScrnStaff_cFv();
-extern void fukiAlpha__15dMsgScrnStaff_cFf();
-extern void fukiScale__15dMsgScrnStaff_cFf();
-extern void fukiTrans__15dMsgScrnStaff_cFff();
-extern void fontAlpha__15dMsgScrnStaff_cFf();
-extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern void getGlobalPosX__8CPaneMgrFv();
-extern void getGlobalPosY__8CPaneMgrFv();
-extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void __ct__9J2DScreenFv();
-extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern void setString__10J2DTextBoxFsPCce();
-extern void _savegpr_26();
-extern void _restgpr_26();
+extern "C" extern void mDoExt_getMesgFont__Fv();
+extern "C" extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" extern void selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" extern void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" extern void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" extern void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" extern void isSelect__14dMsgScrnBase_cFv();
+extern "C" extern void selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" extern void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" extern void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" extern void __ct__14dMsgScrnBase_cFv();
+extern "C" extern void __dt__14dMsgScrnBase_cFv();
+extern "C" extern void init__14dMsgScrnBase_cFv();
+extern "C" extern void multiDraw__14dMsgScrnBase_cFv();
+extern "C" extern void draw__14dMsgScrnBase_cFv();
+extern "C" extern void drawOutFont__14dMsgScrnBase_cFfff();
+extern "C" extern void isTalkNow__14dMsgScrnBase_cFv();
+extern "C" extern void __ct__15dMsgScrnStaff_cFUc();
+extern "C" extern void __dt__15dMsgScrnStaff_cFv();
+extern "C" extern void exec__15dMsgScrnStaff_cFv();
+extern "C" extern void drawSelf__15dMsgScrnStaff_cFv();
+extern "C" extern void fukiAlpha__15dMsgScrnStaff_cFf();
+extern "C" extern void fukiScale__15dMsgScrnStaff_cFf();
+extern "C" extern void fukiTrans__15dMsgScrnStaff_cFff();
+extern "C" extern void fontAlpha__15dMsgScrnStaff_cFf();
+extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" extern void getGlobalPosX__8CPaneMgrFv();
+extern "C" extern void getGlobalPosY__8CPaneMgrFv();
+extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__9J2DScreenFv();
+extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" extern void setString__10J2DTextBoxFsPCce();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_staff__stringBase0[24];
 SECTION_DATA extern u8 data_803C1340[48];
-SECTION_DATA extern void* __vt__15dMsgScrnStaff_c[22];
+SECTION_DATA extern void* const __vt__15dMsgScrnStaff_c[22];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_staff__LIT_3842[4];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_staff__LIT_3877[4];
-}
+SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_staff__lit_3842[4];
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_staff__lit_3877;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80399B98-80399BB0 0016 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -72,22 +69,16 @@ SECTION_DEAD const char* const stringBase_80399BAD = "";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80399BAE = "\0";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C1340-803C1370 0030 .data      t_tag$3752                                                   */
-SECTION_DATA u8 data_803C1340[48] = {
+u8 data_803C1340[48] = {
 	0x00, 0x72, 0x69, 0x67, 0x68, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x00, 0x72, 0x69, 0x67, 0x68, 0x74,
 	0x63, 0x65, 0x6E, 0x74, 0x65, 0x72, 0x5F, 0x73, 0x00, 0x00, 0x63, 0x65, 0x6E, 0x74, 0x65, 0x72,
 	0x00, 0x00, 0x6C, 0x65, 0x66, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x65, 0x66, 0x74,
 };
+
 /* 803C1370-803C13C8 0058 .data      __vt__15dMsgScrnStaff_c                                      */
-SECTION_DATA void* __vt__15dMsgScrnStaff_c[22] = {
+void* const __vt__15dMsgScrnStaff_c[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
@@ -111,104 +102,98 @@ SECTION_DATA void* __vt__15dMsgScrnStaff_c[22] = {
 	(void*)fontAlpha__15dMsgScrnStaff_cFf,
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80454CF8-80454CFC 0004 .sdata2    @3842                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_staff__LIT_3842[4] = {
+u8 msg_scrn_d_msg_scrn_staff__lit_3842[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454CFC-80454D00 0004 .sdata2    @3877                                                        */
-SECTION_SDATA2 u8 msg_scrn_d_msg_scrn_staff__LIT_3877[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80246B34-80246DD8 02A4 .text      __ct__15dMsgScrnStaff_cFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15dMsgScrnStaff_cFUc() {
+extern "C" asm void __ct__15dMsgScrnStaff_cFUc() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/__ct__15dMsgScrnStaff_cFUc.s"
 }
 #pragma pop
 
+
 /* 80246DD8-80246EE8 0110 .text      __dt__15dMsgScrnStaff_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15dMsgScrnStaff_cFv() {
+extern "C" asm void __dt__15dMsgScrnStaff_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/__dt__15dMsgScrnStaff_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454CFC-80454D00 0004 .sdata2    @3877                                                        */
+f32 msg_scrn_d_msg_scrn_staff__lit_3877 = 1.0f;
+
 /* 80246EE8-80246F68 0080 .text      exec__15dMsgScrnStaff_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void exec__15dMsgScrnStaff_cFv() {
+extern "C" asm void exec__15dMsgScrnStaff_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/exec__15dMsgScrnStaff_cFv.s"
 }
 #pragma pop
 
+
 /* 80246F68-80246FC0 0058 .text      drawSelf__15dMsgScrnStaff_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void drawSelf__15dMsgScrnStaff_cFv() {
+extern "C" asm void drawSelf__15dMsgScrnStaff_cFv() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/drawSelf__15dMsgScrnStaff_cFv.s"
 }
 #pragma pop
 
+
 /* 80246FC0-80246FE4 0024 .text      fukiAlpha__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fukiAlpha__15dMsgScrnStaff_cFf() {
+extern "C" asm void fukiAlpha__15dMsgScrnStaff_cFf() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/fukiAlpha__15dMsgScrnStaff_cFf.s"
 }
 #pragma pop
 
+
 /* 80246FE4-80246FE8 0004 .text      fukiScale__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fukiScale__15dMsgScrnStaff_cFf() {
+extern "C" asm void fukiScale__15dMsgScrnStaff_cFf() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/fukiScale__15dMsgScrnStaff_cFf.s"
 }
 #pragma pop
 
+
 /* 80246FE8-80246FEC 0004 .text      fukiTrans__15dMsgScrnStaff_cFff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fukiTrans__15dMsgScrnStaff_cFff() {
+extern "C" asm void fukiTrans__15dMsgScrnStaff_cFff() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/fukiTrans__15dMsgScrnStaff_cFff.s"
 }
 #pragma pop
 
+
 /* 80246FEC-80246FF0 0004 .text      fontAlpha__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fontAlpha__15dMsgScrnStaff_cFf() {
+extern "C" asm void fontAlpha__15dMsgScrnStaff_cFf() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/fontAlpha__15dMsgScrnStaff_cFf.s"
 }

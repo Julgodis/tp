@@ -222,10 +222,10 @@ lbl_801EE994:
 /* 801EE994 00000000  3B 40 00 00 */	li r26, 0
 /* 801EE998 00000004  3B A0 00 00 */	li r29, 0
 /* 801EE99C 00000008  54 1C 06 3E */	clrlwi r28, r0, 0x18
-/* 801EE9A0 0000000C  CB A2 A9 B8 */	lfd f29, d_menu_d_menu_ring__LIT_4312(r2)
+/* 801EE9A0 0000000C  CB A2 A9 B8 */	lfd f29, d_menu_d_menu_ring__lit_4312(r2)
 /* 801EE9A4 00000010  3F C0 43 30 */	lis r30, 0x4330
-/* 801EE9A8 00000014  C3 C2 AA 18 */	lfs f30, d_menu_d_menu_ring__LIT_6143(r2)
-/* 801EE9AC 00000018  CB E2 A9 C8 */	lfd f31, d_menu_d_menu_ring__LIT_4596(r2)
+/* 801EE9A8 00000014  C3 C2 AA 18 */	lfs f30, d_menu_d_menu_ring__lit_6143(r2)
+/* 801EE9AC 00000018  CB E2 A9 C8 */	lfd f31, d_menu_d_menu_ring__lit_4596(r2)
 lbl_801EE9B0:
 /* 801EE9B0 00000000  3B 7D 01 BC */	addi r27, r29, 0x1bc
 /* 801EE9B4 00000004  7C 7F D8 2E */	lwzx r3, r31, r27

@@ -5,379 +5,378 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void OSReport_Error();
-extern void mDoExt_getArchiveHeap__Fv();
-extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern void __ct__11J3DLightObjFv();
-extern void getFileListInfo__15dStage_roomDt_cCFv();
-extern void fopAcM_FastCreate__FsPFPv_iPvPv();
-extern void fopAcM_CreateAppend__Fv();
-extern void fopAcM_delete__FP10fopAc_ac_c();
-extern void fopCamM_Create__FisPv();
-extern void fopScnM_SearchByID__FUi();
-extern void fopScnM_CreateReq__FssUsUl();
-extern void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
-extern void fopMsgM_Create__FsPFPv_iPv();
-extern void fpcLy_CurrentLayer__Fv();
-extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern void set__18dStage_nextStage_cFPCcScsScScUc();
-extern void dStage_SetErrorRoom__Fv();
-extern void dStage_SetErrorStage__Fv();
-extern void dStage_GetKeepDoorInfo__Fv();
-extern void dStage_isBossStage__FP11dStage_dt_c();
-extern void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
-extern void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
-extern void dStage_GetRoomKeepDoorInfo__Fv();
-extern void dStage_initRoomKeepDoorInfo__Fv();
-extern void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
-extern void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
-extern void set__19dStage_startStage_cFPCcScsSc();
-extern void init__20dStage_roomControl_cFv();
-extern void initZone__20dStage_roomControl_cFv();
-extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern void getMemoryBlock__20dStage_roomControl_cFi();
-extern void setStayNo__20dStage_roomControl_cFi();
-extern void setNextStayNo__20dStage_roomControl_cFi();
-extern void stayRoomCheck__FiPUci();
-extern void createRoomScene__Fi();
-extern void checkRoomDisp__20dStage_roomControl_cCFi();
-extern void loadRoom__20dStage_roomControl_cFiPUcb();
-extern void zoneCountCheck__20dStage_roomControl_cCFi();
-extern void getStagInfo__16dStage_stageDt_cCFv();
-extern void createMemoryBlock__20dStage_roomControl_cFiUl();
-extern void destroyMemoryBlock__20dStage_roomControl_cFv();
-extern void setArcBank__20dStage_roomControl_cFiPCc();
-extern void getArcBank__20dStage_roomControl_cFi();
-extern void resetArchiveBank__20dStage_roomControl_cFi();
-extern void create__Q220dStage_roomControl_c9roomDzs_cFUc();
-extern void remove__Q220dStage_roomControl_c9roomDzs_cFv();
-extern void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
-extern void init__16dStage_stageDt_cFv();
-extern void initFileList2__15dStage_roomDt_cFv();
-extern void init__15dStage_roomDt_cFv();
-extern void dStage_roomInit__Fi();
-extern void SetTimePass__20dStage_roomControl_cFi();
-extern void getRoom__16dStage_stageDt_cCFv();
-extern void dStage_searchName__FPCc();
-extern void dStage_getName__FsSc();
-extern void dStage_getName2__FsSc();
-extern void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
-extern void dStage_cameraCreate__FP24stage_camera2_data_classii();
-extern void getPlayer__15dStage_roomDt_cCFv();
-extern void getPlayer__16dStage_stageDt_cCFv();
-extern void dStage_playerInit__FP11dStage_dt_cPviPv();
-extern void dStage_cameraInit__FP11dStage_dt_cPviPv();
-extern void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
-extern void dStage_arrowInit__FP11dStage_dt_cPviPv();
-extern void getMapInfo2__15dStage_roomDt_cCFi();
-extern void getMapInfoBase__15dStage_roomDt_cCFv();
-extern void getMapInfo2__16dStage_stageDt_cCFi();
-extern void getMapInfoBase__16dStage_stageDt_cCFv();
-extern void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
-extern void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
-extern void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
-extern void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
-extern void resetOldMulti__16dStage_stageDt_cFv();
-extern void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
-extern void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
-extern void dStage_actorInit__FP11dStage_dt_cPviPv();
-extern void dStage_actorInit_always__FP11dStage_dt_cPviPv();
-extern void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_roomReadInit__FP11dStage_dt_cPviPv();
-extern void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
-extern void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
-extern void dStage_setLayerTagName__FP9FuncTableii();
-extern void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
-extern void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
-extern void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
-extern void dStage_dt_c_offsetToPtr__FPv();
-extern void dStage_mapPathInit__FP11dStage_dt_cPviPv();
-extern void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
-extern void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
-extern void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
-extern void dStage_multInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
-extern void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
-extern void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
-extern void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
-extern void dKankyo_create__Fv();
-extern void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
-extern void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
-extern void layerTableLoader__FPvP11dStage_dt_ci();
-extern void getElst__16dStage_stageDt_cFv();
-extern void layerActorLoader__FPvP11dStage_dt_ci();
-extern void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
-extern void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
-extern void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
-extern void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
-extern void dStage_infoCreate__Fv();
-extern void dStage_Create__Fv();
-extern void dStage_Delete__Fv();
-extern void setOldMulti__16dStage_stageDt_cFv();
-extern void dStage_RoomCheck__FP11cBgS_GndChk();
-extern void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
-extern void dStage_changeScene__FifUlScsi();
-extern void getSclsInfo__15dStage_roomDt_cCFv();
-extern void getSclsInfo__16dStage_stageDt_cCFv();
-extern void dStage_changeScene4Event__FiScibfUlsi();
-extern void dStage_restartRoom__FUlUli();
-extern void setCamera__15dStage_roomDt_cFP18stage_camera_class();
-extern void getCamera__15dStage_roomDt_cCFv();
-extern void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
-extern void getArrow__15dStage_roomDt_cCFv();
-extern void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
-extern void setPlayerNum__15dStage_roomDt_cFUs();
-extern void getPlayerNum__15dStage_roomDt_cCFv();
-extern void setRoom__15dStage_roomDt_cFP14roomRead_class();
-extern void getRoom__15dStage_roomDt_cCFv();
-extern void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
-extern void getMapInfo__15dStage_roomDt_cCFv();
-extern void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
-extern void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
-extern void getPaletteInfo__15dStage_roomDt_cCFv();
-extern void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
-extern void getPselectInfo__15dStage_roomDt_cCFv();
-extern void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
-extern void getEnvrInfo__15dStage_roomDt_cCFv();
-extern void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
-extern void getVrboxInfo__15dStage_roomDt_cCFv();
-extern void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
-extern void getVrboxcolInfo__15dStage_roomDt_cCFv();
-extern void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
-extern void getPlightInfo__15dStage_roomDt_cCFv();
-extern void setPaletteNumInfo__15dStage_roomDt_cFi();
-extern void getPaletteNumInfo__15dStage_roomDt_cCFv();
-extern void setPselectNumInfo__15dStage_roomDt_cFi();
-extern void getPselectNumInfo__15dStage_roomDt_cCFv();
-extern void setEnvrNumInfo__15dStage_roomDt_cFi();
-extern void getEnvrNumInfo__15dStage_roomDt_cCFv();
-extern void setVrboxNumInfo__15dStage_roomDt_cFi();
-extern void getVrboxNumInfo__15dStage_roomDt_cCFv();
-extern void setVrboxcolNumInfo__15dStage_roomDt_cFi();
-extern void getVrboxcolNumInfo__15dStage_roomDt_cCFv();
-extern void setPlightNumInfo__15dStage_roomDt_cFi();
-extern void getPlightNumInfo__15dStage_roomDt_cCFv();
-extern void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
-extern void getLightVecInfo__15dStage_roomDt_cCFv();
-extern void setLightVecInfoNum__15dStage_roomDt_cFi();
-extern void getLightVecInfoNum__15dStage_roomDt_cCFv();
-extern void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
-extern void getStagInfo__15dStage_roomDt_cCFv();
-extern void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
-extern void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
-extern void getPntInf__15dStage_roomDt_cCFv();
-extern void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
-extern void getPathInf__15dStage_roomDt_cCFv();
-extern void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
-extern void getPnt2Inf__15dStage_roomDt_cCFv();
-extern void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
-extern void getPath2Inf__15dStage_roomDt_cCFv();
-extern void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
-extern void getSoundInf__15dStage_roomDt_cCFv();
-extern void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
-extern void getSoundInfCL__15dStage_roomDt_cCFv();
-extern void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
-extern void getMapEventInfo__15dStage_roomDt_cCFv();
-extern void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
-extern void getFileList2Info__15dStage_roomDt_cCFv();
-extern void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
-extern void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
-extern void getFloorInfo__15dStage_roomDt_cCFv();
-extern void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
-extern void getMemoryConfig__15dStage_roomDt_cCFv();
-extern void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
-extern void getMemoryMap__15dStage_roomDt_cCFv();
-extern void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
-extern void getMulti__15dStage_roomDt_cCFv();
-extern void setOldMulti__15dStage_roomDt_cFv();
-extern void resetOldMulti__15dStage_roomDt_cFv();
-extern void getOldMulti__15dStage_roomDt_cCFv();
-extern void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
-extern void getLbnk__15dStage_roomDt_cCFv();
-extern void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
-extern void getTresure__15dStage_roomDt_cCFv();
-extern void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
-extern void getDMap__15dStage_roomDt_cCFv();
-extern void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
-extern void getDrTg__15dStage_roomDt_cCFv();
-extern void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
-extern void getDoor__15dStage_roomDt_cCFv();
-extern void setMapPath__15dStage_roomDt_cFPv();
-extern void getMapPath__15dStage_roomDt_cFv();
-extern void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
-extern void getElst__15dStage_roomDt_cFv();
-extern void setCamera__16dStage_stageDt_cFP18stage_camera_class();
-extern void getCamera__16dStage_stageDt_cCFv();
-extern void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
-extern void getArrow__16dStage_stageDt_cCFv();
-extern void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
-extern void setPlayerNum__16dStage_stageDt_cFUs();
-extern void getPlayerNum__16dStage_stageDt_cCFv();
-extern void setRoom__16dStage_stageDt_cFP14roomRead_class();
-extern void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
-extern void getMapInfo__16dStage_stageDt_cCFv();
-extern void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
-extern void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
-extern void getPaletteInfo__16dStage_stageDt_cCFv();
-extern void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
-extern void getPselectInfo__16dStage_stageDt_cCFv();
-extern void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
-extern void getEnvrInfo__16dStage_stageDt_cCFv();
-extern void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
-extern void getVrboxInfo__16dStage_stageDt_cCFv();
-extern void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
-extern void getVrboxcolInfo__16dStage_stageDt_cCFv();
-extern void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
-extern void getPlightInfo__16dStage_stageDt_cCFv();
-extern void setPaletteNumInfo__16dStage_stageDt_cFi();
-extern void getPaletteNumInfo__16dStage_stageDt_cCFv();
-extern void setPselectNumInfo__16dStage_stageDt_cFi();
-extern void getPselectNumInfo__16dStage_stageDt_cCFv();
-extern void setEnvrNumInfo__16dStage_stageDt_cFi();
-extern void getEnvrNumInfo__16dStage_stageDt_cCFv();
-extern void setVrboxNumInfo__16dStage_stageDt_cFi();
-extern void getVrboxNumInfo__16dStage_stageDt_cCFv();
-extern void setVrboxcolNumInfo__16dStage_stageDt_cFi();
-extern void getVrboxcolNumInfo__16dStage_stageDt_cCFv();
-extern void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
-extern void getLightVecInfo__16dStage_stageDt_cCFv();
-extern void setLightVecInfoNum__16dStage_stageDt_cFi();
-extern void getLightVecInfoNum__16dStage_stageDt_cCFv();
-extern void setPlightNumInfo__16dStage_stageDt_cFi();
-extern void getPlightNumInfo__16dStage_stageDt_cCFv();
-extern void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
-extern void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
-extern void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
-extern void getPntInf__16dStage_stageDt_cCFv();
-extern void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
-extern void getPathInf__16dStage_stageDt_cCFv();
-extern void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
-extern void getPnt2Inf__16dStage_stageDt_cCFv();
-extern void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
-extern void getPath2Inf__16dStage_stageDt_cCFv();
-extern void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
-extern void getSoundInf__16dStage_stageDt_cCFv();
-extern void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
-extern void getSoundInfCL__16dStage_stageDt_cCFv();
-extern void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
-extern void getMapEventInfo__16dStage_stageDt_cCFv();
-extern void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
-extern void getFileList2Info__16dStage_stageDt_cCFv();
-extern void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
-extern void getFileListInfo__16dStage_stageDt_cCFv();
-extern void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
-extern void getFloorInfo__16dStage_stageDt_cCFv();
-extern void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
-extern void getMemoryConfig__16dStage_stageDt_cCFv();
-extern void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
-extern void getMemoryMap__16dStage_stageDt_cCFv();
-extern void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
-extern void getMulti__16dStage_stageDt_cCFv();
-extern void getOldMulti__16dStage_stageDt_cCFv();
-extern void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
-extern void getLbnk__16dStage_stageDt_cCFv();
-extern void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
-extern void getTresure__16dStage_stageDt_cCFv();
-extern void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
-extern void getDMap__16dStage_stageDt_cCFv();
-extern void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
-extern void getDrTg__16dStage_stageDt_cCFv();
-extern void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
-extern void getDoor__16dStage_stageDt_cCFv();
-extern void setMapPath__16dStage_stageDt_cFPv();
-extern void getMapPath__16dStage_stageDt_cFv();
-extern void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
-extern void __sinit_d_stage_cpp();
-extern void func_80028328();
-extern void __dt__19dStage_roomStatus_cFv();
-extern void __ct__19dStage_roomStatus_cFv();
-extern void __dt__19dStage_KeepDoorInfoFv();
-extern void __dt__21stage_tgsc_data_classFv();
-extern void __ct__21stage_tgsc_data_classFv();
-extern void getLayerNo__14dComIfG_play_cFi();
-extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
-extern void dComIfG_getStageRes__FPCc();
-extern void dComIfG_getOldStageRes__FPCc();
-extern void check__7daSus_cFScRC4cXyz();
-extern void execute__7daSus_cFv();
-extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern void init__12dSv_danBit_cFSc();
-extern void clearRoomSwitch__13dSv_zoneBit_cFv();
-extern void clearRoomItem__13dSv_zoneBit_cFv();
-extern void getSave__10dSv_info_cFi();
-extern void putSave__10dSv_info_cFi();
-extern void initZone__10dSv_info_cFv();
-extern void isActor__10dSv_info_cCFii();
-extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
-extern void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
-extern void setPointer__8dMpath_cFScPvi();
-extern void create__16dEvent_manager_cFv();
-extern void remove__16dEvent_manager_cFv();
-extern void GetExitId__4dBgSFRC13cBgS_PolyInfo();
-extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern void addData__7dTres_cFPQ27dTres_c10list_classSc();
-extern void dKy_set_nexttime__Ff();
-extern void init__12dSvBit_HIO_cFv();
-extern void memalignB__3cMlFiUl();
-extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void free__7JKRHeapFPv();
-extern void __nwa__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void __dla__FPv();
-extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern void __register_global_object();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savegpr_24();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_24();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void sprintf();
-extern void snprintf();
-extern void strcmp();
-extern void strncpy();
-extern void strcpy();
+extern "C" extern void OSReport();
+extern "C" extern void OSReport_Error();
+extern "C" extern void mDoExt_getArchiveHeap__Fv();
+extern "C" extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" extern void __ct__11J3DLightObjFv();
+extern "C" extern void getFileListInfo__15dStage_roomDt_cCFv();
+extern "C" extern void fopAcM_FastCreate__FsPFPv_iPvPv();
+extern "C" extern void fopAcM_CreateAppend__Fv();
+extern "C" extern void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" extern void fopCamM_Create__FisPv();
+extern "C" extern void fopScnM_SearchByID__FUi();
+extern "C" extern void fopScnM_CreateReq__FssUsUl();
+extern "C" extern void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" extern void fopMsgM_Create__FsPFPv_iPv();
+extern "C" extern void fpcLy_CurrentLayer__Fv();
+extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" extern void set__18dStage_nextStage_cFPCcScsScScUc();
+extern "C" extern void dStage_SetErrorRoom__Fv();
+extern "C" extern void dStage_SetErrorStage__Fv();
+extern "C" extern void dStage_GetKeepDoorInfo__Fv();
+extern "C" extern void dStage_isBossStage__FP11dStage_dt_c();
+extern "C" extern void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
+extern "C" extern void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" extern void dStage_GetRoomKeepDoorInfo__Fv();
+extern "C" extern void dStage_initRoomKeepDoorInfo__Fv();
+extern "C" extern void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" extern void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
+extern "C" extern void set__19dStage_startStage_cFPCcScsSc();
+extern "C" extern void init__20dStage_roomControl_cFv();
+extern "C" extern void initZone__20dStage_roomControl_cFv();
+extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" extern void getMemoryBlock__20dStage_roomControl_cFi();
+extern "C" extern void setStayNo__20dStage_roomControl_cFi();
+extern "C" extern void setNextStayNo__20dStage_roomControl_cFi();
+extern "C" extern void stayRoomCheck__FiPUci();
+extern "C" extern void createRoomScene__Fi();
+extern "C" extern void checkRoomDisp__20dStage_roomControl_cCFi();
+extern "C" extern void loadRoom__20dStage_roomControl_cFiPUcb();
+extern "C" extern void zoneCountCheck__20dStage_roomControl_cCFi();
+extern "C" extern void getStagInfo__16dStage_stageDt_cCFv();
+extern "C" extern void createMemoryBlock__20dStage_roomControl_cFiUl();
+extern "C" extern void destroyMemoryBlock__20dStage_roomControl_cFv();
+extern "C" extern void setArcBank__20dStage_roomControl_cFiPCc();
+extern "C" extern void getArcBank__20dStage_roomControl_cFi();
+extern "C" extern void resetArchiveBank__20dStage_roomControl_cFi();
+extern "C" extern void create__Q220dStage_roomControl_c9roomDzs_cFUc();
+extern "C" extern void remove__Q220dStage_roomControl_c9roomDzs_cFv();
+extern "C" extern void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
+extern "C" extern void init__16dStage_stageDt_cFv();
+extern "C" extern void initFileList2__15dStage_roomDt_cFv();
+extern "C" extern void init__15dStage_roomDt_cFv();
+extern "C" extern void dStage_roomInit__Fi();
+extern "C" extern void SetTimePass__20dStage_roomControl_cFi();
+extern "C" extern void getRoom__16dStage_stageDt_cCFv();
+extern "C" extern void dStage_searchName__FPCc();
+extern "C" extern void dStage_getName__FsSc();
+extern "C" extern void dStage_getName2__FsSc();
+extern "C" extern void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
+extern "C" extern void dStage_cameraCreate__FP24stage_camera2_data_classii();
+extern "C" extern void getPlayer__15dStage_roomDt_cCFv();
+extern "C" extern void getPlayer__16dStage_stageDt_cCFv();
+extern "C" extern void dStage_playerInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_cameraInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_arrowInit__FP11dStage_dt_cPviPv();
+extern "C" extern void getMapInfo2__15dStage_roomDt_cCFi();
+extern "C" extern void getMapInfoBase__15dStage_roomDt_cCFv();
+extern "C" extern void getMapInfo2__16dStage_stageDt_cCFi();
+extern "C" extern void getMapInfoBase__16dStage_stageDt_cCFv();
+extern "C" extern void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+extern "C" extern void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void resetOldMulti__16dStage_stageDt_cFv();
+extern "C" extern void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_actorInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_actorInit_always__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_roomReadInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
+extern "C" extern void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_setLayerTagName__FP9FuncTableii();
+extern "C" extern void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
+extern "C" extern void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_dt_c_offsetToPtr__FPv();
+extern "C" extern void dStage_mapPathInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
+extern "C" extern void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
+extern "C" extern void dStage_multInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
+extern "C" extern void dKankyo_create__Fv();
+extern "C" extern void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
+extern "C" extern void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
+extern "C" extern void layerTableLoader__FPvP11dStage_dt_ci();
+extern "C" extern void getElst__16dStage_stageDt_cFv();
+extern "C" extern void layerActorLoader__FPvP11dStage_dt_ci();
+extern "C" extern void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
+extern "C" extern void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
+extern "C" extern void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
+extern "C" extern void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
+extern "C" extern void dStage_infoCreate__Fv();
+extern "C" extern void dStage_Create__Fv();
+extern "C" extern void dStage_Delete__Fv();
+extern "C" extern void setOldMulti__16dStage_stageDt_cFv();
+extern "C" extern void dStage_RoomCheck__FP11cBgS_GndChk();
+extern "C" extern void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
+extern "C" extern void dStage_changeScene__FifUlScsi();
+extern "C" extern void getSclsInfo__15dStage_roomDt_cCFv();
+extern "C" extern void getSclsInfo__16dStage_stageDt_cCFv();
+extern "C" extern void dStage_changeScene4Event__FiScibfUlsi();
+extern "C" extern void dStage_restartRoom__FUlUli();
+extern "C" extern void setCamera__15dStage_roomDt_cFP18stage_camera_class();
+extern "C" extern void getCamera__15dStage_roomDt_cCFv();
+extern "C" extern void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
+extern "C" extern void getArrow__15dStage_roomDt_cCFv();
+extern "C" extern void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
+extern "C" extern void setPlayerNum__15dStage_roomDt_cFUs();
+extern "C" extern void getPlayerNum__15dStage_roomDt_cCFv();
+extern "C" extern void setRoom__15dStage_roomDt_cFP14roomRead_class();
+extern "C" extern void getRoom__15dStage_roomDt_cCFv();
+extern "C" extern void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
+extern "C" extern void getMapInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
+extern "C" extern void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
+extern "C" extern void getPaletteInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
+extern "C" extern void getPselectInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
+extern "C" extern void getEnvrInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
+extern "C" extern void getVrboxInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
+extern "C" extern void getVrboxcolInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
+extern "C" extern void getPlightInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setPaletteNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getPaletteNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setPselectNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getPselectNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setEnvrNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getEnvrNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setVrboxNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getVrboxNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setVrboxcolNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getVrboxcolNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setPlightNumInfo__15dStage_roomDt_cFi();
+extern "C" extern void getPlightNumInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
+extern "C" extern void getLightVecInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setLightVecInfoNum__15dStage_roomDt_cFi();
+extern "C" extern void getLightVecInfoNum__15dStage_roomDt_cCFv();
+extern "C" extern void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
+extern "C" extern void getStagInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
+extern "C" extern void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" extern void getPntInf__15dStage_roomDt_cCFv();
+extern "C" extern void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" extern void getPathInf__15dStage_roomDt_cCFv();
+extern "C" extern void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" extern void getPnt2Inf__15dStage_roomDt_cCFv();
+extern "C" extern void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" extern void getPath2Inf__15dStage_roomDt_cCFv();
+extern "C" extern void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" extern void getSoundInf__15dStage_roomDt_cCFv();
+extern "C" extern void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" extern void getSoundInfCL__15dStage_roomDt_cCFv();
+extern "C" extern void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
+extern "C" extern void getMapEventInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
+extern "C" extern void getFileList2Info__15dStage_roomDt_cCFv();
+extern "C" extern void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
+extern "C" extern void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
+extern "C" extern void getFloorInfo__15dStage_roomDt_cCFv();
+extern "C" extern void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
+extern "C" extern void getMemoryConfig__15dStage_roomDt_cCFv();
+extern "C" extern void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
+extern "C" extern void getMemoryMap__15dStage_roomDt_cCFv();
+extern "C" extern void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
+extern "C" extern void getMulti__15dStage_roomDt_cCFv();
+extern "C" extern void setOldMulti__15dStage_roomDt_cFv();
+extern "C" extern void resetOldMulti__15dStage_roomDt_cFv();
+extern "C" extern void getOldMulti__15dStage_roomDt_cCFv();
+extern "C" extern void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
+extern "C" extern void getLbnk__15dStage_roomDt_cCFv();
+extern "C" extern void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
+extern "C" extern void getTresure__15dStage_roomDt_cCFv();
+extern "C" extern void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
+extern "C" extern void getDMap__15dStage_roomDt_cCFv();
+extern "C" extern void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" extern void getDrTg__15dStage_roomDt_cCFv();
+extern "C" extern void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" extern void getDoor__15dStage_roomDt_cCFv();
+extern "C" extern void setMapPath__15dStage_roomDt_cFPv();
+extern "C" extern void getMapPath__15dStage_roomDt_cFv();
+extern "C" extern void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
+extern "C" extern void getElst__15dStage_roomDt_cFv();
+extern "C" extern void setCamera__16dStage_stageDt_cFP18stage_camera_class();
+extern "C" extern void getCamera__16dStage_stageDt_cCFv();
+extern "C" extern void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
+extern "C" extern void getArrow__16dStage_stageDt_cCFv();
+extern "C" extern void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
+extern "C" extern void setPlayerNum__16dStage_stageDt_cFUs();
+extern "C" extern void getPlayerNum__16dStage_stageDt_cCFv();
+extern "C" extern void setRoom__16dStage_stageDt_cFP14roomRead_class();
+extern "C" extern void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
+extern "C" extern void getMapInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
+extern "C" extern void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
+extern "C" extern void getPaletteInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
+extern "C" extern void getPselectInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
+extern "C" extern void getEnvrInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
+extern "C" extern void getVrboxInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
+extern "C" extern void getVrboxcolInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
+extern "C" extern void getPlightInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setPaletteNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getPaletteNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setPselectNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getPselectNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setEnvrNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getEnvrNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setVrboxNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getVrboxNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setVrboxcolNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getVrboxcolNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
+extern "C" extern void getLightVecInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setLightVecInfoNum__16dStage_stageDt_cFi();
+extern "C" extern void getLightVecInfoNum__16dStage_stageDt_cCFv();
+extern "C" extern void setPlightNumInfo__16dStage_stageDt_cFi();
+extern "C" extern void getPlightNumInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
+extern "C" extern void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
+extern "C" extern void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" extern void getPntInf__16dStage_stageDt_cCFv();
+extern "C" extern void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" extern void getPathInf__16dStage_stageDt_cCFv();
+extern "C" extern void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" extern void getPnt2Inf__16dStage_stageDt_cCFv();
+extern "C" extern void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" extern void getPath2Inf__16dStage_stageDt_cCFv();
+extern "C" extern void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" extern void getSoundInf__16dStage_stageDt_cCFv();
+extern "C" extern void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" extern void getSoundInfCL__16dStage_stageDt_cCFv();
+extern "C" extern void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
+extern "C" extern void getMapEventInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
+extern "C" extern void getFileList2Info__16dStage_stageDt_cCFv();
+extern "C" extern void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
+extern "C" extern void getFileListInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
+extern "C" extern void getFloorInfo__16dStage_stageDt_cCFv();
+extern "C" extern void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
+extern "C" extern void getMemoryConfig__16dStage_stageDt_cCFv();
+extern "C" extern void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
+extern "C" extern void getMemoryMap__16dStage_stageDt_cCFv();
+extern "C" extern void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
+extern "C" extern void getMulti__16dStage_stageDt_cCFv();
+extern "C" extern void getOldMulti__16dStage_stageDt_cCFv();
+extern "C" extern void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
+extern "C" extern void getLbnk__16dStage_stageDt_cCFv();
+extern "C" extern void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
+extern "C" extern void getTresure__16dStage_stageDt_cCFv();
+extern "C" extern void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
+extern "C" extern void getDMap__16dStage_stageDt_cCFv();
+extern "C" extern void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" extern void getDrTg__16dStage_stageDt_cCFv();
+extern "C" extern void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" extern void getDoor__16dStage_stageDt_cCFv();
+extern "C" extern void setMapPath__16dStage_stageDt_cFPv();
+extern "C" extern void getMapPath__16dStage_stageDt_cFv();
+extern "C" extern void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
+extern "C" extern void __sinit_d_stage_cpp();
+extern "C" extern void func_80028328();
+extern "C" extern void __dt__19dStage_roomStatus_cFv();
+extern "C" extern void __ct__19dStage_roomStatus_cFv();
+extern "C" extern void __dt__19dStage_KeepDoorInfoFv();
+extern "C" extern void __dt__21stage_tgsc_data_classFv();
+extern "C" extern void __ct__21stage_tgsc_data_classFv();
+extern "C" extern void getLayerNo__14dComIfG_play_cFi();
+extern "C" extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" extern void dComIfG_getStageRes__FPCc();
+extern "C" extern void dComIfG_getOldStageRes__FPCc();
+extern "C" extern void check__7daSus_cFScRC4cXyz();
+extern "C" extern void execute__7daSus_cFv();
+extern "C" extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" extern void init__12dSv_danBit_cFSc();
+extern "C" extern void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" extern void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" extern void getSave__10dSv_info_cFi();
+extern "C" extern void putSave__10dSv_info_cFi();
+extern "C" extern void initZone__10dSv_info_cFv();
+extern "C" extern void isActor__10dSv_info_cCFii();
+extern "C" extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" extern void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
+extern "C" extern void setPointer__8dMpath_cFScPvi();
+extern "C" extern void create__16dEvent_manager_cFv();
+extern "C" extern void remove__16dEvent_manager_cFv();
+extern "C" extern void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" extern void addData__7dTres_cFPQ27dTres_c10list_classSc();
+extern "C" extern void dKy_set_nexttime__Ff();
+extern "C" extern void init__12dSvBit_HIO_cFv();
+extern "C" extern void memalignB__3cMlFiUl();
+extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void free__7JKRHeapFPv();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dla__FPv();
+extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" extern void __register_global_object();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void sprintf();
+extern "C" extern void snprintf();
+extern "C" extern void strcmp();
+extern "C" extern void strncpy();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 d_d_stage__stringBase0[1016];
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_DATA extern u8 l_objectName[10932];
@@ -388,20 +387,20 @@ SECTION_DATA extern void* data_803A6638[3];
 SECTION_DATA extern void* data_803A6644[3];
 SECTION_DATA extern void* data_803A6650[15];
 SECTION_DATA extern void* data_803A668C[12];
-SECTION_DATA extern u8 data_803A66BC[312];
+SECTION_DATA extern void* data_803A66BC[78];
 SECTION_DATA extern void* data_803A67F4[42];
 SECTION_DATA extern void* data_803A689C[24];
 SECTION_DATA extern void* data_803A68FC[9];
 SECTION_DATA extern u8 mMemoryBlock__20dStage_roomControl_c[76];
 SECTION_DATA extern u8 mArcBank__20dStage_roomControl_c[320];
-SECTION_DATA extern void* __vt__15dStage_roomDt_c[93];
-SECTION_DATA extern void* __vt__16dStage_stageDt_c[93];
-SECTION_DATA extern void* __vt__11dStage_dt_c[93];
-SECTION_BSS extern u8 d_d_stage__LIT_3926[12];
+SECTION_DATA extern void* const __vt__15dStage_roomDt_c[93];
+SECTION_DATA extern void* const __vt__16dStage_stageDt_c[93];
+SECTION_DATA extern void* const __vt__11dStage_dt_c[93];
+SECTION_BSS extern u8 d_d_stage__lit_3926[12];
 SECTION_BSS extern u8 DoorInfo[2308];
-SECTION_BSS extern u8 d_d_stage__LIT_3981[12];
+SECTION_BSS extern u8 d_d_stage__lit_3981[12];
 SECTION_BSS extern u8 l_RoomKeepDoorInfo[2308];
-SECTION_BSS extern u8 d_d_stage__LIT_5376[12];
+SECTION_BSS extern u8 d_d_stage__lit_5376[12];
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
 SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -415,45 +414,35 @@ SECTION_SBSS extern u8 data_80450D68[4];
 SECTION_SBSS extern u8 mArcBankName__20dStage_roomControl_c[4];
 SECTION_SBSS extern u8 mArcBankData__20dStage_roomControl_c[4];
 SECTION_SBSS extern u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
-SECTION_SDATA2 extern u8 d_d_stage__LIT_4270[4];
-SECTION_SDATA2 extern u8 LIT_5315[4];
-SECTION_SDATA2 extern u8 LIT_5317[8];
-}
+SECTION_SDATA2 extern u8 d_d_stage__lit_4270[4];
+SECTION_SDATA2 extern f32 lit_5315;
+SECTION_SDATA2 extern f64 lit_5317;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80378A50-80378E48 03F3 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD const char* const stringBase_80378A50 = "OPENING";
 SECTION_DEAD const char* const stringBase_80378A58 = 
-    "部屋情報が、多分ですが壊れていま"
-    "す。\n変換し直してみてください。"
-    "\n";
+    "部屋情報が、多分ですが壊れています。\n変換し直してみてください。\n";
 SECTION_DEAD const char* const stringBase_80378A99 = 
-    "ステージ情報が、多分ですが壊れて"
-    "います。\n変換し直してみてくださ"
-    "い。";
+    "ステージ情報が、多分ですが壊れています。\n変換し直してみてください。";
 SECTION_DEAD const char* const stringBase_80378ADD = "name.bin";
 SECTION_DEAD const char* const stringBase_80378AE6 = "bank.bin";
 SECTION_DEAD const char* const stringBase_80378AEF = "";
 SECTION_DEAD const char* const stringBase_80378AF0 = 
-    "Bank[%d] : %s.ar"
-    "c Sync Read Erro"
-    "r !!\n";
+    "Bank[%d] : %s.arc Sync Read Error !!\n";
 SECTION_DEAD const char* const stringBase_80378B16 = "%s/room%d.dzs";
 SECTION_DEAD const char* const stringBase_80378B24 = "%d%+0d";
 SECTION_DEAD const char* const stringBase_80378B2B = "S_MV000";
 SECTION_DEAD const char* const stringBase_80378B33 = "Xtg_00";
 SECTION_DEAD const char* const stringBase_80378B3A = 
-    "dStage_dt_c_deco"
-    "de: i_data is NU"
-    "LL\n";
+    "dStage_dt_c_decode: i_data is NULL\n";
 SECTION_DEAD const char* const stringBase_80378B5E = "room%d.dzs";
 SECTION_DEAD const char* const stringBase_80378B69 = "stage.dzs";
 SECTION_DEAD const char* const stringBase_80378B73 = "vrbox_sora.bmd";
@@ -489,16 +478,218 @@ SECTION_DEAD const char* const stringBase_80378E2D = "stage non Lbnk data!\n";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80378E43 = "\0\0\0\0";
 #pragma pop
+
+/* 80023E28-80023E94 006C .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void set__18dStage_nextStage_cFPCcScsScScUc() {
+	nofralloc
+#include "asm/d/d_stage/set__18dStage_nextStage_cFPCcScsScScUc.s"
 }
+#pragma pop
+
+
+/* 80023E94-80023EC4 0030 .text      dStage_SetErrorRoom__Fv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_SetErrorRoom__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_SetErrorRoom__Fv.s"
+}
+#pragma pop
+
+
+/* 80023EC4-80023EF4 0030 .text      dStage_SetErrorStage__Fv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_SetErrorStage__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_SetErrorStage__Fv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 803F4E68-803F4E74 000C .bss       @3926                                                        */
+u8 d_d_stage__lit_3926[12];
 
-extern "C" {
+/* 803F4E74-803F5778 0904 .bss       DoorInfo                                                     */
+u8 DoorInfo[2308];
+
+/* 80023EF4-80023F00 000C .text      dStage_GetKeepDoorInfo__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_GetKeepDoorInfo__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_GetKeepDoorInfo__Fv.s"
+}
+#pragma pop
+
+
+/* 80023F00-80023F50 0050 .text      dStage_isBossStage__FP11dStage_dt_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_isBossStage__FP11dStage_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/dStage_isBossStage__FP11dStage_dt_c.s"
+}
+#pragma pop
+
+
+/* 80023F50-80023F84 0034 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_KeepDoorInfoInit__FP11dStage_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/dStage_KeepDoorInfoInit__FP11dStage_dt_c.s"
+}
+#pragma pop
+
+
+/* 80023F84-8002405C 00D8 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 803F5778-803F5784 000C .bss       @3981                                                        */
+u8 d_d_stage__lit_3981[12];
+
+/* 803F5784-803F6088 0904 .bss       l_RoomKeepDoorInfo                                           */
+u8 l_RoomKeepDoorInfo[2308];
+
+/* 8002405C-80024068 000C .text      dStage_GetRoomKeepDoorInfo__Fv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_GetRoomKeepDoorInfo__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_GetRoomKeepDoorInfo__Fv.s"
+}
+#pragma pop
+
+
+/* 80024068-80024078 0010 .text      dStage_initRoomKeepDoorInfo__Fv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_initRoomKeepDoorInfo__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_initRoomKeepDoorInfo__Fv.s"
+}
+#pragma pop
+
+
+/* 80024078-80024174 00FC .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* 80024174-8002419C 0028 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002419C-800241E8 004C .text      set__19dStage_startStage_cFPCcScsSc                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void set__19dStage_startStage_cFPCcScsSc() {
+	nofralloc
+#include "asm/d/d_stage/set__19dStage_startStage_cFPCcScsSc.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 803F6088-803F6094 000C .bss       @5376                                                        */
+u8 d_d_stage__lit_5376[12];
+
+/* 803F6094-80406194 10100 .bss       mStatus__20dStage_roomControl_c                              */
+u8 mStatus__20dStage_roomControl_c[65792];
+
+/* 80450D58-80450D60 0008 .sbss      tmp_name$4456                                                */
+u8 data_80450D58[8];
+
+/* 80450D60-80450D64 0004 .sbss      mProcID__20dStage_roomControl_c                              */
+u8 mProcID__20dStage_roomControl_c[4];
+
+/* 80450D64-80450D68 0004 .sbss      None                                                         */
+u8 struct_80450D64[4];
+/* 80450D64 0001 data_80450D64 */
+/* 80450D65 0001 data_80450D65 */
+/* 80450D66 0001 data_80450D66 */
+/* 80450D67 0001 data_80450D67 */
+
+/* 80450D68-80450D6C 0004 .sbss      None                                                         */
+u8 data_80450D68[4];
+
+/* 80450D6C-80450D70 0004 .sbss      mArcBankName__20dStage_roomControl_c                         */
+u8 mArcBankName__20dStage_roomControl_c[4];
+
+/* 80450D70-80450D74 0004 .sbss      mArcBankData__20dStage_roomControl_c                         */
+u8 mArcBankData__20dStage_roomControl_c[4];
+
+/* 800241E8-80024338 0150 .text      init__20dStage_roomControl_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__20dStage_roomControl_cFv() {
+	nofralloc
+#include "asm/d/d_stage/init__20dStage_roomControl_cFv.s"
+}
+#pragma pop
+
+
+/* 80024338-80024384 004C .text      initZone__20dStage_roomControl_cFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initZone__20dStage_roomControl_cFv() {
+	nofralloc
+#include "asm/d/d_stage/initZone__20dStage_roomControl_cFv.s"
+}
+#pragma pop
+
+
+/* 80024384-800243B0 002C .text      getStatusRoomDt__20dStage_roomControl_cFi                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStatusRoomDt__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/getStatusRoomDt__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A3B18-803A65CC 2AB4 .data      l_objectName                                                 */
-SECTION_DATA u8 l_objectName[10932] = {
+u8 l_objectName[10932] = {
 	0x47, 0x72, 0x61, 0x73, 0x73, 0x00, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61,
 	0x78, 0x31, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61, 0x78, 0x37, 0x00, 0x00,
 	0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61, 0x78, 0x32, 0x31, 0x00, 0x03, 0x10, 0xFF, 0x00,
@@ -1184,8 +1375,9 @@ SECTION_DATA u8 l_objectName[10932] = {
 	0x49, 0x74, 0x6D, 0x00, 0x02, 0x1D, 0xFF, 0x00, 0x45, 0x6E, 0x64, 0x43, 0x6F, 0x64, 0x65, 0x00,
 	0x00, 0x0B, 0xFF, 0x00,
 };
+
 /* 803A65CC-803A65FC 0030 .data      l_roomFuncTable$5052                                         */
-SECTION_DATA void* data_803A65CC[12] = {
+void* data_803A65CC[12] = {
 	(void*)0x54524553,
 	NULL,
 	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
@@ -1199,8 +1391,9 @@ SECTION_DATA void* data_803A65CC[12] = {
 	NULL,
 	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A65FC-803A6620 0024 .data      l_layerFuncTable$5053                                        */
-SECTION_DATA void* data_803A65FC[9] = {
+void* data_803A65FC[9] = {
 	(void*)0x54524530,
 	NULL,
 	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
@@ -1211,8 +1404,9 @@ SECTION_DATA void* data_803A65FC[9] = {
 	NULL,
 	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A6620-803A6638 0018 .data      l_layerFuncTable$5131                                        */
-SECTION_DATA void* data_803A6620[6] = {
+void* data_803A6620[6] = {
 	(void*)0x4D454D30,
 	NULL,
 	(void*)dStage_memaInfoInit__FP11dStage_dt_cPviPv,
@@ -1220,20 +1414,23 @@ SECTION_DATA void* data_803A6620[6] = {
 	NULL,
 	(void*)dStage_mecoInfoInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A6638-803A6644 000C .data      l_funcTable$5136                                             */
-SECTION_DATA void* data_803A6638[3] = {
+void* data_803A6638[3] = {
 	(void*)0x53544147,
 	NULL,
 	(void*)dStage_stagInfoInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A6644-803A6650 000C .data      l_layerFuncTableA$5141                                       */
-SECTION_DATA void* data_803A6644[3] = {
+void* data_803A6644[3] = {
 	(void*)0x534F4E30,
 	NULL,
 	(void*)dStage_soundInfoInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A6650-803A668C 003C .data      l_envLayerFuncTable$5142                                     */
-SECTION_DATA void* data_803A6650[15] = {
+void* data_803A6650[15] = {
 	(void*)0x4C475430,
 	NULL,
 	(void*)dStage_lgtvInfoInit__FP11dStage_dt_cPviPv,
@@ -1250,8 +1447,9 @@ SECTION_DATA void* data_803A6650[15] = {
 	NULL,
 	(void*)dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A668C-803A66BC 0030 .data      l_layerFuncTable$5158                                        */
-SECTION_DATA void* data_803A668C[12] = {
+void* data_803A668C[12] = {
 	(void*)0x446F6F30,
 	NULL,
 	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
@@ -1265,31 +1463,91 @@ SECTION_DATA void* data_803A668C[12] = {
 	NULL,
 	(void*)dStage_layerTresureInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A66BC-803A67F4 0138 .data      l_funcTable$5163                                             */
-SECTION_DATA u8 data_803A66BC[312] = {
-	0x45, 0x56, 0x4C, 0x59, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x68, 0x44, 0x52, 0x50, 0x50, 0x4E,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5F, 0x44, 0x52, 0x50, 0x41, 0x54, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5F, 0x78, 0x4D, 0x55, 0x4C, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x65, 0xDC,
-	0x50, 0x4C, 0x59, 0x52, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x50, 0x14, 0x43, 0x41, 0x4D, 0x52,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x52, 0xB8, 0x52, 0x43, 0x41, 0x4D, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x52, 0xB8, 0x41, 0x43, 0x54, 0x52, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5B, 0x24,
-	0x54, 0x47, 0x4F, 0x42, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5B, 0x24, 0x52, 0x54, 0x42, 0x4C,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5D, 0xA8, 0x41, 0x52, 0x4F, 0x42, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x53, 0x3C, 0x52, 0x41, 0x52, 0x4F, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x53, 0x3C,
-	0x56, 0x69, 0x72, 0x74, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0xE0, 0x53, 0x43, 0x4C, 0x53,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x58, 0x38, 0x54, 0x47, 0x53, 0x43, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5B, 0xFC, 0x4C, 0x47, 0x48, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x56, 0x48,
-	0x50, 0x50, 0x4E, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5E, 0x70, 0x50, 0x41, 0x54, 0x48,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5E, 0xA4, 0x53, 0x43, 0x4F, 0x42, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5B, 0xFC, 0x46, 0x49, 0x4C, 0x49, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0x8C,
-	0x44, 0x6F, 0x6F, 0x72, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x67, 0x64, 0x46, 0x4C, 0x4F, 0x52,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x61, 0xE4, 0x54, 0x47, 0x44, 0x52, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5B, 0xFC, 0x44, 0x4D, 0x41, 0x50, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x67, 0x30,
-	0x52, 0x45, 0x56, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x61, 0x7C, 0x53, 0x4F, 0x4E, 0x44,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x60, 0x4C,
+void* data_803A66BC[78] = {
+	(void*)0x45564C59,
+	NULL,
+	(void*)dStage_elstInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x5250504E,
+	NULL,
+	(void*)dStage_rppnInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52504154,
+	NULL,
+	(void*)dStage_rpatInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4D554C54,
+	NULL,
+	(void*)dStage_multInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x504C5952,
+	NULL,
+	(void*)dStage_playerInit__FP11dStage_dt_cPviPv,
+	(void*)0x43414D52,
+	NULL,
+	(void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
+	(void*)0x5243414D,
+	NULL,
+	(void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
+	(void*)0x41435452,
+	NULL,
+	(void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
+	(void*)0x54474F42,
+	NULL,
+	(void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
+	(void*)0x5254424C,
+	NULL,
+	(void*)dStage_roomReadInit__FP11dStage_dt_cPviPv,
+	(void*)0x41524F42,
+	NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x5241524F,
+	NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x56697274,
+	NULL,
+	(void*)dStage_vrboxInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434C53,
+	NULL,
+	(void*)dStage_sclsInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x54475343,
+	NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4C474854,
+	NULL,
+	(void*)dStage_plightInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x50504E54,
+	NULL,
+	(void*)dStage_ppntInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x50415448,
+	NULL,
+	(void*)dStage_pathInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434F42,
+	NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x46494C49,
+	NULL,
+	(void*)dStage_filiInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F72,
+	NULL,
+	(void*)dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x464C4F52,
+	NULL,
+	(void*)dStage_floorInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x54474452,
+	NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x444D4150,
+	NULL,
+	(void*)dStage_dmapInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52455654,
+	NULL,
+	(void*)dStage_stEventInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x534F4E44,
+	NULL,
+	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
+
 /* 803A67F4-803A689C 00A8 .data      l_funcTable$5168                                             */
-SECTION_DATA void* data_803A67F4[42] = {
+void* data_803A67F4[42] = {
 	(void*)0x504C5952,
 	NULL,
 	(void*)dStage_playerInit__FP11dStage_dt_cPviPv,
@@ -1333,8 +1591,9 @@ SECTION_DATA void* data_803A67F4[42] = {
 	NULL,
 	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
+
 /* 803A689C-803A68FC 0060 .data      l_funcTable$5173                                             */
-SECTION_DATA void* data_803A689C[24] = {
+void* data_803A689C[24] = {
 	(void*)0x446F6F72,
 	NULL,
 	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
@@ -1360,8 +1619,9 @@ SECTION_DATA void* data_803A689C[24] = {
 	NULL,
 	(void*)dStage_mapEventInfoInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A68FC-803A6920 0024 .data      l_funcTable$5178                                             */
-SECTION_DATA void* data_803A68FC[9] = {
+void* data_803A68FC[9] = {
 	(void*)0x54524553,
 	NULL,
 	(void*)dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv,
@@ -1372,16 +1632,140 @@ SECTION_DATA void* data_803A68FC[9] = {
 	NULL,
 	(void*)dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv,
 };
+
 /* 803A6920-803A696C 004C .data      mMemoryBlock__20dStage_roomControl_c                         */
-SECTION_DATA u8 mMemoryBlock__20dStage_roomControl_c[76] = {
+u8 mMemoryBlock__20dStage_roomControl_c[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
+/* 800243B0-800243E8 0038 .text      getMemoryBlock__20dStage_roomControl_cFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMemoryBlock__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/getMemoryBlock__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 800243E8-80024424 003C .text      setStayNo__20dStage_roomControl_cFi                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setStayNo__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setStayNo__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 80024424-8002442C 0008 .text      setNextStayNo__20dStage_roomControl_cFi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setNextStayNo__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setNextStayNo__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 8002442C-80024460 0034 .text      stayRoomCheck__FiPUci                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void stayRoomCheck__FiPUci() {
+	nofralloc
+#include "asm/d/d_stage/stayRoomCheck__FiPUci.s"
+}
+#pragma pop
+
+
+/* 80024460-800244E8 0088 .text      createRoomScene__Fi                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void createRoomScene__Fi() {
+	nofralloc
+#include "asm/d/d_stage/createRoomScene__Fi.s"
+}
+#pragma pop
+
+
+/* 800244E8-8002451C 0034 .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void checkRoomDisp__20dStage_roomControl_cCFi() {
+	nofralloc
+#include "asm/d/d_stage/checkRoomDisp__20dStage_roomControl_cCFi.s"
+}
+#pragma pop
+
+
+/* 8002451C-8002471C 0200 .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void loadRoom__20dStage_roomControl_cFiPUcb() {
+	nofralloc
+#include "asm/d/d_stage/loadRoom__20dStage_roomControl_cFiPUcb.s"
+}
+#pragma pop
+
+
+/* 8002471C-8002483C 0120 .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void zoneCountCheck__20dStage_roomControl_cCFi() {
+	nofralloc
+#include "asm/d/d_stage/zoneCountCheck__20dStage_roomControl_cCFi.s"
+}
+#pragma pop
+
+
+/* 8002483C-80024844 0008 .text      getStagInfo__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStagInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getStagInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80024844-800248A8 0064 .text      createMemoryBlock__20dStage_roomControl_cFiUl                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void createMemoryBlock__20dStage_roomControl_cFiUl() {
+	nofralloc
+#include "asm/d/d_stage/createMemoryBlock__20dStage_roomControl_cFiUl.s"
+}
+#pragma pop
+
+
+/* 800248A8-8002490C 0064 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void destroyMemoryBlock__20dStage_roomControl_cFv() {
+	nofralloc
+#include "asm/d/d_stage/destroyMemoryBlock__20dStage_roomControl_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A696C-803A6AAC 0140 .data      mArcBank__20dStage_roomControl_c                             */
-SECTION_DATA u8 mArcBank__20dStage_roomControl_c[320] = {
+u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1403,8 +1787,2968 @@ SECTION_DATA u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
+/* 8002490C-80024940 0034 .text      setArcBank__20dStage_roomControl_cFiPCc                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setArcBank__20dStage_roomControl_cFiPCc() {
+	nofralloc
+#include "asm/d/d_stage/setArcBank__20dStage_roomControl_cFiPCc.s"
+}
+#pragma pop
+
+
+/* 80024940-80024954 0014 .text      getArcBank__20dStage_roomControl_cFi                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getArcBank__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/getArcBank__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 80024954-80024A34 00E0 .text      resetArchiveBank__20dStage_roomControl_cFi                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetArchiveBank__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/resetArchiveBank__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 80024A34-80024ABC 0088 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void create__Q220dStage_roomControl_c9roomDzs_cFUc() {
+	nofralloc
+#include "asm/d/d_stage/create__Q220dStage_roomControl_c9roomDzs_cFUc.s"
+}
+#pragma pop
+
+
+/* 80024ABC-80024B44 0088 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void remove__Q220dStage_roomControl_c9roomDzs_cFv() {
+	nofralloc
+#include "asm/d/d_stage/remove__Q220dStage_roomControl_c9roomDzs_cFv.s"
+}
+#pragma pop
+
+
+/* 80024B44-80024C1C 00D8 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void add__Q220dStage_roomControl_c9roomDzs_cFUcUc() {
+	nofralloc
+#include "asm/d/d_stage/add__Q220dStage_roomControl_c9roomDzs_cFUcUc.s"
+}
+#pragma pop
+
+
+/* 80024C1C-80024CA8 008C .text      init__16dStage_stageDt_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__16dStage_stageDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/init__16dStage_stageDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80024CA8-80024CB4 000C .text      initFileList2__15dStage_roomDt_cFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initFileList2__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/initFileList2__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80024CB4-80024D10 005C .text      init__15dStage_roomDt_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/init__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80024D10-80024DB0 00A0 .text      dStage_roomInit__Fi                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_roomInit__Fi() {
+	nofralloc
+#include "asm/d/d_stage/dStage_roomInit__Fi.s"
+}
+#pragma pop
+
+
+/* 80024DB0-80024DB8 0008 .text      SetTimePass__20dStage_roomControl_cFi                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void SetTimePass__20dStage_roomControl_cFi() {
+	nofralloc
+#include "asm/d/d_stage/SetTimePass__20dStage_roomControl_cFi.s"
+}
+#pragma pop
+
+
+/* 80024DB8-80024DC0 0008 .text      getRoom__16dStage_stageDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getRoom__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getRoom__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80024DC0-80024E30 0070 .text      dStage_searchName__FPCc                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_searchName__FPCc() {
+	nofralloc
+#include "asm/d/d_stage/dStage_searchName__FPCc.s"
+}
+#pragma pop
+
+
+/* 80024E30-80024EDC 00AC .text      dStage_getName__FsSc                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_getName__FsSc() {
+	nofralloc
+#include "asm/d/d_stage/dStage_getName__FsSc.s"
+}
+#pragma pop
+
+
+/* 80024EDC-80024EFC 0020 .text      dStage_getName2__FsSc                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_getName2__FsSc() {
+	nofralloc
+#include "asm/d/d_stage/dStage_getName2__FsSc.s"
+}
+#pragma pop
+
+
+/* 80024EFC-80024F98 009C .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class() {
+	nofralloc
+#include "asm/d/d_stage/dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80451C90-80451C94 0004 .sdata2    @4270                                                        */
+u8 d_d_stage__lit_4270[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80024F98-80025004 006C .text      dStage_cameraCreate__FP24stage_camera2_data_classii          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_cameraCreate__FP24stage_camera2_data_classii() {
+	nofralloc
+#include "asm/d/d_stage/dStage_cameraCreate__FP24stage_camera2_data_classii.s"
+}
+#pragma pop
+
+
+/* 80025004-8002500C 0008 .text      getPlayer__15dStage_roomDt_cCFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlayer__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlayer__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002500C-80025014 0008 .text      getPlayer__16dStage_stageDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlayer__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlayer__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80025014-800252B8 02A4 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_playerInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_playerInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800252B8-80025308 0050 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_cameraInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_cameraInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025308-8002533C 0034 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_RoomCameraInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_RoomCameraInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002533C-80025370 0034 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_arrowInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_arrowInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025370-800253FC 008C .text      getMapInfo2__15dStage_roomDt_cCFi                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfo2__15dStage_roomDt_cCFi() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfo2__15dStage_roomDt_cCFi.s"
+}
+#pragma pop
+
+
+/* 800253FC-80025404 0008 .text      getMapInfoBase__15dStage_roomDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfoBase__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfoBase__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80025404-80025490 008C .text      getMapInfo2__16dStage_stageDt_cCFi                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfo2__16dStage_stageDt_cCFi() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfo2__16dStage_stageDt_cCFi.s"
+}
+#pragma pop
+
+
+/* 80025490-80025498 0008 .text      getMapInfoBase__16dStage_stageDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfoBase__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfoBase__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80025498-800254CC 0034 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_paletteInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_paletteInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800254CC-80025500 0034 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_pselectInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_pselectInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025500-80025534 0034 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_envrInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_envrInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025534-8002556C 0038 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_filiInfo2Init__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_filiInfo2Init__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002556C-8002558C 0020 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002558C-800255E0 0054 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_filiInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_filiInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800255E0-80025614 0034 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_vrboxInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025614-80025648 0034 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025648-800256AC 0064 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_plightInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_plightInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800256AC-80025738 008C .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_lgtvInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025738-80025744 000C .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi() {
+	nofralloc
+#include "asm/d/d_stage/dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi.s"
+}
+#pragma pop
+
+
+/* 80025744-8002582C 00E8 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_stagInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_stagInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002582C-80025838 000C .text      resetOldMulti__16dStage_stageDt_cFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetOldMulti__16dStage_stageDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/resetOldMulti__16dStage_stageDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80025838-8002586C 0034 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_sclsInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_sclsInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002586C-80025958 00EC .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025958-80025A38 00E0 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025A38-80025B24 00EC .text      dStage_actorInit__FP11dStage_dt_cPviPv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_actorInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_actorInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025B24-80025BFC 00D8 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_actorInit_always__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_actorInit_always__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025BFC-80025CDC 00E0 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_tgscInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_tgscInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025CDC-80025DA8 00CC .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_doorInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_doorInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025DA8-80025E40 0098 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_roomReadInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_roomReadInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025E40-80025E70 0030 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi() {
+	nofralloc
+#include "asm/d/d_stage/dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi.s"
+}
+#pragma pop
+
+
+/* 80025E70-80025EA4 0034 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_ppntInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_ppntInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025EA4-80025F44 00A0 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_pathInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_pathInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025F44-80025F78 0034 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_rppnInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_rppnInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80025F78-80026018 00A0 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_rpatInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_rpatInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026018-8002604C 0034 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_soundInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_soundInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002604C-80026080 0034 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_soundInfoInitCL__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026080-800260B4 0034 .text      dStage_setLayerTagName__FP9FuncTableii                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_setLayerTagName__FP9FuncTableii() {
+	nofralloc
+#include "asm/d/d_stage/dStage_setLayerTagName__FP9FuncTableii.s"
+}
+#pragma pop
+
+
+/* 800260B4-8002617C 00C8 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei.s"
+}
+#pragma pop
+
+
+/* 8002617C-800261B0 0034 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_stEventInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_stEventInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800261B0-800261E4 0034 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_mapEventInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800261E4-80026218 0034 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_floorInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_floorInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026218-80026298 0080 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_memaInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_memaInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026298-8002631C 0084 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_mecoInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_mecoInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002631C-8002634C 0030 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002634C-8002635C 0010 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002635C-800263A0 0044 .text      dStage_dt_c_offsetToPtr__FPv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_offsetToPtr__FPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_offsetToPtr__FPv.s"
+}
+#pragma pop
+
+
+/* 800263A0-800263D0 0030 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_mapPathInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_mapPathInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800263D0-80026400 0030 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026400-8002645C 005C .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80450D74-80450D80 0008 .sbss      m_roomDzs__20dStage_roomControl_c                            */
+u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
+
+/* 8002645C-800265DC 0180 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void readMult__FP11dStage_dt_cP14dStage_Multi_cb() {
+	nofralloc
+#include "asm/d/d_stage/readMult__FP11dStage_dt_cP14dStage_Multi_cb.s"
+}
+#pragma pop
+
+
+/* 800265DC-80026670 0094 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_multInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_multInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026670-800266A4 0034 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_lbnkInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800266A4-8002670C 0068 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_roomTresureInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_roomTresureInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 8002670C-80026730 0024 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_layerTresureInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_layerTresureInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026730-80026764 0034 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dmapInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dmapInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026764-800267DC 0078 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 800267DC-80026844 0068 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026844-80026898 0054 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_elstInfoInit__FP11dStage_dt_cPviPv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_elstInfoInit__FP11dStage_dt_cPviPv.s"
+}
+#pragma pop
+
+
+/* 80026898-80026914 007C .text      dKankyo_create__Fv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dKankyo_create__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dKankyo_create__Fv.s"
+}
+#pragma pop
+
+
+/* 80026914-80026940 002C .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void layerMemoryInfoLoader__FPvP11dStage_dt_ci() {
+	nofralloc
+#include "asm/d/d_stage/layerMemoryInfoLoader__FPvP11dStage_dt_ci.s"
+}
+#pragma pop
+
+
+/* 80026940-800269B4 0074 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c.s"
+}
+#pragma pop
+
+
+/* 800269B4-80026AE8 0134 .text      layerTableLoader__FPvP11dStage_dt_ci                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void layerTableLoader__FPvP11dStage_dt_ci() {
+	nofralloc
+#include "asm/d/d_stage/layerTableLoader__FPvP11dStage_dt_ci.s"
+}
+#pragma pop
+
+
+/* 80026AE8-80026AF0 0008 .text      getElst__16dStage_stageDt_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getElst__16dStage_stageDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/getElst__16dStage_stageDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80026AF0-80026B58 0068 .text      layerActorLoader__FPvP11dStage_dt_ci                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void layerActorLoader__FPvP11dStage_dt_ci() {
+	nofralloc
+#include "asm/d/d_stage/layerActorLoader__FPvP11dStage_dt_ci.s"
+}
+#pragma pop
+
+
+/* 80026B58-80026BBC 0064 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_stageLoader__FPvP11dStage_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_stageLoader__FPvP11dStage_dt_c.s"
+}
+#pragma pop
+
+
+/* 80026BBC-80026C34 0078 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_roomLoader__FPvP11dStage_dt_ci.s"
+}
+#pragma pop
+
+
+/* 80026C34-80026C8C 0058 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci.s"
+}
+#pragma pop
+
+
+/* 80026C8C-80026CDC 0050 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c.s"
+}
+#pragma pop
+
+
+/* 80026CDC-80026D38 005C .text      dStage_infoCreate__Fv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_infoCreate__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_infoCreate__Fv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80406194-804061A0 000A .bss       mDemoArcName__20dStage_roomControl_c                         */
+u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+
+/* 80026D38-80026DF8 00C0 .text      dStage_Create__Fv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_Create__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_Create__Fv.s"
+}
+#pragma pop
+
+
+/* 80026DF8-80026FDC 01E4 .text      dStage_Delete__Fv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_Delete__Fv() {
+	nofralloc
+#include "asm/d/d_stage/dStage_Delete__Fv.s"
+}
+#pragma pop
+
+
+/* 80026FDC-80026FE8 000C .text      setOldMulti__16dStage_stageDt_cFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setOldMulti__16dStage_stageDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/setOldMulti__16dStage_stageDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80026FE8-800270FC 0114 .text      dStage_RoomCheck__FP11cBgS_GndChk                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_RoomCheck__FP11cBgS_GndChk() {
+	nofralloc
+#include "asm/d/d_stage/dStage_RoomCheck__FP11cBgS_GndChk.s"
+}
+#pragma pop
+
+
+/* 800270FC-80027170 0074 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs() {
+	nofralloc
+#include "asm/d/d_stage/dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80451C94-80451C98 0004 .sdata2    @5315                                                        */
+f32 lit_5315 = 15.0f;
+
+/* 80451C98-80451CA0 0008 .sdata2    @5317                                                        */
+f64 lit_5317 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 80027170-800272E0 0170 .text      dStage_changeScene__FifUlScsi                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_changeScene__FifUlScsi() {
+	nofralloc
+#include "asm/d/d_stage/dStage_changeScene__FifUlScsi.s"
+}
+#pragma pop
+
+
+/* 800272E0-800272E8 0008 .text      getSclsInfo__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSclsInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSclsInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800272E8-800272F0 0008 .text      getSclsInfo__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSclsInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSclsInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800272F0-800274B0 01C0 .text      dStage_changeScene4Event__FiScibfUlsi                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_changeScene4Event__FiScibfUlsi() {
+	nofralloc
+#include "asm/d/d_stage/dStage_changeScene4Event__FiScibfUlsi.s"
+}
+#pragma pop
+
+
+/* 800274B0-80027524 0074 .text      dStage_restartRoom__FUlUli                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dStage_restartRoom__FUlUli() {
+	nofralloc
+#include "asm/d/d_stage/dStage_restartRoom__FUlUli.s"
+}
+#pragma pop
+
+
+/* 80027524-8002752C 0008 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setCamera__15dStage_roomDt_cFP18stage_camera_class() {
+	nofralloc
+#include "asm/d/d_stage/setCamera__15dStage_roomDt_cFP18stage_camera_class.s"
+}
+#pragma pop
+
+
+/* 8002752C-80027534 0008 .text      getCamera__15dStage_roomDt_cCFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getCamera__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getCamera__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027534-8002753C 0008 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setArrow__15dStage_roomDt_cFP17stage_arrow_class() {
+	nofralloc
+#include "asm/d/d_stage/setArrow__15dStage_roomDt_cFP17stage_arrow_class.s"
+}
+#pragma pop
+
+
+/* 8002753C-80027544 0008 .text      getArrow__15dStage_roomDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getArrow__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getArrow__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027544-8002754C 0008 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlayer__15dStage_roomDt_cFP17stage_actor_class() {
+	nofralloc
+#include "asm/d/d_stage/setPlayer__15dStage_roomDt_cFP17stage_actor_class.s"
+}
+#pragma pop
+
+
+/* 8002754C-80027554 0008 .text      setPlayerNum__15dStage_roomDt_cFUs                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlayerNum__15dStage_roomDt_cFUs() {
+	nofralloc
+#include "asm/d/d_stage/setPlayerNum__15dStage_roomDt_cFUs.s"
+}
+#pragma pop
+
+
+/* 80027554-8002755C 0008 .text      getPlayerNum__15dStage_roomDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlayerNum__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlayerNum__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002755C-80027590 0034 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setRoom__15dStage_roomDt_cFP14roomRead_class() {
+	nofralloc
+#include "asm/d/d_stage/setRoom__15dStage_roomDt_cFP14roomRead_class.s"
+}
+#pragma pop
+
+
+/* 80027590-800275C4 0034 .text      getRoom__15dStage_roomDt_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getRoom__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getRoom__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800275C4-800275CC 0008 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setMapInfo__15dStage_roomDt_cFP20stage_map_info_class.s"
+}
+#pragma pop
+
+
+/* 800275CC-800275D4 0008 .text      getMapInfo__15dStage_roomDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800275D4-800275DC 0008 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class() {
+	nofralloc
+#include "asm/d/d_stage/setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class.s"
+}
+#pragma pop
+
+
+/* 800275DC-80027610 0034 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class.s"
+}
+#pragma pop
+
+
+/* 80027610-80027644 0034 .text      getPaletteInfo__15dStage_roomDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPaletteInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPaletteInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027644-80027678 0034 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class.s"
+}
+#pragma pop
+
+
+/* 80027678-800276AC 0034 .text      getPselectInfo__15dStage_roomDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPselectInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPselectInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800276AC-800276E0 0034 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class.s"
+}
+#pragma pop
+
+
+/* 800276E0-80027714 0034 .text      getEnvrInfo__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getEnvrInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getEnvrInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027714-8002771C 0008 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class.s"
+}
+#pragma pop
+
+
+/* 8002771C-80027724 0008 .text      getVrboxInfo__15dStage_roomDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027724-8002772C 0008 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class.s"
+}
+#pragma pop
+
+
+/* 8002772C-80027734 0008 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxcolInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxcolInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027734-80027768 0034 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class.s"
+}
+#pragma pop
+
+
+/* 80027768-8002779C 0034 .text      getPlightInfo__15dStage_roomDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlightInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlightInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002779C-800277D0 0034 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPaletteNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPaletteNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 800277D0-80027804 0034 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPaletteNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPaletteNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027804-80027838 0034 .text      setPselectNumInfo__15dStage_roomDt_cFi                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPselectNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPselectNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027838-8002786C 0034 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPselectNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPselectNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002786C-800278A0 0034 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEnvrNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setEnvrNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 800278A0-800278D4 0034 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getEnvrNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getEnvrNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800278D4-800278DC 0008 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 800278DC-800278E4 0008 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800278E4-800278EC 0008 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxcolNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxcolNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 800278EC-800278F4 0008 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxcolNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxcolNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800278F4-80027928 0034 .text      setPlightNumInfo__15dStage_roomDt_cFi                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlightNumInfo__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPlightNumInfo__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027928-8002795C 0034 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlightNumInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlightNumInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002795C-80027964 0008 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class.s"
+}
+#pragma pop
+
+
+/* 80027964-8002796C 0008 .text      getLightVecInfo__15dStage_roomDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLightVecInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLightVecInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002796C-80027974 0008 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLightVecInfoNum__15dStage_roomDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setLightVecInfoNum__15dStage_roomDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027974-8002797C 0008 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLightVecInfoNum__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLightVecInfoNum__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 8002797C-800279B0 0034 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class.s"
+}
+#pragma pop
+
+
+/* 800279B0-800279E4 0034 .text      getStagInfo__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getStagInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getStagInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800279E4-800279EC 0008 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class() {
+	nofralloc
+#include "asm/d/d_stage/setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class.s"
+}
+#pragma pop
+
+
+/* 800279EC-80027A20 0034 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c() {
+	nofralloc
+#include "asm/d/d_stage/setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c.s"
+}
+#pragma pop
+
+
+/* 80027A20-80027A54 0034 .text      getPntInf__15dStage_roomDt_cCFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPntInf__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPntInf__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027A54-80027A88 0034 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c() {
+	nofralloc
+#include "asm/d/d_stage/setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c.s"
+}
+#pragma pop
+
+
+/* 80027A88-80027ABC 0034 .text      getPathInf__15dStage_roomDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPathInf__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPathInf__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027ABC-80027AC4 0008 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c() {
+	nofralloc
+#include "asm/d/d_stage/setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c.s"
+}
+#pragma pop
+
+
+/* 80027AC4-80027ACC 0008 .text      getPnt2Inf__15dStage_roomDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPnt2Inf__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPnt2Inf__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027ACC-80027AD4 0008 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c() {
+	nofralloc
+#include "asm/d/d_stage/setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c.s"
+}
+#pragma pop
+
+
+/* 80027AD4-80027ADC 0008 .text      getPath2Inf__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPath2Inf__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPath2Inf__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027ADC-80027AE4 0008 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
+}
+#pragma pop
+
+
+/* 80027AE4-80027AEC 0008 .text      getSoundInf__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundInf__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSoundInf__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027AEC-80027AF4 0008 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
+}
+#pragma pop
+
+
+/* 80027AF4-80027AFC 0008 .text      getSoundInfCL__15dStage_roomDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundInfCL__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSoundInfCL__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027AFC-80027B04 0008 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c.s"
+}
+#pragma pop
+
+
+/* 80027B04-80027B0C 0008 .text      getMapEventInfo__15dStage_roomDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapEventInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapEventInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027B0C-80027B14 0008 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c.s"
+}
+#pragma pop
+
+
+/* 80027B14-80027B1C 0008 .text      getFileList2Info__15dStage_roomDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getFileList2Info__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getFileList2Info__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027B1C-80027B24 0008 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c.s"
+}
+#pragma pop
+
+
+/* 80027B24-80027B2C 0008 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c.s"
+}
+#pragma pop
+
+
+/* 80027B2C-80027B34 0008 .text      getFloorInfo__15dStage_roomDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getFloorInfo__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getFloorInfo__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027B34-80027B64 0030 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c() {
+	nofralloc
+#include "asm/d/d_stage/setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c.s"
+}
+#pragma pop
+
+
+/* 80027B64-80027B98 0034 .text      getMemoryConfig__15dStage_roomDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMemoryConfig__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMemoryConfig__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027B98-80027BC8 0030 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c() {
+	nofralloc
+#include "asm/d/d_stage/setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c.s"
+}
+#pragma pop
+
+
+/* 80027BC8-80027BFC 0034 .text      getMemoryMap__15dStage_roomDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMemoryMap__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMemoryMap__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027BFC-80027C2C 0030 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMulti__15dStage_roomDt_cFP14dStage_Multi_c() {
+	nofralloc
+#include "asm/d/d_stage/setMulti__15dStage_roomDt_cFP14dStage_Multi_c.s"
+}
+#pragma pop
+
+
+/* 80027C2C-80027C60 0034 .text      getMulti__15dStage_roomDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMulti__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMulti__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027C60-80027C90 0030 .text      setOldMulti__15dStage_roomDt_cFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setOldMulti__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/setOldMulti__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80027C90-80027CC0 0030 .text      resetOldMulti__15dStage_roomDt_cFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void resetOldMulti__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/resetOldMulti__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80027CC0-80027CF4 0034 .text      getOldMulti__15dStage_roomDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getOldMulti__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getOldMulti__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027CF4-80027CFC 0008 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c() {
+	nofralloc
+#include "asm/d/d_stage/setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c.s"
+}
+#pragma pop
+
+
+/* 80027CFC-80027D04 0008 .text      getLbnk__15dStage_roomDt_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLbnk__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLbnk__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027D04-80027D0C 0008 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setTresure__15dStage_roomDt_cFP19stage_tresure_class() {
+	nofralloc
+#include "asm/d/d_stage/setTresure__15dStage_roomDt_cFP19stage_tresure_class.s"
+}
+#pragma pop
+
+
+/* 80027D0C-80027D14 0008 .text      getTresure__15dStage_roomDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getTresure__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getTresure__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027D14-80027D18 0004 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDMap__15dStage_roomDt_cFP13dStage_DMap_c() {
+	nofralloc
+#include "asm/d/d_stage/setDMap__15dStage_roomDt_cFP13dStage_DMap_c.s"
+}
+#pragma pop
+
+
+/* 80027D18-80027D20 0008 .text      getDMap__15dStage_roomDt_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDMap__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDMap__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027D20-80027D28 0008 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/setDrTg__15dStage_roomDt_cFP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* 80027D28-80027D30 0008 .text      getDrTg__15dStage_roomDt_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDrTg__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDrTg__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027D30-80027D38 0008 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDoor__15dStage_roomDt_cFP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/setDoor__15dStage_roomDt_cFP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* 80027D38-80027D40 0008 .text      getDoor__15dStage_roomDt_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDoor__15dStage_roomDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDoor__15dStage_roomDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027D40-80027D70 0030 .text      setMapPath__15dStage_roomDt_cFPv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapPath__15dStage_roomDt_cFPv() {
+	nofralloc
+#include "asm/d/d_stage/setMapPath__15dStage_roomDt_cFPv.s"
+}
+#pragma pop
+
+
+/* 80027D70-80027DA4 0034 .text      getMapPath__15dStage_roomDt_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapPath__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapPath__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80027DA4-80027DD8 0034 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setElst__15dStage_roomDt_cFP13dStage_Elst_c() {
+	nofralloc
+#include "asm/d/d_stage/setElst__15dStage_roomDt_cFP13dStage_Elst_c.s"
+}
+#pragma pop
+
+
+/* 80027DD8-80027E10 0038 .text      getElst__15dStage_roomDt_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getElst__15dStage_roomDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/getElst__15dStage_roomDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80027E10-80027E18 0008 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setCamera__16dStage_stageDt_cFP18stage_camera_class() {
+	nofralloc
+#include "asm/d/d_stage/setCamera__16dStage_stageDt_cFP18stage_camera_class.s"
+}
+#pragma pop
+
+
+/* 80027E18-80027E20 0008 .text      getCamera__16dStage_stageDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getCamera__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getCamera__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E20-80027E28 0008 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setArrow__16dStage_stageDt_cFP17stage_arrow_class() {
+	nofralloc
+#include "asm/d/d_stage/setArrow__16dStage_stageDt_cFP17stage_arrow_class.s"
+}
+#pragma pop
+
+
+/* 80027E28-80027E30 0008 .text      getArrow__16dStage_stageDt_cCFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getArrow__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getArrow__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E30-80027E38 0008 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlayer__16dStage_stageDt_cFP17stage_actor_class() {
+	nofralloc
+#include "asm/d/d_stage/setPlayer__16dStage_stageDt_cFP17stage_actor_class.s"
+}
+#pragma pop
+
+
+/* 80027E38-80027E40 0008 .text      setPlayerNum__16dStage_stageDt_cFUs                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlayerNum__16dStage_stageDt_cFUs() {
+	nofralloc
+#include "asm/d/d_stage/setPlayerNum__16dStage_stageDt_cFUs.s"
+}
+#pragma pop
+
+
+/* 80027E40-80027E48 0008 .text      getPlayerNum__16dStage_stageDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlayerNum__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlayerNum__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E48-80027E50 0008 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setRoom__16dStage_stageDt_cFP14roomRead_class() {
+	nofralloc
+#include "asm/d/d_stage/setRoom__16dStage_stageDt_cFP14roomRead_class.s"
+}
+#pragma pop
+
+
+/* 80027E50-80027E58 0008 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setMapInfo__16dStage_stageDt_cFP20stage_map_info_class.s"
+}
+#pragma pop
+
+
+/* 80027E58-80027E60 0008 .text      getMapInfo__16dStage_stageDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E60-80027E68 0008 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class() {
+	nofralloc
+#include "asm/d/d_stage/setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class.s"
+}
+#pragma pop
+
+
+/* 80027E68-80027E70 0008 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class.s"
+}
+#pragma pop
+
+
+/* 80027E70-80027E78 0008 .text      getPaletteInfo__16dStage_stageDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPaletteInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPaletteInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E78-80027E80 0008 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class.s"
+}
+#pragma pop
+
+
+/* 80027E80-80027E88 0008 .text      getPselectInfo__16dStage_stageDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPselectInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPselectInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E88-80027E90 0008 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class.s"
+}
+#pragma pop
+
+
+/* 80027E90-80027E98 0008 .text      getEnvrInfo__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getEnvrInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getEnvrInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027E98-80027EA0 0008 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class.s"
+}
+#pragma pop
+
+
+/* 80027EA0-80027EA8 0008 .text      getVrboxInfo__16dStage_stageDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027EA8-80027EB0 0008 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class.s"
+}
+#pragma pop
+
+
+/* 80027EB0-80027EB8 0008 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxcolInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxcolInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027EB8-80027EC0 0008 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class.s"
+}
+#pragma pop
+
+
+/* 80027EC0-80027EC8 0008 .text      getPlightInfo__16dStage_stageDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlightInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlightInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027EC8-80027ED0 0008 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPaletteNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPaletteNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027ED0-80027ED8 0008 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPaletteNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPaletteNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027ED8-80027EE0 0008 .text      setPselectNumInfo__16dStage_stageDt_cFi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPselectNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPselectNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027EE0-80027EE8 0008 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPselectNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPselectNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027EE8-80027EF0 0008 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setEnvrNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setEnvrNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027EF0-80027EF8 0008 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getEnvrNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getEnvrNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027EF8-80027F00 0008 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027F00-80027F08 0008 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027F08-80027F10 0008 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setVrboxcolNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setVrboxcolNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027F10-80027F18 0008 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getVrboxcolNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getVrboxcolNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027F18-80027F4C 0034 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class.s"
+}
+#pragma pop
+
+
+/* 80027F4C-80027F80 0034 .text      getLightVecInfo__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLightVecInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLightVecInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027F80-80027FB4 0034 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLightVecInfoNum__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setLightVecInfoNum__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027FB4-80027FE8 0034 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLightVecInfoNum__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLightVecInfoNum__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027FE8-80027FF0 0008 .text      setPlightNumInfo__16dStage_stageDt_cFi                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPlightNumInfo__16dStage_stageDt_cFi() {
+	nofralloc
+#include "asm/d/d_stage/setPlightNumInfo__16dStage_stageDt_cFi.s"
+}
+#pragma pop
+
+
+/* 80027FF0-80027FF8 0008 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPlightNumInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPlightNumInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80027FF8-80028000 0008 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class() {
+	nofralloc
+#include "asm/d/d_stage/setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class.s"
+}
+#pragma pop
+
+
+/* 80028000-80028008 0008 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class() {
+	nofralloc
+#include "asm/d/d_stage/setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class.s"
+}
+#pragma pop
+
+
+/* 80028008-80028010 0008 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c() {
+	nofralloc
+#include "asm/d/d_stage/setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c.s"
+}
+#pragma pop
+
+
+/* 80028010-80028018 0008 .text      getPntInf__16dStage_stageDt_cCFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPntInf__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPntInf__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028018-80028020 0008 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c() {
+	nofralloc
+#include "asm/d/d_stage/setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c.s"
+}
+#pragma pop
+
+
+/* 80028020-80028028 0008 .text      getPathInf__16dStage_stageDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPathInf__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPathInf__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028028-80028030 0008 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c() {
+	nofralloc
+#include "asm/d/d_stage/setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c.s"
+}
+#pragma pop
+
+
+/* 80028030-80028038 0008 .text      getPnt2Inf__16dStage_stageDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPnt2Inf__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPnt2Inf__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028038-80028040 0008 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c() {
+	nofralloc
+#include "asm/d/d_stage/setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c.s"
+}
+#pragma pop
+
+
+/* 80028040-80028048 0008 .text      getPath2Inf__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getPath2Inf__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getPath2Inf__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028048-80028050 0008 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
+}
+#pragma pop
+
+
+/* 80028050-80028058 0008 .text      getSoundInf__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundInf__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSoundInf__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028058-80028060 0008 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
+}
+#pragma pop
+
+
+/* 80028060-80028068 0008 .text      getSoundInfCL__16dStage_stageDt_cCFv                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getSoundInfCL__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getSoundInfCL__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028068-80028070 0008 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c.s"
+}
+#pragma pop
+
+
+/* 80028070-80028078 0008 .text      getMapEventInfo__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapEventInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapEventInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028078-800280AC 0034 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c.s"
+}
+#pragma pop
+
+
+/* 800280AC-800280E0 0034 .text      getFileList2Info__16dStage_stageDt_cCFv                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getFileList2Info__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getFileList2Info__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800280E0-80028114 0034 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c() {
+	nofralloc
+#include "asm/d/d_stage/setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c.s"
+}
+#pragma pop
+
+
+/* 80028114-80028148 0034 .text      getFileListInfo__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getFileListInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getFileListInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028148-80028150 0008 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c() {
+	nofralloc
+#include "asm/d/d_stage/setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c.s"
+}
+#pragma pop
+
+
+/* 80028150-80028158 0008 .text      getFloorInfo__16dStage_stageDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getFloorInfo__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getFloorInfo__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028158-80028160 0008 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c() {
+	nofralloc
+#include "asm/d/d_stage/setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c.s"
+}
+#pragma pop
+
+
+/* 80028160-80028168 0008 .text      getMemoryConfig__16dStage_stageDt_cCFv                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMemoryConfig__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMemoryConfig__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028168-80028170 0008 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c() {
+	nofralloc
+#include "asm/d/d_stage/setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c.s"
+}
+#pragma pop
+
+
+/* 80028170-80028178 0008 .text      getMemoryMap__16dStage_stageDt_cCFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMemoryMap__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMemoryMap__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028178-80028180 0008 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMulti__16dStage_stageDt_cFP14dStage_Multi_c() {
+	nofralloc
+#include "asm/d/d_stage/setMulti__16dStage_stageDt_cFP14dStage_Multi_c.s"
+}
+#pragma pop
+
+
+/* 80028180-80028188 0008 .text      getMulti__16dStage_stageDt_cCFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMulti__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getMulti__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028188-80028190 0008 .text      getOldMulti__16dStage_stageDt_cCFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getOldMulti__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getOldMulti__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028190-800281C4 0034 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c() {
+	nofralloc
+#include "asm/d/d_stage/setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c.s"
+}
+#pragma pop
+
+
+/* 800281C4-800281F8 0034 .text      getLbnk__16dStage_stageDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getLbnk__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getLbnk__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 800281F8-80028200 0008 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setTresure__16dStage_stageDt_cFP19stage_tresure_class() {
+	nofralloc
+#include "asm/d/d_stage/setTresure__16dStage_stageDt_cFP19stage_tresure_class.s"
+}
+#pragma pop
+
+
+/* 80028200-80028208 0008 .text      getTresure__16dStage_stageDt_cCFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getTresure__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getTresure__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028208-80028210 0008 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDMap__16dStage_stageDt_cFP13dStage_DMap_c() {
+	nofralloc
+#include "asm/d/d_stage/setDMap__16dStage_stageDt_cFP13dStage_DMap_c.s"
+}
+#pragma pop
+
+
+/* 80028210-80028218 0008 .text      getDMap__16dStage_stageDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDMap__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDMap__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028218-80028220 0008 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/setDrTg__16dStage_stageDt_cFP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* 80028220-80028228 0008 .text      getDrTg__16dStage_stageDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDrTg__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDrTg__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028228-80028230 0008 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setDoor__16dStage_stageDt_cFP16stage_tgsc_class() {
+	nofralloc
+#include "asm/d/d_stage/setDoor__16dStage_stageDt_cFP16stage_tgsc_class.s"
+}
+#pragma pop
+
+
+/* 80028230-80028238 0008 .text      getDoor__16dStage_stageDt_cCFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getDoor__16dStage_stageDt_cCFv() {
+	nofralloc
+#include "asm/d/d_stage/getDoor__16dStage_stageDt_cCFv.s"
+}
+#pragma pop
+
+
+/* 80028238-8002823C 0004 .text      setMapPath__16dStage_stageDt_cFPv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setMapPath__16dStage_stageDt_cFPv() {
+	nofralloc
+#include "asm/d/d_stage/setMapPath__16dStage_stageDt_cFPv.s"
+}
+#pragma pop
+
+
+/* 8002823C-80028244 0008 .text      getMapPath__16dStage_stageDt_cFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void getMapPath__16dStage_stageDt_cFv() {
+	nofralloc
+#include "asm/d/d_stage/getMapPath__16dStage_stageDt_cFv.s"
+}
+#pragma pop
+
+
+/* 80028244-8002824C 0008 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setElst__16dStage_stageDt_cFP13dStage_Elst_c() {
+	nofralloc
+#include "asm/d/d_stage/setElst__16dStage_stageDt_cFP13dStage_Elst_c.s"
+}
+#pragma pop
+
+
+/* 8002824C-80028328 00DC .text      __sinit_d_stage_cpp                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __sinit_d_stage_cpp() {
+	nofralloc
+#include "asm/d/d_stage/__sinit_d_stage_cpp.s"
+}
+#pragma pop
+
+
+/* 80028328-80028360 0038 .text      __arraydtor$5375                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_80028328() {
+	nofralloc
+#include "asm/d/d_stage/func_80028328.s"
+}
+#pragma pop
+
+
+/* 80028360-8002839C 003C .text      __dt__19dStage_roomStatus_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__19dStage_roomStatus_cFv() {
+	nofralloc
+#include "asm/d/d_stage/__dt__19dStage_roomStatus_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A6AAC-803A6C20 0174 .data      __vt__15dStage_roomDt_c                                      */
-SECTION_DATA void* __vt__15dStage_roomDt_c[93] = {
+void* const __vt__15dStage_roomDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)init__15dStage_roomDt_cFv,
@@ -1499,8 +4843,9 @@ SECTION_DATA void* __vt__15dStage_roomDt_c[93] = {
 	(void*)setElst__15dStage_roomDt_cFP13dStage_Elst_c,
 	(void*)getElst__15dStage_roomDt_cFv,
 };
+
 /* 803A6C20-803A6D94 0174 .data      __vt__16dStage_stageDt_c                                     */
-SECTION_DATA void* __vt__16dStage_stageDt_c[93] = {
+void* const __vt__16dStage_stageDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)init__16dStage_stageDt_cFv,
@@ -1595,8 +4940,9 @@ SECTION_DATA void* __vt__16dStage_stageDt_c[93] = {
 	(void*)setElst__16dStage_stageDt_cFP13dStage_Elst_c,
 	(void*)getElst__16dStage_stageDt_cFv,
 };
+
 /* 803A6D94-803A6F08 0174 .data      __vt__11dStage_dt_c                                          */
-SECTION_DATA void* __vt__11dStage_dt_c[93] = {
+void* const __vt__11dStage_dt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -1691,3047 +5037,45 @@ SECTION_DATA void* __vt__11dStage_dt_c[93] = {
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451C90-80451C94 0004 .sdata2    @4270                                                        */
-SECTION_SDATA2 u8 d_d_stage__LIT_4270[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80451C94-80451C98 0004 .sdata2    @5315                                                        */
-SECTION_SDATA2 u8 LIT_5315[4] = {
-	0x41, 0x70, 0x00, 0x00,
-};
-/* 80451C98-80451CA0 0008 .sdata2    @5317                                                        */
-SECTION_SDATA2 u8 LIT_5317[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803F4E68-803F4E68 0000 .bss       ...bss.0                                                     */
-/* 803F4E68-803F4E74 000C .bss       @3926                                                        */
-SECTION_BSS u8 d_d_stage__LIT_3926[12];
-/* 803F4E74-803F5778 0904 .bss       DoorInfo                                                     */
-SECTION_BSS u8 DoorInfo[2308];
-/* 803F5778-803F5784 000C .bss       @3981                                                        */
-SECTION_BSS u8 d_d_stage__LIT_3981[12];
-/* 803F5784-803F6088 0904 .bss       l_RoomKeepDoorInfo                                           */
-SECTION_BSS u8 l_RoomKeepDoorInfo[2308];
-/* 803F6088-803F6094 000C .bss       @5376                                                        */
-SECTION_BSS u8 d_d_stage__LIT_5376[12];
-/* 803F6094-80406194 10100 .bss       mStatus__20dStage_roomControl_c                              */
-SECTION_BSS u8 mStatus__20dStage_roomControl_c[65792];
-/* 80406194-804061A0 000A .bss       mDemoArcName__20dStage_roomControl_c                         */
-SECTION_BSS u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450D58-80450D60 0008 .sbss      tmp_name$4456                                                */
-SECTION_SBSS u8 data_80450D58[8];
-/* 80450D60-80450D64 0004 .sbss      mProcID__20dStage_roomControl_c                              */
-SECTION_SBSS u8 mProcID__20dStage_roomControl_c[4];
-/* 80450D64-80450D68 0004 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80450D64[4];
-/* 80450D64 0001 data_80450D64 */
-/* 80450D65 0001 data_80450D65 */
-/* 80450D66 0001 data_80450D66 */
-/* 80450D67 0001 data_80450D67 */
-/* 80450D68-80450D6C 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450D68[4];
-/* 80450D6C-80450D70 0004 .sbss      mArcBankName__20dStage_roomControl_c                         */
-SECTION_SBSS u8 mArcBankName__20dStage_roomControl_c[4];
-/* 80450D70-80450D74 0004 .sbss      mArcBankData__20dStage_roomControl_c                         */
-SECTION_SBSS u8 mArcBankData__20dStage_roomControl_c[4];
-/* 80450D74-80450D80 0008 .sbss      m_roomDzs__20dStage_roomControl_c                            */
-SECTION_SBSS u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80023E28-80023E94 006C .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void set__18dStage_nextStage_cFPCcScsScScUc() {
-	nofralloc
-#include "asm/d/d_stage/set__18dStage_nextStage_cFPCcScsScScUc.s"
-}
-#pragma pop
-
-/* 80023E94-80023EC4 0030 .text      dStage_SetErrorRoom__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_SetErrorRoom__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_SetErrorRoom__Fv.s"
-}
-#pragma pop
-
-/* 80023EC4-80023EF4 0030 .text      dStage_SetErrorStage__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_SetErrorStage__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_SetErrorStage__Fv.s"
-}
-#pragma pop
-
-/* 80023EF4-80023F00 000C .text      dStage_GetKeepDoorInfo__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_GetKeepDoorInfo__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_GetKeepDoorInfo__Fv.s"
-}
-#pragma pop
-
-/* 80023F00-80023F50 0050 .text      dStage_isBossStage__FP11dStage_dt_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_isBossStage__FP11dStage_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/dStage_isBossStage__FP11dStage_dt_c.s"
-}
-#pragma pop
-
-/* 80023F50-80023F84 0034 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_KeepDoorInfoInit__FP11dStage_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/dStage_KeepDoorInfoInit__FP11dStage_dt_c.s"
-}
-#pragma pop
-
-/* 80023F84-8002405C 00D8 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 8002405C-80024068 000C .text      dStage_GetRoomKeepDoorInfo__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_GetRoomKeepDoorInfo__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_GetRoomKeepDoorInfo__Fv.s"
-}
-#pragma pop
-
-/* 80024068-80024078 0010 .text      dStage_initRoomKeepDoorInfo__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_initRoomKeepDoorInfo__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_initRoomKeepDoorInfo__Fv.s"
-}
-#pragma pop
-
-/* 80024078-80024174 00FC .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 80024174-8002419C 0028 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002419C-800241E8 004C .text      set__19dStage_startStage_cFPCcScsSc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void set__19dStage_startStage_cFPCcScsSc() {
-	nofralloc
-#include "asm/d/d_stage/set__19dStage_startStage_cFPCcScsSc.s"
-}
-#pragma pop
-
-/* 800241E8-80024338 0150 .text      init__20dStage_roomControl_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__20dStage_roomControl_cFv() {
-	nofralloc
-#include "asm/d/d_stage/init__20dStage_roomControl_cFv.s"
-}
-#pragma pop
-
-/* 80024338-80024384 004C .text      initZone__20dStage_roomControl_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initZone__20dStage_roomControl_cFv() {
-	nofralloc
-#include "asm/d/d_stage/initZone__20dStage_roomControl_cFv.s"
-}
-#pragma pop
-
-/* 80024384-800243B0 002C .text      getStatusRoomDt__20dStage_roomControl_cFi                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStatusRoomDt__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/getStatusRoomDt__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 800243B0-800243E8 0038 .text      getMemoryBlock__20dStage_roomControl_cFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMemoryBlock__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/getMemoryBlock__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 800243E8-80024424 003C .text      setStayNo__20dStage_roomControl_cFi                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setStayNo__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setStayNo__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 80024424-8002442C 0008 .text      setNextStayNo__20dStage_roomControl_cFi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setNextStayNo__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setNextStayNo__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 8002442C-80024460 0034 .text      stayRoomCheck__FiPUci                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void stayRoomCheck__FiPUci() {
-	nofralloc
-#include "asm/d/d_stage/stayRoomCheck__FiPUci.s"
-}
-#pragma pop
-
-/* 80024460-800244E8 0088 .text      createRoomScene__Fi                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void createRoomScene__Fi() {
-	nofralloc
-#include "asm/d/d_stage/createRoomScene__Fi.s"
-}
-#pragma pop
-
-/* 800244E8-8002451C 0034 .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void checkRoomDisp__20dStage_roomControl_cCFi() {
-	nofralloc
-#include "asm/d/d_stage/checkRoomDisp__20dStage_roomControl_cCFi.s"
-}
-#pragma pop
-
-/* 8002451C-8002471C 0200 .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void loadRoom__20dStage_roomControl_cFiPUcb() {
-	nofralloc
-#include "asm/d/d_stage/loadRoom__20dStage_roomControl_cFiPUcb.s"
-}
-#pragma pop
-
-/* 8002471C-8002483C 0120 .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void zoneCountCheck__20dStage_roomControl_cCFi() {
-	nofralloc
-#include "asm/d/d_stage/zoneCountCheck__20dStage_roomControl_cCFi.s"
-}
-#pragma pop
-
-/* 8002483C-80024844 0008 .text      getStagInfo__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStagInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getStagInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80024844-800248A8 0064 .text      createMemoryBlock__20dStage_roomControl_cFiUl                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void createMemoryBlock__20dStage_roomControl_cFiUl() {
-	nofralloc
-#include "asm/d/d_stage/createMemoryBlock__20dStage_roomControl_cFiUl.s"
-}
-#pragma pop
-
-/* 800248A8-8002490C 0064 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void destroyMemoryBlock__20dStage_roomControl_cFv() {
-	nofralloc
-#include "asm/d/d_stage/destroyMemoryBlock__20dStage_roomControl_cFv.s"
-}
-#pragma pop
-
-/* 8002490C-80024940 0034 .text      setArcBank__20dStage_roomControl_cFiPCc                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setArcBank__20dStage_roomControl_cFiPCc() {
-	nofralloc
-#include "asm/d/d_stage/setArcBank__20dStage_roomControl_cFiPCc.s"
-}
-#pragma pop
-
-/* 80024940-80024954 0014 .text      getArcBank__20dStage_roomControl_cFi                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getArcBank__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/getArcBank__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 80024954-80024A34 00E0 .text      resetArchiveBank__20dStage_roomControl_cFi                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetArchiveBank__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/resetArchiveBank__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 80024A34-80024ABC 0088 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void create__Q220dStage_roomControl_c9roomDzs_cFUc() {
-	nofralloc
-#include "asm/d/d_stage/create__Q220dStage_roomControl_c9roomDzs_cFUc.s"
-}
-#pragma pop
-
-/* 80024ABC-80024B44 0088 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void remove__Q220dStage_roomControl_c9roomDzs_cFv() {
-	nofralloc
-#include "asm/d/d_stage/remove__Q220dStage_roomControl_c9roomDzs_cFv.s"
-}
-#pragma pop
-
-/* 80024B44-80024C1C 00D8 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void add__Q220dStage_roomControl_c9roomDzs_cFUcUc() {
-	nofralloc
-#include "asm/d/d_stage/add__Q220dStage_roomControl_c9roomDzs_cFUcUc.s"
-}
-#pragma pop
-
-/* 80024C1C-80024CA8 008C .text      init__16dStage_stageDt_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__16dStage_stageDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/init__16dStage_stageDt_cFv.s"
-}
-#pragma pop
-
-/* 80024CA8-80024CB4 000C .text      initFileList2__15dStage_roomDt_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initFileList2__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/initFileList2__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80024CB4-80024D10 005C .text      init__15dStage_roomDt_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/init__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80024D10-80024DB0 00A0 .text      dStage_roomInit__Fi                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomInit__Fi() {
-	nofralloc
-#include "asm/d/d_stage/dStage_roomInit__Fi.s"
-}
-#pragma pop
-
-/* 80024DB0-80024DB8 0008 .text      SetTimePass__20dStage_roomControl_cFi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void SetTimePass__20dStage_roomControl_cFi() {
-	nofralloc
-#include "asm/d/d_stage/SetTimePass__20dStage_roomControl_cFi.s"
-}
-#pragma pop
-
-/* 80024DB8-80024DC0 0008 .text      getRoom__16dStage_stageDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getRoom__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getRoom__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80024DC0-80024E30 0070 .text      dStage_searchName__FPCc                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_searchName__FPCc() {
-	nofralloc
-#include "asm/d/d_stage/dStage_searchName__FPCc.s"
-}
-#pragma pop
-
-/* 80024E30-80024EDC 00AC .text      dStage_getName__FsSc                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_getName__FsSc() {
-	nofralloc
-#include "asm/d/d_stage/dStage_getName__FsSc.s"
-}
-#pragma pop
-
-/* 80024EDC-80024EFC 0020 .text      dStage_getName2__FsSc                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_getName2__FsSc() {
-	nofralloc
-#include "asm/d/d_stage/dStage_getName2__FsSc.s"
-}
-#pragma pop
-
-/* 80024EFC-80024F98 009C .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class() {
-	nofralloc
-#include "asm/d/d_stage/dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class.s"
-}
-#pragma pop
-
-/* 80024F98-80025004 006C .text      dStage_cameraCreate__FP24stage_camera2_data_classii          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_cameraCreate__FP24stage_camera2_data_classii() {
-	nofralloc
-#include "asm/d/d_stage/dStage_cameraCreate__FP24stage_camera2_data_classii.s"
-}
-#pragma pop
-
-/* 80025004-8002500C 0008 .text      getPlayer__15dStage_roomDt_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlayer__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlayer__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002500C-80025014 0008 .text      getPlayer__16dStage_stageDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlayer__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlayer__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80025014-800252B8 02A4 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_playerInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_playerInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800252B8-80025308 0050 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_cameraInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_cameraInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025308-8002533C 0034 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_RoomCameraInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_RoomCameraInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002533C-80025370 0034 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_arrowInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_arrowInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025370-800253FC 008C .text      getMapInfo2__15dStage_roomDt_cCFi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfo2__15dStage_roomDt_cCFi() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfo2__15dStage_roomDt_cCFi.s"
-}
-#pragma pop
-
-/* 800253FC-80025404 0008 .text      getMapInfoBase__15dStage_roomDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfoBase__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfoBase__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80025404-80025490 008C .text      getMapInfo2__16dStage_stageDt_cCFi                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfo2__16dStage_stageDt_cCFi() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfo2__16dStage_stageDt_cCFi.s"
-}
-#pragma pop
-
-/* 80025490-80025498 0008 .text      getMapInfoBase__16dStage_stageDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfoBase__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfoBase__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80025498-800254CC 0034 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_paletteInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_paletteInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800254CC-80025500 0034 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_pselectInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_pselectInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025500-80025534 0034 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_envrInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_envrInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025534-8002556C 0038 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_filiInfo2Init__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_filiInfo2Init__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002556C-8002558C 0020 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002558C-800255E0 0054 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_filiInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_filiInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800255E0-80025614 0034 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_vrboxInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025614-80025648 0034 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025648-800256AC 0064 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_plightInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_plightInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800256AC-80025738 008C .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_lgtvInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025738-80025744 000C .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi() {
-	nofralloc
-#include "asm/d/d_stage/dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi.s"
-}
-#pragma pop
-
-/* 80025744-8002582C 00E8 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stagInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_stagInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002582C-80025838 000C .text      resetOldMulti__16dStage_stageDt_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetOldMulti__16dStage_stageDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/resetOldMulti__16dStage_stageDt_cFv.s"
-}
-#pragma pop
-
-/* 80025838-8002586C 0034 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_sclsInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_sclsInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002586C-80025958 00EC .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025958-80025A38 00E0 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025A38-80025B24 00EC .text      dStage_actorInit__FP11dStage_dt_cPviPv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_actorInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_actorInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025B24-80025BFC 00D8 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_actorInit_always__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_actorInit_always__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025BFC-80025CDC 00E0 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_tgscInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_tgscInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025CDC-80025DA8 00CC .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_doorInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_doorInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025DA8-80025E40 0098 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomReadInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_roomReadInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025E40-80025E70 0030 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi() {
-	nofralloc
-#include "asm/d/d_stage/dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi.s"
-}
-#pragma pop
-
-/* 80025E70-80025EA4 0034 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_ppntInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_ppntInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025EA4-80025F44 00A0 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_pathInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_pathInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025F44-80025F78 0034 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_rppnInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_rppnInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80025F78-80026018 00A0 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_rpatInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_rpatInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026018-8002604C 0034 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_soundInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_soundInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002604C-80026080 0034 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_soundInfoInitCL__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026080-800260B4 0034 .text      dStage_setLayerTagName__FP9FuncTableii                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_setLayerTagName__FP9FuncTableii() {
-	nofralloc
-#include "asm/d/d_stage/dStage_setLayerTagName__FP9FuncTableii.s"
-}
-#pragma pop
-
-/* 800260B4-8002617C 00C8 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei.s"
-}
-#pragma pop
-
-/* 8002617C-800261B0 0034 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stEventInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_stEventInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800261B0-800261E4 0034 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_mapEventInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800261E4-80026218 0034 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_floorInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_floorInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026218-80026298 0080 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_memaInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_memaInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026298-8002631C 0084 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_mecoInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_mecoInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002631C-8002634C 0030 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002634C-8002635C 0010 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002635C-800263A0 0044 .text      dStage_dt_c_offsetToPtr__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_offsetToPtr__FPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_offsetToPtr__FPv.s"
-}
-#pragma pop
-
-/* 800263A0-800263D0 0030 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_mapPathInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_mapPathInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800263D0-80026400 0030 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026400-8002645C 005C .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002645C-800265DC 0180 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void readMult__FP11dStage_dt_cP14dStage_Multi_cb() {
-	nofralloc
-#include "asm/d/d_stage/readMult__FP11dStage_dt_cP14dStage_Multi_cb.s"
-}
-#pragma pop
-
-/* 800265DC-80026670 0094 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_multInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_multInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026670-800266A4 0034 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_lbnkInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800266A4-8002670C 0068 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomTresureInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_roomTresureInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 8002670C-80026730 0024 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_layerTresureInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_layerTresureInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026730-80026764 0034 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dmapInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dmapInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026764-800267DC 0078 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 800267DC-80026844 0068 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026844-80026898 0054 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_elstInfoInit__FP11dStage_dt_cPviPv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_elstInfoInit__FP11dStage_dt_cPviPv.s"
-}
-#pragma pop
-
-/* 80026898-80026914 007C .text      dKankyo_create__Fv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dKankyo_create__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dKankyo_create__Fv.s"
-}
-#pragma pop
-
-/* 80026914-80026940 002C .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void layerMemoryInfoLoader__FPvP11dStage_dt_ci() {
-	nofralloc
-#include "asm/d/d_stage/layerMemoryInfoLoader__FPvP11dStage_dt_ci.s"
-}
-#pragma pop
-
-/* 80026940-800269B4 0074 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c.s"
-}
-#pragma pop
-
-/* 800269B4-80026AE8 0134 .text      layerTableLoader__FPvP11dStage_dt_ci                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void layerTableLoader__FPvP11dStage_dt_ci() {
-	nofralloc
-#include "asm/d/d_stage/layerTableLoader__FPvP11dStage_dt_ci.s"
-}
-#pragma pop
-
-/* 80026AE8-80026AF0 0008 .text      getElst__16dStage_stageDt_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getElst__16dStage_stageDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/getElst__16dStage_stageDt_cFv.s"
-}
-#pragma pop
-
-/* 80026AF0-80026B58 0068 .text      layerActorLoader__FPvP11dStage_dt_ci                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void layerActorLoader__FPvP11dStage_dt_ci() {
-	nofralloc
-#include "asm/d/d_stage/layerActorLoader__FPvP11dStage_dt_ci.s"
-}
-#pragma pop
-
-/* 80026B58-80026BBC 0064 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_stageLoader__FPvP11dStage_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_stageLoader__FPvP11dStage_dt_c.s"
-}
-#pragma pop
-
-/* 80026BBC-80026C34 0078 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_roomLoader__FPvP11dStage_dt_ci.s"
-}
-#pragma pop
-
-/* 80026C34-80026C8C 0058 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci.s"
-}
-#pragma pop
-
-/* 80026C8C-80026CDC 0050 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c.s"
-}
-#pragma pop
-
-/* 80026CDC-80026D38 005C .text      dStage_infoCreate__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_infoCreate__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_infoCreate__Fv.s"
-}
-#pragma pop
-
-/* 80026D38-80026DF8 00C0 .text      dStage_Create__Fv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_Create__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_Create__Fv.s"
-}
-#pragma pop
-
-/* 80026DF8-80026FDC 01E4 .text      dStage_Delete__Fv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_Delete__Fv() {
-	nofralloc
-#include "asm/d/d_stage/dStage_Delete__Fv.s"
-}
-#pragma pop
-
-/* 80026FDC-80026FE8 000C .text      setOldMulti__16dStage_stageDt_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setOldMulti__16dStage_stageDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/setOldMulti__16dStage_stageDt_cFv.s"
-}
-#pragma pop
-
-/* 80026FE8-800270FC 0114 .text      dStage_RoomCheck__FP11cBgS_GndChk                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_RoomCheck__FP11cBgS_GndChk() {
-	nofralloc
-#include "asm/d/d_stage/dStage_RoomCheck__FP11cBgS_GndChk.s"
-}
-#pragma pop
-
-/* 800270FC-80027170 0074 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs() {
-	nofralloc
-#include "asm/d/d_stage/dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs.s"
-}
-#pragma pop
-
-/* 80027170-800272E0 0170 .text      dStage_changeScene__FifUlScsi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_changeScene__FifUlScsi() {
-	nofralloc
-#include "asm/d/d_stage/dStage_changeScene__FifUlScsi.s"
-}
-#pragma pop
-
-/* 800272E0-800272E8 0008 .text      getSclsInfo__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSclsInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSclsInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800272E8-800272F0 0008 .text      getSclsInfo__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSclsInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSclsInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 800272F0-800274B0 01C0 .text      dStage_changeScene4Event__FiScibfUlsi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_changeScene4Event__FiScibfUlsi() {
-	nofralloc
-#include "asm/d/d_stage/dStage_changeScene4Event__FiScibfUlsi.s"
-}
-#pragma pop
-
-/* 800274B0-80027524 0074 .text      dStage_restartRoom__FUlUli                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_restartRoom__FUlUli() {
-	nofralloc
-#include "asm/d/d_stage/dStage_restartRoom__FUlUli.s"
-}
-#pragma pop
-
-/* 80027524-8002752C 0008 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setCamera__15dStage_roomDt_cFP18stage_camera_class() {
-	nofralloc
-#include "asm/d/d_stage/setCamera__15dStage_roomDt_cFP18stage_camera_class.s"
-}
-#pragma pop
-
-/* 8002752C-80027534 0008 .text      getCamera__15dStage_roomDt_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getCamera__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getCamera__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027534-8002753C 0008 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setArrow__15dStage_roomDt_cFP17stage_arrow_class() {
-	nofralloc
-#include "asm/d/d_stage/setArrow__15dStage_roomDt_cFP17stage_arrow_class.s"
-}
-#pragma pop
-
-/* 8002753C-80027544 0008 .text      getArrow__15dStage_roomDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getArrow__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getArrow__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027544-8002754C 0008 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlayer__15dStage_roomDt_cFP17stage_actor_class() {
-	nofralloc
-#include "asm/d/d_stage/setPlayer__15dStage_roomDt_cFP17stage_actor_class.s"
-}
-#pragma pop
-
-/* 8002754C-80027554 0008 .text      setPlayerNum__15dStage_roomDt_cFUs                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlayerNum__15dStage_roomDt_cFUs() {
-	nofralloc
-#include "asm/d/d_stage/setPlayerNum__15dStage_roomDt_cFUs.s"
-}
-#pragma pop
-
-/* 80027554-8002755C 0008 .text      getPlayerNum__15dStage_roomDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlayerNum__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlayerNum__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002755C-80027590 0034 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setRoom__15dStage_roomDt_cFP14roomRead_class() {
-	nofralloc
-#include "asm/d/d_stage/setRoom__15dStage_roomDt_cFP14roomRead_class.s"
-}
-#pragma pop
-
-/* 80027590-800275C4 0034 .text      getRoom__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getRoom__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getRoom__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800275C4-800275CC 0008 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setMapInfo__15dStage_roomDt_cFP20stage_map_info_class.s"
-}
-#pragma pop
-
-/* 800275CC-800275D4 0008 .text      getMapInfo__15dStage_roomDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800275D4-800275DC 0008 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class() {
-	nofralloc
-#include "asm/d/d_stage/setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class.s"
-}
-#pragma pop
-
-/* 800275DC-80027610 0034 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class.s"
-}
-#pragma pop
-
-/* 80027610-80027644 0034 .text      getPaletteInfo__15dStage_roomDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPaletteInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPaletteInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027644-80027678 0034 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class.s"
-}
-#pragma pop
-
-/* 80027678-800276AC 0034 .text      getPselectInfo__15dStage_roomDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPselectInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPselectInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800276AC-800276E0 0034 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class.s"
-}
-#pragma pop
-
-/* 800276E0-80027714 0034 .text      getEnvrInfo__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getEnvrInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getEnvrInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027714-8002771C 0008 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class.s"
-}
-#pragma pop
-
-/* 8002771C-80027724 0008 .text      getVrboxInfo__15dStage_roomDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027724-8002772C 0008 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class.s"
-}
-#pragma pop
-
-/* 8002772C-80027734 0008 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxcolInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxcolInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027734-80027768 0034 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class.s"
-}
-#pragma pop
-
-/* 80027768-8002779C 0034 .text      getPlightInfo__15dStage_roomDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlightInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlightInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002779C-800277D0 0034 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPaletteNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPaletteNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 800277D0-80027804 0034 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPaletteNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPaletteNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027804-80027838 0034 .text      setPselectNumInfo__15dStage_roomDt_cFi                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPselectNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPselectNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 80027838-8002786C 0034 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPselectNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPselectNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002786C-800278A0 0034 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEnvrNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setEnvrNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 800278A0-800278D4 0034 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getEnvrNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getEnvrNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800278D4-800278DC 0008 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 800278DC-800278E4 0008 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800278E4-800278EC 0008 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxcolNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxcolNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 800278EC-800278F4 0008 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxcolNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxcolNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800278F4-80027928 0034 .text      setPlightNumInfo__15dStage_roomDt_cFi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlightNumInfo__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPlightNumInfo__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 80027928-8002795C 0034 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlightNumInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlightNumInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002795C-80027964 0008 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class.s"
-}
-#pragma pop
-
-/* 80027964-8002796C 0008 .text      getLightVecInfo__15dStage_roomDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLightVecInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLightVecInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002796C-80027974 0008 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLightVecInfoNum__15dStage_roomDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setLightVecInfoNum__15dStage_roomDt_cFi.s"
-}
-#pragma pop
-
-/* 80027974-8002797C 0008 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLightVecInfoNum__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLightVecInfoNum__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 8002797C-800279B0 0034 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class.s"
-}
-#pragma pop
-
-/* 800279B0-800279E4 0034 .text      getStagInfo__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getStagInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getStagInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 800279E4-800279EC 0008 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class() {
-	nofralloc
-#include "asm/d/d_stage/setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class.s"
-}
-#pragma pop
-
-/* 800279EC-80027A20 0034 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c() {
-	nofralloc
-#include "asm/d/d_stage/setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c.s"
-}
-#pragma pop
-
-/* 80027A20-80027A54 0034 .text      getPntInf__15dStage_roomDt_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPntInf__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPntInf__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027A54-80027A88 0034 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c() {
-	nofralloc
-#include "asm/d/d_stage/setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c.s"
-}
-#pragma pop
-
-/* 80027A88-80027ABC 0034 .text      getPathInf__15dStage_roomDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPathInf__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPathInf__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027ABC-80027AC4 0008 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c() {
-	nofralloc
-#include "asm/d/d_stage/setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c.s"
-}
-#pragma pop
-
-/* 80027AC4-80027ACC 0008 .text      getPnt2Inf__15dStage_roomDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPnt2Inf__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPnt2Inf__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027ACC-80027AD4 0008 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c() {
-	nofralloc
-#include "asm/d/d_stage/setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c.s"
-}
-#pragma pop
-
-/* 80027AD4-80027ADC 0008 .text      getPath2Inf__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPath2Inf__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPath2Inf__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027ADC-80027AE4 0008 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
-}
-#pragma pop
-
-/* 80027AE4-80027AEC 0008 .text      getSoundInf__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundInf__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSoundInf__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027AEC-80027AF4 0008 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
-}
-#pragma pop
-
-/* 80027AF4-80027AFC 0008 .text      getSoundInfCL__15dStage_roomDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundInfCL__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSoundInfCL__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027AFC-80027B04 0008 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c.s"
-}
-#pragma pop
-
-/* 80027B04-80027B0C 0008 .text      getMapEventInfo__15dStage_roomDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapEventInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapEventInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027B0C-80027B14 0008 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c.s"
-}
-#pragma pop
-
-/* 80027B14-80027B1C 0008 .text      getFileList2Info__15dStage_roomDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getFileList2Info__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getFileList2Info__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027B1C-80027B24 0008 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c.s"
-}
-#pragma pop
-
-/* 80027B24-80027B2C 0008 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c.s"
-}
-#pragma pop
-
-/* 80027B2C-80027B34 0008 .text      getFloorInfo__15dStage_roomDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getFloorInfo__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getFloorInfo__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027B34-80027B64 0030 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c() {
-	nofralloc
-#include "asm/d/d_stage/setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c.s"
-}
-#pragma pop
-
-/* 80027B64-80027B98 0034 .text      getMemoryConfig__15dStage_roomDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMemoryConfig__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMemoryConfig__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027B98-80027BC8 0030 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c() {
-	nofralloc
-#include "asm/d/d_stage/setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c.s"
-}
-#pragma pop
-
-/* 80027BC8-80027BFC 0034 .text      getMemoryMap__15dStage_roomDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMemoryMap__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMemoryMap__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027BFC-80027C2C 0030 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMulti__15dStage_roomDt_cFP14dStage_Multi_c() {
-	nofralloc
-#include "asm/d/d_stage/setMulti__15dStage_roomDt_cFP14dStage_Multi_c.s"
-}
-#pragma pop
-
-/* 80027C2C-80027C60 0034 .text      getMulti__15dStage_roomDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMulti__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMulti__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027C60-80027C90 0030 .text      setOldMulti__15dStage_roomDt_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setOldMulti__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/setOldMulti__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80027C90-80027CC0 0030 .text      resetOldMulti__15dStage_roomDt_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void resetOldMulti__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/resetOldMulti__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80027CC0-80027CF4 0034 .text      getOldMulti__15dStage_roomDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getOldMulti__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getOldMulti__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027CF4-80027CFC 0008 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c() {
-	nofralloc
-#include "asm/d/d_stage/setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c.s"
-}
-#pragma pop
-
-/* 80027CFC-80027D04 0008 .text      getLbnk__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLbnk__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLbnk__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027D04-80027D0C 0008 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setTresure__15dStage_roomDt_cFP19stage_tresure_class() {
-	nofralloc
-#include "asm/d/d_stage/setTresure__15dStage_roomDt_cFP19stage_tresure_class.s"
-}
-#pragma pop
-
-/* 80027D0C-80027D14 0008 .text      getTresure__15dStage_roomDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getTresure__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getTresure__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027D14-80027D18 0004 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDMap__15dStage_roomDt_cFP13dStage_DMap_c() {
-	nofralloc
-#include "asm/d/d_stage/setDMap__15dStage_roomDt_cFP13dStage_DMap_c.s"
-}
-#pragma pop
-
-/* 80027D18-80027D20 0008 .text      getDMap__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDMap__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDMap__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027D20-80027D28 0008 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/setDrTg__15dStage_roomDt_cFP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 80027D28-80027D30 0008 .text      getDrTg__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDrTg__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDrTg__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027D30-80027D38 0008 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDoor__15dStage_roomDt_cFP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/setDoor__15dStage_roomDt_cFP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 80027D38-80027D40 0008 .text      getDoor__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDoor__15dStage_roomDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDoor__15dStage_roomDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027D40-80027D70 0030 .text      setMapPath__15dStage_roomDt_cFPv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapPath__15dStage_roomDt_cFPv() {
-	nofralloc
-#include "asm/d/d_stage/setMapPath__15dStage_roomDt_cFPv.s"
-}
-#pragma pop
-
-/* 80027D70-80027DA4 0034 .text      getMapPath__15dStage_roomDt_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapPath__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapPath__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80027DA4-80027DD8 0034 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setElst__15dStage_roomDt_cFP13dStage_Elst_c() {
-	nofralloc
-#include "asm/d/d_stage/setElst__15dStage_roomDt_cFP13dStage_Elst_c.s"
-}
-#pragma pop
-
-/* 80027DD8-80027E10 0038 .text      getElst__15dStage_roomDt_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getElst__15dStage_roomDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/getElst__15dStage_roomDt_cFv.s"
-}
-#pragma pop
-
-/* 80027E10-80027E18 0008 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setCamera__16dStage_stageDt_cFP18stage_camera_class() {
-	nofralloc
-#include "asm/d/d_stage/setCamera__16dStage_stageDt_cFP18stage_camera_class.s"
-}
-#pragma pop
-
-/* 80027E18-80027E20 0008 .text      getCamera__16dStage_stageDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getCamera__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getCamera__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E20-80027E28 0008 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setArrow__16dStage_stageDt_cFP17stage_arrow_class() {
-	nofralloc
-#include "asm/d/d_stage/setArrow__16dStage_stageDt_cFP17stage_arrow_class.s"
-}
-#pragma pop
-
-/* 80027E28-80027E30 0008 .text      getArrow__16dStage_stageDt_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getArrow__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getArrow__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E30-80027E38 0008 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlayer__16dStage_stageDt_cFP17stage_actor_class() {
-	nofralloc
-#include "asm/d/d_stage/setPlayer__16dStage_stageDt_cFP17stage_actor_class.s"
-}
-#pragma pop
-
-/* 80027E38-80027E40 0008 .text      setPlayerNum__16dStage_stageDt_cFUs                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlayerNum__16dStage_stageDt_cFUs() {
-	nofralloc
-#include "asm/d/d_stage/setPlayerNum__16dStage_stageDt_cFUs.s"
-}
-#pragma pop
-
-/* 80027E40-80027E48 0008 .text      getPlayerNum__16dStage_stageDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlayerNum__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlayerNum__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E48-80027E50 0008 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setRoom__16dStage_stageDt_cFP14roomRead_class() {
-	nofralloc
-#include "asm/d/d_stage/setRoom__16dStage_stageDt_cFP14roomRead_class.s"
-}
-#pragma pop
-
-/* 80027E50-80027E58 0008 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setMapInfo__16dStage_stageDt_cFP20stage_map_info_class.s"
-}
-#pragma pop
-
-/* 80027E58-80027E60 0008 .text      getMapInfo__16dStage_stageDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E60-80027E68 0008 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class() {
-	nofralloc
-#include "asm/d/d_stage/setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class.s"
-}
-#pragma pop
-
-/* 80027E68-80027E70 0008 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class.s"
-}
-#pragma pop
-
-/* 80027E70-80027E78 0008 .text      getPaletteInfo__16dStage_stageDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPaletteInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPaletteInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E78-80027E80 0008 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class.s"
-}
-#pragma pop
-
-/* 80027E80-80027E88 0008 .text      getPselectInfo__16dStage_stageDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPselectInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPselectInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E88-80027E90 0008 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class.s"
-}
-#pragma pop
-
-/* 80027E90-80027E98 0008 .text      getEnvrInfo__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getEnvrInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getEnvrInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027E98-80027EA0 0008 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class.s"
-}
-#pragma pop
-
-/* 80027EA0-80027EA8 0008 .text      getVrboxInfo__16dStage_stageDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027EA8-80027EB0 0008 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class.s"
-}
-#pragma pop
-
-/* 80027EB0-80027EB8 0008 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxcolInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxcolInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027EB8-80027EC0 0008 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class.s"
-}
-#pragma pop
-
-/* 80027EC0-80027EC8 0008 .text      getPlightInfo__16dStage_stageDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlightInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlightInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027EC8-80027ED0 0008 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPaletteNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPaletteNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027ED0-80027ED8 0008 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPaletteNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPaletteNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027ED8-80027EE0 0008 .text      setPselectNumInfo__16dStage_stageDt_cFi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPselectNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPselectNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027EE0-80027EE8 0008 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPselectNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPselectNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027EE8-80027EF0 0008 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setEnvrNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setEnvrNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027EF0-80027EF8 0008 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getEnvrNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getEnvrNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027EF8-80027F00 0008 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027F00-80027F08 0008 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027F08-80027F10 0008 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setVrboxcolNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setVrboxcolNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027F10-80027F18 0008 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getVrboxcolNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getVrboxcolNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027F18-80027F4C 0034 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class.s"
-}
-#pragma pop
-
-/* 80027F4C-80027F80 0034 .text      getLightVecInfo__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLightVecInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLightVecInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027F80-80027FB4 0034 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLightVecInfoNum__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setLightVecInfoNum__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027FB4-80027FE8 0034 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLightVecInfoNum__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLightVecInfoNum__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027FE8-80027FF0 0008 .text      setPlightNumInfo__16dStage_stageDt_cFi                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPlightNumInfo__16dStage_stageDt_cFi() {
-	nofralloc
-#include "asm/d/d_stage/setPlightNumInfo__16dStage_stageDt_cFi.s"
-}
-#pragma pop
-
-/* 80027FF0-80027FF8 0008 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPlightNumInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPlightNumInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80027FF8-80028000 0008 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class() {
-	nofralloc
-#include "asm/d/d_stage/setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class.s"
-}
-#pragma pop
-
-/* 80028000-80028008 0008 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class() {
-	nofralloc
-#include "asm/d/d_stage/setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class.s"
-}
-#pragma pop
-
-/* 80028008-80028010 0008 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c() {
-	nofralloc
-#include "asm/d/d_stage/setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c.s"
-}
-#pragma pop
-
-/* 80028010-80028018 0008 .text      getPntInf__16dStage_stageDt_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPntInf__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPntInf__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028018-80028020 0008 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c() {
-	nofralloc
-#include "asm/d/d_stage/setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c.s"
-}
-#pragma pop
-
-/* 80028020-80028028 0008 .text      getPathInf__16dStage_stageDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPathInf__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPathInf__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028028-80028030 0008 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c() {
-	nofralloc
-#include "asm/d/d_stage/setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c.s"
-}
-#pragma pop
-
-/* 80028030-80028038 0008 .text      getPnt2Inf__16dStage_stageDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPnt2Inf__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPnt2Inf__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028038-80028040 0008 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c() {
-	nofralloc
-#include "asm/d/d_stage/setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c.s"
-}
-#pragma pop
-
-/* 80028040-80028048 0008 .text      getPath2Inf__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getPath2Inf__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getPath2Inf__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028048-80028050 0008 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
-}
-#pragma pop
-
-/* 80028050-80028058 0008 .text      getSoundInf__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundInf__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSoundInf__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028058-80028060 0008 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
-}
-#pragma pop
-
-/* 80028060-80028068 0008 .text      getSoundInfCL__16dStage_stageDt_cCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getSoundInfCL__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getSoundInfCL__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028068-80028070 0008 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c.s"
-}
-#pragma pop
-
-/* 80028070-80028078 0008 .text      getMapEventInfo__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapEventInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapEventInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028078-800280AC 0034 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c.s"
-}
-#pragma pop
-
-/* 800280AC-800280E0 0034 .text      getFileList2Info__16dStage_stageDt_cCFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getFileList2Info__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getFileList2Info__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 800280E0-80028114 0034 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c() {
-	nofralloc
-#include "asm/d/d_stage/setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c.s"
-}
-#pragma pop
-
-/* 80028114-80028148 0034 .text      getFileListInfo__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getFileListInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getFileListInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028148-80028150 0008 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c() {
-	nofralloc
-#include "asm/d/d_stage/setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c.s"
-}
-#pragma pop
-
-/* 80028150-80028158 0008 .text      getFloorInfo__16dStage_stageDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getFloorInfo__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getFloorInfo__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028158-80028160 0008 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c() {
-	nofralloc
-#include "asm/d/d_stage/setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c.s"
-}
-#pragma pop
-
-/* 80028160-80028168 0008 .text      getMemoryConfig__16dStage_stageDt_cCFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMemoryConfig__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMemoryConfig__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028168-80028170 0008 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c() {
-	nofralloc
-#include "asm/d/d_stage/setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c.s"
-}
-#pragma pop
-
-/* 80028170-80028178 0008 .text      getMemoryMap__16dStage_stageDt_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMemoryMap__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMemoryMap__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028178-80028180 0008 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMulti__16dStage_stageDt_cFP14dStage_Multi_c() {
-	nofralloc
-#include "asm/d/d_stage/setMulti__16dStage_stageDt_cFP14dStage_Multi_c.s"
-}
-#pragma pop
-
-/* 80028180-80028188 0008 .text      getMulti__16dStage_stageDt_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMulti__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getMulti__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028188-80028190 0008 .text      getOldMulti__16dStage_stageDt_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getOldMulti__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getOldMulti__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028190-800281C4 0034 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c() {
-	nofralloc
-#include "asm/d/d_stage/setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c.s"
-}
-#pragma pop
-
-/* 800281C4-800281F8 0034 .text      getLbnk__16dStage_stageDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getLbnk__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getLbnk__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 800281F8-80028200 0008 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setTresure__16dStage_stageDt_cFP19stage_tresure_class() {
-	nofralloc
-#include "asm/d/d_stage/setTresure__16dStage_stageDt_cFP19stage_tresure_class.s"
-}
-#pragma pop
-
-/* 80028200-80028208 0008 .text      getTresure__16dStage_stageDt_cCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getTresure__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getTresure__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028208-80028210 0008 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDMap__16dStage_stageDt_cFP13dStage_DMap_c() {
-	nofralloc
-#include "asm/d/d_stage/setDMap__16dStage_stageDt_cFP13dStage_DMap_c.s"
-}
-#pragma pop
-
-/* 80028210-80028218 0008 .text      getDMap__16dStage_stageDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDMap__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDMap__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028218-80028220 0008 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/setDrTg__16dStage_stageDt_cFP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 80028220-80028228 0008 .text      getDrTg__16dStage_stageDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDrTg__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDrTg__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028228-80028230 0008 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setDoor__16dStage_stageDt_cFP16stage_tgsc_class() {
-	nofralloc
-#include "asm/d/d_stage/setDoor__16dStage_stageDt_cFP16stage_tgsc_class.s"
-}
-#pragma pop
-
-/* 80028230-80028238 0008 .text      getDoor__16dStage_stageDt_cCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getDoor__16dStage_stageDt_cCFv() {
-	nofralloc
-#include "asm/d/d_stage/getDoor__16dStage_stageDt_cCFv.s"
-}
-#pragma pop
-
-/* 80028238-8002823C 0004 .text      setMapPath__16dStage_stageDt_cFPv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setMapPath__16dStage_stageDt_cFPv() {
-	nofralloc
-#include "asm/d/d_stage/setMapPath__16dStage_stageDt_cFPv.s"
-}
-#pragma pop
-
-/* 8002823C-80028244 0008 .text      getMapPath__16dStage_stageDt_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void getMapPath__16dStage_stageDt_cFv() {
-	nofralloc
-#include "asm/d/d_stage/getMapPath__16dStage_stageDt_cFv.s"
-}
-#pragma pop
-
-/* 80028244-8002824C 0008 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setElst__16dStage_stageDt_cFP13dStage_Elst_c() {
-	nofralloc
-#include "asm/d/d_stage/setElst__16dStage_stageDt_cFP13dStage_Elst_c.s"
-}
-#pragma pop
-
-/* 8002824C-80028328 00DC .text      __sinit_d_stage_cpp                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __sinit_d_stage_cpp() {
-	nofralloc
-#include "asm/d/d_stage/__sinit_d_stage_cpp.s"
-}
-#pragma pop
-
-/* 80028328-80028360 0038 .text      __arraydtor$5375                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_80028328() {
-	nofralloc
-#include "asm/d/d_stage/func_80028328.s"
-}
-#pragma pop
-
-/* 80028360-8002839C 003C .text      __dt__19dStage_roomStatus_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__19dStage_roomStatus_cFv() {
-	nofralloc
-#include "asm/d/d_stage/__dt__19dStage_roomStatus_cFv.s"
-}
-#pragma pop
 
 /* 8002839C-80028418 007C .text      __ct__19dStage_roomStatus_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19dStage_roomStatus_cFv() {
+extern "C" asm void __ct__19dStage_roomStatus_cFv() {
 	nofralloc
 #include "asm/d/d_stage/__ct__19dStage_roomStatus_cFv.s"
 }
 #pragma pop
 
+
 /* 80028418-8002847C 0064 .text      __dt__19dStage_KeepDoorInfoFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19dStage_KeepDoorInfoFv() {
+extern "C" asm void __dt__19dStage_KeepDoorInfoFv() {
 	nofralloc
 #include "asm/d/d_stage/__dt__19dStage_KeepDoorInfoFv.s"
 }
 #pragma pop
 
+
 /* 8002847C-800284B8 003C .text      __dt__21stage_tgsc_data_classFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__21stage_tgsc_data_classFv() {
+extern "C" asm void __dt__21stage_tgsc_data_classFv() {
 	nofralloc
 #include "asm/d/d_stage/__dt__21stage_tgsc_data_classFv.s"
 }
 #pragma pop
 
+
 /* 800284B8-800284BC 0004 .text      __ct__21stage_tgsc_data_classFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__21stage_tgsc_data_classFv() {
+extern "C" asm void __ct__21stage_tgsc_data_classFv() {
 	nofralloc
 #include "asm/d/d_stage/__ct__21stage_tgsc_data_classFv.s"
 }

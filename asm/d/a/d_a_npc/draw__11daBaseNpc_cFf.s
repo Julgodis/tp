@@ -106,13 +106,13 @@ lbl_8014EDC4:
 /* 8014EDCC 00000008  7F E5 FB 78 */	mr r5, r31
 /* 8014EDD0 0000000C  38 DD 04 D0 */	addi r6, r29, 0x4d0
 /* 8014EDD4 00000010  FC 20 F8 90 */	fmr f1, f31
-/* 8014EDD8 00000014  C0 42 9A 44 */	lfs f2, LIT_5794(r2)
+/* 8014EDD8 00000014  C0 42 9A 44 */	lfs f2, lit_5794(r2)
 /* 8014EDDC 00000018  C0 7D 04 D4 */	lfs f3, 0x4d4(r29)
 /* 8014EDE0 0000001C  C0 9D 0A 10 */	lfs f4, 0xa10(r29)
 /* 8014EDE4 00000020  38 FD 09 E8 */	addi r7, r29, 0x9e8
 /* 8014EDE8 00000024  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 8014EDEC 00000028  39 20 00 00 */	li r9, 0
-/* 8014EDF0 0000002C  C0 A2 99 DC */	lfs f5, d_a_d_a_npc__LIT_4140(r2)
+/* 8014EDF0 0000002C  C0 A2 99 DC */	lfs f5, d_a_d_a_npc__lit_4140(r2)
 /* 8014EDF4 00000030  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 8014EDF8 00000034  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 8014EDFC 00000038  4B ED FB 15 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

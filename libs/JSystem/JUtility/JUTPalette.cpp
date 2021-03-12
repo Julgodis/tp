@@ -5,27 +5,24 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSPanic();
-extern void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
-extern void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
-extern void load__10JUTPaletteFv();
-extern void GXInitTlutObj();
-extern void GXLoadTlut();
-extern void _savegpr_29();
-extern void _restgpr_29();
+extern "C" extern void OSPanic();
+extern "C" extern void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
+extern "C" extern void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+extern "C" extern void load__10JUTPaletteFv();
+extern "C" extern void GXInitTlutObj();
+extern "C" extern void GXLoadTlut();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 JUTPalette__stringBase0[48];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039D360-8039D390 0029 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -35,38 +32,34 @@ SECTION_DEAD const char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_8039D389 = "\0\0\0\0\0\0";
 #pragma pop
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802DE890-802DE91C 008C .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT() {
+extern "C" asm void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTPalette/storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT.s"
 }
 #pragma pop
 
+
 /* 802DE91C-802DE95C 0040 .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv() {
+extern "C" asm void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTPalette/storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv.s"
 }
 #pragma pop
 
+
 /* 802DE95C-802DE9A0 0044 .text      load__10JUTPaletteFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load__10JUTPaletteFv() {
+extern "C" asm void load__10JUTPaletteFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTPalette/load__10JUTPaletteFv.s"
 }

@@ -62,9 +62,9 @@ lbl_80058938:
 /* 8005897C 00000044  38 A0 00 00 */	li r5, 0
 /* 80058980 00000048  38 C0 00 00 */	li r6, 0
 /* 80058984 0000004C  38 E0 00 00 */	li r7, 0
-/* 80058988 00000050  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__LIT_4379(r2)
+/* 80058988 00000050  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__lit_4379(r2)
 /* 8005898C 00000054  FC 40 08 90 */	fmr f2, f1
-/* 80058990 00000058  C0 62 86 F0 */	lfs f3, d_kankyo_d_kankyo_wether__LIT_4668(r2)
+/* 80058990 00000058  C0 62 86 F0 */	lfs f3, d_kankyo_d_kankyo_wether__lit_4668(r2)
 /* 80058994 0000005C  FC 80 18 90 */	fmr f4, f3
 /* 80058998 00000060  39 00 00 00 */	li r8, 0
 /* 8005899C 00000064  48 25 2F E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -91,21 +91,21 @@ lbl_800589A4:
 /* 800589EC 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 800589F0 0000004C  40 82 00 14 */	bne lbl_80058A04
 /* 800589F4 00000050  C0 3E 00 DC */	lfs f1, 0xdc(r30)
-/* 800589F8 00000054  C0 02 86 E0 */	lfs f0, LIT_4378(r2)
+/* 800589F8 00000054  C0 02 86 E0 */	lfs f0, lit_4378(r2)
 /* 800589FC 00000058  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80058A00 00000000  40 81 00 64 */	ble lbl_80058A64
 lbl_80058A04:
 /* 80058A04 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80058A08 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80058A0C 00000008  80 03 0E 80 */	lwz r0, 0xe80(r3)
-/* 80058A10 0000000C  C8 22 86 F8 */	lfd f1, d_kankyo_d_kankyo_wether__LIT_4671(r2)
+/* 80058A10 0000000C  C8 22 86 F8 */	lfd f1, d_kankyo_d_kankyo_wether__lit_4671(r2)
 /* 80058A14 00000010  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80058A18 00000014  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80058A1C 00000018  3C 00 43 30 */	lis r0, 0x4330
 /* 80058A20 0000001C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80058A24 00000020  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80058A28 00000024  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80058A2C 00000028  C0 02 86 F4 */	lfs f0, d_kankyo_d_kankyo_wether__LIT_4669(r2)
+/* 80058A2C 00000028  C0 02 86 F4 */	lfs f0, d_kankyo_d_kankyo_wether__lit_4669(r2)
 /* 80058A30 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80058A34 00000000  40 80 00 1C */	bge lbl_80058A50
 /* 80058A38 00000004  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
@@ -136,9 +136,9 @@ lbl_80058A64:
 /* 80058A94 00000030  38 A0 00 00 */	li r5, 0
 /* 80058A98 00000034  38 C0 00 00 */	li r6, 0
 /* 80058A9C 00000038  38 E0 00 00 */	li r7, 0
-/* 80058AA0 0000003C  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__LIT_4379(r2)
+/* 80058AA0 0000003C  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__lit_4379(r2)
 /* 80058AA4 00000040  FC 40 08 90 */	fmr f2, f1
-/* 80058AA8 00000044  C0 62 86 F0 */	lfs f3, d_kankyo_d_kankyo_wether__LIT_4668(r2)
+/* 80058AA8 00000044  C0 62 86 F0 */	lfs f3, d_kankyo_d_kankyo_wether__lit_4668(r2)
 /* 80058AAC 00000048  FC 80 18 90 */	fmr f4, f3
 /* 80058AB0 0000004C  39 00 00 00 */	li r8, 0
 /* 80058AB4 00000050  48 25 2E D1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

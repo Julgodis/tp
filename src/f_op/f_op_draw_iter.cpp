@@ -5,57 +5,50 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopDwIt_GetTag__Fv();
-extern void fopDwIt_Begin__Fv();
-extern void fopDwIt_Next__FP16create_tag_class();
+extern "C" extern void fopDwIt_GetTag__Fv();
+extern "C" extern void fopDwIt_Begin__Fv();
+extern "C" extern void fopDwIt_Next__FP16create_tag_class();
 SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 SECTION_SBSS extern u8 l_fopDwTg_id[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450CF8-80450D00 0004 .sbss      l_fopDwTg_id                                                 */
-SECTION_SBSS u8 l_fopDwTg_id[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 l_fopDwTg_id[4 + 4 /* padding */];
 
 /* 80020400-80020444 0044 .text      fopDwIt_GetTag__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopDwIt_GetTag__Fv() {
+extern "C" asm void fopDwIt_GetTag__Fv() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_GetTag__Fv.s"
 }
 #pragma pop
 
+
 /* 80020444-80020480 003C .text      fopDwIt_Begin__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopDwIt_Begin__Fv() {
+extern "C" asm void fopDwIt_Begin__Fv() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_Begin__Fv.s"
 }
 #pragma pop
 
+
 /* 80020480-800204AC 002C .text      fopDwIt_Next__FP16create_tag_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopDwIt_Next__FP16create_tag_class() {
+extern "C" asm void fopDwIt_Next__FP16create_tag_class() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_Next__FP16create_tag_class.s"
 }

@@ -30,7 +30,7 @@ lbl_800F16BC:
 lbl_800F16F4:
 /* 800F16F4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800F16F8 00000004  38 80 00 02 */	li r4, 2
-/* 800F16FC 00000008  C0 22 93 24 */	lfs f1, LIT_7450(r2)
+/* 800F16FC 00000008  C0 22 93 24 */	lfs f1, lit_7450(r2)
 /* 800F1700 0000000C  4B FB C0 25 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F1704 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800F1708 00000014  4B FF F2 79 */	bl procHorseWaitInit__9daAlink_cFv
@@ -86,7 +86,7 @@ lbl_800F17B0:
 lbl_800F17BC:
 /* 800F17BC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800F17C0 00000004  38 80 00 02 */	li r4, 2
-/* 800F17C4 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F17C4 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F17C8 0000000C  4B FB BF 5D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F17CC 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800F17D0 00000014  38 80 00 55 */	li r4, 0x55

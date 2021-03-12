@@ -13,13 +13,13 @@ lbl_801A1D64:
 /* 801A1D90 0000002C  88 05 03 81 */	lbz r0, 0x381(r5)
 /* 801A1D94 00000030  28 00 00 FF */	cmplwi r0, 0xff
 /* 801A1D98 00000034  41 82 00 50 */	beq lbl_801A1DE8
-/* 801A1D9C 00000038  C8 22 A2 80 */	lfd f1, LIT_4964(r2)
+/* 801A1D9C 00000038  C8 22 A2 80 */	lfd f1, lit_4964(r2)
 /* 801A1DA0 0000003C  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 801A1DA4 00000040  3C 00 43 30 */	lis r0, 0x4330
 /* 801A1DA8 00000044  90 01 00 28 */	stw r0, 0x28(r1)
 /* 801A1DAC 00000048  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 801A1DB0 0000004C  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801A1DB4 00000050  C0 02 A2 94 */	lfs f0, d_kankyo_d_kankyo__LIT_5192(r2)
+/* 801A1DB4 00000050  C0 02 A2 94 */	lfs f0, d_kankyo_d_kankyo__lit_5192(r2)
 /* 801A1DB8 00000054  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801A1DBC 00000058  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1DC0 0000005C  38 63 CA 54 */	addi r3, r3, g_env_light@l
@@ -27,9 +27,9 @@ lbl_801A1D64:
 /* 801A1DC8 00000064  2C 00 00 64 */	cmpwi r0, 0x64
 /* 801A1DCC 00000068  40 82 00 64 */	bne lbl_801A1E30
 /* 801A1DD0 0000006C  38 7B 03 74 */	addi r3, r27, 0x374
-/* 801A1DD4 00000070  C0 42 A2 EC */	lfs f2, LIT_6033(r2)
-/* 801A1DD8 00000074  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__LIT_6040(r2)
-/* 801A1DDC 00000078  C0 82 A3 10 */	lfs f4, LIT_6042(r2)
+/* 801A1DD4 00000070  C0 42 A2 EC */	lfs f2, lit_6033(r2)
+/* 801A1DD8 00000074  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__lit_6040(r2)
+/* 801A1DDC 00000078  C0 82 A3 10 */	lfs f4, lit_6042(r2)
 /* 801A1DE0 0000007C  48 0C DB 9D */	bl cLib_addCalc__FPfffff
 /* 801A1DE4 00000080  48 00 00 4C */	b lbl_801A1E30
 lbl_801A1DE8:
@@ -43,10 +43,10 @@ lbl_801A1DE8:
 /* 801A1E04 0000001C  2C 00 00 64 */	cmpwi r0, 0x64
 /* 801A1E08 00000020  40 82 00 28 */	bne lbl_801A1E30
 /* 801A1E0C 00000024  38 7B 03 74 */	addi r3, r27, 0x374
-/* 801A1E10 00000028  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__LIT_4505(r2)
-/* 801A1E14 0000002C  C0 42 A2 EC */	lfs f2, LIT_6033(r2)
-/* 801A1E18 00000030  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__LIT_6040(r2)
-/* 801A1E1C 00000034  C0 82 A3 10 */	lfs f4, LIT_6042(r2)
+/* 801A1E10 00000028  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
+/* 801A1E14 0000002C  C0 42 A2 EC */	lfs f2, lit_6033(r2)
+/* 801A1E18 00000030  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__lit_6040(r2)
+/* 801A1E1C 00000034  C0 82 A3 10 */	lfs f4, lit_6042(r2)
 /* 801A1E20 00000038  48 0C DB 5D */	bl cLib_addCalc__FPfffff
 /* 801A1E24 0000003C  48 00 00 0C */	b lbl_801A1E30
 lbl_801A1E28:
@@ -75,7 +75,7 @@ lbl_801A1E6C:
 /* 801A1E70 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 801A1E74 00000008  41 82 00 0C */	beq lbl_801A1E80
 lbl_801A1E78:
-/* 801A1E78 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A1E78 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A1E7C 00000004  D0 1B 03 74 */	stfs f0, 0x374(r27)
 lbl_801A1E80:
 /* 801A1E80 00000000  88 7B 03 7D */	lbz r3, 0x37d(r27)
@@ -83,16 +83,16 @@ lbl_801A1E80:
 /* 801A1E88 00000008  7C 03 00 40 */	cmplw r3, r0
 /* 801A1E8C 0000000C  41 82 00 30 */	beq lbl_801A1EBC
 /* 801A1E90 00000010  C0 3B 03 70 */	lfs f1, 0x370(r27)
-/* 801A1E94 00000014  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A1E94 00000014  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A1E98 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A1E9C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801A1EA0 00000004  41 82 00 14 */	beq lbl_801A1EB4
-/* 801A1EA4 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A1EA4 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A1EA8 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A1EAC 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 801A1EB0 00000004  40 82 00 0C */	bne lbl_801A1EBC
 lbl_801A1EB4:
-/* 801A1EB4 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A1EB4 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A1EB8 00000004  D0 1B 03 70 */	stfs f0, 0x370(r27)
 lbl_801A1EBC:
 /* 801A1EBC 00000000  88 1B 03 7A */	lbz r0, 0x37a(r27)

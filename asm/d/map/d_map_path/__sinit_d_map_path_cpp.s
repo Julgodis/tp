@@ -16,8 +16,8 @@ lbl_8003D708:
 /* 8003D718 00000010  38 63 46 84 */	addi r3, r3, m_texObjAgg__8dMpath_n@l
 /* 8003D71C 00000014  3C 80 80 04 */	lis r4, __dt__Q28dMpath_n18dTexObjAggregate_cFv@ha
 /* 8003D720 00000018  38 84 D7 40 */	addi r4, r4, __dt__Q28dMpath_n18dTexObjAggregate_cFv@l
-/* 8003D724 0000001C  3C A0 80 42 */	lis r5, LIT_3639@ha
-/* 8003D728 00000020  38 A5 46 78 */	addi r5, r5, LIT_3639@l
+/* 8003D724 0000001C  3C A0 80 42 */	lis r5, lit_3639@ha
+/* 8003D728 00000020  38 A5 46 78 */	addi r5, r5, lit_3639@l
 /* 8003D72C 00000024  48 32 44 F9 */	bl __register_global_object
 /* 8003D730 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8003D734 0000002C  7C 08 03 A6 */	mtlr r0

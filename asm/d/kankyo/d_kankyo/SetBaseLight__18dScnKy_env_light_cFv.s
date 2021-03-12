@@ -16,10 +16,10 @@ lbl_801A516C:
 /* 801A51A4 00000038  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A51A8 0000003C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 801A51AC 00000040  4B FF A8 5D */	bl getDaytime__18dScnKy_env_light_cFv
-/* 801A51B0 00000044  C0 02 A3 98 */	lfs f0, LIT_7365(r2)
+/* 801A51B0 00000044  C0 02 A3 98 */	lfs f0, lit_7365(r2)
 /* 801A51B4 00000048  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A51B8 00000000  40 81 00 2C */	ble lbl_801A51E4
-/* 801A51BC 00000004  C0 02 A3 9C */	lfs f0, LIT_7366(r2)
+/* 801A51BC 00000004  C0 02 A3 9C */	lfs f0, lit_7366(r2)
 /* 801A51C0 00000054  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A51C4 00000000  40 80 00 20 */	bge lbl_801A51E4
 /* 801A51C8 00000004  C0 1F 10 70 */	lfs f0, 0x1070(r31)
@@ -65,7 +65,7 @@ lbl_801A5250:
 /* 801A5258 00000008  B0 1D 00 26 */	sth r0, 0x26(r29)
 /* 801A525C 0000000C  B0 1D 00 28 */	sth r0, 0x28(r29)
 /* 801A5260 00000010  B0 1D 00 2A */	sth r0, 0x2a(r29)
-/* 801A5264 00000014  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A5264 00000014  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A5268 00000018  D0 1D 00 2C */	stfs f0, 0x2c(r29)
 /* 801A526C 0000001C  D0 1D 00 30 */	stfs f0, 0x30(r29)
 /* 801A5270 00000020  39 61 00 30 */	addi r11, r1, 0x30

@@ -9,7 +9,7 @@ lbl_8036C028:
 /* 8036C044 0000001C  54 63 00 7E */	clrlwi r3, r3, 1
 /* 8036C048 00000020  7C 03 00 00 */	cmpw r3, r0
 /* 8036C04C 00000024  41 81 00 10 */	bgt lbl_8036C05C
-/* 8036C050 00000028  C8 42 D0 F0 */	lfd f2, Math_Double_precision_s_cos__LIT_67(r2)
+/* 8036C050 00000028  C8 42 D0 F0 */	lfd f2, Math_Double_precision_s_cos__lit_67(r2)
 /* 8036C054 0000002C  4B FF EA 55 */	bl __kernel_cos
 /* 8036C058 00000030  48 00 00 94 */	b lbl_8036C0EC
 lbl_8036C05C:

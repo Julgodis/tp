@@ -5,95 +5,80 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void GFSetFog__F10_GXFogTypeffff8_GXColor();
-extern void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
-extern void GFSetZMode__FUc10_GXCompareUc();
-extern void __cvt_fp2unsigned();
-extern void _savegpr_28();
-extern void _restgpr_28();
-SECTION_SDATA2 extern u8 GFPixel__LIT_293[4];
-SECTION_SDATA2 extern u8 GFPixel__LIT_294[4];
-SECTION_SDATA2 extern u8 LIT_295[8];
-SECTION_SDATA2 extern u8 LIT_296[8];
-SECTION_SDATA2 extern u8 GFPixel__LIT_297[8];
-SECTION_SDATA2 extern u8 LIT_298[8];
-SECTION_SDATA2 extern u8 GFPixel__LIT_301[8];
-}
+extern "C" extern void GFSetFog__F10_GXFogTypeffff8_GXColor();
+extern "C" extern void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
+extern "C" extern void GFSetZMode__FUc10_GXCompareUc();
+extern "C" extern void __cvt_fp2unsigned();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
+SECTION_SDATA2 extern u8 GFPixel__lit_293[4];
+SECTION_SDATA2 extern f32 GFPixel__lit_294;
+SECTION_SDATA2 extern f64 lit_295;
+SECTION_SDATA2 extern f32 lit_296;
+SECTION_SDATA2 extern f64 GFPixel__lit_297;
+SECTION_SDATA2 extern f32 lit_298;
+SECTION_SDATA2 extern f64 GFPixel__lit_301;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80455F68-80455F6C 0004 .sdata2    @293                                                         */
-SECTION_SDATA2 u8 GFPixel__LIT_293[4] = {
+u8 GFPixel__lit_293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80455F6C-80455F70 0004 .sdata2    @294                                                         */
-SECTION_SDATA2 u8 GFPixel__LIT_294[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
+f32 GFPixel__lit_294 = 0.5f;
+
 /* 80455F70-80455F78 0008 .sdata2    @295                                                         */
-SECTION_SDATA2 u8 LIT_295[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_295 = 1.0;
+
 /* 80455F78-80455F80 0004 .sdata2    @296                                                         */
-SECTION_SDATA2 u8 LIT_296[8] = {
-	0x40, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+f32 lit_296 = 2.0f;
+/* padding 4 bytes */
+
 /* 80455F80-80455F88 0008 .sdata2    @297                                                         */
-SECTION_SDATA2 u8 GFPixel__LIT_297[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 GFPixel__lit_297 = 0.5;
+
 /* 80455F88-80455F90 0004 .sdata2    @298                                                         */
-SECTION_SDATA2 u8 LIT_298[8] = {
-	0x4B, 0x00, 0x00, 0x1E,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+f32 lit_298 = 8388638.0f;
+/* padding 4 bytes */
+
 /* 80455F90-80455F98 0008 .sdata2    @301                                                         */
-SECTION_SDATA2 u8 GFPixel__LIT_301[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 GFPixel__lit_301 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802CDE9C-802CE004 0168 .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetFog__F10_GXFogTypeffff8_GXColor() {
+extern "C" asm void GFSetFog__F10_GXFogTypeffff8_GXColor() {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetFog__F10_GXFogTypeffff8_GXColor.s"
 }
 #pragma pop
 
+
 /* 802CE004-802CE0A4 00A0 .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc() {
+extern "C" asm void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc() {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc.s"
 }
 #pragma pop
 
+
 /* 802CE0A4-802CE0D0 002C .text      GFSetZMode__FUc10_GXCompareUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetZMode__FUc10_GXCompareUc() {
+extern "C" asm void GFSetZMode__FUc10_GXCompareUc() {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetZMode__FUc10_GXCompareUc.s"
 }

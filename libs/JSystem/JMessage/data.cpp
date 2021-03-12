@@ -5,24 +5,16 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-SECTION_SDATA2 extern u8 ga4cSignature__Q28JMessage4data[8];
-}
+SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data;
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80455818-80455820 0004 .sdata2    ga4cSignature__Q28JMessage4data                              */
-SECTION_SDATA2 u8 ga4cSignature__Q28JMessage4data[8] = {
-	0x4D, 0x45, 0x53, 0x47,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
+u32 ga4cSignature__Q28JMessage4data = 0x4D455347;
+/* padding 4 bytes */
 

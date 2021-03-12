@@ -23,7 +23,7 @@ lbl_8019BCF4:
 /* 8019BD48 00000040  28 00 00 02 */	cmplwi r0, 2
 /* 8019BD4C 00000044  40 82 00 CC */	bne lbl_8019BE18
 lbl_8019BD50:
-/* 8019BD50 00000000  C0 22 A1 84 */	lfs f1, d_d_gameover__LIT_3869(r2)
+/* 8019BD50 00000000  C0 22 A1 84 */	lfs f1, d_d_gameover__lit_3869(r2)
 /* 8019BD54 00000004  C0 0D 86 5C */	lfs f0, mFadeRate__13mDoGph_gInf_c(r13)
 /* 8019BD58 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8019BD5C 0000000C  40 82 00 3C */	bne lbl_8019BD98
@@ -62,10 +62,10 @@ lbl_8019BD98:
 /* 8019BDDC 00000044  7D 89 03 A6 */	mtctr r12
 /* 8019BDE0 00000048  4E 80 04 21 */	bctrl 
 /* 8019BDE4 0000004C  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8019BDE8 00000050  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
+/* 8019BDE8 00000050  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
 /* 8019BDEC 00000054  FC 40 08 90 */	fmr f2, f1
-/* 8019BDF0 00000058  C0 62 A1 AC */	lfs f3, d_d_gameover__LIT_4374(r2)
-/* 8019BDF4 0000005C  C0 82 A1 B0 */	lfs f4, d_d_gameover__LIT_4375(r2)
+/* 8019BDF0 00000058  C0 62 A1 AC */	lfs f3, d_d_gameover__lit_4374(r2)
+/* 8019BDF4 0000005C  C0 82 A1 B0 */	lfs f4, d_d_gameover__lit_4375(r2)
 /* 8019BDF8 00000060  38 80 00 00 */	li r4, 0
 /* 8019BDFC 00000064  38 A0 00 00 */	li r5, 0
 /* 8019BE00 00000068  38 C0 00 00 */	li r6, 0
@@ -97,10 +97,10 @@ lbl_8019BE18:
 /* 8019BE64 0000004C  88 03 00 1B */	lbz r0, 0x1b(r3)
 /* 8019BE68 00000050  98 01 00 27 */	stb r0, 0x27(r1)
 /* 8019BE6C 00000054  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8019BE70 00000058  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
+/* 8019BE70 00000058  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
 /* 8019BE74 0000005C  FC 40 08 90 */	fmr f2, f1
-/* 8019BE78 00000060  C0 62 A1 AC */	lfs f3, d_d_gameover__LIT_4374(r2)
-/* 8019BE7C 00000064  C0 82 A1 B0 */	lfs f4, d_d_gameover__LIT_4375(r2)
+/* 8019BE78 00000060  C0 62 A1 AC */	lfs f3, d_d_gameover__lit_4374(r2)
+/* 8019BE7C 00000064  C0 82 A1 B0 */	lfs f4, d_d_gameover__lit_4375(r2)
 /* 8019BE80 00000068  38 80 00 00 */	li r4, 0
 /* 8019BE84 0000006C  38 A0 00 00 */	li r5, 0
 /* 8019BE88 00000070  38 C0 00 00 */	li r6, 0
@@ -114,7 +114,7 @@ lbl_8019BE18:
 /* 8019BEA8 00000090  3B 23 CA 2C */	addi r25, r3, l_HIO@l
 /* 8019BEAC 00000094  83 41 00 24 */	lwz r26, 0x24(r1)
 /* 8019BEB0 00000098  83 61 00 28 */	lwz r27, 0x28(r1)
-/* 8019BEB4 0000009C  C3 E2 A1 B4 */	lfs f31, d_d_gameover__LIT_4376(r2)
+/* 8019BEB4 0000009C  C3 E2 A1 B4 */	lfs f31, d_d_gameover__lit_4376(r2)
 /* 8019BEB8 000000A0  3C 60 80 3C */	lis r3, data_803BBD0C@ha
 /* 8019BEBC 000000A4  3B 83 BD 0C */	addi r28, r3, data_803BBD0C@l
 lbl_8019BEC0:
@@ -125,7 +125,7 @@ lbl_8019BEC0:
 /* 8019BED0 00000010  38 9E 00 10 */	addi r4, r30, 0x10
 /* 8019BED4 00000014  7C 1C EC 2E */	lfsx f0, r28, r29
 /* 8019BED8 00000018  EC 3F 00 2A */	fadds f1, f31, f0
-/* 8019BEDC 0000001C  C0 42 A1 B8 */	lfs f2, LIT_4377(r2)
+/* 8019BEDC 0000001C  C0 42 A1 B8 */	lfs f2, lit_4377(r2)
 /* 8019BEE0 00000020  FC 80 18 90 */	fmr f4, f3
 /* 8019BEE4 00000024  C0 B9 00 0C */	lfs f5, 0xc(r25)
 /* 8019BEE8 00000028  C0 D9 00 10 */	lfs f6, 0x10(r25)
@@ -138,7 +138,7 @@ lbl_8019BEC0:
 /* 8019BF04 00000044  41 80 FF BC */	blt lbl_8019BEC0
 lbl_8019BF08:
 /* 8019BF08 00000000  80 7E 00 04 */	lwz r3, 4(r30)
-/* 8019BF0C 00000004  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868(r2)
+/* 8019BF0C 00000004  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
 /* 8019BF10 00000008  FC 40 08 90 */	fmr f2, f1
 /* 8019BF14 0000000C  7F E4 FB 78 */	mr r4, r31
 /* 8019BF18 00000010  48 15 CF BD */	bl draw__9J2DScreenFffPC14J2DGrafContext

@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __CARDReadSegment();
-extern void __CARDWritePage();
-extern void __CARDPutControlBlock();
-extern void BlockReadCallback();
-extern void __CARDRead();
-extern void BlockWriteCallback();
-extern void __CARDWrite();
+extern "C" extern void __CARDReadSegment();
+extern "C" extern void __CARDWritePage();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void BlockReadCallback();
+extern "C" extern void __CARDRead();
+extern "C" extern void BlockWriteCallback();
+extern "C" extern void __CARDWrite();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80355184-80355260 00DC .text      BlockReadCallback                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void BlockReadCallback() {
+extern "C" asm void BlockReadCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/BlockReadCallback.s"
 }
 #pragma pop
 
+
 /* 80355260-803552C4 0064 .text      __CARDRead                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDRead() {
+extern "C" asm void __CARDRead() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/__CARDRead.s"
 }
 #pragma pop
 
+
 /* 803552C4-803553AC 00E8 .text      BlockWriteCallback                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void BlockWriteCallback() {
+extern "C" asm void BlockWriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/BlockWriteCallback.s"
 }
 #pragma pop
 
+
 /* 803553AC-80355414 0068 .text      __CARDWrite                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDWrite() {
+extern "C" asm void __CARDWrite() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/__CARDWrite.s"
 }

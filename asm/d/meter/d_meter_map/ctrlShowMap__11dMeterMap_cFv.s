@@ -31,9 +31,9 @@ lbl_8020E0D0:
 /* 8020E0E0 00000010  38 A0 00 00 */	li r5, 0
 /* 8020E0E4 00000014  38 C0 00 00 */	li r6, 0
 /* 8020E0E8 00000018  38 E0 00 00 */	li r7, 0
-/* 8020E0EC 0000001C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E0EC 0000001C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E0F0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8020E0F4 00000024  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E0F4 00000024  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E0F8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8020E0FC 0000002C  39 00 00 00 */	li r8, 0
 /* 8020E100 00000030  48 09 D8 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -72,9 +72,9 @@ lbl_8020E144:
 /* 8020E17C 00000038  38 A0 00 00 */	li r5, 0
 /* 8020E180 0000003C  38 C0 00 00 */	li r6, 0
 /* 8020E184 00000040  38 E0 00 00 */	li r7, 0
-/* 8020E188 00000044  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E188 00000044  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E18C 00000048  FC 40 08 90 */	fmr f2, f1
-/* 8020E190 0000004C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E190 0000004C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E194 00000050  FC 80 18 90 */	fmr f4, f3
 /* 8020E198 00000054  39 00 00 00 */	li r8, 0
 /* 8020E19C 00000058  48 09 D7 E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -94,8 +94,8 @@ lbl_8020E1AC:
 /* 8020E1D0 00000024  88 1E 00 C1 */	lbz r0, 0xc1(r30)
 /* 8020E1D4 00000028  28 00 00 07 */	cmplwi r0, 7
 /* 8020E1D8 0000002C  41 81 00 60 */	bgt lbl_8020E238
-/* 8020E1DC 00000030  3C 60 80 3C */	lis r3, d_meter_d_meter_map__LIT_4516@ha
-/* 8020E1E0 00000034  38 63 F2 D8 */	addi r3, r3, d_meter_d_meter_map__LIT_4516@l
+/* 8020E1DC 00000030  3C 60 80 3C */	lis r3, d_meter_d_meter_map__lit_4516@ha
+/* 8020E1E0 00000034  38 63 F2 D8 */	addi r3, r3, d_meter_d_meter_map__lit_4516@l
 /* 8020E1E4 00000038  54 00 10 3A */	slwi r0, r0, 2
 /* 8020E1E8 0000003C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8020E1EC 00000040  7C 09 03 A6 */	mtctr r0
@@ -129,9 +129,9 @@ lbl_8020E238:
 /* 8020E258 00000020  38 A0 00 00 */	li r5, 0
 /* 8020E25C 00000024  38 C0 00 00 */	li r6, 0
 /* 8020E260 00000028  38 E0 00 00 */	li r7, 0
-/* 8020E264 0000002C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E264 0000002C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E268 00000030  FC 40 08 90 */	fmr f2, f1
-/* 8020E26C 00000034  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E26C 00000034  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E270 00000038  FC 80 18 90 */	fmr f4, f3
 /* 8020E274 0000003C  39 00 00 00 */	li r8, 0
 /* 8020E278 00000040  48 09 D7 0D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -165,9 +165,9 @@ lbl_8020E28C:
 /* 8020E2E0 00000054  38 A0 00 00 */	li r5, 0
 /* 8020E2E4 00000058  38 C0 00 00 */	li r6, 0
 /* 8020E2E8 0000005C  38 E0 00 00 */	li r7, 0
-/* 8020E2EC 00000060  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E2EC 00000060  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E2F0 00000064  FC 40 08 90 */	fmr f2, f1
-/* 8020E2F4 00000068  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E2F4 00000068  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E2F8 0000006C  FC 80 18 90 */	fmr f4, f3
 /* 8020E2FC 00000070  39 00 00 00 */	li r8, 0
 /* 8020E300 00000074  48 09 D6 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -194,9 +194,9 @@ lbl_8020E310:
 /* 8020E350 00000040  38 A0 00 00 */	li r5, 0
 /* 8020E354 00000044  38 C0 00 00 */	li r6, 0
 /* 8020E358 00000048  38 E0 00 00 */	li r7, 0
-/* 8020E35C 0000004C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__LIT_4129(r2)
+/* 8020E35C 0000004C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
 /* 8020E360 00000050  FC 40 08 90 */	fmr f2, f1
-/* 8020E364 00000054  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__LIT_4515(r2)
+/* 8020E364 00000054  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
 /* 8020E368 00000058  FC 80 18 90 */	fmr f4, f3
 /* 8020E36C 0000005C  39 00 00 00 */	li r8, 0
 /* 8020E370 00000060  48 09 D6 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

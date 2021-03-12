@@ -11,8 +11,8 @@ lbl_80015544:
 /* 80015568 00000024  38 63 D8 E4 */	addi r3, r3, mClipper__14mDoLib_clipper@l
 /* 8001556C 00000028  3C 80 80 01 */	lis r4, __dt__11J3DUClipperFv@ha
 /* 80015570 0000002C  38 84 55 90 */	addi r4, r4, __dt__11J3DUClipperFv@l
-/* 80015574 00000030  3C A0 80 3E */	lis r5, LIT_3727@ha
-/* 80015578 00000034  38 A5 D8 D8 */	addi r5, r5, LIT_3727@l
+/* 80015574 00000030  3C A0 80 3E */	lis r5, lit_3727@ha
+/* 80015578 00000034  38 A5 D8 D8 */	addi r5, r5, lit_3727@l
 /* 8001557C 00000038  48 34 C6 A9 */	bl __register_global_object
 /* 80015580 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80015584 00000040  7C 08 03 A6 */	mtlr r0

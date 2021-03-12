@@ -14,11 +14,11 @@ lbl_8012D2A8:
 /* 8012D2D8 00000030  4B F8 97 59 */	bl checkFrontWallTypeAction__9daAlink_cFv
 /* 8012D2DC 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 8012D2E0 00000038  40 82 00 84 */	bne lbl_8012D364
-/* 8012D2E4 0000003C  C0 42 94 78 */	lfs f2, LIT_15460(r2)
+/* 8012D2E4 0000003C  C0 42 94 78 */	lfs f2, lit_15460(r2)
 /* 8012D2E8 00000040  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 8012D2EC 00000044  7C 1F 00 50 */	subf r0, r31, r0
 /* 8012D2F0 00000048  7C 00 07 34 */	extsh r0, r0
-/* 8012D2F4 0000004C  C8 22 92 B0 */	lfd f1, LIT_6025(r2)
+/* 8012D2F4 0000004C  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 8012D2F8 00000050  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8012D2FC 00000054  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8012D300 00000058  3C 00 43 30 */	lis r0, 0x4330
@@ -28,7 +28,7 @@ lbl_8012D2A8:
 /* 8012D310 00000068  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8012D314 0000006C  D0 1E 33 F0 */	stfs f0, 0x33f0(r30)
 /* 8012D318 00000070  7F C3 F3 78 */	mr r3, r30
-/* 8012D31C 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 8012D31C 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 8012D320 00000078  4B FF B5 25 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8012D324 0000007C  7F C3 F3 78 */	mr r3, r30
 /* 8012D328 00000080  4B F8 74 8D */	bl checkServiceWaitMode__9daAlink_cFv

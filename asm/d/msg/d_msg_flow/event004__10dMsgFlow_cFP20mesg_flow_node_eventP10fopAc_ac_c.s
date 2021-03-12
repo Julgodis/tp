@@ -4,7 +4,7 @@ lbl_8024C590:
 /* 8024C598 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8024C59C 0000000C  38 84 00 04 */	addi r4, r4, 4
 /* 8024C5A0 00000010  4B FF EB 91 */	bl getParam__10dMsgFlow_cFPUc
-/* 8024C5A4 00000014  C8 22 B3 A0 */	lfd f1, d_msg_d_msg_flow__LIT_6040(r2)
+/* 8024C5A4 00000014  C8 22 B3 A0 */	lfd f1, d_msg_d_msg_flow__lit_6040(r2)
 /* 8024C5A8 00000018  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8024C5AC 0000001C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8024C5B0 00000020  3C 00 43 30 */	lis r0, 0x4330

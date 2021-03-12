@@ -5,114 +5,113 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void PPCSync();
-extern void PPCMfhid2();
-extern void PPCMthid2();
-extern void PPCMtwpar();
-extern void OSRegisterVersion();
-extern void OSRegisterResetFunction();
-extern void OSGetTime();
-extern void VIGetTvFormat();
-extern void __GXDefaultTexRegionCallback();
-extern void __GXDefaultTlutRegionCallback();
-extern void __GXShutdown();
-extern void __GXInitRevisionBits();
-extern void GXInit();
-extern void __GXInitGX();
-extern void GXInitFifoBase();
-extern void GXSetCPUFifo();
-extern void GXSetGPFifo();
-extern void GXSetBreakPtCallback();
-extern void __GXFifoInit();
-extern void GXClearVtxDesc();
-extern void GXSetVtxAttrFmtv();
-extern void GXSetArray();
-extern void GXInvalidateVtxCache();
-extern void GXSetTexCoordGen2();
-extern void GXSetNumTexGens();
-extern void GXSetMisc();
-extern void __GXAbort();
-extern void GXPokeAlphaMode();
-extern void GXPokeAlphaRead();
-extern void GXPokeAlphaUpdate();
-extern void GXPokeBlendMode();
-extern void GXPokeColorUpdate();
-extern void GXPokeDstAlpha();
-extern void GXPokeDither();
-extern void GXPokeZMode();
-extern void GXSetDrawSyncCallback();
-extern void GXSetDrawDoneCallback();
-extern void __GXPEInit();
-extern void GXSetLineWidth();
-extern void GXSetPointSize();
-extern void GXEnableTexOffsets();
-extern void GXSetCullMode();
-extern void GXSetCoPlanar();
-extern void GXSetDispCopySrc();
-extern void GXSetDispCopyDst();
-extern void GXSetDispCopyFrame2Field();
-extern void GXSetCopyClamp();
-extern void GXSetDispCopyYScale();
-extern void GXSetCopyClear();
-extern void GXSetCopyFilter();
-extern void GXSetDispCopyGamma();
-extern void GXClearBoundingBox();
-extern void GXSetChanAmbColor();
-extern void GXSetChanMatColor();
-extern void GXSetNumChans();
-extern void GXSetChanCtrl();
-extern void GXInitTexObj();
-extern void GXGetTexObjFmt();
-extern void GXGetTexObjMipMap();
-extern void GXLoadTexObj();
-extern void GXInitTexCacheRegion();
-extern void GXInitTlutRegion();
-extern void GXInvalidateTexAll();
-extern void GXSetTexRegionCallback();
-extern void GXSetTlutRegionCallback();
-extern void __GXSetTmemConfig();
-extern void GXSetIndTexCoordScale();
-extern void GXSetNumIndStages();
-extern void GXSetTevDirect();
-extern void __GXSetIndirectMask();
-extern void __GXFlushTextureState();
-extern void GXSetTevOp();
-extern void GXSetTevKColorSel();
-extern void GXSetTevKAlphaSel();
-extern void GXSetTevSwapMode();
-extern void GXSetTevSwapModeTable();
-extern void GXSetAlphaCompare();
-extern void GXSetZTexture();
-extern void GXSetTevOrder();
-extern void GXSetNumTevStages();
-extern void GXSetFog();
-extern void GXSetFogRangeAdj();
-extern void GXSetBlendMode();
-extern void GXSetColorUpdate();
-extern void GXSetAlphaUpdate();
-extern void GXSetZMode();
-extern void GXSetZCompLoc();
-extern void GXSetPixelFmt();
-extern void GXSetDither();
-extern void GXSetDstAlpha();
-extern void GXSetFieldMask();
-extern void GXSetFieldMode();
-extern void GXSetProjectionv();
-extern void GXLoadPosMtxImm();
-extern void GXLoadNrmMtxImm();
-extern void GXSetCurrentMtx();
-extern void GXLoadTexMtxImm();
-extern void GXSetViewport();
-extern void GXSetScissor();
-extern void GXSetScissorBoxOffset();
-extern void GXSetClipMode();
-extern void GXSetGPMetric();
-extern void GXClearGPMetric();
-SECTION_DATA extern u8 GXInit__LIT_1[96];
+extern "C" extern void PPCSync();
+extern "C" extern void PPCMfhid2();
+extern "C" extern void PPCMthid2();
+extern "C" extern void PPCMtwpar();
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSRegisterResetFunction();
+extern "C" extern void OSGetTime();
+extern "C" extern void VIGetTvFormat();
+extern "C" extern void __GXDefaultTexRegionCallback();
+extern "C" extern void __GXDefaultTlutRegionCallback();
+extern "C" extern void __GXShutdown();
+extern "C" extern void __GXInitRevisionBits();
+extern "C" extern void GXInit();
+extern "C" extern void __GXInitGX();
+extern "C" extern void GXInitFifoBase();
+extern "C" extern void GXSetCPUFifo();
+extern "C" extern void GXSetGPFifo();
+extern "C" extern void GXSetBreakPtCallback();
+extern "C" extern void __GXFifoInit();
+extern "C" extern void GXClearVtxDesc();
+extern "C" extern void GXSetVtxAttrFmtv();
+extern "C" extern void GXSetArray();
+extern "C" extern void GXInvalidateVtxCache();
+extern "C" extern void GXSetTexCoordGen2();
+extern "C" extern void GXSetNumTexGens();
+extern "C" extern void GXSetMisc();
+extern "C" extern void __GXAbort();
+extern "C" extern void GXPokeAlphaMode();
+extern "C" extern void GXPokeAlphaRead();
+extern "C" extern void GXPokeAlphaUpdate();
+extern "C" extern void GXPokeBlendMode();
+extern "C" extern void GXPokeColorUpdate();
+extern "C" extern void GXPokeDstAlpha();
+extern "C" extern void GXPokeDither();
+extern "C" extern void GXPokeZMode();
+extern "C" extern void GXSetDrawSyncCallback();
+extern "C" extern void GXSetDrawDoneCallback();
+extern "C" extern void __GXPEInit();
+extern "C" extern void GXSetLineWidth();
+extern "C" extern void GXSetPointSize();
+extern "C" extern void GXEnableTexOffsets();
+extern "C" extern void GXSetCullMode();
+extern "C" extern void GXSetCoPlanar();
+extern "C" extern void GXSetDispCopySrc();
+extern "C" extern void GXSetDispCopyDst();
+extern "C" extern void GXSetDispCopyFrame2Field();
+extern "C" extern void GXSetCopyClamp();
+extern "C" extern void GXSetDispCopyYScale();
+extern "C" extern void GXSetCopyClear();
+extern "C" extern void GXSetCopyFilter();
+extern "C" extern void GXSetDispCopyGamma();
+extern "C" extern void GXClearBoundingBox();
+extern "C" extern void GXSetChanAmbColor();
+extern "C" extern void GXSetChanMatColor();
+extern "C" extern void GXSetNumChans();
+extern "C" extern void GXSetChanCtrl();
+extern "C" extern void GXInitTexObj();
+extern "C" extern void GXGetTexObjFmt();
+extern "C" extern void GXGetTexObjMipMap();
+extern "C" extern void GXLoadTexObj();
+extern "C" extern void GXInitTexCacheRegion();
+extern "C" extern void GXInitTlutRegion();
+extern "C" extern void GXInvalidateTexAll();
+extern "C" extern void GXSetTexRegionCallback();
+extern "C" extern void GXSetTlutRegionCallback();
+extern "C" extern void __GXSetTmemConfig();
+extern "C" extern void GXSetIndTexCoordScale();
+extern "C" extern void GXSetNumIndStages();
+extern "C" extern void GXSetTevDirect();
+extern "C" extern void __GXSetIndirectMask();
+extern "C" extern void __GXFlushTextureState();
+extern "C" extern void GXSetTevOp();
+extern "C" extern void GXSetTevKColorSel();
+extern "C" extern void GXSetTevKAlphaSel();
+extern "C" extern void GXSetTevSwapMode();
+extern "C" extern void GXSetTevSwapModeTable();
+extern "C" extern void GXSetAlphaCompare();
+extern "C" extern void GXSetZTexture();
+extern "C" extern void GXSetTevOrder();
+extern "C" extern void GXSetNumTevStages();
+extern "C" extern void GXSetFog();
+extern "C" extern void GXSetFogRangeAdj();
+extern "C" extern void GXSetBlendMode();
+extern "C" extern void GXSetColorUpdate();
+extern "C" extern void GXSetAlphaUpdate();
+extern "C" extern void GXSetZMode();
+extern "C" extern void GXSetZCompLoc();
+extern "C" extern void GXSetPixelFmt();
+extern "C" extern void GXSetDither();
+extern "C" extern void GXSetDstAlpha();
+extern "C" extern void GXSetFieldMask();
+extern "C" extern void GXSetFieldMode();
+extern "C" extern void GXSetProjectionv();
+extern "C" extern void GXLoadPosMtxImm();
+extern "C" extern void GXLoadNrmMtxImm();
+extern "C" extern void GXSetCurrentMtx();
+extern "C" extern void GXLoadTexMtxImm();
+extern "C" extern void GXSetViewport();
+extern "C" extern void GXSetScissor();
+extern "C" extern void GXSetScissorBoxOffset();
+extern "C" extern void GXSetClipMode();
+extern "C" extern void GXSetGPMetric();
+extern "C" extern void GXClearGPMetric();
+SECTION_DATA extern u8 GXInit__lit_1[96];
 SECTION_DATA extern u8 DefaultTexData[32];
 SECTION_DATA extern u8 GXDefaultVATList[208];
 SECTION_DATA extern u8 GXDefaultProjData[28];
@@ -135,25 +134,95 @@ SECTION_SBSS extern u8 data_8045193C[4];
 SECTION_SBSS extern u8 data_80451940[4];
 SECTION_SBSS extern u8 data_80451944[4];
 SECTION_SDATA2 extern void* __GXData;
-SECTION_SDATA2 extern u8 GXInit__LIT_267[4];
-SECTION_SDATA2 extern u8 GXInit__LIT_268[4];
-SECTION_SDATA2 extern u8 GXInit__LIT_269[4];
-SECTION_SDATA2 extern u8 GXInit__LIT_270[4];
-SECTION_SDATA2 extern u8 GXInit__LIT_271[4];
-SECTION_SDATA2 extern u8 LIT_331[4];
-SECTION_SDATA2 extern u8 LIT_332[4];
-SECTION_SDATA2 extern u8 LIT_334[8];
+SECTION_SDATA2 extern f32 GXInit__lit_267;
+SECTION_SDATA2 extern u8 GXInit__lit_268[4];
+SECTION_SDATA2 extern u32 GXInit__lit_269;
+SECTION_SDATA2 extern u8 GXInit__lit_270[4];
+SECTION_SDATA2 extern u32 GXInit__lit_271;
+SECTION_SDATA2 extern f32 lit_331;
+SECTION_SDATA2 extern f32 lit_332;
+SECTION_SDATA2 extern f64 lit_334;
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80456580-80456584 0004 .sdata2    __GXData                                                     */
+void* __GXData = (void*)&gxData;
+
+/* 8035921C-80359318 00FC .text      __GXDefaultTexRegionCallback                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __GXDefaultTexRegionCallback() {
+	nofralloc
+#include "asm/dolphin/gx/GXInit/__GXDefaultTexRegionCallback.s"
 }
+#pragma pop
+
+
+/* 80359318-8035933C 0024 .text      __GXDefaultTlutRegionCallback                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __GXDefaultTlutRegionCallback() {
+	nofralloc
+#include "asm/dolphin/gx/GXInit/__GXDefaultTlutRegionCallback.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80451920-80451924 0004 .sbss      __piReg                                                      */
+u8 __piReg[4];
 
-extern "C" {
-/* 803D2040-803D2040 0000 .data      ...data.0                                                    */
+/* 80451924-80451928 0004 .sbss      __cpReg                                                      */
+u8 __cpReg[4];
+
+/* 80451928-8045192C 0004 .sbss      __peReg                                                      */
+u8 __peReg[4];
+
+/* 8045192C-80451930 0004 .sbss      __memReg                                                     */
+u8 __memReg[4];
+
+/* 80451930-80451938 0004 .sbss      peCount$35                                                   */
+u8 data_80451930[4 + 4 /* padding */];
+
+/* 80451938-8045193C 0004 .sbss      time$36                                                      */
+u8 data_80451938[4];
+
+/* 8045193C-80451940 0004 .sbss      None                                                         */
+u8 data_8045193C[4];
+
+/* 80451940-80451944 0004 .sbss      calledOnce$37                                                */
+u8 data_80451940[4];
+
+/* 8035933C-803594CC 0190 .text      __GXShutdown                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __GXShutdown() {
+	nofralloc
+#include "asm/dolphin/gx/GXInit/__GXShutdown.s"
+}
+#pragma pop
+
+
+/* 803594CC-80359670 01A4 .text      __GXInitRevisionBits                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __GXInitRevisionBits() {
+	nofralloc
+#include "asm/dolphin/gx/GXInit/__GXInitRevisionBits.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D2040-803D20A0 0044 .data      @1                                                           */
-SECTION_DATA u8 GXInit__LIT_1[96] = {
+u8 GXInit__lit_1[96] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x47, 0x58, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -163,13 +232,15 @@ SECTION_DATA u8 GXInit__LIT_1[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803D20A0-803D20C0 0020 .data      DefaultTexData                                               */
-SECTION_DATA u8 DefaultTexData[32] = {
+u8 DefaultTexData[32] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
+
 /* 803D20C0-803D2190 00D0 .data      GXDefaultVATList                                             */
-SECTION_DATA u8 GXDefaultVATList[208] = {
+u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00,
@@ -184,13 +255,15 @@ SECTION_DATA u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803D2190-803D21AC 001C .data      GXDefaultProjData                                            */
-SECTION_DATA u8 GXDefaultProjData[28] = {
+u8 GXDefaultProjData[28] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803D21AC-803D226C 00C0 .data      GXTexRegionAddrTable                                         */
-SECTION_DATA u8 GXTexRegionAddrTable[192] = {
+u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00,
 	0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x80, 0x00, 0x00, 0x02, 0x80, 0x00, 0x00, 0x03, 0x80, 0x00,
@@ -204,8 +277,9 @@ SECTION_DATA u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00,
 	0x00, 0x08, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
 };
+
 /* 803D226C-803D2280 0010 .data      GXResetFuncInfo                                              */
-SECTION_DATA void* GXResetFuncInfo[5] = {
+void* GXResetFuncInfo[5] = {
 	(void*)__GXShutdown,
 	(void*)0x0000007F,
 	NULL,
@@ -213,166 +287,71 @@ SECTION_DATA void* GXResetFuncInfo[5] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450A78-80450A80 0004 .sdata     __GXVersion                                                  */
-SECTION_SDATA void* __GXVersion[2] = {
-	(void*)&GXInit__LIT_1,
+void* __GXVersion[2] = {
+	(void*)&GXInit__lit_1,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456580-80456584 0004 .sdata2    __GXData                                                     */
-SECTION_SDATA2 void* __GXData = (void*)&gxData;
 /* 80456584-80456588 0004 .sdata2    @267                                                         */
-SECTION_SDATA2 u8 GXInit__LIT_267[4] = {
-	0x4B, 0x80, 0x00, 0x00,
-};
+f32 GXInit__lit_267 = 16777216.0f;
+
 /* 80456588-8045658C 0004 .sdata2    @268                                                         */
-SECTION_SDATA2 u8 GXInit__LIT_268[4] = {
+u8 GXInit__lit_268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045658C-80456590 0004 .sdata2    @269                                                         */
-SECTION_SDATA2 u8 GXInit__LIT_269[4] = {
-	0x40, 0x40, 0x40, 0xFF,
-};
-/* 80456590-80456594 0004 .sdata2    @270                                                         */
-SECTION_SDATA2 u8 GXInit__LIT_270[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80456594-80456598 0004 .sdata2    @271                                                         */
-SECTION_SDATA2 u8 GXInit__LIT_271[4] = {
-	0xFF, 0xFF, 0xFF, 0xFF,
-};
-/* 80456598-8045659C 0004 .sdata2    @331                                                         */
-SECTION_SDATA2 u8 LIT_331[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 8045659C-804565A0 0004 .sdata2    @332                                                         */
-SECTION_SDATA2 u8 LIT_332[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 804565A0-804565A8 0008 .sdata2    @334                                                         */
-SECTION_SDATA2 u8 LIT_334[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044CE00-8044CE00 0000 .bss       ...bss.0                                                     */
 /* 8044CE00-8044CE80 0080 .bss       FifoObj                                                      */
-SECTION_BSS u8 FifoObj[128];
-/* 8044CE80-8044D430 05B0 .bss       gxData                                                       */
-SECTION_BSS u8 gxData[1456];
-}
+u8 FifoObj[128];
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451920-80451924 0004 .sbss      __piReg                                                      */
-SECTION_SBSS u8 __piReg[4];
-/* 80451924-80451928 0004 .sbss      __cpReg                                                      */
-SECTION_SBSS u8 __cpReg[4];
-/* 80451928-8045192C 0004 .sbss      __peReg                                                      */
-SECTION_SBSS u8 __peReg[4];
-/* 8045192C-80451930 0004 .sbss      __memReg                                                     */
-SECTION_SBSS u8 __memReg[4];
-/* 80451930-80451938 0004 .sbss      peCount$35                                                   */
-SECTION_SBSS u8 data_80451930[4 + 4 /* padding */];
-/* 80451938-8045193C 0004 .sbss      time$36                                                      */
-SECTION_SBSS u8 data_80451938[4];
-/* 8045193C-80451940 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_8045193C[4];
-/* 80451940-80451944 0004 .sbss      calledOnce$37                                                */
-SECTION_SBSS u8 data_80451940[4];
 /* 80451944-80451948 0004 .sbss      resetFuncRegistered$145                                      */
-SECTION_SBSS u8 data_80451944[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8035921C-80359318 00FC .text      __GXDefaultTexRegionCallback                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __GXDefaultTexRegionCallback() {
-	nofralloc
-#include "asm/dolphin/gx/GXInit/__GXDefaultTexRegionCallback.s"
-}
-#pragma pop
-
-/* 80359318-8035933C 0024 .text      __GXDefaultTlutRegionCallback                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __GXDefaultTlutRegionCallback() {
-	nofralloc
-#include "asm/dolphin/gx/GXInit/__GXDefaultTlutRegionCallback.s"
-}
-#pragma pop
-
-/* 8035933C-803594CC 0190 .text      __GXShutdown                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __GXShutdown() {
-	nofralloc
-#include "asm/dolphin/gx/GXInit/__GXShutdown.s"
-}
-#pragma pop
-
-/* 803594CC-80359670 01A4 .text      __GXInitRevisionBits                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __GXInitRevisionBits() {
-	nofralloc
-#include "asm/dolphin/gx/GXInit/__GXInitRevisionBits.s"
-}
-#pragma pop
+u8 data_80451944[4];
 
 /* 80359670-80359C70 0600 .text      GXInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXInit() {
+extern "C" asm void GXInit() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/GXInit.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045658C-80456590 0004 .sdata2    @269                                                         */
+u32 GXInit__lit_269 = 0x404040FF;
+
+/* 80456590-80456594 0004 .sdata2    @270                                                         */
+u8 GXInit__lit_270[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80456594-80456598 0004 .sdata2    @271                                                         */
+u32 GXInit__lit_271 = 0xFFFFFFFF;
+
+/* 80456598-8045659C 0004 .sdata2    @331                                                         */
+f32 lit_331 = 1.0f;
+
+/* 8045659C-804565A0 0004 .sdata2    @332                                                         */
+f32 lit_332 = 1.0f / 10.0f;
+
+/* 804565A0-804565A8 0008 .sdata2    @334                                                         */
+f64 lit_334 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 80359C70-8035A5A8 0938 .text      __GXInitGX                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __GXInitGX() {
+extern "C" asm void __GXInitGX() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/__GXInitGX.s"
 }
 #pragma pop
 
+
+/* 8044CE80-8044D430 05B0 .bss       gxData                                                       */
+u8 gxData[1456];
 

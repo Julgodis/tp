@@ -5,8 +5,8 @@ lbl_801F8388:
 /* 801F8394 0000000C  39 61 00 70 */	addi r11, r1, 0x70
 /* 801F8398 00000010  48 16 9E 09 */	bl __save_gpr
 /* 801F839C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801F83A0 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__data_80397A18@ha
-/* 801F83A4 0000001C  3A E3 7A 18 */	addi r23, r3, d_menu_d_menu_skill__data_80397A18@l
+/* 801F83A0 00000018  3C 60 80 39 */	lis r3, data_80397A18@ha
+/* 801F83A4 0000001C  3A E3 7A 18 */	addi r23, r3, data_80397A18@l
 /* 801F83A8 00000020  38 60 01 18 */	li r3, 0x118
 /* 801F83AC 00000024  48 0D 68 A1 */	bl __nw__FUl
 /* 801F83B0 00000028  7C 60 1B 79 */	or. r0, r3, r3
@@ -39,7 +39,7 @@ lbl_801F83C0:
 lbl_801F8418:
 /* 801F8418 00000000  90 1F 01 5C */	stw r0, 0x15c(r31)
 /* 801F841C 00000004  80 7F 01 5C */	lwz r3, 0x15c(r31)
-/* 801F8420 00000008  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__LIT_3808(r2)
+/* 801F8420 00000008  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
 /* 801F8424 0000000C  48 05 D3 AD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F8428 00000010  3A 80 00 00 */	li r20, 0
 /* 801F842C 00000014  3A 40 00 00 */	li r18, 0

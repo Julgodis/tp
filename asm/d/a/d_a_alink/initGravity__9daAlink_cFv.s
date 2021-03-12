@@ -7,8 +7,8 @@ lbl_800BB644:
 /* 800BB658 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BB65C 00000004  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BB660 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 800BB664 0000000C  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800BB668 00000010  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__LIT_3757@l
+/* 800BB664 0000000C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800BB668 00000010  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
 /* 800BB66C 00000014  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 800BB670 00000018  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 800BB674 0000001C  41 82 00 5C */	beq lbl_800BB6D0

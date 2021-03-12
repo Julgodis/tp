@@ -5,139 +5,113 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoLib_project__FP3VecP3Vec();
-extern void mDoLib_pos2camera__FP3VecP3Vec();
-extern void __ct__10fopAc_ac_cFv();
-extern void fopAcM_delete__FP10fopAc_ac_c();
-extern void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
-extern void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
-extern void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi();
-extern void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
-extern void isEventBit__11dSv_event_cCFUs();
-extern void reset__14dEvt_control_cFv();
-extern void setPtI_Id__14dEvt_control_cFUi();
-extern void endCheckOld__16dEvent_manager_cFPCc();
-extern void newData__13dDlst_peekZ_cFssPUl();
-extern void Insect_Release__9dInsect_cFv();
-extern void __ct__9dInsect_cFv();
-extern void Insect_GetDemoMain__9dInsect_cFv();
-extern void CalcZBuffer__9dInsect_cFf();
-extern void isCatchNotGiveInsect__14dMenu_Insect_cFUc();
+extern "C" extern void mDoLib_project__FP3VecP3Vec();
+extern "C" extern void mDoLib_pos2camera__FP3VecP3Vec();
+extern "C" extern void __ct__10fopAc_ac_cFv();
+extern "C" extern void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" extern void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
+extern "C" extern void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
+extern "C" extern void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi();
+extern "C" extern void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
+extern "C" extern void isEventBit__11dSv_event_cCFUs();
+extern "C" extern void reset__14dEvt_control_cFv();
+extern "C" extern void setPtI_Id__14dEvt_control_cFUi();
+extern "C" extern void endCheckOld__16dEvent_manager_cFPCc();
+extern "C" extern void newData__13dDlst_peekZ_cFssPUl();
+extern "C" extern void Insect_Release__9dInsect_cFv();
+extern "C" extern void __ct__9dInsect_cFv();
+extern "C" extern void Insect_GetDemoMain__9dInsect_cFv();
+extern "C" extern void CalcZBuffer__9dInsect_cFf();
+extern "C" extern void isCatchNotGiveInsect__14dMenu_Insect_cFUc();
 SECTION_RODATA extern const u8 d_d_insect__stringBase0[16];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern void* __vt__9dInsect_c[4];
+SECTION_DATA extern void* const __vt__9dInsect_c[4];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SDATA2 extern u8 d_d_insect__LIT_3871[4];
-SECTION_SDATA2 extern u8 LIT_3872[4];
-SECTION_SDATA2 extern u8 d_d_insect__LIT_3873[4];
-SECTION_SDATA2 extern u8 LIT_3874[4];
-SECTION_SDATA2 extern u8 LIT_3875[4];
-SECTION_SDATA2 extern u8 d_d_insect__LIT_3876[4];
-SECTION_SDATA2 extern u8 d_d_insect__LIT_3877[8];
-}
+SECTION_SDATA2 extern f32 d_d_insect__lit_3871;
+SECTION_SDATA2 extern u8 lit_3872[4];
+SECTION_SDATA2 extern f32 d_d_insect__lit_3873;
+SECTION_SDATA2 extern f32 lit_3874;
+SECTION_SDATA2 extern f32 lit_3875;
+SECTION_SDATA2 extern f32 d_d_insect__lit_3876;
+SECTION_SDATA2 extern f32 d_d_insect__lit_3877;
 
-
-/* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80393D98-80393DA8 0010 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD const char* const stringBase_80393D98 = "DEFAULT_GETITEM";
-#pragma pop
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803BA078-803BA088 000C .data      __vt__9dInsect_c                                             */
-SECTION_DATA void* __vt__9dInsect_c[4] = {
+void* const __vt__9dInsect_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)Insect_Release__9dInsect_cFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804535E0-804535E4 0004 .sdata2    @3871                                                        */
-SECTION_SDATA2 u8 d_d_insect__LIT_3871[4] = {
-	0x41, 0xA0, 0x00, 0x00,
-};
-/* 804535E4-804535E8 0004 .sdata2    @3872                                                        */
-SECTION_SDATA2 u8 LIT_3872[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804535E8-804535EC 0004 .sdata2    @3873                                                        */
-SECTION_SDATA2 u8 d_d_insect__LIT_3873[4] = {
-	0x44, 0x18, 0x00, 0x00,
-};
-/* 804535EC-804535F0 0004 .sdata2    @3874                                                        */
-SECTION_SDATA2 u8 LIT_3874[4] = {
-	0x43, 0xE0, 0x00, 0x00,
-};
-/* 804535F0-804535F4 0004 .sdata2    @3875                                                        */
-SECTION_SDATA2 u8 LIT_3875[4] = {
-	0xC1, 0x20, 0x00, 0x00,
-};
-/* 804535F4-804535F8 0004 .sdata2    @3876                                                        */
-SECTION_SDATA2 u8 d_d_insect__LIT_3876[4] = {
-	0x4B, 0x7F, 0xFF, 0xFF,
-};
-/* 804535F8-80453600 0004 .sdata2    @3877                                                        */
-SECTION_SDATA2 u8 d_d_insect__LIT_3877[8] = {
-	0x3F, 0x80, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8015E010-8015E078 0068 .text      __ct__9dInsect_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9dInsect_cFv() {
+extern "C" asm void __ct__9dInsect_cFv() {
 	nofralloc
 #include "asm/d/d_insect/__ct__9dInsect_cFv.s"
 }
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 80393D98-80393DA8 0010 .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80393D98 = "DEFAULT_GETITEM";
 #pragma pop
 
 /* 8015E078-8015E26C 01F4 .text      Insect_GetDemoMain__9dInsect_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Insect_GetDemoMain__9dInsect_cFv() {
+extern "C" asm void Insect_GetDemoMain__9dInsect_cFv() {
 	nofralloc
 #include "asm/d/d_insect/Insect_GetDemoMain__9dInsect_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804535E0-804535E4 0004 .sdata2    @3871                                                        */
+f32 d_d_insect__lit_3871 = 20.0f;
+
+/* 804535E4-804535E8 0004 .sdata2    @3872                                                        */
+u8 lit_3872[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804535E8-804535EC 0004 .sdata2    @3873                                                        */
+f32 d_d_insect__lit_3873 = 608.0f;
+
+/* 804535EC-804535F0 0004 .sdata2    @3874                                                        */
+f32 lit_3874 = 448.0f;
+
+/* 804535F0-804535F4 0004 .sdata2    @3875                                                        */
+f32 lit_3875 = -10.0f;
+
+/* 804535F4-804535F8 0004 .sdata2    @3876                                                        */
+f32 d_d_insect__lit_3876 = 16777215.0f;
+
+/* 804535F8-80453600 0004 .sdata2    @3877                                                        */
+f32 d_d_insect__lit_3877 = 1.0f;
+/* padding 4 bytes */
+
 /* 8015E26C-8015E3F8 018C .text      CalcZBuffer__9dInsect_cFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CalcZBuffer__9dInsect_cFf() {
+extern "C" asm void CalcZBuffer__9dInsect_cFf() {
 	nofralloc
 #include "asm/d/d_insect/CalcZBuffer__9dInsect_cFf.s"
 }

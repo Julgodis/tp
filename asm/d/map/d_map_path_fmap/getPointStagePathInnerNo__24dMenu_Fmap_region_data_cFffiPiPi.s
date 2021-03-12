@@ -25,7 +25,7 @@ lbl_8003DB70:
 /* 8003DBCC 00000030  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8003DBD0 00000034  38 00 FF FF */	li r0, -1
 /* 8003DBD4 00000038  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 8003DBD8 0000003C  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003DBD8 0000003C  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003DBDC 00000040  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 8003DBE0 00000044  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8003DBE4 00000048  83 03 00 00 */	lwz r24, 0(r3)
@@ -115,7 +115,7 @@ lbl_8003DCEC:
 /* 8003DD1C 00000030  54 00 18 38 */	slwi r0, r0, 3
 /* 8003DD20 00000034  7F FA 02 14 */	add r31, r26, r0
 /* 8003DD24 00000038  3A C0 00 02 */	li r22, 2
-/* 8003DD28 0000003C  C3 82 84 20 */	lfs f28, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003DD28 0000003C  C3 82 84 20 */	lfs f28, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003DD2C 00000040  3B DE 00 04 */	addi r30, r30, 4
 lbl_8003DD30:
 /* 8003DD30 00000000  C0 03 00 00 */	lfs f0, 0(r3)

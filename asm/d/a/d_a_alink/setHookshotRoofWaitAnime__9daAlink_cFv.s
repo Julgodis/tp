@@ -28,7 +28,7 @@ lbl_8010B32C:
 /* 8010B338 0000000C  90 1F 31 A0 */	stw r0, 0x31a0(r31)
 lbl_8010B33C:
 /* 8010B33C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8010B340 00000004  C0 22 93 14 */	lfs f1, LIT_7307(r2)
+/* 8010B340 00000004  C0 22 93 14 */	lfs f1, lit_7307(r2)
 /* 8010B344 00000008  4B FA 1C 6D */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 8010B348 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8010B34C 00000010  80 01 00 14 */	lwz r0, 0x14(r1)

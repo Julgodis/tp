@@ -13,7 +13,7 @@ lbl_80167C24:
 /* 80167C50 00000018  38 FD 00 70 */	addi r7, r29, 0x70
 /* 80167C54 0000001C  C0 23 00 58 */	lfs f1, 0x58(r3)
 /* 80167C58 00000020  A9 03 00 54 */	lha r8, 0x54(r3)
-/* 80167C5C 00000024  C0 42 9C E8 */	lfs f2, LIT_6630(r2)
+/* 80167C5C 00000024  C0 42 9C E8 */	lfs f2, lit_6630(r2)
 /* 80167C60 00000028  4B FF D5 D9 */	bl radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyzfsf
 /* 80167C64 0000002C  FF E0 08 90 */	fmr f31, f1
 /* 80167C68 00000030  7F A3 EB 78 */	mr r3, r29
@@ -23,7 +23,7 @@ lbl_80167C24:
 /* 80167C78 00000040  38 FD 00 70 */	addi r7, r29, 0x70
 /* 80167C7C 00000044  C0 3D 00 58 */	lfs f1, 0x58(r29)
 /* 80167C80 00000048  A9 1D 00 54 */	lha r8, 0x54(r29)
-/* 80167C84 0000004C  C0 42 9C E8 */	lfs f2, LIT_6630(r2)
+/* 80167C84 0000004C  C0 42 9C E8 */	lfs f2, lit_6630(r2)
 /* 80167C88 00000050  4B FF D5 B1 */	bl radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyzfsf
 /* 80167C8C 00000068  FC 1F 08 40 */	fcmpo cr0, f31, f1
 /* 80167C90 00000000  40 81 00 08 */	ble lbl_80167C98

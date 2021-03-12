@@ -4,10 +4,10 @@ lbl_8028C8A4:
 /* 8028C8AC 00000008  90 01 00 74 */	stw r0, 0x74(r1)
 /* 8028C8B0 0000000C  93 E1 00 6C */	stw r31, 0x6c(r1)
 /* 8028C8B4 00000010  93 C1 00 68 */	stw r30, 0x68(r1)
-/* 8028C8B8 00000014  3C 60 80 43 */	lis r3, object_fog__LIT_848@ha
-/* 8028C8BC 00000018  3B C3 13 78 */	addi r30, r3, object_fog__LIT_848@l
-/* 8028C8C0 0000001C  3C 60 80 3C */	lis r3, object_fog__LIT_844@ha
-/* 8028C8C4 00000020  3B E3 59 A0 */	addi r31, r3, object_fog__LIT_844@l
+/* 8028C8B8 00000014  3C 60 80 43 */	lis r3, object_fog__lit_848@ha
+/* 8028C8BC 00000018  3B C3 13 78 */	addi r30, r3, object_fog__lit_848@l
+/* 8028C8C0 0000001C  3C 60 80 3C */	lis r3, object_fog__lit_844@ha
+/* 8028C8C4 00000020  3B E3 59 A0 */	addi r31, r3, object_fog__lit_844@l
 /* 8028C8C8 00000024  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028C8CC 00000028  39 43 56 40 */	addi r10, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 8028C8D0 0000002C  91 41 00 48 */	stw r10, 0x48(r1)

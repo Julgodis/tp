@@ -1,0 +1,24 @@
+lbl_80BB55B8:
+/* 80BB55B8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BB55BC 00000004  7C 08 02 A6 */	mflr r0
+/* 80BB55C0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BB55C4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80BB55C8 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80BB55CC 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
+/* 80BB55D0 00000018  4B FF FD 29 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 80BB55D4 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
+/* 80BB55D8 00000020  4B FF FD 21 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 80BB55DC 00000024  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BB55E0 00000028  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BB55E4 0000002C  80 9F 05 EC */	lwz r4, 0x5ec(r31)
+/* 80BB55E8 00000030  38 84 00 24 */	addi r4, r4, 0x24
+/* 80BB55EC 00000034  4B FF FD 0D */	bl PSMTXCopy
+/* 80BB55F0 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BB55F4 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BB55F8 00000040  38 9F 05 6C */	addi r4, r31, 0x56c
+/* 80BB55FC 00000044  4B FF FC FD */	bl PSMTXCopy
+/* 80BB5600 00000048  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80BB5604 0000004C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BB5608 00000050  7C 08 03 A6 */	mtlr r0
+/* 80BB560C 00000054  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BB5610 00000058  4E 80 00 20 */	blr 

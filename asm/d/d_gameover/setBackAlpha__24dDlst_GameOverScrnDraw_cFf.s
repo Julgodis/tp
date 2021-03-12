@@ -3,7 +3,7 @@ lbl_8019BCB0:
 /* 8019BCB4 00000004  7C 08 02 A6 */	mflr r0
 /* 8019BCB8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019BCBC 0000000C  80 63 00 08 */	lwz r3, 8(r3)
-/* 8019BCC0 00000010  C0 02 A1 A8 */	lfs f0, d_d_gameover__LIT_4316(r2)
+/* 8019BCC0 00000010  C0 02 A1 A8 */	lfs f0, d_d_gameover__lit_4316(r2)
 /* 8019BCC4 00000014  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8019BCC8 00000018  FC 00 00 1E */	fctiwz f0, f0
 /* 8019BCCC 0000001C  D8 01 00 08 */	stfd f0, 8(r1)

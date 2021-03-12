@@ -5,79 +5,266 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSRegisterVersion();
-extern void OSInitAlarm();
-extern void OSCreateAlarm();
-extern void OSSetAlarm();
-extern void OSCancelAlarm();
-extern void OSGetFontEncode();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSRegisterResetFunction();
-extern void OSInitThreadQueue();
-extern void OSSleepThread();
-extern void OSWakeupThread();
-extern void EXIImm();
-extern void EXIImmEx();
-extern void EXIDma();
-extern void EXISync();
-extern void EXISetExiCallback();
-extern void EXIProbe();
-extern void EXISelect();
-extern void EXIDeselect();
-extern void EXILock();
-extern void EXIUnlock();
-extern void DSPInit();
-extern void __CARDDefaultApiCallback();
-extern void __CARDSyncCallback();
-extern void __CARDExtHandler();
-extern void __CARDExiHandler();
-extern void __CARDTxHandler();
-extern void __CARDUnlockedHandler();
-extern void __CARDEnableInterrupt();
-extern void __CARDReadStatus();
-extern void __CARDReadVendorID();
-extern void __CARDClearStatus();
-extern void TimeoutHandler();
-extern void Retry();
-extern void UnlockedCallback();
-extern void __CARDStart();
-extern void __CARDReadSegment();
-extern void __CARDWritePage();
-extern void __CARDEraseSector();
-extern void CARDInit();
-extern void __CARDGetFontEncode();
-extern void __CARDSetDiskID();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void CARDFreeBlocks();
-extern void __CARDSync();
-extern void CARDBios__OnReset();
-extern void CARDGetFastMode();
-extern void __CARDGetFatBlock();
-extern void __CARDGetDirBlock();
-extern void CARDUnmount();
-SECTION_DATA extern u8 CARDBios__LIT_1[72];
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSInitAlarm();
+extern "C" extern void OSCreateAlarm();
+extern "C" extern void OSSetAlarm();
+extern "C" extern void OSCancelAlarm();
+extern "C" extern void OSGetFontEncode();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSRegisterResetFunction();
+extern "C" extern void OSInitThreadQueue();
+extern "C" extern void OSSleepThread();
+extern "C" extern void OSWakeupThread();
+extern "C" extern void EXIImm();
+extern "C" extern void EXIImmEx();
+extern "C" extern void EXIDma();
+extern "C" extern void EXISync();
+extern "C" extern void EXISetExiCallback();
+extern "C" extern void EXIProbe();
+extern "C" extern void EXISelect();
+extern "C" extern void EXIDeselect();
+extern "C" extern void EXILock();
+extern "C" extern void EXIUnlock();
+extern "C" extern void DSPInit();
+extern "C" extern void __CARDDefaultApiCallback();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDExtHandler();
+extern "C" extern void __CARDExiHandler();
+extern "C" extern void __CARDTxHandler();
+extern "C" extern void __CARDUnlockedHandler();
+extern "C" extern void __CARDEnableInterrupt();
+extern "C" extern void __CARDReadStatus();
+extern "C" extern void __CARDReadVendorID();
+extern "C" extern void __CARDClearStatus();
+extern "C" extern void TimeoutHandler();
+extern "C" extern void Retry();
+extern "C" extern void UnlockedCallback();
+extern "C" extern void __CARDStart();
+extern "C" extern void __CARDReadSegment();
+extern "C" extern void __CARDWritePage();
+extern "C" extern void __CARDEraseSector();
+extern "C" extern void CARDInit();
+extern "C" extern void __CARDGetFontEncode();
+extern "C" extern void __CARDSetDiskID();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void CARDFreeBlocks();
+extern "C" extern void __CARDSync();
+extern "C" extern void CARDBios__OnReset();
+extern "C" extern void CARDGetFastMode();
+extern "C" extern void __CARDGetFatBlock();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void CARDUnmount();
+SECTION_DATA extern u8 CARDBios__lit_1[72];
 SECTION_DATA extern void* CARDBios__ResetFunctionInfo[8];
 SECTION_BSS extern u8 __CARDBlock[544];
 SECTION_BSS extern u8 __CARDDiskNone[32];
 SECTION_SDATA extern void* __CARDVersion[2];
 SECTION_SBSS extern u8 struct_80451918[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 80352A30-80352A34 0004 .text      __CARDDefaultApiCallback                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDDefaultApiCallback() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDDefaultApiCallback.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 8044CBC0-8044CDE0 0220 .bss       __CARDBlock                                                  */
+u8 __CARDBlock[544];
 
-extern "C" {
-/* 803D1E38-803D1E38 0000 .data      ...data.0                                                    */
+/* 80352A34-80352A68 0034 .text      __CARDSyncCallback                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDSyncCallback() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDSyncCallback.s"
+}
+#pragma pop
+
+
+/* 80352A68-80352B40 00D8 .text      __CARDExtHandler                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDExtHandler() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDExtHandler.s"
+}
+#pragma pop
+
+
+/* 80352B40-80352C58 0118 .text      __CARDExiHandler                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDExiHandler() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDExiHandler.s"
+}
+#pragma pop
+
+
+/* 80352C58-80352D00 00A8 .text      __CARDTxHandler                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDTxHandler() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDTxHandler.s"
+}
+#pragma pop
+
+
+/* 80352D00-80352D84 0084 .text      __CARDUnlockedHandler                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDUnlockedHandler() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDUnlockedHandler.s"
+}
+#pragma pop
+
+
+/* 80352D84-80352E44 00C0 .text      __CARDEnableInterrupt                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDEnableInterrupt() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDEnableInterrupt.s"
+}
+#pragma pop
+
+
+/* 80352E44-80352F34 00F0 .text      __CARDReadStatus                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDReadStatus() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDReadStatus.s"
+}
+#pragma pop
+
+
+/* 80352F34-80353024 00F0 .text      __CARDReadVendorID                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDReadVendorID() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDReadVendorID.s"
+}
+#pragma pop
+
+
+/* 80353024-803530D0 00AC .text      __CARDClearStatus                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDClearStatus() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDClearStatus.s"
+}
+#pragma pop
+
+
+/* 803530D0-80353174 00A4 .text      TimeoutHandler                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void TimeoutHandler() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/TimeoutHandler.s"
+}
+#pragma pop
+
+
+/* 80353174-80353414 02A0 .text      Retry                                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void Retry() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/Retry.s"
+}
+#pragma pop
+
+
+/* 80353414-80353524 0110 .text      UnlockedCallback                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void UnlockedCallback() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/UnlockedCallback.s"
+}
+#pragma pop
+
+
+/* 80353524-80353748 0224 .text      __CARDStart                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDStart() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDStart.s"
+}
+#pragma pop
+
+
+/* 80353748-8035387C 0134 .text      __CARDReadSegment                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDReadSegment() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDReadSegment.s"
+}
+#pragma pop
+
+
+/* 8035387C-803539B8 013C .text      __CARDWritePage                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDWritePage() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDWritePage.s"
+}
+#pragma pop
+
+
+/* 803539B8-80353AC8 0110 .text      __CARDEraseSector                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __CARDEraseSector() {
+	nofralloc
+#include "asm/dolphin/card/CARDBios/__CARDEraseSector.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803D1E38-803D1E80 0046 .data      @1                                                           */
-SECTION_DATA u8 CARDBios__LIT_1[72] = {
+u8 CARDBios__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x43, 0x41, 0x52, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75,
 	0x69, 0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34,
@@ -86,8 +273,9 @@ SECTION_DATA u8 CARDBios__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803D1E80-803D1EA0 0010 .data      ResetFunctionInfo                                            */
-SECTION_DATA void* CARDBios__ResetFunctionInfo[8] = {
+void* CARDBios__ResetFunctionInfo[8] = {
 	(void*)CARDBios__OnReset,
 	(void*)0x0000007F,
 	NULL,
@@ -98,310 +286,118 @@ SECTION_DATA void* CARDBios__ResetFunctionInfo[8] = {
 	NULL,
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450A60-80450A68 0004 .sdata     __CARDVersion                                                */
-SECTION_SDATA void* __CARDVersion[2] = {
-	(void*)&CARDBios__LIT_1,
+void* __CARDVersion[2] = {
+	(void*)&CARDBios__lit_1,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044CBC0-8044CBC0 0000 .bss       ...bss.0                                                     */
-/* 8044CBC0-8044CDE0 0220 .bss       __CARDBlock                                                  */
-SECTION_BSS u8 __CARDBlock[544];
-/* 8044CDE0-8044CE00 0020 .bss       __CARDDiskNone                                               */
-SECTION_BSS u8 __CARDDiskNone[32];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451918-80451920 0004 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80451918[4 + 4 /* padding */];
+u8 struct_80451918[4 + 4 /* padding */];
 /* 80451918 0002 data_80451918 */
 /* 8045191A 0002 data_8045191A */
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80352A30-80352A34 0004 .text      __CARDDefaultApiCallback                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDDefaultApiCallback() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDDefaultApiCallback.s"
-}
-#pragma pop
-
-/* 80352A34-80352A68 0034 .text      __CARDSyncCallback                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDSyncCallback() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDSyncCallback.s"
-}
-#pragma pop
-
-/* 80352A68-80352B40 00D8 .text      __CARDExtHandler                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDExtHandler() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDExtHandler.s"
-}
-#pragma pop
-
-/* 80352B40-80352C58 0118 .text      __CARDExiHandler                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDExiHandler() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDExiHandler.s"
-}
-#pragma pop
-
-/* 80352C58-80352D00 00A8 .text      __CARDTxHandler                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDTxHandler() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDTxHandler.s"
-}
-#pragma pop
-
-/* 80352D00-80352D84 0084 .text      __CARDUnlockedHandler                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDUnlockedHandler() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDUnlockedHandler.s"
-}
-#pragma pop
-
-/* 80352D84-80352E44 00C0 .text      __CARDEnableInterrupt                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDEnableInterrupt() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDEnableInterrupt.s"
-}
-#pragma pop
-
-/* 80352E44-80352F34 00F0 .text      __CARDReadStatus                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDReadStatus() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDReadStatus.s"
-}
-#pragma pop
-
-/* 80352F34-80353024 00F0 .text      __CARDReadVendorID                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDReadVendorID() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDReadVendorID.s"
-}
-#pragma pop
-
-/* 80353024-803530D0 00AC .text      __CARDClearStatus                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDClearStatus() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDClearStatus.s"
-}
-#pragma pop
-
-/* 803530D0-80353174 00A4 .text      TimeoutHandler                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void TimeoutHandler() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/TimeoutHandler.s"
-}
-#pragma pop
-
-/* 80353174-80353414 02A0 .text      Retry                                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Retry() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/Retry.s"
-}
-#pragma pop
-
-/* 80353414-80353524 0110 .text      UnlockedCallback                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void UnlockedCallback() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/UnlockedCallback.s"
-}
-#pragma pop
-
-/* 80353524-80353748 0224 .text      __CARDStart                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDStart() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDStart.s"
-}
-#pragma pop
-
-/* 80353748-8035387C 0134 .text      __CARDReadSegment                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDReadSegment() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDReadSegment.s"
-}
-#pragma pop
-
-/* 8035387C-803539B8 013C .text      __CARDWritePage                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDWritePage() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDWritePage.s"
-}
-#pragma pop
-
-/* 803539B8-80353AC8 0110 .text      __CARDEraseSector                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __CARDEraseSector() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDEraseSector.s"
-}
-#pragma pop
 
 /* 80353AC8-80353B74 00AC .text      CARDInit                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDInit() {
+extern "C" asm void CARDInit() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/CARDInit.s"
 }
 #pragma pop
 
+
 /* 80353B74-80353B7C 0008 .text      __CARDGetFontEncode                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDGetFontEncode() {
+extern "C" asm void __CARDGetFontEncode() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/__CARDGetFontEncode.s"
 }
 #pragma pop
 
+
 /* 80353B7C-80353BB4 0038 .text      __CARDSetDiskID                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDSetDiskID() {
+extern "C" asm void __CARDSetDiskID() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/__CARDSetDiskID.s"
 }
 #pragma pop
 
+
 /* 80353BB4-80353C6C 00B8 .text      __CARDGetControlBlock                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDGetControlBlock() {
+extern "C" asm void __CARDGetControlBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/__CARDGetControlBlock.s"
 }
 #pragma pop
 
+
 /* 80353C6C-80353CD0 0064 .text      __CARDPutControlBlock                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDPutControlBlock() {
+extern "C" asm void __CARDPutControlBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/__CARDPutControlBlock.s"
 }
 #pragma pop
 
+
 /* 80353CD0-80353E20 0150 .text      CARDFreeBlocks                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDFreeBlocks() {
+extern "C" asm void CARDFreeBlocks() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/CARDFreeBlocks.s"
 }
 #pragma pop
 
+
 /* 80353E20-80353EB8 0098 .text      __CARDSync                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDSync() {
+extern "C" asm void __CARDSync() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/__CARDSync.s"
 }
 #pragma pop
 
+
 /* 80353EB8-80353F08 0050 .text      OnReset                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDBios__OnReset() {
+extern "C" asm void CARDBios__OnReset() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/CARDBios__OnReset.s"
 }
 #pragma pop
 
+
 /* 80353F08-80353F24 001C .text      CARDGetFastMode                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDGetFastMode() {
+extern "C" asm void CARDGetFastMode() {
 	nofralloc
 #include "asm/dolphin/card/CARDBios/CARDGetFastMode.s"
 }
 #pragma pop
 
+
+/* 8044CDE0-8044CE00 0020 .bss       __CARDDiskNone                                               */
+u8 __CARDDiskNone[32];
 

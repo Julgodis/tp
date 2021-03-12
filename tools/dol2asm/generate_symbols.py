@@ -4,6 +4,7 @@ from exception import *
 
 import util
 import linker_map
+from disassembler import Access, BranchAccess, FloatLoadAccess, DoubleLoadAccess
 
 
 def string_decode(data: bytearray) -> Tuple[str, str]:
@@ -144,21 +145,21 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
             __destroy_global_chain_reference = ReferenceArray(identifier, symbol.addr, symbol.size,
-                                   section=section,
-                                   data=data,
-                                   source=f".dtors0/{symbol.source}")
+                                                              section=section,
+                                                              data=data,
+                                                              source=f".dtors0/{symbol.source}")
 
             if len(padding_data) == 0:
                 return [__destroy_global_chain_reference]
 
             return [
-                __destroy_global_chain_reference, 
+                __destroy_global_chain_reference,
                 InitData(Identifier('pad', symbol.addr + 4, None),
-                    symbol.addr + 4,
-                    len(padding_data), 
-                    section=section,
-                    data=padding_data,
-                    source=f".dtors0/padding/{symbol.source}")
+                         symbol.addr + 4,
+                         len(padding_data),
+                         section=section,
+                         data=padding_data,
+                         source=f".dtors0/padding/{symbol.source}")
             ]
 
         elif symbol.name == "__fini_cpp_exceptions_reference":
@@ -168,6 +169,98 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                                    section=section,
                                    data=data,
                                    source=f".dtors1/{symbol.source}")]
+
+
+    if isinstance(symbol.access, FloatLoadAccess):
+        is_float_constant = identifier.name and identifier.name.startswith("__float_")
+        if symbol.size >= 4 and symbol.size % 4 == 0 and not is_float_constant:
+            values = []
+            for data4 in util.chunks(data, 4):
+                value = util.bytes2float32(data4)
+                special_value = util.special_float32(value)
+                if special_value:
+                    values.append(special_value)
+                elif value in util.float32_exact:
+                    fractions = util.float32_exact[value]
+                    values.append(f"{fractions[0]}.0f / {fractions[1]}.0f")
+                else:
+                    values.append(f"{value}f")
+
+            # Metrowerks is very smart... if you initialize a float with 0.0f, the storage will be moved to the one of the .bss sections.
+            # Generated literals will always be (for floats and doubles) in the .sdata2 section. Thus, if we are a literal, we cannot 
+            # use the value 0.0f.
+            if len(values) > 0 and not (len(values) == 1 and values[0] == "0.0f"): 
+                return [Float32(identifier, symbol.addr, symbol.size,
+                        value_type="f32",
+                        values=values,
+                        section=section,
+                        data=data,
+                        padding=len(padding_data),
+                        padding_data=padding_data,
+                        source=symbol.source)]
+
+    if isinstance(symbol.access, DoubleLoadAccess):
+        if symbol.size >= 8 and symbol.size % 8 == 0:
+            values = []
+            for data8 in util.chunks(data, 8):
+                uvalue = struct.unpack('>Q', data8)[0]
+                value = util.bytes2float64(data8)
+                special_value = util.special_float64(value)
+                if special_value:
+                    values.append(special_value)
+                elif value in util.float64_exact:
+                    fractions = util.float64_exact[value]
+                    values.append(f"{fractions[0]}.0 / {fractions[1]}.0")
+                else:
+                    comment = ""
+                    if uvalue == 0x43300000_00000000:
+                        comment = " /* cast u32 to float */"
+                    elif uvalue == 0x43300000_80000000:
+                        comment = " /* cast s32 to float */"
+                    values.append(f"{value}{comment}")
+
+            # Same comments as for the float case.
+            if  len(values) > 0 and not (len(values) == 1 and values[0] == "0.0"): 
+                return [Float64(identifier, symbol.addr, symbol.size,
+                            value_type="f64",
+                            values=values,
+                            section=section,
+                            data=data,
+                            padding=len(padding_data),
+                            padding_data=padding_data,
+                            source=symbol.source)]
+
+    if symbol.size == 4:
+        if identifier.name and "$" in identifier.name:
+            # symbols with the character $ are often arrays.
+            pass
+        else:
+            value = struct.unpack('>I', data)[0]
+            if value != 0:
+                return [Integer(identifier, symbol.addr, symbol.size,
+                    value_type="u32",
+                    values=[f"0x{value:08X}"],
+                    section=section,
+                    data=data,
+                    padding=len(padding_data),
+                    padding_data=padding_data,
+                    source=symbol.source)]
+
+    if symbol.size == 2:
+        if identifier.name and "$" in identifier.name:
+            # symbols with the character $ are often arrays.
+            pass
+        else:
+            value = struct.unpack('>H', data)[0]
+            if value != 0:
+                return [Integer(identifier, symbol.addr, symbol.size,
+                    value_type="u16",
+                    values=[f"0x{value:04X}"],
+                    section=section,
+                    data=data,
+                    padding=len(padding_data),
+                    padding_data=padding_data,
+                    source=symbol.source)]
 
     # otherwise export it as raw initialized data
     return [InitData(identifier, symbol.addr, symbol.size,
@@ -183,21 +276,24 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> List[Symbol]
     assert len(group) == 1
     first = group[0]
     identifier = Identifier("data", first.addr, first.name)
+    
+    if first.size <= 0:
+        return []
 
     # if the section have not data, it is probably a .bss section
     if not section.data:
+        # TODO FLOATS!
         return [ZeroData(identifier, first.addr, first.size, padding=first.padding, source=first.source)]
 
     # TODO: remove the exception and do a "real" bounds-check
     data = bytes()
     padding_data = bytes()
     try:
-        if first.size > 0:
-            data = section.getData(first.start, first.end)
-            if first.padding > 0:
-                padding_data = section.getData(
-                    first.end, first.end+first.padding)
-            assert len(data) == first.size
+        data = section.getData(first.start, first.end)
+        if first.padding > 0:
+            padding_data = section.getData(
+                first.end, first.end+first.padding)
+        assert len(data) == first.size
     except IndexError:
         raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
                                (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))

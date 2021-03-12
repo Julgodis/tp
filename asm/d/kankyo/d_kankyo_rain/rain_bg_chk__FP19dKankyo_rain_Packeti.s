@@ -1,5 +1,5 @@
 lbl_8005CDA8:
-/* 8005CDA8 00000000  C0 22 88 78 */	lfs f1, d_kankyo_d_kankyo_rain__LIT_4430(r2)
+/* 8005CDA8 00000000  C0 22 88 78 */	lfs f1, d_kankyo_d_kankyo_rain__lit_4430(r2)
 /* 8005CDAC 00000004  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8005CDB0 00000008  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8005CDB4 0000000C  80 A5 5D 74 */	lwz r5, 0x5d74(r5)

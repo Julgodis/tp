@@ -13,10 +13,10 @@ lbl_80243F94:
 /* 80243FC0 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80243FC4 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 80243FC8 00000008  FF E0 08 90 */	fmr f31, f1
-/* 80243FCC 0000000C  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80243FCC 0000000C  C0 02 B2 50 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80243FD0 0000003C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 80243FD4 00000000  40 80 00 88 */	bge lbl_8024405C
-/* 80243FD8 00000004  C0 02 B2 AC */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_5508(r2)
+/* 80243FD8 00000004  C0 02 B2 AC */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_5508(r2)
 /* 80243FDC 00000008  EF FF 00 32 */	fmuls f31, f31, f0
 /* 80243FE0 0000000C  80 7F 00 C8 */	lwz r3, 0xc8(r31)
 /* 80243FE4 00000010  80 83 00 04 */	lwz r4, 4(r3)
@@ -24,7 +24,7 @@ lbl_80243F94:
 /* 80243FEC 00000018  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80243FF0 0000001C  EF C1 00 28 */	fsubs f30, f1, f0
 /* 80243FF4 00000020  48 01 03 71 */	bl getGlobalPosY__8CPaneMgrFv
-/* 80243FF8 00000024  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80243FF8 00000024  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80243FFC 00000028  EC 1E 00 32 */	fmuls f0, f30, f0
 /* 80244000 0000002C  EF C1 00 2A */	fadds f30, f1, f0
 /* 80244004 00000030  80 7F 00 C4 */	lwz r3, 0xc4(r31)
@@ -33,7 +33,7 @@ lbl_80243F94:
 /* 80244010 0000003C  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80244014 00000040  EF A1 00 28 */	fsubs f29, f1, f0
 /* 80244018 00000044  48 01 03 4D */	bl getGlobalPosY__8CPaneMgrFv
-/* 8024401C 00000048  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 8024401C 00000048  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80244020 0000004C  EC 1D 00 32 */	fmuls f0, f29, f0
 /* 80244024 00000050  EF A1 00 2A */	fadds f29, f1, f0
 /* 80244028 00000054  80 7F 00 C8 */	lwz r3, 0xc8(r31)
@@ -42,7 +42,7 @@ lbl_80243F94:
 /* 80244034 00000060  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80244038 00000064  EF 81 00 28 */	fsubs f28, f1, f0
 /* 8024403C 00000068  48 01 03 29 */	bl getGlobalPosY__8CPaneMgrFv
-/* 80244040 0000006C  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80244040 0000006C  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80244044 00000070  EC 1C 00 32 */	fmuls f0, f28, f0
 /* 80244048 00000074  EC 21 00 2A */	fadds f1, f1, f0
 /* 8024404C 00000078  EC 1D F0 28 */	fsubs f0, f29, f30
@@ -56,7 +56,7 @@ lbl_8024405C:
 /* 80244068 0000000C  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 8024406C 00000010  EF 81 00 28 */	fsubs f28, f1, f0
 /* 80244070 00000014  48 01 02 F5 */	bl getGlobalPosY__8CPaneMgrFv
-/* 80244074 00000018  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80244074 00000018  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 80244078 0000001C  EC 1C 00 32 */	fmuls f0, f28, f0
 /* 8024407C 00000020  EF 81 00 2A */	fadds f28, f1, f0
 /* 80244080 00000024  80 7F 00 CC */	lwz r3, 0xcc(r31)
@@ -65,7 +65,7 @@ lbl_8024405C:
 /* 8024408C 00000030  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80244090 00000034  EF A1 00 28 */	fsubs f29, f1, f0
 /* 80244094 00000038  48 01 02 D1 */	bl getGlobalPosY__8CPaneMgrFv
-/* 80244098 0000003C  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 80244098 0000003C  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 8024409C 00000040  EC 1D 00 32 */	fmuls f0, f29, f0
 /* 802440A0 00000044  EF A1 00 2A */	fadds f29, f1, f0
 /* 802440A4 00000048  80 7F 00 C8 */	lwz r3, 0xc8(r31)
@@ -74,7 +74,7 @@ lbl_8024405C:
 /* 802440B0 00000054  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 802440B4 00000058  EF C1 00 28 */	fsubs f30, f1, f0
 /* 802440B8 0000005C  48 01 02 AD */	bl getGlobalPosY__8CPaneMgrFv
-/* 802440BC 00000060  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4561(r2)
+/* 802440BC 00000060  C0 02 B2 70 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
 /* 802440C0 00000064  EC 1E 00 32 */	fmuls f0, f30, f0
 /* 802440C4 00000068  EC 21 00 2A */	fadds f1, f1, f0
 /* 802440C8 0000006C  EC 1D E0 28 */	fsubs f0, f29, f28

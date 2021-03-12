@@ -94,10 +94,10 @@ lbl_8020C524:
 lbl_8020C55C:
 /* 8020C55C 00000000  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 8020C560 00000004  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 8020C564 00000008  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C564 00000008  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C568 0000000C  48 04 92 69 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020C56C 00000010  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 8020C570 00000014  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C570 00000014  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C574 00000018  48 04 92 5D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020C578 0000001C  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8020C57C 00000020  48 04 90 8D */	bl hide__13CPaneMgrAlphaFv
@@ -106,7 +106,7 @@ lbl_8020C55C:
 /* 8020C588 0000002C  38 E0 00 00 */	li r7, 0
 /* 8020C58C 00000030  38 60 00 00 */	li r3, 0
 /* 8020C590 00000034  38 80 00 00 */	li r4, 0
-/* 8020C594 00000038  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C594 00000038  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C598 0000003C  38 A0 00 00 */	li r5, 0
 /* 8020C59C 00000040  38 00 00 0C */	li r0, 0xc
 /* 8020C5A0 00000044  7C 09 03 A6 */	mtctr r0
@@ -161,7 +161,7 @@ lbl_8020C654:
 /* 8020C658 00000004  80 7F 00 34 */	lwz r3, 0x34(r31)
 /* 8020C65C 00000008  48 04 8F 6D */	bl show__13CPaneMgrAlphaFv
 /* 8020C660 0000000C  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 8020C664 00000010  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C664 00000010  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C668 00000014  48 04 91 69 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020C66C 00000018  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8020C670 0000001C  3C 80 66 6F */	lis r4, 0x666F /* 0x666F5F6E@ha */
@@ -171,7 +171,7 @@ lbl_8020C654:
 /* 8020C680 0000002C  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 8020C684 00000030  7D 89 03 A6 */	mtctr r12
 /* 8020C688 00000034  4E 80 04 21 */	bctrl 
-/* 8020C68C 00000038  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C68C 00000038  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C690 0000003C  D0 03 00 D4 */	stfs f0, 0xd4(r3)
 /* 8020C694 00000040  D0 03 00 D8 */	stfs f0, 0xd8(r3)
 /* 8020C698 00000044  81 83 00 00 */	lwz r12, 0(r3)
@@ -194,7 +194,7 @@ lbl_8020C654:
 /* 8020C6DC 00000088  2C 03 00 00 */	cmpwi r3, 0
 /* 8020C6E0 0000008C  40 82 00 28 */	bne lbl_8020C708
 /* 8020C6E4 00000090  80 7F 00 10 */	lwz r3, 0x10(r31)
-/* 8020C6E8 00000094  C0 22 AE 04 */	lfs f1, d_meter_d_meter_hakusha__LIT_3794(r2)
+/* 8020C6E8 00000094  C0 22 AE 04 */	lfs f1, d_meter_d_meter_hakusha__lit_3794(r2)
 /* 8020C6EC 00000098  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020C6F0 0000009C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 8020C6F4 000000A0  C0 04 03 B0 */	lfs f0, 0x3b0(r4)
@@ -258,7 +258,7 @@ lbl_8020C720:
 /* 8020C7D4 000000B4  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 8020C7D8 000000B8  7D 89 03 A6 */	mtctr r12
 /* 8020C7DC 000000BC  4E 80 04 21 */	bctrl 
-/* 8020C7E0 000000C0  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020C7E0 000000C0  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020C7E4 000000C4  D0 1F 00 F8 */	stfs f0, 0xf8(r31)
 /* 8020C7E8 000000C8  D0 1F 00 FC */	stfs f0, 0xfc(r31)
 /* 8020C7EC 000000CC  38 60 00 04 */	li r3, 4

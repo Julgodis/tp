@@ -5,30 +5,27 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8cM3dGCpsFv();
-extern void __dt__8cM3dGCpsFv();
-extern void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
-extern void Set__8cM3dGCpsFRC9cM3dGCpsS();
-extern void SetCps__8cM3dGCpsFRC8cM3dGCps();
-extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__8cM3dGLin[3];
-SECTION_DATA extern void* __vt__8cM3dGCps[10];
-}
+extern "C" extern void __ct__8cM3dGCpsFv();
+extern "C" extern void __dt__8cM3dGCpsFv();
+extern "C" extern void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
+extern "C" extern void Set__8cM3dGCpsFRC9cM3dGCpsS();
+extern "C" extern void SetCps__8cM3dGCpsFRC8cM3dGCps();
+extern "C" extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__8cM3dGLin[3];
+SECTION_DATA extern void* const __vt__8cM3dGCps[10];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C3FF8-803C4020 000C .data      __vt__8cM3dGCps                                              */
-SECTION_DATA void* __vt__8cM3dGCps[10] = {
+void* const __vt__8cM3dGCps[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM3dGCpsFv,
@@ -41,58 +38,56 @@ SECTION_DATA void* __vt__8cM3dGCps[10] = {
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8026EF88-8026EFA4 001C .text      __ct__8cM3dGCpsFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8cM3dGCpsFv() {
+extern "C" asm void __ct__8cM3dGCpsFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cps/__ct__8cM3dGCpsFv.s"
 }
 #pragma pop
 
+
 /* 8026EFA4-8026F000 005C .text      __dt__8cM3dGCpsFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8cM3dGCpsFv() {
+extern "C" asm void __dt__8cM3dGCpsFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cps/__dt__8cM3dGCpsFv.s"
 }
 #pragma pop
 
+
 /* 8026F000-8026F03C 003C .text      Set__8cM3dGCpsFRC4cXyzRC4cXyzf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Set__8cM3dGCpsFRC4cXyzRC4cXyzf() {
+extern "C" asm void Set__8cM3dGCpsFRC4cXyzRC4cXyzf() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cps/Set__8cM3dGCpsFRC4cXyzRC4cXyzf.s"
 }
 #pragma pop
 
+
 /* 8026F03C-8026F080 0044 .text      Set__8cM3dGCpsFRC9cM3dGCpsS                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Set__8cM3dGCpsFRC9cM3dGCpsS() {
+extern "C" asm void Set__8cM3dGCpsFRC9cM3dGCpsS() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cps/Set__8cM3dGCpsFRC9cM3dGCpsS.s"
 }
 #pragma pop
 
+
 /* 8026F080-8026F0A8 0028 .text      SetCps__8cM3dGCpsFRC8cM3dGCps                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetCps__8cM3dGCpsFRC8cM3dGCps() {
+extern "C" asm void SetCps__8cM3dGCpsFRC8cM3dGCps() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cps/SetCps__8cM3dGCpsFRC8cM3dGCps.s"
 }

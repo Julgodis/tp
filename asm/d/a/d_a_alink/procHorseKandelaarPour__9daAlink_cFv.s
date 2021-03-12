@@ -29,7 +29,7 @@ lbl_800F2C78:
 lbl_800F2CE4:
 /* 800F2CE4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800F2CE8 00000004  38 80 00 02 */	li r4, 2
-/* 800F2CEC 00000008  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800F2CEC 00000008  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800F2CF0 0000000C  4B FB AA 35 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F2CF4 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800F2CF8 00000014  48 01 E2 91 */	bl resetOilBottleModel__9daAlink_cFv

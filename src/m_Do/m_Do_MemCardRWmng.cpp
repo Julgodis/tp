@@ -5,45 +5,68 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
 SECTION_INIT extern void memcpy();
-extern void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
-extern void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
-extern void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData();
-extern void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo();
-extern void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo();
-extern void mDoMemCdRWm_CalcCheckSum__FPvUl();
-extern void mDoMemCdRWm_CalcCheckSumGameData__FPvUl();
-extern void mDoMemCdRWm_TestCheckSumGameData__FPv();
-extern void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
-extern void OSGetTime();
-extern void OSTicksToCalendarTime();
-extern void CARDRead();
-extern void CARDWrite();
-extern void CARDGetStatus();
-extern void CARDSetStatus();
-extern void CARDGetSerialNo();
-extern void _savegpr_20();
-extern void _savegpr_28();
-extern void _restgpr_20();
-extern void _restgpr_28();
-extern void snprintf();
+extern "C" extern void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
+extern "C" extern void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
+extern "C" extern void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData();
+extern "C" extern void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo();
+extern "C" extern void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo();
+extern "C" extern void mDoMemCdRWm_CalcCheckSum__FPvUl();
+extern "C" extern void mDoMemCdRWm_CalcCheckSumGameData__FPvUl();
+extern "C" extern void mDoMemCdRWm_TestCheckSumGameData__FPv();
+extern "C" extern void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
+extern "C" extern void OSGetTime();
+extern "C" extern void OSTicksToCalendarTime();
+extern "C" extern void CARDRead();
+extern "C" extern void CARDWrite();
+extern "C" extern void CARDGetStatus();
+extern "C" extern void CARDSetStatus();
+extern "C" extern void CARDGetSerialNo();
+extern "C" extern void _savegpr_20();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_20();
+extern "C" extern void _restgpr_28();
+extern "C" extern void snprintf();
 SECTION_RODATA extern const u8 m_Do_m_Do_MemCardRWmng__stringBase0[88];
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
 SECTION_BSS extern u8 sTmpBuf[16384];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 803ECF40-803F0F40 4000 .bss       sTmpBuf                                                      */
+u8 sTmpBuf[16384];
+
+/* 80017498-8001769C 0204 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_Store__FP12CARDFileInfoPvUl.s"
 }
+#pragma pop
+
+
+/* 8001769C-8001787C 01E0 .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80374408-80374460 0051 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -55,108 +78,78 @@ SECTION_DEAD const char* const stringBase_80374446 = "zelda2_gc_icon.bti";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80374459 = "\0\0\0\0\0\0";
 #pragma pop
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803ECF40-803F0F40 4000 .bss       sTmpBuf                                                      */
-SECTION_BSS u8 sTmpBuf[16384];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80017498-8001769C 0204 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_Store__FP12CARDFileInfoPvUl.s"
-}
-#pragma pop
-
-/* 8001769C-8001787C 01E0 .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl() {
-	nofralloc
-#include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl.s"
-}
-#pragma pop
 
 /* 8001787C-800179E4 0168 .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData() {
+extern "C" asm void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData.s"
 }
 #pragma pop
 
+
 /* 800179E4-80017B4C 0168 .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo() {
+extern "C" asm void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_SetCardStat__FP12CARDFileInfo.s"
 }
 #pragma pop
 
+
 /* 80017B4C-80017C74 0128 .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo() {
+extern "C" asm void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo.s"
 }
 #pragma pop
 
+
 /* 80017C74-80017CB4 0040 .text      mDoMemCdRWm_CalcCheckSum__FPvUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_CalcCheckSum__FPvUl() {
+extern "C" asm void mDoMemCdRWm_CalcCheckSum__FPvUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_CalcCheckSum__FPvUl.s"
 }
 #pragma pop
 
+
 /* 80017CB4-80017CEC 0038 .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_CalcCheckSumGameData__FPvUl() {
+extern "C" asm void mDoMemCdRWm_CalcCheckSumGameData__FPvUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_CalcCheckSumGameData__FPvUl.s"
 }
 #pragma pop
 
+
 /* 80017CEC-80017D38 004C .text      mDoMemCdRWm_TestCheckSumGameData__FPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_TestCheckSumGameData__FPv() {
+extern "C" asm void mDoMemCdRWm_TestCheckSumGameData__FPv() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_TestCheckSumGameData__FPv.s"
 }
 #pragma pop
 
+
 /* 80017D38-80017D7C 0044 .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_SetCheckSumGameData__FPUcUc() {
+extern "C" asm void mDoMemCdRWm_SetCheckSumGameData__FPUcUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_SetCheckSumGameData__FPUcUc.s"
 }

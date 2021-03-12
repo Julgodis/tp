@@ -43,7 +43,7 @@ lbl_80205874:
 lbl_802058D4:
 /* 802058D4 00000000  90 1F 00 D8 */	stw r0, 0xd8(r31)
 /* 802058D8 00000004  80 7F 00 D8 */	lwz r3, 0xd8(r31)
-/* 802058DC 00000008  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__LIT_4146(r2)
+/* 802058DC 00000008  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
 /* 802058E0 0000000C  48 04 FE F1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802058E4 00000010  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 802058E8 00000014  3C 80 6E 75 */	lis r4, 0x6E75 /* 0x6E756C6C@ha */

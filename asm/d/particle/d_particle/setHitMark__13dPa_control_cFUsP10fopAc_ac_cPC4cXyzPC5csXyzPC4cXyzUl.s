@@ -53,7 +53,7 @@ lbl_8004C29C:
 /* 8004C2E0 00000044  7F 48 D3 78 */	mr r8, r26
 /* 8004C2E4 00000048  7F A9 EB 78 */	mr r9, r29
 /* 8004C2E8 0000004C  39 40 00 FF */	li r10, 0xff
-/* 8004C2EC 00000050  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C2EC 00000050  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C2F0 00000054  48 00 07 A1 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C2F4 00000058  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C2F8 0000005C  38 80 00 00 */	li r4, 0
@@ -70,7 +70,7 @@ lbl_8004C29C:
 /* 8004C324 00000088  39 00 00 00 */	li r8, 0
 /* 8004C328 0000008C  7F A9 EB 78 */	mr r9, r29
 /* 8004C32C 00000090  39 40 00 FF */	li r10, 0xff
-/* 8004C330 00000094  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C330 00000094  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C334 00000098  48 00 07 5D */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C338 0000009C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C33C 000000A0  38 80 00 00 */	li r4, 0
@@ -87,7 +87,7 @@ lbl_8004C29C:
 /* 8004C368 000000CC  39 00 00 00 */	li r8, 0
 /* 8004C36C 000000D0  7F A9 EB 78 */	mr r9, r29
 /* 8004C370 000000D4  39 40 00 FF */	li r10, 0xff
-/* 8004C374 000000D8  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C374 000000D8  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C378 000000DC  48 00 07 19 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C37C 000000E0  57 C0 07 BD */	rlwinm. r0, r30, 0, 0x1e, 0x1e
 /* 8004C380 000000E4  41 82 00 5C */	beq lbl_8004C3DC
@@ -111,7 +111,7 @@ lbl_8004C29C:
 /* 8004C3C8 0000012C  39 00 00 00 */	li r8, 0
 /* 8004C3CC 00000130  7F A9 EB 78 */	mr r9, r29
 /* 8004C3D0 00000134  39 40 00 FF */	li r10, 0xff
-/* 8004C3D4 00000138  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C3D4 00000138  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C3D8 0000013C  48 00 06 B9 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_8004C3DC:
 /* 8004C3DC 00000000  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
@@ -129,7 +129,7 @@ lbl_8004C3DC:
 /* 8004C40C 00000030  39 00 00 00 */	li r8, 0
 /* 8004C410 00000034  7F A9 EB 78 */	mr r9, r29
 /* 8004C414 00000038  39 40 00 FF */	li r10, 0xff
-/* 8004C418 0000003C  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C418 0000003C  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C41C 00000040  48 00 06 75 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C420 00000044  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8004C424 00000048  D0 01 00 4C */	stfs f0, 0x4c(r1)
@@ -170,7 +170,7 @@ lbl_8004C470:
 /* 8004C4A8 00000038  7F 48 D3 78 */	mr r8, r26
 /* 8004C4AC 0000003C  7F A9 EB 78 */	mr r9, r29
 /* 8004C4B0 00000040  39 40 00 FF */	li r10, 0xff
-/* 8004C4B4 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C4B4 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C4B8 00000048  48 00 05 D9 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C4BC 0000004C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 8004C4C0 00000050  38 80 00 00 */	li r4, 0
@@ -187,7 +187,7 @@ lbl_8004C470:
 /* 8004C4EC 0000007C  39 00 00 00 */	li r8, 0
 /* 8004C4F0 00000080  7F A9 EB 78 */	mr r9, r29
 /* 8004C4F4 00000084  39 40 00 FF */	li r10, 0xff
-/* 8004C4F8 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C4F8 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C4FC 0000008C  48 00 05 95 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C500 00000090  57 60 04 3E */	clrlwi r0, r27, 0x10
 /* 8004C504 00000094  28 00 00 09 */	cmplwi r0, 9
@@ -209,7 +209,7 @@ lbl_8004C534:
 /* 8004C540 0000000C  41 82 00 30 */	beq lbl_8004C570
 /* 8004C544 00000010  38 61 00 34 */	addi r3, r1, 0x34
 /* 8004C548 00000014  7F A4 EB 78 */	mr r4, r29
-/* 8004C54C 00000018  C0 22 85 8C */	lfs f1, d_particle_d_particle__LIT_5066(r2)
+/* 8004C54C 00000018  C0 22 85 8C */	lfs f1, d_particle_d_particle__lit_5066(r2)
 /* 8004C550 0000001C  48 21 A6 35 */	bl __ml__4cXyzCFf
 /* 8004C554 00000020  C0 01 00 34 */	lfs f0, 0x34(r1)
 /* 8004C558 00000024  D0 01 00 58 */	stfs f0, 0x58(r1)
@@ -219,7 +219,7 @@ lbl_8004C534:
 /* 8004C568 00000034  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 8004C56C 00000038  48 00 00 14 */	b lbl_8004C580
 lbl_8004C570:
-/* 8004C570 00000000  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004C570 00000000  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004C574 00000004  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8004C578 00000008  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 8004C57C 0000000C  D0 01 00 60 */	stfs f0, 0x60(r1)
@@ -241,7 +241,7 @@ lbl_8004C580:
 /* 8004C5B8 00000038  7F 48 D3 78 */	mr r8, r26
 /* 8004C5BC 0000003C  39 21 00 58 */	addi r9, r1, 0x58
 /* 8004C5C0 00000040  39 40 00 FF */	li r10, 0xff
-/* 8004C5C4 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C5C4 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C5C8 00000048  48 00 04 C9 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C5CC 0000004C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C5D0 00000050  38 80 00 00 */	li r4, 0
@@ -258,7 +258,7 @@ lbl_8004C580:
 /* 8004C5FC 0000007C  39 00 00 00 */	li r8, 0
 /* 8004C600 00000080  39 21 00 58 */	addi r9, r1, 0x58
 /* 8004C604 00000084  39 40 00 FF */	li r10, 0xff
-/* 8004C608 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C608 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C60C 0000008C  48 00 04 85 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C610 00000090  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C614 00000094  38 80 00 00 */	li r4, 0
@@ -275,7 +275,7 @@ lbl_8004C580:
 /* 8004C640 000000C0  39 00 00 00 */	li r8, 0
 /* 8004C644 000000C4  39 21 00 58 */	addi r9, r1, 0x58
 /* 8004C648 000000C8  39 40 00 FF */	li r10, 0xff
-/* 8004C64C 000000CC  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C64C 000000CC  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C650 000000D0  48 00 04 41 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C654 000000D4  57 C0 07 BD */	rlwinm. r0, r30, 0, 0x1e, 0x1e
 /* 8004C658 000000D8  41 82 01 C8 */	beq lbl_8004C820
@@ -299,7 +299,7 @@ lbl_8004C580:
 /* 8004C6A0 00000120  39 00 00 00 */	li r8, 0
 /* 8004C6A4 00000124  39 21 00 58 */	addi r9, r1, 0x58
 /* 8004C6A8 00000128  39 40 00 FF */	li r10, 0xff
-/* 8004C6AC 0000012C  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C6AC 0000012C  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C6B0 00000130  48 00 03 E1 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C6B4 00000134  48 00 01 6C */	b lbl_8004C820
 lbl_8004C6B8:
@@ -325,7 +325,7 @@ lbl_8004C6C8:
 /* 8004C700 00000038  7F 48 D3 78 */	mr r8, r26
 /* 8004C704 0000003C  7F A9 EB 78 */	mr r9, r29
 /* 8004C708 00000040  39 40 00 FF */	li r10, 0xff
-/* 8004C70C 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C70C 00000044  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C710 00000048  48 00 03 81 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C714 0000004C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C718 00000050  38 80 00 00 */	li r4, 0
@@ -342,7 +342,7 @@ lbl_8004C6C8:
 /* 8004C744 0000007C  39 00 00 00 */	li r8, 0
 /* 8004C748 00000080  7F A9 EB 78 */	mr r9, r29
 /* 8004C74C 00000084  39 40 00 FF */	li r10, 0xff
-/* 8004C750 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C750 00000088  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C754 0000008C  48 00 03 3D */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C758 00000090  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8004C75C 00000094  38 80 00 00 */	li r4, 0
@@ -359,7 +359,7 @@ lbl_8004C6C8:
 /* 8004C788 000000C0  39 00 00 00 */	li r8, 0
 /* 8004C78C 000000C4  7F A9 EB 78 */	mr r9, r29
 /* 8004C790 000000C8  39 40 00 FF */	li r10, 0xff
-/* 8004C794 000000CC  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C794 000000CC  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C798 000000D0  48 00 02 F9 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004C79C 000000D4  57 C0 07 BD */	rlwinm. r0, r30, 0, 0x1e, 0x1e
 /* 8004C7A0 000000D8  41 82 00 5C */	beq lbl_8004C7FC
@@ -383,7 +383,7 @@ lbl_8004C6C8:
 /* 8004C7E8 00000120  39 00 00 00 */	li r8, 0
 /* 8004C7EC 00000124  7F A9 EB 78 */	mr r9, r29
 /* 8004C7F0 00000128  39 40 00 FF */	li r10, 0xff
-/* 8004C7F4 0000012C  C0 22 85 88 */	lfs f1, d_particle_d_particle__LIT_4519(r2)
+/* 8004C7F4 0000012C  C0 22 85 88 */	lfs f1, d_particle_d_particle__lit_4519(r2)
 /* 8004C7F8 00000130  48 00 02 99 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_8004C7FC:
 /* 8004C7FC 00000000  C0 1F 00 00 */	lfs f0, 0(r31)

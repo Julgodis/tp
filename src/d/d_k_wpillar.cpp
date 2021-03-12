@@ -5,52 +5,51 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void play__14mDoExt_baseAnmFv();
-extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_restoreCurrentHeap__Fv();
-extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern void __ct__11J3DLightObjFv();
-extern void fopAcM_getWaterY__FPC4cXyzPf();
-extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
-extern void fopKyM_Delete__FPv();
-extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
-extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern void create__11dkWpillar_cFv();
-extern void dkWpillar_Create__FP12kankyo_class();
-extern void __dt__11dkWpillar_cFv();
-extern void dkWpillar_Delete__FP11dkWpillar_c();
-extern void execute__11dkWpillar_cFv();
-extern void dkWpillar_Execute__FP11dkWpillar_c();
-extern void draw__11dkWpillar_cFv();
-extern void dkWpillar_Draw__FP11dkWpillar_c();
-extern void __dl__FPv();
-extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern void init__12J3DFrameCtrlFs();
-extern void PSMTXCopy();
-extern void PSMTXTrans();
-extern void __construct_array();
-extern void _savegpr_28();
-extern void _restgpr_28();
+extern "C" extern void play__14mDoExt_baseAnmFv();
+extern "C" extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
+extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" extern void __ct__11J3DLightObjFv();
+extern "C" extern void fopAcM_getWaterY__FPC4cXyzPf();
+extern "C" extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" extern void fopKyM_Delete__FPv();
+extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" extern void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" extern void create__11dkWpillar_cFv();
+extern "C" extern void dkWpillar_Create__FP12kankyo_class();
+extern "C" extern void __dt__11dkWpillar_cFv();
+extern "C" extern void dkWpillar_Delete__FP11dkWpillar_c();
+extern "C" extern void execute__11dkWpillar_cFv();
+extern "C" extern void dkWpillar_Execute__FP11dkWpillar_c();
+extern "C" extern void draw__11dkWpillar_cFv();
+extern "C" extern void dkWpillar_Draw__FP11dkWpillar_c();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" extern void init__12J3DFrameCtrlFs();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXTrans();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern void* __vt__12J3DFrameCtrl[3];
+SECTION_DATA extern void* const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void* g_fopKy_Method[6];
 SECTION_DATA extern void* g_fpcLf_Method[6];
 SECTION_DATA extern void* l_dkWpillar_Method[5];
@@ -62,28 +61,137 @@ SECTION_BSS extern u8 g_env_light[4880];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_SBSS extern u8 struct_80450D64[4];
 SECTION_SDATA2 extern u8 d_d_k_wpillar__l_arcName[8];
-SECTION_SDATA2 extern u8 d_d_k_wpillar__LIT_3838[4];
-SECTION_SDATA2 extern u8 d_d_k_wpillar__LIT_3839[4];
-SECTION_SDATA2 extern u8 d_d_k_wpillar__LIT_3840[4];
-SECTION_SDATA2 extern u8 d_d_k_wpillar__LIT_3946[4];
+SECTION_SDATA2 extern f32 d_d_k_wpillar__lit_3838;
+SECTION_SDATA2 extern f32 d_d_k_wpillar__lit_3839;
+SECTION_SDATA2 extern f32 d_d_k_wpillar__lit_3840;
+SECTION_SDATA2 extern u8 d_d_k_wpillar__lit_3946[4];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80454FF0-80454FF8 0007 .sdata2    l_arcName                                                    */
+u8 d_d_k_wpillar__l_arcName[8] = {
+	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
+	/* padding */
+	0x00,
+};
+
+/* 80454FF8-80454FFC 0004 .sdata2    @3838                                                        */
+f32 d_d_k_wpillar__lit_3838 = 1.0f;
+
+/* 80454FFC-80455000 0004 .sdata2    @3839                                                        */
+f32 d_d_k_wpillar__lit_3839 = 0.5f;
+
+/* 80455000-80455004 0004 .sdata2    @3840                                                        */
+f32 d_d_k_wpillar__lit_3840 = 0.25f;
+
+/* 80261B54-80261F04 03B0 .text      create__11dkWpillar_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void create__11dkWpillar_cFv() {
+	nofralloc
+#include "asm/d/d_k_wpillar/create__11dkWpillar_cFv.s"
 }
+#pragma pop
+
+
+/* 80261F04-80261F24 0020 .text      dkWpillar_Create__FP12kankyo_class                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWpillar_Create__FP12kankyo_class() {
+	nofralloc
+#include "asm/d/d_k_wpillar/dkWpillar_Create__FP12kankyo_class.s"
+}
+#pragma pop
+
+
+/* 80261F24-80261FEC 00C8 .text      __dt__11dkWpillar_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __dt__11dkWpillar_cFv() {
+	nofralloc
+#include "asm/d/d_k_wpillar/__dt__11dkWpillar_cFv.s"
+}
+#pragma pop
+
+
+/* 80261FEC-80262014 0028 .text      dkWpillar_Delete__FP11dkWpillar_c                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWpillar_Delete__FP11dkWpillar_c() {
+	nofralloc
+#include "asm/d/d_k_wpillar/dkWpillar_Delete__FP11dkWpillar_c.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80455004-80455008 0004 .sdata2    @3946                                                        */
+u8 d_d_k_wpillar__lit_3946[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 80262014-802620A8 0094 .text      execute__11dkWpillar_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void execute__11dkWpillar_cFv() {
+	nofralloc
+#include "asm/d/d_k_wpillar/execute__11dkWpillar_cFv.s"
+}
+#pragma pop
+
+
+/* 802620A8-802620C8 0020 .text      dkWpillar_Execute__FP11dkWpillar_c                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWpillar_Execute__FP11dkWpillar_c() {
+	nofralloc
+#include "asm/d/d_k_wpillar/dkWpillar_Execute__FP11dkWpillar_c.s"
+}
+#pragma pop
+
+
+/* 802620C8-802621AC 00E4 .text      draw__11dkWpillar_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__11dkWpillar_cFv() {
+	nofralloc
+#include "asm/d/d_k_wpillar/draw__11dkWpillar_cFv.s"
+}
+#pragma pop
+
+
+/* 802621AC-802621CC 0020 .text      dkWpillar_Draw__FP11dkWpillar_c                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void dkWpillar_Draw__FP11dkWpillar_c() {
+	nofralloc
+#include "asm/d/d_k_wpillar/dkWpillar_Draw__FP11dkWpillar_c.s"
+}
+#pragma pop
+
+
 /* 803C3470-803C3484 0014 .data      l_dkWpillar_Method                                           */
-SECTION_DATA void* l_dkWpillar_Method[5] = {
+void* l_dkWpillar_Method[5] = {
 	(void*)dkWpillar_Create__FP12kankyo_class,
 	(void*)dkWpillar_Delete__FP11dkWpillar_c,
 	(void*)dkWpillar_Execute__FP11dkWpillar_c,
 	NULL,
 	(void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
+
 /* 803C3484-803C34B0 0028 .data      g_profile_WPILLAR                                            */
-SECTION_DATA void* g_profile_WPILLAR[11] = {
+void* g_profile_WPILLAR[11] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,
 	(void*)0x03020000,
@@ -97,121 +205,4 @@ SECTION_DATA void* g_profile_WPILLAR[11] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454FF0-80454FF8 0007 .sdata2    l_arcName                                                    */
-SECTION_SDATA2 u8 d_d_k_wpillar__l_arcName[8] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-	/* padding */
-	0x00,
-};
-/* 80454FF8-80454FFC 0004 .sdata2    @3838                                                        */
-SECTION_SDATA2 u8 d_d_k_wpillar__LIT_3838[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454FFC-80455000 0004 .sdata2    @3839                                                        */
-SECTION_SDATA2 u8 d_d_k_wpillar__LIT_3839[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80455000-80455004 0004 .sdata2    @3840                                                        */
-SECTION_SDATA2 u8 d_d_k_wpillar__LIT_3840[4] = {
-	0x3E, 0x80, 0x00, 0x00,
-};
-/* 80455004-80455008 0004 .sdata2    @3946                                                        */
-SECTION_SDATA2 u8 d_d_k_wpillar__LIT_3946[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80261B54-80261F04 03B0 .text      create__11dkWpillar_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void create__11dkWpillar_cFv() {
-	nofralloc
-#include "asm/d/d_k_wpillar/create__11dkWpillar_cFv.s"
-}
-#pragma pop
-
-/* 80261F04-80261F24 0020 .text      dkWpillar_Create__FP12kankyo_class                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWpillar_Create__FP12kankyo_class() {
-	nofralloc
-#include "asm/d/d_k_wpillar/dkWpillar_Create__FP12kankyo_class.s"
-}
-#pragma pop
-
-/* 80261F24-80261FEC 00C8 .text      __dt__11dkWpillar_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __dt__11dkWpillar_cFv() {
-	nofralloc
-#include "asm/d/d_k_wpillar/__dt__11dkWpillar_cFv.s"
-}
-#pragma pop
-
-/* 80261FEC-80262014 0028 .text      dkWpillar_Delete__FP11dkWpillar_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWpillar_Delete__FP11dkWpillar_c() {
-	nofralloc
-#include "asm/d/d_k_wpillar/dkWpillar_Delete__FP11dkWpillar_c.s"
-}
-#pragma pop
-
-/* 80262014-802620A8 0094 .text      execute__11dkWpillar_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void execute__11dkWpillar_cFv() {
-	nofralloc
-#include "asm/d/d_k_wpillar/execute__11dkWpillar_cFv.s"
-}
-#pragma pop
-
-/* 802620A8-802620C8 0020 .text      dkWpillar_Execute__FP11dkWpillar_c                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWpillar_Execute__FP11dkWpillar_c() {
-	nofralloc
-#include "asm/d/d_k_wpillar/dkWpillar_Execute__FP11dkWpillar_c.s"
-}
-#pragma pop
-
-/* 802620C8-802621AC 00E4 .text      draw__11dkWpillar_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__11dkWpillar_cFv() {
-	nofralloc
-#include "asm/d/d_k_wpillar/draw__11dkWpillar_cFv.s"
-}
-#pragma pop
-
-/* 802621AC-802621CC 0020 .text      dkWpillar_Draw__FP11dkWpillar_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dkWpillar_Draw__FP11dkWpillar_c() {
-	nofralloc
-#include "asm/d/d_k_wpillar/dkWpillar_Draw__FP11dkWpillar_c.s"
-}
-#pragma pop
-
 

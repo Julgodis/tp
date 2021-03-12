@@ -6,7 +6,7 @@ lbl_8020D258:
 /* 8020D268 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8020D26C 00000014  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 8020D270 00000018  48 04 85 B9 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8020D274 0000001C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020D274 0000001C  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020D278 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D27C 00000024  41 82 00 34 */	beq lbl_8020D2B0
 /* 8020D280 00000028  80 7F 00 2C */	lwz r3, 0x2c(r31)
@@ -24,7 +24,7 @@ lbl_8020D258:
 lbl_8020D2B0:
 /* 8020D2B0 00000000  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 8020D2B4 00000004  48 04 85 75 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8020D2B8 00000008  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__LIT_3793(r2)
+/* 8020D2B8 00000008  C0 02 AE 00 */	lfs f0, d_meter_d_meter_hakusha__lit_3793(r2)
 /* 8020D2BC 0000000C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D2C0 00000010  41 82 00 34 */	beq lbl_8020D2F4
 /* 8020D2C4 00000014  80 7F 00 30 */	lwz r3, 0x30(r31)

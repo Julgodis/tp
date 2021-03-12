@@ -23,10 +23,10 @@ lbl_8004849C:
 /* 800484BC 00000020  D0 61 00 18 */	stfs f3, 0x18(r1)
 /* 800484C0 00000024  C0 41 00 10 */	lfs f2, 0x10(r1)
 /* 800484C4 00000028  D0 41 00 1C */	stfs f2, 0x1c(r1)
-/* 800484C8 0000002C  C0 22 85 2C */	lfs f1, d_event_d_event_manager__LIT_5025(r2)
+/* 800484C8 0000002C  C0 22 85 2C */	lfs f1, d_event_d_event_manager__lit_5025(r2)
 /* 800484CC 00000030  FC 04 08 40 */	fcmpo cr0, f4, f1
 /* 800484D0 00000000  40 80 00 38 */	bge lbl_80048508
-/* 800484D4 00000004  C0 02 85 30 */	lfs f0, d_event_d_event_manager__LIT_5026(r2)
+/* 800484D4 00000004  C0 02 85 30 */	lfs f0, d_event_d_event_manager__lit_5026(r2)
 /* 800484D8 0000003C  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 800484DC 00000000  40 81 00 2C */	ble lbl_80048508
 /* 800484E0 00000044  FC 03 08 40 */	fcmpo cr0, f3, f1

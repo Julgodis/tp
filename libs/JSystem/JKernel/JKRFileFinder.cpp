@@ -5,126 +5,125 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dl__FPv();
-extern void __ct__12JKRArcFinderFP10JKRArchivell();
-extern void findNextFile__12JKRArcFinderFv();
-extern void __ct__12JKRDvdFinderFPCc();
-extern void __dt__12JKRDvdFinderFv();
-extern void findNextFile__12JKRDvdFinderFv();
-extern void __dt__13JKRFileFinderFv();
-extern void __dt__12JKRArcFinderFv();
-extern void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
-extern void DVDOpenDir();
-extern void DVDReadDir();
-extern void DVDCloseDir();
-SECTION_DATA extern void* __vt__12JKRDvdFinder[4];
-SECTION_DATA extern void* __vt__12JKRArcFinder[4];
-SECTION_DATA extern void* __vt__13JKRFileFinder[4];
-}
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__12JKRArcFinderFP10JKRArchivell();
+extern "C" extern void findNextFile__12JKRArcFinderFv();
+extern "C" extern void __ct__12JKRDvdFinderFPCc();
+extern "C" extern void __dt__12JKRDvdFinderFv();
+extern "C" extern void findNextFile__12JKRDvdFinderFv();
+extern "C" extern void __dt__13JKRFileFinderFv();
+extern "C" extern void __dt__12JKRArcFinderFv();
+extern "C" extern void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
+extern "C" extern void DVDOpenDir();
+extern "C" extern void DVDReadDir();
+extern "C" extern void DVDCloseDir();
+SECTION_DATA extern void* const __vt__12JKRDvdFinder[4];
+SECTION_DATA extern void* const __vt__12JKRArcFinder[4];
+SECTION_DATA extern void* const __vt__13JKRFileFinder[4];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC208-803CC218 0010 .data      __vt__12JKRDvdFinder                                         */
-SECTION_DATA void* __vt__12JKRDvdFinder[4] = {
+void* const __vt__12JKRDvdFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRDvdFinderFv,
 	(void*)findNextFile__12JKRDvdFinderFv,
 };
+
 /* 803CC218-803CC228 0010 .data      __vt__12JKRArcFinder                                         */
-SECTION_DATA void* __vt__12JKRArcFinder[4] = {
+void* const __vt__12JKRArcFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRArcFinderFv,
 	(void*)findNextFile__12JKRArcFinderFv,
 };
+
 /* 803CC228-803CC238 0010 .data      __vt__13JKRFileFinder                                        */
-SECTION_DATA void* __vt__13JKRFileFinder[4] = {
+void* const __vt__13JKRFileFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JKRFileFinderFv,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 802D4638-802D46C4 008C .text      __ct__12JKRArcFinderFP10JKRArchivell                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12JKRArcFinderFP10JKRArchivell() {
+extern "C" asm void __ct__12JKRArcFinderFP10JKRArchivell() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/__ct__12JKRArcFinderFP10JKRArchivell.s"
 }
 #pragma pop
 
+
 /* 802D46C4-802D4770 00AC .text      findNextFile__12JKRArcFinderFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void findNextFile__12JKRArcFinderFv() {
+extern "C" asm void findNextFile__12JKRArcFinderFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/findNextFile__12JKRArcFinderFv.s"
 }
 #pragma pop
 
+
 /* 802D4770-802D47F4 0084 .text      __ct__12JKRDvdFinderFPCc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12JKRDvdFinderFPCc() {
+extern "C" asm void __ct__12JKRDvdFinderFPCc() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/__ct__12JKRDvdFinderFPCc.s"
 }
 #pragma pop
 
+
 /* 802D47F4-802D4874 0080 .text      __dt__12JKRDvdFinderFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JKRDvdFinderFv() {
+extern "C" asm void __dt__12JKRDvdFinderFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/__dt__12JKRDvdFinderFv.s"
 }
 #pragma pop
 
+
 /* 802D4874-802D4910 009C .text      findNextFile__12JKRDvdFinderFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void findNextFile__12JKRDvdFinderFv() {
+extern "C" asm void findNextFile__12JKRDvdFinderFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/findNextFile__12JKRDvdFinderFv.s"
 }
 #pragma pop
 
+
 /* 802D4910-802D4958 0048 .text      __dt__13JKRFileFinderFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13JKRFileFinderFv() {
+extern "C" asm void __dt__13JKRFileFinderFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/__dt__13JKRFileFinderFv.s"
 }
 #pragma pop
 
+
 /* 802D4958-802D49B4 005C .text      __dt__12JKRArcFinderFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JKRArcFinderFv() {
+extern "C" asm void __dt__12JKRArcFinderFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileFinder/__dt__12JKRArcFinderFv.s"
 }

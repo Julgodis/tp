@@ -12,16 +12,16 @@ lbl_8024CDCC:
 /* 8024CDD0 00000004  38 C4 61 C0 */	addi r6, r4, g_dComIfG_gameInfo@l
 /* 8024CDD4 00000008  A0 A6 00 06 */	lhz r5, 6(r6)
 /* 8024CDD8 0000000C  80 86 5D D4 */	lwz r4, 0x5dd4(r6)
-/* 8024CDDC 00000010  C8 22 B3 A0 */	lfd f1, d_msg_d_msg_flow__LIT_6040(r2)
+/* 8024CDDC 00000010  C8 22 B3 A0 */	lfd f1, d_msg_d_msg_flow__lit_6040(r2)
 /* 8024CDE0 00000014  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8024CDE4 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8024CDE8 0000001C  3C 00 43 30 */	lis r0, 0x4330
 /* 8024CDEC 00000020  90 01 00 08 */	stw r0, 8(r1)
 /* 8024CDF0 00000024  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8024CDF4 00000028  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8024CDF8 0000002C  C0 02 B3 A8 */	lfs f0, LIT_6273(r2)
+/* 8024CDF8 0000002C  C0 02 B3 A8 */	lfs f0, lit_6273(r2)
 /* 8024CDFC 00000030  EC 41 00 24 */	fdivs f2, f1, f0
-/* 8024CE00 00000034  C8 22 B3 90 */	lfd f1, d_msg_d_msg_flow__LIT_5116(r2)
+/* 8024CE00 00000034  C8 22 B3 90 */	lfd f1, d_msg_d_msg_flow__lit_5116(r2)
 /* 8024CE04 00000038  90 A1 00 14 */	stw r5, 0x14(r1)
 /* 8024CE08 0000003C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8024CE0C 00000040  C8 01 00 10 */	lfd f0, 0x10(r1)

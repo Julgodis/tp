@@ -23,7 +23,7 @@ lbl_8014BBF0:
 /* 8014BC44 00000054  38 00 00 00 */	li r0, 0
 /* 8014BC48 00000058  B0 1F 0D D8 */	sth r0, 0xdd8(r31)
 lbl_8014BC4C:
-/* 8014BC4C 00000000  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__LIT_4116(r2)
+/* 8014BC4C 00000000  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__lit_4116(r2)
 /* 8014BC50 00000004  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 8014BC54 00000008  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 8014BC58 0000000C  D0 1F 04 FC */	stfs f0, 0x4fc(r31)

@@ -6,8 +6,8 @@ lbl_8013ADF0:
 /* 8013AE00 00000010  48 22 73 D9 */	bl _savegpr_28
 /* 8013AE04 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8013AE08 00000018  7C 9D 23 78 */	mr r29, r4
-/* 8013AE0C 0000001C  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 8013AE10 00000020  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__LIT_3757@l
+/* 8013AE0C 0000001C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 8013AE10 00000020  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
 /* 8013AE14 00000024  57 A0 18 38 */	slwi r0, r29, 3
 /* 8013AE18 00000028  3B 9E 48 48 */	addi r28, r30, 0x4848
 /* 8013AE1C 0000002C  7F 9C 02 14 */	add r28, r28, r0

@@ -1,0 +1,133 @@
+lbl_8015DC40:
+/* 8015DC40 00000000  94 21 FF A0 */	stwu r1, -0x60(r1)
+/* 8015DC44 00000004  7C 08 02 A6 */	mflr r0
+/* 8015DC48 00000008  90 01 00 64 */	stw r0, 0x64(r1)
+/* 8015DC4C 0000000C  DB E1 00 50 */	stfd f31, 0x50(r1)
+/* 8015DC50 00000010  F3 E1 00 58 */	psq_st f31, 88(r1), 0, 0 /* qr0 */
+/* 8015DC54 00000000  DB C1 00 40 */	stfd f30, 0x40(r1)
+/* 8015DC58 00000018  F3 C1 00 48 */	psq_st f30, 72(r1), 0, 0 /* qr0 */
+/* 8015DC5C 00000000  39 61 00 40 */	addi r11, r1, 0x40
+/* 8015DC60 00000004  48 20 45 7D */	bl _savegpr_29
+/* 8015DC64 00000008  7C 7D 1B 78 */	mr r29, r3
+/* 8015DC68 0000000C  7C 9E 23 78 */	mr r30, r4
+/* 8015DC6C 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8015DC70 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8015DC74 00000018  83 E3 5D AC */	lwz r31, 0x5dac(r3)
+/* 8015DC78 0000001C  C0 22 9B C4 */	lfs f1, a_obj_d_a_obj_item__lit_5050(r2)
+/* 8015DC7C 00000020  48 10 9D 11 */	bl cM_rndFX__Ff
+/* 8015DC80 00000024  FF E0 08 90 */	fmr f31, f1
+/* 8015DC84 00000028  7F A3 EB 78 */	mr r3, r29
+/* 8015DC88 0000002C  4B FF D4 31 */	bl getData__12daItemBase_cFv
+/* 8015DC8C 00000030  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8015DC90 00000034  EF E0 F8 2A */	fadds f31, f0, f31
+/* 8015DC94 00000038  7F A3 EB 78 */	mr r3, r29
+/* 8015DC98 0000003C  4B FF D4 21 */	bl getData__12daItemBase_cFv
+/* 8015DC9C 00000040  C3 C3 00 10 */	lfs f30, 0x10(r3)
+/* 8015DCA0 00000044  80 1D 00 B0 */	lwz r0, 0xb0(r29)
+/* 8015DCA4 00000048  54 03 47 3E */	rlwinm r3, r0, 8, 0x1c, 0x1f
+/* 8015DCA8 0000004C  2C 1E 00 00 */	cmpwi r30, 0
+/* 8015DCAC 00000050  40 82 01 40 */	bne lbl_8015DDEC
+/* 8015DCB0 00000054  28 03 00 03 */	cmplwi r3, 3
+/* 8015DCB4 00000058  41 82 00 18 */	beq lbl_8015DCCC
+/* 8015DCB8 0000005C  28 03 00 05 */	cmplwi r3, 5
+/* 8015DCBC 00000060  41 82 00 10 */	beq lbl_8015DCCC
+/* 8015DCC0 00000064  88 1D 09 2A */	lbz r0, 0x92a(r29)
+/* 8015DCC4 00000068  28 00 00 40 */	cmplwi r0, 0x40
+/* 8015DCC8 0000006C  40 82 00 10 */	bne lbl_8015DCD8
+lbl_8015DCCC:
+/* 8015DCCC 00000000  C3 E2 9B 50 */	lfs f31, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015DCD0 00000004  FF C0 F8 90 */	fmr f30, f31
+/* 8015DCD4 00000008  48 00 01 18 */	b lbl_8015DDEC
+lbl_8015DCD8:
+/* 8015DCD8 00000000  28 03 00 06 */	cmplwi r3, 6
+/* 8015DCDC 00000004  41 82 00 0C */	beq lbl_8015DCE8
+/* 8015DCE0 00000008  28 03 00 01 */	cmplwi r3, 1
+/* 8015DCE4 0000000C  40 82 00 20 */	bne lbl_8015DD04
+lbl_8015DCE8:
+/* 8015DCE8 00000000  7F A3 EB 78 */	mr r3, r29
+/* 8015DCEC 00000004  4B FF D3 CD */	bl getData__12daItemBase_cFv
+/* 8015DCF0 00000008  C3 E3 00 08 */	lfs f31, 8(r3)
+/* 8015DCF4 0000000C  7F A3 EB 78 */	mr r3, r29
+/* 8015DCF8 00000010  4B FF D3 C1 */	bl getData__12daItemBase_cFv
+/* 8015DCFC 00000014  C3 C3 00 10 */	lfs f30, 0x10(r3)
+/* 8015DD00 00000018  48 00 00 EC */	b lbl_8015DDEC
+lbl_8015DD04:
+/* 8015DD04 00000000  28 03 00 08 */	cmplwi r3, 8
+/* 8015DD08 00000004  40 82 00 6C */	bne lbl_8015DD74
+/* 8015DD0C 00000008  7F A3 EB 78 */	mr r3, r29
+/* 8015DD10 0000000C  4B FF D3 A9 */	bl getData__12daItemBase_cFv
+/* 8015DD14 00000010  C0 23 00 08 */	lfs f1, 8(r3)
+/* 8015DD18 00000014  C0 02 9B D0 */	lfs f0, a_obj_d_a_obj_item__lit_5230(r2)
+/* 8015DD1C 00000018  EF E0 00 72 */	fmuls f31, f0, f1
+/* 8015DD20 0000001C  7F A3 EB 78 */	mr r3, r29
+/* 8015DD24 00000020  4B FF D3 95 */	bl getData__12daItemBase_cFv
+/* 8015DD28 00000024  C0 23 00 10 */	lfs f1, 0x10(r3)
+/* 8015DD2C 00000028  C0 02 9B D0 */	lfs f0, a_obj_d_a_obj_item__lit_5230(r2)
+/* 8015DD30 0000002C  EF C0 00 72 */	fmuls f30, f0, f1
+/* 8015DD34 00000030  C0 22 9B A8 */	lfs f1, a_obj_d_a_obj_item__lit_4666(r2)
+/* 8015DD38 00000034  48 10 9C 55 */	bl cM_rndFX__Ff
+/* 8015DD3C 00000038  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
+/* 8015DD40 0000003C  C8 42 9B B0 */	lfd f2, a_obj_d_a_obj_item__lit_4668(r2)
+/* 8015DD44 00000040  6C 00 80 00 */	xoris r0, r0, 0x8000
+/* 8015DD48 00000044  90 01 00 1C */	stw r0, 0x1c(r1)
+/* 8015DD4C 00000048  3C 00 43 30 */	lis r0, 0x4330
+/* 8015DD50 0000004C  90 01 00 18 */	stw r0, 0x18(r1)
+/* 8015DD54 00000050  C8 01 00 18 */	lfd f0, 0x18(r1)
+/* 8015DD58 00000054  EC 00 10 28 */	fsubs f0, f0, f2
+/* 8015DD5C 00000058  EC 00 08 2A */	fadds f0, f0, f1
+/* 8015DD60 0000005C  FC 00 00 1E */	fctiwz f0, f0
+/* 8015DD64 00000060  D8 01 00 20 */	stfd f0, 0x20(r1)
+/* 8015DD68 00000064  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8015DD6C 00000068  B0 1D 04 DE */	sth r0, 0x4de(r29)
+/* 8015DD70 0000006C  48 00 00 7C */	b lbl_8015DDEC
+lbl_8015DD74:
+/* 8015DD74 00000000  28 03 00 09 */	cmplwi r3, 9
+/* 8015DD78 00000004  40 82 00 74 */	bne lbl_8015DDEC
+/* 8015DD7C 00000008  7F A3 EB 78 */	mr r3, r29
+/* 8015DD80 0000000C  4B FF D3 39 */	bl getData__12daItemBase_cFv
+/* 8015DD84 00000010  C0 23 00 08 */	lfs f1, 8(r3)
+/* 8015DD88 00000014  C0 02 9B D4 */	lfs f0, a_obj_d_a_obj_item__lit_5231(r2)
+/* 8015DD8C 00000018  EF E0 00 72 */	fmuls f31, f0, f1
+/* 8015DD90 0000001C  7F A3 EB 78 */	mr r3, r29
+/* 8015DD94 00000020  4B FF D3 25 */	bl getData__12daItemBase_cFv
+/* 8015DD98 00000024  C0 23 00 10 */	lfs f1, 0x10(r3)
+/* 8015DD9C 00000028  C0 02 9B D8 */	lfs f0, a_obj_d_a_obj_item__lit_5232(r2)
+/* 8015DDA0 0000002C  EF C0 00 72 */	fmuls f30, f0, f1
+/* 8015DDA4 00000030  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015DDA8 00000034  D0 01 00 08 */	stfs f0, 8(r1)
+/* 8015DDAC 00000038  D0 01 00 0C */	stfs f0, 0xc(r1)
+/* 8015DDB0 0000003C  C0 02 9B DC */	lfs f0, a_obj_d_a_obj_item__lit_5233(r2)
+/* 8015DDB4 00000040  D0 01 00 10 */	stfs f0, 0x10(r1)
+/* 8015DDB8 00000044  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 8015DDBC 00000048  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 8015DDC0 0000004C  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
+/* 8015DDC4 00000050  4B EA E6 19 */	bl mDoMtx_YrotS__FPA4_fs
+/* 8015DDC8 00000054  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 8015DDCC 00000058  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 8015DDD0 0000005C  38 81 00 08 */	addi r4, r1, 8
+/* 8015DDD4 00000060  7C 85 23 78 */	mr r5, r4
+/* 8015DDD8 00000064  48 1E 8F 95 */	bl PSMTXMultVec
+/* 8015DDDC 00000068  38 7D 04 D0 */	addi r3, r29, 0x4d0
+/* 8015DDE0 0000006C  38 81 00 08 */	addi r4, r1, 8
+/* 8015DDE4 00000070  7C 65 1B 78 */	mr r5, r3
+/* 8015DDE8 00000074  48 1E 92 A9 */	bl PSVECAdd
+lbl_8015DDEC:
+/* 8015DDEC 00000000  7F A3 EB 78 */	mr r3, r29
+/* 8015DDF0 00000004  4B FF D2 C9 */	bl getData__12daItemBase_cFv
+/* 8015DDF4 00000008  C0 03 00 00 */	lfs f0, 0(r3)
+/* 8015DDF8 0000000C  D0 1D 05 30 */	stfs f0, 0x530(r29)
+/* 8015DDFC 00000010  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015DE00 00000014  D0 1D 04 F8 */	stfs f0, 0x4f8(r29)
+/* 8015DE04 00000018  D3 FD 04 FC */	stfs f31, 0x4fc(r29)
+/* 8015DE08 0000001C  D0 1D 05 00 */	stfs f0, 0x500(r29)
+/* 8015DE0C 00000020  D3 DD 05 2C */	stfs f30, 0x52c(r29)
+/* 8015DE10 00000024  E3 E1 00 58 */	psq_l f31, 88(r1), 0, 0 /* qr0 */
+/* 8015DE14 00000000  CB E1 00 50 */	lfd f31, 0x50(r1)
+/* 8015DE18 0000002C  E3 C1 00 48 */	psq_l f30, 72(r1), 0, 0 /* qr0 */
+/* 8015DE1C 00000000  CB C1 00 40 */	lfd f30, 0x40(r1)
+/* 8015DE20 00000004  39 61 00 40 */	addi r11, r1, 0x40
+/* 8015DE24 00000008  48 20 44 05 */	bl _restgpr_29
+/* 8015DE28 0000000C  80 01 00 64 */	lwz r0, 0x64(r1)
+/* 8015DE2C 00000010  7C 08 03 A6 */	mtlr r0
+/* 8015DE30 00000014  38 21 00 60 */	addi r1, r1, 0x60
+/* 8015DE34 00000018  4E 80 00 20 */	blr 

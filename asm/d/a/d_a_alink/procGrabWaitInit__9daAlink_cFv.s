@@ -41,13 +41,13 @@ lbl_800E6B14:
 /* 800E6B28 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 800E6B2C 00000018  40 82 00 14 */	bne lbl_800E6B40
 /* 800E6B30 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 800E6B34 00000020  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800E6B34 00000020  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800E6B38 00000024  4B FF D2 85 */	bl setGrabUpperAnime__9daAlink_cFf
 /* 800E6B3C 00000028  48 00 00 14 */	b lbl_800E6B50
 lbl_800E6B40:
 /* 800E6B40 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800E6B44 00000004  38 9F 20 48 */	addi r4, r31, 0x2048
-/* 800E6B48 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800E6B48 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800E6B4C 0000000C  48 01 B1 A9 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 lbl_800E6B50:
 /* 800E6B50 00000000  2C 1C 00 00 */	cmpwi r28, 0
@@ -56,7 +56,7 @@ lbl_800E6B50:
 /* 800E6B5C 0000000C  4B FD 92 55 */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800E6B60 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 800E6B64 00000014  41 82 00 20 */	beq lbl_800E6B84
-/* 800E6B68 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800E6B68 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800E6B6C 0000001C  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E6B70 00000020  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
 /* 800E6B74 00000024  C0 03 00 48 */	lfs f0, 0x48(r3)
@@ -64,7 +64,7 @@ lbl_800E6B50:
 /* 800E6B7C 0000002C  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800E6B80 00000030  48 00 00 1C */	b lbl_800E6B9C
 lbl_800E6B84:
-/* 800E6B84 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 800E6B84 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 800E6B88 00000004  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E6B8C 00000008  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
 /* 800E6B90 0000000C  C0 03 00 28 */	lfs f0, 0x28(r3)
@@ -102,7 +102,7 @@ lbl_800E6BF4:
 lbl_800E6C00:
 /* 800E6C00 00000000  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800E6C04 00000004  B0 1F 04 DE */	sth r0, 0x4de(r31)
-/* 800E6C08 00000008  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E6C08 00000008  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E6C0C 0000000C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E6C10 00000010  38 60 00 01 */	li r3, 1
 lbl_800E6C14:

@@ -47,13 +47,13 @@ lbl_800DEF64:
 /* 800DEF7C 00000018  40 82 00 18 */	bne lbl_800DEF94
 /* 800DEF80 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800DEF84 00000020  38 80 01 F1 */	li r4, 0x1f1
-/* 800DEF88 00000024  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DEF88 00000024  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DEF8C 00000028  4B FE 10 F9 */	bl changeItemBck__9daAlink_cFUsf
 /* 800DEF90 0000002C  48 00 00 14 */	b lbl_800DEFA4
 lbl_800DEF94:
 /* 800DEF94 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DEF98 00000004  38 80 00 43 */	li r4, 0x43
-/* 800DEF9C 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800DEF9C 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800DEFA0 0000000C  4B FE 10 E5 */	bl changeItemBck__9daAlink_cFUsf
 lbl_800DEFA4:
 /* 800DEFA4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

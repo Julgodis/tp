@@ -5,60 +5,57 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__Q26JStage7TCameraFv();
-extern void JSGFGetType__Q26JStage7TCameraCFv();
-extern void JSGGetProjectionType__Q26JStage7TCameraCFv();
-extern void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
-extern void JSGGetProjectionNear__Q26JStage7TCameraCFv();
-extern void JSGSetProjectionNear__Q26JStage7TCameraFf();
-extern void JSGGetProjectionFar__Q26JStage7TCameraCFv();
-extern void JSGSetProjectionFar__Q26JStage7TCameraFf();
-extern void JSGGetProjectionFovy__Q26JStage7TCameraCFv();
-extern void JSGSetProjectionFovy__Q26JStage7TCameraFf();
-extern void JSGGetProjectionAspect__Q26JStage7TCameraCFv();
-extern void JSGSetProjectionAspect__Q26JStage7TCameraFf();
-extern void JSGGetProjectionField__Q26JStage7TCameraCFPf();
-extern void JSGSetProjectionField__Q26JStage7TCameraFPCf();
-extern void JSGGetViewType__Q26JStage7TCameraCFv();
-extern void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
-extern void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec();
-extern void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec();
-extern void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec();
-extern void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec();
-extern void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec();
-extern void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec();
-extern void JSGGetViewRoll__Q26JStage7TCameraCFv();
-extern void JSGSetViewRoll__Q26JStage7TCameraFf();
-extern void __dt__Q26JStage7TObjectFv();
-extern void JSGGetName__Q26JStage7TObjectCFv();
-extern void JSGUpdate__Q26JStage7TObjectFv();
-extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__Q26JStage7TCamera[38];
-SECTION_SDATA extern u8 __float_max[4];
-SECTION_SDATA2 extern u8 JSGCamera__LIT_319[8];
-}
+extern "C" extern void __dt__Q26JStage7TCameraFv();
+extern "C" extern void JSGFGetType__Q26JStage7TCameraCFv();
+extern "C" extern void JSGGetProjectionType__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
+extern "C" extern void JSGGetProjectionNear__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetProjectionNear__Q26JStage7TCameraFf();
+extern "C" extern void JSGGetProjectionFar__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetProjectionFar__Q26JStage7TCameraFf();
+extern "C" extern void JSGGetProjectionFovy__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetProjectionFovy__Q26JStage7TCameraFf();
+extern "C" extern void JSGGetProjectionAspect__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetProjectionAspect__Q26JStage7TCameraFf();
+extern "C" extern void JSGGetProjectionField__Q26JStage7TCameraCFPf();
+extern "C" extern void JSGSetProjectionField__Q26JStage7TCameraFPCf();
+extern "C" extern void JSGGetViewType__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
+extern "C" extern void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec();
+extern "C" extern void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec();
+extern "C" extern void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec();
+extern "C" extern void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec();
+extern "C" extern void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec();
+extern "C" extern void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec();
+extern "C" extern void JSGGetViewRoll__Q26JStage7TCameraCFv();
+extern "C" extern void JSGSetViewRoll__Q26JStage7TCameraFf();
+extern "C" extern void __dt__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
+extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__Q26JStage7TCamera[38];
+SECTION_SDATA extern u32 __float_max;
+SECTION_SDATA2 extern u8 JSGCamera__lit_319[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C4680-803C4718 0094 .data      __vt__Q26JStage7TCamera                                      */
-SECTION_DATA void* __vt__Q26JStage7TCamera[38] = {
+void* const __vt__Q26JStage7TCamera[38] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -99,262 +96,273 @@ SECTION_DATA void* __vt__Q26JStage7TCamera[38] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804553D8-804553E0 0004 .sdata2    @319                                                         */
-SECTION_SDATA2 u8 JSGCamera__LIT_319[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80280BA0-80280C00 0060 .text      __dt__Q26JStage7TCameraFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q26JStage7TCameraFv() {
+extern "C" asm void __dt__Q26JStage7TCameraFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/__dt__Q26JStage7TCameraFv.s"
 }
 #pragma pop
 
+
 /* 80280C00-80280C08 0008 .text      JSGFGetType__Q26JStage7TCameraCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGFGetType__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGFGetType__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGFGetType__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C08-80280C10 0008 .text      JSGGetProjectionType__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionType__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetProjectionType__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionType__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C10-80280C14 0004 .text      JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection() {
+extern "C" asm void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804553D8-804553E0 0004 .sdata2    @319                                                         */
+u8 JSGCamera__lit_319[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80280C14-80280C1C 0008 .text      JSGGetProjectionNear__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionNear__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetProjectionNear__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionNear__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C1C-80280C20 0004 .text      JSGSetProjectionNear__Q26JStage7TCameraFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionNear__Q26JStage7TCameraFf() {
+extern "C" asm void JSGSetProjectionNear__Q26JStage7TCameraFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionNear__Q26JStage7TCameraFf.s"
 }
 #pragma pop
 
+
 /* 80280C20-80280C2C 000C .text      JSGGetProjectionFar__Q26JStage7TCameraCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionFar__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetProjectionFar__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionFar__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C2C-80280C30 0004 .text      JSGSetProjectionFar__Q26JStage7TCameraFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionFar__Q26JStage7TCameraFf() {
+extern "C" asm void JSGSetProjectionFar__Q26JStage7TCameraFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionFar__Q26JStage7TCameraFf.s"
 }
 #pragma pop
 
+
 /* 80280C30-80280C38 0008 .text      JSGGetProjectionFovy__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionFovy__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetProjectionFovy__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionFovy__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C38-80280C3C 0004 .text      JSGSetProjectionFovy__Q26JStage7TCameraFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionFovy__Q26JStage7TCameraFf() {
+extern "C" asm void JSGSetProjectionFovy__Q26JStage7TCameraFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionFovy__Q26JStage7TCameraFf.s"
 }
 #pragma pop
 
+
 /* 80280C3C-80280C44 0008 .text      JSGGetProjectionAspect__Q26JStage7TCameraCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionAspect__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetProjectionAspect__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionAspect__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C44-80280C48 0004 .text      JSGSetProjectionAspect__Q26JStage7TCameraFf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionAspect__Q26JStage7TCameraFf() {
+extern "C" asm void JSGSetProjectionAspect__Q26JStage7TCameraFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionAspect__Q26JStage7TCameraFf.s"
 }
 #pragma pop
 
+
 /* 80280C48-80280C4C 0004 .text      JSGGetProjectionField__Q26JStage7TCameraCFPf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetProjectionField__Q26JStage7TCameraCFPf() {
+extern "C" asm void JSGGetProjectionField__Q26JStage7TCameraCFPf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetProjectionField__Q26JStage7TCameraCFPf.s"
 }
 #pragma pop
 
+
 /* 80280C4C-80280C50 0004 .text      JSGSetProjectionField__Q26JStage7TCameraFPCf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetProjectionField__Q26JStage7TCameraFPCf() {
+extern "C" asm void JSGSetProjectionField__Q26JStage7TCameraFPCf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetProjectionField__Q26JStage7TCameraFPCf.s"
 }
 #pragma pop
 
+
 /* 80280C50-80280C58 0008 .text      JSGGetViewType__Q26JStage7TCameraCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetViewType__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetViewType__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetViewType__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C58-80280C5C 0004 .text      JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView() {
+extern "C" asm void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView.s"
 }
 #pragma pop
 
+
 /* 80280C5C-80280C60 0004 .text      JSGGetViewPosition__Q26JStage7TCameraCFP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec() {
+extern "C" asm void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetViewPosition__Q26JStage7TCameraCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C60-80280C64 0004 .text      JSGSetViewPosition__Q26JStage7TCameraFRC3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec() {
+extern "C" asm void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetViewPosition__Q26JStage7TCameraFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C64-80280C68 0004 .text      JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec() {
+extern "C" asm void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C68-80280C6C 0004 .text      JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec() {
+extern "C" asm void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C6C-80280C70 0004 .text      JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec() {
+extern "C" asm void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C70-80280C74 0004 .text      JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec() {
+extern "C" asm void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280C74-80280C7C 0008 .text      JSGGetViewRoll__Q26JStage7TCameraCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetViewRoll__Q26JStage7TCameraCFv() {
+extern "C" asm void JSGGetViewRoll__Q26JStage7TCameraCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGGetViewRoll__Q26JStage7TCameraCFv.s"
 }
 #pragma pop
 
+
 /* 80280C7C-80280C80 0004 .text      JSGSetViewRoll__Q26JStage7TCameraFf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetViewRoll__Q26JStage7TCameraFf() {
+extern "C" asm void JSGSetViewRoll__Q26JStage7TCameraFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGCamera/JSGSetViewRoll__Q26JStage7TCameraFf.s"
 }

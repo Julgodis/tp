@@ -1,0 +1,35 @@
+#
+# Generate By: dol2asm
+# Module: 32
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048C480, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048C4AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048C4D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
+	'create__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C4F8, 'size': 0x0230, 'padding': 0x00, 'name': "create__15daTag_EvtArea_cFv", 'reference_count': 2, 'type': "Function"},
+	'Delete__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C728, 'size': 0x0008, 'padding': 0x00, 'name': "Delete__15daTag_EvtArea_cFv", 'reference_count': 1, 'type': "Function"},
+	'Execute__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C730, 'size': 0x0164, 'padding': 0x00, 'name': "Execute__15daTag_EvtArea_cFv", 'reference_count': 1, 'type': "Function"},
+	'Draw__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C894, 'size': 0x0008, 'padding': 0x00, 'name': "Draw__15daTag_EvtArea_cFv", 'reference_count': 1, 'type': "Function"},
+	'isDelete__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C89C, 'size': 0x00B0, 'padding': 0x00, 'name': "isDelete__15daTag_EvtArea_cFv", 'reference_count': 2, 'type': "Function"},
+	'chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048C94C, 'size': 0x0334, 'padding': 0x00, 'name': "chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz", 'reference_count': 1, 'type': "Function"},
+	'daTag_EvtArea_Create__FPv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CC80, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_EvtArea_Create__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_EvtArea_Delete__FPv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CCA0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_EvtArea_Delete__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_EvtArea_Execute__FPv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CCC0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_EvtArea_Execute__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_EvtArea_Draw__FPv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CCE0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_EvtArea_Draw__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_EvtArea_IsDelete__FPv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CD00, 'size': 0x0008, 'padding': 0x00, 'name': "daTag_EvtArea_IsDelete__FPv", 'reference_count': 1, 'type': "Function"},
+	'chkPointInArea__15daTag_EvtArea_cF4cXyz': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CD08, 'size': 0x0060, 'padding': 0x00, 'name': "chkPointInArea__15daTag_EvtArea_cF4cXyz", 'reference_count': 1, 'type': "Function"},
+	'__dt__15daTag_EvtArea_cFv': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".text", 'addr': 0x8048CD68, 'size': 0x0060, 'padding': 0x00, 'name': "__dt__15daTag_EvtArea_cFv", 'reference_count': 0, 'type': "Function"},
+	'data_8048CDC8': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x8048CDC8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_8048CDCC': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8048CDCC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3853': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDD4, 'size': 0x0004, 'padding': 0x00, 'name': "@3853", 'reference_count': 0, 'type': "Integer"},
+	'lit_3854': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDD8, 'size': 0x0004, 'padding': 0x00, 'name': "@3854", 'reference_count': 0, 'type': "Integer"},
+	'lit_3855': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDDC, 'size': 0x0004, 'padding': 0x00, 'name': "@3855", 'reference_count': 0, 'type': "Integer"},
+	'lit_3856': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDE0, 'size': 0x0004, 'padding': 0x00, 'name': "@3856", 'reference_count': 0, 'type': "Integer"},
+	'lit_3922': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDE4, 'size': 0x0004, 'padding': 0x00, 'name': "@3922", 'reference_count': 0, 'type': "InitData"},
+	'lit_4146': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".rodata", 'addr': 0x8048CDE8, 'size': 0x0004, 'padding': 0x00, 'name': "@4146", 'reference_count': 0, 'type': "Integer"},
+	'lit_3857': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".data", 'addr': 0x8048CDEC, 'size': 0x0060, 'padding': 0x00, 'name': "@3857", 'reference_count': 0, 'type': "ReferenceArray"},
+	'daTag_EvtArea_MethodTable': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".data", 'addr': 0x8048CE4C, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_EvtArea_MethodTable", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_TAG_EVTAREA': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".data", 'addr': 0x8048CE6C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_EVTAREA", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__15daTag_EvtArea_c': {'library': "d/a/tag/d_a_tag_evtarea", 'translation_unit': "d_a_tag_evtarea", 'section': ".data", 'addr': 0x8048CE9C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__15daTag_EvtArea_c", 'reference_count': 0, 'type': "VirtualTable"},
+}

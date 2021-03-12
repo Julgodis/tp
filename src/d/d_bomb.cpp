@@ -5,56 +5,56 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void checkStateCarry__7dBomb_cFv();
-extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
-extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
-extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
-}
+extern "C" extern void checkStateCarry__7dBomb_cFv();
+extern "C" extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
+extern "C" extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+extern "C" extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80031F94-80031FCC 0038 .text      checkStateCarry__7dBomb_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkStateCarry__7dBomb_cFv() {
+extern "C" asm void checkStateCarry__7dBomb_cFv() {
 	nofralloc
 #include "asm/d/d_bomb/checkStateCarry__7dBomb_cFv.s"
 }
 #pragma pop
 
+
 /* 80031FCC-80031FF4 0028 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c() {
+extern "C" asm void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 80031FF4-8003201C 0028 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkWaterBomb__7dBomb_cFP10fopAc_ac_c() {
+extern "C" asm void checkWaterBomb__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkWaterBomb__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003201C-80032044 0028 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c() {
+extern "C" asm void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_bomb/checkInsectBombMove__7dBomb_cFP10fopAc_ac_c.s"
 }

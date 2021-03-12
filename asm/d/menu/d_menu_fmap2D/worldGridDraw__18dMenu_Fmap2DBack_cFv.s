@@ -30,9 +30,9 @@ lbl_801D31D0:
 /* 801D3240 00000044  80 01 00 30 */	lwz r0, 0x30(r1)
 /* 801D3244 00000048  90 01 00 34 */	stw r0, 0x34(r1)
 /* 801D3248 0000004C  C0 21 00 3C */	lfs f1, 0x3c(r1)
-/* 801D324C 00000050  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D324C 00000050  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801D3250 00000054  FC 60 08 90 */	fmr f3, f1
-/* 801D3254 00000058  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__LIT_4200(r2)
+/* 801D3254 00000058  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__lit_4200(r2)
 /* 801D3258 0000005C  38 61 00 34 */	addi r3, r1, 0x34
 /* 801D325C 00000060  38 80 00 06 */	li r4, 6
 /* 801D3260 00000064  48 11 67 39 */	bl J2DDrawLine__FffffQ28JUtility6TColori
@@ -61,8 +61,8 @@ lbl_801D3274:
 /* 801D32B8 0000001C  80 01 00 28 */	lwz r0, 0x28(r1)
 /* 801D32BC 00000020  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 801D32C0 00000024  FC 20 18 90 */	fmr f1, f3
-/* 801D32C4 00000028  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__LIT_3970(r2)
-/* 801D32C8 0000002C  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__LIT_4200(r2)
+/* 801D32C4 00000028  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D32C8 0000002C  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__lit_4200(r2)
 /* 801D32CC 00000030  38 61 00 2C */	addi r3, r1, 0x2c
 /* 801D32D0 00000034  38 80 00 06 */	li r4, 6
 /* 801D32D4 00000038  48 11 66 C5 */	bl J2DDrawLine__FffffQ28JUtility6TColori
@@ -96,9 +96,9 @@ lbl_801D32EC:
 /* 801D333C 00000018  98 01 00 23 */	stb r0, 0x23(r1)
 /* 801D3340 0000001C  80 01 00 20 */	lwz r0, 0x20(r1)
 /* 801D3344 00000020  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801D3348 00000024  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D3348 00000024  C0 42 A7 D0 */	lfs f2, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801D334C 00000028  FC 60 08 90 */	fmr f3, f1
-/* 801D3350 0000002C  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__LIT_4200(r2)
+/* 801D3350 0000002C  C0 82 A7 E0 */	lfs f4, d_menu_d_menu_fmap2D__lit_4200(r2)
 /* 801D3354 00000030  38 61 00 24 */	addi r3, r1, 0x24
 /* 801D3358 00000034  38 80 00 06 */	li r4, 6
 /* 801D335C 00000038  48 11 66 3D */	bl J2DDrawLine__FffffQ28JUtility6TColori
@@ -114,8 +114,8 @@ lbl_801D336C:
 /* 801D3380 00000014  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 801D3384 00000018  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801D3388 0000001C  C0 41 00 38 */	lfs f2, 0x38(r1)
-/* 801D338C 00000020  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__LIT_3970(r2)
-/* 801D3390 00000024  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__LIT_4199(r2)
+/* 801D338C 00000020  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D3390 00000024  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__lit_4199(r2)
 /* 801D3394 00000028  FC 80 10 90 */	fmr f4, f2
 /* 801D3398 0000002C  38 61 00 1C */	addi r3, r1, 0x1c
 /* 801D339C 00000030  38 80 00 06 */	li r4, 6
@@ -142,8 +142,8 @@ lbl_801D33AC:
 /* 801D33EC 00000018  98 01 00 13 */	stb r0, 0x13(r1)
 /* 801D33F0 0000001C  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 801D33F4 00000020  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801D33F8 00000024  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__LIT_3970(r2)
-/* 801D33FC 00000028  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__LIT_4199(r2)
+/* 801D33F8 00000024  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D33FC 00000028  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__lit_4199(r2)
 /* 801D3400 0000002C  FC 80 10 90 */	fmr f4, f2
 /* 801D3404 00000030  38 61 00 14 */	addi r3, r1, 0x14
 /* 801D3408 00000034  38 80 00 06 */	li r4, 6
@@ -178,8 +178,8 @@ lbl_801D3424:
 /* 801D3474 00000018  98 01 00 0B */	stb r0, 0xb(r1)
 /* 801D3478 0000001C  80 01 00 08 */	lwz r0, 8(r1)
 /* 801D347C 00000020  90 01 00 0C */	stw r0, 0xc(r1)
-/* 801D3480 00000024  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__LIT_3970(r2)
-/* 801D3484 00000028  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__LIT_4199(r2)
+/* 801D3480 00000024  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D3484 00000028  C0 62 A7 DC */	lfs f3, d_menu_d_menu_fmap2D__lit_4199(r2)
 /* 801D3488 0000002C  FC 80 10 90 */	fmr f4, f2
 /* 801D348C 00000030  38 61 00 0C */	addi r3, r1, 0xc
 /* 801D3490 00000034  38 80 00 06 */	li r4, 6

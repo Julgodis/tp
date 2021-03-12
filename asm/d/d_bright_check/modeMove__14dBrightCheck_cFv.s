@@ -19,9 +19,9 @@ lbl_8019353C:
 /* 8019354C 00000010  38 A0 00 00 */	li r5, 0
 /* 80193550 00000014  38 C0 00 00 */	li r6, 0
 /* 80193554 00000018  38 E0 00 00 */	li r7, 0
-/* 80193558 0000001C  C0 22 A0 04 */	lfs f1, d_d_bright_check__LIT_3821(r2)
+/* 80193558 0000001C  C0 22 A0 04 */	lfs f1, d_d_bright_check__lit_3821(r2)
 /* 8019355C 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80193560 00000024  C0 62 A0 08 */	lfs f3, d_d_bright_check__LIT_3822(r2)
+/* 80193560 00000024  C0 62 A0 08 */	lfs f3, d_d_bright_check__lit_3822(r2)
 /* 80193564 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80193568 0000002C  39 00 00 00 */	li r8, 0
 /* 8019356C 00000030  48 11 84 19 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

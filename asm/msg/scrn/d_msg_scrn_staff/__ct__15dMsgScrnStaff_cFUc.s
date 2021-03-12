@@ -11,7 +11,7 @@ lbl_80246B34:
 /* 80246B58 00000024  90 1E 00 00 */	stw r0, 0(r30)
 /* 80246B5C 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80246B60 0000002C  4B FF 56 0D */	bl init__14dMsgScrnBase_cFv
-/* 80246B64 00000030  C0 02 B2 F8 */	lfs f0, msg_scrn_d_msg_scrn_staff__LIT_3842(r2)
+/* 80246B64 00000030  C0 02 B2 F8 */	lfs f0, msg_scrn_d_msg_scrn_staff__lit_3842(r2)
 /* 80246B68 00000034  D0 1E 00 D0 */	stfs f0, 0xd0(r30)
 /* 80246B6C 00000038  D0 1E 00 CC */	stfs f0, 0xcc(r30)
 /* 80246B70 0000003C  38 60 01 18 */	li r3, 0x118

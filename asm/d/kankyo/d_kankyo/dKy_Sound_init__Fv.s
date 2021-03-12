@@ -1,5 +1,5 @@
 lbl_801A8190:
-/* 801A8190 00000000  C0 02 A2 A8 */	lfs f0, d_kankyo_d_kankyo__LIT_5346(r2)
+/* 801A8190 00000000  C0 02 A2 A8 */	lfs f0, d_kankyo_d_kankyo__lit_5346(r2)
 /* 801A8194 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A8198 00000008  38 83 CA 54 */	addi r4, r3, g_env_light@l
 /* 801A819C 0000000C  D0 04 09 74 */	stfs f0, 0x974(r4)

@@ -18,8 +18,8 @@ lbl_80285368:
 /* 802853A8 0000002C  48 00 00 68 */	b lbl_80285410
 lbl_802853AC:
 /* 802853AC 00000000  80 BF 00 14 */	lwz r5, 0x14(r31)
-/* 802853B0 00000004  3C 60 80 3A */	lis r3, jstudio_control__LIT_838@ha
-/* 802853B4 00000008  38 83 AA 4C */	addi r4, r3, jstudio_control__LIT_838@l
+/* 802853B0 00000004  3C 60 80 3A */	lis r3, jstudio_control__lit_838@ha
+/* 802853B4 00000008  38 83 AA 4C */	addi r4, r3, jstudio_control__lit_838@l
 /* 802853B8 0000000C  80 64 00 00 */	lwz r3, 0(r4)
 /* 802853BC 00000010  80 04 00 04 */	lwz r0, 4(r4)
 /* 802853C0 00000014  90 61 00 08 */	stw r3, 8(r1)

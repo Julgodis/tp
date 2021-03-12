@@ -61,7 +61,7 @@ lbl_800E264C:
 /* 800E2660 00000014  41 82 00 18 */	beq lbl_800E2678
 /* 800E2664 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800E2668 0000001C  38 80 00 01 */	li r4, 1
-/* 800E266C 00000020  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 800E266C 00000020  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 800E2670 00000024  4B FE 43 D9 */	bl procFallInit__9daAlink_cFif
 /* 800E2674 00000028  48 00 00 B0 */	b lbl_800E2724
 lbl_800E2678:
@@ -71,7 +71,7 @@ lbl_800E2678:
 /* 800E2684 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800E2688 00000010  4B FE 0D 31 */	bl procWaitInit__9daAlink_cFv
 /* 800E268C 00000014  80 7F 20 60 */	lwz r3, 0x2060(r31)
-/* 800E2690 00000018  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800E2690 00000018  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800E2694 0000001C  38 80 00 00 */	li r4, 0
 /* 800E2698 00000020  38 A0 00 23 */	li r5, 0x23
 /* 800E269C 00000024  4B F2 D1 AD */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs

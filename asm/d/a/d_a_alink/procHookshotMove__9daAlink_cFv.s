@@ -12,7 +12,7 @@ lbl_8010BCA4:
 /* 8010BCCC 00000014  4B FA E4 05 */	bl checkNextAction__9daAlink_cFi
 /* 8010BCD0 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 8010BCD4 0000001C  40 82 00 9C */	bne lbl_8010BD70
-/* 8010BCD8 00000020  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__LIT_6041(r2)
+/* 8010BCD8 00000020  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__lit_6041(r2)
 /* 8010BCDC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8010BCE0 00000028  4B FA 7C 25 */	bl checkZeroSpeedF__9daAlink_cCFv
 /* 8010BCE4 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18

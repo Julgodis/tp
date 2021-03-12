@@ -50,7 +50,7 @@ lbl_800C3460:
 /* 800C3460 00000000  7F C3 F3 78 */	mr r3, r30
 /* 800C3464 00000004  38 80 00 03 */	li r4, 3
 /* 800C3468 00000008  4B FF EB 05 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800C346C 0000000C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800C346C 0000000C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C3470 00000010  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800C3474 00000014  7F C3 F3 78 */	mr r3, r30
 /* 800C3478 00000018  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha

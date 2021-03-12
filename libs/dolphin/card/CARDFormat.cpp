@@ -5,64 +5,63 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
 SECTION_INIT extern void memcpy();
-extern void DCStoreRange();
-extern void __OSLockSram();
-extern void __OSLockSramEx();
-extern void __OSUnlockSram();
-extern void __OSUnlockSramEx();
-extern void OSGetTime();
-extern void __CARDDefaultApiCallback();
-extern void __CARDSyncCallback();
-extern void __CARDEraseSector();
-extern void __CARDGetFontEncode();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDWrite();
-extern void __CARDCheckSum();
-extern void FormatCallback();
-extern void __CARDFormatRegionAsync();
-extern void CARDFormat();
-extern void __shr2i();
+extern "C" extern void DCStoreRange();
+extern "C" extern void __OSLockSram();
+extern "C" extern void __OSLockSramEx();
+extern "C" extern void __OSUnlockSram();
+extern "C" extern void __OSUnlockSramEx();
+extern "C" extern void OSGetTime();
+extern "C" extern void __CARDDefaultApiCallback();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDEraseSector();
+extern "C" extern void __CARDGetFontEncode();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDWrite();
+extern "C" extern void __CARDCheckSum();
+extern "C" extern void FormatCallback();
+extern "C" extern void __CARDFormatRegionAsync();
+extern "C" extern void CARDFormat();
+extern "C" extern void __shr2i();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80357484-803575C8 0144 .text      FormatCallback                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void FormatCallback() {
+extern "C" asm void FormatCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/FormatCallback.s"
 }
 #pragma pop
 
+
 /* 803575C8-80357C20 0658 .text      __CARDFormatRegionAsync                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __CARDFormatRegionAsync() {
+extern "C" asm void __CARDFormatRegionAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/__CARDFormatRegionAsync.s"
 }
 #pragma pop
 
+
 /* 80357C20-80357C74 0054 .text      CARDFormat                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDFormat() {
+extern "C" asm void CARDFormat() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/CARDFormat.s"
 }

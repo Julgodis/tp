@@ -5,45 +5,101 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
-extern void OSReport();
-extern void __OSStopAudioSystem();
-extern void ICFlashInvalidate();
-extern void LCDisable();
-extern void OSDisableInterrupts();
-extern void __OSReboot();
-extern void OSRegisterResetFunction();
-extern void __OSCallResetFunctions();
-extern void Reset();
-extern void KillThreads();
-extern void __OSDoHotReset();
-extern void OSResetSystem();
-extern void OSGetResetCode();
-extern void __OSLockSram();
-extern void __OSUnlockSram();
-extern void __OSSyncSram();
-extern void OSDisableScheduler();
-extern void OSEnableScheduler();
-extern void OSCancelThread();
-extern void __PADDisableRecalibration();
-SECTION_DATA extern u8 OSReset__LIT_153[80];
+extern "C" extern void OSReport();
+extern "C" extern void __OSStopAudioSystem();
+extern "C" extern void ICFlashInvalidate();
+extern "C" extern void LCDisable();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void __OSReboot();
+extern "C" extern void OSRegisterResetFunction();
+extern "C" extern void __OSCallResetFunctions();
+extern "C" extern void Reset();
+extern "C" extern void KillThreads();
+extern "C" extern void __OSDoHotReset();
+extern "C" extern void OSResetSystem();
+extern "C" extern void OSGetResetCode();
+extern "C" extern void __OSLockSram();
+extern "C" extern void __OSUnlockSram();
+extern "C" extern void __OSSyncSram();
+extern "C" extern void OSDisableScheduler();
+extern "C" extern void OSEnableScheduler();
+extern "C" extern void OSCancelThread();
+extern "C" extern void __PADDisableRecalibration();
+SECTION_DATA extern u8 OSReset__lit_153[80];
 SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
 SECTION_SBSS extern u8 ResetFunctionQueue[8];
 SECTION_SBSS extern u8 bootThisDol[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80451690-80451698 0008 .sbss      ResetFunctionQueue                                           */
+u8 ResetFunctionQueue[8];
+
+/* 8033F660-8033F6E4 0084 .text      OSRegisterResetFunction                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSRegisterResetFunction() {
+	nofralloc
+#include "asm/dolphin/os/OSReset/OSRegisterResetFunction.s"
 }
+#pragma pop
+
+
+/* 8033F6E4-8033F78C 00A8 .text      __OSCallResetFunctions                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSCallResetFunctions() {
+	nofralloc
+#include "asm/dolphin/os/OSReset/__OSCallResetFunctions.s"
+}
+#pragma pop
+
+
+/* 8033F78C-8033F7FC 0070 .text      Reset                                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void Reset() {
+	nofralloc
+#include "asm/dolphin/os/OSReset/Reset.s"
+}
+#pragma pop
+
+
+/* 8033F7FC-8033F864 0068 .text      KillThreads                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void KillThreads() {
+	nofralloc
+#include "asm/dolphin/os/OSReset/KillThreads.s"
+}
+#pragma pop
+
+
+/* 8033F864-8033F8AC 0048 .text      __OSDoHotReset                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSDoHotReset() {
+	nofralloc
+#include "asm/dolphin/os/OSReset/__OSDoHotReset.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803D07E8-803D0838 004E .data      @153                                                         */
-SECTION_DATA u8 OSReset__LIT_153[80] = {
+u8 OSReset__lit_153[80] = {
 	0x4F, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6D, 0x28, 0x29, 0x3A,
 	0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69,
 	0x66, 0x79, 0x20, 0x54, 0x52, 0x55, 0x45, 0x20, 0x74, 0x6F, 0x20, 0x66, 0x6F, 0x72, 0x63, 0x65,
@@ -52,90 +108,26 @@ SECTION_DATA u8 OSReset__LIT_153[80] = {
 	/* padding */
 	0x00, 0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451690-80451698 0008 .sbss      ResetFunctionQueue                                           */
-SECTION_SBSS u8 ResetFunctionQueue[8];
 /* 80451698-804516A0 0004 .sbss      bootThisDol                                                  */
-SECTION_SBSS u8 bootThisDol[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8033F660-8033F6E4 0084 .text      OSRegisterResetFunction                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSRegisterResetFunction() {
-	nofralloc
-#include "asm/dolphin/os/OSReset/OSRegisterResetFunction.s"
-}
-#pragma pop
-
-/* 8033F6E4-8033F78C 00A8 .text      __OSCallResetFunctions                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSCallResetFunctions() {
-	nofralloc
-#include "asm/dolphin/os/OSReset/__OSCallResetFunctions.s"
-}
-#pragma pop
-
-/* 8033F78C-8033F7FC 0070 .text      Reset                                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Reset() {
-	nofralloc
-#include "asm/dolphin/os/OSReset/Reset.s"
-}
-#pragma pop
-
-/* 8033F7FC-8033F864 0068 .text      KillThreads                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void KillThreads() {
-	nofralloc
-#include "asm/dolphin/os/OSReset/KillThreads.s"
-}
-#pragma pop
-
-/* 8033F864-8033F8AC 0048 .text      __OSDoHotReset                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSDoHotReset() {
-	nofralloc
-#include "asm/dolphin/os/OSReset/__OSDoHotReset.s"
-}
-#pragma pop
+u8 bootThisDol[4 + 4 /* padding */];
 
 /* 8033F8AC-8033FAAC 0200 .text      OSResetSystem                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSResetSystem() {
+extern "C" asm void OSResetSystem() {
 	nofralloc
 #include "asm/dolphin/os/OSReset/OSResetSystem.s"
 }
 #pragma pop
 
+
 /* 8033FAAC-8033FAE4 0038 .text      OSGetResetCode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSGetResetCode() {
+extern "C" asm void OSGetResetCode() {
 	nofralloc
 #include "asm/dolphin/os/OSReset/OSGetResetCode.s"
 }

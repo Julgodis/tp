@@ -41,8 +41,8 @@ lbl_80228694:
 /* 80228694 00000000  38 03 FF E0 */	addi r0, r3, -32
 /* 80228698 00000004  28 00 00 3F */	cmplwi r0, 0x3f
 /* 8022869C 00000008  41 81 01 94 */	bgt lbl_80228830
-/* 802286A0 0000000C  3C 60 80 3C */	lis r3, d_msg_d_msg_class__LIT_3831@ha
-/* 802286A4 00000010  38 63 FE 78 */	addi r3, r3, d_msg_d_msg_class__LIT_3831@l
+/* 802286A0 0000000C  3C 60 80 3C */	lis r3, d_msg_d_msg_class__lit_3831@ha
+/* 802286A4 00000010  38 63 FE 78 */	addi r3, r3, d_msg_d_msg_class__lit_3831@l
 /* 802286A8 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 802286AC 00000018  7C 03 00 2E */	lwzx r0, r3, r0
 /* 802286B0 0000001C  7C 09 03 A6 */	mtctr r0

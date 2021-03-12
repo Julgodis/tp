@@ -20,13 +20,13 @@ lbl_8023C040:
 /* 8023C054 00000014  48 01 95 75 */	bl show__13CPaneMgrAlphaFv
 lbl_8023C058:
 /* 8023C058 00000000  C0 3F 00 20 */	lfs f1, 0x20(r31)
-/* 8023C05C 00000004  C0 02 B1 9C */	lfs f0, msg_scrn_d_msg_scrn_arrow__LIT_3761(r2)
+/* 8023C05C 00000004  C0 02 B1 9C */	lfs f0, msg_scrn_d_msg_scrn_arrow__lit_3761(r2)
 /* 8023C060 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 8023C064 0000000C  D0 1F 00 20 */	stfs f0, 0x20(r31)
 /* 8023C068 00000010  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8023C06C 00000014  A8 03 00 06 */	lha r0, 6(r3)
 /* 8023C070 00000018  C0 5F 00 20 */	lfs f2, 0x20(r31)
-/* 8023C074 0000001C  C8 22 B1 A0 */	lfd f1, msg_scrn_d_msg_scrn_arrow__LIT_3763(r2)
+/* 8023C074 0000001C  C8 22 B1 A0 */	lfd f1, msg_scrn_d_msg_scrn_arrow__lit_3763(r2)
 /* 8023C078 00000020  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 8023C07C 00000024  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8023C080 00000028  3C 00 43 30 */	lis r0, 0x4330

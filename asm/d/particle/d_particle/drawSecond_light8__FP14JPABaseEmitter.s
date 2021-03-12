@@ -12,7 +12,7 @@ lbl_80049C44:
 /* 80049C6C 00000028  7C 1F 07 34 */	extsh r31, r0
 /* 80049C70 0000002C  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 80049C74 00000030  7C 03 07 74 */	extsb r3, r0
-/* 80049C78 00000034  C0 22 85 50 */	lfs f1, d_particle_d_particle__LIT_3964(r2)
+/* 80049C78 00000034  C0 22 85 50 */	lfs f1, d_particle_d_particle__lit_3964(r2)
 /* 80049C7C 00000038  48 15 CF DD */	bl dKy_setLight_nowroom_grass__Fcf
 /* 80049C80 0000003C  38 60 00 01 */	li r3, 1
 /* 80049C84 00000040  48 31 5F C1 */	bl GXSetColorUpdate

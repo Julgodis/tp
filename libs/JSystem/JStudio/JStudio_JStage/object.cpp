@@ -5,104 +5,108 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
-extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
-extern void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
-extern void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
-extern void PSMTXConcat();
-extern void PSMTXInverse();
-extern void PSMTXTrans();
-}
+extern "C" extern void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
+extern "C" extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+extern "C" extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
+extern "C" extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+extern "C" extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
+extern "C" extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+extern "C" extern void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
+extern "C" extern void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
+extern "C" extern void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void PSMTXInverse();
+extern "C" extern void PSMTXTrans();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8028A1F8-8028A290 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
+extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl.s"
 }
 #pragma pop
 
+
 /* 8028A290-8028A328 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
+extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl.s"
 }
 #pragma pop
 
+
 /* 8028A328-8028A3CC 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
+extern "C" asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl.s"
 }
 #pragma pop
 
+
 /* 8028A3CC-8028A470 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
+extern "C" asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl.s"
 }
 #pragma pop
 
+
 /* 8028A470-8028A4BC 004C .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl() {
+extern "C" asm void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl.s"
 }
 #pragma pop
 
+
 /* 8028A4BC-8028A50C 0050 .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc() {
+extern "C" asm void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc.s"
 }
 #pragma pop
 
+
 /* 8028A50C-8028A550 0044 .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc() {
+extern "C" asm void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc.s"
 }
 #pragma pop
 
+
 /* 8028A550-8028A5F0 00A0 .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl() {
+extern "C" asm void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl.s"
 }

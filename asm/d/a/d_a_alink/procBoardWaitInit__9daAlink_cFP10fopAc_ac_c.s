@@ -27,7 +27,7 @@ lbl_80106A74:
 /* 80106A94 00000020  40 82 00 14 */	bne lbl_80106AA8
 /* 80106A98 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80106A9C 00000028  38 80 00 02 */	li r4, 2
-/* 80106AA0 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 80106AA0 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 80106AA4 00000030  4B FA 6C 81 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_80106AA8:
 /* 80106AA8 00000000  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -36,7 +36,7 @@ lbl_80106AA8:
 /* 80106AB4 0000000C  28 1D 00 00 */	cmplwi r29, 0
 /* 80106AB8 00000010  40 82 00 18 */	bne lbl_80106AD0
 /* 80106ABC 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80106AC0 00000018  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80106AC0 00000018  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80106AC4 0000001C  38 80 00 01 */	li r4, 1
 /* 80106AC8 00000020  48 00 07 51 */	bl procBoardJumpInit__9daAlink_cFfi
 /* 80106ACC 00000024  48 00 00 E8 */	b lbl_80106BB4
@@ -69,7 +69,7 @@ lbl_80106AFC:
 /* 80106B30 00000034  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
 /* 80106B34 00000038  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 80106B38 0000003C  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80106B3C 00000040  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 80106B3C 00000040  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 80106B40 00000044  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80106B44 00000000  40 81 00 08 */	ble lbl_80106B4C
 /* 80106B48 00000004  FC 40 00 90 */	fmr f2, f0
@@ -83,7 +83,7 @@ lbl_80106B4C:
 /* 80106B64 00000018  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 80106B68 0000001C  48 00 00 0C */	b lbl_80106B74
 lbl_80106B6C:
-/* 80106B6C 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80106B6C 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80106B70 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 lbl_80106B74:
 /* 80106B74 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_board_c0@ha

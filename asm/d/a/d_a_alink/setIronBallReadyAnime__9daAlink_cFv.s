@@ -6,23 +6,23 @@ lbl_8011510C:
 /* 8011511C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80115120 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80115124 00000018  38 80 00 02 */	li r4, 2
-/* 80115128 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 80115128 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 8011512C 00000020  4B F9 85 F9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80115130 00000024  7F C3 F3 78 */	mr r3, r30
 /* 80115134 00000028  38 80 01 62 */	li r4, 0x162
 /* 80115138 0000002C  3C A0 80 39 */	lis r5, m__22daAlinkHIO_ironBall_c0@ha
 /* 8011513C 00000030  3B E5 EA 70 */	addi r31, r5, m__22daAlinkHIO_ironBall_c0@l
 /* 80115140 00000034  C0 3F 00 1C */	lfs f1, 0x1c(r31)
-/* 80115144 00000038  C0 42 92 C0 */	lfs f2, LIT_6108(r2)
+/* 80115144 00000038  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 80115148 0000003C  38 A0 00 15 */	li r5, 0x15
 /* 8011514C 00000040  C0 7F 00 20 */	lfs f3, 0x20(r31)
 /* 80115150 00000044  4B F9 7E BD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 80115154 00000048  7F C3 F3 78 */	mr r3, r30
 /* 80115158 0000004C  38 80 01 9A */	li r4, 0x19a
 /* 8011515C 00000050  C0 3F 00 1C */	lfs f1, 0x1c(r31)
-/* 80115160 00000054  C0 42 92 BC */	lfs f2, d_a_d_a_alink__LIT_6041(r2)
+/* 80115160 00000054  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
 /* 80115164 00000058  4B F9 82 45 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
-/* 80115168 0000005C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80115168 0000005C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011516C 00000060  D0 1E 1F 50 */	stfs f0, 0x1f50(r30)
 /* 80115170 00000064  7F C3 F3 78 */	mr r3, r30
 /* 80115174 00000068  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010027@ha */
@@ -42,9 +42,9 @@ lbl_8011510C:
 /* 801151AC 000000A0  B0 1E 30 1E */	sth r0, 0x301e(r30)
 /* 801151B0 000000A4  38 00 00 00 */	li r0, 0
 /* 801151B4 000000A8  B0 1E 30 20 */	sth r0, 0x3020(r30)
-/* 801151B8 000000AC  C0 02 93 3C */	lfs f0, d_a_d_a_alink__LIT_7808(r2)
+/* 801151B8 000000AC  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
 /* 801151BC 000000B0  D0 1E 34 94 */	stfs f0, 0x3494(r30)
-/* 801151C0 000000B4  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 801151C0 000000B4  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 801151C4 000000B8  D0 1E 34 90 */	stfs f0, 0x3490(r30)
 /* 801151C8 000000BC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801151CC 000000C0  83 C1 00 08 */	lwz r30, 8(r1)

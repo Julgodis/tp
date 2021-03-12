@@ -9,8 +9,8 @@ lbl_8036BEBC:
 /* 8036BED8 0000001C  40 80 00 94 */	bge lbl_8036BF6C
 /* 8036BEDC 00000020  2C 07 00 00 */	cmpwi r7, 0
 /* 8036BEE0 00000024  40 80 00 40 */	bge lbl_8036BF20
-/* 8036BEE4 00000028  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__LIT_124(r2)
-/* 8036BEE8 0000002C  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__LIT_125(r2)
+/* 8036BEE4 00000028  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__lit_124(r2)
+/* 8036BEE8 0000002C  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__lit_125(r2)
 /* 8036BEEC 00000030  FC 22 08 2A */	fadd f1, f2, f1
 /* 8036BEF0 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8036BEF4 00000000  40 81 00 F8 */	ble lbl_8036BFEC
@@ -34,8 +34,8 @@ lbl_8036BF20:
 /* 8036BF34 00000014  40 82 00 08 */	bne lbl_8036BF3C
 /* 8036BF38 00000018  48 00 00 C0 */	b lbl_8036BFF8
 lbl_8036BF3C:
-/* 8036BF3C 00000000  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__LIT_124(r2)
-/* 8036BF40 00000004  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__LIT_125(r2)
+/* 8036BF3C 00000000  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__lit_124(r2)
+/* 8036BF40 00000004  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__lit_125(r2)
 /* 8036BF44 00000008  FC 22 08 2A */	fadd f1, f2, f1
 /* 8036BF48 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8036BF4C 00000000  40 81 00 A0 */	ble lbl_8036BFEC
@@ -62,8 +62,8 @@ lbl_8036BF84:
 /* 8036BF94 00000010  40 82 00 08 */	bne lbl_8036BF9C
 /* 8036BF98 00000014  48 00 00 60 */	b lbl_8036BFF8
 lbl_8036BF9C:
-/* 8036BF9C 00000000  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__LIT_124(r2)
-/* 8036BFA0 00000004  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__LIT_125(r2)
+/* 8036BF9C 00000000  C8 42 D0 E0 */	lfd f2, Math_Double_precision_s_ceil__lit_124(r2)
+/* 8036BFA0 00000004  C8 02 D0 E8 */	lfd f0, Math_Double_precision_s_ceil__lit_125(r2)
 /* 8036BFA4 00000008  FC 22 08 2A */	fadd f1, f2, f1
 /* 8036BFA8 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8036BFAC 00000000  40 81 00 40 */	ble lbl_8036BFEC

@@ -41,9 +41,9 @@ lbl_801AE458:
 /* 801AE4F4 00000068  38 00 00 00 */	li r0, 0
 /* 801AE4F8 0000006C  90 1B 00 14 */	stw r0, 0x14(r27)
 lbl_801AE4FC:
-/* 801AE4FC 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE4FC 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE500 00000004  48 0B 94 55 */	bl cM_rndF__Ff
-/* 801AE504 00000008  C0 02 A4 9C */	lfs f0, d_d_ky_thunder__LIT_4079(r2)
+/* 801AE504 00000008  C0 02 A4 9C */	lfs f0, d_d_ky_thunder__lit_4079(r2)
 /* 801AE508 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE50C 00000000  40 80 00 30 */	bge lbl_801AE53C
 /* 801AE510 00000004  3C 60 80 39 */	lis r3, d_d_ky_thunder__stringBase0@ha
@@ -94,7 +94,7 @@ lbl_801AE58C:
 /* 801AE5B8 0000002C  38 9B 00 58 */	addi r4, r27, 0x58
 /* 801AE5BC 00000030  38 C0 00 01 */	li r6, 1
 /* 801AE5C0 00000034  38 E0 00 00 */	li r7, 0
-/* 801AE5C4 00000038  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE5C4 00000038  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE5C8 0000003C  39 00 00 00 */	li r8, 0
 /* 801AE5CC 00000040  39 20 FF FF */	li r9, -1
 /* 801AE5D0 00000044  4B E5 F1 3D */	bl init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss
@@ -103,7 +103,7 @@ lbl_801AE58C:
 /* 801AE5DC 00000050  38 60 00 05 */	li r3, 5
 /* 801AE5E0 00000054  48 00 03 18 */	b lbl_801AE8F8
 lbl_801AE5E4:
-/* 801AE5E4 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE5E4 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE5E8 00000004  D0 3D 01 64 */	stfs f1, 0x164(r29)
 /* 801AE5EC 00000008  C0 1D 01 64 */	lfs f0, 0x164(r29)
 /* 801AE5F0 0000000C  D0 1D 01 14 */	stfs f0, 0x114(r29)
@@ -113,7 +113,7 @@ lbl_801AE5E4:
 /* 801AE600 0000001C  FF A0 08 90 */	fmr f29, f1
 /* 801AE604 00000020  48 00 00 08 */	b lbl_801AE60C
 lbl_801AE608:
-/* 801AE608 00000000  C3 A2 A4 A0 */	lfs f29, d_d_ky_thunder__LIT_4080(r2)
+/* 801AE608 00000000  C3 A2 A4 A0 */	lfs f29, d_d_ky_thunder__lit_4080(r2)
 lbl_801AE60C:
 /* 801AE60C 00000000  38 7E 00 D8 */	addi r3, r30, 0xd8
 /* 801AE610 00000004  38 9E 00 E4 */	addi r4, r30, 0xe4
@@ -127,26 +127,26 @@ lbl_801AE60C:
 /* 801AE630 00000024  38 03 7F FF */	addi r0, r3, 0x7fff
 /* 801AE634 00000028  B0 1D 01 68 */	sth r0, 0x168(r29)
 lbl_801AE638:
-/* 801AE638 00000000  C3 82 A4 A4 */	lfs f28, d_d_ky_thunder__LIT_4081(r2)
-/* 801AE63C 00000004  C3 62 A4 A8 */	lfs f27, d_d_ky_thunder__LIT_4082(r2)
+/* 801AE638 00000000  C3 82 A4 A4 */	lfs f28, d_d_ky_thunder__lit_4081(r2)
+/* 801AE63C 00000004  C3 62 A4 A8 */	lfs f27, d_d_ky_thunder__lit_4082(r2)
 /* 801AE640 00000008  FF E0 E0 90 */	fmr f31, f28
 /* 801AE644 0000000C  FF C0 D8 90 */	fmr f30, f27
-/* 801AE648 00000010  C0 02 A4 AC */	lfs f0, d_d_ky_thunder__LIT_4083(r2)
+/* 801AE648 00000010  C0 02 A4 AC */	lfs f0, d_d_ky_thunder__lit_4083(r2)
 /* 801AE64C 00000014  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 801AE650 00000018  C0 02 A4 B0 */	lfs f0, d_d_ky_thunder__LIT_4084(r2)
+/* 801AE650 00000018  C0 02 A4 B0 */	lfs f0, d_d_ky_thunder__lit_4084(r2)
 /* 801AE654 0000001C  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 801AE658 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882(r2)
+/* 801AE658 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__lit_3882(r2)
 /* 801AE65C 00000024  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 801AE660 00000028  C0 02 A4 B4 */	lfs f0, d_d_ky_thunder__LIT_4085(r2)
+/* 801AE660 00000028  C0 02 A4 B4 */	lfs f0, d_d_ky_thunder__lit_4085(r2)
 /* 801AE664 0000002C  D0 1D 01 5C */	stfs f0, 0x15c(r29)
 /* 801AE668 00000030  88 1F 0E D5 */	lbz r0, 0xed5(r31)
 /* 801AE66C 00000034  28 00 00 0A */	cmplwi r0, 0xa
 /* 801AE670 00000038  41 80 00 1C */	blt lbl_801AE68C
 /* 801AE674 0000003C  FF E0 D8 90 */	fmr f31, f27
-/* 801AE678 00000040  C3 C2 A4 B8 */	lfs f30, d_d_ky_thunder__LIT_4086(r2)
-/* 801AE67C 00000044  C0 02 A4 BC */	lfs f0, d_d_ky_thunder__LIT_4087(r2)
+/* 801AE678 00000040  C3 C2 A4 B8 */	lfs f30, d_d_ky_thunder__lit_4086(r2)
+/* 801AE67C 00000044  C0 02 A4 BC */	lfs f0, d_d_ky_thunder__lit_4087(r2)
 /* 801AE680 00000048  D0 1D 01 5C */	stfs f0, 0x15c(r29)
-/* 801AE684 0000004C  C0 02 A4 C0 */	lfs f0, d_d_ky_thunder__LIT_4088(r2)
+/* 801AE684 0000004C  C0 02 A4 C0 */	lfs f0, d_d_ky_thunder__lit_4088(r2)
 /* 801AE688 00000050  D0 01 00 18 */	stfs f0, 0x18(r1)
 lbl_801AE68C:
 /* 801AE68C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -162,10 +162,10 @@ lbl_801AE68C:
 /* 801AE6B4 00000028  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 801AE6B8 0000002C  2C 00 00 04 */	cmpwi r0, 4
 /* 801AE6BC 00000030  40 82 00 14 */	bne lbl_801AE6D0
-/* 801AE6C0 00000034  C3 82 A4 80 */	lfs f28, d_d_ky_thunder__LIT_3923(r2)
-/* 801AE6C4 00000038  C3 62 A4 A0 */	lfs f27, d_d_ky_thunder__LIT_4080(r2)
-/* 801AE6C8 0000003C  C3 E2 A4 C4 */	lfs f31, d_d_ky_thunder__LIT_4089(r2)
-/* 801AE6CC 00000040  C3 C2 A4 C8 */	lfs f30, d_d_ky_thunder__LIT_4090(r2)
+/* 801AE6C0 00000034  C3 82 A4 80 */	lfs f28, d_d_ky_thunder__lit_3923(r2)
+/* 801AE6C4 00000038  C3 62 A4 A0 */	lfs f27, d_d_ky_thunder__lit_4080(r2)
+/* 801AE6C8 0000003C  C3 E2 A4 C4 */	lfs f31, d_d_ky_thunder__lit_4089(r2)
+/* 801AE6CC 00000040  C3 C2 A4 C8 */	lfs f30, d_d_ky_thunder__lit_4090(r2)
 lbl_801AE6D0:
 /* 801AE6D0 00000000  C0 3D 01 5C */	lfs f1, 0x15c(r29)
 /* 801AE6D4 00000004  48 0B 92 B9 */	bl cM_rndFX__Ff
@@ -176,14 +176,14 @@ lbl_801AE6D0:
 /* 801AE6E8 00000018  EC 1C 08 2A */	fadds f0, f28, f1
 /* 801AE6EC 0000001C  EC 1D 00 32 */	fmuls f0, f29, f0
 /* 801AE6F0 00000020  D0 1D 01 38 */	stfs f0, 0x138(r29)
-/* 801AE6F4 00000024  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE6F4 00000024  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE6F8 00000028  48 0B 92 95 */	bl cM_rndFX__Ff
-/* 801AE6FC 0000002C  C8 02 A4 D0 */	lfd f0, d_d_ky_thunder__LIT_4091(r2)
+/* 801AE6FC 0000002C  C8 02 A4 D0 */	lfd f0, d_d_ky_thunder__lit_4091(r2)
 /* 801AE700 00000030  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE704 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801AE708 00000004  40 82 00 14 */	bne lbl_801AE71C
 /* 801AE70C 00000008  C0 3D 01 38 */	lfs f1, 0x138(r29)
-/* 801AE710 0000000C  C0 02 A4 D8 */	lfs f0, d_d_ky_thunder__LIT_4092(r2)
+/* 801AE710 0000000C  C0 02 A4 D8 */	lfs f0, d_d_ky_thunder__lit_4092(r2)
 /* 801AE714 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801AE718 00000014  D0 1D 01 38 */	stfs f0, 0x138(r29)
 lbl_801AE71C:
@@ -192,7 +192,7 @@ lbl_801AE71C:
 /* 801AE724 00000008  EC 1F 08 2A */	fadds f0, f31, f1
 /* 801AE728 0000000C  EC 1D 00 32 */	fmuls f0, f29, f0
 /* 801AE72C 00000010  D0 1D 01 3C */	stfs f0, 0x13c(r29)
-/* 801AE730 00000014  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE730 00000014  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__lit_3885(r2)
 /* 801AE734 00000018  D0 1D 01 40 */	stfs f0, 0x140(r29)
 /* 801AE738 0000001C  38 7E 00 D8 */	addi r3, r30, 0xd8
 /* 801AE73C 00000020  38 9E 00 E4 */	addi r4, r30, 0xe4
@@ -203,7 +203,7 @@ lbl_801AE71C:
 /* 801AE750 00000034  C0 41 00 28 */	lfs f2, 0x28(r1)
 /* 801AE754 00000038  EC 02 00 B2 */	fmuls f0, f2, f2
 /* 801AE758 0000003C  EF A3 00 2A */	fadds f29, f3, f0
-/* 801AE75C 00000040  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882(r2)
+/* 801AE75C 00000040  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__lit_3882(r2)
 /* 801AE760 00000044  FC 1D 00 40 */	fcmpo cr0, f29, f0
 /* 801AE764 00000000  40 81 00 0C */	ble lbl_801AE770
 /* 801AE768 00000004  FC 00 E8 34 */	frsqrte f0, f29
@@ -215,9 +215,9 @@ lbl_801AE770:
 /* 801AE77C 0000000C  FC 40 E8 90 */	fmr f2, f29
 /* 801AE780 00000010  48 0B 8E F5 */	bl cM_atan2s__Fff
 /* 801AE784 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801AE788 00000018  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE788 00000018  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE78C 0000001C  48 0B 92 01 */	bl cM_rndFX__Ff
-/* 801AE790 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882(r2)
+/* 801AE790 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__lit_3882(r2)
 /* 801AE794 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE798 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801AE79C 00000004  40 82 00 10 */	bne lbl_801AE7AC
@@ -243,7 +243,7 @@ lbl_801AE7B0:
 /* 801AE7E4 00000034  48 0B 91 71 */	bl cM_rndF__Ff
 /* 801AE7E8 00000038  FF E0 08 90 */	fmr f31, f1
 /* 801AE7EC 0000003C  C0 5E 00 D8 */	lfs f2, 0xd8(r30)
-/* 801AE7F0 00000040  C0 22 A4 DC */	lfs f1, d_d_ky_thunder__LIT_4093(r2)
+/* 801AE7F0 00000040  C0 22 A4 DC */	lfs f1, d_d_ky_thunder__lit_4093(r2)
 /* 801AE7F4 00000044  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 801AE7F8 00000048  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801AE7FC 0000004C  EC 22 00 2A */	fadds f1, f2, f0
@@ -253,13 +253,13 @@ lbl_801AE7B0:
 /* 801AE80C 0000005C  D0 1D 01 44 */	stfs f0, 0x144(r29)
 /* 801AE810 00000060  C0 21 00 18 */	lfs f1, 0x18(r1)
 /* 801AE814 00000064  48 0B 91 41 */	bl cM_rndF__Ff
-/* 801AE818 00000068  C0 42 A4 B4 */	lfs f2, d_d_ky_thunder__LIT_4085(r2)
+/* 801AE818 00000068  C0 42 A4 B4 */	lfs f2, d_d_ky_thunder__lit_4085(r2)
 /* 801AE81C 0000006C  C0 1E 00 DC */	lfs f0, 0xdc(r30)
 /* 801AE820 00000070  EC 02 00 2A */	fadds f0, f2, f0
 /* 801AE824 00000074  EC 00 08 2A */	fadds f0, f0, f1
 /* 801AE828 00000078  D0 1D 01 48 */	stfs f0, 0x148(r29)
 /* 801AE82C 0000007C  C0 5E 00 E0 */	lfs f2, 0xe0(r30)
-/* 801AE830 00000080  C0 22 A4 DC */	lfs f1, d_d_ky_thunder__LIT_4093(r2)
+/* 801AE830 00000080  C0 22 A4 DC */	lfs f1, d_d_ky_thunder__lit_4093(r2)
 /* 801AE834 00000084  C0 01 00 28 */	lfs f0, 0x28(r1)
 /* 801AE838 00000088  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801AE83C 0000008C  EC 22 00 2A */	fadds f1, f2, f0
@@ -277,22 +277,22 @@ lbl_801AE7B0:
 /* 801AE86C 000000BC  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 801AE870 000000C0  2C 00 00 04 */	cmpwi r0, 4
 /* 801AE874 000000C4  40 82 00 34 */	bne lbl_801AE8A8
-/* 801AE878 000000C8  C0 22 A4 E4 */	lfs f1, d_d_ky_thunder__LIT_4095(r2)
+/* 801AE878 000000C8  C0 22 A4 E4 */	lfs f1, d_d_ky_thunder__lit_4095(r2)
 /* 801AE87C 000000CC  48 0B 91 11 */	bl cM_rndFX__Ff
-/* 801AE880 000000D0  C0 02 A4 E0 */	lfs f0, d_d_ky_thunder__LIT_4094(r2)
+/* 801AE880 000000D0  C0 02 A4 E0 */	lfs f0, d_d_ky_thunder__lit_4094(r2)
 /* 801AE884 000000D4  EC 00 08 2A */	fadds f0, f0, f1
 /* 801AE888 000000D8  D0 1D 01 44 */	stfs f0, 0x144(r29)
-/* 801AE88C 000000DC  C0 02 A4 E8 */	lfs f0, d_d_ky_thunder__LIT_4096(r2)
+/* 801AE88C 000000DC  C0 02 A4 E8 */	lfs f0, d_d_ky_thunder__lit_4096(r2)
 /* 801AE890 000000E0  D0 1D 01 48 */	stfs f0, 0x148(r29)
-/* 801AE894 000000E4  C0 22 A4 F0 */	lfs f1, d_d_ky_thunder__LIT_4098(r2)
+/* 801AE894 000000E4  C0 22 A4 F0 */	lfs f1, d_d_ky_thunder__lit_4098(r2)
 /* 801AE898 000000E8  48 0B 90 F5 */	bl cM_rndFX__Ff
-/* 801AE89C 000000EC  C0 02 A4 EC */	lfs f0, d_d_ky_thunder__LIT_4097(r2)
+/* 801AE89C 000000EC  C0 02 A4 EC */	lfs f0, d_d_ky_thunder__lit_4097(r2)
 /* 801AE8A0 000000F0  EC 00 08 2A */	fadds f0, f0, f1
 /* 801AE8A4 000000F4  D0 1D 01 4C */	stfs f0, 0x14c(r29)
 lbl_801AE8A8:
-/* 801AE8A8 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE8A8 00000000  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__lit_3885(r2)
 /* 801AE8AC 00000004  48 0B 90 A9 */	bl cM_rndF__Ff
-/* 801AE8B0 00000008  C0 02 A4 F4 */	lfs f0, d_d_ky_thunder__LIT_4099(r2)
+/* 801AE8B0 00000008  C0 02 A4 F4 */	lfs f0, d_d_ky_thunder__lit_4099(r2)
 /* 801AE8B4 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE8B8 00000000  40 80 00 3C */	bge lbl_801AE8F4
 /* 801AE8BC 00000004  C0 1D 01 44 */	lfs f0, 0x144(r29)

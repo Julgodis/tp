@@ -81,7 +81,7 @@ lbl_80045944:
 /* 800459A8 00000064  C3 E3 00 00 */	lfs f31, 0(r3)
 /* 800459AC 00000068  48 00 00 08 */	b lbl_800459B4
 lbl_800459B0:
-/* 800459B0 00000000  C3 E2 84 D0 */	lfs f31, d_event_d_event_data__LIT_4264(r2)
+/* 800459B0 00000000  C3 E2 84 D0 */	lfs f31, d_event_d_event_data__lit_4264(r2)
 lbl_800459B4:
 /* 800459B4 00000000  38 7E 4E C8 */	addi r3, r30, 0x4ec8
 /* 800459B8 00000004  7F 44 D3 78 */	mr r4, r26
@@ -89,7 +89,7 @@ lbl_800459B4:
 /* 800459C0 0000000C  7F 24 CB 78 */	mr r4, r25
 /* 800459C4 00000010  FC 20 F8 90 */	fmr f1, f31
 /* 800459C8 00000014  4B FF 41 A5 */	bl start__7dDemo_cFPCUcP4cXyzf
-/* 800459CC 00000018  C0 02 84 F8 */	lfs f0, d_event_d_event_data__LIT_5057(r2)
+/* 800459CC 00000018  C0 02 84 F8 */	lfs f0, d_event_d_event_data__lit_5057(r2)
 /* 800459D0 0000001C  D0 1E 4F B8 */	stfs f0, 0x4fb8(r30)
 /* 800459D4 00000020  7F 83 E3 78 */	mr r3, r28
 /* 800459D8 00000024  7F A4 EB 78 */	mr r4, r29

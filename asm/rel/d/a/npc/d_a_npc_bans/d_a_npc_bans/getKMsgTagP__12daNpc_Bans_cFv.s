@@ -1,0 +1,43 @@
+lbl_80964EB0:
+/* 80964EB0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80964EB4 00000004  7C 08 02 A6 */	mflr r0
+/* 80964EB8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80964EBC 0000000C  7C 64 1B 78 */	mr r4, r3
+/* 80964EC0 00000010  38 00 00 00 */	li r0, 0
+/* 80964EC4 00000014  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
+/* 80964EC8 00000018  90 03 00 00 */	stw r0, mFindCount__8daNpcT_c@l(r3)
+/* 80964ECC 0000001C  38 00 02 EB */	li r0, 0x2eb
+/* 80964ED0 00000020  3C 60 00 00 */	lis r3, mSrchName__8daNpcT_c@ha
+/* 80964ED4 00000024  B0 03 00 00 */	sth r0, mSrchName__8daNpcT_c@l(r3)
+/* 80964ED8 00000028  3C 60 00 00 */	lis r3, srchActor__8daNpcT_cFPvPv@ha
+/* 80964EDC 0000002C  38 63 00 00 */	addi r3, r3, srchActor__8daNpcT_cFPvPv@l
+/* 80964EE0 00000030  4B FF D9 59 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80964EE4 00000034  38 80 00 00 */	li r4, 0
+/* 80964EE8 00000038  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
+/* 80964EEC 0000003C  80 03 00 00 */	lwz r0, mFindCount__8daNpcT_c@l(r3)
+/* 80964EF0 00000040  3C 60 00 00 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
+/* 80964EF4 00000044  38 A3 00 00 */	addi r5, r3, mFindActorPtrs__8daNpcT_c@l
+/* 80964EF8 00000048  7C 09 03 A6 */	mtctr r0
+/* 80964EFC 0000004C  2C 00 00 00 */	cmpwi r0, 0
+/* 80964F00 00000050  40 81 00 34 */	ble lbl_80964F34
+lbl_80964F04:
+/* 80964F04 00000000  7C 65 20 2E */	lwzx r3, r5, r4
+/* 80964F08 00000004  80 03 00 B0 */	lwz r0, 0xb0(r3)
+/* 80964F0C 00000008  54 06 46 3E */	srwi r6, r0, 0x18
+/* 80964F10 0000000C  38 06 FF 01 */	addi r0, r6, -255
+/* 80964F14 00000010  30 00 FF FF */	addic r0, r0, -1
+/* 80964F18 00000014  7C 00 01 10 */	subfe r0, r0, r0
+/* 80964F1C 00000018  7C C0 00 78 */	andc r0, r6, r0
+/* 80964F20 0000001C  2C 00 00 01 */	cmpwi r0, 1
+/* 80964F24 00000020  40 82 00 08 */	bne lbl_80964F2C
+/* 80964F28 00000024  48 00 00 10 */	b lbl_80964F38
+lbl_80964F2C:
+/* 80964F2C 00000000  38 84 00 04 */	addi r4, r4, 4
+/* 80964F30 00000004  42 00 FF D4 */	bdnz lbl_80964F04
+lbl_80964F34:
+/* 80964F34 00000000  38 60 00 00 */	li r3, 0
+lbl_80964F38:
+/* 80964F38 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80964F3C 00000004  7C 08 03 A6 */	mtlr r0
+/* 80964F40 00000008  38 21 00 10 */	addi r1, r1, 0x10
+/* 80964F44 0000000C  4E 80 00 20 */	blr 

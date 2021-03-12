@@ -1,0 +1,30 @@
+#
+# Generate By: dol2asm
+# Module: 741
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D60820, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D6084C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D60878, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
+	'create__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60898, 'size': 0x0064, 'padding': 0x00, 'name': "create__18daTag_ShopCamera_cFv", 'reference_count': 1, 'type': "Function"},
+	'Delete__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D608FC, 'size': 0x0008, 'padding': 0x00, 'name': "Delete__18daTag_ShopCamera_cFv", 'reference_count': 1, 'type': "Function"},
+	'Execute__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60904, 'size': 0x0008, 'padding': 0x00, 'name': "Execute__18daTag_ShopCamera_cFv", 'reference_count': 1, 'type': "Function"},
+	'Draw__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D6090C, 'size': 0x0008, 'padding': 0x00, 'name': "Draw__18daTag_ShopCamera_cFv", 'reference_count': 1, 'type': "Function"},
+	'initialize__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60914, 'size': 0x007C, 'padding': 0x00, 'name': "initialize__18daTag_ShopCamera_cFv", 'reference_count': 1, 'type': "Function"},
+	'daTag_ShopCamera_Create__FPv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60990, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_ShopCamera_Create__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_ShopCamera_Delete__FPv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D609B0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_ShopCamera_Delete__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_ShopCamera_Execute__FPv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D609D0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_ShopCamera_Execute__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_ShopCamera_Draw__FPv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D609F0, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_ShopCamera_Draw__FPv", 'reference_count': 1, 'type': "Function"},
+	'daTag_ShopCamera_IsDelete__FPv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60A10, 'size': 0x0008, 'padding': 0x00, 'name': "daTag_ShopCamera_IsDelete__FPv", 'reference_count': 1, 'type': "Function"},
+	'__dt__18daTag_ShopCamera_cFv': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".text", 'addr': 0x80D60A18, 'size': 0x0060, 'padding': 0x00, 'name': "__dt__18daTag_ShopCamera_cFv", 'reference_count': 0, 'type': "Function"},
+	'data_80D60A78': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D60A78, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80D60A7C': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D60A7C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3663': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".rodata", 'addr': 0x80D60A84, 'size': 0x0004, 'padding': 0x00, 'name': "@3663", 'reference_count': 0, 'type': "Integer"},
+	'lit_3664': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".rodata", 'addr': 0x80D60A88, 'size': 0x0004, 'padding': 0x00, 'name': "@3664", 'reference_count': 0, 'type': "Integer"},
+	'lit_3665': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".rodata", 'addr': 0x80D60A8C, 'size': 0x0004, 'padding': 0x00, 'name': "@3665", 'reference_count': 0, 'type': "Integer"},
+	'lit_3666': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".rodata", 'addr': 0x80D60A90, 'size': 0x0004, 'padding': 0x00, 'name': "@3666", 'reference_count': 0, 'type': "Integer"},
+	'daTag_ShopCamera_MethodTable': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".data", 'addr': 0x80D60A94, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_ShopCamera_MethodTable", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_TAG_SHOPCAM': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".data", 'addr': 0x80D60AB4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_SHOPCAM", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__18daTag_ShopCamera_c': {'library': "d/a/tag/d_a_tag_shop_camera", 'translation_unit': "d_a_tag_shop_camera", 'section': ".data", 'addr': 0x80D60AE4, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__18daTag_ShopCamera_c", 'reference_count': 0, 'type': "VirtualTable"},
+}

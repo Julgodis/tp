@@ -5,28 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRKReleaseBuffer();
-extern void TRKGetFreeBuffer();
-extern void TRKRequestSend();
-extern void TRKDoNotifyStopped();
-extern void TRKTargetAddExceptionInfo();
-extern void TRKTargetAddStopInfo();
-}
+extern "C" extern void TRKReleaseBuffer();
+extern "C" extern void TRKGetFreeBuffer();
+extern "C" extern void TRKRequestSend();
+extern "C" extern void TRKDoNotifyStopped();
+extern "C" extern void TRKTargetAddExceptionInfo();
+extern "C" extern void TRKTargetAddStopInfo();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036F4B0-8036F548 0098 .text      TRKDoNotifyStopped                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKDoNotifyStopped() {
+extern "C" asm void TRKDoNotifyStopped() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/notify/TRKDoNotifyStopped.s"
 }

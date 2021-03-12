@@ -3,7 +3,7 @@ lbl_8024BBE4:
 /* 8024BBE8 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8024BBEC 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8024BBF0 0000000C  C0 23 00 34 */	lfs f1, 0x34(r3)
-/* 8024BBF4 00000010  C0 02 B3 98 */	lfs f0, LIT_5608(r2)
+/* 8024BBF4 00000010  C0 02 B3 98 */	lfs f0, lit_5608(r2)
 /* 8024BBF8 00000014  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8024BBFC 00000018  FC 00 00 1E */	fctiwz f0, f0
 /* 8024BC00 0000001C  D8 01 00 08 */	stfd f0, 8(r1)

@@ -5,65 +5,59 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSSetArenaHi();
-extern void OSSetArenaLo();
-extern void OSSetCurrentContext();
-extern void OSClearContext();
-extern void __OSBootDol();
-extern void OSDisableInterrupts();
-extern void __OSReboot();
-extern void OSSetSaveRegion();
-extern void OSGetSaveRegion();
+extern "C" extern void OSSetArenaHi();
+extern "C" extern void OSSetArenaLo();
+extern "C" extern void OSSetCurrentContext();
+extern "C" extern void OSClearContext();
+extern "C" extern void __OSBootDol();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void __OSReboot();
+extern "C" extern void OSSetSaveRegion();
+extern "C" extern void OSGetSaveRegion();
 SECTION_SBSS extern u8 SaveStart[4];
 SECTION_SBSS extern u8 SaveEnd[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451688-8045168C 0004 .sbss      SaveStart                                                    */
-SECTION_SBSS u8 SaveStart[4];
-/* 8045168C-80451690 0004 .sbss      SaveEnd                                                      */
-SECTION_SBSS u8 SaveEnd[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8033F5D0-8033F640 0070 .text      __OSReboot                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __OSReboot() {
+extern "C" asm void __OSReboot() {
 	nofralloc
 #include "asm/dolphin/os/OSReboot/__OSReboot.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451688-8045168C 0004 .sbss      SaveStart                                                    */
+u8 SaveStart[4];
+
+/* 8045168C-80451690 0004 .sbss      SaveEnd                                                      */
+u8 SaveEnd[4];
+
 /* 8033F640-8033F64C 000C .text      OSSetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSSetSaveRegion() {
+extern "C" asm void OSSetSaveRegion() {
 	nofralloc
 #include "asm/dolphin/os/OSReboot/OSSetSaveRegion.s"
 }
 #pragma pop
 
+
 /* 8033F64C-8033F660 0014 .text      OSGetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSGetSaveRegion() {
+extern "C" asm void OSGetSaveRegion() {
 	nofralloc
 #include "asm/dolphin/os/OSReboot/OSGetSaveRegion.s"
 }

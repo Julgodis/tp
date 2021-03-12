@@ -35,7 +35,7 @@ lbl_8001D150:
 /* 8001D18C 0000003C  39 00 00 00 */	li r8, 0
 /* 8001D190 00000040  39 20 00 00 */	li r9, 0
 /* 8001D194 00000044  39 41 00 20 */	addi r10, r1, 0x20
-/* 8001D198 00000048  C0 22 82 38 */	lfs f1, f_op_f_op_actor_mng__LIT_5810(r2)
+/* 8001D198 00000048  C0 22 82 38 */	lfs f1, f_op_f_op_actor_mng__lit_5810(r2)
 /* 8001D19C 0000004C  48 03 03 31 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8001D1A0 00000050  90 7B 00 00 */	stw r3, 0(r27)
 /* 8001D1A4 00000054  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)

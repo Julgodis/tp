@@ -23,7 +23,7 @@ lbl_8011C8D8:
 /* 8011C8DC 00000004  38 80 00 FF */	li r4, 0xff
 /* 8011C8E0 00000008  4B F9 06 A1 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
 lbl_8011C8E4:
-/* 8011C8E4 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8011C8E4 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011C8E8 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8011C8EC 00000008  38 60 00 01 */	li r3, 1
 lbl_8011C8F0:

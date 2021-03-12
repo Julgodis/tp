@@ -27,8 +27,8 @@ lbl_801C08B4:
 lbl_801C08CC:
 /* 801C08CC 00000000  28 1C 00 10 */	cmplwi r28, 0x10
 /* 801C08D0 00000004  41 81 02 54 */	bgt lbl_801C0B24
-/* 801C08D4 00000008  3C 60 80 3C */	lis r3, d_menu_d_menu_dmap_map__LIT_3798@ha
-/* 801C08D8 0000000C  38 63 CB 6C */	addi r3, r3, d_menu_d_menu_dmap_map__LIT_3798@l
+/* 801C08D4 00000008  3C 60 80 3C */	lis r3, d_menu_d_menu_dmap_map__lit_3798@ha
+/* 801C08D8 0000000C  38 63 CB 6C */	addi r3, r3, d_menu_d_menu_dmap_map__lit_3798@l
 /* 801C08DC 00000010  57 80 10 3A */	slwi r0, r28, 2
 /* 801C08E0 00000014  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801C08E4 00000018  7C 09 03 A6 */	mtctr r0

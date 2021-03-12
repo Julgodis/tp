@@ -28,11 +28,11 @@ lbl_80253800:
 /* 80253810 00000010  40 82 00 58 */	bne lbl_80253868
 /* 80253814 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80253818 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8025381C 0000001C  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3800(r2)
+/* 8025381C 0000001C  C0 22 B4 5C */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3800(r2)
 /* 80253820 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80253824 00000024  C0 62 B4 84 */	lfs f3, d_ovlp_d_ovlp_fade3__LIT_3947(r2)
+/* 80253824 00000024  C0 62 B4 84 */	lfs f3, d_ovlp_d_ovlp_fade3__lit_3947(r2)
 /* 80253828 00000028  48 0F 30 C1 */	bl PSMTXTrans
-/* 8025382C 0000002C  C0 22 B4 68 */	lfs f1, d_ovlp_d_ovlp_fade3__LIT_3803(r2)
+/* 8025382C 0000002C  C0 22 B4 68 */	lfs f1, d_ovlp_d_ovlp_fade3__lit_3803(r2)
 /* 80253830 00000030  FC 40 08 90 */	fmr f2, f1
 /* 80253834 00000034  FC 60 08 90 */	fmr f3, f1
 /* 80253838 00000038  4B DB 96 01 */	bl scaleM__14mDoMtx_stack_cFfff

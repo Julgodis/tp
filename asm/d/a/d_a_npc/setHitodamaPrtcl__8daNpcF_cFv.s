@@ -15,13 +15,13 @@ lbl_80154BD8:
 /* 80154C0C 00000034  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80154C10 00000038  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80154C14 0000003C  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80154C18 00000040  C0 02 9A 6C */	lfs f0, LIT_7090(r2)
+/* 80154C18 00000040  C0 02 9A 6C */	lfs f0, lit_7090(r2)
 /* 80154C1C 00000044  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80154C20 00000048  D0 1E 09 B8 */	stfs f0, 0x9b8(r30)
 /* 80154C24 0000004C  A8 1E 09 D0 */	lha r0, 0x9d0(r30)
 /* 80154C28 00000050  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80154C2C 00000054  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80154C30 00000058  C0 02 9A 84 */	lfs f0, LIT_7442(r2)
+/* 80154C30 00000058  C0 02 9A 84 */	lfs f0, lit_7442(r2)
 /* 80154C34 0000005C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80154C38 00000060  D0 1E 09 BC */	stfs f0, 0x9bc(r30)
 /* 80154C3C 00000064  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
@@ -84,7 +84,7 @@ lbl_80154CDC:
 /* 80154D1C 00000040  39 00 00 00 */	li r8, 0
 /* 80154D20 00000044  39 3E 08 F0 */	addi r9, r30, 0x8f0
 /* 80154D24 00000048  39 40 00 00 */	li r10, 0
-/* 80154D28 0000004C  C0 22 99 DC */	lfs f1, d_a_d_a_npc__LIT_4140(r2)
+/* 80154D28 0000004C  C0 22 99 DC */	lfs f1, d_a_d_a_npc__lit_4140(r2)
 /* 80154D2C 00000050  4B EF 87 A1 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80154D30 00000054  7C 7E D9 2E */	stwx r3, r30, r27
 /* 80154D34 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)

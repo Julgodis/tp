@@ -5,34 +5,32 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
-extern void getFreeHandle__15JAISoundHandlesFv();
-}
+extern "C" extern void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
+extern "C" extern void getFreeHandle__15JAISoundHandlesFv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802A2C98-802A2CF4 005C .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getHandleSoundID__15JAISoundHandlesF10JAISoundID() {
+extern "C" asm void getHandleSoundID__15JAISoundHandlesF10JAISoundID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundHandles/getHandleSoundID__15JAISoundHandlesF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802A2CF4-802A2D34 0040 .text      getFreeHandle__15JAISoundHandlesFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFreeHandle__15JAISoundHandlesFv() {
+extern "C" asm void getFreeHandle__15JAISoundHandlesFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundHandles/getFreeHandle__15JAISoundHandlesFv.s"
 }

@@ -57,16 +57,16 @@ lbl_8004DD1C:
 /* 8004DDF8 000000DC  10 00 00 32 */	ps_mul f0, f0, f0
 /* 8004DDFC 000000E0  10 62 00 BA */	ps_madd f3, f2, f2, f0
 /* 8004DE00 000000E4  10 63 00 14 */	ps_sum0 f3, f3, f0, f0
-/* 8004DE04 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004DE04 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004DE08 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004DE0C 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004DE10 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004DE14 000000F8  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 8004DE18 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DE1C 00000004  40 82 00 1C */	bne lbl_8004DE38
-/* 8004DE20 00000008  C0 22 85 50 */	lfs f1, d_particle_d_particle__LIT_3964(r2)
+/* 8004DE20 00000008  C0 22 85 50 */	lfs f1, d_particle_d_particle__lit_3964(r2)
 /* 8004DE24 0000000C  D0 21 00 5C */	stfs f1, 0x5c(r1)
-/* 8004DE28 00000010  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004DE28 00000010  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004DE2C 00000014  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 8004DE30 00000018  D0 21 00 64 */	stfs f1, 0x64(r1)
 /* 8004DE34 0000001C  48 00 00 78 */	b lbl_8004DEAC
@@ -78,7 +78,7 @@ lbl_8004DE38:
 /* 8004DE48 00000010  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DE4C 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DE50 00000004  41 82 00 5C */	beq lbl_8004DEAC
-/* 8004DE54 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004DE54 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004DE58 00000020  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DE5C 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DE60 00000004  40 82 00 0C */	bne lbl_8004DE6C
@@ -87,9 +87,9 @@ lbl_8004DE38:
 lbl_8004DE6C:
 /* 8004DE6C 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004DE70 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004DE74 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004DE74 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004DE78 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004DE7C 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004DE7C 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004DE80 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004DE84 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004DE88 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -112,17 +112,17 @@ lbl_8004DEAC:
 /* 8004DEC4 00000000  C2 E1 00 58 */	lfs f23, 0x58(r1)
 /* 8004DEC8 0000001C  10 57 05 FA */	ps_madd f2, f23, f23, f0
 /* 8004DECC 00000020  10 42 00 14 */	ps_sum0 f2, f2, f0, f0
-/* 8004DED0 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004DED0 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004DED4 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004DED8 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004DEDC 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004DEE0 00000034  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8004DEE4 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DEE8 00000004  40 82 00 1C */	bne lbl_8004DF04
-/* 8004DEEC 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004DEEC 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004DEF0 0000000C  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 8004DEF4 00000010  D0 01 00 54 */	stfs f0, 0x54(r1)
-/* 8004DEF8 00000014  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004DEF8 00000014  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004DEFC 00000018  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8004DF00 0000001C  48 00 00 78 */	b lbl_8004DF78
 lbl_8004DF04:
@@ -133,7 +133,7 @@ lbl_8004DF04:
 /* 8004DF14 00000010  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DF18 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DF1C 00000004  41 82 00 5C */	beq lbl_8004DF78
-/* 8004DF20 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004DF20 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004DF24 00000020  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DF28 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DF2C 00000004  40 82 00 0C */	bne lbl_8004DF38
@@ -142,9 +142,9 @@ lbl_8004DF04:
 lbl_8004DF38:
 /* 8004DF38 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004DF3C 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004DF40 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004DF40 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004DF44 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004DF48 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004DF48 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004DF4C 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004DF50 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004DF54 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -167,14 +167,14 @@ lbl_8004DF78:
 /* 8004DF90 00000000  C2 C1 00 70 */	lfs f22, 0x70(r1)
 /* 8004DF94 0000001C  10 96 05 BA */	ps_madd f4, f22, f22, f0
 /* 8004DF98 00000020  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004DF9C 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004DF9C 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004DFA0 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004DFA4 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004DFA8 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004DFAC 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DFB0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DFB4 00000004  41 82 00 5C */	beq lbl_8004E010
-/* 8004DFB8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004DFB8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004DFBC 00000044  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004DFC0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004DFC4 00000004  40 82 00 0C */	bne lbl_8004DFD0
@@ -183,9 +183,9 @@ lbl_8004DF78:
 lbl_8004DFD0:
 /* 8004DFD0 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004DFD4 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004DFD8 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004DFD8 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004DFDC 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004DFE0 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004DFE0 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004DFE4 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004DFE8 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004DFEC 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -217,20 +217,20 @@ lbl_8004E010:
 /* 8004E04C 0000003C  D0 01 01 28 */	stfs f0, 0x128(r1)
 /* 8004E050 00000040  C0 01 00 58 */	lfs f0, 0x58(r1)
 /* 8004E054 00000044  D0 01 01 2C */	stfs f0, 0x12c(r1)
-/* 8004E058 00000048  C0 42 85 5C */	lfs f2, d_particle_d_particle__LIT_4090(r2)
+/* 8004E058 00000048  C0 42 85 5C */	lfs f2, d_particle_d_particle__lit_4090(r2)
 /* 8004E05C 0000004C  A0 1E 00 88 */	lhz r0, 0x88(r30)
-/* 8004E060 00000050  C8 22 85 68 */	lfd f1, d_particle_d_particle__LIT_4093(r2)
+/* 8004E060 00000050  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
 /* 8004E064 00000054  90 01 01 3C */	stw r0, 0x13c(r1)
 /* 8004E068 00000058  3C 00 43 30 */	lis r0, 0x4330
 /* 8004E06C 0000005C  90 01 01 38 */	stw r0, 0x138(r1)
 /* 8004E070 00000060  C8 01 01 38 */	lfd f0, 0x138(r1)
 /* 8004E074 00000064  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8004E078 00000068  EC 22 00 32 */	fmuls f1, f2, f0
-/* 8004E07C 0000006C  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E07C 0000006C  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E080 00000070  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8004E084 00000074  41 82 00 48 */	beq lbl_8004E0CC
-/* 8004E088 00000078  3C 60 80 38 */	lis r3, d_particle_d_particle__LIT_5691@ha
-/* 8004E08C 0000007C  38 83 A1 14 */	addi r4, r3, d_particle_d_particle__LIT_5691@l
+/* 8004E088 00000078  3C 60 80 38 */	lis r3, d_particle_d_particle__lit_5691@ha
+/* 8004E08C 0000007C  38 83 A1 14 */	addi r4, r3, d_particle_d_particle__lit_5691@l
 /* 8004E090 00000080  80 64 00 00 */	lwz r3, 0(r4)
 /* 8004E094 00000084  80 04 00 04 */	lwz r0, 4(r4)
 /* 8004E098 00000088  90 61 00 08 */	stw r3, 8(r1)
@@ -239,7 +239,7 @@ lbl_8004E010:
 /* 8004E0A4 00000094  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8004E0A8 00000098  38 61 00 D4 */	addi r3, r1, 0xd4
 /* 8004E0AC 0000009C  38 81 00 08 */	addi r4, r1, 8
-/* 8004E0B0 000000A0  C0 02 85 60 */	lfs f0, d_particle_d_particle__LIT_4091(r2)
+/* 8004E0B0 000000A0  C0 02 85 60 */	lfs f0, d_particle_d_particle__lit_4091(r2)
 /* 8004E0B4 000000A4  EC 20 00 72 */	fmuls f1, f0, f1
 /* 8004E0B8 000000A8  48 2F 87 C1 */	bl PSMTXRotAxisRad
 /* 8004E0BC 000000AC  38 61 01 04 */	addi r3, r1, 0x104
@@ -267,13 +267,13 @@ lbl_8004E0CC:
 /* 8004E110 00000044  7F A4 EB 78 */	mr r4, r29
 /* 8004E114 00000048  48 23 24 55 */	bl getHeight__15JPABaseParticleCFPC14JPABaseEmitter
 /* 8004E118 0000004C  EE F7 00 72 */	fmuls f23, f23, f1
-/* 8004E11C 00000050  C0 02 85 E0 */	lfs f0, LIT_6077(r2)
+/* 8004E11C 00000050  C0 02 85 E0 */	lfs f0, lit_6077(r2)
 /* 8004E120 00000054  EE D6 00 32 */	fmuls f22, f22, f0
 /* 8004E124 00000058  EE F7 00 32 */	fmuls f23, f23, f0
 /* 8004E128 0000005C  38 61 00 74 */	addi r3, r1, 0x74
 /* 8004E12C 00000060  FC 20 B0 90 */	fmr f1, f22
 /* 8004E130 00000064  FC 40 B8 90 */	fmr f2, f23
-/* 8004E134 00000068  C0 62 85 50 */	lfs f3, d_particle_d_particle__LIT_3964(r2)
+/* 8004E134 00000068  C0 62 85 50 */	lfs f3, d_particle_d_particle__lit_3964(r2)
 /* 8004E138 0000006C  48 2F 88 31 */	bl PSMTXScale
 /* 8004E13C 00000070  38 61 01 04 */	addi r3, r1, 0x104
 /* 8004E140 00000074  38 81 00 74 */	addi r4, r1, 0x74
@@ -287,9 +287,9 @@ lbl_8004E0CC:
 /* 8004E160 00000094  38 61 00 A4 */	addi r3, r1, 0xa4
 /* 8004E164 00000098  38 80 00 00 */	li r4, 0
 /* 8004E168 0000009C  48 31 20 E5 */	bl GXLoadPosMtxImm
-/* 8004E16C 000000A0  C0 42 85 50 */	lfs f2, d_particle_d_particle__LIT_3964(r2)
+/* 8004E16C 000000A0  C0 42 85 50 */	lfs f2, d_particle_d_particle__lit_3964(r2)
 /* 8004E170 000000A4  D0 41 00 44 */	stfs f2, 0x44(r1)
-/* 8004E174 000000A8  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E174 000000A8  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E178 000000AC  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 8004E17C 000000B0  D0 41 00 4C */	stfs f2, 0x4c(r1)
 /* 8004E180 000000B4  D0 41 00 38 */	stfs f2, 0x38(r1)
@@ -308,7 +308,7 @@ lbl_8004E0CC:
 /* 8004E1B4 000000E8  10 00 00 32 */	ps_mul f0, f0, f0
 /* 8004E1B8 000000EC  10 82 00 BA */	ps_madd f4, f2, f2, f0
 /* 8004E1BC 000000F0  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004E1C0 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004E1C0 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004E1C4 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004E1C8 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004E1CC 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
@@ -323,9 +323,9 @@ lbl_8004E0CC:
 lbl_8004E1F0:
 /* 8004E1F0 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004E1F4 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004E1F8 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E1F8 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E1FC 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004E200 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004E200 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004E204 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004E208 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004E20C 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -344,14 +344,14 @@ lbl_8004E230:
 /* 8004E238 00000000  C2 A1 00 40 */	lfs f21, 0x40(r1)
 /* 8004E23C 0000000C  10 95 05 7A */	ps_madd f4, f21, f21, f0
 /* 8004E240 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004E244 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004E244 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004E248 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004E24C 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004E250 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004E254 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E258 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E25C 00000004  41 82 00 5C */	beq lbl_8004E2B8
-/* 8004E260 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E260 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E264 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E268 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E26C 00000004  40 82 00 0C */	bne lbl_8004E278
@@ -360,9 +360,9 @@ lbl_8004E230:
 lbl_8004E278:
 /* 8004E278 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004E27C 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004E280 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E280 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E284 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004E288 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004E288 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004E28C 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004E290 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004E294 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -381,14 +381,14 @@ lbl_8004E2B8:
 /* 8004E2C0 00000000  C2 81 00 34 */	lfs f20, 0x34(r1)
 /* 8004E2C4 0000000C  10 94 05 3A */	ps_madd f4, f20, f20, f0
 /* 8004E2C8 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004E2CC 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004E2CC 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004E2D0 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004E2D4 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004E2D8 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004E2DC 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E2E0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E2E4 00000004  41 82 00 5C */	beq lbl_8004E340
-/* 8004E2E8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E2E8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E2EC 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E2F0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E2F4 00000004  40 82 00 0C */	bne lbl_8004E300
@@ -397,9 +397,9 @@ lbl_8004E2B8:
 lbl_8004E300:
 /* 8004E300 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004E304 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004E308 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E308 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E30C 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004E310 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004E310 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004E314 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004E318 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004E31C 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -418,14 +418,14 @@ lbl_8004E340:
 /* 8004E348 00000000  C2 61 00 28 */	lfs f19, 0x28(r1)
 /* 8004E34C 0000000C  10 93 04 FA */	ps_madd f4, f19, f19, f0
 /* 8004E350 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004E354 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004E354 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004E358 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004E35C 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004E360 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004E364 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E368 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E36C 00000004  41 82 00 5C */	beq lbl_8004E3C8
-/* 8004E370 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E370 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E374 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E378 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E37C 00000004  40 82 00 0C */	bne lbl_8004E388
@@ -434,9 +434,9 @@ lbl_8004E340:
 lbl_8004E388:
 /* 8004E388 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004E38C 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004E390 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E390 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E394 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004E398 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004E398 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004E39C 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004E3A0 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004E3A4 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -455,14 +455,14 @@ lbl_8004E3C8:
 /* 8004E3D0 00000000  C2 41 00 1C */	lfs f18, 0x1c(r1)
 /* 8004E3D4 0000000C  10 92 04 BA */	ps_madd f4, f18, f18, f0
 /* 8004E3D8 00000010  10 84 00 14 */	ps_sum0 f4, f4, f0, f0
-/* 8004E3DC 00000000  C0 22 85 D8 */	lfs f1, LIT_6075(r2)
+/* 8004E3DC 00000000  C0 22 85 D8 */	lfs f1, lit_6075(r2)
 /* 8004E3E0 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8004E3E4 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8004E3E8 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8004E3EC 00000024  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E3F0 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E3F4 00000004  41 82 00 5C */	beq lbl_8004E450
-/* 8004E3F8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E3F8 00000008  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E3FC 00000034  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 8004E400 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 8004E404 00000004  40 82 00 0C */	bne lbl_8004E410
@@ -471,9 +471,9 @@ lbl_8004E3C8:
 lbl_8004E410:
 /* 8004E410 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8004E414 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8004E418 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E418 00000008  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E41C 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8004E420 00000010  C0 22 85 DC */	lfs f1, LIT_6076(r2)
+/* 8004E420 00000010  C0 22 85 DC */	lfs f1, lit_6076(r2)
 /* 8004E424 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8004E428 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8004E42C 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
@@ -491,12 +491,12 @@ lbl_8004E450:
 /* 8004E454 00000004  38 80 00 00 */	li r4, 0
 /* 8004E458 00000008  38 A0 00 06 */	li r5, 6
 /* 8004E45C 0000000C  48 30 E3 09 */	bl GXBegin
-/* 8004E460 00000010  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E460 00000010  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E464 00000014  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */
 /* 8004E468 00000018  D0 03 80 00 */	stfs f0, 0x8000(r3)
-/* 8004E46C 0000001C  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E46C 0000001C  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E470 00000020  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E474 00000024  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E474 00000024  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E478 00000028  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8004E47C 0000002C  C0 01 00 44 */	lfs f0, 0x44(r1)
 /* 8004E480 00000030  D0 03 80 00 */	stfs f0, -0x8000(r3)
@@ -510,15 +510,15 @@ lbl_8004E450:
 /* 8004E4A0 00000050  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E4A4 00000054  57 E4 06 3E */	clrlwi r4, r31, 0x18
 /* 8004E4A8 00000058  9B E3 80 00 */	stb r31, -0x8000(r3)
-/* 8004E4AC 0000005C  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E4AC 0000005C  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E4B0 00000060  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E4B4 00000064  C0 02 85 8C */	lfs f0, d_particle_d_particle__LIT_5066(r2)
+/* 8004E4B4 00000064  C0 02 85 8C */	lfs f0, d_particle_d_particle__lit_5066(r2)
 /* 8004E4B8 00000068  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E4BC 0000006C  C0 82 85 88 */	lfs f4, d_particle_d_particle__LIT_4519(r2)
+/* 8004E4BC 0000006C  C0 82 85 88 */	lfs f4, d_particle_d_particle__lit_4519(r2)
 /* 8004E4C0 00000070  D0 83 80 00 */	stfs f4, -0x8000(r3)
-/* 8004E4C4 00000074  C0 62 85 E4 */	lfs f3, LIT_6078(r2)
+/* 8004E4C4 00000074  C0 62 85 E4 */	lfs f3, lit_6078(r2)
 /* 8004E4C8 00000078  D0 63 80 00 */	stfs f3, -0x8000(r3)
-/* 8004E4CC 0000007C  C0 42 85 50 */	lfs f2, d_particle_d_particle__LIT_3964(r2)
+/* 8004E4CC 0000007C  C0 42 85 50 */	lfs f2, d_particle_d_particle__lit_3964(r2)
 /* 8004E4D0 00000080  D0 43 80 00 */	stfs f2, -0x8000(r3)
 /* 8004E4D4 00000084  C0 A1 00 38 */	lfs f5, 0x38(r1)
 /* 8004E4D8 00000088  D0 A3 80 00 */	stfs f5, -0x8000(r3)
@@ -530,9 +530,9 @@ lbl_8004E450:
 /* 8004E4F0 000000A0  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E4F4 000000A4  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E4F8 000000A8  9B E3 80 00 */	stb r31, -0x8000(r3)
-/* 8004E4FC 000000AC  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E4FC 000000AC  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E500 000000B0  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E504 000000B4  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E504 000000B4  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E508 000000B8  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8004E50C 000000BC  D0 83 80 00 */	stfs f4, -0x8000(r3)
 /* 8004E510 000000C0  D0 43 80 00 */	stfs f2, -0x8000(r3)
@@ -547,11 +547,11 @@ lbl_8004E450:
 /* 8004E534 000000E4  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E538 000000E8  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E53C 000000EC  9B E3 80 00 */	stb r31, -0x8000(r3)
-/* 8004E540 000000F0  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E540 000000F0  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E544 000000F4  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E548 000000F8  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E548 000000F8  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E54C 000000FC  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E550 00000100  C0 22 85 E8 */	lfs f1, LIT_6079(r2)
+/* 8004E550 00000100  C0 22 85 E8 */	lfs f1, lit_6079(r2)
 /* 8004E554 00000104  D0 23 80 00 */	stfs f1, -0x8000(r3)
 /* 8004E558 00000108  D0 43 80 00 */	stfs f2, -0x8000(r3)
 /* 8004E55C 0000010C  D0 43 80 00 */	stfs f2, -0x8000(r3)
@@ -565,9 +565,9 @@ lbl_8004E450:
 /* 8004E57C 0000012C  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E580 00000130  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E584 00000134  98 83 80 00 */	stb r4, -0x8000(r3)
-/* 8004E588 00000138  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E588 00000138  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E58C 0000013C  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E590 00000140  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E590 00000140  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E594 00000144  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8004E598 00000148  D0 23 80 00 */	stfs f1, -0x8000(r3)
 /* 8004E59C 0000014C  D0 63 80 00 */	stfs f3, -0x8000(r3)
@@ -582,9 +582,9 @@ lbl_8004E450:
 /* 8004E5C0 00000170  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E5C4 00000174  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E5C8 00000178  98 83 80 00 */	stb r4, -0x8000(r3)
-/* 8004E5CC 0000017C  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E5CC 0000017C  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E5D0 00000180  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E5D4 00000184  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E5D4 00000184  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E5D8 00000188  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8004E5DC 0000018C  D0 83 80 00 */	stfs f4, -0x8000(r3)
 /* 8004E5E0 00000190  D0 63 80 00 */	stfs f3, -0x8000(r3)
@@ -596,9 +596,9 @@ lbl_8004E450:
 /* 8004E5F8 000001A8  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E5FC 000001AC  98 03 80 00 */	stb r0, -0x8000(r3)
 /* 8004E600 000001B0  98 83 80 00 */	stb r4, -0x8000(r3)
-/* 8004E604 000001B4  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004E604 000001B4  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004E608 000001B8  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 8004E60C 000001BC  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004E60C 000001BC  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004E610 000001C0  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8004E614 000001C4  80 1E 00 7C */	lwz r0, 0x7c(r30)
 /* 8004E618 000001C8  60 00 00 08 */	ori r0, r0, 8

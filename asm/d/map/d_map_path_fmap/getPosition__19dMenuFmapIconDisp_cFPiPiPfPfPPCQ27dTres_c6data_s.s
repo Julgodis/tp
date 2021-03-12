@@ -21,12 +21,12 @@ lbl_8003E578:
 /* 8003E5C4 00000030  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 8003E5C8 00000034  EF C1 00 2A */	fadds f30, f1, f0
 /* 8003E5CC 00000038  41 82 00 0C */	beq lbl_8003E5D8
-/* 8003E5D0 0000003C  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003E5D0 0000003C  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003E5D4 00000040  D0 1D 00 00 */	stfs f0, 0(r29)
 lbl_8003E5D8:
 /* 8003E5D8 00000000  28 1E 00 00 */	cmplwi r30, 0
 /* 8003E5DC 00000004  41 82 00 0C */	beq lbl_8003E5E8
-/* 8003E5E0 00000008  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003E5E0 00000008  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003E5E4 0000000C  D0 1E 00 00 */	stfs f0, 0(r30)
 lbl_8003E5E8:
 /* 8003E5E8 00000000  28 04 00 00 */	cmplwi r4, 0

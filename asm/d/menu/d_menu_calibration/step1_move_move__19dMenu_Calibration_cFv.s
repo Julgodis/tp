@@ -18,9 +18,9 @@ lbl_801AF0C0:
 /* 801AF100 00000040  38 A0 00 00 */	li r5, 0
 /* 801AF104 00000044  38 C0 00 00 */	li r6, 0
 /* 801AF108 00000048  38 E0 00 00 */	li r7, 0
-/* 801AF10C 0000004C  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__LIT_3885(r2)
+/* 801AF10C 0000004C  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__lit_3885(r2)
 /* 801AF110 00000050  FC 40 08 90 */	fmr f2, f1
-/* 801AF114 00000054  C0 62 A5 20 */	lfs f3, d_menu_d_menu_calibration__LIT_3911(r2)
+/* 801AF114 00000054  C0 62 A5 20 */	lfs f3, d_menu_d_menu_calibration__lit_3911(r2)
 /* 801AF118 00000058  FC 80 18 90 */	fmr f4, f3
 /* 801AF11C 0000005C  39 00 00 00 */	li r8, 0
 /* 801AF120 00000060  48 0F C8 65 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -39,9 +39,9 @@ lbl_801AF12C:
 /* 801AF150 00000024  38 A0 00 00 */	li r5, 0
 /* 801AF154 00000028  38 C0 00 00 */	li r6, 0
 /* 801AF158 0000002C  38 E0 00 00 */	li r7, 0
-/* 801AF15C 00000030  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__LIT_3885(r2)
+/* 801AF15C 00000030  C0 22 A5 14 */	lfs f1, d_menu_d_menu_calibration__lit_3885(r2)
 /* 801AF160 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801AF164 00000038  C0 62 A5 20 */	lfs f3, d_menu_d_menu_calibration__LIT_3911(r2)
+/* 801AF164 00000038  C0 62 A5 20 */	lfs f3, d_menu_d_menu_calibration__lit_3911(r2)
 /* 801AF168 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801AF16C 00000040  39 00 00 00 */	li r8, 0
 /* 801AF170 00000044  48 0F C8 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

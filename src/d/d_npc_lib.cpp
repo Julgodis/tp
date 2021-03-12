@@ -5,199 +5,185 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__4cXyzFv();
-extern void transS__14mDoMtx_stack_cFRC4cXyz();
-extern void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
-extern void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
-extern void __ct__4cXyzFv();
-extern void __dt__5csXyzFv();
-extern void __ct__5csXyzFv();
-extern void __ct__16dNpcLib_lookat_cFv();
-extern void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz();
-extern void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi();
-extern void dbView__16dNpcLib_lookat_cFv();
-extern void setPrm__16dNpcLib_lookat_cFv();
-extern void update__16dNpcLib_lookat_cFv();
-extern void limitter__16dNpcLib_lookat_cFPssss();
-extern void __dt__16dNpcLib_lookat_cFv();
-extern void __mi__4cXyzCFRC3Vec();
-extern void normalize__4cXyzFv();
-extern void isZero__4cXyzCFv();
-extern void __apl__5csXyzFR5csXyz();
-extern void cM_atan2s__Fff();
-extern void __dl__FPv();
-extern void PSMTXCopy();
-extern void PSMTXConcat();
-extern void PSMTXInverse();
-extern void PSMTXMultVec();
-extern void PSVECSquareMag();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savegpr_22();
-extern void _savegpr_23();
-extern void _savegpr_25();
-extern void _restgpr_22();
-extern void _restgpr_23();
-extern void _restgpr_25();
-SECTION_DATA extern void* __vt__16dNpcLib_lookat_c[4];
+extern "C" extern void __dt__4cXyzFv();
+extern "C" extern void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" extern void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" extern void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" extern void __ct__4cXyzFv();
+extern "C" extern void __dt__5csXyzFv();
+extern "C" extern void __ct__5csXyzFv();
+extern "C" extern void __ct__16dNpcLib_lookat_cFv();
+extern "C" extern void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz();
+extern "C" extern void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi();
+extern "C" extern void dbView__16dNpcLib_lookat_cFv();
+extern "C" extern void setPrm__16dNpcLib_lookat_cFv();
+extern "C" extern void update__16dNpcLib_lookat_cFv();
+extern "C" extern void limitter__16dNpcLib_lookat_cFPssss();
+extern "C" extern void __dt__16dNpcLib_lookat_cFv();
+extern "C" extern void __mi__4cXyzCFRC3Vec();
+extern "C" extern void normalize__4cXyzFv();
+extern "C" extern void isZero__4cXyzCFv();
+extern "C" extern void __apl__5csXyzFR5csXyz();
+extern "C" extern void cM_atan2s__Fff();
+extern "C" extern void __dl__FPv();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void PSMTXInverse();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void PSVECSquareMag();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_23();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_23();
+extern "C" extern void _restgpr_25();
+SECTION_DATA extern void* const __vt__16dNpcLib_lookat_c[4];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_SDATA extern u8 __float_nan[4];
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 Zero__5csXyz[4];
 SECTION_SBSS extern u8 data_80451164[4];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3864[4];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3865[4];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3866[8];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3867[8];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3868[8];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3869[8];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3873[8];
-SECTION_SDATA2 extern u8 d_d_npc_lib__LIT_3970[8];
-}
+SECTION_SDATA2 extern u8 d_d_npc_lib__lit_3864[4];
+SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3865;
+SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3866;
+SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3867;
+SECTION_SDATA2 extern u8 d_d_npc_lib__lit_3868[8];
+SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3869;
+SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3873;
+SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3970;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C2B88-803C2B98 000C .data      __vt__16dNpcLib_lookat_c                                     */
-SECTION_DATA void* __vt__16dNpcLib_lookat_c[4] = {
+void* const __vt__16dNpcLib_lookat_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dNpcLib_lookat_cFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80454DE8-80454DEC 0004 .sdata2    @3864                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3864[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454DEC-80454DF0 0004 .sdata2    @3865                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3865[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80454DF0-80454DF8 0008 .sdata2    @3866                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3866[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454DF8-80454E00 0008 .sdata2    @3867                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3867[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454E00-80454E08 0008 .sdata2    @3868                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3868[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80454E08-80454E10 0004 .sdata2    @3869                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3869[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80454E10-80454E18 0008 .sdata2    @3873                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3873[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80454E18-80454E20 0004 .sdata2    @3970                                                        */
-SECTION_SDATA2 u8 d_d_npc_lib__LIT_3970[8] = {
-	0x3E, 0xCC, 0xCC, 0xCD,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80251314-8025140C 00F8 .text      __ct__16dNpcLib_lookat_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16dNpcLib_lookat_cFv() {
+extern "C" asm void __ct__16dNpcLib_lookat_cFv() {
 	nofralloc
 #include "asm/d/d_npc_lib/__ct__16dNpcLib_lookat_cFv.s"
 }
 #pragma pop
 
+
 /* 8025140C-80251534 0128 .text      init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz() {
+extern "C" asm void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz() {
 	nofralloc
 #include "asm/d/d_npc_lib/init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454DE8-80454DEC 0004 .sdata2    @3864                                                        */
+u8 d_d_npc_lib__lit_3864[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80454DEC-80454DF0 0004 .sdata2    @3865                                                        */
+f32 d_d_npc_lib__lit_3865 = 1.0f;
+
+/* 80454DF0-80454DF8 0008 .sdata2    @3866                                                        */
+f64 d_d_npc_lib__lit_3866 = 0.5;
+
+/* 80454DF8-80454E00 0008 .sdata2    @3867                                                        */
+f64 d_d_npc_lib__lit_3867 = 3.0;
+
+/* 80454E00-80454E08 0008 .sdata2    @3868                                                        */
+u8 d_d_npc_lib__lit_3868[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80454E08-80454E10 0004 .sdata2    @3869                                                        */
+f32 d_d_npc_lib__lit_3869 = 0.5f;
+/* padding 4 bytes */
+
+/* 80454E10-80454E18 0008 .sdata2    @3873                                                        */
+f64 d_d_npc_lib__lit_3873 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 80251534-80251B60 062C .text      action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi() {
+extern "C" asm void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi() {
 	nofralloc
 #include "asm/d/d_npc_lib/action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi.s"
 }
 #pragma pop
 
+
 /* 80251B60-80251B64 0004 .text      dbView__16dNpcLib_lookat_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dbView__16dNpcLib_lookat_cFv() {
+extern "C" asm void dbView__16dNpcLib_lookat_cFv() {
 	nofralloc
 #include "asm/d/d_npc_lib/dbView__16dNpcLib_lookat_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80454E18-80454E20 0004 .sdata2    @3970                                                        */
+f32 d_d_npc_lib__lit_3970 = 2.0f / 5.0f;
+/* padding 4 bytes */
+
 /* 80251B64-80251EF8 0394 .text      setPrm__16dNpcLib_lookat_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPrm__16dNpcLib_lookat_cFv() {
+extern "C" asm void setPrm__16dNpcLib_lookat_cFv() {
 	nofralloc
 #include "asm/d/d_npc_lib/setPrm__16dNpcLib_lookat_cFv.s"
 }
 #pragma pop
 
+
 /* 80251EF8-80252018 0120 .text      update__16dNpcLib_lookat_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__16dNpcLib_lookat_cFv() {
+extern "C" asm void update__16dNpcLib_lookat_cFv() {
 	nofralloc
 #include "asm/d/d_npc_lib/update__16dNpcLib_lookat_cFv.s"
 }
 #pragma pop
 
+
 /* 80252018-80252094 007C .text      limitter__16dNpcLib_lookat_cFPssss                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void limitter__16dNpcLib_lookat_cFPssss() {
+extern "C" asm void limitter__16dNpcLib_lookat_cFPssss() {
 	nofralloc
 #include "asm/d/d_npc_lib/limitter__16dNpcLib_lookat_cFPssss.s"
 }
 #pragma pop
 
+
 /* 80252094-8025217C 00E8 .text      __dt__16dNpcLib_lookat_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16dNpcLib_lookat_cFv() {
+extern "C" asm void __dt__16dNpcLib_lookat_cFv() {
 	nofralloc
 #include "asm/d/d_npc_lib/__dt__16dNpcLib_lookat_cFv.s"
 }

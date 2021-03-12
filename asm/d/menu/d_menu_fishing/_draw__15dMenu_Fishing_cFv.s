@@ -18,10 +18,10 @@ lbl_801C514C:
 /* 801C518C 00000040  7D 89 03 A6 */	mtctr r12
 /* 801C5190 00000044  4E 80 04 21 */	bctrl 
 /* 801C5194 00000048  80 7E 01 F0 */	lwz r3, 0x1f0(r30)
-/* 801C5198 0000004C  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__LIT_3904(r2)
+/* 801C5198 0000004C  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__lit_3904(r2)
 /* 801C519C 00000050  FC 40 08 90 */	fmr f2, f1
-/* 801C51A0 00000054  C0 62 A7 0C */	lfs f3, d_menu_d_menu_fishing__LIT_3905(r2)
-/* 801C51A4 00000058  C0 82 A7 10 */	lfs f4, d_menu_d_menu_fishing__LIT_3906(r2)
+/* 801C51A0 00000054  C0 62 A7 0C */	lfs f3, d_menu_d_menu_fishing__lit_3905(r2)
+/* 801C51A4 00000058  C0 82 A7 10 */	lfs f4, d_menu_d_menu_fishing__lit_3906(r2)
 /* 801C51A8 0000005C  38 80 00 00 */	li r4, 0
 /* 801C51AC 00000060  38 A0 00 00 */	li r5, 0
 /* 801C51B0 00000064  38 C0 00 00 */	li r6, 0
@@ -30,12 +30,12 @@ lbl_801C514C:
 /* 801C51BC 00000070  7D 89 03 A6 */	mtctr r12
 /* 801C51C0 00000074  4E 80 04 21 */	bctrl 
 /* 801C51C4 00000078  80 7E 00 18 */	lwz r3, 0x18(r30)
-/* 801C51C8 0000007C  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__LIT_3904(r2)
+/* 801C51C8 0000007C  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__lit_3904(r2)
 /* 801C51CC 00000080  FC 40 08 90 */	fmr f2, f1
 /* 801C51D0 00000084  7F E4 FB 78 */	mr r4, r31
 /* 801C51D4 00000088  48 13 3D 01 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 801C51D8 0000008C  80 7E 00 1C */	lwz r3, 0x1c(r30)
-/* 801C51DC 00000090  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__LIT_3904(r2)
+/* 801C51DC 00000090  C0 22 A7 08 */	lfs f1, d_menu_d_menu_fishing__lit_3904(r2)
 /* 801C51E0 00000094  FC 40 08 90 */	fmr f2, f1
 /* 801C51E4 00000098  7F E4 FB 78 */	mr r4, r31
 /* 801C51E8 0000009C  48 13 3C ED */	bl draw__9J2DScreenFffPC14J2DGrafContext

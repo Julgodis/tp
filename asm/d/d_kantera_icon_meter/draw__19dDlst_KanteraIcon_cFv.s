@@ -14,7 +14,7 @@ lbl_801AECB8:
 /* 801AECE8 00000030  7D 89 03 A6 */	mtctr r12
 /* 801AECEC 00000034  4E 80 04 21 */	bctrl 
 /* 801AECF0 00000038  80 7E 00 04 */	lwz r3, 4(r30)
-/* 801AECF4 0000003C  C0 22 A5 08 */	lfs f1, d_d_kantera_icon_meter__LIT_3776(r2)
+/* 801AECF4 0000003C  C0 22 A5 08 */	lfs f1, d_d_kantera_icon_meter__lit_3776(r2)
 /* 801AECF8 00000040  FC 40 08 90 */	fmr f2, f1
 /* 801AECFC 00000044  7F E4 FB 78 */	mr r4, r31
 /* 801AED00 00000048  48 14 A1 D5 */	bl draw__9J2DScreenFffPC14J2DGrafContext

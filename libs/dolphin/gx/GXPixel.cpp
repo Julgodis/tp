@@ -5,215 +5,201 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __GXFlushTextureState();
-extern void GXSetFog();
-extern void GXSetFogRangeAdj();
-extern void GXSetBlendMode();
-extern void GXSetColorUpdate();
-extern void GXSetAlphaUpdate();
-extern void GXSetZMode();
-extern void GXSetZCompLoc();
-extern void GXSetPixelFmt();
-extern void GXSetDither();
-extern void GXSetDstAlpha();
-extern void GXSetFieldMask();
-extern void GXSetFieldMode();
-extern void __cvt_fp2unsigned();
+extern "C" extern void __GXFlushTextureState();
+extern "C" extern void GXSetFog();
+extern "C" extern void GXSetFogRangeAdj();
+extern "C" extern void GXSetBlendMode();
+extern "C" extern void GXSetColorUpdate();
+extern "C" extern void GXSetAlphaUpdate();
+extern "C" extern void GXSetZMode();
+extern "C" extern void GXSetZCompLoc();
+extern "C" extern void GXSetPixelFmt();
+extern "C" extern void GXSetDither();
+extern "C" extern void GXSetDstAlpha();
+extern "C" extern void GXSetFieldMask();
+extern "C" extern void GXSetFieldMode();
+extern "C" extern void __cvt_fp2unsigned();
 SECTION_DATA extern u8 data_803D2838[32];
 SECTION_SDATA2 extern void* __GXData;
-SECTION_SDATA2 extern u8 GXPixel__LIT_211[4];
-SECTION_SDATA2 extern u8 LIT_212[4];
-SECTION_SDATA2 extern u8 GXPixel__LIT_213[8];
-SECTION_SDATA2 extern u8 LIT_214[8];
-SECTION_SDATA2 extern u8 GXPixel__LIT_215[8];
-SECTION_SDATA2 extern u8 GXPixel__LIT_216[8];
-SECTION_SDATA2 extern u8 GXPixel__LIT_217[8];
-SECTION_SDATA2 extern u8 GXPixel__LIT_219[8];
-}
+SECTION_SDATA2 extern u8 GXPixel__lit_211[4];
+SECTION_SDATA2 extern f32 lit_212;
+SECTION_SDATA2 extern f32 GXPixel__lit_213;
+SECTION_SDATA2 extern f64 lit_214;
+SECTION_SDATA2 extern f32 GXPixel__lit_215;
+SECTION_SDATA2 extern f64 GXPixel__lit_216;
+SECTION_SDATA2 extern f32 GXPixel__lit_217;
+SECTION_SDATA2 extern f64 GXPixel__lit_219;
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803D2838-803D2858 0020 .data      p2f$358                                                      */
-SECTION_DATA u8 data_803D2838[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
-	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456618-8045661C 0004 .sdata2    @211                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_211[4] = {
+u8 GXPixel__lit_211[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 8045661C-80456620 0004 .sdata2    @212                                                         */
-SECTION_SDATA2 u8 LIT_212[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 lit_212 = 1.0f;
+
 /* 80456620-80456628 0004 .sdata2    @213                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_213[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+f32 GXPixel__lit_213 = 0.5f;
+/* padding 4 bytes */
+
 /* 80456628-80456630 0008 .sdata2    @214                                                         */
-SECTION_SDATA2 u8 LIT_214[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 lit_214 = 1.0;
+
 /* 80456630-80456638 0004 .sdata2    @215                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_215[8] = {
-	0x40, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+f32 GXPixel__lit_215 = 2.0f;
+/* padding 4 bytes */
+
 /* 80456638-80456640 0008 .sdata2    @216                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_216[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 GXPixel__lit_216 = 0.5;
+
 /* 80456640-80456648 0004 .sdata2    @217                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_217[8] = {
-	0x4B, 0x00, 0x00, 0x1E,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+f32 GXPixel__lit_217 = 8388638.0f;
+/* padding 4 bytes */
+
 /* 80456648-80456650 0008 .sdata2    @219                                                         */
-SECTION_SDATA2 u8 GXPixel__LIT_219[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 GXPixel__lit_219 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8035F8B8-8035FACC 0214 .text      GXSetFog                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetFog() {
+extern "C" asm void GXSetFog() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetFog.s"
 }
 #pragma pop
 
+
 /* 8035FACC-8035FBF0 0124 .text      GXSetFogRangeAdj                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetFogRangeAdj() {
+extern "C" asm void GXSetFogRangeAdj() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetFogRangeAdj.s"
 }
 #pragma pop
 
+
 /* 8035FBF0-8035FC44 0054 .text      GXSetBlendMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetBlendMode() {
+extern "C" asm void GXSetBlendMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetBlendMode.s"
 }
 #pragma pop
 
+
 /* 8035FC44-8035FC70 002C .text      GXSetColorUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetColorUpdate() {
+extern "C" asm void GXSetColorUpdate() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetColorUpdate.s"
 }
 #pragma pop
 
+
 /* 8035FC70-8035FC9C 002C .text      GXSetAlphaUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetAlphaUpdate() {
+extern "C" asm void GXSetAlphaUpdate() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetAlphaUpdate.s"
 }
 #pragma pop
 
+
 /* 8035FC9C-8035FCD0 0034 .text      GXSetZMode                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetZMode() {
+extern "C" asm void GXSetZMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetZMode.s"
 }
 #pragma pop
 
+
 /* 8035FCD0-8035FD04 0034 .text      GXSetZCompLoc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetZCompLoc() {
+extern "C" asm void GXSetZCompLoc() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetZCompLoc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803D2838-803D2858 0020 .data      p2f$358                                                      */
+u8 data_803D2838[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
+	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
+};
+
 /* 8035FD04-8035FDD8 00D4 .text      GXSetPixelFmt                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetPixelFmt() {
+extern "C" asm void GXSetPixelFmt() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetPixelFmt.s"
 }
 #pragma pop
 
+
 /* 8035FDD8-8035FE04 002C .text      GXSetDither                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetDither() {
+extern "C" asm void GXSetDither() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetDither.s"
 }
 #pragma pop
 
+
 /* 8035FE04-8035FE40 003C .text      GXSetDstAlpha                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetDstAlpha() {
+extern "C" asm void GXSetDstAlpha() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetDstAlpha.s"
 }
 #pragma pop
 
+
 /* 8035FE40-8035FE78 0038 .text      GXSetFieldMask                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetFieldMask() {
+extern "C" asm void GXSetFieldMask() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetFieldMask.s"
 }
 #pragma pop
 
+
 /* 8035FE78-8035FEF0 0078 .text      GXSetFieldMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GXSetFieldMode() {
+extern "C" asm void GXSetFieldMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXPixel/GXSetFieldMode.s"
 }

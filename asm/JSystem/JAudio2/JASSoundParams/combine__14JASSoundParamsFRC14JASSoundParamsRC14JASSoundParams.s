@@ -14,7 +14,7 @@ lbl_8029E47C:
 /* 8029E4AC 00000030  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8029E4B0 00000034  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 8029E4B4 00000038  EC 21 00 2A */	fadds f1, f1, f0
-/* 8029E4B8 0000003C  C0 02 BD 6C */	lfs f0, JASSoundParams__LIT_311(r2)
+/* 8029E4B8 0000003C  C0 02 BD 6C */	lfs f0, JASSoundParams__lit_311(r2)
 /* 8029E4BC 00000040  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8029E4C0 00000044  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8029E4C4 00000048  C0 24 00 10 */	lfs f1, 0x10(r4)

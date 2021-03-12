@@ -49,28 +49,28 @@ lbl_80285BCC:
 /* 80285C88 00000090  D0 1E 00 04 */	stfs f0, 4(r30)
 /* 80285C8C 00000094  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80285C90 00000098  D0 1E 00 08 */	stfs f0, 8(r30)
-/* 80285C94 0000009C  C8 62 BA 70 */	lfd f3, LIT_623(r2)
+/* 80285C94 0000009C  C8 62 BA 70 */	lfd f3, lit_623(r2)
 /* 80285C98 000000A0  FC 80 18 90 */	fmr f4, f3
 /* 80285C9C 000000A4  FC 40 18 90 */	fmr f2, f3
-/* 80285CA0 000000A8  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489(r2)
+/* 80285CA0 000000A8  C0 02 BA 6C */	lfs f0, jstudio_math__lit_489(r2)
 /* 80285CA4 000000AC  C0 3C 00 00 */	lfs f1, 0(r28)
 /* 80285CA8 000000B0  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80285CAC 000000B4  41 82 00 0C */	beq lbl_80285CB8
-/* 80285CB0 000000B8  C8 02 BA 78 */	lfd f0, LIT_624(r2)
+/* 80285CB0 000000B8  C8 02 BA 78 */	lfd f0, lit_624(r2)
 /* 80285CB4 000000BC  FC 60 08 24 */	fdiv f3, f0, f1
 lbl_80285CB8:
-/* 80285CB8 00000000  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489(r2)
+/* 80285CB8 00000000  C0 02 BA 6C */	lfs f0, jstudio_math__lit_489(r2)
 /* 80285CBC 00000004  C0 3C 00 04 */	lfs f1, 4(r28)
 /* 80285CC0 00000008  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80285CC4 0000000C  41 82 00 0C */	beq lbl_80285CD0
-/* 80285CC8 00000010  C8 02 BA 78 */	lfd f0, LIT_624(r2)
+/* 80285CC8 00000010  C8 02 BA 78 */	lfd f0, lit_624(r2)
 /* 80285CCC 00000014  FC 80 08 24 */	fdiv f4, f0, f1
 lbl_80285CD0:
-/* 80285CD0 00000000  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489(r2)
+/* 80285CD0 00000000  C0 02 BA 6C */	lfs f0, jstudio_math__lit_489(r2)
 /* 80285CD4 00000004  C0 3C 00 08 */	lfs f1, 8(r28)
 /* 80285CD8 00000008  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80285CDC 0000000C  41 82 00 0C */	beq lbl_80285CE8
-/* 80285CE0 00000010  C8 02 BA 78 */	lfd f0, LIT_624(r2)
+/* 80285CE0 00000010  C8 02 BA 78 */	lfd f0, lit_624(r2)
 /* 80285CE4 00000014  FC 40 08 24 */	fdiv f2, f0, f1
 lbl_80285CE8:
 /* 80285CE8 00000000  C0 1F 00 28 */	lfs f0, 0x28(r31)
@@ -87,9 +87,9 @@ lbl_80285CE8:
 /* 80285D14 0000002C  FC 20 01 32 */	fmul f1, f0, f4
 /* 80285D18 00000030  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80285D1C 00000034  FF C0 00 F2 */	fmul f30, f0, f3
-/* 80285D20 00000038  C8 A2 BA 78 */	lfd f5, LIT_624(r2)
+/* 80285D20 00000038  C8 A2 BA 78 */	lfd f5, lit_624(r2)
 /* 80285D24 0000003C  FC 9F 28 28 */	fsub f4, f31, f5
-/* 80285D28 00000040  C0 62 BA 80 */	lfs f3, LIT_625(r2)
+/* 80285D28 00000040  C0 62 BA 80 */	lfs f3, lit_625(r2)
 /* 80285D2C 00000044  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 80285D30 00000048  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 80285D34 0000004C  EC 63 00 32 */	fmuls f3, f3, f0
@@ -100,8 +100,8 @@ lbl_80285CE8:
 /* 80285D48 00000008  FC 20 08 50 */	fneg f1, f1
 /* 80285D4C 0000000C  48 0E 69 D5 */	bl atan2
 /* 80285D50 00000010  FF 80 08 90 */	fmr f28, f1
-/* 80285D54 00000014  C8 22 BA 88 */	lfd f1, jstudio_math__LIT_626(r2)
-/* 80285D58 00000018  CB A2 BA 70 */	lfd f29, LIT_623(r2)
+/* 80285D54 00000014  C8 22 BA 88 */	lfd f1, jstudio_math__lit_626(r2)
+/* 80285D58 00000018  CB A2 BA 70 */	lfd f29, lit_623(r2)
 /* 80285D5C 0000001C  48 00 00 50 */	b lbl_80285DAC
 lbl_80285D60:
 /* 80285D60 00000000  FC 1F 28 2A */	fadd f0, f31, f5
@@ -110,8 +110,8 @@ lbl_80285D60:
 /* 80285D6C 00000004  40 82 00 18 */	bne lbl_80285D84
 /* 80285D70 00000008  48 0E 69 B1 */	bl atan2
 /* 80285D74 0000000C  FF 80 08 90 */	fmr f28, f1
-/* 80285D78 00000010  C8 22 BA 90 */	lfd f1, jstudio_math__LIT_627(r2)
-/* 80285D7C 00000014  CB A2 BA 70 */	lfd f29, LIT_623(r2)
+/* 80285D78 00000010  C8 22 BA 90 */	lfd f1, jstudio_math__lit_627(r2)
+/* 80285D7C 00000014  CB A2 BA 70 */	lfd f29, lit_623(r2)
 /* 80285D80 00000018  48 00 00 2C */	b lbl_80285DAC
 lbl_80285D84:
 /* 80285D84 00000000  FC 20 30 90 */	fmr f1, f6
@@ -125,7 +125,7 @@ lbl_80285D84:
 /* 80285DA4 00000020  FC 20 F8 50 */	fneg f1, f31
 /* 80285DA8 00000024  48 0E 69 59 */	bl asin
 lbl_80285DAC:
-/* 80285DAC 00000000  C8 02 BA 98 */	lfd f0, jstudio_math__LIT_628(r2)
+/* 80285DAC 00000000  C8 02 BA 98 */	lfd f0, jstudio_math__lit_628(r2)
 /* 80285DB0 00000004  FF 9C 00 32 */	fmul f28, f28, f0
 /* 80285DB4 00000008  FC 21 00 32 */	fmul f1, f1, f0
 /* 80285DB8 0000000C  FF BD 00 32 */	fmul f29, f29, f0

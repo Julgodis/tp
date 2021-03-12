@@ -8,7 +8,7 @@ lbl_8014BE2C:
 /* 8014BE44 00000004  48 21 63 91 */	bl _savegpr_27
 /* 8014BE48 00000008  7C 7B 1B 78 */	mr r27, r3
 /* 8014BE4C 0000000C  3B A0 00 00 */	li r29, 0
-/* 8014BE50 00000010  C3 E2 9A 7C */	lfs f31, d_a_d_a_npc__LIT_7337(r2)
+/* 8014BE50 00000010  C3 E2 9A 7C */	lfs f31, d_a_d_a_npc__lit_7337(r2)
 /* 8014BE54 00000014  38 00 00 00 */	li r0, 0
 /* 8014BE58 00000018  90 0D 8A 5C */	stw r0, mFindCount__8daNpcT_c(r13)
 /* 8014BE5C 0000001C  B0 8D 8A 58 */	sth r4, mSrchName__8daNpcT_c(r13)

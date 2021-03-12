@@ -13,9 +13,9 @@ lbl_803701E0:
 /* 8037020C 0000002C  38 60 07 01 */	li r3, 0x701
 /* 80370210 00000030  48 00 03 F4 */	b lbl_80370604
 lbl_80370214:
-/* 80370214 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_276@ha
+/* 80370214 00000000  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_276@ha
 /* 80370218 00000004  3C A0 80 3D */	lis r5, gTRKExceptionStatus@ha
-/* 8037021C 00000008  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__LIT_276@l
+/* 8037021C 00000008  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__lit_276@l
 /* 80370220 0000000C  3C 80 7C 99 */	lis r4, 0x7C99 /* 0x7C98E2A6@ha */
 /* 80370224 00000010  80 1D 00 00 */	lwz r0, 0(r29)
 /* 80370228 00000014  3B E5 32 44 */	addi r31, r5, gTRKExceptionStatus@l
@@ -64,9 +64,9 @@ lbl_80370214:
 /* 803702D4 000000C0  38 61 00 08 */	addi r3, r1, 8
 /* 803702D8 000000C4  7D 89 03 A6 */	mtctr r12
 /* 803702DC 000000C8  4E 80 04 21 */	bctrl 
-/* 803702E0 000000CC  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_276@ha
+/* 803702E0 000000CC  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_276@ha
 /* 803702E4 000000D0  80 A1 00 08 */	lwz r5, 8(r1)
-/* 803702E8 000000D4  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__LIT_276@l
+/* 803702E8 000000D4  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__lit_276@l
 /* 803702EC 000000D8  3C 80 7C 99 */	lis r4, 0x7C99 /* 0x7C98E3A6@ha */
 /* 803702F0 000000DC  81 1D 00 00 */	lwz r8, 0(r29)
 /* 803702F4 000000E0  3C 60 4E 80 */	lis r3, 0x4E80 /* 0x4E800020@ha */
@@ -106,9 +106,9 @@ lbl_80370214:
 /* 8037037C 00000168  38 61 00 08 */	addi r3, r1, 8
 /* 80370380 0000016C  7D 89 03 A6 */	mtctr r12
 /* 80370384 00000170  4E 80 04 21 */	bctrl 
-/* 80370388 00000174  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__LIT_276@ha
+/* 80370388 00000174  3C 60 80 3A */	lis r3, ppc_Generic_targimpl__lit_276@ha
 /* 8037038C 00000178  3C 80 7C 91 */	lis r4, 0x7C91 /* 0x7C90E3A6@ha */
-/* 80370390 0000017C  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__LIT_276@l
+/* 80370390 0000017C  3B A3 2B 70 */	addi r29, r3, ppc_Generic_targimpl__lit_276@l
 /* 80370394 00000180  3C 60 4E 80 */	lis r3, 0x4E80 /* 0x4E800020@ha */
 /* 80370398 00000184  81 1D 00 00 */	lwz r8, 0(r29)
 /* 8037039C 00000188  3B C0 00 00 */	li r30, 0
@@ -157,8 +157,8 @@ lbl_80370214:
 lbl_80370448:
 /* 80370448 00000000  2C 1A 00 00 */	cmpwi r26, 0
 /* 8037044C 00000004  41 82 00 AC */	beq lbl_803704F8
-/* 80370450 00000008  3C 60 80 3A */	lis r3, LIT_283@ha
-/* 80370454 0000000C  85 83 2B 98 */	lwzu r12, LIT_283@l(r3)
+/* 80370450 00000008  3C 60 80 3A */	lis r3, lit_283@ha
+/* 80370454 0000000C  85 83 2B 98 */	lwzu r12, lit_283@l(r3)
 /* 80370458 00000010  67 C0 E0 03 */	oris r0, r30, 0xe003
 /* 8037045C 00000014  81 63 00 04 */	lwz r11, 4(r3)
 /* 80370460 00000018  81 43 00 08 */	lwz r10, 8(r3)
@@ -204,8 +204,8 @@ lbl_803704F8:
 /* 803704F8 00000000  7F 03 C3 78 */	mr r3, r24
 /* 803704FC 00000004  38 81 00 0C */	addi r4, r1, 0xc
 /* 80370500 00000008  4B FF CC A5 */	bl TRKReadBuffer1_ui64
-/* 80370504 0000000C  3C 60 80 3A */	lis r3, LIT_283@ha
-/* 80370508 00000010  85 83 2B 98 */	lwzu r12, LIT_283@l(r3)
+/* 80370504 0000000C  3C 60 80 3A */	lis r3, lit_283@ha
+/* 80370508 00000010  85 83 2B 98 */	lwzu r12, lit_283@l(r3)
 /* 8037050C 00000014  2C 1A 00 00 */	cmpwi r26, 0
 /* 80370510 00000018  67 C0 E0 03 */	oris r0, r30, 0xe003
 /* 80370514 0000001C  81 63 00 04 */	lwz r11, 4(r3)

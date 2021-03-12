@@ -11,14 +11,14 @@ lbl_801F1BF8:
 /* 801F1C1C 00000024  38 A0 00 00 */	li r5, 0
 /* 801F1C20 00000028  38 C0 00 00 */	li r6, 0
 /* 801F1C24 0000002C  38 E0 00 00 */	li r7, 0
-/* 801F1C28 00000030  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__LIT_4179(r2)
+/* 801F1C28 00000030  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
 /* 801F1C2C 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801F1C30 00000038  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__LIT_4879(r2)
+/* 801F1C30 00000038  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
 /* 801F1C34 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801F1C38 00000040  39 00 00 00 */	li r8, 0
 /* 801F1C3C 00000044  48 0B 9D 49 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801F1C40 00000048  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F1C44 0000004C  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__LIT_4175(r2)
+/* 801F1C44 0000004C  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
 /* 801F1C48 00000050  4B FA 36 59 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F1C4C 00000054  38 00 00 01 */	li r0, 1
 /* 801F1C50 00000058  98 1F 21 A2 */	stb r0, 0x21a2(r31)

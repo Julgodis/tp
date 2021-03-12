@@ -5,43 +5,42 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoMtx_YrotS__FPA4_fs();
-extern void __ct__9STControlFssssffss();
-extern void setWaitParm__9STControlFssssffss();
-extern void init__9STControlFv();
-extern void Xinit__9STControlFv();
-extern void Yinit__9STControlFv();
-extern void getValueStick__9STControlFv();
-extern void getAngleStick__9STControlFv();
-extern void getValueStick__10CSTControlFv();
-extern void getAngleStick__10CSTControlFv();
-extern void checkTrigger__9STControlFv();
-extern void checkLeftTrigger__9STControlFv();
-extern void checkRightTrigger__9STControlFv();
-extern void checkUpTrigger__9STControlFv();
-extern void checkDownTrigger__9STControlFv();
-extern void dLib_getEventSwitchNo__Fi();
-extern void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz();
-extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern void getTime__11dLib_time_cFv();
-extern void stopTime__11dLib_time_cFv();
-extern void startTime__11dLib_time_cFv();
-extern void searchMapEventData__14dEvt_control_cFUc();
-extern void __mi__4cXyzCFRC3Vec();
-extern void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
-extern void findFsResource__10JKRArchiveCFPCcUl();
-extern void getAramAddress__14JKRAramArchiveFPCc();
-extern void OSGetTime();
-extern void PSMTXMultVec();
-extern void _savegpr_29();
-extern void _restgpr_29();
+extern "C" extern void mDoMtx_YrotS__FPA4_fs();
+extern "C" extern void __ct__9STControlFssssffss();
+extern "C" extern void setWaitParm__9STControlFssssffss();
+extern "C" extern void init__9STControlFv();
+extern "C" extern void Xinit__9STControlFv();
+extern "C" extern void Yinit__9STControlFv();
+extern "C" extern void getValueStick__9STControlFv();
+extern "C" extern void getAngleStick__9STControlFv();
+extern "C" extern void getValueStick__10CSTControlFv();
+extern "C" extern void getAngleStick__10CSTControlFv();
+extern "C" extern void checkTrigger__9STControlFv();
+extern "C" extern void checkLeftTrigger__9STControlFv();
+extern "C" extern void checkRightTrigger__9STControlFv();
+extern "C" extern void checkUpTrigger__9STControlFv();
+extern "C" extern void checkDownTrigger__9STControlFv();
+extern "C" extern void dLib_getEventSwitchNo__Fi();
+extern "C" extern void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz();
+extern "C" extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" extern void getTime__11dLib_time_cFv();
+extern "C" extern void stopTime__11dLib_time_cFv();
+extern "C" extern void startTime__11dLib_time_cFv();
+extern "C" extern void searchMapEventData__14dEvt_control_cFUc();
+extern "C" extern void __mi__4cXyzCFRC3Vec();
+extern "C" extern void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" extern void findFsResource__10JKRArchiveCFPCcUl();
+extern "C" extern void getAramAddress__14JKRAramArchiveFPCc();
+extern "C" extern void OSGetTime();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 SECTION_DATA extern u8 ZeroQuat[16];
-SECTION_DATA extern void* __vt__10CSTControl[4];
-SECTION_DATA extern void* __vt__9STControl[4];
+SECTION_DATA extern void* const __vt__10CSTControl[4];
+SECTION_DATA extern void* const __vt__9STControl[4];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_SBSS extern u8 m_diffTime__11dLib_time_c[4];
@@ -51,261 +50,273 @@ SECTION_SBSS extern u8 data_80450DE4[4];
 SECTION_SBSS extern u8 data_80450DE8[8];
 SECTION_SBSS extern u8 struct_80450DF0[8];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A7240-803A7250 0010 .data      ZeroQuat                                                     */
-SECTION_DATA u8 ZeroQuat[16] = {
+u8 ZeroQuat[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
+
 /* 803A7250-803A7260 0010 .data      __vt__10CSTControl                                           */
-SECTION_DATA void* __vt__10CSTControl[4] = {
+void* const __vt__10CSTControl[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getValueStick__10CSTControlFv,
 	(void*)getAngleStick__10CSTControlFv,
 };
+
 /* 803A7260-803A7270 0010 .data      __vt__9STControl                                             */
-SECTION_DATA void* __vt__9STControl[4] = {
+void* const __vt__9STControl[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getValueStick__9STControlFv,
 	(void*)getAngleStick__9STControlFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450DD8-80450DDC 0004 .sbss      m_diffTime__11dLib_time_c                                    */
-SECTION_SBSS u8 m_diffTime__11dLib_time_c[4];
-/* 80450DDC-80450DE0 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450DDC[4];
-/* 80450DE0-80450DE4 0004 .sbss      m_stopTime__11dLib_time_c                                    */
-SECTION_SBSS u8 m_stopTime__11dLib_time_c[4];
-/* 80450DE4-80450DE8 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450DE4[4];
-/* 80450DE8-80450DF0 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450DE8[8];
-/* 80450DF0-80450DF8 0008 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80450DF0[8];
-/* 80450DF0 0001 data_80450DF0 */
-/* 80450DF1 0001 data_80450DF1 */
-/* 80450DF2 0001 data_80450DF2 */
-/* 80450DF3 0005 data_80450DF3 */
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80032044-80032088 0044 .text      __ct__9STControlFssssffss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9STControlFssssffss() {
+extern "C" asm void __ct__9STControlFssssffss() {
 	nofralloc
 #include "asm/d/d_lib/__ct__9STControlFssssffss.s"
 }
 #pragma pop
 
+
 /* 80032088-800320AC 0024 .text      setWaitParm__9STControlFssssffss                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWaitParm__9STControlFssssffss() {
+extern "C" asm void setWaitParm__9STControlFssssffss() {
 	nofralloc
 #include "asm/d/d_lib/setWaitParm__9STControlFssssffss.s"
 }
 #pragma pop
 
+
 /* 800320AC-800320FC 0050 .text      init__9STControlFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__9STControlFv() {
+extern "C" asm void init__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/init__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 800320FC-8003212C 0030 .text      Xinit__9STControlFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Xinit__9STControlFv() {
+extern "C" asm void Xinit__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/Xinit__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003212C-8003215C 0030 .text      Yinit__9STControlFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Yinit__9STControlFv() {
+extern "C" asm void Yinit__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/Yinit__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003215C-8003216C 0010 .text      getValueStick__9STControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getValueStick__9STControlFv() {
+extern "C" asm void getValueStick__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/getValueStick__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003216C-8003217C 0010 .text      getAngleStick__9STControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAngleStick__9STControlFv() {
+extern "C" asm void getAngleStick__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/getAngleStick__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003217C-8003218C 0010 .text      getValueStick__10CSTControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getValueStick__10CSTControlFv() {
+extern "C" asm void getValueStick__10CSTControlFv() {
 	nofralloc
 #include "asm/d/d_lib/getValueStick__10CSTControlFv.s"
 }
 #pragma pop
 
+
 /* 8003218C-8003219C 0010 .text      getAngleStick__10CSTControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAngleStick__10CSTControlFv() {
+extern "C" asm void getAngleStick__10CSTControlFv() {
 	nofralloc
 #include "asm/d/d_lib/getAngleStick__10CSTControlFv.s"
 }
 #pragma pop
 
+
 /* 8003219C-8003242C 0290 .text      checkTrigger__9STControlFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkTrigger__9STControlFv() {
+extern "C" asm void checkTrigger__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/checkTrigger__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003242C-800324A8 007C .text      checkLeftTrigger__9STControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkLeftTrigger__9STControlFv() {
+extern "C" asm void checkLeftTrigger__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/checkLeftTrigger__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 800324A8-80032524 007C .text      checkRightTrigger__9STControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkRightTrigger__9STControlFv() {
+extern "C" asm void checkRightTrigger__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/checkRightTrigger__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 80032524-800325A0 007C .text      checkUpTrigger__9STControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkUpTrigger__9STControlFv() {
+extern "C" asm void checkUpTrigger__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/checkUpTrigger__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 800325A0-8003261C 007C .text      checkDownTrigger__9STControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkDownTrigger__9STControlFv() {
+extern "C" asm void checkDownTrigger__9STControlFv() {
 	nofralloc
 #include "asm/d/d_lib/checkDownTrigger__9STControlFv.s"
 }
 #pragma pop
 
+
 /* 8003261C-80032654 0038 .text      dLib_getEventSwitchNo__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dLib_getEventSwitchNo__Fi() {
+extern "C" asm void dLib_getEventSwitchNo__Fi() {
 	nofralloc
 #include "asm/d/d_lib/dLib_getEventSwitchNo__Fi.s"
 }
 #pragma pop
 
+
 /* 80032654-80032738 00E4 .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz() {
+extern "C" asm void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz() {
 	nofralloc
 #include "asm/d/d_lib/dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz.s"
 }
 #pragma pop
 
+
 /* 80032738-80032804 00CC .text      dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc() {
+extern "C" asm void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc() {
 	nofralloc
 #include "asm/d/d_lib/dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450DD8-80450DDC 0004 .sbss      m_diffTime__11dLib_time_c                                    */
+u8 m_diffTime__11dLib_time_c[4];
+
+/* 80450DDC-80450DE0 0004 .sbss      None                                                         */
+u8 data_80450DDC[4];
+
+/* 80450DE0-80450DE4 0004 .sbss      m_stopTime__11dLib_time_c                                    */
+u8 m_stopTime__11dLib_time_c[4];
+
+/* 80450DE4-80450DE8 0004 .sbss      None                                                         */
+u8 data_80450DE4[4];
+
+/* 80450DE8-80450DF0 0008 .sbss      None                                                         */
+u8 data_80450DE8[8];
+
 /* 80032804-80032880 007C .text      getTime__11dLib_time_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTime__11dLib_time_cFv() {
+extern "C" asm void getTime__11dLib_time_cFv() {
 	nofralloc
 #include "asm/d/d_lib/getTime__11dLib_time_cFv.s"
 }
 #pragma pop
 
+
 /* 80032880-800328BC 003C .text      stopTime__11dLib_time_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stopTime__11dLib_time_cFv() {
+extern "C" asm void stopTime__11dLib_time_cFv() {
 	nofralloc
 #include "asm/d/d_lib/stopTime__11dLib_time_cFv.s"
 }
 #pragma pop
 
+
 /* 800328BC-80032918 005C .text      startTime__11dLib_time_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startTime__11dLib_time_cFv() {
+extern "C" asm void startTime__11dLib_time_cFv() {
 	nofralloc
 #include "asm/d/d_lib/startTime__11dLib_time_cFv.s"
 }
 #pragma pop
 
+
+/* 80450DF0-80450DF8 0008 .sbss      None                                                         */
+u8 struct_80450DF0[8];
+/* 80450DF0 0001 data_80450DF0 */
+/* 80450DF1 0001 data_80450DF1 */
+/* 80450DF2 0001 data_80450DF2 */
+/* 80450DF3 0005 data_80450DF3 */
 

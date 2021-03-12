@@ -12,7 +12,7 @@ lbl_801D0C6C:
 /* 801D0C94 0000000C  7C 9E 23 78 */	mr r30, r4
 /* 801D0C98 00000010  7C BF 2B 78 */	mr r31, r5
 /* 801D0C9C 00000014  C0 A3 0F F0 */	lfs f5, 0xff0(r3)
-/* 801D0CA0 00000018  C0 82 A7 E8 */	lfs f4, d_menu_d_menu_fmap2D__LIT_4202(r2)
+/* 801D0CA0 00000018  C0 82 A7 E8 */	lfs f4, d_menu_d_menu_fmap2D__lit_4202(r2)
 /* 801D0CA4 0000001C  C0 63 0F E8 */	lfs f3, 0xfe8(r3)
 /* 801D0CA8 00000020  C0 03 0F E0 */	lfs f0, 0xfe0(r3)
 /* 801D0CAC 00000024  EC 03 00 2A */	fadds f0, f3, f0

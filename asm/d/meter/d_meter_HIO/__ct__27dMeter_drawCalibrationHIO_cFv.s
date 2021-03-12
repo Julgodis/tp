@@ -9,8 +9,8 @@ lbl_801FE954:
 /* 801FE970 0000001C  98 03 00 16 */	stb r0, 0x16(r3)
 /* 801FE974 00000020  38 00 00 1E */	li r0, 0x1e
 /* 801FE978 00000024  B0 03 00 14 */	sth r0, 0x14(r3)
-/* 801FE97C 00000028  C0 02 AA E0 */	lfs f0, d_meter_d_meter_HIO__LIT_3787(r2)
+/* 801FE97C 00000028  C0 02 AA E0 */	lfs f0, d_meter_d_meter_HIO__lit_3787(r2)
 /* 801FE980 0000002C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 801FE984 00000030  C0 02 AB 64 */	lfs f0, d_meter_d_meter_HIO__LIT_3921(r2)
+/* 801FE984 00000030  C0 02 AB 64 */	lfs f0, d_meter_d_meter_HIO__lit_3921(r2)
 /* 801FE988 00000034  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 801FE98C 00000038  4E 80 00 20 */	blr 

@@ -18,5 +18,5 @@ lbl_801C4790:
 lbl_801C47B4:
 /* 801C47B4 00000000  38 63 00 0C */	addi r3, r3, 0xc
 /* 801C47B8 00000004  42 00 FF D8 */	bdnz lbl_801C4790
-/* 801C47BC 00000008  C0 22 A6 D8 */	lfs f1, d_menu_d_menu_map_common__LIT_3703(r2)
+/* 801C47BC 00000008  C0 22 A6 D8 */	lfs f1, d_menu_d_menu_map_common__lit_3703(r2)
 /* 801C47C0 0000000C  4E 80 00 20 */	blr 

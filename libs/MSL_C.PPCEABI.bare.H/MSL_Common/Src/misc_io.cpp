@@ -5,25 +5,22 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __close_all();
-extern void __stdio_atexit();
+extern "C" extern void __close_all();
+extern "C" extern void __stdio_atexit();
 SECTION_SBSS extern u8 __stdio_exit[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803664CC-803664DC 0010 .text      __stdio_atexit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __stdio_atexit() {
+extern "C" asm void __stdio_atexit() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/misc_io/__stdio_atexit.s"
 }

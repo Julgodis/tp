@@ -2,13 +2,13 @@ lbl_801910D4:
 /* 801910D4 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801910D8 00000004  7C 08 02 A6 */	mflr r0
 /* 801910DC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801910E0 0000000C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 801910E0 0000000C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 801910E4 00000010  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 801910E8 00000014  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 801910EC 00000018  C0 02 9F D4 */	lfs f0, d_file_d_file_select__LIT_8993(r2)
+/* 801910EC 00000018  C0 02 9F D4 */	lfs f0, d_file_d_file_select__lit_8993(r2)
 /* 801910F0 0000001C  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 801910F4 00000020  D0 21 00 08 */	stfs f1, 8(r1)
-/* 801910F8 00000024  C0 02 9F 40 */	lfs f0, d_file_d_file_select__LIT_4611(r2)
+/* 801910F8 00000024  C0 02 9F 40 */	lfs f0, d_file_d_file_select__lit_4611(r2)
 /* 801910FC 00000028  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80191100 0000002C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80191104 00000030  7C 83 23 78 */	mr r3, r4

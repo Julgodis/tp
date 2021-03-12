@@ -17,7 +17,7 @@ lbl_800E3048:
 /* 800E3084 0000003C  41 82 00 30 */	beq lbl_800E30B4
 /* 800E3088 00000040  7F E3 FB 78 */	mr r3, r31
 /* 800E308C 00000044  38 80 00 02 */	li r4, 2
-/* 800E3090 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800E3090 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800E3094 0000004C  4B FC A6 91 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800E3098 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E309C 00000054  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
@@ -29,7 +29,7 @@ lbl_800E3048:
 lbl_800E30B4:
 /* 800E30B4 00000000  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800E30B8 00000004  B0 1F 04 DE */	sth r0, 0x4de(r31)
-/* 800E30BC 00000008  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E30BC 00000008  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E30C0 0000000C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800E30C4 00000010  38 60 00 01 */	li r3, 1
 /* 800E30C8 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)

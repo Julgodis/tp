@@ -30,16 +30,16 @@ lbl_8010126C:
 /* 80101284 00000018  C0 45 00 40 */	lfs f2, 0x40(r5)
 /* 80101288 0000001C  4B FA BD 59 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8010128C 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80101290 00000024  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80101290 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80101294 00000028  C0 5E 05 34 */	lfs f2, 0x534(r30)
 /* 80101298 0000002C  38 80 00 00 */	li r4, 0
 /* 8010129C 00000030  4B FB A4 D5 */	bl setSpecialGravity__9daAlink_cFffi
-/* 801012A0 00000034  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 801012A0 00000034  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 801012A4 00000038  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 801012A8 0000003C  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
-/* 801012AC 00000040  C0 02 94 64 */	lfs f0, LIT_14954(r2)
+/* 801012AC 00000040  C0 02 94 64 */	lfs f0, lit_14954(r2)
 /* 801012B0 00000044  D0 1E 34 78 */	stfs f0, 0x3478(r30)
-/* 801012B4 00000048  C0 02 93 90 */	lfs f0, LIT_8784(r2)
+/* 801012B4 00000048  C0 02 93 90 */	lfs f0, lit_8784(r2)
 /* 801012B8 0000004C  D0 1E 34 7C */	stfs f0, 0x347c(r30)
 /* 801012BC 00000050  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 801012C0 00000054  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)

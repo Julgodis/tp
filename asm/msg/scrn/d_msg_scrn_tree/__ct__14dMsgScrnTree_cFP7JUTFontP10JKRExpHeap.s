@@ -84,7 +84,7 @@ lbl_802489E8:
 /* 80248A88 000000A0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80248A8C 000000A4  7D 89 03 A6 */	mtctr r12
 /* 80248A90 000000A8  4E 80 04 21 */	bctrl 
-/* 80248A94 000000AC  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__LIT_3949(r2)
+/* 80248A94 000000AC  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__lit_3949(r2)
 /* 80248A98 000000B0  D0 1F 00 DC */	stfs f0, 0xdc(r31)
 /* 80248A9C 000000B4  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_tree__stringBase0@ha
 /* 80248AA0 000000B8  38 84 9C 30 */	addi r4, r4, msg_scrn_d_msg_scrn_tree__stringBase0@l
@@ -99,7 +99,7 @@ lbl_802489E8:
 /* 80248AC4 000000DC  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80248AC8 000000E0  7D 89 03 A6 */	mtctr r12
 /* 80248ACC 000000E4  4E 80 04 21 */	bctrl 
-/* 80248AD0 000000E8  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__LIT_3949(r2)
+/* 80248AD0 000000E8  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__lit_3949(r2)
 /* 80248AD4 000000EC  D0 1F 00 E0 */	stfs f0, 0xe0(r31)
 /* 80248AD8 000000F0  38 60 00 6C */	li r3, 0x6c
 /* 80248ADC 000000F4  48 08 61 71 */	bl __nw__FUl
@@ -122,7 +122,7 @@ lbl_80248B08:
 /* 80248B1C 00000014  81 8C 00 60 */	lwz r12, 0x60(r12)
 /* 80248B20 00000018  7D 89 03 A6 */	mtctr r12
 /* 80248B24 0000001C  4E 80 04 21 */	bctrl 
-/* 80248B28 00000020  C0 02 B3 5C */	lfs f0, msg_scrn_d_msg_scrn_tree__LIT_3950(r2)
+/* 80248B28 00000020  C0 02 B3 5C */	lfs f0, msg_scrn_d_msg_scrn_tree__lit_3950(r2)
 /* 80248B2C 00000024  80 9F 00 CC */	lwz r4, 0xcc(r31)
 /* 80248B30 00000028  D0 04 00 08 */	stfs f0, 8(r4)
 /* 80248B34 0000002C  80 9F 00 08 */	lwz r4, 8(r31)
@@ -299,7 +299,7 @@ lbl_80248C94:
 /* 80248DD0 0000013C  D0 1F 00 80 */	stfs f0, 0x80(r31)
 /* 80248DD4 00000140  3B 60 00 00 */	li r27, 0
 /* 80248DD8 00000144  3B C0 00 00 */	li r30, 0
-/* 80248DDC 00000148  C3 E2 B3 60 */	lfs f31, LIT_3951(r2)
+/* 80248DDC 00000148  C3 E2 B3 60 */	lfs f31, lit_3951(r2)
 lbl_80248DE0:
 /* 80248DE0 00000000  38 1E 00 0C */	addi r0, r30, 0xc
 /* 80248DE4 00000004  7C 9F 00 2E */	lwzx r4, r31, r0
@@ -329,7 +329,7 @@ lbl_80248DE0:
 /* 80248E44 00000064  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 80248E48 00000068  48 00 B5 1D */	bl getGlobalPosY__8CPaneMgrFv
 /* 80248E4C 0000006C  D0 3F 00 68 */	stfs f1, 0x68(r31)
-/* 80248E50 00000070  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__LIT_3949(r2)
+/* 80248E50 00000070  C0 02 B3 58 */	lfs f0, msg_scrn_d_msg_scrn_tree__lit_3949(r2)
 /* 80248E54 00000074  D0 1F 00 B4 */	stfs f0, 0xb4(r31)
 /* 80248E58 00000078  3B 60 00 00 */	li r27, 0
 /* 80248E5C 0000007C  3B C0 00 00 */	li r30, 0
@@ -361,7 +361,7 @@ lbl_80248EA4:
 /* 80248EBC 00000018  C0 23 00 28 */	lfs f1, 0x28(r3)
 /* 80248EC0 0000001C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 80248EC4 00000020  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80248EC8 00000024  C0 02 B3 60 */	lfs f0, LIT_3951(r2)
+/* 80248EC8 00000024  C0 02 B3 60 */	lfs f0, lit_3951(r2)
 /* 80248ECC 00000028  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80248ED0 0000002C  81 83 00 00 */	lwz r12, 0(r3)
 /* 80248ED4 00000030  81 8C 00 18 */	lwz r12, 0x18(r12)

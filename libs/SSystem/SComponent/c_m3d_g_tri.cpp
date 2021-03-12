@@ -5,60 +5,60 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
-extern void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
-extern void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
-extern void Set__8cM3dGPlaFPC8cM3dGPla();
-extern void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
-extern void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec();
-extern void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla();
-extern void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec();
-}
+extern "C" extern void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
+extern "C" extern void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
+extern "C" extern void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" extern void Set__8cM3dGPlaFPC8cM3dGPla();
+extern "C" extern void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
+extern "C" extern void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec();
+extern "C" extern void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla();
+extern "C" extern void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8026F7B0-8026F7DC 002C .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cross__8cM3dGTriCFPC8cM3dGCylP3Vec() {
+extern "C" asm void cross__8cM3dGTriCFPC8cM3dGCylP3Vec() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_tri/cross__8cM3dGTriCFPC8cM3dGCylP3Vec.s"
 }
 #pragma pop
 
+
 /* 8026F7DC-8026F85C 0080 .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec() {
+extern "C" asm void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_tri/setPos__8cM3dGTriFPC3VecPC3VecPC3Vec.s"
 }
 #pragma pop
 
+
 /* 8026F85C-8026F8C8 006C .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla() {
+extern "C" asm void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_tri/setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla.s"
 }
 #pragma pop
 
+
 /* 8026F8C8-8026F93C 0074 .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec() {
+extern "C" asm void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_tri/set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec.s"
 }

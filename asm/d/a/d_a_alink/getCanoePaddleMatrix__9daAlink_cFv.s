@@ -9,9 +9,9 @@ lbl_800F3DFC:
 /* 800F3E18 0000001C  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
 /* 800F3E1C 00000020  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 800F3E20 00000024  48 25 26 91 */	bl PSMTXCopy
-/* 800F3E24 00000028  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800F3E24 00000028  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800F3E28 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 800F3E2C 00000030  C0 62 92 9C */	lfs f3, d_a_d_a_alink__LIT_5944(r2)
+/* 800F3E2C 00000030  C0 62 92 9C */	lfs f3, d_a_d_a_alink__lit_5944(r2)
 /* 800F3E30 00000034  4B F1 8F 6D */	bl transM__14mDoMtx_stack_cFfff
 /* 800F3E34 00000038  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800F3E38 0000003C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

@@ -27,14 +27,14 @@ lbl_802376C8:
 /* 802376E8 00000020  4B FF FD E9 */	bl getSelectBombNum__12dMsgObject_cFv
 /* 802376EC 00000024  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802376F0 00000028  7C 00 F9 D6 */	mullw r0, r0, r31
-/* 802376F4 0000002C  C8 22 B1 20 */	lfd f1, d_msg_d_msg_object__LIT_4965(r2)
+/* 802376F4 0000002C  C8 22 B1 20 */	lfd f1, d_msg_d_msg_object__lit_4965(r2)
 /* 802376F8 00000030  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 802376FC 00000034  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80237700 00000038  3C 00 43 30 */	lis r0, 0x4330
 /* 80237704 0000003C  90 01 00 08 */	stw r0, 8(r1)
 /* 80237708 00000040  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8023770C 00000044  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80237710 00000048  C0 02 B1 28 */	lfs f0, d_msg_d_msg_object__LIT_5044(r2)
+/* 80237710 00000048  C0 02 B1 28 */	lfs f0, d_msg_d_msg_object__lit_5044(r2)
 /* 80237714 0000004C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80237718 00000050  FC 00 00 1E */	fctiwz f0, f0
 /* 8023771C 00000054  D8 01 00 10 */	stfd f0, 0x10(r1)

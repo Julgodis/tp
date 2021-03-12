@@ -13,9 +13,9 @@ lbl_801A8AD8:
 /* 801A8B04 0000002C  38 A0 00 00 */	li r5, 0
 /* 801A8B08 00000030  38 C0 00 00 */	li r6, 0
 /* 801A8B0C 00000034  38 E0 00 00 */	li r7, 0
-/* 801A8B10 00000038  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A8B10 00000038  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A8B14 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 801A8B18 00000040  C0 62 A2 50 */	lfs f3, d_kankyo_d_kankyo__LIT_4507(r2)
+/* 801A8B18 00000040  C0 62 A2 50 */	lfs f3, d_kankyo_d_kankyo__lit_4507(r2)
 /* 801A8B1C 00000044  FC 80 18 90 */	fmr f4, f3
 /* 801A8B20 00000048  39 00 00 00 */	li r8, 0
 /* 801A8B24 0000004C  48 10 2E 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

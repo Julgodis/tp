@@ -8,7 +8,7 @@ lbl_802080C0:
 /* 802080D8 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 802080DC 0000001C  41 82 00 C4 */	beq lbl_802081A0
 /* 802080E0 00000020  48 04 D7 49 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802080E4 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__LIT_4147(r2)
+/* 802080E4 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
 /* 802080E8 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802080EC 0000002C  41 82 00 B4 */	beq lbl_802081A0
 /* 802080F0 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -37,7 +37,7 @@ lbl_80208120:
 lbl_80208148:
 /* 80208148 00000000  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 8020814C 00000004  48 04 D6 DD */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80208150 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__LIT_4147(r2)
+/* 80208150 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
 /* 80208154 0000000C  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80208158 00000010  40 82 00 48 */	bne lbl_802081A0
 /* 8020815C 00000014  88 1F 04 CA */	lbz r0, 0x4ca(r31)
@@ -51,7 +51,7 @@ lbl_80208148:
 /* 8020817C 00000034  38 C0 00 00 */	li r6, 0
 /* 80208180 00000038  38 E0 00 00 */	li r7, 0
 /* 80208184 0000003C  FC 20 10 90 */	fmr f1, f2
-/* 80208188 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__LIT_4513(r2)
+/* 80208188 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
 /* 8020818C 00000044  FC 80 18 90 */	fmr f4, f3
 /* 80208190 00000048  39 00 00 00 */	li r8, 0
 /* 80208194 0000004C  48 0A 37 F1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

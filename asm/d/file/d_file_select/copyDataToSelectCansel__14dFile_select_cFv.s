@@ -11,9 +11,9 @@ lbl_80188234:
 /* 80188258 00000024  38 A0 00 00 */	li r5, 0
 /* 8018825C 00000028  38 C0 00 00 */	li r6, 0
 /* 80188260 0000002C  38 E0 00 00 */	li r7, 0
-/* 80188264 00000030  C0 22 9F 40 */	lfs f1, d_file_d_file_select__LIT_4611(r2)
+/* 80188264 00000030  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
 /* 80188268 00000034  FC 40 08 90 */	fmr f2, f1
-/* 8018826C 00000038  C0 62 9F 44 */	lfs f3, d_file_d_file_select__LIT_4612(r2)
+/* 8018826C 00000038  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
 /* 80188270 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 80188274 00000040  39 00 00 00 */	li r8, 0
 /* 80188278 00000044  48 12 37 0D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -44,7 +44,7 @@ lbl_80188234:
 /* 801882DC 000000A8  38 C0 00 00 */	li r6, 0
 /* 801882E0 000000AC  48 00 4E 05 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 801882E4 000000B0  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 801882E8 000000B4  C0 22 9F 48 */	lfs f1, d_file_d_file_select__LIT_4778(r2)
+/* 801882E8 000000B4  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
 /* 801882EC 000000B8  48 00 CF B5 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801882F0 000000BC  7F E3 FB 78 */	mr r3, r31
 /* 801882F4 000000C0  88 9F 02 65 */	lbz r4, 0x265(r31)

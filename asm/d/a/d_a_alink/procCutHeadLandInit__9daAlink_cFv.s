@@ -14,7 +14,7 @@ lbl_800D6130:
 /* 800D6160 00000030  38 A5 DD B8 */	addi r5, r5, m__21daAlinkHIO_cutHead_c0@l
 /* 800D6164 00000034  38 A5 00 28 */	addi r5, r5, 0x28
 /* 800D6168 00000038  4B FD 6F 8D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800D616C 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800D616C 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800D6170 00000040  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800D6174 00000044  38 60 00 01 */	li r3, 1
 /* 800D6178 00000048  83 E1 00 0C */	lwz r31, 0xc(r1)

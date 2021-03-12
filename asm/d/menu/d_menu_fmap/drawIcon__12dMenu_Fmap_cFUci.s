@@ -47,7 +47,7 @@ lbl_801CD174:
 /* 801CD1BC 00000048  57 84 06 3E */	clrlwi r4, r28, 0x18
 /* 801CD1C0 0000004C  C0 21 00 14 */	lfs f1, 0x14(r1)
 /* 801CD1C4 00000050  C0 41 00 10 */	lfs f2, 0x10(r1)
-/* 801CD1C8 00000054  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CD1C8 00000054  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CD1CC 00000058  38 A0 00 00 */	li r5, 0
 /* 801CD1D0 0000005C  38 C0 00 00 */	li r6, 0
 /* 801CD1D4 00000060  48 00 4F 2D */	bl setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb

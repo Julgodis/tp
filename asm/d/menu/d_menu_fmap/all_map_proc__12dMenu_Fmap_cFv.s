@@ -48,9 +48,9 @@ lbl_801C7CC0:
 /* 801C7CD8 00000018  38 A0 00 00 */	li r5, 0
 /* 801C7CDC 0000001C  38 C0 00 00 */	li r6, 0
 /* 801C7CE0 00000020  38 E0 00 00 */	li r7, 0
-/* 801C7CE4 00000024  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C7CE4 00000024  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7CE8 00000028  FC 40 08 90 */	fmr f2, f1
-/* 801C7CEC 0000002C  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C7CEC 0000002C  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C7CF0 00000030  FC 80 18 90 */	fmr f4, f3
 /* 801C7CF4 00000034  39 00 00 00 */	li r8, 0
 /* 801C7CF8 00000038  48 0E 3C 8D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -92,9 +92,9 @@ lbl_801C7D60:
 /* 801C7D7C 0000001C  38 A0 00 00 */	li r5, 0
 /* 801C7D80 00000020  38 C0 00 00 */	li r6, 0
 /* 801C7D84 00000024  38 E0 00 00 */	li r7, 0
-/* 801C7D88 00000028  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C7D88 00000028  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7D8C 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 801C7D90 00000030  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C7D90 00000030  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C7D94 00000034  FC 80 18 90 */	fmr f4, f3
 /* 801C7D98 00000038  39 00 00 00 */	li r8, 0
 /* 801C7D9C 0000003C  48 0E 3B E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -121,9 +121,9 @@ lbl_801C7DAC:
 /* 801C7DEC 00000040  38 A0 00 00 */	li r5, 0
 /* 801C7DF0 00000044  38 C0 00 00 */	li r6, 0
 /* 801C7DF4 00000048  38 E0 00 00 */	li r7, 0
-/* 801C7DF8 0000004C  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C7DF8 0000004C  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7DFC 00000050  FC 40 08 90 */	fmr f2, f1
-/* 801C7E00 00000054  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C7E00 00000054  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C7E04 00000058  FC 80 18 90 */	fmr f4, f3
 /* 801C7E08 0000005C  39 00 00 00 */	li r8, 0
 /* 801C7E0C 00000060  48 0E 3B 79 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -211,9 +211,9 @@ lbl_801C7E94:
 /* 801C7F48 000000B4  38 A0 00 00 */	li r5, 0
 /* 801C7F4C 000000B8  38 C0 00 00 */	li r6, 0
 /* 801C7F50 000000BC  38 E0 00 00 */	li r7, 0
-/* 801C7F54 000000C0  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C7F54 000000C0  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7F58 000000C4  FC 40 08 90 */	fmr f2, f1
-/* 801C7F5C 000000C8  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C7F5C 000000C8  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C7F60 000000CC  FC 80 18 90 */	fmr f4, f3
 /* 801C7F64 000000D0  39 00 00 00 */	li r8, 0
 /* 801C7F68 000000D4  48 0E 3A 1D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -239,9 +239,9 @@ lbl_801C7F70:
 /* 801C7FB4 00000044  38 A0 00 00 */	li r5, 0
 /* 801C7FB8 00000048  38 C0 00 00 */	li r6, 0
 /* 801C7FBC 0000004C  38 E0 00 00 */	li r7, 0
-/* 801C7FC0 00000050  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C7FC0 00000050  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C7FC4 00000054  FC 40 08 90 */	fmr f2, f1
-/* 801C7FC8 00000058  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C7FC8 00000058  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C7FCC 0000005C  FC 80 18 90 */	fmr f4, f3
 /* 801C7FD0 00000060  39 00 00 00 */	li r8, 0
 /* 801C7FD4 00000064  48 0E 39 B1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -260,9 +260,9 @@ lbl_801C7FDC:
 /* 801C8004 00000028  38 A0 00 00 */	li r5, 0
 /* 801C8008 0000002C  38 C0 00 00 */	li r6, 0
 /* 801C800C 00000030  38 E0 00 00 */	li r7, 0
-/* 801C8010 00000034  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C8010 00000034  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C8014 00000038  FC 40 08 90 */	fmr f2, f1
-/* 801C8018 0000003C  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C8018 0000003C  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C801C 00000040  FC 80 18 90 */	fmr f4, f3
 /* 801C8020 00000044  39 00 00 00 */	li r8, 0
 /* 801C8024 00000048  48 0E 39 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -350,9 +350,9 @@ lbl_801C8134:
 /* 801C8158 00000024  38 A0 00 00 */	li r5, 0
 /* 801C815C 00000028  38 C0 00 00 */	li r6, 0
 /* 801C8160 0000002C  38 E0 00 00 */	li r7, 0
-/* 801C8164 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__LIT_3995(r2)
+/* 801C8164 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
 /* 801C8168 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801C816C 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__LIT_4541(r2)
+/* 801C816C 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
 /* 801C8170 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801C8174 00000040  39 00 00 00 */	li r8, 0
 /* 801C8178 00000044  48 0E 38 0D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

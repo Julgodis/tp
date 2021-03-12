@@ -21,7 +21,7 @@ lbl_80246EE8:
 /* 80246F34 0000004C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80246F38 00000050  41 82 00 1C */	beq lbl_80246F54
 /* 80246F3C 00000054  7F E3 FB 78 */	mr r3, r31
-/* 80246F40 00000058  C0 22 B2 FC */	lfs f1, msg_scrn_d_msg_scrn_staff__LIT_3877(r2)
+/* 80246F40 00000058  C0 22 B2 FC */	lfs f1, msg_scrn_d_msg_scrn_staff__lit_3877(r2)
 /* 80246F44 0000005C  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80246F48 00000060  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 80246F4C 00000064  7D 89 03 A6 */	mtctr r12

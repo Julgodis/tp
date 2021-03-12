@@ -8,7 +8,7 @@ lbl_802088A0:
 /* 802088B8 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 802088BC 0000001C  41 82 00 D0 */	beq lbl_8020898C
 /* 802088C0 00000020  48 04 CF 69 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802088C4 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__LIT_4147(r2)
+/* 802088C4 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
 /* 802088C8 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802088CC 0000002C  41 82 00 C0 */	beq lbl_8020898C
 /* 802088D0 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -21,7 +21,7 @@ lbl_802088A0:
 /* 802088EC 0000004C  41 82 00 20 */	beq lbl_8020890C
 lbl_802088F0:
 /* 802088F0 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 802088F4 00000004  C0 22 AD 4C */	lfs f1, d_meter_d_meter_button__LIT_4147(r2)
+/* 802088F4 00000004  C0 22 AD 4C */	lfs f1, d_meter_d_meter_button__lit_4147(r2)
 /* 802088F8 00000008  48 04 CE D9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802088FC 0000000C  38 00 00 05 */	li r0, 5
 /* 80208900 00000010  80 7F 00 58 */	lwz r3, 0x58(r31)
@@ -41,7 +41,7 @@ lbl_8020890C:
 lbl_80208934:
 /* 80208934 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 80208938 00000004  48 04 CE F1 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8020893C 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__LIT_4147(r2)
+/* 8020893C 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
 /* 80208940 0000000C  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80208944 00000010  40 82 00 48 */	bne lbl_8020898C
 /* 80208948 00000014  88 1F 04 CF */	lbz r0, 0x4cf(r31)
@@ -55,7 +55,7 @@ lbl_80208934:
 /* 80208968 00000034  38 C0 00 00 */	li r6, 0
 /* 8020896C 00000038  38 E0 00 00 */	li r7, 0
 /* 80208970 0000003C  FC 20 10 90 */	fmr f1, f2
-/* 80208974 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__LIT_4513(r2)
+/* 80208974 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
 /* 80208978 00000044  FC 80 18 90 */	fmr f4, f3
 /* 8020897C 00000048  39 00 00 00 */	li r8, 0
 /* 80208980 0000004C  48 0A 30 05 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

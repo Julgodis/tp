@@ -5,39 +5,94 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopMsg_Draw__FPv();
-extern void fopMsg_Execute__FPv();
-extern void fopMsg_IsDelete__FPv();
-extern void fopMsg_Delete__FPv();
-extern void fopMsg_Create__FPv();
-extern void fopMsgM_GetAppend__FPv();
-extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
-extern void fopDwTg_DrawQTo__FP16create_tag_class();
-extern void fopDwTg_Init__FP16create_tag_classPv();
-extern void fpcBs_MakeOfType__FPi();
-extern void fpcLf_GetPriority__FPC14leafdraw_class();
-extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern void fpcMtd_Execute__FP20process_method_classPv();
-extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern void fpcMtd_Delete__FP20process_method_classPv();
-extern void fpcMtd_Create__FP20process_method_classPv();
+extern "C" extern void fopMsg_Draw__FPv();
+extern "C" extern void fopMsg_Execute__FPv();
+extern "C" extern void fopMsg_IsDelete__FPv();
+extern "C" extern void fopMsg_Delete__FPv();
+extern "C" extern void fopMsg_Create__FPv();
+extern "C" extern void fopMsgM_GetAppend__FPv();
+extern "C" extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" extern void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" extern void fopDwTg_Init__FP16create_tag_classPv();
+extern "C" extern void fpcBs_MakeOfType__FPi();
+extern "C" extern void fpcLf_GetPriority__FPC14leafdraw_class();
+extern "C" extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
 SECTION_DATA extern void* g_fopMsg_Method[6];
 SECTION_SBSS extern u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80451124[4];
+
+// 
+// Functions:
+// 
+
+/* 8001F488-8001F4B0 0028 .text      fopMsg_Draw__FPv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsg_Draw__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg/fopMsg_Draw__FPv.s"
 }
+#pragma pop
+
+
+/* 8001F4B0-8001F4E8 0038 .text      fopMsg_Execute__FPv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsg_Execute__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg/fopMsg_Execute__FPv.s"
+}
+#pragma pop
+
+
+/* 8001F4E8-8001F53C 0054 .text      fopMsg_IsDelete__FPv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsg_IsDelete__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg/fopMsg_IsDelete__FPv.s"
+}
+#pragma pop
+
+
+/* 8001F53C-8001F588 004C .text      fopMsg_Delete__FPv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsg_Delete__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg/fopMsg_Delete__FPv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80450CF0-80450CF8 0004 .sbss      fopMsg_MSG_TYPE                                              */
+u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
 
-extern "C" {
+/* 8001F588-8001F660 00D8 .text      fopMsg_Create__FPv                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopMsg_Create__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_msg/fopMsg_Create__FPv.s"
+}
+#pragma pop
+
+
 /* 803A3958-803A3970 0014 .data      g_fopMsg_Method                                              */
-SECTION_DATA void* g_fopMsg_Method[6] = {
+void* g_fopMsg_Method[6] = {
 	(void*)fopMsg_Create__FPv,
 	(void*)fopMsg_Delete__FPv,
 	(void*)fopMsg_Execute__FPv,
@@ -46,71 +101,4 @@ SECTION_DATA void* g_fopMsg_Method[6] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450CF0-80450CF8 0004 .sbss      fopMsg_MSG_TYPE                                              */
-SECTION_SBSS u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001F488-8001F4B0 0028 .text      fopMsg_Draw__FPv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsg_Draw__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg/fopMsg_Draw__FPv.s"
-}
-#pragma pop
-
-/* 8001F4B0-8001F4E8 0038 .text      fopMsg_Execute__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsg_Execute__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg/fopMsg_Execute__FPv.s"
-}
-#pragma pop
-
-/* 8001F4E8-8001F53C 0054 .text      fopMsg_IsDelete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsg_IsDelete__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg/fopMsg_IsDelete__FPv.s"
-}
-#pragma pop
-
-/* 8001F53C-8001F588 004C .text      fopMsg_Delete__FPv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsg_Delete__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg/fopMsg_Delete__FPv.s"
-}
-#pragma pop
-
-/* 8001F588-8001F660 00D8 .text      fopMsg_Create__FPv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopMsg_Create__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_msg/fopMsg_Create__FPv.s"
-}
-#pragma pop
-
 

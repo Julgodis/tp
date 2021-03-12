@@ -24,10 +24,10 @@ lbl_800F79CC:
 /* 800F79DC 00000010  4B FC A5 91 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F79E0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 800F79E4 00000018  38 80 01 04 */	li r4, 0x104
-/* 800F79E8 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
-/* 800F79EC 00000020  C0 42 92 C0 */	lfs f2, LIT_6108(r2)
+/* 800F79E8 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800F79EC 00000020  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800F79F0 00000024  38 A0 00 15 */	li r5, 0x15
-/* 800F79F4 00000028  C0 62 92 C4 */	lfs f3, LIT_6109(r2)
+/* 800F79F4 00000028  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 800F79F8 0000002C  4B FB 56 15 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800F79FC 00000030  88 1F 2F 9C */	lbz r0, 0x2f9c(r31)
 /* 800F7A00 00000034  B0 1F 30 0E */	sth r0, 0x300e(r31)
@@ -62,7 +62,7 @@ lbl_800F7A30:
 /* 800F7A70 00000040  7F E3 FB 78 */	mr r3, r31
 /* 800F7A74 00000044  4B FC 7F 7D */	bl setItemActor__9daAlink_cFv
 lbl_800F7A78:
-/* 800F7A78 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800F7A78 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800F7A7C 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800F7A80 00000008  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800F7A84 0000000C  B0 1F 04 DE */	sth r0, 0x4de(r31)

@@ -5,45 +5,44 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void startCtrl__8daItem_cFv();
-extern void startControl__8daItem_cFv();
-extern void endControl__8daItem_cFv();
-}
+extern "C" extern void startCtrl__8daItem_cFv();
+extern "C" extern void startControl__8daItem_cFv();
+extern "C" extern void endControl__8daItem_cFv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80037BE0-80037BF4 0014 .text      startCtrl__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startCtrl__8daItem_cFv() {
+extern "C" asm void startCtrl__8daItem_cFv() {
 	nofralloc
 #include "asm/d/a/d_a_item_static/startCtrl__8daItem_cFv.s"
 }
 #pragma pop
 
+
 /* 80037BF4-80037C04 0010 .text      startControl__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startControl__8daItem_cFv() {
+extern "C" asm void startControl__8daItem_cFv() {
 	nofralloc
 #include "asm/d/a/d_a_item_static/startControl__8daItem_cFv.s"
 }
 #pragma pop
 
+
 /* 80037C04-80037C14 0010 .text      endControl__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void endControl__8daItem_cFv() {
+extern "C" asm void endControl__8daItem_cFv() {
 	nofralloc
 #include "asm/d/a/d_a_item_static/endControl__8daItem_cFv.s"
 }

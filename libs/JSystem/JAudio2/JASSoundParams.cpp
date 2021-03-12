@@ -5,62 +5,52 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void clamp__14JASSoundParamsFv();
-extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
-SECTION_SDATA2 extern u8 LIT_299[4];
-SECTION_SDATA2 extern u8 LIT_300[4];
-SECTION_SDATA2 extern u8 JASSoundParams__LIT_301[4];
-SECTION_SDATA2 extern u8 JASSoundParams__LIT_311[4];
-}
+extern "C" extern void clamp__14JASSoundParamsFv();
+extern "C" extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+SECTION_SDATA2 extern u8 lit_299[4];
+SECTION_SDATA2 extern f32 lit_300;
+SECTION_SDATA2 extern f32 JASSoundParams__lit_301;
+SECTION_SDATA2 extern f32 JASSoundParams__lit_311;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80455760-80455764 0004 .sdata2    @299                                                         */
-SECTION_SDATA2 u8 LIT_299[4] = {
+u8 lit_299[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80455764-80455768 0004 .sdata2    @300                                                         */
-SECTION_SDATA2 u8 LIT_300[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 lit_300 = 1.0f;
+
 /* 80455768-8045576C 0004 .sdata2    @301                                                         */
-SECTION_SDATA2 u8 JASSoundParams__LIT_301[4] = {
-	0x41, 0x00, 0x00, 0x00,
-};
-/* 8045576C-80455770 0004 .sdata2    @311                                                         */
-SECTION_SDATA2 u8 JASSoundParams__LIT_311[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f32 JASSoundParams__lit_301 = 8.0f;
 
 /* 8029E3B0-8029E47C 00CC .text      clamp__14JASSoundParamsFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clamp__14JASSoundParamsFv() {
+extern "C" asm void clamp__14JASSoundParamsFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSoundParams/clamp__14JASSoundParamsFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8045576C-80455770 0004 .sdata2    @311                                                         */
+f32 JASSoundParams__lit_311 = 0.5f;
+
 /* 8029E47C-8029E4D8 005C .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams() {
+extern "C" asm void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSoundParams/combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams.s"
 }

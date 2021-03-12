@@ -58,7 +58,7 @@ lbl_800F34E0:
 /* 800F3504 00000024  B0 1D 30 02 */	sth r0, 0x3002(r29)
 /* 800F3508 00000028  7F A3 EB 78 */	mr r3, r29
 /* 800F350C 0000002C  38 80 00 02 */	li r4, 2
-/* 800F3510 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F3510 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F3514 00000034  4B FB A5 D9 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 /* 800F3518 00000038  7F A3 EB 78 */	mr r3, r29
 /* 800F351C 0000003C  4B FF 9F C1 */	bl setSyncHorsePos__9daAlink_cFv

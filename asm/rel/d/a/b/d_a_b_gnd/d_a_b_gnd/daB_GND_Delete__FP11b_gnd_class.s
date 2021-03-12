@@ -1,0 +1,50 @@
+lbl_80600A5C:
+/* 80600A5C 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80600A60 00000004  7C 08 02 A6 */	mflr r0
+/* 80600A64 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80600A68 0000000C  39 61 00 20 */	addi r11, r1, 0x20
+/* 80600A6C 00000010  4B FF 3F 4D */	bl _savegpr_29
+/* 80600A70 00000014  7C 7D 1B 78 */	mr r29, r3
+/* 80600A74 00000018  38 7D 05 AC */	addi r3, r29, 0x5ac
+/* 80600A78 0000001C  3C 80 00 00 */	lis r4, stringBase0@ha
+/* 80600A7C 00000020  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80600A80 00000024  4B FF 3F 39 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80600A84 00000028  38 7D 05 B4 */	addi r3, r29, 0x5b4
+/* 80600A88 0000002C  3C 80 00 00 */	lis r4, stringBase0@ha
+/* 80600A8C 00000030  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80600A90 00000034  38 84 00 06 */	addi r4, r4, 6
+/* 80600A94 00000038  4B FF 3F 25 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80600A98 0000003C  88 1D 1F B0 */	lbz r0, 0x1fb0(r29)
+/* 80600A9C 00000040  28 00 00 00 */	cmplwi r0, 0
+/* 80600AA0 00000044  41 82 00 10 */	beq lbl_80600AB0
+/* 80600AA4 00000048  38 00 00 00 */	li r0, 0
+/* 80600AA8 0000004C  3C 60 00 00 */	lis r3, struct_80602FB0@ha
+/* 80600AAC 00000050  98 03 00 00 */	stb r0, struct_80602FB0@l(r3)
+lbl_80600AB0:
+/* 80600AB0 00000000  80 1D 00 F0 */	lwz r0, 0xf0(r29)
+/* 80600AB4 00000004  28 00 00 00 */	cmplwi r0, 0
+/* 80600AB8 00000008  41 82 00 40 */	beq lbl_80600AF8
+/* 80600ABC 0000000C  80 7D 05 D0 */	lwz r3, 0x5d0(r29)
+/* 80600AC0 00000010  4B FF 3E F9 */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 80600AC4 00000014  80 7D 05 D4 */	lwz r3, 0x5d4(r29)
+/* 80600AC8 00000018  4B FF 3E F1 */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 80600ACC 0000001C  38 7D 1E 2C */	addi r3, r29, 0x1e2c
+/* 80600AD0 00000020  4B FF 3E E9 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80600AD4 00000024  3B C0 00 00 */	li r30, 0
+/* 80600AD8 00000028  3B E0 00 00 */	li r31, 0
+lbl_80600ADC:
+/* 80600ADC 00000000  38 7F 1F 10 */	addi r3, r31, 0x1f10
+/* 80600AE0 00000004  7C 7D 1A 14 */	add r3, r29, r3
+/* 80600AE4 00000008  4B FF 3E D5 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80600AE8 0000000C  3B DE 00 01 */	addi r30, r30, 1
+/* 80600AEC 00000010  2C 1E 00 05 */	cmpwi r30, 5
+/* 80600AF0 00000014  3B FF 00 20 */	addi r31, r31, 0x20
+/* 80600AF4 00000018  41 80 FF E8 */	blt lbl_80600ADC
+lbl_80600AF8:
+/* 80600AF8 00000000  38 60 00 01 */	li r3, 1
+/* 80600AFC 00000004  39 61 00 20 */	addi r11, r1, 0x20
+/* 80600B00 00000008  4B FF 3E B9 */	bl _restgpr_29
+/* 80600B04 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80600B08 00000010  7C 08 03 A6 */	mtlr r0
+/* 80600B0C 00000014  38 21 00 20 */	addi r1, r1, 0x20
+/* 80600B10 00000018  4E 80 00 20 */	blr 

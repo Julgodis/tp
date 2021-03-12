@@ -11,10 +11,10 @@ lbl_801AE19C:
 /* 801AE1C0 00000024  28 00 00 0A */	cmplwi r0, 0xa
 /* 801AE1C4 00000028  40 80 00 1C */	bge lbl_801AE1E0
 /* 801AE1C8 0000002C  38 7F 01 64 */	addi r3, r31, 0x164
-/* 801AE1CC 00000030  C0 22 A4 80 */	lfs f1, d_d_ky_thunder__LIT_3923(r2)
-/* 801AE1D0 00000034  C0 42 A4 84 */	lfs f2, d_d_ky_thunder__LIT_3924(r2)
-/* 801AE1D4 00000038  C0 62 A4 88 */	lfs f3, d_d_ky_thunder__LIT_3925(r2)
-/* 801AE1D8 0000003C  C0 82 A4 8C */	lfs f4, d_d_ky_thunder__LIT_3926(r2)
+/* 801AE1CC 00000030  C0 22 A4 80 */	lfs f1, d_d_ky_thunder__lit_3923(r2)
+/* 801AE1D0 00000034  C0 42 A4 84 */	lfs f2, d_d_ky_thunder__lit_3924(r2)
+/* 801AE1D4 00000038  C0 62 A4 88 */	lfs f3, d_d_ky_thunder__lit_3925(r2)
+/* 801AE1D8 0000003C  C0 82 A4 8C */	lfs f4, d_d_ky_thunder__lit_3926(r2)
 /* 801AE1DC 00000040  48 0C 17 A1 */	bl cLib_addCalc__FPfffff
 lbl_801AE1E0:
 /* 801AE1E0 00000000  C0 1F 01 64 */	lfs f0, 0x164(r31)
@@ -37,9 +37,9 @@ lbl_801AE214:
 /* 801AE220 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801AE224 00000010  41 82 00 30 */	beq lbl_801AE254
 /* 801AE228 00000014  C0 23 00 D0 */	lfs f1, 0xd0(r3)
-/* 801AE22C 00000018  C0 02 A4 90 */	lfs f0, d_d_ky_thunder__LIT_3927(r2)
+/* 801AE22C 00000018  C0 02 A4 90 */	lfs f0, d_d_ky_thunder__lit_3927(r2)
 /* 801AE230 0000001C  EC 61 00 24 */	fdivs f3, f1, f0
-/* 801AE234 00000020  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE234 00000020  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__lit_3885(r2)
 /* 801AE238 00000024  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801AE23C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801AE240 00000004  40 82 00 08 */	bne lbl_801AE248
@@ -49,7 +49,7 @@ lbl_801AE248:
 /* 801AE24C 00000004  EC 63 00 32 */	fmuls f3, f3, f0
 /* 801AE250 00000008  48 00 00 08 */	b lbl_801AE258
 lbl_801AE254:
-/* 801AE254 00000000  C0 62 A4 7C */	lfs f3, d_d_ky_thunder__LIT_3885(r2)
+/* 801AE254 00000000  C0 62 A4 7C */	lfs f3, d_d_ky_thunder__lit_3885(r2)
 lbl_801AE258:
 /* 801AE258 00000000  C0 1F 01 64 */	lfs f0, 0x164(r31)
 /* 801AE25C 00000004  EC 63 00 32 */	fmuls f3, f3, f0
@@ -62,7 +62,7 @@ lbl_801AE258:
 /* 801AE278 00000020  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 801AE27C 00000024  7C 83 04 2E */	lfsx f4, r3, r0
 /* 801AE280 00000028  C0 3F 01 38 */	lfs f1, 0x138(r31)
-/* 801AE284 0000002C  C0 42 A4 94 */	lfs f2, d_d_ky_thunder__LIT_3928(r2)
+/* 801AE284 0000002C  C0 42 A4 94 */	lfs f2, d_d_ky_thunder__lit_3928(r2)
 /* 801AE288 00000030  EC 03 00 72 */	fmuls f0, f3, f1
 /* 801AE28C 00000034  EC 02 00 32 */	fmuls f0, f2, f0
 /* 801AE290 00000038  EC 00 01 32 */	fmuls f0, f0, f4
@@ -92,7 +92,7 @@ lbl_801AE2E0:
 /* 801AE2EC 0000000C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 801AE2F0 00000010  7C 83 04 2E */	lfsx f4, r3, r0
 /* 801AE2F4 00000014  C0 3F 01 38 */	lfs f1, 0x138(r31)
-/* 801AE2F8 00000018  C0 42 A4 98 */	lfs f2, d_d_ky_thunder__LIT_3929(r2)
+/* 801AE2F8 00000018  C0 42 A4 98 */	lfs f2, d_d_ky_thunder__lit_3929(r2)
 /* 801AE2FC 0000001C  EC 03 00 72 */	fmuls f0, f3, f1
 /* 801AE300 00000020  EC 02 00 32 */	fmuls f0, f2, f0
 /* 801AE304 00000024  EC 00 01 32 */	fmuls f0, f0, f4

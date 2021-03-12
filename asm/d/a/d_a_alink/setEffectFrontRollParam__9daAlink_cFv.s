@@ -9,7 +9,7 @@ lbl_801207BC:
 /* 801207D8 0000001C  7C 78 1B 78 */	mr r24, r3
 /* 801207DC 00000020  3B 20 00 00 */	li r25, 0
 /* 801207E0 00000024  3B E0 00 00 */	li r31, 0
-/* 801207E4 00000028  C3 E2 93 14 */	lfs f31, LIT_7307(r2)
+/* 801207E4 00000028  C3 E2 93 14 */	lfs f31, lit_7307(r2)
 /* 801207E8 0000002C  3C 60 80 3B */	lis r3, m_typeFourData__8dPaPoF_c@ha
 /* 801207EC 00000030  3B A3 86 D0 */	addi r29, r3, m_typeFourData__8dPaPoF_c@l
 /* 801207F0 00000034  3C 60 80 3B */	lis r3, m_emitterFourData__8dPaPoF_c@ha

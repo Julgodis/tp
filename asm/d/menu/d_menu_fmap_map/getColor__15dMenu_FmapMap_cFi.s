@@ -6,8 +6,8 @@ lbl_801CF2A0:
 /* 801CF2B0 00000010  48 19 2F 25 */	bl _savegpr_27
 /* 801CF2B4 00000014  7C 7B 1B 78 */	mr r27, r3
 /* 801CF2B8 00000018  7C 9E 23 78 */	mr r30, r4
-/* 801CF2BC 0000001C  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap_map__data_803961B0@ha
-/* 801CF2C0 00000020  3B A4 61 B0 */	addi r29, r4, d_menu_d_menu_fmap_map__data_803961B0@l
+/* 801CF2BC 0000001C  3C 80 80 39 */	lis r4, data_803961B0@ha
+/* 801CF2C0 00000020  3B A4 61 B0 */	addi r29, r4, data_803961B0@l
 /* 801CF2C4 00000024  3B FD 00 20 */	addi r31, r29, 0x20
 /* 801CF2C8 00000028  88 03 00 D8 */	lbz r0, 0xd8(r3)
 /* 801CF2CC 0000002C  28 00 00 00 */	cmplwi r0, 0

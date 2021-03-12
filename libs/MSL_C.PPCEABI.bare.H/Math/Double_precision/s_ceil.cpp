@@ -5,41 +5,31 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void ceil();
-SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__LIT_124[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__LIT_125[8];
-}
+extern "C" extern void ceil();
+SECTION_SDATA2 extern f64 Math_Double_precision_s_ceil__lit_124;
+SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__lit_125[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456AE0-80456AE8 0008 .sdata2    @124                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_s_ceil__LIT_124[8] = {
-	0x7E, 0x37, 0xE4, 0x3C, 0x88, 0x00, 0x75, 0x9C,
-};
+f64 Math_Double_precision_s_ceil__lit_124 = 1e+300;
+
 /* 80456AE8-80456AF0 0008 .sdata2    @125                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_s_ceil__LIT_125[8] = {
+u8 Math_Double_precision_s_ceil__lit_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8036BEBC-8036C000 0144 .text      ceil                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ceil() {
+extern "C" asm void ceil() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_ceil/ceil.s"
 }

@@ -5,8 +5,8 @@ lbl_800A29DC:
 /* 800A29E8 0000000C  39 61 00 40 */	addi r11, r1, 0x40
 /* 800A29EC 00000010  48 2B F7 DD */	bl _savegpr_24
 /* 800A29F0 00000014  7C 79 1B 78 */	mr r25, r3
-/* 800A29F4 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__LIT_3757@ha
-/* 800A29F8 0000001C  3B A3 D6 58 */	addi r29, r3, d_a_d_a_alink__LIT_3757@l
+/* 800A29F4 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
+/* 800A29F8 0000001C  3B A3 D6 58 */	addi r29, r3, d_a_d_a_alink__lit_3757@l
 /* 800A29FC 00000020  3B 99 29 04 */	addi r28, r25, 0x2904
 /* 800A2A00 00000024  3B C0 00 00 */	li r30, 0
 /* 800A2A04 00000028  3B 00 00 00 */	li r24, 0

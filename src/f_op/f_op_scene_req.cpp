@@ -5,62 +5,195 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopOvlpM_ToldAboutID__FUi();
-extern void fopOvlpM_IsDone__Fv();
-extern void fopOvlpM_IsDoingReq__Fv();
-extern void fopOvlpM_ClearOfReq__Fv();
-extern void fopOvlpM_Request__FsUs();
-extern void fopOvlpM_Cancel__Fv();
-extern void fopScnRq_phase_ClearOverlap__FP19scene_request_class();
-extern void fopScnRq_phase_Execute__FP19scene_request_class();
-extern void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class();
-extern void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class();
-extern void fopScnRq_phase_Done__FP19scene_request_class();
-extern void fopScnRq_Execute__FP19scene_request_class();
-extern void fopScnRq_PostMethod__FPvP19scene_request_class();
-extern void fopScnRq_Cancel__FP19scene_request_class();
-extern void fopScnRq_FadeRequest__FsUs();
-extern void fopScnRq_Request__FiP11scene_classsPvsUs();
-extern void fopScnRq_ReRequest__FUisPv();
-extern void fopScnRq_Handler__Fv();
-extern void fopScnPause_Enable__FP11scene_class();
-extern void fopScnPause_Disable__FP11scene_class();
-extern void fpcEx_SearchByID__FUi();
-extern void fpcNdRq_Execute__FP19node_create_request();
-extern void fpcNdRq_Delete__FP19node_create_request();
-extern void fpcNdRq_Handler__Fv();
-extern void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
-extern void fpcNdRq_ReRequest__FUisPv();
-extern void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
-extern void cPhs_Do__FP30request_of_phase_process_classPv();
-extern void _savegpr_26();
-extern void _restgpr_26();
-SECTION_DATA extern void* f_op_f_op_scene_req__data_803A38C8[4];
+extern "C" extern void fopOvlpM_ToldAboutID__FUi();
+extern "C" extern void fopOvlpM_IsDone__Fv();
+extern "C" extern void fopOvlpM_IsDoingReq__Fv();
+extern "C" extern void fopOvlpM_ClearOfReq__Fv();
+extern "C" extern void fopOvlpM_Request__FsUs();
+extern "C" extern void fopOvlpM_Cancel__Fv();
+extern "C" extern void fopScnRq_phase_ClearOverlap__FP19scene_request_class();
+extern "C" extern void fopScnRq_phase_Execute__FP19scene_request_class();
+extern "C" extern void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class();
+extern "C" extern void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class();
+extern "C" extern void fopScnRq_phase_Done__FP19scene_request_class();
+extern "C" extern void fopScnRq_Execute__FP19scene_request_class();
+extern "C" extern void fopScnRq_PostMethod__FPvP19scene_request_class();
+extern "C" extern void fopScnRq_Cancel__FP19scene_request_class();
+extern "C" extern void fopScnRq_FadeRequest__FsUs();
+extern "C" extern void fopScnRq_Request__FiP11scene_classsPvsUs();
+extern "C" extern void fopScnRq_ReRequest__FUisPv();
+extern "C" extern void fopScnRq_Handler__Fv();
+extern "C" extern void fopScnPause_Enable__FP11scene_class();
+extern "C" extern void fopScnPause_Disable__FP11scene_class();
+extern "C" extern void fpcEx_SearchByID__FUi();
+extern "C" extern void fpcNdRq_Execute__FP19node_create_request();
+extern "C" extern void fpcNdRq_Delete__FP19node_create_request();
+extern "C" extern void fpcNdRq_Handler__Fv();
+extern "C" extern void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
+extern "C" extern void fpcNdRq_ReRequest__FUisPv();
+extern "C" extern void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+extern "C" extern void cPhs_Do__FP30request_of_phase_process_classPv();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
+SECTION_DATA extern void* data_803A38C8[4];
 SECTION_DATA extern void* data_803A38D8[8];
 SECTION_DATA extern void* data_803A38F8[8];
 SECTION_SBSS extern u8 l_fopScnRq_IsUsingOfOverlap[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* 8001EE34-8001EE64 0030 .text      fopScnRq_phase_ClearOverlap__FP19scene_request_class         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_phase_ClearOverlap__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_phase_ClearOverlap__FP19scene_request_class.s"
 }
+#pragma pop
+
+
+/* 8001EE64-8001EE84 0020 .text      fopScnRq_phase_Execute__FP19scene_request_class              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_phase_Execute__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_phase_Execute__FP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EE84-8001EEB4 0030 .text      fopScnRq_phase_IsDoingOverlap__FP19scene_request_class       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_phase_IsDoingOverlap__FP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EEB4-8001EEE4 0030 .text      fopScnRq_phase_IsDoneOverlap__FP19scene_request_class        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_phase_IsDoneOverlap__FP19scene_request_class.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80450CE0-80450CE8 0004 .sbss      l_fopScnRq_IsUsingOfOverlap                                  */
+u8 l_fopScnRq_IsUsingOfOverlap[4 + 4 /* padding */];
 
-extern "C" {
-/* 803A38C8-803A38C8 0000 .data      ...data.0                                                    */
+/* 8001EEE4-8001EF24 0040 .text      fopScnRq_phase_Done__FP19scene_request_class                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_phase_Done__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_phase_Done__FP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EF24-8001EF6C 0048 .text      fopScnRq_Execute__FP19scene_request_class                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_Execute__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_Execute__FP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EF6C-8001EFB0 0044 .text      fopScnRq_PostMethod__FPvP19scene_request_class               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_PostMethod__FPvP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_PostMethod__FPvP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EFB0-8001EFF0 0040 .text      fopScnRq_Cancel__FP19scene_request_class                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_Cancel__FP19scene_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_Cancel__FP19scene_request_class.s"
+}
+#pragma pop
+
+
+/* 8001EFF0-8001F034 0044 .text      fopScnRq_FadeRequest__FsUs                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_FadeRequest__FsUs() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_FadeRequest__FsUs.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A38C8-803A38D8 0010 .data      submethod$2274                                               */
-SECTION_DATA void* f_op_f_op_scene_req__data_803A38C8[4] = {
+void* data_803A38C8[4] = {
 	(void*)fopScnRq_Execute__FP19scene_request_class,
 	(void*)fopScnRq_Cancel__FP19scene_request_class,
 	NULL,
 	(void*)fopScnRq_PostMethod__FPvP19scene_request_class,
 };
+
+/* 8001F034-8001F0FC 00C8 .text      fopScnRq_Request__FiP11scene_classsPvsUs                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_Request__FiP11scene_classsPvsUs() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_Request__FiP11scene_classsPvsUs.s"
+}
+#pragma pop
+
+
+/* 8001F0FC-8001F11C 0020 .text      fopScnRq_ReRequest__FUisPv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_ReRequest__FUisPv() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_ReRequest__FUisPv.s"
+}
+#pragma pop
+
+
+/* 8001F11C-8001F13C 0020 .text      fopScnRq_Handler__Fv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopScnRq_Handler__Fv() {
+	nofralloc
+#include "asm/f_op/f_op_scene_req/fopScnRq_Handler__Fv.s"
+}
+#pragma pop
+
+
 /* 803A38D8-803A38F8 0020 .data      noFadeFase$2275                                              */
-SECTION_DATA void* data_803A38D8[8] = {
+void* data_803A38D8[8] = {
 	(void*)fopScnRq_phase_Execute__FP19scene_request_class,
 	(void*)fopScnRq_phase_Done__FP19scene_request_class,
 	NULL,
@@ -70,8 +203,9 @@ SECTION_DATA void* data_803A38D8[8] = {
 	NULL,
 	NULL,
 };
+
 /* 803A38F8-803A3918 0020 .data      fadeFase$2276                                                */
-SECTION_DATA void* data_803A38F8[8] = {
+void* data_803A38F8[8] = {
 	(void*)fopScnRq_phase_IsDoingOverlap__FP19scene_request_class,
 	(void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,
 	(void*)fopScnRq_phase_Execute__FP19scene_request_class,
@@ -81,141 +215,4 @@ SECTION_DATA void* data_803A38F8[8] = {
 	NULL,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450CE0-80450CE8 0004 .sbss      l_fopScnRq_IsUsingOfOverlap                                  */
-SECTION_SBSS u8 l_fopScnRq_IsUsingOfOverlap[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001EE34-8001EE64 0030 .text      fopScnRq_phase_ClearOverlap__FP19scene_request_class         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_phase_ClearOverlap__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_phase_ClearOverlap__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EE64-8001EE84 0020 .text      fopScnRq_phase_Execute__FP19scene_request_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_phase_Execute__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_phase_Execute__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EE84-8001EEB4 0030 .text      fopScnRq_phase_IsDoingOverlap__FP19scene_request_class       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_phase_IsDoingOverlap__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EEB4-8001EEE4 0030 .text      fopScnRq_phase_IsDoneOverlap__FP19scene_request_class        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_phase_IsDoneOverlap__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EEE4-8001EF24 0040 .text      fopScnRq_phase_Done__FP19scene_request_class                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_phase_Done__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_phase_Done__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EF24-8001EF6C 0048 .text      fopScnRq_Execute__FP19scene_request_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_Execute__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_Execute__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EF6C-8001EFB0 0044 .text      fopScnRq_PostMethod__FPvP19scene_request_class               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_PostMethod__FPvP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_PostMethod__FPvP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EFB0-8001EFF0 0040 .text      fopScnRq_Cancel__FP19scene_request_class                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_Cancel__FP19scene_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_Cancel__FP19scene_request_class.s"
-}
-#pragma pop
-
-/* 8001EFF0-8001F034 0044 .text      fopScnRq_FadeRequest__FsUs                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_FadeRequest__FsUs() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_FadeRequest__FsUs.s"
-}
-#pragma pop
-
-/* 8001F034-8001F0FC 00C8 .text      fopScnRq_Request__FiP11scene_classsPvsUs                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_Request__FiP11scene_classsPvsUs() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_Request__FiP11scene_classsPvsUs.s"
-}
-#pragma pop
-
-/* 8001F0FC-8001F11C 0020 .text      fopScnRq_ReRequest__FUisPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_ReRequest__FUisPv() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_ReRequest__FUisPv.s"
-}
-#pragma pop
-
-/* 8001F11C-8001F13C 0020 .text      fopScnRq_Handler__Fv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopScnRq_Handler__Fv() {
-	nofralloc
-#include "asm/f_op/f_op_scene_req/fopScnRq_Handler__Fv.s"
-}
-#pragma pop
-
 

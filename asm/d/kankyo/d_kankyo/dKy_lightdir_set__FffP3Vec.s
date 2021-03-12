@@ -11,7 +11,7 @@ lbl_8019D1A0:
 /* 8019D1C4 00000000  93 E1 00 5C */	stw r31, 0x5c(r1)
 /* 8019D1C8 00000004  93 C1 00 58 */	stw r30, 0x58(r1)
 /* 8019D1CC 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 8019D1D0 0000000C  C0 02 A2 38 */	lfs f0, d_kankyo_d_kankyo__LIT_4477(r2)
+/* 8019D1D0 0000000C  C0 02 A2 38 */	lfs f0, d_kankyo_d_kankyo__lit_4477(r2)
 /* 8019D1D4 00000010  EF C1 00 24 */	fdivs f30, f1, f0
 /* 8019D1D8 00000014  EF A2 00 24 */	fdivs f29, f2, f0
 /* 8019D1DC 00000018  FC 20 E8 90 */	fmr f1, f29

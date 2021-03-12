@@ -5,8 +5,8 @@ lbl_802A4D60:
 /* 802A4D6C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802A4D70 00000010  48 0B D4 6D */	bl _savegpr_29
 /* 802A4D74 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 802A4D78 00000018  3C 60 80 43 */	lis r3, JAUInitializer__LIT_757@ha
-/* 802A4D7C 0000001C  3B E3 41 10 */	addi r31, r3, JAUInitializer__LIT_757@l
+/* 802A4D78 00000018  3C 60 80 43 */	lis r3, JAUInitializer__lit_757@ha
+/* 802A4D7C 0000001C  3B E3 41 10 */	addi r31, r3, JAUInitializer__lit_757@l
 /* 802A4D80 00000020  80 6D 8C 90 */	lwz r3, JASDram(r13)
 /* 802A4D84 00000024  48 02 99 A9 */	bl getFreeSize__7JKRHeapFv
 /* 802A4D88 00000028  83 BE 00 08 */	lwz r29, 8(r30)

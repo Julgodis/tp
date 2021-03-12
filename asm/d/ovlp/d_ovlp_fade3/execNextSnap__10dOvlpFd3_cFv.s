@@ -27,8 +27,8 @@ lbl_8025368C:
 /* 802536F0 00000064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802536F4 00000068  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 802536F8 0000006C  98 03 5D 44 */	stb r0, 0x5d44(r3)
-/* 802536FC 00000070  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__LIT_3898@ha
-/* 80253700 00000074  38 83 2D 94 */	addi r4, r3, d_ovlp_d_ovlp_fade3__LIT_3898@l
+/* 802536FC 00000070  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__lit_3898@ha
+/* 80253700 00000074  38 83 2D 94 */	addi r4, r3, d_ovlp_d_ovlp_fade3__lit_3898@l
 /* 80253704 00000078  80 64 00 00 */	lwz r3, 0(r4)
 /* 80253708 0000007C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8025370C 00000080  90 7F 00 CC */	stw r3, 0xcc(r31)

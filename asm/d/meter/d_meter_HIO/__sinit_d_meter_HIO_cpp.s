@@ -3,8 +3,8 @@ lbl_80201284:
 /* 80201288 00000004  7C 08 02 A6 */	mflr r0
 /* 8020128C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80201290 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80201294 00000010  3C 60 80 43 */	lis r3, d_meter_d_meter_HIO__LIT_3766@ha
-/* 80201298 00000014  3B E3 EB B0 */	addi r31, r3, d_meter_d_meter_HIO__LIT_3766@l
+/* 80201294 00000010  3C 60 80 43 */	lis r3, d_meter_d_meter_HIO__lit_3766@ha
+/* 80201298 00000014  3B E3 EB B0 */	addi r31, r3, d_meter_d_meter_HIO__lit_3766@l
 /* 8020129C 00000018  38 6D 8B 30 */	addi r3, r13, 0x804510B0-0x80458580 /* g_menuHIO-_SDA_BASE_ */
 /* 802012A0 0000001C  4B FF D0 91 */	bl __ct__16dMeter_menuHIO_cFv
 /* 802012A4 00000020  3C 80 80 20 */	lis r4, __dt__16dMeter_menuHIO_cFv@ha

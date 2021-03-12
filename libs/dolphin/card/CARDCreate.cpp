@@ -5,62 +5,61 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void OSGetTime();
-extern void __CARDDefaultApiCallback();
-extern void __CARDSyncCallback();
-extern void __CARDGetControlBlock();
-extern void __CARDPutControlBlock();
-extern void __CARDSync();
-extern void __CARDGetFatBlock();
-extern void __CARDAllocBlock();
-extern void __CARDGetDirBlock();
-extern void __CARDUpdateDir();
-extern void __CARDCompareFileName();
-extern void CreateCallbackFat();
-extern void CARDCreateAsync();
-extern void CARDCreate();
-extern void __div2i();
-extern void memcmp();
-extern void strncpy();
-extern void strlen();
+extern "C" extern void OSGetTime();
+extern "C" extern void __CARDDefaultApiCallback();
+extern "C" extern void __CARDSyncCallback();
+extern "C" extern void __CARDGetControlBlock();
+extern "C" extern void __CARDPutControlBlock();
+extern "C" extern void __CARDSync();
+extern "C" extern void __CARDGetFatBlock();
+extern "C" extern void __CARDAllocBlock();
+extern "C" extern void __CARDGetDirBlock();
+extern "C" extern void __CARDUpdateDir();
+extern "C" extern void __CARDCompareFileName();
+extern "C" extern void CreateCallbackFat();
+extern "C" extern void CARDCreateAsync();
+extern "C" extern void CARDCreate();
+extern "C" extern void __div2i();
+extern "C" extern void memcmp();
+extern "C" extern void strncpy();
+extern "C" extern void strlen();
 SECTION_BSS extern u8 __CARDBlock[544];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80358108-80358238 0130 .text      CreateCallbackFat                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CreateCallbackFat() {
+extern "C" asm void CreateCallbackFat() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CreateCallbackFat.s"
 }
 #pragma pop
 
+
 /* 80358238-80358458 0220 .text      CARDCreateAsync                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDCreateAsync() {
+extern "C" asm void CARDCreateAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CARDCreateAsync.s"
 }
 #pragma pop
 
+
 /* 80358458-803584A0 0048 .text      CARDCreate                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CARDCreate() {
+extern "C" asm void CARDCreate() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CARDCreate.s"
 }

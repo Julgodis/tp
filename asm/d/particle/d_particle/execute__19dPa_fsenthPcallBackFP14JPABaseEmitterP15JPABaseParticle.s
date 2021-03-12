@@ -6,10 +6,10 @@ lbl_8004DCA0:
 /* 8004DCB0 00000010  28 00 00 01 */	cmplwi r0, 1
 /* 8004DCB4 00000014  40 82 00 3C */	bne lbl_8004DCF0
 /* 8004DCB8 00000018  C0 23 0F 40 */	lfs f1, 0xf40(r3)
-/* 8004DCBC 0000001C  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004DCBC 0000001C  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004DCC0 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8004DCC4 00000000  40 81 00 2C */	ble lbl_8004DCF0
-/* 8004DCC8 00000004  C0 02 85 40 */	lfs f0, d_particle_d_particle__LIT_3880(r2)
+/* 8004DCC8 00000004  C0 02 85 40 */	lfs f0, d_particle_d_particle__lit_3880(r2)
 /* 8004DCCC 00000008  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8004DCD0 0000000C  FC 00 00 1E */	fctiwz f0, f0
 /* 8004DCD4 00000010  D8 01 00 08 */	stfd f0, 8(r1)

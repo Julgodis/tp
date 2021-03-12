@@ -24,8 +24,8 @@ lbl_801843CC:
 /* 80184424 00000058  38 A0 00 02 */	li r5, 2
 /* 80184428 0000005C  38 C0 00 01 */	li r6, 1
 /* 8018442C 00000060  38 E0 00 01 */	li r7, 1
-/* 80184430 00000064  C0 22 9F 2C */	lfs f1, d_file_d_file_select__LIT_4165(r2)
-/* 80184434 00000068  C0 42 9F 30 */	lfs f2, d_file_d_file_select__LIT_4166(r2)
+/* 80184430 00000064  C0 22 9F 2C */	lfs f1, d_file_d_file_select__lit_4165(r2)
+/* 80184434 00000068  C0 42 9F 30 */	lfs f2, d_file_d_file_select__lit_4166(r2)
 /* 80184438 0000006C  39 00 00 00 */	li r8, 0
 /* 8018443C 00000070  39 20 20 00 */	li r9, 0x2000
 /* 80184440 00000074  4B EA DC 05 */	bl __ct__9STControlFssssffss

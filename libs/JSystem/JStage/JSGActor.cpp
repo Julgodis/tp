@@ -5,57 +5,54 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dt__Q26JStage6TActorFv();
-extern void JSGFGetType__Q26JStage6TActorCFv();
-extern void JSGGetTranslation__Q26JStage6TActorCFP3Vec();
-extern void JSGSetTranslation__Q26JStage6TActorFRC3Vec();
-extern void JSGGetScaling__Q26JStage6TActorCFP3Vec();
-extern void JSGSetScaling__Q26JStage6TActorFRC3Vec();
-extern void JSGGetRotation__Q26JStage6TActorCFP3Vec();
-extern void JSGSetRotation__Q26JStage6TActorFRC3Vec();
-extern void JSGGetShape__Q26JStage6TActorCFv();
-extern void JSGSetShape__Q26JStage6TActorFUl();
-extern void JSGGetAnimation__Q26JStage6TActorCFv();
-extern void JSGSetAnimation__Q26JStage6TActorFUl();
-extern void JSGGetAnimationFrame__Q26JStage6TActorCFv();
-extern void JSGSetAnimationFrame__Q26JStage6TActorFf();
-extern void JSGGetAnimationFrameMax__Q26JStage6TActorCFv();
-extern void JSGGetAnimationTransition__Q26JStage6TActorCFv();
-extern void JSGSetAnimationTransition__Q26JStage6TActorFf();
-extern void JSGGetTextureAnimation__Q26JStage6TActorCFv();
-extern void JSGSetTextureAnimation__Q26JStage6TActorFUl();
-extern void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
-extern void JSGSetTextureAnimationFrame__Q26JStage6TActorFf();
-extern void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv();
-extern void __dt__Q26JStage7TObjectFv();
-extern void JSGGetName__Q26JStage7TObjectCFv();
-extern void JSGUpdate__Q26JStage7TObjectFv();
-extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__Q26JStage6TActor[36];
-SECTION_SDATA2 extern u8 JSGActor__LIT_343[8];
-}
+extern "C" extern void __dt__Q26JStage6TActorFv();
+extern "C" extern void JSGFGetType__Q26JStage6TActorCFv();
+extern "C" extern void JSGGetTranslation__Q26JStage6TActorCFP3Vec();
+extern "C" extern void JSGSetTranslation__Q26JStage6TActorFRC3Vec();
+extern "C" extern void JSGGetScaling__Q26JStage6TActorCFP3Vec();
+extern "C" extern void JSGSetScaling__Q26JStage6TActorFRC3Vec();
+extern "C" extern void JSGGetRotation__Q26JStage6TActorCFP3Vec();
+extern "C" extern void JSGSetRotation__Q26JStage6TActorFRC3Vec();
+extern "C" extern void JSGGetShape__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetShape__Q26JStage6TActorFUl();
+extern "C" extern void JSGGetAnimation__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetAnimation__Q26JStage6TActorFUl();
+extern "C" extern void JSGGetAnimationFrame__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetAnimationFrame__Q26JStage6TActorFf();
+extern "C" extern void JSGGetAnimationFrameMax__Q26JStage6TActorCFv();
+extern "C" extern void JSGGetAnimationTransition__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetAnimationTransition__Q26JStage6TActorFf();
+extern "C" extern void JSGGetTextureAnimation__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetTextureAnimation__Q26JStage6TActorFUl();
+extern "C" extern void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
+extern "C" extern void JSGSetTextureAnimationFrame__Q26JStage6TActorFf();
+extern "C" extern void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv();
+extern "C" extern void __dt__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
+extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__Q26JStage6TActor[36];
+SECTION_SDATA2 extern u8 JSGActor__lit_343[8];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C45A8-803C4638 008C .data      __vt__Q26JStage6TActor                                       */
-SECTION_DATA void* __vt__Q26JStage6TActor[36] = {
+void* const __vt__Q26JStage6TActor[36] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -94,242 +91,251 @@ SECTION_DATA void* __vt__Q26JStage6TActor[36] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804553C8-804553D0 0004 .sdata2    @343                                                         */
-SECTION_SDATA2 u8 JSGActor__LIT_343[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80280A48-80280AA8 0060 .text      __dt__Q26JStage6TActorFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__Q26JStage6TActorFv() {
+extern "C" asm void __dt__Q26JStage6TActorFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/__dt__Q26JStage6TActorFv.s"
 }
 #pragma pop
 
+
 /* 80280AA8-80280AB0 0008 .text      JSGFGetType__Q26JStage6TActorCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGFGetType__Q26JStage6TActorCFv() {
+extern "C" asm void JSGFGetType__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGFGetType__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280AB0-80280AB4 0004 .text      JSGGetTranslation__Q26JStage6TActorCFP3Vec                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetTranslation__Q26JStage6TActorCFP3Vec() {
+extern "C" asm void JSGGetTranslation__Q26JStage6TActorCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetTranslation__Q26JStage6TActorCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280AB4-80280AB8 0004 .text      JSGSetTranslation__Q26JStage6TActorFRC3Vec                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetTranslation__Q26JStage6TActorFRC3Vec() {
+extern "C" asm void JSGSetTranslation__Q26JStage6TActorFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetTranslation__Q26JStage6TActorFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280AB8-80280ABC 0004 .text      JSGGetScaling__Q26JStage6TActorCFP3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetScaling__Q26JStage6TActorCFP3Vec() {
+extern "C" asm void JSGGetScaling__Q26JStage6TActorCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetScaling__Q26JStage6TActorCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280ABC-80280AC0 0004 .text      JSGSetScaling__Q26JStage6TActorFRC3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetScaling__Q26JStage6TActorFRC3Vec() {
+extern "C" asm void JSGSetScaling__Q26JStage6TActorFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetScaling__Q26JStage6TActorFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280AC0-80280AC4 0004 .text      JSGGetRotation__Q26JStage6TActorCFP3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetRotation__Q26JStage6TActorCFP3Vec() {
+extern "C" asm void JSGGetRotation__Q26JStage6TActorCFP3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetRotation__Q26JStage6TActorCFP3Vec.s"
 }
 #pragma pop
 
+
 /* 80280AC4-80280AC8 0004 .text      JSGSetRotation__Q26JStage6TActorFRC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetRotation__Q26JStage6TActorFRC3Vec() {
+extern "C" asm void JSGSetRotation__Q26JStage6TActorFRC3Vec() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetRotation__Q26JStage6TActorFRC3Vec.s"
 }
 #pragma pop
 
+
 /* 80280AC8-80280AD0 0008 .text      JSGGetShape__Q26JStage6TActorCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetShape__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetShape__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetShape__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280AD0-80280AD4 0004 .text      JSGSetShape__Q26JStage6TActorFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetShape__Q26JStage6TActorFUl() {
+extern "C" asm void JSGSetShape__Q26JStage6TActorFUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetShape__Q26JStage6TActorFUl.s"
 }
 #pragma pop
 
+
 /* 80280AD4-80280ADC 0008 .text      JSGGetAnimation__Q26JStage6TActorCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetAnimation__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetAnimation__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetAnimation__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280ADC-80280AE0 0004 .text      JSGSetAnimation__Q26JStage6TActorFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetAnimation__Q26JStage6TActorFUl() {
+extern "C" asm void JSGSetAnimation__Q26JStage6TActorFUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetAnimation__Q26JStage6TActorFUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804553C8-804553D0 0004 .sdata2    @343                                                         */
+u8 JSGActor__lit_343[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80280AE0-80280AE8 0008 .text      JSGGetAnimationFrame__Q26JStage6TActorCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetAnimationFrame__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetAnimationFrame__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetAnimationFrame__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280AE8-80280AEC 0004 .text      JSGSetAnimationFrame__Q26JStage6TActorFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetAnimationFrame__Q26JStage6TActorFf() {
+extern "C" asm void JSGSetAnimationFrame__Q26JStage6TActorFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetAnimationFrame__Q26JStage6TActorFf.s"
 }
 #pragma pop
 
+
 /* 80280AEC-80280AF4 0008 .text      JSGGetAnimationFrameMax__Q26JStage6TActorCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetAnimationFrameMax__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetAnimationFrameMax__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetAnimationFrameMax__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280AF4-80280AFC 0008 .text      JSGGetAnimationTransition__Q26JStage6TActorCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetAnimationTransition__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetAnimationTransition__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetAnimationTransition__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280AFC-80280B00 0004 .text      JSGSetAnimationTransition__Q26JStage6TActorFf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetAnimationTransition__Q26JStage6TActorFf() {
+extern "C" asm void JSGSetAnimationTransition__Q26JStage6TActorFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetAnimationTransition__Q26JStage6TActorFf.s"
 }
 #pragma pop
 
+
 /* 80280B00-80280B08 0008 .text      JSGGetTextureAnimation__Q26JStage6TActorCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetTextureAnimation__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetTextureAnimation__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetTextureAnimation__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280B08-80280B0C 0004 .text      JSGSetTextureAnimation__Q26JStage6TActorFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetTextureAnimation__Q26JStage6TActorFUl() {
+extern "C" asm void JSGSetTextureAnimation__Q26JStage6TActorFUl() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetTextureAnimation__Q26JStage6TActorFUl.s"
 }
 #pragma pop
 
+
 /* 80280B0C-80280B14 0008 .text      JSGGetTextureAnimationFrame__Q26JStage6TActorCFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetTextureAnimationFrame__Q26JStage6TActorCFv.s"
 }
 #pragma pop
 
+
 /* 80280B14-80280B18 0004 .text      JSGSetTextureAnimationFrame__Q26JStage6TActorFf              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGSetTextureAnimationFrame__Q26JStage6TActorFf() {
+extern "C" asm void JSGSetTextureAnimationFrame__Q26JStage6TActorFf() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGSetTextureAnimationFrame__Q26JStage6TActorFf.s"
 }
 #pragma pop
 
+
 /* 80280B18-80280B20 0008 .text      JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv() {
+extern "C" asm void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGActor/JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv.s"
 }

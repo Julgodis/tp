@@ -27,3 +27,10 @@ powerpc-linux-gnu-objdump -j extabindex_ -s expected/build/dolzel2/main.elf > ba
 
 hexdump -C expected/build/dolzel2/main.dol > base_dol.dump
 hexdump -C build/dolzel2/main.dol > main_dol.dump
+
+powerpc-linux-gnu-objdump -h expected/build/dolzel2/libMSL_C.PPCEABI.bare.H.a > base_a.dump
+powerpc-linux-gnu-objdump -h build/dolzel2/libMSL_C.PPCEABI.bare.H.a > main_a.dump
+
+
+
+python3 tools/sort_objdump_t.py -s .sdata2 -o t_sdata2.dump main_t_sdata2.dump

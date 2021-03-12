@@ -5,77 +5,66 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __nwa__FUl();
-extern void loadGX__10J3DTextureCFUs11_GXTexMapID();
-extern void entryNum__10J3DTextureFUs();
-extern void addResTIMG__10J3DTextureFUsPC7ResTIMG();
-extern void GXInitTexObj();
-extern void GXInitTexObjCI();
-extern void GXInitTexObjLOD();
-extern void GXLoadTexObj();
-extern void GXInitTlutObj();
-extern void GXLoadTlut();
-extern void _savegpr_28();
-extern void _restgpr_28();
-SECTION_SDATA2 extern u8 LIT_284[4];
-SECTION_SDATA2 extern u8 LIT_285[4];
-SECTION_SDATA2 extern u8 J3DTexture__LIT_288[8];
-}
+extern "C" extern void __nwa__FUl();
+extern "C" extern void loadGX__10J3DTextureCFUs11_GXTexMapID();
+extern "C" extern void entryNum__10J3DTextureFUs();
+extern "C" extern void addResTIMG__10J3DTextureFUsPC7ResTIMG();
+extern "C" extern void GXInitTexObj();
+extern "C" extern void GXInitTexObjCI();
+extern "C" extern void GXInitTexObjLOD();
+extern "C" extern void GXLoadTexObj();
+extern "C" extern void GXInitTlutObj();
+extern "C" extern void GXLoadTlut();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
+SECTION_SDATA2 extern f32 lit_284;
+SECTION_SDATA2 extern f32 lit_285;
+SECTION_SDATA2 extern f64 J3DTexture__lit_288;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456388-8045638C 0004 .sdata2    @284                                                         */
-SECTION_SDATA2 u8 LIT_284[4] = {
-	0x3E, 0x00, 0x00, 0x00,
-};
+f32 lit_284 = 0.125f;
+
 /* 8045638C-80456390 0004 .sdata2    @285                                                         */
-SECTION_SDATA2 u8 LIT_285[4] = {
-	0x3C, 0x23, 0xD7, 0x0A,
-};
+f32 lit_285 = 1.0f / 100.0f;
+
 /* 80456390-80456398 0008 .sdata2    @288                                                         */
-SECTION_SDATA2 u8 J3DTexture__LIT_288[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 J3DTexture__lit_288 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8031204C-803121A4 0158 .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadGX__10J3DTextureCFUs11_GXTexMapID() {
+extern "C" asm void loadGX__10J3DTextureCFUs11_GXTexMapID() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTexture/loadGX__10J3DTextureCFUs11_GXTexMapID.s"
 }
 #pragma pop
 
+
 /* 803121A4-8031221C 0078 .text      entryNum__10J3DTextureFUs                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryNum__10J3DTextureFUs() {
+extern "C" asm void entryNum__10J3DTextureFUs() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTexture/entryNum__10J3DTextureFUs.s"
 }
 #pragma pop
 
+
 /* 8031221C-80312488 026C .text      addResTIMG__10J3DTextureFUsPC7ResTIMG                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void addResTIMG__10J3DTextureFUsPC7ResTIMG() {
+extern "C" asm void addResTIMG__10J3DTextureFUsPC7ResTIMG() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTexture/addResTIMG__10J3DTextureFUsPC7ResTIMG.s"
 }

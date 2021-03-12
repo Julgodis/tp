@@ -5,8 +5,8 @@ lbl_800EC8F8:
 /* 800EC904 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 800EC908 00000010  48 27 58 D5 */	bl _savegpr_29
 /* 800EC90C 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 800EC910 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800EC914 0000001C  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__LIT_3757@l
+/* 800EC910 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800EC914 0000001C  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
 /* 800EC918 00000020  4B FF FF 65 */	bl getReinRideDirection__9daAlink_cFv
 /* 800EC91C 00000024  80 9D 27 F4 */	lwz r4, 0x27f4(r29)
 /* 800EC920 00000028  A8 04 00 08 */	lha r0, 8(r4)

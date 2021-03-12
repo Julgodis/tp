@@ -18,7 +18,7 @@ lbl_80130210:
 /* 80130220 00000010  C0 25 00 B8 */	lfs f1, 0xb8(r5)
 /* 80130224 00000014  C0 45 00 BC */	lfs f2, 0xbc(r5)
 /* 80130228 00000018  4B FF 94 B1 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
-/* 8013022C 0000001C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013022C 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80130230 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 80130234 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80130238 00000028  4B FF BF BD */	bl setWolfWaitSlip__9daAlink_cFv

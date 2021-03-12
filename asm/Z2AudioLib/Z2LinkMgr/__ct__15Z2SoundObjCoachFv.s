@@ -8,7 +8,7 @@ lbl_802C54B8:
 /* 802C54D0 00000018  3C 60 80 3D */	lis r3, __vt__15Z2SoundObjCoach@ha
 /* 802C54D4 0000001C  38 03 B8 F0 */	addi r0, r3, __vt__15Z2SoundObjCoach@l
 /* 802C54D8 00000020  90 1F 00 10 */	stw r0, 0x10(r31)
-/* 802C54DC 00000024  C0 02 C2 A0 */	lfs f0, LIT_3723(r2)
+/* 802C54DC 00000024  C0 02 C2 A0 */	lfs f0, lit_3723(r2)
 /* 802C54E0 00000028  D0 1F 00 20 */	stfs f0, 0x20(r31)
 /* 802C54E4 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 802C54E8 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)

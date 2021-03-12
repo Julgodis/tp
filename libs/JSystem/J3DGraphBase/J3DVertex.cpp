@@ -5,155 +5,163 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memcpy();
-extern void __nwa__FUli();
-extern void __dl__FPv();
-extern void __ct__13J3DVertexDataFv();
-extern void setVertexData__15J3DVertexBufferFP13J3DVertexData();
-extern void init__15J3DVertexBufferFv();
-extern void __dt__15J3DVertexBufferFv();
-extern void setArray__15J3DVertexBufferCFv();
-extern void copyLocalVtxPosArray__15J3DVertexBufferFUl();
-extern void copyLocalVtxNrmArray__15J3DVertexBufferFUl();
-extern void copyLocalVtxArray__15J3DVertexBufferFUl();
-extern void allocTransformedVtxPosArray__15J3DVertexBufferFv();
-extern void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
-extern void __ct__14J3DDrawMtxDataFv();
-extern void __dt__14J3DDrawMtxDataFv();
-extern void DCStoreRange();
-extern void _savegpr_24();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_24();
-extern void _restgpr_28();
-extern void _restgpr_29();
+extern "C" extern void __nwa__FUli();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__13J3DVertexDataFv();
+extern "C" extern void setVertexData__15J3DVertexBufferFP13J3DVertexData();
+extern "C" extern void init__15J3DVertexBufferFv();
+extern "C" extern void __dt__15J3DVertexBufferFv();
+extern "C" extern void setArray__15J3DVertexBufferCFv();
+extern "C" extern void copyLocalVtxPosArray__15J3DVertexBufferFUl();
+extern "C" extern void copyLocalVtxNrmArray__15J3DVertexBufferFUl();
+extern "C" extern void copyLocalVtxArray__15J3DVertexBufferFUl();
+extern "C" extern void allocTransformedVtxPosArray__15J3DVertexBufferFv();
+extern "C" extern void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
+extern "C" extern void __ct__14J3DDrawMtxDataFv();
+extern "C" extern void __dt__14J3DDrawMtxDataFv();
+extern "C" extern void DCStoreRange();
+extern "C" extern void _savegpr_24();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_24();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
 SECTION_BSS extern u8 j3dSys[284];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80310EF8-80310F78 0080 .text      __ct__13J3DVertexDataFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13J3DVertexDataFv() {
+extern "C" asm void __ct__13J3DVertexDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/__ct__13J3DVertexDataFv.s"
 }
 #pragma pop
 
+
 /* 80310F78-80310FD8 0060 .text      setVertexData__15J3DVertexBufferFP13J3DVertexData            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setVertexData__15J3DVertexBufferFP13J3DVertexData() {
+extern "C" asm void setVertexData__15J3DVertexBufferFP13J3DVertexData() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/setVertexData__15J3DVertexBufferFP13J3DVertexData.s"
 }
 #pragma pop
 
+
 /* 80310FD8-80311030 0058 .text      init__15J3DVertexBufferFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__15J3DVertexBufferFv() {
+extern "C" asm void init__15J3DVertexBufferFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/init__15J3DVertexBufferFv.s"
 }
 #pragma pop
 
+
 /* 80311030-8031106C 003C .text      __dt__15J3DVertexBufferFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15J3DVertexBufferFv() {
+extern "C" asm void __dt__15J3DVertexBufferFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/__dt__15J3DVertexBufferFv.s"
 }
 #pragma pop
 
+
 /* 8031106C-80311090 0024 .text      setArray__15J3DVertexBufferCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setArray__15J3DVertexBufferCFv() {
+extern "C" asm void setArray__15J3DVertexBufferCFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/setArray__15J3DVertexBufferCFv.s"
 }
 #pragma pop
 
+
 /* 80311090-803111B0 0120 .text      copyLocalVtxPosArray__15J3DVertexBufferFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void copyLocalVtxPosArray__15J3DVertexBufferFUl() {
+extern "C" asm void copyLocalVtxPosArray__15J3DVertexBufferFUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/copyLocalVtxPosArray__15J3DVertexBufferFUl.s"
 }
 #pragma pop
 
+
 /* 803111B0-803112D0 0120 .text      copyLocalVtxNrmArray__15J3DVertexBufferFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void copyLocalVtxNrmArray__15J3DVertexBufferFUl() {
+extern "C" asm void copyLocalVtxNrmArray__15J3DVertexBufferFUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/copyLocalVtxNrmArray__15J3DVertexBufferFUl.s"
 }
 #pragma pop
 
+
 /* 803112D0-80311478 01A8 .text      copyLocalVtxArray__15J3DVertexBufferFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void copyLocalVtxArray__15J3DVertexBufferFUl() {
+extern "C" asm void copyLocalVtxArray__15J3DVertexBufferFUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/copyLocalVtxArray__15J3DVertexBufferFUl.s"
 }
 #pragma pop
 
+
 /* 80311478-8031152C 00B4 .text      allocTransformedVtxPosArray__15J3DVertexBufferFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocTransformedVtxPosArray__15J3DVertexBufferFv() {
+extern "C" asm void allocTransformedVtxPosArray__15J3DVertexBufferFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/allocTransformedVtxPosArray__15J3DVertexBufferFv.s"
 }
 #pragma pop
 
+
 /* 8031152C-803115E0 00B4 .text      allocTransformedVtxNrmArray__15J3DVertexBufferFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void allocTransformedVtxNrmArray__15J3DVertexBufferFv() {
+extern "C" asm void allocTransformedVtxNrmArray__15J3DVertexBufferFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/allocTransformedVtxNrmArray__15J3DVertexBufferFv.s"
 }
 #pragma pop
 
+
 /* 803115E0-803115F4 0014 .text      __ct__14J3DDrawMtxDataFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14J3DDrawMtxDataFv() {
+extern "C" asm void __ct__14J3DDrawMtxDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/__ct__14J3DDrawMtxDataFv.s"
 }
 #pragma pop
 
+
 /* 803115F4-80311630 003C .text      __dt__14J3DDrawMtxDataFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14J3DDrawMtxDataFv() {
+extern "C" asm void __dt__14J3DDrawMtxDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DVertex/__dt__14J3DDrawMtxDataFv.s"
 }

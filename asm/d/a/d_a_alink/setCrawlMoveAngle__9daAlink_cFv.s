@@ -7,8 +7,8 @@ lbl_800F8DBC:
 /* 800F8DD0 00000000  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 800F8DD4 00000004  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 800F8DD8 00000008  7C 7F 1B 78 */	mr r31, r3
-/* 800F8DDC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__LIT_3757@ha
-/* 800F8DE0 00000010  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__LIT_3757@l
+/* 800F8DDC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
+/* 800F8DE0 00000010  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__lit_3757@l
 /* 800F8DE4 00000014  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 800F8DE8 00000018  A8 9F 2F E2 */	lha r4, 0x2fe2(r31)
 /* 800F8DEC 0000001C  38 FE 09 C4 */	addi r7, r30, 0x9c4

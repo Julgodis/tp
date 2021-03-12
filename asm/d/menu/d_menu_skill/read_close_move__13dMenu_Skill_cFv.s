@@ -18,7 +18,7 @@ lbl_801F826C:
 /* 801F82AC 00000040  38 00 00 00 */	li r0, 0
 /* 801F82B0 00000044  98 1F 02 05 */	stb r0, 0x205(r31)
 /* 801F82B4 00000048  80 7F 01 7C */	lwz r3, 0x17c(r31)
-/* 801F82B8 0000004C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__LIT_3808(r2)
+/* 801F82B8 0000004C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
 /* 801F82BC 00000050  48 05 D5 15 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F82C0 00000054  80 7F 01 58 */	lwz r3, 0x158(r31)
 /* 801F82C4 00000058  3C 80 80 43 */	lis r4, g_drawHIO@ha
@@ -30,7 +30,7 @@ lbl_801F826C:
 /* 801F82DC 00000070  4E 80 04 21 */	bctrl 
 /* 801F82E0 00000074  48 00 00 8C */	b lbl_801F836C
 lbl_801F82E4:
-/* 801F82E4 00000000  C8 42 AA B0 */	lfd f2, LIT_4016(r2)
+/* 801F82E4 00000000  C8 42 AA B0 */	lfd f2, lit_4016(r2)
 /* 801F82E8 00000004  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 801F82EC 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F82F0 0000000C  3C 60 43 30 */	lis r3, 0x4330
@@ -50,7 +50,7 @@ lbl_801F82E4:
 /* 801F8328 00000044  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801F832C 00000048  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801F8330 0000004C  88 04 0A 8D */	lbz r0, 0xa8d(r4)
-/* 801F8334 00000050  C8 22 AA B8 */	lfd f1, d_menu_d_menu_skill__LIT_4104(r2)
+/* 801F8334 00000050  C8 22 AA B8 */	lfd f1, d_menu_d_menu_skill__lit_4104(r2)
 /* 801F8338 00000054  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801F833C 00000058  3C 00 43 30 */	lis r0, 0x4330
 /* 801F8340 0000005C  90 01 00 18 */	stw r0, 0x18(r1)

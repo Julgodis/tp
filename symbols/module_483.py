@@ -1,0 +1,41 @@
+#
+# Generate By: dol2asm
+# Module: 483
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C25FA0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C25FCC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C25FF8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 9, 'type': "Function"},
+	'daObj_Ihasi_Draw__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26018, 'size': 0x0104, 'padding': 0x00, 'name': "daObj_Ihasi_Draw__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'ih_normal__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C2611C, 'size': 0x0004, 'padding': 0x00, 'name': "ih_normal__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'ih_disappear__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26120, 'size': 0x0004, 'padding': 0x00, 'name': "ih_disappear__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'action__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26124, 'size': 0x00E0, 'padding': 0x00, 'name': "action__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Ihasi_Execute__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26204, 'size': 0x00C0, 'padding': 0x00, 'name': "daObj_Ihasi_Execute__FP15obj_ihasi_class", 'reference_count': 2, 'type': "Function"},
+	'daObj_Ihasi_IsDelete__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C262C4, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Ihasi_IsDelete__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Ihasi_Delete__FP15obj_ihasi_class': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C262CC, 'size': 0x0058, 'padding': 0x00, 'name': "daObj_Ihasi_Delete__FP15obj_ihasi_class", 'reference_count': 1, 'type': "Function"},
+	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26324, 'size': 0x01D4, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
+	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C264F8, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
+	'daObj_Ihasi_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".text", 'addr': 0x80C26540, 'size': 0x0340, 'padding': 0x00, 'name': "daObj_Ihasi_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'data_80C26880': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80C26880, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80C26884': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80C26884, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'lit_3841': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C2688C, 'size': 0x0004, 'padding': 0x00, 'name': "@3841", 'reference_count': 0, 'type': "Integer"},
+	'lit_3842': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C26890, 'size': 0x0004, 'padding': 0x00, 'name': "@3842", 'reference_count': 0, 'type': "Integer"},
+	'lit_3843': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C26894, 'size': 0x0004, 'padding': 0x00, 'name': "@3843", 'reference_count': 0, 'type': "Integer"},
+	'lit_3922': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C26898, 'size': 0x0004, 'padding': 0x00, 'name': "@3922", 'reference_count': 0, 'type': "Integer"},
+	'lit_4021': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C2689C, 'size': 0x0004, 'padding': 0x00, 'name': "@4021", 'reference_count': 0, 'type': "Integer"},
+	'lit_4022': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268A0, 'size': 0x0004, 'padding': 0x00, 'name': "@4022", 'reference_count': 0, 'type': "Integer"},
+	'lit_4023': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268A4, 'size': 0x0004, 'padding': 0x00, 'name': "@4023", 'reference_count': 0, 'type': "Integer"},
+	'lit_4024': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268A8, 'size': 0x0004, 'padding': 0x00, 'name': "@4024", 'reference_count': 0, 'type': "Integer"},
+	'lit_4025': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268AC, 'size': 0x0004, 'padding': 0x00, 'name': "@4025", 'reference_count': 0, 'type': "Integer"},
+	'lit_4026': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268B0, 'size': 0x0004, 'padding': 0x00, 'name': "@4026", 'reference_count': 0, 'type': "Integer"},
+	'lit_4027': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268B4, 'size': 0x0004, 'padding': 0x00, 'name': "@4027", 'reference_count': 0, 'type': "Integer"},
+	'lit_4028': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268B8, 'size': 0x0004, 'padding': 0x00, 'name': "@4028", 'reference_count': 0, 'type': "Integer"},
+	'lit_4029': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268BC, 'size': 0x0004, 'padding': 0x00, 'name': "@4029", 'reference_count': 0, 'type': "Integer"},
+	'lit_4030': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268C0, 'size': 0x0004, 'padding': 0x00, 'name': "@4030", 'reference_count': 0, 'type': "Integer"},
+	'lit_4031': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268C4, 'size': 0x0004, 'padding': 0x00, 'name': "@4031", 'reference_count': 0, 'type': "Integer"},
+	'stringBase0': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".rodata", 'addr': 0x80C268C8, 'size': 0x0012, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
+	'l_daObj_Ihasi_Method': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".data", 'addr': 0x80C268DC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Ihasi_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_OBJ_IHASI': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".data", 'addr': 0x80C268FC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_IHASI", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/d_a_obj_ihasi", 'translation_unit': "d_a_obj_ihasi", 'section': ".data", 'addr': 0x80C2692C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+}

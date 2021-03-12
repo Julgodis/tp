@@ -59,7 +59,7 @@ lbl_8005CF78:
 /* 8005D05C 000000D0  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8005D060 000000D4  EC 01 00 2A */	fadds f0, f1, f0
 /* 8005D064 000000D8  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8005D068 000000DC  C0 02 88 7C */	lfs f0, d_kankyo_d_kankyo_rain__LIT_4467(r2)
+/* 8005D068 000000DC  C0 02 88 7C */	lfs f0, d_kankyo_d_kankyo_rain__lit_4467(r2)
 /* 8005D06C 000000E0  EC 00 10 2A */	fadds f0, f0, f2
 /* 8005D070 000000E4  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8005D074 000000E8  D0 7D 00 00 */	stfs f3, 0(r29)
@@ -79,7 +79,7 @@ lbl_8005CF78:
 /* 8005D0AC 00000120  7F A3 EB 78 */	mr r3, r29
 /* 8005D0B0 00000124  38 81 00 20 */	addi r4, r1, 0x20
 /* 8005D0B4 00000128  48 01 83 E9 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
-/* 8005D0B8 0000012C  C0 02 88 30 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_4361(r2)
+/* 8005D0B8 0000012C  C0 02 88 30 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4361(r2)
 /* 8005D0BC 00000130  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8005D0C0 00000134  41 82 00 50 */	beq lbl_8005D110
 /* 8005D0C4 00000138  3B C0 00 01 */	li r30, 1
@@ -103,7 +103,7 @@ lbl_8005CF78:
 /* 8005D10C 00000180  48 00 00 60 */	b lbl_8005D16C
 lbl_8005D110:
 /* 8005D110 00000000  C0 21 00 18 */	lfs f1, 0x18(r1)
-/* 8005D114 00000004  C0 02 88 80 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_4468(r2)
+/* 8005D114 00000004  C0 02 88 80 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4468(r2)
 /* 8005D118 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 8005D11C 0000000C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8005D120 00000010  38 61 00 70 */	addi r3, r1, 0x70
@@ -112,7 +112,7 @@ lbl_8005D110:
 /* 8005D12C 0000001C  7F A3 EB 78 */	mr r3, r29
 /* 8005D130 00000020  38 81 00 70 */	addi r4, r1, 0x70
 /* 8005D134 00000024  48 01 73 6D */	bl GroundCross__4cBgSFP11cBgS_GndChk
-/* 8005D138 00000028  C0 42 88 7C */	lfs f2, d_kankyo_d_kankyo_rain__LIT_4467(r2)
+/* 8005D138 00000028  C0 42 88 7C */	lfs f2, d_kankyo_d_kankyo_rain__lit_4467(r2)
 /* 8005D13C 0000002C  C0 1F 00 DC */	lfs f0, 0xdc(r31)
 /* 8005D140 00000030  EC 02 00 2A */	fadds f0, f2, f0
 /* 8005D144 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0

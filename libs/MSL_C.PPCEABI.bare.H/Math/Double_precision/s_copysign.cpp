@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void copysign();
-}
+extern "C" extern void copysign();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C000-8036C028 0028 .text      copysign                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void copysign() {
+extern "C" asm void copysign() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_copysign/copysign.s"
 }

@@ -5,30 +5,26 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_DATA extern u8 j_o_id__8dPa_name[12];
 SECTION_DATA extern u8 s_o_id__8dPa_name[28];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A85D0-803A85DC 000A .data      j_o_id__8dPa_name                                            */
-SECTION_DATA u8 j_o_id__8dPa_name[12] = {
+u8 j_o_id__8dPa_name[12] = {
 	0x07, 0x0F, 0x07, 0x3D, 0x01, 0x00, 0x01, 0x01, 0x01, 0x03,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803A85DC-803A85F8 001C .data      s_o_id__8dPa_name                                            */
-SECTION_DATA u8 s_o_id__8dPa_name[28] = {
+u8 s_o_id__8dPa_name[28] = {
 	0x81, 0x10, 0x81, 0x11, 0x81, 0x12, 0x89, 0xD6, 0x89, 0xD7, 0x89, 0xD8, 0x83, 0xA6, 0x83, 0xA7,
 	0x81, 0x04, 0x81, 0x05, 0x81, 0x06, 0x81, 0x74, 0x81, 0x75, 0x81, 0x76,
 };
-}
 

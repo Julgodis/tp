@@ -69,11 +69,11 @@ lbl_80216EA0:
 /* 80216EA8 00000008  57 A0 06 3E */	clrlwi r0, r29, 0x18
 /* 80216EAC 0000000C  28 00 00 25 */	cmplwi r0, 0x25
 /* 80216EB0 00000010  40 82 00 38 */	bne lbl_80216EE8
-/* 80216EB4 00000014  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80216EB4 00000014  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80216EB8 00000018  C0 1C 06 08 */	lfs f0, 0x608(r28)
 /* 80216EBC 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80216EC0 00000020  40 82 00 1C */	bne lbl_80216EDC
-/* 80216EC4 00000024  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__LIT_4923(r2)
+/* 80216EC4 00000024  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__lit_4923(r2)
 /* 80216EC8 00000028  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80216ECC 0000002C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 80216ED0 00000030  C0 03 04 90 */	lfs f0, 0x490(r3)
@@ -86,7 +86,7 @@ lbl_80216EDC:
 lbl_80216EE8:
 /* 80216EE8 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 80216EEC 00000004  41 82 00 1C */	beq lbl_80216F08
-/* 80216EF0 00000008  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__LIT_4923(r2)
+/* 80216EF0 00000008  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__lit_4923(r2)
 /* 80216EF4 0000000C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80216EF8 00000010  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 80216EFC 00000014  C0 03 04 90 */	lfs f0, 0x490(r3)

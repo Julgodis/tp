@@ -1,3 +1,3 @@
 lbl_8032C11C:
-/* 8032C11C 00000000  C0 22 CA 30 */	lfs f1, J3DAnimation__LIT_852(r2)
+/* 8032C11C 00000000  C0 22 CA 30 */	lfs f1, J3DAnimation__lit_852(r2)
 /* 8032C120 00000004  4E 80 00 20 */	blr 

@@ -267,8 +267,8 @@ lbl_8021FB80:
 /* 8021FB88 00000008  88 03 00 B9 */	lbz r0, 0xb9(r3)
 /* 8021FB8C 0000000C  28 00 00 0A */	cmplwi r0, 0xa
 /* 8021FB90 00000010  41 81 01 50 */	bgt lbl_8021FCE0
-/* 8021FB94 00000014  3C 60 80 3C */	lis r3, d_meter_d_meter2__LIT_5038@ha
-/* 8021FB98 00000018  38 63 FA 28 */	addi r3, r3, d_meter_d_meter2__LIT_5038@l
+/* 8021FB94 00000014  3C 60 80 3C */	lis r3, d_meter_d_meter2__lit_5038@ha
+/* 8021FB98 00000018  38 63 FA 28 */	addi r3, r3, d_meter_d_meter2__lit_5038@l
 /* 8021FB9C 0000001C  54 00 10 3A */	slwi r0, r0, 2
 /* 8021FBA0 00000020  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8021FBA4 00000024  7C 09 03 A6 */	mtctr r0

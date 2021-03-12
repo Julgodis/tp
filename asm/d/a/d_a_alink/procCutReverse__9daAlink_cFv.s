@@ -13,7 +13,7 @@ lbl_800D41FC:
 lbl_800D4228:
 /* 800D4228 00000000  3B FE 1F D0 */	addi r31, r30, 0x1fd0
 /* 800D422C 00000004  38 7E 33 98 */	addi r3, r30, 0x3398
-/* 800D4230 00000008  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800D4230 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D4234 0000000C  3C 80 80 39 */	lis r4, m__17daAlinkHIO_cut_c0@ha
 /* 800D4238 00000010  38 84 DE 8C */	addi r4, r4, m__17daAlinkHIO_cut_c0@l
 /* 800D423C 00000014  C0 44 00 68 */	lfs f2, 0x68(r4)
@@ -31,7 +31,7 @@ lbl_800D4264:
 /* 800D4268 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 800D426C 00000008  41 82 00 10 */	beq lbl_800D427C
 /* 800D4270 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 800D4274 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800D4274 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800D4278 00000014  48 00 8D 91 */	bl setUpperGuardAnime__9daAlink_cFf
 lbl_800D427C:
 /* 800D427C 00000000  7F E3 FB 78 */	mr r3, r31

@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_exp();
-extern void exp();
-}
+extern "C" extern void __ieee754_exp();
+extern "C" extern void exp();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C740-8036C760 0020 .text      exp                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void exp() {
+extern "C" asm void exp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_exp/exp.s"
 }

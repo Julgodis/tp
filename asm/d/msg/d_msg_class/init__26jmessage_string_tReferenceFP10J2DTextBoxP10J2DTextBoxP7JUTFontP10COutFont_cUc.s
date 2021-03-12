@@ -16,7 +16,7 @@ lbl_8022F9AC:
 /* 8022F9E4 00000038  90 C3 00 14 */	stw r6, 0x14(r3)
 lbl_8022F9E8:
 /* 8022F9E8 00000000  38 80 00 00 */	li r4, 0
-/* 8022F9EC 00000004  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022F9EC 00000004  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__lit_4027(r2)
 /* 8022F9F0 00000008  38 00 00 0C */	li r0, 0xc
 /* 8022F9F4 0000000C  7C 09 03 A6 */	mtctr r0
 lbl_8022F9F8:

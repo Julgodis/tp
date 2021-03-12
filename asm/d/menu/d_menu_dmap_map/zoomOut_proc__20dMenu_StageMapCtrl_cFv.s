@@ -13,7 +13,7 @@ lbl_801C21AC:
 /* 801C21D8 00000018  38 A0 00 04 */	li r5, 4
 /* 801C21DC 0000001C  4B E5 DF 85 */	bl fopMsgM_valueIncrease__FiiUc
 /* 801C21E0 00000020  7F E3 FB 78 */	mr r3, r31
-/* 801C21E4 00000024  C0 02 A6 98 */	lfs f0, d_menu_d_menu_dmap_map__LIT_3946(r2)
+/* 801C21E4 00000024  C0 02 A6 98 */	lfs f0, d_menu_d_menu_dmap_map__lit_3946(r2)
 /* 801C21E8 00000028  EF E0 08 28 */	fsubs f31, f0, f1
 /* 801C21EC 0000002C  FC 20 F8 90 */	fmr f1, f31
 /* 801C21F0 00000030  4B FF FC 85 */	bl zoomCalcSet__20dMenu_StageMapCtrl_cFf

@@ -12,12 +12,12 @@ lbl_80199E28:
 /* 80199E50 00000028  40 82 00 30 */	bne lbl_80199E80
 /* 80199E54 0000002C  38 00 00 00 */	li r0, 0
 /* 80199E58 00000030  B0 1D 0F 4C */	sth r0, 0xf4c(r29)
-/* 80199E5C 00000034  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__LIT_4494(r2)
+/* 80199E5C 00000034  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__lit_4494(r2)
 /* 80199E60 00000038  D0 3D 0F 38 */	stfs f1, 0xf38(r29)
-/* 80199E64 0000003C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__LIT_4495(r2)
+/* 80199E64 0000003C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__lit_4495(r2)
 /* 80199E68 00000040  D0 1D 0F 3C */	stfs f0, 0xf3c(r29)
 /* 80199E6C 00000044  D0 3D 0F 40 */	stfs f1, 0xf40(r29)
-/* 80199E70 00000048  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__LIT_4496(r2)
+/* 80199E70 00000048  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__lit_4496(r2)
 /* 80199E74 0000004C  D0 1D 0F 44 */	stfs f0, 0xf44(r29)
 /* 80199E78 00000050  38 00 00 01 */	li r0, 1
 /* 80199E7C 00000054  98 1D 0F 76 */	stb r0, 0xf76(r29)

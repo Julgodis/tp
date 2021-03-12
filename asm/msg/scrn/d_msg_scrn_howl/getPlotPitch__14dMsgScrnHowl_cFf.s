@@ -1,21 +1,21 @@
 lbl_80244108:
-/* 80244108 00000000  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4431(r2)
+/* 80244108 00000000  C0 02 B2 60 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
 /* 8024410C 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80244110 00000008  40 82 00 0C */	bne lbl_8024411C
 /* 80244114 0000000C  C0 23 1B 08 */	lfs f1, 0x1b08(r3)
 /* 80244118 00000010  4E 80 00 20 */	blr 
 lbl_8024411C:
-/* 8024411C 00000000  C0 02 B2 94 */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4827(r2)
+/* 8024411C 00000000  C0 02 B2 94 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4827(r2)
 /* 80244120 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80244124 00000008  40 82 00 0C */	bne lbl_80244130
 /* 80244128 0000000C  C0 23 1B 0C */	lfs f1, 0x1b0c(r3)
 /* 8024412C 00000010  4E 80 00 20 */	blr 
 lbl_80244130:
-/* 80244130 00000000  C0 02 B2 5C */	lfs f0, msg_scrn_d_msg_scrn_howl__LIT_4430(r2)
+/* 80244130 00000000  C0 02 B2 5C */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4430(r2)
 /* 80244134 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80244138 00000008  40 82 00 0C */	bne lbl_80244144
 /* 8024413C 0000000C  C0 23 1B 10 */	lfs f1, 0x1b10(r3)
 /* 80244140 00000010  4E 80 00 20 */	blr 
 lbl_80244144:
-/* 80244144 00000000  C0 22 B2 50 */	lfs f1, msg_scrn_d_msg_scrn_howl__LIT_4427(r2)
+/* 80244144 00000000  C0 22 B2 50 */	lfs f1, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
 /* 80244148 00000004  4E 80 00 20 */	blr 

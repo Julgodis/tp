@@ -52,7 +52,7 @@ lbl_8020DA90:
 /* 8020DA9C 0000000C  3B A0 00 60 */	li r29, 0x60
 lbl_8020DAA0:
 /* 8020DAA0 00000000  7F C0 07 34 */	extsh r0, r30
-/* 8020DAA4 00000004  C8 22 AE 28 */	lfd f1, d_meter_d_meter_map__LIT_4100(r2)
+/* 8020DAA4 00000004  C8 22 AE 28 */	lfd f1, d_meter_d_meter_map__lit_4100(r2)
 /* 8020DAA8 00000008  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8020DAAC 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8020DAB0 00000010  3C 60 43 30 */	lis r3, 0x4330

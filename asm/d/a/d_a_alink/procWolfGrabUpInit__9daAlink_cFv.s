@@ -32,8 +32,8 @@ lbl_8013D124:
 /* 8013D144 00000020  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlGrab_c0@ha
 /* 8013D148 00000024  38 A5 F9 5C */	addi r5, r5, m__20daAlinkHIO_wlGrab_c0@l
 /* 8013D14C 00000028  4B FE C6 FD */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013D150 0000002C  C3 E2 95 50 */	lfs f31, LIT_23595(r2)
-/* 8013D154 00000030  C0 02 93 30 */	lfs f0, d_a_d_a_alink__LIT_7625(r2)
+/* 8013D150 0000002C  C3 E2 95 50 */	lfs f31, lit_23595(r2)
+/* 8013D154 00000030  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
 /* 8013D158 00000034  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 8013D15C 00000038  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlGrab_c0@ha
 /* 8013D160 0000003C  38 63 F9 5C */	addi r3, r3, m__20daAlinkHIO_wlGrab_c0@l
@@ -47,8 +47,8 @@ lbl_8013D170:
 /* 8013D17C 0000000C  38 A5 F9 5C */	addi r5, r5, m__20daAlinkHIO_wlGrab_c0@l
 /* 8013D180 00000010  38 A5 00 28 */	addi r5, r5, 0x28
 /* 8013D184 00000014  4B FE C6 C5 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013D188 00000018  C3 E2 93 B0 */	lfs f31, LIT_10039(r2)
-/* 8013D18C 0000001C  C0 02 93 74 */	lfs f0, LIT_8502(r2)
+/* 8013D188 00000018  C3 E2 93 B0 */	lfs f31, lit_10039(r2)
+/* 8013D18C 0000001C  C0 02 93 74 */	lfs f0, lit_8502(r2)
 /* 8013D190 00000020  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 8013D194 00000024  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlGrab_c0@ha
 /* 8013D198 00000028  38 63 F9 5C */	addi r3, r3, m__20daAlinkHIO_wlGrab_c0@l
@@ -120,7 +120,7 @@ lbl_8013D294:
 /* 8013D298 00000004  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
 /* 8013D29C 00000008  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8013D2A0 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8013D2A4 00000010  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013D2A4 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013D2A8 00000014  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8013D2AC 00000018  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 8013D2B0 0000001C  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
@@ -131,13 +131,13 @@ lbl_8013D294:
 /* 8013D2C4 00000030  38 61 00 0C */	addi r3, r1, 0xc
 /* 8013D2C8 00000034  38 81 00 18 */	addi r4, r1, 0x18
 /* 8013D2CC 00000038  48 20 A0 D1 */	bl PSVECSquareDistance
-/* 8013D2D0 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013D2D0 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013D2D4 00000040  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013D2D8 00000000  40 81 00 58 */	ble lbl_8013D330
 /* 8013D2DC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8013D2E0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__LIT_6846(r2)
+/* 8013D2E0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
 /* 8013D2E4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 8013D2E8 00000010  C8 62 92 F0 */	lfd f3, LIT_6847(r2)
+/* 8013D2E8 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 8013D2EC 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8013D2F0 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8013D2F4 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -156,7 +156,7 @@ lbl_8013D294:
 /* 8013D328 00000050  FC 20 08 18 */	frsp f1, f1
 /* 8013D32C 00000054  48 00 00 88 */	b lbl_8013D3B4
 lbl_8013D330:
-/* 8013D330 00000000  C8 02 92 F8 */	lfd f0, LIT_6848(r2)
+/* 8013D330 00000000  C8 02 92 F8 */	lfd f0, lit_6848(r2)
 /* 8013D334 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013D338 00000000  40 80 00 10 */	bge lbl_8013D348
 /* 8013D33C 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -197,16 +197,16 @@ lbl_8013D3A4:
 /* 8013D3AC 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 8013D3B0 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_8013D3B4:
-/* 8013D3B4 00000000  C0 02 93 50 */	lfs f0, LIT_8247(r2)
+/* 8013D3B4 00000000  C0 02 93 50 */	lfs f0, lit_8247(r2)
 /* 8013D3B8 00000004  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8013D3BC 00000008  D0 1F 33 E4 */	stfs f0, 0x33e4(r31)
 /* 8013D3C0 0000000C  C0 3F 33 E4 */	lfs f1, 0x33e4(r31)
-/* 8013D3C4 00000010  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013D3C4 00000010  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013D3C8 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013D3CC 00000000  40 80 00 08 */	bge lbl_8013D3D4
 /* 8013D3D0 00000004  D0 1F 33 E4 */	stfs f0, 0x33e4(r31)
 lbl_8013D3D4:
-/* 8013D3D4 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013D3D4 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013D3D8 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8013D3DC 00000008  38 60 00 01 */	li r3, 1
 lbl_8013D3E0:

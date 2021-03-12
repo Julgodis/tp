@@ -5,64 +5,64 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern void getThreadPointer__6JASDvdFv();
-extern void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
-extern void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
-extern void loadResourceCallback__15JASResArcLoaderFPv();
-extern void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
-extern void readResource__10JKRArchiveFPvUlUs();
-extern void findIdxResource__10JKRArchiveCFUl();
-extern void findIdResource__10JKRArchiveCFUs();
-extern void OSSendMessage();
-extern void _savegpr_28();
-extern void _restgpr_28();
-}
+extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" extern void getThreadPointer__6JASDvdFv();
+extern "C" extern void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+extern "C" extern void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
+extern "C" extern void loadResourceCallback__15JASResArcLoaderFPv();
+extern "C" extern void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
+extern "C" extern void readResource__10JKRArchiveFPvUlUs();
+extern "C" extern void findIdxResource__10JKRArchiveCFUl();
+extern "C" extern void findIdResource__10JKRArchiveCFUs();
+extern "C" extern void OSSendMessage();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_28();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80290BD0-80290C04 0034 .text      getResSize__15JASResArcLoaderFPC10JKRArchiveUs               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getResSize__15JASResArcLoaderFPC10JKRArchiveUs() {
+extern "C" asm void getResSize__15JASResArcLoaderFPC10JKRArchiveUs() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASResArcLoader/getResSize__15JASResArcLoaderFPC10JKRArchiveUs.s"
 }
 #pragma pop
 
+
 /* 80290C04-80290C7C 0078 .text      getResMaxSize__15JASResArcLoaderFPC10JKRArchive              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getResMaxSize__15JASResArcLoaderFPC10JKRArchive() {
+extern "C" asm void getResMaxSize__15JASResArcLoaderFPC10JKRArchive() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASResArcLoader/getResMaxSize__15JASResArcLoaderFPC10JKRArchive.s"
 }
 #pragma pop
 
+
 /* 80290C7C-80290D18 009C .text      loadResourceCallback__15JASResArcLoaderFPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadResourceCallback__15JASResArcLoaderFPv() {
+extern "C" asm void loadResourceCallback__15JASResArcLoaderFPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASResArcLoader/loadResourceCallback__15JASResArcLoaderFPv.s"
 }
 #pragma pop
 
+
 /* 80290D18-80290D74 005C .text      loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl() {
+extern "C" asm void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASResArcLoader/loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl.s"
 }

@@ -15,18 +15,18 @@ lbl_8010CF6C:
 /* 8010CFA0 00000034  40 82 00 08 */	bne lbl_8010CFA8
 /* 8010CFA4 00000038  38 80 01 35 */	li r4, 0x135
 lbl_8010CFA8:
-/* 8010CFA8 00000000  C0 22 93 14 */	lfs f1, LIT_7307(r2)
+/* 8010CFA8 00000000  C0 22 93 14 */	lfs f1, lit_7307(r2)
 /* 8010CFAC 00000004  4B FA 00 05 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 8010CFB0 00000008  7F C3 F3 78 */	mr r3, r30
 /* 8010CFB4 0000000C  4B FF B7 29 */	bl resetHookshotMode__9daAlink_cFv
 /* 8010CFB8 00000010  38 00 00 01 */	li r0, 1
 /* 8010CFBC 00000014  B0 1E 30 24 */	sth r0, 0x3024(r30)
 /* 8010CFC0 00000018  7F C3 F3 78 */	mr r3, r30
-/* 8010CFC4 0000001C  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8010CFC4 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8010CFC8 00000020  C0 5E 05 34 */	lfs f2, 0x534(r30)
 /* 8010CFCC 00000024  38 80 00 00 */	li r4, 0
 /* 8010CFD0 00000028  4B FA E7 A1 */	bl setSpecialGravity__9daAlink_cFffi
-/* 8010CFD4 0000002C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8010CFD4 0000002C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010CFD8 00000030  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 8010CFDC 00000034  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 8010CFE0 00000038  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
@@ -34,7 +34,7 @@ lbl_8010CFA8:
 /* 8010CFE8 00000040  7F C3 F3 78 */	mr r3, r30
 /* 8010CFEC 00000044  7F E4 FB 78 */	mr r4, r31
 /* 8010CFF0 00000048  4B FF E6 55 */	bl initHookshotRoofWaitActor__9daAlink_cFP10fopAc_ac_c
-/* 8010CFF4 0000004C  C0 02 96 00 */	lfs f0, LIT_30895(r2)
+/* 8010CFF4 0000004C  C0 02 96 00 */	lfs f0, lit_30895(r2)
 /* 8010CFF8 00000050  D0 1E 2B 98 */	stfs f0, 0x2b98(r30)
 /* 8010CFFC 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010D000 00000058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

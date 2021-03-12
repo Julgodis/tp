@@ -23,7 +23,7 @@ lbl_80365FAC:
 /* 80365FBC 00000010  7C 1C F9 AE */	stbx r0, r28, r31
 /* 80365FC0 00000014  48 00 00 B8 */	b lbl_80366078
 lbl_80365FC4:
-/* 80365FC4 00000000  80 02 CC 68 */	lwz r0, MSL_Common_Src_mbstring__LIT_74(r2)
+/* 80365FC4 00000000  80 02 CC 68 */	lwz r0, MSL_Common_Src_mbstring__lit_74(r2)
 /* 80365FC8 00000004  28 06 00 80 */	cmplwi r6, 0x80
 /* 80365FCC 00000008  3B DE 00 02 */	addi r30, r30, 2
 /* 80365FD0 0000000C  90 01 00 08 */	stw r0, 8(r1)

@@ -5,198 +5,160 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-SECTION_SDATA extern u8 DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 MAX_VOLUME_DISTANCE__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_CENTER_VALUE__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_FLONT_DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param[4];
-SECTION_SDATA extern u8 DISTANCE_FX_PARAM__7Z2Param[4];
-SECTION_SDATA extern u8 SONIC_SPEED__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_BGM_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_SYSTEM_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_OBJECT_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_BGM_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_SYSTEM_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_VOICE_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_MOTION_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_VOICE_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_MOVE_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_OBJECT_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_ATMOSPHERE_TALKING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_BGM_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_SYSTEM_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_VOICE_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_MOTION_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_OBJECT_PAUSING__7Z2Param[4];
-SECTION_SDATA extern u8 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param[4];
+SECTION_SDATA extern f32 DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 MAX_VOLUME_DISTANCE__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_CENTER_VALUE__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_FLONT_DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param;
+SECTION_SDATA extern f32 DISTANCE_FX_PARAM__7Z2Param;
+SECTION_SDATA extern f32 SONIC_SPEED__7Z2Param;
+SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_OBJECT_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param;
+SECTION_SDATA extern f32 VOL_BGM_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_SYSTEM_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_VOICE_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_MOTION_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_VOICE_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_MOVE_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_OBJECT_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_ATMOSPHERE_TALKING__7Z2Param;
+SECTION_SDATA extern f32 VOL_BGM_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_SYSTEM_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_VOICE_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_MOTION_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_OBJECT_PAUSING__7Z2Param;
+SECTION_SDATA extern f32 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param;
 SECTION_SDATA extern u8 struct_80450860[4];
 SECTION_SDATA extern u8 struct_80450864[4];
 SECTION_SDATA extern u8 struct_80450868[4];
-SECTION_SDATA extern u8 data_8045086C[4];
+SECTION_SDATA extern u32 data_8045086C;
 SECTION_SBSS extern u8 MIN_DISTANCE_VOLUME__7Z2Param[4];
 SECTION_SBSS extern u8 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param[4];
 SECTION_SBSS extern u8 struct_80451340[8];
 SECTION_SBSS extern u8 data_80451348[8];
-}
 
+// 
+// Functions:
+// 
 
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804507D8-804507DC 0004 .sdata     DISTANCE_MAX__7Z2Param                                       */
-SECTION_SDATA u8 DISTANCE_MAX__7Z2Param[4] = {
-	0x44, 0xFA, 0x00, 0x00,
-};
+f32 DISTANCE_MAX__7Z2Param = 2000.0f;
+
 /* 804507DC-804507E0 0004 .sdata     MAX_VOLUME_DISTANCE__7Z2Param                                */
-SECTION_SDATA u8 MAX_VOLUME_DISTANCE__7Z2Param[4] = {
-	0x43, 0x96, 0x00, 0x00,
-};
+f32 MAX_VOLUME_DISTANCE__7Z2Param = 300.0f;
+
 /* 804507E0-804507E4 0004 .sdata     DOLBY_CENTER_VALUE__7Z2Param                                 */
-SECTION_SDATA u8 DOLBY_CENTER_VALUE__7Z2Param[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
+f32 DOLBY_CENTER_VALUE__7Z2Param = 3.0f / 10.0f;
+
 /* 804507E4-804507E8 0004 .sdata     DOLBY_FLONT_DISTANCE_MAX__7Z2Param                           */
-SECTION_SDATA u8 DOLBY_FLONT_DISTANCE_MAX__7Z2Param[4] = {
-	0xC3, 0x96, 0x00, 0x00,
-};
+f32 DOLBY_FLONT_DISTANCE_MAX__7Z2Param = -300.0f;
+
 /* 804507E8-804507EC 0004 .sdata     DOLBY_BEHIND_DISTANCE_MAX__7Z2Param                          */
-SECTION_SDATA u8 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param[4] = {
-	0x44, 0x16, 0x00, 0x00,
-};
+f32 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param = 600.0f;
+
 /* 804507EC-804507F0 0004 .sdata     DISTANCE_FX_PARAM__7Z2Param                                  */
-SECTION_SDATA u8 DISTANCE_FX_PARAM__7Z2Param[4] = {
-	0x3D, 0xA1, 0x42, 0x85,
-};
+f32 DISTANCE_FX_PARAM__7Z2Param = 10.0f / 127.0f;
+
 /* 804507F0-804507F4 0004 .sdata     SONIC_SPEED__7Z2Param                                        */
-SECTION_SDATA u8 SONIC_SPEED__7Z2Param[4] = {
-	0x43, 0xB4, 0x00, 0x00,
-};
+f32 SONIC_SPEED__7Z2Param = 360.0f;
+
 /* 804507F4-804507F8 0004 .sdata     VOL_BGM_DEFAULT__7Z2Param                                    */
-SECTION_SDATA u8 VOL_BGM_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 VOL_BGM_DEFAULT__7Z2Param = 1.0f;
+
 /* 804507F8-804507FC 0004 .sdata     VOL_SE_SYSTEM_DEFAULT__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_SYSTEM_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_SYSTEM_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 804507FC-80450800 0004 .sdata     VOL_SE_LINK_VOICE_DEFAULT__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param = 1.0f;
+
 /* 80450800-80450804 0004 .sdata     VOL_SE_LINK_MOTION_DEFAULT__7Z2Param                         */
-SECTION_SDATA u8 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 80450804-80450808 0004 .sdata     VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param                       */
-SECTION_SDATA u8 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 80450808-8045080C 0004 .sdata     VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 8045080C-80450810 0004 .sdata     VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param                           */
-SECTION_SDATA u8 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 80450810-80450814 0004 .sdata     VOL_SE_OBJECT_DEFAULT__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_OBJECT_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_OBJECT_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 80450814-80450818 0004 .sdata     VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param = 120.0f / 127.0f;
+
 /* 80450818-8045081C 0004 .sdata     VOL_BGM_TALKING__7Z2Param                                    */
-SECTION_SDATA u8 VOL_BGM_TALKING__7Z2Param[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
+f32 VOL_BGM_TALKING__7Z2Param = 0.5f;
+
 /* 8045081C-80450820 0004 .sdata     VOL_SE_SYSTEM_TALKING__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_SYSTEM_TALKING__7Z2Param[4] = {
-	0x3F, 0x61, 0xC3, 0x87,
-};
+f32 VOL_SE_SYSTEM_TALKING__7Z2Param = 112.0f / 127.0f;
+
 /* 80450820-80450824 0004 .sdata     VOL_SE_LINK_VOICE_TALKING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_LINK_VOICE_TALKING__7Z2Param[4] = {
-	0x3F, 0x51, 0xA3, 0x47,
-};
+f32 VOL_SE_LINK_VOICE_TALKING__7Z2Param = 104.0f / 127.0f;
+
 /* 80450824-80450828 0004 .sdata     VOL_SE_LINK_MOTION_TALKING__7Z2Param                         */
-SECTION_SDATA u8 VOL_SE_LINK_MOTION_TALKING__7Z2Param[4] = {
-	0x3F, 0x41, 0x83, 0x06,
-};
+f32 VOL_SE_LINK_MOTION_TALKING__7Z2Param = 96.0f / 127.0f;
+
 /* 80450828-8045082C 0004 .sdata     VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param                       */
-SECTION_SDATA u8 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param[4] = {
-	0x3F, 0x41, 0x83, 0x06,
-};
+f32 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param = 96.0f / 127.0f;
+
 /* 8045082C-80450830 0004 .sdata     VOL_SE_CHAR_VOICE_TALKING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_CHAR_VOICE_TALKING__7Z2Param[4] = {
-	0x3F, 0x71, 0xE3, 0xC8,
-};
+f32 VOL_SE_CHAR_VOICE_TALKING__7Z2Param = 120.0f / 127.0f;
+
 /* 80450830-80450834 0004 .sdata     VOL_SE_CHAR_MOVE_TALKING__7Z2Param                           */
-SECTION_SDATA u8 VOL_SE_CHAR_MOVE_TALKING__7Z2Param[4] = {
-	0x3F, 0x6F, 0xDF, 0xBF,
-};
+f32 VOL_SE_CHAR_MOVE_TALKING__7Z2Param = 119.0f / 127.0f;
+
 /* 80450834-80450838 0004 .sdata     VOL_SE_OBJECT_TALKING__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_OBJECT_TALKING__7Z2Param[4] = {
-	0x3F, 0x41, 0x83, 0x06,
-};
+f32 VOL_SE_OBJECT_TALKING__7Z2Param = 96.0f / 127.0f;
+
 /* 80450838-8045083C 0004 .sdata     VOL_SE_ATMOSPHERE_TALKING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_ATMOSPHERE_TALKING__7Z2Param[4] = {
-	0x3F, 0x41, 0x83, 0x06,
-};
+f32 VOL_SE_ATMOSPHERE_TALKING__7Z2Param = 96.0f / 127.0f;
+
 /* 8045083C-80450840 0004 .sdata     VOL_BGM_PAUSING__7Z2Param                                    */
-SECTION_SDATA u8 VOL_BGM_PAUSING__7Z2Param[4] = {
-	0x3E, 0x99, 0x99, 0x9A,
-};
+f32 VOL_BGM_PAUSING__7Z2Param = 3.0f / 10.0f;
+
 /* 80450840-80450844 0004 .sdata     VOL_SE_SYSTEM_PAUSING__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_SYSTEM_PAUSING__7Z2Param[4] = {
-	0x3F, 0x61, 0xC3, 0x87,
-};
+f32 VOL_SE_SYSTEM_PAUSING__7Z2Param = 112.0f / 127.0f;
+
 /* 80450844-80450848 0004 .sdata     VOL_SE_LINK_VOICE_PAUSING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_LINK_VOICE_PAUSING__7Z2Param[4] = {
-	0x3F, 0x21, 0x42, 0x85,
-};
+f32 VOL_SE_LINK_VOICE_PAUSING__7Z2Param = 80.0f / 127.0f;
+
 /* 80450848-8045084C 0004 .sdata     VOL_SE_LINK_MOTION_PAUSING__7Z2Param                         */
-SECTION_SDATA u8 VOL_SE_LINK_MOTION_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_LINK_MOTION_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 8045084C-80450850 0004 .sdata     VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param                       */
-SECTION_SDATA u8 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 80450850-80450854 0004 .sdata     VOL_SE_CHAR_VOICE_PAUSING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 80450854-80450858 0004 .sdata     VOL_SE_CHAR_MOVE_PAUSING__7Z2Param                           */
-SECTION_SDATA u8 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 80450858-8045085C 0004 .sdata     VOL_SE_OBJECT_PAUSING__7Z2Param                              */
-SECTION_SDATA u8 VOL_SE_OBJECT_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_OBJECT_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 8045085C-80450860 0004 .sdata     VOL_SE_ATMOSPHERE_PAUSING__7Z2Param                          */
-SECTION_SDATA u8 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param[4] = {
-	0x3F, 0x11, 0x22, 0x45,
-};
+f32 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param = 72.0f / 127.0f;
+
 /* 80450860-80450864 0004 .sdata     None                                                         */
-SECTION_SDATA u8 struct_80450860[4] = {
+u8 struct_80450860[4] = {
 	/* data_80450860 */
 	0x21,
 	/* data_80450861 */
@@ -206,8 +168,9 @@ SECTION_SDATA u8 struct_80450860[4] = {
 	/* data_80450863 */
 	0x1E,
 };
+
 /* 80450864-80450868 0004 .sdata     None                                                         */
-SECTION_SDATA u8 struct_80450864[4] = {
+u8 struct_80450864[4] = {
 	/* data_80450864 */
 	0x14,
 	/* data_80450865 */
@@ -217,8 +180,9 @@ SECTION_SDATA u8 struct_80450864[4] = {
 	/* data_80450867 */
 	0x1E,
 };
+
 /* 80450868-8045086C 0004 .sdata     None                                                         */
-SECTION_SDATA u8 struct_80450868[4] = {
+u8 struct_80450868[4] = {
 	/* data_80450868 */
 	0x01,
 	/* data_80450869 */
@@ -228,28 +192,22 @@ SECTION_SDATA u8 struct_80450868[4] = {
 	/* data_8045086B */
 	0x14,
 };
+
 /* 8045086C-80450870 0004 .sdata     None                                                         */
-SECTION_SDATA u8 data_8045086C[4] = {
-	0x01, 0x00, 0x00, 0x00,
-};
-}
+u32 data_8045086C = 0x01000000;
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451338-8045133C 0004 .sbss      MIN_DISTANCE_VOLUME__7Z2Param                                */
-SECTION_SBSS u8 MIN_DISTANCE_VOLUME__7Z2Param[4];
+u8 MIN_DISTANCE_VOLUME__7Z2Param[4];
+
 /* 8045133C-80451340 0004 .sbss      ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param                          */
-SECTION_SBSS u8 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param[4];
+u8 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param[4];
+
 /* 80451340-80451348 0008 .sbss      None                                                         */
-SECTION_SBSS u8 struct_80451340[8];
+u8 struct_80451340[8];
 /* 80451340 0001 data_80451340 */
 /* 80451341 0001 data_80451341 */
 /* 80451342 0006 data_80451342 */
+
 /* 80451348-80451350 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451348[8];
-}
+u8 data_80451348[8];
 

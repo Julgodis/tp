@@ -5,8 +5,8 @@ lbl_800D4A74:
 /* 800D4A80 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 800D4A84 00000010  48 28 D7 59 */	bl _savegpr_29
 /* 800D4A88 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 800D4A8C 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800D4A90 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__LIT_3757@l
+/* 800D4A8C 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800D4A90 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
 /* 800D4A94 00000020  4B FE 54 BD */	bl checkGroundSpecialMode__9daAlink_cFv
 /* 800D4A98 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800D4A9C 00000028  41 82 00 0C */	beq lbl_800D4AA8
@@ -17,7 +17,7 @@ lbl_800D4AA8:
 /* 800D4AAC 00000004  38 00 00 04 */	li r0, 4
 /* 800D4AB0 00000008  98 1F 2F 99 */	stb r0, 0x2f99(r31)
 /* 800D4AB4 0000000C  38 7F 33 98 */	addi r3, r31, 0x3398
-/* 800D4AB8 00000010  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800D4AB8 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D4ABC 00000014  38 9E 00 64 */	addi r4, r30, 0x64
 /* 800D4AC0 00000018  C0 44 00 38 */	lfs f2, 0x38(r4)
 /* 800D4AC4 0000001C  48 19 BC 7D */	bl cLib_chaseF__FPfff
@@ -32,7 +32,7 @@ lbl_800D4AA8:
 /* 800D4AE8 00000040  B0 1F 30 7E */	sth r0, 0x307e(r31)
 lbl_800D4AEC:
 /* 800D4AEC 00000000  C0 3D 00 10 */	lfs f1, 0x10(r29)
-/* 800D4AF0 00000004  C0 02 93 40 */	lfs f0, d_a_d_a_alink__LIT_7945(r2)
+/* 800D4AF0 00000004  C0 02 93 40 */	lfs f0, d_a_d_a_alink__lit_7945(r2)
 /* 800D4AF4 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D4AF8 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800D4AFC 00000004  40 82 00 0C */	bne lbl_800D4B08

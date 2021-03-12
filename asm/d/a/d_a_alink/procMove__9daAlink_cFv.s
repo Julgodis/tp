@@ -29,7 +29,7 @@ lbl_800C3730:
 /* 800C379C 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 lbl_800C37A0:
 /* 800C37A0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800C37A4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800C37A4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800C37A8 00000008  4B FE A6 6D */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C37AC 0000000C  80 1F 31 74 */	lwz r0, 0x3174(r31)
 /* 800C37B0 00000010  2C 00 00 08 */	cmpwi r0, 8

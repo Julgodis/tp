@@ -9,7 +9,7 @@ lbl_80071D6C:
 /* 80071D88 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 80071D8C 00000020  7F C4 F3 78 */	mr r4, r30
 /* 80071D90 00000024  4B FF FF 31 */	bl EnemyDistance__12dAttention_cFP10fopAc_ac_c
-/* 80071D94 00000028  C0 02 8C 50 */	lfs f0, d_d_attention__LIT_4071(r2)
+/* 80071D94 00000028  C0 02 8C 50 */	lfs f0, d_d_attention__lit_4071(r2)
 /* 80071D98 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80071D9C 00000000  40 80 00 0C */	bge lbl_80071DA8
 /* 80071DA0 00000004  38 60 00 00 */	li r3, 0

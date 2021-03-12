@@ -5,48 +5,38 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__11JPAKeyBlockFPCUc();
-extern void calc__11JPAKeyBlockFf();
-extern void JPACalcKeyAnmValue__FfUsPCf();
-SECTION_SDATA2 extern u8 JPAKeyBlock__LIT_2215[8];
-}
+extern "C" extern void __ct__11JPAKeyBlockFPCUc();
+extern "C" extern void calc__11JPAKeyBlockFf();
+extern "C" extern void JPACalcKeyAnmValue__FfUsPCf();
+SECTION_SDATA2 extern f64 JPAKeyBlock__lit_2215;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455350-80455358 0008 .sdata2    @2215                                                        */
-SECTION_SDATA2 u8 JPAKeyBlock__LIT_2215[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8027D730-8027D740 0010 .text      __ct__11JPAKeyBlockFPCUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11JPAKeyBlockFPCUc() {
+extern "C" asm void __ct__11JPAKeyBlockFPCUc() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAKeyBlock/__ct__11JPAKeyBlockFPCUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455350-80455358 0008 .sdata2    @2215                                                        */
+f64 JPAKeyBlock__lit_2215 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 8027D740-8027D7D4 0094 .text      calc__11JPAKeyBlockFf                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__11JPAKeyBlockFf() {
+extern "C" asm void calc__11JPAKeyBlockFf() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAKeyBlock/calc__11JPAKeyBlockFf.s"
 }

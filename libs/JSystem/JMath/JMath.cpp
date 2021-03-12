@@ -5,88 +5,82 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void JMAEulerToQuat__FsssP10Quaternion();
-extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
-extern void JMAFastVECNormalize__FPC3VecP3Vec();
-extern void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
-extern void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+extern "C" extern void JMAEulerToQuat__FsssP10Quaternion();
+extern "C" extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
+extern "C" extern void JMAFastVECNormalize__FPC3VecP3Vec();
+extern "C" extern void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
+extern "C" extern void JMAMTXApplyScale__FPA4_CfPA4_ffff();
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA2 extern u8 JMath__LIT_376[8];
-SECTION_SDATA2 extern u8 LIT_411[8];
-}
+SECTION_SDATA2 extern u8 JMath__lit_376[8];
+SECTION_SDATA2 extern f32 lit_411;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804564C8-804564D0 0008 .sdata2    @376                                                         */
-SECTION_SDATA2 u8 JMath__LIT_376[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 804564D0-804564D8 0004 .sdata2    @411                                                         */
-SECTION_SDATA2 u8 LIT_411[8] = {
-	0x3F, 0x80, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80339878-80339938 00C0 .text      JMAEulerToQuat__FsssP10Quaternion                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAEulerToQuat__FsssP10Quaternion() {
+extern "C" asm void JMAEulerToQuat__FsssP10Quaternion() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAEulerToQuat__FsssP10Quaternion.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804564C8-804564D0 0008 .sdata2    @376                                                         */
+u8 JMath__lit_376[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80339938-80339A30 00F8 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion() {
+extern "C" asm void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion.s"
 }
 #pragma pop
 
+
 /* 80339A30-80339A5C 002C .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAFastVECNormalize__FPC3VecP3Vec() {
+extern "C" asm void JMAFastVECNormalize__FPC3VecP3Vec() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAFastVECNormalize__FPC3VecP3Vec.s"
 }
 #pragma pop
 
+
 /* 80339A5C-80339A84 0028 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf() {
+extern "C" asm void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAVECScaleAdd__FPC3VecPC3VecP3Vecf.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804564D0-804564D8 0004 .sdata2    @411                                                         */
+f32 lit_411 = 1.0f;
+/* padding 4 bytes */
+
 /* 80339A84-80339AE4 0060 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAMTXApplyScale__FPA4_CfPA4_ffff() {
+extern "C" asm void JMAMTXApplyScale__FPA4_CfPA4_ffff() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAMTXApplyScale__FPA4_CfPA4_ffff.s"
 }

@@ -5,36 +5,25 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void frexp();
-SECTION_SDATA2 extern u8 LIT_57[8];
-}
+extern "C" extern void frexp();
+SECTION_SDATA2 extern f64 lit_57;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456B08-80456B10 0008 .sdata2    @57                                                          */
-SECTION_SDATA2 u8 LIT_57[8] = {
-	0x43, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 lit_57 = 1.8014398509481984e+16;
 
 /* 8036C244-8036C2D0 008C .text      frexp                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void frexp() {
+extern "C" asm void frexp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_frexp/frexp.s"
 }

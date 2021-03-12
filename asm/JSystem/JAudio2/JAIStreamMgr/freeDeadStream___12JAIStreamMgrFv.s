@@ -45,8 +45,8 @@ lbl_802A3DF4:
 /* 802A3E10 0000001C  38 63 40 FC */	addi r3, r3, data_804340FC@l
 /* 802A3E14 00000020  3C 80 80 2A */	lis r4, func_802A3E68@ha
 /* 802A3E18 00000024  38 84 3E 68 */	addi r4, r4, func_802A3E68@l
-/* 802A3E1C 00000028  3C A0 80 43 */	lis r5, JAIStreamMgr__LIT_745@ha
-/* 802A3E20 0000002C  38 A5 40 F0 */	addi r5, r5, JAIStreamMgr__LIT_745@l
+/* 802A3E1C 00000028  3C A0 80 43 */	lis r5, JAIStreamMgr__lit_745@ha
+/* 802A3E20 0000002C  38 A5 40 F0 */	addi r5, r5, JAIStreamMgr__lit_745@l
 /* 802A3E24 00000030  48 0B DE 01 */	bl __register_global_object
 /* 802A3E28 00000034  38 00 00 01 */	li r0, 1
 /* 802A3E2C 00000038  98 0D 8D A8 */	stb r0, data_80451328(r13)

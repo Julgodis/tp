@@ -22,31 +22,31 @@ lbl_802BE8A0:
 /* 802BE8F0 00000050  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BE8F4 00000054  28 00 00 00 */	cmplwi r0, 0
 /* 802BE8F8 00000058  41 82 00 94 */	beq lbl_802BE98C
-/* 802BE8FC 0000005C  C8 22 C1 68 */	lfd f1, Z2SoundObject__LIT_3828(r2)
+/* 802BE8FC 0000005C  C8 22 C1 68 */	lfd f1, Z2SoundObject__lit_3828(r2)
 /* 802BE900 00000060  93 C1 00 14 */	stw r30, 0x14(r1)
 /* 802BE904 00000064  3C 00 43 30 */	lis r0, 0x4330
 /* 802BE908 00000068  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802BE90C 0000006C  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 802BE910 00000070  EC 20 08 28 */	fsubs f1, f0, f1
-/* 802BE914 00000074  C0 42 C1 50 */	lfs f2, Z2SoundObject__LIT_3821(r2)
-/* 802BE918 00000078  C0 62 C1 38 */	lfs f3, Z2SoundObject__LIT_3559(r2)
-/* 802BE91C 0000007C  C0 82 C1 54 */	lfs f4, Z2SoundObject__LIT_3822(r2)
-/* 802BE920 00000080  C0 A2 C1 58 */	lfs f5, Z2SoundObject__LIT_3823(r2)
-/* 802BE924 00000084  C0 C2 C1 3C */	lfs f6, LIT_3560(r2)
+/* 802BE914 00000074  C0 42 C1 50 */	lfs f2, Z2SoundObject__lit_3821(r2)
+/* 802BE918 00000078  C0 62 C1 38 */	lfs f3, Z2SoundObject__lit_3559(r2)
+/* 802BE91C 0000007C  C0 82 C1 54 */	lfs f4, Z2SoundObject__lit_3822(r2)
+/* 802BE920 00000080  C0 A2 C1 58 */	lfs f5, Z2SoundObject__lit_3823(r2)
+/* 802BE924 00000084  C0 C2 C1 3C */	lfs f6, lit_3560(r2)
 /* 802BE928 00000088  38 60 00 01 */	li r3, 1
 /* 802BE92C 0000008C  4B FE AD C9 */	bl getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign
 /* 802BE930 00000090  FF E0 08 90 */	fmr f31, f1
-/* 802BE934 00000094  C8 22 C1 68 */	lfd f1, Z2SoundObject__LIT_3828(r2)
+/* 802BE934 00000094  C8 22 C1 68 */	lfd f1, Z2SoundObject__lit_3828(r2)
 /* 802BE938 00000098  93 C1 00 1C */	stw r30, 0x1c(r1)
 /* 802BE93C 0000009C  3C 00 43 30 */	lis r0, 0x4330
 /* 802BE940 000000A0  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802BE944 000000A4  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 802BE948 000000A8  EC 20 08 28 */	fsubs f1, f0, f1
-/* 802BE94C 000000AC  C0 42 C1 50 */	lfs f2, Z2SoundObject__LIT_3821(r2)
-/* 802BE950 000000B0  C0 62 C1 38 */	lfs f3, Z2SoundObject__LIT_3559(r2)
-/* 802BE954 000000B4  C0 82 C1 54 */	lfs f4, Z2SoundObject__LIT_3822(r2)
-/* 802BE958 000000B8  C0 A2 C1 5C */	lfs f5, Z2SoundObject__LIT_3824(r2)
-/* 802BE95C 000000BC  C0 C2 C1 60 */	lfs f6, Z2SoundObject__LIT_3825(r2)
+/* 802BE94C 000000AC  C0 42 C1 50 */	lfs f2, Z2SoundObject__lit_3821(r2)
+/* 802BE950 000000B0  C0 62 C1 38 */	lfs f3, Z2SoundObject__lit_3559(r2)
+/* 802BE954 000000B4  C0 82 C1 54 */	lfs f4, Z2SoundObject__lit_3822(r2)
+/* 802BE958 000000B8  C0 A2 C1 5C */	lfs f5, Z2SoundObject__lit_3824(r2)
+/* 802BE95C 000000BC  C0 C2 C1 60 */	lfs f6, Z2SoundObject__lit_3825(r2)
 /* 802BE960 000000C0  38 60 00 01 */	li r3, 1
 /* 802BE964 000000C4  4B FE AD 91 */	bl getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign
 /* 802BE968 000000C8  80 7F 00 00 */	lwz r3, 0(r31)

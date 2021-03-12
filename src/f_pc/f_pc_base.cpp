@@ -5,151 +5,155 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcBs_Is_JustOfType__Fii();
-extern void fpcBs_MakeOfType__FPi();
-extern void fpcBs_MakeOfId__Fv();
-extern void fpcBs_Execute__FP18base_process_class();
-extern void fpcBs_DeleteAppend__FP18base_process_class();
-extern void fpcBs_IsDelete__FP18base_process_class();
-extern void fpcBs_Delete__FP18base_process_class();
-extern void fpcBs_Create__FsUiPv();
-extern void fpcBs_SubCreate__FP18base_process_class();
-extern void fpcDtTg_Init__FP16delete_tag_classPv();
-extern void fpcLy_SetCurrentLayer__FP11layer_class();
-extern void fpcLy_CurrentLayer__Fv();
-extern void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
-extern void fpcMtd_Execute__FP20process_method_classPv();
-extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern void fpcMtd_Delete__FP20process_method_classPv();
-extern void fpcMtd_Create__FP20process_method_classPv();
-extern void fpcPi_Init__FP22process_priority_classPvUiUsUs();
-extern void fpcPf_Get__Fs();
-extern void fpcLnTg_Init__FP8line_tagPv();
-extern void fpcPause_Init__FPv();
-extern void memalignB__3cMlFiUl();
-extern void free__3cMlFPv();
-extern void sBs_ClearArea__FPvUl();
-extern void _savegpr_26();
-extern void _restgpr_26();
+extern "C" extern void fpcBs_Is_JustOfType__Fii();
+extern "C" extern void fpcBs_MakeOfType__FPi();
+extern "C" extern void fpcBs_MakeOfId__Fv();
+extern "C" extern void fpcBs_Execute__FP18base_process_class();
+extern "C" extern void fpcBs_DeleteAppend__FP18base_process_class();
+extern "C" extern void fpcBs_IsDelete__FP18base_process_class();
+extern "C" extern void fpcBs_Delete__FP18base_process_class();
+extern "C" extern void fpcBs_Create__FsUiPv();
+extern "C" extern void fpcBs_SubCreate__FP18base_process_class();
+extern "C" extern void fpcDtTg_Init__FP16delete_tag_classPv();
+extern "C" extern void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" extern void fpcLy_CurrentLayer__Fv();
+extern "C" extern void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
+extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
+extern "C" extern void fpcPi_Init__FP22process_priority_classPvUiUsUs();
+extern "C" extern void fpcPf_Get__Fs();
+extern "C" extern void fpcLnTg_Init__FP8line_tagPv();
+extern "C" extern void fpcPause_Init__FPv();
+extern "C" extern void memalignB__3cMlFiUl();
+extern "C" extern void free__3cMlFPv();
+extern "C" extern void sBs_ClearArea__FPvUl();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _restgpr_26();
 SECTION_SBSS extern u8 g_fpcBs_type[4];
 SECTION_SBSS extern u8 data_80450D04[4];
 SECTION_SBSS extern u8 data_80450D08[4];
 SECTION_SBSS extern u8 data_80450D0C[4];
 SECTION_SBSS extern u8 data_80450D10[8];
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450D00-80450D04 0004 .sbss      g_fpcBs_type                                                 */
-SECTION_SBSS u8 g_fpcBs_type[4];
-/* 80450D04-80450D08 0004 .sbss      t_type$2207                                                  */
-SECTION_SBSS u8 data_80450D04[4];
-/* 80450D08-80450D0C 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450D08[4];
-/* 80450D0C-80450D10 0004 .sbss      process_id$2216                                              */
-SECTION_SBSS u8 data_80450D0C[4];
-/* 80450D10-80450D18 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450D10[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8002064C-8002065C 0010 .text      fpcBs_Is_JustOfType__Fii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Is_JustOfType__Fii() {
+extern "C" asm void fpcBs_Is_JustOfType__Fii() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Is_JustOfType__Fii.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450D00-80450D04 0004 .sbss      g_fpcBs_type                                                 */
+u8 g_fpcBs_type[4];
+
+/* 80450D04-80450D08 0004 .sbss      t_type$2207                                                  */
+u8 data_80450D04[4];
+
+/* 80450D08-80450D0C 0004 .sbss      None                                                         */
+u8 data_80450D08[4];
+
 /* 8002065C-8002069C 0040 .text      fpcBs_MakeOfType__FPi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_MakeOfType__FPi() {
+extern "C" asm void fpcBs_MakeOfType__FPi() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_MakeOfType__FPi.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450D0C-80450D10 0004 .sbss      process_id$2216                                              */
+u8 data_80450D0C[4];
+
+/* 80450D10-80450D18 0008 .sbss      None                                                         */
+u8 data_80450D10[8];
+
 /* 8002069C-800206C4 0028 .text      fpcBs_MakeOfId__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_MakeOfId__Fv() {
+extern "C" asm void fpcBs_MakeOfId__Fv() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_MakeOfId__Fv.s"
 }
 #pragma pop
 
+
 /* 800206C4-80020720 005C .text      fpcBs_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Execute__FP18base_process_class() {
+extern "C" asm void fpcBs_Execute__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Execute__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80020720-80020760 0040 .text      fpcBs_DeleteAppend__FP18base_process_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_DeleteAppend__FP18base_process_class() {
+extern "C" asm void fpcBs_DeleteAppend__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_DeleteAppend__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80020760-800207BC 005C .text      fpcBs_IsDelete__FP18base_process_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_IsDelete__FP18base_process_class() {
+extern "C" asm void fpcBs_IsDelete__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_IsDelete__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 800207BC-80020820 0064 .text      fpcBs_Delete__FP18base_process_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Delete__FP18base_process_class() {
+extern "C" asm void fpcBs_Delete__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Delete__FP18base_process_class.s"
 }
 #pragma pop
 
+
 /* 80020820-8002091C 00FC .text      fpcBs_Create__FsUiPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Create__FsUiPv() {
+extern "C" asm void fpcBs_Create__FsUiPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Create__FsUiPv.s"
 }
 #pragma pop
 
+
 /* 8002091C-800209C8 00AC .text      fpcBs_SubCreate__FP18base_process_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_SubCreate__FP18base_process_class() {
+extern "C" asm void fpcBs_SubCreate__FP18base_process_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_SubCreate__FP18base_process_class.s"
 }

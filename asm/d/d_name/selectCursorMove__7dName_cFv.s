@@ -80,7 +80,7 @@ lbl_8024F994:
 /* 8024FACC 00000138  38 A0 00 01 */	li r5, 1
 /* 8024FAD0 0000013C  4B F4 56 25 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8024FAD4 00000140  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 8024FAD8 00000144  C0 22 B3 C0 */	lfs f1, d_d_name__LIT_3820(r2)
+/* 8024FAD8 00000144  C0 22 B3 C0 */	lfs f1, d_d_name__lit_3820(r2)
 /* 8024FADC 00000148  4B F4 57 C5 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8024FAE0 0000014C  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 8024FAE4 00000150  80 01 00 34 */	lwz r0, 0x34(r1)

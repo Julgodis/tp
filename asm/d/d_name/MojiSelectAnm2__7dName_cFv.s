@@ -15,7 +15,7 @@ lbl_8024F164:
 /* 8024F198 00000034  3C A0 80 43 */	lis r5, g_nmHIO@ha
 /* 8024F19C 00000038  38 A5 07 34 */	addi r5, r5, g_nmHIO@l
 /* 8024F1A0 0000003C  C0 25 00 0C */	lfs f1, 0xc(r5)
-/* 8024F1A4 00000040  C0 42 B3 C0 */	lfs f2, d_d_name__LIT_3820(r2)
+/* 8024F1A4 00000040  C0 42 B3 C0 */	lfs f2, d_d_name__lit_3820(r2)
 /* 8024F1A8 00000044  38 A0 00 00 */	li r5, 0
 /* 8024F1AC 00000048  48 00 56 21 */	bl scaleAnime__8CPaneMgrFsffUc
 /* 8024F1B0 0000004C  54 60 06 3E */	clrlwi r0, r3, 0x18

@@ -5,68 +5,69 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__6dBgPlcFv();
-extern void __dt__6dBgPlcFv();
-extern void setBase__6dBgPlcFPv();
-extern void getCode__6dBgPlcCFiPP5sBgPc();
-extern void getGrpCode__6dBgPlcCFi();
-extern void __dl__FPv();
-}
+extern "C" extern void __ct__6dBgPlcFv();
+extern "C" extern void __dt__6dBgPlcFv();
+extern "C" extern void setBase__6dBgPlcFPv();
+extern "C" extern void getCode__6dBgPlcCFiPP5sBgPc();
+extern "C" extern void getGrpCode__6dBgPlcCFi();
+extern "C" extern void __dl__FPv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80074074-80074080 000C .text      __ct__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__6dBgPlcFv() {
+extern "C" asm void __ct__6dBgPlcFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/__ct__6dBgPlcFv.s"
 }
 #pragma pop
 
+
 /* 80074080-800740BC 003C .text      __dt__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__6dBgPlcFv() {
+extern "C" asm void __dt__6dBgPlcFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/__dt__6dBgPlcFv.s"
 }
 #pragma pop
 
+
 /* 800740BC-800740C4 0008 .text      setBase__6dBgPlcFPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBase__6dBgPlcFPv() {
+extern "C" asm void setBase__6dBgPlcFPv() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/setBase__6dBgPlcFPv.s"
 }
 #pragma pop
 
+
 /* 800740C4-800740DC 0018 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getCode__6dBgPlcCFiPP5sBgPc() {
+extern "C" asm void getCode__6dBgPlcCFiPP5sBgPc() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getCode__6dBgPlcCFiPP5sBgPc.s"
 }
 #pragma pop
 
+
 /* 800740DC-800740F4 0018 .text      getGrpCode__6dBgPlcCFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getGrpCode__6dBgPlcCFi() {
+extern "C" asm void getGrpCode__6dBgPlcCFi() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getGrpCode__6dBgPlcCFi.s"
 }

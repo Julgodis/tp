@@ -5,78 +5,67 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void _ExitProcess();
-extern void __destroy_global_chain();
-extern void exit();
-extern void abort();
-extern void __end_critical_region();
-extern void __begin_critical_region();
-extern void __kill_critical_regions();
-extern void raise();
-extern const void* __destroy_global_chain_reference;
+extern "C" extern void _ExitProcess();
+extern "C" extern void __destroy_global_chain();
+extern "C" extern void exit();
+extern "C" extern void abort();
+extern "C" extern void __end_critical_region();
+extern "C" extern void __begin_critical_region();
+extern "C" extern void __kill_critical_regions();
+extern "C" extern void raise();
+extern const void* const __destroy_global_chain_reference;
 SECTION_BSS extern u8 __atexit_funcs[256];
 SECTION_SBSS extern u8 __aborting[4];
 SECTION_SBSS extern u8 __atexit_curr_func[4];
 SECTION_SBSS extern u8 __stdio_exit[4];
 SECTION_SBSS extern u8 __console_exit[4];
 SECTION_SBSS extern u8 data_804519A0[8];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8044D440-8044D540 0100 .bss       __atexit_funcs                                               */
-SECTION_BSS u8 __atexit_funcs[256];
-}
+u8 __atexit_funcs[256];
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451990-80451994 0004 .sbss      __aborting                                                   */
-SECTION_SBSS u8 __aborting[4];
+u8 __aborting[4];
+
 /* 80451994-80451998 0004 .sbss      __atexit_curr_func                                           */
-SECTION_SBSS u8 __atexit_curr_func[4];
+u8 __atexit_curr_func[4];
+
 /* 80451998-8045199C 0004 .sbss      __stdio_exit                                                 */
-SECTION_SBSS u8 __stdio_exit[4];
+u8 __stdio_exit[4];
+
 /* 8045199C-804519A0 0004 .sbss      __console_exit                                               */
-SECTION_SBSS u8 __console_exit[4];
-/* 804519A0-804519A8 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_804519A0[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 __console_exit[4];
 
 /* 803629CC-80362ABC 00F0 .text      exit                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void exit() {
+extern "C" asm void exit() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit/exit.s"
 }
 #pragma pop
 
+
 /* 80362ABC-80362B58 009C .text      abort                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void abort() {
+extern "C" asm void abort() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit/abort.s"
 }
 #pragma pop
 
+
+/* 804519A0-804519A8 0008 .sbss      None                                                         */
+u8 data_804519A0[8];
 

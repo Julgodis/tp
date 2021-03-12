@@ -5,39 +5,37 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopAcIt_Executor__FPFPvPv_iPv();
-extern void fopAcIt_Judge__FPFPvPv_PvPv();
-extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
-extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+extern "C" extern void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
 SECTION_DATA extern u8 g_fopAcTg_Queue[16];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 800197BC-800197F8 003C .text      fopAcIt_Executor__FPFPvPv_iPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcIt_Executor__FPFPvPv_iPv() {
+extern "C" asm void fopAcIt_Executor__FPFPvPv_iPv() {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Executor__FPFPvPv_iPv.s"
 }
 #pragma pop
 
+
 /* 800197F8-80019834 003C .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcIt_Judge__FPFPvPv_PvPv() {
+extern "C" asm void fopAcIt_Judge__FPFPvPv_PvPv() {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Judge__FPFPvPv_PvPv.s"
 }

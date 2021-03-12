@@ -1,5 +1,5 @@
 lbl_802F847C:
-/* 802F847C 00000000  C0 02 C7 F0 */	lfs f0, LIT_1469(r2)
+/* 802F847C 00000000  C0 02 C7 F0 */	lfs f0, lit_1469(r2)
 /* 802F8480 00000004  3C 60 80 43 */	lis r3, static_mBounds__7J2DPane@ha
 /* 802F8484 00000008  D4 03 49 B0 */	stfsu f0, static_mBounds__7J2DPane@l(r3)
 /* 802F8488 0000000C  D0 03 00 04 */	stfs f0, 4(r3)

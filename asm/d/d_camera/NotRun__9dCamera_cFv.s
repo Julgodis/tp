@@ -47,8 +47,8 @@ lbl_80162D88:
 /* 80162DE8 00000060  41 82 00 AC */	beq lbl_80162E94
 lbl_80162DEC:
 /* 80162DEC 00000000  80 9E 06 8C */	lwz r4, 0x68c(r30)
-/* 80162DF0 00000004  3C 60 80 43 */	lis r3, d_d_camera__data_8042C8F8@ha
-/* 80162DF4 00000008  3B A3 C8 F8 */	addi r29, r3, d_d_camera__data_8042C8F8@l
+/* 80162DF0 00000004  3C 60 80 43 */	lis r3, data_8042C8F8@ha
+/* 80162DF4 00000008  3B A3 C8 F8 */	addi r29, r3, data_8042C8F8@l
 /* 80162DF8 0000000C  80 1D 00 04 */	lwz r0, 4(r29)
 /* 80162DFC 00000010  7C 04 00 00 */	cmpw r4, r0
 /* 80162E00 00000014  41 82 00 48 */	beq lbl_80162E48
@@ -134,7 +134,7 @@ lbl_80162F2C:
 /* 80162F30 00000004  48 04 83 41 */	bl dKy_camera_water_in_status_set__FUc
 /* 80162F34 00000008  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
 /* 80162F38 0000000C  38 63 04 C4 */	addi r3, r3, 0x4c4
-/* 80162F3C 00000010  C0 22 9C A0 */	lfs f1, LIT_5656(r2)
+/* 80162F3C 00000010  C0 22 9C A0 */	lfs f1, lit_5656(r2)
 /* 80162F40 00000014  48 15 38 49 */	bl setCameraInWaterDepth__11Z2StatusMgrFf
 lbl_80162F44:
 /* 80162F44 00000000  80 7E 00 A8 */	lwz r3, 0xa8(r30)

@@ -5,83 +5,78 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void TRK_memcpy();
-extern void TRKDestructEvent();
-extern void TRKConstructEvent();
-extern void TRKPostEvent();
-extern void TRKGetNextEvent();
-extern void TRKInitializeEventQueue();
-extern void TRKReleaseBuffer();
-extern void TRKReleaseMutex();
-extern void TRKAcquireMutex();
-extern void TRKInitializeMutex();
+extern "C" extern void TRKDestructEvent();
+extern "C" extern void TRKConstructEvent();
+extern "C" extern void TRKPostEvent();
+extern "C" extern void TRKGetNextEvent();
+extern "C" extern void TRKInitializeEventQueue();
+extern "C" extern void TRKReleaseBuffer();
+extern "C" extern void TRKReleaseMutex();
+extern "C" extern void TRKAcquireMutex();
+extern "C" extern void TRKInitializeMutex();
 SECTION_BSS extern u8 gTRKEventQueue[40];
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044D890-8044D8B8 0028 .bss       gTRKEventQueue                                               */
-SECTION_BSS u8 gTRKEventQueue[40];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036CC18-8036CC3C 0024 .text      TRKDestructEvent                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKDestructEvent() {
+extern "C" asm void TRKDestructEvent() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent/TRKDestructEvent.s"
 }
 #pragma pop
 
+
 /* 8036CC3C-8036CC54 0018 .text      TRKConstructEvent                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKConstructEvent() {
+extern "C" asm void TRKConstructEvent() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent/TRKConstructEvent.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 8044D890-8044D8B8 0028 .bss       gTRKEventQueue                                               */
+u8 gTRKEventQueue[40];
+
 /* 8036CC54-8036CD34 00E0 .text      TRKPostEvent                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKPostEvent() {
+extern "C" asm void TRKPostEvent() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent/TRKPostEvent.s"
 }
 #pragma pop
 
+
 /* 8036CD34-8036CDE8 00B4 .text      TRKGetNextEvent                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKGetNextEvent() {
+extern "C" asm void TRKGetNextEvent() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent/TRKGetNextEvent.s"
 }
 #pragma pop
 
+
 /* 8036CDE8-8036CE40 0058 .text      TRKInitializeEventQueue                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKInitializeEventQueue() {
+extern "C" asm void TRKInitializeEventQueue() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent/TRKInitializeEventQueue.s"
 }

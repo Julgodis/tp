@@ -22,7 +22,7 @@ lbl_8012DC44:
 /* 8012DC94 00000050  2C 03 00 00 */	cmpwi r3, 0
 /* 8012DC98 00000054  41 82 00 2C */	beq lbl_8012DCC4
 /* 8012DC9C 00000058  C0 3F 33 AC */	lfs f1, 0x33ac(r31)
-/* 8012DCA0 0000005C  C0 02 92 A4 */	lfs f0, LIT_6021(r2)
+/* 8012DCA0 0000005C  C0 02 92 A4 */	lfs f0, lit_6021(r2)
 /* 8012DCA4 00000060  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8012DCA8 00000000  41 81 00 1C */	bgt lbl_8012DCC4
 /* 8012DCAC 00000004  7F E3 FB 78 */	mr r3, r31
@@ -34,7 +34,7 @@ lbl_8012DCB8:
 /* 8012DCC0 00000008  90 1F 31 A0 */	stw r0, 0x31a0(r31)
 lbl_8012DCC4:
 /* 8012DCC4 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8012DCC8 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 8012DCC8 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 8012DCCC 00000008  4B FF B4 49 */	bl setBlendWolfAtnMoveAnime__9daAlink_cFf
 /* 8012DCD0 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8012DCD4 00000010  4B FF AA C5 */	bl checkWolfAtnWait__9daAlink_cFv

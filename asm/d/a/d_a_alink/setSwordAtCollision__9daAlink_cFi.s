@@ -54,7 +54,7 @@ lbl_800AA350:
 /* 800AA3A8 00000058  D0 61 00 7C */	stfs f3, 0x7c(r1)
 /* 800AA3AC 0000005C  C0 1F 05 C0 */	lfs f0, 0x5c0(r31)
 /* 800AA3B0 00000060  EC 20 10 28 */	fsubs f1, f0, f2
-/* 800AA3B4 00000064  C0 02 93 30 */	lfs f0, d_a_d_a_alink__LIT_7625(r2)
+/* 800AA3B4 00000064  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
 /* 800AA3B8 00000068  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800AA3BC 00000000  40 80 00 08 */	bge lbl_800AA3C4
 /* 800AA3C0 00000004  FC 20 00 90 */	fmr f1, f0

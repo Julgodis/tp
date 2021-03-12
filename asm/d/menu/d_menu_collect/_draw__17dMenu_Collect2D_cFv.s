@@ -14,7 +14,7 @@ lbl_801B5D70:
 /* 801B5DA0 00000030  7D 89 03 A6 */	mtctr r12
 /* 801B5DA4 00000034  4E 80 04 21 */	bctrl 
 /* 801B5DA8 00000038  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801B5DAC 0000003C  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B5DAC 0000003C  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B5DB0 00000040  FC 40 08 90 */	fmr f2, f1
 /* 801B5DB4 00000044  7F C4 F3 78 */	mr r4, r30
 /* 801B5DB8 00000048  48 14 31 1D */	bl draw__9J2DScreenFffPC14J2DGrafContext
@@ -102,7 +102,7 @@ lbl_801B5E3C:
 /* 801B5EFC 000000C0  4E 80 04 21 */	bctrl 
 /* 801B5F00 000000C4  7C 64 1B 78 */	mr r4, r3
 /* 801B5F04 000000C8  80 7F 00 24 */	lwz r3, 0x24(r31)
-/* 801B5F08 000000CC  C0 22 A5 60 */	lfs f1, d_menu_d_menu_collect__LIT_5531(r2)
+/* 801B5F08 000000CC  C0 22 A5 60 */	lfs f1, d_menu_d_menu_collect__lit_5531(r2)
 /* 801B5F0C 000000D0  81 83 00 00 */	lwz r12, 0(r3)
 /* 801B5F10 000000D4  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 801B5F14 000000D8  7D 89 03 A6 */	mtctr r12

@@ -30,7 +30,7 @@ lbl_801CF56C:
 /* 801CF5DC 00000070  98 64 00 F2 */	stb r3, 0xf2(r4)
 /* 801CF5E0 00000074  38 80 00 00 */	li r4, 0
 /* 801CF5E4 00000078  38 A0 00 00 */	li r5, 0
-/* 801CF5E8 0000007C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801CF5E8 0000007C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801CF5EC 00000080  38 00 00 08 */	li r0, 8
 /* 801CF5F0 00000084  7C 09 03 A6 */	mtctr r0
 lbl_801CF5F4:
@@ -93,7 +93,7 @@ lbl_801CF5F4:
 /* 801CF6D4 000000E0  38 63 00 04 */	addi r3, r3, 4
 /* 801CF6D8 000000E4  42 00 FF 1C */	bdnz lbl_801CF5F4
 /* 801CF6DC 000000E8  38 60 00 00 */	li r3, 0
-/* 801CF6E0 000000EC  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801CF6E0 000000EC  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801CF6E4 000000F0  38 00 00 14 */	li r0, 0x14
 /* 801CF6E8 000000F4  7C 09 03 A6 */	mtctr r0
 lbl_801CF6EC:
@@ -109,7 +109,7 @@ lbl_801CF6EC:
 /* 801CF710 00000024  42 00 FF DC */	bdnz lbl_801CF6EC
 /* 801CF714 00000028  38 00 00 00 */	li r0, 0
 /* 801CF718 0000002C  90 1F 0D 88 */	stw r0, 0xd88(r31)
-/* 801CF71C 00000030  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801CF71C 00000030  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801CF720 00000034  D0 3F 0F E0 */	stfs f1, 0xfe0(r31)
 /* 801CF724 00000038  D0 3F 0F E4 */	stfs f1, 0xfe4(r31)
 /* 801CF728 0000003C  D0 3F 0F E8 */	stfs f1, 0xfe8(r31)
@@ -123,16 +123,16 @@ lbl_801CF6EC:
 /* 801CF748 0000005C  D0 3F 11 88 */	stfs f1, 0x1188(r31)
 /* 801CF74C 00000060  D0 3F 0F 8C */	stfs f1, 0xf8c(r31)
 /* 801CF750 00000064  D0 3F 0F 90 */	stfs f1, 0xf90(r31)
-/* 801CF754 00000068  C0 02 A7 D4 */	lfs f0, LIT_3971(r2)
+/* 801CF754 00000068  C0 02 A7 D4 */	lfs f0, lit_3971(r2)
 /* 801CF758 0000006C  D0 1F 0F 94 */	stfs f0, 0xf94(r31)
 /* 801CF75C 00000070  D0 1F 0F 98 */	stfs f0, 0xf98(r31)
 /* 801CF760 00000074  D0 3F 0F A0 */	stfs f1, 0xfa0(r31)
 /* 801CF764 00000078  7F E3 FB 78 */	mr r3, r31
 /* 801CF768 0000007C  48 00 33 F5 */	bl getAllMapZoomRate__18dMenu_Fmap2DBack_cFv
 /* 801CF76C 00000080  D0 3F 0F 9C */	stfs f1, 0xf9c(r31)
-/* 801CF770 00000084  C0 42 A7 D4 */	lfs f2, LIT_3971(r2)
+/* 801CF770 00000084  C0 42 A7 D4 */	lfs f2, lit_3971(r2)
 /* 801CF774 00000088  D0 5F 0F A4 */	stfs f2, 0xfa4(r31)
-/* 801CF778 0000008C  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801CF778 0000008C  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801CF77C 00000090  D0 3F 0F A8 */	stfs f1, 0xfa8(r31)
 /* 801CF780 00000094  38 80 00 00 */	li r4, 0
 /* 801CF784 00000098  90 9F 0C B0 */	stw r4, 0xcb0(r31)
@@ -189,7 +189,7 @@ lbl_801CF6EC:
 /* 801CF850 00000164  D0 3F 11 94 */	stfs f1, 0x1194(r31)
 /* 801CF854 00000168  D0 3F 11 D8 */	stfs f1, 0x11d8(r31)
 /* 801CF858 0000016C  D0 3F 11 DC */	stfs f1, 0x11dc(r31)
-/* 801CF85C 00000170  C0 02 A7 D8 */	lfs f0, LIT_3972(r2)
+/* 801CF85C 00000170  C0 02 A7 D8 */	lfs f0, lit_3972(r2)
 /* 801CF860 00000174  D0 1F 11 E0 */	stfs f0, 0x11e0(r31)
 /* 801CF864 00000178  D0 3F 11 E4 */	stfs f1, 0x11e4(r31)
 /* 801CF868 0000017C  D0 3F 11 E8 */	stfs f1, 0x11e8(r31)
@@ -281,7 +281,7 @@ lbl_801CF968:
 /* 801CF9B8 00000050  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 801CF9BC 00000054  7D 89 03 A6 */	mtctr r12
 /* 801CF9C0 00000058  4E 80 04 21 */	bctrl 
-/* 801CF9C4 0000005C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801CF9C4 0000005C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801CF9C8 00000060  D0 1F 0F AC */	stfs f0, 0xfac(r31)
 /* 801CF9CC 00000064  38 60 00 2C */	li r3, 0x2c
 /* 801CF9D0 00000068  48 0F F2 7D */	bl __nw__FUl
@@ -431,8 +431,8 @@ lbl_801CFBC0:
 /* 801CFBF4 00000034  3B C0 00 00 */	li r30, 0
 /* 801CFBF8 00000038  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801CFBFC 0000003C  3B 83 FC 60 */	addi r28, r3, g_fmapHIO@l
-/* 801CFC00 00000040  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap2D__data_80396248@ha
-/* 801CFC04 00000044  3B A3 62 48 */	addi r29, r3, d_menu_d_menu_fmap2D__data_80396248@l
+/* 801CFC00 00000040  3C 60 80 39 */	lis r3, data_80396248@ha
+/* 801CFC04 00000044  3B A3 62 48 */	addi r29, r3, data_80396248@l
 lbl_801CFC08:
 /* 801CFC08 00000000  80 7F 0C D8 */	lwz r3, 0xcd8(r31)
 /* 801CFC0C 00000004  7C 9D F2 14 */	add r4, r29, r30

@@ -84,14 +84,14 @@ lbl_801E38CC:
 /* 801E3A14 00000148  EC 80 38 28 */	fsubs f4, f0, f7
 /* 801E3A18 0000014C  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 801E3A1C 00000150  88 9F 03 F6 */	lbz r4, 0x3f6(r31)
-/* 801E3A20 00000154  C0 42 A9 48 */	lfs f2, d_menu_d_menu_option__LIT_4469(r2)
-/* 801E3A24 00000158  C0 22 A9 4C */	lfs f1, d_menu_d_menu_option__LIT_4470(r2)
-/* 801E3A28 0000015C  C0 A2 A9 50 */	lfs f5, d_menu_d_menu_option__LIT_4471(r2)
+/* 801E3A20 00000154  C0 42 A9 48 */	lfs f2, d_menu_d_menu_option__lit_4469(r2)
+/* 801E3A24 00000158  C0 22 A9 4C */	lfs f1, d_menu_d_menu_option__lit_4470(r2)
+/* 801E3A28 0000015C  C0 A2 A9 50 */	lfs f5, d_menu_d_menu_option__lit_4471(r2)
 /* 801E3A2C 00000160  EC 03 01 72 */	fmuls f0, f3, f5
 /* 801E3A30 00000164  EC 06 00 2A */	fadds f0, f6, f0
 /* 801E3A34 00000168  EC 01 00 2A */	fadds f0, f1, f0
 /* 801E3A38 0000016C  EC 22 00 2A */	fadds f1, f2, f0
-/* 801E3A3C 00000170  C0 42 A9 54 */	lfs f2, d_menu_d_menu_option__LIT_4472(r2)
+/* 801E3A3C 00000170  C0 42 A9 54 */	lfs f2, d_menu_d_menu_option__lit_4472(r2)
 /* 801E3A40 00000174  EC 04 01 72 */	fmuls f0, f4, f5
 /* 801E3A44 00000178  EC 07 00 2A */	fadds f0, f7, f0
 /* 801E3A48 0000017C  EC 42 00 2A */	fadds f2, f2, f0

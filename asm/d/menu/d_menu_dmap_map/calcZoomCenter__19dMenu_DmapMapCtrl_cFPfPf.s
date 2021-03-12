@@ -6,7 +6,7 @@ lbl_801C1B14:
 /* 801C1B24 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801C1B28 00000014  7C 9E 23 78 */	mr r30, r4
 /* 801C1B2C 00000018  7C BF 2B 78 */	mr r31, r5
-/* 801C1B30 0000001C  C0 02 A6 60 */	lfs f0, d_menu_d_menu_dmap_map__LIT_3803(r2)
+/* 801C1B30 0000001C  C0 02 A6 60 */	lfs f0, d_menu_d_menu_dmap_map__lit_3803(r2)
 /* 801C1B34 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 801C1B38 00000024  D0 01 00 08 */	stfs f0, 8(r1)
 /* 801C1B3C 00000028  3C 80 80 3F */	lis r4, mStatus__20dStage_roomControl_c@ha

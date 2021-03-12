@@ -5,179 +5,175 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dl__FPv();
-extern void __ct__13J3DVertexDataFv();
-extern void __dt__14J3DDrawMtxDataFv();
-extern void countDLSize__11J3DMaterialFv();
-extern void newSharedDisplayList__11J3DMaterialFUl();
-extern void newSingleSharedDisplayList__11J3DMaterialFUl();
-extern void __ct__12J3DJointTreeFv();
-extern void clear__12J3DModelDataFv();
-extern void __ct__12J3DModelDataFv();
-extern void newSharedDisplayList__12J3DModelDataFUl();
-extern void indexToPtr__12J3DModelDataFv();
-extern void makeSharedDL__12J3DModelDataFv();
-extern void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
-extern void syncJ3DSysPointers__12J3DModelDataCFv();
-extern void syncJ3DSysFlags__12J3DModelDataCFv();
-extern void __dt__13J3DShapeTableFv();
-extern void __dt__12J3DModelDataFv();
-extern void __ct__16J3DMaterialTableFv();
-extern void __dt__16J3DMaterialTableFv();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSDisableScheduler();
-extern void OSEnableScheduler();
-extern void GDInitGDLObj();
-extern void _savegpr_27();
-extern void _savegpr_29();
-extern void _restgpr_27();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__12J3DJointTree[5];
-SECTION_DATA extern void* __vt__13J3DShapeTable[3];
-SECTION_DATA extern void* __vt__12J3DModelData[3];
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__13J3DVertexDataFv();
+extern "C" extern void __dt__14J3DDrawMtxDataFv();
+extern "C" extern void countDLSize__11J3DMaterialFv();
+extern "C" extern void newSharedDisplayList__11J3DMaterialFUl();
+extern "C" extern void newSingleSharedDisplayList__11J3DMaterialFUl();
+extern "C" extern void __ct__12J3DJointTreeFv();
+extern "C" extern void clear__12J3DModelDataFv();
+extern "C" extern void __ct__12J3DModelDataFv();
+extern "C" extern void newSharedDisplayList__12J3DModelDataFUl();
+extern "C" extern void indexToPtr__12J3DModelDataFv();
+extern "C" extern void makeSharedDL__12J3DModelDataFv();
+extern "C" extern void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" extern void syncJ3DSysPointers__12J3DModelDataCFv();
+extern "C" extern void syncJ3DSysFlags__12J3DModelDataCFv();
+extern "C" extern void __dt__13J3DShapeTableFv();
+extern "C" extern void __dt__12J3DModelDataFv();
+extern "C" extern void __ct__16J3DMaterialTableFv();
+extern "C" extern void __dt__16J3DMaterialTableFv();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSDisableScheduler();
+extern "C" extern void OSEnableScheduler();
+extern "C" extern void GDInitGDLObj();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__12J3DJointTree[5];
+SECTION_DATA extern void* const __vt__13J3DShapeTable[3];
+SECTION_DATA extern void* const __vt__12J3DModelData[3];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_SBSS extern u8 data_804515E8[4];
 SECTION_SBSS extern u8 data_804515EC[4];
 SECTION_SBSS extern u8 __GDCurrentDL[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803CED08-803CED14 000C .data      __vt__13J3DShapeTable                                        */
-SECTION_DATA void* __vt__13J3DShapeTable[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__13J3DShapeTableFv,
-};
-/* 803CED14-803CED20 000C .data      __vt__12J3DModelData                                         */
-SECTION_DATA void* __vt__12J3DModelData[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__12J3DModelDataFv,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804515E8-804515EC 0004 .sbss      sInterruptFlag$965                                           */
-SECTION_SBSS u8 data_804515E8[4];
-/* 804515EC-804515F0 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_804515EC[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80325D88-80325DA0 0018 .text      clear__12J3DModelDataFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clear__12J3DModelDataFv() {
+extern "C" asm void clear__12J3DModelDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/clear__12J3DModelDataFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803CED08-803CED14 000C .data      __vt__13J3DShapeTable                                        */
+void* const __vt__13J3DShapeTable[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__13J3DShapeTableFv,
+};
+
+/* 803CED14-803CED20 000C .data      __vt__12J3DModelData                                         */
+void* const __vt__12J3DModelData[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__12J3DModelDataFv,
+};
+
 /* 80325DA0-80325E14 0074 .text      __ct__12J3DModelDataFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12J3DModelDataFv() {
+extern "C" asm void __ct__12J3DModelDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/__ct__12J3DModelDataFv.s"
 }
 #pragma pop
 
+
 /* 80325E14-80325EC8 00B4 .text      newSharedDisplayList__12J3DModelDataFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void newSharedDisplayList__12J3DModelDataFUl() {
+extern "C" asm void newSharedDisplayList__12J3DModelDataFUl() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/newSharedDisplayList__12J3DModelDataFUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804515E8-804515EC 0004 .sbss      sInterruptFlag$965                                           */
+u8 data_804515E8[4];
+
+/* 804515EC-804515F0 0004 .sbss      None                                                         */
+u8 data_804515EC[4];
+
 /* 80325EC8-80325F94 00CC .text      indexToPtr__12J3DModelDataFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void indexToPtr__12J3DModelDataFv() {
+extern "C" asm void indexToPtr__12J3DModelDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/indexToPtr__12J3DModelDataFv.s"
 }
 #pragma pop
 
+
 /* 80325F94-8032600C 0078 .text      makeSharedDL__12J3DModelDataFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void makeSharedDL__12J3DModelDataFv() {
+extern "C" asm void makeSharedDL__12J3DModelDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/makeSharedDL__12J3DModelDataFv.s"
 }
 #pragma pop
 
+
 /* 8032600C-803260CC 00C0 .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void simpleCalcMaterial__12J3DModelDataFUsPA4_f() {
+extern "C" asm void simpleCalcMaterial__12J3DModelDataFUsPA4_f() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/simpleCalcMaterial__12J3DModelDataFUsPA4_f.s"
 }
 #pragma pop
 
+
 /* 803260CC-803260F8 002C .text      syncJ3DSysPointers__12J3DModelDataCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void syncJ3DSysPointers__12J3DModelDataCFv() {
+extern "C" asm void syncJ3DSysPointers__12J3DModelDataCFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/syncJ3DSysPointers__12J3DModelDataCFv.s"
 }
 #pragma pop
 
+
 /* 803260F8-80326134 003C .text      syncJ3DSysFlags__12J3DModelDataCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void syncJ3DSysFlags__12J3DModelDataCFv() {
+extern "C" asm void syncJ3DSysFlags__12J3DModelDataCFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/syncJ3DSysFlags__12J3DModelDataCFv.s"
 }
 #pragma pop
 
+
 /* 80326134-8032617C 0048 .text      __dt__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13J3DShapeTableFv() {
+extern "C" asm void __dt__13J3DShapeTableFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/__dt__13J3DShapeTableFv.s"
 }
 #pragma pop
 
+
 /* 8032617C-80326214 0098 .text      __dt__12J3DModelDataFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12J3DModelDataFv() {
+extern "C" asm void __dt__12J3DModelDataFv() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/__dt__12J3DModelDataFv.s"
 }

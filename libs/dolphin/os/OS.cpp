@@ -5,98 +5,97 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 SECTION_INIT extern void memset();
 SECTION_INIT extern void memcpy();
-extern void OSReport();
-extern void PPCMtmmcr0();
-extern void PPCMtmmcr1();
-extern void PPCMtpmc1();
-extern void PPCMtpmc2();
-extern void PPCMtpmc3();
-extern void PPCMtpmc4();
-extern void PPCMfhid2();
-extern void PPCMthid2();
-extern void PPCDisableSpeculation();
-extern void PPCSetFpNonIEEEMode();
-extern void __OSFPRInit();
-extern void OSGetConsoleType();
-extern void InquiryCallback();
-extern void OSInit();
-extern void OSExceptionInit();
-extern void __OSDBIntegrator();
-extern void __OSDBJump();
-extern void __OSSetExceptionHandler();
-extern void __OSGetExceptionHandler();
-extern void OSExceptionVector();
-extern void __DBVECTOR();
-extern void __OSEVSetNumber();
-extern void __OSEVEnd();
-extern void OSDefaultExceptionHandler();
-extern void __OSPSInit();
-extern void __OSGetDIConfig();
-extern void OSRegisterVersion();
-extern void OSInitAlarm();
-extern void OSGetArenaHi();
-extern void OSGetArenaLo();
-extern void OSSetArenaHi();
-extern void OSSetArenaLo();
-extern void __OSInitAudioSystem();
-extern void DCInvalidateRange();
-extern void DCFlushRangeNoSync();
-extern void ICInvalidateRange();
-extern void ICFlashInvalidate();
-extern void __OSCacheInit();
-extern void __OSContextInit();
-extern void __OSUnhandledException();
-extern void __OSGetExecParams();
-extern void OSDisableInterrupts();
-extern void OSEnableInterrupts();
-extern void __OSSetInterruptHandler();
-extern void __OSInterruptInit();
-extern void __OSModuleInit();
-extern void __OSInitMemoryProtection();
-extern void OSGetResetCode();
-extern void __OSResetSWInterruptHandler();
-extern void __OSInitSram();
-extern void __OSInitSystemCall();
-extern void __OSThreadInit();
-extern void __OSGetSystemTime();
-extern void EXIInit();
-extern void SIInit();
-extern void __DBIsExceptionMarked();
-extern void DBPrintf();
-extern void DVDInit();
-extern void DVDInquiryAsync();
-extern void EnableMetroTRKInterrupts();
-SECTION_DATA extern u8 OS__LIT_1[68];
-SECTION_DATA extern u8 OS__LIT_105[16];
-SECTION_DATA extern u8 OS__LIT_106[24];
-SECTION_DATA extern u8 OS__LIT_107[12];
-SECTION_DATA extern u8 OS__LIT_108[12];
-SECTION_DATA extern u8 OS__LIT_109[16];
-SECTION_DATA extern u8 OS__LIT_110[12];
-SECTION_DATA extern u8 LIT_111[16];
-SECTION_DATA extern u8 LIT_112[16];
-SECTION_DATA extern u8 OS__LIT_113[16];
-SECTION_DATA extern u8 LIT_114[16];
-SECTION_DATA extern u8 OS__LIT_115[28];
-SECTION_DATA extern u8 OS__LIT_117[16];
-SECTION_DATA extern u8 OS__LIT_118[24];
+extern "C" extern void OSReport();
+extern "C" extern void PPCMtmmcr0();
+extern "C" extern void PPCMtmmcr1();
+extern "C" extern void PPCMtpmc1();
+extern "C" extern void PPCMtpmc2();
+extern "C" extern void PPCMtpmc3();
+extern "C" extern void PPCMtpmc4();
+extern "C" extern void PPCMfhid2();
+extern "C" extern void PPCMthid2();
+extern "C" extern void PPCDisableSpeculation();
+extern "C" extern void PPCSetFpNonIEEEMode();
+extern "C" extern void __OSFPRInit();
+extern "C" extern void OSGetConsoleType();
+extern "C" extern void InquiryCallback();
+extern "C" extern void OSInit();
+extern "C" extern void OSExceptionInit();
+extern "C" extern void __OSDBIntegrator();
+extern "C" extern void __OSDBJump();
+extern "C" extern void __OSSetExceptionHandler();
+extern "C" extern void __OSGetExceptionHandler();
+extern "C" extern void OSExceptionVector();
+extern "C" extern void __DBVECTOR();
+extern "C" extern void __OSEVSetNumber();
+extern "C" extern void __OSEVEnd();
+extern "C" extern void OSDefaultExceptionHandler();
+extern "C" extern void __OSPSInit();
+extern "C" extern void __OSGetDIConfig();
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSInitAlarm();
+extern "C" extern void OSGetArenaHi();
+extern "C" extern void OSGetArenaLo();
+extern "C" extern void OSSetArenaHi();
+extern "C" extern void OSSetArenaLo();
+extern "C" extern void __OSInitAudioSystem();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void DCFlushRangeNoSync();
+extern "C" extern void ICInvalidateRange();
+extern "C" extern void ICFlashInvalidate();
+extern "C" extern void __OSCacheInit();
+extern "C" extern void __OSContextInit();
+extern "C" extern void __OSUnhandledException();
+extern "C" extern void __OSGetExecParams();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSEnableInterrupts();
+extern "C" extern void __OSSetInterruptHandler();
+extern "C" extern void __OSInterruptInit();
+extern "C" extern void __OSModuleInit();
+extern "C" extern void __OSInitMemoryProtection();
+extern "C" extern void OSGetResetCode();
+extern "C" extern void __OSResetSWInterruptHandler();
+extern "C" extern void __OSInitSram();
+extern "C" extern void __OSInitSystemCall();
+extern "C" extern void __OSThreadInit();
+extern "C" extern void __OSGetSystemTime();
+extern "C" extern void EXIInit();
+extern "C" extern void SIInit();
+extern "C" extern void __DBIsExceptionMarked();
+extern "C" extern void DBPrintf();
+extern "C" extern void DVDInit();
+extern "C" extern void DVDInquiryAsync();
+extern "C" extern void EnableMetroTRKInterrupts();
+SECTION_DATA extern u8 OS__lit_1[68];
+SECTION_DATA extern u8 OS__lit_105[16];
+SECTION_DATA extern u8 OS__lit_106[24];
+SECTION_DATA extern u8 OS__lit_107[12];
+SECTION_DATA extern u8 OS__lit_108[12];
+SECTION_DATA extern u8 OS__lit_109[16];
+SECTION_DATA extern u8 OS__lit_110[12];
+SECTION_DATA extern u8 lit_111[16];
+SECTION_DATA extern u8 lit_112[16];
+SECTION_DATA extern u8 OS__lit_113[16];
+SECTION_DATA extern u8 lit_114[16];
+SECTION_DATA extern u8 OS__lit_115[28];
+SECTION_DATA extern u8 OS__lit_117[16];
+SECTION_DATA extern u8 OS__lit_118[24];
 SECTION_DATA extern u8 __OSExceptionLocations[60];
-SECTION_DATA extern u8 OS__LIT_152[28];
-SECTION_DATA extern u8 OS__LIT_153[48];
-SECTION_DATA extern u8 OS__LIT_154[48];
-SECTION_DATA extern u8 OS__LIT_155[28];
+SECTION_DATA extern u8 OS__lit_152[28];
+SECTION_DATA extern u8 OS__lit_153[48];
+SECTION_DATA extern u8 OS__lit_154[48];
+SECTION_DATA extern u8 OS__lit_155[28];
 SECTION_BSS extern u8 DriveInfo[32];
 SECTION_BSS extern u8 DriveBlock[48];
 SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
 SECTION_SDATA extern void* __OSVersion;
-SECTION_SDATA extern u8 OS__LIT_116[8];
-SECTION_SDATA extern u8 LIT_163[4];
+SECTION_SDATA extern u8 OS__lit_116[8];
+SECTION_SDATA extern u32 lit_163;
 SECTION_SBSS extern u8 OS__BootInfo[4];
 SECTION_SBSS extern u8 BI2DebugFlag[4];
 SECTION_SBSS extern u8 BI2DebugFlagHolder[4];
@@ -110,382 +109,405 @@ SECTION_SBSS extern u8 __OSStartTime[4];
 SECTION_SBSS extern u8 data_80451634[4];
 SECTION_SBSS extern u8 __DVDLongFileNameFlag[4];
 SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80451600-80451604 0004 .sbss      BootInfo                                                     */
+u8 OS__BootInfo[4];
+
+/* 80451604-80451608 0004 .sbss      BI2DebugFlag                                                 */
+u8 BI2DebugFlag[4];
+
+/* 80451608-8045160C 0004 .sbss      BI2DebugFlagHolder                                           */
+u8 BI2DebugFlagHolder[4];
+
+/* 8045160C-80451610 0004 .sbss      __OSIsGcam                                                   */
+u8 __OSIsGcam[4];
+
+/* 80451610-80451618 0008 .sbss      ZeroF                                                        */
+u8 ZeroF[8];
+
+/* 80451618-80451620 0008 .sbss      ZeroPS                                                       */
+u8 ZeroPS[8];
+
+/* 80339DD4-80339EFC 0128 .text      __OSFPRInit                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSFPRInit() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSFPRInit.s"
 }
+#pragma pop
+
+
+/* 80339EFC-80339F24 0028 .text      OSGetConsoleType                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSGetConsoleType() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSGetConsoleType.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 8044BA60-8044BA80 0020 .bss       DriveInfo                                                    */
+u8 DriveInfo[32];
 
-extern "C" {
-/* 803CF288-803CF288 0000 .data      ...data.0                                                    */
+/* 80339F24-80339F60 003C .text      InquiryCallback                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void InquiryCallback() {
+	nofralloc
+#include "asm/dolphin/os/OS/InquiryCallback.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803CF288-803CF2CC 0044 .data      @1                                                           */
-SECTION_DATA u8 OS__LIT_1[68] = {
+u8 OS__lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x4F, 0x53, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
 	0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,
 	0x20, 0x3E, 0x3E, 0x00,
 };
+
+/* 80450980-80450984 0004 .sdata     __OSVersion                                                  */
+void* __OSVersion = (void*)&OS__lit_1;
+
+/* 80450984-8045098C 0006 .sdata     @116                                                         */
+u8 OS__lit_116[8] = {
+	0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80451620-80451624 0004 .sbss      AreWeInitialized                                             */
+u8 AreWeInitialized[4];
+
+/* 80451624-80451628 0004 .sbss      OSExceptionTable                                             */
+u8 OSExceptionTable[4];
+
+/* 80451628-80451630 0004 .sbss      __OSInIPL                                                    */
+u8 __OSInIPL[4 + 4 /* padding */];
+
+/* 80451630-80451634 0004 .sbss      __OSStartTime                                                */
+u8 __OSStartTime[4];
+
+/* 80451634-80451638 0004 .sbss      None                                                         */
+u8 data_80451634[4];
+
+/* 80339F60-8033A440 04E0 .text      OSInit                                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSInit() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSInit.s"
+}
+#pragma pop
+
+
+/* 8033A440-8033A6C0 0280 .text      OSExceptionInit                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSExceptionInit() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSExceptionInit.s"
+}
+#pragma pop
+
+
+/* 8033A6C0-8033A6C0 0000 .text      __OSDBINTSTART                                               */
+
+/* 8033A6C0-8033A6E4 0024 .text      __OSDBIntegrator                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSDBIntegrator() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSDBIntegrator.s"
+}
+#pragma pop
+
+
+/* 8033A6E4-8033A6E4 0000 .text      __OSDBINTEND                                                 */
+
+/* 8033A6E4-8033A6E4 0000 .text      __OSDBJUMPSTART                                              */
+
+/* 8033A6E4-8033A6E8 0004 .text      __OSDBJump                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSDBJump() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSDBJump.s"
+}
+#pragma pop
+
+
+/* 8033A6E8-8033A6E8 0000 .text      __OSDBJUMPEND                                                */
+
+/* 8033A6E8-8033A704 001C .text      __OSSetExceptionHandler                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSSetExceptionHandler() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSSetExceptionHandler.s"
+}
+#pragma pop
+
+
+/* 8033A704-8033A718 0014 .text      __OSGetExceptionHandler                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSGetExceptionHandler() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSGetExceptionHandler.s"
+}
+#pragma pop
+
+
+/* 8033A718-8033A718 0000 .text      __OSEVStart                                                  */
+
+/* 8033A718-8033A770 0058 .text      OSExceptionVector                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSExceptionVector() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSExceptionVector.s"
+}
+#pragma pop
+
+
+/* 8033A770-8033A780 0010 .text      __DBVECTOR                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __DBVECTOR() {
+	nofralloc
+#include "asm/dolphin/os/OS/__DBVECTOR.s"
+}
+#pragma pop
+
+
+/* 8033A780-8033A7B0 0030 .text      __OSEVSetNumber                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSEVSetNumber() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSEVSetNumber.s"
+}
+#pragma pop
+
+
+/* 8033A7B0-8033A7B4 0004 .text      __OSEVEnd                                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSEVEnd() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSEVEnd.s"
+}
+#pragma pop
+
+
+/* 8033A7B4-8033A80C 0058 .text      OSDefaultExceptionHandler                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSDefaultExceptionHandler() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSDefaultExceptionHandler.s"
+}
+#pragma pop
+
+
+/* 8033A80C-8033A860 0054 .text      __OSPSInit                                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSPSInit() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSPSInit.s"
+}
+#pragma pop
+
+
+/* 8033A860-8033A874 0014 .text      __OSGetDIConfig                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __OSGetDIConfig() {
+	nofralloc
+#include "asm/dolphin/os/OS/__OSGetDIConfig.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 8045098C-80450990 0004 .sdata     @163                                                         */
+u32 lit_163 = 0x25730A00;
+
+/* 8033A874-8033A8A0 002C .text      OSRegisterVersion                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void OSRegisterVersion() {
+	nofralloc
+#include "asm/dolphin/os/OS/OSRegisterVersion.s"
+}
+#pragma pop
+
+
 /* 803CF2CC-803CF2DC 000D .data      @105                                                         */
-SECTION_DATA u8 OS__LIT_105[16] = {
+u8 OS__lit_105[16] = {
 	0x0A, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x4F, 0x53, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF2DC-803CF2F4 0016 .data      @106                                                         */
-SECTION_DATA u8 OS__LIT_106[24] = {
+u8 OS__lit_106[24] = {
 	0x4B, 0x65, 0x72, 0x6E, 0x65, 0x6C, 0x20, 0x62, 0x75, 0x69, 0x6C, 0x74, 0x20, 0x3A, 0x20, 0x25,
 	0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803CF2F4-803CF300 000C .data      @107                                                         */
-SECTION_DATA u8 OS__LIT_107[12] = {
+u8 OS__lit_107[12] = {
 	0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,
 };
+
 /* 803CF300-803CF30C 0009 .data      @108                                                         */
-SECTION_DATA u8 OS__LIT_108[12] = {
+u8 OS__lit_108[12] = {
 	0x30, 0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF30C-803CF31C 0010 .data      @109                                                         */
-SECTION_DATA u8 OS__LIT_109[16] = {
+u8 OS__lit_109[16] = {
 	0x43, 0x6F, 0x6E, 0x73, 0x6F, 0x6C, 0x65, 0x20, 0x54, 0x79, 0x70, 0x65, 0x20, 0x3A, 0x20, 0x00,
 };
+
 /* 803CF31C-803CF328 000B .data      @110                                                         */
-SECTION_DATA u8 OS__LIT_110[12] = {
+u8 OS__lit_110[12] = {
 	0x52, 0x65, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x25, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
+
 /* 803CF328-803CF338 000E .data      @111                                                         */
-SECTION_DATA u8 LIT_111[16] = {
+u8 lit_111[16] = {
 	0x4D, 0x61, 0x63, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803CF338-803CF348 000D .data      @112                                                         */
-SECTION_DATA u8 LIT_112[16] = {
+u8 lit_112[16] = {
 	0x50, 0x43, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF348-803CF358 000D .data      @113                                                         */
-SECTION_DATA u8 OS__LIT_113[16] = {
+u8 OS__lit_113[16] = {
 	0x45, 0x50, 0x50, 0x43, 0x20, 0x41, 0x72, 0x74, 0x68, 0x75, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF358-803CF368 000D .data      @114                                                         */
-SECTION_DATA u8 LIT_114[16] = {
+u8 lit_114[16] = {
 	0x45, 0x50, 0x50, 0x43, 0x20, 0x4D, 0x69, 0x6E, 0x6E, 0x6F, 0x77, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF368-803CF384 0019 .data      @115                                                         */
-SECTION_DATA u8 OS__LIT_115[28] = {
+u8 OS__lit_115[28] = {
 	0x44, 0x65, 0x76, 0x65, 0x6C, 0x6F, 0x70, 0x6D, 0x65, 0x6E, 0x74, 0x20, 0x48, 0x57, 0x25, 0x64,
 	0x20, 0x28, 0x25, 0x30, 0x38, 0x78, 0x29, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF384-803CF394 000E .data      @117                                                         */
-SECTION_DATA u8 OS__LIT_117[16] = {
+u8 OS__lit_117[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x25, 0x64, 0x20, 0x4D, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803CF394-803CF3AC 0015 .data      @118                                                         */
-SECTION_DATA u8 OS__LIT_118[24] = {
+u8 OS__lit_118[24] = {
 	0x41, 0x72, 0x65, 0x6E, 0x61, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x2D, 0x20, 0x30,
 	0x78, 0x25, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803CF3AC-803CF3E8 003C .data      __OSExceptionLocations                                       */
-SECTION_DATA u8 __OSExceptionLocations[60] = {
+u8 __OSExceptionLocations[60] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,
 	0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,
 	0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0F, 0x00,
 	0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x17, 0x00,
 };
+
 /* 803CF3E8-803CF404 001B .data      @152                                                         */
-SECTION_DATA u8 OS__LIT_152[28] = {
+u8 OS__lit_152[28] = {
 	0x49, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x69, 0x6E, 0x67, 0x20, 0x4F, 0x53, 0x44, 0x42, 0x49,
 	0x6E, 0x74, 0x65, 0x67, 0x72, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
+
 /* 803CF404-803CF434 002E .data      @153                                                         */
-SECTION_DATA u8 OS__LIT_153[48] = {
+u8 OS__lit_153[48] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x65, 0x65, 0x72, 0x65, 0x64, 0x20, 0x62, 0x79, 0x20, 0x54, 0x52, 0x4B, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
+
 /* 803CF434-803CF464 002F .data      @154                                                         */
-SECTION_DATA u8 OS__LIT_154[48] = {
+u8 OS__lit_154[48] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x76, 0x65, 0x63, 0x74, 0x6F, 0x72, 0x65,
 	0x64, 0x20, 0x74, 0x6F, 0x20, 0x64, 0x65, 0x62, 0x75, 0x67, 0x67, 0x65, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
+
 /* 803CF464-803CF480 001B .data      @155                                                         */
-SECTION_DATA u8 OS__LIT_155[28] = {
+u8 OS__lit_155[28] = {
 	0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69,
 	0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x2E, 0x2E, 0x2E, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450980-80450984 0004 .sdata     __OSVersion                                                  */
-SECTION_SDATA void* __OSVersion = (void*)&OS__LIT_1;
-/* 80450984-8045098C 0006 .sdata     @116                                                         */
-SECTION_SDATA u8 OS__LIT_116[8] = {
-	0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 8045098C-80450990 0004 .sdata     @163                                                         */
-SECTION_SDATA u8 LIT_163[4] = {
-	0x25, 0x73, 0x0A, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 8044BA60-8044BA60 0000 .bss       ...bss.0                                                     */
-/* 8044BA60-8044BA80 0020 .bss       DriveInfo                                                    */
-SECTION_BSS u8 DriveInfo[32];
 /* 8044BA80-8044BAB0 0030 .bss       DriveBlock                                                   */
-SECTION_BSS u8 DriveBlock[48];
+u8 DriveBlock[48];
+
 /* 8044BAB0-8044BAD0 001C .bss       __OSRebootParams                                             */
-SECTION_BSS u8 __OSRebootParams[28 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451600-80451604 0004 .sbss      BootInfo                                                     */
-SECTION_SBSS u8 OS__BootInfo[4];
-/* 80451604-80451608 0004 .sbss      BI2DebugFlag                                                 */
-SECTION_SBSS u8 BI2DebugFlag[4];
-/* 80451608-8045160C 0004 .sbss      BI2DebugFlagHolder                                           */
-SECTION_SBSS u8 BI2DebugFlagHolder[4];
-/* 8045160C-80451610 0004 .sbss      __OSIsGcam                                                   */
-SECTION_SBSS u8 __OSIsGcam[4];
-/* 80451610-80451618 0008 .sbss      ZeroF                                                        */
-SECTION_SBSS u8 ZeroF[8];
-/* 80451618-80451620 0008 .sbss      ZeroPS                                                       */
-SECTION_SBSS u8 ZeroPS[8];
-/* 80451620-80451624 0004 .sbss      AreWeInitialized                                             */
-SECTION_SBSS u8 AreWeInitialized[4];
-/* 80451624-80451628 0004 .sbss      OSExceptionTable                                             */
-SECTION_SBSS u8 OSExceptionTable[4];
-/* 80451628-80451630 0004 .sbss      __OSInIPL                                                    */
-SECTION_SBSS u8 __OSInIPL[4 + 4 /* padding */];
-/* 80451630-80451634 0004 .sbss      __OSStartTime                                                */
-SECTION_SBSS u8 __OSStartTime[4];
-/* 80451634-80451638 0004 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451634[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80339DD4-80339EFC 0128 .text      __OSFPRInit                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSFPRInit() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSFPRInit.s"
-}
-#pragma pop
-
-/* 80339EFC-80339F24 0028 .text      OSGetConsoleType                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSGetConsoleType() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSGetConsoleType.s"
-}
-#pragma pop
-
-/* 80339F24-80339F60 003C .text      InquiryCallback                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void InquiryCallback() {
-	nofralloc
-#include "asm/dolphin/os/OS/InquiryCallback.s"
-}
-#pragma pop
-
-/* 80339F60-8033A440 04E0 .text      OSInit                                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSInit() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSInit.s"
-}
-#pragma pop
-
-/* 8033A440-8033A6C0 0280 .text      OSExceptionInit                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSExceptionInit() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSExceptionInit.s"
-}
-#pragma pop
-
-/* 8033A6C0-8033A6C0 0000 .text      __OSDBINTSTART                                               */
-/* 8033A6C0-8033A6E4 0024 .text      __OSDBIntegrator                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSDBIntegrator() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSDBIntegrator.s"
-}
-#pragma pop
-
-/* 8033A6E4-8033A6E4 0000 .text      __OSDBINTEND                                                 */
-/* 8033A6E4-8033A6E4 0000 .text      __OSDBJUMPSTART                                              */
-/* 8033A6E4-8033A6E8 0004 .text      __OSDBJump                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSDBJump() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSDBJump.s"
-}
-#pragma pop
-
-/* 8033A6E8-8033A6E8 0000 .text      __OSDBJUMPEND                                                */
-/* 8033A6E8-8033A704 001C .text      __OSSetExceptionHandler                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSSetExceptionHandler() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSSetExceptionHandler.s"
-}
-#pragma pop
-
-/* 8033A704-8033A718 0014 .text      __OSGetExceptionHandler                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSGetExceptionHandler() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSGetExceptionHandler.s"
-}
-#pragma pop
-
-/* 8033A718-8033A718 0000 .text      __OSEVStart                                                  */
-/* 8033A718-8033A770 0058 .text      OSExceptionVector                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSExceptionVector() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSExceptionVector.s"
-}
-#pragma pop
-
-/* 8033A770-8033A780 0010 .text      __DBVECTOR                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __DBVECTOR() {
-	nofralloc
-#include "asm/dolphin/os/OS/__DBVECTOR.s"
-}
-#pragma pop
-
-/* 8033A780-8033A7B0 0030 .text      __OSEVSetNumber                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSEVSetNumber() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSEVSetNumber.s"
-}
-#pragma pop
-
-/* 8033A7B0-8033A7B4 0004 .text      __OSEVEnd                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSEVEnd() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSEVEnd.s"
-}
-#pragma pop
-
-/* 8033A7B4-8033A80C 0058 .text      OSDefaultExceptionHandler                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSDefaultExceptionHandler() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSDefaultExceptionHandler.s"
-}
-#pragma pop
-
-/* 8033A80C-8033A860 0054 .text      __OSPSInit                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSPSInit() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSPSInit.s"
-}
-#pragma pop
-
-/* 8033A860-8033A874 0014 .text      __OSGetDIConfig                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __OSGetDIConfig() {
-	nofralloc
-#include "asm/dolphin/os/OS/__OSGetDIConfig.s"
-}
-#pragma pop
-
-/* 8033A874-8033A8A0 002C .text      OSRegisterVersion                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void OSRegisterVersion() {
-	nofralloc
-#include "asm/dolphin/os/OS/OSRegisterVersion.s"
-}
-#pragma pop
-
+u8 __OSRebootParams[28 + 4 /* padding */];
 

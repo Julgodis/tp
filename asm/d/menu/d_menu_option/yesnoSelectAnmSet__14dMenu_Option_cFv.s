@@ -31,7 +31,7 @@ lbl_801E8AC8:
 /* 801E8B3C 00000074  54 00 10 3A */	slwi r0, r0, 2
 /* 801E8B40 00000078  7C 7F 02 14 */	add r3, r31, r0
 /* 801E8B44 0000007C  80 03 03 C8 */	lwz r0, 0x3c8(r3)
-/* 801E8B48 00000080  C8 22 A9 58 */	lfd f1, d_menu_d_menu_option__LIT_4520(r2)
+/* 801E8B48 00000080  C8 22 A9 58 */	lfd f1, d_menu_d_menu_option__lit_4520(r2)
 /* 801E8B4C 00000084  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801E8B50 00000088  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E8B54 0000008C  3C 00 43 30 */	lis r0, 0x4330
@@ -47,7 +47,7 @@ lbl_801E8AC8:
 /* 801E8B7C 000000B4  80 63 00 04 */	lwz r3, 4(r3)
 /* 801E8B80 000000B8  48 10 F4 4D */	bl animationTransform__7J2DPaneFv
 /* 801E8B84 000000BC  80 7F 00 44 */	lwz r3, 0x44(r31)
-/* 801E8B88 000000C0  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__LIT_4068(r2)
+/* 801E8B88 000000C0  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__lit_4068(r2)
 /* 801E8B8C 000000C4  4B FA C7 15 */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_801E8B90:
 /* 801E8B90 00000000  88 1F 03 F9 */	lbz r0, 0x3f9(r31)
@@ -72,7 +72,7 @@ lbl_801E8B90:
 /* 801E8BDC 0000004C  54 00 10 3A */	slwi r0, r0, 2
 /* 801E8BE0 00000050  7C 7F 02 14 */	add r3, r31, r0
 /* 801E8BE4 00000054  80 03 03 C8 */	lwz r0, 0x3c8(r3)
-/* 801E8BE8 00000058  C8 22 A9 58 */	lfd f1, d_menu_d_menu_option__LIT_4520(r2)
+/* 801E8BE8 00000058  C8 22 A9 58 */	lfd f1, d_menu_d_menu_option__lit_4520(r2)
 /* 801E8BEC 0000005C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801E8BF0 00000060  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E8BF4 00000064  3C 00 43 30 */	lis r0, 0x4330

@@ -5,36 +5,34 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void TRKSaveExtended1Block();
-extern void TRKRestoreExtended1Block();
+extern "C" extern void TRKSaveExtended1Block();
+extern "C" extern void TRKRestoreExtended1Block();
 SECTION_DATA extern u8 gTRKRestoreFlags[12];
 SECTION_BSS extern u8 gTRKCPUState[1072];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803711F0-803713A8 01B8 .text      TRKSaveExtended1Block                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKSaveExtended1Block() {
+extern "C" asm void TRKSaveExtended1Block() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Generic/mpc_7xx_603e/TRKSaveExtended1Block.s"
 }
 #pragma pop
 
+
 /* 803713A8-80371560 01B8 .text      TRKRestoreExtended1Block                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void TRKRestoreExtended1Block() {
+extern "C" asm void TRKRestoreExtended1Block() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Generic/mpc_7xx_603e/TRKRestoreExtended1Block.s"
 }

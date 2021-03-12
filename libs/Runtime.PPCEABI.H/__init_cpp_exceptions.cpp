@@ -5,140 +5,141 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
 extern void* data_8000569C[8];
-extern void __sinit_m_Do_main_cpp();
-extern void __sinit_m_Do_audio_cpp();
-extern void __sinit_m_Do_graphic_cpp();
-extern void __sinit_m_Do_mtx_cpp();
-extern void __sinit_m_Do_lib_cpp();
-extern void __sinit_m_Do_dvd_thread_cpp();
-extern void __sinit_m_Do_MemCard_cpp();
-extern void __sinit_c_damagereaction_cpp();
-extern void __sinit_f_ap_game_cpp();
-extern void __sinit_f_op_actor_mng_cpp();
-extern void __sinit_d_stage_cpp();
-extern void __sinit_d_com_inf_game_cpp();
-extern void __sinit_d_com_static_cpp();
-extern void __sinit_d_map_path_cpp();
-extern void __sinit_d_map_path_dmap_cpp();
-extern void __sinit_d_event_lib_cpp();
-extern void __sinit_d_particle_cpp();
-extern void __sinit_d_particle_copoly_cpp();
-extern void __sinit_d_drawlist_cpp();
-extern void __sinit_d_attention_cpp();
-extern void __sinit_d_ev_camera_cpp();
-extern void __sinit_d_a_alink_cpp();
-extern void __sinit_d_a_npc_cpp();
-extern void __sinit_d_a_npc_cd_cpp();
-extern void __sinit_d_a_npc_cd2_cpp();
-extern void __sinit_d_a_obj_item_cpp();
-extern void __sinit_d_camera_cpp();
-extern void __sinit_d_file_select_cpp();
-extern void __sinit_d_file_sel_warning_cpp();
-extern void __sinit_d_file_sel_info_cpp();
-extern void __sinit_d_bright_check_cpp();
-extern void __sinit_d_scope_cpp();
-extern void __sinit_d_select_icon_cpp();
-extern void __sinit_d_shop_system_cpp();
-extern void __sinit_d_gameover_cpp();
-extern void __sinit_d_kankyo_cpp();
-extern void __sinit_d_menu_calibration_cpp();
-extern void __sinit_d_menu_collect_cpp();
-extern void __sinit_d_menu_dmap_cpp();
-extern void __sinit_d_menu_dmap_map_cpp();
-extern void __sinit_d_menu_fishing_cpp();
-extern void __sinit_d_menu_fmap_cpp();
-extern void __sinit_d_menu_insect_cpp();
-extern void __sinit_d_menu_item_explain_cpp();
-extern void __sinit_d_menu_letter_cpp();
-extern void __sinit_d_menu_option_cpp();
-extern void __sinit_d_menu_ring_cpp();
-extern void __sinit_d_menu_save_cpp();
-extern void __sinit_d_menu_skill_cpp();
-extern void __sinit_d_menu_window_HIO_cpp();
-extern void __sinit_d_menu_window_cpp();
-extern void __sinit_d_meter_HIO_cpp();
-extern void __sinit_d_meter2_info_cpp();
-extern void __sinit_d_msg_object_cpp();
-extern void __sinit_d_msg_unit_cpp();
-extern void __sinit_d_msg_scrn_3select_cpp();
-extern void __sinit_d_msg_scrn_explain_cpp();
-extern void __sinit_d_msg_scrn_howl_cpp();
-extern void __sinit_d_msg_scrn_light_cpp();
-extern void __sinit_d_msg_flow_cpp();
-extern void __sinit_d_name_cpp();
-extern void __sinit_d_pane_class_cpp();
-extern void __sinit_d_s_logo_cpp();
-extern void __sinit_d_s_name_cpp();
-extern void __sinit_d_s_play_cpp();
-extern void __sinit_d_save_HIO_cpp();
-extern void __sinit_c_cc_d_cpp();
-extern void __sinit_c_xyz_cpp();
-extern void __sinit_c_sxyz_cpp();
-extern void __sinit_c_m3d_cpp();
-extern void __sinit_c_angle_cpp();
-extern void __sinit_JFWDisplay_cpp();
-extern void func_80288204();
-extern void func_8028B198();
-extern void func_8028C180();
-extern void func_8028C8A4();
-extern void func_8028D2B8();
-extern void func_8028E0F4();
-extern void __sinit_JASHeapCtrl_cpp();
-extern void __sinit_JASCmdStack_cpp();
-extern void __sinit_JASTrack_cpp();
-extern void __sinit_JASSeqCtrl_cpp();
-extern void __sinit_JASSeqParser_cpp();
-extern void __sinit_JASBNKParser_cpp();
-extern void __sinit_JASLfo_cpp();
-extern void __sinit_JASDriverIF_cpp();
-extern void __sinit_Z2Audience_cpp();
-extern void __sinit_Z2SoundObjMgr_cpp();
-extern void __sinit_Z2Creature_cpp();
-extern void __sinit_Z2WolfHowlMgr_cpp();
-extern void __sinit_JKRThread_cpp();
-extern void __sinit_JKRAram_cpp();
-extern void __sinit_JKRAramHeap_cpp();
-extern void __sinit_JKRAramPiece_cpp();
-extern void __sinit_JKRFileLoader_cpp();
-extern void __sinit_JKRDvdFile_cpp();
-extern void __sinit_JKRDvdRipper_cpp();
-extern void __sinit_JKRDvdAramRipper_cpp();
-extern void __sinit_JUTGamePad_cpp();
-extern void __sinit_JUTException_cpp();
-extern void __sinit_J2DPane_cpp();
-extern void __sinit_J3DSys_cpp();
-extern void __sinit_J3DShapeMtx_cpp();
-extern void __sinit_J3DMatBlock_cpp();
-extern void __sinit_J3DDrawBuffer_cpp();
-extern void __sinit_JMATrigonometric_cpp();
-extern void __destroy_global_chain();
-extern void __fini_cpp_exceptions();
-extern void __init_cpp_exceptions();
-extern void __unregister_fragment();
-extern void __register_fragment();
-extern const void* __init_cpp_exceptions_reference;
-extern const void* _ctors[106];
-extern const void* __destroy_global_chain_reference;
-extern const void* __fini_cpp_exceptions_reference;
-SECTION_SDATA extern u8 fragmentID[8];
-}
+extern "C" extern void __sinit_m_Do_main_cpp();
+extern "C" extern void __sinit_m_Do_audio_cpp();
+extern "C" extern void __sinit_m_Do_graphic_cpp();
+extern "C" extern void __sinit_m_Do_mtx_cpp();
+extern "C" extern void __sinit_m_Do_lib_cpp();
+extern "C" extern void __sinit_m_Do_dvd_thread_cpp();
+extern "C" extern void __sinit_m_Do_MemCard_cpp();
+extern "C" extern void __sinit_c_damagereaction_cpp();
+extern "C" extern void __sinit_f_ap_game_cpp();
+extern "C" extern void __sinit_f_op_actor_mng_cpp();
+extern "C" extern void __sinit_d_stage_cpp();
+extern "C" extern void __sinit_d_com_inf_game_cpp();
+extern "C" extern void __sinit_d_com_static_cpp();
+extern "C" extern void __sinit_d_map_path_cpp();
+extern "C" extern void __sinit_d_map_path_dmap_cpp();
+extern "C" extern void __sinit_d_event_lib_cpp();
+extern "C" extern void __sinit_d_particle_cpp();
+extern "C" extern void __sinit_d_particle_copoly_cpp();
+extern "C" extern void __sinit_d_drawlist_cpp();
+extern "C" extern void __sinit_d_attention_cpp();
+extern "C" extern void __sinit_d_ev_camera_cpp();
+extern "C" extern void __sinit_d_a_alink_cpp();
+extern "C" extern void __sinit_d_a_npc_cpp();
+extern "C" extern void __sinit_d_a_npc_cd_cpp();
+extern "C" extern void __sinit_d_a_npc_cd2_cpp();
+extern "C" extern void __sinit_d_a_obj_item_cpp();
+extern "C" extern void __sinit_d_camera_cpp();
+extern "C" extern void __sinit_d_file_select_cpp();
+extern "C" extern void __sinit_d_file_sel_warning_cpp();
+extern "C" extern void __sinit_d_file_sel_info_cpp();
+extern "C" extern void __sinit_d_bright_check_cpp();
+extern "C" extern void __sinit_d_scope_cpp();
+extern "C" extern void __sinit_d_select_icon_cpp();
+extern "C" extern void __sinit_d_shop_system_cpp();
+extern "C" extern void __sinit_d_gameover_cpp();
+extern "C" extern void __sinit_d_kankyo_cpp();
+extern "C" extern void __sinit_d_menu_calibration_cpp();
+extern "C" extern void __sinit_d_menu_collect_cpp();
+extern "C" extern void __sinit_d_menu_dmap_cpp();
+extern "C" extern void __sinit_d_menu_dmap_map_cpp();
+extern "C" extern void __sinit_d_menu_fishing_cpp();
+extern "C" extern void __sinit_d_menu_fmap_cpp();
+extern "C" extern void __sinit_d_menu_insect_cpp();
+extern "C" extern void __sinit_d_menu_item_explain_cpp();
+extern "C" extern void __sinit_d_menu_letter_cpp();
+extern "C" extern void __sinit_d_menu_option_cpp();
+extern "C" extern void __sinit_d_menu_ring_cpp();
+extern "C" extern void __sinit_d_menu_save_cpp();
+extern "C" extern void __sinit_d_menu_skill_cpp();
+extern "C" extern void __sinit_d_menu_window_HIO_cpp();
+extern "C" extern void __sinit_d_menu_window_cpp();
+extern "C" extern void __sinit_d_meter_HIO_cpp();
+extern "C" extern void __sinit_d_meter2_info_cpp();
+extern "C" extern void __sinit_d_msg_object_cpp();
+extern "C" extern void __sinit_d_msg_unit_cpp();
+extern "C" extern void __sinit_d_msg_scrn_3select_cpp();
+extern "C" extern void __sinit_d_msg_scrn_explain_cpp();
+extern "C" extern void __sinit_d_msg_scrn_howl_cpp();
+extern "C" extern void __sinit_d_msg_scrn_light_cpp();
+extern "C" extern void __sinit_d_msg_flow_cpp();
+extern "C" extern void __sinit_d_name_cpp();
+extern "C" extern void __sinit_d_pane_class_cpp();
+extern "C" extern void __sinit_d_s_logo_cpp();
+extern "C" extern void __sinit_d_s_name_cpp();
+extern "C" extern void __sinit_d_s_play_cpp();
+extern "C" extern void __sinit_d_save_HIO_cpp();
+extern "C" extern void __sinit_c_cc_d_cpp();
+extern "C" extern void __sinit_c_xyz_cpp();
+extern "C" extern void __sinit_c_sxyz_cpp();
+extern "C" extern void __sinit_c_m3d_cpp();
+extern "C" extern void __sinit_c_angle_cpp();
+extern "C" extern void __sinit_JFWDisplay_cpp();
+extern "C" extern void func_80288204();
+extern "C" extern void func_8028B198();
+extern "C" extern void func_8028C180();
+extern "C" extern void func_8028C8A4();
+extern "C" extern void func_8028D2B8();
+extern "C" extern void func_8028E0F4();
+extern "C" extern void __sinit_JASHeapCtrl_cpp();
+extern "C" extern void __sinit_JASCmdStack_cpp();
+extern "C" extern void __sinit_JASTrack_cpp();
+extern "C" extern void __sinit_JASSeqCtrl_cpp();
+extern "C" extern void __sinit_JASSeqParser_cpp();
+extern "C" extern void __sinit_JASBNKParser_cpp();
+extern "C" extern void __sinit_JASLfo_cpp();
+extern "C" extern void __sinit_JASDriverIF_cpp();
+extern "C" extern void __sinit_Z2Audience_cpp();
+extern "C" extern void __sinit_Z2SoundObjMgr_cpp();
+extern "C" extern void __sinit_Z2Creature_cpp();
+extern "C" extern void __sinit_Z2WolfHowlMgr_cpp();
+extern "C" extern void __sinit_JKRThread_cpp();
+extern "C" extern void __sinit_JKRAram_cpp();
+extern "C" extern void __sinit_JKRAramHeap_cpp();
+extern "C" extern void __sinit_JKRAramPiece_cpp();
+extern "C" extern void __sinit_JKRFileLoader_cpp();
+extern "C" extern void __sinit_JKRDvdFile_cpp();
+extern "C" extern void __sinit_JKRDvdRipper_cpp();
+extern "C" extern void __sinit_JKRDvdAramRipper_cpp();
+extern "C" extern void __sinit_JUTGamePad_cpp();
+extern "C" extern void __sinit_JUTException_cpp();
+extern "C" extern void __sinit_J2DPane_cpp();
+extern "C" extern void __sinit_J3DSys_cpp();
+extern "C" extern void __sinit_J3DShapeMtx_cpp();
+extern "C" extern void __sinit_J3DMatBlock_cpp();
+extern "C" extern void __sinit_J3DDrawBuffer_cpp();
+extern "C" extern void __sinit_JMATrigonometric_cpp();
+extern "C" extern void __destroy_global_chain();
+extern "C" extern void __fini_cpp_exceptions();
+extern "C" extern void __init_cpp_exceptions();
+extern "C" extern void __unregister_fragment();
+extern "C" extern void __register_fragment();
+extern const void* const __init_cpp_exceptions_reference;
+extern const void* const _ctors[106];
+extern const void* const __destroy_global_chain_reference;
+extern const void* const __fini_cpp_exceptions_reference;
+SECTION_SDATA extern u32 fragmentID;
+
+// 
+// Functions:
+// 
 
 
 /* ###################################################################################### */
 /*                                         .ctors                                         */
 /* ###################################################################################### */
 
-extern "C" {
 #pragma section ".ctors$10"
 /* 803737C0-803737C4 0004 .ctors     __init_cpp_exceptions_reference                              */
-__declspec(section ".ctors$10") const void* __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
+__declspec(section ".ctors$10") const void* const __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
 /* 803737C4-8037396C 01A8 .ctors     _ctors                                                       */
-__declspec(section ".ctors$10") const void* _ctors[106] = {
+__declspec(section ".ctors$10") const void* const _ctors[106] = {
 	(void*)__sinit_m_Do_main_cpp,
 	(void*)__sinit_m_Do_audio_cpp,
 	(void*)__sinit_m_Do_graphic_cpp,
@@ -246,57 +247,41 @@ __declspec(section ".ctors$10") const void* _ctors[106] = {
 	(void*)__sinit_J3DDrawBuffer_cpp,
 	(void*)__sinit_JMATrigonometric_cpp,
 };
-}
 
 
 /* ###################################################################################### */
 /*                                         .dtors                                         */
 /* ###################################################################################### */
 
-extern "C" {
 #pragma section ".dtors$10"
 /* 80373980-80373984 0004 .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") const void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+__declspec(section ".dtors$10") const void* const __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
 /* 80373984-80373988 0004 .dtors     __fini_cpp_exceptions_reference                              */
-__declspec(section ".dtors$15") const void* __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
-}
-
+__declspec(section ".dtors$15") const void* const __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
 
 /* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450AD0-80450AD8 0004 .sdata     fragmentID                                                   */
-SECTION_SDATA u8 fragmentID[8] = {
-	0xFF, 0xFF, 0xFF, 0xFE,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u32 fragmentID = 0xFFFFFFFE;
+/* padding 4 bytes */
 
 /* 8036283C-80362870 0034 .text      __fini_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __fini_cpp_exceptions() {
+extern "C" asm void __fini_cpp_exceptions() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/__init_cpp_exceptions/__fini_cpp_exceptions.s"
 }
 #pragma pop
 
+
 /* 80362870-803628AC 003C .text      __init_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __init_cpp_exceptions() {
+extern "C" asm void __init_cpp_exceptions() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/__init_cpp_exceptions/__init_cpp_exceptions.s"
 }

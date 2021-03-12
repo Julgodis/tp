@@ -71,14 +71,14 @@ lbl_801D5388:
 /* 801D549C 000000C8  3B A0 00 00 */	li r29, 0
 /* 801D54A0 000000CC  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D54A4 000000D0  3B C3 FC 60 */	addi r30, r3, g_fmapHIO@l
-/* 801D54A8 000000D4  CB 22 A8 08 */	lfd f25, d_menu_d_menu_fmap2D__LIT_4496(r2)
+/* 801D54A8 000000D4  CB 22 A8 08 */	lfd f25, d_menu_d_menu_fmap2D__lit_4496(r2)
 /* 801D54AC 000000D8  3F E0 43 30 */	lis r31, 0x4330
-/* 801D54B0 000000DC  C3 42 A8 28 */	lfs f26, d_menu_d_menu_fmap2D__LIT_5633(r2)
-/* 801D54B4 000000E0  C3 62 A7 E0 */	lfs f27, d_menu_d_menu_fmap2D__LIT_4200(r2)
-/* 801D54B8 000000E4  C3 C2 A8 24 */	lfs f30, d_menu_d_menu_fmap2D__LIT_5632(r2)
-/* 801D54BC 000000E8  C3 E2 A7 D0 */	lfs f31, d_menu_d_menu_fmap2D__LIT_3970(r2)
-/* 801D54C0 000000EC  C3 02 A7 F0 */	lfs f24, d_menu_d_menu_fmap2D__LIT_4204(r2)
-/* 801D54C4 000000F0  C3 82 A7 DC */	lfs f28, d_menu_d_menu_fmap2D__LIT_4199(r2)
+/* 801D54B0 000000DC  C3 42 A8 28 */	lfs f26, d_menu_d_menu_fmap2D__lit_5633(r2)
+/* 801D54B4 000000E0  C3 62 A7 E0 */	lfs f27, d_menu_d_menu_fmap2D__lit_4200(r2)
+/* 801D54B8 000000E4  C3 C2 A8 24 */	lfs f30, d_menu_d_menu_fmap2D__lit_5632(r2)
+/* 801D54BC 000000E8  C3 E2 A7 D0 */	lfs f31, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D54C0 000000EC  C3 02 A7 F0 */	lfs f24, d_menu_d_menu_fmap2D__lit_4204(r2)
+/* 801D54C4 000000F0  C3 82 A7 DC */	lfs f28, d_menu_d_menu_fmap2D__lit_4199(r2)
 /* 801D54C8 000000F4  48 00 01 08 */	b lbl_801D55D0
 lbl_801D54CC:
 /* 801D54CC 00000000  3B 80 00 00 */	li r28, 0
@@ -121,16 +121,16 @@ lbl_801D5504:
 /* 801D555C 00000058  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801D5560 0000005C  90 01 00 08 */	stw r0, 8(r1)
 /* 801D5564 00000060  FC 20 B8 90 */	fmr f1, f23
-/* 801D5568 00000064  C8 42 A8 08 */	lfd f2, d_menu_d_menu_fmap2D__LIT_4496(r2)
+/* 801D5568 00000064  C8 42 A8 08 */	lfd f2, d_menu_d_menu_fmap2D__lit_4496(r2)
 /* 801D556C 00000068  6F 80 80 00 */	xoris r0, r28, 0x8000
 /* 801D5570 0000006C  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 801D5574 00000070  3C 00 43 30 */	lis r0, 0x4330
 /* 801D5578 00000074  90 01 00 48 */	stw r0, 0x48(r1)
 /* 801D557C 00000078  C8 01 00 48 */	lfd f0, 0x48(r1)
 /* 801D5580 0000007C  EC 40 10 28 */	fsubs f2, f0, f2
-/* 801D5584 00000080  C0 02 A7 F0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4204(r2)
+/* 801D5584 00000080  C0 02 A7 F0 */	lfs f0, d_menu_d_menu_fmap2D__lit_4204(r2)
 /* 801D5588 00000084  EC 42 00 28 */	fsubs f2, f2, f0
-/* 801D558C 00000088  C0 62 A7 F4 */	lfs f3, d_menu_d_menu_fmap2D__LIT_4205(r2)
+/* 801D558C 00000088  C0 62 A7 F4 */	lfs f3, d_menu_d_menu_fmap2D__lit_4205(r2)
 /* 801D5590 0000008C  FC 80 18 90 */	fmr f4, f3
 /* 801D5594 00000090  38 61 00 08 */	addi r3, r1, 8
 /* 801D5598 00000094  48 11 45 2D */	bl J2DFillBox__FffffQ28JUtility6TColor

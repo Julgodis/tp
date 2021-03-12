@@ -96,19 +96,19 @@ lbl_801C1A10:
 /* 801C1A1C 0000000C  3A D6 00 04 */	addi r22, r22, 4
 /* 801C1A20 00000010  41 80 FF 28 */	blt lbl_801C1948
 /* 801C1A24 00000014  EC 3E F8 28 */	fsubs f1, f30, f31
-/* 801C1A28 00000018  C0 02 A6 B8 */	lfs f0, LIT_4245(r2)
+/* 801C1A28 00000018  C0 02 A6 B8 */	lfs f0, lit_4245(r2)
 /* 801C1A2C 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C1A30 00000000  40 80 00 14 */	bge lbl_801C1A44
-/* 801C1A34 00000004  C0 22 A6 94 */	lfs f1, d_menu_d_menu_dmap_map__LIT_3837(r2)
+/* 801C1A34 00000004  C0 22 A6 94 */	lfs f1, d_menu_d_menu_dmap_map__lit_3837(r2)
 /* 801C1A38 00000008  EC 1F F0 2A */	fadds f0, f31, f30
 /* 801C1A3C 0000000C  EF E1 00 32 */	fmuls f31, f1, f0
 /* 801C1A40 00000010  FF C0 F8 90 */	fmr f30, f31
 lbl_801C1A44:
 /* 801C1A44 00000000  EC 3C E8 28 */	fsubs f1, f28, f29
-/* 801C1A48 00000004  C0 02 A6 B8 */	lfs f0, LIT_4245(r2)
+/* 801C1A48 00000004  C0 02 A6 B8 */	lfs f0, lit_4245(r2)
 /* 801C1A4C 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801C1A50 00000000  40 80 00 14 */	bge lbl_801C1A64
-/* 801C1A54 00000004  C0 22 A6 94 */	lfs f1, d_menu_d_menu_dmap_map__LIT_3837(r2)
+/* 801C1A54 00000004  C0 22 A6 94 */	lfs f1, d_menu_d_menu_dmap_map__lit_3837(r2)
 /* 801C1A58 00000008  EC 1D E0 2A */	fadds f0, f29, f28
 /* 801C1A5C 0000000C  EF A1 00 32 */	fmuls f29, f1, f0
 /* 801C1A60 00000010  FF 80 E8 90 */	fmr f28, f29

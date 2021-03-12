@@ -6,7 +6,7 @@ lbl_80209368:
 /* 80209378 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8020937C 00000014  80 63 00 F4 */	lwz r3, 0xf4(r3)
 /* 80209380 00000018  48 04 C4 A9 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80209384 0000001C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__LIT_4146(r2)
+/* 80209384 0000001C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
 /* 80209388 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020938C 00000024  41 82 00 38 */	beq lbl_802093C4
 /* 80209390 00000028  88 9F 04 D9 */	lbz r4, 0x4d9(r31)
@@ -16,7 +16,7 @@ lbl_80209368:
 /* 802093A0 00000038  4B FF D9 D1 */	bl isFastSet__14dMeterButton_cFi
 lbl_802093A4:
 /* 802093A4 00000000  80 7F 00 F4 */	lwz r3, 0xf4(r31)
-/* 802093A8 00000004  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__LIT_4146(r2)
+/* 802093A8 00000004  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
 /* 802093AC 00000008  48 04 C4 25 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802093B0 0000000C  38 00 00 00 */	li r0, 0
 /* 802093B4 00000010  80 7F 00 F4 */	lwz r3, 0xf4(r31)

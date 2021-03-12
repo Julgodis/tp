@@ -5,44 +5,95 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __DSPHandler();
-extern void OSRegisterVersion();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void __OSSetInterruptHandler();
-extern void __OSUnmaskInterrupts();
-extern void DSPCheckMailToDSP();
-extern void DSPCheckMailFromDSP();
-extern void DSPReadMailFromDSP();
-extern void DSPSendMailToDSP();
-extern void DSPAssertInt();
-extern void DSPInit();
-extern void __DSP_debug_printf();
-SECTION_DATA extern u8 dsp__LIT_1[72];
-SECTION_DATA extern u8 LIT_19[32];
-SECTION_DATA extern u8 LIT_20[12];
-SECTION_DATA extern u8 LIT_21[12];
+extern "C" extern void __DSPHandler();
+extern "C" extern void OSRegisterVersion();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void __OSSetInterruptHandler();
+extern "C" extern void __OSUnmaskInterrupts();
+extern "C" extern void DSPCheckMailToDSP();
+extern "C" extern void DSPCheckMailFromDSP();
+extern "C" extern void DSPReadMailFromDSP();
+extern "C" extern void DSPSendMailToDSP();
+extern "C" extern void DSPAssertInt();
+extern "C" extern void DSPInit();
+extern "C" extern void __DSP_debug_printf();
+SECTION_DATA extern u8 dsp__lit_1[72];
+SECTION_DATA extern u8 lit_19[32];
+SECTION_DATA extern u8 lit_20[12];
+SECTION_DATA extern u8 lit_21[12];
 SECTION_SDATA extern void* __DSPVersion[2];
 SECTION_SBSS extern u8 __DSP_init_flag[4 + 4 /* padding */];
 SECTION_SBSS extern u8 __DSP_tmp_task[4];
 SECTION_SBSS extern u8 __DSP_last_task[4];
 SECTION_SBSS extern u8 __DSP_first_task[4];
 SECTION_SBSS extern u8 __DSP_curr_task[4];
+
+// 
+// Functions:
+// 
+
+/* 80352430-80352440 0010 .text      DSPCheckMailToDSP                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DSPCheckMailToDSP() {
+	nofralloc
+#include "asm/dolphin/dsp/dsp/DSPCheckMailToDSP.s"
 }
+#pragma pop
+
+
+/* 80352440-80352450 0010 .text      DSPCheckMailFromDSP                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DSPCheckMailFromDSP() {
+	nofralloc
+#include "asm/dolphin/dsp/dsp/DSPCheckMailFromDSP.s"
+}
+#pragma pop
+
+
+/* 80352450-80352468 0018 .text      DSPReadMailFromDSP                                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DSPReadMailFromDSP() {
+	nofralloc
+#include "asm/dolphin/dsp/dsp/DSPReadMailFromDSP.s"
+}
+#pragma pop
+
+
+/* 80352468-8035247C 0014 .text      DSPSendMailToDSP                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DSPSendMailToDSP() {
+	nofralloc
+#include "asm/dolphin/dsp/dsp/DSPSendMailToDSP.s"
+}
+#pragma pop
+
+
+/* 8035247C-803524BC 0040 .text      DSPAssertInt                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void DSPAssertInt() {
+	nofralloc
+#include "asm/dolphin/dsp/dsp/DSPAssertInt.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803D1C78-803D1C78 0000 .data      ...data.0                                                    */
 /* 803D1C78-803D1CC0 0045 .data      @1                                                           */
-SECTION_DATA u8 dsp__LIT_1[72] = {
+u8 dsp__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x44, 0x53, 0x50, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -51,112 +102,45 @@ SECTION_DATA u8 dsp__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1CC0-803D1CE0 001E .data      @19                                                          */
-SECTION_DATA u8 LIT_19[32] = {
-	0x44, 0x53, 0x50, 0x49, 0x6E, 0x69, 0x74, 0x28, 0x29, 0x3A, 0x20, 0x42, 0x75, 0x69, 0x6C, 0x64,
-	0x20, 0x44, 0x61, 0x74, 0x65, 0x3A, 0x20, 0x25, 0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 803D1CE0-803D1CEC 000C .data      @20                                                          */
-SECTION_DATA u8 LIT_20[12] = {
-	0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,
-};
-/* 803D1CEC-803D1CF8 0009 .data      @21                                                          */
-SECTION_DATA u8 LIT_21[12] = {
-	0x30, 0x34, 0x3A, 0x31, 0x35, 0x3A, 0x33, 0x32, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
-}
 
-
-/* ###################################################################################### */
-/*                                         .sdata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80450A58-80450A60 0004 .sdata     __DSPVersion                                                 */
-SECTION_SDATA void* __DSPVersion[2] = {
-	(void*)&dsp__LIT_1,
+void* __DSPVersion[2] = {
+	(void*)&dsp__lit_1,
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451900-80451908 0004 .sbss      __DSP_init_flag                                              */
-SECTION_SBSS u8 __DSP_init_flag[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80352430-80352440 0010 .text      DSPCheckMailToDSP                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DSPCheckMailToDSP() {
-	nofralloc
-#include "asm/dolphin/dsp/dsp/DSPCheckMailToDSP.s"
-}
-#pragma pop
-
-/* 80352440-80352450 0010 .text      DSPCheckMailFromDSP                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DSPCheckMailFromDSP() {
-	nofralloc
-#include "asm/dolphin/dsp/dsp/DSPCheckMailFromDSP.s"
-}
-#pragma pop
-
-/* 80352450-80352468 0018 .text      DSPReadMailFromDSP                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DSPReadMailFromDSP() {
-	nofralloc
-#include "asm/dolphin/dsp/dsp/DSPReadMailFromDSP.s"
-}
-#pragma pop
-
-/* 80352468-8035247C 0014 .text      DSPSendMailToDSP                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DSPSendMailToDSP() {
-	nofralloc
-#include "asm/dolphin/dsp/dsp/DSPSendMailToDSP.s"
-}
-#pragma pop
-
-/* 8035247C-803524BC 0040 .text      DSPAssertInt                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DSPAssertInt() {
-	nofralloc
-#include "asm/dolphin/dsp/dsp/DSPAssertInt.s"
-}
-#pragma pop
+u8 __DSP_init_flag[4 + 4 /* padding */];
 
 /* 803524BC-80352580 00C4 .text      DSPInit                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DSPInit() {
+extern "C" asm void DSPInit() {
 	nofralloc
 #include "asm/dolphin/dsp/dsp/DSPInit.s"
 }
 #pragma pop
 
+
+/* 803D1CC0-803D1CE0 001E .data      @19                                                          */
+u8 lit_19[32] = {
+	0x44, 0x53, 0x50, 0x49, 0x6E, 0x69, 0x74, 0x28, 0x29, 0x3A, 0x20, 0x42, 0x75, 0x69, 0x6C, 0x64,
+	0x20, 0x44, 0x61, 0x74, 0x65, 0x3A, 0x20, 0x25, 0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 803D1CE0-803D1CEC 000C .data      @20                                                          */
+u8 lit_20[12] = {
+	0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,
+};
+
+/* 803D1CEC-803D1CF8 0009 .data      @21                                                          */
+u8 lit_21[12] = {
+	0x30, 0x34, 0x3A, 0x31, 0x35, 0x3A, 0x33, 0x32, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
 

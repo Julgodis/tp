@@ -58,7 +58,7 @@ lbl_801C538C:
 /* 801C53B4 00000028  98 1F 01 FA */	stb r0, 0x1fa(r31)
 /* 801C53B8 0000002C  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 801C53BC 00000030  80 63 00 04 */	lwz r3, 4(r3)
-/* 801C53C0 00000034  C0 02 A7 14 */	lfs f0, d_menu_d_menu_fishing__LIT_4010(r2)
+/* 801C53C0 00000034  C0 02 A7 14 */	lfs f0, d_menu_d_menu_fishing__lit_4010(r2)
 /* 801C53C4 00000038  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 801C53C8 0000003C  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 801C53CC 00000040  81 83 00 00 */	lwz r12, 0(r3)
@@ -66,12 +66,12 @@ lbl_801C538C:
 /* 801C53D4 00000048  7D 89 03 A6 */	mtctr r12
 /* 801C53D8 0000004C  4E 80 04 21 */	bctrl 
 /* 801C53DC 00000050  80 7F 00 48 */	lwz r3, 0x48(r31)
-/* 801C53E0 00000054  C0 22 A7 14 */	lfs f1, d_menu_d_menu_fishing__LIT_4010(r2)
+/* 801C53E0 00000054  C0 22 A7 14 */	lfs f1, d_menu_d_menu_fishing__lit_4010(r2)
 /* 801C53E4 00000058  48 09 03 ED */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801C53E8 0000005C  38 60 00 01 */	li r3, 1
 /* 801C53EC 00000060  48 00 00 68 */	b lbl_801C5454
 lbl_801C53F0:
-/* 801C53F0 00000000  C8 42 A7 18 */	lfd f2, d_menu_d_menu_fishing__LIT_4012(r2)
+/* 801C53F0 00000000  C8 42 A7 18 */	lfd f2, d_menu_d_menu_fishing__lit_4012(r2)
 /* 801C53F4 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801C53F8 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801C53FC 0000000C  3C 60 43 30 */	lis r3, 0x4330

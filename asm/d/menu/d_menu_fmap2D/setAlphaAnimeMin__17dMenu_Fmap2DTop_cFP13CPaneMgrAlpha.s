@@ -10,7 +10,7 @@ lbl_801D77C4:
 /* 801D77E4 00000020  41 81 00 18 */	bgt lbl_801D77FC
 /* 801D77E8 00000024  7F C3 F3 78 */	mr r3, r30
 /* 801D77EC 00000028  48 07 E0 3D */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 801D77F0 0000002C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D77F0 0000002C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801D77F4 00000030  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801D77F8 00000034  41 82 00 48 */	beq lbl_801D7840
 lbl_801D77FC:
@@ -22,14 +22,14 @@ lbl_801D780C:
 /* 801D780C 00000000  B0 9E 00 16 */	sth r4, 0x16(r30)
 /* 801D7810 00000004  7F C3 F3 78 */	mr r3, r30
 /* 801D7814 00000008  7C 80 07 34 */	extsh r0, r4
-/* 801D7818 0000000C  C8 22 A8 08 */	lfd f1, d_menu_d_menu_fmap2D__LIT_4496(r2)
+/* 801D7818 0000000C  C8 22 A8 08 */	lfd f1, d_menu_d_menu_fmap2D__lit_4496(r2)
 /* 801D781C 00000010  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801D7820 00000014  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801D7824 00000018  3C 00 43 30 */	lis r0, 0x4330
 /* 801D7828 0000001C  90 01 00 08 */	stw r0, 8(r1)
 /* 801D782C 00000020  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801D7830 00000024  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801D7834 00000028  C0 02 A8 2C */	lfs f0, LIT_6309(r2)
+/* 801D7834 00000028  C0 02 A8 2C */	lfs f0, lit_6309(r2)
 /* 801D7838 0000002C  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801D783C 00000030  48 07 DF 95 */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_801D7840:

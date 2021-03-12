@@ -46,7 +46,7 @@ lbl_80061398:
 /* 800613D0 00000038  4B FD AF 1D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 800613D4 0000003C  80 9F 0E A4 */	lwz r4, 0xea4(r31)
 /* 800613D8 00000040  90 64 00 10 */	stw r3, 0x10(r4)
-/* 800613DC 00000044  C0 02 88 14 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_4354(r2)
+/* 800613DC 00000044  C0 02 88 14 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4354(r2)
 /* 800613E0 00000048  80 7F 0E A4 */	lwz r3, 0xea4(r31)
 /* 800613E4 0000004C  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 800613E8 00000050  38 00 00 00 */	li r0, 0

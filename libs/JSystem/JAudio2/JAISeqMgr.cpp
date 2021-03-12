@@ -5,69 +5,88 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__17JASGenericMemPoolFv();
-extern void __dt__17JASGenericMemPoolFv();
-extern void alloc__17JASGenericMemPoolFUl();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void __dt__8JASTrackFv();
-extern void func_802A0A8C();
-extern void func_802A0B64();
-extern void JAISeqMgr_calc___6JAISeqFv();
-extern void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity();
-extern void __dt__14JAISeqDataUserFv();
-extern void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
-extern void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
-extern void __ct__9JAISeqMgrFb();
-extern void freeDeadSeq___9JAISeqMgrFv();
-extern void func_802A1AF4();
-extern void func_802A1B48();
-extern void calc__9JAISeqMgrFv();
-extern void stop__9JAISeqMgrFv();
-extern void stop__9JAISeqMgrFUl();
-extern void stopSoundID__9JAISeqMgrF10JAISoundID();
-extern void mixOut__9JAISeqMgrFv();
-extern void beginStartSeq___9JAISeqMgrFv();
-extern void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle();
-extern void __dt__9JAISeqMgrFv();
-extern void attachHandle__8JAISoundFP14JAISoundHandle();
-extern void stop__8JAISoundFUl();
-extern void stop__8JAISoundFv();
-extern void __dl__FPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void __dt__10JSUPtrListFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void __register_global_object();
-extern void _savegpr_25();
-extern void _savegpr_29();
-extern void _restgpr_25();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__6JAISeq[13];
-SECTION_DATA extern void* __vt__14JAISeqDataUser[6];
-SECTION_DATA extern void* __vt__9JAISeqMgr[6];
-SECTION_BSS extern u8 LIT_715[12];
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void __dt__17JASGenericMemPoolFv();
+extern "C" extern void alloc__17JASGenericMemPoolFUl();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void __dt__8JASTrackFv();
+extern "C" extern void func_802A0A8C();
+extern "C" extern void func_802A0B64();
+extern "C" extern void JAISeqMgr_calc___6JAISeqFv();
+extern "C" extern void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity();
+extern "C" extern void __dt__14JAISeqDataUserFv();
+extern "C" extern void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
+extern "C" extern void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
+extern "C" extern void __ct__9JAISeqMgrFb();
+extern "C" extern void freeDeadSeq___9JAISeqMgrFv();
+extern "C" extern void func_802A1AF4();
+extern "C" extern void func_802A1B48();
+extern "C" extern void calc__9JAISeqMgrFv();
+extern "C" extern void stop__9JAISeqMgrFv();
+extern "C" extern void stop__9JAISeqMgrFUl();
+extern "C" extern void stopSoundID__9JAISeqMgrF10JAISoundID();
+extern "C" extern void mixOut__9JAISeqMgrFv();
+extern "C" extern void beginStartSeq___9JAISeqMgrFv();
+extern "C" extern void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle();
+extern "C" extern void __dt__9JAISeqMgrFv();
+extern "C" extern void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" extern void stop__8JAISoundFUl();
+extern "C" extern void stop__8JAISoundFv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__6JAISeq[13];
+SECTION_DATA extern void* const __vt__14JAISeqDataUser[6];
+SECTION_DATA extern void* const __vt__9JAISeqMgr[6];
+SECTION_BSS extern u8 lit_715[12];
 SECTION_BSS extern u8 data_804340CC[16 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80450B5C[4];
 SECTION_SBSS extern u8 data_80450B68[4];
 SECTION_SBSS extern u8 data_80451320[8];
-SECTION_SDATA2 extern u8 JAISeqMgr__LIT_691[4];
-SECTION_SDATA2 extern u8 LIT_692[4];
-SECTION_SDATA2 extern u8 JAISeqMgr__LIT_693[8];
+SECTION_SDATA2 extern f32 JAISeqMgr__lit_691;
+SECTION_SDATA2 extern u8 lit_692[4];
+SECTION_SDATA2 extern f32 JAISeqMgr__lit_693;
+
+// 
+// Functions:
+// 
+
+/* 802A1804-802A1870 006C .text      isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeqMgr/isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion.s"
 }
+#pragma pop
+
+
+/* 802A1870-802A1914 00A4 .text      releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISeqMgr/releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C9958-803C9970 0014 .data      __vt__9JAISeqMgr                                             */
-SECTION_DATA void* __vt__9JAISeqMgr[6] = {
+void* const __vt__9JAISeqMgr[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9JAISeqMgrFv,
@@ -76,182 +95,152 @@ SECTION_DATA void* __vt__9JAISeqMgr[6] = {
 	/* padding */
 	NULL,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804557A8-804557AC 0004 .sdata2    @691                                                         */
-SECTION_SDATA2 u8 JAISeqMgr__LIT_691[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
+f32 JAISeqMgr__lit_691 = 1.0f;
+
 /* 804557AC-804557B0 0004 .sdata2    @692                                                         */
-SECTION_SDATA2 u8 LIT_692[4] = {
+u8 lit_692[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
+
 /* 804557B0-804557B8 0004 .sdata2    @693                                                         */
-SECTION_SDATA2 u8 JAISeqMgr__LIT_693[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804340C0-804340CC 000C .bss       @715                                                         */
-SECTION_BSS u8 LIT_715[12];
-/* 804340CC-804340E0 0010 .bss       memPool_$localstatic3$getMemPool___27JASPoolAllocObject<6JAISeq>Fv */
-SECTION_BSS u8 data_804340CC[16 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802A1804-802A1870 006C .text      isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeqMgr/isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
-
-/* 802A1870-802A1914 00A4 .text      releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeqMgr/releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion.s"
-}
-#pragma pop
+f32 JAISeqMgr__lit_693 = 0.5f;
+/* padding 4 bytes */
 
 /* 802A1914-802A1A08 00F4 .text      __ct__9JAISeqMgrFb                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9JAISeqMgrFb() {
+extern "C" asm void __ct__9JAISeqMgrFb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/__ct__9JAISeqMgrFb.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804340C0-804340CC 000C .bss       @715                                                         */
+u8 lit_715[12];
+
+/* 804340CC-804340E0 0010 .bss       memPool_$localstatic3$getMemPool___27JASPoolAllocObject<6JAISeq>Fv */
+u8 data_804340CC[16 + 4 /* padding */];
+
 /* 802A1A08-802A1AF4 00EC .text      freeDeadSeq___9JAISeqMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void freeDeadSeq___9JAISeqMgrFv() {
+extern "C" asm void freeDeadSeq___9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/freeDeadSeq___9JAISeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A1AF4-802A1B48 0054 .text      __dt__19JASMemPool<6JAISeq>Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A1AF4() {
+extern "C" asm void func_802A1AF4() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/func_802A1AF4.s"
 }
 #pragma pop
 
+
 /* 802A1B48-802A1C90 0148 .text      startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A1B48() {
+extern "C" asm void func_802A1B48() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/func_802A1B48.s"
 }
 #pragma pop
 
+
 /* 802A1C90-802A1DFC 016C .text      calc__9JAISeqMgrFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__9JAISeqMgrFv() {
+extern "C" asm void calc__9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/calc__9JAISeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A1DFC-802A1E3C 0040 .text      stop__9JAISeqMgrFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stop__9JAISeqMgrFv() {
+extern "C" asm void stop__9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/stop__9JAISeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A1E3C-802A1E8C 0050 .text      stop__9JAISeqMgrFUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stop__9JAISeqMgrFUl() {
+extern "C" asm void stop__9JAISeqMgrFUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/stop__9JAISeqMgrFUl.s"
 }
 #pragma pop
 
+
 /* 802A1E8C-802A1EFC 0070 .text      stopSoundID__9JAISeqMgrF10JAISoundID                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stopSoundID__9JAISeqMgrF10JAISoundID() {
+extern "C" asm void stopSoundID__9JAISeqMgrF10JAISoundID() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/stopSoundID__9JAISeqMgrF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802A1EFC-802A1F58 005C .text      mixOut__9JAISeqMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mixOut__9JAISeqMgrFv() {
+extern "C" asm void mixOut__9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/mixOut__9JAISeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A1F58-802A1FE8 0090 .text      beginStartSeq___9JAISeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void beginStartSeq___9JAISeqMgrFv() {
+extern "C" asm void beginStartSeq___9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/beginStartSeq___9JAISeqMgrFv.s"
 }
 #pragma pop
 
+
 /* 802A1FE8-802A20F0 0108 .text      endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle() {
+extern "C" asm void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle.s"
 }
 #pragma pop
 
+
 /* 802A20F0-802A2184 0094 .text      __dt__9JAISeqMgrFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9JAISeqMgrFv() {
+extern "C" asm void __dt__9JAISeqMgrFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/__dt__9JAISeqMgrFv.s"
 }

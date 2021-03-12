@@ -15,7 +15,7 @@ lbl_800F1060:
 /* 800F1094 00000034  41 82 00 14 */	beq lbl_800F10A8
 /* 800F1098 00000038  7F E3 FB 78 */	mr r3, r31
 /* 800F109C 0000003C  38 80 00 02 */	li r4, 2
-/* 800F10A0 00000040  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F10A0 00000040  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F10A4 00000044  4B FB CA 49 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F10A8:
 /* 800F10A8 00000000  7F E3 FB 78 */	mr r3, r31

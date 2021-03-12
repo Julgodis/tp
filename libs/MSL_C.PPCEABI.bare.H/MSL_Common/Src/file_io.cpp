@@ -5,50 +5,49 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void free();
-extern void __flush_all();
-extern void __flush_buffer();
-extern void __msl_strnicmp();
-extern void fflush();
-extern void fclose();
-extern void ftell();
+extern "C" extern void free();
+extern "C" extern void __flush_all();
+extern "C" extern void __flush_buffer();
+extern "C" extern void __msl_strnicmp();
+extern "C" extern void fflush();
+extern "C" extern void fclose();
+extern "C" extern void ftell();
 SECTION_DATA extern u8 __lower_map[256];
-}
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036581C-803658C0 00A4 .text      __msl_strnicmp                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __msl_strnicmp() {
+extern "C" asm void __msl_strnicmp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/file_io/__msl_strnicmp.s"
 }
 #pragma pop
 
+
 /* 803658C0-803659F8 0138 .text      fflush                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fflush() {
+extern "C" asm void fflush() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/file_io/fflush.s"
 }
 #pragma pop
 
+
 /* 803659F8-80365BB4 01BC .text      fclose                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fclose() {
+extern "C" asm void fclose() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/file_io/fclose.s"
 }

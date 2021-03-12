@@ -70,7 +70,7 @@ lbl_8010B7C8:
 lbl_8010B824:
 /* 8010B824 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8010B828 00000004  38 80 00 01 */	li r4, 1
-/* 8010B82C 00000008  C0 22 93 3C */	lfs f1, d_a_d_a_alink__LIT_7808(r2)
+/* 8010B82C 00000008  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
 /* 8010B830 0000000C  4B FB B2 19 */	bl procFallInit__9daAlink_cFif
 lbl_8010B834:
 /* 8010B834 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

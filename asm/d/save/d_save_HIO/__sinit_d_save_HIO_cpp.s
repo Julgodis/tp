@@ -55,8 +55,8 @@ lbl_8025C5FC:
 /* 8025C6D0 000000D4  38 63 07 EC */	addi r3, r3, g_save_bit_HIO@l
 /* 8025C6D4 000000D8  3C 80 80 26 */	lis r4, __dt__12dSvBit_HIO_cFv@ha
 /* 8025C6D8 000000DC  38 84 C6 FC */	addi r4, r4, __dt__12dSvBit_HIO_cFv@l
-/* 8025C6DC 000000E0  3C A0 80 43 */	lis r5, d_save_d_save_HIO__LIT_3659@ha
-/* 8025C6E0 000000E4  38 A5 07 E0 */	addi r5, r5, d_save_d_save_HIO__LIT_3659@l
+/* 8025C6DC 000000E0  3C A0 80 43 */	lis r5, d_save_d_save_HIO__lit_3659@ha
+/* 8025C6E0 000000E4  38 A5 07 E0 */	addi r5, r5, d_save_d_save_HIO__lit_3659@l
 /* 8025C6E4 000000E8  48 10 55 41 */	bl __register_global_object
 /* 8025C6E8 000000EC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8025C6EC 000000F0  80 01 00 14 */	lwz r0, 0x14(r1)

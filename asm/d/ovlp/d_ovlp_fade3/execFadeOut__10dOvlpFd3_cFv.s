@@ -15,8 +15,8 @@ lbl_802535AC:
 /* 802535E0 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 802535E4 00000038  41 82 00 38 */	beq lbl_8025361C
 /* 802535E8 0000003C  4B DC AE DD */	bl fopOvlpM_SceneIsStart__Fv
-/* 802535EC 00000040  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__LIT_3871@ha
-/* 802535F0 00000044  38 83 2D 88 */	addi r4, r3, d_ovlp_d_ovlp_fade3__LIT_3871@l
+/* 802535EC 00000040  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade3__lit_3871@ha
+/* 802535F0 00000044  38 83 2D 88 */	addi r4, r3, d_ovlp_d_ovlp_fade3__lit_3871@l
 /* 802535F4 00000048  80 64 00 00 */	lwz r3, 0(r4)
 /* 802535F8 0000004C  80 04 00 04 */	lwz r0, 4(r4)
 /* 802535FC 00000050  90 7F 00 CC */	stw r3, 0xcc(r31)

@@ -12,16 +12,16 @@ lbl_8004A460:
 /* 8004A488 00000014  48 2F BF FD */	bl PSMTXIdentity
 /* 8004A48C 00000018  38 61 00 44 */	addi r3, r1, 0x44
 /* 8004A490 0000001C  48 2F BF F5 */	bl PSMTXIdentity
-/* 8004A494 00000020  C0 42 85 5C */	lfs f2, d_particle_d_particle__LIT_4090(r2)
+/* 8004A494 00000020  C0 42 85 5C */	lfs f2, d_particle_d_particle__lit_4090(r2)
 /* 8004A498 00000024  A0 1F 00 88 */	lhz r0, 0x88(r31)
-/* 8004A49C 00000028  C8 22 85 68 */	lfd f1, d_particle_d_particle__LIT_4093(r2)
+/* 8004A49C 00000028  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
 /* 8004A4A0 0000002C  90 01 00 AC */	stw r0, 0xac(r1)
 /* 8004A4A4 00000030  3C 00 43 30 */	lis r0, 0x4330
 /* 8004A4A8 00000034  90 01 00 A8 */	stw r0, 0xa8(r1)
 /* 8004A4AC 00000038  C8 01 00 A8 */	lfd f0, 0xa8(r1)
 /* 8004A4B0 0000003C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8004A4B4 00000040  EF E2 00 32 */	fmuls f31, f2, f0
-/* 8004A4B8 00000044  C0 02 85 50 */	lfs f0, d_particle_d_particle__LIT_3964(r2)
+/* 8004A4B8 00000044  C0 02 85 50 */	lfs f0, d_particle_d_particle__lit_3964(r2)
 /* 8004A4BC 00000048  FC 1F 00 00 */	fcmpu cr0, f31, f0
 /* 8004A4C0 0000004C  41 82 00 C4 */	beq lbl_8004A584
 /* 8004A4C4 00000050  7F C3 F3 78 */	mr r3, r30
@@ -41,27 +41,27 @@ lbl_8004A4EC:
 lbl_8004A4F8:
 /* 8004A4F8 00000000  38 61 00 44 */	addi r3, r1, 0x44
 /* 8004A4FC 00000004  38 80 00 79 */	li r4, 0x79
-/* 8004A500 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__LIT_4091(r2)
+/* 8004A500 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__lit_4091(r2)
 /* 8004A504 0000000C  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 8004A508 00000010  48 2F C1 A1 */	bl PSMTXRotRad
 /* 8004A50C 00000014  48 00 00 68 */	b lbl_8004A574
 lbl_8004A510:
 /* 8004A510 00000000  38 61 00 44 */	addi r3, r1, 0x44
 /* 8004A514 00000004  38 80 00 78 */	li r4, 0x78
-/* 8004A518 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__LIT_4091(r2)
+/* 8004A518 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__lit_4091(r2)
 /* 8004A51C 0000000C  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 8004A520 00000010  48 2F C1 89 */	bl PSMTXRotRad
 /* 8004A524 00000014  48 00 00 50 */	b lbl_8004A574
 lbl_8004A528:
 /* 8004A528 00000000  38 61 00 44 */	addi r3, r1, 0x44
 /* 8004A52C 00000004  38 80 00 7A */	li r4, 0x7a
-/* 8004A530 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__LIT_4091(r2)
+/* 8004A530 00000008  C0 02 85 60 */	lfs f0, d_particle_d_particle__lit_4091(r2)
 /* 8004A534 0000000C  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 8004A538 00000010  48 2F C1 71 */	bl PSMTXRotRad
 /* 8004A53C 00000014  48 00 00 38 */	b lbl_8004A574
 lbl_8004A540:
-/* 8004A540 00000000  3C 60 80 38 */	lis r3, d_particle_d_particle__LIT_4065@ha
-/* 8004A544 00000004  38 83 A1 08 */	addi r4, r3, d_particle_d_particle__LIT_4065@l
+/* 8004A540 00000000  3C 60 80 38 */	lis r3, d_particle_d_particle__lit_4065@ha
+/* 8004A544 00000004  38 83 A1 08 */	addi r4, r3, d_particle_d_particle__lit_4065@l
 /* 8004A548 00000008  80 64 00 00 */	lwz r3, 0(r4)
 /* 8004A54C 0000000C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8004A550 00000010  90 61 00 08 */	stw r3, 8(r1)
@@ -70,7 +70,7 @@ lbl_8004A540:
 /* 8004A55C 0000001C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8004A560 00000020  38 61 00 44 */	addi r3, r1, 0x44
 /* 8004A564 00000024  38 81 00 08 */	addi r4, r1, 8
-/* 8004A568 00000028  C0 02 85 60 */	lfs f0, d_particle_d_particle__LIT_4091(r2)
+/* 8004A568 00000028  C0 02 85 60 */	lfs f0, d_particle_d_particle__lit_4091(r2)
 /* 8004A56C 0000002C  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 8004A570 00000030  48 2F C3 09 */	bl PSMTXRotAxisRad
 lbl_8004A574:

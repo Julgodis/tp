@@ -5,104 +5,100 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void checkWait__10e_wb_classFv();
-extern void setPlayerRideNow__10e_wb_classFv();
-extern void setPlayerRide__10e_wb_classFv();
-extern void getOff__10e_wb_classFv();
-extern void checkDownDamage__10e_wb_classFv();
-extern void checkNormalRideMode__10e_wb_classCFv();
-extern void setRunRideMode__10e_wb_classFv();
-extern void setLinkRiding__14Z2CreatureRideFb();
+extern "C" extern void checkWait__10e_wb_classFv();
+extern "C" extern void setPlayerRideNow__10e_wb_classFv();
+extern "C" extern void setPlayerRide__10e_wb_classFv();
+extern "C" extern void getOff__10e_wb_classFv();
+extern "C" extern void checkDownDamage__10e_wb_classFv();
+extern "C" extern void checkNormalRideMode__10e_wb_classCFv();
+extern "C" extern void setRunRideMode__10e_wb_classFv();
+extern "C" extern void setLinkRiding__14Z2CreatureRideFb();
 SECTION_SBSS extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
-}
 
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450DF8-80450E00 0004 .sbss      m_top__12daTagHstop_c                                        */
-SECTION_SBSS u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80037C7C-80037C90 0014 .text      checkWait__10e_wb_classFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkWait__10e_wb_classFv() {
+extern "C" asm void checkWait__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/checkWait__10e_wb_classFv.s"
 }
 #pragma pop
 
+
 /* 80037C90-80037CB0 0020 .text      setPlayerRideNow__10e_wb_classFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPlayerRideNow__10e_wb_classFv() {
+extern "C" asm void setPlayerRideNow__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/setPlayerRideNow__10e_wb_classFv.s"
 }
 #pragma pop
 
+
 /* 80037CB0-80037CF4 0044 .text      setPlayerRide__10e_wb_classFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPlayerRide__10e_wb_classFv() {
+extern "C" asm void setPlayerRide__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/setPlayerRide__10e_wb_classFv.s"
 }
 #pragma pop
 
+
 /* 80037CF4-80037D68 0074 .text      getOff__10e_wb_classFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getOff__10e_wb_classFv() {
+extern "C" asm void getOff__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/getOff__10e_wb_classFv.s"
 }
 #pragma pop
 
+
 /* 80037D68-80037D94 002C .text      checkDownDamage__10e_wb_classFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkDownDamage__10e_wb_classFv() {
+extern "C" asm void checkDownDamage__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/checkDownDamage__10e_wb_classFv.s"
 }
 #pragma pop
 
+
 /* 80037D94-80037DBC 0028 .text      checkNormalRideMode__10e_wb_classCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkNormalRideMode__10e_wb_classCFv() {
+extern "C" asm void checkNormalRideMode__10e_wb_classCFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/checkNormalRideMode__10e_wb_classCFv.s"
 }
 #pragma pop
 
+
 /* 80037DBC-80037DE4 0028 .text      setRunRideMode__10e_wb_classFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setRunRideMode__10e_wb_classFv() {
+extern "C" asm void setRunRideMode__10e_wb_classFv() {
 	nofralloc
 #include "asm/d/a/d_a_horse_static/setRunRideMode__10e_wb_classFv.s"
 }
 #pragma pop
 
+
+/* 80450DF8-80450E00 0004 .sbss      m_top__12daTagHstop_c                                        */
+u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 

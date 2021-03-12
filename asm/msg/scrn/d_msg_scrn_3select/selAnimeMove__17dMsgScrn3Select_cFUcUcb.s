@@ -18,13 +18,13 @@ lbl_8023A398:
 /* 8023A3D8 00000040  48 12 7C AD */	bl __ptmf_scall
 /* 8023A3DC 00000044  60 00 00 00 */	nop 
 /* 8023A3E0 00000048  C0 3E 00 F4 */	lfs f1, 0xf4(r30)
-/* 8023A3E4 0000004C  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3911(r2)
+/* 8023A3E4 0000004C  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
 /* 8023A3E8 00000050  EC 01 00 2A */	fadds f0, f1, f0
 /* 8023A3EC 00000054  D0 1E 00 F4 */	stfs f0, 0xf4(r30)
 /* 8023A3F0 00000058  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8023A3F4 0000005C  A8 03 00 06 */	lha r0, 6(r3)
 /* 8023A3F8 00000060  C0 5E 00 F4 */	lfs f2, 0xf4(r30)
-/* 8023A3FC 00000064  C8 22 B1 78 */	lfd f1, msg_scrn_d_msg_scrn_3select__LIT_4345(r2)
+/* 8023A3FC 00000064  C8 22 B1 78 */	lfd f1, msg_scrn_d_msg_scrn_3select__lit_4345(r2)
 /* 8023A400 00000068  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 8023A404 0000006C  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 8023A408 00000070  3C 00 43 30 */	lis r0, 0x4330
@@ -45,13 +45,13 @@ lbl_8023A43C:
 /* 8023A440 00000004  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8023A444 00000008  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8023A448 0000000C  C0 3E 00 F8 */	lfs f1, 0xf8(r30)
-/* 8023A44C 00000010  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3911(r2)
+/* 8023A44C 00000010  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
 /* 8023A450 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 8023A454 00000018  D0 1E 00 F8 */	stfs f0, 0xf8(r30)
 /* 8023A458 0000001C  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 8023A45C 00000020  A8 03 00 06 */	lha r0, 6(r3)
 /* 8023A460 00000024  C0 5E 00 F8 */	lfs f2, 0xf8(r30)
-/* 8023A464 00000028  C8 22 B1 78 */	lfd f1, msg_scrn_d_msg_scrn_3select__LIT_4345(r2)
+/* 8023A464 00000028  C8 22 B1 78 */	lfd f1, msg_scrn_d_msg_scrn_3select__lit_4345(r2)
 /* 8023A468 0000002C  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 8023A46C 00000030  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 8023A470 00000034  3C 00 43 30 */	lis r0, 0x4330
@@ -82,7 +82,7 @@ lbl_8023A4C0:
 /* 8023A4CC 0000000C  7F FE EA 14 */	add r31, r30, r29
 /* 8023A4D0 00000010  80 7F 00 40 */	lwz r3, 0x40(r31)
 /* 8023A4D4 00000014  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023A4D8 00000018  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3911(r2)
+/* 8023A4D8 00000018  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
 /* 8023A4DC 0000001C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023A4E0 00000020  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 8023A4E4 00000024  81 83 00 00 */	lwz r12, 0(r3)
@@ -91,7 +91,7 @@ lbl_8023A4C0:
 /* 8023A4F0 00000030  4E 80 04 21 */	bctrl 
 /* 8023A4F4 00000034  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 8023A4F8 00000038  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023A4FC 0000003C  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3911(r2)
+/* 8023A4FC 0000003C  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
 /* 8023A500 00000040  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023A504 00000044  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 8023A508 00000048  81 83 00 00 */	lwz r12, 0(r3)
@@ -103,7 +103,7 @@ lbl_8023A51C:
 /* 8023A51C 00000000  7F FE EA 14 */	add r31, r30, r29
 /* 8023A520 00000004  80 7F 00 40 */	lwz r3, 0x40(r31)
 /* 8023A524 00000008  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023A528 0000000C  C0 02 B1 58 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3909(r2)
+/* 8023A528 0000000C  C0 02 B1 58 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3909(r2)
 /* 8023A52C 00000010  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023A530 00000014  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 8023A534 00000018  81 83 00 00 */	lwz r12, 0(r3)
@@ -112,7 +112,7 @@ lbl_8023A51C:
 /* 8023A540 00000024  4E 80 04 21 */	bctrl 
 /* 8023A544 00000028  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 8023A548 0000002C  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023A54C 00000030  C0 02 B1 58 */	lfs f0, msg_scrn_d_msg_scrn_3select__LIT_3909(r2)
+/* 8023A54C 00000030  C0 02 B1 58 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3909(r2)
 /* 8023A550 00000034  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023A554 00000038  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 8023A558 0000003C  81 83 00 00 */	lwz r12, 0(r3)

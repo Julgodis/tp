@@ -19,7 +19,7 @@ lbl_800B9664:
 /* 800B9680 0000001C  54 00 03 98 */	rlwinm r0, r0, 0, 0xe, 0xc
 /* 800B9684 00000020  90 03 05 7C */	stw r0, 0x57c(r3)
 /* 800B9688 00000024  A0 83 2F DE */	lhz r4, 0x2fde(r3)
-/* 800B968C 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800B968C 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800B9690 0000002C  48 00 00 15 */	bl itemUnequip__9daAlink_cFUsf
 lbl_800B9694:
 /* 800B9694 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

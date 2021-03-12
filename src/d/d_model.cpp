@@ -5,59 +5,130 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void draw__6dMdl_cFv();
-extern void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c();
-extern void entryObj__6dMdl_cFP10dMdl_obj_c();
-extern void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
-extern void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
-extern void create__10dMdl_mng_cFv();
-extern void __dt__6dMdl_cFv();
-extern void remove__10dMdl_mng_cFv();
-extern void reset__10dMdl_mng_cFv();
-extern void entry__10dMdl_mng_cFP12J3DModelDataUsi();
-extern void __ct__6dMdl_cFv();
-extern void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c();
-extern void dKy_setLight_again__Fv();
-extern void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
-extern void __nw__FUl();
-extern void __dl__FPv();
-extern void entry__9J3DPacketFP13J3DDrawBuffer();
-extern void loadPreDrawSetting__8J3DShapeCFv();
-extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern void PSMTXConcat();
-extern void GXSetChanAmbColor();
-extern void GXSetChanMatColor();
-extern void GXLoadPosMtxImm();
-extern void GXLoadNrmMtxImm();
-extern void __destroy_arr();
-extern void __construct_array();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _restgpr_27();
-extern void _restgpr_28();
-SECTION_DATA extern void* __vt__6dMdl_c[6];
-SECTION_DATA extern void* __vt__9J3DPacket[5];
+extern "C" extern void draw__6dMdl_cFv();
+extern "C" extern void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" extern void entryObj__6dMdl_cFP10dMdl_obj_c();
+extern "C" extern void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" extern void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" extern void create__10dMdl_mng_cFv();
+extern "C" extern void __dt__6dMdl_cFv();
+extern "C" extern void remove__10dMdl_mng_cFv();
+extern "C" extern void reset__10dMdl_mng_cFv();
+extern "C" extern void entry__10dMdl_mng_cFP12J3DModelDataUsi();
+extern "C" extern void __ct__6dMdl_cFv();
+extern "C" extern void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c();
+extern "C" extern void dKy_setLight_again__Fv();
+extern "C" extern void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" extern void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void GXSetChanAmbColor();
+extern "C" extern void GXSetChanMatColor();
+extern "C" extern void GXLoadPosMtxImm();
+extern "C" extern void GXLoadNrmMtxImm();
+extern "C" extern void __destroy_arr();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+SECTION_DATA extern void* const __vt__6dMdl_c[6];
+SECTION_DATA extern void* const __vt__9J3DPacket[5];
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_SDATA extern u8 g_whiteColor[4];
+SECTION_SDATA extern u32 g_whiteColor;
 SECTION_SBSS extern u8 m_myObj__10dMdl_mng_c[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
-SECTION_SBSS2 extern u8 d_d_model__LIT_3621[4 + 4 /* padding */];
+SECTION_SBSS2 extern u8 d_d_model__lit_3621[4 + 4 /* padding */];
+
+// 
+// Functions:
+// 
+
+/* ###################################################################################### */
+/* 80456B70-80456B78 0004 .sbss2     @3621                                                        */
+u8 d_d_model__lit_3621[4 + 4 /* padding */];
+
+/* 8009C4FC-8009C650 0154 .text      draw__6dMdl_cFv                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void draw__6dMdl_cFv() {
+	nofralloc
+#include "asm/d/d_model/draw__6dMdl_cFv.s"
 }
+#pragma pop
+
+
+/* 8009C650-8009C668 0018 .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c() {
+	nofralloc
+#include "asm/d/d_model/create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
+}
+#pragma pop
+
+
+/* 8009C668-8009C6DC 0074 .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entryObj__6dMdl_cFP10dMdl_obj_c() {
+	nofralloc
+#include "asm/d/d_model/entryObj__6dMdl_cFP10dMdl_obj_c.s"
+}
+#pragma pop
+
+
+/* 8009C6DC-8009C724 0048 .text      search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c() {
+	nofralloc
+#include "asm/d/d_model/search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
+}
+#pragma pop
+
+
+/* 8009C724-8009C7AC 0088 .text      entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c() {
+	nofralloc
+#include "asm/d/d_model/entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80450FA0-80450FA8 0004 .sbss      m_myObj__10dMdl_mng_c                                        */
+u8 m_myObj__10dMdl_mng_c[4 + 4 /* padding */];
 
-extern "C" {
+/* 8009C7AC-8009C808 005C .text      create__10dMdl_mng_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void create__10dMdl_mng_cFv() {
+	nofralloc
+#include "asm/d/d_model/create__10dMdl_mng_cFv.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803AF978-803AF990 0014 .data      __vt__6dMdl_c                                                */
-SECTION_DATA void* __vt__6dMdl_c[6] = {
+void* const __vt__6dMdl_c[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
@@ -66,138 +137,56 @@ SECTION_DATA void* __vt__6dMdl_c[6] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450FA0-80450FA8 0004 .sbss      m_myObj__10dMdl_mng_c                                        */
-SECTION_SBSS u8 m_myObj__10dMdl_mng_c[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80456B70-80456B78 0004 .sbss2     @3621                                                        */
-SECTION_SBSS2 u8 d_d_model__LIT_3621[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8009C4FC-8009C650 0154 .text      draw__6dMdl_cFv                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void draw__6dMdl_cFv() {
-	nofralloc
-#include "asm/d/d_model/draw__6dMdl_cFv.s"
-}
-#pragma pop
-
-/* 8009C650-8009C668 0018 .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c() {
-	nofralloc
-#include "asm/d/d_model/create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
-}
-#pragma pop
-
-/* 8009C668-8009C6DC 0074 .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entryObj__6dMdl_cFP10dMdl_obj_c() {
-	nofralloc
-#include "asm/d/d_model/entryObj__6dMdl_cFP10dMdl_obj_c.s"
-}
-#pragma pop
-
-/* 8009C6DC-8009C724 0048 .text      search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c() {
-	nofralloc
-#include "asm/d/d_model/search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
-}
-#pragma pop
-
-/* 8009C724-8009C7AC 0088 .text      entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c() {
-	nofralloc
-#include "asm/d/d_model/entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c.s"
-}
-#pragma pop
-
-/* 8009C7AC-8009C808 005C .text      create__10dMdl_mng_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void create__10dMdl_mng_cFv() {
-	nofralloc
-#include "asm/d/d_model/create__10dMdl_mng_cFv.s"
-}
-#pragma pop
 
 /* 8009C808-8009C864 005C .text      __dt__6dMdl_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__6dMdl_cFv() {
+extern "C" asm void __dt__6dMdl_cFv() {
 	nofralloc
 #include "asm/d/d_model/__dt__6dMdl_cFv.s"
 }
 #pragma pop
 
+
 /* 8009C864-8009C8C0 005C .text      remove__10dMdl_mng_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void remove__10dMdl_mng_cFv() {
+extern "C" asm void remove__10dMdl_mng_cFv() {
 	nofralloc
 #include "asm/d/d_model/remove__10dMdl_mng_cFv.s"
 }
 #pragma pop
 
+
 /* 8009C8C0-8009C8D8 0018 .text      reset__10dMdl_mng_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__10dMdl_mng_cFv() {
+extern "C" asm void reset__10dMdl_mng_cFv() {
 	nofralloc
 #include "asm/d/d_model/reset__10dMdl_mng_cFv.s"
 }
 #pragma pop
 
+
 /* 8009C8D8-8009C930 0058 .text      entry__10dMdl_mng_cFP12J3DModelDataUsi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entry__10dMdl_mng_cFP12J3DModelDataUsi() {
+extern "C" asm void entry__10dMdl_mng_cFP12J3DModelDataUsi() {
 	nofralloc
 #include "asm/d/d_model/entry__10dMdl_mng_cFP12J3DModelDataUsi.s"
 }
 #pragma pop
 
+
 /* 8009C930-8009C964 0034 .text      __ct__6dMdl_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__6dMdl_cFv() {
+extern "C" asm void __ct__6dMdl_cFv() {
 	nofralloc
 #include "asm/d/d_model/__ct__6dMdl_cFv.s"
 }

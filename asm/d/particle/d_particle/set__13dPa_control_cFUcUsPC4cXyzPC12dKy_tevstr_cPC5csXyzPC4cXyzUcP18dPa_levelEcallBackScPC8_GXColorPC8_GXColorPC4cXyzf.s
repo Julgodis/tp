@@ -166,20 +166,20 @@ lbl_8004CCF0:
 /* 8004CCF4 00000004  54 00 84 3E */	srwi r0, r0, 0x10
 /* 8004CCF8 00000008  28 00 00 64 */	cmplwi r0, 0x64
 /* 8004CCFC 0000000C  40 80 00 24 */	bge lbl_8004CD20
-/* 8004CD00 00000010  C8 22 85 68 */	lfd f1, d_particle_d_particle__LIT_4093(r2)
+/* 8004CD00 00000010  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
 /* 8004CD04 00000014  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 8004CD08 00000018  3C 00 43 30 */	lis r0, 0x4330
 /* 8004CD0C 0000001C  90 01 00 48 */	stw r0, 0x48(r1)
 /* 8004CD10 00000020  C8 01 00 48 */	lfd f0, 0x48(r1)
 /* 8004CD14 00000024  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8004CD18 00000028  C0 02 85 84 */	lfs f0, d_particle_d_particle__LIT_4518(r2)
+/* 8004CD18 00000028  C0 02 85 84 */	lfs f0, d_particle_d_particle__lit_4518(r2)
 /* 8004CD1C 0000002C  EF E1 00 24 */	fdivs f31, f1, f0
 lbl_8004CD20:
 /* 8004CD20 00000000  54 60 06 B5 */	rlwinm. r0, r3, 0, 0x1a, 0x1a
 /* 8004CD24 00000004  41 82 00 B8 */	beq lbl_8004CDDC
-/* 8004CD28 00000008  80 02 85 B8 */	lwz r0, d_particle_d_particle__LIT_5189(r2)
+/* 8004CD28 00000008  80 02 85 B8 */	lwz r0, d_particle_d_particle__lit_5189(r2)
 /* 8004CD2C 0000000C  90 01 00 28 */	stw r0, 0x28(r1)
-/* 8004CD30 00000010  80 02 85 BC */	lwz r0, d_particle_d_particle__LIT_5190(r2)
+/* 8004CD30 00000010  80 02 85 BC */	lwz r0, d_particle_d_particle__lit_5190(r2)
 /* 8004CD34 00000014  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8004CD38 00000018  28 1F 00 00 */	cmplwi r31, 0
 /* 8004CD3C 0000001C  41 82 00 24 */	beq lbl_8004CD60
@@ -227,9 +227,9 @@ lbl_8004CD88:
 lbl_8004CDDC:
 /* 8004CDDC 00000000  54 60 06 73 */	rlwinm. r0, r3, 0, 0x19, 0x19
 /* 8004CDE0 00000004  41 82 01 34 */	beq lbl_8004CF14
-/* 8004CDE4 00000008  80 02 85 C0 */	lwz r0, LIT_5198(r2)
+/* 8004CDE4 00000008  80 02 85 C0 */	lwz r0, lit_5198(r2)
 /* 8004CDE8 0000000C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 8004CDEC 00000010  80 02 85 C4 */	lwz r0, d_particle_d_particle__LIT_5199(r2)
+/* 8004CDEC 00000010  80 02 85 C4 */	lwz r0, d_particle_d_particle__lit_5199(r2)
 /* 8004CDF0 00000014  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8004CDF4 00000018  28 1F 00 00 */	cmplwi r31, 0
 /* 8004CDF8 0000001C  41 82 00 24 */	beq lbl_8004CE1C
@@ -264,7 +264,7 @@ lbl_8004CE44:
 /* 8004CE64 00000020  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8004CE68 00000024  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8004CE6C 00000028  C0 23 12 5C */	lfs f1, 0x125c(r3)
-/* 8004CE70 0000002C  C0 02 85 88 */	lfs f0, d_particle_d_particle__LIT_4519(r2)
+/* 8004CE70 0000002C  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
 /* 8004CE74 00000030  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8004CE78 00000034  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8004CE7C 00000038  EF E1 00 2A */	fadds f31, f1, f0

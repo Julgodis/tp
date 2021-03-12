@@ -5,31 +5,82 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopVw_Draw__FP10view_class();
-extern void fopVw_Execute__FP10view_class();
-extern void fopVw_IsDelete__FPv();
-extern void fopVw_Delete__FP10view_class();
-extern void fopVw_Create__FPv();
-extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern void fpcMtd_Execute__FP20process_method_classPv();
-extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern void fpcMtd_Delete__FP20process_method_classPv();
-extern void fpcMtd_Create__FP20process_method_classPv();
+extern "C" extern void fopVw_Draw__FP10view_class();
+extern "C" extern void fopVw_Execute__FP10view_class();
+extern "C" extern void fopVw_IsDelete__FPv();
+extern "C" extern void fopVw_Delete__FP10view_class();
+extern "C" extern void fopVw_Create__FPv();
+extern "C" extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
 SECTION_DATA extern void* g_fopVw_Method[6];
+
+// 
+// Functions:
+// 
+
+/* 8001F1A8-8001F1D0 0028 .text      fopVw_Draw__FP10view_class                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopVw_Draw__FP10view_class() {
+	nofralloc
+#include "asm/f_op/f_op_view/fopVw_Draw__FP10view_class.s"
 }
+#pragma pop
 
 
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 8001F1D0-8001F1F8 0028 .text      fopVw_Execute__FP10view_class                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopVw_Execute__FP10view_class() {
+	nofralloc
+#include "asm/f_op/f_op_view/fopVw_Execute__FP10view_class.s"
+}
+#pragma pop
 
-extern "C" {
+
+/* 8001F1F8-8001F220 0028 .text      fopVw_IsDelete__FPv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopVw_IsDelete__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_view/fopVw_IsDelete__FPv.s"
+}
+#pragma pop
+
+
+/* 8001F220-8001F248 0028 .text      fopVw_Delete__FP10view_class                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopVw_Delete__FP10view_class() {
+	nofralloc
+#include "asm/f_op/f_op_view/fopVw_Delete__FP10view_class.s"
+}
+#pragma pop
+
+
+/* 8001F248-8001F284 003C .text      fopVw_Create__FPv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopVw_Create__FPv() {
+	nofralloc
+#include "asm/f_op/f_op_view/fopVw_Create__FPv.s"
+}
+#pragma pop
+
+
 /* 803A3928-803A3940 0014 .data      g_fopVw_Method                                               */
-SECTION_DATA void* g_fopVw_Method[6] = {
+void* g_fopVw_Method[6] = {
 	(void*)fopVw_Create__FPv,
 	(void*)fopVw_Delete__FP10view_class,
 	(void*)fopVw_Execute__FP10view_class,
@@ -38,61 +89,4 @@ SECTION_DATA void* g_fopVw_Method[6] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001F1A8-8001F1D0 0028 .text      fopVw_Draw__FP10view_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopVw_Draw__FP10view_class() {
-	nofralloc
-#include "asm/f_op/f_op_view/fopVw_Draw__FP10view_class.s"
-}
-#pragma pop
-
-/* 8001F1D0-8001F1F8 0028 .text      fopVw_Execute__FP10view_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopVw_Execute__FP10view_class() {
-	nofralloc
-#include "asm/f_op/f_op_view/fopVw_Execute__FP10view_class.s"
-}
-#pragma pop
-
-/* 8001F1F8-8001F220 0028 .text      fopVw_IsDelete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopVw_IsDelete__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_view/fopVw_IsDelete__FPv.s"
-}
-#pragma pop
-
-/* 8001F220-8001F248 0028 .text      fopVw_Delete__FP10view_class                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopVw_Delete__FP10view_class() {
-	nofralloc
-#include "asm/f_op/f_op_view/fopVw_Delete__FP10view_class.s"
-}
-#pragma pop
-
-/* 8001F248-8001F284 003C .text      fopVw_Create__FPv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopVw_Create__FPv() {
-	nofralloc
-#include "asm/f_op/f_op_view/fopVw_Create__FPv.s"
-}
-#pragma pop
-
 

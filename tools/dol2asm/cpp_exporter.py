@@ -12,8 +12,6 @@ from capstone import *
 from capstone.ppc import *
 from data import *
 from symbols import ReturnFunction, ReturnIntegerFunction, FirstParamFunction, GlobalFunction
-from symbols import S32Data, U32Data, Float32Data, Fraction32Data
-from symbols import Float64Data, Fraction64Data, IntegerData
 from demangle import demangle
 
 from intervaltree import Interval, IntervalTree
@@ -108,7 +106,6 @@ class CPPDisassembler(dasm.Disassembler):
         offset_load = dasm.is_load_store_reg_offset(insn, None)
         r2_addr = self.r2AddrInsns[addr]
         r13_addr = self.r13AddrInsns[addr]
-        #g.LOG.debug(f"r2={r2_addr:08X},r13={r13_addr:08X}, {addr:08X}\t{insn.mnemonic} {insn.op_str}")
 
         # Relocation
         if len(self.relocations) > 0 and addr in self.relocations:
@@ -124,7 +121,7 @@ class CPPDisassembler(dasm.Disassembler):
                     return f"{insn.mnemonic} {reg}, {symbol.identifier.reference}@hi"
                 else:
                     assert False
-            elif id in {PPC_INS_ADDI, PPC_INS_ORI}:
+            elif id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_ORI}:
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].reg)
                 if relocation.type == rellib.R_PPC_ADDR16_LO:
@@ -139,7 +136,7 @@ class CPPDisassembler(dasm.Disassembler):
                 else:
                     assert False
             else:
-                g.LOG.warning(f"{addr:08X}: relocation ({rellib.RELOCATION_NAMES[relocation.type]}) for instruction not supported. \"{insn.mnemonic} {insn.op_str}\"")
+                g.LOG.warning(f"{addr:08X}: relocation ({rellib.RELOCATION_NAMES[relocation.type]}) for instruction not supported. \"{insn.mnemonic} {insn.op_str}\" ({id})")
 
 
 
@@ -290,19 +287,25 @@ def symbol_get_desc(section: Section, symbol: Symbol, forward: bool, **kwargs):
             sys.exit(1)
         # TODO
         #if not symbol.name.is_function:
-        #    declspec = "extern \"C\" "
+        declspec = "extern \"C\" "
     if section.name == ".data":
-        declspec = "SECTION_DATA "
+        if forward:
+            declspec = "SECTION_DATA "
     if section.name == ".sdata":
-        declspec = "SECTION_SDATA "
+        if forward:
+            declspec = "SECTION_SDATA "
     if section.name == ".sdata2":
-        declspec = "SECTION_SDATA2 "
+        if forward:
+            declspec = "SECTION_SDATA2 "
     if section.name == ".bss":
-        declspec = "SECTION_BSS "
+        if forward:
+            declspec = "SECTION_BSS "
     if section.name == ".sbss":
-        declspec = "SECTION_SBSS "
+        if forward:
+            declspec = "SECTION_SBSS "
     if section.name == ".sbss2":
-        declspec = "SECTION_SBSS2 "
+        if forward:
+            declspec = "SECTION_SBSS2 "
     if section.name == ".init":
         declspec = "SECTION_INIT "
         if not isinstance(symbol, Function):
@@ -342,6 +345,10 @@ def symbol_get_desc(section: Section, symbol: Symbol, forward: bool, **kwargs):
 
 async def export_desc(builder, section, symbol, forward, **kwargs):
     a, b, c, d = symbol_get_desc(section, symbol, forward, **kwargs)
+    if section.name == ".extab":
+        await builder.write("#pragma section \"extab_\"")
+    if section.name == ".extabindex":
+        await builder.write("#pragma section \"extabindex_\"")
     await builder.write_nonewline(f"{a}{b}{c}{d}")
 
 async def export_symbol_function_normal(builder: Builder, section: Section, function: Function, symbol_map: Dict[int,Symbol], address_interval_tree, declspec: str):
@@ -502,7 +509,7 @@ async def export_symbol_function(builder: Builder, section: Section, function: F
 async def export_symbol_virtual_table(builder: Builder, section: Section, vtable: VirtualTable):
     count = len(vtable.functions) + vtable.padding // 4
     await export_desc(builder, section, vtable, False)
-    await builder.write(f"void* {vtable.identifier.label}[{count}] = {{")
+    await builder.write(f"void* const {vtable.identifier.label}[{count}] = {{")
     index = 0
     for addr, symbol in vtable.functions:
         if addr == 0 and not symbol:
@@ -523,7 +530,7 @@ async def export_symbol_virtual_table(builder: Builder, section: Section, vtable
 
 async def export_symbol_reference_array(builder: Builder, section: Section, sra: ReferenceArray):
     const = ""
-    if section.name == ".rodata":
+    if section.name == ".rodata" or section.name == ".ctors" or section.name == ".dtors":
         const = " const"
 
     count = len(sra.references) + sra.padding // 4
@@ -533,7 +540,7 @@ async def export_symbol_reference_array(builder: Builder, section: Section, sra:
         symbol = sra.references[0][1]
         if addr == 0 and not symbol:
             value = "NULL"
-        elif symbol != None:
+        elif symbol:
             value = symbol.cpp_reference(sra, addr)
         else:
             value = f"0x{addr:08X}"
@@ -543,7 +550,7 @@ async def export_symbol_reference_array(builder: Builder, section: Section, sra:
         for addr, symbol in sra.references:
             if addr == 0 and not symbol:
                 await builder.write("\tNULL,")
-            elif symbol != None:
+            elif symbol:
                 await builder.write(f"\t(void*){symbol.cpp_reference(sra, addr)},")
             else:
                 await builder.write(f"\t(void*)0x{addr:08X},")
@@ -556,40 +563,21 @@ async def export_symbol_reference_array(builder: Builder, section: Section, sra:
                 await builder.write("\tNULL,")
         await builder.write("};")
 
-def export_symbol_float32_data(builder: Builder, section: Section, fp: Float32Data):
-    if fp.comment:
-        builder.write("// %s" % fp.comment)
+async def export_symbol_literal(builder: Builder, section: Section, symbol: Literal):
+    if symbol.comment:
+        await builder.write(f"// {symbol.comment}")
 
-    export_desc(builder, section, fp, False)
-    builder.write("f32 %s = %ff;" % (fp.name.label, fp.value))
-
-def export_symbol_fraction32_data(builder: Builder, section: Section, fp: Fraction32Data):
-    if fp.comment:
-        builder.write("// %s" % fp.comment)
-
-    export_desc(builder, section, fp, False)
-    builder.write("f32 %s = %ff / %ff;" % (fp.name.label, fp.numerator, fp.denominator))
-
-def export_symbol_float64_data(builder: Builder, section: Section, fp: Float64Data):
-    if fp.comment:
-        builder.write("// %s" % fp.comment)
-
-    export_desc(builder, section, fp, False)
-    builder.write("f64 %s = %f;" % (fp.name.label, fp.value))
-
-def export_symbol_fraction64_data(builder: Builder, section: Section, fp: Fraction64Data):
-    if fp.comment:
-        builder.write("// %s" % fp.comment)
-
-    export_desc(builder, section, fp, False)
-    builder.write("f64 %s = %f / %f;" % (fp.name.label, fp.numerator, fp.denominator))
-
-def export_symbol_integer_data(builder: Builder, section: Section, data: IntegerData):
-    if data.comment:
-        builder.write("// %s" % data.comment)
-
-    export_desc(builder, section, data, False)
-    builder.write(f"{data.integer_type} {data.name.label} = {data.integer_value};")
+    await export_desc(builder, section, symbol, False)
+    if len(symbol.values) == 1:
+        await builder.write(f"{symbol.value_type} {symbol.identifier.label} = {symbol.values[0]};")
+    else:
+        await builder.write(f"{symbol.value_type} {symbol.identifier.label}[{len(symbol.values)}] = {{")
+        for values in util.chunks(symbol.values, 8):
+            await builder.write("\t" + ", ".join([f"{x}" for x in values]))
+        await builder.write(f"}};")
+    
+    if symbol.padding > 0:
+        await builder.write(f"/* padding {symbol.padding} bytes */")
 
 async def export_symbol_init_data(builder: Builder, section: Section, init_data: InitData):
     count = len(init_data.data) + init_data.padding
@@ -762,16 +750,8 @@ async def export_symbol(builder: Builder, section: Section, symbol: Symbol, symb
         await export_symbol_virtual_table(builder, section, symbol)
     elif isinstance(symbol, ReferenceArray):
         await export_symbol_reference_array(builder, section, symbol)
-    elif isinstance(symbol, Fraction32Data):
-        export_symbol_fraction32_data(builder, section, symbol)
-    elif isinstance(symbol, Float32Data):
-        export_symbol_float32_data(builder, section, symbol)
-    elif isinstance(symbol, Fraction64Data):
-        export_symbol_fraction64_data(builder, section, symbol)
-    elif isinstance(symbol, Float64Data):
-        export_symbol_float64_data(builder, section, symbol)
-    elif isinstance(symbol, IntegerData):
-        export_symbol_integer_data(builder, section, symbol)
+    elif isinstance(symbol, Literal):
+        await export_symbol_literal(builder, section, symbol)
     elif isinstance(symbol, StringBase):
         await export_symbol_string_base(builder, section, symbol)
     elif isinstance(symbol, InitStruct):
@@ -794,6 +774,8 @@ def export_section_preprocess(section: Section, symbol_map, my_labels, labels, r
 
         if isinstance(symbol, Function):
             relocation_symbols.update(symbol.relocation_symbols)
+        if isinstance(symbol, ReferenceArray):
+            relocation_symbols.update(symbol.relocation_symbols)
 
         if isinstance(symbol, GlobalFunction):
             offset = symbol.load_offset
@@ -814,7 +796,7 @@ def export_section_preprocess(section: Section, symbol_map, my_labels, labels, r
                 symbol.load_symbol = symbol_map[addr]
 
 async def export_section_ctors(builder: Builder, section: Section, symbol_map, address_interval_tree):
-    await builder.write("extern \"C\" {")
+    #await builder.write("extern \"C\" {")
     await builder.write("#pragma section \".ctors$10\"")
 
     tasks = []
@@ -832,13 +814,13 @@ async def export_section_ctors(builder: Builder, section: Section, symbol_map, a
                 tasks.append(task)
             break
 
-    await builder.write("}")
+    #await builder.write("}")
     await builder.write("")
 
     return tasks
 
 async def export_section_dtors(builder: Builder, section: Section, symbol_map, address_interval_tree):
-    await builder.write("extern \"C\" {")
+    #await builder.write("extern \"C\" {")
     await builder.write("#pragma section \".dtors$10\"")
 
     tasks = []
@@ -859,7 +841,7 @@ async def export_section_dtors(builder: Builder, section: Section, symbol_map, a
                 tasks.append(task)
             break
 
-    await builder.write("}")
+    #await builder.write("}")
     await builder.write("")
 
     return tasks
@@ -889,7 +871,7 @@ async def export_section(builder: Builder, section: Section, symbol_map, address
             await builder.write("")
         tasks = []
         if section.name == ".rodata":
-            await builder.write("extern \"C\" {")
+            #await builder.write("extern \"C\" {")
             # @stringBase0 will always be last (because it's generated by the compiler). But we place it
             # at the beginning of the .rodata section for referencing to work. 
             for symbol in section.symbols:
@@ -903,18 +885,126 @@ async def export_section(builder: Builder, section: Section, symbol_map, address
                     task = await export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
                     if task:
                         tasks.append(task)
-            await builder.write("}")
+            #await builder.write("}")
         else:
-            if section.name != ".text":
-                await builder.write("extern \"C\" {")
+            #if section.name != ".text":
+            #    await builder.write("extern \"C\" {")
             for symbol in section.symbols:
                 task = await export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
                 if task:
                     tasks.append(task)
-            if section.name != ".text":
-                await builder.write("}")
+            #if section.name != ".text":
+            #    await builder.write("}")
         await builder.write("")
         return tasks
+
+
+async def export_translation_unit_body_sorted(builder, tu: TranslationUnit, symbol_map, ait, cpp_gen):
+    order = {
+        ".ctors": -2,
+        ".dtors": -1,
+        ".rodata": 0,
+        ".data": 1,
+        ".sdata": 2,
+        ".sdata2": 3,
+        ".bss": 4,
+        ".sbss": 5,
+        ".sbss2": 6,
+        ".text": 7,
+        ".init": 8
+    }
+
+    sections = list(tu.sections)
+    sections.sort(key=lambda x: order[x.name] if x.name in order else 10 + len(x.name) )
+
+    decl_symbols = set()
+    tasks = []
+    for section in sections:
+        section.function_files = set()
+        if section.name == ".ctors" or section.name == ".dtors" or section.name == ".init":
+            tasks.extend(await export_section(builder, section, symbol_map, ait))
+        for symbol in section.symbols:
+            decl_symbols.add(symbol)
+
+    used_symbols = set()
+    for section in sections:
+        if section.name == ".text":
+            for function in section.symbols:
+                assert isinstance(function, Function)
+
+                symbols = []
+                # all references
+                for x in function.internal_references:
+                    if x in symbol_map:
+                        symbol = symbol_map[x]
+                    else:
+                        overlap_symbols = list(ait[x])
+                        if len(overlap_symbols) == 1:
+                            symbol = overlap_symbols[0].data
+                    if isinstance(symbol, Function):
+                        continue
+                    if not symbol in decl_symbols:
+                        continue
+                    if symbol in used_symbols:
+                        continue
+                    symbols.append(symbol)
+                    used_symbols.add(symbol)
+
+                # all relocation symbols
+                for symbol in function.relocation_symbols:
+                    if isinstance(symbol, Function):
+                        continue
+                    if not symbol in decl_symbols:
+                        continue
+                    if symbol in used_symbols:
+                        continue
+                    symbols.append(symbol)
+                    used_symbols.add(symbol)
+
+                if len(symbols) > 0:
+                    await builder.write("/* ###################################################################################### */")
+                    
+                missing_order_symbols = []
+                for symbol in symbols:
+                    for prev_symbol in symbol.section.symbols:
+                        if prev_symbol == symbol:
+                            break
+                        if prev_symbol in used_symbols:
+                            continue
+                        #g.LOG.debug(f"{symbol.identifier.label} is missing predecessor {prev_symbol.identifier.label}")
+                        missing_order_symbols.append(prev_symbol)
+                        used_symbols.add(prev_symbol)
+
+                symbols.extend(missing_order_symbols)
+                symbols.sort(key=lambda x: (order[x.section.name] if x.section.name in order else 10 + len(x.section.name), x.addr, x.size))
+                for symbol in symbols:
+                    #await builder.write(f"//\t{symbol.addr:08X} {symbol.section.name:<16} {symbol.identifier.label}")
+                    task = await export_symbol(builder, symbol.section, symbol, symbol_map, ait)
+                    if task:
+                        tasks.append(task)
+                    await builder.write("")
+
+                task = await export_symbol(builder, section, function, symbol_map, ait)
+                if task:
+                    tasks.append(task)
+                await builder.write("")
+
+    for section in sections:
+        if section.name == ".ctors" or section.name == ".dtors" or section.name == ".init":
+            continue
+        for symbol in section.symbols:
+            if isinstance(symbol, Function):
+                continue
+            if symbol in used_symbols:
+                continue
+            task = await export_symbol(builder, symbol.section, symbol, symbol_map, ait)
+            if task:
+                tasks.append(task)
+            await builder.write("")
+
+    return tasks
+
+
 
 
 async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen):
@@ -936,15 +1026,6 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
         await builder.write("// Generated By: dol2asm")
         await builder.write("// ")
 
-        # TODO
-        """
-        if tu.using_string_base:
-            builder.write("")
-            builder.write("// ")
-            builder.write("// Compiler Options: -str pool,readonly,reuse")
-            builder.write("// ")
-        """
-
         await builder.write("")
         await builder.write("#include \"dolphin/types.h\"")
         await builder.write("")
@@ -961,7 +1042,7 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
             rel_symbol_map[symbol.addr] = symbol
 
         await builder.write("// ")
-        await builder.write("// Additional Symbols:")
+        await builder.write("// Forward References:")
         await builder.write("// ")
         await builder.write("")
 
@@ -1010,6 +1091,10 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
                 const = ""
                 if symbol.section.name == ".rodata":
                     const = " const"
+                if symbol.section.name == ".ctors":
+                    const = " const"
+                if symbol.section.name == ".dtors":
+                    const = " const"
 
                 a, b, c, d = symbol_get_desc(symbol.section, symbol, True)
                 if isinstance(symbol, ReturnIntegerFunction) and not hasattr(symbol, 'decompile_fail'):
@@ -1032,19 +1117,19 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
                     c_extern.append(f"{a}{b}{c}{d}void %s();" % symbol.identifier.label)
                 elif isinstance(symbol, VirtualTable):
                     count = len(symbol.functions) + symbol.padding // 4
-                    c_extern.append(f"{a}{b}{c}{d}void*{const} %s[%i];" % (symbol.identifier.label, count))
+                    c_extern.append(f"{a}{b}{c}{d}void* const %s[%i];" % (symbol.identifier.label, count))
                 elif isinstance(symbol, ReferenceArray):
                     count = len(symbol.references) + symbol.padding // 4
                     if count == 1:
                         c_extern.append(f"{a}{b}{c}{d}void*{const} {symbol.identifier.label};")
                     else:
                         c_extern.append(f"{a}{b}{c}{d}void*{const} {symbol.identifier.label}[{count}];")
-                elif isinstance(symbol, Float32Data) or isinstance(symbol, Fraction32Data):
-                    c_extern.append(f"{a}{b}{c}{d}f32 %s;" % symbol.identifier.label)
-                elif isinstance(symbol, Float64Data) or isinstance(symbol, Fraction64Data):
-                    c_extern.append(f"{a}{b}{c}{d}f64 %s;" % symbol.identifier.label)
-                elif isinstance(symbol, IntegerData):
-                    c_extern.append(f"{a}{b}{c}{d}%s %s;" % (symbol.integer_type, symbol.identifier.label))
+                elif isinstance(symbol, Literal):
+                    count = len(symbol.values)
+                    if count == 1:
+                        c_extern.append(f"{a}{b}{c}{d}{symbol.value_type} {symbol.identifier.label};")
+                    else:
+                        c_extern.append(f"{a}{b}{c}{d}{symbol.value_type} {symbol.identifier.label}[{count}];")
                 elif isinstance(symbol, StringBase):
                     count = symbol.size + symbol.padding
                     c_extern.append(f"{a}{b}{c}{d}u8 %s[%i];" % (symbol.identifier.label, count))
@@ -1071,31 +1156,39 @@ async def export_translation_unit(tu: TranslationUnit, symbol_map, ait, cpp_gen)
             await builder.write("")
 
         if len(c_extern) > 0:
-            await builder.write("extern \"C\" {")
+            #await builder.write("extern \"C\" {")
             for s in c_extern:
                 await builder.write(s)
-            await builder.write("}")
+            #await builder.write("}")
             await builder.write("")
 
-        order = {
-            ".ctors": -2,
-            ".dtors": -1,
-            ".rodata": 0,
-            ".data": 1,
-            ".sdata": 2,
-            ".sdata2": 3,
-            ".bss": 4,
-            ".sbss": 5,
-            ".sbss2": 6,
-            ".text": 7,
-            ".init": 8
-        }
+        await builder.write("// ")
+        await builder.write("// Functions:")
+        await builder.write("// ")
+        await builder.write("")
 
-        sections = list(tu.sections)
-        sections.sort(key=lambda x: order[x.name] if x.name in order else 10 + len(x.name) )
+        if False:
+            order = {
+                ".ctors": -2,
+                ".dtors": -1,
+                ".rodata": 0,
+                ".data": 1,
+                ".sdata": 2,
+                ".sdata2": 3,
+                ".bss": 4,
+                ".sbss": 5,
+                ".sbss2": 6,
+                ".text": 7,
+                ".init": 8
+            }
 
-        for section in sections:
-            tasks.extend(await export_section(builder, section, symbol_map, ait))
+            sections = list(tu.sections)
+            sections.sort(key=lambda x: order[x.name] if x.name in order else 10 + len(x.name) )
+
+            for section in sections:
+                tasks.extend(await export_section(builder, section, symbol_map, ait))
+        else:
+            tasks.extend(await export_translation_unit_body_sorted(builder, tu, symbol_map, ait, cpp_gen))
 
     if cpp_gen:
         g.LOG.debug(f"generated cpp: '{path}'")

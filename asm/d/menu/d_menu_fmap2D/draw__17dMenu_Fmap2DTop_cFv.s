@@ -20,12 +20,12 @@ lbl_801D6C98:
 /* 801D6CE0 00000048  48 18 98 69 */	bl GXGetScissor
 /* 801D6CE4 0000004C  C0 3E 00 78 */	lfs f1, 0x78(r30)
 /* 801D6CE8 00000050  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 801D6CEC 00000054  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D6CEC 00000054  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
 /* 801D6CF0 00000058  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 801D6CF4 0000005C  C0 02 A7 DC */	lfs f0, d_menu_d_menu_fmap2D__LIT_4199(r2)
+/* 801D6CF4 0000005C  C0 02 A7 DC */	lfs f0, d_menu_d_menu_fmap2D__lit_4199(r2)
 /* 801D6CF8 00000060  EC 01 00 2A */	fadds f0, f1, f0
 /* 801D6CFC 00000064  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 801D6D00 00000068  C0 02 A7 E0 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4200(r2)
+/* 801D6D00 00000068  C0 02 A7 E0 */	lfs f0, d_menu_d_menu_fmap2D__lit_4200(r2)
 /* 801D6D04 0000006C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 801D6D08 00000070  7F E3 FB 78 */	mr r3, r31
 /* 801D6D0C 00000074  38 81 00 28 */	addi r4, r1, 0x28
@@ -41,7 +41,7 @@ lbl_801D6C98:
 /* 801D6D34 0000009C  7F E4 FB 78 */	mr r4, r31
 /* 801D6D38 000000A0  48 12 21 9D */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 801D6D3C 000000A4  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 801D6D40 000000A8  C8 22 A7 F8 */	lfd f1, d_menu_d_menu_fmap2D__LIT_4207(r2)
+/* 801D6D40 000000A8  C8 22 A7 F8 */	lfd f1, d_menu_d_menu_fmap2D__lit_4207(r2)
 /* 801D6D44 000000AC  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 801D6D48 000000B0  3C 60 43 30 */	lis r3, 0x4330
 /* 801D6D4C 000000B4  90 61 00 38 */	stw r3, 0x38(r1)

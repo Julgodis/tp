@@ -2,8 +2,8 @@ lbl_8021D44C:
 /* 8021D44C 00000000  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8021D450 00000004  28 00 00 24 */	cmplwi r0, 0x24
 /* 8021D454 00000008  41 81 00 5C */	bgt lbl_8021D4B0
-/* 8021D458 0000000C  3C 60 80 3C */	lis r3, d_meter_d_meter2_info__LIT_4572@ha
-/* 8021D45C 00000010  38 63 F7 60 */	addi r3, r3, d_meter_d_meter2_info__LIT_4572@l
+/* 8021D458 0000000C  3C 60 80 3C */	lis r3, d_meter_d_meter2_info__lit_4572@ha
+/* 8021D45C 00000010  38 63 F7 60 */	addi r3, r3, d_meter_d_meter2_info__lit_4572@l
 /* 8021D460 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 8021D464 00000018  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8021D468 0000001C  7C 09 03 A6 */	mtctr r0

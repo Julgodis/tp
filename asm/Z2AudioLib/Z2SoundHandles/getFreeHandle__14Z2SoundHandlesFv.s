@@ -32,8 +32,8 @@ lbl_802AB310:
 /* 802AB344 00000034  38 63 41 C4 */	addi r3, r3, data_804341C4@l
 /* 802AB348 00000038  3C 80 80 2B */	lis r4, func_802AB200@ha
 /* 802AB34C 0000003C  38 84 B2 00 */	addi r4, r4, func_802AB200@l
-/* 802AB350 00000040  3C A0 80 43 */	lis r5, Z2SoundHandles__LIT_632@ha
-/* 802AB354 00000044  38 A5 41 B8 */	addi r5, r5, Z2SoundHandles__LIT_632@l
+/* 802AB350 00000040  3C A0 80 43 */	lis r5, Z2SoundHandles__lit_632@ha
+/* 802AB354 00000044  38 A5 41 B8 */	addi r5, r5, Z2SoundHandles__lit_632@l
 /* 802AB358 00000048  48 0B 68 CD */	bl __register_global_object
 /* 802AB35C 0000004C  38 00 00 01 */	li r0, 1
 /* 802AB360 00000050  98 0D 8D C8 */	stb r0, data_80451348(r13)

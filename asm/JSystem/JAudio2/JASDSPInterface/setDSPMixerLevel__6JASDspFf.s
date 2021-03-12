@@ -3,7 +3,7 @@ lbl_8029DA04:
 /* 8029DA08 00000004  7C 08 02 A6 */	mflr r0
 /* 8029DA0C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029DA10 0000000C  D0 2D 8D 70 */	stfs f1, sDSPVolume__6JASDsp(r13)
-/* 8029DA14 00000010  C0 02 BD 48 */	lfs f0, JASDSPInterface__LIT_176(r2)
+/* 8029DA14 00000010  C0 02 BD 48 */	lfs f0, JASDSPInterface__lit_176(r2)
 /* 8029DA18 00000014  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8029DA1C 00000018  48 00 0B C5 */	bl DsetMixerLevel__Ff
 /* 8029DA20 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

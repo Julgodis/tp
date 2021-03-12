@@ -5,111 +5,116 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void udp_cc_post_stop();
-extern void udp_cc_pre_continue();
-extern void udp_cc_peek();
-extern void udp_cc_write();
-extern void udp_cc_read();
-extern void udp_cc_close();
-extern void udp_cc_open();
-extern void udp_cc_shutdown();
-extern void udp_cc_initialize();
-}
+extern "C" extern void udp_cc_post_stop();
+extern "C" extern void udp_cc_pre_continue();
+extern "C" extern void udp_cc_peek();
+extern "C" extern void udp_cc_write();
+extern "C" extern void udp_cc_read();
+extern "C" extern void udp_cc_close();
+extern "C" extern void udp_cc_open();
+extern "C" extern void udp_cc_shutdown();
+extern "C" extern void udp_cc_initialize();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80372314-8037231C 0008 .text      udp_cc_post_stop                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_post_stop() {
+extern "C" asm void udp_cc_post_stop() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_post_stop.s"
 }
 #pragma pop
 
+
 /* 8037231C-80372324 0008 .text      udp_cc_pre_continue                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_pre_continue() {
+extern "C" asm void udp_cc_pre_continue() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_pre_continue.s"
 }
 #pragma pop
 
+
 /* 80372324-8037232C 0008 .text      udp_cc_peek                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_peek() {
+extern "C" asm void udp_cc_peek() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_peek.s"
 }
 #pragma pop
 
+
 /* 8037232C-80372334 0008 .text      udp_cc_write                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_write() {
+extern "C" asm void udp_cc_write() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_write.s"
 }
 #pragma pop
 
+
 /* 80372334-8037233C 0008 .text      udp_cc_read                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_read() {
+extern "C" asm void udp_cc_read() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_read.s"
 }
 #pragma pop
 
+
 /* 8037233C-80372344 0008 .text      udp_cc_close                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_close() {
+extern "C" asm void udp_cc_close() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_close.s"
 }
 #pragma pop
 
+
 /* 80372344-8037234C 0008 .text      udp_cc_open                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_open() {
+extern "C" asm void udp_cc_open() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_open.s"
 }
 #pragma pop
 
+
 /* 8037234C-80372354 0008 .text      udp_cc_shutdown                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_shutdown() {
+extern "C" asm void udp_cc_shutdown() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_shutdown.s"
 }
 #pragma pop
 
+
 /* 80372354-8037235C 0008 .text      udp_cc_initialize                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void udp_cc_initialize() {
+extern "C" asm void udp_cc_initialize() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_initialize.s"
 }

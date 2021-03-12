@@ -5,50 +5,48 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void registRes__18JPAResourceManagerFP11JPAResource();
-extern void registTex__18JPAResourceManagerFP10JPATexture();
-extern void __ct__11JPAResourceFv();
-extern void init__11JPAResourceFP7JKRHeap();
-extern void __ct__12JPABaseShapeFPCUcP7JKRHeap();
-extern void __ct__13JPAExtraShapeFPCUc();
-extern void __ct__13JPAChildShapeFPCUc();
-extern void __ct__13JPAExTexShapeFPCUc();
-extern void __ct__16JPADynamicsBlockFPCUc();
-extern void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
-extern void __ct__11JPAKeyBlockFPCUc();
-extern void __ct__10JPATextureFPCUc();
-extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern void __nw__FUlP7JKRHeapi();
-extern void __nwa__FUlP7JKRHeapi();
-extern void _savegpr_18();
-extern void _restgpr_18();
-}
+extern "C" extern void registRes__18JPAResourceManagerFP11JPAResource();
+extern "C" extern void registTex__18JPAResourceManagerFP10JPATexture();
+extern "C" extern void __ct__11JPAResourceFv();
+extern "C" extern void init__11JPAResourceFP7JKRHeap();
+extern "C" extern void __ct__12JPABaseShapeFPCUcP7JKRHeap();
+extern "C" extern void __ct__13JPAExtraShapeFPCUc();
+extern "C" extern void __ct__13JPAChildShapeFPCUc();
+extern "C" extern void __ct__13JPAExTexShapeFPCUc();
+extern "C" extern void __ct__16JPADynamicsBlockFPCUc();
+extern "C" extern void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+extern "C" extern void __ct__11JPAKeyBlockFPCUc();
+extern "C" extern void __ct__10JPATextureFPCUc();
+extern "C" extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" extern void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __nwa__FUlP7JKRHeapi();
+extern "C" extern void _savegpr_18();
+extern "C" extern void _restgpr_18();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8027D8A0-8027D8E0 0040 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager() {
+extern "C" asm void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/__ct__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }
 #pragma pop
 
+
 /* 8027D8E0-8027DCA0 03C0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager() {
+extern "C" asm void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }

@@ -12,9 +12,9 @@ lbl_80244D34:
 /* 80244D5C 00000028  7D 89 03 A6 */	mtctr r12
 /* 80244D60 0000002C  4E 80 04 21 */	bctrl 
 /* 80244D64 00000030  7F E3 FB 78 */	mr r3, r31
-/* 80244D68 00000034  C0 22 B2 B0 */	lfs f1, msg_scrn_d_msg_scrn_jimaku__LIT_3941(r2)
+/* 80244D68 00000034  C0 22 B2 B0 */	lfs f1, msg_scrn_d_msg_scrn_jimaku__lit_3941(r2)
 /* 80244D6C 00000038  FC 40 08 90 */	fmr f2, f1
-/* 80244D70 0000003C  C0 62 B2 B8 */	lfs f3, msg_scrn_d_msg_scrn_jimaku__LIT_4021(r2)
+/* 80244D70 0000003C  C0 62 B2 B8 */	lfs f3, msg_scrn_d_msg_scrn_jimaku__lit_4021(r2)
 /* 80244D74 00000040  4B FF 75 B9 */	bl drawOutFont__14dMsgScrnBase_cFfff
 /* 80244D78 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80244D7C 00000048  80 01 00 14 */	lwz r0, 0x14(r1)

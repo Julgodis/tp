@@ -7,8 +7,8 @@ lbl_8023AA04:
 /* 8023AA18 00000014  39 61 00 30 */	addi r11, r1, 0x30
 /* 8023AA1C 00000018  48 12 77 BD */	bl _savegpr_28
 /* 8023AA20 0000001C  7C 7C 1B 78 */	mr r28, r3
-/* 8023AA24 00000020  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_3select__LIT_4497@ha
-/* 8023AA28 00000024  38 83 98 28 */	addi r4, r3, msg_scrn_d_msg_scrn_3select__LIT_4497@l
+/* 8023AA24 00000020  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_3select__lit_4497@ha
+/* 8023AA28 00000024  38 83 98 28 */	addi r4, r3, msg_scrn_d_msg_scrn_3select__lit_4497@l
 /* 8023AA2C 00000028  80 64 00 00 */	lwz r3, 0(r4)
 /* 8023AA30 0000002C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8023AA34 00000030  90 61 00 08 */	stw r3, 8(r1)
@@ -49,7 +49,7 @@ lbl_8023AA68:
 /* 8023AABC 00000054  3B FF 00 04 */	addi r31, r31, 4
 /* 8023AAC0 00000058  41 80 FF A8 */	blt lbl_8023AA68
 lbl_8023AAC4:
-/* 8023AAC4 00000000  C0 02 B1 5C */	lfs f0, LIT_3910(r2)
+/* 8023AAC4 00000000  C0 02 B1 5C */	lfs f0, lit_3910(r2)
 /* 8023AAC8 00000004  D0 1C 00 F0 */	stfs f0, 0xf0(r28)
 /* 8023AACC 00000008  38 00 00 01 */	li r0, 1
 /* 8023AAD0 0000000C  98 1C 01 13 */	stb r0, 0x113(r28)

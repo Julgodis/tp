@@ -85,7 +85,7 @@ lbl_8000A290:
 /* 8000A3DC 0000014C  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 8000A3E0 00000150  90 01 00 08 */	stw r0, 8(r1)
 /* 8000A3E4 00000154  38 60 00 00 */	li r3, 0
-/* 8000A3E8 00000158  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 8000A3E8 00000158  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000A3EC 0000015C  FC 40 08 90 */	fmr f2, f1
 /* 8000A3F0 00000160  FC 60 08 90 */	fmr f3, f1
 /* 8000A3F4 00000164  FC 80 08 90 */	fmr f4, f1
@@ -96,12 +96,12 @@ lbl_8000A290:
 /* 8000A408 00000178  38 60 00 01 */	li r3, 1
 /* 8000A40C 0000017C  48 35 59 CD */	bl GXSetDither
 /* 8000A410 00000180  38 61 00 14 */	addi r3, r1, 0x14
-/* 8000A414 00000184  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__LIT_4062(r2)
-/* 8000A418 00000188  C0 42 80 3C */	lfs f2, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 8000A414 00000184  C0 22 80 38 */	lfs f1, m_Do_m_Do_graphic__lit_4062(r2)
+/* 8000A418 00000188  C0 42 80 3C */	lfs f2, m_Do_m_Do_graphic__lit_4063(r2)
 /* 8000A41C 0000018C  FC 60 08 90 */	fmr f3, f1
 /* 8000A420 00000190  FC 80 10 90 */	fmr f4, f2
 /* 8000A424 00000194  FC A0 08 90 */	fmr f5, f1
-/* 8000A428 00000198  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__LIT_4105(r2)
+/* 8000A428 00000198  C0 C2 80 40 */	lfs f6, m_Do_m_Do_graphic__lit_4105(r2)
 /* 8000A42C 0000019C  48 33 CB CD */	bl C_MTXOrtho
 /* 8000A430 000001A0  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
 /* 8000A434 000001A4  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l

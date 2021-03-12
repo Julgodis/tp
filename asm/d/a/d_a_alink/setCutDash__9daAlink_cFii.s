@@ -6,8 +6,8 @@ lbl_800D1E1C:
 /* 800D1E2C 00000010  48 29 03 B1 */	bl _savegpr_29
 /* 800D1E30 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 800D1E34 00000018  7C BD 2B 78 */	mr r29, r5
-/* 800D1E38 0000001C  3C A0 80 39 */	lis r5, d_a_d_a_alink__LIT_3757@ha
-/* 800D1E3C 00000020  3B C5 D6 58 */	addi r30, r5, d_a_d_a_alink__LIT_3757@l
+/* 800D1E38 0000001C  3C A0 80 39 */	lis r5, d_a_d_a_alink__lit_3757@ha
+/* 800D1E3C 00000020  3B C5 D6 58 */	addi r30, r5, d_a_d_a_alink__lit_3757@l
 /* 800D1E40 00000024  2C 04 00 00 */	cmpwi r4, 0
 /* 800D1E44 00000028  40 82 00 18 */	bne lbl_800D1E5C
 /* 800D1E48 0000002C  80 1F 05 74 */	lwz r0, 0x574(r31)
@@ -165,8 +165,8 @@ lbl_800D2028:
 /* 800D2074 0000004C  38 C0 00 07 */	li r6, 7
 /* 800D2078 00000050  38 E0 00 10 */	li r7, 0x10
 /* 800D207C 00000054  39 00 00 01 */	li r8, 1
-/* 800D2080 00000058  C0 22 93 00 */	lfs f1, LIT_6895(r2)
-/* 800D2084 0000005C  C0 42 93 04 */	lfs f2, LIT_6896(r2)
+/* 800D2080 00000058  C0 22 93 00 */	lfs f1, lit_6895(r2)
+/* 800D2084 0000005C  C0 42 93 04 */	lfs f2, lit_6896(r2)
 /* 800D2088 00000060  4B FF F4 B9 */	bl setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff
 /* 800D208C 00000064  7F E3 FB 78 */	mr r3, r31
 /* 800D2090 00000068  48 05 20 B5 */	bl setCutWaterDropEffect__9daAlink_cFv

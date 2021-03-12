@@ -9,8 +9,8 @@ lbl_802585C0:
 /* 802585DC 0000001C  4B FF DA C9 */	bl __ct__10dLog_HIO_cFv
 /* 802585E0 00000020  3C 80 80 26 */	lis r4, __dt__10dLog_HIO_cFv@ha
 /* 802585E4 00000024  38 84 85 5C */	addi r4, r4, __dt__10dLog_HIO_cFv@l
-/* 802585E8 00000028  3C A0 80 43 */	lis r5, d_s_d_s_logo__LIT_3702@ha
-/* 802585EC 0000002C  38 A5 07 58 */	addi r5, r5, d_s_d_s_logo__LIT_3702@l
+/* 802585E8 00000028  3C A0 80 43 */	lis r5, d_s_d_s_logo__lit_3702@ha
+/* 802585EC 0000002C  38 A5 07 58 */	addi r5, r5, d_s_d_s_logo__lit_3702@l
 /* 802585F0 00000030  48 10 96 35 */	bl __register_global_object
 /* 802585F4 00000034  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 802585F8 00000038  80 1F 00 10 */	lwz r0, 0x10(r31)

@@ -10,5 +10,5 @@ lbl_801CB260:
 /* 801CB280 00000020  C0 24 0F C8 */	lfs f1, 0xfc8(r4)
 /* 801CB284 00000024  4E 80 00 20 */	blr 
 lbl_801CB288:
-/* 801CB288 00000000  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CB288 00000000  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CB28C 00000004  4E 80 00 20 */	blr 

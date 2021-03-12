@@ -21,8 +21,8 @@ lbl_801CEB1C:
 /* 801CEB68 0000004C  40 82 00 54 */	bne lbl_801CEBBC
 /* 801CEB6C 00000050  3B 80 00 00 */	li r28, 0
 /* 801CEB70 00000054  3B C0 00 00 */	li r30, 0
-/* 801CEB74 00000058  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap_map__data_803961B0@ha
-/* 801CEB78 0000005C  3B A3 61 B0 */	addi r29, r3, d_menu_d_menu_fmap_map__data_803961B0@l
+/* 801CEB74 00000058  3C 60 80 39 */	lis r3, data_803961B0@ha
+/* 801CEB78 0000005C  3B A3 61 B0 */	addi r29, r3, data_803961B0@l
 lbl_801CEB7C:
 /* 801CEB7C 00000000  80 1F 00 C4 */	lwz r0, 0xc4(r31)
 /* 801CEB80 00000004  7C 80 F2 14 */	add r4, r0, r30
@@ -43,8 +43,8 @@ lbl_801CEB7C:
 lbl_801CEBBC:
 /* 801CEBBC 00000000  3B 80 00 00 */	li r28, 0
 /* 801CEBC0 00000004  3B C0 00 00 */	li r30, 0
-/* 801CEBC4 00000008  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap_map__data_803961B0@ha
-/* 801CEBC8 0000000C  3B A3 61 B0 */	addi r29, r3, d_menu_d_menu_fmap_map__data_803961B0@l
+/* 801CEBC4 00000008  3C 60 80 39 */	lis r3, data_803961B0@ha
+/* 801CEBC8 0000000C  3B A3 61 B0 */	addi r29, r3, data_803961B0@l
 lbl_801CEBCC:
 /* 801CEBCC 00000000  80 1F 00 C4 */	lwz r0, 0xc4(r31)
 /* 801CEBD0 00000004  7C 80 F2 14 */	add r4, r0, r30

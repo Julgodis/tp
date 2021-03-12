@@ -9,7 +9,7 @@ lbl_80244C2C:
 /* 80244C48 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80244C4C 00000020  41 82 00 1C */	beq lbl_80244C68
 /* 80244C50 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80244C54 00000028  C0 22 B2 B8 */	lfs f1, msg_scrn_d_msg_scrn_jimaku__LIT_4021(r2)
+/* 80244C54 00000028  C0 22 B2 B8 */	lfs f1, msg_scrn_d_msg_scrn_jimaku__lit_4021(r2)
 /* 80244C58 0000002C  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80244C5C 00000030  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 80244C60 00000034  7D 89 03 A6 */	mtctr r12

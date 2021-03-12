@@ -34,9 +34,9 @@ lbl_801F7DF0:
 /* 801F7E10 00000020  38 A0 00 00 */	li r5, 0
 /* 801F7E14 00000024  38 C0 00 00 */	li r6, 0
 /* 801F7E18 00000028  38 E0 00 00 */	li r7, 0
-/* 801F7E1C 0000002C  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7E1C 0000002C  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7E20 00000030  FC 40 08 90 */	fmr f2, f1
-/* 801F7E24 00000034  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__LIT_3946(r2)
+/* 801F7E24 00000034  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__lit_3946(r2)
 /* 801F7E28 00000038  FC 80 18 90 */	fmr f4, f3
 /* 801F7E2C 0000003C  39 00 00 00 */	li r8, 0
 /* 801F7E30 00000040  48 0B 3B 55 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -59,9 +59,9 @@ lbl_801F7E3C:
 /* 801F7E70 00000034  38 A0 00 00 */	li r5, 0
 /* 801F7E74 00000038  38 C0 00 00 */	li r6, 0
 /* 801F7E78 0000003C  38 E0 00 00 */	li r7, 0
-/* 801F7E7C 00000040  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7E7C 00000040  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7E80 00000044  FC 40 08 90 */	fmr f2, f1
-/* 801F7E84 00000048  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__LIT_3946(r2)
+/* 801F7E84 00000048  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__lit_3946(r2)
 /* 801F7E88 0000004C  FC 80 18 90 */	fmr f4, f3
 /* 801F7E8C 00000050  39 00 00 00 */	li r8, 0
 /* 801F7E90 00000054  48 0B 3A F5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -85,9 +85,9 @@ lbl_801F7E98:
 /* 801F7ED4 0000003C  38 A0 00 00 */	li r5, 0
 /* 801F7ED8 00000040  38 C0 00 00 */	li r6, 0
 /* 801F7EDC 00000044  38 E0 00 00 */	li r7, 0
-/* 801F7EE0 00000048  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F7EE0 00000048  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F7EE4 0000004C  FC 40 08 90 */	fmr f2, f1
-/* 801F7EE8 00000050  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__LIT_3946(r2)
+/* 801F7EE8 00000050  C0 62 AA A8 */	lfs f3, d_menu_d_menu_skill__lit_3946(r2)
 /* 801F7EEC 00000054  FC 80 18 90 */	fmr f4, f3
 /* 801F7EF0 00000058  39 00 00 00 */	li r8, 0
 /* 801F7EF4 0000005C  48 0B 3A 91 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

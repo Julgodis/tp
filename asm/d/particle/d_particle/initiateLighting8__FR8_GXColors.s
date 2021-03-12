@@ -35,14 +35,14 @@ lbl_80049934:
 /* 800499B8 00000084  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800499BC 00000088  38 83 CA 54 */	addi r4, r3, g_env_light@l
 /* 800499C0 0000008C  A8 04 11 08 */	lha r0, 0x1108(r4)
-/* 800499C4 00000090  C8 82 85 48 */	lfd f4, d_particle_d_particle__LIT_3883(r2)
+/* 800499C4 00000090  C8 82 85 48 */	lfd f4, d_particle_d_particle__lit_3883(r2)
 /* 800499C8 00000094  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800499CC 00000098  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 800499D0 0000009C  3C 60 43 30 */	lis r3, 0x4330
 /* 800499D4 000000A0  90 61 00 18 */	stw r3, 0x18(r1)
 /* 800499D8 000000A4  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 800499DC 000000A8  EC 00 20 28 */	fsubs f0, f0, f4
-/* 800499E0 000000AC  C0 62 85 40 */	lfs f3, d_particle_d_particle__LIT_3880(r2)
+/* 800499E0 000000AC  C0 62 85 40 */	lfs f3, d_particle_d_particle__lit_3880(r2)
 /* 800499E4 000000B0  EC A0 18 24 */	fdivs f5, f0, f3
 /* 800499E8 000000B4  38 1E 00 10 */	addi r0, r30, 0x10
 /* 800499EC 000000B8  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -50,7 +50,7 @@ lbl_80049934:
 /* 800499F4 000000C0  90 61 00 20 */	stw r3, 0x20(r1)
 /* 800499F8 000000C4  C8 01 00 20 */	lfd f0, 0x20(r1)
 /* 800499FC 000000C8  EC 20 20 28 */	fsubs f1, f0, f4
-/* 80049A00 000000CC  C0 42 85 44 */	lfs f2, d_particle_d_particle__LIT_3881(r2)
+/* 80049A00 000000CC  C0 42 85 44 */	lfs f2, d_particle_d_particle__lit_3881(r2)
 /* 80049A04 000000D0  EC 02 01 72 */	fmuls f0, f2, f5
 /* 80049A08 000000D4  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80049A0C 000000D8  FC 00 00 1E */	fctiwz f0, f0

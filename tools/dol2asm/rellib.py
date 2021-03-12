@@ -48,6 +48,7 @@ class Relocation:
     offset: int
     addend: int
     parent: "Section" = field(default=None,repr=False)
+    access: "disassembler.Access" = None
 
     @property
     def symbol_offset(self):

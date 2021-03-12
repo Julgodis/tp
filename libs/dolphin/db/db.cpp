@@ -5,98 +5,88 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void PPCHalt();
-extern void OSDumpContext();
-extern void DBInit();
-extern void __DBExceptionDestinationAux();
-extern void __DBExceptionDestination();
-extern void __DBIsExceptionMarked();
-extern void DBPrintf();
-SECTION_DATA extern u8 LIT_9[24];
+extern "C" extern void OSReport();
+extern "C" extern void PPCHalt();
+extern "C" extern void OSDumpContext();
+extern "C" extern void DBInit();
+extern "C" extern void __DBExceptionDestinationAux();
+extern "C" extern void __DBExceptionDestination();
+extern "C" extern void __DBIsExceptionMarked();
+extern "C" extern void DBPrintf();
+SECTION_DATA extern u8 lit_9[24];
 SECTION_SBSS extern u8 __DBInterface[4];
 SECTION_SBSS extern u8 DBVerbose[4];
-}
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803D1368-803D1380 0018 .data      @9                                                           */
-SECTION_DATA u8 LIT_9[24] = {
-	0x44, 0x42, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x44, 0x65, 0x73, 0x74, 0x69,
-	0x6E, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x0A, 0x00,
-};
-}
-
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451708-8045170C 0004 .sbss      __DBInterface                                                */
-SECTION_SBSS u8 __DBInterface[4];
+u8 __DBInterface[4];
+
 /* 8045170C-80451710 0004 .sbss      DBVerbose                                                    */
-SECTION_SBSS u8 DBVerbose[4];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 DBVerbose[4];
 
 /* 80346398-803463C0 0028 .text      DBInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DBInit() {
+extern "C" asm void DBInit() {
 	nofralloc
 #include "asm/dolphin/db/db/DBInit.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803D1368-803D1380 0018 .data      @9                                                           */
+u8 lit_9[24] = {
+	0x44, 0x42, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x44, 0x65, 0x73, 0x74, 0x69,
+	0x6E, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x0A, 0x00,
+};
+
 /* 803463C0-80346408 0048 .text      __DBExceptionDestinationAux                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DBExceptionDestinationAux() {
+extern "C" asm void __DBExceptionDestinationAux() {
 	nofralloc
 #include "asm/dolphin/db/db/__DBExceptionDestinationAux.s"
 }
 #pragma pop
 
+
 /* 80346408-80346418 0010 .text      __DBExceptionDestination                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DBExceptionDestination() {
+extern "C" asm void __DBExceptionDestination() {
 	nofralloc
 #include "asm/dolphin/db/db/__DBExceptionDestination.s"
 }
 #pragma pop
 
+
 /* 80346418-80346434 001C .text      __DBIsExceptionMarked                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __DBIsExceptionMarked() {
+extern "C" asm void __DBIsExceptionMarked() {
 	nofralloc
 #include "asm/dolphin/db/db/__DBIsExceptionMarked.s"
 }
 #pragma pop
 
+
 /* 80346434-80346484 0050 .text      DBPrintf                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void DBPrintf() {
+extern "C" asm void DBPrintf() {
 	nofralloc
 #include "asm/dolphin/db/db/DBPrintf.s"
 }

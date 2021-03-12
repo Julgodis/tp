@@ -27,7 +27,7 @@ lbl_80100BFC:
 /* 80100C10 00000014  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80100C14 00000018  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80100C18 0000001C  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
-/* 80100C1C 00000020  C0 42 92 9C */	lfs f2, d_a_d_a_alink__LIT_5944(r2)
+/* 80100C1C 00000020  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
 /* 80100C20 00000024  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80100C24 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 80100C28 0000002C  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
@@ -52,7 +52,7 @@ lbl_80100C64:
 /* 80100C70 0000000C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80100C74 00000010  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80100C78 00000014  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
-/* 80100C7C 00000018  C0 42 92 9C */	lfs f2, d_a_d_a_alink__LIT_5944(r2)
+/* 80100C7C 00000018  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
 /* 80100C80 0000001C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80100C84 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80100C88 00000024  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
@@ -80,11 +80,11 @@ lbl_80100CC0:
 /* 80100CDC 0000001C  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 80100CE0 00000020  B0 1E 04 DE */	sth r0, 0x4de(r30)
 /* 80100CE4 00000024  7F C3 F3 78 */	mr r3, r30
-/* 80100CE8 00000028  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80100CE8 00000028  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80100CEC 0000002C  C0 5E 05 34 */	lfs f2, 0x534(r30)
 /* 80100CF0 00000030  38 80 00 00 */	li r4, 0
 /* 80100CF4 00000034  4B FB AA 7D */	bl setSpecialGravity__9daAlink_cFffi
-/* 80100CF8 00000038  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 80100CF8 00000038  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 80100CFC 0000003C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 80100D00 00000040  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80100D04 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

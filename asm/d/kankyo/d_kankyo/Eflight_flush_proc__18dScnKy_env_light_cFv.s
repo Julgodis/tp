@@ -13,20 +13,20 @@ lbl_801A4F64:
 /* 801A4F90 0000002C  2C 00 00 00 */	cmpwi r0, 0
 /* 801A4F94 00000030  40 82 00 14 */	bne lbl_801A4FA8
 /* 801A4F98 00000034  3B E3 02 B8 */	addi r31, r3, 0x2b8
-/* 801A4F9C 00000038  C0 22 A2 94 */	lfs f1, d_kankyo_d_kankyo__LIT_5192(r2)
-/* 801A4FA0 0000003C  C0 02 A2 B8 */	lfs f0, LIT_5365(r2)
+/* 801A4F9C 00000038  C0 22 A2 94 */	lfs f1, d_kankyo_d_kankyo__lit_5192(r2)
+/* 801A4FA0 0000003C  C0 02 A2 B8 */	lfs f0, lit_5365(r2)
 /* 801A4FA4 00000040  48 00 00 28 */	b lbl_801A4FCC
 lbl_801A4FA8:
 /* 801A4FA8 00000000  2C 00 00 01 */	cmpwi r0, 1
 /* 801A4FAC 00000004  40 82 00 14 */	bne lbl_801A4FC0
 /* 801A4FB0 00000008  3B E3 02 C8 */	addi r31, r3, 0x2c8
-/* 801A4FB4 0000000C  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__LIT_4409(r2)
-/* 801A4FB8 00000010  C0 02 A2 B8 */	lfs f0, LIT_5365(r2)
+/* 801A4FB4 0000000C  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A4FB8 00000010  C0 02 A2 B8 */	lfs f0, lit_5365(r2)
 /* 801A4FBC 00000014  48 00 00 10 */	b lbl_801A4FCC
 lbl_801A4FC0:
 /* 801A4FC0 00000000  3B E3 02 D8 */	addi r31, r3, 0x2d8
-/* 801A4FC4 00000004  C0 22 A2 94 */	lfs f1, d_kankyo_d_kankyo__LIT_5192(r2)
-/* 801A4FC8 00000008  C0 02 A3 20 */	lfs f0, LIT_6764(r2)
+/* 801A4FC4 00000004  C0 22 A2 94 */	lfs f1, d_kankyo_d_kankyo__lit_5192(r2)
+/* 801A4FC8 00000008  C0 02 A3 20 */	lfs f0, lit_6764(r2)
 lbl_801A4FCC:
 /* 801A4FCC 00000000  88 1E 07 A4 */	lbz r0, 0x7a4(r30)
 /* 801A4FD0 00000004  2C 00 00 02 */	cmpwi r0, 2
@@ -71,9 +71,9 @@ lbl_801A5048:
 /* 801A505C 00000014  88 85 00 04 */	lbz r4, 4(r5)
 /* 801A5060 00000018  7C 00 20 40 */	cmplw r0, r4
 /* 801A5064 0000001C  41 81 00 90 */	bgt lbl_801A50F4
-/* 801A5068 00000020  C0 62 A2 48 */	lfs f3, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A5068 00000020  C0 62 A2 48 */	lfs f3, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A506C 00000024  7C 00 20 50 */	subf r0, r0, r4
-/* 801A5070 00000028  C8 42 A2 30 */	lfd f2, d_kankyo_d_kankyo__LIT_4444(r2)
+/* 801A5070 00000028  C8 42 A2 30 */	lfd f2, d_kankyo_d_kankyo__lit_4444(r2)
 /* 801A5074 0000002C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801A5078 00000030  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801A507C 00000034  3C 60 43 30 */	lis r3, 0x4330

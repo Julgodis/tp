@@ -20,7 +20,7 @@ lbl_801102D0:
 /* 80110318 00000048  3C A0 80 39 */	lis r5, m__20daAlinkHIO_bottle_c0@ha
 /* 8011031C 0000004C  38 C5 E9 0C */	addi r6, r5, m__20daAlinkHIO_bottle_c0@l
 /* 80110320 00000050  C0 26 00 7C */	lfs f1, 0x7c(r6)
-/* 80110324 00000054  C0 42 93 D4 */	lfs f2, LIT_11442(r2)
+/* 80110324 00000054  C0 42 93 D4 */	lfs f2, lit_11442(r2)
 /* 80110328 00000058  A8 A6 00 78 */	lha r5, 0x78(r6)
 /* 8011032C 0000005C  C0 66 00 84 */	lfs f3, 0x84(r6)
 /* 80110330 00000060  4B F9 CC DD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf

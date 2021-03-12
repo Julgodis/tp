@@ -5,64 +5,61 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8dBgS_ChkFv();
-extern void __dt__8dBgS_ChkFv();
-extern void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern void __ct__11dBgS_GndChkFv();
-extern void __dt__11dBgS_GndChkFv();
-extern void __ct__18dBgS_ObjGndChk_WtrFv();
-extern void __dt__18dBgS_ObjGndChk_WtrFv();
-extern void __ct__18dBgS_ObjGndChk_SplFv();
-extern void __dt__18dBgS_ObjGndChk_SplFv();
-extern void __dt__18dBgS_ObjGndChk_AllFv();
-extern void __dt__14dBgS_CamGndChkFv();
-extern void __ct__18dBgS_CamGndChk_WtrFv();
-extern void __dt__18dBgS_CamGndChk_WtrFv();
-extern void func_80077B10();
-extern void func_80077B18();
-extern void func_80077B20();
-extern void func_80077B28();
-extern void func_80077B30();
-extern void func_80077B38();
-extern void func_80077B40();
-extern void func_80077B48();
-extern void func_80077B50();
-extern void func_80077B58();
-extern void func_80077B60();
-extern void func_80077B68();
-extern void func_80077B70();
-extern void func_80077B78();
-extern void func_80077B80();
-extern void func_80077B88();
-extern void func_80077B90();
-extern void func_80077B98();
-extern void SetObj__16dBgS_PolyPassChkFv();
-extern void SetCam__16dBgS_PolyPassChkFv();
-extern void __ct__11cBgS_GndChkFv();
-extern void __dt__11cBgS_GndChkFv();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__14dBgS_ObjGndChk[13];
-SECTION_DATA extern void* __vt__18dBgS_CamGndChk_Wtr[12];
-SECTION_DATA extern void* __vt__14dBgS_CamGndChk[12];
-SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_All[12];
-SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_Spl[12];
-SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_Wtr[12];
-SECTION_DATA extern void* __vt__11dBgS_GndChk[12];
-}
+extern "C" extern void __ct__8dBgS_ChkFv();
+extern "C" extern void __dt__8dBgS_ChkFv();
+extern "C" extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" extern void __ct__11dBgS_GndChkFv();
+extern "C" extern void __dt__11dBgS_GndChkFv();
+extern "C" extern void __ct__18dBgS_ObjGndChk_WtrFv();
+extern "C" extern void __dt__18dBgS_ObjGndChk_WtrFv();
+extern "C" extern void __ct__18dBgS_ObjGndChk_SplFv();
+extern "C" extern void __dt__18dBgS_ObjGndChk_SplFv();
+extern "C" extern void __dt__18dBgS_ObjGndChk_AllFv();
+extern "C" extern void __dt__14dBgS_CamGndChkFv();
+extern "C" extern void __ct__18dBgS_CamGndChk_WtrFv();
+extern "C" extern void __dt__18dBgS_CamGndChk_WtrFv();
+extern "C" extern void func_80077B10();
+extern "C" extern void func_80077B18();
+extern "C" extern void func_80077B20();
+extern "C" extern void func_80077B28();
+extern "C" extern void func_80077B30();
+extern "C" extern void func_80077B38();
+extern "C" extern void func_80077B40();
+extern "C" extern void func_80077B48();
+extern "C" extern void func_80077B50();
+extern "C" extern void func_80077B58();
+extern "C" extern void func_80077B60();
+extern "C" extern void func_80077B68();
+extern "C" extern void func_80077B70();
+extern "C" extern void func_80077B78();
+extern "C" extern void func_80077B80();
+extern "C" extern void func_80077B88();
+extern "C" extern void func_80077B90();
+extern "C" extern void func_80077B98();
+extern "C" extern void SetObj__16dBgS_PolyPassChkFv();
+extern "C" extern void SetCam__16dBgS_PolyPassChkFv();
+extern "C" extern void __ct__11cBgS_GndChkFv();
+extern "C" extern void __dt__11cBgS_GndChkFv();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__14dBgS_ObjGndChk[13];
+SECTION_DATA extern void* const __vt__18dBgS_CamGndChk_Wtr[12];
+SECTION_DATA extern void* const __vt__14dBgS_CamGndChk[12];
+SECTION_DATA extern void* const __vt__18dBgS_ObjGndChk_All[12];
+SECTION_DATA extern void* const __vt__18dBgS_ObjGndChk_Spl[12];
+SECTION_DATA extern void* const __vt__18dBgS_ObjGndChk_Wtr[12];
+SECTION_DATA extern void* const __vt__11dBgS_GndChk[12];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803AB688-803AB6B8 0030 .data      __vt__18dBgS_CamGndChk_Wtr                                   */
-SECTION_DATA void* __vt__18dBgS_CamGndChk_Wtr[12] = {
+void* const __vt__18dBgS_CamGndChk_Wtr[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_CamGndChk_WtrFv,
@@ -76,8 +73,9 @@ SECTION_DATA void* __vt__18dBgS_CamGndChk_Wtr[12] = {
 	NULL,
 	(void*)func_80077B90,
 };
+
 /* 803AB6B8-803AB6E8 0030 .data      __vt__14dBgS_CamGndChk                                       */
-SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
+void* const __vt__14dBgS_CamGndChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14dBgS_CamGndChkFv,
@@ -91,8 +89,9 @@ SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
 	NULL,
 	(void*)func_80077B78,
 };
+
 /* 803AB6E8-803AB718 0030 .data      __vt__18dBgS_ObjGndChk_All                                   */
-SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
+void* const __vt__18dBgS_ObjGndChk_All[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_AllFv,
@@ -106,8 +105,9 @@ SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
 	NULL,
 	(void*)func_80077B60,
 };
+
 /* 803AB718-803AB748 0030 .data      __vt__18dBgS_ObjGndChk_Spl                                   */
-SECTION_DATA void* __vt__18dBgS_ObjGndChk_Spl[12] = {
+void* const __vt__18dBgS_ObjGndChk_Spl[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_SplFv,
@@ -121,8 +121,9 @@ SECTION_DATA void* __vt__18dBgS_ObjGndChk_Spl[12] = {
 	NULL,
 	(void*)func_80077B48,
 };
+
 /* 803AB748-803AB778 0030 .data      __vt__18dBgS_ObjGndChk_Wtr                                   */
-SECTION_DATA void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
+void* const __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_WtrFv,
@@ -136,8 +137,9 @@ SECTION_DATA void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	NULL,
 	(void*)func_80077B30,
 };
+
 /* 803AB778-803AB7A8 0030 .data      __vt__11dBgS_GndChk                                          */
-SECTION_DATA void* __vt__11dBgS_GndChk[12] = {
+void* const __vt__11dBgS_GndChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dBgS_GndChkFv,
@@ -151,288 +153,309 @@ SECTION_DATA void* __vt__11dBgS_GndChk[12] = {
 	NULL,
 	(void*)func_80077B18,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 8007757C-800775F0 0074 .text      __ct__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dBgS_GndChkFv() {
+extern "C" asm void __ct__11dBgS_GndChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__ct__11dBgS_GndChkFv.s"
 }
 #pragma pop
 
+
 /* 800775F0-80077678 0088 .text      __dt__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__11dBgS_GndChkFv() {
+extern "C" asm void __dt__11dBgS_GndChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__11dBgS_GndChkFv.s"
 }
 #pragma pop
 
+
 /* 80077678-80077710 0098 .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__18dBgS_ObjGndChk_WtrFv() {
+extern "C" asm void __ct__18dBgS_ObjGndChk_WtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__ct__18dBgS_ObjGndChk_WtrFv.s"
 }
 #pragma pop
 
+
 /* 80077710-800777B0 00A0 .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__18dBgS_ObjGndChk_WtrFv() {
+extern "C" asm void __dt__18dBgS_ObjGndChk_WtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__18dBgS_ObjGndChk_WtrFv.s"
 }
 #pragma pop
 
+
 /* 800777B0-80077848 0098 .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__18dBgS_ObjGndChk_SplFv() {
+extern "C" asm void __ct__18dBgS_ObjGndChk_SplFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__ct__18dBgS_ObjGndChk_SplFv.s"
 }
 #pragma pop
 
+
 /* 80077848-800778E8 00A0 .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__18dBgS_ObjGndChk_SplFv() {
+extern "C" asm void __dt__18dBgS_ObjGndChk_SplFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__18dBgS_ObjGndChk_SplFv.s"
 }
 #pragma pop
 
+
 /* 800778E8-80077988 00A0 .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__18dBgS_ObjGndChk_AllFv() {
+extern "C" asm void __dt__18dBgS_ObjGndChk_AllFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__18dBgS_ObjGndChk_AllFv.s"
 }
 #pragma pop
 
+
 /* 80077988-80077A00 0078 .text      __dt__14dBgS_CamGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14dBgS_CamGndChkFv() {
+extern "C" asm void __dt__14dBgS_CamGndChkFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__14dBgS_CamGndChkFv.s"
 }
 #pragma pop
 
+
 /* 80077A00-80077A98 0098 .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__18dBgS_CamGndChk_WtrFv() {
+extern "C" asm void __ct__18dBgS_CamGndChk_WtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__ct__18dBgS_CamGndChk_WtrFv.s"
 }
 #pragma pop
 
+
 /* 80077A98-80077B10 0078 .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__18dBgS_CamGndChk_WtrFv() {
+extern "C" asm void __dt__18dBgS_CamGndChk_WtrFv() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/__dt__18dBgS_CamGndChk_WtrFv.s"
 }
 #pragma pop
 
+
 /* 80077B10-80077B18 0008 .text      @20@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B10() {
+extern "C" asm void func_80077B10() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B10.s"
 }
 #pragma pop
 
+
 /* 80077B18-80077B20 0008 .text      @76@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B18() {
+extern "C" asm void func_80077B18() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B18.s"
 }
 #pragma pop
 
+
 /* 80077B20-80077B28 0008 .text      @60@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B20() {
+extern "C" asm void func_80077B20() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B20.s"
 }
 #pragma pop
 
+
 /* 80077B28-80077B30 0008 .text      @20@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B28() {
+extern "C" asm void func_80077B28() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B28.s"
 }
 #pragma pop
 
+
 /* 80077B30-80077B38 0008 .text      @76@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B30() {
+extern "C" asm void func_80077B30() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B30.s"
 }
 #pragma pop
 
+
 /* 80077B38-80077B40 0008 .text      @60@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B38() {
+extern "C" asm void func_80077B38() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B38.s"
 }
 #pragma pop
 
+
 /* 80077B40-80077B48 0008 .text      @20@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B40() {
+extern "C" asm void func_80077B40() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B40.s"
 }
 #pragma pop
 
+
 /* 80077B48-80077B50 0008 .text      @76@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B48() {
+extern "C" asm void func_80077B48() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B48.s"
 }
 #pragma pop
 
+
 /* 80077B50-80077B58 0008 .text      @60@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B50() {
+extern "C" asm void func_80077B50() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B50.s"
 }
 #pragma pop
 
+
 /* 80077B58-80077B60 0008 .text      @20@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B58() {
+extern "C" asm void func_80077B58() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B58.s"
 }
 #pragma pop
 
+
 /* 80077B60-80077B68 0008 .text      @76@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B60() {
+extern "C" asm void func_80077B60() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B60.s"
 }
 #pragma pop
 
+
 /* 80077B68-80077B70 0008 .text      @60@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B68() {
+extern "C" asm void func_80077B68() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B68.s"
 }
 #pragma pop
 
+
 /* 80077B70-80077B78 0008 .text      @20@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B70() {
+extern "C" asm void func_80077B70() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B70.s"
 }
 #pragma pop
 
+
 /* 80077B78-80077B80 0008 .text      @76@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B78() {
+extern "C" asm void func_80077B78() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B78.s"
 }
 #pragma pop
 
+
 /* 80077B80-80077B88 0008 .text      @60@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B80() {
+extern "C" asm void func_80077B80() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B80.s"
 }
 #pragma pop
 
+
 /* 80077B88-80077B90 0008 .text      @20@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B88() {
+extern "C" asm void func_80077B88() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B88.s"
 }
 #pragma pop
 
+
 /* 80077B90-80077B98 0008 .text      @76@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B90() {
+extern "C" asm void func_80077B90() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B90.s"
 }
 #pragma pop
 
+
 /* 80077B98-80077BA0 0008 .text      @60@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80077B98() {
+extern "C" asm void func_80077B98() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_gnd_chk/func_80077B98.s"
 }

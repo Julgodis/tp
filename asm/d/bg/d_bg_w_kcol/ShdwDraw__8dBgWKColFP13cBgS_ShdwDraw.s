@@ -19,7 +19,7 @@ lbl_8007F9A4:
 /* 8007F9E8 00000044  38 A1 00 24 */	addi r5, r1, 0x24
 /* 8007F9EC 00000048  48 2C 76 C9 */	bl PSVECSubtract
 /* 8007F9F0 0000004C  C0 01 00 30 */	lfs f0, 0x30(r1)
-/* 8007F9F4 00000050  C0 42 8D 20 */	lfs f2, d_bg_d_bg_w_kcol__LIT_4189(r2)
+/* 8007F9F4 00000050  C0 42 8D 20 */	lfs f2, d_bg_d_bg_w_kcol__lit_4189(r2)
 /* 8007F9F8 00000054  EC 20 10 28 */	fsubs f1, f0, f2
 /* 8007F9FC 00000058  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 8007FA00 0000005C  C0 01 00 34 */	lfs f0, 0x34(r1)

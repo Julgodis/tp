@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcMtdIt_Method__FP15node_list_classPFPv_i();
-extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-}
+extern "C" extern void fpcMtdIt_Method__FP15node_list_classPFPv_i();
+extern "C" extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80023764-80023788 0024 .text      fpcMtdIt_Method__FP15node_list_classPFPv_i                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcMtdIt_Method__FP15node_list_classPFPv_i() {
+extern "C" asm void fpcMtdIt_Method__FP15node_list_classPFPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_method_iter/fpcMtdIt_Method__FP15node_list_classPFPv_i.s"
 }

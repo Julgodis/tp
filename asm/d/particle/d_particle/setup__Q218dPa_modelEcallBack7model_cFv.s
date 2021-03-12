@@ -15,7 +15,7 @@ lbl_8004A7AC:
 /* 8004A7E0 00000034  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8004A7E4 00000038  48 2E 08 B9 */	bl searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData
 /* 8004A7E8 0000003C  88 1E 03 91 */	lbz r0, 0x391(r30)
-/* 8004A7EC 00000040  C8 22 85 68 */	lfd f1, d_particle_d_particle__LIT_4093(r2)
+/* 8004A7EC 00000040  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
 /* 8004A7F0 00000044  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8004A7F4 00000048  3C 00 43 30 */	lis r0, 0x4330
 /* 8004A7F8 0000004C  90 01 00 08 */	stw r0, 8(r1)
@@ -32,7 +32,7 @@ lbl_8004A81C:
 /* 8004A820 00000004  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8004A824 00000008  48 2E 10 59 */	bl searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData
 /* 8004A828 0000000C  88 1E 03 91 */	lbz r0, 0x391(r30)
-/* 8004A82C 00000010  C8 22 85 68 */	lfd f1, d_particle_d_particle__LIT_4093(r2)
+/* 8004A82C 00000010  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
 /* 8004A830 00000014  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8004A834 00000018  3C 00 43 30 */	lis r0, 0x4330
 /* 8004A838 0000001C  90 01 00 08 */	stw r0, 8(r1)

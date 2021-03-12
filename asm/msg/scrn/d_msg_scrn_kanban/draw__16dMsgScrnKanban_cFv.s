@@ -14,15 +14,15 @@ lbl_80245618:
 /* 80245648 00000030  7D 89 03 A6 */	mtctr r12
 /* 8024564C 00000034  4E 80 04 21 */	bctrl 
 /* 80245650 00000038  80 7E 00 04 */	lwz r3, 4(r30)
-/* 80245654 0000003C  C0 22 B2 C0 */	lfs f1, msg_scrn_d_msg_scrn_kanban__LIT_3944(r2)
+/* 80245654 0000003C  C0 22 B2 C0 */	lfs f1, msg_scrn_d_msg_scrn_kanban__lit_3944(r2)
 /* 80245658 00000040  FC 40 08 90 */	fmr f2, f1
 /* 8024565C 00000044  7F E4 FB 78 */	mr r4, r31
 /* 80245660 00000048  48 0B 38 75 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 80245664 0000004C  80 7E 00 44 */	lwz r3, 0x44(r30)
 /* 80245668 00000050  38 80 00 00 */	li r4, 0
-/* 8024566C 00000054  C0 22 B2 C0 */	lfs f1, msg_scrn_d_msg_scrn_kanban__LIT_3944(r2)
+/* 8024566C 00000054  C0 22 B2 C0 */	lfs f1, msg_scrn_d_msg_scrn_kanban__lit_3944(r2)
 /* 80245670 00000058  FC 40 08 90 */	fmr f2, f1
-/* 80245674 0000005C  C0 62 B2 C4 */	lfs f3, msg_scrn_d_msg_scrn_kanban__LIT_3945(r2)
+/* 80245674 0000005C  C0 62 B2 C4 */	lfs f3, msg_scrn_d_msg_scrn_kanban__lit_3945(r2)
 /* 80245678 00000060  81 83 00 00 */	lwz r12, 0(r3)
 /* 8024567C 00000064  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 80245680 00000068  7D 89 03 A6 */	mtctr r12

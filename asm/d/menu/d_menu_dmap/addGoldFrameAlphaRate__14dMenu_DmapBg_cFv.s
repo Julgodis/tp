@@ -13,7 +13,7 @@ lbl_801BA974:
 /* 801BA9A0 00000018  A8 1F 00 94 */	lha r0, 0x94(r31)
 /* 801BA9A4 0000001C  7C 05 00 00 */	cmpw r5, r0
 /* 801BA9A8 00000020  41 80 00 14 */	blt lbl_801BA9BC
-/* 801BA9AC 00000024  C3 E2 A5 EC */	lfs f31, d_menu_d_menu_dmap__LIT_3963(r2)
+/* 801BA9AC 00000024  C3 E2 A5 EC */	lfs f31, d_menu_d_menu_dmap__lit_3963(r2)
 /* 801BA9B0 00000028  38 80 00 01 */	li r4, 1
 /* 801BA9B4 0000002C  4B FF FD 4D */	bl setGoldAnimation__14dMenu_DmapBg_cFb
 /* 801BA9B8 00000030  48 00 00 68 */	b lbl_801BAA20
@@ -29,7 +29,7 @@ lbl_801BA9BC:
 lbl_801BA9DC:
 /* 801BA9DC 00000000  88 1E 0D D7 */	lbz r0, 0xdd7(r30)
 /* 801BA9E0 00000004  7C 00 01 D6 */	mullw r0, r0, r0
-/* 801BA9E4 00000008  C8 42 A5 F8 */	lfd f2, d_menu_d_menu_dmap__LIT_4108(r2)
+/* 801BA9E4 00000008  C8 42 A5 F8 */	lfd f2, d_menu_d_menu_dmap__lit_4108(r2)
 /* 801BA9E8 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801BA9EC 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801BA9F0 00000014  3C 60 43 30 */	lis r3, 0x4330

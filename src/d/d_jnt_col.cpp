@@ -5,239 +5,226 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void mDoMtx_XrotM__FPA4_fs();
-extern void mDoMtx_YrotM__FPA4_fs();
-extern void transS__14mDoMtx_stack_cFRC4cXyz();
-extern void transM__14mDoMtx_stack_cFfff();
-extern void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
-extern void __ct__9dJntCol_cFv();
-extern void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli();
-extern void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz();
-extern void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi();
-extern void __dt__8cM3dGLinFv();
-extern void __dt__8cM3dGSphFv();
-extern void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz();
-extern void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
-extern void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz();
-extern void __pl__4cXyzCFRC3Vec();
-extern void __mi__4cXyzCFRC3Vec();
-extern void __ml__4cXyzCFf();
-extern void __dv__4cXyzCFf();
-extern void normalizeZP__4cXyzFv();
-extern void atan2sX_Z__4cXyzCFv();
-extern void atan2sY_XZ__4cXyzCFv();
-extern void cM_atan2s__Fff();
-extern void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
-extern void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb();
-extern void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
-extern void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
-extern void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec();
-extern void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec();
-extern void Set__8cM3dGCylFRC4cXyzff();
-extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
-extern void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
-extern void Set__8cM3dGSphFRC4cXyzf();
-extern void __dl__FPv();
-extern void PSMTXCopy();
-extern void PSMTXInverse();
-extern void PSMTXMultVec();
-extern void PSMTXMultVecSR();
-extern void PSVECSquareMag();
-extern void PSVECDotProduct();
-extern void PSVECSquareDistance();
-extern void _savegpr_19();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_19();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__8cM3dGPla[3];
-SECTION_DATA extern void* __vt__8cM3dGCyl[3];
-SECTION_DATA extern void* __vt__8cM3dGLin[3];
-SECTION_DATA extern void* __vt__8cM3dGSph[3];
+extern "C" extern void mDoMtx_XrotM__FPA4_fs();
+extern "C" extern void mDoMtx_YrotM__FPA4_fs();
+extern "C" extern void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" extern void transM__14mDoMtx_stack_cFfff();
+extern "C" extern void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" extern void __ct__9dJntCol_cFv();
+extern "C" extern void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli();
+extern "C" extern void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz();
+extern "C" extern void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi();
+extern "C" extern void __dt__8cM3dGLinFv();
+extern "C" extern void __dt__8cM3dGSphFv();
+extern "C" extern void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz();
+extern "C" extern void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
+extern "C" extern void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz();
+extern "C" extern void __pl__4cXyzCFRC3Vec();
+extern "C" extern void __mi__4cXyzCFRC3Vec();
+extern "C" extern void __ml__4cXyzCFf();
+extern "C" extern void __dv__4cXyzCFf();
+extern "C" extern void normalizeZP__4cXyzFv();
+extern "C" extern void atan2sX_Z__4cXyzCFv();
+extern "C" extern void atan2sY_XZ__4cXyzCFv();
+extern "C" extern void cM_atan2s__Fff();
+extern "C" extern void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
+extern "C" extern void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb();
+extern "C" extern void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
+extern "C" extern void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
+extern "C" extern void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec();
+extern "C" extern void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec();
+extern "C" extern void Set__8cM3dGCylFRC4cXyzff();
+extern "C" extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" extern void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
+extern "C" extern void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" extern void Set__8cM3dGSphFRC4cXyzf();
+extern "C" extern void __dl__FPv();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXInverse();
+extern "C" extern void PSMTXMultVec();
+extern "C" extern void PSMTXMultVecSR();
+extern "C" extern void PSVECSquareMag();
+extern "C" extern void PSVECDotProduct();
+extern "C" extern void PSVECSquareDistance();
+extern "C" extern void _savegpr_19();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_19();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__8cM3dGPla[3];
+SECTION_DATA extern void* const __vt__8cM3dGCyl[3];
+SECTION_DATA extern void* const __vt__8cM3dGLin[3];
+SECTION_DATA extern void* const __vt__8cM3dGSph[3];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 BaseZ__4cXyz[12];
-SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SDATA extern u8 __float_max[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_3655[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4141[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4142[8];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4143[8];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4144[8];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4145[8];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4146[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4147[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4148[4];
-SECTION_SDATA2 extern u8 d_d_jnt_col__LIT_4149[4];
-}
+SECTION_SDATA extern u32 __float_nan;
+SECTION_SDATA extern u32 __float_max;
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_3655;
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4141;
+SECTION_SDATA2 extern u8 d_d_jnt_col__lit_4142[8];
+SECTION_SDATA2 extern f64 d_d_jnt_col__lit_4143;
+SECTION_SDATA2 extern f64 d_d_jnt_col__lit_4144;
+SECTION_SDATA2 extern u8 d_d_jnt_col__lit_4145[8];
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4146;
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4147;
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4148;
+SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4149;
 
-
-/* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 803A78F8-803A7904 000C .data      __vt__8cM3dGLin                                              */
-SECTION_DATA void* __vt__8cM3dGLin[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__8cM3dGLinFv,
-};
-/* 803A7904-803A7910 000C .data      __vt__8cM3dGSph                                              */
-SECTION_DATA void* __vt__8cM3dGSph[3] = {
-	NULL, /* RTTI */
-	NULL,
-	(void*)__dt__8cM3dGSphFv,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451D60-80451D64 0004 .sdata2    @3655                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_3655[4] = {
-	0x43, 0xFA, 0x00, 0x00,
-};
-/* 80451D64-80451D68 0004 .sdata2    @4141                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4141[4] = {
-	0xCB, 0x18, 0x96, 0x80,
-};
-/* 80451D68-80451D70 0004 .sdata2    @4142                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4142[8] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80451D70-80451D78 0008 .sdata2    @4143                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4143[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451D78-80451D80 0008 .sdata2    @4144                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4144[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451D80-80451D88 0008 .sdata2    @4145                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4145[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451D88-80451D8C 0004 .sdata2    @4146                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4146[4] = {
-	0x3C, 0x23, 0xD7, 0x0A,
-};
-/* 80451D8C-80451D90 0004 .sdata2    @4147                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4147[4] = {
-	0x38, 0xD1, 0xB7, 0x17,
-};
-/* 80451D90-80451D94 0004 .sdata2    @4148                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4148[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80451D94-80451D98 0004 .sdata2    @4149                                                        */
-SECTION_SDATA2 u8 d_d_jnt_col__LIT_4149[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80035C8C-80035CA0 0014 .text      __ct__9dJntCol_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__9dJntCol_cFv() {
+extern "C" asm void __ct__9dJntCol_cFv() {
 	nofralloc
 #include "asm/d/d_jnt_col/__ct__9dJntCol_cFv.s"
 }
 #pragma pop
 
+
 /* 80035CA0-80035CC8 0028 .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli() {
+extern "C" asm void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli() {
 	nofralloc
 #include "asm/d/d_jnt_col/init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451D60-80451D64 0004 .sdata2    @3655                                                        */
+f32 d_d_jnt_col__lit_3655 = 500.0f;
+
 /* 80035CC8-80035DC8 0100 .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz() {
+extern "C" asm void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz() {
 	nofralloc
 #include "asm/d/d_jnt_col/setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 803A78F8-803A7904 000C .data      __vt__8cM3dGLin                                              */
+void* const __vt__8cM3dGLin[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__8cM3dGLinFv,
+};
+
+/* 803A7904-803A7910 000C .data      __vt__8cM3dGSph                                              */
+void* const __vt__8cM3dGSph[3] = {
+	NULL, /* RTTI */
+	NULL,
+	(void*)__dt__8cM3dGSphFv,
+};
+
+/* 80451D64-80451D68 0004 .sdata2    @4141                                                        */
+f32 d_d_jnt_col__lit_4141 = -10000000.0f;
+
+/* 80451D68-80451D70 0004 .sdata2    @4142                                                        */
+u8 d_d_jnt_col__lit_4142[8] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80451D70-80451D78 0008 .sdata2    @4143                                                        */
+f64 d_d_jnt_col__lit_4143 = 0.5;
+
+/* 80451D78-80451D80 0008 .sdata2    @4144                                                        */
+f64 d_d_jnt_col__lit_4144 = 3.0;
+
+/* 80451D80-80451D88 0008 .sdata2    @4145                                                        */
+u8 d_d_jnt_col__lit_4145[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80451D88-80451D8C 0004 .sdata2    @4146                                                        */
+f32 d_d_jnt_col__lit_4146 = 1.0f / 100.0f;
+
+/* 80451D8C-80451D90 0004 .sdata2    @4147                                                        */
+f32 d_d_jnt_col__lit_4147 = 9.999999747378752e-05f;
+
+/* 80451D90-80451D94 0004 .sdata2    @4148                                                        */
+f32 d_d_jnt_col__lit_4148 = 0.5f;
+
+/* 80451D94-80451D98 0004 .sdata2    @4149                                                        */
+f32 d_d_jnt_col__lit_4149 = 1.0f;
+
 /* 80035DC8-80036A5C 0C94 .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi() {
+extern "C" asm void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi() {
 	nofralloc
 #include "asm/d/d_jnt_col/searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi.s"
 }
 #pragma pop
 
+
 /* 80036A5C-80036AA4 0048 .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8cM3dGLinFv() {
+extern "C" asm void __dt__8cM3dGLinFv() {
 	nofralloc
 #include "asm/d/d_jnt_col/__dt__8cM3dGLinFv.s"
 }
 #pragma pop
 
+
 /* 80036AA4-80036AEC 0048 .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8cM3dGSphFv() {
+extern "C" asm void __dt__8cM3dGSphFv() {
 	nofralloc
 #include "asm/d/d_jnt_col/__dt__8cM3dGSphFv.s"
 }
 #pragma pop
 
+
 /* 80036AEC-80036C44 0158 .text      getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz() {
+extern "C" asm void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz() {
 	nofralloc
 #include "asm/d/d_jnt_col/getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz.s"
 }
 #pragma pop
 
+
 /* 80036C44-80036FA8 0364 .text      getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi() {
+extern "C" asm void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi() {
 	nofralloc
 #include "asm/d/d_jnt_col/getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi.s"
 }
 #pragma pop
 
+
 /* 80036FA8-80037038 0090 .text      setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz() {
+extern "C" asm void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz() {
 	nofralloc
 #include "asm/d/d_jnt_col/setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz.s"
 }

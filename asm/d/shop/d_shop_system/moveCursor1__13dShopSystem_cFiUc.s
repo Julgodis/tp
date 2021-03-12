@@ -62,12 +62,12 @@ lbl_801987D8:
 /* 801987E0 00000008  4B FF ED E1 */	bl onFlag__13dShopSystem_cFi
 /* 801987E4 0000000C  88 1F 0F 6E */	lbz r0, 0xf6e(r31)
 /* 801987E8 00000010  B0 1F 0F 4C */	sth r0, 0xf4c(r31)
-/* 801987EC 00000014  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__LIT_4494(r2)
+/* 801987EC 00000014  C0 22 A1 18 */	lfs f1, d_shop_d_shop_system__lit_4494(r2)
 /* 801987F0 00000018  D0 3F 0F 38 */	stfs f1, 0xf38(r31)
-/* 801987F4 0000001C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__LIT_4495(r2)
+/* 801987F4 0000001C  C0 02 A1 1C */	lfs f0, d_shop_d_shop_system__lit_4495(r2)
 /* 801987F8 00000020  D0 1F 0F 3C */	stfs f0, 0xf3c(r31)
 /* 801987FC 00000024  D0 3F 0F 40 */	stfs f1, 0xf40(r31)
-/* 80198800 00000028  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__LIT_4496(r2)
+/* 80198800 00000028  C0 02 A1 20 */	lfs f0, d_shop_d_shop_system__lit_4496(r2)
 /* 80198804 0000002C  D0 1F 0F 44 */	stfs f0, 0xf44(r31)
 /* 80198808 00000030  88 7F 0F 6E */	lbz r3, 0xf6e(r31)
 /* 8019880C 00000034  28 03 00 00 */	cmplwi r3, 0

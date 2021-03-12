@@ -5,35 +5,32 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dl__FPv();
-extern void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
-extern void control__8JUTFaderFv();
-extern void draw__8JUTFaderFv();
-extern void startFadeIn__8JUTFaderFi();
-extern void startFadeOut__8JUTFaderFi();
-extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
-extern void __dt__8JUTFaderFv();
-extern void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern void func_802E9260();
-extern void __ct__13J2DOrthoGraphFv();
-SECTION_DATA extern void* __vt__8JUTFader[6];
-SECTION_DATA extern void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
-SECTION_SDATA2 extern u8 LIT_2196[8];
-}
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
+extern "C" extern void control__8JUTFaderFv();
+extern "C" extern void draw__8JUTFaderFv();
+extern "C" extern void startFadeIn__8JUTFaderFi();
+extern "C" extern void startFadeOut__8JUTFaderFi();
+extern "C" extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+extern "C" extern void __dt__8JUTFaderFv();
+extern "C" extern void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void func_802E9260();
+extern "C" extern void __ct__13J2DOrthoGraphFv();
+SECTION_DATA extern void* const __vt__8JUTFader[6];
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__13J2DOrthoGraph[10];
+SECTION_SDATA2 extern f64 lit_2196;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803CC990-803CC9A8 0018 .data      __vt__8JUTFader                                              */
-SECTION_DATA void* __vt__8JUTFader[6] = {
+void* const __vt__8JUTFader[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8JUTFaderFv,
@@ -41,90 +38,81 @@ SECTION_DATA void* __vt__8JUTFader[6] = {
 	(void*)startFadeOut__8JUTFaderFi,
 	(void*)draw__8JUTFaderFv,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 804560D0-804560D8 0008 .sdata2    @2196                                                        */
-SECTION_SDATA2 u8 LIT_2196[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 lit_2196 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802E5530-802E55DC 00AC .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8JUTFaderFiiiiQ28JUtility6TColor() {
+extern "C" asm void __ct__8JUTFaderFiiiiQ28JUtility6TColor() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/__ct__8JUTFaderFiiiiQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 802E55DC-802E56DC 0100 .text      control__8JUTFaderFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void control__8JUTFaderFv() {
+extern "C" asm void control__8JUTFaderFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/control__8JUTFaderFv.s"
 }
 #pragma pop
 
+
 /* 802E56DC-802E576C 0090 .text      draw__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__8JUTFaderFv() {
+extern "C" asm void draw__8JUTFaderFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/draw__8JUTFaderFv.s"
 }
 #pragma pop
 
+
 /* 802E576C-802E579C 0030 .text      startFadeIn__8JUTFaderFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startFadeIn__8JUTFaderFi() {
+extern "C" asm void startFadeIn__8JUTFaderFi() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeIn__8JUTFaderFi.s"
 }
 #pragma pop
 
+
 /* 802E579C-802E57D0 0034 .text      startFadeOut__8JUTFaderFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startFadeOut__8JUTFaderFi() {
+extern "C" asm void startFadeOut__8JUTFaderFi() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeOut__8JUTFaderFi.s"
 }
 #pragma pop
 
+
 /* 802E57D0-802E5840 0070 .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setStatus__8JUTFaderFQ28JUTFader7EStatusi() {
+extern "C" asm void setStatus__8JUTFaderFQ28JUTFader7EStatusi() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/setStatus__8JUTFaderFQ28JUTFader7EStatusi.s"
 }
 #pragma pop
 
+
 /* 802E5840-802E5888 0048 .text      __dt__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8JUTFaderFv() {
+extern "C" asm void __dt__8JUTFaderFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/__dt__8JUTFaderFv.s"
 }

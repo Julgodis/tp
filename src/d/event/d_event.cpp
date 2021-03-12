@@ -5,125 +5,124 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fadeOut__13mDoGph_gInf_cFf();
-extern void fopAcIt_Judge__FPFPvPv_PvPv();
-extern void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
-extern void fopAcM_getItemEventPartner__FPC10fopAc_ac_c();
-extern void fpcSch_JudgeByID__FPvPv();
-extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern void dStage_changeScene4Event__FiScibfUlsi();
-extern void dComIfGp_getSelectItem__Fi();
-extern void dComIfG_getStageRes__FPCc();
-extern void dComIfG_getRoomArcName__Fi();
-extern void dComIfGs_onVisitedRoom__Fi();
-extern void __dt__12dEvt_order_cFv();
-extern void offEventBit__11dSv_event_cFUs();
-extern void onSwitch__10dSv_info_cFii();
-extern void isSwitch__10dSv_info_cCFii();
-extern void dead__12daItemBase_cFv();
-extern void end__7dDemo_cFv();
-extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern void func_80041480();
-extern void func_80041488();
-extern void __ct__14dEvt_control_cFv();
-extern void __ct__12dEvt_order_cFv();
-extern void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv();
-extern void order__14dEvt_control_cFUsUsUsUsPvPvsUc();
-extern void setParam__14dEvt_control_cFP12dEvt_order_c();
-extern void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c();
-extern void afterFlagProc__14dEvt_control_cFP12dEvt_order_c();
-extern void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs();
-extern void talkCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void talkXyCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void catchCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void talkEnd__14dEvt_control_cFv();
-extern void demoCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void demoEnd__14dEvt_control_cFv();
-extern void potentialCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void doorCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void itemCheck__14dEvt_control_cFP12dEvt_order_c();
-extern void endProc__14dEvt_control_cFv();
-extern void change__14dEvt_control_cFv();
-extern void entry__14dEvt_control_cFv();
-extern void reset__14dEvt_control_cFv();
-extern void reset__14dEvt_control_cFPv();
-extern void clearSkipSystem__14dEvt_control_cFv();
-extern void dEv_defaultSkipProc__FPvi();
-extern void dEv_defaultSkipZev__FPvi();
-extern void dEv_defaultSkipStb__FPvi();
-extern void dEv_noFinishSkipProc__FPvi();
-extern void getSkipEventName__14dEvt_control_cFv();
-extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
-extern void setSkipZev__14dEvt_control_cFPvPc();
-extern void onSkipFade__14dEvt_control_cFv();
-extern void offSkipFade__14dEvt_control_cFv();
-extern void skipper__14dEvt_control_cFv();
-extern void Step__14dEvt_control_cFv();
-extern void moveApproval__14dEvt_control_cFPv();
-extern void compulsory__14dEvt_control_cFPvPCcUs();
-extern void remove__14dEvt_control_cFv();
-extern void getStageEventDt__14dEvt_control_cFv();
-extern void sceneChange__14dEvt_control_cFi();
-extern void getPId__14dEvt_control_cFPv();
-extern void convPId__14dEvt_control_cFUi();
-extern void getStbDemoData__14dEvt_control_cFPc();
-extern void __ct__11dEvt_info_cFv();
-extern void setEventName__11dEvt_info_cFPc();
-extern void getEventName__11dEvt_info_cFv();
-extern void beforeProc__11dEvt_info_cFv();
-extern void searchMapEventData__14dEvt_control_cFUc();
-extern void searchMapEventData__14dEvt_control_cFUcl();
-extern void runningEventID__14dEvt_control_cFs();
-extern void setPt1__14dEvt_control_cFPv();
-extern void setPt2__14dEvt_control_cFPv();
-extern void setPtT__14dEvt_control_cFPv();
-extern void setPtI__14dEvt_control_cFPv();
-extern void setPtI_Id__14dEvt_control_cFUi();
-extern void setPtD__14dEvt_control_cFPv();
-extern void setGtItm__14dEvt_control_cFUc();
-extern void forceFinish__12dEvDtEvent_cFv();
-extern void setStartDemo__18dEvent_exception_cFi();
-extern void setObjectArchive__16dEvent_manager_cFPc();
-extern void endProc__16dEvent_manager_cFsi();
-extern void Sequencer__16dEvent_manager_cFv();
-extern void Experts__16dEvent_manager_cFv();
-extern void getEventData__16dEvent_manager_cFs();
-extern void getEventIdx__16dEvent_manager_cFPCcUcl();
-extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
-extern void order__16dEvent_manager_cFs();
-extern void issueStaff__16dEvent_manager_cFPCc();
-extern void cancelStaff__16dEvent_manager_cFPCc();
-extern void StopQuake__12dVibration_cFi();
-extern void QuickStart__9dCamera_cFv();
-extern void dCam_getBody__Fv();
-extern void onKillMessageFlag__12dMsgObject_cFv();
-extern void setKillMessageFlag__12dMsgObject_cFv();
-extern void endFlowGroup__12dMsgObject_cFv();
-extern void setDemoName__11Z2StatusMgrFPc();
-extern void __construct_array();
-extern void _savegpr_22();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_22();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void strcat();
-extern void strncpy();
-extern void strcpy();
+extern "C" extern void fadeOut__13mDoGph_gInf_cFf();
+extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" extern void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" extern void fopAcM_getItemEventPartner__FPC10fopAc_ac_c();
+extern "C" extern void fpcSch_JudgeByID__FPvPv();
+extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" extern void dStage_changeScene4Event__FiScibfUlsi();
+extern "C" extern void dComIfGp_getSelectItem__Fi();
+extern "C" extern void dComIfG_getStageRes__FPCc();
+extern "C" extern void dComIfG_getRoomArcName__Fi();
+extern "C" extern void dComIfGs_onVisitedRoom__Fi();
+extern "C" extern void __dt__12dEvt_order_cFv();
+extern "C" extern void offEventBit__11dSv_event_cFUs();
+extern "C" extern void onSwitch__10dSv_info_cFii();
+extern "C" extern void isSwitch__10dSv_info_cCFii();
+extern "C" extern void dead__12daItemBase_cFv();
+extern "C" extern void end__7dDemo_cFv();
+extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" extern void func_80041480();
+extern "C" extern void func_80041488();
+extern "C" extern void __ct__14dEvt_control_cFv();
+extern "C" extern void __ct__12dEvt_order_cFv();
+extern "C" extern void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv();
+extern "C" extern void order__14dEvt_control_cFUsUsUsUsPvPvsUc();
+extern "C" extern void setParam__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void afterFlagProc__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs();
+extern "C" extern void talkCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void talkXyCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void catchCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void talkEnd__14dEvt_control_cFv();
+extern "C" extern void demoCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void demoEnd__14dEvt_control_cFv();
+extern "C" extern void potentialCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void doorCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void itemCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" extern void endProc__14dEvt_control_cFv();
+extern "C" extern void change__14dEvt_control_cFv();
+extern "C" extern void entry__14dEvt_control_cFv();
+extern "C" extern void reset__14dEvt_control_cFv();
+extern "C" extern void reset__14dEvt_control_cFPv();
+extern "C" extern void clearSkipSystem__14dEvt_control_cFv();
+extern "C" extern void dEv_defaultSkipProc__FPvi();
+extern "C" extern void dEv_defaultSkipZev__FPvi();
+extern "C" extern void dEv_defaultSkipStb__FPvi();
+extern "C" extern void dEv_noFinishSkipProc__FPvi();
+extern "C" extern void getSkipEventName__14dEvt_control_cFv();
+extern "C" extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" extern void setSkipZev__14dEvt_control_cFPvPc();
+extern "C" extern void onSkipFade__14dEvt_control_cFv();
+extern "C" extern void offSkipFade__14dEvt_control_cFv();
+extern "C" extern void skipper__14dEvt_control_cFv();
+extern "C" extern void Step__14dEvt_control_cFv();
+extern "C" extern void moveApproval__14dEvt_control_cFPv();
+extern "C" extern void compulsory__14dEvt_control_cFPvPCcUs();
+extern "C" extern void remove__14dEvt_control_cFv();
+extern "C" extern void getStageEventDt__14dEvt_control_cFv();
+extern "C" extern void sceneChange__14dEvt_control_cFi();
+extern "C" extern void getPId__14dEvt_control_cFPv();
+extern "C" extern void convPId__14dEvt_control_cFUi();
+extern "C" extern void getStbDemoData__14dEvt_control_cFPc();
+extern "C" extern void __ct__11dEvt_info_cFv();
+extern "C" extern void setEventName__11dEvt_info_cFPc();
+extern "C" extern void getEventName__11dEvt_info_cFv();
+extern "C" extern void beforeProc__11dEvt_info_cFv();
+extern "C" extern void searchMapEventData__14dEvt_control_cFUc();
+extern "C" extern void searchMapEventData__14dEvt_control_cFUcl();
+extern "C" extern void runningEventID__14dEvt_control_cFs();
+extern "C" extern void setPt1__14dEvt_control_cFPv();
+extern "C" extern void setPt2__14dEvt_control_cFPv();
+extern "C" extern void setPtT__14dEvt_control_cFPv();
+extern "C" extern void setPtI__14dEvt_control_cFPv();
+extern "C" extern void setPtI_Id__14dEvt_control_cFUi();
+extern "C" extern void setPtD__14dEvt_control_cFPv();
+extern "C" extern void setGtItm__14dEvt_control_cFUc();
+extern "C" extern void forceFinish__12dEvDtEvent_cFv();
+extern "C" extern void setStartDemo__18dEvent_exception_cFi();
+extern "C" extern void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" extern void endProc__16dEvent_manager_cFsi();
+extern "C" extern void Sequencer__16dEvent_manager_cFv();
+extern "C" extern void Experts__16dEvent_manager_cFv();
+extern "C" extern void getEventData__16dEvent_manager_cFs();
+extern "C" extern void getEventIdx__16dEvent_manager_cFPCcUcl();
+extern "C" extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" extern void order__16dEvent_manager_cFs();
+extern "C" extern void issueStaff__16dEvent_manager_cFPCc();
+extern "C" extern void cancelStaff__16dEvent_manager_cFPCc();
+extern "C" extern void StopQuake__12dVibration_cFi();
+extern "C" extern void QuickStart__9dCamera_cFv();
+extern "C" extern void dCam_getBody__Fv();
+extern "C" extern void onKillMessageFlag__12dMsgObject_cFv();
+extern "C" extern void setKillMessageFlag__12dMsgObject_cFv();
+extern "C" extern void endFlowGroup__12dMsgObject_cFv();
+extern "C" extern void setDemoName__11Z2StatusMgrFPc();
+extern "C" extern void __construct_array();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void strcat();
+extern "C" extern void strncpy();
+extern "C" extern void strcpy();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
 SECTION_RODATA extern const u8 d_event_d_event__stringBase0[80];
-SECTION_DATA extern void* __vt__11dEvt_info_c[4];
-SECTION_DATA extern void* d_event_d_event__LIT_4719[14];
+SECTION_DATA extern void* const __vt__11dEvt_info_c[4];
+SECTION_DATA extern void* d_event_d_event__lit_4719[14];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -131,18 +130,108 @@ SECTION_SBSS extern u8 struct_80450D64[4];
 SECTION_SBSS extern u8 m_mode__7dDemo_c[4];
 SECTION_SBSS extern u8 m_midnaActor__9daPy_py_c[4];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-SECTION_SDATA2 extern u8 d_event_d_event__LIT_4361[4];
-SECTION_SDATA2 extern u8 LIT_4904[4];
-SECTION_SDATA2 extern u8 LIT_5013[4];
-SECTION_SDATA2 extern u8 LIT_5095[4];
+SECTION_SDATA2 extern f32 d_event_d_event__lit_4361;
+SECTION_SDATA2 extern f32 lit_4904;
+SECTION_SDATA2 extern f32 lit_5013;
+SECTION_SDATA2 extern u8 lit_5095[4];
+
+// 
+// Functions:
+// 
+
+/* 80041480-80041488 0008 .text      event_debug_evnt__21@unnamed@d_event_cpp@Fv                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_80041480() {
+	nofralloc
+#include "asm/d/event/d_event/func_80041480.s"
 }
+#pragma pop
+
+
+/* 80041488-80041580 00F8 .text      clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void func_80041488() {
+	nofralloc
+#include "asm/d/event/d_event/func_80041488.s"
+}
+#pragma pop
+
+
+/* 80041580-800415D4 0054 .text      __ct__14dEvt_control_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__14dEvt_control_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/__ct__14dEvt_control_cFv.s"
+}
+#pragma pop
+
+
+/* 800415D4-800415D8 0004 .text      __ct__12dEvt_order_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __ct__12dEvt_order_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/__ct__12dEvt_order_cFv.s"
+}
+#pragma pop
+
+
+/* 800415D8-80041668 0090 .text      orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv() {
+	nofralloc
+#include "asm/d/event/d_event/orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv.s"
+}
+#pragma pop
+
+
+/* 80041668-80041804 019C .text      order__14dEvt_control_cFUsUsUsUsPvPvsUc                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void order__14dEvt_control_cFUsUsUsUsPvPvsUc() {
+	nofralloc
+#include "asm/d/event/d_event/order__14dEvt_control_cFUsUsUsUsPvPvsUc.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80451EC0-80451EC4 0004 .sdata2    @4361                                                        */
+f32 d_event_d_event__lit_4361 = 1.0f;
 
-extern "C" {
+/* 80041804-80041934 0130 .text      setParam__14dEvt_control_cFP12dEvt_order_c                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void setParam__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/setParam__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80041934-80041964 0030 .text      beforeFlagProc__14dEvt_control_cFP12dEvt_order_c             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/beforeFlagProc__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 80379D80-80379DD0 004E .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -158,16 +247,153 @@ SECTION_DEAD const char* const stringBase_80379DC6 = "GIVEMAN";
 /* @stringBase0 padding */
 SECTION_DEAD const char* const pad_80379DCE = "\0";
 #pragma pop
+
+/* 80041964-800419A8 0044 .text      afterFlagProc__14dEvt_control_cFP12dEvt_order_c              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void afterFlagProc__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/afterFlagProc__14dEvt_control_cFP12dEvt_order_c.s"
 }
+#pragma pop
+
+
+/* 800419A8-80041A20 0078 .text      commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs() {
+	nofralloc
+#include "asm/d/event/d_event/commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs.s"
+}
+#pragma pop
+
+
+/* 80041A20-80041B58 0138 .text      talkCheck__14dEvt_control_cFP12dEvt_order_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/talkCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80041B58-80041C90 0138 .text      talkXyCheck__14dEvt_control_cFP12dEvt_order_c                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkXyCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/talkXyCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80041C90-80041D34 00A4 .text      catchCheck__14dEvt_control_cFP12dEvt_order_c                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void catchCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/catchCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80041D34-80041DDC 00A8 .text      talkEnd__14dEvt_control_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void talkEnd__14dEvt_control_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/talkEnd__14dEvt_control_cFv.s"
+}
+#pragma pop
+
+
+/* 80041DDC-80041F18 013C .text      demoCheck__14dEvt_control_cFP12dEvt_order_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void demoCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/demoCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80041F18-80041FA0 0088 .text      demoEnd__14dEvt_control_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void demoEnd__14dEvt_control_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/demoEnd__14dEvt_control_cFv.s"
+}
+#pragma pop
+
+
+/* 80041FA0-80042014 0074 .text      potentialCheck__14dEvt_control_cFP12dEvt_order_c             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void potentialCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/potentialCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 80042014-8004212C 0118 .text      doorCheck__14dEvt_control_cFP12dEvt_order_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void doorCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/doorCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 8004212C-800421C0 0094 .text      itemCheck__14dEvt_control_cFP12dEvt_order_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void itemCheck__14dEvt_control_cFP12dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/itemCheck__14dEvt_control_cFP12dEvt_order_c.s"
+}
+#pragma pop
+
+
+/* 800421C0-80042254 0094 .text      endProc__14dEvt_control_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void endProc__14dEvt_control_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/endProc__14dEvt_control_cFv.s"
+}
+#pragma pop
+
+
+/* 80042254-800422C0 006C .text      change__14dEvt_control_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void change__14dEvt_control_cFv() {
+	nofralloc
+#include "asm/d/event/d_event/change__14dEvt_control_cFv.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A7F78-803A7FB0 0038 .data      @4719                                                        */
-SECTION_DATA void* d_event_d_event__LIT_4719[14] = {
+void* d_event_d_event__lit_4719[14] = {
 	(void*)(((char*)entry__14dEvt_control_cFv)+0x70),
 	(void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
 	(void*)(((char*)entry__14dEvt_control_cFv)+0x94),
@@ -183,612 +409,422 @@ SECTION_DATA void* d_event_d_event__LIT_4719[14] = {
 	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
 	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451EC0-80451EC4 0004 .sdata2    @4361                                                        */
-SECTION_SDATA2 u8 d_event_d_event__LIT_4361[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80451EC4-80451EC8 0004 .sdata2    @4904                                                        */
-SECTION_SDATA2 u8 LIT_4904[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 80451EC8-80451ECC 0004 .sdata2    @5013                                                        */
-SECTION_SDATA2 u8 LIT_5013[4] = {
-	0xBD, 0x4C, 0xCC, 0xCD,
-};
-/* 80451ECC-80451ED0 0004 .sdata2    @5095                                                        */
-SECTION_SDATA2 u8 LIT_5095[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 80041480-80041488 0008 .text      event_debug_evnt__21@unnamed@d_event_cpp@Fv                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_80041480() {
-	nofralloc
-#include "asm/d/event/d_event/func_80041480.s"
-}
-#pragma pop
-
-/* 80041488-80041580 00F8 .text      clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void func_80041488() {
-	nofralloc
-#include "asm/d/event/d_event/func_80041488.s"
-}
-#pragma pop
-
-/* 80041580-800415D4 0054 .text      __ct__14dEvt_control_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__14dEvt_control_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/__ct__14dEvt_control_cFv.s"
-}
-#pragma pop
-
-/* 800415D4-800415D8 0004 .text      __ct__12dEvt_order_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void __ct__12dEvt_order_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/__ct__12dEvt_order_cFv.s"
-}
-#pragma pop
-
-/* 800415D8-80041668 0090 .text      orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv() {
-	nofralloc
-#include "asm/d/event/d_event/orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv.s"
-}
-#pragma pop
-
-/* 80041668-80041804 019C .text      order__14dEvt_control_cFUsUsUsUsPvPvsUc                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void order__14dEvt_control_cFUsUsUsUsPvPvsUc() {
-	nofralloc
-#include "asm/d/event/d_event/order__14dEvt_control_cFUsUsUsUsPvPvsUc.s"
-}
-#pragma pop
-
-/* 80041804-80041934 0130 .text      setParam__14dEvt_control_cFP12dEvt_order_c                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void setParam__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/setParam__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041934-80041964 0030 .text      beforeFlagProc__14dEvt_control_cFP12dEvt_order_c             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/beforeFlagProc__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041964-800419A8 0044 .text      afterFlagProc__14dEvt_control_cFP12dEvt_order_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void afterFlagProc__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/afterFlagProc__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 800419A8-80041A20 0078 .text      commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs() {
-	nofralloc
-#include "asm/d/event/d_event/commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs.s"
-}
-#pragma pop
-
-/* 80041A20-80041B58 0138 .text      talkCheck__14dEvt_control_cFP12dEvt_order_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/talkCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041B58-80041C90 0138 .text      talkXyCheck__14dEvt_control_cFP12dEvt_order_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkXyCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/talkXyCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041C90-80041D34 00A4 .text      catchCheck__14dEvt_control_cFP12dEvt_order_c                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void catchCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/catchCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041D34-80041DDC 00A8 .text      talkEnd__14dEvt_control_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void talkEnd__14dEvt_control_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/talkEnd__14dEvt_control_cFv.s"
-}
-#pragma pop
-
-/* 80041DDC-80041F18 013C .text      demoCheck__14dEvt_control_cFP12dEvt_order_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void demoCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/demoCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80041F18-80041FA0 0088 .text      demoEnd__14dEvt_control_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void demoEnd__14dEvt_control_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/demoEnd__14dEvt_control_cFv.s"
-}
-#pragma pop
-
-/* 80041FA0-80042014 0074 .text      potentialCheck__14dEvt_control_cFP12dEvt_order_c             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void potentialCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/potentialCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 80042014-8004212C 0118 .text      doorCheck__14dEvt_control_cFP12dEvt_order_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void doorCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/doorCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 8004212C-800421C0 0094 .text      itemCheck__14dEvt_control_cFP12dEvt_order_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void itemCheck__14dEvt_control_cFP12dEvt_order_c() {
-	nofralloc
-#include "asm/d/event/d_event/itemCheck__14dEvt_control_cFP12dEvt_order_c.s"
-}
-#pragma pop
-
-/* 800421C0-80042254 0094 .text      endProc__14dEvt_control_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void endProc__14dEvt_control_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/endProc__14dEvt_control_cFv.s"
-}
-#pragma pop
-
-/* 80042254-800422C0 006C .text      change__14dEvt_control_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void change__14dEvt_control_cFv() {
-	nofralloc
-#include "asm/d/event/d_event/change__14dEvt_control_cFv.s"
-}
-#pragma pop
 
 /* 800422C0-80042468 01A8 .text      entry__14dEvt_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entry__14dEvt_control_cFv() {
+extern "C" asm void entry__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/entry__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80042468-80042518 00B0 .text      reset__14dEvt_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__14dEvt_control_cFv() {
+extern "C" asm void reset__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/reset__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80042518-800425B4 009C .text      reset__14dEvt_control_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void reset__14dEvt_control_cFPv() {
+extern "C" asm void reset__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/reset__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 800425B4-800425E8 0034 .text      clearSkipSystem__14dEvt_control_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void clearSkipSystem__14dEvt_control_cFv() {
+extern "C" asm void clearSkipSystem__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/clearSkipSystem__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 800425E8-8004261C 0034 .text      dEv_defaultSkipProc__FPvi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipProc__FPvi() {
+extern "C" asm void dEv_defaultSkipProc__FPvi() {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipProc__FPvi.s"
 }
 #pragma pop
 
+
 /* 8004261C-80042778 015C .text      dEv_defaultSkipZev__FPvi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipZev__FPvi() {
+extern "C" asm void dEv_defaultSkipZev__FPvi() {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipZev__FPvi.s"
 }
 #pragma pop
 
+
 /* 80042778-800428DC 0164 .text      dEv_defaultSkipStb__FPvi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipStb__FPvi() {
+extern "C" asm void dEv_defaultSkipStb__FPvi() {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipStb__FPvi.s"
 }
 #pragma pop
 
+
 /* 800428DC-8004290C 0030 .text      dEv_noFinishSkipProc__FPvi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_noFinishSkipProc__FPvi() {
+extern "C" asm void dEv_noFinishSkipProc__FPvi() {
 	nofralloc
 #include "asm/d/event/d_event/dEv_noFinishSkipProc__FPvi.s"
 }
 #pragma pop
 
+
 /* 8004290C-80042914 0008 .text      getSkipEventName__14dEvt_control_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSkipEventName__14dEvt_control_cFv() {
+extern "C" asm void getSkipEventName__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/getSkipEventName__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80042914-80042958 0044 .text      setSkipProc__14dEvt_control_cFPvPFPvi_ii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSkipProc__14dEvt_control_cFPvPFPvi_ii() {
+extern "C" asm void setSkipProc__14dEvt_control_cFPvPFPvi_ii() {
 	nofralloc
 #include "asm/d/event/d_event/setSkipProc__14dEvt_control_cFPvPFPvi_ii.s"
 }
 #pragma pop
 
+
 /* 80042958-800429A8 0050 .text      setSkipZev__14dEvt_control_cFPvPc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setSkipZev__14dEvt_control_cFPvPc() {
+extern "C" asm void setSkipZev__14dEvt_control_cFPvPc() {
 	nofralloc
 #include "asm/d/event/d_event/setSkipZev__14dEvt_control_cFPvPc.s"
 }
 #pragma pop
 
+
 /* 800429A8-800429B4 000C .text      onSkipFade__14dEvt_control_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void onSkipFade__14dEvt_control_cFv() {
+extern "C" asm void onSkipFade__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/onSkipFade__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 800429B4-800429D4 0020 .text      offSkipFade__14dEvt_control_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void offSkipFade__14dEvt_control_cFv() {
+extern "C" asm void offSkipFade__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/offSkipFade__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451EC4-80451EC8 0004 .sdata2    @4904                                                        */
+f32 lit_4904 = 1.0f / 10.0f;
+
 /* 800429D4-80042BBC 01E8 .text      skipper__14dEvt_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void skipper__14dEvt_control_cFv() {
+extern "C" asm void skipper__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/skipper__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451EC8-80451ECC 0004 .sdata2    @5013                                                        */
+f32 lit_5013 = -1.0f / 20.0f;
+
 /* 80042BBC-80042FA8 03EC .text      Step__14dEvt_control_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Step__14dEvt_control_cFv() {
+extern "C" asm void Step__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/Step__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80042FA8-8004316C 01C4 .text      moveApproval__14dEvt_control_cFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void moveApproval__14dEvt_control_cFPv() {
+extern "C" asm void moveApproval__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/moveApproval__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 8004316C-800431E8 007C .text      compulsory__14dEvt_control_cFPvPCcUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void compulsory__14dEvt_control_cFPvPCcUs() {
+extern "C" asm void compulsory__14dEvt_control_cFPvPCcUs() {
 	nofralloc
 #include "asm/d/event/d_event/compulsory__14dEvt_control_cFPvPCcUs.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451ECC-80451ED0 0004 .sdata2    @5095                                                        */
+u8 lit_5095[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 800431E8-80043278 0090 .text      remove__14dEvt_control_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void remove__14dEvt_control_cFv() {
+extern "C" asm void remove__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/remove__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80043278-80043280 0008 .text      getStageEventDt__14dEvt_control_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStageEventDt__14dEvt_control_cFv() {
+extern "C" asm void getStageEventDt__14dEvt_control_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/getStageEventDt__14dEvt_control_cFv.s"
 }
 #pragma pop
 
+
 /* 80043280-800432C8 0048 .text      sceneChange__14dEvt_control_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sceneChange__14dEvt_control_cFi() {
+extern "C" asm void sceneChange__14dEvt_control_cFi() {
 	nofralloc
 #include "asm/d/event/d_event/sceneChange__14dEvt_control_cFi.s"
 }
 #pragma pop
 
+
 /* 800432C8-800432EC 0024 .text      getPId__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getPId__14dEvt_control_cFPv() {
+extern "C" asm void getPId__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/getPId__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 800432EC-8004331C 0030 .text      convPId__14dEvt_control_cFUi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void convPId__14dEvt_control_cFUi() {
+extern "C" asm void convPId__14dEvt_control_cFUi() {
 	nofralloc
 #include "asm/d/event/d_event/convPId__14dEvt_control_cFUi.s"
 }
 #pragma pop
 
+
 /* 8004331C-800433F0 00D4 .text      getStbDemoData__14dEvt_control_cFPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getStbDemoData__14dEvt_control_cFPc() {
+extern "C" asm void getStbDemoData__14dEvt_control_cFPc() {
 	nofralloc
 #include "asm/d/event/d_event/getStbDemoData__14dEvt_control_cFPc.s"
 }
 #pragma pop
 
+
 /* 800433F0-80043428 0038 .text      __ct__11dEvt_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11dEvt_info_cFv() {
+extern "C" asm void __ct__11dEvt_info_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/__ct__11dEvt_info_cFv.s"
 }
 #pragma pop
 
+
 /* 80043428-80043480 0058 .text      setEventName__11dEvt_info_cFPc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setEventName__11dEvt_info_cFPc() {
+extern "C" asm void setEventName__11dEvt_info_cFPc() {
 	nofralloc
 #include "asm/d/event/d_event/setEventName__11dEvt_info_cFPc.s"
 }
 #pragma pop
 
+
 /* 80043480-800434CC 004C .text      getEventName__11dEvt_info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getEventName__11dEvt_info_cFv() {
+extern "C" asm void getEventName__11dEvt_info_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/getEventName__11dEvt_info_cFv.s"
 }
 #pragma pop
 
+
 /* 800434CC-800434D8 000C .text      beforeProc__11dEvt_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void beforeProc__11dEvt_info_cFv() {
+extern "C" asm void beforeProc__11dEvt_info_cFv() {
 	nofralloc
 #include "asm/d/event/d_event/beforeProc__11dEvt_info_cFv.s"
 }
 #pragma pop
 
+
 /* 800434D8-80043500 0028 .text      searchMapEventData__14dEvt_control_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchMapEventData__14dEvt_control_cFUc() {
+extern "C" asm void searchMapEventData__14dEvt_control_cFUc() {
 	nofralloc
 #include "asm/d/event/d_event/searchMapEventData__14dEvt_control_cFUc.s"
 }
 #pragma pop
 
+
 /* 80043500-8004360C 010C .text      searchMapEventData__14dEvt_control_cFUcl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void searchMapEventData__14dEvt_control_cFUcl() {
+extern "C" asm void searchMapEventData__14dEvt_control_cFUcl() {
 	nofralloc
 #include "asm/d/event/d_event/searchMapEventData__14dEvt_control_cFUcl.s"
 }
 #pragma pop
 
+
 /* 8004360C-8004362C 0020 .text      runningEventID__14dEvt_control_cFs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void runningEventID__14dEvt_control_cFs() {
+extern "C" asm void runningEventID__14dEvt_control_cFs() {
 	nofralloc
 #include "asm/d/event/d_event/runningEventID__14dEvt_control_cFs.s"
 }
 #pragma pop
 
+
 /* 8004362C-8004365C 0030 .text      setPt1__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPt1__14dEvt_control_cFPv() {
+extern "C" asm void setPt1__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/setPt1__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 8004365C-8004368C 0030 .text      setPt2__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPt2__14dEvt_control_cFPv() {
+extern "C" asm void setPt2__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/setPt2__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 8004368C-800436BC 0030 .text      setPtT__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPtT__14dEvt_control_cFPv() {
+extern "C" asm void setPtT__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/setPtT__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 800436BC-800436EC 0030 .text      setPtI__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPtI__14dEvt_control_cFPv() {
+extern "C" asm void setPtI__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/setPtI__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 800436EC-800436F4 0008 .text      setPtI_Id__14dEvt_control_cFUi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPtI_Id__14dEvt_control_cFUi() {
+extern "C" asm void setPtI_Id__14dEvt_control_cFUi() {
 	nofralloc
 #include "asm/d/event/d_event/setPtI_Id__14dEvt_control_cFUi.s"
 }
 #pragma pop
 
+
 /* 800436F4-80043724 0030 .text      setPtD__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setPtD__14dEvt_control_cFPv() {
+extern "C" asm void setPtD__14dEvt_control_cFPv() {
 	nofralloc
 #include "asm/d/event/d_event/setPtD__14dEvt_control_cFPv.s"
 }
 #pragma pop
 
+
 /* 80043724-8004372C 0008 .text      setGtItm__14dEvt_control_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setGtItm__14dEvt_control_cFUc() {
+extern "C" asm void setGtItm__14dEvt_control_cFUc() {
 	nofralloc
 #include "asm/d/event/d_event/setGtItm__14dEvt_control_cFUc.s"
 }

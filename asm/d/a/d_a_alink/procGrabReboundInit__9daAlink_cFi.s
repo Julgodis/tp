@@ -14,16 +14,16 @@ lbl_800E6D6C:
 /* 800E6D9C 00000030  38 A5 EC 48 */	addi r5, r5, m__18daAlinkHIO_grab_c0@l
 /* 800E6DA0 00000034  38 A5 00 64 */	addi r5, r5, 0x64
 /* 800E6DA4 00000038  4B FC 63 51 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E6DA8 0000003C  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800E6DA8 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800E6DAC 00000040  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800E6DB0 00000044  93 FE 31 98 */	stw r31, 0x3198(r30)
 /* 800E6DB4 00000048  2C 1F 00 00 */	cmpwi r31, 0
 /* 800E6DB8 0000004C  41 82 00 08 */	beq lbl_800E6DC0
 /* 800E6DBC 00000050  D0 1E 1F DC */	stfs f0, 0x1fdc(r30)
 lbl_800E6DC0:
-/* 800E6DC0 00000000  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 800E6DC0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800E6DC4 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800E6DC8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800E6DC8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800E6DCC 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800E6DD0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800E6DD4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

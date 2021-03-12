@@ -199,9 +199,9 @@ lbl_80235274:
 /* 802352E0 0000006C  38 A0 00 00 */	li r5, 0
 /* 802352E4 00000070  38 C0 00 00 */	li r6, 0
 /* 802352E8 00000074  38 E0 00 00 */	li r7, 0
-/* 802352EC 00000078  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__LIT_4084(r2)
+/* 802352EC 00000078  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__lit_4084(r2)
 /* 802352F0 0000007C  FC 40 08 90 */	fmr f2, f1
-/* 802352F4 00000080  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__LIT_4145(r2)
+/* 802352F4 00000080  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__lit_4145(r2)
 /* 802352F8 00000084  FC 80 18 90 */	fmr f4, f3
 /* 802352FC 00000088  39 00 00 00 */	li r8, 0
 /* 80235300 0000008C  48 07 66 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

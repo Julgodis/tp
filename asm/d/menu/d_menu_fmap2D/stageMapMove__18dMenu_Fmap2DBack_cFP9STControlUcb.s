@@ -70,7 +70,7 @@ lbl_801D4F04:
 /* 801D4F80 00000054  88 9E 12 27 */	lbz r4, 0x1227(r30)
 /* 801D4F84 00000058  4B FF DB E1 */	bl getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi
 /* 801D4F88 0000005C  C0 5E 0F A0 */	lfs f2, 0xfa0(r30)
-/* 801D4F8C 00000060  C0 02 A7 D4 */	lfs f0, LIT_3971(r2)
+/* 801D4F8C 00000060  C0 02 A7 D4 */	lfs f0, lit_3971(r2)
 /* 801D4F90 00000064  EC 42 00 28 */	fsubs f2, f2, f0
 /* 801D4F94 00000068  EC 1E 08 28 */	fsubs f0, f30, f1
 /* 801D4F98 0000006C  EC 02 00 32 */	fmuls f0, f2, f0
@@ -87,7 +87,7 @@ lbl_801D4FBC:
 /* 801D4FC0 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
 /* 801D4FC4 00000008  C0 23 00 C4 */	lfs f1, 0xc4(r3)
 lbl_801D4FC8:
-/* 801D4FC8 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4260(r2)
+/* 801D4FC8 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__lit_4260(r2)
 /* 801D4FCC 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D4FD0 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 /* 801D4FD4 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -221,9 +221,9 @@ lbl_801D51A0:
 /* 801D51B0 00000010  38 A0 00 00 */	li r5, 0
 /* 801D51B4 00000014  38 C0 00 00 */	li r6, 0
 /* 801D51B8 00000018  38 E0 00 00 */	li r7, 0
-/* 801D51BC 0000001C  C0 22 A7 D4 */	lfs f1, LIT_3971(r2)
+/* 801D51BC 0000001C  C0 22 A7 D4 */	lfs f1, lit_3971(r2)
 /* 801D51C0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801D51C4 00000024  C0 62 A8 20 */	lfs f3, LIT_5568(r2)
+/* 801D51C4 00000024  C0 62 A8 20 */	lfs f3, lit_5568(r2)
 /* 801D51C8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801D51CC 0000002C  39 00 00 00 */	li r8, 0
 /* 801D51D0 00000030  48 0D 73 3D */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

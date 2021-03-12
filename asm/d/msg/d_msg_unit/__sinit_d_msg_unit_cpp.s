@@ -6,8 +6,8 @@ lbl_8023907C:
 /* 8023908C 00000010  4B FF FC 09 */	bl __ct__10dMsgUnit_cFv
 /* 80239090 00000014  3C 80 80 24 */	lis r4, __dt__10dMsgUnit_cFv@ha
 /* 80239094 00000018  38 84 8C A4 */	addi r4, r4, __dt__10dMsgUnit_cFv@l
-/* 80239098 0000001C  3C A0 80 43 */	lis r5, LIT_3640@ha
-/* 8023909C 00000020  38 A5 06 B8 */	addi r5, r5, LIT_3640@l
+/* 80239098 0000001C  3C A0 80 43 */	lis r5, lit_3640@ha
+/* 8023909C 00000020  38 A5 06 B8 */	addi r5, r5, lit_3640@l
 /* 802390A0 00000024  48 12 8B 85 */	bl __register_global_object
 /* 802390A4 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802390A8 0000002C  7C 08 03 A6 */	mtlr r0

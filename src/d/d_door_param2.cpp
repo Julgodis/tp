@@ -5,210 +5,224 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void getKind__13door_param2_cFP10fopAc_ac_c();
-extern void getDoorModel__13door_param2_cFP10fopAc_ac_c();
-extern void getFrontOption__13door_param2_cFP10fopAc_ac_c();
-extern void getBackOption__13door_param2_cFP10fopAc_ac_c();
-extern void getFRoomNo__13door_param2_cFP10fopAc_ac_c();
-extern void getBRoomNo__13door_param2_cFP10fopAc_ac_c();
-extern void getSwbit__13door_param2_cFP10fopAc_ac_c();
-extern void getSwbit2__13door_param2_cFP10fopAc_ac_c();
-extern void getSwbit3__13door_param2_cFP10fopAc_ac_c();
-extern void isMsgDoor__13door_param2_cFP10fopAc_ac_c();
-extern void getEventNo__13door_param2_cFP10fopAc_ac_c();
-extern void getEventNo2__13door_param2_cFP10fopAc_ac_c();
-extern void getMsgNo__13door_param2_cFP10fopAc_ac_c();
-extern void getExitNo__13door_param2_cFP10fopAc_ac_c();
-extern void getFLightInf__13door_param2_cFP10fopAc_ac_c();
-extern void getBLightInf__13door_param2_cFP10fopAc_ac_c();
-extern void getMFLightInf__13door_param2_cFP10fopAc_ac_c();
-extern void getMBLightInf__13door_param2_cFP10fopAc_ac_c();
-}
+extern "C" extern void getKind__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getDoorModel__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getFrontOption__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getBackOption__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getFRoomNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getBRoomNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getSwbit__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getSwbit2__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getSwbit3__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void isMsgDoor__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getEventNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getEventNo2__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getMsgNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getExitNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getFLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getBLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getMFLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" extern void getMBLightInf__13door_param2_cFP10fopAc_ac_c();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8003A188-8003A194 000C .text      getKind__13door_param2_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getKind__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getKind__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getKind__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A194-8003A1A0 000C .text      getDoorModel__13door_param2_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getDoorModel__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getDoorModel__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getDoorModel__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1A0-8003A1AC 000C .text      getFrontOption__13door_param2_cFP10fopAc_ac_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFrontOption__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getFrontOption__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getFrontOption__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1AC-8003A1B8 000C .text      getBackOption__13door_param2_cFP10fopAc_ac_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBackOption__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getBackOption__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getBackOption__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1B8-8003A1C4 000C .text      getFRoomNo__13door_param2_cFP10fopAc_ac_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFRoomNo__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getFRoomNo__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getFRoomNo__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1C4-8003A1D0 000C .text      getBRoomNo__13door_param2_cFP10fopAc_ac_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBRoomNo__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getBRoomNo__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getBRoomNo__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1D0-8003A1DC 000C .text      getSwbit__13door_param2_cFP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSwbit__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getSwbit__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getSwbit__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1DC-8003A1E8 000C .text      getSwbit2__13door_param2_cFP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSwbit2__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getSwbit2__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getSwbit2__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1E8-8003A1F4 000C .text      getSwbit3__13door_param2_cFP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getSwbit3__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getSwbit3__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getSwbit3__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A1F4-8003A200 000C .text      isMsgDoor__13door_param2_cFP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isMsgDoor__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void isMsgDoor__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/isMsgDoor__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A200-8003A20C 000C .text      getEventNo__13door_param2_cFP10fopAc_ac_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getEventNo__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getEventNo__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getEventNo__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A20C-8003A218 000C .text      getEventNo2__13door_param2_cFP10fopAc_ac_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getEventNo2__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getEventNo2__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getEventNo2__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A218-8003A224 000C .text      getMsgNo__13door_param2_cFP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMsgNo__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getMsgNo__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getMsgNo__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A224-8003A230 000C .text      getExitNo__13door_param2_cFP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getExitNo__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getExitNo__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getExitNo__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A230-8003A23C 000C .text      getFLightInf__13door_param2_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFLightInf__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getFLightInf__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getFLightInf__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A23C-8003A248 000C .text      getBLightInf__13door_param2_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBLightInf__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getBLightInf__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getBLightInf__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A248-8003A254 000C .text      getMFLightInf__13door_param2_cFP10fopAc_ac_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMFLightInf__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getMFLightInf__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getMFLightInf__13door_param2_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
 /* 8003A254-8003A260 000C .text      getMBLightInf__13door_param2_cFP10fopAc_ac_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMBLightInf__13door_param2_cFP10fopAc_ac_c() {
+extern "C" asm void getMBLightInf__13door_param2_cFP10fopAc_ac_c() {
 	nofralloc
 #include "asm/d/d_door_param2/getMBLightInf__13door_param2_cFP10fopAc_ac_c.s"
 }

@@ -5,118 +5,93 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_acos();
-extern void sqrt();
-SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_83[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_84[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_85[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_86[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_87[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_88[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_89[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_90[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_91[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_92[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_93[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_94[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_95[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_96[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_97[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_98[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__LIT_99[8];
-}
+extern "C" extern void __ieee754_acos();
+extern "C" extern void sqrt();
+SECTION_SDATA extern u32 __float_nan;
+SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__lit_83[8];
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_84;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_85;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_86;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_87;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_88;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_89;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_90;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_91;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_92;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_93;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_94;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_95;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_96;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_97;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_98;
+SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_99;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456678-80456680 0008 .sdata2    @83                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_83[8] = {
+u8 Math_Double_precision_e_acos__lit_83[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80456680-80456688 0008 .sdata2    @84                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_84[8] = {
-	0x40, 0x09, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
-};
+f64 Math_Double_precision_e_acos__lit_84 = 3.141592653589793;
+
 /* 80456688-80456690 0008 .sdata2    @85                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_85[8] = {
-	0x3F, 0xF9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
-};
+f64 Math_Double_precision_e_acos__lit_85 = 1.5707963267948966;
+
 /* 80456690-80456698 0008 .sdata2    @86                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_86[8] = {
-	0x3C, 0x91, 0xA6, 0x26, 0x33, 0x14, 0x5C, 0x07,
-};
+f64 Math_Double_precision_e_acos__lit_86 = 6.123233995736766e-17;
+
 /* 80456698-804566A0 0008 .sdata2    @87                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_87[8] = {
-	0x3F, 0xC5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
-};
+f64 Math_Double_precision_e_acos__lit_87 = 1.0 / 6.0;
+
 /* 804566A0-804566A8 0008 .sdata2    @88                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_88[8] = {
-	0xBF, 0xD4, 0xD6, 0x12, 0x03, 0xEB, 0x6F, 0x7D,
-};
+f64 Math_Double_precision_e_acos__lit_88 = -0.3255658186224009;
+
 /* 804566A8-804566B0 0008 .sdata2    @89                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_89[8] = {
-	0x3F, 0xC9, 0xC1, 0x55, 0x0E, 0x88, 0x44, 0x55,
-};
+f64 Math_Double_precision_e_acos__lit_89 = 0.20121253213486293;
+
 /* 804566B0-804566B8 0008 .sdata2    @90                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_90[8] = {
-	0xBF, 0xA4, 0x82, 0x28, 0xB5, 0x68, 0x8F, 0x3B,
-};
+f64 Math_Double_precision_e_acos__lit_90 = -0.04005553450067941;
+
 /* 804566B8-804566C0 0008 .sdata2    @91                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_91[8] = {
-	0x3F, 0x49, 0xEF, 0xE0, 0x75, 0x01, 0xB2, 0x88,
-};
+f64 Math_Double_precision_e_acos__lit_91 = 0.0007915349942898145;
+
 /* 804566C0-804566C8 0008 .sdata2    @92                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_92[8] = {
-	0x3F, 0x02, 0x3D, 0xE1, 0x0D, 0xFD, 0xF7, 0x09,
-};
+f64 Math_Double_precision_e_acos__lit_92 = 3.479331075960212e-05;
+
 /* 804566C8-804566D0 0008 .sdata2    @93                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_93[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_acos__lit_93 = 1.0;
+
 /* 804566D0-804566D8 0008 .sdata2    @94                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_94[8] = {
-	0xC0, 0x03, 0x3A, 0x27, 0x1C, 0x8A, 0x2D, 0x4B,
-};
+f64 Math_Double_precision_e_acos__lit_94 = -2.403394911734414;
+
 /* 804566D8-804566E0 0008 .sdata2    @95                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_95[8] = {
-	0x40, 0x00, 0x2A, 0xE5, 0x9C, 0x59, 0x8A, 0xC8,
-};
+f64 Math_Double_precision_e_acos__lit_95 = 2.0209457602335057;
+
 /* 804566E0-804566E8 0008 .sdata2    @96                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_96[8] = {
-	0xBF, 0xE6, 0x06, 0x6C, 0x1B, 0x8D, 0x01, 0x59,
-};
+f64 Math_Double_precision_e_acos__lit_96 = -0.6882839716054533;
+
 /* 804566E8-804566F0 0008 .sdata2    @97                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_97[8] = {
-	0x3F, 0xB3, 0xB8, 0xC5, 0xB1, 0x2E, 0x92, 0x82,
-};
+f64 Math_Double_precision_e_acos__lit_97 = 0.07703815055590194;
+
 /* 804566F0-804566F8 0008 .sdata2    @98                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_98[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_e_acos__lit_98 = 0.5;
+
 /* 804566F8-80456700 0008 .sdata2    @99                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_e_acos__LIT_99[8] = {
-	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 Math_Double_precision_e_acos__lit_99 = 2.0;
 
 /* 80369274-803694B0 023C .text      __ieee754_acos                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ieee754_acos() {
+extern "C" asm void __ieee754_acos() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_acos/__ieee754_acos.s"
 }

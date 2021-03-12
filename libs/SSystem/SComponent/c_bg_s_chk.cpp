@@ -5,74 +5,68 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__8cBgS_ChkFv();
-extern void __dt__8cBgS_ChkFv();
-extern void SetExtChk__8cBgS_ChkFR8cBgS_Chk();
-extern void ChkSameActorPid__8cBgS_ChkCFUi();
-extern void __dl__FPv();
-SECTION_DATA extern void* __vt__8cBgS_Chk[4];
-}
+extern "C" extern void __ct__8cBgS_ChkFv();
+extern "C" extern void __dt__8cBgS_ChkFv();
+extern "C" extern void SetExtChk__8cBgS_ChkFR8cBgS_Chk();
+extern "C" extern void ChkSameActorPid__8cBgS_ChkCFUi();
+extern "C" extern void __dl__FPv();
+SECTION_DATA extern void* const __vt__8cBgS_Chk[4];
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C3F80-803C3F90 000C .data      __vt__8cBgS_Chk                                              */
-SECTION_DATA void* __vt__8cBgS_Chk[4] = {
+void* const __vt__8cBgS_Chk[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cBgS_ChkFv,
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
 
 /* 80267B4C-80267B70 0024 .text      __ct__8cBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__8cBgS_ChkFv() {
+extern "C" asm void __ct__8cBgS_ChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_chk/__ct__8cBgS_ChkFv.s"
 }
 #pragma pop
 
+
 /* 80267B70-80267BB8 0048 .text      __dt__8cBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__8cBgS_ChkFv() {
+extern "C" asm void __dt__8cBgS_ChkFv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_chk/__dt__8cBgS_ChkFv.s"
 }
 #pragma pop
 
+
 /* 80267BB8-80267BDC 0024 .text      SetExtChk__8cBgS_ChkFR8cBgS_Chk                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void SetExtChk__8cBgS_ChkFR8cBgS_Chk() {
+extern "C" asm void SetExtChk__8cBgS_ChkFR8cBgS_Chk() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_chk/SetExtChk__8cBgS_ChkFR8cBgS_Chk.s"
 }
 #pragma pop
 
+
 /* 80267BDC-80267C1C 0040 .text      ChkSameActorPid__8cBgS_ChkCFUi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ChkSameActorPid__8cBgS_ChkCFUi() {
+extern "C" asm void ChkSameActorPid__8cBgS_ChkCFUi() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_chk/ChkSameActorPid__8cBgS_ChkCFUi.s"
 }

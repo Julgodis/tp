@@ -12,7 +12,7 @@ lbl_8013A7EC:
 /* 8013A814 00000028  38 A5 F5 B4 */	addi r5, r5, m__23daAlinkHIO_wlAtCjump_c0@l
 /* 8013A818 0000002C  38 A5 00 14 */	addi r5, r5, 0x14
 /* 8013A81C 00000030  4B FE F0 2D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013A820 00000034  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013A820 00000034  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013A824 00000038  D0 3F 04 FC */	stfs f1, 0x4fc(r31)
 /* 8013A828 0000003C  D0 3F 33 98 */	stfs f1, 0x3398(r31)
 /* 8013A82C 00000040  7F E3 FB 78 */	mr r3, r31

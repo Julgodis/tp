@@ -127,7 +127,7 @@ lbl_8036C948:
 /* 8036C94C 00000004  40 82 FF 94 */	bne lbl_8036C8E0
 /* 8036C950 00000008  7C A0 03 79 */	or. r0, r5, r0
 /* 8036C954 0000000C  41 82 00 30 */	beq lbl_8036C984
-/* 8036C958 00000010  C8 02 D1 48 */	lfd f0, Math_Double_precision_e_sqrt__LIT_164(r2)
+/* 8036C958 00000010  C8 02 D1 48 */	lfd f0, Math_Double_precision_e_sqrt__lit_164(r2)
 /* 8036C95C 00000014  3C 0A 00 01 */	addis r0, r10, 1
 /* 8036C960 00000018  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8036C964 0000001C  D8 01 00 10 */	stfd f0, 0x10(r1)

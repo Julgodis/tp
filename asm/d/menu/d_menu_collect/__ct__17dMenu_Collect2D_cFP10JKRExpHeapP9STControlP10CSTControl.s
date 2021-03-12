@@ -21,11 +21,11 @@ lbl_801AFD48:
 /* 801AFD94 0000004C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 801AFD98 00000050  54 00 01 8C */	rlwinm r0, r0, 0, 6, 6
 /* 801AFD9C 00000054  90 1F 00 40 */	stw r0, 0x40(r31)
-/* 801AFDA0 00000058  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801AFDA0 00000058  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801AFDA4 0000005C  D0 1F 00 7C */	stfs f0, 0x7c(r31)
 /* 801AFDA8 00000060  D0 1F 00 80 */	stfs f0, 0x80(r31)
 /* 801AFDAC 00000064  D0 1F 00 84 */	stfs f0, 0x84(r31)
-/* 801AFDB0 00000068  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801AFDB0 00000068  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__lit_4482(r2)
 /* 801AFDB4 0000006C  38 00 00 02 */	li r0, 2
 /* 801AFDB8 00000070  7C 09 03 A6 */	mtctr r0
 lbl_801AFDBC:
@@ -35,10 +35,10 @@ lbl_801AFDBC:
 /* 801AFDC8 0000000C  7C 1F 05 2E */	stfsx f0, r31, r0
 /* 801AFDCC 00000010  38 84 00 04 */	addi r4, r4, 4
 /* 801AFDD0 00000014  42 00 FF EC */	bdnz lbl_801AFDBC
-/* 801AFDD4 00000018  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801AFDD4 00000018  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__lit_4481(r2)
 /* 801AFDD8 0000001C  D0 3F 00 54 */	stfs f1, 0x54(r31)
 /* 801AFDDC 00000020  D0 3F 00 58 */	stfs f1, 0x58(r31)
-/* 801AFDE0 00000024  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801AFDE0 00000024  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__lit_4482(r2)
 /* 801AFDE4 00000028  D0 1F 00 5C */	stfs f0, 0x5c(r31)
 /* 801AFDE8 0000002C  D0 1F 00 60 */	stfs f0, 0x60(r31)
 /* 801AFDEC 00000030  D0 3F 00 64 */	stfs f1, 0x64(r31)

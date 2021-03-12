@@ -7,13 +7,13 @@ lbl_801A1F58:
 /* 801A1F6C 00000014  88 04 03 81 */	lbz r0, 0x381(r4)
 /* 801A1F70 00000018  28 00 00 FF */	cmplwi r0, 0xff
 /* 801A1F74 0000001C  41 82 00 50 */	beq lbl_801A1FC4
-/* 801A1F78 00000020  C8 22 A2 80 */	lfd f1, LIT_4964(r2)
+/* 801A1F78 00000020  C8 22 A2 80 */	lfd f1, lit_4964(r2)
 /* 801A1F7C 00000024  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801A1F80 00000028  3C 00 43 30 */	lis r0, 0x4330
 /* 801A1F84 0000002C  90 01 00 08 */	stw r0, 8(r1)
 /* 801A1F88 00000030  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801A1F8C 00000034  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801A1F90 00000038  C0 02 A2 94 */	lfs f0, d_kankyo_d_kankyo__LIT_5192(r2)
+/* 801A1F90 00000038  C0 02 A2 94 */	lfs f0, d_kankyo_d_kankyo__lit_5192(r2)
 /* 801A1F94 0000003C  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801A1F98 00000040  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1F9C 00000044  38 63 CA 54 */	addi r3, r3, g_env_light@l
@@ -21,9 +21,9 @@ lbl_801A1F58:
 /* 801A1FA4 0000004C  2C 00 00 64 */	cmpwi r0, 0x64
 /* 801A1FA8 00000050  40 82 00 58 */	bne lbl_801A2000
 /* 801A1FAC 00000054  38 7F 03 74 */	addi r3, r31, 0x374
-/* 801A1FB0 00000058  C0 42 A2 EC */	lfs f2, LIT_6033(r2)
-/* 801A1FB4 0000005C  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__LIT_6040(r2)
-/* 801A1FB8 00000060  C0 82 A3 10 */	lfs f4, LIT_6042(r2)
+/* 801A1FB0 00000058  C0 42 A2 EC */	lfs f2, lit_6033(r2)
+/* 801A1FB4 0000005C  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__lit_6040(r2)
+/* 801A1FB8 00000060  C0 82 A3 10 */	lfs f4, lit_6042(r2)
 /* 801A1FBC 00000064  48 0C D9 C1 */	bl cLib_addCalc__FPfffff
 /* 801A1FC0 00000068  48 00 00 40 */	b lbl_801A2000
 lbl_801A1FC4:
@@ -37,10 +37,10 @@ lbl_801A1FC4:
 /* 801A1FE0 0000001C  2C 00 00 64 */	cmpwi r0, 0x64
 /* 801A1FE4 00000020  40 82 00 1C */	bne lbl_801A2000
 /* 801A1FE8 00000024  38 7F 03 74 */	addi r3, r31, 0x374
-/* 801A1FEC 00000028  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__LIT_4505(r2)
-/* 801A1FF0 0000002C  C0 42 A2 EC */	lfs f2, LIT_6033(r2)
-/* 801A1FF4 00000030  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__LIT_6040(r2)
-/* 801A1FF8 00000034  C0 82 A3 10 */	lfs f4, LIT_6042(r2)
+/* 801A1FEC 00000028  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
+/* 801A1FF0 0000002C  C0 42 A2 EC */	lfs f2, lit_6033(r2)
+/* 801A1FF4 00000030  C0 62 A3 08 */	lfs f3, d_kankyo_d_kankyo__lit_6040(r2)
+/* 801A1FF8 00000034  C0 82 A3 10 */	lfs f4, lit_6042(r2)
 /* 801A1FFC 00000038  48 0C D9 81 */	bl cLib_addCalc__FPfffff
 lbl_801A2000:
 /* 801A2000 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
@@ -54,7 +54,7 @@ lbl_801A2000:
 /* 801A2020 00000020  40 82 00 28 */	bne lbl_801A2048
 /* 801A2024 00000024  98 A3 12 C6 */	stb r5, 0x12c6(r3)
 /* 801A2028 00000028  98 83 12 C7 */	stb r4, 0x12c7(r3)
-/* 801A202C 0000002C  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A202C 0000002C  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A2030 00000030  C0 03 11 DC */	lfs f0, 0x11dc(r3)
 /* 801A2034 00000034  EC 01 00 28 */	fsubs f0, f1, f0
 /* 801A2038 00000038  D0 03 11 DC */	stfs f0, 0x11dc(r3)
@@ -63,17 +63,17 @@ lbl_801A2000:
 /* 801A2044 00000044  48 00 00 38 */	b lbl_801A207C
 lbl_801A2048:
 /* 801A2048 00000000  C0 23 11 DC */	lfs f1, 0x11dc(r3)
-/* 801A204C 00000004  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__LIT_4505(r2)
+/* 801A204C 00000004  C0 02 A2 48 */	lfs f0, d_kankyo_d_kankyo__lit_4505(r2)
 /* 801A2050 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A2054 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801A2058 00000004  41 82 00 14 */	beq lbl_801A206C
-/* 801A205C 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A205C 00000008  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A2060 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A2064 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 801A2068 00000004  40 82 00 14 */	bne lbl_801A207C
 lbl_801A206C:
 /* 801A206C 00000000  98 83 12 C7 */	stb r4, 0x12c7(r3)
-/* 801A2070 00000004  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__LIT_4409(r2)
+/* 801A2070 00000004  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
 /* 801A2074 00000008  D0 03 11 DC */	stfs f0, 0x11dc(r3)
 /* 801A2078 0000000C  D0 1F 03 70 */	stfs f0, 0x370(r31)
 lbl_801A207C:

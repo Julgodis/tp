@@ -4,8 +4,8 @@ lbl_80050480:
 /* 80050488 00000008  90 01 00 74 */	stw r0, 0x74(r1)
 /* 8005048C 0000000C  93 E1 00 6C */	stw r31, 0x6c(r1)
 /* 80050490 00000010  93 C1 00 68 */	stw r30, 0x68(r1)
-/* 80050494 00000014  3C 60 80 42 */	lis r3, d_particle_d_particle__LIT_4053@ha
-/* 80050498 00000018  3B E3 47 10 */	addi r31, r3, d_particle_d_particle__LIT_4053@l
+/* 80050494 00000014  3C 60 80 42 */	lis r3, d_particle_d_particle__lit_4053@ha
+/* 80050498 00000018  3B E3 47 10 */	addi r31, r3, d_particle_d_particle__lit_4053@l
 /* 8005049C 0000001C  3C 60 80 3B */	lis r3, l_lifeBallColor@ha
 /* 800504A0 00000020  3B C3 83 08 */	addi r30, r3, l_lifeBallColor@l
 /* 800504A4 00000024  3C 60 80 3B */	lis r3, __vt__18JPAEmitterCallBack@ha

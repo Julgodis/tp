@@ -3,8 +3,8 @@ lbl_8028D2B8:
 /* 8028D2BC 00000004  7C 08 02 A6 */	mflr r0
 /* 8028D2C0 00000008  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8028D2C4 0000000C  93 E1 00 5C */	stw r31, 0x5c(r1)
-/* 8028D2C8 00000010  3C 60 80 43 */	lis r3, LIT_930@ha
-/* 8028D2CC 00000014  3B E3 14 00 */	addi r31, r3, LIT_930@l
+/* 8028D2C8 00000010  3C 60 80 43 */	lis r3, lit_930@ha
+/* 8028D2CC 00000014  3B E3 14 00 */	addi r31, r3, lit_930@l
 /* 8028D2D0 00000018  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028D2D4 0000001C  38 A3 56 40 */	addi r5, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 8028D2D8 00000020  90 A1 00 44 */	stw r5, 0x44(r1)

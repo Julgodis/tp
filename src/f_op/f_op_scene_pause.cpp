@@ -5,38 +5,36 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopScnPause_Enable__FP11scene_class();
-extern void fopScnPause_Disable__FP11scene_class();
-extern void fpcEx_IsExist__FUi();
-extern void fpcM_IsPause__FPvUc();
-extern void fpcM_PauseEnable__FPvUc();
-extern void fpcM_PauseDisable__FPvUc();
-}
+extern "C" extern void fopScnPause_Enable__FP11scene_class();
+extern "C" extern void fopScnPause_Disable__FP11scene_class();
+extern "C" extern void fpcEx_IsExist__FUi();
+extern "C" extern void fpcM_IsPause__FPvUc();
+extern "C" extern void fpcM_PauseEnable__FPvUc();
+extern "C" extern void fpcM_PauseDisable__FPvUc();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80020548-80020594 004C .text      fopScnPause_Enable__FP11scene_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnPause_Enable__FP11scene_class() {
+extern "C" asm void fopScnPause_Enable__FP11scene_class() {
 	nofralloc
 #include "asm/f_op/f_op_scene_pause/fopScnPause_Enable__FP11scene_class.s"
 }
 #pragma pop
 
+
 /* 80020594-8002064C 00B8 .text      fopScnPause_Disable__FP11scene_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnPause_Disable__FP11scene_class() {
+extern "C" asm void fopScnPause_Disable__FP11scene_class() {
 	nofralloc
 #include "asm/f_op/f_op_scene_pause/fopScnPause_Disable__FP11scene_class.s"
 }

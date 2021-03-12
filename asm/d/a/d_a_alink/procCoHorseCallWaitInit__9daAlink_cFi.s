@@ -31,7 +31,7 @@ lbl_80112044:
 /* 80112058 00000014  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8011205C 00000018  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
 /* 80112060 0000001C  C0 25 00 70 */	lfs f1, 0x70(r5)
-/* 80112064 00000020  C0 42 92 C4 */	lfs f2, LIT_6109(r2)
+/* 80112064 00000020  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 80112068 00000024  48 01 76 71 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8011206C 00000028  48 00 00 20 */	b lbl_8011208C
 lbl_80112070:
@@ -40,7 +40,7 @@ lbl_80112070:
 /* 80112078 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 8011207C 0000000C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
 /* 80112080 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
-/* 80112084 00000014  C0 42 92 C4 */	lfs f2, LIT_6109(r2)
+/* 80112084 00000014  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 80112088 00000018  4B F9 AF 59 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_8011208C:
 /* 8011208C 00000000  7F C3 F3 78 */	mr r3, r30

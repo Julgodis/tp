@@ -5,49 +5,123 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fopOvlpReq_phase_Done__FP21overlap_request_class();
-extern void fopOvlpReq_phase_IsDone__FP21overlap_request_class();
-extern void fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class();
-extern void fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class();
-extern void fopOvlpReq_phase_IsComplete__FP21overlap_request_class();
-extern void fopOvlpReq_phase_IsCreated__FP21overlap_request_class();
-extern void fopOvlpReq_phase_Create__FP21overlap_request_class();
-extern void fopOvlpReq_Request__FP21overlap_request_classsUs();
-extern void fopOvlpReq_Handler__FP21overlap_request_class();
-extern void fopOvlpReq_Cancel__FP21overlap_request_class();
-extern void fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class();
-extern void fopOvlpReq_SetPeektime__FP21overlap_request_classUs();
-extern void fopOvlpReq_OverlapClr__FP21overlap_request_class();
-extern void fpcEx_SearchByID__FUi();
-extern void fpcLy_RootLayer__Fv();
-extern void fpcLy_SetCurrentLayer__FP11layer_class();
-extern void fpcLy_CurrentLayer__Fv();
-extern void fpcM_Delete__FPv();
-extern void fpcM_IsCreating__FUi();
-extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
-extern void cPhs_Do__FP30request_of_phase_process_classPv();
-extern void cReq_Is_Done__FP18request_base_class();
-extern void cReq_Done__FP18request_base_class();
-extern void cReq_Command__FP18request_base_classUc();
-extern void cReq_Create__FP18request_base_classUc();
-extern void _savegpr_29();
-extern void _restgpr_29();
+extern "C" extern void fopOvlpReq_phase_Done__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_IsDone__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_IsComplete__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_IsCreated__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_phase_Create__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_Request__FP21overlap_request_classsUs();
+extern "C" extern void fopOvlpReq_Handler__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_Cancel__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class();
+extern "C" extern void fopOvlpReq_SetPeektime__FP21overlap_request_classUs();
+extern "C" extern void fopOvlpReq_OverlapClr__FP21overlap_request_class();
+extern "C" extern void fpcEx_SearchByID__FUi();
+extern "C" extern void fpcLy_RootLayer__Fv();
+extern "C" extern void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" extern void fpcLy_CurrentLayer__Fv();
+extern "C" extern void fpcM_Delete__FPv();
+extern "C" extern void fpcM_IsCreating__FUi();
+extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" extern void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+extern "C" extern void cPhs_Do__FP30request_of_phase_process_classPv();
+extern "C" extern void cReq_Is_Done__FP18request_base_class();
+extern "C" extern void cReq_Done__FP18request_base_class();
+extern "C" extern void cReq_Command__FP18request_base_classUc();
+extern "C" extern void cReq_Create__FP18request_base_classUc();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 SECTION_DATA extern void* data_803A3890[8];
+
+// 
+// Functions:
+// 
+
+/* 8001E6EC-8001E748 005C .text      fopOvlpReq_phase_Done__FP21overlap_request_class             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_Done__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_Done__FP21overlap_request_class.s"
 }
+#pragma pop
+
+
+/* 8001E748-8001E794 004C .text      fopOvlpReq_phase_IsDone__FP21overlap_request_class           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_IsDone__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsDone__FP21overlap_request_class.s"
+}
+#pragma pop
+
+
+/* 8001E794-8001E7E4 0050 .text      fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class.s"
+}
+#pragma pop
+
+
+/* 8001E7E4-8001E854 0070 .text      fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class.s"
+}
+#pragma pop
+
+
+/* 8001E854-8001E8A4 0050 .text      fopOvlpReq_phase_IsComplete__FP21overlap_request_class       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_IsComplete__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsComplete__FP21overlap_request_class.s"
+}
+#pragma pop
+
+
+/* 8001E8A4-8001E904 0060 .text      fopOvlpReq_phase_IsCreated__FP21overlap_request_class        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_IsCreated__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsCreated__FP21overlap_request_class.s"
+}
+#pragma pop
+
+
+/* 8001E904-8001E954 0050 .text      fopOvlpReq_phase_Create__FP21overlap_request_class           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void fopOvlpReq_phase_Create__FP21overlap_request_class() {
+	nofralloc
+#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_Create__FP21overlap_request_class.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A3890-803A38B0 0020 .data      phaseMethod$2260                                             */
-SECTION_DATA void* data_803A3890[8] = {
+void* data_803A3890[8] = {
 	(void*)fopOvlpReq_phase_Create__FP21overlap_request_class,
 	(void*)fopOvlpReq_phase_IsCreated__FP21overlap_request_class,
 	(void*)fopOvlpReq_phase_IsComplete__FP21overlap_request_class,
@@ -57,138 +131,67 @@ SECTION_DATA void* data_803A3890[8] = {
 	(void*)fopOvlpReq_phase_Done__FP21overlap_request_class,
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8001E6EC-8001E748 005C .text      fopOvlpReq_phase_Done__FP21overlap_request_class             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_Done__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_Done__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E748-8001E794 004C .text      fopOvlpReq_phase_IsDone__FP21overlap_request_class           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_IsDone__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsDone__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E794-8001E7E4 0050 .text      fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E7E4-8001E854 0070 .text      fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E854-8001E8A4 0050 .text      fopOvlpReq_phase_IsComplete__FP21overlap_request_class       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_IsComplete__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsComplete__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E8A4-8001E904 0060 .text      fopOvlpReq_phase_IsCreated__FP21overlap_request_class        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_IsCreated__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_IsCreated__FP21overlap_request_class.s"
-}
-#pragma pop
-
-/* 8001E904-8001E954 0050 .text      fopOvlpReq_phase_Create__FP21overlap_request_class           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpReq_phase_Create__FP21overlap_request_class() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_req/fopOvlpReq_phase_Create__FP21overlap_request_class.s"
-}
-#pragma pop
 
 /* 8001E954-8001E9F0 009C .text      fopOvlpReq_Request__FP21overlap_request_classsUs             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_Request__FP21overlap_request_classsUs() {
+extern "C" asm void fopOvlpReq_Request__FP21overlap_request_classsUs() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_Request__FP21overlap_request_classsUs.s"
 }
 #pragma pop
 
+
 /* 8001E9F0-8001EA88 0098 .text      fopOvlpReq_Handler__FP21overlap_request_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_Handler__FP21overlap_request_class() {
+extern "C" asm void fopOvlpReq_Handler__FP21overlap_request_class() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_Handler__FP21overlap_request_class.s"
 }
 #pragma pop
 
+
 /* 8001EA88-8001EAB4 002C .text      fopOvlpReq_Cancel__FP21overlap_request_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_Cancel__FP21overlap_request_class() {
+extern "C" asm void fopOvlpReq_Cancel__FP21overlap_request_class() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_Cancel__FP21overlap_request_class.s"
 }
 #pragma pop
 
+
 /* 8001EAB4-8001EAC4 0010 .text      fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class() {
+extern "C" asm void fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class.s"
 }
 #pragma pop
 
+
 /* 8001EAC4-8001EAD8 0014 .text      fopOvlpReq_SetPeektime__FP21overlap_request_classUs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_SetPeektime__FP21overlap_request_classUs() {
+extern "C" asm void fopOvlpReq_SetPeektime__FP21overlap_request_classUs() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_SetPeektime__FP21overlap_request_classUs.s"
 }
 #pragma pop
 
+
 /* 8001EAD8-8001EB34 005C .text      fopOvlpReq_OverlapClr__FP21overlap_request_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpReq_OverlapClr__FP21overlap_request_class() {
+extern "C" asm void fopOvlpReq_OverlapClr__FP21overlap_request_class() {
 	nofralloc
 #include "asm/f_op/f_op_overlap_req/fopOvlpReq_OverlapClr__FP21overlap_request_class.s"
 }

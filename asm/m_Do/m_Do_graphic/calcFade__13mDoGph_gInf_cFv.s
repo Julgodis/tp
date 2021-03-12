@@ -9,7 +9,7 @@ lbl_80008330:
 /* 8000834C 0000001C  C0 0D 86 60 */	lfs f0, mFadeSpeed__13mDoGph_gInf_c(r13)
 /* 80008350 00000020  EC 21 00 2A */	fadds f1, f1, f0
 /* 80008354 00000024  D0 2D 86 5C */	stfs f1, mFadeRate__13mDoGph_gInf_c(r13)
-/* 80008358 00000028  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__LIT_4062(r2)
+/* 80008358 00000028  C0 02 80 38 */	lfs f0, m_Do_m_Do_graphic__lit_4062(r2)
 /* 8000835C 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80008360 00000000  40 80 00 14 */	bge lbl_80008374
 /* 80008364 00000004  D0 0D 86 5C */	stfs f0, mFadeRate__13mDoGph_gInf_c(r13)
@@ -17,12 +17,12 @@ lbl_80008330:
 /* 8000836C 0000000C  98 0D 86 66 */	stb r0, struct_80450BE4+0x2(r13)
 /* 80008370 00000010  48 00 00 14 */	b lbl_80008384
 lbl_80008374:
-/* 80008374 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__LIT_4063(r2)
+/* 80008374 00000000  C0 02 80 3C */	lfs f0, m_Do_m_Do_graphic__lit_4063(r2)
 /* 80008378 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8000837C 00000000  40 81 00 08 */	ble lbl_80008384
 /* 80008380 00000004  D0 0D 86 5C */	stfs f0, mFadeRate__13mDoGph_gInf_c(r13)
 lbl_80008384:
-/* 80008384 00000000  C0 22 80 44 */	lfs f1, m_Do_m_Do_graphic__LIT_4131(r2)
+/* 80008384 00000000  C0 22 80 44 */	lfs f1, m_Do_m_Do_graphic__lit_4131(r2)
 /* 80008388 00000004  C0 0D 86 5C */	lfs f0, mFadeRate__13mDoGph_gInf_c(r13)
 /* 8000838C 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80008390 0000000C  FC 00 00 1E */	fctiwz f0, f0

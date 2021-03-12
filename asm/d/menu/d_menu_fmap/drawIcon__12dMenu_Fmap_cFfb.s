@@ -60,9 +60,9 @@ lbl_801CCBD8:
 /* 801CCBE0 00000008  38 A1 00 08 */	addi r5, r1, 8
 /* 801CCBE4 0000000C  C0 21 00 1C */	lfs f1, 0x1c(r1)
 /* 801CCBE8 00000010  C0 41 00 24 */	lfs f2, 0x24(r1)
-/* 801CCBEC 00000014  C0 82 A7 64 */	lfs f4, LIT_6987(r2)
+/* 801CCBEC 00000014  C0 82 A7 64 */	lfs f4, lit_6987(r2)
 /* 801CCBF0 00000018  7F 80 07 34 */	extsh r0, r28
-/* 801CCBF4 0000001C  C8 62 A7 40 */	lfd f3, d_menu_d_menu_fmap__LIT_4358(r2)
+/* 801CCBF4 0000001C  C8 62 A7 40 */	lfd f3, d_menu_d_menu_fmap__lit_4358(r2)
 /* 801CCBF8 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801CCBFC 00000024  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 801CCC00 00000028  3C 00 43 30 */	lis r0, 0x4330
@@ -114,7 +114,7 @@ lbl_801CCCA4:
 /* 801CCCAC 00000008  38 80 00 01 */	li r4, 1
 /* 801CCCB0 0000000C  C0 3C 00 10 */	lfs f1, 0x10(r28)
 /* 801CCCB4 00000010  C0 5C 00 18 */	lfs f2, 0x18(r28)
-/* 801CCCB8 00000014  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CCCB8 00000014  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CCCBC 00000018  38 A0 00 00 */	li r5, 0
 /* 801CCCC0 0000001C  38 C0 00 00 */	li r6, 0
 /* 801CCCC4 00000020  48 00 54 3D */	bl setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb
@@ -125,7 +125,7 @@ lbl_801CCCA4:
 /* 801CCCD8 00000034  38 80 00 00 */	li r4, 0
 /* 801CCCDC 00000038  C0 3C 00 10 */	lfs f1, 0x10(r28)
 /* 801CCCE0 0000003C  C0 5C 00 18 */	lfs f2, 0x18(r28)
-/* 801CCCE4 00000040  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CCCE4 00000040  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CCCE8 00000044  38 A0 00 00 */	li r5, 0
 /* 801CCCEC 00000048  38 C0 00 00 */	li r6, 0
 /* 801CCCF0 0000004C  48 00 54 11 */	bl setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb
@@ -134,7 +134,7 @@ lbl_801CCCF8:
 /* 801CCCF8 00000000  38 80 00 01 */	li r4, 1
 /* 801CCCFC 00000004  C0 3C 00 10 */	lfs f1, 0x10(r28)
 /* 801CCD00 00000008  C0 5C 00 18 */	lfs f2, 0x18(r28)
-/* 801CCD04 0000000C  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__LIT_4158(r2)
+/* 801CCD04 0000000C  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
 /* 801CCD08 00000010  38 A0 00 00 */	li r5, 0
 /* 801CCD0C 00000014  38 C0 00 00 */	li r6, 0
 /* 801CCD10 00000018  48 00 53 F1 */	bl setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb

@@ -5,64 +5,58 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void init__3cMlFP7JKRHeap();
-extern void memalignB__3cMlFiUl();
-extern void free__3cMlFPv();
-extern void alloc__7JKRHeapFUli();
-extern void free__7JKRHeapFPv();
+extern "C" extern void init__3cMlFP7JKRHeap();
+extern "C" extern void memalignB__3cMlFiUl();
+extern "C" extern void free__3cMlFPv();
+extern "C" extern void alloc__7JKRHeapFUli();
+extern "C" extern void free__7JKRHeapFPv();
 SECTION_SBSS extern u8 Heap__3cMl[4 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80451158[8];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451150-80451158 0004 .sbss      Heap__3cMl                                                   */
-SECTION_SBSS u8 Heap__3cMl[4 + 4 /* padding */];
-/* 80451158-80451160 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80451158[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 Heap__3cMl[4 + 4 /* padding */];
 
 /* 80263220-80263228 0008 .text      init__3cMlFP7JKRHeap                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__3cMlFP7JKRHeap() {
+extern "C" asm void init__3cMlFP7JKRHeap() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_malloc/init__3cMlFP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 80263228-80263260 0038 .text      memalignB__3cMlFiUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void memalignB__3cMlFiUl() {
+extern "C" asm void memalignB__3cMlFiUl() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_malloc/memalignB__3cMlFiUl.s"
 }
 #pragma pop
 
+
 /* 80263260-8026328C 002C .text      free__3cMlFPv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void free__3cMlFPv() {
+extern "C" asm void free__3cMlFPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_malloc/free__3cMlFPv.s"
 }
 #pragma pop
 
+
+/* 80451158-80451160 0008 .sbss      None                                                         */
+u8 data_80451158[8];
 

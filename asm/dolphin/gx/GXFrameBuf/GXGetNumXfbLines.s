@@ -4,7 +4,7 @@ lbl_8035CCDC:
 /* 8035CCE4 00000008  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035CCE8 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8035CCEC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8035CCF0 00000014  C0 02 CB A8 */	lfs f0, LIT_179(r2)
+/* 8035CCF0 00000014  C0 02 CB A8 */	lfs f0, lit_179(r2)
 /* 8035CCF4 00000018  EC 20 08 24 */	fdivs f1, f0, f1
 /* 8035CCF8 0000001C  48 00 53 B5 */	bl __cvt_fp2unsigned
 /* 8035CCFC 00000020  57 E5 04 3E */	clrlwi r5, r31, 0x10

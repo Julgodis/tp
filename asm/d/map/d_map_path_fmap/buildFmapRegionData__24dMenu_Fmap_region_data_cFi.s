@@ -68,7 +68,7 @@ lbl_8003DFB4:
 /* 8003DFD0 0000001C  D3 9D 00 1C */	stfs f28, 0x1c(r29)
 /* 8003DFD4 00000020  48 00 00 18 */	b lbl_8003DFEC
 lbl_8003DFD8:
-/* 8003DFD8 00000000  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__LIT_3894(r2)
+/* 8003DFD8 00000000  C0 02 84 20 */	lfs f0, d_map_d_map_path_fmap__lit_3894(r2)
 /* 8003DFDC 00000004  D0 1D 00 10 */	stfs f0, 0x10(r29)
 /* 8003DFE0 00000008  D0 1D 00 14 */	stfs f0, 0x14(r29)
 /* 8003DFE4 0000000C  D0 1D 00 18 */	stfs f0, 0x18(r29)

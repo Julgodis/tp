@@ -5,42 +5,41 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void checkVibration__19dSv_player_config_cCFv();
-extern void func_8006F168();
-extern void func_8006F184();
-extern void func_8006F1A4();
-extern void func_8006F1D8();
-extern void Run__12dVibration_cFv();
-extern void StartShock__12dVibration_cFii4cXyz();
-extern void StartQuake__12dVibration_cFii4cXyz();
-extern void StartQuake__12dVibration_cFPCUcii4cXyz();
-extern void StopQuake__12dVibration_cFi();
-extern void Kill__12dVibration_cFv();
-extern void CheckQuake__12dVibration_cFv();
-extern void setDefault__12dVibration_cFv();
-extern void Init__12dVibration_cFv();
-extern void Pause__12dVibration_cFv();
-extern void Remove__12dVibration_cFv();
-extern void StartShake__9dCamera_cFlPUcl4cXyz();
-extern void StopShake__9dCamera_cFv();
-extern void dCam_getBody__Fv();
-extern void dKy_darkworld_check__Fv();
-extern void __pl__4cXyzCFRC3Vec();
-extern void norm__4cXyzCFv();
-extern void cM_rnd__Fv();
-extern void stopMotor__Q210JUTGamePad7CRumbleFib();
-extern void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
-extern void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
-extern void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
-extern void __cvt_fp2unsigned();
-extern void _savegpr_26();
-extern void _savegpr_29();
-extern void _restgpr_26();
-extern void _restgpr_29();
+extern "C" extern void checkVibration__19dSv_player_config_cCFv();
+extern "C" extern void func_8006F168();
+extern "C" extern void func_8006F184();
+extern "C" extern void func_8006F1A4();
+extern "C" extern void func_8006F1D8();
+extern "C" extern void Run__12dVibration_cFv();
+extern "C" extern void StartShock__12dVibration_cFii4cXyz();
+extern "C" extern void StartQuake__12dVibration_cFii4cXyz();
+extern "C" extern void StartQuake__12dVibration_cFPCUcii4cXyz();
+extern "C" extern void StopQuake__12dVibration_cFi();
+extern "C" extern void Kill__12dVibration_cFv();
+extern "C" extern void CheckQuake__12dVibration_cFv();
+extern "C" extern void setDefault__12dVibration_cFv();
+extern "C" extern void Init__12dVibration_cFv();
+extern "C" extern void Pause__12dVibration_cFv();
+extern "C" extern void Remove__12dVibration_cFv();
+extern "C" extern void StartShake__9dCamera_cFlPUcl4cXyz();
+extern "C" extern void StopShake__9dCamera_cFv();
+extern "C" extern void dCam_getBody__Fv();
+extern "C" extern void dKy_darkworld_check__Fv();
+extern "C" extern void __pl__4cXyzCFRC3Vec();
+extern "C" extern void norm__4cXyzCFv();
+extern "C" extern void cM_rnd__Fv();
+extern "C" extern void stopMotor__Q210JUTGamePad7CRumbleFib();
+extern "C" extern void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+extern "C" extern void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+extern "C" extern void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
+extern "C" extern void __cvt_fp2unsigned();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_29();
 SECTION_RODATA extern const u8 MS_patt__12dVibration_c[88];
 SECTION_RODATA extern const u8 CS_patt__12dVibration_c[88];
 SECTION_RODATA extern const u8 MQ_patt__12dVibration_c[80];
@@ -49,186 +48,185 @@ SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 data_80450F50[8];
 SECTION_SBSS extern u8 data_80450F58[8];
-SECTION_SDATA2 extern u8 d_d_vibration__LIT_3756[8];
-}
+SECTION_SDATA2 extern f64 d_d_vibration__lit_3756;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80452620-80452628 0008 .sdata2    @3756                                                        */
-SECTION_SDATA2 u8 d_d_vibration__LIT_3756[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450F50-80450F58 0008 .sbss      data$3831                                                    */
-SECTION_SBSS u8 data_80450F50[8];
-/* 80450F58-80450F60 0008 .sbss      None                                                         */
-SECTION_SBSS u8 data_80450F58[8];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8006F168-8006F184 001C .text      makedata__25@unnamed@d_vibration_cpp@FPUsUll                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8006F168() {
+extern "C" asm void func_8006F168() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F168.s"
 }
 #pragma pop
 
+
 /* 8006F184-8006F1A4 0020 .text      rollshift__25@unnamed@d_vibration_cpp@FUlll                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8006F184() {
+extern "C" asm void func_8006F184() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F184.s"
 }
 #pragma pop
 
+
 /* 8006F1A4-8006F1D8 0034 .text      makebits__25@unnamed@d_vibration_cpp@FUlll                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8006F1A4() {
+extern "C" asm void func_8006F1A4() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F1A4.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80452620-80452628 0008 .sdata2    @3756                                                        */
+f64 d_d_vibration__lit_3756 = 4503601774854144.0 /* cast s32 to float */;
+
 /* 8006F1D8-8006F268 0090 .text      randombit__25@unnamed@d_vibration_cpp@Fll                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8006F1D8() {
+extern "C" asm void func_8006F1D8() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F1D8.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450F50-80450F58 0008 .sbss      data$3831                                                    */
+u8 data_80450F50[8];
+
 /* 8006F268-8006FA24 07BC .text      Run__12dVibration_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Run__12dVibration_cFv() {
+extern "C" asm void Run__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/Run__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FA24-8006FB10 00EC .text      StartShock__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void StartShock__12dVibration_cFii4cXyz() {
+extern "C" asm void StartShock__12dVibration_cFii4cXyz() {
 	nofralloc
 #include "asm/d/d_vibration/StartShock__12dVibration_cFii4cXyz.s"
 }
 #pragma pop
 
+
 /* 8006FB10-8006FC0C 00FC .text      StartQuake__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void StartQuake__12dVibration_cFii4cXyz() {
+extern "C" asm void StartQuake__12dVibration_cFii4cXyz() {
 	nofralloc
 #include "asm/d/d_vibration/StartQuake__12dVibration_cFii4cXyz.s"
 }
 #pragma pop
 
+
 /* 8006FC0C-8006FD94 0188 .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void StartQuake__12dVibration_cFPCUcii4cXyz() {
+extern "C" asm void StartQuake__12dVibration_cFPCUcii4cXyz() {
 	nofralloc
 #include "asm/d/d_vibration/StartQuake__12dVibration_cFPCUcii4cXyz.s"
 }
 #pragma pop
 
+
 /* 8006FD94-8006FE00 006C .text      StopQuake__12dVibration_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void StopQuake__12dVibration_cFi() {
+extern "C" asm void StopQuake__12dVibration_cFi() {
 	nofralloc
 #include "asm/d/d_vibration/StopQuake__12dVibration_cFi.s"
 }
 #pragma pop
 
+
 /* 8006FE00-8006FE5C 005C .text      Kill__12dVibration_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Kill__12dVibration_cFv() {
+extern "C" asm void Kill__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/Kill__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FE5C-8006FE84 0028 .text      CheckQuake__12dVibration_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CheckQuake__12dVibration_cFv() {
+extern "C" asm void CheckQuake__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/CheckQuake__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FE84-8006FF04 0080 .text      setDefault__12dVibration_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setDefault__12dVibration_cFv() {
+extern "C" asm void setDefault__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/setDefault__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FF04-8006FF38 0034 .text      Init__12dVibration_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Init__12dVibration_cFv() {
+extern "C" asm void Init__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/Init__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FF38-8006FFF8 00C0 .text      Pause__12dVibration_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Pause__12dVibration_cFv() {
+extern "C" asm void Pause__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/Pause__12dVibration_cFv.s"
 }
 #pragma pop
 
+
 /* 8006FFF8-80070018 0020 .text      Remove__12dVibration_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Remove__12dVibration_cFv() {
+extern "C" asm void Remove__12dVibration_cFv() {
 	nofralloc
 #include "asm/d/d_vibration/Remove__12dVibration_cFv.s"
 }
 #pragma pop
 
+
+/* 80450F58-80450F60 0008 .sbss      None                                                         */
+u8 data_80450F58[8];
 

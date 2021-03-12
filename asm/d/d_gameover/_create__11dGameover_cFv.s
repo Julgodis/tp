@@ -163,7 +163,7 @@ lbl_8019B28C:
 /* 8019B294 00000008  38 00 00 03 */	li r0, 3
 /* 8019B298 0000000C  98 1D 01 18 */	stb r0, 0x118(r29)
 /* 8019B29C 00000010  80 7D 01 00 */	lwz r3, 0x100(r29)
-/* 8019B2A0 00000014  C0 22 A1 84 */	lfs f1, d_d_gameover__LIT_3869(r2)
+/* 8019B2A0 00000014  C0 22 A1 84 */	lfs f1, d_d_gameover__lit_3869(r2)
 /* 8019B2A4 00000018  48 00 0A 0D */	bl setBackAlpha__24dDlst_GameOverScrnDraw_cFf
 /* 8019B2A8 0000001C  48 00 00 10 */	b lbl_8019B2B8
 lbl_8019B2AC:

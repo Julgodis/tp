@@ -111,9 +111,9 @@ lbl_802295E8:
 /* 80229620 00000038  38 A0 00 00 */	li r5, 0
 /* 80229624 0000003C  38 C0 00 00 */	li r6, 0
 /* 80229628 00000040  38 E0 00 00 */	li r7, 0
-/* 8022962C 00000044  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022962C 00000044  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__lit_4028(r2)
 /* 80229630 00000048  FC 40 08 90 */	fmr f2, f1
-/* 80229634 0000004C  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__LIT_4291(r2)
+/* 80229634 0000004C  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__lit_4291(r2)
 /* 80229638 00000050  FC 80 18 90 */	fmr f4, f3
 /* 8022963C 00000054  39 00 00 00 */	li r8, 0
 /* 80229640 00000058  48 08 23 45 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -135,9 +135,9 @@ lbl_80229648:
 /* 8022967C 00000034  38 A0 00 00 */	li r5, 0
 /* 80229680 00000038  38 C0 00 00 */	li r6, 0
 /* 80229684 0000003C  38 E0 00 00 */	li r7, 0
-/* 80229688 00000040  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__LIT_4028(r2)
+/* 80229688 00000040  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__lit_4028(r2)
 /* 8022968C 00000044  FC 40 08 90 */	fmr f2, f1
-/* 80229690 00000048  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__LIT_4291(r2)
+/* 80229690 00000048  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__lit_4291(r2)
 /* 80229694 0000004C  FC 80 18 90 */	fmr f4, f3
 /* 80229698 00000050  39 00 00 00 */	li r8, 0
 /* 8022969C 00000054  48 08 22 E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -163,9 +163,9 @@ lbl_802296C4:
 /* 802296E0 0000001C  38 A0 00 00 */	li r5, 0
 /* 802296E4 00000020  38 C0 00 00 */	li r6, 0
 /* 802296E8 00000024  38 E0 00 00 */	li r7, 0
-/* 802296EC 00000028  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__LIT_4028(r2)
+/* 802296EC 00000028  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__lit_4028(r2)
 /* 802296F0 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 802296F4 00000030  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__LIT_4291(r2)
+/* 802296F4 00000030  C0 62 B0 78 */	lfs f3, d_msg_d_msg_class__lit_4291(r2)
 /* 802296F8 00000034  FC 80 18 90 */	fmr f4, f3
 /* 802296FC 00000038  39 00 00 00 */	li r8, 0
 /* 80229700 0000003C  48 08 22 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

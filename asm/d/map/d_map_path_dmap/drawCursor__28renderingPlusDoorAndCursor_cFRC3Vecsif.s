@@ -10,11 +10,11 @@ lbl_800412C0:
 /* 800412E0 00000004  48 32 0E F5 */	bl _savegpr_27
 /* 800412E4 00000008  7C BC 2B 78 */	mr r28, r5
 /* 800412E8 0000000C  7C DB 33 78 */	mr r27, r6
-/* 800412EC 00000010  C0 02 84 B8 */	lfs f0, d_map_d_map_path_dmap__LIT_4731(r2)
+/* 800412EC 00000010  C0 02 84 B8 */	lfs f0, d_map_d_map_path_dmap__lit_4731(r2)
 /* 800412F0 00000014  EC 61 00 24 */	fdivs f3, f1, f0
 /* 800412F4 00000018  C0 23 00 08 */	lfs f1, 8(r3)
 /* 800412F8 0000001C  A0 03 00 20 */	lhz r0, 0x20(r3)
-/* 800412FC 00000020  C8 42 84 40 */	lfd f2, d_map_d_map_path_dmap__LIT_4211(r2)
+/* 800412FC 00000020  C8 42 84 40 */	lfd f2, d_map_d_map_path_dmap__lit_4211(r2)
 /* 80041300 00000024  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80041304 00000028  3C A0 43 30 */	lis r5, 0x4330
 /* 80041308 0000002C  90 A1 00 30 */	stw r5, 0x30(r1)
@@ -33,11 +33,11 @@ lbl_800412C0:
 /* 8004133C 00000060  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80041340 00000064  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80041344 00000068  C0 24 00 00 */	lfs f1, 0(r4)
-/* 80041348 0000006C  C0 42 84 28 */	lfs f2, d_map_d_map_path_dmap__LIT_3796(r2)
+/* 80041348 0000006C  C0 42 84 28 */	lfs f2, d_map_d_map_path_dmap__lit_3796(r2)
 /* 8004134C 00000070  C0 64 00 08 */	lfs f3, 8(r4)
 /* 80041350 00000074  48 30 55 99 */	bl PSMTXTrans
 /* 80041354 00000078  FC 20 F8 90 */	fmr f1, f31
-/* 80041358 0000007C  C0 42 84 38 */	lfs f2, d_map_d_map_path_dmap__LIT_4202(r2)
+/* 80041358 0000007C  C0 42 84 38 */	lfs f2, d_map_d_map_path_dmap__lit_4202(r2)
 /* 8004135C 00000080  FC 60 F0 90 */	fmr f3, f30
 /* 80041360 00000084  4B FC BA D9 */	bl scaleM__14mDoMtx_stack_cFfff
 /* 80041364 00000088  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

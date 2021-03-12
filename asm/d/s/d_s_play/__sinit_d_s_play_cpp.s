@@ -3,8 +3,8 @@ lbl_8025AC54:
 /* 8025AC58 00000004  7C 08 02 A6 */	mflr r0
 /* 8025AC5C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8025AC60 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8025AC64 00000010  3C 60 80 43 */	lis r3, d_s_d_s_play__LIT_4041@ha
-/* 8025AC68 00000014  3B E3 07 78 */	addi r31, r3, d_s_d_s_play__LIT_4041@l
+/* 8025AC64 00000010  3C 60 80 43 */	lis r3, d_s_d_s_play__lit_4041@ha
+/* 8025AC68 00000014  3B E3 07 78 */	addi r31, r3, d_s_d_s_play__lit_4041@l
 /* 8025AC6C 00000018  3C 60 80 3B */	lis r3, __vt__14mDoHIO_entry_c@ha
 /* 8025AC70 0000001C  38 03 61 B4 */	addi r0, r3, __vt__14mDoHIO_entry_c@l
 /* 8025AC74 00000020  90 0D 8B A0 */	stw r0, g_preLoadHIO(r13)

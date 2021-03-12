@@ -87,7 +87,7 @@ lbl_801D1F00:
 /* 801D1F04 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
 /* 801D1F08 00000008  C0 23 00 C8 */	lfs f1, 0xc8(r3)
 lbl_801D1F0C:
-/* 801D1F0C 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__LIT_4260(r2)
+/* 801D1F0C 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__lit_4260(r2)
 /* 801D1F10 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D1F14 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 /* 801D1F18 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha

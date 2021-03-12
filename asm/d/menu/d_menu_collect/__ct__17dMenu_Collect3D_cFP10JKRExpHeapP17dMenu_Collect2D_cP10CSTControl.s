@@ -44,12 +44,12 @@ lbl_801B64F8:
 /* 801B64F8 00000000  38 00 A4 E4 */	li r0, -23324
 /* 801B64FC 00000004  B0 1F 03 D8 */	sth r0, 0x3d8(r31)
 lbl_801B6500:
-/* 801B6500 00000000  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__LIT_4481(r2)
+/* 801B6500 00000000  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
 /* 801B6504 00000004  D0 1F 03 D0 */	stfs f0, 0x3d0(r31)
 /* 801B6508 00000008  D0 1F 03 D4 */	stfs f0, 0x3d4(r31)
 /* 801B650C 0000000C  D0 1F 03 C8 */	stfs f0, 0x3c8(r31)
 /* 801B6510 00000010  D0 1F 03 C4 */	stfs f0, 0x3c4(r31)
-/* 801B6514 00000014  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__LIT_4482(r2)
+/* 801B6514 00000014  C0 02 A5 2C */	lfs f0, d_menu_d_menu_collect__lit_4482(r2)
 /* 801B6518 00000018  D0 1F 03 CC */	stfs f0, 0x3cc(r31)
 /* 801B651C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 801B6520 00000020  39 61 00 20 */	addi r11, r1, 0x20

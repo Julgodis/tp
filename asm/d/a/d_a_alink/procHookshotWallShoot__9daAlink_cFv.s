@@ -67,7 +67,7 @@ lbl_8010D7A8:
 /* 8010D7C0 00000018  4B FF B2 59 */	bl checkHookshotWait__9daAlink_cCFv
 /* 8010D7C4 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 8010D7C8 00000020  41 82 00 3C */	beq lbl_8010D804
-/* 8010D7CC 00000024  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8010D7CC 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010D7D0 00000028  D0 1D 1F DC */	stfs f0, 0x1fdc(r29)
 /* 8010D7D4 0000002C  D0 1D 1F E0 */	stfs f0, 0x1fe0(r29)
 /* 8010D7D8 00000030  80 7D 1F 2C */	lwz r3, 0x1f2c(r29)
@@ -110,7 +110,7 @@ lbl_8010D850:
 /* 8010D85C 0000000C  41 82 00 58 */	beq lbl_8010D8B4
 /* 8010D860 00000010  7F A3 EB 78 */	mr r3, r29
 /* 8010D864 00000014  38 9D 1F D0 */	addi r4, r29, 0x1fd0
-/* 8010D868 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
+/* 8010D868 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
 /* 8010D86C 0000001C  4B FF 44 89 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 /* 8010D870 00000020  A8 1D 30 0C */	lha r0, 0x300c(r29)
 /* 8010D874 00000024  2C 00 00 00 */	cmpwi r0, 0

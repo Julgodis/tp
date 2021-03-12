@@ -5,8 +5,8 @@ lbl_800B8988:
 /* 800B8994 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800B8998 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B899C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 800B89A0 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__LIT_3757@ha
-/* 800B89A4 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__LIT_3757@l
+/* 800B89A0 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
+/* 800B89A4 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
 /* 800B89A8 00000020  48 00 09 99 */	bl checkEquipAnime__9daAlink_cCFv
 /* 800B89AC 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800B89B0 00000028  40 82 00 3C */	bne lbl_800B89EC
@@ -362,7 +362,7 @@ lbl_800B8E54:
 /* 800B8E84 00000030  48 0A 5E 79 */	bl clearData__16daPy_actorKeep_cFv
 /* 800B8E88 00000034  7F E3 FB 78 */	mr r3, r31
 /* 800B8E8C 00000038  38 80 00 02 */	li r4, 2
-/* 800B8E90 0000003C  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 800B8E90 0000003C  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 800B8E94 00000040  4B FF 48 91 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800B8E98 00000044  38 60 00 01 */	li r3, 1
 /* 800B8E9C 00000048  48 00 01 5C */	b lbl_800B8FF8
@@ -374,7 +374,7 @@ lbl_800B8EA0:
 /* 800B8EB0 00000010  C0 3F 33 B4 */	lfs f1, 0x33b4(r31)
 /* 800B8EB4 00000014  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 800B8EB8 00000018  EC 21 00 28 */	fsubs f1, f1, f0
-/* 800B8EBC 0000001C  C0 02 93 10 */	lfs f0, LIT_7306(r2)
+/* 800B8EBC 0000001C  C0 02 93 10 */	lfs f0, lit_7306(r2)
 /* 800B8EC0 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B8EC4 00000000  41 81 00 60 */	bgt lbl_800B8F24
 lbl_800B8EC8:

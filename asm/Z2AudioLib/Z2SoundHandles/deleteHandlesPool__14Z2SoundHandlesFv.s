@@ -38,8 +38,8 @@ lbl_802AB184:
 /* 802AB1A0 0000001C  38 63 41 C4 */	addi r3, r3, data_804341C4@l
 /* 802AB1A4 00000020  3C 80 80 2B */	lis r4, func_802AB200@ha
 /* 802AB1A8 00000024  38 84 B2 00 */	addi r4, r4, func_802AB200@l
-/* 802AB1AC 00000028  3C A0 80 43 */	lis r5, Z2SoundHandles__LIT_632@ha
-/* 802AB1B0 0000002C  38 A5 41 B8 */	addi r5, r5, Z2SoundHandles__LIT_632@l
+/* 802AB1AC 00000028  3C A0 80 43 */	lis r5, Z2SoundHandles__lit_632@ha
+/* 802AB1B0 0000002C  38 A5 41 B8 */	addi r5, r5, Z2SoundHandles__lit_632@l
 /* 802AB1B4 00000030  48 0B 6A 71 */	bl __register_global_object
 /* 802AB1B8 00000034  38 00 00 01 */	li r0, 1
 /* 802AB1BC 00000038  98 0D 8D C8 */	stb r0, data_80451348(r13)

@@ -23,7 +23,7 @@ lbl_800DBE48:
 /* 800DBE4C 00000004  38 80 00 FF */	li r4, 0xff
 /* 800DBE50 00000008  4B FD 11 31 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
 lbl_800DBE54:
-/* 800DBE54 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800DBE54 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800DBE58 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800DBE5C 00000008  38 60 00 01 */	li r3, 1
 lbl_800DBE60:

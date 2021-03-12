@@ -17,7 +17,7 @@ lbl_8022F8C0:
 /* 8022F8FC 0000003C  4B DE 50 F5 */	bl mDoExt_getMesgFont__Fv
 /* 8022F900 00000040  90 7F 00 14 */	stw r3, 0x14(r31)
 /* 8022F904 00000044  38 60 00 00 */	li r3, 0
-/* 8022F908 00000048  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022F908 00000048  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__lit_4027(r2)
 /* 8022F90C 0000004C  38 00 00 0C */	li r0, 0xc
 /* 8022F910 00000050  7C 09 03 A6 */	mtctr r0
 lbl_8022F914:

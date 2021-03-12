@@ -6,7 +6,7 @@ lbl_8022CDCC:
 /* 8022CDDC 00000010  48 13 53 F5 */	bl _savegpr_26
 /* 8022CDE0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8022CDE4 00000018  83 E3 00 04 */	lwz r31, 4(r3)
-/* 8022CDE8 0000001C  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022CDE8 0000001C  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__lit_4027(r2)
 /* 8022CDEC 00000020  D0 03 01 28 */	stfs f0, 0x128(r3)
 /* 8022CDF0 00000024  D0 03 01 2C */	stfs f0, 0x12c(r3)
 /* 8022CDF4 00000028  D0 03 01 30 */	stfs f0, 0x130(r3)
@@ -35,7 +35,7 @@ lbl_8022CE4C:
 /* 8022CE4C 00000000  38 60 00 00 */	li r3, 0
 /* 8022CE50 00000004  98 7E 01 4D */	stb r3, 0x14d(r30)
 /* 8022CE54 00000008  B0 7E 01 40 */	sth r3, 0x140(r30)
-/* 8022CE58 0000000C  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022CE58 0000000C  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 8022CE5C 00000010  D0 1E 00 44 */	stfs f0, 0x44(r30)
 /* 8022CE60 00000014  98 7E 01 4E */	stb r3, 0x14e(r30)
 /* 8022CE64 00000018  38 00 FF FF */	li r0, -1
@@ -52,7 +52,7 @@ lbl_8022CE4C:
 /* 8022CE90 00000044  80 7E 00 38 */	lwz r3, 0x38(r30)
 /* 8022CE94 00000048  4B FF 9E 65 */	bl initialize__10COutFont_cFv
 /* 8022CE98 0000004C  38 60 00 00 */	li r3, 0
-/* 8022CE9C 00000050  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__LIT_4027(r2)
+/* 8022CE9C 00000050  C0 02 B0 60 */	lfs f0, d_msg_d_msg_class__lit_4027(r2)
 /* 8022CEA0 00000054  38 00 00 28 */	li r0, 0x28
 /* 8022CEA4 00000058  7C 09 03 A6 */	mtctr r0
 lbl_8022CEA8:
@@ -96,7 +96,7 @@ lbl_8022CF10:
 /* 8022CF38 00000028  3B BD 00 50 */	addi r29, r29, 0x50
 /* 8022CF3C 0000002C  3B 9C 00 32 */	addi r28, r28, 0x32
 /* 8022CF40 00000030  41 80 FF D0 */	blt lbl_8022CF10
-/* 8022CF44 00000034  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__LIT_4028(r2)
+/* 8022CF44 00000034  C0 22 B0 64 */	lfs f1, d_msg_d_msg_class__lit_4028(r2)
 /* 8022CF48 00000038  C0 1F 04 54 */	lfs f0, 0x454(r31)
 /* 8022CF4C 0000003C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8022CF50 00000040  41 82 00 10 */	beq lbl_8022CF60
@@ -119,13 +119,13 @@ lbl_8022CF60:
 /* 8022CF90 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 8022CF94 00000034  41 82 00 2C */	beq lbl_8022CFC0
 /* 8022CF98 00000038  7F C3 F3 78 */	mr r3, r30
-/* 8022CF9C 0000003C  C8 22 B0 80 */	lfd f1, LIT_5154(r2)
+/* 8022CF9C 0000003C  C8 22 B0 80 */	lfd f1, lit_5154(r2)
 /* 8022CFA0 00000040  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8022CFA4 00000044  3C 00 43 30 */	lis r0, 0x4330
 /* 8022CFA8 00000048  90 01 00 08 */	stw r0, 8(r1)
 /* 8022CFAC 0000004C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8022CFB0 00000050  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8022CFB4 00000054  C0 02 B0 7C */	lfs f0, LIT_5151(r2)
+/* 8022CFB4 00000054  C0 02 B0 7C */	lfs f0, lit_5151(r2)
 /* 8022CFB8 00000058  EC 21 00 24 */	fdivs f1, f1, f0
 /* 8022CFBC 0000005C  48 00 18 A5 */	bl do_scale__28jmessage_tRenderingProcessorFf
 lbl_8022CFC0:

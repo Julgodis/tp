@@ -5,34 +5,32 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __flush_buffer();
-extern void __prep_buffer();
-}
+extern "C" extern void __flush_buffer();
+extern "C" extern void __prep_buffer();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 803650E0-803651A4 00C4 .text      __flush_buffer                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __flush_buffer() {
+extern "C" asm void __flush_buffer() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/buffer_io/__flush_buffer.s"
 }
 #pragma pop
 
+
 /* 803651A4-803651D8 0034 .text      __prep_buffer                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __prep_buffer() {
+extern "C" asm void __prep_buffer() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/buffer_io/__prep_buffer.s"
 }

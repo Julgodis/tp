@@ -5,71 +5,79 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__17JASGenericMemPoolFv();
-extern void alloc__17JASGenericMemPoolFUl();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void __ct__13JASAramStreamFv();
-extern void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
-extern void prepare__13JASAramStreamFli();
-extern void start__13JASAramStreamFv();
-extern void stop__13JASAramStreamFUs();
-extern void pause__13JASAramStreamFb();
-extern void cancel__13JASAramStreamFv();
-extern void func_802A1268();
-extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
-extern void __ct__8JAISoundFv();
-extern void func_802A2328();
-extern void asSe__8JAISoundFv();
-extern void asSeq__8JAISoundFv();
-extern void die_JAISound___8JAISoundFv();
-extern void increasePrepareCount_JAISound___8JAISoundFv();
-extern void calc_JAISound___8JAISoundFv();
-extern void init__13JAISoundChildFv();
-extern void calc__13JAISoundChildFv();
-extern void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv();
-extern void func_802A3104();
-extern void func_802A319C();
-extern void prepare_prepareStream___9JAIStreamFv();
-extern void prepare___9JAIStreamFv();
-extern void prepare_startStream___9JAIStreamFv();
-extern void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
-extern void die_JAIStream___9JAIStreamFv();
-extern void JAISound_tryDie___9JAIStreamFv();
-extern void JAIStreamMgr_calc___9JAIStreamFv();
-extern void getNumChild__9JAIStreamCFv();
-extern void getChild__9JAIStreamFi();
-extern void releaseChild__9JAIStreamFi();
-extern void getTrack__9JAIStreamFv();
-extern void getChildTrack__9JAIStreamFi();
-extern void asStream__9JAIStreamFv();
-extern void getTempoMgr__9JAIStreamFv();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __register_global_object();
-extern void _savegpr_27();
-extern void _savegpr_29();
-extern void _restgpr_27();
-extern void _restgpr_29();
-SECTION_DATA extern void* __vt__9JAIStream[12];
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void alloc__17JASGenericMemPoolFUl();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void __ct__13JASAramStreamFv();
+extern "C" extern void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
+extern "C" extern void prepare__13JASAramStreamFli();
+extern "C" extern void start__13JASAramStreamFv();
+extern "C" extern void stop__13JASAramStreamFUs();
+extern "C" extern void pause__13JASAramStreamFb();
+extern "C" extern void cancel__13JASAramStreamFv();
+extern "C" extern void func_802A1268();
+extern "C" extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+extern "C" extern void __ct__8JAISoundFv();
+extern "C" extern void func_802A2328();
+extern "C" extern void asSe__8JAISoundFv();
+extern "C" extern void asSeq__8JAISoundFv();
+extern "C" extern void die_JAISound___8JAISoundFv();
+extern "C" extern void increasePrepareCount_JAISound___8JAISoundFv();
+extern "C" extern void calc_JAISound___8JAISoundFv();
+extern "C" extern void init__13JAISoundChildFv();
+extern "C" extern void calc__13JAISoundChildFv();
+extern "C" extern void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv();
+extern "C" extern void func_802A3104();
+extern "C" extern void func_802A319C();
+extern "C" extern void prepare_prepareStream___9JAIStreamFv();
+extern "C" extern void prepare___9JAIStreamFv();
+extern "C" extern void prepare_startStream___9JAIStreamFv();
+extern "C" extern void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
+extern "C" extern void die_JAIStream___9JAIStreamFv();
+extern "C" extern void JAISound_tryDie___9JAIStreamFv();
+extern "C" extern void JAIStreamMgr_calc___9JAIStreamFv();
+extern "C" extern void getNumChild__9JAIStreamCFv();
+extern "C" extern void getChild__9JAIStreamFi();
+extern "C" extern void releaseChild__9JAIStreamFi();
+extern "C" extern void getTrack__9JAIStreamFv();
+extern "C" extern void getChildTrack__9JAIStreamFi();
+extern "C" extern void asStream__9JAIStreamFv();
+extern "C" extern void getTempoMgr__9JAIStreamFv();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_29();
+SECTION_DATA extern void* const __vt__9JAIStream[12];
 SECTION_BSS extern u8 data_804340B0[16];
-SECTION_BSS extern u8 LIT_881[12 + 4 /* padding */];
+SECTION_BSS extern u8 lit_881[12 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80451318[8];
-SECTION_SDATA2 extern u8 LIT_864[4];
-SECTION_SDATA2 extern u8 LIT_865[4];
-SECTION_SDATA2 extern u8 JAIStream__LIT_866[8];
+SECTION_SDATA2 extern f32 lit_864;
+SECTION_SDATA2 extern u8 lit_865[4];
+SECTION_SDATA2 extern f32 JAIStream__lit_866;
+
+// 
+// Functions:
+// 
+
+/* 802A30D4-802A3104 0030 .text      JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAIStream/JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803C99D8-803C9A08 0030 .data      __vt__9JAIStream                                             */
-SECTION_DATA void* __vt__9JAIStream[12] = {
+void* const __vt__9JAIStream[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getNumChild__9JAIStreamCFv,
@@ -83,210 +91,194 @@ SECTION_DATA void* __vt__9JAIStream[12] = {
 	(void*)getTempoMgr__9JAIStreamFv,
 	(void*)JAISound_tryDie___9JAIStreamFv,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804557F0-804557F4 0004 .sdata2    @864                                                         */
-SECTION_SDATA2 u8 LIT_864[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 804557F4-804557F8 0004 .sdata2    @865                                                         */
-SECTION_SDATA2 u8 LIT_865[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 804557F8-80455800 0004 .sdata2    @866                                                         */
-SECTION_SDATA2 u8 JAIStream__LIT_866[8] = {
-	0x3F, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804340E0-804340F0 000C .bss       @881                                                         */
-SECTION_BSS u8 LIT_881[12 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802A30D4-802A3104 0030 .text      JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAIStream/JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv.s"
-}
-#pragma pop
 
 /* 802A3104-802A319C 0098 .text      __ct__9JAIStreamFP12JAIStreamMgrP31JAISoundStrategyMgr<9JAIStream> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A3104() {
+extern "C" asm void func_802A3104() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/func_802A3104.s"
 }
 #pragma pop
 
+
 /* 802A319C-802A3230 0094 .text      JAIStreamMgr_startID___9JAIStreamF10JAISoundIDlPCQ29JGeometry8TVec3<f>P11JAIAudiencei */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802A319C() {
+extern "C" asm void func_802A319C() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/func_802A319C.s"
 }
 #pragma pop
 
+
 /* 802A3230-802A33F4 01C4 .text      prepare_prepareStream___9JAIStreamFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void prepare_prepareStream___9JAIStreamFv() {
+extern "C" asm void prepare_prepareStream___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/prepare_prepareStream___9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A33F4-802A3498 00A4 .text      prepare___9JAIStreamFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void prepare___9JAIStreamFv() {
+extern "C" asm void prepare___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/prepare___9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A3498-802A34E4 004C .text      prepare_startStream___9JAIStreamFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void prepare_startStream___9JAIStreamFv() {
+extern "C" asm void prepare_startStream___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/prepare_startStream___9JAIStreamFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804557F0-804557F4 0004 .sdata2    @864                                                         */
+f32 lit_864 = 1.0f;
+
+/* 804557F4-804557F8 0004 .sdata2    @865                                                         */
+u8 lit_865[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804557F8-80455800 0004 .sdata2    @866                                                         */
+f32 JAIStream__lit_866 = 0.5f;
+/* padding 4 bytes */
+
 /* 802A34E4-802A3720 023C .text      JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity() {
+extern "C" asm void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804340E0-804340F0 000C .bss       @881                                                         */
+u8 lit_881[12 + 4 /* padding */];
+
 /* 802A3720-802A37FC 00DC .text      die_JAIStream___9JAIStreamFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void die_JAIStream___9JAIStreamFv() {
+extern "C" asm void die_JAIStream___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/die_JAIStream___9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A37FC-802A388C 0090 .text      JAISound_tryDie___9JAIStreamFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISound_tryDie___9JAIStreamFv() {
+extern "C" asm void JAISound_tryDie___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/JAISound_tryDie___9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A388C-802A3948 00BC .text      JAIStreamMgr_calc___9JAIStreamFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAIStreamMgr_calc___9JAIStreamFv() {
+extern "C" asm void JAIStreamMgr_calc___9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/JAIStreamMgr_calc___9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A3948-802A3950 0008 .text      getNumChild__9JAIStreamCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getNumChild__9JAIStreamCFv() {
+extern "C" asm void getNumChild__9JAIStreamCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getNumChild__9JAIStreamCFv.s"
 }
 #pragma pop
 
+
 /* 802A3950-802A3A24 00D4 .text      getChild__9JAIStreamFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getChild__9JAIStreamFi() {
+extern "C" asm void getChild__9JAIStreamFi() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getChild__9JAIStreamFi.s"
 }
 #pragma pop
 
+
 /* 802A3A24-802A3ABC 0098 .text      releaseChild__9JAIStreamFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void releaseChild__9JAIStreamFi() {
+extern "C" asm void releaseChild__9JAIStreamFi() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/releaseChild__9JAIStreamFi.s"
 }
 #pragma pop
 
+
 /* 802A3ABC-802A3AC4 0008 .text      getTrack__9JAIStreamFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTrack__9JAIStreamFv() {
+extern "C" asm void getTrack__9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getTrack__9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A3AC4-802A3ACC 0008 .text      getChildTrack__9JAIStreamFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getChildTrack__9JAIStreamFi() {
+extern "C" asm void getChildTrack__9JAIStreamFi() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getChildTrack__9JAIStreamFi.s"
 }
 #pragma pop
 
+
 /* 802A3ACC-802A3AD0 0004 .text      asStream__9JAIStreamFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void asStream__9JAIStreamFv() {
+extern "C" asm void asStream__9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/asStream__9JAIStreamFv.s"
 }
 #pragma pop
 
+
 /* 802A3AD0-802A3AD8 0008 .text      getTempoMgr__9JAIStreamFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTempoMgr__9JAIStreamFv() {
+extern "C" asm void getTempoMgr__9JAIStreamFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getTempoMgr__9JAIStreamFv.s"
 }

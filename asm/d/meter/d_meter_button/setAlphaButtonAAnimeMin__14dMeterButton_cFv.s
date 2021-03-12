@@ -6,7 +6,7 @@ lbl_80206CE0:
 /* 80206CF0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80206CF4 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 80206CF8 00000018  48 04 EB 31 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80206CFC 0000001C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__LIT_4146(r2)
+/* 80206CFC 0000001C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
 /* 80206D00 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80206D04 00000024  41 82 00 58 */	beq lbl_80206D5C
 /* 80206D08 00000028  A8 1F 04 84 */	lha r0, 0x484(r31)
@@ -16,14 +16,14 @@ lbl_80206CE0:
 /* 80206D18 00000038  B0 1F 04 84 */	sth r0, 0x484(r31)
 lbl_80206D1C:
 /* 80206D1C 00000000  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 80206D20 00000004  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__LIT_4146(r2)
+/* 80206D20 00000004  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
 /* 80206D24 00000008  48 04 EA AD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80206D28 0000000C  38 00 00 00 */	li r0, 0
 /* 80206D2C 00000010  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 80206D30 00000014  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 80206D34 00000018  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 80206D38 0000001C  48 04 EA F1 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80206D3C 00000020  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__LIT_4146(r2)
+/* 80206D3C 00000020  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
 /* 80206D40 00000024  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80206D44 00000028  40 82 00 18 */	bne lbl_80206D5C
 /* 80206D48 0000002C  7F E3 FB 78 */	mr r3, r31

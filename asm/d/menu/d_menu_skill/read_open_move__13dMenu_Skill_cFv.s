@@ -18,7 +18,7 @@ lbl_801F7FF8:
 /* 801F8038 00000040  38 00 00 02 */	li r0, 2
 /* 801F803C 00000044  98 1F 02 05 */	stb r0, 0x205(r31)
 /* 801F8040 00000048  80 7F 01 7C */	lwz r3, 0x17c(r31)
-/* 801F8044 0000004C  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__LIT_3809(r2)
+/* 801F8044 0000004C  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
 /* 801F8048 00000050  48 05 D7 89 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F804C 00000054  80 7F 01 58 */	lwz r3, 0x158(r31)
 /* 801F8050 00000058  3C 80 80 43 */	lis r4, g_drawHIO@ha
@@ -30,7 +30,7 @@ lbl_801F7FF8:
 /* 801F8068 00000070  4E 80 04 21 */	bctrl 
 /* 801F806C 00000074  48 00 00 8C */	b lbl_801F80F8
 lbl_801F8070:
-/* 801F8070 00000000  C8 42 AA B0 */	lfd f2, LIT_4016(r2)
+/* 801F8070 00000000  C8 42 AA B0 */	lfd f2, lit_4016(r2)
 /* 801F8074 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F8078 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F807C 0000000C  3C 60 43 30 */	lis r3, 0x4330
@@ -50,7 +50,7 @@ lbl_801F8070:
 /* 801F80B4 00000044  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801F80B8 00000048  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801F80BC 0000004C  88 04 0A 8D */	lbz r0, 0xa8d(r4)
-/* 801F80C0 00000050  C8 22 AA B8 */	lfd f1, d_menu_d_menu_skill__LIT_4104(r2)
+/* 801F80C0 00000050  C8 22 AA B8 */	lfd f1, d_menu_d_menu_skill__lit_4104(r2)
 /* 801F80C4 00000054  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801F80C8 00000058  3C 00 43 30 */	lis r0, 0x4330
 /* 801F80CC 0000005C  90 01 00 18 */	stw r0, 0x18(r1)

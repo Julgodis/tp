@@ -5,112 +5,107 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void stop__14JASAudioThreadFv();
-extern void __ct__15JASAudioReseterFv();
-extern void __dt__15JASAudioReseterFv();
-extern void start__15JASAudioReseterFUlb();
-extern void resume__15JASAudioReseterFv();
-extern void checkDone__15JASAudioReseterCFv();
-extern void calc__15JASAudioReseterFv();
-extern void callback__15JASAudioReseterFPv();
-extern void drop__13JASDSPChannelFv();
-extern void getHandle__13JASDSPChannelFUl();
-extern void setDSPLevel__9JASDriverFf();
-extern void getDSPLevel__9JASDriverFv();
-extern void registerDspSyncCallback__9JASDriverFPFPv_lPv();
-extern void __dl__FPv();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
+extern "C" extern void stop__14JASAudioThreadFv();
+extern "C" extern void __ct__15JASAudioReseterFv();
+extern "C" extern void __dt__15JASAudioReseterFv();
+extern "C" extern void start__15JASAudioReseterFUlb();
+extern "C" extern void resume__15JASAudioReseterFv();
+extern "C" extern void checkDone__15JASAudioReseterCFv();
+extern "C" extern void calc__15JASAudioReseterFv();
+extern "C" extern void callback__15JASAudioReseterFPv();
+extern "C" extern void drop__13JASDSPChannelFv();
+extern "C" extern void getHandle__13JASDSPChannelFUl();
+extern "C" extern void setDSPLevel__9JASDriverFf();
+extern "C" extern void getDSPLevel__9JASDriverFv();
+extern "C" extern void registerDspSyncCallback__9JASDriverFPFPv_lPv();
+extern "C" extern void __dl__FPv();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
 SECTION_SBSS extern u8 data_80450B8C[4];
-SECTION_SDATA2 extern u8 JASAudioReseter__LIT_156[8];
-}
+SECTION_SDATA2 extern f64 JASAudioReseter__lit_156;
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80455740-80455748 0008 .sdata2    @156                                                         */
-SECTION_SDATA2 u8 JASAudioReseter__LIT_156[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8029D0B4-8029D0FC 0048 .text      __ct__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15JASAudioReseterFv() {
+extern "C" asm void __ct__15JASAudioReseterFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/__ct__15JASAudioReseterFv.s"
 }
 #pragma pop
 
+
 /* 8029D0FC-8029D138 003C .text      __dt__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15JASAudioReseterFv() {
+extern "C" asm void __dt__15JASAudioReseterFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/__dt__15JASAudioReseterFv.s"
 }
 #pragma pop
 
+
 /* 8029D138-8029D1D4 009C .text      start__15JASAudioReseterFUlb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void start__15JASAudioReseterFUlb() {
+extern "C" asm void start__15JASAudioReseterFUlb() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/start__15JASAudioReseterFUlb.s"
 }
 #pragma pop
 
+
 /* 8029D1D4-8029D1F8 0024 .text      resume__15JASAudioReseterFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resume__15JASAudioReseterFv() {
+extern "C" asm void resume__15JASAudioReseterFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/resume__15JASAudioReseterFv.s"
 }
 #pragma pop
 
+
 /* 8029D1F8-8029D200 0008 .text      checkDone__15JASAudioReseterCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkDone__15JASAudioReseterCFv() {
+extern "C" asm void checkDone__15JASAudioReseterCFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/checkDone__15JASAudioReseterCFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80455740-80455748 0008 .sdata2    @156                                                         */
+f64 JASAudioReseter__lit_156 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 8029D200-8029D2D4 00D4 .text      calc__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__15JASAudioReseterFv() {
+extern "C" asm void calc__15JASAudioReseterFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/calc__15JASAudioReseterFv.s"
 }
 #pragma pop
 
+
 /* 8029D2D4-8029D2F4 0020 .text      callback__15JASAudioReseterFPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void callback__15JASAudioReseterFPv() {
+extern "C" asm void callback__15JASAudioReseterFPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioReseter/callback__15JASAudioReseterFPv.s"
 }

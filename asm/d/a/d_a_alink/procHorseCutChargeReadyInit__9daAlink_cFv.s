@@ -28,7 +28,7 @@ lbl_800F1894:
 /* 800F18FC 00000068  40 82 00 14 */	bne lbl_800F1910
 /* 800F1900 0000006C  7F E3 FB 78 */	mr r3, r31
 /* 800F1904 00000070  38 80 00 02 */	li r4, 2
-/* 800F1908 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800F1908 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800F190C 00000078  4B FB C1 E1 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1910:
 /* 800F1910 00000000  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha

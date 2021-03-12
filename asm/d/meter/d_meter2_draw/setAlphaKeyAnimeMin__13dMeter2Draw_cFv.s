@@ -15,7 +15,7 @@ lbl_80216CA8:
 /* 80216CDC 00000020  EF E2 00 32 */	fmuls f31, f2, f0
 /* 80216CE0 00000024  80 7F 02 E0 */	lwz r3, 0x2e0(r31)
 /* 80216CE4 00000028  48 03 EB 45 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80216CE8 0000002C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80216CE8 0000002C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80216CEC 00000030  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80216CF0 00000034  41 82 00 20 */	beq lbl_80216D10
 /* 80216CF4 00000038  80 7F 02 E0 */	lwz r3, 0x2e0(r31)

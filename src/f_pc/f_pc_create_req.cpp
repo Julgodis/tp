@@ -5,140 +5,146 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void fpcBs_MakeOfId__Fv();
-extern void fpcCtIt_Method__FPFPvPv_iPv();
-extern void fpcCtIt_Judge__FPFPvPv_PvPv();
-extern void fpcCtRq_isCreatingByID__FP10create_tagPUi();
-extern void fpcCtRq_IsCreatingByID__FUi();
-extern void fpcCtRq_CreateQTo__FP14create_request();
-extern void fpcCtRq_ToCreateQ__FP14create_request();
-extern void fpcCtRq_Delete__FP14create_request();
-extern void fpcCtRq_Cancel__FP14create_request();
-extern void fpcCtRq_IsDoing__FP14create_request();
-extern void fpcCtRq_Do__FP14create_request();
-extern void fpcCtRq_Handler__Fv();
-extern void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
-extern void fpcCtTg_ToCreateQ__FP10create_tag();
-extern void fpcCtTg_CreateQTo__FP10create_tag();
-extern void fpcCtTg_Init__FP10create_tagPv();
-extern void fpcDt_Delete__FPv();
-extern void fpcEx_ToExecuteQ__FP18base_process_class();
-extern void fpcLy_CancelQTo__FP24process_method_tag_class();
-extern void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
-extern void fpcLy_CreatingMesg__FP11layer_class();
-extern void fpcLy_CreatedMesg__FP11layer_class();
-extern void fpcMtd_Method__FPFPv_iPv();
-extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern void memalignB__3cMlFiUl();
-extern void free__3cMlFPv();
-extern void _savegpr_29();
-extern void _restgpr_29();
-}
+extern "C" extern void fpcBs_MakeOfId__Fv();
+extern "C" extern void fpcCtIt_Method__FPFPvPv_iPv();
+extern "C" extern void fpcCtIt_Judge__FPFPvPv_PvPv();
+extern "C" extern void fpcCtRq_isCreatingByID__FP10create_tagPUi();
+extern "C" extern void fpcCtRq_IsCreatingByID__FUi();
+extern "C" extern void fpcCtRq_CreateQTo__FP14create_request();
+extern "C" extern void fpcCtRq_ToCreateQ__FP14create_request();
+extern "C" extern void fpcCtRq_Delete__FP14create_request();
+extern "C" extern void fpcCtRq_Cancel__FP14create_request();
+extern "C" extern void fpcCtRq_IsDoing__FP14create_request();
+extern "C" extern void fpcCtRq_Do__FP14create_request();
+extern "C" extern void fpcCtRq_Handler__Fv();
+extern "C" extern void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+extern "C" extern void fpcCtTg_ToCreateQ__FP10create_tag();
+extern "C" extern void fpcCtTg_CreateQTo__FP10create_tag();
+extern "C" extern void fpcCtTg_Init__FP10create_tagPv();
+extern "C" extern void fpcDt_Delete__FPv();
+extern "C" extern void fpcEx_ToExecuteQ__FP18base_process_class();
+extern "C" extern void fpcLy_CancelQTo__FP24process_method_tag_class();
+extern "C" extern void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
+extern "C" extern void fpcLy_CreatingMesg__FP11layer_class();
+extern "C" extern void fpcLy_CreatedMesg__FP11layer_class();
+extern "C" extern void fpcMtd_Method__FPFPv_iPv();
+extern "C" extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" extern void memalignB__3cMlFiUl();
+extern "C" extern void free__3cMlFPv();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80020ACC-80020AE8 001C .text      fpcCtRq_isCreatingByID__FP10create_tagPUi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_isCreatingByID__FP10create_tagPUi() {
+extern "C" asm void fpcCtRq_isCreatingByID__FP10create_tagPUi() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_isCreatingByID__FP10create_tagPUi.s"
 }
 #pragma pop
 
+
 /* 80020AE8-80020B20 0038 .text      fpcCtRq_IsCreatingByID__FUi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_IsCreatingByID__FUi() {
+extern "C" asm void fpcCtRq_IsCreatingByID__FUi() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_IsCreatingByID__FUi.s"
 }
 #pragma pop
 
+
 /* 80020B20-80020B5C 003C .text      fpcCtRq_CreateQTo__FP14create_request                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_CreateQTo__FP14create_request() {
+extern "C" asm void fpcCtRq_CreateQTo__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_CreateQTo__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020B5C-80020BA0 0044 .text      fpcCtRq_ToCreateQ__FP14create_request                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_ToCreateQ__FP14create_request() {
+extern "C" asm void fpcCtRq_ToCreateQ__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_ToCreateQ__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020BA0-80020C14 0074 .text      fpcCtRq_Delete__FP14create_request                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_Delete__FP14create_request() {
+extern "C" asm void fpcCtRq_Delete__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_Delete__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020C14-80020CAC 0098 .text      fpcCtRq_Cancel__FP14create_request                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_Cancel__FP14create_request() {
+extern "C" asm void fpcCtRq_Cancel__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_Cancel__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020CAC-80020CC8 001C .text      fpcCtRq_IsDoing__FP14create_request                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_IsDoing__FP14create_request() {
+extern "C" asm void fpcCtRq_IsDoing__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_IsDoing__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020CC8-80020D84 00BC .text      fpcCtRq_Do__FP14create_request                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_Do__FP14create_request() {
+extern "C" asm void fpcCtRq_Do__FP14create_request() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_Do__FP14create_request.s"
 }
 #pragma pop
 
+
 /* 80020D84-80020DB0 002C .text      fpcCtRq_Handler__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_Handler__Fv() {
+extern "C" asm void fpcCtRq_Handler__Fv() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_Handler__Fv.s"
 }
 #pragma pop
 
+
 /* 80020DB0-80020E38 0088 .text      fpcCtRq_Create__FP11layer_classUlP27create_request_method_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class() {
+extern "C" asm void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class() {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_Create__FP11layer_classUlP27create_request_method_class.s"
 }

@@ -27,7 +27,7 @@ lbl_8011BB04:
 /* 8011BB18 00000014  C0 45 00 14 */	lfs f2, 0x14(r5)
 /* 8011BB1C 00000018  4B F9 14 C5 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_8011BB20:
-/* 8011BB20 00000000  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8011BB20 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8011BB24 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8011BB28 00000008  38 60 00 01 */	li r3, 1
 lbl_8011BB2C:

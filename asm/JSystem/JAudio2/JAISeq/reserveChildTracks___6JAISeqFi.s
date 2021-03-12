@@ -21,8 +21,8 @@ lbl_802A0CD0:
 /* 802A0CEC 0000001C  38 63 1B 04 */	addi r3, r3, data_80431B04@l
 /* 802A0CF0 00000020  3C 80 80 29 */	lis r4, func_802932E0@ha
 /* 802A0CF4 00000024  38 84 32 E0 */	addi r4, r4, func_802932E0@l
-/* 802A0CF8 00000028  3C A0 80 43 */	lis r5, LIT_716@ha
-/* 802A0CFC 0000002C  38 A5 40 98 */	addi r5, r5, LIT_716@l
+/* 802A0CF8 00000028  3C A0 80 43 */	lis r5, lit_716@ha
+/* 802A0CFC 0000002C  38 A5 40 98 */	addi r5, r5, lit_716@l
 /* 802A0D00 00000030  48 0C 0F 25 */	bl __register_global_object
 /* 802A0D04 00000034  38 00 00 01 */	li r0, 1
 /* 802A0D08 00000038  98 0D 8C B1 */	stb r0, struct_80451230+0x1(r13)
@@ -66,8 +66,8 @@ lbl_802A0D6C:
 /* 802A0D94 00000028  38 63 1B 04 */	addi r3, r3, data_80431B04@l
 /* 802A0D98 0000002C  3C 80 80 29 */	lis r4, func_802932E0@ha
 /* 802A0D9C 00000030  38 84 32 E0 */	addi r4, r4, func_802932E0@l
-/* 802A0DA0 00000034  3C A0 80 43 */	lis r5, LIT_716@ha
-/* 802A0DA4 00000038  38 A5 40 98 */	addi r5, r5, LIT_716@l
+/* 802A0DA0 00000034  3C A0 80 43 */	lis r5, lit_716@ha
+/* 802A0DA4 00000038  38 A5 40 98 */	addi r5, r5, lit_716@l
 /* 802A0DA8 0000003C  48 0C 0E 7D */	bl __register_global_object
 /* 802A0DAC 00000040  38 00 00 01 */	li r0, 1
 /* 802A0DB0 00000044  98 0D 8C B1 */	stb r0, struct_80451230+0x1(r13)

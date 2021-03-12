@@ -23,9 +23,9 @@ lbl_8001CED0:
 /* 8001CF24 00000040  80 6D 81 E8 */	lwz r3, calc_mtx(r13)
 /* 8001CF28 00000044  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 8001CF2C 00000048  4B FE F4 B1 */	bl mDoMtx_YrotS__FPA4_fs
-/* 8001CF30 0000004C  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001CF30 0000004C  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001CF34 00000050  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8001CF38 00000054  C0 02 82 4C */	lfs f0, LIT_6068(r2)
+/* 8001CF38 00000054  C0 02 82 4C */	lfs f0, lit_6068(r2)
 /* 8001CF3C 00000058  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8001CF40 0000005C  D3 C1 00 28 */	stfs f30, 0x28(r1)
 /* 8001CF44 00000060  38 61 00 20 */	addi r3, r1, 0x20

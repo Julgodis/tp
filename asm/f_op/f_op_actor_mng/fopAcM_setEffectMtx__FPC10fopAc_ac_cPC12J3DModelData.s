@@ -36,7 +36,7 @@ lbl_8001D42C:
 /* 8001D4B4 00000088  48 32 95 D9 */	bl C_MTXLookAt
 /* 8001D4B8 0000008C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8001D4BC 00000090  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8001D4C0 00000094  C0 22 82 38 */	lfs f1, f_op_f_op_actor_mng__LIT_5810(r2)
+/* 8001D4C0 00000094  C0 22 82 38 */	lfs f1, f_op_f_op_actor_mng__lit_5810(r2)
 /* 8001D4C4 00000098  FC 40 08 90 */	fmr f2, f1
 /* 8001D4C8 0000009C  FC 60 08 90 */	fmr f3, f1
 /* 8001D4CC 000000A0  48 32 94 9D */	bl PSMTXScale
@@ -51,7 +51,7 @@ lbl_8001D42C:
 /* 8001D4F0 000000C4  38 81 00 68 */	addi r4, r1, 0x68
 /* 8001D4F4 000000C8  7C 65 1B 78 */	mr r5, r3
 /* 8001D4F8 000000CC  48 32 8F ED */	bl PSMTXConcat
-/* 8001D4FC 000000D0  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__LIT_4645(r2)
+/* 8001D4FC 000000D0  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
 /* 8001D500 000000D4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8001D504 000000D8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8001D508 000000DC  D0 03 00 0C */	stfs f0, 0xc(r3)

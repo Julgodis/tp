@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __StringRead();
-}
+extern "C" extern void __StringRead();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036878C-8036881C 0090 .text      __StringRead                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __StringRead() {
+extern "C" asm void __StringRead() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/scanf/__StringRead.s"
 }

@@ -40,7 +40,7 @@ lbl_8013707C:
 /* 80137088 0000000C  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlDamLarge_c0@ha
 /* 8013708C 00000010  38 C5 F2 9C */	addi r6, r5, m__24daAlinkHIO_wlDamLarge_c0@l
 /* 80137090 00000014  C0 26 00 04 */	lfs f1, 4(r6)
-/* 80137094 00000018  C0 42 93 78 */	lfs f2, LIT_8676(r2)
+/* 80137094 00000018  C0 42 93 78 */	lfs f2, lit_8676(r2)
 /* 80137098 0000001C  A8 A6 00 00 */	lha r5, 0(r6)
 /* 8013709C 00000020  C0 66 00 0C */	lfs f3, 0xc(r6)
 /* 801370A0 00000024  4B FF 26 65 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf

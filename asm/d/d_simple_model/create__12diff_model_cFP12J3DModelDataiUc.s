@@ -33,7 +33,7 @@ lbl_800490EC:
 /* 80049168 0000007C  4B FC 60 8D */	bl mDoExt_restoreCurrentHeap__Fv
 /* 8004916C 00000080  48 00 00 6C */	b lbl_800491D8
 lbl_80049170:
-/* 80049170 00000000  C0 02 85 38 */	lfs f0, d_d_simple_model__LIT_3763(r2)
+/* 80049170 00000000  C0 02 85 38 */	lfs f0, d_d_simple_model__lit_3763(r2)
 /* 80049174 00000004  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80049178 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8004917C 0000000C  D0 01 00 10 */	stfs f0, 0x10(r1)

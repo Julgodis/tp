@@ -25,7 +25,6 @@ SECTIONS = [
     (".sdata2", 0x20),
     (".sbss2", 0x20),
     (".stack", 0x100),
-    (".dead", 0x100),
 ]
 
 FORCE_ACTIVE = [

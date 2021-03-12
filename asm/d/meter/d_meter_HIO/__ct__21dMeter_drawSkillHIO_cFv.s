@@ -25,15 +25,15 @@ lbl_801FE9D0:
 /* 801FE9E8 00000018  98 E3 00 5B */	stb r7, 0x5b(r3)
 /* 801FE9EC 0000001C  38 C0 00 FF */	li r6, 0xff
 /* 801FE9F0 00000020  98 C3 00 58 */	stb r6, 0x58(r3)
-/* 801FE9F4 00000024  C0 02 AB 20 */	lfs f0, d_meter_d_meter_HIO__LIT_3828(r2)
+/* 801FE9F4 00000024  C0 02 AB 20 */	lfs f0, d_meter_d_meter_HIO__lit_3828(r2)
 /* 801FE9F8 00000028  D0 03 00 08 */	stfs f0, 8(r3)
-/* 801FE9FC 0000002C  C0 02 AB 24 */	lfs f0, d_meter_d_meter_HIO__LIT_3829(r2)
+/* 801FE9FC 0000002C  C0 02 AB 24 */	lfs f0, d_meter_d_meter_HIO__lit_3829(r2)
 /* 801FEA00 00000030  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 801FEA04 00000034  C0 22 AA F8 */	lfs f1, d_meter_d_meter_HIO__LIT_3793(r2)
+/* 801FEA04 00000034  C0 22 AA F8 */	lfs f1, d_meter_d_meter_HIO__lit_3793(r2)
 /* 801FEA08 00000038  D0 23 00 10 */	stfs f1, 0x10(r3)
-/* 801FEA0C 0000003C  C0 02 AB 68 */	lfs f0, d_meter_d_meter_HIO__LIT_3956(r2)
+/* 801FEA0C 0000003C  C0 02 AB 68 */	lfs f0, d_meter_d_meter_HIO__lit_3956(r2)
 /* 801FEA10 00000040  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 801FEA14 00000044  C0 02 AB 6C */	lfs f0, d_meter_d_meter_HIO__LIT_3957(r2)
+/* 801FEA14 00000044  C0 02 AB 6C */	lfs f0, d_meter_d_meter_HIO__lit_3957(r2)
 /* 801FEA18 00000048  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 801FEA1C 0000004C  38 00 00 96 */	li r0, 0x96
 /* 801FEA20 00000050  98 03 00 59 */	stb r0, 0x59(r3)
@@ -85,6 +85,6 @@ lbl_801FE9D0:
 /* 801FEAD8 00000108  98 C3 00 57 */	stb r6, 0x57(r3)
 /* 801FEADC 0000010C  D0 23 00 1C */	stfs f1, 0x1c(r3)
 /* 801FEAE0 00000110  D0 23 00 20 */	stfs f1, 0x20(r3)
-/* 801FEAE4 00000114  C0 02 AA E8 */	lfs f0, d_meter_d_meter_HIO__LIT_3789(r2)
+/* 801FEAE4 00000114  C0 02 AA E8 */	lfs f0, d_meter_d_meter_HIO__lit_3789(r2)
 /* 801FEAE8 00000118  D0 03 00 24 */	stfs f0, 0x24(r3)
 /* 801FEAEC 0000011C  4E 80 00 20 */	blr 

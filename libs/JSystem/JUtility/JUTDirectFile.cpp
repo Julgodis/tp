@@ -5,89 +5,91 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __dl__FPv();
-extern void fetch32byte__13JUTDirectFileFv();
-extern void __ct__13JUTDirectFileFv();
-extern void __dt__13JUTDirectFileFv();
-extern void fopen__13JUTDirectFileFPCc();
-extern void fclose__13JUTDirectFileFv();
-extern void fgets__13JUTDirectFileFPvi();
-extern void OSEnableInterrupts();
-extern void OSRestoreInterrupts();
-extern void DVDOpen();
-extern void DVDClose();
-extern void DVDReadAsyncPrio();
-extern void DVDGetCommandBlockStatus();
-extern void _savegpr_27();
-extern void _savegpr_29();
-extern void _restgpr_27();
-extern void _restgpr_29();
-}
+extern "C" extern void __dl__FPv();
+extern "C" extern void fetch32byte__13JUTDirectFileFv();
+extern "C" extern void __ct__13JUTDirectFileFv();
+extern "C" extern void __dt__13JUTDirectFileFv();
+extern "C" extern void fopen__13JUTDirectFileFPCc();
+extern "C" extern void fclose__13JUTDirectFileFv();
+extern "C" extern void fgets__13JUTDirectFileFPvi();
+extern "C" extern void OSEnableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void DVDOpen();
+extern "C" extern void DVDClose();
+extern "C" extern void DVDReadAsyncPrio();
+extern "C" extern void DVDGetCommandBlockStatus();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_29();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802E8730-802E87F8 00C8 .text      fetch32byte__13JUTDirectFileFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fetch32byte__13JUTDirectFileFv() {
+extern "C" asm void fetch32byte__13JUTDirectFileFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/fetch32byte__13JUTDirectFileFv.s"
 }
 #pragma pop
 
+
 /* 802E87F8-802E881C 0024 .text      __ct__13JUTDirectFileFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13JUTDirectFileFv() {
+extern "C" asm void __ct__13JUTDirectFileFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/__ct__13JUTDirectFileFv.s"
 }
 #pragma pop
 
+
 /* 802E881C-802E8860 0044 .text      __dt__13JUTDirectFileFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13JUTDirectFileFv() {
+extern "C" asm void __dt__13JUTDirectFileFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/__dt__13JUTDirectFileFv.s"
 }
 #pragma pop
 
+
 /* 802E8860-802E88FC 009C .text      fopen__13JUTDirectFileFPCc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopen__13JUTDirectFileFPCc() {
+extern "C" asm void fopen__13JUTDirectFileFPCc() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/fopen__13JUTDirectFileFPCc.s"
 }
 #pragma pop
 
+
 /* 802E88FC-802E8958 005C .text      fclose__13JUTDirectFileFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fclose__13JUTDirectFileFv() {
+extern "C" asm void fclose__13JUTDirectFileFv() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/fclose__13JUTDirectFileFv.s"
 }
 #pragma pop
 
+
 /* 802E8958-802E8B08 01B0 .text      fgets__13JUTDirectFileFPvi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fgets__13JUTDirectFileFPvi() {
+extern "C" asm void fgets__13JUTDirectFileFPvi() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/fgets__13JUTDirectFileFPvi.s"
 }

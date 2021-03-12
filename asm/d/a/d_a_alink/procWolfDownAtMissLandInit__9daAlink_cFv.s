@@ -15,7 +15,7 @@ lbl_8013BC94:
 /* 8013BCC8 00000034  7F E3 FB 78 */	mr r3, r31
 /* 8013BCCC 00000038  38 80 00 97 */	li r4, 0x97
 /* 8013BCD0 0000003C  4B F7 3B D1 */	bl setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM
-/* 8013BCD4 00000040  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 8013BCD4 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8013BCD8 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8013BCDC 00000048  7F E3 FB 78 */	mr r3, r31
 /* 8013BCE0 0000004C  38 80 00 01 */	li r4, 1
@@ -29,9 +29,9 @@ lbl_8013BC94:
 /* 8013BD00 0000006C  D0 1F 35 8C */	stfs f0, 0x358c(r31)
 /* 8013BD04 00000070  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8013BD08 00000074  D0 1F 35 90 */	stfs f0, 0x3590(r31)
-/* 8013BD0C 00000078  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 8013BD0C 00000078  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013BD10 0000007C  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013BD14 00000080  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 8013BD14 00000080  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 8013BD18 00000084  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8013BD1C 00000088  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8013BD20 0000008C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

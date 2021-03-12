@@ -142,11 +142,11 @@ lbl_80111E60:
 lbl_80111EA0:
 /* 80111EA0 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80111EA4 00000004  38 80 01 10 */	li r4, 0x110
-/* 80111EA8 00000008  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80111EA8 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80111EAC 0000000C  4B F9 B1 05 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 80111EB0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80111EB4 00000014  38 80 00 02 */	li r4, 2
-/* 80111EB8 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 80111EB8 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 80111EBC 0000001C  4B F9 B8 69 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80111EC0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111EC4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -209,7 +209,7 @@ lbl_80111F90:
 /* 80111FA0 00000010  41 82 00 34 */	beq lbl_80111FD4
 /* 80111FA4 00000014  7F E3 FB 78 */	mr r3, r31
 /* 80111FA8 00000018  38 80 00 02 */	li r4, 2
-/* 80111FAC 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 80111FAC 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 80111FB0 00000020  4B F9 B7 75 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80111FB4 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80111FB8 00000028  48 00 5C D9 */	bl resetSpecialEvent__9daAlink_cFv

@@ -42,13 +42,13 @@ lbl_80219A84:
 /* 80219B24 00000084  EF C2 00 32 */	fmuls f30, f2, f0
 /* 80219B28 00000088  80 7D 03 08 */	lwz r3, 0x308(r29)
 /* 80219B2C 0000008C  88 03 00 18 */	lbz r0, 0x18(r3)
-/* 80219B30 00000090  C8 22 AE C0 */	lfd f1, LIT_6293(r2)
+/* 80219B30 00000090  C8 22 AE C0 */	lfd f1, lit_6293(r2)
 /* 80219B34 00000094  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80219B38 00000098  3C 00 43 30 */	lis r0, 0x4330
 /* 80219B3C 0000009C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80219B40 000000A0  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80219B44 000000A4  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80219B48 000000A8  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219B48 000000A8  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219B4C 000000AC  EF A1 00 24 */	fdivs f29, f1, f0
 /* 80219B50 000000B0  80 7D 02 F8 */	lwz r3, 0x2f8(r29)
 /* 80219B54 000000B4  48 03 BC D5 */	bl getAlphaRate__13CPaneMgrAlphaFv
@@ -83,7 +83,7 @@ lbl_80219BA4:
 /* 80219BC4 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80219BC8 00000024  41 82 00 0C */	beq lbl_80219BD4
 lbl_80219BCC:
-/* 80219BCC 00000000  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219BCC 00000000  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219BD0 00000004  48 00 00 E8 */	b lbl_80219CB8
 lbl_80219BD4:
 /* 80219BD4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -91,7 +91,7 @@ lbl_80219BD4:
 /* 80219BDC 00000008  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
 /* 80219BE0 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80219BE4 00000010  41 82 00 0C */	beq lbl_80219BF0
-/* 80219BE8 00000014  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219BE8 00000014  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219BEC 00000018  48 00 00 CC */	b lbl_80219CB8
 lbl_80219BF0:
 /* 80219BF0 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
@@ -102,13 +102,13 @@ lbl_80219BF0:
 /* 80219C04 00000014  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80219C08 00000018  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 80219C0C 0000001C  88 03 04 2A */	lbz r0, 0x42a(r3)
-/* 80219C10 00000020  C8 22 AE C0 */	lfd f1, LIT_6293(r2)
+/* 80219C10 00000020  C8 22 AE C0 */	lfd f1, lit_6293(r2)
 /* 80219C14 00000024  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80219C18 00000028  3C 00 43 30 */	lis r0, 0x4330
 /* 80219C1C 0000002C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80219C20 00000030  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80219C24 00000034  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80219C28 00000038  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219C28 00000038  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219C2C 0000003C  EF A1 00 24 */	fdivs f29, f1, f0
 /* 80219C30 00000040  48 00 00 88 */	b lbl_80219CB8
 lbl_80219C34:
@@ -117,16 +117,16 @@ lbl_80219C34:
 /* 80219C3C 00000008  40 82 00 7C */	bne lbl_80219CB8
 /* 80219C40 0000000C  57 C0 00 43 */	rlwinm. r0, r30, 0, 1, 1
 /* 80219C44 00000010  40 82 00 74 */	bne lbl_80219CB8
-/* 80219C48 00000014  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219C48 00000014  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219C4C 00000018  FC 1F 08 40 */	fcmpo cr0, f31, f1
 /* 80219C50 00000000  40 81 00 68 */	ble lbl_80219CB8
 /* 80219C54 00000004  C0 1D 07 38 */	lfs f0, 0x738(r29)
 /* 80219C58 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80219C5C 0000000C  40 82 00 0C */	bne lbl_80219C68
-/* 80219C60 00000010  C0 02 AE 98 */	lfs f0, d_meter_d_meter2_draw__LIT_4923(r2)
+/* 80219C60 00000010  C0 02 AE 98 */	lfs f0, d_meter_d_meter2_draw__lit_4923(r2)
 /* 80219C64 00000014  D0 1D 07 38 */	stfs f0, 0x738(r29)
 lbl_80219C68:
-/* 80219C68 00000000  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__LIT_4923(r2)
+/* 80219C68 00000000  C0 22 AE 98 */	lfs f1, d_meter_d_meter2_draw__lit_4923(r2)
 /* 80219C6C 00000004  C0 1D 07 38 */	lfs f0, 0x738(r29)
 /* 80219C70 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80219C74 0000000C  40 82 00 3C */	bne lbl_80219CB0
@@ -137,9 +137,9 @@ lbl_80219C68:
 /* 80219C88 00000020  38 A0 00 00 */	li r5, 0
 /* 80219C8C 00000024  38 C0 00 00 */	li r6, 0
 /* 80219C90 00000028  38 E0 00 00 */	li r7, 0
-/* 80219C94 0000002C  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__LIT_4183(r2)
+/* 80219C94 0000002C  C0 22 AE 84 */	lfs f1, d_meter_d_meter2_draw__lit_4183(r2)
 /* 80219C98 00000030  FC 40 08 90 */	fmr f2, f1
-/* 80219C9C 00000034  C0 62 AE B0 */	lfs f3, LIT_5786(r2)
+/* 80219C9C 00000034  C0 62 AE B0 */	lfs f3, lit_5786(r2)
 /* 80219CA0 00000038  FC 80 18 90 */	fmr f4, f3
 /* 80219CA4 0000003C  39 00 00 00 */	li r8, 0
 /* 80219CA8 00000040  48 09 1C DD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -150,7 +150,7 @@ lbl_80219CB0:
 lbl_80219CB8:
 /* 80219CB8 00000000  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 80219CBC 00000004  41 82 00 58 */	beq lbl_80219D14
-/* 80219CC0 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219CC0 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219CC4 0000000C  C0 1D 07 38 */	lfs f0, 0x738(r29)
 /* 80219CC8 00000010  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80219CCC 00000014  41 82 00 08 */	beq lbl_80219CD4
@@ -161,20 +161,20 @@ lbl_80219CD4:
 /* 80219CDC 00000008  41 82 00 38 */	beq lbl_80219D14
 /* 80219CE0 0000000C  38 7D 07 20 */	addi r3, r29, 0x720
 /* 80219CE4 00000010  FC 20 E8 90 */	fmr f1, f29
-/* 80219CE8 00000014  C0 42 AE D0 */	lfs f2, LIT_8359(r2)
-/* 80219CEC 00000018  C0 62 AE 94 */	lfs f3, d_meter_d_meter2_draw__LIT_4922(r2)
+/* 80219CE8 00000014  C0 42 AE D0 */	lfs f2, lit_8359(r2)
+/* 80219CEC 00000018  C0 62 AE 94 */	lfs f3, d_meter_d_meter2_draw__lit_4922(r2)
 /* 80219CF0 0000001C  48 05 5D 4D */	bl cLib_addCalc2__FPffff
 /* 80219CF4 00000020  C0 1D 07 20 */	lfs f0, 0x720(r29)
 /* 80219CF8 00000024  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 80219CFC 00000028  FC 00 02 10 */	fabs f0, f0
 /* 80219D00 0000002C  FC 20 00 18 */	frsp f1, f0
-/* 80219D04 00000030  C0 02 AE D4 */	lfs f0, d_meter_d_meter2_draw__LIT_8360(r2)
+/* 80219D04 00000030  C0 02 AE D4 */	lfs f0, d_meter_d_meter2_draw__lit_8360(r2)
 /* 80219D08 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80219D0C 00000000  40 80 00 08 */	bge lbl_80219D14
 /* 80219D10 00000004  D3 BD 07 20 */	stfs f29, 0x720(r29)
 lbl_80219D14:
 /* 80219D14 00000000  80 7D 03 08 */	lwz r3, 0x308(r29)
-/* 80219D18 00000004  C0 22 AE CC */	lfs f1, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219D18 00000004  C0 22 AE CC */	lfs f1, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219D1C 00000008  C0 1D 07 20 */	lfs f0, 0x720(r29)
 /* 80219D20 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80219D24 00000010  EC 00 07 F2 */	fmuls f0, f0, f31
@@ -188,7 +188,7 @@ lbl_80219D14:
 /* 80219D44 00000030  4E 80 04 21 */	bctrl 
 /* 80219D48 00000034  48 00 00 0C */	b lbl_80219D54
 lbl_80219D4C:
-/* 80219D4C 00000000  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219D4C 00000000  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219D50 00000004  D0 1D 07 20 */	stfs f0, 0x720(r29)
 lbl_80219D54:
 /* 80219D54 00000000  80 7D 03 14 */	lwz r3, 0x314(r29)
@@ -200,21 +200,21 @@ lbl_80219D54:
 /* 80219D6C 00000018  C0 03 00 84 */	lfs f0, 0x84(r3)
 /* 80219D70 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80219D74 00000020  EC 42 00 32 */	fmuls f2, f2, f0
-/* 80219D78 00000024  C8 22 AE C0 */	lfd f1, LIT_6293(r2)
+/* 80219D78 00000024  C8 22 AE C0 */	lfd f1, lit_6293(r2)
 /* 80219D7C 00000028  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80219D80 0000002C  3C 00 43 30 */	lis r0, 0x4330
 /* 80219D84 00000030  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80219D88 00000034  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80219D8C 00000038  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80219D90 0000003C  EC 22 00 32 */	fmuls f1, f2, f0
-/* 80219D94 00000040  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219D94 00000040  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219D98 00000044  EF A1 00 24 */	fdivs f29, f1, f0
 /* 80219D9C 00000048  80 7D 02 F8 */	lwz r3, 0x2f8(r29)
 /* 80219DA0 0000004C  48 03 BA 89 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 80219DA4 00000050  FF C0 08 90 */	fmr f30, f1
 /* 80219DA8 00000054  57 C0 01 CF */	rlwinm. r0, r30, 0, 7, 7
 /* 80219DAC 00000058  41 82 00 0C */	beq lbl_80219DB8
-/* 80219DB0 0000005C  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__LIT_4182(r2)
+/* 80219DB0 0000005C  C3 A2 AE 80 */	lfs f29, d_meter_d_meter2_draw__lit_4182(r2)
 /* 80219DB4 00000060  48 00 00 44 */	b lbl_80219DF8
 lbl_80219DB8:
 /* 80219DB8 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
@@ -225,13 +225,13 @@ lbl_80219DB8:
 /* 80219DCC 00000014  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80219DD0 00000018  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 80219DD4 0000001C  88 03 04 2B */	lbz r0, 0x42b(r3)
-/* 80219DD8 00000020  C8 22 AE C0 */	lfd f1, LIT_6293(r2)
+/* 80219DD8 00000020  C8 22 AE C0 */	lfd f1, lit_6293(r2)
 /* 80219DDC 00000024  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80219DE0 00000028  3C 00 43 30 */	lis r0, 0x4330
 /* 80219DE4 0000002C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80219DE8 00000030  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80219DEC 00000034  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80219DF0 00000038  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219DF0 00000038  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219DF4 0000003C  EF A1 00 24 */	fdivs f29, f1, f0
 lbl_80219DF8:
 /* 80219DF8 00000000  C0 1D 07 24 */	lfs f0, 0x724(r29)
@@ -239,20 +239,20 @@ lbl_80219DF8:
 /* 80219E00 00000008  41 82 00 38 */	beq lbl_80219E38
 /* 80219E04 0000000C  38 7D 07 24 */	addi r3, r29, 0x724
 /* 80219E08 00000010  FC 20 E8 90 */	fmr f1, f29
-/* 80219E0C 00000014  C0 42 AE D0 */	lfs f2, LIT_8359(r2)
-/* 80219E10 00000018  C0 62 AE 94 */	lfs f3, d_meter_d_meter2_draw__LIT_4922(r2)
+/* 80219E0C 00000014  C0 42 AE D0 */	lfs f2, lit_8359(r2)
+/* 80219E10 00000018  C0 62 AE 94 */	lfs f3, d_meter_d_meter2_draw__lit_4922(r2)
 /* 80219E14 0000001C  48 05 5C 29 */	bl cLib_addCalc2__FPffff
 /* 80219E18 00000020  C0 1D 07 24 */	lfs f0, 0x724(r29)
 /* 80219E1C 00000024  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 80219E20 00000028  FC 00 02 10 */	fabs f0, f0
 /* 80219E24 0000002C  FC 20 00 18 */	frsp f1, f0
-/* 80219E28 00000030  C0 02 AE D4 */	lfs f0, d_meter_d_meter2_draw__LIT_8360(r2)
+/* 80219E28 00000030  C0 02 AE D4 */	lfs f0, d_meter_d_meter2_draw__lit_8360(r2)
 /* 80219E2C 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80219E30 00000000  40 80 00 08 */	bge lbl_80219E38
 /* 80219E34 00000004  D3 BD 07 24 */	stfs f29, 0x724(r29)
 lbl_80219E38:
 /* 80219E38 00000000  80 7D 03 14 */	lwz r3, 0x314(r29)
-/* 80219E3C 00000004  C0 22 AE CC */	lfs f1, d_meter_d_meter2_draw__LIT_8207(r2)
+/* 80219E3C 00000004  C0 22 AE CC */	lfs f1, d_meter_d_meter2_draw__lit_8207(r2)
 /* 80219E40 00000008  C0 1D 07 24 */	lfs f0, 0x724(r29)
 /* 80219E44 0000000C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80219E48 00000010  EC 00 07 B2 */	fmuls f0, f0, f30

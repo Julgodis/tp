@@ -20,9 +20,9 @@ lbl_801F4FB4:
 /* 801F4FFC 00000048  38 A0 00 00 */	li r5, 0
 /* 801F5000 0000004C  54 C6 06 3E */	clrlwi r6, r6, 0x18
 /* 801F5004 00000050  38 E0 00 00 */	li r7, 0
-/* 801F5008 00000054  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__LIT_4179(r2)
+/* 801F5008 00000054  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
 /* 801F500C 00000058  FC 40 08 90 */	fmr f2, f1
-/* 801F5010 0000005C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__LIT_4879(r2)
+/* 801F5010 0000005C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
 /* 801F5014 00000060  FC 80 18 90 */	fmr f4, f3
 /* 801F5018 00000064  39 00 00 00 */	li r8, 0
 /* 801F501C 00000068  48 0B 69 69 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

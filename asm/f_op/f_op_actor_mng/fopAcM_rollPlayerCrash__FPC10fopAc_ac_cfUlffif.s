@@ -22,12 +22,12 @@ lbl_8001AAE0:
 /* 8001AB30 00000034  38 60 00 00 */	li r3, 0
 /* 8001AB34 00000038  48 00 00 E4 */	b lbl_8001AC18
 lbl_8001AB38:
-/* 8001AB38 00000000  C0 02 82 20 */	lfs f0, f_op_f_op_actor_mng__LIT_4922(r2)
+/* 8001AB38 00000000  C0 02 82 20 */	lfs f0, f_op_f_op_actor_mng__lit_4922(r2)
 /* 8001AB3C 00000004  EF E0 08 2A */	fadds f31, f0, f1
 /* 8001AB40 00000008  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8001AB44 0000000C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8001AB48 00000010  41 82 00 0C */	beq lbl_8001AB54
-/* 8001AB4C 00000014  C0 02 82 24 */	lfs f0, f_op_f_op_actor_mng__LIT_4923(r2)
+/* 8001AB4C 00000014  C0 02 82 24 */	lfs f0, f_op_f_op_actor_mng__lit_4923(r2)
 /* 8001AB50 00000018  EF FF 00 2A */	fadds f31, f31, f0
 lbl_8001AB54:
 /* 8001AB54 00000000  C0 24 04 D4 */	lfs f1, 0x4d4(r4)

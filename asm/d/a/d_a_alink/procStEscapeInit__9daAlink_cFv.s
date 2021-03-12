@@ -11,11 +11,11 @@ lbl_800DB5B0:
 /* 800DB5D4 00000024  3C A0 80 39 */	lis r5, m__23daAlinkHIO_damCaught_c0@ha
 /* 800DB5D8 00000028  38 A5 E4 9C */	addi r5, r5, m__23daAlinkHIO_damCaught_c0@l
 /* 800DB5DC 0000002C  4B FD 1B 19 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800DB5E0 00000030  C0 02 93 74 */	lfs f0, LIT_8502(r2)
+/* 800DB5E0 00000030  C0 02 93 74 */	lfs f0, lit_8502(r2)
 /* 800DB5E4 00000034  D0 1F 1F E0 */	stfs f0, 0x1fe0(r31)
 /* 800DB5E8 00000038  80 7F 1F 2C */	lwz r3, 0x1f2c(r31)
 /* 800DB5EC 0000003C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 800DB5F0 00000040  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800DB5F0 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800DB5F4 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800DB5F8 00000048  38 60 00 01 */	li r3, 1
 /* 800DB5FC 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)

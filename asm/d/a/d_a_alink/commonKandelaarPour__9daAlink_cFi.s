@@ -40,13 +40,13 @@ lbl_80111100:
 /* 80111148 00000048  4B F9 B3 09 */	bl getMainBckData__9daAlink_cCFQ29daAlink_c11daAlink_ANM
 /* 8011114C 0000004C  A0 83 00 02 */	lhz r4, 2(r3)
 /* 80111150 00000050  7F C3 F3 78 */	mr r3, r30
-/* 80111154 00000054  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80111154 00000054  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80111158 00000058  4B F9 C2 1D */	bl setUpperAnimeBaseMorf__9daAlink_cFUsf
 /* 8011115C 0000005C  48 00 00 14 */	b lbl_80111170
 lbl_80111160:
 /* 80111160 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80111164 00000004  38 80 01 0D */	li r4, 0x10d
-/* 80111168 00000008  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 80111168 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011116C 0000000C  4B F9 BE 45 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 lbl_80111170:
 /* 80111170 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -58,11 +58,11 @@ lbl_80111170:
 /* 80111188 00000018  48 00 01 68 */	b lbl_801112F0
 lbl_8011118C:
 /* 8011118C 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80111190 00000004  C0 22 93 30 */	lfs f1, d_a_d_a_alink__LIT_7625(r2)
+/* 80111190 00000004  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
 /* 80111194 00000008  48 21 72 99 */	bl checkPass__12J3DFrameCtrlFf
 /* 80111198 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 8011119C 00000010  41 82 01 54 */	beq lbl_801112F0
-/* 801111A0 00000014  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 801111A0 00000014  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 801111A4 00000018  80 7E 07 1C */	lwz r3, 0x71c(r30)
 /* 801111A8 0000001C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801111AC 00000020  80 7E 07 08 */	lwz r3, 0x708(r30)
@@ -122,7 +122,7 @@ lbl_80111268:
 /* 80111278 00000010  38 A5 00 28 */	addi r5, r5, 0x28
 /* 8011127C 00000014  4B F9 BE 79 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 lbl_80111280:
-/* 80111280 00000000  C0 02 93 14 */	lfs f0, LIT_7307(r2)
+/* 80111280 00000000  C0 02 93 14 */	lfs f0, lit_7307(r2)
 /* 80111284 00000004  80 7E 07 2C */	lwz r3, 0x72c(r30)
 /* 80111288 00000008  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8011128C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -140,7 +140,7 @@ lbl_801112A4:
 /* 801112B8 00000014  41 82 00 14 */	beq lbl_801112CC
 /* 801112BC 00000018  7F C3 F3 78 */	mr r3, r30
 /* 801112C0 0000001C  38 80 00 02 */	li r4, 2
-/* 801112C4 00000020  C0 22 92 C4 */	lfs f1, LIT_6109(r2)
+/* 801112C4 00000020  C0 22 92 C4 */	lfs f1, lit_6109(r2)
 /* 801112C8 00000024  4B F9 C4 5D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_801112CC:
 /* 801112CC 00000000  7F C3 F3 78 */	mr r3, r30

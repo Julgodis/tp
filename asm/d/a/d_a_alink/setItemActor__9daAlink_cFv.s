@@ -85,7 +85,7 @@ lbl_800BFAE4:
 /* 800BFB2C 00000048  40 82 00 14 */	bne lbl_800BFB40
 /* 800BFB30 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 800BFB34 00000050  38 80 00 02 */	li r4, 2
-/* 800BFB38 00000054  C0 22 92 BC */	lfs f1, d_a_d_a_alink__LIT_6041(r2)
+/* 800BFB38 00000054  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
 /* 800BFB3C 00000058  4B FE DB E9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800BFB40:
 /* 800BFB40 00000000  7F E3 FB 78 */	mr r3, r31
@@ -169,7 +169,7 @@ lbl_800BFC4C:
 /* 800BFC58 0000000C  48 1A 6E 8D */	bl __pl__4cXyzCFRC3Vec
 /* 800BFC5C 00000010  38 61 00 10 */	addi r3, r1, 0x10
 /* 800BFC60 00000014  38 81 00 1C */	addi r4, r1, 0x1c
-/* 800BFC64 00000018  C0 22 92 98 */	lfs f1, LIT_5943(r2)
+/* 800BFC64 00000018  C0 22 92 98 */	lfs f1, lit_5943(r2)
 /* 800BFC68 0000001C  48 1A 6F 1D */	bl __ml__4cXyzCFf
 /* 800BFC6C 00000020  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 800BFC70 00000024  D0 01 00 28 */	stfs f0, 0x28(r1)
@@ -221,7 +221,7 @@ lbl_800BFD04:
 /* 800BFD20 0000001C  88 7F 2F 9C */	lbz r3, 0x2f9c(r31)
 /* 800BFD24 00000020  38 80 FF FF */	li r4, -1
 /* 800BFD28 00000024  4B F6 EB 15 */	bl dComIfGp_addSelectItemNum__Fis
-/* 800BFD2C 00000028  C0 02 93 94 */	lfs f0, LIT_8785(r2)
+/* 800BFD2C 00000028  C0 02 93 94 */	lfs f0, lit_8785(r2)
 /* 800BFD30 0000002C  D0 1F 33 E4 */	stfs f0, 0x33e4(r31)
 /* 800BFD34 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800BFD38 00000034  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha

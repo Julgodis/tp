@@ -5,362 +5,361 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport_FatalError();
-extern void OSReport_Error();
-extern void __dt__4cXyzFv();
-extern void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs();
-extern void initPlay__14mDoExt_baseAnmFsifss();
-extern void play__14mDoExt_baseAnmFv();
-extern void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
-extern void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
-extern void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
-extern void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
-extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern void func_8000D8E4();
-extern void __dt__17J3DMtxCalcAnmBaseFv();
-extern void __dt__10J3DMtxCalcFv();
-extern void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform();
-extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf();
-extern void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss();
-extern void mDoExt_changeMaterial__FP8J3DModel();
-extern void mDoExt_modelTexturePatch__FP12J3DModelData();
-extern void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
-extern void patch__10J3DPEBlockFv();
-extern void patchLight__13J3DColorBlockFv();
-extern void patch__11J3DTevBlockFv();
-extern void mDoExt_modelDiff__FP8J3DModel();
-extern void mDoExt_modelUpdate__FP8J3DModel();
-extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern void mDoExt_modelEntryDL__FP8J3DModel();
-extern void mDoExt_btkAnmRemove__FP12J3DModelData();
-extern void mDoExt_brkAnmRemove__FP12J3DModelData();
-extern void getZCompLoc__10J3DPEBlockCFv();
-extern void getZMode__10J3DPEBlockFv();
-extern void getBlend__10J3DPEBlockFv();
-extern void getAlphaComp__10J3DPEBlockFv();
-extern void getFog__10J3DPEBlockFv();
-extern void getIndTexCoordScale__11J3DIndBlockFUl();
-extern void getIndTexMtx__11J3DIndBlockFUl();
-extern void getIndTexOrder__11J3DIndBlockFUl();
-extern void getIndTexStageNum__11J3DIndBlockCFv();
-extern void getIndTevStage__11J3DTevBlockFUl();
-extern void getTevStage__11J3DTevBlockFUl();
-extern void getTexNo__11J3DTevBlockCFUl();
-extern void getTevSwapModeTable__11J3DTevBlockFUl();
-extern void getTevKAlphaSel__11J3DTevBlockFUl();
-extern void getTevKColorSel__11J3DTevBlockFUl();
-extern void getTevOrder__11J3DTevBlockFUl();
-extern void getTevKColor__11J3DTevBlockFUl();
-extern void getTevColor__11J3DTevBlockFUl();
-extern void getTevStageNum__11J3DTevBlockCFv();
-extern void getTexMtx__14J3DTexGenBlockFUl();
-extern void getTexCoord__14J3DTexGenBlockFUl();
-extern void getTexGenNum__14J3DTexGenBlockCFv();
-extern void getAmbColor__13J3DColorBlockFUl();
-extern void getColorChan__13J3DColorBlockFUl();
-extern void getMatColor__13J3DColorBlockFUl();
-extern void getColorChanNum__13J3DColorBlockCFv();
-extern void setZCompLoc__10J3DPEBlockFUc();
-extern void setZMode__10J3DPEBlockF8J3DZMode();
-extern void setBlend__10J3DPEBlockFRC8J3DBlend();
-extern void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
-extern void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale();
-extern void __dt__19J3DIndTexCoordScaleFv();
-extern void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx();
-extern void __dt__12J3DIndTexMtxFv();
-extern void setIndTexStageNum__11J3DIndBlockFUc();
-extern void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
-extern void setTevStage__11J3DTevBlockFUl11J3DTevStage();
-extern void setTexNo__11J3DTevBlockFUlUs();
-extern void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
-extern void setTevKAlphaSel__11J3DTevBlockFUlUc();
-extern void setTevKColorSel__11J3DTevBlockFUlUc();
-extern void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
-extern void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
-extern void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
-extern void setTevStageNum__11J3DTevBlockFUc();
-extern void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord();
-extern void setTexGenNum__14J3DTexGenBlockFUl();
-extern void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
-extern void setColorChan__13J3DColorBlockFUlRC12J3DColorChan();
-extern void setMatColor__13J3DColorBlockFUl10J3DGXColor();
-extern void setColorChanNum__13J3DColorBlockFUc();
-extern void __ct__19J3DIndTexCoordScaleFv();
-extern void __ct__12J3DIndTexMtxFv();
-extern void __ct__14J3DIndTexOrderFv();
-extern void __ct__19J3DTevSwapModeTableFv();
-extern void __ct__11J3DTevOrderFv();
-extern void __ct__14J3DIndTevStageFv();
-extern void __ct__11J3DTevStageFv();
-extern void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
-extern void __ct__13J3DGXColorS10Fv();
-extern void __ct__11J3DTexCoordFv();
-extern void __ct__12J3DColorChanFv();
-extern void __ct__10J3DGXColorFv();
-extern void create__21mDoExt_invisibleModelFP8J3DModelUc();
-extern void __dt__19mDoExt_invJntPacketFv();
-extern void __ct__19mDoExt_invJntPacketFv();
-extern void __dt__9J3DPacketFv();
-extern void entryJoint__21mDoExt_invisibleModelFP4cXyz();
-extern void entryDL__21mDoExt_invisibleModelFP4cXyz();
-extern void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData();
-extern void mDoExt_setupStageTexture__FP12J3DModelData();
-extern void mDoExt_createAssertHeap__FP7JKRHeap();
-extern void mDoExt_getAssertHeap__Fv();
-extern void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
-extern void mDoExt_getDbPrintHeap__Fv();
-extern void mDoExt_createGameHeap__FUlP7JKRHeap();
-extern void mDoExt_getGameHeap__Fv();
-extern void mDoExt_createZeldaHeap__FUlP7JKRHeap();
-extern void mDoExt_getZeldaHeap__Fv();
-extern void mDoExt_createCommandHeap__FUlP7JKRHeap();
-extern void mDoExt_getCommandHeap__Fv();
-extern void mDoExt_createArchiveHeap__FUlP7JKRHeap();
-extern void mDoExt_getArchiveHeap__Fv();
-extern void mDoExt_getArchiveHeapPtr__Fv();
-extern void mDoExt_createJ2dHeap__FUlP7JKRHeap();
-extern void mDoExt_getJ2dHeap__Fv();
-extern void mDoExt_getHostIOHeap__Fv();
-extern void mDoExt_createSolidHeap__FUlP7JKRHeapUl();
-extern void mDoExt_createSolidHeapFromGame__FUlUl();
-extern void mDoExt_createSolidHeapFromSystem__FUlUl();
-extern void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl();
-extern void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
-extern void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
-extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
-extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern void mDoExt_getCurrentHeap__Fv();
-extern void mDoExt_restoreCurrentHeap__Fv();
-extern void mDoExt_resIDToIndex__FP10JKRArchiveUs();
-extern void calc__25mDoExt_MtxCalcAnmBlendTblFv();
-extern void calc__28mDoExt_MtxCalcAnmBlendTblOldFv();
-extern void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs();
-extern void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv();
-extern void __ct__13mDoExt_morf_cFv();
-extern void __dt__12J3DFrameCtrlFv();
-extern void func_8000FA20();
-extern void __dt__19J3DMtxCalcNoAnmBaseFv();
-extern void __dt__13mDoExt_morf_cFv();
-extern void setMorf__13mDoExt_morf_cFf();
-extern void frameUpdate__13mDoExt_morf_cFv();
-extern void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
-extern void __dt__14mDoExt_McaMorfFv();
-extern void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
-extern void calc__14mDoExt_McaMorfFv();
-extern void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
-extern void play__14mDoExt_McaMorfFP3VecUlSc();
-extern void entryDL__14mDoExt_McaMorfFv();
-extern void modelCalc__14mDoExt_McaMorfFv();
-extern void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo();
-extern void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern void __dt__16mDoExt_McaMorfSOFv();
-extern void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern void calc__16mDoExt_McaMorfSOFv();
-extern void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
-extern void play__16mDoExt_McaMorfSOFUlSc();
-extern void updateDL__16mDoExt_McaMorfSOFv();
-extern void entryDL__16mDoExt_McaMorfSOFv();
-extern void modelCalc__16mDoExt_McaMorfSOFv();
-extern void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo();
-extern void stopZelAnime__16mDoExt_McaMorfSOFv();
-extern void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern void __dt__15mDoExt_McaMorf2Fv();
-extern void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern void ERROR_EXIT__15mDoExt_McaMorf2Fv();
-extern void calc__15mDoExt_McaMorf2Fv();
-extern void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff();
-extern void setAnmRate__15mDoExt_McaMorf2Ff();
-extern void play__15mDoExt_McaMorf2FUlSc();
-extern void entryDL__15mDoExt_McaMorf2Fv();
-extern void modelCalc__15mDoExt_McaMorf2Fv();
-extern void stopZelAnime__15mDoExt_McaMorf2Fv();
-extern void draw__19mDoExt_invJntPacketFv();
-extern void init__15mDoExt_3Dline_cFUsii();
-extern void __ct__4cXyzFv();
-extern void init__19mDoExt_3DlineMat0_cFUsUsi();
-extern void __ct__15mDoExt_3Dline_cFv();
-extern void setMaterial__19mDoExt_3DlineMat0_cFv();
-extern void draw__19mDoExt_3DlineMat0_cFv();
-extern void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c();
-extern void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c();
-extern void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi();
-extern void setMaterial__19mDoExt_3DlineMat1_cFv();
-extern void draw__19mDoExt_3DlineMat1_cFv();
-extern void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c();
-extern void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c();
-extern void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c();
-extern void draw__26mDoExt_3DlineMatSortPacketFv();
-extern void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl();
-extern void __dt__7JUTFontFv();
-extern void mDoExt_initFont0__Fv();
-extern void mDoExt_getMesgFont__Fv();
-extern void mDoExt_removeMesgFont__Fv();
-extern void mDoExt_initFont1__Fv();
-extern void mDoExt_getRubyFont__Fv();
-extern void mDoExt_initFont2__Fv();
-extern void mDoExt_getSubFont__Fv();
-extern void mDoExt_removeSubFont__Fv();
-extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern void mDoExt_setAraCacheSize__FUl();
-extern void mDoExt_GetCurrentRunningThread__Fv();
-extern void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern void getCellWidth__7JUTFontCFv();
-extern void getCellHeight__7JUTFontCFv();
-extern void __dt__26mDoExt_3DlineMatSortPacketFv();
-extern void getMaterialID__19mDoExt_3DlineMat1_cFv();
-extern void getMaterialID__19mDoExt_3DlineMat0_cFv();
-extern void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
-extern void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
-extern void getAnmTransform__10J3DMtxCalcFUc();
-extern void getAnmTransform__10J3DMtxCalcFv();
-extern void setWeight__10J3DMtxCalcFUcf();
-extern void getWeight__10J3DMtxCalcCFUc();
-extern void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv();
-extern void __dt__25mDoExt_MtxCalcAnmBlendTblFv();
-extern void getAnmTransform__17J3DMtxCalcAnmBaseFv();
-extern void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform();
-extern void func_80014FC8();
-extern void func_80015034();
-extern void func_8001505C();
-extern void func_80015084();
-extern void func_800150AC();
-extern void dComIfG_getStageRes__FPCc();
-extern void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
-extern void dKy_setLight_again__Fv();
-extern void dKy_Global_amb_set__FP12dKy_tevstr_c();
-extern void dKy_GxFog_set__Fv();
-extern void __pl__4cXyzCFRC3Vec();
-extern void __mi__4cXyzCFRC3Vec();
-extern void __ml__4cXyzCFf();
-extern void outprod__4cXyzCFRC3Vec();
-extern void normalizeZP__4cXyzFv();
-extern void cLib_chaseF__FPfff();
-extern void framework__14Z2SoundObjBaseFUlSc();
-extern void dispose__14Z2SoundObjBaseFv();
-extern void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
-extern void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern void __ct__15Z2SoundObjAnimeFv();
-extern void init__15Z2SoundObjAnimeFP3VecUc();
-extern void initAnime__15Z2SoundObjAnimeFPvbff();
-extern void updateAnime__15Z2SoundObjAnimeFff();
-extern void initAnime__10Z2CreatureFPvbff();
-extern void updateAnime__10Z2CreatureFff();
-extern void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
-extern void GFSetZMode__FUc10_GXCompareUc();
-extern void becomeCurrentHeap__7JKRHeapFv();
-extern void destroy__7JKRHeapFv();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void setErrorFlag__7JKRHeapFb();
-extern void __nw__FUl();
-extern void __nw__FUlP7JKRHeapi();
-extern void __nwa__FUl();
-extern void __dl__FPv();
-extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern void adjustSize__12JKRSolidHeapFv();
-extern void create__13JKRAssertHeapFP7JKRHeap();
-extern void removeResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern void findIdResource__10JKRArchiveCFUs();
-extern void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap();
-extern void getName__10JUTNameTabCFUs();
-extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern void reinitGX__6J3DSysFv();
-extern void init__15J3DVertexBufferFv();
-extern void callDL__17J3DDisplayListObjCFv();
-extern void entry__9J3DPacketFP13J3DDrawBuffer();
-extern void drawFast__14J3DShapePacketFv();
-extern void loadPreDrawSetting__8J3DShapeCFv();
-extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern void initialize__8J3DModelFv();
-extern void entryModelData__8J3DModelFP12J3DModelDataUlUl();
-extern void newDifferedDisplayList__8J3DModelFUl();
-extern void lock__8J3DModelFv();
-extern void unlock__8J3DModelFv();
-extern void diff__8J3DModelFv();
-extern void init__12J3DFrameCtrlFs();
-extern void update__12J3DFrameCtrlFv();
-extern void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable();
-extern void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable();
-extern void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable();
-extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable();
-extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
-extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
-extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
-extern void setAnm__13J3DDeformDataFP13J3DAnmCluster();
-extern void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
-extern void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
-extern void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
-extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern void JMAEulerToQuat__FsssP10Quaternion();
-extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
-extern void DCStoreRangeNoSync();
-extern void OSDisableInterrupts();
-extern void OSRestoreInterrupts();
-extern void OSGetCurrentThread();
-extern void PSMTXCopy();
-extern void PSMTXConcat();
-extern void PSMTXQuat();
-extern void PSVECAdd();
-extern void PSVECScale();
-extern void PSVECSquareMag();
-extern void GXSetVtxDesc();
-extern void GXClearVtxDesc();
-extern void GXSetVtxAttrFmt();
-extern void GXSetArray();
-extern void GXBegin();
-extern void GXInitTexObj();
-extern void GXInitTexObjLOD();
-extern void GXGetTexObjWidth();
-extern void GXGetTexObjHeight();
-extern void GXLoadTexObj();
-extern void GXSetTexCoordScaleManually();
-extern void GXSetNumIndStages();
-extern void GXSetTevColor();
-extern void GXCallDisplayList();
-extern void GXLoadPosMtxImm();
-extern void GXLoadNrmMtxImm();
-extern void GDInitGDLObj();
-extern void __construct_new_array();
-extern void _savegpr_15();
-extern void _savegpr_18();
-extern void _savegpr_20();
-extern void _savegpr_21();
-extern void _savegpr_22();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _savegpr_28();
-extern void _savegpr_29();
-extern void _restgpr_15();
-extern void _restgpr_18();
-extern void _restgpr_20();
-extern void _restgpr_21();
-extern void _restgpr_22();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
-extern void _restgpr_28();
-extern void _restgpr_29();
-extern void snprintf();
-extern void strcmp();
+extern "C" extern void OSReport_FatalError();
+extern "C" extern void OSReport_Error();
+extern "C" extern void __dt__4cXyzFv();
+extern "C" extern void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs();
+extern "C" extern void initPlay__14mDoExt_baseAnmFsifss();
+extern "C" extern void play__14mDoExt_baseAnmFv();
+extern "C" extern void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" extern void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" extern void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
+extern "C" extern void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
+extern "C" extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" extern void func_8000D8E4();
+extern "C" extern void __dt__17J3DMtxCalcAnmBaseFv();
+extern "C" extern void __dt__10J3DMtxCalcFv();
+extern "C" extern void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform();
+extern "C" extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" extern void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf();
+extern "C" extern void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss();
+extern "C" extern void mDoExt_changeMaterial__FP8J3DModel();
+extern "C" extern void mDoExt_modelTexturePatch__FP12J3DModelData();
+extern "C" extern void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
+extern "C" extern void patch__10J3DPEBlockFv();
+extern "C" extern void patchLight__13J3DColorBlockFv();
+extern "C" extern void patch__11J3DTevBlockFv();
+extern "C" extern void mDoExt_modelDiff__FP8J3DModel();
+extern "C" extern void mDoExt_modelUpdate__FP8J3DModel();
+extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" extern void mDoExt_modelEntryDL__FP8J3DModel();
+extern "C" extern void mDoExt_btkAnmRemove__FP12J3DModelData();
+extern "C" extern void mDoExt_brkAnmRemove__FP12J3DModelData();
+extern "C" extern void getZCompLoc__10J3DPEBlockCFv();
+extern "C" extern void getZMode__10J3DPEBlockFv();
+extern "C" extern void getBlend__10J3DPEBlockFv();
+extern "C" extern void getAlphaComp__10J3DPEBlockFv();
+extern "C" extern void getFog__10J3DPEBlockFv();
+extern "C" extern void getIndTexCoordScale__11J3DIndBlockFUl();
+extern "C" extern void getIndTexMtx__11J3DIndBlockFUl();
+extern "C" extern void getIndTexOrder__11J3DIndBlockFUl();
+extern "C" extern void getIndTexStageNum__11J3DIndBlockCFv();
+extern "C" extern void getIndTevStage__11J3DTevBlockFUl();
+extern "C" extern void getTevStage__11J3DTevBlockFUl();
+extern "C" extern void getTexNo__11J3DTevBlockCFUl();
+extern "C" extern void getTevSwapModeTable__11J3DTevBlockFUl();
+extern "C" extern void getTevKAlphaSel__11J3DTevBlockFUl();
+extern "C" extern void getTevKColorSel__11J3DTevBlockFUl();
+extern "C" extern void getTevOrder__11J3DTevBlockFUl();
+extern "C" extern void getTevKColor__11J3DTevBlockFUl();
+extern "C" extern void getTevColor__11J3DTevBlockFUl();
+extern "C" extern void getTevStageNum__11J3DTevBlockCFv();
+extern "C" extern void getTexMtx__14J3DTexGenBlockFUl();
+extern "C" extern void getTexCoord__14J3DTexGenBlockFUl();
+extern "C" extern void getTexGenNum__14J3DTexGenBlockCFv();
+extern "C" extern void getAmbColor__13J3DColorBlockFUl();
+extern "C" extern void getColorChan__13J3DColorBlockFUl();
+extern "C" extern void getMatColor__13J3DColorBlockFUl();
+extern "C" extern void getColorChanNum__13J3DColorBlockCFv();
+extern "C" extern void setZCompLoc__10J3DPEBlockFUc();
+extern "C" extern void setZMode__10J3DPEBlockF8J3DZMode();
+extern "C" extern void setBlend__10J3DPEBlockFRC8J3DBlend();
+extern "C" extern void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
+extern "C" extern void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale();
+extern "C" extern void __dt__19J3DIndTexCoordScaleFv();
+extern "C" extern void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx();
+extern "C" extern void __dt__12J3DIndTexMtxFv();
+extern "C" extern void setIndTexStageNum__11J3DIndBlockFUc();
+extern "C" extern void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
+extern "C" extern void setTevStage__11J3DTevBlockFUl11J3DTevStage();
+extern "C" extern void setTexNo__11J3DTevBlockFUlUs();
+extern "C" extern void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
+extern "C" extern void setTevKAlphaSel__11J3DTevBlockFUlUc();
+extern "C" extern void setTevKColorSel__11J3DTevBlockFUlUc();
+extern "C" extern void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
+extern "C" extern void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
+extern "C" extern void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
+extern "C" extern void setTevStageNum__11J3DTevBlockFUc();
+extern "C" extern void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord();
+extern "C" extern void setTexGenNum__14J3DTexGenBlockFUl();
+extern "C" extern void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
+extern "C" extern void setColorChan__13J3DColorBlockFUlRC12J3DColorChan();
+extern "C" extern void setMatColor__13J3DColorBlockFUl10J3DGXColor();
+extern "C" extern void setColorChanNum__13J3DColorBlockFUc();
+extern "C" extern void __ct__19J3DIndTexCoordScaleFv();
+extern "C" extern void __ct__12J3DIndTexMtxFv();
+extern "C" extern void __ct__14J3DIndTexOrderFv();
+extern "C" extern void __ct__19J3DTevSwapModeTableFv();
+extern "C" extern void __ct__11J3DTevOrderFv();
+extern "C" extern void __ct__14J3DIndTevStageFv();
+extern "C" extern void __ct__11J3DTevStageFv();
+extern "C" extern void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" extern void __ct__13J3DGXColorS10Fv();
+extern "C" extern void __ct__11J3DTexCoordFv();
+extern "C" extern void __ct__12J3DColorChanFv();
+extern "C" extern void __ct__10J3DGXColorFv();
+extern "C" extern void create__21mDoExt_invisibleModelFP8J3DModelUc();
+extern "C" extern void __dt__19mDoExt_invJntPacketFv();
+extern "C" extern void __ct__19mDoExt_invJntPacketFv();
+extern "C" extern void __dt__9J3DPacketFv();
+extern "C" extern void entryJoint__21mDoExt_invisibleModelFP4cXyz();
+extern "C" extern void entryDL__21mDoExt_invisibleModelFP4cXyz();
+extern "C" extern void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData();
+extern "C" extern void mDoExt_setupStageTexture__FP12J3DModelData();
+extern "C" extern void mDoExt_createAssertHeap__FP7JKRHeap();
+extern "C" extern void mDoExt_getAssertHeap__Fv();
+extern "C" extern void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getDbPrintHeap__Fv();
+extern "C" extern void mDoExt_createGameHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getGameHeap__Fv();
+extern "C" extern void mDoExt_createZeldaHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getZeldaHeap__Fv();
+extern "C" extern void mDoExt_createCommandHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getCommandHeap__Fv();
+extern "C" extern void mDoExt_createArchiveHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getArchiveHeap__Fv();
+extern "C" extern void mDoExt_getArchiveHeapPtr__Fv();
+extern "C" extern void mDoExt_createJ2dHeap__FUlP7JKRHeap();
+extern "C" extern void mDoExt_getJ2dHeap__Fv();
+extern "C" extern void mDoExt_getHostIOHeap__Fv();
+extern "C" extern void mDoExt_createSolidHeap__FUlP7JKRHeapUl();
+extern "C" extern void mDoExt_createSolidHeapFromGame__FUlUl();
+extern "C" extern void mDoExt_createSolidHeapFromSystem__FUlUl();
+extern "C" extern void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl();
+extern "C" extern void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
+extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
+extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" extern void mDoExt_getCurrentHeap__Fv();
+extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
+extern "C" extern void mDoExt_resIDToIndex__FP10JKRArchiveUs();
+extern "C" extern void calc__25mDoExt_MtxCalcAnmBlendTblFv();
+extern "C" extern void calc__28mDoExt_MtxCalcAnmBlendTblOldFv();
+extern "C" extern void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs();
+extern "C" extern void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv();
+extern "C" extern void __ct__13mDoExt_morf_cFv();
+extern "C" extern void __dt__12J3DFrameCtrlFv();
+extern "C" extern void func_8000FA20();
+extern "C" extern void __dt__19J3DMtxCalcNoAnmBaseFv();
+extern "C" extern void __dt__13mDoExt_morf_cFv();
+extern "C" extern void setMorf__13mDoExt_morf_cFf();
+extern "C" extern void frameUpdate__13mDoExt_morf_cFv();
+extern "C" extern void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
+extern "C" extern void __dt__14mDoExt_McaMorfFv();
+extern "C" extern void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
+extern "C" extern void calc__14mDoExt_McaMorfFv();
+extern "C" extern void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
+extern "C" extern void play__14mDoExt_McaMorfFP3VecUlSc();
+extern "C" extern void entryDL__14mDoExt_McaMorfFv();
+extern "C" extern void modelCalc__14mDoExt_McaMorfFv();
+extern "C" extern void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo();
+extern "C" extern void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" extern void __dt__16mDoExt_McaMorfSOFv();
+extern "C" extern void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" extern void calc__16mDoExt_McaMorfSOFv();
+extern "C" extern void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
+extern "C" extern void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" extern void updateDL__16mDoExt_McaMorfSOFv();
+extern "C" extern void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" extern void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" extern void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo();
+extern "C" extern void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" extern void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" extern void __dt__15mDoExt_McaMorf2Fv();
+extern "C" extern void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" extern void ERROR_EXIT__15mDoExt_McaMorf2Fv();
+extern "C" extern void calc__15mDoExt_McaMorf2Fv();
+extern "C" extern void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff();
+extern "C" extern void setAnmRate__15mDoExt_McaMorf2Ff();
+extern "C" extern void play__15mDoExt_McaMorf2FUlSc();
+extern "C" extern void entryDL__15mDoExt_McaMorf2Fv();
+extern "C" extern void modelCalc__15mDoExt_McaMorf2Fv();
+extern "C" extern void stopZelAnime__15mDoExt_McaMorf2Fv();
+extern "C" extern void draw__19mDoExt_invJntPacketFv();
+extern "C" extern void init__15mDoExt_3Dline_cFUsii();
+extern "C" extern void __ct__4cXyzFv();
+extern "C" extern void init__19mDoExt_3DlineMat0_cFUsUsi();
+extern "C" extern void __ct__15mDoExt_3Dline_cFv();
+extern "C" extern void setMaterial__19mDoExt_3DlineMat0_cFv();
+extern "C" extern void draw__19mDoExt_3DlineMat0_cFv();
+extern "C" extern void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c();
+extern "C" extern void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c();
+extern "C" extern void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi();
+extern "C" extern void setMaterial__19mDoExt_3DlineMat1_cFv();
+extern "C" extern void draw__19mDoExt_3DlineMat1_cFv();
+extern "C" extern void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c();
+extern "C" extern void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c();
+extern "C" extern void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c();
+extern "C" extern void draw__26mDoExt_3DlineMatSortPacketFv();
+extern "C" extern void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl();
+extern "C" extern void __dt__7JUTFontFv();
+extern "C" extern void mDoExt_initFont0__Fv();
+extern "C" extern void mDoExt_getMesgFont__Fv();
+extern "C" extern void mDoExt_removeMesgFont__Fv();
+extern "C" extern void mDoExt_initFont1__Fv();
+extern "C" extern void mDoExt_getRubyFont__Fv();
+extern "C" extern void mDoExt_initFont2__Fv();
+extern "C" extern void mDoExt_getSubFont__Fv();
+extern "C" extern void mDoExt_removeSubFont__Fv();
+extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" extern void mDoExt_setAraCacheSize__FUl();
+extern "C" extern void mDoExt_GetCurrentRunningThread__Fv();
+extern "C" extern void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" extern void getCellWidth__7JUTFontCFv();
+extern "C" extern void getCellHeight__7JUTFontCFv();
+extern "C" extern void __dt__26mDoExt_3DlineMatSortPacketFv();
+extern "C" extern void getMaterialID__19mDoExt_3DlineMat1_cFv();
+extern "C" extern void getMaterialID__19mDoExt_3DlineMat0_cFv();
+extern "C" extern void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
+extern "C" extern void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
+extern "C" extern void getAnmTransform__10J3DMtxCalcFUc();
+extern "C" extern void getAnmTransform__10J3DMtxCalcFv();
+extern "C" extern void setWeight__10J3DMtxCalcFUcf();
+extern "C" extern void getWeight__10J3DMtxCalcCFUc();
+extern "C" extern void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv();
+extern "C" extern void __dt__25mDoExt_MtxCalcAnmBlendTblFv();
+extern "C" extern void getAnmTransform__17J3DMtxCalcAnmBaseFv();
+extern "C" extern void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform();
+extern "C" extern void func_80014FC8();
+extern "C" extern void func_80015034();
+extern "C" extern void func_8001505C();
+extern "C" extern void func_80015084();
+extern "C" extern void func_800150AC();
+extern "C" extern void dComIfG_getStageRes__FPCc();
+extern "C" extern void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
+extern "C" extern void dKy_setLight_again__Fv();
+extern "C" extern void dKy_Global_amb_set__FP12dKy_tevstr_c();
+extern "C" extern void dKy_GxFog_set__Fv();
+extern "C" extern void __pl__4cXyzCFRC3Vec();
+extern "C" extern void __mi__4cXyzCFRC3Vec();
+extern "C" extern void __ml__4cXyzCFf();
+extern "C" extern void outprod__4cXyzCFRC3Vec();
+extern "C" extern void normalizeZP__4cXyzFv();
+extern "C" extern void cLib_chaseF__FPfff();
+extern "C" extern void framework__14Z2SoundObjBaseFUlSc();
+extern "C" extern void dispose__14Z2SoundObjBaseFv();
+extern "C" extern void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
+extern "C" extern void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" extern void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" extern void __ct__15Z2SoundObjAnimeFv();
+extern "C" extern void init__15Z2SoundObjAnimeFP3VecUc();
+extern "C" extern void initAnime__15Z2SoundObjAnimeFPvbff();
+extern "C" extern void updateAnime__15Z2SoundObjAnimeFff();
+extern "C" extern void initAnime__10Z2CreatureFPvbff();
+extern "C" extern void updateAnime__10Z2CreatureFff();
+extern "C" extern void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
+extern "C" extern void GFSetZMode__FUc10_GXCompareUc();
+extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
+extern "C" extern void destroy__7JKRHeapFv();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void setErrorFlag__7JKRHeapFb();
+extern "C" extern void __nw__FUl();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __nwa__FUl();
+extern "C" extern void __dl__FPv();
+extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" extern void create__12JKRSolidHeapFUlP7JKRHeapb();
+extern "C" extern void adjustSize__12JKRSolidHeapFv();
+extern "C" extern void create__13JKRAssertHeapFP7JKRHeap();
+extern "C" extern void removeResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" extern void findIdResource__10JKRArchiveCFUs();
+extern "C" extern void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap();
+extern "C" extern void getName__10JUTNameTabCFUs();
+extern "C" extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" extern void reinitGX__6J3DSysFv();
+extern "C" extern void init__15J3DVertexBufferFv();
+extern "C" extern void callDL__17J3DDisplayListObjCFv();
+extern "C" extern void entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" extern void drawFast__14J3DShapePacketFv();
+extern "C" extern void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+extern "C" extern void initialize__8J3DModelFv();
+extern "C" extern void entryModelData__8J3DModelFP12J3DModelDataUlUl();
+extern "C" extern void newDifferedDisplayList__8J3DModelFUl();
+extern "C" extern void lock__8J3DModelFv();
+extern "C" extern void unlock__8J3DModelFv();
+extern "C" extern void diff__8J3DModelFv();
+extern "C" extern void init__12J3DFrameCtrlFs();
+extern "C" extern void update__12J3DFrameCtrlFv();
+extern "C" extern void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable();
+extern "C" extern void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable();
+extern "C" extern void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable();
+extern "C" extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable();
+extern "C" extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+extern "C" extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+extern "C" extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+extern "C" extern void setAnm__13J3DDeformDataFP13J3DAnmCluster();
+extern "C" extern void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
+extern "C" extern void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
+extern "C" extern void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" extern void JMAEulerToQuat__FsssP10Quaternion();
+extern "C" extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
+extern "C" extern void DCStoreRangeNoSync();
+extern "C" extern void OSDisableInterrupts();
+extern "C" extern void OSRestoreInterrupts();
+extern "C" extern void OSGetCurrentThread();
+extern "C" extern void PSMTXCopy();
+extern "C" extern void PSMTXConcat();
+extern "C" extern void PSMTXQuat();
+extern "C" extern void PSVECAdd();
+extern "C" extern void PSVECScale();
+extern "C" extern void PSVECSquareMag();
+extern "C" extern void GXSetVtxDesc();
+extern "C" extern void GXClearVtxDesc();
+extern "C" extern void GXSetVtxAttrFmt();
+extern "C" extern void GXSetArray();
+extern "C" extern void GXBegin();
+extern "C" extern void GXInitTexObj();
+extern "C" extern void GXInitTexObjLOD();
+extern "C" extern void GXGetTexObjWidth();
+extern "C" extern void GXGetTexObjHeight();
+extern "C" extern void GXLoadTexObj();
+extern "C" extern void GXSetTexCoordScaleManually();
+extern "C" extern void GXSetNumIndStages();
+extern "C" extern void GXSetTevColor();
+extern "C" extern void GXCallDisplayList();
+extern "C" extern void GXLoadPosMtxImm();
+extern "C" extern void GXLoadNrmMtxImm();
+extern "C" extern void GDInitGDLObj();
+extern "C" extern void __construct_new_array();
+extern "C" extern void _savegpr_15();
+extern "C" extern void _savegpr_18();
+extern "C" extern void _savegpr_20();
+extern "C" extern void _savegpr_21();
+extern "C" extern void _savegpr_22();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_15();
+extern "C" extern void _restgpr_18();
+extern "C" extern void _restgpr_20();
+extern "C" extern void _restgpr_21();
+extern "C" extern void _restgpr_22();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
+extern "C" extern void _restgpr_28();
+extern "C" extern void _restgpr_29();
+extern "C" extern void snprintf();
+extern "C" extern void strcmp();
 SECTION_RODATA extern const u8 data_803740C0[20];
 SECTION_RODATA extern const u8 data_803740D4[20];
 SECTION_RODATA extern const u8 data_803740E8[20];
@@ -373,32 +372,32 @@ SECTION_DATA extern u8 g_mDoMtx_identity[72];
 SECTION_DATA extern u8 data_803A3020[160];
 SECTION_DATA extern u8 l_matDL[160];
 SECTION_DATA extern u8 l_mat1DL[144];
-SECTION_DATA extern void* __vt__7JUTFont[17];
-SECTION_DATA extern void* __vt__26mDoExt_3DlineMatSortPacket[5];
-SECTION_DATA extern void* __vt__19mDoExt_3DlineMat1_c[5];
-SECTION_DATA extern void* __vt__19mDoExt_3DlineMat0_c[5];
-SECTION_DATA extern void* __vt__19mDoExt_invJntPacket[5];
-SECTION_DATA extern void* __vt__15mDoExt_McaMorf2[11];
-SECTION_DATA extern void* __vt__16mDoExt_McaMorfSO[11];
-SECTION_DATA extern void* __vt__15mDoExt_zelAnime[8];
-SECTION_DATA extern void* __vt__14mDoExt_McaMorf[11];
-SECTION_DATA extern void* __vt__13mDoExt_morf_c[11];
-SECTION_DATA extern void* __vt__12J3DFrameCtrl[3];
-SECTION_DATA extern void* data_803A3360[11];
-SECTION_DATA extern void* __vt__19J3DMtxCalcNoAnmBase[11];
-SECTION_DATA extern void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11];
-SECTION_DATA extern void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11];
-SECTION_DATA extern void* data_803A3410[11];
-SECTION_DATA extern void* __vt__17J3DMtxCalcAnmBase[11];
-SECTION_DATA extern void* __vt__10J3DMtxCalc[12];
-SECTION_DATA extern void* __vt__9J3DPacket[5];
-SECTION_DATA extern void* __vt__8J3DModel[9];
+SECTION_DATA extern void* const __vt__7JUTFont[17];
+SECTION_DATA extern void* const __vt__26mDoExt_3DlineMatSortPacket[5];
+SECTION_DATA extern void* const __vt__19mDoExt_3DlineMat1_c[5];
+SECTION_DATA extern void* const __vt__19mDoExt_3DlineMat0_c[5];
+SECTION_DATA extern void* const __vt__19mDoExt_invJntPacket[5];
+SECTION_DATA extern void* const __vt__15mDoExt_McaMorf2[11];
+SECTION_DATA extern void* const __vt__16mDoExt_McaMorfSO[11];
+SECTION_DATA extern void* const __vt__15mDoExt_zelAnime[8];
+SECTION_DATA extern void* const __vt__14mDoExt_McaMorf[11];
+SECTION_DATA extern void* const __vt__13mDoExt_morf_c[11];
+SECTION_DATA extern void* const __vt__12J3DFrameCtrl[3];
+SECTION_DATA extern void* const data_803A3360[11];
+SECTION_DATA extern void* const __vt__19J3DMtxCalcNoAnmBase[11];
+SECTION_DATA extern void* const __vt__28mDoExt_MtxCalcAnmBlendTblOld[11];
+SECTION_DATA extern void* const __vt__25mDoExt_MtxCalcAnmBlendTbl[11];
+SECTION_DATA extern void* const data_803A3410[11];
+SECTION_DATA extern void* const __vt__17J3DMtxCalcAnmBase[11];
+SECTION_DATA extern void* const __vt__10J3DMtxCalc[12];
+SECTION_DATA extern void* const __vt__9J3DPacket[5];
+SECTION_DATA extern void* const __vt__8J3DModel[9];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 mCurrentMtx__6J3DSys[48];
 SECTION_BSS extern u8 mParentS__6J3DSys[12];
 SECTION_BSS extern u8 sGDLObj__17J3DDisplayListObj[16];
-SECTION_SDATA extern u8 __float_nan[4];
+SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 AssertHeap[4];
 SECTION_SBSS extern u8 DbPrintHeap[4];
 SECTION_SBSS extern u8 gameHeap[4];
@@ -423,77 +422,169 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
 SECTION_SBSS extern u8 mJoint__10J3DMtxCalc[4];
 SECTION_SBSS extern u8 __GDCurrentDL[4];
-SECTION_SDATA2 extern u8 m_Do_m_Do_ext__LIT_3847[4];
-SECTION_SDATA2 extern u8 m_Do_m_Do_ext__LIT_3876[4];
-SECTION_SDATA2 extern u8 m_Do_m_Do_ext__LIT_3878[8];
-SECTION_SDATA2 extern u8 LIT_5939[4];
-SECTION_SDATA2 extern u8 LIT_6819[4];
-SECTION_SDATA2 extern u8 LIT_7404[8];
-SECTION_SDATA2 extern u8 LIT_7406[8];
-SECTION_SDATA2 extern u8 m_Do_m_Do_ext__LIT_7624[4];
-SECTION_SDATA2 extern u8 m_Do_m_Do_ext__LIT_7625[4];
-SECTION_SDATA2 extern u8 LIT_7919[8];
-SECTION_SDATA2 extern u8 LIT_7920[8];
-SECTION_SDATA2 extern u8 LIT_7921[8];
-SECTION_SDATA2 extern u8 LIT_7922[4];
-SECTION_SDATA2 extern u8 LIT_7923[4];
-SECTION_SDATA2 extern u8 LIT_7924[8];
-SECTION_SDATA2 extern u8 j3dDefaultTevOrderInfoNull[4];
-SECTION_SDATA2 extern u8 j3dDefaultIndTexOrderNull[4];
+SECTION_SDATA2 extern f32 m_Do_m_Do_ext__lit_3847;
+SECTION_SDATA2 extern u8 m_Do_m_Do_ext__lit_3876[4];
+SECTION_SDATA2 extern f64 m_Do_m_Do_ext__lit_3878;
+SECTION_SDATA2 extern f32 lit_5939;
+SECTION_SDATA2 extern f32 lit_6819;
+SECTION_SDATA2 extern f32 lit_7404;
+SECTION_SDATA2 extern f64 lit_7406;
+SECTION_SDATA2 extern f32 m_Do_m_Do_ext__lit_7624;
+SECTION_SDATA2 extern f32 m_Do_m_Do_ext__lit_7625;
+SECTION_SDATA2 extern f64 lit_7919;
+SECTION_SDATA2 extern f64 lit_7920;
+SECTION_SDATA2 extern u8 lit_7921[8];
+SECTION_SDATA2 extern f32 lit_7922;
+SECTION_SDATA2 extern f32 lit_7923;
+SECTION_SDATA2 extern f32 lit_7924;
+SECTION_SDATA2 extern u32 j3dDefaultTevOrderInfoNull;
+SECTION_SDATA2 extern u32 j3dDefaultIndTexOrderNull;
 SECTION_SDATA2 extern u8 j3dDefaultIndTexCoordScaleInfo[4];
 SECTION_SDATA2 extern u8 j3dDefaultTevSwapMode[4];
 SECTION_SDATA2 extern u8 j3dDefaultColorChanInfo[8];
-SECTION_SDATA2 extern u8 struct_804563F8[4];
-}
+SECTION_SDATA2 extern u16 data_804563F8;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
+/* 80451B18-80451B1C 0004 .sdata2    @3847                                                        */
+f32 m_Do_m_Do_ext__lit_3847 = 1.0f;
 
-extern "C" {
-/* 803740FC-80374198 009C .rodata    @stringBase0                                                 */
+/* 8000D0AC-8000D320 0274 .text      mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs              */
 #pragma push
-#pragma force_active on
-#pragma section ".dead"
-// MWCC ignores mapping of some japanese characters using the 
-// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
-SECTION_DEAD const char* const stringBase_803740FC = "\x83\x5C\x83\x8A\x83\x62\x83\x68\x83\x71\x81\x5B\x83\x76\x82\xBF\x82\xE1\x82\xA4\x82\xAA\x82\xC8\x81\x49\x0A";
-SECTION_DEAD const char* const stringBase_80374118 = "%s.bti";
-SECTION_DEAD const char* const stringBase_8037411F = 
-    "親ヒープがExpでないのでアジャ"
-    "ストできません %08x %08"
-    "x\n";
-SECTION_DEAD const char* const stringBase_80374156 = "adjustSize失敗 %08x\n";
-SECTION_DEAD const char* const stringBase_8037416B = "\nキャッシュフォントクラス作成に失敗しました\n";
-#pragma pop
-/* 803740C0-803740D4 0012 .rodata    fontdata$8224                                                */
-SECTION_RODATA const u8 data_803740C0[20] = {
-	0x72, 0x6F, 0x64, 0x61, 0x6E, 0x5F, 0x62, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E, 0x62, 0x66,
-	0x6E, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
-/* 803740D4-803740E8 0014 .rodata    fontdata$8253                                                */
-SECTION_RODATA const u8 data_803740D4[20] = {
-	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
-	0x62, 0x66, 0x6E, 0x00,
-};
-/* 803740E8-803740FC 0014 .rodata    fontdata$8287                                                */
-SECTION_RODATA const u8 data_803740E8[20] = {
-	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
-	0x62, 0x66, 0x6E, 0x00,
-};
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs.s"
 }
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                         .data                                          */
-/* ###################################################################################### */
+/* 80451B1C-80451B20 0004 .sdata2    @3876                                                        */
+u8 m_Do_m_Do_ext__lit_3876[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
-extern "C" {
+/* 80451B20-80451B28 0008 .sdata2    @3878                                                        */
+f64 m_Do_m_Do_ext__lit_3878 = 4503601774854144.0 /* cast s32 to float */;
+
+/* 8000D320-8000D428 0108 .text      initPlay__14mDoExt_baseAnmFsifss                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void initPlay__14mDoExt_baseAnmFsifss() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/initPlay__14mDoExt_baseAnmFsifss.s"
+}
+#pragma pop
+
+
+/* 8000D428-8000D47C 0054 .text      play__14mDoExt_baseAnmFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void play__14mDoExt_baseAnmFv() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/play__14mDoExt_baseAnmFv.s"
+}
+#pragma pop
+
+
+/* 8000D47C-8000D518 009C .text      init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss.s"
+}
+#pragma pop
+
+
+/* 8000D518-8000D54C 0034 .text      entry__13mDoExt_bpkAnmFP16J3DMaterialTablef                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/entry__13mDoExt_bpkAnmFP16J3DMaterialTablef.s"
+}
+#pragma pop
+
+
+/* 8000D54C-8000D5E8 009C .text      init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss.s"
+}
+#pragma pop
+
+
+/* 8000D5E8-8000D63C 0054 .text      entry__13mDoExt_btpAnmFP16J3DMaterialTables                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entry__13mDoExt_btpAnmFP16J3DMaterialTables() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/entry__13mDoExt_btpAnmFP16J3DMaterialTables.s"
+}
+#pragma pop
+
+
+/* 8000D63C-8000D6D8 009C .text      init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss.s"
+}
+#pragma pop
+
+
+/* 8000D6D8-8000D70C 0034 .text      entry__13mDoExt_btkAnmFP16J3DMaterialTablef                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entry__13mDoExt_btkAnmFP16J3DMaterialTablef() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/entry__13mDoExt_btkAnmFP16J3DMaterialTablef.s"
+}
+#pragma pop
+
+
+/* 8000D70C-8000D7A8 009C .text      init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss.s"
+}
+#pragma pop
+
+
+/* 8000D7A8-8000D7DC 0034 .text      entry__13mDoExt_brkAnmFP16J3DMaterialTablef                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void entry__13mDoExt_brkAnmFP16J3DMaterialTablef() {
+	nofralloc
+#include "asm/m_Do/m_Do_ext/entry__13mDoExt_brkAnmFP16J3DMaterialTablef.s"
+}
+#pragma pop
+
+
+/* ###################################################################################### */
 /* 803A3020-803A30C0 0085 .data      l_invisibleMat$7041                                          */
-SECTION_DATA u8 data_803A3020[160] = {
+u8 data_803A3020[160] = {
 	0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x04, 0x00, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00,
 	0x04, 0x00, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFC, 0x61, 0xC1, 0x08, 0xFF,
 	0xF0, 0x61, 0xF3, 0x7F, 0x00, 0x00, 0x61, 0x43, 0x00, 0x00, 0x41, 0x61, 0x40, 0x00, 0x00, 0x17,
@@ -507,8 +598,9 @@ SECTION_DATA u8 data_803A3020[160] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A30C0-803A3160 0084 .data      l_matDL                                                      */
-SECTION_DATA u8 l_matDL[160] = {
+u8 l_matDL[160] = {
 	0x08, 0x30, 0x3C, 0xF3, 0xCF, 0x00, 0x10, 0x00, 0x00, 0x10, 0x18, 0x3C, 0xF3, 0xCF, 0x00, 0x10,
 	0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x7F, 0x32, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00, 0x05,
 	0x00, 0x10, 0x00, 0x00, 0x10, 0x0C, 0xFF, 0xFF, 0xFF, 0xFF, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61,
@@ -522,8 +614,9 @@ SECTION_DATA u8 l_matDL[160] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 803A3160-803A31F0 008D .data      l_mat1DL                                                     */
-SECTION_DATA u8 l_mat1DL[144] = {
+u8 l_mat1DL[144] = {
 	0x10, 0x00, 0x00, 0x10, 0x40, 0xFF, 0xFF, 0x42, 0x80, 0x08, 0x30, 0x3C, 0xF3, 0xCF, 0x00, 0x10,
 	0x00, 0x00, 0x10, 0x18, 0x3C, 0xF3, 0xCF, 0x00, 0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x7F,
 	0x32, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00, 0x05, 0x00, 0x10, 0x00, 0x00, 0x10, 0x0C, 0xFF,
@@ -536,8 +629,9 @@ SECTION_DATA u8 l_mat1DL[144] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
+
 /* 803A31F0-803A3234 0044 .data      __vt__7JUTFont                                               */
-SECTION_DATA void* __vt__7JUTFont[17] = {
+void* const __vt__7JUTFont[17] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__7JUTFontFv,
@@ -556,40 +650,45 @@ SECTION_DATA void* __vt__7JUTFont[17] = {
 	NULL,
 	NULL,
 };
+
 /* 803A3234-803A3248 0014 .data      __vt__26mDoExt_3DlineMatSortPacket                           */
-SECTION_DATA void* __vt__26mDoExt_3DlineMatSortPacket[5] = {
+void* const __vt__26mDoExt_3DlineMatSortPacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__26mDoExt_3DlineMatSortPacketFv,
 	(void*)__dt__26mDoExt_3DlineMatSortPacketFv,
 };
+
 /* 803A3248-803A325C 0014 .data      __vt__19mDoExt_3DlineMat1_c                                  */
-SECTION_DATA void* __vt__19mDoExt_3DlineMat1_c[5] = {
+void* const __vt__19mDoExt_3DlineMat1_c[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getMaterialID__19mDoExt_3DlineMat1_cFv,
 	(void*)setMaterial__19mDoExt_3DlineMat1_cFv,
 	(void*)draw__19mDoExt_3DlineMat1_cFv,
 };
+
 /* 803A325C-803A3270 0014 .data      __vt__19mDoExt_3DlineMat0_c                                  */
-SECTION_DATA void* __vt__19mDoExt_3DlineMat0_c[5] = {
+void* const __vt__19mDoExt_3DlineMat0_c[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getMaterialID__19mDoExt_3DlineMat0_cFv,
 	(void*)setMaterial__19mDoExt_3DlineMat0_cFv,
 	(void*)draw__19mDoExt_3DlineMat0_cFv,
 };
+
 /* 803A3270-803A3284 0014 .data      __vt__19mDoExt_invJntPacket                                  */
-SECTION_DATA void* __vt__19mDoExt_invJntPacket[5] = {
+void* const __vt__19mDoExt_invJntPacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__19mDoExt_invJntPacketFv,
 	(void*)__dt__19mDoExt_invJntPacketFv,
 };
+
 /* 803A3284-803A32B0 002C .data      __vt__15mDoExt_McaMorf2                                      */
-SECTION_DATA void* __vt__15mDoExt_McaMorf2[11] = {
+void* const __vt__15mDoExt_McaMorf2[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15mDoExt_McaMorf2Fv,
@@ -602,8 +701,9 @@ SECTION_DATA void* __vt__15mDoExt_McaMorf2[11] = {
 	(void*)func_8001505C,
 	(void*)calc__15mDoExt_McaMorf2Fv,
 };
+
 /* 803A32B0-803A32DC 002C .data      __vt__16mDoExt_McaMorfSO                                     */
-SECTION_DATA void* __vt__16mDoExt_McaMorfSO[11] = {
+void* const __vt__16mDoExt_McaMorfSO[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16mDoExt_McaMorfSOFv,
@@ -616,8 +716,9 @@ SECTION_DATA void* __vt__16mDoExt_McaMorfSO[11] = {
 	(void*)func_8001505C,
 	(void*)calc__16mDoExt_McaMorfSOFv,
 };
+
 /* 803A32DC-803A32FC 0020 .data      __vt__15mDoExt_zelAnime                                      */
-SECTION_DATA void* __vt__15mDoExt_zelAnime[8] = {
+void* const __vt__15mDoExt_zelAnime[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)framework__14Z2SoundObjBaseFUlSc,
@@ -627,8 +728,9 @@ SECTION_DATA void* __vt__15mDoExt_zelAnime[8] = {
 	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
+
 /* 803A32FC-803A3328 002C .data      __vt__14mDoExt_McaMorf                                       */
-SECTION_DATA void* __vt__14mDoExt_McaMorf[11] = {
+void* const __vt__14mDoExt_McaMorf[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14mDoExt_McaMorfFv,
@@ -641,8 +743,9 @@ SECTION_DATA void* __vt__14mDoExt_McaMorf[11] = {
 	(void*)func_8001505C,
 	(void*)calc__14mDoExt_McaMorfFv,
 };
+
 /* 803A3328-803A3354 002C .data      __vt__13mDoExt_morf_c                                        */
-SECTION_DATA void* __vt__13mDoExt_morf_c[11] = {
+void* const __vt__13mDoExt_morf_c[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13mDoExt_morf_cFv,
@@ -655,14 +758,16 @@ SECTION_DATA void* __vt__13mDoExt_morf_c[11] = {
 	(void*)func_8001505C,
 	(void*)func_80015084,
 };
+
 /* 803A3354-803A3360 000C .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA void* __vt__12J3DFrameCtrl[3] = {
+void* const __vt__12J3DFrameCtrl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J3DFrameCtrlFv,
 };
+
 /* 803A3360-803A338C 002C .data      __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
-SECTION_DATA void* data_803A3360[11] = {
+void* const data_803A3360[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_8000FA20,
@@ -675,8 +780,9 @@ SECTION_DATA void* data_803A3360[11] = {
 	(void*)func_8001505C,
 	(void*)func_80015084,
 };
+
 /* 803A338C-803A33B8 002C .data      __vt__19J3DMtxCalcNoAnmBase                                  */
-SECTION_DATA void* __vt__19J3DMtxCalcNoAnmBase[11] = {
+void* const __vt__19J3DMtxCalcNoAnmBase[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19J3DMtxCalcNoAnmBaseFv,
@@ -689,8 +795,9 @@ SECTION_DATA void* __vt__19J3DMtxCalcNoAnmBase[11] = {
 	NULL,
 	NULL,
 };
+
 /* 803A33B8-803A33E4 002C .data      __vt__28mDoExt_MtxCalcAnmBlendTblOld                         */
-SECTION_DATA void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11] = {
+void* const __vt__28mDoExt_MtxCalcAnmBlendTblOld[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__28mDoExt_MtxCalcAnmBlendTblOldFv,
@@ -703,8 +810,9 @@ SECTION_DATA void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11] = {
 	(void*)func_8001505C,
 	(void*)calc__28mDoExt_MtxCalcAnmBlendTblOldFv,
 };
+
 /* 803A33E4-803A3410 002C .data      __vt__25mDoExt_MtxCalcAnmBlendTbl                            */
-SECTION_DATA void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11] = {
+void* const __vt__25mDoExt_MtxCalcAnmBlendTbl[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25mDoExt_MtxCalcAnmBlendTblFv,
@@ -717,8 +825,9 @@ SECTION_DATA void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11] = {
 	(void*)func_8001505C,
 	(void*)calc__25mDoExt_MtxCalcAnmBlendTblFv,
 };
+
 /* 803A3410-803A343C 002C .data      __vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya> */
-SECTION_DATA void* data_803A3410[11] = {
+void* const data_803A3410[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_80014FC8,
@@ -731,8 +840,9 @@ SECTION_DATA void* data_803A3410[11] = {
 	(void*)func_80015034,
 	(void*)func_800150AC,
 };
+
 /* 803A343C-803A3468 002C .data      __vt__17J3DMtxCalcAnmBase                                    */
-SECTION_DATA void* __vt__17J3DMtxCalcAnmBase[11] = {
+void* const __vt__17J3DMtxCalcAnmBase[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17J3DMtxCalcAnmBaseFv,
@@ -745,8 +855,9 @@ SECTION_DATA void* __vt__17J3DMtxCalcAnmBase[11] = {
 	NULL,
 	NULL,
 };
+
 /* 803A3468-803A3498 002C .data      __vt__10J3DMtxCalc                                           */
-SECTION_DATA void* __vt__10J3DMtxCalc[12] = {
+void* const __vt__10J3DMtxCalc[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10J3DMtxCalcFv,
@@ -761,2376 +872,2505 @@ SECTION_DATA void* __vt__10J3DMtxCalc[12] = {
 	/* padding */
 	NULL,
 };
-}
-
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80451B18-80451B1C 0004 .sdata2    @3847                                                        */
-SECTION_SDATA2 u8 m_Do_m_Do_ext__LIT_3847[4] = {
-	0x3F, 0x80, 0x00, 0x00,
-};
-/* 80451B1C-80451B20 0004 .sdata2    @3876                                                        */
-SECTION_SDATA2 u8 m_Do_m_Do_ext__LIT_3876[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B20-80451B28 0008 .sdata2    @3878                                                        */
-SECTION_SDATA2 u8 m_Do_m_Do_ext__LIT_3878[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-/* 80451B28-80451B2C 0004 .sdata2    @5939                                                        */
-SECTION_SDATA2 u8 LIT_5939[4] = {
-	0xBF, 0x80, 0x00, 0x00,
-};
-/* 80451B2C-80451B30 0004 .sdata2    @6819                                                        */
-SECTION_SDATA2 u8 LIT_6819[4] = {
-	0x3F, 0x00, 0x00, 0x00,
-};
-/* 80451B30-80451B38 0004 .sdata2    @7404                                                        */
-SECTION_SDATA2 u8 LIT_7404[8] = {
-	0x42, 0x80, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B38-80451B40 0008 .sdata2    @7406                                                        */
-SECTION_SDATA2 u8 LIT_7406[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B40-80451B44 0004 .sdata2    @7624                                                        */
-SECTION_SDATA2 u8 m_Do_m_Do_ext__LIT_7624[4] = {
-	0x3E, 0x00, 0x00, 0x00,
-};
-/* 80451B44-80451B48 0004 .sdata2    @7625                                                        */
-SECTION_SDATA2 u8 m_Do_m_Do_ext__LIT_7625[4] = {
-	0x3C, 0x23, 0xD7, 0x0A,
-};
-/* 80451B48-80451B50 0008 .sdata2    @7919                                                        */
-SECTION_SDATA2 u8 LIT_7919[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B50-80451B58 0008 .sdata2    @7920                                                        */
-SECTION_SDATA2 u8 LIT_7920[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B58-80451B60 0008 .sdata2    @7921                                                        */
-SECTION_SDATA2 u8 LIT_7921[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-/* 80451B60-80451B64 0004 .sdata2    @7922                                                        */
-SECTION_SDATA2 u8 LIT_7922[4] = {
-	0x3D, 0xCC, 0xCC, 0xCD,
-};
-/* 80451B64-80451B68 0004 .sdata2    @7923                                                        */
-SECTION_SDATA2 u8 LIT_7923[4] = {
-	0x3C, 0xA3, 0xD7, 0x0A,
-};
-/* 80451B68-80451B70 0004 .sdata2    @7924                                                        */
-SECTION_SDATA2 u8 LIT_7924[8] = {
-	0x41, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450C20-80450C24 0004 .sbss      AssertHeap                                                   */
-SECTION_SBSS u8 AssertHeap[4];
-/* 80450C24-80450C28 0004 .sbss      DbPrintHeap                                                  */
-SECTION_SBSS u8 DbPrintHeap[4];
-/* 80450C28-80450C2C 0004 .sbss      gameHeap                                                     */
-SECTION_SBSS u8 gameHeap[4];
-/* 80450C2C-80450C30 0004 .sbss      zeldaHeap                                                    */
-SECTION_SBSS u8 zeldaHeap[4];
-/* 80450C30-80450C34 0004 .sbss      commandHeap                                                  */
-SECTION_SBSS u8 commandHeap[4];
-/* 80450C34-80450C38 0004 .sbss      archiveHeap                                                  */
-SECTION_SBSS u8 archiveHeap[4];
-/* 80450C38-80450C3C 0004 .sbss      j2dHeap                                                      */
-SECTION_SBSS u8 j2dHeap[4];
-/* 80450C3C-80450C40 0004 .sbss      HostIOHeap                                                   */
-SECTION_SBSS u8 HostIOHeap[4];
-/* 80450C40-80450C44 0004 .sbss      mDoExt_SaveCurrentHeap                                       */
-SECTION_SBSS u8 mDoExt_SaveCurrentHeap[4];
-/* 80450C44-80450C48 0004 .sbss      mDoExt_font0                                                 */
-SECTION_SBSS u8 mDoExt_font0[4];
-/* 80450C48-80450C4C 0004 .sbss      mDoExt_font0_getCount                                        */
-SECTION_SBSS u8 mDoExt_font0_getCount[4];
-/* 80450C4C-80450C50 0004 .sbss      mDoExt_resfont0                                              */
-SECTION_SBSS u8 mDoExt_resfont0[4];
-/* 80450C50-80450C54 0004 .sbss      mDoExt_font1                                                 */
-SECTION_SBSS u8 mDoExt_font1[4];
-/* 80450C54-80450C58 0004 .sbss      mDoExt_font1_getCount                                        */
-SECTION_SBSS u8 mDoExt_font1_getCount[4];
-/* 80450C58-80450C5C 0004 .sbss      mDoExt_resfont1                                              */
-SECTION_SBSS u8 mDoExt_resfont1[4];
-/* 80450C5C-80450C60 0004 .sbss      mDoExt_font2                                                 */
-SECTION_SBSS u8 mDoExt_font2[4];
-/* 80450C60-80450C64 0004 .sbss      mDoExt_font2_getCount                                        */
-SECTION_SBSS u8 mDoExt_font2_getCount[4];
-/* 80450C64-80450C68 0004 .sbss      mDoExt_resfont2                                              */
-SECTION_SBSS u8 mDoExt_resfont2[4];
-/* 80450C68-80450C70 0004 .sbss      aram_cache_size                                              */
-SECTION_SBSS u8 aram_cache_size[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 8000D0AC-8000D320 0274 .text      mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs.s"
-}
-#pragma pop
-
-/* 8000D320-8000D428 0108 .text      initPlay__14mDoExt_baseAnmFsifss                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void initPlay__14mDoExt_baseAnmFsifss() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/initPlay__14mDoExt_baseAnmFsifss.s"
-}
-#pragma pop
-
-/* 8000D428-8000D47C 0054 .text      play__14mDoExt_baseAnmFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void play__14mDoExt_baseAnmFv() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/play__14mDoExt_baseAnmFv.s"
-}
-#pragma pop
-
-/* 8000D47C-8000D518 009C .text      init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss.s"
-}
-#pragma pop
-
-/* 8000D518-8000D54C 0034 .text      entry__13mDoExt_bpkAnmFP16J3DMaterialTablef                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/entry__13mDoExt_bpkAnmFP16J3DMaterialTablef.s"
-}
-#pragma pop
-
-/* 8000D54C-8000D5E8 009C .text      init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss.s"
-}
-#pragma pop
-
-/* 8000D5E8-8000D63C 0054 .text      entry__13mDoExt_btpAnmFP16J3DMaterialTables                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entry__13mDoExt_btpAnmFP16J3DMaterialTables() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/entry__13mDoExt_btpAnmFP16J3DMaterialTables.s"
-}
-#pragma pop
-
-/* 8000D63C-8000D6D8 009C .text      init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss.s"
-}
-#pragma pop
-
-/* 8000D6D8-8000D70C 0034 .text      entry__13mDoExt_btkAnmFP16J3DMaterialTablef                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entry__13mDoExt_btkAnmFP16J3DMaterialTablef() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/entry__13mDoExt_btkAnmFP16J3DMaterialTablef.s"
-}
-#pragma pop
-
-/* 8000D70C-8000D7A8 009C .text      init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss.s"
-}
-#pragma pop
-
-/* 8000D7A8-8000D7DC 0034 .text      entry__13mDoExt_brkAnmFP16J3DMaterialTablef                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void entry__13mDoExt_brkAnmFP16J3DMaterialTablef() {
-	nofralloc
-#include "asm/m_Do/m_Do_ext/entry__13mDoExt_brkAnmFP16J3DMaterialTablef.s"
-}
-#pragma pop
 
 /* 8000D7DC-8000D8E4 0108 .text      init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb() {
+extern "C" asm void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb.s"
 }
 #pragma pop
 
+
 /* 8000D8E4-8000D8EC 0008 .text      setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8000D8E4() {
+extern "C" asm void func_8000D8E4() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000D8E4.s"
 }
 #pragma pop
 
+
 /* 8000D8EC-8000D948 005C .text      __dt__17J3DMtxCalcAnmBaseFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__17J3DMtxCalcAnmBaseFv() {
+extern "C" asm void __dt__17J3DMtxCalcAnmBaseFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__17J3DMtxCalcAnmBaseFv.s"
 }
 #pragma pop
 
+
 /* 8000D948-8000D990 0048 .text      __dt__10J3DMtxCalcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__10J3DMtxCalcFv() {
+extern "C" asm void __dt__10J3DMtxCalcFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__10J3DMtxCalcFv.s"
 }
 #pragma pop
 
+
 /* 8000D990-8000D9CC 003C .text      changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform() {
+extern "C" asm void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform.s"
 }
 #pragma pop
 
+
 /* 8000D9CC-8000D9E8 001C .text      entry__13mDoExt_bckAnmFP12J3DModelDataf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entry__13mDoExt_bckAnmFP12J3DModelDataf() {
+extern "C" asm void entry__13mDoExt_bckAnmFP12J3DModelDataf() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entry__13mDoExt_bckAnmFP12J3DModelDataf.s"
 }
 #pragma pop
 
+
 /* 8000D9E8-8000DA08 0020 .text      entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf() {
+extern "C" asm void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf.s"
 }
 #pragma pop
 
+
 /* 8000DA08-8000DAA8 00A0 .text      init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss() {
+extern "C" asm void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss.s"
 }
 #pragma pop
 
+
 /* 8000DAA8-8000DB10 0068 .text      mDoExt_changeMaterial__FP8J3DModel                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_changeMaterial__FP8J3DModel() {
+extern "C" asm void mDoExt_changeMaterial__FP8J3DModel() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_changeMaterial__FP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 8000DB10-8000DBC8 00B8 .text      mDoExt_modelTexturePatch__FP12J3DModelData                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_modelTexturePatch__FP12J3DModelData() {
+extern "C" asm void mDoExt_modelTexturePatch__FP12J3DModelData() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_modelTexturePatch__FP12J3DModelData.s"
 }
 #pragma pop
 
+
 /* 8000DBC8-8000DBCC 0004 .text      patchTexNoAndTexCoordScale__11J3DTevBlockFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void patchTexNoAndTexCoordScale__11J3DTevBlockFv() {
+extern "C" asm void patchTexNoAndTexCoordScale__11J3DTevBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/patchTexNoAndTexCoordScale__11J3DTevBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DBCC-8000DBD0 0004 .text      patch__10J3DPEBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void patch__10J3DPEBlockFv() {
+extern "C" asm void patch__10J3DPEBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/patch__10J3DPEBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DBD0-8000DBD4 0004 .text      patchLight__13J3DColorBlockFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void patchLight__13J3DColorBlockFv() {
+extern "C" asm void patchLight__13J3DColorBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/patchLight__13J3DColorBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DBD4-8000DBD8 0004 .text      patch__11J3DTevBlockFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void patch__11J3DTevBlockFv() {
+extern "C" asm void patch__11J3DTevBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/patch__11J3DTevBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DBD8-8000DC2C 0054 .text      mDoExt_modelDiff__FP8J3DModel                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_modelDiff__FP8J3DModel() {
+extern "C" asm void mDoExt_modelDiff__FP8J3DModel() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_modelDiff__FP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 8000DC2C-8000DCC4 0098 .text      mDoExt_modelUpdate__FP8J3DModel                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_modelUpdate__FP8J3DModel() {
+extern "C" asm void mDoExt_modelUpdate__FP8J3DModel() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_modelUpdate__FP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 8000DCC4-8000DD64 00A0 .text      mDoExt_modelUpdateDL__FP8J3DModel                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_modelUpdateDL__FP8J3DModel() {
+extern "C" asm void mDoExt_modelUpdateDL__FP8J3DModel() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_modelUpdateDL__FP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 8000DD64-8000DDF0 008C .text      mDoExt_modelEntryDL__FP8J3DModel                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_modelEntryDL__FP8J3DModel() {
+extern "C" asm void mDoExt_modelEntryDL__FP8J3DModel() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_modelEntryDL__FP8J3DModel.s"
 }
 #pragma pop
 
+
 /* 8000DDF0-8000DE8C 009C .text      mDoExt_btkAnmRemove__FP12J3DModelData                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_btkAnmRemove__FP12J3DModelData() {
+extern "C" asm void mDoExt_btkAnmRemove__FP12J3DModelData() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_btkAnmRemove__FP12J3DModelData.s"
 }
 #pragma pop
 
+
 /* 8000DE8C-8000DF3C 00B0 .text      mDoExt_brkAnmRemove__FP12J3DModelData                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_brkAnmRemove__FP12J3DModelData() {
+extern "C" asm void mDoExt_brkAnmRemove__FP12J3DModelData() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_brkAnmRemove__FP12J3DModelData.s"
 }
 #pragma pop
 
+
 /* 8000DF3C-8000DF44 0008 .text      getZCompLoc__10J3DPEBlockCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getZCompLoc__10J3DPEBlockCFv() {
+extern "C" asm void getZCompLoc__10J3DPEBlockCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getZCompLoc__10J3DPEBlockCFv.s"
 }
 #pragma pop
 
+
 /* 8000DF44-8000DF4C 0008 .text      getZMode__10J3DPEBlockFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getZMode__10J3DPEBlockFv() {
+extern "C" asm void getZMode__10J3DPEBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getZMode__10J3DPEBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DF4C-8000DF54 0008 .text      getBlend__10J3DPEBlockFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getBlend__10J3DPEBlockFv() {
+extern "C" asm void getBlend__10J3DPEBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getBlend__10J3DPEBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DF54-8000DF5C 0008 .text      getAlphaComp__10J3DPEBlockFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAlphaComp__10J3DPEBlockFv() {
+extern "C" asm void getAlphaComp__10J3DPEBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getAlphaComp__10J3DPEBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DF5C-8000DF64 0008 .text      getFog__10J3DPEBlockFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFog__10J3DPEBlockFv() {
+extern "C" asm void getFog__10J3DPEBlockFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getFog__10J3DPEBlockFv.s"
 }
 #pragma pop
 
+
 /* 8000DF64-8000DF6C 0008 .text      getIndTexCoordScale__11J3DIndBlockFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIndTexCoordScale__11J3DIndBlockFUl() {
+extern "C" asm void getIndTexCoordScale__11J3DIndBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getIndTexCoordScale__11J3DIndBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DF6C-8000DF74 0008 .text      getIndTexMtx__11J3DIndBlockFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIndTexMtx__11J3DIndBlockFUl() {
+extern "C" asm void getIndTexMtx__11J3DIndBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getIndTexMtx__11J3DIndBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DF74-8000DF7C 0008 .text      getIndTexOrder__11J3DIndBlockFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIndTexOrder__11J3DIndBlockFUl() {
+extern "C" asm void getIndTexOrder__11J3DIndBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getIndTexOrder__11J3DIndBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DF7C-8000DF84 0008 .text      getIndTexStageNum__11J3DIndBlockCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIndTexStageNum__11J3DIndBlockCFv() {
+extern "C" asm void getIndTexStageNum__11J3DIndBlockCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getIndTexStageNum__11J3DIndBlockCFv.s"
 }
 #pragma pop
 
+
 /* 8000DF84-8000DF8C 0008 .text      getIndTevStage__11J3DTevBlockFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getIndTevStage__11J3DTevBlockFUl() {
+extern "C" asm void getIndTevStage__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getIndTevStage__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DF8C-8000DF94 0008 .text      getTevStage__11J3DTevBlockFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevStage__11J3DTevBlockFUl() {
+extern "C" asm void getTevStage__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevStage__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DF94-8000DFA0 000C .text      getTexNo__11J3DTevBlockCFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTexNo__11J3DTevBlockCFUl() {
+extern "C" asm void getTexNo__11J3DTevBlockCFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTexNo__11J3DTevBlockCFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFA0-8000DFA8 0008 .text      getTevSwapModeTable__11J3DTevBlockFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevSwapModeTable__11J3DTevBlockFUl() {
+extern "C" asm void getTevSwapModeTable__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevSwapModeTable__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFA8-8000DFB0 0008 .text      getTevKAlphaSel__11J3DTevBlockFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevKAlphaSel__11J3DTevBlockFUl() {
+extern "C" asm void getTevKAlphaSel__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevKAlphaSel__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFB0-8000DFB8 0008 .text      getTevKColorSel__11J3DTevBlockFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevKColorSel__11J3DTevBlockFUl() {
+extern "C" asm void getTevKColorSel__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevKColorSel__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFB8-8000DFC0 0008 .text      getTevOrder__11J3DTevBlockFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevOrder__11J3DTevBlockFUl() {
+extern "C" asm void getTevOrder__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevOrder__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFC0-8000DFC8 0008 .text      getTevKColor__11J3DTevBlockFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevKColor__11J3DTevBlockFUl() {
+extern "C" asm void getTevKColor__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevKColor__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFC8-8000DFD0 0008 .text      getTevColor__11J3DTevBlockFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevColor__11J3DTevBlockFUl() {
+extern "C" asm void getTevColor__11J3DTevBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevColor__11J3DTevBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFD0-8000DFD8 0008 .text      getTevStageNum__11J3DTevBlockCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTevStageNum__11J3DTevBlockCFv() {
+extern "C" asm void getTevStageNum__11J3DTevBlockCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTevStageNum__11J3DTevBlockCFv.s"
 }
 #pragma pop
 
+
 /* 8000DFD8-8000DFE0 0008 .text      getTexMtx__14J3DTexGenBlockFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTexMtx__14J3DTexGenBlockFUl() {
+extern "C" asm void getTexMtx__14J3DTexGenBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTexMtx__14J3DTexGenBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFE0-8000DFE8 0008 .text      getTexCoord__14J3DTexGenBlockFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTexCoord__14J3DTexGenBlockFUl() {
+extern "C" asm void getTexCoord__14J3DTexGenBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTexCoord__14J3DTexGenBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFE8-8000DFF0 0008 .text      getTexGenNum__14J3DTexGenBlockCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTexGenNum__14J3DTexGenBlockCFv() {
+extern "C" asm void getTexGenNum__14J3DTexGenBlockCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTexGenNum__14J3DTexGenBlockCFv.s"
 }
 #pragma pop
 
+
 /* 8000DFF0-8000DFF8 0008 .text      getAmbColor__13J3DColorBlockFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAmbColor__13J3DColorBlockFUl() {
+extern "C" asm void getAmbColor__13J3DColorBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getAmbColor__13J3DColorBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000DFF8-8000E000 0008 .text      getColorChan__13J3DColorBlockFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getColorChan__13J3DColorBlockFUl() {
+extern "C" asm void getColorChan__13J3DColorBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getColorChan__13J3DColorBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000E000-8000E008 0008 .text      getMatColor__13J3DColorBlockFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMatColor__13J3DColorBlockFUl() {
+extern "C" asm void getMatColor__13J3DColorBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getMatColor__13J3DColorBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000E008-8000E010 0008 .text      getColorChanNum__13J3DColorBlockCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getColorChanNum__13J3DColorBlockCFv() {
+extern "C" asm void getColorChanNum__13J3DColorBlockCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getColorChanNum__13J3DColorBlockCFv.s"
 }
 #pragma pop
 
+
 /* 8000E010-8000E014 0004 .text      setZCompLoc__10J3DPEBlockFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setZCompLoc__10J3DPEBlockFUc() {
+extern "C" asm void setZCompLoc__10J3DPEBlockFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setZCompLoc__10J3DPEBlockFUc.s"
 }
 #pragma pop
 
+
 /* 8000E014-8000E018 0004 .text      setZMode__10J3DPEBlockF8J3DZMode                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setZMode__10J3DPEBlockF8J3DZMode() {
+extern "C" asm void setZMode__10J3DPEBlockF8J3DZMode() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setZMode__10J3DPEBlockF8J3DZMode.s"
 }
 #pragma pop
 
+
 /* 8000E018-8000E01C 0004 .text      setBlend__10J3DPEBlockFRC8J3DBlend                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setBlend__10J3DPEBlockFRC8J3DBlend() {
+extern "C" asm void setBlend__10J3DPEBlockFRC8J3DBlend() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setBlend__10J3DPEBlockFRC8J3DBlend.s"
 }
 #pragma pop
 
+
 /* 8000E01C-8000E020 0004 .text      setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp() {
+extern "C" asm void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp.s"
 }
 #pragma pop
 
+
 /* 8000E020-8000E024 0004 .text      setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale() {
+extern "C" asm void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale.s"
 }
 #pragma pop
 
+
 /* 8000E024-8000E060 003C .text      __dt__19J3DIndTexCoordScaleFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19J3DIndTexCoordScaleFv() {
+extern "C" asm void __dt__19J3DIndTexCoordScaleFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__19J3DIndTexCoordScaleFv.s"
 }
 #pragma pop
 
+
 /* 8000E060-8000E064 0004 .text      setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx() {
+extern "C" asm void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx.s"
 }
 #pragma pop
 
+
 /* 8000E064-8000E0A0 003C .text      __dt__12J3DIndTexMtxFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12J3DIndTexMtxFv() {
+extern "C" asm void __dt__12J3DIndTexMtxFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__12J3DIndTexMtxFv.s"
 }
 #pragma pop
 
+
 /* 8000E0A0-8000E0A4 0004 .text      setIndTexStageNum__11J3DIndBlockFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setIndTexStageNum__11J3DIndBlockFUc() {
+extern "C" asm void setIndTexStageNum__11J3DIndBlockFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setIndTexStageNum__11J3DIndBlockFUc.s"
 }
 #pragma pop
 
+
 /* 8000E0A4-8000E0A8 0004 .text      setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage() {
+extern "C" asm void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage.s"
 }
 #pragma pop
 
+
 /* 8000E0A8-8000E0AC 0004 .text      setTevStage__11J3DTevBlockFUl11J3DTevStage                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevStage__11J3DTevBlockFUl11J3DTevStage() {
+extern "C" asm void setTevStage__11J3DTevBlockFUl11J3DTevStage() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevStage__11J3DTevBlockFUl11J3DTevStage.s"
 }
 #pragma pop
 
+
 /* 8000E0AC-8000E0B0 0004 .text      setTexNo__11J3DTevBlockFUlUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTexNo__11J3DTevBlockFUlUs() {
+extern "C" asm void setTexNo__11J3DTevBlockFUlUs() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTexNo__11J3DTevBlockFUlUs.s"
 }
 #pragma pop
 
+
 /* 8000E0B0-8000E0B4 0004 .text      setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable() {
+extern "C" asm void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable.s"
 }
 #pragma pop
 
+
 /* 8000E0B4-8000E0B8 0004 .text      setTevKAlphaSel__11J3DTevBlockFUlUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevKAlphaSel__11J3DTevBlockFUlUc() {
+extern "C" asm void setTevKAlphaSel__11J3DTevBlockFUlUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevKAlphaSel__11J3DTevBlockFUlUc.s"
 }
 #pragma pop
 
+
 /* 8000E0B8-8000E0BC 0004 .text      setTevKColorSel__11J3DTevBlockFUlUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevKColorSel__11J3DTevBlockFUlUc() {
+extern "C" asm void setTevKColorSel__11J3DTevBlockFUlUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevKColorSel__11J3DTevBlockFUlUc.s"
 }
 #pragma pop
 
+
 /* 8000E0BC-8000E0C0 0004 .text      setTevOrder__11J3DTevBlockFUl11J3DTevOrder                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevOrder__11J3DTevBlockFUl11J3DTevOrder() {
+extern "C" asm void setTevOrder__11J3DTevBlockFUl11J3DTevOrder() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevOrder__11J3DTevBlockFUl11J3DTevOrder.s"
 }
 #pragma pop
 
+
 /* 8000E0C0-8000E0C4 0004 .text      setTevKColor__11J3DTevBlockFUl10J3DGXColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevKColor__11J3DTevBlockFUl10J3DGXColor() {
+extern "C" asm void setTevKColor__11J3DTevBlockFUl10J3DGXColor() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevKColor__11J3DTevBlockFUl10J3DGXColor.s"
 }
 #pragma pop
 
+
 /* 8000E0C4-8000E0C8 0004 .text      setTevColor__11J3DTevBlockFUl13J3DGXColorS10                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevColor__11J3DTevBlockFUl13J3DGXColorS10() {
+extern "C" asm void setTevColor__11J3DTevBlockFUl13J3DGXColorS10() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevColor__11J3DTevBlockFUl13J3DGXColorS10.s"
 }
 #pragma pop
 
+
 /* 8000E0C8-8000E0CC 0004 .text      setTevStageNum__11J3DTevBlockFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevStageNum__11J3DTevBlockFUc() {
+extern "C" asm void setTevStageNum__11J3DTevBlockFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevStageNum__11J3DTevBlockFUc.s"
 }
 #pragma pop
 
+
 /* 8000E0CC-8000E0D0 0004 .text      setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord() {
+extern "C" asm void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord.s"
 }
 #pragma pop
 
+
 /* 8000E0D0-8000E0D4 0004 .text      setTexGenNum__14J3DTexGenBlockFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTexGenNum__14J3DTexGenBlockFUl() {
+extern "C" asm void setTexGenNum__14J3DTexGenBlockFUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTexGenNum__14J3DTexGenBlockFUl.s"
 }
 #pragma pop
 
+
 /* 8000E0D4-8000E0D8 0004 .text      setAmbColor__13J3DColorBlockFUl10J3DGXColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAmbColor__13J3DColorBlockFUl10J3DGXColor() {
+extern "C" asm void setAmbColor__13J3DColorBlockFUl10J3DGXColor() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAmbColor__13J3DColorBlockFUl10J3DGXColor.s"
 }
 #pragma pop
 
+
 /* 8000E0D8-8000E0DC 0004 .text      setColorChan__13J3DColorBlockFUlRC12J3DColorChan             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setColorChan__13J3DColorBlockFUlRC12J3DColorChan() {
+extern "C" asm void setColorChan__13J3DColorBlockFUlRC12J3DColorChan() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setColorChan__13J3DColorBlockFUlRC12J3DColorChan.s"
 }
 #pragma pop
 
+
 /* 8000E0DC-8000E0E0 0004 .text      setMatColor__13J3DColorBlockFUl10J3DGXColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMatColor__13J3DColorBlockFUl10J3DGXColor() {
+extern "C" asm void setMatColor__13J3DColorBlockFUl10J3DGXColor() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setMatColor__13J3DColorBlockFUl10J3DGXColor.s"
 }
 #pragma pop
 
+
 /* 8000E0E0-8000E0E4 0004 .text      setColorChanNum__13J3DColorBlockFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setColorChanNum__13J3DColorBlockFUc() {
+extern "C" asm void setColorChanNum__13J3DColorBlockFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setColorChanNum__13J3DColorBlockFUc.s"
 }
 #pragma pop
 
+
 /* 8000E0E4-8000E0F0 000C .text      __ct__19J3DIndTexCoordScaleFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19J3DIndTexCoordScaleFv() {
+extern "C" asm void __ct__19J3DIndTexCoordScaleFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__19J3DIndTexCoordScaleFv.s"
 }
 #pragma pop
 
+
 /* 8000E0F0-8000E128 0038 .text      __ct__12J3DIndTexMtxFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12J3DIndTexMtxFv() {
+extern "C" asm void __ct__12J3DIndTexMtxFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__12J3DIndTexMtxFv.s"
 }
 #pragma pop
 
+
 /* 8000E128-8000E134 000C .text      __ct__14J3DIndTexOrderFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14J3DIndTexOrderFv() {
+extern "C" asm void __ct__14J3DIndTexOrderFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__14J3DIndTexOrderFv.s"
 }
 #pragma pop
 
+
 /* 8000E134-8000E140 000C .text      __ct__19J3DTevSwapModeTableFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19J3DTevSwapModeTableFv() {
+extern "C" asm void __ct__19J3DTevSwapModeTableFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__19J3DTevSwapModeTableFv.s"
 }
 #pragma pop
 
+
 /* 8000E140-8000E14C 000C .text      __ct__11J3DTevOrderFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11J3DTevOrderFv() {
+extern "C" asm void __ct__11J3DTevOrderFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__11J3DTevOrderFv.s"
 }
 #pragma pop
 
+
 /* 8000E14C-8000E230 00E4 .text      __ct__14J3DIndTevStageFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14J3DIndTevStageFv() {
+extern "C" asm void __ct__14J3DIndTevStageFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__14J3DIndTevStageFv.s"
 }
 #pragma pop
 
+
 /* 8000E230-8000E298 0068 .text      __ct__11J3DTevStageFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11J3DTevStageFv() {
+extern "C" asm void __ct__11J3DTevStageFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__11J3DTevStageFv.s"
 }
 #pragma pop
 
+
 /* 8000E298-8000E460 01C8 .text      setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo() {
+extern "C" asm void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo.s"
 }
 #pragma pop
 
+
 /* 8000E460-8000E464 0004 .text      __ct__13J3DGXColorS10Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13J3DGXColorS10Fv() {
+extern "C" asm void __ct__13J3DGXColorS10Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__13J3DGXColorS10Fv.s"
 }
 #pragma pop
 
+
 /* 8000E464-8000E47C 0018 .text      __ct__11J3DTexCoordFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__11J3DTexCoordFv() {
+extern "C" asm void __ct__11J3DTexCoordFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__11J3DTexCoordFv.s"
 }
 #pragma pop
 
+
 /* 8000E47C-8000E538 00BC .text      __ct__12J3DColorChanFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12J3DColorChanFv() {
+extern "C" asm void __ct__12J3DColorChanFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__12J3DColorChanFv.s"
 }
 #pragma pop
 
+
 /* 8000E538-8000E53C 0004 .text      __ct__10J3DGXColorFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__10J3DGXColorFv() {
+extern "C" asm void __ct__10J3DGXColorFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__10J3DGXColorFv.s"
 }
 #pragma pop
 
+
 /* 8000E53C-8000E5F8 00BC .text      create__21mDoExt_invisibleModelFP8J3DModelUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void create__21mDoExt_invisibleModelFP8J3DModelUc() {
+extern "C" asm void create__21mDoExt_invisibleModelFP8J3DModelUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/create__21mDoExt_invisibleModelFP8J3DModelUc.s"
 }
 #pragma pop
 
+
 /* 8000E5F8-8000E654 005C .text      __dt__19mDoExt_invJntPacketFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19mDoExt_invJntPacketFv() {
+extern "C" asm void __dt__19mDoExt_invJntPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__19mDoExt_invJntPacketFv.s"
 }
 #pragma pop
 
+
 /* 8000E654-8000E680 002C .text      __ct__19mDoExt_invJntPacketFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__19mDoExt_invJntPacketFv() {
+extern "C" asm void __ct__19mDoExt_invJntPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__19mDoExt_invJntPacketFv.s"
 }
 #pragma pop
 
+
 /* 8000E680-8000E6C8 0048 .text      __dt__9J3DPacketFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__9J3DPacketFv() {
+extern "C" asm void __dt__9J3DPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__9J3DPacketFv.s"
 }
 #pragma pop
 
+
 /* 8000E6C8-8000E7C0 00F8 .text      entryJoint__21mDoExt_invisibleModelFP4cXyz                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryJoint__21mDoExt_invisibleModelFP4cXyz() {
+extern "C" asm void entryJoint__21mDoExt_invisibleModelFP4cXyz() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryJoint__21mDoExt_invisibleModelFP4cXyz.s"
 }
 #pragma pop
 
+
 /* 8000E7C0-8000E834 0074 .text      entryDL__21mDoExt_invisibleModelFP4cXyz                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryDL__21mDoExt_invisibleModelFP4cXyz() {
+extern "C" asm void entryDL__21mDoExt_invisibleModelFP4cXyz() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryDL__21mDoExt_invisibleModelFP4cXyz.s"
 }
 #pragma pop
 
+
 /* 8000E834-8000EA80 024C .text      mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData() {
+extern "C" asm void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData.s"
 }
+#pragma pop
+
+
+/* ###################################################################################### */
+/* 803740C0-803740D4 0012 .rodata    fontdata$8224                                                */
+SECTION_RODATA const u8 data_803740C0[20] = {
+	0x72, 0x6F, 0x64, 0x61, 0x6E, 0x5F, 0x62, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E, 0x62, 0x66,
+	0x6E, 0x00,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 803740D4-803740E8 0014 .rodata    fontdata$8253                                                */
+SECTION_RODATA const u8 data_803740D4[20] = {
+	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
+	0x62, 0x66, 0x6E, 0x00,
+};
+
+/* 803740E8-803740FC 0014 .rodata    fontdata$8287                                                */
+SECTION_RODATA const u8 data_803740E8[20] = {
+	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
+	0x62, 0x66, 0x6E, 0x00,
+};
+
+/* 803740FC-80374198 009C .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+// MWCC ignores mapping of some japanese characters using the 
+// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
+SECTION_DEAD const char* const stringBase_803740FC = "\x83\x5C\x83\x8A\x83\x62\x83\x68\x83\x71\x81\x5B\x83\x76\x82\xBF\x82\xE1\x82\xA4\x82\xAA\x82\xC8\x81\x49\x0A";
+SECTION_DEAD const char* const stringBase_80374118 = "%s.bti";
+SECTION_DEAD const char* const stringBase_8037411F = 
+    "親ヒープがExpでないのでアジャストできません %08x %08x\n";
+SECTION_DEAD const char* const stringBase_80374156 = "adjustSize失敗 %08x\n";
+SECTION_DEAD const char* const stringBase_8037416B = "\nキャッシュフォントクラス作成に失敗しました\n";
 #pragma pop
 
 /* 8000EA80-8000ECC0 0240 .text      mDoExt_setupStageTexture__FP12J3DModelData                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_setupStageTexture__FP12J3DModelData() {
+extern "C" asm void mDoExt_setupStageTexture__FP12J3DModelData() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_setupStageTexture__FP12J3DModelData.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C20-80450C24 0004 .sbss      AssertHeap                                                   */
+u8 AssertHeap[4];
+
 /* 8000ECC0-8000ECE4 0024 .text      mDoExt_createAssertHeap__FP7JKRHeap                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createAssertHeap__FP7JKRHeap() {
+extern "C" asm void mDoExt_createAssertHeap__FP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createAssertHeap__FP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000ECE4-8000ECEC 0008 .text      mDoExt_getAssertHeap__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getAssertHeap__Fv() {
+extern "C" asm void mDoExt_getAssertHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getAssertHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C24-80450C28 0004 .sbss      DbPrintHeap                                                  */
+u8 DbPrintHeap[4];
+
 /* 8000ECEC-8000ED14 0028 .text      mDoExt_createDbPrintHeap__FUlP7JKRHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createDbPrintHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createDbPrintHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createDbPrintHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000ED14-8000ED1C 0008 .text      mDoExt_getDbPrintHeap__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getDbPrintHeap__Fv() {
+extern "C" asm void mDoExt_getDbPrintHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getDbPrintHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C28-80450C2C 0004 .sbss      gameHeap                                                     */
+u8 gameHeap[4];
+
 /* 8000ED1C-8000ED50 0034 .text      mDoExt_createGameHeap__FUlP7JKRHeap                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createGameHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createGameHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createGameHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000ED50-8000ED58 0008 .text      mDoExt_getGameHeap__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getGameHeap__Fv() {
+extern "C" asm void mDoExt_getGameHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getGameHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C2C-80450C30 0004 .sbss      zeldaHeap                                                    */
+u8 zeldaHeap[4];
+
 /* 8000ED58-8000ED80 0028 .text      mDoExt_createZeldaHeap__FUlP7JKRHeap                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createZeldaHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createZeldaHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createZeldaHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000ED80-8000ED88 0008 .text      mDoExt_getZeldaHeap__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getZeldaHeap__Fv() {
+extern "C" asm void mDoExt_getZeldaHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getZeldaHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C30-80450C34 0004 .sbss      commandHeap                                                  */
+u8 commandHeap[4];
+
 /* 8000ED88-8000EDB0 0028 .text      mDoExt_createCommandHeap__FUlP7JKRHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createCommandHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createCommandHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createCommandHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000EDB0-8000EDB8 0008 .text      mDoExt_getCommandHeap__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getCommandHeap__Fv() {
+extern "C" asm void mDoExt_getCommandHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getCommandHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C34-80450C38 0004 .sbss      archiveHeap                                                  */
+u8 archiveHeap[4];
+
 /* 8000EDB8-8000EDEC 0034 .text      mDoExt_createArchiveHeap__FUlP7JKRHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createArchiveHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createArchiveHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createArchiveHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000EDEC-8000EDF4 0008 .text      mDoExt_getArchiveHeap__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getArchiveHeap__Fv() {
+extern "C" asm void mDoExt_getArchiveHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getArchiveHeap__Fv.s"
 }
 #pragma pop
 
+
 /* 8000EDF4-8000EDFC 0008 .text      mDoExt_getArchiveHeapPtr__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getArchiveHeapPtr__Fv() {
+extern "C" asm void mDoExt_getArchiveHeapPtr__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getArchiveHeapPtr__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C38-80450C3C 0004 .sbss      j2dHeap                                                      */
+u8 j2dHeap[4];
+
 /* 8000EDFC-8000EE30 0034 .text      mDoExt_createJ2dHeap__FUlP7JKRHeap                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createJ2dHeap__FUlP7JKRHeap() {
+extern "C" asm void mDoExt_createJ2dHeap__FUlP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createJ2dHeap__FUlP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000EE30-8000EE38 0008 .text      mDoExt_getJ2dHeap__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getJ2dHeap__Fv() {
+extern "C" asm void mDoExt_getJ2dHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getJ2dHeap__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C3C-80450C40 0004 .sbss      HostIOHeap                                                   */
+u8 HostIOHeap[4];
+
 /* 8000EE38-8000EE40 0008 .text      mDoExt_getHostIOHeap__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getHostIOHeap__Fv() {
+extern "C" asm void mDoExt_getHostIOHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getHostIOHeap__Fv.s"
 }
 #pragma pop
 
+
 /* 8000EE40-8000EED8 0098 .text      mDoExt_createSolidHeap__FUlP7JKRHeapUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeap__FUlP7JKRHeapUl() {
+extern "C" asm void mDoExt_createSolidHeap__FUlP7JKRHeapUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeap__FUlP7JKRHeapUl.s"
 }
 #pragma pop
 
+
 /* 8000EED8-8000EF20 0048 .text      mDoExt_createSolidHeapFromGame__FUlUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapFromGame__FUlUl() {
+extern "C" asm void mDoExt_createSolidHeapFromGame__FUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapFromGame__FUlUl.s"
 }
 #pragma pop
 
+
 /* 8000EF20-8000EF68 0048 .text      mDoExt_createSolidHeapFromSystem__FUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapFromSystem__FUlUl() {
+extern "C" asm void mDoExt_createSolidHeapFromSystem__FUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapFromSystem__FUlUl.s"
 }
 #pragma pop
 
+
 /* 8000EF68-8000EFBC 0054 .text      mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl() {
+extern "C" asm void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C40-80450C44 0004 .sbss      mDoExt_SaveCurrentHeap                                       */
+u8 mDoExt_SaveCurrentHeap[4];
+
 /* 8000EFBC-8000EFF4 0038 .text      mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl() {
+extern "C" asm void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl.s"
 }
 #pragma pop
 
+
 /* 8000EFF4-8000F044 0050 .text      mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl() {
+extern "C" asm void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl.s"
 }
 #pragma pop
 
+
 /* 8000F044-8000F08C 0048 .text      mDoExt_createSolidHeapFromGameToCurrent__FUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_createSolidHeapFromGameToCurrent__FUlUl() {
+extern "C" asm void mDoExt_createSolidHeapFromGameToCurrent__FUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_createSolidHeapFromGameToCurrent__FUlUl.s"
 }
 #pragma pop
 
+
 /* 8000F08C-8000F158 00CC .text      mDoExt_adjustSolidHeap__FP12JKRSolidHeap                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_adjustSolidHeap__FP12JKRSolidHeap() {
+extern "C" asm void mDoExt_adjustSolidHeap__FP12JKRSolidHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_adjustSolidHeap__FP12JKRSolidHeap.s"
 }
 #pragma pop
 
+
 /* 8000F158-8000F18C 0034 .text      mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap() {
+extern "C" asm void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap.s"
 }
 #pragma pop
 
+
 /* 8000F18C-8000F1AC 0020 .text      mDoExt_destroySolidHeap__FP12JKRSolidHeap                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_destroySolidHeap__FP12JKRSolidHeap() {
+extern "C" asm void mDoExt_destroySolidHeap__FP12JKRSolidHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_destroySolidHeap__FP12JKRSolidHeap.s"
 }
 #pragma pop
 
+
 /* 8000F1AC-8000F1CC 0020 .text      mDoExt_destroyExpHeap__FP10JKRExpHeap                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_destroyExpHeap__FP10JKRExpHeap() {
+extern "C" asm void mDoExt_destroyExpHeap__FP10JKRExpHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_destroyExpHeap__FP10JKRExpHeap.s"
 }
 #pragma pop
 
+
 /* 8000F1CC-8000F1EC 0020 .text      mDoExt_setCurrentHeap__FP7JKRHeap                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_setCurrentHeap__FP7JKRHeap() {
+extern "C" asm void mDoExt_setCurrentHeap__FP7JKRHeap() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_setCurrentHeap__FP7JKRHeap.s"
 }
 #pragma pop
 
+
 /* 8000F1EC-8000F1F4 0008 .text      mDoExt_getCurrentHeap__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getCurrentHeap__Fv() {
+extern "C" asm void mDoExt_getCurrentHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getCurrentHeap__Fv.s"
 }
 #pragma pop
 
+
 /* 8000F1F4-8000F220 002C .text      mDoExt_restoreCurrentHeap__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_restoreCurrentHeap__Fv() {
+extern "C" asm void mDoExt_restoreCurrentHeap__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_restoreCurrentHeap__Fv.s"
 }
 #pragma pop
 
+
 /* 8000F220-8000F26C 004C .text      mDoExt_resIDToIndex__FP10JKRArchiveUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_resIDToIndex__FP10JKRArchiveUs() {
+extern "C" asm void mDoExt_resIDToIndex__FP10JKRArchiveUs() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_resIDToIndex__FP10JKRArchiveUs.s"
 }
 #pragma pop
 
+
 /* 8000F26C-8000F4B0 0244 .text      calc__25mDoExt_MtxCalcAnmBlendTblFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__25mDoExt_MtxCalcAnmBlendTblFv() {
+extern "C" asm void calc__25mDoExt_MtxCalcAnmBlendTblFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/calc__25mDoExt_MtxCalcAnmBlendTblFv.s"
 }
 #pragma pop
 
+
 /* 8000F4B0-8000F848 0398 .text      calc__28mDoExt_MtxCalcAnmBlendTblOldFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__28mDoExt_MtxCalcAnmBlendTblOldFv() {
+extern "C" asm void calc__28mDoExt_MtxCalcAnmBlendTblOldFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/calc__28mDoExt_MtxCalcAnmBlendTblOldFv.s"
 }
 #pragma pop
 
+
 /* 8000F848-8000F8CC 0084 .text      initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs() {
+extern "C" asm void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs.s"
 }
 #pragma pop
 
+
 /* 8000F8CC-8000F950 0084 .text      decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv() {
+extern "C" asm void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv.s"
 }
 #pragma pop
 
+
 /* 8000F950-8000F9D8 0088 .text      __ct__13mDoExt_morf_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__13mDoExt_morf_cFv() {
+extern "C" asm void __ct__13mDoExt_morf_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__13mDoExt_morf_cFv.s"
 }
 #pragma pop
 
+
 /* 8000F9D8-8000FA20 0048 .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12J3DFrameCtrlFv() {
+extern "C" asm void __dt__12J3DFrameCtrlFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__12J3DFrameCtrlFv.s"
 }
 #pragma pop
 
+
 /* 8000FA20-8000FA8C 006C .text      __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8000FA20() {
+extern "C" asm void func_8000FA20() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000FA20.s"
 }
 #pragma pop
 
+
 /* 8000FA8C-8000FAE8 005C .text      __dt__19J3DMtxCalcNoAnmBaseFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__19J3DMtxCalcNoAnmBaseFv() {
+extern "C" asm void __dt__19J3DMtxCalcNoAnmBaseFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__19J3DMtxCalcNoAnmBaseFv.s"
 }
 #pragma pop
 
+
 /* 8000FAE8-8000FB7C 0094 .text      __dt__13mDoExt_morf_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__13mDoExt_morf_cFv() {
+extern "C" asm void __dt__13mDoExt_morf_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__13mDoExt_morf_cFv.s"
 }
 #pragma pop
 
+
 /* 8000FB7C-8000FBC0 0044 .text      setMorf__13mDoExt_morf_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMorf__13mDoExt_morf_cFf() {
+extern "C" asm void setMorf__13mDoExt_morf_cFf() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setMorf__13mDoExt_morf_cFf.s"
 }
 #pragma pop
 
+
 /* 8000FBC0-8000FC4C 008C .text      frameUpdate__13mDoExt_morf_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void frameUpdate__13mDoExt_morf_cFv() {
+extern "C" asm void frameUpdate__13mDoExt_morf_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/frameUpdate__13mDoExt_morf_cFv.s"
 }
 #pragma pop
 
+
 /* 8000FC4C-8000FD10 00C4 .text      __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl() {
+extern "C" asm void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl.s"
 }
 #pragma pop
 
+
 /* 8000FD10-8000FD94 0084 .text      __dt__14mDoExt_McaMorfFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14mDoExt_McaMorfFv() {
+extern "C" asm void __dt__14mDoExt_McaMorfFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__14mDoExt_McaMorfFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451B28-80451B2C 0004 .sdata2    @5939                                                        */
+f32 lit_5939 = -1.0f;
+
 /* 8000FD94-80010074 02E0 .text      create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl() {
+extern "C" asm void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl.s"
 }
 #pragma pop
 
+
 /* 80010074-8001037C 0308 .text      calc__14mDoExt_McaMorfFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__14mDoExt_McaMorfFv() {
+extern "C" asm void calc__14mDoExt_McaMorfFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/calc__14mDoExt_McaMorfFv.s"
 }
 #pragma pop
 
+
 /* 8001037C-800105C8 024C .text      setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv() {
+extern "C" asm void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv.s"
 }
 #pragma pop
 
+
 /* 800105C8-80010680 00B8 .text      play__14mDoExt_McaMorfFP3VecUlSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void play__14mDoExt_McaMorfFP3VecUlSc() {
+extern "C" asm void play__14mDoExt_McaMorfFP3VecUlSc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__14mDoExt_McaMorfFP3VecUlSc.s"
 }
 #pragma pop
 
+
 /* 80010680-800106AC 002C .text      entryDL__14mDoExt_McaMorfFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryDL__14mDoExt_McaMorfFv() {
+extern "C" asm void entryDL__14mDoExt_McaMorfFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryDL__14mDoExt_McaMorfFv.s"
 }
 #pragma pop
 
+
 /* 800106AC-80010710 0064 .text      modelCalc__14mDoExt_McaMorfFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void modelCalc__14mDoExt_McaMorfFv() {
+extern "C" asm void modelCalc__14mDoExt_McaMorfFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/modelCalc__14mDoExt_McaMorfFv.s"
 }
 #pragma pop
 
+
 /* 80010710-800107D0 00C0 .text      getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo() {
+extern "C" asm void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo.s"
 }
 #pragma pop
 
+
 /* 800107D0-80010888 00B8 .text      __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
+extern "C" asm void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
 }
 #pragma pop
 
+
 /* 80010888-800108F0 0068 .text      __dt__16mDoExt_McaMorfSOFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__16mDoExt_McaMorfSOFv() {
+extern "C" asm void __dt__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 800108F0-80010B68 0278 .text      create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
+extern "C" asm void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
 }
 #pragma pop
 
+
 /* 80010B68-80010E70 0308 .text      calc__16mDoExt_McaMorfSOFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__16mDoExt_McaMorfSOFv() {
+extern "C" asm void calc__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/calc__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 80010E70-800110B0 0240 .text      setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff() {
+extern "C" asm void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff.s"
 }
 #pragma pop
 
+
 /* 800110B0-80011154 00A4 .text      play__16mDoExt_McaMorfSOFUlSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void play__16mDoExt_McaMorfSOFUlSc() {
+extern "C" asm void play__16mDoExt_McaMorfSOFUlSc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__16mDoExt_McaMorfSOFUlSc.s"
 }
 #pragma pop
 
+
 /* 80011154-800111C0 006C .text      updateDL__16mDoExt_McaMorfSOFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void updateDL__16mDoExt_McaMorfSOFv() {
+extern "C" asm void updateDL__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/updateDL__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 800111C0-800111EC 002C .text      entryDL__16mDoExt_McaMorfSOFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryDL__16mDoExt_McaMorfSOFv() {
+extern "C" asm void entryDL__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryDL__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 800111EC-80011250 0064 .text      modelCalc__16mDoExt_McaMorfSOFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void modelCalc__16mDoExt_McaMorfSOFv() {
+extern "C" asm void modelCalc__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/modelCalc__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 80011250-80011310 00C0 .text      getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo() {
+extern "C" asm void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo.s"
 }
 #pragma pop
 
+
 /* 80011310-80011348 0038 .text      stopZelAnime__16mDoExt_McaMorfSOFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stopZelAnime__16mDoExt_McaMorfSOFv() {
+extern "C" asm void stopZelAnime__16mDoExt_McaMorfSOFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/stopZelAnime__16mDoExt_McaMorfSOFv.s"
 }
 #pragma pop
 
+
 /* 80011348-800113FC 00B4 .text      __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
+extern "C" asm void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
 }
 #pragma pop
 
+
 /* 800113FC-80011464 0068 .text      __dt__15mDoExt_McaMorf2Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__15mDoExt_McaMorf2Fv() {
+extern "C" asm void __dt__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
 /* 80011464-800116B4 0250 .text      create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
+extern "C" asm void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
 }
 #pragma pop
 
+
 /* 800116B4-800116F4 0040 .text      ERROR_EXIT__15mDoExt_McaMorf2Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void ERROR_EXIT__15mDoExt_McaMorf2Fv() {
+extern "C" asm void ERROR_EXIT__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/ERROR_EXIT__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
 /* 800116F4-80011D70 067C .text      calc__15mDoExt_McaMorf2Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calc__15mDoExt_McaMorf2Fv() {
+extern "C" asm void calc__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/calc__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451B2C-80451B30 0004 .sdata2    @6819                                                        */
+f32 lit_6819 = 0.5f;
+
 /* 80011D70-80011FCC 025C .text      setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff() {
+extern "C" asm void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff.s"
 }
 #pragma pop
 
+
 /* 80011FCC-800120A0 00D4 .text      setAnmRate__15mDoExt_McaMorf2Ff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnmRate__15mDoExt_McaMorf2Ff() {
+extern "C" asm void setAnmRate__15mDoExt_McaMorf2Ff() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnmRate__15mDoExt_McaMorf2Ff.s"
 }
 #pragma pop
 
+
 /* 800120A0-80012144 00A4 .text      play__15mDoExt_McaMorf2FUlSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void play__15mDoExt_McaMorf2FUlSc() {
+extern "C" asm void play__15mDoExt_McaMorf2FUlSc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__15mDoExt_McaMorf2FUlSc.s"
 }
 #pragma pop
 
+
 /* 80012144-80012170 002C .text      entryDL__15mDoExt_McaMorf2Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void entryDL__15mDoExt_McaMorf2Fv() {
+extern "C" asm void entryDL__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/entryDL__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
 /* 80012170-800121E8 0078 .text      modelCalc__15mDoExt_McaMorf2Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void modelCalc__15mDoExt_McaMorf2Fv() {
+extern "C" asm void modelCalc__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/modelCalc__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
 /* 800121E8-80012220 0038 .text      stopZelAnime__15mDoExt_McaMorf2Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stopZelAnime__15mDoExt_McaMorf2Fv() {
+extern "C" asm void stopZelAnime__15mDoExt_McaMorf2Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/stopZelAnime__15mDoExt_McaMorf2Fv.s"
 }
 #pragma pop
 
+
 /* 80012220-800123D0 01B0 .text      draw__19mDoExt_invJntPacketFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__19mDoExt_invJntPacketFv() {
+extern "C" asm void draw__19mDoExt_invJntPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/draw__19mDoExt_invJntPacketFv.s"
 }
 #pragma pop
 
+
 /* 800123D0-800125DC 020C .text      init__15mDoExt_3Dline_cFUsii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__15mDoExt_3Dline_cFUsii() {
+extern "C" asm void init__15mDoExt_3Dline_cFUsii() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__15mDoExt_3Dline_cFUsii.s"
 }
 #pragma pop
 
+
 /* 800125DC-800125E0 0004 .text      __ct__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__4cXyzFv() {
+extern "C" asm void __ct__4cXyzFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__4cXyzFv.s"
 }
 #pragma pop
 
+
 /* 800125E0-800126BC 00DC .text      init__19mDoExt_3DlineMat0_cFUsUsi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__19mDoExt_3DlineMat0_cFUsUsi() {
+extern "C" asm void init__19mDoExt_3DlineMat0_cFUsUsi() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__19mDoExt_3DlineMat0_cFUsUsi.s"
 }
 #pragma pop
 
+
 /* 800126BC-800126C0 0004 .text      __ct__15mDoExt_3Dline_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__15mDoExt_3Dline_cFv() {
+extern "C" asm void __ct__15mDoExt_3Dline_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__ct__15mDoExt_3Dline_cFv.s"
 }
 #pragma pop
 
+
 /* 800126C0-80012774 00B4 .text      setMaterial__19mDoExt_3DlineMat0_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMaterial__19mDoExt_3DlineMat0_cFv() {
+extern "C" asm void setMaterial__19mDoExt_3DlineMat0_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setMaterial__19mDoExt_3DlineMat0_cFv.s"
 }
 #pragma pop
 
+
 /* 80012774-80012874 0100 .text      draw__19mDoExt_3DlineMat0_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__19mDoExt_3DlineMat0_cFv() {
+extern "C" asm void draw__19mDoExt_3DlineMat0_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/draw__19mDoExt_3DlineMat0_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451B30-80451B38 0004 .sdata2    @7404                                                        */
+f32 lit_7404 = 64.0f;
+/* padding 4 bytes */
+
+/* 80451B38-80451B40 0008 .sdata2    @7406                                                        */
+f64 lit_7406 = 4503599627370496.0 /* cast u32 to float */;
+
 /* 80012874-80012E3C 05C8 .text      update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c() {
+extern "C" asm void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
 /* 80012E3C-80013360 0524 .text      update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c() {
+extern "C" asm void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451B40-80451B44 0004 .sdata2    @7624                                                        */
+f32 m_Do_m_Do_ext__lit_7624 = 0.125f;
+
+/* 80451B44-80451B48 0004 .sdata2    @7625                                                        */
+f32 m_Do_m_Do_ext__lit_7625 = 1.0f / 100.0f;
+
 /* 80013360-800134F8 0198 .text      init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi() {
+extern "C" asm void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi.s"
 }
 #pragma pop
 
+
 /* 800134F8-800135D0 00D8 .text      setMaterial__19mDoExt_3DlineMat1_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMaterial__19mDoExt_3DlineMat1_cFv() {
+extern "C" asm void setMaterial__19mDoExt_3DlineMat1_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setMaterial__19mDoExt_3DlineMat1_cFv.s"
 }
 #pragma pop
 
+
 /* 800135D0-8001373C 016C .text      draw__19mDoExt_3DlineMat1_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__19mDoExt_3DlineMat1_cFv() {
+extern "C" asm void draw__19mDoExt_3DlineMat1_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/draw__19mDoExt_3DlineMat1_cFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80451B48-80451B50 0008 .sdata2    @7919                                                        */
+f64 lit_7919 = 0.5;
+
+/* 80451B50-80451B58 0008 .sdata2    @7920                                                        */
+f64 lit_7920 = 3.0;
+
+/* 80451B58-80451B60 0008 .sdata2    @7921                                                        */
+u8 lit_7921[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80451B60-80451B64 0004 .sdata2    @7922                                                        */
+f32 lit_7922 = 1.0f / 10.0f;
+
+/* 80451B64-80451B68 0004 .sdata2    @7923                                                        */
+f32 lit_7923 = 1.0f / 50.0f;
+
+/* 80451B68-80451B70 0004 .sdata2    @7924                                                        */
+f32 lit_7924 = 8.0f;
+/* padding 4 bytes */
+
 /* 8001373C-80013FB0 0874 .text      update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c() {
+extern "C" asm void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
 /* 80013FB0-80014738 0788 .text      update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c() {
+extern "C" asm void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c.s"
 }
 #pragma pop
 
+
 /* 80014738-8001479C 0064 .text      setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c() {
+extern "C" asm void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c.s"
 }
 #pragma pop
 
+
 /* 8001479C-80014804 0068 .text      draw__26mDoExt_3DlineMatSortPacketFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void draw__26mDoExt_3DlineMatSortPacketFv() {
+extern "C" asm void draw__26mDoExt_3DlineMatSortPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/draw__26mDoExt_3DlineMatSortPacketFv.s"
 }
 #pragma pop
 
+
 /* 80014804-8001494C 0148 .text      mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl() {
+extern "C" asm void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl.s"
 }
 #pragma pop
 
+
 /* 8001494C-80014994 0048 .text      __dt__7JUTFontFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__7JUTFontFv() {
+extern "C" asm void __dt__7JUTFontFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__7JUTFontFv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C44-80450C48 0004 .sbss      mDoExt_font0                                                 */
+u8 mDoExt_font0[4];
+
+/* 80450C48-80450C4C 0004 .sbss      mDoExt_font0_getCount                                        */
+u8 mDoExt_font0_getCount[4];
+
+/* 80450C4C-80450C50 0004 .sbss      mDoExt_resfont0                                              */
+u8 mDoExt_resfont0[4];
+
 /* 80014994-800149F0 005C .text      mDoExt_initFont0__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_initFont0__Fv() {
+extern "C" asm void mDoExt_initFont0__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_initFont0__Fv.s"
 }
 #pragma pop
 
+
 /* 800149F0-80014A2C 003C .text      mDoExt_getMesgFont__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getMesgFont__Fv() {
+extern "C" asm void mDoExt_getMesgFont__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getMesgFont__Fv.s"
 }
 #pragma pop
 
+
 /* 80014A2C-80014AA4 0078 .text      mDoExt_removeMesgFont__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_removeMesgFont__Fv() {
+extern "C" asm void mDoExt_removeMesgFont__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_removeMesgFont__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C50-80450C54 0004 .sbss      mDoExt_font1                                                 */
+u8 mDoExt_font1[4];
+
+/* 80450C54-80450C58 0004 .sbss      mDoExt_font1_getCount                                        */
+u8 mDoExt_font1_getCount[4];
+
+/* 80450C58-80450C5C 0004 .sbss      mDoExt_resfont1                                              */
+u8 mDoExt_resfont1[4];
+
 /* 80014AA4-80014B04 0060 .text      mDoExt_initFont1__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_initFont1__Fv() {
+extern "C" asm void mDoExt_initFont1__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_initFont1__Fv.s"
 }
 #pragma pop
 
+
 /* 80014B04-80014B40 003C .text      mDoExt_getRubyFont__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getRubyFont__Fv() {
+extern "C" asm void mDoExt_getRubyFont__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getRubyFont__Fv.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C5C-80450C60 0004 .sbss      mDoExt_font2                                                 */
+u8 mDoExt_font2[4];
+
+/* 80450C60-80450C64 0004 .sbss      mDoExt_font2_getCount                                        */
+u8 mDoExt_font2_getCount[4];
+
+/* 80450C64-80450C68 0004 .sbss      mDoExt_resfont2                                              */
+u8 mDoExt_resfont2[4];
+
 /* 80014B40-80014BA0 0060 .text      mDoExt_initFont2__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_initFont2__Fv() {
+extern "C" asm void mDoExt_initFont2__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_initFont2__Fv.s"
 }
 #pragma pop
 
+
 /* 80014BA0-80014BDC 003C .text      mDoExt_getSubFont__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_getSubFont__Fv() {
+extern "C" asm void mDoExt_getSubFont__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_getSubFont__Fv.s"
 }
 #pragma pop
 
+
 /* 80014BDC-80014C54 0078 .text      mDoExt_removeSubFont__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_removeSubFont__Fv() {
+extern "C" asm void mDoExt_removeSubFont__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_removeSubFont__Fv.s"
 }
 #pragma pop
 
+
 /* 80014C54-80014D5C 0108 .text      mDoExt_J3DModel__create__FP12J3DModelDataUlUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_J3DModel__create__FP12J3DModelDataUlUl() {
+extern "C" asm void mDoExt_J3DModel__create__FP12J3DModelDataUlUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_J3DModel__create__FP12J3DModelDataUlUl.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 80450C68-80450C70 0004 .sbss      aram_cache_size                                              */
+u8 aram_cache_size[4 + 4 /* padding */];
+
 /* 80014D5C-80014D64 0008 .text      mDoExt_setAraCacheSize__FUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_setAraCacheSize__FUl() {
+extern "C" asm void mDoExt_setAraCacheSize__FUl() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_setAraCacheSize__FUl.s"
 }
 #pragma pop
 
+
 /* 80014D64-80014D9C 0038 .text      mDoExt_GetCurrentRunningThread__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_GetCurrentRunningThread__Fv() {
+extern "C" asm void mDoExt_GetCurrentRunningThread__Fv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_GetCurrentRunningThread__Fv.s"
 }
 #pragma pop
 
+
 /* 80014D9C-80014DC8 002C .text      setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor() {
+extern "C" asm void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
+
 /* 80014DC8-80014DF4 002C .text      getCellWidth__7JUTFontCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getCellWidth__7JUTFontCFv() {
+extern "C" asm void getCellWidth__7JUTFontCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getCellWidth__7JUTFontCFv.s"
 }
 #pragma pop
 
+
 /* 80014DF4-80014E20 002C .text      getCellHeight__7JUTFontCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getCellHeight__7JUTFontCFv() {
+extern "C" asm void getCellHeight__7JUTFontCFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getCellHeight__7JUTFontCFv.s"
 }
 #pragma pop
 
+
 /* 80014E20-80014E7C 005C .text      __dt__26mDoExt_3DlineMatSortPacketFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__26mDoExt_3DlineMatSortPacketFv() {
+extern "C" asm void __dt__26mDoExt_3DlineMatSortPacketFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__26mDoExt_3DlineMatSortPacketFv.s"
 }
 #pragma pop
 
+
 /* 80014E7C-80014E84 0008 .text      getMaterialID__19mDoExt_3DlineMat1_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMaterialID__19mDoExt_3DlineMat1_cFv() {
+extern "C" asm void getMaterialID__19mDoExt_3DlineMat1_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getMaterialID__19mDoExt_3DlineMat1_cFv.s"
 }
 #pragma pop
 
+
 /* 80014E84-80014E8C 0008 .text      getMaterialID__19mDoExt_3DlineMat0_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getMaterialID__19mDoExt_3DlineMat0_cFv() {
+extern "C" asm void getMaterialID__19mDoExt_3DlineMat0_cFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getMaterialID__19mDoExt_3DlineMat0_cFv.s"
 }
 #pragma pop
 
+
 /* 80014E8C-80014E90 0004 .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform() {
+extern "C" asm void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform.s"
 }
 #pragma pop
 
+
 /* 80014E90-80014E94 0004 .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform() {
+extern "C" asm void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform.s"
 }
 #pragma pop
 
+
 /* 80014E94-80014E9C 0008 .text      getAnmTransform__10J3DMtxCalcFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAnmTransform__10J3DMtxCalcFUc() {
+extern "C" asm void getAnmTransform__10J3DMtxCalcFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getAnmTransform__10J3DMtxCalcFUc.s"
 }
 #pragma pop
 
+
 /* 80014E9C-80014EA4 0008 .text      getAnmTransform__10J3DMtxCalcFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAnmTransform__10J3DMtxCalcFv() {
+extern "C" asm void getAnmTransform__10J3DMtxCalcFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getAnmTransform__10J3DMtxCalcFv.s"
 }
 #pragma pop
 
+
 /* 80014EA4-80014EA8 0004 .text      setWeight__10J3DMtxCalcFUcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setWeight__10J3DMtxCalcFUcf() {
+extern "C" asm void setWeight__10J3DMtxCalcFUcf() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setWeight__10J3DMtxCalcFUcf.s"
 }
 #pragma pop
 
+
 /* 80014EA8-80014EB0 0008 .text      getWeight__10J3DMtxCalcCFUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getWeight__10J3DMtxCalcCFUc() {
+extern "C" asm void getWeight__10J3DMtxCalcCFUc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getWeight__10J3DMtxCalcCFUc.s"
 }
 #pragma pop
 
+
 /* 80014EB0-80014F3C 008C .text      __dt__28mDoExt_MtxCalcAnmBlendTblOldFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv() {
+extern "C" asm void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__28mDoExt_MtxCalcAnmBlendTblOldFv.s"
 }
 #pragma pop
 
+
 /* 80014F3C-80014FB8 007C .text      __dt__25mDoExt_MtxCalcAnmBlendTblFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__25mDoExt_MtxCalcAnmBlendTblFv() {
+extern "C" asm void __dt__25mDoExt_MtxCalcAnmBlendTblFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/__dt__25mDoExt_MtxCalcAnmBlendTblFv.s"
 }
 #pragma pop
 
+
 /* 80014FB8-80014FC0 0008 .text      getAnmTransform__17J3DMtxCalcAnmBaseFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getAnmTransform__17J3DMtxCalcAnmBaseFv() {
+extern "C" asm void getAnmTransform__17J3DMtxCalcAnmBaseFv() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getAnmTransform__17J3DMtxCalcAnmBaseFv.s"
 }
 #pragma pop
 
+
 /* 80014FC0-80014FC8 0008 .text      setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform() {
+extern "C" asm void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform.s"
 }
 #pragma pop
 
+
 /* 80014FC8-80015034 006C .text      __dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80014FC8() {
+extern "C" asm void func_80014FC8() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80014FC8.s"
 }
 #pragma pop
 
+
 /* 80015034-8001505C 0028 .text      init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80015034() {
+extern "C" asm void func_80015034() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80015034.s"
 }
 #pragma pop
 
+
 /* 8001505C-80015084 0028 .text      init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_8001505C() {
+extern "C" asm void func_8001505C() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8001505C.s"
 }
 #pragma pop
 
+
 /* 80015084-800150AC 0028 .text      calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_80015084() {
+extern "C" asm void func_80015084() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80015084.s"
 }
 #pragma pop
 
+
 /* 800150AC-8001513C 0090 .text      calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_800150AC() {
+extern "C" asm void func_800150AC() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_800150AC.s"
 }

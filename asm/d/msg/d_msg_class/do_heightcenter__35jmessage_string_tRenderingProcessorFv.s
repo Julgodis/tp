@@ -32,7 +32,7 @@ lbl_80231F54:
 /* 80231F64 00000010  C3 C4 01 18 */	lfs f30, 0x118(r4)
 /* 80231F68 00000014  4B FF DB BD */	bl getLineCountNowPage__26jmessage_string_tReferenceFv
 /* 80231F6C 00000018  7C 60 07 34 */	extsh r0, r3
-/* 80231F70 0000001C  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__LIT_4198(r2)
+/* 80231F70 0000001C  C8 22 B0 70 */	lfd f1, d_msg_d_msg_class__lit_4198(r2)
 /* 80231F74 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80231F78 00000024  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80231F7C 00000028  3C 00 43 30 */	lis r0, 0x4330
@@ -42,11 +42,11 @@ lbl_80231F54:
 /* 80231F8C 00000038  EC 3E 00 32 */	fmuls f1, f30, f0
 /* 80231F90 0000003C  EC 1E E8 28 */	fsubs f0, f30, f29
 /* 80231F94 00000040  EC 01 00 28 */	fsubs f0, f1, f0
-/* 80231F98 00000044  C0 22 B0 5C */	lfs f1, d_msg_d_msg_class__LIT_4026(r2)
+/* 80231F98 00000044  C0 22 B0 5C */	lfs f1, d_msg_d_msg_class__lit_4026(r2)
 /* 80231F9C 00000048  EC 1F 00 28 */	fsubs f0, f31, f0
 /* 80231FA0 0000004C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80231FA4 00000050  EC 21 00 2A */	fadds f1, f1, f0
-/* 80231FA8 00000054  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__LIT_4028(r2)
+/* 80231FA8 00000054  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
 /* 80231FAC 00000058  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80231FB0 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80231FB4 00000004  40 82 00 64 */	bne lbl_80232018

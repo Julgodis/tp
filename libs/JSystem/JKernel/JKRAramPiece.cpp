@@ -5,61 +5,80 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void OSReport();
-extern void free__7JKRHeapFPvP7JKRHeap();
-extern void __nw__FUlP7JKRHeapi();
-extern void __dl__FPv();
-extern void func_802D2DF0();
-extern void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern void sendCommand__12JKRAramPieceFP12JKRAMCommand();
-extern void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern void sync__12JKRAramPieceFP12JKRAMCommandi();
-extern void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
-extern void startDMA__12JKRAramPieceFP12JKRAMCommand();
-extern void doneDMA__12JKRAramPieceFUl();
-extern void __ct__12JKRAMCommandFv();
-extern void __dt__12JKRAMCommandFv();
-extern void __sinit_JKRAramPiece_cpp();
-extern void sendCommand__9JKRDecompFP16JKRDecompCommand();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void panic_f__12JUTExceptionFPCciPCce();
-extern void DCInvalidateRange();
-extern void DCStoreRange();
-extern void OSInitMessageQueue();
-extern void OSSendMessage();
-extern void OSReceiveMessage();
-extern void OSLockMutex();
-extern void OSUnlockMutex();
-extern void ARQPostRequest();
-extern void __register_global_object();
-extern void _savegpr_25();
-extern void _savegpr_26();
-extern void _savegpr_27();
-extern void _restgpr_25();
-extern void _restgpr_26();
-extern void _restgpr_27();
+extern "C" extern void OSReport();
+extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void __dl__FPv();
+extern "C" extern void func_802D2DF0();
+extern "C" extern void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+extern "C" extern void sendCommand__12JKRAramPieceFP12JKRAMCommand();
+extern "C" extern void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+extern "C" extern void sync__12JKRAramPieceFP12JKRAMCommandi();
+extern "C" extern void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+extern "C" extern void startDMA__12JKRAramPieceFP12JKRAMCommand();
+extern "C" extern void doneDMA__12JKRAramPieceFUl();
+extern "C" extern void __ct__12JKRAMCommandFv();
+extern "C" extern void __dt__12JKRAMCommandFv();
+extern "C" extern void __sinit_JKRAramPiece_cpp();
+extern "C" extern void sendCommand__9JKRDecompFP16JKRDecompCommand();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
+extern "C" extern void DCInvalidateRange();
+extern "C" extern void DCStoreRange();
+extern "C" extern void OSInitMessageQueue();
+extern "C" extern void OSSendMessage();
+extern "C" extern void OSReceiveMessage();
+extern "C" extern void OSLockMutex();
+extern "C" extern void OSUnlockMutex();
+extern "C" extern void ARQPostRequest();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_25();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_27();
+extern "C" extern void _restgpr_25();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_27();
 SECTION_RODATA extern const u8 JKRAramPiece__stringBase0[104];
 SECTION_DATA extern u8 sMessageQueue__7JKRAram[32];
-SECTION_BSS extern u8 JKRAramPiece__LIT_492[12];
+SECTION_BSS extern u8 JKRAramPiece__lit_492[12];
 SECTION_BSS extern u8 sAramPieceCommandList__12JKRAramPiece[12];
 SECTION_BSS extern u8 mMutex__12JKRAramPiece[24];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+
+// 
+// Functions:
+// 
+
+/* 802D3574-802D35F4 0080 .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRAramPiece/prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v.s"
 }
+#pragma pop
+
+
+/* 802D35F4-802D3614 0020 .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void sendCommand__12JKRAramPieceFP12JKRAMCommand() {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRAramPiece/sendCommand__12JKRAramPieceFP12JKRAMCommand.s"
+}
+#pragma pop
 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 8039D0B8-8039D120 0068 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
@@ -72,122 +91,98 @@ SECTION_DEAD const char* const stringBase_8039D0F4 = "JKRAramPiece.cpp";
 SECTION_DEAD const char* const stringBase_8039D105 = "%s";
 SECTION_DEAD const char* const stringBase_8039D108 = "illegal address. abort.";
 #pragma pop
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80434318-80434324 000C .bss       @492                                                         */
-SECTION_BSS u8 JKRAramPiece__LIT_492[12];
+u8 JKRAramPiece__lit_492[12];
+
 /* 80434324-80434330 000C .bss       sAramPieceCommandList__12JKRAramPiece                        */
-SECTION_BSS u8 sAramPieceCommandList__12JKRAramPiece[12];
+u8 sAramPieceCommandList__12JKRAramPiece[12];
+
 /* 80434330-80434348 0018 .bss       mMutex__12JKRAramPiece                                       */
-SECTION_BSS u8 mMutex__12JKRAramPiece[24];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
-
-/* 802D3574-802D35F4 0080 .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRAramPiece/prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v.s"
-}
-#pragma pop
-
-/* 802D35F4-802D3614 0020 .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void sendCommand__12JKRAramPieceFP12JKRAMCommand() {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRAramPiece/sendCommand__12JKRAramPieceFP12JKRAMCommand.s"
-}
-#pragma pop
+u8 mMutex__12JKRAramPiece[24];
 
 /* 802D3614-802D3770 015C .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
+extern "C" asm void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v.s"
 }
 #pragma pop
 
+
 /* 802D3770-802D3838 00C8 .text      sync__12JKRAramPieceFP12JKRAMCommandi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sync__12JKRAramPieceFP12JKRAMCommandi() {
+extern "C" asm void sync__12JKRAramPieceFP12JKRAMCommandi() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/sync__12JKRAramPieceFP12JKRAMCommandi.s"
 }
 #pragma pop
 
+
 /* 802D3838-802D38CC 0094 .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock() {
+extern "C" asm void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock.s"
 }
 #pragma pop
 
+
 /* 802D38CC-802D3944 0078 .text      startDMA__12JKRAramPieceFP12JKRAMCommand                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void startDMA__12JKRAramPieceFP12JKRAMCommand() {
+extern "C" asm void startDMA__12JKRAramPieceFP12JKRAMCommand() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/startDMA__12JKRAramPieceFP12JKRAMCommand.s"
 }
 #pragma pop
 
+
 /* 802D3944-802D39EC 00A8 .text      doneDMA__12JKRAramPieceFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void doneDMA__12JKRAramPieceFUl() {
+extern "C" asm void doneDMA__12JKRAramPieceFUl() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/doneDMA__12JKRAramPieceFUl.s"
 }
 #pragma pop
 
+
 /* 802D39EC-802D3A5C 0070 .text      __ct__12JKRAMCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__12JKRAMCommandFv() {
+extern "C" asm void __ct__12JKRAMCommandFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/__ct__12JKRAMCommandFv.s"
 }
 #pragma pop
 
+
 /* 802D3A5C-802D3B04 00A8 .text      __dt__12JKRAMCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__12JKRAMCommandFv() {
+extern "C" asm void __dt__12JKRAMCommandFv() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/__dt__12JKRAMCommandFv.s"
 }
 #pragma pop
 
+
 /* 802D3B04-802D3B48 0044 .text      __sinit_JKRAramPiece_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __sinit_JKRAramPiece_cpp() {
+extern "C" asm void __sinit_JKRAramPiece_cpp() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/__sinit_JKRAramPiece_cpp.s"
 }

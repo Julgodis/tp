@@ -10,15 +10,15 @@ lbl_802BDBF8:
 /* 802BDBF8 00000000  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 802BDBFC 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802BDC00 00000000  40 80 00 0C */	bge lbl_802BDC0C
-/* 802BDC04 00000004  C0 22 C0 A4 */	lfs f1, Z2Audience__LIT_894(r2)
+/* 802BDC04 00000004  C0 22 C0 A4 */	lfs f1, Z2Audience__lit_894(r2)
 /* 802BDC08 00000008  4E 80 00 20 */	blr 
 lbl_802BDC0C:
-/* 802BDC0C 00000000  C0 62 C0 A4 */	lfs f3, Z2Audience__LIT_894(r2)
+/* 802BDC0C 00000000  C0 62 C0 A4 */	lfs f3, Z2Audience__lit_894(r2)
 /* 802BDC10 00000004  C0 44 00 7C */	lfs f2, 0x7c(r4)
 /* 802BDC14 00000008  EC 01 00 28 */	fsubs f0, f1, f0
 /* 802BDC18 0000000C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802BDC1C 00000010  EC 03 00 2A */	fadds f0, f3, f0
-/* 802BDC20 00000014  C0 22 C0 A0 */	lfs f1, Z2Audience__LIT_848(r2)
+/* 802BDC20 00000014  C0 22 C0 A0 */	lfs f1, Z2Audience__lit_848(r2)
 /* 802BDC24 00000018  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802BDC28 00000000  4D 80 00 20 */	bltlr 
 /* 802BDC2C 00000020  FC 00 18 40 */	fcmpo cr0, f0, f3

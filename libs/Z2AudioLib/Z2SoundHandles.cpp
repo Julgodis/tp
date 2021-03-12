@@ -5,178 +5,181 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__17JASGenericMemPoolFv();
-extern void __dt__17JASGenericMemPoolFv();
-extern void alloc__17JASGenericMemPoolFUl();
-extern void free__17JASGenericMemPoolFPvUl();
-extern void releaseSound__14JAISoundHandleFv();
-extern void stop__8JAISoundFUl();
-extern void __ct__14Z2SoundHandlesFv();
-extern void __dt__14Z2SoundHandlesFv();
-extern void initHandlesPool__14Z2SoundHandlesFUc();
-extern void deleteHandlesPool__14Z2SoundHandlesFv();
-extern void func_802AB200();
-extern void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
-extern void getHandleUserData__14Z2SoundHandlesFUl();
-extern void getFreeHandle__14Z2SoundHandlesFv();
-extern void getLowPrioSound__14Z2SoundHandlesF10JAISoundID();
-extern void stopAllSounds__14Z2SoundHandlesFUl();
-extern void isActive__14Z2SoundHandlesCFv();
-extern void func_802AB538();
-extern void __dl__FPv();
-extern void __ct__10JSUPtrLinkFPv();
-extern void __dt__10JSUPtrLinkFv();
-extern void __dt__10JSUPtrListFv();
-extern void initiate__10JSUPtrListFv();
-extern void append__10JSUPtrListFP10JSUPtrLink();
-extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern void __register_global_object();
-extern void _savegpr_26();
-extern void _savegpr_28();
-extern void _restgpr_26();
-extern void _restgpr_28();
-SECTION_BSS extern u8 Z2SoundHandles__LIT_632[12];
+extern "C" extern void __ct__17JASGenericMemPoolFv();
+extern "C" extern void __dt__17JASGenericMemPoolFv();
+extern "C" extern void alloc__17JASGenericMemPoolFUl();
+extern "C" extern void free__17JASGenericMemPoolFPvUl();
+extern "C" extern void releaseSound__14JAISoundHandleFv();
+extern "C" extern void stop__8JAISoundFUl();
+extern "C" extern void __ct__14Z2SoundHandlesFv();
+extern "C" extern void __dt__14Z2SoundHandlesFv();
+extern "C" extern void initHandlesPool__14Z2SoundHandlesFUc();
+extern "C" extern void deleteHandlesPool__14Z2SoundHandlesFv();
+extern "C" extern void func_802AB200();
+extern "C" extern void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
+extern "C" extern void getHandleUserData__14Z2SoundHandlesFUl();
+extern "C" extern void getFreeHandle__14Z2SoundHandlesFv();
+extern "C" extern void getLowPrioSound__14Z2SoundHandlesF10JAISoundID();
+extern "C" extern void stopAllSounds__14Z2SoundHandlesFUl();
+extern "C" extern void isActive__14Z2SoundHandlesCFv();
+extern "C" extern void func_802AB538();
+extern "C" extern void __dl__FPv();
+extern "C" extern void __ct__10JSUPtrLinkFPv();
+extern "C" extern void __dt__10JSUPtrLinkFv();
+extern "C" extern void __dt__10JSUPtrListFv();
+extern "C" extern void initiate__10JSUPtrListFv();
+extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" extern void __register_global_object();
+extern "C" extern void _savegpr_26();
+extern "C" extern void _savegpr_28();
+extern "C" extern void _restgpr_26();
+extern "C" extern void _restgpr_28();
+SECTION_BSS extern u8 Z2SoundHandles__lit_632[12];
 SECTION_BSS extern u8 data_804341C4[16 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80450B5C[4];
 SECTION_SBSS extern u8 data_80451348[8];
-}
 
-
-/* ###################################################################################### */
-/*                                          .bss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 804341B8-804341C4 000C .bss       @632                                                         */
-SECTION_BSS u8 Z2SoundHandles__LIT_632[12];
-/* 804341C4-804341D8 0010 .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv */
-SECTION_BSS u8 data_804341C4[16 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 802AB07C-802AB0B4 0038 .text      __ct__14Z2SoundHandlesFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__14Z2SoundHandlesFv() {
+extern "C" asm void __ct__14Z2SoundHandlesFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/__ct__14Z2SoundHandlesFv.s"
 }
 #pragma pop
 
+
 /* 802AB0B4-802AB118 0064 .text      __dt__14Z2SoundHandlesFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __dt__14Z2SoundHandlesFv() {
+extern "C" asm void __dt__14Z2SoundHandlesFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/__dt__14Z2SoundHandlesFv.s"
 }
 #pragma pop
 
+
 /* 802AB118-802AB120 0008 .text      initHandlesPool__14Z2SoundHandlesFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initHandlesPool__14Z2SoundHandlesFUc() {
+extern "C" asm void initHandlesPool__14Z2SoundHandlesFUc() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/initHandlesPool__14Z2SoundHandlesFUc.s"
 }
 #pragma pop
 
+
+/* ###################################################################################### */
+/* 804341B8-804341C4 000C .bss       @632                                                         */
+u8 Z2SoundHandles__lit_632[12];
+
+/* 804341C4-804341D8 0010 .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv */
+u8 data_804341C4[16 + 4 /* padding */];
+
 /* 802AB120-802AB200 00E0 .text      deleteHandlesPool__14Z2SoundHandlesFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void deleteHandlesPool__14Z2SoundHandlesFv() {
+extern "C" asm void deleteHandlesPool__14Z2SoundHandlesFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/deleteHandlesPool__14Z2SoundHandlesFv.s"
 }
 #pragma pop
 
+
 /* 802AB200-802AB254 0054 .text      __dt__31JASMemPool<17Z2SoundHandlePool>Fv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802AB200() {
+extern "C" asm void func_802AB200() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/func_802AB200.s"
 }
 #pragma pop
 
+
 /* 802AB254-802AB2A0 004C .text      getHandleSoundID__14Z2SoundHandlesF10JAISoundID              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getHandleSoundID__14Z2SoundHandlesF10JAISoundID() {
+extern "C" asm void getHandleSoundID__14Z2SoundHandlesF10JAISoundID() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/getHandleSoundID__14Z2SoundHandlesF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802AB2A0-802AB2D8 0038 .text      getHandleUserData__14Z2SoundHandlesFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getHandleUserData__14Z2SoundHandlesFUl() {
+extern "C" asm void getHandleUserData__14Z2SoundHandlesFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/getHandleUserData__14Z2SoundHandlesFUl.s"
 }
 #pragma pop
 
+
 /* 802AB2D8-802AB3D0 00F8 .text      getFreeHandle__14Z2SoundHandlesFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getFreeHandle__14Z2SoundHandlesFv() {
+extern "C" asm void getFreeHandle__14Z2SoundHandlesFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/getFreeHandle__14Z2SoundHandlesFv.s"
 }
 #pragma pop
 
+
 /* 802AB3D0-802AB4A0 00D0 .text      getLowPrioSound__14Z2SoundHandlesF10JAISoundID               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getLowPrioSound__14Z2SoundHandlesF10JAISoundID() {
+extern "C" asm void getLowPrioSound__14Z2SoundHandlesF10JAISoundID() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/getLowPrioSound__14Z2SoundHandlesF10JAISoundID.s"
 }
 #pragma pop
 
+
 /* 802AB4A0-802AB504 0064 .text      stopAllSounds__14Z2SoundHandlesFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void stopAllSounds__14Z2SoundHandlesFUl() {
+extern "C" asm void stopAllSounds__14Z2SoundHandlesFUl() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/stopAllSounds__14Z2SoundHandlesFUl.s"
 }
 #pragma pop
 
+
 /* 802AB504-802AB538 0034 .text      isActive__14Z2SoundHandlesCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isActive__14Z2SoundHandlesCFv() {
+extern "C" asm void isActive__14Z2SoundHandlesCFv() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/isActive__14Z2SoundHandlesCFv.s"
 }
 #pragma pop
 
+
 /* 802AB538-802AB64C 0114 .text      setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void func_802AB538() {
+extern "C" asm void func_802AB538() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/func_802AB538.s"
 }

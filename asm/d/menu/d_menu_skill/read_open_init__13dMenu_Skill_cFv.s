@@ -9,12 +9,12 @@ lbl_801F7F24:
 /* 801F7F40 0000001C  B0 03 02 02 */	sth r0, 0x202(r3)
 /* 801F7F44 00000020  88 03 02 06 */	lbz r0, 0x206(r3)
 /* 801F7F48 00000024  54 1F 10 3A */	slwi r31, r0, 2
-/* 801F7F4C 00000028  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__data_80397A18@ha
-/* 801F7F50 0000002C  38 63 7A 18 */	addi r3, r3, d_menu_d_menu_skill__data_80397A18@l
+/* 801F7F4C 00000028  3C 60 80 39 */	lis r3, data_80397A18@ha
+/* 801F7F50 0000002C  38 63 7A 18 */	addi r3, r3, data_80397A18@l
 /* 801F7F54 00000030  7C 03 F8 2E */	lwzx r0, r3, r31
 /* 801F7F58 00000034  90 1E 01 FC */	stw r0, 0x1fc(r30)
 /* 801F7F5C 00000038  80 7E 01 7C */	lwz r3, 0x17c(r30)
-/* 801F7F60 0000003C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__LIT_3808(r2)
+/* 801F7F60 0000003C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
 /* 801F7F64 00000040  48 05 D8 6D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F7F68 00000044  7F C3 F3 78 */	mr r3, r30
 /* 801F7F6C 00000048  3C 80 80 39 */	lis r4, data_80397A34@ha

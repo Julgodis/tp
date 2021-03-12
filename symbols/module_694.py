@@ -1,0 +1,36 @@
+#
+# Generate By: dol2asm
+# Module: 694
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFA0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFCC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFF8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
+	'getNowLevel__Fv': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E018, 'size': 0x0078, 'padding': 0x00, 'name': "getNowLevel__Fv", 'reference_count': 1, 'type': "Function"},
+	'daObj_Ystone_Draw__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E090, 'size': 0x00F0, 'padding': 0x00, 'name': "daObj_Ystone_Draw__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
+	'setModelBaseMtx__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E180, 'size': 0x00DC, 'padding': 0x00, 'name': "setModelBaseMtx__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
+	'action__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E25C, 'size': 0x0490, 'padding': 0x00, 'name': "action__FP16obj_ystone_class", 'reference_count': 2, 'type': "Function"},
+	'daObj_Ystone_Execute__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E6EC, 'size': 0x0084, 'padding': 0x00, 'name': "daObj_Ystone_Execute__FP16obj_ystone_class", 'reference_count': 2, 'type': "Function"},
+	'daObj_Ystone_IsDelete__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E770, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Ystone_IsDelete__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
+	'daObj_Ystone_Delete__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E778, 'size': 0x0040, 'padding': 0x00, 'name': "daObj_Ystone_Delete__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
+	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E7B8, 'size': 0x0280, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
+	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3EA38, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
+	'daObj_Ystone_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3EA80, 'size': 0x0184, 'padding': 0x00, 'name': "daObj_Ystone_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'data_80D3EC04': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D3EC04, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80D3EC08': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D3EC08, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'l_bmdIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC0C, 'size': 0x001C, 'padding': 0x00, 'name': "l_bmdIndex", 'reference_count': 0, 'type': "InitData"},
+	'l_brkIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC28, 'size': 0x000C, 'padding': 0x00, 'name': "l_brkIndex", 'reference_count': 0, 'type': "InitData"},
+	'l_btkIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC34, 'size': 0x001C, 'padding': 0x00, 'name': "l_btkIndex", 'reference_count': 0, 'type': "InitData"},
+	'lit_3967': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC50, 'size': 0x0004, 'padding': 0x00, 'name': "@3967", 'reference_count': 0, 'type': "Integer"},
+	'lit_3968': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC54, 'size': 0x0004, 'padding': 0x00, 'name': "@3968", 'reference_count': 0, 'type': "InitData"},
+	'lit_3969': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC58, 'size': 0x0004, 'padding': 0x00, 'name': "@3969", 'reference_count': 0, 'type': "Integer"},
+	'stringBase0': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC5C, 'size': 0x005E, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 2, 'type': "StringBase"},
+	'l_arcName': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECBC, 'size': 0x001C, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_80D3ECD8': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECD8, 'size': 0x0024, 'padding': 0x00, 'name': "l_stageName$3775", 'reference_count': 0, 'type': "ReferenceArray"},
+	'data_80D3ECFC': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECFC, 'size': 0x0014, 'padding': 0x00, 'name': "mirror_effect_id$3870", 'reference_count': 0, 'type': "InitData"},
+	'lit_3970': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED10, 'size': 0x001C, 'padding': 0x00, 'name': "@3970", 'reference_count': 0, 'type': "ReferenceArray"},
+	'l_daObj_Ystone_Method': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED2C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Ystone_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_OBJ_YSTONE': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED4C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_YSTONE", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED7C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+}

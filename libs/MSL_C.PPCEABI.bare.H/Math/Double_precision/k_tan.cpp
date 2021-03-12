@@ -5,27 +5,24 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __kernel_tan();
+extern "C" extern void __kernel_tan();
 SECTION_RODATA extern const u8 T[104];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_94[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_95[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_96[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_97[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_98[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_99[8];
-SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_101[8];
-}
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_94;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_95;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_96;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_97;
+SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__lit_98[8];
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_99;
+SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_101;
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                        .rodata                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 803A2588-803A25F0 0068 .rodata    T                                                            */
 SECTION_RODATA const u8 T[104] = {
 	0x3F, 0xD5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x63, 0x3F, 0xC1, 0x11, 0x11, 0x11, 0x10, 0xFE, 0x7A,
@@ -36,54 +33,35 @@ SECTION_RODATA const u8 T[104] = {
 	0x3F, 0x12, 0xB8, 0x0F, 0x32, 0xF0, 0xA7, 0xE9, 0xBE, 0xF3, 0x75, 0xCB, 0xDB, 0x60, 0x53, 0x73,
 	0x3E, 0xFB, 0x2A, 0x70, 0x74, 0xBF, 0x7A, 0xD4,
 };
-}
 
-
-/* ###################################################################################### */
-/*                                        .sdata2                                         */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80456A80-80456A88 0008 .sdata2    @94                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_94[8] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_k_tan__lit_94 = 1.0;
+
 /* 80456A88-80456A90 0008 .sdata2    @95                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_95[8] = {
-	0xBF, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_k_tan__lit_95 = -1.0;
+
 /* 80456A90-80456A98 0008 .sdata2    @96                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_96[8] = {
-	0x3F, 0xE9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
-};
+f64 Math_Double_precision_k_tan__lit_96 = 0.7853981633974483;
+
 /* 80456A98-80456AA0 0008 .sdata2    @97                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_97[8] = {
-	0x3C, 0x81, 0xA6, 0x26, 0x33, 0x14, 0x5C, 0x07,
-};
+f64 Math_Double_precision_k_tan__lit_97 = 3.061616997868383e-17;
+
 /* 80456AA0-80456AA8 0008 .sdata2    @98                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_98[8] = {
+u8 Math_Double_precision_k_tan__lit_98[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
+
 /* 80456AA8-80456AB0 0008 .sdata2    @99                                                          */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_99[8] = {
-	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+f64 Math_Double_precision_k_tan__lit_99 = 2.0;
+
 /* 80456AB0-80456AB8 0008 .sdata2    @101                                                         */
-SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_101[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+f64 Math_Double_precision_k_tan__lit_101 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8036BA90-8036BCA4 0214 .text      __kernel_tan                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __kernel_tan() {
+extern "C" asm void __kernel_tan() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/k_tan/__kernel_tan.s"
 }

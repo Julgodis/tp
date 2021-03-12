@@ -7,8 +7,8 @@ lbl_8019CB0C:
 /* 8019CB20 00000014  4B FF F8 85 */	bl dKy_sense_pat_get__Fv
 /* 8019CB24 00000018  28 03 00 0F */	cmplwi r3, 0xf
 /* 8019CB28 0000001C  41 81 01 A0 */	bgt lbl_8019CCC8
-/* 8019CB2C 00000020  3C 80 80 3C */	lis r4, d_kankyo_d_kankyo__LIT_4322@ha
-/* 8019CB30 00000024  38 84 BE BC */	addi r4, r4, d_kankyo_d_kankyo__LIT_4322@l
+/* 8019CB2C 00000020  3C 80 80 3C */	lis r4, d_kankyo_d_kankyo__lit_4322@ha
+/* 8019CB30 00000024  38 84 BE BC */	addi r4, r4, d_kankyo_d_kankyo__lit_4322@l
 /* 8019CB34 00000028  54 60 10 3A */	slwi r0, r3, 2
 /* 8019CB38 0000002C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8019CB3C 00000030  7C 09 03 A6 */	mtctr r0

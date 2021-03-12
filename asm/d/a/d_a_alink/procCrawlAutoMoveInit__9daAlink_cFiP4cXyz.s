@@ -19,7 +19,7 @@ lbl_800F99FC:
 /* 800F9A40 00000044  D0 1B 37 CC */	stfs f0, 0x37cc(r27)
 /* 800F9A44 00000048  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 800F9A48 0000004C  D0 1B 37 D0 */	stfs f0, 0x37d0(r27)
-/* 800F9A4C 00000050  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__LIT_6040(r2)
+/* 800F9A4C 00000050  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
 /* 800F9A50 00000054  D0 1B 33 CC */	stfs f0, 0x33cc(r27)
 /* 800F9A54 00000058  93 9B 31 98 */	stw r28, 0x3198(r27)
 /* 800F9A58 0000005C  38 00 00 14 */	li r0, 0x14
@@ -31,7 +31,7 @@ lbl_800F99FC:
 /* 800F9A70 00000074  90 1F 5F 18 */	stw r0, 0x5f18(r31)
 /* 800F9A74 00000078  7F 63 DB 78 */	mr r3, r27
 /* 800F9A78 0000007C  4B FF E2 71 */	bl setCrawlMoveDirectionArrow__9daAlink_cFv
-/* 800F9A7C 00000080  C0 02 92 C0 */	lfs f0, LIT_6108(r2)
+/* 800F9A7C 00000080  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800F9A80 00000084  D0 1B 33 98 */	stfs f0, 0x3398(r27)
 /* 800F9A84 00000088  38 00 00 0C */	li r0, 0xc
 /* 800F9A88 0000008C  98 1B 2F 99 */	stb r0, 0x2f99(r27)

@@ -42,7 +42,7 @@ lbl_8014C200:
 /* 8014C2A0 0000007C  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
 /* 8014C2A4 00000080  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 8014C2A8 00000084  48 1F A2 09 */	bl PSMTXCopy
-/* 8014C2AC 00000088  C0 22 99 D8 */	lfs f1, d_a_d_a_npc__LIT_4116(r2)
+/* 8014C2AC 00000088  C0 22 99 D8 */	lfs f1, d_a_d_a_npc__lit_4116(r2)
 /* 8014C2B0 0000008C  FC 40 E8 90 */	fmr f2, f29
 /* 8014C2B4 00000090  FC 60 08 90 */	fmr f3, f1
 /* 8014C2B8 00000094  4B EC 0A E5 */	bl transM__14mDoMtx_stack_cFfff
@@ -59,9 +59,9 @@ lbl_8014C200:
 lbl_8014C2E4:
 /* 8014C2E4 00000000  3B C0 00 00 */	li r30, 0
 /* 8014C2E8 00000004  3B E0 00 00 */	li r31, 0
-/* 8014C2EC 00000008  C3 A2 99 D8 */	lfs f29, d_a_d_a_npc__LIT_4116(r2)
-/* 8014C2F0 0000000C  C3 C2 9A 88 */	lfs f30, LIT_7550(r2)
-/* 8014C2F4 00000010  C3 E2 9A 8C */	lfs f31, LIT_7551(r2)
+/* 8014C2EC 00000008  C3 A2 99 D8 */	lfs f29, d_a_d_a_npc__lit_4116(r2)
+/* 8014C2F0 0000000C  C3 C2 9A 88 */	lfs f30, lit_7550(r2)
+/* 8014C2F4 00000010  C3 E2 9A 8C */	lfs f31, lit_7551(r2)
 lbl_8014C2F8:
 /* 8014C2F8 00000000  38 61 00 14 */	addi r3, r1, 0x14
 /* 8014C2FC 00000004  7C 63 FA 14 */	add r3, r3, r31

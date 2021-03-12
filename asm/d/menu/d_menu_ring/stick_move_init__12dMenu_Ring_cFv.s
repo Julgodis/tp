@@ -34,9 +34,9 @@ lbl_801ED4F0:
 /* 801ED508 00000018  38 A0 00 00 */	li r5, 0
 /* 801ED50C 0000001C  38 C0 00 00 */	li r6, 0
 /* 801ED510 00000020  38 E0 00 00 */	li r7, 0
-/* 801ED514 00000024  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__LIT_4305(r2)
+/* 801ED514 00000024  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__lit_4305(r2)
 /* 801ED518 00000028  FC 40 08 90 */	fmr f2, f1
-/* 801ED51C 0000002C  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__LIT_4465(r2)
+/* 801ED51C 0000002C  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__lit_4465(r2)
 /* 801ED520 00000030  FC 80 18 90 */	fmr f4, f3
 /* 801ED524 00000034  39 00 00 00 */	li r8, 0
 /* 801ED528 00000038  48 0B E4 5D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

@@ -48,7 +48,7 @@ lbl_800E7040:
 /* 800E7090 00000044  C0 04 00 A8 */	lfs f0, 0xa8(r4)
 /* 800E7094 00000048  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E7098 0000004C  EC 22 00 32 */	fmuls f1, f2, f0
-/* 800E709C 00000050  C0 42 92 C0 */	lfs f2, LIT_6108(r2)
+/* 800E709C 00000050  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800E70A0 00000054  4B FF DF 09 */	bl setCarryArmAngle__9daAlink_cFff
 lbl_800E70A4:
 /* 800E70A4 00000000  38 60 00 01 */	li r3, 1

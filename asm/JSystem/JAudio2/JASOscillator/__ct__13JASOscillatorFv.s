@@ -5,7 +5,7 @@ lbl_8029BE94:
 /* 8029BEA0 0000000C  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 8029BEA4 00000010  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8029BEA8 00000014  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029BEAC 00000018  C0 02 BC F8 */	lfs f0, JASOscillator__LIT_77(r2)
+/* 8029BEAC 00000018  C0 02 BC F8 */	lfs f0, JASOscillator__lit_77(r2)
 /* 8029BEB0 0000001C  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8029BEB4 00000020  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029BEB8 00000024  D0 03 00 08 */	stfs f0, 8(r3)

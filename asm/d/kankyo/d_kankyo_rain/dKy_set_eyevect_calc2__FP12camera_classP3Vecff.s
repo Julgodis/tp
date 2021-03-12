@@ -16,7 +16,7 @@ lbl_8005B830:
 /* 8005B868 0000001C  C0 03 00 D8 */	lfs f0, 0xd8(r3)
 /* 8005B86C 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8005B870 00000024  D8 01 00 18 */	stfd f0, 0x18(r1)
-/* 8005B874 00000028  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3954(r2)
+/* 8005B874 00000028  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
 /* 8005B878 0000002C  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 8005B87C 00000030  41 82 00 18 */	beq lbl_8005B894
 /* 8005B880 00000034  C0 3E 00 E8 */	lfs f1, 0xe8(r30)
@@ -25,7 +25,7 @@ lbl_8005B830:
 /* 8005B88C 00000040  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 8005B890 00000044  48 00 00 0C */	b lbl_8005B89C
 lbl_8005B894:
-/* 8005B894 00000000  C8 02 87 B0 */	lfd f0, d_kankyo_d_kankyo_rain__LIT_3953(r2)
+/* 8005B894 00000000  C8 02 87 B0 */	lfd f0, d_kankyo_d_kankyo_rain__lit_3953(r2)
 /* 8005B898 00000004  D8 01 00 20 */	stfd f0, 0x20(r1)
 lbl_8005B89C:
 /* 8005B89C 00000000  C0 3E 00 EC */	lfs f1, 0xec(r30)
@@ -50,7 +50,7 @@ lbl_8005B89C:
 /* 8005B8E8 0000004C  EC 00 07 B2 */	fmuls f0, f0, f30
 /* 8005B8EC 00000050  EC 01 00 2A */	fadds f0, f1, f0
 /* 8005B8F0 00000054  D0 1F 00 08 */	stfs f0, 8(r31)
-/* 8005B8F4 00000058  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__LIT_3954(r2)
+/* 8005B8F4 00000058  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
 /* 8005B8F8 0000005C  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 8005B8FC 00000060  40 82 00 08 */	bne lbl_8005B904
 /* 8005B900 00000064  D0 1F 00 04 */	stfs f0, 4(r31)

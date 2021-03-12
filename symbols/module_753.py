@@ -1,0 +1,42 @@
+#
+# Generate By: dol2asm
+# Module: 753
+#
+
+SYMBOLS = {
+	'_prolog': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D65980, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
+	'_epilog': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D659AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
+	'_unresolved': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D659D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 12, 'type': "Function"},
+	'create__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D659F8, 'size': 0x022C, 'padding': 0x00, 'name': "create__11daTagYami_cFv", 'reference_count': 1, 'type': "Function"},
+	'Execute__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65C24, 'size': 0x003C, 'padding': 0x00, 'name': "Execute__11daTagYami_cFv", 'reference_count': 1, 'type': "Function"},
+	'calcCoC__11daTagYami_cFR4cXyz': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65C60, 'size': 0x00A8, 'padding': 0x00, 'name': "calcCoC__11daTagYami_cFR4cXyz", 'reference_count': 1, 'type': "Function"},
+	'col_set__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65D08, 'size': 0x0004, 'padding': 0x00, 'name': "col_set__11daTagYami_cFv", 'reference_count': 1, 'type': "Function"},
+	'chk_CoHit__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65D0C, 'size': 0x0054, 'padding': 0x00, 'name': "chk_CoHit__11daTagYami_cFv", 'reference_count': 1, 'type': "Function"},
+	'getPlDist__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65D60, 'size': 0x018C, 'padding': 0x00, 'name': "getPlDist__11daTagYami_cFv", 'reference_count': 1, 'type': "Function"},
+	'onMidnaTagSw__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65EEC, 'size': 0x0038, 'padding': 0x00, 'name': "onMidnaTagSw__11daTagYami_cFv", 'reference_count': 0, 'type': "Function"},
+	'offMidnaTagSw2__11daTagYami_cFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65F24, 'size': 0x0038, 'padding': 0x00, 'name': "offMidnaTagSw2__11daTagYami_cFv", 'reference_count': 0, 'type': "Function"},
+	'daTagYami_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65F5C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagYami_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'daTagYami_Execute__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65F7C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagYami_Execute__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
+	'daTagYami_Delete__FP11daTagYami_c': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D65F9C, 'size': 0x011C, 'padding': 0x00, 'name': "daTagYami_Delete__FP11daTagYami_c", 'reference_count': 1, 'type': "Function"},
+	'__dt__10cCcD_GSttsFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D660B8, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__10cCcD_GSttsFv", 'reference_count': 0, 'type': "Function"},
+	'setCoC__11daTagYami_cF4cXyz': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D66100, 'size': 0x001C, 'padding': 0x00, 'name': "setCoC__11daTagYami_cF4cXyz", 'reference_count': 1, 'type': "Function"},
+	'__dt__10dCcD_GSttsFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D6611C, 'size': 0x005C, 'padding': 0x00, 'name': "__dt__10dCcD_GSttsFv", 'reference_count': 0, 'type': "Function"},
+	'__dt__8cM3dGCylFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D66178, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGCylFv", 'reference_count': 0, 'type': "Function"},
+	'__dt__8cM3dGAabFv': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".text", 'addr': 0x80D661C0, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGAabFv", 'reference_count': 0, 'type': "Function"},
+	'data_80D66208': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D66208, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'data_80D6620C': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D6620C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
+	'l_sph_src': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D66214, 'size': 0x0044, 'padding': 0x00, 'name': "l_sph_src", 'reference_count': 0, 'type': "InitData"},
+	'lit_3726': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D66258, 'size': 0x0004, 'padding': 0x00, 'name': "@3726", 'reference_count': 0, 'type': "Integer"},
+	'lit_3727': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D6625C, 'size': 0x0004, 'padding': 0x00, 'name': "@3727", 'reference_count': 0, 'type': "Integer"},
+	'lit_3820': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D66260, 'size': 0x0004, 'padding': 0x00, 'name': "@3820", 'reference_count': 0, 'type': "InitData"},
+	'lit_3821': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D66264, 'size': 0x0004, 'padding': 0x04, 'name': "@3821", 'reference_count': 0, 'type': "Integer"},
+	'lit_3889': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D6626C, 'size': 0x0008, 'padding': 0x00, 'name': "@3889", 'reference_count': 0, 'type': "InitData"},
+	'lit_3890': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D66274, 'size': 0x0008, 'padding': 0x00, 'name': "@3890", 'reference_count': 0, 'type': "InitData"},
+	'lit_3891': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".rodata", 'addr': 0x80D6627C, 'size': 0x0008, 'padding': 0x00, 'name': "@3891", 'reference_count': 0, 'type': "InitData"},
+	'l_daTagYami_Method': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D66284, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagYami_Method", 'reference_count': 1, 'type': "ReferenceArray"},
+	'g_profile_TAG_YAMI': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D662A4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_YAMI", 'reference_count': 0, 'type': "ReferenceArray"},
+	'__vt__10cCcD_GStts': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D662D4, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__10cCcD_GStts", 'reference_count': 0, 'type': "VirtualTable"},
+	'__vt__10dCcD_GStts': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D662E0, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__10dCcD_GStts", 'reference_count': 0, 'type': "VirtualTable"},
+	'__vt__8cM3dGCyl': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D662EC, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGCyl", 'reference_count': 0, 'type': "VirtualTable"},
+	'__vt__8cM3dGAab': {'library': "d/a/tag/d_a_tag_yami", 'translation_unit': "d_a_tag_yami", 'section': ".data", 'addr': 0x80D662F8, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGAab", 'reference_count': 0, 'type': "VirtualTable"},
+}

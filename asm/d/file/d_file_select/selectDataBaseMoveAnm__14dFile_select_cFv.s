@@ -25,7 +25,7 @@ lbl_80184D8C:
 /* 80184DA4 00000018  90 83 00 B0 */	stw r4, 0xb0(r3)
 lbl_80184DA8:
 /* 80184DA8 00000000  80 03 00 B0 */	lwz r0, 0xb0(r3)
-/* 80184DAC 00000004  C8 22 9F 38 */	lfd f1, d_file_d_file_select__LIT_4342(r2)
+/* 80184DAC 00000004  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
 /* 80184DB0 00000008  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80184DB4 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80184DB8 00000010  3C 00 43 30 */	lis r0, 0x4330

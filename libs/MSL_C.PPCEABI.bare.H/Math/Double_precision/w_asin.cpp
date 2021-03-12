@@ -5,24 +5,21 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ieee754_asin();
-extern void asin();
-}
+extern "C" extern void __ieee754_asin();
+extern "C" extern void asin();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 8036C700-8036C720 0020 .text      asin                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void asin() {
+extern "C" asm void asin() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_asin/asin.s"
 }

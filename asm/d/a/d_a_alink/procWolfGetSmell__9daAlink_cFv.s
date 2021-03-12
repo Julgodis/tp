@@ -137,10 +137,10 @@ lbl_8013FE00:
 lbl_8013FE18:
 /* 8013FE18 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8013FE1C 00000004  38 80 00 83 */	li r4, 0x83
-/* 8013FE20 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__LIT_6040(r2)
-/* 8013FE24 0000000C  C0 42 93 30 */	lfs f2, d_a_d_a_alink__LIT_7625(r2)
+/* 8013FE20 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8013FE24 0000000C  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
 /* 8013FE28 00000010  38 A0 FF FF */	li r5, -1
-/* 8013FE2C 00000014  C0 62 92 C4 */	lfs f3, LIT_6109(r2)
+/* 8013FE2C 00000014  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8013FE30 00000018  4B FE 98 D5 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8013FE34 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013FE38 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

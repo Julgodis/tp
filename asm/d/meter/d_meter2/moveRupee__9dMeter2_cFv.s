@@ -90,9 +90,9 @@ lbl_80220D1C:
 /* 80220D80 00000064  38 A0 00 00 */	li r5, 0
 /* 80220D84 00000068  38 C0 00 00 */	li r6, 0
 /* 80220D88 0000006C  38 E0 00 00 */	li r7, 0
-/* 80220D8C 00000070  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80220D8C 00000070  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80220D90 00000074  FC 40 08 90 */	fmr f2, f1
-/* 80220D94 00000078  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 80220D94 00000078  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 80220D98 0000007C  FC 80 18 90 */	fmr f4, f3
 /* 80220D9C 00000080  39 00 00 00 */	li r8, 0
 /* 80220DA0 00000084  48 08 AB E5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -109,9 +109,9 @@ lbl_80220DB4:
 /* 80220DC4 00000010  38 A0 00 00 */	li r5, 0
 /* 80220DC8 00000014  38 C0 00 00 */	li r6, 0
 /* 80220DCC 00000018  38 E0 00 00 */	li r7, 0
-/* 80220DD0 0000001C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80220DD0 0000001C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80220DD4 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80220DD8 00000024  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 80220DD8 00000024  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 80220DDC 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80220DE0 0000002C  39 00 00 00 */	li r8, 0
 /* 80220DE4 00000030  48 08 AB A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -145,9 +145,9 @@ lbl_80220E04:
 /* 80220E50 0000004C  38 A0 00 00 */	li r5, 0
 /* 80220E54 00000050  38 C0 00 00 */	li r6, 0
 /* 80220E58 00000054  38 E0 00 00 */	li r7, 0
-/* 80220E5C 00000058  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80220E5C 00000058  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80220E60 0000005C  FC 40 08 90 */	fmr f2, f1
-/* 80220E64 00000060  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 80220E64 00000060  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 80220E68 00000064  FC 80 18 90 */	fmr f4, f3
 /* 80220E6C 00000068  39 00 00 00 */	li r8, 0
 /* 80220E70 0000006C  48 08 AB 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -164,9 +164,9 @@ lbl_80220E84:
 /* 80220E94 00000010  38 A0 00 00 */	li r5, 0
 /* 80220E98 00000014  38 C0 00 00 */	li r6, 0
 /* 80220E9C 00000018  38 E0 00 00 */	li r7, 0
-/* 80220EA0 0000001C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__LIT_4663(r2)
+/* 80220EA0 0000001C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
 /* 80220EA4 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80220EA8 00000024  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__LIT_4837(r2)
+/* 80220EA8 00000024  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
 /* 80220EAC 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80220EB0 0000002C  39 00 00 00 */	li r8, 0
 /* 80220EB4 00000030  48 08 AA D1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

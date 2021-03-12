@@ -1,0 +1,47 @@
+lbl_80BDDBF0:
+/* 80BDDBF0 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80BDDBF4 00000004  7C 08 02 A6 */	mflr r0
+/* 80BDDBF8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80BDDBFC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
+/* 80BDDC00 00000010  4B FF FC D9 */	bl _savegpr_28
+/* 80BDDC04 00000014  2C 04 00 00 */	cmpwi r4, 0
+/* 80BDDC08 00000018  40 82 00 7C */	bne lbl_80BDDC84
+/* 80BDDC0C 0000001C  A3 E3 00 14 */	lhz r31, 0x14(r3)
+/* 80BDDC10 00000020  3C 60 00 00 */	lis r3, j3dSys@ha
+/* 80BDDC14 00000024  38 63 00 00 */	addi r3, r3, j3dSys@l
+/* 80BDDC18 00000028  83 C3 00 38 */	lwz r30, 0x38(r3)
+/* 80BDDC1C 0000002C  83 9E 00 14 */	lwz r28, 0x14(r30)
+/* 80BDDC20 00000030  80 7E 00 84 */	lwz r3, 0x84(r30)
+/* 80BDDC24 00000034  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80BDDC28 00000038  1F BF 00 30 */	mulli r29, r31, 0x30
+/* 80BDDC2C 0000003C  7C 60 EA 14 */	add r3, r0, r29
+/* 80BDDC30 00000040  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
+/* 80BDDC34 00000044  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
+/* 80BDDC38 00000048  4B FF FC A1 */	bl PSMTXCopy
+/* 80BDDC3C 0000004C  2C 1F 00 01 */	cmpwi r31, 1
+/* 80BDDC40 00000050  40 82 00 18 */	bne lbl_80BDDC58
+/* 80BDDC44 00000054  C0 3C 06 38 */	lfs f1, 0x638(r28)
+/* 80BDDC48 00000058  3C 60 00 00 */	lis r3, lit_3719@ha
+/* 80BDDC4C 0000005C  C0 43 00 00 */	lfs f2, lit_3719@l(r3)
+/* 80BDDC50 00000060  FC 60 10 90 */	fmr f3, f2
+/* 80BDDC54 00000064  4B FF FC 85 */	bl transM__14mDoMtx_stack_cFfff
+lbl_80BDDC58:
+/* 80BDDC58 00000000  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BDDC5C 00000004  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BDDC60 00000008  80 9E 00 84 */	lwz r4, 0x84(r30)
+/* 80BDDC64 0000000C  80 04 00 0C */	lwz r0, 0xc(r4)
+/* 80BDDC68 00000010  7C 80 EA 14 */	add r4, r0, r29
+/* 80BDDC6C 00000014  4B FF FC 6D */	bl PSMTXCopy
+/* 80BDDC70 00000018  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BDDC74 0000001C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BDDC78 00000020  3C 80 00 00 */	lis r4, mCurrentMtx__6J3DSys@ha
+/* 80BDDC7C 00000024  38 84 00 00 */	addi r4, r4, mCurrentMtx__6J3DSys@l
+/* 80BDDC80 00000028  4B FF FC 59 */	bl PSMTXCopy
+lbl_80BDDC84:
+/* 80BDDC84 00000000  38 60 00 01 */	li r3, 1
+/* 80BDDC88 00000004  39 61 00 20 */	addi r11, r1, 0x20
+/* 80BDDC8C 00000008  4B FF FC 4D */	bl _restgpr_28
+/* 80BDDC90 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80BDDC94 00000010  7C 08 03 A6 */	mtlr r0
+/* 80BDDC98 00000014  38 21 00 20 */	addi r1, r1, 0x20
+/* 80BDDC9C 00000018  4E 80 00 20 */	blr 

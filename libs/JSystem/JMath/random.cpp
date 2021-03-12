@@ -5,23 +5,20 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__Q25JMath13TRandom_fast_FUl();
-}
+extern "C" extern void __ct__Q25JMath13TRandom_fast_FUl();
 
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+// 
+// Functions:
+// 
 
 /* 80339AE4-80339AEC 0008 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __ct__Q25JMath13TRandom_fast_FUl() {
+extern "C" asm void __ct__Q25JMath13TRandom_fast_FUl() {
 	nofralloc
 #include "asm/JSystem/JMath/random/__ct__Q25JMath13TRandom_fast_FUl.s"
 }

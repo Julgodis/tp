@@ -15,7 +15,7 @@ lbl_801D38FC:
 /* 801D3930 00000010  3B A0 00 00 */	li r29, 0
 /* 801D3934 00000014  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D3938 00000018  3B 83 FC 60 */	addi r28, r3, g_fmapHIO@l
-/* 801D393C 0000001C  C3 E2 A7 D0 */	lfs f31, d_menu_d_menu_fmap2D__LIT_3970(r2)
+/* 801D393C 0000001C  C3 E2 A7 D0 */	lfs f31, d_menu_d_menu_fmap2D__lit_3970(r2)
 lbl_801D3940:
 /* 801D3940 00000000  C0 1E 0F A0 */	lfs f0, 0xfa0(r30)
 /* 801D3944 00000004  FC 1F 00 00 */	fcmpu cr0, f31, f0

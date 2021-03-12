@@ -5,8 +5,8 @@ lbl_80125338:
 /* 80125344 0000000C  39 61 00 50 */	addi r11, r1, 0x50
 /* 80125348 00000010  48 23 CE 91 */	bl _savegpr_28
 /* 8012534C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80125350 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__LIT_3757@ha
-/* 80125354 0000001C  3B A3 D6 58 */	addi r29, r3, d_a_d_a_alink__LIT_3757@l
+/* 80125350 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
+/* 80125354 0000001C  3B A3 D6 58 */	addi r29, r3, d_a_d_a_alink__lit_3757@l
 /* 80125358 00000020  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 8012535C 00000024  54 60 00 43 */	rlwinm. r0, r3, 0, 1, 1
 /* 80125360 00000028  41 82 00 CC */	beq lbl_8012542C
@@ -112,7 +112,7 @@ lbl_8012549C:
 /* 801254D0 00000034  39 00 00 00 */	li r8, 0
 /* 801254D4 00000038  39 20 00 00 */	li r9, 0
 /* 801254D8 0000003C  39 40 00 FF */	li r10, 0xff
-/* 801254DC 00000040  C0 22 92 C0 */	lfs f1, LIT_6108(r2)
+/* 801254DC 00000040  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 801254E0 00000044  4B F2 75 B1 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 801254E4 00000048  3B 9C 00 01 */	addi r28, r28, 1
 /* 801254E8 0000004C  2C 1C 00 02 */	cmpwi r28, 2

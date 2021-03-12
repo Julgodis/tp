@@ -4,9 +4,9 @@ lbl_8033C0E0:
 /* 8033C0E8 00000008  94 21 FD 08 */	stwu r1, -0x2f8(r1)
 /* 8033C0EC 0000000C  BF 21 02 DC */	stmw r25, 0x2dc(r1)
 /* 8033C0F0 00000010  7C 7C 1B 78 */	mr r28, r3
-/* 8033C0F4 00000014  3C 60 80 3D */	lis r3, OSContext__LIT_61@ha
+/* 8033C0F4 00000014  3C 60 80 3D */	lis r3, OSContext__lit_61@ha
 /* 8033C0F8 00000018  4C C6 31 82 */	crclr 6
-/* 8033C0FC 0000001C  3B E3 F7 40 */	addi r31, r3, OSContext__LIT_61@l
+/* 8033C0FC 0000001C  3B E3 F7 40 */	addi r31, r3, OSContext__lit_61@l
 /* 8033C100 00000020  7F E3 FB 78 */	mr r3, r31
 /* 8033C104 00000024  7F 84 E3 78 */	mr r4, r28
 /* 8033C108 00000028  4B CC A9 B5 */	bl OSReport

@@ -5,53 +5,45 @@
 #include "dolphin/types.h"
 
 // 
-// Additional Symbols:
+// Forward References:
 // 
 
-extern "C" {
-extern void __ct__13JASTaskThreadFiiUl();
-extern void getThreadPointer__6JASDvdFv();
-extern void createThread__6JASDvdFliUl();
-extern void __nw__FUlP7JKRHeapi();
-extern void OSResumeThread();
-extern void _savegpr_29();
-extern void _restgpr_29();
+extern "C" extern void __ct__13JASTaskThreadFiiUl();
+extern "C" extern void getThreadPointer__6JASDvdFv();
+extern "C" extern void createThread__6JASDvdFliUl();
+extern "C" extern void __nw__FUlP7JKRHeapi();
+extern "C" extern void OSResumeThread();
+extern "C" extern void _savegpr_29();
+extern "C" extern void _restgpr_29();
 SECTION_SBSS extern u8 sThread__6JASDvd[4 + 4 /* padding */];
 SECTION_SBSS extern u8 JASDram[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-}
 
+// 
+// Functions:
+// 
 
 /* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
 /* 80451208-80451210 0004 .sbss      sThread__6JASDvd                                             */
-SECTION_SBSS u8 sThread__6JASDvd[4 + 4 /* padding */];
-}
-
-
-/* ###################################################################################### */
-/*                                         .text                                          */
-/* ###################################################################################### */
+u8 sThread__6JASDvd[4 + 4 /* padding */];
 
 /* 8028FEFC-8028FF04 0008 .text      getThreadPointer__6JASDvdFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getThreadPointer__6JASDvdFv() {
+extern "C" asm void getThreadPointer__6JASDvdFv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDvdThread/getThreadPointer__6JASDvdFv.s"
 }
 #pragma pop
 
+
 /* 8028FF04-8028FFA8 00A4 .text      createThread__6JASDvdFliUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createThread__6JASDvdFliUl() {
+extern "C" asm void createThread__6JASDvdFliUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDvdThread/createThread__6JASDvdFliUl.s"
 }

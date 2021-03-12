@@ -11,7 +11,7 @@ lbl_8032AE18:
 /* 8032AE3C 00000024  98 1F 00 04 */	stb r0, 4(r31)
 /* 8032AE40 00000028  98 1F 00 05 */	stb r0, 5(r31)
 /* 8032AE44 0000002C  B0 1F 00 06 */	sth r0, 6(r31)
-/* 8032AE48 00000030  C0 02 CA 34 */	lfs f0, J3DAnimation__LIT_853(r2)
+/* 8032AE48 00000030  C0 02 CA 34 */	lfs f0, J3DAnimation__lit_853(r2)
 /* 8032AE4C 00000034  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 8032AE50 00000038  3C 60 80 3D */	lis r3, __vt__15J3DAnmTevRegKey@ha
 /* 8032AE54 0000003C  38 03 ED 60 */	addi r0, r3, __vt__15J3DAnmTevRegKey@l
