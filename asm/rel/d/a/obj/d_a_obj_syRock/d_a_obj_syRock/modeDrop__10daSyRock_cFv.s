@@ -5,12 +5,12 @@ lbl_80D03384:
 /* 80D03390 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D03394 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D03398 00000014  38 9F 05 CC */	addi r4, r31, 0x5cc
-/* 80D0339C 00000018  4B FF EE 7D */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 80D0339C 00000018  4B FF EE 7D */	bl _unresolved
 /* 80D033A0 0000001C  38 7F 07 BC */	addi r3, r31, 0x7bc
-/* 80D033A4 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80D033A8 00000024  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D033A4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D033A8 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D033AC 00000028  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80D033B0 0000002C  4B FF EE 69 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80D033B0 0000002C  4B FF EE 69 */	bl _unresolved
 /* 80D033B4 00000030  7F E3 FB 78 */	mr r3, r31
 /* 80D033B8 00000034  48 00 03 25 */	bl bgCheck__10daSyRock_cFv
 /* 80D033BC 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)

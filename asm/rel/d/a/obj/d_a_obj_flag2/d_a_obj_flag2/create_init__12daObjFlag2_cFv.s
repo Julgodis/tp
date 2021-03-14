@@ -5,17 +5,17 @@ lbl_80BED22C:
 /* 80BED238 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BED23C 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80BED240 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BED244 00000018  3C 80 00 00 */	lis r4, M_attr__12daObjFlag2_c@ha
-/* 80BED248 0000001C  3B E4 00 00 */	addi r31, r4, M_attr__12daObjFlag2_c@l
-/* 80BED24C 00000020  4B FF F3 ED */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
-/* 80BED250 00000024  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80BED254 00000028  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80BED258 0000002C  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80BED25C 00000030  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80BED244 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BED248 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80BED24C 00000020  4B FF F3 ED */	bl _unresolved
+/* 80BED250 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BED254 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BED258 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80BED25C 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80BED260 00000034  3C A5 00 02 */	addis r5, r5, 2
 /* 80BED264 00000038  38 C0 00 80 */	li r6, 0x80
 /* 80BED268 0000003C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80BED26C 00000040  4B FF F3 CD */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 80BED26C 00000040  4B FF F3 CD */	bl _unresolved
 /* 80BED270 00000044  80 03 00 00 */	lwz r0, 0(r3)
 /* 80BED274 00000048  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 80BED278 0000004C  C8 3F 00 98 */	lfd f1, 0x98(r31)
@@ -38,7 +38,7 @@ lbl_80BED22C:
 /* 80BED2BC 00000090  C0 9F 00 8C */	lfs f4, 0x8c(r31)
 /* 80BED2C0 00000094  C0 BF 00 90 */	lfs f5, 0x90(r31)
 /* 80BED2C4 00000098  FC C0 20 90 */	fmr f6, f4
-/* 80BED2C8 0000009C  4B FF F3 71 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80BED2C8 0000009C  4B FF F3 71 */	bl _unresolved
 /* 80BED2CC 000000A0  38 61 00 08 */	addi r3, r1, 8
 /* 80BED2D0 000000A4  38 9E 07 00 */	addi r4, r30, 0x700
 /* 80BED2D4 000000A8  48 00 0D E5 */	bl getTargetPos__11FlagCloth_cFv
@@ -67,7 +67,7 @@ lbl_80BED22C:
 /* 80BED330 00000104  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BED334 00000108  7C 04 07 74 */	extsb r4, r0
 /* 80BED338 0000010C  38 A0 00 FF */	li r5, 0xff
-/* 80BED33C 00000110  4B FF F2 FD */	bl dKy_tevstr_init__FP12dKy_tevstr_cScUc
+/* 80BED33C 00000110  4B FF F2 FD */	bl _unresolved
 /* 80BED340 00000114  7F C3 F3 78 */	mr r3, r30
 /* 80BED344 00000118  48 00 00 25 */	bl initBaseMtx__12daObjFlag2_cFv
 /* 80BED348 0000011C  7F C3 F3 78 */	mr r3, r30

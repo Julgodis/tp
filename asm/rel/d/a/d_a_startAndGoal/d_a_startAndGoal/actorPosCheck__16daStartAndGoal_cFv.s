@@ -5,8 +5,8 @@ lbl_80D4DA68:
 /* 80D4DA74 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80D4DA78 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80D4DA7C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D4DA80 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4DA84 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4DA80 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4DA84 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4DA88 00000020  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80D4DA8C 00000024  C0 43 04 D0 */	lfs f2, 0x4d0(r3)
 /* 80D4DA90 00000028  D0 41 00 14 */	stfs f2, 0x14(r1)
@@ -24,24 +24,24 @@ lbl_80D4DA68:
 /* 80D4DAC0 00000058  41 82 00 58 */	beq lbl_80D4DB18
 /* 80D4DAC4 0000005C  A3 FE 05 68 */	lhz r31, 0x568(r30)
 /* 80D4DAC8 00000060  38 7E 05 68 */	addi r3, r30, 0x568
-/* 80D4DACC 00000064  4B FF FC CD */	bl getNextIdx__13daNpcF_Path_cFv
+/* 80D4DACC 00000064  4B FF FC CD */	bl _unresolved
 /* 80D4DAD0 00000068  7C 1F 18 00 */	cmpw r31, r3
 /* 80D4DAD4 0000006C  40 82 00 44 */	bne lbl_80D4DB18
 /* 80D4DAD8 00000070  38 00 00 03 */	li r0, 3
 /* 80D4DADC 00000074  90 1E 0B 9C */	stw r0, 0xb9c(r30)
 /* 80D4DAE0 00000078  88 1E 0B 99 */	lbz r0, 0xb99(r30)
 /* 80D4DAE4 0000007C  54 00 18 38 */	slwi r0, r0, 3
-/* 80D4DAE8 00000080  3C 60 00 00 */	lis r3, l_timerType@ha
-/* 80D4DAEC 00000084  38 63 00 00 */	addi r3, r3, l_timerType@l
+/* 80D4DAE8 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4DAEC 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4DAF0 00000088  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80D4DAF4 0000008C  38 80 FF FF */	li r4, -1
-/* 80D4DAF8 00000090  4B FF FC A1 */	bl dComIfG_TimerEnd__Fii
-/* 80D4DAFC 00000094  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4DB00 00000098  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4DAF8 00000090  4B FF FC A1 */	bl _unresolved
+/* 80D4DAFC 00000094  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4DB00 00000098  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4DB04 0000009C  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80D4DB08 000000A0  4B FF FC 91 */	bl getTimerNowTimeMs__14dComIfG_play_cFv
-/* 80D4DB0C 000000A4  3C 80 00 00 */	lis r4, g_meter2_info@ha
-/* 80D4DB10 000000A8  38 84 00 00 */	addi r4, r4, g_meter2_info@l
+/* 80D4DB08 000000A0  4B FF FC 91 */	bl _unresolved
+/* 80D4DB0C 000000A4  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D4DB10 000000A8  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D4DB14 000000AC  90 64 00 88 */	stw r3, 0x88(r4)
 lbl_80D4DB18:
 /* 80D4DB18 00000000  83 E1 00 2C */	lwz r31, 0x2c(r1)

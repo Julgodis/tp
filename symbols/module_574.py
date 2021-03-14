@@ -3,28 +3,80 @@
 # Module: 574
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C98160, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C9818C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C981B8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
-	'createSolidHeap__FP10fopAc_ac_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C981D8, 'size': 0x02E8, 'padding': 0x00, 'name': "createSolidHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C984C0, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'initBaseMtx__17daObjMirrorSand_cFv': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98508, 'size': 0x002C, 'padding': 0x00, 'name': "initBaseMtx__17daObjMirrorSand_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__17daObjMirrorSand_cFv': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98534, 'size': 0x0064, 'padding': 0x00, 'name': "setBaseMtx__17daObjMirrorSand_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjMirrorSand_Draw__FP17daObjMirrorSand_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98598, 'size': 0x00D0, 'padding': 0x00, 'name': "daObjMirrorSand_Draw__FP17daObjMirrorSand_c", 'reference_count': 1, 'type': "Function"},
-	'daObjMirrorSand_Execute__FP17daObjMirrorSand_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98668, 'size': 0x0098, 'padding': 0x00, 'name': "daObjMirrorSand_Execute__FP17daObjMirrorSand_c", 'reference_count': 1, 'type': "Function"},
-	'daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98700, 'size': 0x0008, 'padding': 0x00, 'name': "daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c", 'reference_count': 1, 'type': "Function"},
-	'daObjMirrorSand_Delete__FP17daObjMirrorSand_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98708, 'size': 0x00B0, 'padding': 0x00, 'name': "daObjMirrorSand_Delete__FP17daObjMirrorSand_c", 'reference_count': 1, 'type': "Function"},
-	'__dt__4dBgWFv': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C987B8, 'size': 0x0060, 'padding': 0x00, 'name': "__dt__4dBgWFv", 'reference_count': 0, 'type': "Function"},
-	'daObjMirrorSand_Create__FP10fopAc_ac_c': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".text", 'addr': 0x80C98818, 'size': 0x01B8, 'padding': 0x00, 'name': "daObjMirrorSand_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80C989D0': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80C989D0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80C989D4': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80C989D4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3729': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".rodata", 'addr': 0x80C989DC, 'size': 0x0004, 'padding': 0x00, 'name': "@3729", 'reference_count': 0, 'type': "Integer"},
-	'lit_3730': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".rodata", 'addr': 0x80C989E0, 'size': 0x0004, 'padding': 0x00, 'name': "@3730", 'reference_count': 0, 'type': "InitData"},
-	'lit_3732': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".rodata", 'addr': 0x80C989E4, 'size': 0x0008, 'padding': 0x00, 'name': "@3732", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".rodata", 'addr': 0x80C989EC, 'size': 0x0008, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".data", 'addr': 0x80C989F4, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daObjMirrorSand_Method': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".data", 'addr': 0x80C989F8, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjMirrorSand_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_MirrorSand': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".data", 'addr': 0x80C98A18, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_MirrorSand", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/mirror/d_a_obj_mirror_sand", 'translation_unit': "d_a_obj_mirror_sand", 'section': ".data", 'addr': 0x80C98A48, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/mirror/d_a_obj_mirror_sand",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_mirror_sand",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80C98160,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C9818C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C981B8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':10,'type':"Function"},
+	{'addr':0x80C981D8,'size':744,'pad':0,'label':"createSolidHeap__FP10fopAc_ac_c",'name':"createSolidHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C984C0,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C98508,'size':44,'pad':0,'label':"initBaseMtx__17daObjMirrorSand_cFv",'name':"initBaseMtx__17daObjMirrorSand_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C98534,'size':100,'pad':0,'label':"setBaseMtx__17daObjMirrorSand_cFv",'name':"setBaseMtx__17daObjMirrorSand_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C98598,'size':208,'pad':0,'label':"daObjMirrorSand_Draw__FP17daObjMirrorSand_c",'name':"daObjMirrorSand_Draw__FP17daObjMirrorSand_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C98668,'size':152,'pad':0,'label':"daObjMirrorSand_Execute__FP17daObjMirrorSand_c",'name':"daObjMirrorSand_Execute__FP17daObjMirrorSand_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C98700,'size':8,'pad':0,'label':"daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c",'name':"daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C98708,'size':176,'pad':0,'label':"daObjMirrorSand_Delete__FP17daObjMirrorSand_c",'name':"daObjMirrorSand_Delete__FP17daObjMirrorSand_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C987B8,'size':96,'pad':0,'label':"__dt__4dBgWFv",'name':"__dt__4dBgWFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C98818,'size':440,'pad':0,'label':"daObjMirrorSand_Create__FP10fopAc_ac_c",'name':"daObjMirrorSand_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C989D0,'size':4,'pad':0,'label':"data_80C989D0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80C989D4,'size':4,'pad':0,'label':"data_80C989D4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80C989D8,'size':4,'pad':0,'label':"lit_3729",'name':"@3729",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C989DC,'size':4,'pad':0,'label':"lit_3730",'name':"@3730",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80C989E0,'size':8,'pad':0,'label':"lit_3732",'name':"@3732",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80C989E8,'size':8,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80C989F0,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80C989F4,'size':32,'pad':0,'label':"l_daObjMirrorSand_Method",'name':"l_daObjMirrorSand_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80C98A14,'size':48,'pad':0,'label':"g_profile_Obj_MirrorSand",'name':"g_profile_Obj_MirrorSand",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80C98A44,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"createSolidHeap__FP10fopAc_ac_c":3,
+	"__dt__12J3DFrameCtrlFv":4,
+	"initBaseMtx__17daObjMirrorSand_cFv":5,
+	"setBaseMtx__17daObjMirrorSand_cFv":6,
+	"daObjMirrorSand_Draw__FP17daObjMirrorSand_c":7,
+	"daObjMirrorSand_Execute__FP17daObjMirrorSand_c":8,
+	"daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c":9,
+	"daObjMirrorSand_Delete__FP17daObjMirrorSand_c":10,
+	"__dt__4dBgWFv":11,
+	"daObjMirrorSand_Create__FP10fopAc_ac_c":12,
+	"data_80C989D0":13,
+	"data_80C989D4":14,
+	"lit_3729":15,
+	"lit_3730":16,
+	"lit_3732":17,
+	"stringBase0":18,
+	"l_arcName":19,
+	"l_daObjMirrorSand_Method":20,
+	"g_profile_Obj_MirrorSand":21,
+	"__vt__12J3DFrameCtrl":22,
 }
+

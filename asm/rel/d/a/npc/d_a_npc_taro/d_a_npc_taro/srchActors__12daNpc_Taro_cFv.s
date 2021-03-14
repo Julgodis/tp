@@ -3,127 +3,127 @@ lbl_8056767C:
 /* 80567680 00000004  7C 08 02 A6 */	mflr r0
 /* 80567684 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80567688 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8056768C 00000010  4B FF E7 6D */	bl _savegpr_29
+/* 8056768C 00000010  4B FF E7 6D */	bl _unresolved
 /* 80567690 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80567694 00000018  88 03 10 C4 */	lbz r0, 0x10c4(r3)
 /* 80567698 0000001C  28 00 00 0F */	cmplwi r0, 0xf
 /* 8056769C 00000020  41 81 03 3C */	bgt lbl_805679D8
-/* 805676A0 00000024  3C 60 00 00 */	lis r3, lit_5298@ha
-/* 805676A4 00000028  38 63 00 00 */	addi r3, r3, lit_5298@l
+/* 805676A0 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805676A4 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805676A8 0000002C  54 00 10 3A */	slwi r0, r0, 2
 /* 805676AC 00000030  7C 03 00 2E */	lwzx r0, r3, r0
 /* 805676B0 00000034  7C 09 03 A6 */	mtctr r0
 /* 805676B4 00000038  4E 80 04 20 */	bctr 
 /* 805676B8 0000003C  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 805676BC 00000040  4B FF E7 3D */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805676BC 00000040  4B FF E7 3D */	bl _unresolved
 /* 805676C0 00000044  28 03 00 00 */	cmplwi r3, 0
 /* 805676C4 00000048  40 82 00 1C */	bne lbl_805676E0
 /* 805676C8 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 805676CC 00000050  38 80 02 60 */	li r4, 0x260
-/* 805676D0 00000054  4B FF E7 29 */	bl getNearestActorP__8daNpcT_cFs
+/* 805676D0 00000054  4B FF E7 29 */	bl _unresolved
 /* 805676D4 00000058  7C 64 1B 78 */	mr r4, r3
 /* 805676D8 0000005C  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 805676DC 00000060  4B FF E7 1D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805676DC 00000060  4B FF E7 1D */	bl _unresolved
 lbl_805676E0:
 /* 805676E0 00000000  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805676E4 00000004  4B FF E7 15 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805676E4 00000004  4B FF E7 15 */	bl _unresolved
 /* 805676E8 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 805676EC 0000000C  40 82 00 1C */	bne lbl_80567708
 /* 805676F0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 805676F4 00000014  38 80 02 45 */	li r4, 0x245
-/* 805676F8 00000018  4B FF E7 01 */	bl getNearestActorP__8daNpcT_cFs
+/* 805676F8 00000018  4B FF E7 01 */	bl _unresolved
 /* 805676FC 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80567700 00000020  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 80567704 00000024  4B FF E6 F5 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567704 00000024  4B FF E6 F5 */	bl _unresolved
 lbl_80567708:
 /* 80567708 00000000  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 8056770C 00000004  4B FF E6 ED */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 8056770C 00000004  4B FF E6 ED */	bl _unresolved
 /* 80567710 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80567714 0000000C  40 82 00 1C */	bne lbl_80567730
 /* 80567718 00000010  7F E3 FB 78 */	mr r3, r31
 /* 8056771C 00000014  38 80 02 5D */	li r4, 0x25d
-/* 80567720 00000018  4B FF E6 D9 */	bl getNearestActorP__8daNpcT_cFs
+/* 80567720 00000018  4B FF E6 D9 */	bl _unresolved
 /* 80567724 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80567728 00000020  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 8056772C 00000024  4B FF E6 CD */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 8056772C 00000024  4B FF E6 CD */	bl _unresolved
 lbl_80567730:
 /* 80567730 00000000  38 7F 10 E0 */	addi r3, r31, 0x10e0
-/* 80567734 00000004  4B FF E6 C5 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567734 00000004  4B FF E6 C5 */	bl _unresolved
 /* 80567738 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 8056773C 0000000C  40 82 02 9C */	bne lbl_805679D8
 /* 80567740 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80567744 00000014  38 80 00 04 */	li r4, 4
 /* 80567748 00000018  38 A0 00 00 */	li r5, 0
-/* 8056774C 0000001C  4B FF E6 AD */	bl getEvtAreaTagP__8daNpcT_cFii
+/* 8056774C 0000001C  4B FF E6 AD */	bl _unresolved
 /* 80567750 00000020  7C 64 1B 78 */	mr r4, r3
 /* 80567754 00000024  38 7F 10 E0 */	addi r3, r31, 0x10e0
-/* 80567758 00000028  4B FF E6 A1 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567758 00000028  4B FF E6 A1 */	bl _unresolved
 /* 8056775C 0000002C  48 00 02 7C */	b lbl_805679D8
 /* 80567760 00000030  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 80567764 00000034  4B FF E6 95 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567764 00000034  4B FF E6 95 */	bl _unresolved
 /* 80567768 00000038  28 03 00 00 */	cmplwi r3, 0
 /* 8056776C 0000003C  40 82 02 6C */	bne lbl_805679D8
 /* 80567770 00000040  7F E3 FB 78 */	mr r3, r31
 /* 80567774 00000044  38 80 02 60 */	li r4, 0x260
-/* 80567778 00000048  4B FF E6 81 */	bl getNearestActorP__8daNpcT_cFs
+/* 80567778 00000048  4B FF E6 81 */	bl _unresolved
 /* 8056777C 0000004C  7C 64 1B 78 */	mr r4, r3
 /* 80567780 00000050  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 80567784 00000054  4B FF E6 75 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567784 00000054  4B FF E6 75 */	bl _unresolved
 /* 80567788 00000058  48 00 02 50 */	b lbl_805679D8
 /* 8056778C 0000005C  38 7F 11 78 */	addi r3, r31, 0x1178
-/* 80567790 00000060  4B FF E6 69 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567790 00000060  4B FF E6 69 */	bl _unresolved
 /* 80567794 00000064  28 03 00 00 */	cmplwi r3, 0
 /* 80567798 00000068  40 82 02 40 */	bne lbl_805679D8
 /* 8056779C 0000006C  7F E3 FB 78 */	mr r3, r31
 /* 805677A0 00000070  38 80 02 50 */	li r4, 0x250
-/* 805677A4 00000074  4B FF E6 55 */	bl getNearestActorP__8daNpcT_cFs
+/* 805677A4 00000074  4B FF E6 55 */	bl _unresolved
 /* 805677A8 00000078  7C 64 1B 78 */	mr r4, r3
 /* 805677AC 0000007C  38 7F 11 78 */	addi r3, r31, 0x1178
-/* 805677B0 00000080  4B FF E6 49 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805677B0 00000080  4B FF E6 49 */	bl _unresolved
 /* 805677B4 00000084  48 00 02 24 */	b lbl_805679D8
 /* 805677B8 00000088  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 805677BC 0000008C  4B FF E6 3D */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805677BC 0000008C  4B FF E6 3D */	bl _unresolved
 /* 805677C0 00000090  28 03 00 00 */	cmplwi r3, 0
 /* 805677C4 00000094  40 82 00 1C */	bne lbl_805677E0
 /* 805677C8 00000098  7F E3 FB 78 */	mr r3, r31
 /* 805677CC 0000009C  38 80 02 60 */	li r4, 0x260
-/* 805677D0 000000A0  4B FF E6 29 */	bl getNearestActorP__8daNpcT_cFs
+/* 805677D0 000000A0  4B FF E6 29 */	bl _unresolved
 /* 805677D4 000000A4  7C 64 1B 78 */	mr r4, r3
 /* 805677D8 000000A8  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 805677DC 000000AC  4B FF E6 1D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805677DC 000000AC  4B FF E6 1D */	bl _unresolved
 lbl_805677E0:
 /* 805677E0 00000000  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805677E4 00000004  4B FF E6 15 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805677E4 00000004  4B FF E6 15 */	bl _unresolved
 /* 805677E8 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 805677EC 0000000C  40 82 00 1C */	bne lbl_80567808
 /* 805677F0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 805677F4 00000014  38 80 02 45 */	li r4, 0x245
-/* 805677F8 00000018  4B FF E6 01 */	bl getNearestActorP__8daNpcT_cFs
+/* 805677F8 00000018  4B FF E6 01 */	bl _unresolved
 /* 805677FC 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80567800 00000020  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 80567804 00000024  4B FF E5 F5 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567804 00000024  4B FF E5 F5 */	bl _unresolved
 lbl_80567808:
 /* 80567808 00000000  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 8056780C 00000004  4B FF E5 ED */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 8056780C 00000004  4B FF E5 ED */	bl _unresolved
 /* 80567810 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80567814 0000000C  40 82 01 C4 */	bne lbl_805679D8
 /* 80567818 00000010  7F E3 FB 78 */	mr r3, r31
 /* 8056781C 00000014  38 80 02 5D */	li r4, 0x25d
-/* 80567820 00000018  4B FF E5 D9 */	bl getNearestActorP__8daNpcT_cFs
+/* 80567820 00000018  4B FF E5 D9 */	bl _unresolved
 /* 80567824 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80567828 00000020  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 8056782C 00000024  4B FF E5 CD */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 8056782C 00000024  4B FF E5 CD */	bl _unresolved
 /* 80567830 00000028  48 00 01 A8 */	b lbl_805679D8
 /* 80567834 0000002C  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 80567838 00000030  4B FF E5 C1 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567838 00000030  4B FF E5 C1 */	bl _unresolved
 /* 8056783C 00000034  28 03 00 00 */	cmplwi r3, 0
 /* 80567840 00000038  40 82 00 1C */	bne lbl_8056785C
 /* 80567844 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80567848 00000040  38 80 02 60 */	li r4, 0x260
-/* 8056784C 00000044  4B FF E5 AD */	bl getNearestActorP__8daNpcT_cFs
+/* 8056784C 00000044  4B FF E5 AD */	bl _unresolved
 /* 80567850 00000048  7C 64 1B 78 */	mr r4, r3
 /* 80567854 0000004C  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 80567858 00000050  4B FF E5 A1 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567858 00000050  4B FF E5 A1 */	bl _unresolved
 lbl_8056785C:
 /* 8056785C 00000000  3B A0 00 00 */	li r29, 0
 lbl_80567860:
@@ -132,101 +132,101 @@ lbl_80567860:
 /* 80567868 00000008  3B C3 10 C8 */	addi r30, r3, 0x10c8
 /* 8056786C 0000000C  7F DF F2 14 */	add r30, r31, r30
 /* 80567870 00000010  7F C3 F3 78 */	mr r3, r30
-/* 80567874 00000014  4B FF E5 85 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567874 00000014  4B FF E5 85 */	bl _unresolved
 /* 80567878 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 8056787C 0000001C  40 82 00 20 */	bne lbl_8056789C
 /* 80567880 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80567884 00000024  38 80 00 0F */	li r4, 0xf
 /* 80567888 00000028  7F A5 EB 78 */	mr r5, r29
-/* 8056788C 0000002C  4B FF E5 6D */	bl getEvtAreaTagP__8daNpcT_cFii
+/* 8056788C 0000002C  4B FF E5 6D */	bl _unresolved
 /* 80567890 00000030  7C 64 1B 78 */	mr r4, r3
 /* 80567894 00000034  7F C3 F3 78 */	mr r3, r30
-/* 80567898 00000038  4B FF E5 61 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567898 00000038  4B FF E5 61 */	bl _unresolved
 lbl_8056789C:
 /* 8056789C 00000000  3B BD 00 01 */	addi r29, r29, 1
 /* 805678A0 00000004  2C 1D 00 10 */	cmpwi r29, 0x10
 /* 805678A4 00000008  41 80 FF BC */	blt lbl_80567860
 /* 805678A8 0000000C  48 00 01 30 */	b lbl_805679D8
 /* 805678AC 00000010  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805678B0 00000014  4B FF E5 49 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805678B0 00000014  4B FF E5 49 */	bl _unresolved
 /* 805678B4 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 805678B8 0000001C  40 82 01 20 */	bne lbl_805679D8
 /* 805678BC 00000020  7F E3 FB 78 */	mr r3, r31
 /* 805678C0 00000024  38 80 02 45 */	li r4, 0x245
-/* 805678C4 00000028  4B FF E5 35 */	bl getNearestActorP__8daNpcT_cFs
+/* 805678C4 00000028  4B FF E5 35 */	bl _unresolved
 /* 805678C8 0000002C  7C 64 1B 78 */	mr r4, r3
 /* 805678CC 00000030  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805678D0 00000034  4B FF E5 29 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805678D0 00000034  4B FF E5 29 */	bl _unresolved
 /* 805678D4 00000038  48 00 01 04 */	b lbl_805679D8
 /* 805678D8 0000003C  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 805678DC 00000040  4B FF E5 1D */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805678DC 00000040  4B FF E5 1D */	bl _unresolved
 /* 805678E0 00000044  28 03 00 00 */	cmplwi r3, 0
 /* 805678E4 00000048  40 82 00 1C */	bne lbl_80567900
 /* 805678E8 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 805678EC 00000050  38 80 02 5D */	li r4, 0x25d
-/* 805678F0 00000054  4B FF E5 09 */	bl getNearestActorP__8daNpcT_cFs
+/* 805678F0 00000054  4B FF E5 09 */	bl _unresolved
 /* 805678F4 00000058  7C 64 1B 78 */	mr r4, r3
 /* 805678F8 0000005C  38 7F 10 D8 */	addi r3, r31, 0x10d8
-/* 805678FC 00000060  4B FF E4 FD */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805678FC 00000060  4B FF E4 FD */	bl _unresolved
 lbl_80567900:
 /* 80567900 00000000  38 7F 11 68 */	addi r3, r31, 0x1168
-/* 80567904 00000004  4B FF E4 F5 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567904 00000004  4B FF E4 F5 */	bl _unresolved
 /* 80567908 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 8056790C 0000000C  40 82 00 CC */	bne lbl_805679D8
 /* 80567910 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80567914 00000014  38 80 02 64 */	li r4, 0x264
-/* 80567918 00000018  4B FF E4 E1 */	bl getNearestActorP__8daNpcT_cFs
+/* 80567918 00000018  4B FF E4 E1 */	bl _unresolved
 /* 8056791C 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80567920 00000020  38 7F 11 68 */	addi r3, r31, 0x1168
-/* 80567924 00000024  4B FF E4 D5 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567924 00000024  4B FF E4 D5 */	bl _unresolved
 /* 80567928 00000028  48 00 00 B0 */	b lbl_805679D8
 /* 8056792C 0000002C  38 7F 10 E0 */	addi r3, r31, 0x10e0
-/* 80567930 00000030  4B FF E4 C9 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567930 00000030  4B FF E4 C9 */	bl _unresolved
 /* 80567934 00000034  28 03 00 00 */	cmplwi r3, 0
 /* 80567938 00000038  40 82 00 A0 */	bne lbl_805679D8
 /* 8056793C 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80567940 00000040  38 80 00 18 */	li r4, 0x18
 /* 80567944 00000044  38 A0 00 00 */	li r5, 0
-/* 80567948 00000048  4B FF E4 B1 */	bl getEvtAreaTagP__8daNpcT_cFii
+/* 80567948 00000048  4B FF E4 B1 */	bl _unresolved
 /* 8056794C 0000004C  7C 64 1B 78 */	mr r4, r3
 /* 80567950 00000050  38 7F 10 E0 */	addi r3, r31, 0x10e0
-/* 80567954 00000054  4B FF E4 A5 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567954 00000054  4B FF E4 A5 */	bl _unresolved
 /* 80567958 00000058  48 00 00 80 */	b lbl_805679D8
 /* 8056795C 0000005C  38 7F 11 70 */	addi r3, r31, 0x1170
-/* 80567960 00000060  4B FF E4 99 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80567960 00000060  4B FF E4 99 */	bl _unresolved
 /* 80567964 00000064  28 03 00 00 */	cmplwi r3, 0
 /* 80567968 00000068  40 82 00 70 */	bne lbl_805679D8
 /* 8056796C 0000006C  7F E3 FB 78 */	mr r3, r31
 /* 80567970 00000070  38 80 02 62 */	li r4, 0x262
-/* 80567974 00000074  4B FF E4 85 */	bl getNearestActorP__8daNpcT_cFs
+/* 80567974 00000074  4B FF E4 85 */	bl _unresolved
 /* 80567978 00000078  7C 64 1B 78 */	mr r4, r3
 /* 8056797C 0000007C  38 7F 11 70 */	addi r3, r31, 0x1170
-/* 80567980 00000080  4B FF E4 79 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80567980 00000080  4B FF E4 79 */	bl _unresolved
 /* 80567984 00000084  48 00 00 54 */	b lbl_805679D8
 /* 80567988 00000088  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 8056798C 0000008C  4B FF E4 6D */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 8056798C 0000008C  4B FF E4 6D */	bl _unresolved
 /* 80567990 00000090  28 03 00 00 */	cmplwi r3, 0
 /* 80567994 00000094  40 82 00 1C */	bne lbl_805679B0
 /* 80567998 00000098  7F E3 FB 78 */	mr r3, r31
 /* 8056799C 0000009C  38 80 02 60 */	li r4, 0x260
-/* 805679A0 000000A0  4B FF E4 59 */	bl getNearestActorP__8daNpcT_cFs
+/* 805679A0 000000A0  4B FF E4 59 */	bl _unresolved
 /* 805679A4 000000A4  7C 64 1B 78 */	mr r4, r3
 /* 805679A8 000000A8  38 7F 10 C8 */	addi r3, r31, 0x10c8
-/* 805679AC 000000AC  4B FF E4 4D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805679AC 000000AC  4B FF E4 4D */	bl _unresolved
 lbl_805679B0:
 /* 805679B0 00000000  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805679B4 00000004  4B FF E4 45 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 805679B4 00000004  4B FF E4 45 */	bl _unresolved
 /* 805679B8 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 805679BC 0000000C  40 82 00 1C */	bne lbl_805679D8
 /* 805679C0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 805679C4 00000014  38 80 02 45 */	li r4, 0x245
-/* 805679C8 00000018  4B FF E4 31 */	bl getNearestActorP__8daNpcT_cFs
+/* 805679C8 00000018  4B FF E4 31 */	bl _unresolved
 /* 805679CC 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 805679D0 00000020  38 7F 10 D0 */	addi r3, r31, 0x10d0
-/* 805679D4 00000024  4B FF E4 25 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 805679D4 00000024  4B FF E4 25 */	bl _unresolved
 lbl_805679D8:
 /* 805679D8 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 805679DC 00000004  4B FF E4 1D */	bl _restgpr_29
+/* 805679DC 00000004  4B FF E4 1D */	bl _unresolved
 /* 805679E0 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 805679E4 0000000C  7C 08 03 A6 */	mtlr r0
 /* 805679E8 00000010  38 21 00 20 */	addi r1, r1, 0x20

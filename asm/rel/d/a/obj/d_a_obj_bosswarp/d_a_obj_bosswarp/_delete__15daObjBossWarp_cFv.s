@@ -7,10 +7,10 @@ lbl_8057B23C:
 /* 8057B250 00000014  38 80 00 00 */	li r4, 0
 /* 8057B254 00000018  4B FF EB B5 */	bl disappear__15daObjBossWarp_cFi
 /* 8057B258 0000001C  38 7F 05 68 */	addi r3, r31, 0x568
-/* 8057B25C 00000020  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 8057B260 00000024  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 8057B25C 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8057B260 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8057B264 00000028  80 84 00 00 */	lwz r4, 0(r4)
-/* 8057B268 0000002C  4B FF E3 B1 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8057B268 0000002C  4B FF E3 B1 */	bl _unresolved
 /* 8057B26C 00000030  38 60 00 01 */	li r3, 1
 /* 8057B270 00000034  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8057B274 00000038  80 01 00 14 */	lwz r0, 0x14(r1)

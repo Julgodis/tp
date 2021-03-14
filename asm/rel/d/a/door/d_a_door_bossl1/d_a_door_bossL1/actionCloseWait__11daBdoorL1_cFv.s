@@ -7,14 +7,14 @@ lbl_804E441C:
 /* 804E4430 00000014  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 804E4434 00000018  28 00 00 03 */	cmplwi r0, 3
 /* 804E4438 0000001C  40 82 00 3C */	bne lbl_804E4474
-/* 804E443C 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804E4440 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804E443C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804E4440 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804E4444 00000028  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 804E4448 0000002C  3C 80 00 00 */	lis r4, l_staff_name@ha
-/* 804E444C 00000030  38 84 00 00 */	addi r4, r4, l_staff_name@l
+/* 804E4448 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804E444C 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 804E4450 00000034  38 A0 00 00 */	li r5, 0
 /* 804E4454 00000038  38 C0 00 00 */	li r6, 0
-/* 804E4458 0000003C  4B FF D9 21 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 804E4458 0000003C  4B FF D9 21 */	bl _unresolved
 /* 804E445C 00000040  90 7F 05 A0 */	stw r3, 0x5a0(r31)
 /* 804E4460 00000044  7F E3 FB 78 */	mr r3, r31
 /* 804E4464 00000048  4B FF E7 5D */	bl demoProc__11daBdoorL1_cFv

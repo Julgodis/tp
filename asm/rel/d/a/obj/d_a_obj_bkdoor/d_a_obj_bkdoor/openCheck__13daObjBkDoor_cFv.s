@@ -7,10 +7,10 @@ lbl_80578FC0:
 /* 80578FD4 00000014  88 03 05 BD */	lbz r0, 0x5bd(r3)
 /* 80578FD8 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80578FDC 0000001C  40 82 00 3C */	bne lbl_80579018
-/* 80578FE0 00000020  3C 60 00 00 */	lis r3, search_door__FPvPv@ha
-/* 80578FE4 00000024  38 63 00 00 */	addi r3, r3, search_door__FPvPv@l
+/* 80578FE0 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80578FE4 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80578FE8 00000028  7F E4 FB 78 */	mr r4, r31
-/* 80578FEC 0000002C  4B FF FD 0D */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80578FEC 0000002C  4B FF FD 0D */	bl _unresolved
 /* 80578FF0 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80578FF4 00000034  41 82 00 14 */	beq lbl_80579008
 /* 80578FF8 00000038  A8 63 04 B6 */	lha r3, 0x4b6(r3)

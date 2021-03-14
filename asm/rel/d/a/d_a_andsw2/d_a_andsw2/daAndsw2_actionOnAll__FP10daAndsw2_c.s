@@ -3,7 +3,7 @@ lbl_804D63A4:
 /* 804D63A8 00000004  7C 08 02 A6 */	mflr r0
 /* 804D63AC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804D63B0 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 804D63B4 00000010  4B FF FA 25 */	bl _savegpr_29
+/* 804D63B4 00000010  4B FF FA 25 */	bl _unresolved
 /* 804D63B8 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 804D63BC 00000018  3B A0 00 00 */	li r29, 0
 /* 804D63C0 0000001C  4B FF FA 5D */	bl getType__10daAndsw2_cFv
@@ -42,10 +42,10 @@ lbl_804D642C:
 /* 804D6434 00000008  7F E3 FB 78 */	mr r3, r31
 /* 804D6438 0000000C  4B FF F9 CD */	bl getSwbit__10daAndsw2_cFv
 /* 804D643C 00000010  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D6440 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D6444 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D6440 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D6444 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D6448 0000001C  7F C5 F3 78 */	mr r5, r30
-/* 804D644C 00000020  4B FF F9 8D */	bl isSwitch__10dSv_info_cCFii
+/* 804D644C 00000020  4B FF F9 8D */	bl _unresolved
 /* 804D6450 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 804D6454 00000028  40 82 00 20 */	bne lbl_804D6474
 /* 804D6458 0000002C  7F E3 FB 78 */	mr r3, r31
@@ -89,10 +89,10 @@ lbl_804D64DC:
 /* 804D64E4 00000008  7F E3 FB 78 */	mr r3, r31
 /* 804D64E8 0000000C  4B FF F9 1D */	bl getSwbit__10daAndsw2_cFv
 /* 804D64EC 00000010  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D64F0 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D64F4 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D64F0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D64F4 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D64F8 0000001C  7F C5 F3 78 */	mr r5, r30
-/* 804D64FC 00000020  4B FF F8 DD */	bl onSwitch__10dSv_info_cFii
+/* 804D64FC 00000020  4B FF F8 DD */	bl _unresolved
 /* 804D6500 00000024  7F E3 FB 78 */	mr r3, r31
 /* 804D6504 00000028  4B FF F9 19 */	bl getType__10daAndsw2_cFv
 /* 804D6508 0000002C  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -123,7 +123,7 @@ lbl_804D6548:
 lbl_804D6564:
 /* 804D6564 00000000  38 60 00 01 */	li r3, 1
 /* 804D6568 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 804D656C 00000008  4B FF F8 6D */	bl _restgpr_29
+/* 804D656C 00000008  4B FF F8 6D */	bl _unresolved
 /* 804D6570 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 804D6574 00000010  7C 08 03 A6 */	mtlr r0
 /* 804D6578 00000014  38 21 00 20 */	addi r1, r1, 0x20

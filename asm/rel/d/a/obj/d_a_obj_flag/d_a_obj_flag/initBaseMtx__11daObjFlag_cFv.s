@@ -5,12 +5,12 @@ lbl_80BEB8F0:
 /* 80BEB8FC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BEB900 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80BEB904 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80BEB908 00000018  4B FF FE 51 */	bl transS__14mDoMtx_stack_cFRC4cXyz
-/* 80BEB90C 0000001C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80BEB910 00000020  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BEB908 00000018  4B FF FE 51 */	bl _unresolved
+/* 80BEB90C 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEB910 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEB914 00000024  80 9F 05 6C */	lwz r4, 0x56c(r31)
 /* 80BEB918 00000028  38 84 00 24 */	addi r4, r4, 0x24
-/* 80BEB91C 0000002C  4B FF FE 3D */	bl PSMTXCopy
+/* 80BEB91C 0000002C  4B FF FE 3D */	bl _unresolved
 /* 80BEB920 00000030  80 7F 05 6C */	lwz r3, 0x56c(r31)
 /* 80BEB924 00000034  38 03 00 24 */	addi r0, r3, 0x24
 /* 80BEB928 00000038  90 1F 05 04 */	stw r0, 0x504(r31)
@@ -18,16 +18,16 @@ lbl_80BEB8F0:
 /* 80BEB930 00000040  28 00 00 00 */	cmplwi r0, 0
 /* 80BEB934 00000044  41 82 00 3C */	beq lbl_80BEB970
 /* 80BEB938 00000048  38 7F 05 D0 */	addi r3, r31, 0x5d0
-/* 80BEB93C 0000004C  4B FF FE 1D */	bl transS__14mDoMtx_stack_cFRC4cXyz
-/* 80BEB940 00000050  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80BEB944 00000054  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BEB93C 0000004C  4B FF FE 1D */	bl _unresolved
+/* 80BEB940 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEB944 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEB948 00000058  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
-/* 80BEB94C 0000005C  4B FF FE 0D */	bl mDoMtx_YrotM__FPA4_fs
-/* 80BEB950 00000060  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80BEB954 00000064  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BEB94C 0000005C  4B FF FE 0D */	bl _unresolved
+/* 80BEB950 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEB954 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEB958 00000068  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80BEB95C 0000006C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80BEB960 00000070  4B FF FD F9 */	bl PSMTXCopy
+/* 80BEB960 00000070  4B FF FD F9 */	bl _unresolved
 /* 80BEB964 00000074  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80BEB968 00000078  38 03 00 24 */	addi r0, r3, 0x24
 /* 80BEB96C 0000007C  90 1F 05 04 */	stw r0, 0x504(r31)

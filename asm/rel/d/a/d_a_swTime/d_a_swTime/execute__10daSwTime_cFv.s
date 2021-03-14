@@ -7,29 +7,29 @@ lbl_80D4F6C8:
 /* 80D4F6DC 00000014  88 83 05 6A */	lbz r4, 0x56a(r3)
 /* 80D4F6E0 00000018  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D4F6E4 0000001C  41 82 00 28 */	beq lbl_80D4F70C
-/* 80D4F6E8 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4F6EC 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4F6E8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4F6EC 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4F6F0 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4F6F4 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80D4F6F8 00000030  4B FF FF 21 */	bl isSwitch__10dSv_info_cCFii
+/* 80D4F6F8 00000030  4B FF FF 21 */	bl _unresolved
 /* 80D4F6FC 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 80D4F700 00000038  40 82 00 0C */	bne lbl_80D4F70C
 /* 80D4F704 0000003C  38 60 00 01 */	li r3, 1
 /* 80D4F708 00000040  48 00 00 3C */	b lbl_80D4F744
 lbl_80D4F70C:
-/* 80D4F70C 00000000  4B FF FF 0D */	bl dKy_getdaytime_hour__Fv
+/* 80D4F70C 00000000  4B FF FF 0D */	bl _unresolved
 /* 80D4F710 00000004  88 1F 05 68 */	lbz r0, 0x568(r31)
 /* 80D4F714 00000008  7C 00 18 00 */	cmpw r0, r3
 /* 80D4F718 0000000C  40 82 00 28 */	bne lbl_80D4F740
-/* 80D4F71C 00000010  4B FF FE FD */	bl dKy_getdaytime_minute__Fv
+/* 80D4F71C 00000010  4B FF FE FD */	bl _unresolved
 /* 80D4F720 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80D4F724 00000018  40 82 00 1C */	bne lbl_80D4F740
-/* 80D4F728 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4F72C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4F728 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4F72C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4F730 00000024  88 9F 05 69 */	lbz r4, 0x569(r31)
 /* 80D4F734 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4F738 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80D4F73C 00000030  4B FF FE DD */	bl onSwitch__10dSv_info_cFii
+/* 80D4F73C 00000030  4B FF FE DD */	bl _unresolved
 lbl_80D4F740:
 /* 80D4F740 00000000  38 60 00 01 */	li r3, 1
 lbl_80D4F744:

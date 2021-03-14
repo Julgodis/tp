@@ -14,10 +14,10 @@ lbl_809A7F3C:
 /* 809A7F6C 00000030  88 1F 0A 89 */	lbz r0, 0xa89(r31)
 /* 809A7F70 00000034  28 00 00 00 */	cmplwi r0, 0
 /* 809A7F74 00000038  41 82 00 0C */	beq lbl_809A7F80
-/* 809A7F78 0000003C  4B FF EC 81 */	bl dKy_getDarktime_hour__Fv
+/* 809A7F78 0000003C  4B FF EC 81 */	bl _unresolved
 /* 809A7F7C 00000040  48 00 00 08 */	b lbl_809A7F84
 lbl_809A7F80:
-/* 809A7F80 00000000  4B FF EC 79 */	bl dKy_getdaytime_hour__Fv
+/* 809A7F80 00000000  4B FF EC 79 */	bl _unresolved
 lbl_809A7F84:
 /* 809A7F84 00000000  38 00 00 00 */	li r0, 0
 /* 809A7F88 00000004  98 1F 0E 25 */	stb r0, 0xe25(r31)
@@ -67,7 +67,7 @@ lbl_809A800C:
 /* 809A801C 00000010  88 1F 0E 25 */	lbz r0, 0xe25(r31)
 /* 809A8020 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 809A8024 00000018  40 82 00 1C */	bne lbl_809A8040
-/* 809A8028 0000001C  4B FF EB D1 */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 809A8028 0000001C  4B FF EB D1 */	bl _unresolved
 /* 809A802C 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 809A8030 00000024  40 82 00 14 */	bne lbl_809A8044
 /* 809A8034 00000028  88 1F 0A 89 */	lbz r0, 0xa89(r31)
@@ -86,7 +86,7 @@ lbl_809A8058:
 /* 809A805C 00000004  88 1F 0E 25 */	lbz r0, 0xe25(r31)
 /* 809A8060 00000008  28 00 00 00 */	cmplwi r0, 0
 /* 809A8064 0000000C  40 82 00 1C */	bne lbl_809A8080
-/* 809A8068 00000010  4B FF EB 91 */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 809A8068 00000010  4B FF EB 91 */	bl _unresolved
 /* 809A806C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 809A8070 00000018  40 82 00 14 */	bne lbl_809A8084
 /* 809A8074 0000001C  88 1F 0A 89 */	lbz r0, 0xa89(r31)

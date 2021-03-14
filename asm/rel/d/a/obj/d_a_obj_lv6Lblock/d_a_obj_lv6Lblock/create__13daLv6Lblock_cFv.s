@@ -10,9 +10,9 @@ lbl_80C73558:
 /* 80C73578 00000020  40 82 00 28 */	bne lbl_80C735A0
 /* 80C7357C 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80C73580 00000028  41 82 00 14 */	beq lbl_80C73594
-/* 80C73584 0000002C  4B FF FD D5 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80C73588 00000030  3C 60 00 00 */	lis r3, __vt__13daLv6Lblock_c@ha
-/* 80C7358C 00000034  38 03 00 00 */	addi r0, r3, __vt__13daLv6Lblock_c@l
+/* 80C73584 0000002C  4B FF FD D5 */	bl _unresolved
+/* 80C73588 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C7358C 00000034  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C73590 00000038  90 1E 05 9C */	stw r0, 0x59c(r30)
 lbl_80C73594:
 /* 80C73594 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
@@ -20,21 +20,21 @@ lbl_80C73594:
 /* 80C7359C 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_80C735A0:
 /* 80C735A0 00000000  38 7E 05 A0 */	addi r3, r30, 0x5a0
-/* 80C735A4 00000004  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80C735A8 00000008  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80C735AC 0000000C  4B FF FD AD */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C735A4 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C735A8 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C735AC 0000000C  4B FF FD AD */	bl _unresolved
 /* 80C735B0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C735B4 00000014  2C 1F 00 04 */	cmpwi r31, 4
 /* 80C735B8 00000018  40 82 00 EC */	bne lbl_80C736A4
 /* 80C735BC 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80C735C0 00000020  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80C735C4 00000024  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80C735C0 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C735C4 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C735C8 00000028  38 A0 00 07 */	li r5, 7
-/* 80C735CC 0000002C  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
-/* 80C735D0 00000030  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
+/* 80C735CC 0000002C  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80C735D0 00000030  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80C735D4 00000034  38 E0 0D 80 */	li r7, 0xd80
 /* 80C735D8 00000038  39 00 00 00 */	li r8, 0
-/* 80C735DC 0000003C  4B FF FD 7D */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80C735DC 0000003C  4B FF FD 7D */	bl _unresolved
 /* 80C735E0 00000040  2C 03 00 05 */	cmpwi r3, 5
 /* 80C735E4 00000044  40 82 00 0C */	bne lbl_80C735F0
 /* 80C735E8 00000048  38 60 00 05 */	li r3, 5
@@ -46,7 +46,7 @@ lbl_80C735F0:
 /* 80C735FC 0000000C  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80C73600 00000010  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C73604 00000014  7F C3 F3 78 */	mr r3, r30
-/* 80C73608 00000018  4B FF FD 51 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80C73608 00000018  4B FF FD 51 */	bl _unresolved
 /* 80C7360C 0000001C  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C73610 00000020  54 00 A7 3E */	rlwinm r0, r0, 0x14, 0x1c, 0x1f
 /* 80C73614 00000024  98 1E 05 AD */	stb r0, 0x5ad(r30)
@@ -63,13 +63,13 @@ lbl_80C7362C:
 /* 80C7363C 00000010  98 7E 05 AF */	stb r3, 0x5af(r30)
 /* 80C73640 00000014  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C73644 00000018  54 00 D6 BA */	rlwinm r0, r0, 0x1a, 0x1a, 0x1d
-/* 80C73648 0000001C  3C 60 00 00 */	lis r3, l_liftUpMax@ha
-/* 80C7364C 00000020  38 63 00 00 */	addi r3, r3, l_liftUpMax@l
+/* 80C73648 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C7364C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C73650 00000024  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80C73654 00000028  D0 1E 05 B0 */	stfs f0, 0x5b0(r30)
 /* 80C73658 0000002C  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
-/* 80C7365C 00000030  3C 60 00 00 */	lis r3, lit_3709@ha
-/* 80C73660 00000034  C0 03 00 00 */	lfs f0, lit_3709@l(r3)
+/* 80C7365C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C73660 00000034  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80C73664 00000038  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80C73668 0000003C  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 /* 80C7366C 00000040  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)

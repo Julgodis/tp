@@ -2,8 +2,8 @@ lbl_80B3FCE8:
 /* 80B3FCE8 00000000  94 21 FC E0 */	stwu r1, -0x320(r1)
 /* 80B3FCEC 00000004  7C 08 02 A6 */	mflr r0
 /* 80B3FCF0 00000008  90 01 03 24 */	stw r0, 0x324(r1)
-/* 80B3FCF4 0000000C  3C 80 00 00 */	lis r4, m__21daNpcWrestler_Param_c@ha
-/* 80B3FCF8 00000010  38 84 00 00 */	addi r4, r4, m__21daNpcWrestler_Param_c@l
+/* 80B3FCF4 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B3FCF8 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80B3FCFC 00000014  80 A4 02 68 */	lwz r5, 0x268(r4)
 /* 80B3FD00 00000018  80 04 02 6C */	lwz r0, 0x26c(r4)
 /* 80B3FD04 0000001C  90 A1 02 94 */	stw r5, 0x294(r1)
@@ -512,7 +512,7 @@ lbl_80B403C4:
 /* 80B404DC 00000118  A8 03 09 DA */	lha r0, 0x9da(r3)
 /* 80B404E0 0000011C  B0 03 0E 92 */	sth r0, 0xe92(r3)
 /* 80B404E4 00000120  38 81 02 A0 */	addi r4, r1, 0x2a0
-/* 80B404E8 00000124  4B FE ED 11 */	bl playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80B404E8 00000124  4B FE ED 11 */	bl _unresolved
 lbl_80B404EC:
 /* 80B404EC 00000000  80 01 03 24 */	lwz r0, 0x324(r1)
 /* 80B404F0 00000004  7C 08 03 A6 */	mtlr r0

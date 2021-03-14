@@ -3,12 +3,12 @@ lbl_8062A71C:
 /* 8062A720 00000004  7C 08 02 A6 */	mflr r0
 /* 8062A724 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8062A728 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8062A72C 00000010  4B FF 44 2D */	bl _savegpr_28
+/* 8062A72C 00000010  4B FF 44 2D */	bl _unresolved
 /* 8062A730 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8062A734 00000018  3C 80 00 00 */	lis r4, lit_3920@ha
-/* 8062A738 0000001C  3B A4 00 00 */	addi r29, r4, lit_3920@l
-/* 8062A73C 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 8062A740 00000024  3B C4 00 00 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 8062A734 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8062A738 0000001C  3B A4 00 00 */	addi r29, r4, 0x0000 /* 0x00000000@l */
+/* 8062A73C 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8062A740 00000024  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 8062A744 00000028  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 8062A748 0000002C  80 03 06 F4 */	lwz r0, 0x6f4(r3)
 /* 8062A74C 00000030  2C 00 00 0A */	cmpwi r0, 0xa
@@ -88,7 +88,7 @@ lbl_8062A824:
 /* 8062A860 0000003C  40 82 00 90 */	bne lbl_8062A8F0
 /* 8062A864 00000040  7F E3 FB 78 */	mr r3, r31
 /* 8062A868 00000044  80 9E 5D AC */	lwz r4, 0x5dac(r30)
-/* 8062A86C 00000048  4B FF 42 ED */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8062A86C 00000048  4B FF 42 ED */	bl _unresolved
 /* 8062A870 0000004C  C0 1D 00 40 */	lfs f0, 0x40(r29)
 /* 8062A874 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8062A878 00000000  40 80 00 78 */	bge lbl_8062A8F0
@@ -107,7 +107,7 @@ lbl_8062A824:
 lbl_8062A8AC:
 /* 8062A8AC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8062A8B0 00000004  80 9E 5D AC */	lwz r4, 0x5dac(r30)
-/* 8062A8B4 00000008  4B FF 42 A5 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8062A8B4 00000008  4B FF 42 A5 */	bl _unresolved
 /* 8062A8B8 0000000C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 8062A8BC 00000010  7C 00 18 50 */	subf r0, r0, r3
 /* 8062A8C0 00000014  7C 00 07 35 */	extsh. r0, r0
@@ -146,7 +146,7 @@ lbl_8062A918:
 /* 8062A934 0000001C  98 1F 0A 91 */	stb r0, 0xa91(r31)
 lbl_8062A938:
 /* 8062A938 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 8062A93C 00000004  4B FF 42 1D */	bl _restgpr_28
+/* 8062A93C 00000004  4B FF 42 1D */	bl _unresolved
 /* 8062A940 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8062A944 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8062A948 00000010  38 21 00 20 */	addi r1, r1, 0x20

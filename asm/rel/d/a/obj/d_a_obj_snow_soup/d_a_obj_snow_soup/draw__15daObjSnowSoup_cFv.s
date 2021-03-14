@@ -4,26 +4,26 @@ lbl_80CDFBC4:
 /* 80CDFBCC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CDFBD0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CDFBD4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CDFBD8 00000014  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80CDFBDC 00000018  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80CDFBD8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDFBDC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDFBE0 0000001C  38 80 00 00 */	li r4, 0
 /* 80CDFBE4 00000020  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80CDFBE8 00000024  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80CDFBEC 00000028  4B FF FC 4D */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80CDFBF0 0000002C  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80CDFBF4 00000030  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80CDFBEC 00000028  4B FF FC 4D */	bl _unresolved
+/* 80CDFBF0 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDFBF4 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDFBF8 00000034  88 1F 05 C0 */	lbz r0, 0x5c0(r31)
 /* 80CDFBFC 00000038  54 00 10 3A */	slwi r0, r0, 2
 /* 80CDFC00 0000003C  7C 9F 02 14 */	add r4, r31, r0
 /* 80CDFC04 00000040  80 84 05 B4 */	lwz r4, 0x5b4(r4)
 /* 80CDFC08 00000044  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CDFC0C 00000048  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80CDFC10 0000004C  4B FF FC 29 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80CDFC10 0000004C  4B FF FC 29 */	bl _unresolved
 /* 80CDFC14 00000050  88 1F 05 C0 */	lbz r0, 0x5c0(r31)
 /* 80CDFC18 00000054  54 00 10 3A */	slwi r0, r0, 2
 /* 80CDFC1C 00000058  7C 7F 02 14 */	add r3, r31, r0
 /* 80CDFC20 0000005C  80 63 05 B4 */	lwz r3, 0x5b4(r3)
-/* 80CDFC24 00000060  4B FF FC 15 */	bl mDoExt_modelUpdate__FP8J3DModel
+/* 80CDFC24 00000060  4B FF FC 15 */	bl _unresolved
 /* 80CDFC28 00000064  38 60 00 01 */	li r3, 1
 /* 80CDFC2C 00000068  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CDFC30 0000006C  80 01 00 14 */	lwz r0, 0x14(r1)

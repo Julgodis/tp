@@ -3,18 +3,18 @@ lbl_8095B48C:
 /* 8095B490 00000004  7C 08 02 A6 */	mflr r0
 /* 8095B494 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8095B498 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8095B49C 00000010  4B FF CD BD */	bl _savegpr_28
+/* 8095B49C 00000010  4B FF CD BD */	bl _unresolved
 /* 8095B4A0 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 8095B4A4 00000018  7C 9D 23 78 */	mr r29, r4
-/* 8095B4A8 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8095B4AC 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8095B4A8 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8095B4AC 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8095B4B0 00000024  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8095B4B4 00000028  7F C3 F3 78 */	mr r3, r30
-/* 8095B4B8 0000002C  3C A0 00 00 */	lis r5, stringBase0@ha
-/* 8095B4BC 00000030  38 A5 00 00 */	addi r5, r5, stringBase0@l
+/* 8095B4B8 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 8095B4BC 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 8095B4C0 00000034  38 A5 00 7B */	addi r5, r5, 0x7b
 /* 8095B4C4 00000038  38 C0 00 03 */	li r6, 3
-/* 8095B4C8 0000003C  4B FF CD 91 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
+/* 8095B4C8 0000003C  4B FF CD 91 */	bl _unresolved
 /* 8095B4CC 00000040  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8095B4D0 00000044  40 82 00 0C */	bne lbl_8095B4DC
 /* 8095B4D4 00000048  38 60 00 00 */	li r3, 0
@@ -22,7 +22,7 @@ lbl_8095B48C:
 lbl_8095B4DC:
 /* 8095B4DC 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8095B4E0 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8095B4E4 00000008  4B FF CD 75 */	bl getIsAddvance__16dEvent_manager_cFi
+/* 8095B4E4 00000008  4B FF CD 75 */	bl _unresolved
 /* 8095B4E8 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 8095B4EC 00000010  41 82 00 84 */	beq lbl_8095B570
 /* 8095B4F0 00000014  80 1F 00 00 */	lwz r0, 0(r31)
@@ -68,7 +68,7 @@ lbl_8095B570:
 /* 8095B570 00000000  38 60 00 00 */	li r3, 0
 lbl_8095B574:
 /* 8095B574 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 8095B578 00000004  4B FF CC E1 */	bl _restgpr_28
+/* 8095B578 00000004  4B FF CC E1 */	bl _unresolved
 /* 8095B57C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8095B580 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8095B584 00000010  38 21 00 20 */	addi r1, r1, 0x20

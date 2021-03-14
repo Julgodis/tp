@@ -18,8 +18,8 @@ lbl_80C18C10:
 /* 80C18C10 00000000  38 60 00 01 */	li r3, 1
 /* 80C18C14 00000004  48 00 00 A0 */	b lbl_80C18CB4
 lbl_80C18C18:
-/* 80C18C18 00000000  3C 60 00 00 */	lis r3, j3dSys@ha
-/* 80C18C1C 00000004  38 63 00 00 */	addi r3, r3, j3dSys@l
+/* 80C18C18 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C18C1C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C18C20 00000008  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80C18C24 0000000C  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 80C18C28 00000010  28 1F 00 00 */	cmplwi r31, 0
@@ -42,22 +42,22 @@ lbl_80C18C40:
 /* 80C18C64 00000024  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80C18C68 00000028  1F C4 00 30 */	mulli r30, r4, 0x30
 /* 80C18C6C 0000002C  7C 60 F2 14 */	add r3, r0, r30
-/* 80C18C70 00000030  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 80C18C74 00000034  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 80C18C78 00000038  4B FF FF 21 */	bl PSMTXCopy
+/* 80C18C70 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C18C74 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C18C78 00000038  4B FF FF 21 */	bl _unresolved
 /* 80C18C7C 0000003C  38 61 00 08 */	addi r3, r1, 8
-/* 80C18C80 00000040  4B FF FF 19 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 80C18C84 00000044  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C18C88 00000048  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C18C80 00000040  4B FF FF 19 */	bl _unresolved
+/* 80C18C84 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C18C88 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C18C8C 0000004C  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 80C18C90 00000050  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 80C18C94 00000054  7C 80 F2 14 */	add r4, r0, r30
-/* 80C18C98 00000058  4B FF FF 01 */	bl PSMTXCopy
-/* 80C18C9C 0000005C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C18CA0 00000060  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C18CA4 00000064  3C 80 00 00 */	lis r4, mCurrentMtx__6J3DSys@ha
-/* 80C18CA8 00000068  38 84 00 00 */	addi r4, r4, mCurrentMtx__6J3DSys@l
-/* 80C18CAC 0000006C  4B FF FE ED */	bl PSMTXCopy
+/* 80C18C98 00000058  4B FF FF 01 */	bl _unresolved
+/* 80C18C9C 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C18CA0 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C18CA4 00000064  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C18CA8 00000068  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C18CAC 0000006C  4B FF FE ED */	bl _unresolved
 /* 80C18CB0 00000070  38 60 00 01 */	li r3, 1
 lbl_80C18CB4:
 /* 80C18CB4 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

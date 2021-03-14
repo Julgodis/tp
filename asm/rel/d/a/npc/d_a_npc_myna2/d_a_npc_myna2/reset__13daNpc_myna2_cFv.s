@@ -5,15 +5,15 @@ lbl_80A85160:
 /* 80A8516C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80A85170 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80A85174 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80A85178 00000018  3C 80 00 00 */	lis r4, m__19daNpc_myna2_Param_c@ha
-/* 80A8517C 0000001C  3B E4 00 00 */	addi r31, r4, m__19daNpc_myna2_Param_c@l
-/* 80A85180 00000020  4B FF EC 79 */	bl initialize__8daNpcF_cFv
+/* 80A85178 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A8517C 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80A85180 00000020  4B FF EC 79 */	bl _unresolved
 /* 80A85184 00000024  38 7E 0B 4C */	addi r3, r30, 0xb4c
-/* 80A85188 00000028  4B FF EC 71 */	bl initialize__15daNpcF_Lookat_cFv
+/* 80A85188 00000028  4B FF EC 71 */	bl _unresolved
 /* 80A8518C 0000002C  38 7E 0C 78 */	addi r3, r30, 0xc78
-/* 80A85190 00000030  4B FF EC 69 */	bl initialize__18daNpcF_ActorMngr_cFv
-/* 80A85194 00000034  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 80A85198 00000038  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 80A85190 00000030  4B FF EC 69 */	bl _unresolved
+/* 80A85194 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A85198 00000038  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80A8519C 0000003C  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A851A0 00000040  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A851A4 00000044  90 7E 0D C0 */	stw r3, 0xdc0(r30)
@@ -114,13 +114,13 @@ lbl_80A852E4:
 /* 80A85314 00000030  28 00 00 01 */	cmplwi r0, 1
 /* 80A85318 00000034  40 82 00 10 */	bne lbl_80A85328
 /* 80A8531C 00000038  38 60 00 4A */	li r3, 0x4a
-/* 80A85320 0000003C  4B FF EA D9 */	bl daNpcF_offTmpBit__FUl
+/* 80A85320 0000003C  4B FF EA D9 */	bl _unresolved
 /* 80A85324 00000040  48 00 00 14 */	b lbl_80A85338
 lbl_80A85328:
 /* 80A85328 00000000  28 00 00 03 */	cmplwi r0, 3
 /* 80A8532C 00000004  40 82 00 0C */	bne lbl_80A85338
 /* 80A85330 00000008  38 60 00 4B */	li r3, 0x4b
-/* 80A85334 0000000C  4B FF EA C5 */	bl daNpcF_offTmpBit__FUl
+/* 80A85334 0000000C  4B FF EA C5 */	bl _unresolved
 lbl_80A85338:
 /* 80A85338 00000000  38 00 00 01 */	li r0, 1
 /* 80A8533C 00000004  98 1E 09 EE */	stb r0, 0x9ee(r30)

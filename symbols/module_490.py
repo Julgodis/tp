@@ -3,32 +3,88 @@
 # Module: 490
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C31460, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C3148C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C314B8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
-	'daObj_Kage_Draw__FP14obj_kage_class': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C314D8, 'size': 0x0064, 'padding': 0x00, 'name': "daObj_Kage_Draw__FP14obj_kage_class", 'reference_count': 1, 'type': "Function"},
-	'daObj_Kage_Execute__FP14obj_kage_class': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C3153C, 'size': 0x0228, 'padding': 0x00, 'name': "daObj_Kage_Execute__FP14obj_kage_class", 'reference_count': 2, 'type': "Function"},
-	'daObj_Kage_IsDelete__FP14obj_kage_class': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C31764, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Kage_IsDelete__FP14obj_kage_class", 'reference_count': 1, 'type': "Function"},
-	'daObj_Kage_Delete__FP14obj_kage_class': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C3176C, 'size': 0x0030, 'padding': 0x00, 'name': "daObj_Kage_Delete__FP14obj_kage_class", 'reference_count': 1, 'type': "Function"},
-	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C3179C, 'size': 0x006C, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'daObj_Kage_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".text", 'addr': 0x80C31808, 'size': 0x014C, 'padding': 0x00, 'name': "daObj_Kage_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80C31954': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80C31954, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80C31958': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80C31958, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3854': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C3195C, 'size': 0x0004, 'padding': 0x00, 'name': "@3854", 'reference_count': 0, 'type': "InitData"},
-	'lit_3855': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31960, 'size': 0x0004, 'padding': 0x00, 'name': "@3855", 'reference_count': 0, 'type': "Integer"},
-	'lit_3856': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31964, 'size': 0x0004, 'padding': 0x00, 'name': "@3856", 'reference_count': 0, 'type': "Integer"},
-	'lit_3857': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31968, 'size': 0x0004, 'padding': 0x00, 'name': "@3857", 'reference_count': 0, 'type': "Integer"},
-	'lit_3858': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C3196C, 'size': 0x0004, 'padding': 0x00, 'name': "@3858", 'reference_count': 0, 'type': "Integer"},
-	'lit_3859': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31970, 'size': 0x0004, 'padding': 0x00, 'name': "@3859", 'reference_count': 0, 'type': "Integer"},
-	'lit_3860': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31974, 'size': 0x0004, 'padding': 0x00, 'name': "@3860", 'reference_count': 0, 'type': "Integer"},
-	'lit_3861': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31978, 'size': 0x0004, 'padding': 0x00, 'name': "@3861", 'reference_count': 0, 'type': "Integer"},
-	'lit_3862': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C3197C, 'size': 0x0004, 'padding': 0x00, 'name': "@3862", 'reference_count': 0, 'type': "Integer"},
-	'lit_3863': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31980, 'size': 0x0004, 'padding': 0x00, 'name': "@3863", 'reference_count': 0, 'type': "Integer"},
-	'lit_3864': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31984, 'size': 0x0004, 'padding': 0x00, 'name': "@3864", 'reference_count': 0, 'type': "Integer"},
-	'lit_3926': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31988, 'size': 0x0004, 'padding': 0x00, 'name': "@3926", 'reference_count': 0, 'type': "Integer"},
-	'lit_3927': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C3198C, 'size': 0x0004, 'padding': 0x00, 'name': "@3927", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".rodata", 'addr': 0x80C31990, 'size': 0x0009, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'l_daObj_Kage_Method': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".data", 'addr': 0x80C3199C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Kage_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_OBJ_KAGE': {'library': "d/a/obj/d_a_obj_kage", 'translation_unit': "d_a_obj_kage", 'section': ".data", 'addr': 0x80C319BC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_KAGE", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_kage",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_kage",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80C31460,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C3148C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C314B8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':7,'type':"Function"},
+	{'addr':0x80C314D8,'size':100,'pad':0,'label':"daObj_Kage_Draw__FP14obj_kage_class",'name':"daObj_Kage_Draw__FP14obj_kage_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C3153C,'size':552,'pad':0,'label':"daObj_Kage_Execute__FP14obj_kage_class",'name':"daObj_Kage_Execute__FP14obj_kage_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C31764,'size':8,'pad':0,'label':"daObj_Kage_IsDelete__FP14obj_kage_class",'name':"daObj_Kage_IsDelete__FP14obj_kage_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C3176C,'size':48,'pad':0,'label':"daObj_Kage_Delete__FP14obj_kage_class",'name':"daObj_Kage_Delete__FP14obj_kage_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C3179C,'size':108,'pad':0,'label':"useHeapInit__FP10fopAc_ac_c",'name':"useHeapInit__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C31808,'size':332,'pad':0,'label':"daObj_Kage_Create__FP10fopAc_ac_c",'name':"daObj_Kage_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C31954,'size':4,'pad':0,'label':"data_80C31954",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80C31958,'size':4,'pad':0,'label':"data_80C31958",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80C3195C,'size':4,'pad':0,'label':"lit_3854",'name':"@3854",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80C31960,'size':4,'pad':0,'label':"lit_3855",'name':"@3855",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31964,'size':4,'pad':0,'label':"lit_3856",'name':"@3856",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31968,'size':4,'pad':0,'label':"lit_3857",'name':"@3857",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C3196C,'size':4,'pad':0,'label':"lit_3858",'name':"@3858",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31970,'size':4,'pad':0,'label':"lit_3859",'name':"@3859",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31974,'size':4,'pad':0,'label':"lit_3860",'name':"@3860",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31978,'size':4,'pad':0,'label':"lit_3861",'name':"@3861",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C3197C,'size':4,'pad':0,'label':"lit_3862",'name':"@3862",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31980,'size':4,'pad':0,'label':"lit_3863",'name':"@3863",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31984,'size':4,'pad':0,'label':"lit_3864",'name':"@3864",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31988,'size':4,'pad':0,'label':"lit_3926",'name':"@3926",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C3198C,'size':4,'pad':0,'label':"lit_3927",'name':"@3927",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C31990,'size':9,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80C3199C,'size':32,'pad':0,'label':"l_daObj_Kage_Method",'name':"l_daObj_Kage_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80C319BC,'size':48,'pad':0,'label':"g_profile_OBJ_KAGE",'name':"g_profile_OBJ_KAGE",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daObj_Kage_Draw__FP14obj_kage_class":3,
+	"daObj_Kage_Execute__FP14obj_kage_class":4,
+	"daObj_Kage_IsDelete__FP14obj_kage_class":5,
+	"daObj_Kage_Delete__FP14obj_kage_class":6,
+	"useHeapInit__FP10fopAc_ac_c":7,
+	"daObj_Kage_Create__FP10fopAc_ac_c":8,
+	"data_80C31954":9,
+	"data_80C31958":10,
+	"lit_3854":11,
+	"lit_3855":12,
+	"lit_3856":13,
+	"lit_3857":14,
+	"lit_3858":15,
+	"lit_3859":16,
+	"lit_3860":17,
+	"lit_3861":18,
+	"lit_3862":19,
+	"lit_3863":20,
+	"lit_3864":21,
+	"lit_3926":22,
+	"lit_3927":23,
+	"stringBase0":24,
+	"l_daObj_Kage_Method":25,
+	"g_profile_OBJ_KAGE":26,
 }
+

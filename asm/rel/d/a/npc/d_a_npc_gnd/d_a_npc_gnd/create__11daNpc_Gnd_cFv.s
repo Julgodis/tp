@@ -3,12 +3,12 @@ lbl_809BB730:
 /* 809BB734 00000004  7C 08 02 A6 */	mflr r0
 /* 809BB738 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 809BB73C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 809BB740 00000010  4B FF FE 39 */	bl _savegpr_29
+/* 809BB740 00000010  4B FF FE 39 */	bl _unresolved
 /* 809BB744 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 809BB748 00000018  3C 80 00 00 */	lis r4, m__17daNpc_Gnd_Param_c@ha
-/* 809BB74C 0000001C  3B E4 00 00 */	addi r31, r4, m__17daNpc_Gnd_Param_c@l
-/* 809BB750 00000020  3C 80 00 00 */	lis r4, cNullVec__6Z2Calc@ha
-/* 809BB754 00000024  3B C4 00 00 */	addi r30, r4, cNullVec__6Z2Calc@l
+/* 809BB748 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809BB74C 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 809BB750 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809BB754 00000024  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 809BB758 00000028  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 809BB75C 0000002C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 809BB760 00000030  40 82 00 40 */	bne lbl_809BB7A0
@@ -43,15 +43,15 @@ lbl_809BB7A0:
 /* 809BB7CC 0000002C  38 9E 00 44 */	addi r4, r30, 0x44
 /* 809BB7D0 00000030  7C 84 00 2E */	lwzx r4, r4, r0
 /* 809BB7D4 00000034  38 BE 00 38 */	addi r5, r30, 0x38
-/* 809BB7D8 00000038  4B FF FD A1 */	bl loadRes__8daNpcT_cFPCScPPCc
+/* 809BB7D8 00000038  4B FF FD A1 */	bl _unresolved
 /* 809BB7DC 0000003C  7C 7E 1B 78 */	mr r30, r3
 /* 809BB7E0 00000040  2C 1E 00 04 */	cmpwi r30, 4
 /* 809BB7E4 00000044  40 82 01 D4 */	bne lbl_809BB9B8
 /* 809BB7E8 00000048  7F A3 EB 78 */	mr r3, r29
-/* 809BB7EC 0000004C  3C 80 00 00 */	lis r4, createHeapCallBack__11daNpc_Gnd_cFP10fopAc_ac_c@ha
-/* 809BB7F0 00000050  38 84 00 00 */	addi r4, r4, createHeapCallBack__11daNpc_Gnd_cFP10fopAc_ac_c@l
+/* 809BB7EC 0000004C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809BB7F0 00000050  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 809BB7F4 00000054  38 A0 00 00 */	li r5, 0
-/* 809BB7F8 00000058  4B FF FD 81 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 809BB7F8 00000058  4B FF FD 81 */	bl _unresolved
 /* 809BB7FC 0000005C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809BB800 00000060  40 82 00 0C */	bne lbl_809BB80C
 /* 809BB804 00000064  38 60 00 05 */	li r3, 5
@@ -75,7 +75,7 @@ lbl_809BB824:
 /* 809BB844 00000020  C0 9F 00 94 */	lfs f4, 0x94(r31)
 /* 809BB848 00000024  C0 BF 00 98 */	lfs f5, 0x98(r31)
 /* 809BB84C 00000028  FC C0 20 90 */	fmr f6, f4
-/* 809BB850 0000002C  4B FF FD 29 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 809BB850 0000002C  4B FF FD 29 */	bl _unresolved
 /* 809BB854 00000030  80 1D 04 9C */	lwz r0, 0x49c(r29)
 /* 809BB858 00000034  64 00 08 00 */	oris r0, r0, 0x800
 /* 809BB85C 00000038  90 1D 04 9C */	stw r0, 0x49c(r29)
@@ -84,7 +84,7 @@ lbl_809BB824:
 /* 809BB868 00000044  38 BD 05 38 */	addi r5, r29, 0x538
 /* 809BB86C 00000048  38 C0 00 03 */	li r6, 3
 /* 809BB870 0000004C  38 E0 00 01 */	li r7, 1
-/* 809BB874 00000050  4B FF FD 05 */	bl init__10Z2CreatureFP3VecP3VecUcUc
+/* 809BB874 00000050  4B FF FD 05 */	bl _unresolved
 /* 809BB878 00000054  38 1D 04 E4 */	addi r0, r29, 0x4e4
 /* 809BB87C 00000058  90 01 00 08 */	stw r0, 8(r1)
 /* 809BB880 0000005C  38 7D 06 8C */	addi r3, r29, 0x68c
@@ -95,7 +95,7 @@ lbl_809BB824:
 /* 809BB894 00000070  39 1D 08 A0 */	addi r8, r29, 0x8a0
 /* 809BB898 00000074  39 3D 04 F8 */	addi r9, r29, 0x4f8
 /* 809BB89C 00000078  39 5D 04 DC */	addi r10, r29, 0x4dc
-/* 809BB8A0 0000007C  4B FF FC D9 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 809BB8A0 0000007C  4B FF FC D9 */	bl _unresolved
 /* 809BB8A4 00000080  38 7D 08 64 */	addi r3, r29, 0x864
 /* 809BB8A8 00000084  38 9F 00 00 */	addi r4, r31, 0
 /* 809BB8AC 00000088  C0 04 00 10 */	lfs f0, 0x10(r4)
@@ -104,21 +104,21 @@ lbl_809BB824:
 /* 809BB8B8 00000094  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 809BB8BC 00000098  38 A0 00 00 */	li r5, 0
 /* 809BB8C0 0000009C  7F A6 EB 78 */	mr r6, r29
-/* 809BB8C4 000000A0  4B FF FC B5 */	bl Init__9dCcD_SttsFiiP10fopAc_ac_c
+/* 809BB8C4 000000A0  4B FF FC B5 */	bl _unresolved
 /* 809BB8C8 000000A4  38 7D 0E 44 */	addi r3, r29, 0xe44
-/* 809BB8CC 000000A8  3C 80 00 00 */	lis r4, mCcDCyl__8daNpcT_c@ha
-/* 809BB8D0 000000AC  38 84 00 00 */	addi r4, r4, mCcDCyl__8daNpcT_c@l
-/* 809BB8D4 000000B0  4B FF FC A5 */	bl Set__8dCcD_CylFRC11dCcD_SrcCyl
+/* 809BB8CC 000000A8  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809BB8D0 000000AC  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809BB8D4 000000B0  4B FF FC A5 */	bl _unresolved
 /* 809BB8D8 000000B4  38 1D 08 64 */	addi r0, r29, 0x864
 /* 809BB8DC 000000B8  90 1D 0E 88 */	stw r0, 0xe88(r29)
-/* 809BB8E0 000000BC  3C 60 00 00 */	lis r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@ha
-/* 809BB8E4 000000C0  38 03 00 00 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
+/* 809BB8E0 000000BC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809BB8E4 000000C0  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809BB8E8 000000C4  90 1D 0E E8 */	stw r0, 0xee8(r29)
 /* 809BB8EC 000000C8  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 809BB8F0 000000CC  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 809BB8F4 000000D0  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809BB8F0 000000CC  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809BB8F4 000000D0  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 809BB8F8 000000D4  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 809BB8FC 000000D8  4B FF FC 7D */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 809BB8FC 000000D8  4B FF FC 7D */	bl _unresolved
 /* 809BB900 000000DC  80 1D 07 68 */	lwz r0, 0x768(r29)
 /* 809BB904 000000E0  90 1D 09 30 */	stw r0, 0x930(r29)
 /* 809BB908 000000E4  80 1D 07 6C */	lwz r0, 0x76c(r29)
@@ -154,9 +154,9 @@ lbl_809BB824:
 /* 809BB980 0000015C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 809BB984 00000160  41 82 00 14 */	beq lbl_809BB998
 /* 809BB988 00000164  7F A3 EB 78 */	mr r3, r29
-/* 809BB98C 00000168  4B FF FB ED */	bl setEnvTevColor__8daNpcT_cFv
+/* 809BB98C 00000168  4B FF FB ED */	bl _unresolved
 /* 809BB990 0000016C  7F A3 EB 78 */	mr r3, r29
-/* 809BB994 00000170  4B FF FB E5 */	bl setRoomNo__8daNpcT_cFv
+/* 809BB994 00000170  4B FF FB E5 */	bl _unresolved
 lbl_809BB998:
 /* 809BB998 00000000  7F A3 EB 78 */	mr r3, r29
 /* 809BB99C 00000004  48 00 06 8D */	bl reset__11daNpc_Gnd_cFv
@@ -170,7 +170,7 @@ lbl_809BB9B8:
 /* 809BB9B8 00000000  7F C3 F3 78 */	mr r3, r30
 lbl_809BB9BC:
 /* 809BB9BC 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 809BB9C0 00000004  4B FF FB B9 */	bl _restgpr_29
+/* 809BB9C0 00000004  4B FF FB B9 */	bl _unresolved
 /* 809BB9C4 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 809BB9C8 0000000C  7C 08 03 A6 */	mtlr r0
 /* 809BB9CC 00000010  38 21 00 30 */	addi r1, r1, 0x30

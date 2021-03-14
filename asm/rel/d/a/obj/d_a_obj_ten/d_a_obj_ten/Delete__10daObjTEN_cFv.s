@@ -5,15 +5,15 @@ lbl_80D0ABCC:
 /* 80D0ABD8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D0ABDC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D0ABE0 00000014  38 7F 0A 5C */	addi r3, r31, 0xa5c
-/* 80D0ABE4 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80D0ABE8 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80D0ABEC 00000020  4B FF DB 4D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D0ABE4 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D0ABE8 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80D0ABEC 00000020  4B FF DB 4D */	bl _unresolved
 /* 80D0ABF0 00000024  88 1F 0A 64 */	lbz r0, 0xa64(r31)
 /* 80D0ABF4 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80D0ABF8 0000002C  41 82 00 10 */	beq lbl_80D0AC08
 /* 80D0ABFC 00000030  38 00 00 00 */	li r0, 0
-/* 80D0AC00 00000034  3C 60 00 00 */	lis r3, data_80D0BAD4@ha
-/* 80D0AC04 00000038  98 03 00 00 */	stb r0, data_80D0BAD4@l(r3)
+/* 80D0AC00 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D0AC04 00000038  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_80D0AC08:
 /* 80D0AC08 00000000  38 7F 09 C4 */	addi r3, r31, 0x9c4
 /* 80D0AC0C 00000004  81 9F 09 C4 */	lwz r12, 0x9c4(r31)

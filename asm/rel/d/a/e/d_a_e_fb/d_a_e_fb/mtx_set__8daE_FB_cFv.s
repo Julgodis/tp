@@ -4,26 +4,26 @@ lbl_806B80A4:
 /* 806B80AC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806B80B0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806B80B4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 806B80B8 00000014  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 806B80BC 00000018  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 806B80B8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806B80BC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806B80C0 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 806B80C4 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 806B80C8 00000024  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 806B80CC 00000028  4B FF E3 4D */	bl PSMTXTrans
+/* 806B80CC 00000028  4B FF E3 4D */	bl _unresolved
 /* 806B80D0 0000002C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 806B80D4 00000030  4B FF E3 45 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 806B80D4 00000030  4B FF E3 45 */	bl _unresolved
 /* 806B80D8 00000034  C0 3F 06 84 */	lfs f1, 0x684(r31)
 /* 806B80DC 00000038  FC 40 08 90 */	fmr f2, f1
 /* 806B80E0 0000003C  FC 60 08 90 */	fmr f3, f1
-/* 806B80E4 00000040  4B FF E3 35 */	bl scaleM__14mDoMtx_stack_cFfff
+/* 806B80E4 00000040  4B FF E3 35 */	bl _unresolved
 /* 806B80E8 00000044  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 806B80EC 00000048  80 83 00 04 */	lwz r4, 4(r3)
-/* 806B80F0 0000004C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 806B80F4 00000050  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 806B80F0 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806B80F4 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806B80F8 00000054  38 84 00 24 */	addi r4, r4, 0x24
-/* 806B80FC 00000058  4B FF E3 1D */	bl PSMTXCopy
+/* 806B80FC 00000058  4B FF E3 1D */	bl _unresolved
 /* 806B8100 0000005C  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
-/* 806B8104 00000060  4B FF E3 15 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 806B8104 00000060  4B FF E3 15 */	bl _unresolved
 /* 806B8108 00000064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 806B810C 00000068  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 806B8110 0000006C  7C 08 03 A6 */	mtlr r0

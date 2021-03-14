@@ -3,24 +3,72 @@
 # Module: 725
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5A780, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5A7AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5A7D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
-	'initBaseMtx__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5A7F8, 'size': 0x0020, 'padding': 0x00, 'name': "initBaseMtx__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5A818, 'size': 0x0058, 'padding': 0x00, 'name': "setBaseMtx__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'Create__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5A870, 'size': 0x0148, 'padding': 0x00, 'name': "Create__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5A9B8, 'size': 0x0068, 'padding': 0x00, 'name': "create__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5AA20, 'size': 0x0180, 'padding': 0x00, 'name': "execute__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5ABA0, 'size': 0x0008, 'padding': 0x00, 'name': "draw__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__16daTagLightBall_cFv': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5ABA8, 'size': 0x0048, 'padding': 0x00, 'name': "_delete__16daTagLightBall_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagLightBall_Draw__FP16daTagLightBall_c': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5ABF0, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLightBall_Draw__FP16daTagLightBall_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLightBall_Execute__FP16daTagLightBall_c': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5AC10, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLightBall_Execute__FP16daTagLightBall_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLightBall_Delete__FP16daTagLightBall_c': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5AC30, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLightBall_Delete__FP16daTagLightBall_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLightBall_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".text", 'addr': 0x80D5AC50, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLightBall_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D5AC70': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D5AC70, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D5AC74': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D5AC74, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3682': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".rodata", 'addr': 0x80D5AC7C, 'size': 0x0004, 'padding': 0x00, 'name': "@3682", 'reference_count': 0, 'type': "Integer"},
-	'l_daTagLightBall_Method': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".data", 'addr': 0x80D5AC84, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagLightBall_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_LightBall': {'library': "d/a/tag/d_a_tag_lightball", 'translation_unit': "d_a_tag_lightball", 'section': ".data", 'addr': 0x80D5ACA4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_LightBall", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_lightball",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_lightball",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D5A780,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5A7AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5A7D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':7,'type':"Function"},
+	{'addr':0x80D5A7F8,'size':32,'pad':0,'label':"initBaseMtx__16daTagLightBall_cFv",'name':"initBaseMtx__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5A818,'size':88,'pad':0,'label':"setBaseMtx__16daTagLightBall_cFv",'name':"setBaseMtx__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5A870,'size':328,'pad':0,'label':"Create__16daTagLightBall_cFv",'name':"Create__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5A9B8,'size':104,'pad':0,'label':"create__16daTagLightBall_cFv",'name':"create__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5AA20,'size':384,'pad':0,'label':"execute__16daTagLightBall_cFv",'name':"execute__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5ABA0,'size':8,'pad':0,'label':"draw__16daTagLightBall_cFv",'name':"draw__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5ABA8,'size':72,'pad':0,'label':"_delete__16daTagLightBall_cFv",'name':"_delete__16daTagLightBall_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5ABF0,'size':32,'pad':0,'label':"daTagLightBall_Draw__FP16daTagLightBall_c",'name':"daTagLightBall_Draw__FP16daTagLightBall_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5AC10,'size':32,'pad':0,'label':"daTagLightBall_Execute__FP16daTagLightBall_c",'name':"daTagLightBall_Execute__FP16daTagLightBall_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5AC30,'size':32,'pad':0,'label':"daTagLightBall_Delete__FP16daTagLightBall_c",'name':"daTagLightBall_Delete__FP16daTagLightBall_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5AC50,'size':32,'pad':0,'label':"daTagLightBall_Create__FP10fopAc_ac_c",'name':"daTagLightBall_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5AC70,'size':4,'pad':0,'label':"data_80D5AC70",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D5AC74,'size':4,'pad':0,'label':"data_80D5AC74",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D5AC78,'size':4,'pad':0,'label':"lit_3682",'name':"@3682",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D5AC7C,'size':32,'pad':0,'label':"l_daTagLightBall_Method",'name':"l_daTagLightBall_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D5AC9C,'size':48,'pad':0,'label':"g_profile_Tag_LightBall",'name':"g_profile_Tag_LightBall",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"initBaseMtx__16daTagLightBall_cFv":3,
+	"setBaseMtx__16daTagLightBall_cFv":4,
+	"Create__16daTagLightBall_cFv":5,
+	"create__16daTagLightBall_cFv":6,
+	"execute__16daTagLightBall_cFv":7,
+	"draw__16daTagLightBall_cFv":8,
+	"_delete__16daTagLightBall_cFv":9,
+	"daTagLightBall_Draw__FP16daTagLightBall_c":10,
+	"daTagLightBall_Execute__FP16daTagLightBall_c":11,
+	"daTagLightBall_Delete__FP16daTagLightBall_c":12,
+	"daTagLightBall_Create__FP10fopAc_ac_c":13,
+	"data_80D5AC70":14,
+	"data_80D5AC74":15,
+	"lit_3682":16,
+	"l_daTagLightBall_Method":17,
+	"g_profile_Tag_LightBall":18,
 }
+

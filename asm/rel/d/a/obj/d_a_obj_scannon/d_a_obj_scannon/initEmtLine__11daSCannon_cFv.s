@@ -3,10 +3,10 @@ lbl_80CC8BF4:
 /* 80CC8BF8 00000004  7C 08 02 A6 */	mflr r0
 /* 80CC8BFC 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80CC8C00 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CC8C04 00000010  4B FF DE 75 */	bl _savegpr_29
+/* 80CC8C04 00000010  4B FF DE 75 */	bl _unresolved
 /* 80CC8C08 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80CC8C0C 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC8C10 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC8C0C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC8C10 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC8C14 00000020  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 80CC8C18 00000024  7C 00 07 74 */	extsb r0, r0
 /* 80CC8C1C 00000028  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -21,17 +21,17 @@ lbl_80CC8BF4:
 /* 80CC8C40 0000004C  C0 1E 00 E0 */	lfs f0, 0xe0(r30)
 /* 80CC8C44 00000050  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80CC8C48 00000054  7F C3 F3 78 */	mr r3, r30
-/* 80CC8C4C 00000058  4B FF DE 2D */	bl dCam_getAngleY__FP12camera_class
+/* 80CC8C4C 00000058  4B FF DE 2D */	bl _unresolved
 /* 80CC8C50 0000005C  7C 7F 1B 78 */	mr r31, r3
 /* 80CC8C54 00000060  7F C3 F3 78 */	mr r3, r30
-/* 80CC8C58 00000064  4B FF DE 21 */	bl dCam_getAngleX__FP12camera_class
+/* 80CC8C58 00000064  4B FF DE 21 */	bl _unresolved
 /* 80CC8C5C 00000068  B0 61 00 20 */	sth r3, 0x20(r1)
 /* 80CC8C60 0000006C  B3 E1 00 22 */	sth r31, 0x22(r1)
 /* 80CC8C64 00000070  38 00 00 00 */	li r0, 0
 /* 80CC8C68 00000074  B0 01 00 24 */	sth r0, 0x24(r1)
 lbl_80CC8C6C:
-/* 80CC8C6C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC8C70 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC8C6C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC8C70 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC8C74 00000008  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80CC8C78 0000000C  38 80 00 00 */	li r4, 0
 /* 80CC8C7C 00000010  90 81 00 08 */	stw r4, 8(r1)
@@ -48,12 +48,12 @@ lbl_80CC8C6C:
 /* 80CC8CA8 0000003C  39 01 00 20 */	addi r8, r1, 0x20
 /* 80CC8CAC 00000040  39 20 00 00 */	li r9, 0
 /* 80CC8CB0 00000044  39 40 00 FF */	li r10, 0xff
-/* 80CC8CB4 00000048  3D 60 00 00 */	lis r11, lit_4114@ha
-/* 80CC8CB8 0000004C  C0 2B 00 00 */	lfs f1, lit_4114@l(r11)
-/* 80CC8CBC 00000050  4B FF DD BD */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80CC8CB4 00000048  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 80CC8CB8 0000004C  C0 2B 00 00 */	lfs f1, 0x0000(r11)
+/* 80CC8CBC 00000050  4B FF DD BD */	bl _unresolved
 /* 80CC8CC0 00000054  90 7D 06 34 */	stw r3, 0x634(r29)
 /* 80CC8CC4 00000058  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CC8CC8 0000005C  4B FF DD B1 */	bl _restgpr_29
+/* 80CC8CC8 0000005C  4B FF DD B1 */	bl _unresolved
 /* 80CC8CCC 00000060  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80CC8CD0 00000064  7C 08 03 A6 */	mtlr r0
 /* 80CC8CD4 00000068  38 21 00 50 */	addi r1, r1, 0x50

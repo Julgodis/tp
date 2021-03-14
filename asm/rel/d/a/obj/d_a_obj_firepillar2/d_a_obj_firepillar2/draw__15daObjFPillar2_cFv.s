@@ -8,34 +8,34 @@ lbl_80BEB1B4:
 /* 80BEB1CC 00000018  54 00 E7 3E */	rlwinm r0, r0, 0x1c, 0x1c, 0x1f
 /* 80BEB1D0 0000001C  28 00 00 01 */	cmplwi r0, 1
 /* 80BEB1D4 00000020  40 82 00 8C */	bne lbl_80BEB260
-/* 80BEB1D8 00000024  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80BEB1DC 00000028  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80BEB1D8 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEB1DC 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEB1E0 0000002C  38 80 00 00 */	li r4, 0
 /* 80BEB1E4 00000030  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80BEB1E8 00000034  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80BEB1EC 00000038  4B FF EA AD */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80BEB1F0 0000003C  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80BEB1F4 00000040  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80BEB1EC 00000038  4B FF EA AD */	bl _unresolved
+/* 80BEB1F0 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEB1F4 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEB1F8 00000044  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80BEB1FC 00000048  80 84 00 04 */	lwz r4, 4(r4)
 /* 80BEB200 0000004C  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80BEB204 00000050  4B FF EA 95 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80BEB204 00000050  4B FF EA 95 */	bl _unresolved
 /* 80BEB208 00000054  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BEB20C 00000058  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BEB210 0000005C  80 7F 05 78 */	lwz r3, 0x578(r31)
 /* 80BEB214 00000060  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 80BEB218 00000064  38 84 00 58 */	addi r4, r4, 0x58
-/* 80BEB21C 00000068  4B FF EA 7D */	bl entry__13mDoExt_btkAnmFP16J3DMaterialTablef
+/* 80BEB21C 00000068  4B FF EA 7D */	bl _unresolved
 /* 80BEB220 0000006C  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BEB224 00000070  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BEB228 00000074  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80BEB22C 00000078  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80BEB230 0000007C  4B FF EA 69 */	bl entry__13mDoExt_bckAnmFP12J3DModelDataf
+/* 80BEB230 0000007C  4B FF EA 69 */	bl _unresolved
 /* 80BEB234 00000080  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80BEB238 00000084  4B FF EA 61 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80BEB238 00000084  4B FF EA 61 */	bl _unresolved
 /* 80BEB23C 00000088  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BEB240 0000008C  80 63 00 04 */	lwz r3, 4(r3)
-/* 80BEB244 00000090  4B FF EA 55 */	bl mDoExt_btkAnmRemove__FP12J3DModelData
+/* 80BEB244 00000090  4B FF EA 55 */	bl _unresolved
 /* 80BEB248 00000094  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BEB24C 00000098  80 63 00 04 */	lwz r3, 4(r3)
 /* 80BEB250 0000009C  80 63 00 28 */	lwz r3, 0x28(r3)

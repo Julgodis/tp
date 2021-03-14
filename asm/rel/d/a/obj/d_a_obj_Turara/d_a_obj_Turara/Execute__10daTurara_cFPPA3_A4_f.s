@@ -7,7 +7,7 @@ lbl_80B9D4CC:
 /* 80B9D4E0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80B9D4E4 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80B9D4E8 0000001C  38 7E 05 A8 */	addi r3, r30, 0x5a8
-/* 80B9D4EC 00000020  4B FF F6 0D */	bl eventUpdate__17dEvLib_callback_cFv
+/* 80B9D4EC 00000020  4B FF F6 0D */	bl _unresolved
 /* 80B9D4F0 00000024  7F C3 F3 78 */	mr r3, r30
 /* 80B9D4F4 00000028  48 00 00 55 */	bl move__10daTurara_cFv
 /* 80B9D4F8 0000002C  88 1E 09 84 */	lbz r0, 0x984(r30)
@@ -22,7 +22,7 @@ lbl_80B9D4CC:
 /* 80B9D51C 00000050  7F C3 F3 78 */	mr r3, r30
 /* 80B9D520 00000054  4B FF F7 7D */	bl setBaseMtx__10daTurara_cFv
 /* 80B9D524 00000058  38 7E 05 E8 */	addi r3, r30, 0x5e8
-/* 80B9D528 0000005C  4B FF F5 D1 */	bl Move__10dCcD_GSttsFv
+/* 80B9D528 0000005C  4B FF F5 D1 */	bl _unresolved
 /* 80B9D52C 00000060  38 60 00 01 */	li r3, 1
 /* 80B9D530 00000064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80B9D534 00000068  83 C1 00 08 */	lwz r30, 8(r1)

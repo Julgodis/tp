@@ -66,10 +66,10 @@ lbl_80D175E8:
 /* 80D175E8 00000000  38 64 05 A0 */	addi r3, r4, 0x5a0
 /* 80D175EC 00000004  88 04 05 E5 */	lbz r0, 0x5e5(r4)
 /* 80D175F0 00000008  54 00 10 3A */	slwi r0, r0, 2
-/* 80D175F4 0000000C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80D175F8 00000010  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80D175F4 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D175F8 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D175FC 00000014  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80D17600 00000018  4B FF E4 19 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D17600 00000018  4B FF E4 19 */	bl _unresolved
 /* 80D17604 0000001C  38 60 00 01 */	li r3, 1
 /* 80D17608 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D1760C 00000024  7C 08 03 A6 */	mtlr r0

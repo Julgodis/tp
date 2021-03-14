@@ -7,7 +7,7 @@ lbl_80C8B4D8:
 /* 80C8B4EC 00000014  88 63 05 C8 */	lbz r3, 0x5c8(r3)
 /* 80C8B4F0 00000018  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80C8B4F4 0000001C  7C 04 07 74 */	extsb r4, r0
-/* 80C8B4F8 00000020  4B FF ED 81 */	bl dPath_GetRoomPath__Fii
+/* 80C8B4F8 00000020  4B FF ED 81 */	bl _unresolved
 /* 80C8B4FC 00000024  80 63 00 08 */	lwz r3, 8(r3)
 /* 80C8B500 00000028  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80C8B504 0000002C  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)

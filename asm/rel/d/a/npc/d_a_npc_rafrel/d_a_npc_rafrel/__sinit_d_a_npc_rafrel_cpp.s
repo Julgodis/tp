@@ -3,19 +3,19 @@ lbl_80ABF088:
 /* 80ABF08C 00000004  7C 08 02 A6 */	mflr r0
 /* 80ABF090 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80ABF094 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80ABF098 00000010  3C 60 00 00 */	lis r3, cNullVec__6Z2Calc@ha
-/* 80ABF09C 00000014  3B E3 00 00 */	addi r31, r3, cNullVec__6Z2Calc@l
-/* 80ABF0A0 00000018  3C 60 00 00 */	lis r3, __vt__19daNpcRafrel_Param_c@ha
-/* 80ABF0A4 0000001C  38 03 00 00 */	addi r0, r3, __vt__19daNpcRafrel_Param_c@l
-/* 80ABF0A8 00000020  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 80ABF0AC 00000024  94 03 00 00 */	stwu r0, l_HIO@l(r3)
-/* 80ABF0B0 00000028  3C 80 00 00 */	lis r4, __dt__19daNpcRafrel_Param_cFv@ha
-/* 80ABF0B4 0000002C  38 84 00 00 */	addi r4, r4, __dt__19daNpcRafrel_Param_cFv@l
-/* 80ABF0B8 00000030  3C A0 00 00 */	lis r5, lit_3819@ha
-/* 80ABF0BC 00000034  38 A5 00 00 */	addi r5, r5, lit_3819@l
+/* 80ABF098 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ABF09C 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80ABF0A0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ABF0A4 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80ABF0A8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ABF0AC 00000024  94 03 00 00 */	stwu r0, 0x0000(r3)
+/* 80ABF0B0 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80ABF0B4 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80ABF0B8 00000030  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80ABF0BC 00000034  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80ABF0C0 00000038  4B FF A4 F9 */	bl __register_global_object
-/* 80ABF0C4 0000003C  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 80ABF0C8 00000040  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 80ABF0C4 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ABF0C8 00000040  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80ABF0CC 00000044  80 64 00 00 */	lwz r3, 0(r4)
 /* 80ABF0D0 00000048  80 04 00 04 */	lwz r0, 4(r4)
 /* 80ABF0D4 0000004C  90 7F 02 90 */	stw r3, 0x290(r31)

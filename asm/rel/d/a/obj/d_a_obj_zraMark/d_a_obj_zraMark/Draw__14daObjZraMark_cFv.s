@@ -70,30 +70,30 @@ lbl_80D42BC4:
 /* 80D42C04 00000040  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80D42C08 00000044  90 03 00 0C */	stw r0, 0xc(r3)
 lbl_80D42C0C:
-/* 80D42C0C 00000000  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80D42C10 00000004  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80D42C0C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D42C10 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D42C14 00000008  38 80 00 10 */	li r4, 0x10
 /* 80D42C18 0000000C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80D42C1C 00000010  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80D42C20 00000014  4B FF FA 19 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80D42C24 00000018  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80D42C28 0000001C  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80D42C20 00000014  4B FF FA 19 */	bl _unresolved
+/* 80D42C24 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D42C28 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D42C2C 00000020  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80D42C30 00000024  80 84 00 04 */	lwz r4, 4(r4)
 /* 80D42C34 00000028  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80D42C38 0000002C  4B FF FA 01 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80D42C3C 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D42C40 00000034  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80D42C38 0000002C  4B FF FA 01 */	bl _unresolved
+/* 80D42C3C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D42C40 00000034  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80D42C44 00000038  80 04 5F 70 */	lwz r0, 0x5f70(r4)
-/* 80D42C48 0000003C  3C 60 00 00 */	lis r3, j3dSys@ha
-/* 80D42C4C 00000040  3B C3 00 00 */	addi r30, r3, j3dSys@l
+/* 80D42C48 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D42C4C 00000040  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80D42C50 00000044  90 1E 00 48 */	stw r0, 0x48(r30)
 /* 80D42C54 00000048  80 04 5F 74 */	lwz r0, 0x5f74(r4)
 /* 80D42C58 0000004C  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80D42C5C 00000050  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42C60 00000054  4B FF F9 D9 */	bl mDoExt_modelUpdateDL__FP8J3DModel
-/* 80D42C64 00000058  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D42C68 0000005C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D42C60 00000054  4B FF F9 D9 */	bl _unresolved
+/* 80D42C64 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D42C68 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D42C6C 00000060  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80D42C70 00000064  90 1E 00 48 */	stw r0, 0x48(r30)
 /* 80D42C74 00000068  80 03 5F 84 */	lwz r0, 0x5f84(r3)

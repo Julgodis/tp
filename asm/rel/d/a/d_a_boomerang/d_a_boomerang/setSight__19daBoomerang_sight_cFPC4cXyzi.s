@@ -25,7 +25,7 @@ lbl_8049EF1C:
 /* 8049EF20 00000004  38 63 00 C8 */	addi r3, r3, 0xc8
 /* 8049EF24 00000008  7C 7E 1A 14 */	add r3, r30, r3
 /* 8049EF28 0000000C  38 81 00 08 */	addi r4, r1, 8
-/* 8049EF2C 00000010  4B FF F1 6D */	bl mDoLib_project__FP3VecP3Vec
+/* 8049EF2C 00000010  4B FF F1 6D */	bl _unresolved
 /* 8049EF30 00000014  C0 01 00 08 */	lfs f0, 8(r1)
 /* 8049EF34 00000018  57 E0 10 3A */	slwi r0, r31, 2
 /* 8049EF38 0000001C  7C 7E 02 14 */	add r3, r30, r0

@@ -5,12 +5,12 @@ lbl_80BE4948:
 /* 80BE4954 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BE4958 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80BE495C 00000014  38 7F 05 F4 */	addi r3, r31, 0x5f4
-/* 80BE4960 00000018  4B FF F0 39 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80BE4960 00000018  4B FF F0 39 */	bl _unresolved
 /* 80BE4964 0000001C  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80BE4968 00000020  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80BE496C 00000024  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80BE4968 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE496C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BE4970 00000028  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BE4974 0000002C  4B FF F0 25 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80BE4974 0000002C  4B FF F0 25 */	bl _unresolved
 /* 80BE4978 00000030  38 60 00 01 */	li r3, 1
 /* 80BE497C 00000034  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BE4980 00000038  80 01 00 14 */	lwz r0, 0x14(r1)

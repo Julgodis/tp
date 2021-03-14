@@ -5,8 +5,8 @@ lbl_806D9D44:
 /* 806D9D50 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806D9D54 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 806D9D58 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 806D9D5C 00000018  3C 60 00 00 */	lis r3, lit_3763@ha
-/* 806D9D60 0000001C  3B E3 00 00 */	addi r31, r3, lit_3763@l
+/* 806D9D5C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806D9D60 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 806D9D64 00000020  38 60 00 05 */	li r3, 5
 /* 806D9D68 00000024  B0 7E 06 7E */	sth r3, 0x67e(r30)
 /* 806D9D6C 00000028  A8 1E 06 58 */	lha r0, 0x658(r30)
@@ -21,19 +21,19 @@ lbl_806D9D84:
 /* 806D9D8C 00000008  B0 1E 06 58 */	sth r0, 0x658(r30)
 /* 806D9D90 0000000C  38 00 00 1E */	li r0, 0x1e
 /* 806D9D94 00000010  B0 1E 06 7E */	sth r0, 0x67e(r30)
-/* 806D9D98 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806D9D9C 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806D9D98 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806D9D9C 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806D9DA0 0000001C  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 806D9DA4 00000020  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
-/* 806D9DA8 00000024  38 84 00 00 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
+/* 806D9DA4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806D9DA8 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 806D9DAC 00000028  A0 84 05 40 */	lhz r4, 0x540(r4)
-/* 806D9DB0 0000002C  4B FF E2 49 */	bl onEventBit__11dSv_event_cFUs
+/* 806D9DB0 0000002C  4B FF E2 49 */	bl _unresolved
 lbl_806D9DB4:
 /* 806D9DB4 00000000  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806D9DB8 00000004  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 806D9DBC 00000008  C0 5F 00 1C */	lfs f2, 0x1c(r31)
 /* 806D9DC0 0000000C  C0 7F 00 58 */	lfs f3, 0x58(r31)
-/* 806D9DC4 00000010  4B FF E2 35 */	bl cLib_addCalc2__FPffff
+/* 806D9DC4 00000010  4B FF E2 35 */	bl _unresolved
 /* 806D9DC8 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 806D9DCC 00000018  83 C1 00 08 */	lwz r30, 8(r1)
 /* 806D9DD0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

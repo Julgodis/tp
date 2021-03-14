@@ -5,8 +5,8 @@ lbl_80494F44:
 /* 80494F50 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80494F54 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80494F58 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80494F5C 00000018  3C 80 00 00 */	lis r4, cNullVec__6Z2Calc@ha
-/* 80494F60 0000001C  3B C4 00 00 */	addi r30, r4, cNullVec__6Z2Calc@l
+/* 80494F5C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80494F60 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80494F64 00000020  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80494F68 00000024  28 00 00 02 */	cmplwi r0, 2
 /* 80494F6C 00000028  40 82 00 60 */	bne lbl_80494FCC
@@ -19,13 +19,13 @@ lbl_80494F44:
 /* 80494F88 00000044  4B FF C4 49 */	bl clrDzb__8daTbox_cFv
 /* 80494F8C 00000048  38 00 00 00 */	li r0, 0
 /* 80494F90 0000004C  98 1F 09 7D */	stb r0, 0x97d(r31)
-/* 80494F94 00000050  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80494F98 00000054  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80494F94 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80494F98 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80494F9C 00000058  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80494FA0 0000005C  80 9E 00 20 */	lwz r4, 0x20(r30)
 /* 80494FA4 00000060  38 A0 00 00 */	li r5, 0
 /* 80494FA8 00000064  38 C0 00 00 */	li r6, 0
-/* 80494FAC 00000068  4B FF BC ED */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80494FAC 00000068  4B FF BC ED */	bl _unresolved
 /* 80494FB0 0000006C  90 7F 07 4C */	stw r3, 0x74c(r31)
 /* 80494FB4 00000070  A0 1F 09 80 */	lhz r0, 0x980(r31)
 /* 80494FB8 00000074  54 00 07 3F */	clrlwi. r0, r0, 0x1c
@@ -47,7 +47,7 @@ lbl_80494FCC:
 /* 80494FF4 00000028  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80494FF8 0000002C  38 E0 00 00 */	li r7, 0
 /* 80494FFC 00000030  39 00 00 01 */	li r8, 1
-/* 80495000 00000034  4B FF BC 99 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80495000 00000034  4B FF BC 99 */	bl _unresolved
 /* 80495004 00000038  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80495008 0000003C  60 00 00 02 */	ori r0, r0, 2
 /* 8049500C 00000040  B0 1F 00 FA */	sth r0, 0xfa(r31)

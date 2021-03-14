@@ -60,11 +60,11 @@ lbl_806898A4:
 /* 806898BC 00000018  88 9F 06 8C */	lbz r4, 0x68c(r31)
 /* 806898C0 0000001C  28 04 00 FF */	cmplwi r4, 0xff
 /* 806898C4 00000020  41 82 00 18 */	beq lbl_806898DC
-/* 806898C8 00000024  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806898CC 00000028  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806898C8 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806898CC 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806898D0 0000002C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 806898D4 00000030  7C 05 07 74 */	extsb r5, r0
-/* 806898D8 00000034  4B FF BE A1 */	bl onSwitch__10dSv_info_cFii
+/* 806898D8 00000034  4B FF BE A1 */	bl _unresolved
 lbl_806898DC:
 /* 806898DC 00000000  38 00 00 00 */	li r0, 0
 /* 806898E0 00000004  90 01 00 08 */	stw r0, 8(r1)
@@ -76,9 +76,9 @@ lbl_806898DC:
 /* 806898F8 0000001C  39 00 00 00 */	li r8, 0
 /* 806898FC 00000020  39 20 FF FF */	li r9, -1
 /* 80689900 00000024  39 40 00 00 */	li r10, 0
-/* 80689904 00000028  4B FF BE 75 */	bl fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv
+/* 80689904 00000028  4B FF BE 75 */	bl _unresolved
 /* 80689908 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 8068990C 00000030  4B FF BE 6D */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 8068990C 00000030  4B FF BE 6D */	bl _unresolved
 /* 80689910 00000034  38 60 00 01 */	li r3, 1
 /* 80689914 00000038  48 00 00 28 */	b lbl_8068993C
 lbl_80689918:

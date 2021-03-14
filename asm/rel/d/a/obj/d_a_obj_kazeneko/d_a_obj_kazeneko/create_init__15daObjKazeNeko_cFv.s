@@ -5,15 +5,15 @@ lbl_80C3C8D8:
 /* 80C3C8E4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C3C8E8 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C3C8EC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C3C8F0 00000018  3C 80 00 00 */	lis r4, M_attr__15daObjKazeNeko_c@ha
-/* 80C3C8F4 0000001C  3B E4 00 00 */	addi r31, r4, M_attr__15daObjKazeNeko_c@l
+/* 80C3C8F0 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C3C8F4 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80C3C8F8 00000020  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 80C3C8FC 00000024  C0 5F 00 30 */	lfs f2, 0x30(r31)
 /* 80C3C900 00000028  FC 60 08 90 */	fmr f3, f1
 /* 80C3C904 0000002C  C0 9F 00 34 */	lfs f4, 0x34(r31)
 /* 80C3C908 00000030  C0 BF 00 38 */	lfs f5, 0x38(r31)
 /* 80C3C90C 00000034  FC C0 20 90 */	fmr f6, f4
-/* 80C3C910 00000038  4B FF FF A9 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80C3C910 00000038  4B FF FF A9 */	bl _unresolved
 /* 80C3C914 0000003C  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)
 /* 80C3C918 00000040  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 80C3C91C 00000044  38 7F 00 00 */	addi r3, r31, 0

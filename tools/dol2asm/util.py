@@ -176,6 +176,10 @@ def _create_dirs_for_file(filepath):
 
 create_dirs_for_file = wrap(_create_dirs_for_file)
 
+async def wait_all(tasks):
+    await asyncio.gather(*tasks)
+
+
 import globals as g
 from exception import Dol2ZelException
 

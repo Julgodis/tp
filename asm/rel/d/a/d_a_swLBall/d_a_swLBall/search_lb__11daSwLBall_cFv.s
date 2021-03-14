@@ -5,27 +5,27 @@ lbl_80D4ED80:
 /* 80D4ED8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D4ED90 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D4ED94 00000014  38 A0 00 00 */	li r5, 0
-/* 80D4ED98 00000018  3C 60 00 00 */	lis r3, l_target_info_count@ha
-/* 80D4ED9C 0000001C  90 A3 00 00 */	stw r5, l_target_info_count@l(r3)
+/* 80D4ED98 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4ED9C 0000001C  90 A3 00 00 */	stw r5, 0x0000(r3)
 /* 80D4EDA0 00000020  7C A3 2B 78 */	mr r3, r5
-/* 80D4EDA4 00000024  3C 80 00 00 */	lis r4, l_target_info@ha
-/* 80D4EDA8 00000028  38 84 00 00 */	addi r4, r4, l_target_info@l
+/* 80D4EDA4 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D4EDA8 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D4EDAC 0000002C  38 00 00 02 */	li r0, 2
 /* 80D4EDB0 00000030  7C 09 03 A6 */	mtctr r0
 lbl_80D4EDB4:
 /* 80D4EDB4 00000000  7C A4 19 2E */	stwx r5, r4, r3
 /* 80D4EDB8 00000004  38 63 00 04 */	addi r3, r3, 4
 /* 80D4EDBC 00000008  42 00 FF F8 */	bdnz lbl_80D4EDB4
-/* 80D4EDC0 0000000C  3C 60 00 00 */	lis r3, s_lb_sub__FPvPv@ha
-/* 80D4EDC4 00000010  38 63 00 00 */	addi r3, r3, s_lb_sub__FPvPv@l
+/* 80D4EDC0 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4EDC4 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4EDC8 00000014  7F E4 FB 78 */	mr r4, r31
-/* 80D4EDCC 00000018  4B FF FD 0D */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80D4EDCC 00000018  4B FF FD 0D */	bl _unresolved
 /* 80D4EDD0 0000001C  39 40 00 00 */	li r10, 0
 /* 80D4EDD4 00000020  38 60 00 00 */	li r3, 0
-/* 80D4EDD8 00000024  3C 80 00 00 */	lis r4, l_target_info@ha
-/* 80D4EDDC 00000028  38 E4 00 00 */	addi r7, r4, l_target_info@l
-/* 80D4EDE0 0000002C  3C 80 00 00 */	lis r4, l_target_info_count@ha
-/* 80D4EDE4 00000030  38 A4 00 00 */	addi r5, r4, l_target_info_count@l
+/* 80D4EDD8 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D4EDDC 00000028  38 E4 00 00 */	addi r7, r4, 0x0000 /* 0x00000000@l */
+/* 80D4EDE0 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D4EDE4 00000030  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
 /* 80D4EDE8 00000034  48 00 00 A4 */	b lbl_80D4EE8C
 lbl_80D4EDEC:
 /* 80D4EDEC 00000000  7C 87 18 2E */	lwzx r4, r7, r3

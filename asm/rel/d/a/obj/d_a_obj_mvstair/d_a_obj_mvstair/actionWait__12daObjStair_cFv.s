@@ -4,13 +4,13 @@ lbl_80C9D82C:
 /* 80C9D834 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C9D838 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C9D83C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C9D840 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C9D844 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C9D840 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D844 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D848 0000001C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D84C 00000020  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80C9D850 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D854 00000028  7C 05 07 74 */	extsb r5, r0
-/* 80C9D858 0000002C  4B FF F8 21 */	bl isSwitch__10dSv_info_cCFii
+/* 80C9D858 0000002C  4B FF F8 21 */	bl _unresolved
 /* 80C9D85C 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80C9D860 00000034  41 82 00 14 */	beq lbl_80C9D874
 /* 80C9D864 00000038  38 00 00 03 */	li r0, 3
@@ -18,13 +18,13 @@ lbl_80C9D82C:
 /* 80C9D86C 00000040  38 60 00 01 */	li r3, 1
 /* 80C9D870 00000044  48 00 00 68 */	b lbl_80C9D8D8
 lbl_80C9D874:
-/* 80C9D874 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C9D878 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C9D874 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D878 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D87C 00000008  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D880 0000000C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C9D884 00000010  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D888 00000014  7C 05 07 74 */	extsb r5, r0
-/* 80C9D88C 00000018  4B FF F7 ED */	bl isSwitch__10dSv_info_cCFii
+/* 80C9D88C 00000018  4B FF F7 ED */	bl _unresolved
 /* 80C9D890 0000001C  88 1F 06 3F */	lbz r0, 0x63f(r31)
 /* 80C9D894 00000020  7C 00 18 00 */	cmpw r0, r3
 /* 80C9D898 00000024  41 82 00 3C */	beq lbl_80C9D8D4
@@ -38,7 +38,7 @@ lbl_80C9D874:
 /* 80C9D8B8 00000044  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80C9D8BC 00000048  38 E0 00 00 */	li r7, 0
 /* 80C9D8C0 0000004C  39 00 00 01 */	li r8, 1
-/* 80C9D8C4 00000050  4B FF F7 B5 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80C9D8C4 00000050  4B FF F7 B5 */	bl _unresolved
 /* 80C9D8C8 00000054  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80C9D8CC 00000058  60 00 00 02 */	ori r0, r0, 2
 /* 80C9D8D0 0000005C  B0 1F 00 FA */	sth r0, 0xfa(r31)

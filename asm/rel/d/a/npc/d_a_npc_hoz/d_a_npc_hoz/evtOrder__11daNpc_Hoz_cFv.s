@@ -8,7 +8,7 @@ lbl_80A02DD4:
 /* 80A02DEC 00000018  A0 1F 0E 30 */	lhz r0, 0xe30(r31)
 /* 80A02DF0 0000001C  54 00 18 38 */	slwi r0, r0, 3
 /* 80A02DF4 00000020  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80A02DF8 00000024  4B FF E6 81 */	bl strlen
+/* 80A02DF8 00000024  4B FF E6 81 */	bl _unresolved
 /* 80A02DFC 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 80A02E00 0000002C  41 82 00 E8 */	beq lbl_80A02EE8
 /* 80A02E04 00000030  80 9F 05 74 */	lwz r4, 0x574(r31)
@@ -19,7 +19,7 @@ lbl_80A02DD4:
 /* 80A02E18 00000044  80 03 00 04 */	lwz r0, 4(r3)
 /* 80A02E1C 00000048  54 00 10 3A */	slwi r0, r0, 2
 /* 80A02E20 0000004C  7C 64 00 2E */	lwzx r3, r4, r0
-/* 80A02E24 00000050  4B FF E6 55 */	bl strlen
+/* 80A02E24 00000050  4B FF E6 55 */	bl _unresolved
 /* 80A02E28 00000054  28 03 00 00 */	cmplwi r3, 0
 /* 80A02E2C 00000058  41 82 00 3C */	beq lbl_80A02E68
 /* 80A02E30 0000005C  80 9F 05 74 */	lwz r4, 0x574(r31)
@@ -31,14 +31,14 @@ lbl_80A02DD4:
 /* 80A02E48 00000074  54 00 10 3A */	slwi r0, r0, 2
 /* 80A02E4C 00000078  7C 04 00 2E */	lwzx r0, r4, r0
 /* 80A02E50 0000007C  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 80A02E54 00000080  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80A02E58 00000084  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A02E54 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A02E58 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A02E5C 00000088  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80A02E60 0000008C  80 9F 01 00 */	lwz r4, 0x100(r31)
-/* 80A02E64 00000090  4B FF E6 15 */	bl setObjectArchive__16dEvent_manager_cFPc
+/* 80A02E64 00000090  4B FF E6 15 */	bl _unresolved
 lbl_80A02E68:
-/* 80A02E68 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80A02E6C 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A02E68 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A02E6C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A02E70 00000008  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80A02E74 0000000C  7F E4 FB 78 */	mr r4, r31
 /* 80A02E78 00000010  80 BF 05 70 */	lwz r5, 0x570(r31)
@@ -46,7 +46,7 @@ lbl_80A02E68:
 /* 80A02E80 00000018  54 00 18 38 */	slwi r0, r0, 3
 /* 80A02E84 0000001C  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80A02E88 00000020  38 C0 00 FF */	li r6, 0xff
-/* 80A02E8C 00000024  4B FF E5 ED */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
+/* 80A02E8C 00000024  4B FF E5 ED */	bl _unresolved
 /* 80A02E90 00000028  B0 7F 0E 1C */	sth r3, 0xe1c(r31)
 /* 80A02E94 0000002C  A0 1F 0E 30 */	lhz r0, 0xe30(r31)
 /* 80A02E98 00000030  28 00 00 02 */	cmplwi r0, 2
@@ -58,7 +58,7 @@ lbl_80A02E68:
 /* 80A02EB0 00000048  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80A02EB4 0000004C  38 E0 00 04 */	li r7, 4
 /* 80A02EB8 00000050  39 00 00 03 */	li r8, 3
-/* 80A02EBC 00000054  4B FF E5 BD */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80A02EBC 00000054  4B FF E5 BD */	bl _unresolved
 /* 80A02EC0 00000058  48 00 00 A4 */	b lbl_80A02F64
 lbl_80A02EC4:
 /* 80A02EC4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -68,13 +68,13 @@ lbl_80A02EC4:
 /* 80A02ED4 00000010  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80A02ED8 00000014  38 E0 00 28 */	li r7, 0x28
 /* 80A02EDC 00000018  39 00 00 01 */	li r8, 1
-/* 80A02EE0 0000001C  4B FF E5 99 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80A02EE0 0000001C  4B FF E5 99 */	bl _unresolved
 /* 80A02EE4 00000020  48 00 00 80 */	b lbl_80A02F64
 lbl_80A02EE8:
 /* 80A02EE8 00000000  88 1F 0A 89 */	lbz r0, 0xa89(r31)
 /* 80A02EEC 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80A02EF0 00000008  41 82 00 10 */	beq lbl_80A02F00
-/* 80A02EF4 0000000C  4B FF E5 85 */	bl checkNowWolfEyeUp__9daPy_py_cFv
+/* 80A02EF4 0000000C  4B FF E5 85 */	bl _unresolved
 /* 80A02EF8 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 80A02EFC 00000014  41 82 00 68 */	beq lbl_80A02F64
 lbl_80A02F00:
@@ -104,7 +104,7 @@ lbl_80A02F48:
 /* 80A02F54 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 80A02F58 00000010  38 80 00 00 */	li r4, 0
 /* 80A02F5C 00000014  38 A0 00 00 */	li r5, 0
-/* 80A02F60 00000018  4B FF E5 19 */	bl fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs
+/* 80A02F60 00000018  4B FF E5 19 */	bl _unresolved
 lbl_80A02F64:
 /* 80A02F64 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A02F68 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

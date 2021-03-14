@@ -9,19 +9,19 @@ lbl_80CA8278:
 /* 80CA8294 0000001C  40 82 00 1C */	bne lbl_80CA82B0
 /* 80CA8298 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80CA829C 00000024  41 82 00 08 */	beq lbl_80CA82A4
-/* 80CA82A0 00000028  4B FF FF B9 */	bl __ct__10fopAc_ac_cFv
+/* 80CA82A0 00000028  4B FF FF B9 */	bl _unresolved
 lbl_80CA82A4:
 /* 80CA82A4 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80CA82A8 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80CA82AC 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80CA82B0:
-/* 80CA82B0 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CA82B4 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CA82B0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CA82B4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CA82B8 00000008  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 80CA82BC 0000000C  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
-/* 80CA82C0 00000010  38 84 00 00 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
+/* 80CA82BC 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CA82C0 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CA82C4 00000014  A0 84 02 F2 */	lhz r4, 0x2f2(r4)
-/* 80CA82C8 00000018  4B FF FF 91 */	bl isEventBit__11dSv_event_cCFUs
+/* 80CA82C8 00000018  4B FF FF 91 */	bl _unresolved
 /* 80CA82CC 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CA82D0 00000020  40 82 00 0C */	bne lbl_80CA82DC
 /* 80CA82D4 00000024  38 60 00 05 */	li r3, 5

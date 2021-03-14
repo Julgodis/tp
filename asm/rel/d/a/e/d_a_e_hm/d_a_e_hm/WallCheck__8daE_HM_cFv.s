@@ -5,8 +5,8 @@ lbl_806E25E8:
 /* 806E25F4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 806E25F8 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 806E25FC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 806E2600 00000018  3C 60 00 00 */	lis r3, lit_3791@ha
-/* 806E2604 0000001C  3B E3 00 00 */	addi r31, r3, lit_3791@l
+/* 806E2600 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806E2604 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 806E2608 00000020  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 806E260C 00000024  D0 01 00 08 */	stfs f0, 8(r1)
 /* 806E2610 00000028  C0 1F 00 F0 */	lfs f0, 0xf0(r31)
@@ -14,22 +14,22 @@ lbl_806E25E8:
 /* 806E2618 00000030  C0 1F 01 04 */	lfs f0, 0x104(r31)
 /* 806E261C 00000034  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 806E2620 00000038  38 7E 04 D0 */	addi r3, r30, 0x4d0
-/* 806E2624 0000003C  4B FF DD 35 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 806E2624 0000003C  4B FF DD 35 */	bl _unresolved
 /* 806E2628 00000040  38 7E 05 CC */	addi r3, r30, 0x5cc
-/* 806E262C 00000044  4B FF DD 2D */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 806E2630 00000048  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 806E2634 0000004C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 806E262C 00000044  4B FF DD 2D */	bl _unresolved
+/* 806E2630 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806E2634 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806E2638 00000050  A8 9E 04 DE */	lha r4, 0x4de(r30)
-/* 806E263C 00000054  4B FF DD 1D */	bl mDoMtx_YrotM__FPA4_fs
-/* 806E2640 00000058  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 806E2644 0000005C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 806E263C 00000054  4B FF DD 1D */	bl _unresolved
+/* 806E2640 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806E2644 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806E2648 00000060  38 81 00 08 */	addi r4, r1, 8
 /* 806E264C 00000064  7C 85 23 78 */	mr r5, r4
-/* 806E2650 00000068  4B FF DD 09 */	bl PSMTXMultVec
+/* 806E2650 00000068  4B FF DD 09 */	bl _unresolved
 /* 806E2654 0000006C  38 61 00 08 */	addi r3, r1, 8
-/* 806E2658 00000070  4B FF DD 01 */	bl gndCheck__11fopAcM_gc_cFPC4cXyz
-/* 806E265C 00000074  3C 60 00 00 */	lis r3, mGroundY__11fopAcM_gc_c@ha
-/* 806E2660 00000078  C0 23 00 00 */	lfs f1, mGroundY__11fopAcM_gc_c@l(r3)
+/* 806E2658 00000070  4B FF DD 01 */	bl _unresolved
+/* 806E265C 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806E2660 00000078  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 806E2664 0000007C  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 806E2668 00000080  EC 21 00 28 */	fsubs f1, f1, f0
 /* 806E266C 00000084  C0 1F 00 EC */	lfs f0, 0xec(r31)

@@ -1,6 +1,6 @@
 lbl_806FABC0:
-/* 806FABC0 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806FABC4 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806FABC0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806FABC4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806FABC8 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 806FABCC 0000000C  2C 04 00 00 */	cmpwi r4, 0
 /* 806FABD0 00000010  40 82 00 18 */	bne lbl_806FABE8

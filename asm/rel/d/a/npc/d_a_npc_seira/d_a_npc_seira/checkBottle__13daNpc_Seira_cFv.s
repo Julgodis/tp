@@ -5,11 +5,11 @@ lbl_80ACC440:
 /* 80ACC44C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80ACC450 00000010  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80ACC454 00000014  54 1F 06 3E */	clrlwi r31, r0, 0x18
-/* 80ACC458 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80ACC45C 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ACC458 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ACC45C 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80ACC460 00000020  38 63 00 28 */	addi r3, r3, 0x28
 /* 80ACC464 00000024  38 80 00 00 */	li r4, 0
-/* 80ACC468 00000028  4B FF F2 D1 */	bl isDarkClearLV__21dSv_player_status_b_cCFi
+/* 80ACC468 00000028  4B FF F2 D1 */	bl _unresolved
 /* 80ACC46C 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACC470 00000030  41 82 00 0C */	beq lbl_80ACC47C
 /* 80ACC474 00000034  38 60 00 00 */	li r3, 0

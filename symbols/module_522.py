@@ -3,30 +3,84 @@
 # Module: 522
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5C480, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5C4AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80C5C4D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'Create__15daObjWaterEff_cFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C4F8, 'size': 0x00E4, 'padding': 0x00, 'name': "Create__15daObjWaterEff_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__15daObjWaterEff_cFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C5DC, 'size': 0x0094, 'padding': 0x00, 'name': "create__15daObjWaterEff_cFv", 'reference_count': 1, 'type': "Function"},
-	'__dt__4cXyzFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C670, 'size': 0x003C, 'padding': 0x00, 'name': "__dt__4cXyzFv", 'reference_count': 0, 'type': "Function"},
-	'__ct__4cXyzFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C6AC, 'size': 0x0004, 'padding': 0x00, 'name': "__ct__4cXyzFv", 'reference_count': 0, 'type': "Function"},
-	'execute__15daObjWaterEff_cFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C6B0, 'size': 0x0108, 'padding': 0x00, 'name': "execute__15daObjWaterEff_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__15daObjWaterEff_cFv': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C7B8, 'size': 0x0058, 'padding': 0x00, 'name': "_delete__15daObjWaterEff_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjWaterEff_Execute__FP15daObjWaterEff_c': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C810, 'size': 0x0020, 'padding': 0x00, 'name': "daObjWaterEff_Execute__FP15daObjWaterEff_c", 'reference_count': 1, 'type': "Function"},
-	'daObjWaterEff_Delete__FP15daObjWaterEff_c': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C830, 'size': 0x0020, 'padding': 0x00, 'name': "daObjWaterEff_Delete__FP15daObjWaterEff_c", 'reference_count': 1, 'type': "Function"},
-	'daObjWaterEff_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".text", 'addr': 0x80C5C850, 'size': 0x0020, 'padding': 0x00, 'name': "daObjWaterEff_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80C5C870': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80C5C870, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80C5C874': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80C5C874, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_eff_id': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C87C, 'size': 0x0008, 'padding': 0x00, 'name': "l_eff_id", 'reference_count': 0, 'type': "InitData"},
-	'lit_3637': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C884, 'size': 0x0004, 'padding': 0x00, 'name': "@3637", 'reference_count': 0, 'type': "Integer"},
-	'lit_3638': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C888, 'size': 0x0004, 'padding': 0x00, 'name': "@3638", 'reference_count': 0, 'type': "Integer"},
-	'lit_3639': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C88C, 'size': 0x0004, 'padding': 0x00, 'name': "@3639", 'reference_count': 0, 'type': "Integer"},
-	'lit_3640': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C890, 'size': 0x0004, 'padding': 0x00, 'name': "@3640", 'reference_count': 0, 'type': "Integer"},
-	'lit_3641': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C894, 'size': 0x0004, 'padding': 0x00, 'name': "@3641", 'reference_count': 0, 'type': "Integer"},
-	'lit_3642': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C898, 'size': 0x0004, 'padding': 0x00, 'name': "@3642", 'reference_count': 0, 'type': "Integer"},
-	'lit_3643': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C89C, 'size': 0x0004, 'padding': 0x00, 'name': "@3643", 'reference_count': 0, 'type': "Integer"},
-	'lit_3710': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".rodata", 'addr': 0x80C5C8A0, 'size': 0x0004, 'padding': 0x00, 'name': "@3710", 'reference_count': 0, 'type': "Integer"},
-	'l_daObjWaterEff_Method': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".data", 'addr': 0x80C5C8A4, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjWaterEff_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_WaterEff': {'library': "d/a/obj/d_a_obj_lv3waterEff", 'translation_unit': "d_a_obj_lv3waterEff", 'section': ".data", 'addr': 0x80C5C8C4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_WaterEff", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_lv3waterEff",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_lv3waterEff",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80C5C480,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C4AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C4D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80C5C4F8,'size':228,'pad':0,'label':"Create__15daObjWaterEff_cFv",'name':"Create__15daObjWaterEff_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C5C5DC,'size':148,'pad':0,'label':"create__15daObjWaterEff_cFv",'name':"create__15daObjWaterEff_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C5C670,'size':60,'pad':0,'label':"__dt__4cXyzFv",'name':"__dt__4cXyzFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C6AC,'size':4,'pad':0,'label':"__ct__4cXyzFv",'name':"__ct__4cXyzFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C6B0,'size':264,'pad':0,'label':"execute__15daObjWaterEff_cFv",'name':"execute__15daObjWaterEff_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C5C7B8,'size':88,'pad':0,'label':"_delete__15daObjWaterEff_cFv",'name':"_delete__15daObjWaterEff_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80C5C810,'size':32,'pad':0,'label':"daObjWaterEff_Execute__FP15daObjWaterEff_c",'name':"daObjWaterEff_Execute__FP15daObjWaterEff_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C830,'size':32,'pad':0,'label':"daObjWaterEff_Delete__FP15daObjWaterEff_c",'name':"daObjWaterEff_Delete__FP15daObjWaterEff_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C850,'size':32,'pad':0,'label':"daObjWaterEff_Create__FP10fopAc_ac_c",'name':"daObjWaterEff_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80C5C870,'size':4,'pad':0,'label':"data_80C5C870",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80C5C874,'size':4,'pad':0,'label':"data_80C5C874",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80C5C878,'size':8,'pad':0,'label':"l_eff_id",'name':"l_eff_id",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80C5C880,'size':4,'pad':0,'label':"lit_3637",'name':"@3637",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C884,'size':4,'pad':0,'label':"lit_3638",'name':"@3638",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C888,'size':4,'pad':0,'label':"lit_3639",'name':"@3639",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C88C,'size':4,'pad':0,'label':"lit_3640",'name':"@3640",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C890,'size':4,'pad':0,'label':"lit_3641",'name':"@3641",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C894,'size':4,'pad':0,'label':"lit_3642",'name':"@3642",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C898,'size':4,'pad':0,'label':"lit_3643",'name':"@3643",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C89C,'size':4,'pad':0,'label':"lit_3710",'name':"@3710",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80C5C8A0,'size':32,'pad':0,'label':"l_daObjWaterEff_Method",'name':"l_daObjWaterEff_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80C5C8C0,'size':48,'pad':0,'label':"g_profile_Obj_WaterEff",'name':"g_profile_Obj_WaterEff",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"Create__15daObjWaterEff_cFv":3,
+	"create__15daObjWaterEff_cFv":4,
+	"__dt__4cXyzFv":5,
+	"__ct__4cXyzFv":6,
+	"execute__15daObjWaterEff_cFv":7,
+	"_delete__15daObjWaterEff_cFv":8,
+	"daObjWaterEff_Execute__FP15daObjWaterEff_c":9,
+	"daObjWaterEff_Delete__FP15daObjWaterEff_c":10,
+	"daObjWaterEff_Create__FP10fopAc_ac_c":11,
+	"data_80C5C870":12,
+	"data_80C5C874":13,
+	"l_eff_id":14,
+	"lit_3637":15,
+	"lit_3638":16,
+	"lit_3639":17,
+	"lit_3640":18,
+	"lit_3641":19,
+	"lit_3642":20,
+	"lit_3643":21,
+	"lit_3710":22,
+	"l_daObjWaterEff_Method":23,
+	"g_profile_Obj_WaterEff":24,
 }
+

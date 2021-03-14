@@ -5,13 +5,13 @@ lbl_8059A038:
 /* 8059A044 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8059A048 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8059A04C 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 8059A050 00000018  4B FF FF A9 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 8059A050 00000018  4B FF FF A9 */	bl _unresolved
 /* 8059A054 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 8059A058 00000020  4B FF FF A1 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 8059A05C 00000024  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 8059A060 00000028  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 8059A058 00000020  4B FF FF A1 */	bl _unresolved
+/* 8059A05C 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059A060 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8059A064 0000002C  38 9F 07 E4 */	addi r4, r31, 0x7e4
-/* 8059A068 00000030  4B FF FF 91 */	bl PSMTXCopy
+/* 8059A068 00000030  4B FF FF 91 */	bl _unresolved
 /* 8059A06C 00000034  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8059A070 00000038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8059A074 0000003C  7C 08 03 A6 */	mtlr r0

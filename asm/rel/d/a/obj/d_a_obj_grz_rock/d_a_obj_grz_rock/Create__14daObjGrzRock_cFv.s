@@ -19,12 +19,12 @@ lbl_80C14DA0:
 /* 80C14DE4 00000044  C0 84 00 48 */	lfs f4, 0x48(r4)
 /* 80C14DE8 00000048  C0 A4 00 4C */	lfs f5, 0x4c(r4)
 /* 80C14DEC 0000004C  C0 C4 00 50 */	lfs f6, 0x50(r4)
-/* 80C14DF0 00000050  4B FF FD C9 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80C14DF0 00000050  4B FF FD C9 */	bl _unresolved
 /* 80C14DF4 00000054  38 7F 07 84 */	addi r3, r31, 0x784
-/* 80C14DF8 00000058  3C 80 00 00 */	lis r4, lit_3886@ha
-/* 80C14DFC 0000005C  C0 24 00 00 */	lfs f1, lit_3886@l(r4)
+/* 80C14DF8 00000058  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C14DFC 0000005C  C0 24 00 00 */	lfs f1, 0x0000(r4)
 /* 80C14E00 00000060  FC 40 08 90 */	fmr f2, f1
-/* 80C14E04 00000064  4B FF FD B5 */	bl SetWall__12dBgS_AcchCirFff
+/* 80C14E04 00000064  4B FF FD B5 */	bl _unresolved
 /* 80C14E08 00000068  38 1F 04 E4 */	addi r0, r31, 0x4e4
 /* 80C14E0C 0000006C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C14E10 00000070  38 7F 05 AC */	addi r3, r31, 0x5ac
@@ -35,12 +35,12 @@ lbl_80C14DA0:
 /* 80C14E24 00000084  39 1F 07 84 */	addi r8, r31, 0x784
 /* 80C14E28 00000088  39 3F 04 F8 */	addi r9, r31, 0x4f8
 /* 80C14E2C 0000008C  39 5F 04 DC */	addi r10, r31, 0x4dc
-/* 80C14E30 00000090  4B FF FD 89 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 80C14E30 00000090  4B FF FD 89 */	bl _unresolved
 /* 80C14E34 00000094  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 80C14E38 00000098  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80C14E3C 0000009C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C14E38 00000098  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C14E3C 0000009C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C14E40 000000A0  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80C14E44 000000A4  4B FF FD 75 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80C14E44 000000A4  4B FF FD 75 */	bl _unresolved
 /* 80C14E48 000000A8  80 1F 06 88 */	lwz r0, 0x688(r31)
 /* 80C14E4C 000000AC  90 1F 07 C4 */	stw r0, 0x7c4(r31)
 /* 80C14E50 000000B0  80 1F 06 8C */	lwz r0, 0x68c(r31)

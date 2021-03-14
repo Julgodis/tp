@@ -3,23 +3,69 @@
 # Module: 754
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_talk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D66300, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_talk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D6632C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_talk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D66358, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
-	'__dt__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D66378, 'size': 0x006C, 'padding': 0x00, 'name': "__dt__8daTalk_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D663E4, 'size': 0x00C8, 'padding': 0x00, 'name': "create__8daTalk_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D664AC, 'size': 0x01B0, 'padding': 0x00, 'name': "execute__8daTalk_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D6665C, 'size': 0x0008, 'padding': 0x00, 'name': "draw__8daTalk_cFv", 'reference_count': 1, 'type': "Function"},
-	'setStatus__8daTalk_cFUs': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D66664, 'size': 0x0024, 'padding': 0x00, 'name': "setStatus__8daTalk_cFUs", 'reference_count': 1, 'type': "Function"},
-	'getStatus__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D66688, 'size': 0x0020, 'padding': 0x00, 'name': "getStatus__8daTalk_cFv", 'reference_count': 2, 'type': "Function"},
-	'messageSet__8daTalk_cFv': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D666A8, 'size': 0x003C, 'padding': 0x00, 'name': "messageSet__8daTalk_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTalk_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D666E4, 'size': 0x0020, 'padding': 0x00, 'name': "daTalk_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daTalk_Delete__FP8daTalk_c': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D66704, 'size': 0x0028, 'padding': 0x00, 'name': "daTalk_Delete__FP8daTalk_c", 'reference_count': 1, 'type': "Function"},
-	'daTalk_Execute__FP8daTalk_c': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D6672C, 'size': 0x0020, 'padding': 0x00, 'name': "daTalk_Execute__FP8daTalk_c", 'reference_count': 1, 'type': "Function"},
-	'daTalk_Draw__FP8daTalk_c': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".text", 'addr': 0x80D6674C, 'size': 0x0020, 'padding': 0x00, 'name': "daTalk_Draw__FP8daTalk_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D6676C': {'library': "d/a/d_a_talk", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D6676C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D66770': {'library': "d/a/d_a_talk", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D66770, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daTalk_Method': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".data", 'addr': 0x80D66774, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTalk_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_TALK': {'library': "d/a/d_a_talk", 'translation_unit': "d_a_talk", 'section': ".data", 'addr': 0x80D66794, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TALK", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_talk",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_talk",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D66300,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6632C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D66358,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':8,'type':"Function"},
+	{'addr':0x80D66378,'size':108,'pad':0,'label':"__dt__8daTalk_cFv",'name':"__dt__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D663E4,'size':200,'pad':0,'label':"create__8daTalk_cFv",'name':"create__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D664AC,'size':432,'pad':0,'label':"execute__8daTalk_cFv",'name':"execute__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D6665C,'size':8,'pad':0,'label':"draw__8daTalk_cFv",'name':"draw__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66664,'size':36,'pad':0,'label':"setStatus__8daTalk_cFUs",'name':"setStatus__8daTalk_cFUs",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66688,'size':32,'pad':0,'label':"getStatus__8daTalk_cFv",'name':"getStatus__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D666A8,'size':60,'pad':0,'label':"messageSet__8daTalk_cFv",'name':"messageSet__8daTalk_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D666E4,'size':32,'pad':0,'label':"daTalk_Create__FP10fopAc_ac_c",'name':"daTalk_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D66704,'size':40,'pad':0,'label':"daTalk_Delete__FP8daTalk_c",'name':"daTalk_Delete__FP8daTalk_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6672C,'size':32,'pad':0,'label':"daTalk_Execute__FP8daTalk_c",'name':"daTalk_Execute__FP8daTalk_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6674C,'size':32,'pad':0,'label':"daTalk_Draw__FP8daTalk_c",'name':"daTalk_Draw__FP8daTalk_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6676C,'size':4,'pad':0,'label':"data_80D6676C",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D66770,'size':4,'pad':0,'label':"data_80D66770",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D66774,'size':32,'pad':0,'label':"l_daTalk_Method",'name':"l_daTalk_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D66794,'size':48,'pad':0,'label':"g_profile_TALK",'name':"g_profile_TALK",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"__dt__8daTalk_cFv":3,
+	"create__8daTalk_cFv":4,
+	"execute__8daTalk_cFv":5,
+	"draw__8daTalk_cFv":6,
+	"setStatus__8daTalk_cFUs":7,
+	"getStatus__8daTalk_cFv":8,
+	"messageSet__8daTalk_cFv":9,
+	"daTalk_Create__FP10fopAc_ac_c":10,
+	"daTalk_Delete__FP8daTalk_c":11,
+	"daTalk_Execute__FP8daTalk_c":12,
+	"daTalk_Draw__FP8daTalk_c":13,
+	"data_80D6676C":14,
+	"data_80D66770":15,
+	"l_daTalk_Method":16,
+	"g_profile_TALK":17,
 }
+

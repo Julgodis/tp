@@ -10,11 +10,11 @@ lbl_80CFE154:
 /* 80CFE174 00000020  38 60 00 00 */	li r3, 0
 /* 80CFE178 00000024  48 00 00 24 */	b lbl_80CFE19C
 lbl_80CFE17C:
-/* 80CFE17C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CFE180 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CFE17C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CFE180 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CFE184 00000008  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 80CFE188 0000000C  7C 05 07 74 */	extsb r5, r0
-/* 80CFE18C 00000010  4B FF FE ED */	bl isSwitch__10dSv_info_cCFii
+/* 80CFE18C 00000010  4B FF FE ED */	bl _unresolved
 /* 80CFE190 00000014  30 03 FF FF */	addic r0, r3, -1
 /* 80CFE194 00000018  7C 00 19 10 */	subfe r0, r0, r3
 /* 80CFE198 0000001C  54 03 06 3E */	clrlwi r3, r0, 0x18

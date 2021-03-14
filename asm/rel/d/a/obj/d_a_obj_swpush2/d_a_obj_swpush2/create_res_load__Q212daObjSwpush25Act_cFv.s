@@ -4,14 +4,14 @@ lbl_80CFE8CC:
 /* 80CFE8D4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CFE8D8 0000000C  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFE8DC 00000010  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFE8E0 00000014  3C 80 00 00 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
-/* 80CFE8E4 00000018  38 04 00 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
+/* 80CFE8E0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CFE8E4 00000018  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80CFE8E8 0000001C  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFE8EC 00000020  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 80CFE8F0 00000024  28 04 00 00 */	cmplwi r4, 0
 /* 80CFE8F4 00000028  41 82 00 10 */	beq lbl_80CFE904
 /* 80CFE8F8 0000002C  38 63 05 68 */	addi r3, r3, 0x568
-/* 80CFE8FC 00000030  4B FF F7 7D */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80CFE8FC 00000030  4B FF F7 7D */	bl _unresolved
 /* 80CFE900 00000034  48 00 00 08 */	b lbl_80CFE908
 lbl_80CFE904:
 /* 80CFE904 00000000  38 60 00 04 */	li r3, 4

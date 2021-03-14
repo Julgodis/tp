@@ -6,13 +6,13 @@ lbl_80D52474:
 /* 80D52484 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80D52488 00000014  41 82 00 24 */	beq lbl_80D524AC
 /* 80D5248C 00000018  38 7F 05 70 */	addi r3, r31, 0x570
-/* 80D52490 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80D52494 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80D52490 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D52494 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D52498 00000024  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D5249C 00000028  4B FF F7 7D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D5249C 00000028  4B FF F7 7D */	bl _unresolved
 /* 80D524A0 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 80D524A4 00000030  38 80 00 00 */	li r4, 0
-/* 80D524A8 00000034  4B FF F7 71 */	bl __dt__10fopAc_ac_cFv
+/* 80D524A8 00000034  4B FF F7 71 */	bl _unresolved
 lbl_80D524AC:
 /* 80D524AC 00000000  38 60 00 01 */	li r3, 1
 /* 80D524B0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

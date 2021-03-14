@@ -4,7 +4,7 @@ lbl_80AA75C8:
 /* 80AA75D0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80AA75D4 0000000C  80 83 0A 18 */	lwz r4, 0xa18(r3)
 /* 80AA75D8 00000010  39 84 00 0C */	addi r12, r4, 0xc
-/* 80AA75DC 00000014  4B FF FE DD */	bl __ptmf_scall
+/* 80AA75DC 00000014  4B FF FE DD */	bl _unresolved
 /* 80AA75E0 00000018  60 00 00 00 */	nop 
 /* 80AA75E4 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80AA75E8 00000020  7C 08 03 A6 */	mtlr r0

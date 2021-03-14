@@ -9,9 +9,9 @@ lbl_80593D74:
 /* 80593D90 0000001C  40 82 00 28 */	bne lbl_80593DB8
 /* 80593D94 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80593D98 00000024  41 82 00 14 */	beq lbl_80593DAC
-/* 80593D9C 00000028  4B FF F7 FD */	bl __ct__16dBgS_MoveBgActorFv
-/* 80593DA0 0000002C  3C 60 00 00 */	lis r3, __vt__12daObjMGate_c@ha
-/* 80593DA4 00000030  38 03 00 00 */	addi r0, r3, __vt__12daObjMGate_c@l
+/* 80593D9C 00000028  4B FF F7 FD */	bl _unresolved
+/* 80593DA0 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80593DA4 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80593DA8 00000034  90 1F 05 9C */	stw r0, 0x59c(r31)
 lbl_80593DAC:
 /* 80593DAC 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)

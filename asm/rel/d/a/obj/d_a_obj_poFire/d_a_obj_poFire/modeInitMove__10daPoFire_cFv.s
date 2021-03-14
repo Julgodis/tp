@@ -5,8 +5,8 @@ lbl_80CB30FC:
 /* 80CB3108 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CB310C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CB3110 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CB3114 00000018  3C 60 00 00 */	lis r3, lit_3662@ha
-/* 80CB3118 0000001C  3B E3 00 00 */	addi r31, r3, lit_3662@l
+/* 80CB3114 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB3118 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80CB311C 00000020  38 7E 04 D4 */	addi r3, r30, 0x4d4
 /* 80CB3120 00000024  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 80CB3124 00000028  C0 1E 05 D0 */	lfs f0, 0x5d0(r30)
@@ -14,21 +14,21 @@ lbl_80CB30FC:
 /* 80CB312C 00000030  C0 5F 00 28 */	lfs f2, 0x28(r31)
 /* 80CB3130 00000034  C0 7F 00 30 */	lfs f3, 0x30(r31)
 /* 80CB3134 00000038  FC 80 10 90 */	fmr f4, f2
-/* 80CB3138 0000003C  4B FF F7 81 */	bl cLib_addCalc__FPfffff
+/* 80CB3138 0000003C  4B FF F7 81 */	bl _unresolved
 /* 80CB313C 00000040  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80CB3140 00000044  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80CB3144 00000048  40 82 00 A0 */	bne lbl_80CB31E4
 /* 80CB3148 0000004C  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 80CB314C 00000050  D0 1E 05 D4 */	stfs f0, 0x5d4(r30)
-/* 80CB3150 00000054  3C 60 00 00 */	lis r3, searchCandle__10daPoFire_cFPvPv@ha
-/* 80CB3154 00000058  38 63 00 00 */	addi r3, r3, searchCandle__10daPoFire_cFPvPv@l
+/* 80CB3150 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB3154 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CB3158 0000005C  7F C4 F3 78 */	mr r4, r30
-/* 80CB315C 00000060  4B FF F7 5D */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80CB315C 00000060  4B FF F7 5D */	bl _unresolved
 /* 80CB3160 00000064  90 7E 05 C8 */	stw r3, 0x5c8(r30)
-/* 80CB3164 00000068  3C 60 00 00 */	lis r3, searchFireTag__10daPoFire_cFPvPv@ha
-/* 80CB3168 0000006C  38 63 00 00 */	addi r3, r3, searchFireTag__10daPoFire_cFPvPv@l
+/* 80CB3164 00000068  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB3168 0000006C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CB316C 00000070  7F C4 F3 78 */	mr r4, r30
-/* 80CB3170 00000074  4B FF F7 49 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80CB3170 00000074  4B FF F7 49 */	bl _unresolved
 /* 80CB3174 00000078  90 7E 05 CC */	stw r3, 0x5cc(r30)
 /* 80CB3178 0000007C  80 7E 05 C8 */	lwz r3, 0x5c8(r30)
 /* 80CB317C 00000080  28 03 00 00 */	cmplwi r3, 0
@@ -55,7 +55,7 @@ lbl_80CB31B4:
 /* 80CB31C8 00000014  38 7E 05 70 */	addi r3, r30, 0x570
 /* 80CB31CC 00000018  38 80 00 FF */	li r4, 0xff
 /* 80CB31D0 0000001C  38 C0 00 01 */	li r6, 1
-/* 80CB31D4 00000020  4B FF F6 E5 */	bl orderEvent__17dEvLib_callback_cFiii
+/* 80CB31D4 00000020  4B FF F6 E5 */	bl _unresolved
 /* 80CB31D8 00000024  48 00 00 0C */	b lbl_80CB31E4
 lbl_80CB31DC:
 /* 80CB31DC 00000000  7F C3 F3 78 */	mr r3, r30

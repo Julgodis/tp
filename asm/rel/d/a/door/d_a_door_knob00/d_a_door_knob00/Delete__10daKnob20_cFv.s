@@ -10,25 +10,25 @@ lbl_80460550:
 /* 80460570 00000020  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
 /* 80460574 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 80460578 00000028  41 82 00 24 */	beq lbl_8046059C
-/* 8046057C 0000002C  4B FF E2 BD */	bl ChkUsed__9cBgW_BgIdCFv
+/* 8046057C 0000002C  4B FF E2 BD */	bl _unresolved
 /* 80460580 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80460584 00000034  41 82 00 18 */	beq lbl_8046059C
-/* 80460588 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8046058C 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80460588 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8046058C 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80460590 00000040  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80460594 00000044  80 9F 05 A0 */	lwz r4, 0x5a0(r31)
-/* 80460598 00000048  4B FF E2 A1 */	bl Release__4cBgSFP9dBgW_Base
+/* 80460598 00000048  4B FF E2 A1 */	bl _unresolved
 lbl_8046059C:
 /* 8046059C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 804605A0 00000004  4B FF E2 E9 */	bl getAlwaysArcName__10daKnob20_cFv
 /* 804605A4 00000008  7C 64 1B 78 */	mr r4, r3
 /* 804605A8 0000000C  38 7F 05 70 */	addi r3, r31, 0x570
-/* 804605AC 00000010  4B FF E2 8D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 804605AC 00000010  4B FF E2 8D */	bl _unresolved
 /* 804605B0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 804605B4 00000018  4B FF E2 E5 */	bl getEvArcName__10daKnob20_cFv
 /* 804605B8 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 804605BC 00000020  38 7F 05 68 */	addi r3, r31, 0x568
-/* 804605C0 00000024  4B FF E2 79 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 804605C0 00000024  4B FF E2 79 */	bl _unresolved
 /* 804605C4 00000028  38 60 00 01 */	li r3, 1
 /* 804605C8 0000002C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804605CC 00000030  80 01 00 14 */	lwz r0, 0x14(r1)

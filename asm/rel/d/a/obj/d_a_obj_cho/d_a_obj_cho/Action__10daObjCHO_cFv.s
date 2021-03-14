@@ -18,7 +18,7 @@ lbl_80BCB248:
 /* 80BCB248 00000000  4B FF FC 95 */	bl MoveAction__10daObjCHO_cFv
 lbl_80BCB24C:
 /* 80BCB24C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80BCB250 00000004  4B FF F0 29 */	bl Insect_GetDemoMain__9dInsect_cFv
+/* 80BCB250 00000004  4B FF F0 29 */	bl _unresolved
 /* 80BCB254 00000008  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BCB258 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BCB25C 00000010  7C 08 03 A6 */	mtlr r0

@@ -3,20 +3,63 @@
 # Module: 254
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80815D80, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80815DAC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80815DD8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'daE_YM_TAG_Draw__FP12daE_YM_TAG_c': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815DF8, 'size': 0x0008, 'padding': 0x00, 'name': "daE_YM_TAG_Draw__FP12daE_YM_TAG_c", 'reference_count': 1, 'type': "Function"},
-	's_e_ym__FPvPv': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815E00, 'size': 0x008C, 'padding': 0x00, 'name': "s_e_ym__FPvPv", 'reference_count': 0, 'type': "Function"},
-	'execute__12daE_YM_TAG_cFv': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815E8C, 'size': 0x006C, 'padding': 0x00, 'name': "execute__12daE_YM_TAG_cFv", 'reference_count': 1, 'type': "Function"},
-	'daE_YM_TAG_Execute__FP12daE_YM_TAG_c': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815EF8, 'size': 0x0020, 'padding': 0x00, 'name': "daE_YM_TAG_Execute__FP12daE_YM_TAG_c", 'reference_count': 1, 'type': "Function"},
-	'daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815F18, 'size': 0x0008, 'padding': 0x00, 'name': "daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c", 'reference_count': 1, 'type': "Function"},
-	'daE_YM_TAG_Delete__FP12daE_YM_TAG_c': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815F20, 'size': 0x0008, 'padding': 0x00, 'name': "daE_YM_TAG_Delete__FP12daE_YM_TAG_c", 'reference_count': 1, 'type': "Function"},
-	'create__12daE_YM_TAG_cFv': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815F28, 'size': 0x0068, 'padding': 0x00, 'name': "create__12daE_YM_TAG_cFv", 'reference_count': 1, 'type': "Function"},
-	'daE_YM_TAG_Create__FP12daE_YM_TAG_c': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".text", 'addr': 0x80815F90, 'size': 0x0020, 'padding': 0x00, 'name': "daE_YM_TAG_Create__FP12daE_YM_TAG_c", 'reference_count': 1, 'type': "Function"},
-	'data_80815FB0': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80815FB0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80815FB4': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80815FB4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daE_YM_TAG_Method': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".data", 'addr': 0x80815FBC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daE_YM_TAG_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_E_YM_TAG': {'library': "d/a/e/d_a_e_ym_tag", 'translation_unit': "d_a_e_ym_tag", 'section': ".data", 'addr': 0x80815FDC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_E_YM_TAG", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/e/d_a_e_ym_tag",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_e_ym_tag",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80815D80,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815DAC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815DD8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x80815DF8,'size':8,'pad':0,'label':"daE_YM_TAG_Draw__FP12daE_YM_TAG_c",'name':"daE_YM_TAG_Draw__FP12daE_YM_TAG_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815E00,'size':140,'pad':0,'label':"s_e_ym__FPvPv",'name':"s_e_ym__FPvPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815E8C,'size':108,'pad':0,'label':"execute__12daE_YM_TAG_cFv",'name':"execute__12daE_YM_TAG_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80815EF8,'size':32,'pad':0,'label':"daE_YM_TAG_Execute__FP12daE_YM_TAG_c",'name':"daE_YM_TAG_Execute__FP12daE_YM_TAG_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815F18,'size':8,'pad':0,'label':"daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c",'name':"daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815F20,'size':8,'pad':0,'label':"daE_YM_TAG_Delete__FP12daE_YM_TAG_c",'name':"daE_YM_TAG_Delete__FP12daE_YM_TAG_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815F28,'size':104,'pad':0,'label':"create__12daE_YM_TAG_cFv",'name':"create__12daE_YM_TAG_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80815F90,'size':32,'pad':0,'label':"daE_YM_TAG_Create__FP12daE_YM_TAG_c",'name':"daE_YM_TAG_Create__FP12daE_YM_TAG_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80815FB0,'size':4,'pad':0,'label':"data_80815FB0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80815FB4,'size':4,'pad':0,'label':"data_80815FB4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80815FB8,'size':32,'pad':0,'label':"l_daE_YM_TAG_Method",'name':"l_daE_YM_TAG_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80815FD8,'size':48,'pad':0,'label':"g_profile_E_YM_TAG",'name':"g_profile_E_YM_TAG",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daE_YM_TAG_Draw__FP12daE_YM_TAG_c":3,
+	"s_e_ym__FPvPv":4,
+	"execute__12daE_YM_TAG_cFv":5,
+	"daE_YM_TAG_Execute__FP12daE_YM_TAG_c":6,
+	"daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c":7,
+	"daE_YM_TAG_Delete__FP12daE_YM_TAG_c":8,
+	"create__12daE_YM_TAG_cFv":9,
+	"daE_YM_TAG_Create__FP12daE_YM_TAG_c":10,
+	"data_80815FB0":11,
+	"data_80815FB4":12,
+	"l_daE_YM_TAG_Method":13,
+	"g_profile_E_YM_TAG":14,
 }
+

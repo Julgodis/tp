@@ -25,7 +25,7 @@ lbl_80A3ACD4:
 /* 80A3AD30 0000005C  38 A1 00 08 */	addi r5, r1, 8
 /* 80A3AD34 00000060  7C E6 3B 78 */	mr r6, r7
 /* 80A3AD38 00000064  38 E0 00 01 */	li r7, 1
-/* 80A3AD3C 00000068  4B FE FC 3D */	bl daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi
+/* 80A3AD3C 00000068  4B FE FC 3D */	bl _unresolved
 /* 80A3AD40 0000006C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80A3AD44 00000070  7C 08 03 A6 */	mtlr r0
 /* 80A3AD48 00000074  38 21 00 30 */	addi r1, r1, 0x30

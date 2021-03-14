@@ -6,11 +6,11 @@ lbl_80CDADD4:
 /* 80CDADE4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CDADE8 00000014  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80CDADEC 00000018  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
-/* 80CDADF0 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CDADF4 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CDADF0 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDADF4 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDADF8 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CDADFC 00000028  7C 05 07 74 */	extsb r5, r0
-/* 80CDAE00 0000002C  4B FF E9 99 */	bl isSwitch__10dSv_info_cCFii
+/* 80CDAE00 0000002C  4B FF E9 99 */	bl _unresolved
 /* 80CDAE04 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80CDAE08 00000034  41 82 00 24 */	beq lbl_80CDAE2C
 /* 80CDAE0C 00000038  38 7F 09 35 */	addi r3, r31, 0x935
@@ -18,7 +18,7 @@ lbl_80CDADD4:
 /* 80CDAE14 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80CDAE18 00000044  40 82 00 14 */	bne lbl_80CDAE2C
 /* 80CDAE1C 00000048  7F E3 FB 78 */	mr r3, r31
-/* 80CDAE20 0000004C  4B FF E9 79 */	bl show__12daItemBase_cFv
+/* 80CDAE20 0000004C  4B FF E9 79 */	bl _unresolved
 /* 80CDAE24 00000050  7F E3 FB 78 */	mr r3, r31
 /* 80CDAE28 00000054  4B FF FB 85 */	bl actionWaitInit__7daKey_cFv
 lbl_80CDAE2C:

@@ -6,10 +6,10 @@ lbl_80598E00:
 /* 80598E10 00000010  38 64 05 A0 */	addi r3, r4, 0x5a0
 /* 80598E14 00000014  88 04 05 AC */	lbz r0, 0x5ac(r4)
 /* 80598E18 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 80598E1C 0000001C  3C 80 00 00 */	lis r4, l_resNameIdx@ha
-/* 80598E20 00000020  38 84 00 00 */	addi r4, r4, l_resNameIdx@l
+/* 80598E1C 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80598E20 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80598E24 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80598E28 00000028  4B FF F3 31 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80598E28 00000028  4B FF F3 31 */	bl _unresolved
 /* 80598E2C 0000002C  38 60 00 01 */	li r3, 1
 /* 80598E30 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80598E34 00000034  7C 08 03 A6 */	mtlr r0

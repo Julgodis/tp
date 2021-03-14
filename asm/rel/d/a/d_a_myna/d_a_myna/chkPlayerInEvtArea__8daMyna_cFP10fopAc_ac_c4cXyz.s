@@ -11,32 +11,32 @@ lbl_80949D54:
 /* 80949D78 00000000  DB 81 00 40 */	stfd f28, 0x40(r1)
 /* 80949D7C 00000028  F3 81 00 48 */	psq_st f28, 72(r1), 0, 0 /* qr0 */
 /* 80949D80 00000000  39 61 00 40 */	addi r11, r1, 0x40
-/* 80949D84 00000004  4B FF BE 55 */	bl _savegpr_28
+/* 80949D84 00000004  4B FF BE 55 */	bl _unresolved
 /* 80949D88 00000008  7C 9C 23 79 */	or. r28, r4, r4
 /* 80949D8C 0000000C  7C BD 2B 78 */	mr r29, r5
 /* 80949D90 00000010  3B C0 00 00 */	li r30, 0
 /* 80949D94 00000014  41 82 01 18 */	beq lbl_80949EAC
-/* 80949D98 00000018  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80949D9C 0000001C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80949D98 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80949D9C 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80949DA0 00000020  A8 1C 04 DE */	lha r0, 0x4de(r28)
 /* 80949DA4 00000024  7C 00 00 D0 */	neg r0, r0
 /* 80949DA8 00000028  7C 04 07 34 */	extsh r4, r0
-/* 80949DAC 0000002C  4B FF BE 2D */	bl mDoMtx_YrotS__FPA4_fs
+/* 80949DAC 0000002C  4B FF BE 2D */	bl _unresolved
 /* 80949DB0 00000030  C0 1C 04 D0 */	lfs f0, 0x4d0(r28)
 /* 80949DB4 00000034  FC 20 00 50 */	fneg f1, f0
 /* 80949DB8 00000038  C0 1C 04 D4 */	lfs f0, 0x4d4(r28)
 /* 80949DBC 0000003C  FC 40 00 50 */	fneg f2, f0
 /* 80949DC0 00000040  C0 1C 04 D8 */	lfs f0, 0x4d8(r28)
 /* 80949DC4 00000044  FC 60 00 50 */	fneg f3, f0
-/* 80949DC8 00000048  4B FF BE 11 */	bl transM__14mDoMtx_stack_cFfff
-/* 80949DCC 0000004C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80949DD0 00000050  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80949DD4 00000054  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80949DD8 00000058  3B E4 00 00 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80949DC8 00000048  4B FF BE 11 */	bl _unresolved
+/* 80949DCC 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80949DD0 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80949DD4 00000054  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80949DD8 00000058  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80949DDC 0000005C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80949DE0 00000060  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80949DE4 00000064  38 A1 00 14 */	addi r5, r1, 0x14
-/* 80949DE8 00000068  4B FF BD F1 */	bl PSMTXMultVec
+/* 80949DE8 00000068  4B FF BD F1 */	bl _unresolved
 /* 80949DEC 0000006C  C0 3C 04 EC */	lfs f1, 0x4ec(r28)
 /* 80949DF0 00000070  C0 1D 00 00 */	lfs f0, 0(r29)
 /* 80949DF4 00000074  EC 01 00 2A */	fadds f0, f1, f0
@@ -57,7 +57,7 @@ lbl_80949D54:
 /* 80949E30 000000B0  38 9C 04 D0 */	addi r4, r28, 0x4d0
 /* 80949E34 000000B4  80 BF 5D AC */	lwz r5, 0x5dac(r31)
 /* 80949E38 000000B8  38 A5 04 D0 */	addi r5, r5, 0x4d0
-/* 80949E3C 000000BC  4B FF BD 9D */	bl __mi__4cXyzCFRC3Vec
+/* 80949E3C 000000BC  4B FF BD 9D */	bl _unresolved
 /* 80949E40 000000C0  C0 01 00 08 */	lfs f0, 8(r1)
 /* 80949E44 000000C4  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80949E48 000000C8  C0 61 00 0C */	lfs f3, 0xc(r1)
@@ -71,8 +71,8 @@ lbl_80949D54:
 /* 80949E68 000000E8  EC 1E 07 B2 */	fmuls f0, f30, f30
 /* 80949E6C 000000EC  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80949E70 000000F0  EC 22 00 2A */	fadds f1, f2, f0
-/* 80949E74 000000F4  3C 60 00 00 */	lis r3, lit_4270@ha
-/* 80949E78 000000F8  C0 03 00 00 */	lfs f0, lit_4270@l(r3)
+/* 80949E74 000000F4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80949E78 000000F8  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80949E7C 00000128  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80949E80 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 80949E84 00000004  40 82 00 28 */	bne lbl_80949EAC
@@ -96,7 +96,7 @@ lbl_80949EAC:
 /* 80949EC8 0000001C  E3 81 00 48 */	psq_l f28, 72(r1), 0, 0 /* qr0 */
 /* 80949ECC 00000000  CB 81 00 40 */	lfd f28, 0x40(r1)
 /* 80949ED0 00000004  39 61 00 40 */	addi r11, r1, 0x40
-/* 80949ED4 00000008  4B FF BD 05 */	bl _restgpr_28
+/* 80949ED4 00000008  4B FF BD 05 */	bl _unresolved
 /* 80949ED8 0000000C  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80949EDC 00000010  7C 08 03 A6 */	mtlr r0
 /* 80949EE0 00000014  38 21 00 80 */	addi r1, r1, 0x80

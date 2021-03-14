@@ -3,31 +3,88 @@
 # Module: 81
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80542100, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8054212C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80542158, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'daNpc_Fish_Draw__FP14npc_fish_class': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542178, 'size': 0x0008, 'padding': 0x00, 'name': "daNpc_Fish_Draw__FP14npc_fish_class", 'reference_count': 1, 'type': "Function"},
-	'daNpc_Fish_Execute__FP14npc_fish_class': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542180, 'size': 0x0008, 'padding': 0x00, 'name': "daNpc_Fish_Execute__FP14npc_fish_class", 'reference_count': 1, 'type': "Function"},
-	'daNpc_Fish_IsDelete__FP14npc_fish_class': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542188, 'size': 0x0008, 'padding': 0x00, 'name': "daNpc_Fish_IsDelete__FP14npc_fish_class", 'reference_count': 1, 'type': "Function"},
-	'daNpc_Fish_Delete__FP14npc_fish_class': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542190, 'size': 0x0008, 'padding': 0x00, 'name': "daNpc_Fish_Delete__FP14npc_fish_class", 'reference_count': 1, 'type': "Function"},
-	'fish_set__FP10fopAc_ac_cP11fish_data_s': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542198, 'size': 0x00BC, 'padding': 0x00, 'name': "fish_set__FP10fopAc_ac_cP11fish_data_s", 'reference_count': 1, 'type': "Function"},
-	'daNpc_Fish_Create__FP10fopAc_ac_c': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".text", 'addr': 0x80542254, 'size': 0x0264, 'padding': 0x00, 'name': "daNpc_Fish_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_805424B8': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805424B8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_805424BC': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805424BC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3787': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424C4, 'size': 0x0004, 'padding': 0x00, 'name': "@3787", 'reference_count': 0, 'type': "Integer"},
-	'lit_3788': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424C8, 'size': 0x0004, 'padding': 0x00, 'name': "@3788", 'reference_count': 0, 'type': "InitData"},
-	'lit_3789': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424CC, 'size': 0x0004, 'padding': 0x00, 'name': "@3789", 'reference_count': 0, 'type': "Integer"},
-	'lit_3790': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424D0, 'size': 0x0004, 'padding': 0x00, 'name': "@3790", 'reference_count': 0, 'type': "Integer"},
-	'lit_3791': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424D4, 'size': 0x0004, 'padding': 0x00, 'name': "@3791", 'reference_count': 0, 'type': "Integer"},
-	'lit_3792': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424D8, 'size': 0x0004, 'padding': 0x00, 'name': "@3792", 'reference_count': 0, 'type': "Integer"},
-	'lit_3793': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424DC, 'size': 0x0004, 'padding': 0x00, 'name': "@3793", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".rodata", 'addr': 0x805424E0, 'size': 0x0008, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'cNullVec__6Z2Calc': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x805424EC, 'size': 0x000C, 'padding': 0x00, 'name': "cNullVec__6Z2Calc", 'reference_count': 0, 'type': "InitData"},
-	'lit_1787': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x805424F8, 'size': 0x0004, 'padding': 0x10, 'name': "@1787", 'reference_count': 0, 'type': "Integer"},
-	'fish_d127_S': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x8054250C, 'size': 0x03D4, 'padding': 0x00, 'name': "fish_d127_S", 'reference_count': 0, 'type': "InitData"},
-	'fish_d127': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x805428E0, 'size': 0x0460, 'padding': 0x00, 'name': "fish_d127", 'reference_count': 0, 'type': "InitData"},
-	'lf_pos': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x80542D40, 'size': 0x0090, 'padding': 0x00, 'name': "lf_pos", 'reference_count': 0, 'type': "InitData"},
-	'l_daNpc_Fish_Method': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x80542DD0, 'size': 0x0020, 'padding': 0x00, 'name': "l_daNpc_Fish_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_NPC_FISH': {'library': "d/a/npc/d_a_npc_fish", 'translation_unit': "d_a_npc_fish", 'section': ".data", 'addr': 0x80542DF0, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_NPC_FISH", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/npc/d_a_npc_fish",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_npc_fish",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80542100,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8054212C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80542158,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x80542178,'size':8,'pad':0,'label':"daNpc_Fish_Draw__FP14npc_fish_class",'name':"daNpc_Fish_Draw__FP14npc_fish_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80542180,'size':8,'pad':0,'label':"daNpc_Fish_Execute__FP14npc_fish_class",'name':"daNpc_Fish_Execute__FP14npc_fish_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80542188,'size':8,'pad':0,'label':"daNpc_Fish_IsDelete__FP14npc_fish_class",'name':"daNpc_Fish_IsDelete__FP14npc_fish_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80542190,'size':8,'pad':0,'label':"daNpc_Fish_Delete__FP14npc_fish_class",'name':"daNpc_Fish_Delete__FP14npc_fish_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80542198,'size':188,'pad':0,'label':"fish_set__FP10fopAc_ac_cP11fish_data_s",'name':"fish_set__FP10fopAc_ac_cP11fish_data_s",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80542254,'size':612,'pad':0,'label':"daNpc_Fish_Create__FP10fopAc_ac_c",'name':"daNpc_Fish_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805424B8,'size':4,'pad':0,'label':"data_805424B8",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x805424BC,'size':4,'pad':0,'label':"data_805424BC",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x805424C0,'size':4,'pad':0,'label':"lit_3787",'name':"@3787",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424C4,'size':4,'pad':0,'label':"lit_3788",'name':"@3788",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805424C8,'size':4,'pad':0,'label':"lit_3789",'name':"@3789",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424CC,'size':4,'pad':0,'label':"lit_3790",'name':"@3790",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424D0,'size':4,'pad':0,'label':"lit_3791",'name':"@3791",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424D4,'size':4,'pad':0,'label':"lit_3792",'name':"@3792",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424D8,'size':4,'pad':0,'label':"lit_3793",'name':"@3793",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805424DC,'size':8,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x805424E4,'size':12,'pad':0,'label':"cNullVec__6Z2Calc",'name':"cNullVec__6Z2Calc",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x805424F0,'size':4,'pad':0,'label':"lit_1787",'name':"@1787",'lib':-1,'tu':4,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x805424F4,'size':16,'pad':0,'label':"pad_805424F4",'name':None,'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80542504,'size':980,'pad':0,'label':"fish_d127_S",'name':"fish_d127_S",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x805428D8,'size':1120,'pad':0,'label':"fish_d127",'name':"fish_d127",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80542D38,'size':144,'pad':0,'label':"lf_pos",'name':"lf_pos",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80542DC8,'size':32,'pad':0,'label':"l_daNpc_Fish_Method",'name':"l_daNpc_Fish_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80542DE8,'size':48,'pad':0,'label':"g_profile_NPC_FISH",'name':"g_profile_NPC_FISH",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daNpc_Fish_Draw__FP14npc_fish_class":3,
+	"daNpc_Fish_Execute__FP14npc_fish_class":4,
+	"daNpc_Fish_IsDelete__FP14npc_fish_class":5,
+	"daNpc_Fish_Delete__FP14npc_fish_class":6,
+	"fish_set__FP10fopAc_ac_cP11fish_data_s":7,
+	"daNpc_Fish_Create__FP10fopAc_ac_c":8,
+	"data_805424B8":9,
+	"data_805424BC":10,
+	"lit_3787":11,
+	"lit_3788":12,
+	"lit_3789":13,
+	"lit_3790":14,
+	"lit_3791":15,
+	"lit_3792":16,
+	"lit_3793":17,
+	"stringBase0":18,
+	"cNullVec__6Z2Calc":19,
+	"lit_1787":20,
+	"pad_805424F4":21,
+	"fish_d127_S":22,
+	"fish_d127":23,
+	"lf_pos":24,
+	"l_daNpc_Fish_Method":25,
+	"g_profile_NPC_FISH":26,
 }
+

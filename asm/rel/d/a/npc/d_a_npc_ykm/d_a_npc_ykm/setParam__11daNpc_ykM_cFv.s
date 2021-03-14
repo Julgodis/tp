@@ -5,10 +5,10 @@ lbl_80B54BD0:
 /* 80B54BDC 0000000C  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 80B54BE0 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
 /* 80B54BE4 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B54BE8 00000004  4B FF E8 71 */	bl _savegpr_28
+/* 80B54BE8 00000004  4B FF E8 71 */	bl _unresolved
 /* 80B54BEC 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 80B54BF0 0000000C  3C 80 00 00 */	lis r4, m__17daNpc_ykM_Param_c@ha
-/* 80B54BF4 00000010  3B E4 00 00 */	addi r31, r4, m__17daNpc_ykM_Param_c@l
+/* 80B54BF0 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B54BF4 00000010  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80B54BF8 00000014  48 00 1C 15 */	bl selectAction__11daNpc_ykM_cFv
 /* 80B54BFC 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80B54C00 0000001C  48 00 04 A5 */	bl srchActors__11daNpc_ykM_cFv
@@ -90,8 +90,8 @@ lbl_80B54CFC:
 /* 80B54D20 00000024  98 1E 05 45 */	stb r0, 0x545(r30)
 /* 80B54D24 00000028  38 00 00 46 */	li r0, 0x46
 /* 80B54D28 0000002C  98 1E 05 47 */	stb r0, 0x547(r30)
-/* 80B54D2C 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80B54D30 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B54D2C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B54D30 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B54D34 00000038  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80B54D38 0000003C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B54D3C 00000040  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
@@ -122,7 +122,7 @@ lbl_80B54D58:
 /* 80B54D94 0000003C  D0 1E 0D F8 */	stfs f0, 0xdf8(r30)
 /* 80B54D98 00000040  38 7E 08 A0 */	addi r3, r30, 0x8a0
 /* 80B54D9C 00000044  C0 3E 0D F0 */	lfs f1, 0xdf0(r30)
-/* 80B54DA0 00000048  4B FF E6 B9 */	bl SetWallR__12dBgS_AcchCirFf
+/* 80B54DA0 00000048  4B FF E6 B9 */	bl _unresolved
 /* 80B54DA4 0000004C  38 7F 00 00 */	addi r3, r31, 0
 /* 80B54DA8 00000050  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B54DAC 00000054  D0 1E 08 D0 */	stfs f0, 0x8d0(r30)
@@ -161,7 +161,7 @@ lbl_80B54DFC:
 /* 80B54E28 0000002C  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 80B54E2C 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 80B54E30 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B54E34 00000008  4B FF E6 25 */	bl _restgpr_28
+/* 80B54E34 00000008  4B FF E6 25 */	bl _unresolved
 /* 80B54E38 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80B54E3C 00000010  7C 08 03 A6 */	mtlr r0
 /* 80B54E40 00000014  38 21 00 30 */	addi r1, r1, 0x30

@@ -3,10 +3,10 @@ lbl_8077ACA4:
 /* 8077ACA8 00000004  7C 08 02 A6 */	mflr r0
 /* 8077ACAC 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8077ACB0 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 8077ACB4 00000010  4B FF FE 45 */	bl _savegpr_28
+/* 8077ACB4 00000010  4B FF FE 45 */	bl _unresolved
 /* 8077ACB8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8077ACBC 00000018  3C 60 00 00 */	lis r3, lit_3903@ha
-/* 8077ACC0 0000001C  3B A3 00 00 */	addi r29, r3, lit_3903@l
+/* 8077ACBC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077ACC0 0000001C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
 /* 8077ACC4 00000020  88 1E 30 6C */	lbz r0, 0x306c(r30)
 /* 8077ACC8 00000024  7C 00 07 75 */	extsb. r0, r0
 /* 8077ACCC 00000028  41 82 00 0C */	beq lbl_8077ACD8
@@ -15,27 +15,27 @@ lbl_8077ACA4:
 lbl_8077ACD8:
 /* 8077ACD8 00000000  80 7E 05 D4 */	lwz r3, 0x5d4(r30)
 /* 8077ACDC 00000004  83 83 00 04 */	lwz r28, 4(r3)
-/* 8077ACE0 00000008  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 8077ACE4 0000000C  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 8077ACE0 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077ACE4 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8077ACE8 00000010  38 80 00 02 */	li r4, 2
 /* 8077ACEC 00000014  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8077ACF0 00000018  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 8077ACF4 0000001C  4B FF FE 05 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 8077ACF8 00000020  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 8077ACFC 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 8077ACF4 0000001C  4B FF FE 05 */	bl _unresolved
+/* 8077ACF8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077ACFC 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8077AD00 00000028  80 9C 00 04 */	lwz r4, 4(r28)
 /* 8077AD04 0000002C  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 8077AD08 00000030  4B FF FD F1 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 8077AD0C 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8077AD10 00000038  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8077AD08 00000030  4B FF FD F1 */	bl _unresolved
+/* 8077AD0C 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077AD10 00000038  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8077AD14 0000003C  80 04 5F 88 */	lwz r0, 0x5f88(r4)
-/* 8077AD18 00000040  3C 60 00 00 */	lis r3, j3dSys@ha
-/* 8077AD1C 00000044  3B E3 00 00 */	addi r31, r3, j3dSys@l
+/* 8077AD18 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077AD1C 00000044  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8077AD20 00000048  90 1F 00 48 */	stw r0, 0x48(r31)
 /* 8077AD24 0000004C  80 04 5F 8C */	lwz r0, 0x5f8c(r4)
 /* 8077AD28 00000050  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8077AD2C 00000054  80 7E 05 D4 */	lwz r3, 0x5d4(r30)
-/* 8077AD30 00000058  4B FF FD C9 */	bl entryDL__16mDoExt_McaMorfSOFv
+/* 8077AD30 00000058  4B FF FD C9 */	bl _unresolved
 /* 8077AD34 0000005C  88 1E 06 9A */	lbz r0, 0x69a(r30)
 /* 8077AD38 00000060  7C 00 07 75 */	extsb. r0, r0
 /* 8077AD3C 00000064  41 82 00 60 */	beq lbl_8077AD9C
@@ -58,9 +58,9 @@ lbl_8077ACD8:
 /* 8077AD80 000000A8  39 1E 01 0C */	addi r8, r30, 0x10c
 /* 8077AD84 000000AC  39 20 00 00 */	li r9, 0
 /* 8077AD88 000000B0  C0 BD 00 08 */	lfs f5, 8(r29)
-/* 8077AD8C 000000B4  3D 40 00 00 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
-/* 8077AD90 000000B8  39 4A 00 00 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
-/* 8077AD94 000000BC  4B FF FD 65 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
+/* 8077AD8C 000000B4  3D 40 00 00 */	lis r10, 0x0000 /* 0x00000000@ha */
+/* 8077AD90 000000B8  39 4A 00 00 */	addi r10, r10, 0x0000 /* 0x00000000@l */
+/* 8077AD94 000000BC  4B FF FD 65 */	bl _unresolved
 /* 8077AD98 000000C0  90 7E 06 9C */	stw r3, 0x69c(r30)
 lbl_8077AD9C:
 /* 8077AD9C 00000000  38 00 00 05 */	li r0, 5
@@ -74,23 +74,23 @@ lbl_8077AD9C:
 /* 8077ADBC 00000020  38 80 00 10 */	li r4, 0x10
 /* 8077ADC0 00000024  38 A1 00 08 */	addi r5, r1, 8
 /* 8077ADC4 00000028  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 8077ADC8 0000002C  4B FF FD 31 */	bl update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c
+/* 8077ADC8 0000002C  4B FF FD 31 */	bl _unresolved
 /* 8077ADCC 00000030  38 7E 30 1C */	addi r3, r30, 0x301c
 /* 8077ADD0 00000034  81 9E 30 1C */	lwz r12, 0x301c(r30)
 /* 8077ADD4 00000038  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8077ADD8 0000003C  7D 89 03 A6 */	mtctr r12
 /* 8077ADDC 00000040  4E 80 04 21 */	bctrl 
 /* 8077ADE0 00000044  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 8077ADE4 00000048  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8077ADE8 0000004C  38 03 00 00 */	addi r0, r3, g_dComIfG_gameInfo@l
+/* 8077ADE4 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077ADE8 0000004C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8077ADEC 00000050  7C 60 22 14 */	add r3, r0, r4
 /* 8077ADF0 00000054  3C 63 00 01 */	addis r3, r3, 1
 /* 8077ADF4 00000058  38 63 61 54 */	addi r3, r3, 0x6154
 /* 8077ADF8 0000005C  38 63 5F 64 */	addi r3, r3, 0x5f64
 /* 8077ADFC 00000060  38 9E 30 1C */	addi r4, r30, 0x301c
-/* 8077AE00 00000064  4B FF FC F9 */	bl setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
-/* 8077AE04 00000068  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8077AE08 0000006C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8077AE00 00000064  4B FF FC F9 */	bl _unresolved
+/* 8077AE04 00000068  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8077AE08 0000006C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8077AE0C 00000070  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8077AE10 00000074  90 1F 00 48 */	stw r0, 0x48(r31)
 /* 8077AE14 00000078  80 03 5F 84 */	lwz r0, 0x5f84(r3)
@@ -98,7 +98,7 @@ lbl_8077AD9C:
 /* 8077AE1C 00000080  38 60 00 01 */	li r3, 1
 lbl_8077AE20:
 /* 8077AE20 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 8077AE24 00000004  4B FF FC D5 */	bl _restgpr_28
+/* 8077AE24 00000004  4B FF FC D5 */	bl _unresolved
 /* 8077AE28 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8077AE2C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8077AE30 00000010  38 21 00 30 */	addi r1, r1, 0x30

@@ -11,15 +11,15 @@ lbl_8058D378:
 /* 8058D39C 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 8058D3A0 00000028  41 82 00 50 */	beq lbl_8058D3F0
 /* 8058D3A4 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 8058D3A8 00000030  4B FF FD 91 */	bl __ct__16dBgS_MoveBgActorFv
-/* 8058D3AC 00000034  3C 60 00 00 */	lis r3, __vt__Q211daObjLadder5Act_c@ha
-/* 8058D3B0 00000038  38 03 00 00 */	addi r0, r3, __vt__Q211daObjLadder5Act_c@l
+/* 8058D3A8 00000030  4B FF FD 91 */	bl _unresolved
+/* 8058D3AC 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8058D3B0 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8058D3B4 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
 /* 8058D3B8 00000040  3B DE 05 BC */	addi r30, r30, 0x5bc
 /* 8058D3BC 00000044  7F C3 F3 78 */	mr r3, r30
-/* 8058D3C0 00000048  4B FF FD 79 */	bl __ct__11dBgS_GndChkFv
-/* 8058D3C4 0000004C  3C 60 00 00 */	lis r3, __vt__14dBgS_ObjGndChk@ha
-/* 8058D3C8 00000050  38 63 00 00 */	addi r3, r3, __vt__14dBgS_ObjGndChk@l
+/* 8058D3C0 00000048  4B FF FD 79 */	bl _unresolved
+/* 8058D3C4 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8058D3C8 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8058D3CC 00000054  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 8058D3D0 00000058  38 03 00 0C */	addi r0, r3, 0xc
 /* 8058D3D4 0000005C  90 1E 00 20 */	stw r0, 0x20(r30)
@@ -28,16 +28,16 @@ lbl_8058D378:
 /* 8058D3E0 00000068  38 03 00 24 */	addi r0, r3, 0x24
 /* 8058D3E4 0000006C  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 8058D3E8 00000070  38 7E 00 3C */	addi r3, r30, 0x3c
-/* 8058D3EC 00000074  4B FF FD 4D */	bl SetObj__16dBgS_PolyPassChkFv
+/* 8058D3EC 00000074  4B FF FD 4D */	bl _unresolved
 lbl_8058D3F0:
 /* 8058D3F0 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 8058D3F4 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 8058D3F8 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_8058D3FC:
 /* 8058D3FC 00000000  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 8058D400 00000004  3C 80 00 00 */	lis r4, M_arcname__Q211daObjLadder5Act_c@ha
-/* 8058D404 00000008  38 84 00 00 */	addi r4, r4, M_arcname__Q211daObjLadder5Act_c@l
-/* 8058D408 0000000C  4B FF FD 31 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8058D400 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8058D404 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8058D408 0000000C  4B FF FD 31 */	bl _unresolved
 /* 8058D40C 00000010  2C 03 00 04 */	cmpwi r3, 4
 /* 8058D410 00000014  40 82 00 50 */	bne lbl_8058D460
 /* 8058D414 00000018  7F E3 FB 78 */	mr r3, r31
@@ -47,18 +47,18 @@ lbl_8058D3FC:
 /* 8058D424 00000028  90 7F 05 AC */	stw r3, 0x5ac(r31)
 /* 8058D428 0000002C  80 1F 05 AC */	lwz r0, 0x5ac(r31)
 /* 8058D42C 00000030  54 04 18 38 */	slwi r4, r0, 3
-/* 8058D430 00000034  3C 60 00 00 */	lis r3, data_8058DDD4@ha
-/* 8058D434 00000038  38 03 00 00 */	addi r0, r3, data_8058DDD4@l
+/* 8058D430 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8058D434 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8058D438 0000003C  7C A0 22 14 */	add r5, r0, r4
 /* 8058D43C 00000040  7F E3 FB 78 */	mr r3, r31
-/* 8058D440 00000044  3C 80 00 00 */	lis r4, M_arcname__Q211daObjLadder5Act_c@ha
-/* 8058D444 00000048  38 84 00 00 */	addi r4, r4, M_arcname__Q211daObjLadder5Act_c@l
+/* 8058D440 00000044  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8058D444 00000048  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8058D448 0000004C  A8 A5 00 02 */	lha r5, 2(r5)
-/* 8058D44C 00000050  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
-/* 8058D450 00000054  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
+/* 8058D44C 00000050  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 8058D450 00000054  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 8058D454 00000058  38 E0 0C B0 */	li r7, 0xcb0
 /* 8058D458 0000005C  39 00 00 00 */	li r8, 0
-/* 8058D45C 00000060  4B FF FC DD */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 8058D45C 00000060  4B FF FC DD */	bl _unresolved
 lbl_8058D460:
 /* 8058D460 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8058D464 00000004  83 C1 00 08 */	lwz r30, 8(r1)

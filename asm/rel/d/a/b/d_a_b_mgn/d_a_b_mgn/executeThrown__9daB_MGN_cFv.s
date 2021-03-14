@@ -3,25 +3,25 @@ lbl_80609D70:
 /* 80609D74 00000004  7C 08 02 A6 */	mflr r0
 /* 80609D78 00000008  90 01 00 74 */	stw r0, 0x74(r1)
 /* 80609D7C 0000000C  39 61 00 70 */	addi r11, r1, 0x70
-/* 80609D80 00000010  4B FF B9 19 */	bl _savegpr_28
+/* 80609D80 00000010  4B FF B9 19 */	bl _unresolved
 /* 80609D84 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80609D88 00000018  3C 60 00 00 */	lis r3, lit_3928@ha
-/* 80609D8C 0000001C  3B C3 00 00 */	addi r30, r3, lit_3928@l
-/* 80609D90 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80609D94 00000024  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80609D88 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609D8C 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 80609D90 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609D94 00000024  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80609D98 00000028  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 80609D9C 0000002C  38 7C 04 D0 */	addi r3, r28, 0x4d0
-/* 80609DA0 00000030  4B FF B8 F9 */	bl transS__14mDoMtx_stack_cFRC4cXyz
-/* 80609DA4 00000034  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80609DA8 00000038  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80609DA0 00000030  4B FF B8 F9 */	bl _unresolved
+/* 80609DA4 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609DA8 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80609DAC 0000003C  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
-/* 80609DB0 00000040  4B FF B8 E9 */	bl mDoMtx_YrotM__FPA4_fs
+/* 80609DB0 00000040  4B FF B8 E9 */	bl _unresolved
 /* 80609DB4 00000044  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 80609DB8 00000048  FC 40 08 90 */	fmr f2, f1
 /* 80609DBC 0000004C  C0 7E 01 28 */	lfs f3, 0x128(r30)
-/* 80609DC0 00000050  4B FF B8 D9 */	bl transM__14mDoMtx_stack_cFfff
-/* 80609DC4 00000054  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80609DC8 00000058  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80609DC0 00000050  4B FF B8 D9 */	bl _unresolved
+/* 80609DC4 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609DC8 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80609DCC 0000005C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80609DD0 00000060  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80609DD4 00000064  C0 03 00 1C */	lfs f0, 0x1c(r3)
@@ -31,8 +31,8 @@ lbl_80609D70:
 /* 80609DE4 00000074  88 1D 0A FA */	lbz r0, 0xafa(r29)
 /* 80609DE8 00000078  28 00 00 0B */	cmplwi r0, 0xb
 /* 80609DEC 0000007C  41 81 08 6C */	bgt lbl_8060A658
-/* 80609DF0 00000080  3C 60 00 00 */	lis r3, lit_6262@ha
-/* 80609DF4 00000084  38 63 00 00 */	addi r3, r3, lit_6262@l
+/* 80609DF0 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609DF4 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80609DF8 00000088  54 00 10 3A */	slwi r0, r0, 2
 /* 80609DFC 0000008C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80609E00 00000090  7C 09 03 A6 */	mtctr r0
@@ -40,13 +40,13 @@ lbl_80609D70:
 /* 80609E08 00000098  38 60 00 02 */	li r3, 2
 /* 80609E0C 0000009C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80609E10 000000A0  7C 04 07 74 */	extsb r4, r0
-/* 80609E14 000000A4  4B FF B8 85 */	bl dComIfGs_isOneZoneSwitch__Fii
+/* 80609E14 000000A4  4B FF B8 85 */	bl _unresolved
 /* 80609E18 000000A8  2C 03 00 00 */	cmpwi r3, 0
 /* 80609E1C 000000AC  40 82 00 14 */	bne lbl_80609E30
 /* 80609E20 000000B0  38 60 00 02 */	li r3, 2
 /* 80609E24 000000B4  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80609E28 000000B8  7C 04 07 74 */	extsb r4, r0
-/* 80609E2C 000000BC  4B FF B8 6D */	bl dComIfGs_onOneZoneSwitch__Fii
+/* 80609E2C 000000BC  4B FF B8 6D */	bl _unresolved
 lbl_80609E30:
 /* 80609E30 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80609E34 00000004  38 80 00 1C */	li r4, 0x1c
@@ -66,7 +66,7 @@ lbl_80609E30:
 /* 80609E6C 0000003C  38 60 00 0B */	li r3, 0xb
 /* 80609E70 00000040  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80609E74 00000044  7C 04 07 74 */	extsb r4, r0
-/* 80609E78 00000048  4B FF B8 21 */	bl dComIfGs_onOneZoneSwitch__Fii
+/* 80609E78 00000048  4B FF B8 21 */	bl _unresolved
 /* 80609E7C 0000004C  38 00 00 00 */	li r0, 0
 /* 80609E80 00000050  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 80609E84 00000054  C0 3E 00 04 */	lfs f1, 4(r30)
@@ -74,13 +74,13 @@ lbl_80609E30:
 /* 80609E8C 0000005C  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 80609E90 00000060  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80609E94 00000064  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 80609E98 00000068  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80609E9C 0000006C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80609E98 00000068  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609E9C 0000006C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80609EA0 00000070  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80609EA4 00000074  38 80 00 06 */	li r4, 6
 /* 80609EA8 00000078  38 A0 00 1F */	li r5, 0x1f
 /* 80609EAC 0000007C  38 C1 00 3C */	addi r6, r1, 0x3c
-/* 80609EB0 00000080  4B FF B7 E9 */	bl StartQuake__12dVibration_cFii4cXyz
+/* 80609EB0 00000080  4B FF B7 E9 */	bl _unresolved
 /* 80609EB4 00000084  3C 60 00 07 */	lis r3, 0x0007 /* 0x000704FE@ha */
 /* 80609EB8 00000088  38 03 04 FE */	addi r0, r3, 0x04FE /* 0x000704FE@l */
 /* 80609EBC 0000008C  90 01 00 20 */	stw r0, 0x20(r1)
@@ -104,19 +104,19 @@ lbl_80609E30:
 /* 80609F04 000000D4  4E 80 04 21 */	bctrl 
 /* 80609F08 000000D8  7F A3 EB 78 */	mr r3, r29
 /* 80609F0C 000000DC  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 80609F10 000000E0  4B FF B7 89 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80609F10 000000E0  4B FF B7 89 */	bl _unresolved
 /* 80609F14 000000E4  7C 64 1B 78 */	mr r4, r3
 /* 80609F18 000000E8  38 7D 04 E6 */	addi r3, r29, 0x4e6
 /* 80609F1C 000000EC  38 A0 00 10 */	li r5, 0x10
 /* 80609F20 000000F0  38 C0 04 00 */	li r6, 0x400
 /* 80609F24 000000F4  38 E0 00 80 */	li r7, 0x80
-/* 80609F28 000000F8  4B FF B7 71 */	bl cLib_addCalcAngleS__FPsssss
+/* 80609F28 000000F8  4B FF B7 71 */	bl _unresolved
 /* 80609F2C 000000FC  7F A3 EB 78 */	mr r3, r29
 /* 80609F30 00000100  4B FF C4 F5 */	bl setBodySlideEffect__9daB_MGN_cFv
 /* 80609F34 00000104  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 80609F38 00000108  38 81 00 48 */	addi r4, r1, 0x48
 /* 80609F3C 0000010C  C0 3E 00 00 */	lfs f1, 0(r30)
-/* 80609F40 00000110  4B FF B7 59 */	bl cLib_chasePos__FP4cXyzRC4cXyzf
+/* 80609F40 00000110  4B FF B7 59 */	bl _unresolved
 /* 80609F44 00000114  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 80609F48 00000118  38 80 00 01 */	li r4, 1
 /* 80609F4C 0000011C  88 03 00 11 */	lbz r0, 0x11(r3)
@@ -152,8 +152,8 @@ lbl_80609F6C:
 /* 80609FC0 00000054  7D 89 03 A6 */	mtctr r12
 /* 80609FC4 00000058  4E 80 04 21 */	bctrl 
 /* 80609FC8 0000005C  38 00 00 13 */	li r0, 0x13
-/* 80609FCC 00000060  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80609FD0 00000064  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80609FCC 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80609FD0 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80609FD4 00000068  98 03 5E 3E */	stb r0, 0x5e3e(r3)
 /* 80609FD8 0000006C  38 00 00 05 */	li r0, 5
 /* 80609FDC 00000070  98 03 5E 2E */	stb r0, 0x5e2e(r3)
@@ -162,28 +162,28 @@ lbl_80609F6C:
 /* 80609FE8 0000007C  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 80609FEC 00000080  38 81 00 48 */	addi r4, r1, 0x48
 /* 80609FF0 00000084  C0 3E 00 00 */	lfs f1, 0(r30)
-/* 80609FF4 00000088  4B FF B6 A5 */	bl cLib_chasePos__FP4cXyzRC4cXyzf
+/* 80609FF4 00000088  4B FF B6 A5 */	bl _unresolved
 /* 80609FF8 0000008C  7F A3 EB 78 */	mr r3, r29
 /* 80609FFC 00000090  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 8060A000 00000094  4B FF B6 99 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8060A000 00000094  4B FF B6 99 */	bl _unresolved
 /* 8060A004 00000098  B0 7D 04 E6 */	sth r3, 0x4e6(r29)
 /* 8060A008 0000009C  80 1D 0A 9C */	lwz r0, 0xa9c(r29)
 /* 8060A00C 000000A0  2C 00 00 00 */	cmpwi r0, 0
 /* 8060A010 000000A4  40 82 00 18 */	bne lbl_8060A028
-/* 8060A014 000000A8  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A018 000000AC  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A014 000000A8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A018 000000AC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A01C 000000B0  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A020 000000B4  38 80 00 1F */	li r4, 0x1f
-/* 8060A024 000000B8  4B FF B6 75 */	bl StopQuake__12dVibration_cFi
+/* 8060A024 000000B8  4B FF B6 75 */	bl _unresolved
 lbl_8060A028:
 /* 8060A028 00000000  88 7D 05 8D */	lbz r3, 0x58d(r29)
 /* 8060A02C 00000004  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 8060A030 00000008  41 82 00 54 */	beq lbl_8060A084
-/* 8060A034 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A038 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A034 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A038 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A03C 00000014  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A040 00000018  38 80 00 1F */	li r4, 0x1f
-/* 8060A044 0000001C  4B FF B6 55 */	bl StopQuake__12dVibration_cFi
+/* 8060A044 0000001C  4B FF B6 55 */	bl _unresolved
 /* 8060A048 00000020  88 1D 05 8D */	lbz r0, 0x58d(r29)
 /* 8060A04C 00000024  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 8060A050 00000028  98 1D 05 8D */	stb r0, 0x58d(r29)
@@ -202,11 +202,11 @@ lbl_8060A028:
 lbl_8060A084:
 /* 8060A084 00000000  54 60 07 39 */	rlwinm. r0, r3, 0, 0x1c, 0x1c
 /* 8060A088 00000004  41 82 00 58 */	beq lbl_8060A0E0
-/* 8060A08C 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A090 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A08C 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A090 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A094 00000010  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A098 00000014  38 80 00 1F */	li r4, 0x1f
-/* 8060A09C 00000018  4B FF B5 FD */	bl StopQuake__12dVibration_cFi
+/* 8060A09C 00000018  4B FF B5 FD */	bl _unresolved
 /* 8060A0A0 0000001C  88 1D 05 8D */	lbz r0, 0x58d(r29)
 /* 8060A0A4 00000020  54 00 07 76 */	rlwinm r0, r0, 0, 0x1d, 0x1b
 /* 8060A0A8 00000024  98 1D 05 8D */	stb r0, 0x58d(r29)
@@ -229,12 +229,12 @@ lbl_8060A0E0:
 /* 8060A0E8 00000008  38 60 00 0B */	li r3, 0xb
 /* 8060A0EC 0000000C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8060A0F0 00000010  7C 04 07 74 */	extsb r4, r0
-/* 8060A0F4 00000014  4B FF B5 A5 */	bl dComIfGs_offOneZoneSwitch__Fii
-/* 8060A0F8 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A0FC 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A0F4 00000014  4B FF B5 A5 */	bl _unresolved
+/* 8060A0F8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A0FC 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A100 00000020  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A104 00000024  38 80 00 1F */	li r4, 0x1f
-/* 8060A108 00000028  4B FF B5 91 */	bl StopQuake__12dVibration_cFi
+/* 8060A108 00000028  4B FF B5 91 */	bl _unresolved
 /* 8060A10C 0000002C  88 1D 05 8D */	lbz r0, 0x58d(r29)
 /* 8060A110 00000030  54 00 07 B8 */	rlwinm r0, r0, 0, 0x1e, 0x1c
 /* 8060A114 00000034  98 1D 05 8D */	stb r0, 0x58d(r29)
@@ -272,10 +272,10 @@ lbl_8060A0E0:
 /* 8060A194 000000B4  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 8060A198 000000B8  38 81 00 48 */	addi r4, r1, 0x48
 /* 8060A19C 000000BC  C0 3E 00 00 */	lfs f1, 0(r30)
-/* 8060A1A0 000000C0  4B FF B4 F9 */	bl cLib_chasePos__FP4cXyzRC4cXyzf
+/* 8060A1A0 000000C0  4B FF B4 F9 */	bl _unresolved
 /* 8060A1A4 000000C4  7F A3 EB 78 */	mr r3, r29
 /* 8060A1A8 000000C8  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 8060A1AC 000000CC  4B FF B4 ED */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8060A1AC 000000CC  4B FF B4 ED */	bl _unresolved
 /* 8060A1B0 000000D0  B0 7D 04 E6 */	sth r3, 0x4e6(r29)
 /* 8060A1B4 000000D4  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 8060A1B8 000000D8  38 80 00 01 */	li r4, 1
@@ -342,7 +342,7 @@ lbl_8060A26C:
 /* 8060A2A0 00000034  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 8060A2A4 00000038  38 63 00 0C */	addi r3, r3, 0xc
 /* 8060A2A8 0000003C  C0 3E 01 2C */	lfs f1, 0x12c(r30)
-/* 8060A2AC 00000040  4B FF B3 ED */	bl checkPass__12J3DFrameCtrlFf
+/* 8060A2AC 00000040  4B FF B3 ED */	bl _unresolved
 /* 8060A2B0 00000044  2C 03 00 00 */	cmpwi r3, 0
 /* 8060A2B4 00000048  41 82 00 38 */	beq lbl_8060A2EC
 /* 8060A2B8 0000004C  88 1D 0A FC */	lbz r0, 0xafc(r29)
@@ -355,9 +355,9 @@ lbl_8060A2D0:
 /* 8060A2D0 00000000  38 00 FE 00 */	li r0, -512
 /* 8060A2D4 00000004  B0 1D 0A 92 */	sth r0, 0xa92(r29)
 lbl_8060A2D8:
-/* 8060A2D8 00000000  4B FF B3 C1 */	bl dCam_getBody__Fv
+/* 8060A2D8 00000000  4B FF B3 C1 */	bl _unresolved
 /* 8060A2DC 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8060A2E0 00000008  4B FF B3 B9 */	bl ForceLockOn__9dCamera_cFP10fopAc_ac_c
+/* 8060A2E0 00000008  4B FF B3 B9 */	bl _unresolved
 /* 8060A2E4 0000000C  7F A3 EB 78 */	mr r3, r29
 /* 8060A2E8 00000010  4B FF D8 C9 */	bl onBodySlideAt__9daB_MGN_cFv
 lbl_8060A2EC:
@@ -376,7 +376,7 @@ lbl_8060A310:
 /* 8060A318 00000008  38 7D 0A 92 */	addi r3, r29, 0xa92
 /* 8060A31C 0000000C  38 80 00 00 */	li r4, 0
 /* 8060A320 00000010  38 A0 00 20 */	li r5, 0x20
-/* 8060A324 00000014  4B FF B3 75 */	bl cLib_chaseAngleS__FPsss
+/* 8060A324 00000014  4B FF B3 75 */	bl _unresolved
 /* 8060A328 00000018  A8 7D 04 E6 */	lha r3, 0x4e6(r29)
 /* 8060A32C 0000001C  A8 1D 0A 92 */	lha r0, 0xa92(r29)
 /* 8060A330 00000020  7C 03 02 14 */	add r0, r3, r0
@@ -389,13 +389,13 @@ lbl_8060A338:
 /* 8060A348 00000010  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 8060A34C 00000014  38 63 00 0C */	addi r3, r3, 0xc
 /* 8060A350 00000018  C0 3E 01 30 */	lfs f1, 0x130(r30)
-/* 8060A354 0000001C  4B FF B3 45 */	bl checkPass__12J3DFrameCtrlFf
+/* 8060A354 0000001C  4B FF B3 45 */	bl _unresolved
 /* 8060A358 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 8060A35C 00000024  40 82 00 1C */	bne lbl_8060A378
 /* 8060A360 00000028  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 8060A364 0000002C  38 63 00 0C */	addi r3, r3, 0xc
 /* 8060A368 00000030  C0 3E 01 34 */	lfs f1, 0x134(r30)
-/* 8060A36C 00000034  4B FF B3 2D */	bl checkPass__12J3DFrameCtrlFf
+/* 8060A36C 00000034  4B FF B3 2D */	bl _unresolved
 /* 8060A370 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 8060A374 0000003C  41 82 00 60 */	beq lbl_8060A3D4
 lbl_8060A378:
@@ -404,13 +404,13 @@ lbl_8060A378:
 /* 8060A380 00000008  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 8060A384 0000000C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 8060A388 00000010  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 8060A38C 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A390 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A38C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A390 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A394 0000001C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A398 00000020  38 80 00 08 */	li r4, 8
 /* 8060A39C 00000024  38 A0 00 1F */	li r5, 0x1f
 /* 8060A3A0 00000028  38 C1 00 30 */	addi r6, r1, 0x30
-/* 8060A3A4 0000002C  4B FF B2 F5 */	bl StartShock__12dVibration_cFii4cXyz
+/* 8060A3A4 0000002C  4B FF B2 F5 */	bl _unresolved
 /* 8060A3A8 00000030  3C 60 00 07 */	lis r3, 0x0007 /* 0x000704F6@ha */
 /* 8060A3AC 00000034  38 03 04 F6 */	addi r0, r3, 0x04F6 /* 0x000704F6@l */
 /* 8060A3B0 00000038  90 01 00 08 */	stw r0, 8(r1)
@@ -427,11 +427,11 @@ lbl_8060A3D4:
 /* 8060A3D8 00000004  A8 9D 0A 90 */	lha r4, 0xa90(r29)
 /* 8060A3DC 00000008  38 A0 00 08 */	li r5, 8
 /* 8060A3E0 0000000C  38 C0 01 00 */	li r6, 0x100
-/* 8060A3E4 00000010  4B FF B2 B5 */	bl cLib_addCalcAngleS2__FPssss
+/* 8060A3E4 00000010  4B FF B2 B5 */	bl _unresolved
 /* 8060A3E8 00000014  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 8060A3EC 00000018  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 8060A3F0 0000001C  C0 5E 01 0C */	lfs f2, 0x10c(r30)
-/* 8060A3F4 00000020  4B FF B2 A5 */	bl cLib_chaseF__FPfff
+/* 8060A3F4 00000020  4B FF B2 A5 */	bl _unresolved
 /* 8060A3F8 00000024  80 7D 05 BC */	lwz r3, 0x5bc(r29)
 /* 8060A3FC 00000028  38 80 00 01 */	li r4, 1
 /* 8060A400 0000002C  88 03 00 11 */	lbz r0, 0x11(r3)
@@ -450,13 +450,13 @@ lbl_8060A420:
 /* 8060A430 00000010  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 8060A434 00000014  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8060A438 00000018  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 8060A43C 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A440 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A43C 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A440 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A444 00000024  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A448 00000028  38 80 00 03 */	li r4, 3
 /* 8060A44C 0000002C  38 A0 00 1F */	li r5, 0x1f
 /* 8060A450 00000030  38 C1 00 24 */	addi r6, r1, 0x24
-/* 8060A454 00000034  4B FF B2 45 */	bl StartQuake__12dVibration_cFii4cXyz
+/* 8060A454 00000034  4B FF B2 45 */	bl _unresolved
 /* 8060A458 00000038  88 1D 0A FC */	lbz r0, 0xafc(r29)
 /* 8060A45C 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 8060A460 00000040  40 82 00 20 */	bne lbl_8060A480
@@ -478,7 +478,7 @@ lbl_8060A498:
 /* 8060A498 00000000  38 60 00 0B */	li r3, 0xb
 /* 8060A49C 00000004  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8060A4A0 00000008  7C 04 07 74 */	extsb r4, r0
-/* 8060A4A4 0000000C  4B FF B1 F5 */	bl dComIfGs_offOneZoneSwitch__Fii
+/* 8060A4A4 0000000C  4B FF B1 F5 */	bl _unresolved
 /* 8060A4A8 00000010  38 00 00 09 */	li r0, 9
 /* 8060A4AC 00000014  98 1D 0A FA */	stb r0, 0xafa(r29)
 /* 8060A4B0 00000018  48 00 01 A8 */	b lbl_8060A658
@@ -487,11 +487,11 @@ lbl_8060A498:
 /* 8060A4BC 00000024  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 8060A4C0 00000028  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 8060A4C4 0000002C  C0 5E 01 0C */	lfs f2, 0x10c(r30)
-/* 8060A4C8 00000030  4B FF B1 D1 */	bl cLib_chaseF__FPfff
+/* 8060A4C8 00000030  4B FF B1 D1 */	bl _unresolved
 /* 8060A4CC 00000034  38 7D 0A 92 */	addi r3, r29, 0xa92
 /* 8060A4D0 00000038  38 80 00 00 */	li r4, 0
 /* 8060A4D4 0000003C  38 A0 00 20 */	li r5, 0x20
-/* 8060A4D8 00000040  4B FF B1 C1 */	bl cLib_chaseAngleS__FPsss
+/* 8060A4D8 00000040  4B FF B1 C1 */	bl _unresolved
 /* 8060A4DC 00000044  A8 7D 04 E6 */	lha r3, 0x4e6(r29)
 /* 8060A4E0 00000048  A8 1D 0A 92 */	lha r0, 0xa92(r29)
 /* 8060A4E4 0000004C  7C 03 02 14 */	add r0, r3, r0
@@ -503,13 +503,13 @@ lbl_8060A498:
 /* 8060A4FC 00000064  A8 1D 0A 92 */	lha r0, 0xa92(r29)
 /* 8060A500 00000068  2C 00 00 00 */	cmpwi r0, 0
 /* 8060A504 0000006C  40 82 01 54 */	bne lbl_8060A658
-/* 8060A508 00000070  4B FF B1 91 */	bl dCam_getBody__Fv
-/* 8060A50C 00000074  4B FF B1 8D */	bl GetForceLockOnActor__9dCamera_cFv
+/* 8060A508 00000070  4B FF B1 91 */	bl _unresolved
+/* 8060A50C 00000074  4B FF B1 8D */	bl _unresolved
 /* 8060A510 00000078  7C 03 E8 40 */	cmplw r3, r29
 /* 8060A514 0000007C  40 82 00 10 */	bne lbl_8060A524
-/* 8060A518 00000080  4B FF B1 81 */	bl dCam_getBody__Fv
+/* 8060A518 00000080  4B FF B1 81 */	bl _unresolved
 /* 8060A51C 00000084  7F A4 EB 78 */	mr r4, r29
-/* 8060A520 00000088  4B FF B1 79 */	bl ForceLockOff__9dCamera_cFP10fopAc_ac_c
+/* 8060A520 00000088  4B FF B1 79 */	bl _unresolved
 lbl_8060A524:
 /* 8060A524 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8060A528 00000004  4B FF D6 D5 */	bl offBodySlideAt__9daB_MGN_cFv
@@ -517,11 +517,11 @@ lbl_8060A524:
 /* 8060A530 0000000C  38 80 00 04 */	li r4, 4
 /* 8060A534 00000010  38 A0 00 05 */	li r5, 5
 /* 8060A538 00000014  4B FF D4 F5 */	bl setActionMode__9daB_MGN_cFii
-/* 8060A53C 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8060A540 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060A53C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060A540 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060A544 00000020  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A548 00000024  38 80 00 1F */	li r4, 0x1f
-/* 8060A54C 00000028  4B FF B1 4D */	bl StopQuake__12dVibration_cFi
+/* 8060A54C 00000028  4B FF B1 4D */	bl _unresolved
 /* 8060A550 0000002C  80 1D 21 0C */	lwz r0, 0x210c(r29)
 /* 8060A554 00000030  60 00 00 01 */	ori r0, r0, 1
 /* 8060A558 00000034  90 1D 21 0C */	stw r0, 0x210c(r29)
@@ -535,7 +535,7 @@ lbl_8060A524:
 /* 8060A578 00000054  38 00 00 04 */	li r0, 4
 /* 8060A57C 00000058  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 8060A580 0000005C  48 00 00 D8 */	b lbl_8060A658
-/* 8060A584 00000060  4B FF B1 15 */	bl cM_rnd__Fv
+/* 8060A584 00000060  4B FF B1 15 */	bl _unresolved
 /* 8060A588 00000064  C0 1E 00 80 */	lfs f0, 0x80(r30)
 /* 8060A58C 00000068  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8060A590 00000000  40 80 00 14 */	bge lbl_8060A5A4
@@ -560,9 +560,9 @@ lbl_8060A5B0:
 /* 8060A5D4 00000024  4E 80 04 21 */	bctrl 
 /* 8060A5D8 00000028  38 00 00 0B */	li r0, 0xb
 /* 8060A5DC 0000002C  98 1D 0A FA */	stb r0, 0xafa(r29)
-/* 8060A5E0 00000030  4B FF B0 B9 */	bl dCam_getBody__Fv
+/* 8060A5E0 00000030  4B FF B0 B9 */	bl _unresolved
 /* 8060A5E4 00000034  7F A4 EB 78 */	mr r4, r29
-/* 8060A5E8 00000038  4B FF B0 B1 */	bl ForceLockOn__9dCamera_cFP10fopAc_ac_c
+/* 8060A5E8 00000038  4B FF B0 B1 */	bl _unresolved
 /* 8060A5EC 0000003C  38 00 00 04 */	li r0, 4
 /* 8060A5F0 00000040  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 8060A5F4 00000044  80 7D 05 BC */	lwz r3, 0x5bc(r29)
@@ -580,13 +580,13 @@ lbl_8060A61C:
 /* 8060A620 00000004  41 82 00 38 */	beq lbl_8060A658
 /* 8060A624 00000008  38 00 00 00 */	li r0, 0
 /* 8060A628 0000000C  90 1D 05 5C */	stw r0, 0x55c(r29)
-/* 8060A62C 00000010  4B FF B0 6D */	bl dCam_getBody__Fv
-/* 8060A630 00000014  4B FF B0 69 */	bl GetForceLockOnActor__9dCamera_cFv
+/* 8060A62C 00000010  4B FF B0 6D */	bl _unresolved
+/* 8060A630 00000014  4B FF B0 69 */	bl _unresolved
 /* 8060A634 00000018  7C 03 E8 40 */	cmplw r3, r29
 /* 8060A638 0000001C  40 82 00 10 */	bne lbl_8060A648
-/* 8060A63C 00000020  4B FF B0 5D */	bl dCam_getBody__Fv
+/* 8060A63C 00000020  4B FF B0 5D */	bl _unresolved
 /* 8060A640 00000024  7F A4 EB 78 */	mr r4, r29
-/* 8060A644 00000028  4B FF B0 55 */	bl ForceLockOff__9dCamera_cFP10fopAc_ac_c
+/* 8060A644 00000028  4B FF B0 55 */	bl _unresolved
 lbl_8060A648:
 /* 8060A648 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8060A64C 00000004  38 80 00 02 */	li r4, 2
@@ -594,7 +594,7 @@ lbl_8060A648:
 /* 8060A654 0000000C  4B FF D3 D9 */	bl setActionMode__9daB_MGN_cFii
 lbl_8060A658:
 /* 8060A658 00000000  39 61 00 70 */	addi r11, r1, 0x70
-/* 8060A65C 00000004  4B FF B0 3D */	bl _restgpr_28
+/* 8060A65C 00000004  4B FF B0 3D */	bl _unresolved
 /* 8060A660 00000008  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 8060A664 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8060A668 00000010  38 21 00 70 */	addi r1, r1, 0x70

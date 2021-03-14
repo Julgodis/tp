@@ -19,7 +19,7 @@ lbl_809EFF1C:
 /* 809EFF60 00000030  38 7F 0A D8 */	addi r3, r31, 0xad8
 /* 809EFF64 00000034  38 81 00 14 */	addi r4, r1, 0x14
 /* 809EFF68 00000038  C0 3F 05 2C */	lfs f1, 0x52c(r31)
-/* 809EFF6C 0000003C  4B FF FD CD */	bl checkPoint__11PathTrace_cF4cXyzf
+/* 809EFF6C 0000003C  4B FF FD CD */	bl _unresolved
 /* 809EFF70 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809EFF74 00000044  41 82 00 5C */	beq lbl_809EFFD0
 /* 809EFF78 00000048  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
@@ -31,7 +31,7 @@ lbl_809EFF1C:
 /* 809EFF90 00000060  38 7F 0A D8 */	addi r3, r31, 0xad8
 /* 809EFF94 00000064  38 81 00 08 */	addi r4, r1, 8
 /* 809EFF98 00000068  C0 3F 05 2C */	lfs f1, 0x52c(r31)
-/* 809EFF9C 0000006C  4B FF FD 9D */	bl checkPathEnd__11PathTrace_cF4cXyzf
+/* 809EFF9C 0000006C  4B FF FD 9D */	bl _unresolved
 /* 809EFFA0 00000070  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809EFFA4 00000074  41 82 00 20 */	beq lbl_809EFFC4
 /* 809EFFA8 00000078  80 7F 0A E0 */	lwz r3, 0xae0(r31)
@@ -44,7 +44,7 @@ lbl_809EFF1C:
 lbl_809EFFC4:
 /* 809EFFC4 00000000  38 7F 0A D8 */	addi r3, r31, 0xad8
 /* 809EFFC8 00000004  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 809EFFCC 00000008  4B FF FD 6D */	bl setNextPoint__11PathTrace_cFR4cXyz
+/* 809EFFCC 00000008  4B FF FD 6D */	bl _unresolved
 lbl_809EFFD0:
 /* 809EFFD0 00000000  80 1F 0D 9C */	lwz r0, 0xd9c(r31)
 /* 809EFFD4 00000004  28 00 00 02 */	cmplwi r0, 2
@@ -54,34 +54,34 @@ lbl_809EFFD0:
 lbl_809EFFE4:
 /* 809EFFE4 00000000  38 7F 0A D8 */	addi r3, r31, 0xad8
 /* 809EFFE8 00000004  38 81 00 20 */	addi r4, r1, 0x20
-/* 809EFFEC 00000008  4B FF FD 4D */	bl getTargetPoint__11PathTrace_cFP3Vec
+/* 809EFFEC 00000008  4B FF FD 4D */	bl _unresolved
 /* 809EFFF0 0000000C  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 809EFFF4 00000010  38 81 00 20 */	addi r4, r1, 0x20
-/* 809EFFF8 00000014  4B FF FD 41 */	bl cLib_targetAngleY__FPC3VecPC3Vec
+/* 809EFFF8 00000014  4B FF FD 41 */	bl _unresolved
 /* 809EFFFC 00000018  7C 64 1B 78 */	mr r4, r3
 /* 809F0000 0000001C  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 809F0004 00000020  38 A0 00 0D */	li r5, 0xd
 /* 809F0008 00000024  38 C0 06 00 */	li r6, 0x600
-/* 809F000C 00000028  4B FF FD 2D */	bl cLib_addCalcAngleS2__FPssss
+/* 809F000C 00000028  4B FF FD 2D */	bl _unresolved
 /* 809F0010 0000002C  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 809F0014 00000030  C0 1F 04 C0 */	lfs f0, 0x4c0(r31)
 /* 809F0018 00000034  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 809F001C 00000038  41 82 00 60 */	beq lbl_809F007C
 /* 809F0020 0000003C  3B C0 00 00 */	li r30, 0
-/* 809F0024 00000040  3C 60 00 00 */	lis r3, __vt__8cM3dGPla@ha
-/* 809F0028 00000044  38 03 00 00 */	addi r0, r3, __vt__8cM3dGPla@l
+/* 809F0024 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F0028 00000044  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809F002C 00000048  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 809F0030 0000004C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809F0034 00000050  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809F0030 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F0034 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809F0038 00000054  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 809F003C 00000058  38 9F 07 28 */	addi r4, r31, 0x728
 /* 809F0040 0000005C  38 A1 00 2C */	addi r5, r1, 0x2c
-/* 809F0044 00000060  4B FF FC F5 */	bl GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
+/* 809F0044 00000060  4B FF FC F5 */	bl _unresolved
 /* 809F0048 00000064  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809F004C 00000068  41 82 00 14 */	beq lbl_809F0060
 /* 809F0050 0000006C  38 61 00 2C */	addi r3, r1, 0x2c
 /* 809F0054 00000070  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
-/* 809F0058 00000074  4B FF FC E1 */	bl fopAcM_getPolygonAngle__FPC8cM3dGPlas
+/* 809F0058 00000074  4B FF FC E1 */	bl _unresolved
 /* 809F005C 00000078  7C 7E 1B 78 */	mr r30, r3
 lbl_809F0060:
 /* 809F0060 00000000  7F C0 07 35 */	extsh. r0, r30
@@ -89,8 +89,8 @@ lbl_809F0060:
 /* 809F0068 00000008  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 809F006C 0000000C  D0 1F 0D 94 */	stfs f0, 0xd94(r31)
 lbl_809F0070:
-/* 809F0070 00000000  3C 60 00 00 */	lis r3, __vt__8cM3dGPla@ha
-/* 809F0074 00000004  38 03 00 00 */	addi r0, r3, __vt__8cM3dGPla@l
+/* 809F0070 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F0074 00000004  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809F0078 00000008  90 01 00 3C */	stw r0, 0x3c(r1)
 lbl_809F007C:
 /* 809F007C 00000000  7F E3 FB 78 */	mr r3, r31
@@ -98,21 +98,21 @@ lbl_809F007C:
 /* 809F0084 00000008  7F E3 FB 78 */	mr r3, r31
 /* 809F0088 0000000C  48 00 0E 4D */	bl pathMoveF__12daNpcGuard_cFv
 /* 809F008C 00000010  38 7F 06 38 */	addi r3, r31, 0x638
-/* 809F0090 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 809F0094 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809F0090 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809F0094 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 809F0098 0000001C  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 809F009C 00000020  4B FF FC 9D */	bl CrrPos__9dBgS_AcchFR4dBgS
-/* 809F00A0 00000024  3C 60 00 00 */	lis r3, lit_3951@ha
-/* 809F00A4 00000028  C8 23 00 00 */	lfd f1, lit_3951@l(r3)
-/* 809F00A8 0000002C  3C 60 00 00 */	lis r3, lit_3952@ha
-/* 809F00AC 00000030  C8 43 00 00 */	lfd f2, lit_3952@l(r3)
-/* 809F00B0 00000034  4B FF FC 89 */	bl pow
+/* 809F009C 00000020  4B FF FC 9D */	bl _unresolved
+/* 809F00A0 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F00A4 00000028  C8 23 00 00 */	lfd f1, 0x0000(r3)
+/* 809F00A8 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F00AC 00000030  C8 43 00 00 */	lfd f2, 0x0000(r3)
+/* 809F00B0 00000034  4B FF FC 89 */	bl _unresolved
 /* 809F00B4 00000038  FF E0 08 18 */	frsp f31, f1
 /* 809F00B8 0000003C  7F E3 FB 78 */	mr r3, r31
-/* 809F00BC 00000040  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 809F00C0 00000044  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809F00BC 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809F00C0 00000044  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 809F00C4 00000048  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 809F00C8 0000004C  4B FF FC 71 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 809F00C8 0000004C  4B FF FC 71 */	bl _unresolved
 /* 809F00CC 00000050  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 809F00D0 00000000  40 80 00 10 */	bge lbl_809F00E0
 /* 809F00D4 00000004  7F E3 FB 78 */	mr r3, r31

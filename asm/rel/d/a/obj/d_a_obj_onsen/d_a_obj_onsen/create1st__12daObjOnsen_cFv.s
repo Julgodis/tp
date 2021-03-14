@@ -9,28 +9,28 @@ lbl_80CA7E44:
 /* 80CA7E60 0000001C  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80CA7E64 00000020  88 1F 05 B4 */	lbz r0, 0x5b4(r31)
 /* 80CA7E68 00000024  54 00 10 3A */	slwi r0, r0, 2
-/* 80CA7E6C 00000028  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80CA7E70 0000002C  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80CA7E6C 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CA7E70 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CA7E74 00000030  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80CA7E78 00000034  4B FF FC C1 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80CA7E78 00000034  4B FF FC C1 */	bl _unresolved
 /* 80CA7E7C 00000038  7C 60 1B 78 */	mr r0, r3
 /* 80CA7E80 0000003C  2C 00 00 04 */	cmpwi r0, 4
 /* 80CA7E84 00000040  40 82 00 50 */	bne lbl_80CA7ED4
 /* 80CA7E88 00000044  88 1F 05 B4 */	lbz r0, 0x5b4(r31)
 /* 80CA7E8C 00000048  54 00 10 3A */	slwi r0, r0, 2
 /* 80CA7E90 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80CA7E94 00000050  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80CA7E98 00000054  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80CA7E94 00000050  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CA7E98 00000054  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CA7E9C 00000058  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80CA7EA0 0000005C  3C A0 00 00 */	lis r5, l_dzb@ha
-/* 80CA7EA4 00000060  38 A5 00 00 */	addi r5, r5, l_dzb@l
+/* 80CA7EA0 0000005C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CA7EA4 00000060  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80CA7EA8 00000064  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80CA7EAC 00000068  38 C0 00 00 */	li r6, 0
-/* 80CA7EB0 0000006C  3C E0 00 00 */	lis r7, l_heap_size@ha
-/* 80CA7EB4 00000070  38 E7 00 00 */	addi r7, r7, l_heap_size@l
+/* 80CA7EB0 0000006C  3C E0 00 00 */	lis r7, 0x0000 /* 0x00000000@ha */
+/* 80CA7EB4 00000070  38 E7 00 00 */	addi r7, r7, 0x0000 /* 0x00000000@l */
 /* 80CA7EB8 00000074  7C E7 00 2E */	lwzx r7, r7, r0
 /* 80CA7EBC 00000078  39 00 00 00 */	li r8, 0
-/* 80CA7EC0 0000007C  4B FF FC 79 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80CA7EC0 0000007C  4B FF FC 79 */	bl _unresolved
 /* 80CA7EC4 00000080  7C 60 1B 78 */	mr r0, r3
 /* 80CA7EC8 00000084  2C 00 00 05 */	cmpwi r0, 5
 /* 80CA7ECC 00000088  40 82 00 08 */	bne lbl_80CA7ED4

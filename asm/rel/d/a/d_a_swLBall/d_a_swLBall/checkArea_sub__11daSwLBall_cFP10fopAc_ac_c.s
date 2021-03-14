@@ -5,8 +5,8 @@ lbl_80D4EB8C:
 /* 80D4EB98 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80D4EB9C 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80D4EBA0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D4EBA4 00000018  3C A0 00 00 */	lis r5, lit_3723@ha
-/* 80D4EBA8 0000001C  3B E5 00 00 */	addi r31, r5, lit_3723@l
+/* 80D4EBA4 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80D4EBA8 0000001C  3B E5 00 00 */	addi r31, r5, 0x0000 /* 0x00000000@l */
 /* 80D4EBAC 00000020  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80D4EBB0 00000024  54 00 47 3F */	rlwinm. r0, r0, 8, 0x1c, 0x1f
 /* 80D4EBB4 00000028  40 82 00 58 */	bne lbl_80D4EC0C
@@ -23,7 +23,7 @@ lbl_80D4EB8C:
 /* 80D4EBE0 00000014  EC 02 00 2A */	fadds f0, f2, f0
 /* 80D4EBE4 00000058  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 80D4EBE8 00000000  40 80 00 C8 */	bge lbl_80D4ECB0
-/* 80D4EBEC 00000004  4B FF FE ED */	bl fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80D4EBEC 00000004  4B FF FE ED */	bl _unresolved
 /* 80D4EBF0 00000008  C0 5F 00 04 */	lfs f2, 4(r31)
 /* 80D4EBF4 0000000C  C0 1E 04 EC */	lfs f0, 0x4ec(r30)
 /* 80D4EBF8 00000010  EC 02 00 32 */	fmuls f0, f2, f0
@@ -68,7 +68,7 @@ lbl_80D4EC0C:
 /* 80D4EC90 00000008  7F C4 F3 78 */	mr r4, r30
 /* 80D4EC94 0000000C  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80D4EC98 00000010  38 C1 00 08 */	addi r6, r1, 8
-/* 80D4EC9C 00000014  4B FF FE 3D */	bl dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz
+/* 80D4EC9C 00000014  4B FF FE 3D */	bl _unresolved
 /* 80D4ECA0 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80D4ECA4 0000001C  41 82 00 0C */	beq lbl_80D4ECB0
 /* 80D4ECA8 00000020  38 60 00 01 */	li r3, 1

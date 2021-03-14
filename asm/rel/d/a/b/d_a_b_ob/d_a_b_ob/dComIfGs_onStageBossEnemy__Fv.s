@@ -3,15 +3,15 @@ lbl_8061A8DC:
 /* 8061A8E0 00000004  7C 08 02 A6 */	mflr r0
 /* 8061A8E4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8061A8E8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8061A8EC 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8061A8F0 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8061A8EC 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8061A8F0 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8061A8F4 00000018  3B E3 09 58 */	addi r31, r3, 0x958
 /* 8061A8F8 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 8061A8FC 00000020  38 80 00 03 */	li r4, 3
-/* 8061A900 00000024  4B FF 5B D9 */	bl onDungeonItem__12dSv_memBit_cFi
+/* 8061A900 00000024  4B FF 5B D9 */	bl _unresolved
 /* 8061A904 00000028  7F E3 FB 78 */	mr r3, r31
 /* 8061A908 0000002C  38 80 00 06 */	li r4, 6
-/* 8061A90C 00000030  4B FF 5B CD */	bl onDungeonItem__12dSv_memBit_cFi
+/* 8061A90C 00000030  4B FF 5B CD */	bl _unresolved
 /* 8061A910 00000034  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8061A914 00000038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8061A918 0000003C  7C 08 03 A6 */	mtlr r0

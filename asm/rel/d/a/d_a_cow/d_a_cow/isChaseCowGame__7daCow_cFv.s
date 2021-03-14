@@ -2,21 +2,21 @@ lbl_80658AA4:
 /* 80658AA4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80658AA8 00000004  7C 08 02 A6 */	mflr r0
 /* 80658AAC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80658AB0 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80658AB4 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80658AB0 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80658AB4 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80658AB8 00000014  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 80658ABC 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80658AC0 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80658ABC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80658AC0 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80658AC4 00000020  38 84 00 04 */	addi r4, r4, 4
-/* 80658AC8 00000024  4B FF FA 71 */	bl strcmp
+/* 80658AC8 00000024  4B FF FA 71 */	bl _unresolved
 /* 80658ACC 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80658AD0 0000002C  40 82 00 2C */	bne lbl_80658AFC
 /* 80658AD4 00000030  38 60 00 00 */	li r3, 0
-/* 80658AD8 00000034  4B FF FA 61 */	bl getLayerNo__14dComIfG_play_cFi
+/* 80658AD8 00000034  4B FF FA 61 */	bl _unresolved
 /* 80658ADC 00000038  2C 03 00 04 */	cmpwi r3, 4
 /* 80658AE0 0000003C  41 82 00 14 */	beq lbl_80658AF4
 /* 80658AE4 00000040  38 60 00 00 */	li r3, 0
-/* 80658AE8 00000044  4B FF FA 51 */	bl getLayerNo__14dComIfG_play_cFi
+/* 80658AE8 00000044  4B FF FA 51 */	bl _unresolved
 /* 80658AEC 00000048  2C 03 00 05 */	cmpwi r3, 5
 /* 80658AF0 0000004C  40 82 00 0C */	bne lbl_80658AFC
 lbl_80658AF4:

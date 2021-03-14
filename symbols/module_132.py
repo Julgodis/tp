@@ -3,28 +3,80 @@
 # Module: 132
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A69E0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A6A0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A6A38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'initBaseMtx__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6A58, 'size': 0x0020, 'padding': 0x00, 'name': "initBaseMtx__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6A78, 'size': 0x0058, 'padding': 0x00, 'name': "setBaseMtx__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'Create__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6AD0, 'size': 0x0024, 'padding': 0x00, 'name': "Create__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6AF4, 'size': 0x0068, 'padding': 0x00, 'name': "create__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6B5C, 'size': 0x0128, 'padding': 0x00, 'name': "execute__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'checkArea__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6C84, 'size': 0x0178, 'padding': 0x00, 'name': "checkArea__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__13daTagSpring_cFv': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6DFC, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__13daTagSpring_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagSpring_Execute__FP13daTagSpring_c': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6E04, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpring_Execute__FP13daTagSpring_c", 'reference_count': 1, 'type': "Function"},
-	'daTagSpring_Delete__FP13daTagSpring_c': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6E24, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpring_Delete__FP13daTagSpring_c", 'reference_count': 1, 'type': "Function"},
-	'daTagSpring_Create__FP13daTagSpring_c': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".text", 'addr': 0x805A6E44, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpring_Create__FP13daTagSpring_c", 'reference_count': 1, 'type': "Function"},
-	'data_805A6E64': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805A6E64, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_805A6E68': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805A6E68, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3728': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E6C, 'size': 0x0004, 'padding': 0x00, 'name': "@3728", 'reference_count': 0, 'type': "Integer"},
-	'lit_3773': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E70, 'size': 0x0004, 'padding': 0x00, 'name': "@3773", 'reference_count': 0, 'type': "InitData"},
-	'lit_3774': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E74, 'size': 0x0008, 'padding': 0x00, 'name': "@3774", 'reference_count': 0, 'type': "InitData"},
-	'lit_3775': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E7C, 'size': 0x0008, 'padding': 0x00, 'name': "@3775", 'reference_count': 0, 'type': "InitData"},
-	'lit_3776': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E84, 'size': 0x0008, 'padding': 0x00, 'name': "@3776", 'reference_count': 0, 'type': "InitData"},
-	'lit_3777': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".rodata", 'addr': 0x805A6E8C, 'size': 0x0004, 'padding': 0x00, 'name': "@3777", 'reference_count': 0, 'type': "Integer"},
-	'l_daTagSpring_Method': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".data", 'addr': 0x805A6E94, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagSpring_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Spring': {'library': "d/a/tag/d_a_tag_spring", 'translation_unit': "d_a_tag_spring", 'section': ".data", 'addr': 0x805A6EB4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Spring", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_spring",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_spring",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x805A69E0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6A0C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6A38,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x805A6A58,'size':32,'pad':0,'label':"initBaseMtx__13daTagSpring_cFv",'name':"initBaseMtx__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6A78,'size':88,'pad':0,'label':"setBaseMtx__13daTagSpring_cFv",'name':"setBaseMtx__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6AD0,'size':36,'pad':0,'label':"Create__13daTagSpring_cFv",'name':"Create__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6AF4,'size':104,'pad':0,'label':"create__13daTagSpring_cFv",'name':"create__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6B5C,'size':296,'pad':0,'label':"execute__13daTagSpring_cFv",'name':"execute__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6C84,'size':376,'pad':0,'label':"checkArea__13daTagSpring_cFv",'name':"checkArea__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6DFC,'size':8,'pad':0,'label':"_delete__13daTagSpring_cFv",'name':"_delete__13daTagSpring_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6E04,'size':32,'pad':0,'label':"daTagSpring_Execute__FP13daTagSpring_c",'name':"daTagSpring_Execute__FP13daTagSpring_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6E24,'size':32,'pad':0,'label':"daTagSpring_Delete__FP13daTagSpring_c",'name':"daTagSpring_Delete__FP13daTagSpring_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6E44,'size':32,'pad':0,'label':"daTagSpring_Create__FP13daTagSpring_c",'name':"daTagSpring_Create__FP13daTagSpring_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6E64,'size':4,'pad':0,'label':"data_805A6E64",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E68,'size':4,'pad':0,'label':"data_805A6E68",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E6C,'size':4,'pad':0,'label':"lit_3728",'name':"@3728",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6E70,'size':4,'pad':0,'label':"lit_3773",'name':"@3773",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E74,'size':8,'pad':0,'label':"lit_3774",'name':"@3774",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E7C,'size':8,'pad':0,'label':"lit_3775",'name':"@3775",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E84,'size':8,'pad':0,'label':"lit_3776",'name':"@3776",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805A6E8C,'size':4,'pad':0,'label':"lit_3777",'name':"@3777",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6E90,'size':32,'pad':0,'label':"l_daTagSpring_Method",'name':"l_daTagSpring_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x805A6EB0,'size':48,'pad':0,'label':"g_profile_Tag_Spring",'name':"g_profile_Tag_Spring",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"initBaseMtx__13daTagSpring_cFv":3,
+	"setBaseMtx__13daTagSpring_cFv":4,
+	"Create__13daTagSpring_cFv":5,
+	"create__13daTagSpring_cFv":6,
+	"execute__13daTagSpring_cFv":7,
+	"checkArea__13daTagSpring_cFv":8,
+	"_delete__13daTagSpring_cFv":9,
+	"daTagSpring_Execute__FP13daTagSpring_c":10,
+	"daTagSpring_Delete__FP13daTagSpring_c":11,
+	"daTagSpring_Create__FP13daTagSpring_c":12,
+	"data_805A6E64":13,
+	"data_805A6E68":14,
+	"lit_3728":15,
+	"lit_3773":16,
+	"lit_3774":17,
+	"lit_3775":18,
+	"lit_3776":19,
+	"lit_3777":20,
+	"l_daTagSpring_Method":21,
+	"g_profile_Tag_Spring":22,
 }
+

@@ -25,25 +25,25 @@ async def create_library(library: Library):
         await builder.write("")
 
         await builder.write(f"{prefix}_CPP_FILES := \\")
-        for tu in library.translation_units:
+        for tu in library.translation_units.values():
             # Skip empty translation units
             if len(tu.sections) == 0:
                 continue
-            if sum([len(x.symbols) for x in tu.sections]) == 0:
+            if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                 continue
             
-            await builder.write(f"\t{tu.source_path} \\")
+            await builder.write(f"\t{tu.source_path(library)} \\")
         await builder.write("")
 
         await builder.write(f"{prefix}_O_FILES := \\")
-        for tu in library.translation_units:
+        for tu in library.translation_units.values():
             # Skip empty translation units
             if len(tu.sections) == 0:
                 continue
-            if sum([len(x.symbols) for x in tu.sections]) == 0:
+            if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                 continue
             
-            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path} \\")
+            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path(library)} \\")
         await builder.write("")
 
         await builder.write(f"{prefix}_CFLAGS := \\")
@@ -95,25 +95,25 @@ async def create_rel(module: Module):
         await builder.write("")
 
         await builder.write(f"{prefix}_CPP_FILES := \\")
-        for tu in base.translation_units:
+        for tu in base.translation_units.values():
             # Skip empty translation units
             if len(tu.sections) == 0:
                 continue
-            if sum([len(x.symbols) for x in tu.sections]) == 0:
+            if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                 continue
 
-            await builder.write(f"\t{tu.source_path} \\")
+            await builder.write(f"\t{tu.source_path(base)} \\")
         await builder.write("")
 
         await builder.write(f"{prefix}_O_FILES := \\")
-        for tu in base.translation_units:
+        for tu in base.translation_units.values():
             # Skip empty translation units
             if len(tu.sections) == 0:
                 continue
-            if sum([len(x.symbols) for x in tu.sections]) == 0:
+            if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                 continue
             
-            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path} \\")
+            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path(base)} \\")
         await builder.write("")
 
         await builder.write(f"{prefix}_LIBS := \\")
@@ -170,25 +170,25 @@ async def create_rel(module: Module):
             await builder.write("")
 
             await builder.write(f"{prefix}_CPP_FILES := \\")
-            for tu in library.translation_units:
+            for tu in library.translation_units.values():
                 # Skip empty translation units
                 if len(tu.sections) == 0:
                     continue
-                if sum([len(x.symbols) for x in tu.sections]) == 0:
+                if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                     continue
 
-                await builder.write(f"\t{tu.source_path} \\")
+                await builder.write(f"\t{tu.source_path(library)} \\")
             await builder.write("")
 
             await builder.write(f"{prefix}_O_FILES := \\")
-            for tu in library.translation_units:
+            for tu in library.translation_units.values():
                 # Skip empty translation units
                 if len(tu.sections) == 0:
                     continue
-                if sum([len(x.symbols) for x in tu.sections]) == 0:
+                if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                     continue
                 
-                await builder.write(f"\t$(BUILD_DIR)/{tu.object_path} \\")
+                await builder.write(f"\t$(BUILD_DIR)/{tu.object_path(library)} \\")
             await builder.write("")
 
             await builder.write(f"{prefix}_CFLAGS := \\")
@@ -214,6 +214,19 @@ async def create_rel(module: Module):
 
         g.LOG.debug(f"generated Makefile: '{makefile_path}'")
 
+def library_sort(x):
+    library = x[1]
+    if len(library.translation_units) == 0:
+        return 0xFFFFFFFF
+    for tu in library.translation_units.values():
+        if len(tu.sections) == 0:
+            continue
+        for sec in tu.sections.values():
+            if len(sec.symbols) == 0:
+                continue
+            return sec.symbols[0].start
+    return 0xFFFFFFFF
+
 async def create_obj_files(modules: Module):
     makefile_path = Path('obj_files.mk')
     async with AsyncBuilder(makefile_path) as builder:
@@ -224,19 +237,19 @@ async def create_obj_files(modules: Module):
 
         await builder.write(f"O_FILES := \\")
         base = modules[0].libraries[None]
-        for tu in base.translation_units:
+        for tu in base.translation_units.values():
             # Skip empty translation units
             if len(tu.sections) == 0:
                 continue
-            if sum([len(x.symbols) for x in tu.sections]) == 0:
+            if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
                 continue
 
-            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path} \\")
+            await builder.write(f"\t$(BUILD_DIR)/{tu.object_path(base)} \\")
         await builder.write("")
 
         await builder.write(f"LIBS := \\")
-        lib_order = [x for x in modules[0].libraries.items() if len(x[1].translation_units) > 0 and len(x[1].translation_units[0].sections) > 0]
-        lib_order.sort(key = lambda x: x[1].translation_units[0].sections[0].symbols[0].start)
+        lib_order = list(modules[0].libraries.items())
+        lib_order.sort(key=library_sort)
         for name, lib in lib_order:
             if name == None:
                 continue
@@ -263,8 +276,8 @@ async def create_include_link(modules: Module):
         await builder.write("")
 
         await builder.write("# libraries")
-        lib_order = [x for x in modules[0].libraries.items() if len(x[1].translation_units) > 0 and len(x[1].translation_units[0].sections) > 0]
-        lib_order.sort(key = lambda x: x[1].translation_units[0].sections[0].symbols[0].start)
+        lib_order = list(modules[0].libraries.items())
+        lib_order.sort(key=library_sort)
         for name, lib in lib_order:
             if name == None:
                 continue

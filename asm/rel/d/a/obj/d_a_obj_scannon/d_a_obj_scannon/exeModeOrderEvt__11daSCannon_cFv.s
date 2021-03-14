@@ -10,20 +10,20 @@ lbl_80CC7C48:
 /* 80CC7C68 00000020  88 1F 06 18 */	lbz r0, 0x618(r31)
 /* 80CC7C6C 00000024  28 00 00 02 */	cmplwi r0, 2
 /* 80CC7C70 00000028  40 82 00 14 */	bne lbl_80CC7C84
-/* 80CC7C74 0000002C  3C 60 00 00 */	lis r3, stringBase0@ha
-/* 80CC7C78 00000030  38 63 00 00 */	addi r3, r3, stringBase0@l
+/* 80CC7C74 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7C78 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC7C7C 00000034  38 83 00 97 */	addi r4, r3, 0x97
 /* 80CC7C80 00000038  48 00 00 0C */	b lbl_80CC7C8C
 lbl_80CC7C84:
-/* 80CC7C84 00000000  3C 60 00 00 */	lis r3, l_staffName@ha
-/* 80CC7C88 00000004  80 83 00 00 */	lwz r4, l_staffName@l(r3)
+/* 80CC7C84 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7C88 00000004  80 83 00 00 */	lwz r4, 0x0000(r3)
 lbl_80CC7C8C:
-/* 80CC7C8C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC7C90 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC7C8C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7C90 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC7C94 00000008  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC7C98 0000000C  38 A0 00 00 */	li r5, 0
 /* 80CC7C9C 00000010  38 C0 00 00 */	li r6, 0
-/* 80CC7CA0 00000014  4B FF ED D9 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80CC7CA0 00000014  4B FF ED D9 */	bl _unresolved
 /* 80CC7CA4 00000018  90 7F 06 04 */	stw r3, 0x604(r31)
 /* 80CC7CA8 0000001C  38 00 00 02 */	li r0, 2
 /* 80CC7CAC 00000020  98 1F 06 16 */	stb r0, 0x616(r31)
@@ -44,7 +44,7 @@ lbl_80CC7CC0:
 /* 80CC7CE4 00000024  7C 00 38 78 */	andc r0, r0, r7
 /* 80CC7CE8 00000028  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80CC7CEC 0000002C  39 00 00 01 */	li r8, 1
-/* 80CC7CF0 00000030  4B FF ED 89 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80CC7CF0 00000030  4B FF ED 89 */	bl _unresolved
 /* 80CC7CF4 00000034  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CC7CF8 00000038  60 00 00 02 */	ori r0, r0, 2
 /* 80CC7CFC 0000003C  B0 1F 00 FA */	sth r0, 0xfa(r31)

@@ -8,51 +8,51 @@ lbl_80BE63C8:
 /* 80BE63E0 00000018  7C 9E 23 78 */	mr r30, r4
 /* 80BE63E4 0000001C  41 82 00 B8 */	beq lbl_80BE649C
 /* 80BE63E8 00000020  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80BE63EC 00000024  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80BE63F0 00000028  38 84 00 00 */	addi r4, r4, l_arcName@l
-/* 80BE63F4 0000002C  4B FF FB E5 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80BE63EC 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE63F0 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BE63F4 0000002C  4B FF FB E5 */	bl _unresolved
 /* 80BE63F8 00000030  38 7F 08 A4 */	addi r3, r31, 0x8a4
-/* 80BE63FC 00000034  3C 80 00 00 */	lis r4, __dt__5csXyzFv@ha
-/* 80BE6400 00000038  38 84 00 00 */	addi r4, r4, __dt__5csXyzFv@l
+/* 80BE63FC 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE6400 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BE6404 0000003C  38 A0 00 06 */	li r5, 6
 /* 80BE6408 00000040  38 C0 00 16 */	li r6, 0x16
-/* 80BE640C 00000044  4B FF FB CD */	bl __destroy_arr
+/* 80BE640C 00000044  4B FF FB CD */	bl _unresolved
 /* 80BE6410 00000048  38 7F 07 9C */	addi r3, r31, 0x79c
-/* 80BE6414 0000004C  3C 80 00 00 */	lis r4, __dt__4cXyzFv@ha
-/* 80BE6418 00000050  38 84 00 00 */	addi r4, r4, __dt__4cXyzFv@l
+/* 80BE6414 0000004C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE6418 00000050  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BE641C 00000054  38 A0 00 0C */	li r5, 0xc
 /* 80BE6420 00000058  38 C0 00 16 */	li r6, 0x16
-/* 80BE6424 0000005C  4B FF FB B5 */	bl __destroy_arr
+/* 80BE6424 0000005C  4B FF FB B5 */	bl _unresolved
 /* 80BE6428 00000060  38 7F 06 94 */	addi r3, r31, 0x694
-/* 80BE642C 00000064  3C 80 00 00 */	lis r4, __dt__4cXyzFv@ha
-/* 80BE6430 00000068  38 84 00 00 */	addi r4, r4, __dt__4cXyzFv@l
+/* 80BE642C 00000064  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE6430 00000068  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BE6434 0000006C  38 A0 00 0C */	li r5, 0xc
 /* 80BE6438 00000070  38 C0 00 16 */	li r6, 0x16
-/* 80BE643C 00000074  4B FF FB 9D */	bl __destroy_arr
+/* 80BE643C 00000074  4B FF FB 9D */	bl _unresolved
 /* 80BE6440 00000078  38 7F 05 8C */	addi r3, r31, 0x58c
-/* 80BE6444 0000007C  3C 80 00 00 */	lis r4, __dt__4cXyzFv@ha
-/* 80BE6448 00000080  38 84 00 00 */	addi r4, r4, __dt__4cXyzFv@l
+/* 80BE6444 0000007C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE6448 00000080  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BE644C 00000084  38 A0 00 0C */	li r5, 0xc
 /* 80BE6450 00000088  38 C0 00 16 */	li r6, 0x16
-/* 80BE6454 0000008C  4B FF FB 85 */	bl __destroy_arr
+/* 80BE6454 0000008C  4B FF FB 85 */	bl _unresolved
 /* 80BE6458 00000090  34 1F 05 74 */	addic. r0, r31, 0x574
 /* 80BE645C 00000094  41 82 00 24 */	beq lbl_80BE6480
-/* 80BE6460 00000098  3C 60 00 00 */	lis r3, __vt__19daObjFchain_shape_c@ha
-/* 80BE6464 0000009C  38 03 00 00 */	addi r0, r3, __vt__19daObjFchain_shape_c@l
+/* 80BE6460 00000098  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE6464 0000009C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80BE6468 000000A0  90 1F 05 74 */	stw r0, 0x574(r31)
 /* 80BE646C 000000A4  34 1F 05 74 */	addic. r0, r31, 0x574
 /* 80BE6470 000000A8  41 82 00 10 */	beq lbl_80BE6480
-/* 80BE6474 000000AC  3C 60 00 00 */	lis r3, __vt__9J3DPacket@ha
-/* 80BE6478 000000B0  38 03 00 00 */	addi r0, r3, __vt__9J3DPacket@l
+/* 80BE6474 000000AC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE6478 000000B0  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80BE647C 000000B4  90 1F 05 74 */	stw r0, 0x574(r31)
 lbl_80BE6480:
 /* 80BE6480 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80BE6484 00000004  38 80 00 00 */	li r4, 0
-/* 80BE6488 00000008  4B FF FB 51 */	bl __dt__10fopAc_ac_cFv
+/* 80BE6488 00000008  4B FF FB 51 */	bl _unresolved
 /* 80BE648C 0000000C  7F C0 07 35 */	extsh. r0, r30
 /* 80BE6490 00000010  40 81 00 0C */	ble lbl_80BE649C
 /* 80BE6494 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80BE6498 00000018  4B FF FB 41 */	bl __dl__FPv
+/* 80BE6498 00000018  4B FF FB 41 */	bl _unresolved
 lbl_80BE649C:
 /* 80BE649C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80BE64A0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

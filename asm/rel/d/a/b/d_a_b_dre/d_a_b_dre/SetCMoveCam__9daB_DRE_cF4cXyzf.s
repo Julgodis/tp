@@ -11,7 +11,7 @@ lbl_805C81B8:
 /* 805C81DC 00000024  D0 03 05 DC */	stfs f0, 0x5dc(r3)
 /* 805C81E0 00000028  38 65 05 C8 */	addi r3, r5, 0x5c8
 /* 805C81E4 0000002C  38 85 05 D4 */	addi r4, r5, 0x5d4
-/* 805C81E8 00000030  4B FF F8 B1 */	bl cLib_chasePos__FP4cXyzRC4cXyzf
+/* 805C81E8 00000030  4B FF F8 B1 */	bl _unresolved
 /* 805C81EC 00000034  30 03 FF FF */	addic r0, r3, -1
 /* 805C81F0 00000038  7C 00 19 10 */	subfe r0, r0, r3
 /* 805C81F4 0000003C  54 03 06 3E */	clrlwi r3, r0, 0x18

@@ -3,19 +3,61 @@
 # Module: 709
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_swTime", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D4F5C0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_swTime", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D4F5EC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_swTime", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D4F618, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'Create__10daSwTime_cFv': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F638, 'size': 0x0028, 'padding': 0x00, 'name': "Create__10daSwTime_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__10daSwTime_cFv': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F660, 'size': 0x0068, 'padding': 0x00, 'name': "create__10daSwTime_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__10daSwTime_cFv': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F6C8, 'size': 0x0090, 'padding': 0x00, 'name': "execute__10daSwTime_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__10daSwTime_cFv': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F758, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__10daSwTime_cFv", 'reference_count': 1, 'type': "Function"},
-	'daSwTime_Execute__FP10daSwTime_c': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F760, 'size': 0x0020, 'padding': 0x00, 'name': "daSwTime_Execute__FP10daSwTime_c", 'reference_count': 1, 'type': "Function"},
-	'daSwTime_Delete__FP10daSwTime_c': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F780, 'size': 0x0020, 'padding': 0x00, 'name': "daSwTime_Delete__FP10daSwTime_c", 'reference_count': 1, 'type': "Function"},
-	'daSwTime_Create__FP10daSwTime_c': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".text", 'addr': 0x80D4F7A0, 'size': 0x0020, 'padding': 0x00, 'name': "daSwTime_Create__FP10daSwTime_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D4F7C0': {'library': "d/a/d_a_swTime", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D4F7C0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D4F7C4': {'library': "d/a/d_a_swTime", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D4F7C4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daSwTime_Method': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".data", 'addr': 0x80D4F7CC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daSwTime_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_SwTime': {'library': "d/a/d_a_swTime", 'translation_unit': "d_a_swTime", 'section': ".data", 'addr': 0x80D4F7EC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_SwTime", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_swTime",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_swTime",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D4F5C0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D4F5EC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D4F618,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x80D4F638,'size':40,'pad':0,'label':"Create__10daSwTime_cFv",'name':"Create__10daSwTime_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D4F660,'size':104,'pad':0,'label':"create__10daSwTime_cFv",'name':"create__10daSwTime_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D4F6C8,'size':144,'pad':0,'label':"execute__10daSwTime_cFv",'name':"execute__10daSwTime_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D4F758,'size':8,'pad':0,'label':"_delete__10daSwTime_cFv",'name':"_delete__10daSwTime_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D4F760,'size':32,'pad':0,'label':"daSwTime_Execute__FP10daSwTime_c",'name':"daSwTime_Execute__FP10daSwTime_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D4F780,'size':32,'pad':0,'label':"daSwTime_Delete__FP10daSwTime_c",'name':"daSwTime_Delete__FP10daSwTime_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D4F7A0,'size':32,'pad':0,'label':"daSwTime_Create__FP10daSwTime_c",'name':"daSwTime_Create__FP10daSwTime_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D4F7C0,'size':4,'pad':0,'label':"data_80D4F7C0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D4F7C4,'size':4,'pad':0,'label':"data_80D4F7C4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D4F7C8,'size':32,'pad':0,'label':"l_daSwTime_Method",'name':"l_daSwTime_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D4F7E8,'size':48,'pad':0,'label':"g_profile_SwTime",'name':"g_profile_SwTime",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"Create__10daSwTime_cFv":3,
+	"create__10daSwTime_cFv":4,
+	"execute__10daSwTime_cFv":5,
+	"_delete__10daSwTime_cFv":6,
+	"daSwTime_Execute__FP10daSwTime_c":7,
+	"daSwTime_Delete__FP10daSwTime_c":8,
+	"daSwTime_Create__FP10daSwTime_c":9,
+	"data_80D4F7C0":10,
+	"data_80D4F7C4":11,
+	"l_daSwTime_Method":12,
+	"g_profile_SwTime":13,
 }
+

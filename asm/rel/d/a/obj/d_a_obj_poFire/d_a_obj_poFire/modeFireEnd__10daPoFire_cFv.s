@@ -3,34 +3,34 @@ lbl_80CB3AE8:
 /* 80CB3AEC 00000004  7C 08 02 A6 */	mflr r0
 /* 80CB3AF0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80CB3AF4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80CB3AF8 00000010  4B FF ED C1 */	bl _savegpr_27
+/* 80CB3AF8 00000010  4B FF ED C1 */	bl _unresolved
 /* 80CB3AFC 00000014  7C 7B 1B 78 */	mr r27, r3
 /* 80CB3B00 00000018  3B 80 00 00 */	li r28, 0
 /* 80CB3B04 0000001C  3B E0 00 00 */	li r31, 0
-/* 80CB3B08 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CB3B0C 00000024  3B C3 00 00 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80CB3B08 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB3B0C 00000024  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 lbl_80CB3B10:
 /* 80CB3B10 00000000  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80CB3B14 00000004  38 63 02 10 */	addi r3, r3, 0x210
 /* 80CB3B18 00000008  3B BF 05 98 */	addi r29, r31, 0x598
 /* 80CB3B1C 0000000C  7C 9B E8 2E */	lwzx r4, r27, r29
-/* 80CB3B20 00000010  4B FF ED 99 */	bl getEmitter__Q213dPa_control_c7level_cFUl
+/* 80CB3B20 00000010  4B FF ED 99 */	bl _unresolved
 /* 80CB3B24 00000014  28 03 00 00 */	cmplwi r3, 0
 /* 80CB3B28 00000018  41 82 00 18 */	beq lbl_80CB3B40
-/* 80CB3B2C 0000001C  4B FF ED 8D */	bl deleteAllParticle__14JPABaseEmitterFv
+/* 80CB3B2C 0000001C  4B FF ED 8D */	bl _unresolved
 /* 80CB3B30 00000020  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80CB3B34 00000024  38 63 02 10 */	addi r3, r3, 0x210
 /* 80CB3B38 00000028  7C 9B E8 2E */	lwzx r4, r27, r29
-/* 80CB3B3C 0000002C  4B FF ED 7D */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl
+/* 80CB3B3C 0000002C  4B FF ED 7D */	bl _unresolved
 lbl_80CB3B40:
 /* 80CB3B40 00000000  3B 9C 00 01 */	addi r28, r28, 1
 /* 80CB3B44 00000004  2C 1C 00 02 */	cmpwi r28, 2
 /* 80CB3B48 00000008  3B FF 00 04 */	addi r31, r31, 4
 /* 80CB3B4C 0000000C  41 80 FF C4 */	blt lbl_80CB3B10
 /* 80CB3B50 00000010  7F 63 DB 78 */	mr r3, r27
-/* 80CB3B54 00000014  4B FF ED 65 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80CB3B54 00000014  4B FF ED 65 */	bl _unresolved
 /* 80CB3B58 00000018  39 61 00 20 */	addi r11, r1, 0x20
-/* 80CB3B5C 0000001C  4B FF ED 5D */	bl _restgpr_27
+/* 80CB3B5C 0000001C  4B FF ED 5D */	bl _unresolved
 /* 80CB3B60 00000020  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80CB3B64 00000024  7C 08 03 A6 */	mtlr r0
 /* 80CB3B68 00000028  38 21 00 20 */	addi r1, r1, 0x20

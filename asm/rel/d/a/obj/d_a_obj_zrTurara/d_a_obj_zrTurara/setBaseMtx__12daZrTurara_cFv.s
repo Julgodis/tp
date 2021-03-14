@@ -4,24 +4,24 @@ lbl_80D405E4:
 /* 80D405EC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D405F0 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D405F4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D405F8 00000014  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D405FC 00000018  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D405F8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D405FC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D40600 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80D40604 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80D40608 00000024  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80D4060C 00000028  4B FF FE CD */	bl PSMTXTrans
-/* 80D40610 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D40614 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D4060C 00000028  4B FF FE CD */	bl _unresolved
+/* 80D40610 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D40614 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D40618 00000034  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 80D4061C 00000038  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80D40620 0000003C  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80D40624 00000040  4B FF FE B5 */	bl mDoMtx_ZXYrotM__FPA4_fsss
+/* 80D40624 00000040  4B FF FE B5 */	bl _unresolved
 /* 80D40628 00000044  C0 3F 07 60 */	lfs f1, 0x760(r31)
 /* 80D4062C 00000048  FC 40 08 90 */	fmr f2, f1
 /* 80D40630 0000004C  FC 60 08 90 */	fmr f3, f1
-/* 80D40634 00000050  4B FF FE A5 */	bl scaleM__14mDoMtx_stack_cFfff
-/* 80D40638 00000054  3C 60 00 00 */	lis r3, lit_3699@ha
-/* 80D4063C 00000058  C0 03 00 00 */	lfs f0, lit_3699@l(r3)
+/* 80D40634 00000050  4B FF FE A5 */	bl _unresolved
+/* 80D40638 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4063C 00000058  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80D40640 0000005C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80D40644 00000060  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80D40648 00000064  D0 01 00 10 */	stfs f0, 0x10(r1)
@@ -29,31 +29,31 @@ lbl_80D405E4:
 /* 80D40650 0000006C  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 80D40654 00000070  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80D40658 00000074  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80D4065C 00000078  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D40660 0000007C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D4065C 00000078  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D40660 0000007C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D40664 00000080  80 9F 07 20 */	lwz r4, 0x720(r31)
 /* 80D40668 00000084  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D4066C 00000088  4B FF FE 6D */	bl PSMTXCopy
-/* 80D40670 0000008C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D40674 00000090  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D4066C 00000088  4B FF FE 6D */	bl _unresolved
+/* 80D40670 0000008C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D40674 00000090  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D40678 00000094  38 9F 05 6C */	addi r4, r31, 0x56c
-/* 80D4067C 00000098  4B FF FE 5D */	bl PSMTXCopy
-/* 80D40680 0000009C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D40684 000000A0  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D4067C 00000098  4B FF FE 5D */	bl _unresolved
+/* 80D40680 0000009C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D40684 000000A0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D40688 000000A4  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80D4068C 000000A8  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80D40690 000000AC  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80D40694 000000B0  4B FF FE 45 */	bl PSMTXTrans
-/* 80D40698 000000B4  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D4069C 000000B8  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D40694 000000B0  4B FF FE 45 */	bl _unresolved
+/* 80D40698 000000B4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4069C 000000B8  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D406A0 000000BC  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 80D406A4 000000C0  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80D406A8 000000C4  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80D406AC 000000C8  4B FF FE 2D */	bl mDoMtx_ZXYrotM__FPA4_fsss
+/* 80D406AC 000000C8  4B FF FE 2D */	bl _unresolved
 /* 80D406B0 000000CC  C0 3F 07 60 */	lfs f1, 0x760(r31)
 /* 80D406B4 000000D0  FC 40 08 90 */	fmr f2, f1
 /* 80D406B8 000000D4  FC 60 08 90 */	fmr f3, f1
-/* 80D406BC 000000D8  4B FF FE 1D */	bl scaleM__14mDoMtx_stack_cFfff
+/* 80D406BC 000000D8  4B FF FE 1D */	bl _unresolved
 /* 80D406C0 000000DC  80 7F 07 24 */	lwz r3, 0x724(r31)
 /* 80D406C4 000000E0  C0 01 00 08 */	lfs f0, 8(r1)
 /* 80D406C8 000000E4  D0 03 00 18 */	stfs f0, 0x18(r3)
@@ -61,15 +61,15 @@ lbl_80D405E4:
 /* 80D406D0 000000EC  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80D406D4 000000F0  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 80D406D8 000000F4  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80D406DC 000000F8  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D406E0 000000FC  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D406DC 000000F8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D406E0 000000FC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D406E4 00000100  80 9F 07 24 */	lwz r4, 0x724(r31)
 /* 80D406E8 00000104  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D406EC 00000108  4B FF FD ED */	bl PSMTXCopy
-/* 80D406F0 0000010C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80D406F4 00000110  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80D406EC 00000108  4B FF FD ED */	bl _unresolved
+/* 80D406F0 0000010C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D406F4 00000110  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D406F8 00000114  38 9F 07 30 */	addi r4, r31, 0x730
-/* 80D406FC 00000118  4B FF FD DD */	bl PSMTXCopy
+/* 80D406FC 00000118  4B FF FD DD */	bl _unresolved
 /* 80D40700 0000011C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80D40704 00000120  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80D40708 00000124  7C 08 03 A6 */	mtlr r0

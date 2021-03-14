@@ -21,7 +21,7 @@ lbl_80C408EC:
 /* 80C408F8 0000000C  4B FF FD F5 */	bl action__FP13obj_key_class
 /* 80C408FC 00000010  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80C40900 00000014  7C 03 07 74 */	extsb r3, r0
-/* 80C40904 00000018  4B FF EA 75 */	bl dComIfGp_getReverb__Fi
+/* 80C40904 00000018  4B FF EA 75 */	bl _unresolved
 /* 80C40908 0000001C  7C 65 1B 78 */	mr r5, r3
 /* 80C4090C 00000020  38 7F 05 E8 */	addi r3, r31, 0x5e8
 /* 80C40910 00000024  38 80 00 00 */	li r4, 0

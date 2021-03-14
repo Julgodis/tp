@@ -12,17 +12,17 @@ lbl_80D3BA40:
 /* 80D3BA68 00000028  38 80 00 FF */	li r4, 0xff
 /* 80D3BA6C 0000002C  38 A0 00 FF */	li r5, 0xff
 /* 80D3BA70 00000030  7F E6 FB 78 */	mr r6, r31
-/* 80D3BA74 00000034  4B FF FE E5 */	bl Init__9dCcD_SttsFiiP10fopAc_ac_c
+/* 80D3BA74 00000034  4B FF FE E5 */	bl _unresolved
 /* 80D3BA78 00000038  38 7F 07 C8 */	addi r3, r31, 0x7c8
-/* 80D3BA7C 0000003C  3C 80 00 00 */	lis r4, l_cyl_src@ha
-/* 80D3BA80 00000040  38 84 00 00 */	addi r4, r4, l_cyl_src@l
-/* 80D3BA84 00000044  4B FF FE D5 */	bl Set__8dCcD_CylFRC11dCcD_SrcCyl
+/* 80D3BA7C 0000003C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D3BA80 00000040  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80D3BA84 00000044  4B FF FE D5 */	bl _unresolved
 /* 80D3BA88 00000048  38 1F 07 8C */	addi r0, r31, 0x78c
 /* 80D3BA8C 0000004C  90 1F 08 0C */	stw r0, 0x80c(r31)
 /* 80D3BA90 00000050  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80D3BA94 00000054  80 83 00 04 */	lwz r4, 4(r3)
 /* 80D3BA98 00000058  7F E3 FB 78 */	mr r3, r31
-/* 80D3BA9C 0000005C  4B FF FE BD */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80D3BA9C 0000005C  4B FF FE BD */	bl _unresolved
 /* 80D3BAA0 00000060  38 60 00 01 */	li r3, 1
 /* 80D3BAA4 00000064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D3BAA8 00000068  80 01 00 14 */	lwz r0, 0x14(r1)

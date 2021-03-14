@@ -4,15 +4,15 @@ lbl_8057EFB0:
 /* 8057EFB8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8057EFBC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057EFC0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8057EFC4 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8057EFC8 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8057EFC4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8057EFC8 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8057EFCC 0000001C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8057EFD0 00000020  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8057EFD4 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 8057EFD8 00000028  7C 05 07 74 */	extsb r5, r0
-/* 8057EFDC 0000002C  4B FF E0 5D */	bl onSwitch__10dSv_info_cFii
+/* 8057EFDC 0000002C  4B FF E0 5D */	bl _unresolved
 /* 8057EFE0 00000030  7F E3 FB 78 */	mr r3, r31
-/* 8057EFE4 00000034  4B FF E0 55 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 8057EFE4 00000034  4B FF E0 55 */	bl _unresolved
 /* 8057EFE8 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8057EFEC 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8057EFF0 00000040  7C 08 03 A6 */	mtlr r0

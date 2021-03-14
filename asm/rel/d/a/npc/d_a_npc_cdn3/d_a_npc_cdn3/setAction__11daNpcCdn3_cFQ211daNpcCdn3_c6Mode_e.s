@@ -7,8 +7,8 @@ lbl_80978DD4:
 /* 80978DE8 00000014  90 83 0B 50 */	stw r4, 0xb50(r3)
 /* 80978DEC 00000018  80 03 0B 50 */	lwz r0, 0xb50(r3)
 /* 80978DF0 0000001C  1C A0 00 18 */	mulli r5, r0, 0x18
-/* 80978DF4 00000020  3C 80 00 00 */	lis r4, ActionTable__11daNpcCdn3_c@ha
-/* 80978DF8 00000024  38 04 00 00 */	addi r0, r4, ActionTable__11daNpcCdn3_c@l
+/* 80978DF4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80978DF8 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80978DFC 00000028  7C 00 2A 14 */	add r0, r0, r5
 /* 80978E00 0000002C  90 03 0B 4C */	stw r0, 0xb4c(r3)
 /* 80978E04 00000030  48 00 00 15 */	bl callInit__11daNpcCdn3_cFv

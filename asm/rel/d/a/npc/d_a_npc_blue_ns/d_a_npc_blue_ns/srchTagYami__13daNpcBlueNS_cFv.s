@@ -7,10 +7,10 @@ lbl_80969CF8:
 /* 80969D0C 00000014  80 03 0D F8 */	lwz r0, 0xdf8(r3)
 /* 80969D10 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80969D14 0000001C  40 82 00 38 */	bne lbl_80969D4C
-/* 80969D18 00000020  3C 60 00 00 */	lis r3, _search_Tag__13daNpcBlueNS_cFPvPv@ha
-/* 80969D1C 00000024  38 63 00 00 */	addi r3, r3, _search_Tag__13daNpcBlueNS_cFPvPv@l
+/* 80969D18 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80969D1C 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80969D20 00000028  7F E4 FB 78 */	mr r4, r31
-/* 80969D24 0000002C  4B FF EB B5 */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80969D24 0000002C  4B FF EB B5 */	bl _unresolved
 /* 80969D28 00000030  90 7F 0D F8 */	stw r3, 0xdf8(r31)
 /* 80969D2C 00000034  80 7F 0D F8 */	lwz r3, 0xdf8(r31)
 /* 80969D30 00000038  28 03 00 00 */	cmplwi r3, 0

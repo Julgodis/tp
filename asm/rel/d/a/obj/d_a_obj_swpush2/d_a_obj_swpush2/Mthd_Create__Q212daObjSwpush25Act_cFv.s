@@ -10,7 +10,7 @@ lbl_80CFE928:
 /* 80CFE948 00000020  40 82 00 1C */	bne lbl_80CFE964
 /* 80CFE94C 00000024  28 1F 00 00 */	cmplwi r31, 0
 /* 80CFE950 00000028  41 82 00 08 */	beq lbl_80CFE958
-/* 80CFE954 0000002C  4B FF F7 25 */	bl __ct__10fopAc_ac_cFv
+/* 80CFE954 0000002C  4B FF F7 25 */	bl _unresolved
 lbl_80CFE958:
 /* 80CFE958 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80CFE95C 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -31,8 +31,8 @@ lbl_80CFE964:
 /* 80CFE994 00000030  C0 3F 04 EC */	lfs f1, 0x4ec(r31)
 /* 80CFE998 00000034  80 1F 05 C0 */	lwz r0, 0x5c0(r31)
 /* 80CFE99C 00000038  1C 00 00 38 */	mulli r0, r0, 0x38
-/* 80CFE9A0 0000003C  3C 60 00 00 */	lis r3, M_attr__Q212daObjSwpush25Act_c@ha
-/* 80CFE9A4 00000040  38 A3 00 00 */	addi r5, r3, M_attr__Q212daObjSwpush25Act_c@l
+/* 80CFE9A0 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CFE9A4 00000040  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
 /* 80CFE9A8 00000044  7C 65 02 14 */	add r3, r5, r0
 /* 80CFE9AC 00000048  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CFE9B0 0000004C  EC 01 00 32 */	fmuls f0, f1, f0
@@ -45,12 +45,12 @@ lbl_80CFE964:
 /* 80CFE9CC 00000068  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CFE9D0 0000006C  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
 /* 80CFE9D4 00000070  7F E3 FB 78 */	mr r3, r31
-/* 80CFE9D8 00000074  3C 80 00 00 */	lis r4, solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c@ha
-/* 80CFE9DC 00000078  38 84 00 00 */	addi r4, r4, solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c@l
+/* 80CFE9D8 00000074  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CFE9DC 00000078  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CFE9E0 0000007C  80 1F 05 C0 */	lwz r0, 0x5c0(r31)
 /* 80CFE9E4 00000080  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80CFE9E8 00000084  7C A5 00 2E */	lwzx r5, r5, r0
-/* 80CFE9EC 00000088  4B FF F6 8D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80CFE9EC 00000088  4B FF F6 8D */	bl _unresolved
 /* 80CFE9F0 0000008C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80CFE9F4 00000090  40 82 00 0C */	bne lbl_80CFEA00
 /* 80CFE9F8 00000094  38 60 00 05 */	li r3, 5

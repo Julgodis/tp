@@ -45,18 +45,24 @@ import traceback
 class GlobalSymbolTable:
     symbols: AIT = field(default_factory=AIT)
 
-    def at(self, key):
-        if isinstance(key, rellib.Relocation):
+    def at(self, module, addr):
+        if isinstance(addr, rellib.Relocation):
             #if relocation.module != 0:
             #    addr = symbol.section.addr + relocation.addend
             #else:
             #    addr = relocation.addend
             return 0, None
         else:
-            return self.symbols.get_one_or_none(key)
+            symbol = self.symbols.get_one_or_none(addr)
+            if symbol:
+                if symbol._module == module:
+                    if symbol.valid_reference(addr):
+                        return symbol
+
+            return None
 
     def __getitem__(self, key):
-        return self.at(key)
+        return self.at(key[0], key[1])
 
     def add_symbol(self, symbol: Symbol):
         if symbol.size > 0:

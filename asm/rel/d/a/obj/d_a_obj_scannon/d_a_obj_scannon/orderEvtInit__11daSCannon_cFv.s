@@ -4,20 +4,20 @@ lbl_80CC7A10:
 /* 80CC7A18 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CC7A1C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CC7A20 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CC7A24 00000014  3C 60 00 00 */	lis r3, l_arcName_Zev@ha
-/* 80CC7A28 00000018  80 03 00 00 */	lwz r0, l_arcName_Zev@l(r3)
+/* 80CC7A24 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7A28 00000018  80 03 00 00 */	lwz r0, 0x0000(r3)
 /* 80CC7A2C 0000001C  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 80CC7A30 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC7A34 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC7A30 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7A34 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC7A38 00000028  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC7A3C 0000002C  7F E4 FB 78 */	mr r4, r31
 /* 80CC7A40 00000030  88 1F 06 18 */	lbz r0, 0x618(r31)
 /* 80CC7A44 00000034  54 00 10 3A */	slwi r0, r0, 2
-/* 80CC7A48 00000038  3C A0 00 00 */	lis r5, l_eventName@ha
-/* 80CC7A4C 0000003C  38 A5 00 00 */	addi r5, r5, l_eventName@l
+/* 80CC7A48 00000038  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CC7A4C 0000003C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80CC7A50 00000040  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80CC7A54 00000044  38 C0 00 FF */	li r6, 0xff
-/* 80CC7A58 00000048  4B FF F0 21 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
+/* 80CC7A58 00000048  4B FF F0 21 */	bl _unresolved
 /* 80CC7A5C 0000004C  B0 7F 06 10 */	sth r3, 0x610(r31)
 /* 80CC7A60 00000050  7F E3 FB 78 */	mr r3, r31
 /* 80CC7A64 00000054  A8 9F 06 10 */	lha r4, 0x610(r31)
@@ -32,7 +32,7 @@ lbl_80CC7A10:
 /* 80CC7A88 00000078  7C 00 38 78 */	andc r0, r0, r7
 /* 80CC7A8C 0000007C  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80CC7A90 00000080  39 00 00 01 */	li r8, 1
-/* 80CC7A94 00000084  4B FF EF E5 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80CC7A94 00000084  4B FF EF E5 */	bl _unresolved
 /* 80CC7A98 00000088  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CC7A9C 0000008C  60 00 00 02 */	ori r0, r0, 2
 /* 80CC7AA0 00000090  B0 1F 00 FA */	sth r0, 0xfa(r31)

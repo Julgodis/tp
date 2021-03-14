@@ -9,30 +9,30 @@ lbl_80B27750:
 /* 80B2776C 0000001C  2C 1E 00 01 */	cmpwi r30, 1
 /* 80B27770 00000020  40 82 00 30 */	bne lbl_80B277A0
 /* 80B27774 00000024  A8 9F 0D 12 */	lha r4, 0xd12(r31)
-/* 80B27778 00000028  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B2777C 0000002C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B27780 00000030  4B FF EF 99 */	bl mDoMtx_YrotM__FPA4_fs
-/* 80B27784 00000034  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B27788 00000038  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80B27778 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B2777C 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B27780 00000030  4B FF EF 99 */	bl _unresolved
+/* 80B27784 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B27788 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B2778C 0000003C  A8 1F 0D 0E */	lha r0, 0xd0e(r31)
 /* 80B27790 00000040  7C 00 00 D0 */	neg r0, r0
 /* 80B27794 00000044  7C 04 07 34 */	extsh r4, r0
-/* 80B27798 00000048  4B FF EF 81 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80B27798 00000048  4B FF EF 81 */	bl _unresolved
 /* 80B2779C 0000004C  48 00 00 2C */	b lbl_80B277C8
 lbl_80B277A0:
 /* 80B277A0 00000000  2C 1E 00 04 */	cmpwi r30, 4
 /* 80B277A4 00000004  40 82 00 24 */	bne lbl_80B277C8
 /* 80B277A8 00000008  A8 9F 0D 0C */	lha r4, 0xd0c(r31)
-/* 80B277AC 0000000C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B277B0 00000010  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B277B4 00000014  4B FF EF 65 */	bl mDoMtx_YrotM__FPA4_fs
+/* 80B277AC 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B277B0 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B277B4 00000014  4B FF EF 65 */	bl _unresolved
 /* 80B277B8 00000018  A8 9F 0D 08 */	lha r4, 0xd08(r31)
-/* 80B277BC 0000001C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B277C0 00000020  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B277C4 00000024  4B FF EF 55 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80B277BC 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B277C0 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B277C4 00000024  4B FF EF 55 */	bl _unresolved
 lbl_80B277C8:
-/* 80B277C8 00000000  3C 60 00 00 */	lis r3, lit_4055@ha
-/* 80B277CC 00000004  C0 23 00 00 */	lfs f1, lit_4055@l(r3)
+/* 80B277C8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B277CC 00000004  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 80B277D0 00000008  C0 1F 10 04 */	lfs f0, 0x1004(r31)
 /* 80B277D4 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80B277D8 00000000  40 80 00 30 */	bge lbl_80B27808

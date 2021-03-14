@@ -5,20 +5,20 @@ lbl_80C752F8:
 /* 80C75304 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C75308 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C7530C 00000014  38 7F 14 AC */	addi r3, r31, 0x14ac
-/* 80C75310 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80C75314 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80C75318 00000020  4B FF EB 61 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C75310 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C75314 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C75318 00000020  4B FF EB 61 */	bl _unresolved
 /* 80C7531C 00000024  80 7F 14 C4 */	lwz r3, 0x14c4(r31)
 /* 80C75320 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 80C75324 0000002C  41 82 00 24 */	beq lbl_80C75348
-/* 80C75328 00000030  4B FF EB 51 */	bl ChkUsed__9cBgW_BgIdCFv
+/* 80C75328 00000030  4B FF EB 51 */	bl _unresolved
 /* 80C7532C 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C75330 00000038  41 82 00 18 */	beq lbl_80C75348
-/* 80C75334 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C75338 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C75334 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C75338 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C7533C 00000044  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C75340 00000048  80 9F 14 C4 */	lwz r4, 0x14c4(r31)
-/* 80C75344 0000004C  4B FF EB 35 */	bl Release__4cBgSFP9dBgW_Base
+/* 80C75344 0000004C  4B FF EB 35 */	bl _unresolved
 lbl_80C75348:
 /* 80C75348 00000000  38 60 00 01 */	li r3, 1
 /* 80C7534C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

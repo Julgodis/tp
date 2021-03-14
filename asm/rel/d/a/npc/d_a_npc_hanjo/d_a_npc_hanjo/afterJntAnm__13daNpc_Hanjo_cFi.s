@@ -7,27 +7,27 @@ lbl_809F9FCC:
 /* 809F9FE0 00000014  2C 04 00 01 */	cmpwi r4, 1
 /* 809F9FE4 00000018  40 82 00 30 */	bne lbl_809FA014
 /* 809F9FE8 0000001C  A8 9F 0D 12 */	lha r4, 0xd12(r31)
-/* 809F9FEC 00000020  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809F9FF0 00000024  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 809F9FF4 00000028  4B FF F0 05 */	bl mDoMtx_YrotM__FPA4_fs
-/* 809F9FF8 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809F9FFC 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 809F9FEC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F9FF0 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809F9FF4 00000028  4B FF F0 05 */	bl _unresolved
+/* 809F9FF8 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809F9FFC 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FA000 00000034  A8 1F 0D 0E */	lha r0, 0xd0e(r31)
 /* 809FA004 00000038  7C 00 00 D0 */	neg r0, r0
 /* 809FA008 0000003C  7C 04 07 34 */	extsh r4, r0
-/* 809FA00C 00000040  4B FF EF ED */	bl mDoMtx_ZrotM__FPA4_fs
+/* 809FA00C 00000040  4B FF EF ED */	bl _unresolved
 /* 809FA010 00000044  48 00 00 2C */	b lbl_809FA03C
 lbl_809FA014:
 /* 809FA014 00000000  2C 04 00 04 */	cmpwi r4, 4
 /* 809FA018 00000004  40 82 00 24 */	bne lbl_809FA03C
 /* 809FA01C 00000008  A8 9F 0D 0C */	lha r4, 0xd0c(r31)
-/* 809FA020 0000000C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809FA024 00000010  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 809FA028 00000014  4B FF EF D1 */	bl mDoMtx_YrotM__FPA4_fs
+/* 809FA020 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA024 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809FA028 00000014  4B FF EF D1 */	bl _unresolved
 /* 809FA02C 00000018  A8 9F 0D 08 */	lha r4, 0xd08(r31)
-/* 809FA030 0000001C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809FA034 00000020  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 809FA038 00000024  4B FF EF C1 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 809FA030 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA034 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809FA038 00000024  4B FF EF C1 */	bl _unresolved
 lbl_809FA03C:
 /* 809FA03C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809FA040 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

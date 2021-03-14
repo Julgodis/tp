@@ -6,7 +6,7 @@ lbl_80AA59BC:
 /* 80AA59CC 00000010  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */
 /* 80AA59D0 00000000  FF E0 08 90 */	fmr f31, f1
 /* 80AA59D4 00000004  FC 20 10 90 */	fmr f1, f2
-/* 80AA59D8 00000008  4B FF D2 21 */	bl cM_rndF__Ff
+/* 80AA59D8 00000008  4B FF D2 21 */	bl _unresolved
 /* 80AA59DC 0000000C  EC 3F 08 2A */	fadds f1, f31, f1
 /* 80AA59E0 00000024  E3 E1 00 18 */	psq_l f31, 24(r1), 0, 0 /* qr0 */
 /* 80AA59E4 00000000  CB E1 00 10 */	lfd f31, 0x10(r1)

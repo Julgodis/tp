@@ -3,30 +3,84 @@
 # Module: 662
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D13000, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D1302C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D13058, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 9, 'type': "Function"},
-	'daObjToaruMaki_c_createHeap__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D13078, 'size': 0x0020, 'padding': 0x00, 'name': "daObjToaruMaki_c_createHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'__ct__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D13098, 'size': 0x0048, 'padding': 0x00, 'name': "__ct__16daObjToaruMaki_cFv", 'reference_count': 2, 'type': "Function"},
-	'__dt__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D130E0, 'size': 0x008C, 'padding': 0x00, 'name': "__dt__16daObjToaruMaki_cFv", 'reference_count': 0, 'type': "Function"},
-	'createHeap__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D1316C, 'size': 0x0148, 'padding': 0x00, 'name': "createHeap__16daObjToaruMaki_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D132B4, 'size': 0x010C, 'padding': 0x00, 'name': "create__16daObjToaruMaki_cFv", 'reference_count': 1, 'type': "Function"},
-	'Delete__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D133C0, 'size': 0x007C, 'padding': 0x00, 'name': "Delete__16daObjToaruMaki_cFv", 'reference_count': 1, 'type': "Function"},
-	'setModelMtx__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D1343C, 'size': 0x0064, 'padding': 0x00, 'name': "setModelMtx__16daObjToaruMaki_cFv", 'reference_count': 2, 'type': "Function"},
-	'draw__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D134A0, 'size': 0x0084, 'padding': 0x00, 'name': "draw__16daObjToaruMaki_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__16daObjToaruMaki_cFv': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D13524, 'size': 0x0024, 'padding': 0x00, 'name': "execute__16daObjToaruMaki_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjToaruMaki_create__FP16daObjToaruMaki_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D13548, 'size': 0x0054, 'padding': 0x00, 'name': "daObjToaruMaki_create__FP16daObjToaruMaki_c", 'reference_count': 1, 'type': "Function"},
-	'daObjToaruMaki_Delete__FP16daObjToaruMaki_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D1359C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjToaruMaki_Delete__FP16daObjToaruMaki_c", 'reference_count': 1, 'type': "Function"},
-	'daObjToaruMaki_execute__FP16daObjToaruMaki_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D135BC, 'size': 0x0020, 'padding': 0x00, 'name': "daObjToaruMaki_execute__FP16daObjToaruMaki_c", 'reference_count': 1, 'type': "Function"},
-	'daObjToaruMaki_draw__FP16daObjToaruMaki_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".text", 'addr': 0x80D135DC, 'size': 0x0020, 'padding': 0x00, 'name': "daObjToaruMaki_draw__FP16daObjToaruMaki_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D135FC': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D135FC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D13600': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D13600, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_bmdIdx': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".rodata", 'addr': 0x80D13604, 'size': 0x0008, 'padding': 0x00, 'name': "l_bmdIdx", 'reference_count': 0, 'type': "InitData"},
-	'l_heapSize': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".rodata", 'addr': 0x80D1360C, 'size': 0x0008, 'padding': 0x00, 'name': "l_heapSize", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".rodata", 'addr': 0x80D13614, 'size': 0x0010, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".data", 'addr': 0x80D13624, 'size': 0x0008, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'daObjToaruMaki_METHODS': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".data", 'addr': 0x80D1362C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjToaruMaki_METHODS", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_ToaruMaki': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".data", 'addr': 0x80D1364C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_ToaruMaki", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__16daObjToaruMaki_c': {'library': "d/a/obj/d_a_obj_toaru_maki", 'translation_unit': "d_a_obj_toaru_maki", 'section': ".data", 'addr': 0x80D1367C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__16daObjToaruMaki_c", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_toaru_maki",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_toaru_maki",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D13000,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D1302C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D13058,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':9,'type':"Function"},
+	{'addr':0x80D13078,'size':32,'pad':0,'label':"daObjToaruMaki_c_createHeap__FP10fopAc_ac_c",'name':"daObjToaruMaki_c_createHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D13098,'size':72,'pad':0,'label':"__ct__16daObjToaruMaki_cFv",'name':"__ct__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D130E0,'size':140,'pad':0,'label':"__dt__16daObjToaruMaki_cFv",'name':"__dt__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D1316C,'size':328,'pad':0,'label':"createHeap__16daObjToaruMaki_cFv",'name':"createHeap__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D132B4,'size':268,'pad':0,'label':"create__16daObjToaruMaki_cFv",'name':"create__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D133C0,'size':124,'pad':0,'label':"Delete__16daObjToaruMaki_cFv",'name':"Delete__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D1343C,'size':100,'pad':0,'label':"setModelMtx__16daObjToaruMaki_cFv",'name':"setModelMtx__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D134A0,'size':132,'pad':0,'label':"draw__16daObjToaruMaki_cFv",'name':"draw__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D13524,'size':36,'pad':0,'label':"execute__16daObjToaruMaki_cFv",'name':"execute__16daObjToaruMaki_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D13548,'size':84,'pad':0,'label':"daObjToaruMaki_create__FP16daObjToaruMaki_c",'name':"daObjToaruMaki_create__FP16daObjToaruMaki_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D1359C,'size':32,'pad':0,'label':"daObjToaruMaki_Delete__FP16daObjToaruMaki_c",'name':"daObjToaruMaki_Delete__FP16daObjToaruMaki_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D135BC,'size':32,'pad':0,'label':"daObjToaruMaki_execute__FP16daObjToaruMaki_c",'name':"daObjToaruMaki_execute__FP16daObjToaruMaki_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D135DC,'size':32,'pad':0,'label':"daObjToaruMaki_draw__FP16daObjToaruMaki_c",'name':"daObjToaruMaki_draw__FP16daObjToaruMaki_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D135FC,'size':4,'pad':0,'label':"data_80D135FC",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D13600,'size':4,'pad':0,'label':"data_80D13600",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D13604,'size':8,'pad':0,'label':"l_bmdIdx",'name':"l_bmdIdx",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D1360C,'size':8,'pad':0,'label':"l_heapSize",'name':"l_heapSize",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D13614,'size':16,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80D13624,'size':8,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D1362C,'size':32,'pad':0,'label':"daObjToaruMaki_METHODS",'name':"daObjToaruMaki_METHODS",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D1364C,'size':48,'pad':0,'label':"g_profile_Obj_ToaruMaki",'name':"g_profile_Obj_ToaruMaki",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D1367C,'size':12,'pad':0,'label':"__vt__16daObjToaruMaki_c",'name':"__vt__16daObjToaruMaki_c",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daObjToaruMaki_c_createHeap__FP10fopAc_ac_c":3,
+	"__ct__16daObjToaruMaki_cFv":4,
+	"__dt__16daObjToaruMaki_cFv":5,
+	"createHeap__16daObjToaruMaki_cFv":6,
+	"create__16daObjToaruMaki_cFv":7,
+	"Delete__16daObjToaruMaki_cFv":8,
+	"setModelMtx__16daObjToaruMaki_cFv":9,
+	"draw__16daObjToaruMaki_cFv":10,
+	"execute__16daObjToaruMaki_cFv":11,
+	"daObjToaruMaki_create__FP16daObjToaruMaki_c":12,
+	"daObjToaruMaki_Delete__FP16daObjToaruMaki_c":13,
+	"daObjToaruMaki_execute__FP16daObjToaruMaki_c":14,
+	"daObjToaruMaki_draw__FP16daObjToaruMaki_c":15,
+	"data_80D135FC":16,
+	"data_80D13600":17,
+	"l_bmdIdx":18,
+	"l_heapSize":19,
+	"stringBase0":20,
+	"l_arcName":21,
+	"daObjToaruMaki_METHODS":22,
+	"g_profile_Obj_ToaruMaki":23,
+	"__vt__16daObjToaruMaki_c":24,
 }
+

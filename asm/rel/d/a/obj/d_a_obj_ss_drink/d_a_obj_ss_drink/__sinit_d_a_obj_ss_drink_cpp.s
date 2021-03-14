@@ -1,9 +1,9 @@
 lbl_80CE66F4:
-/* 80CE66F4 00000000  3C 60 00 00 */	lis r3, mCcDCyl__15daObj_SSDrink_c@ha
-/* 80CE66F8 00000004  38 63 00 00 */	addi r3, r3, mCcDCyl__15daObj_SSDrink_c@l
+/* 80CE66F4 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE66F8 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE66FC 00000008  38 A3 FF FC */	addi r5, r3, -4
-/* 80CE6700 0000000C  3C 60 00 00 */	lis r3, mCcDObjInfo__15daObj_SSDrink_c@ha
-/* 80CE6704 00000010  38 63 00 00 */	addi r3, r3, mCcDObjInfo__15daObj_SSDrink_c@l
+/* 80CE6700 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE6704 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE6708 00000014  38 83 FF FC */	addi r4, r3, -4
 /* 80CE670C 00000018  38 00 00 06 */	li r0, 6
 /* 80CE6710 0000001C  7C 09 03 A6 */	mtctr r0

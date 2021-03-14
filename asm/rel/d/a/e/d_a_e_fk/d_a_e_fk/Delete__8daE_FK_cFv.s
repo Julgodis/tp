@@ -5,15 +5,15 @@ lbl_806BADB4:
 /* 806BADC0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806BADC4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 806BADC8 00000014  38 7F 0C 40 */	addi r3, r31, 0xc40
-/* 806BADCC 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 806BADD0 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 806BADD4 00000020  4B FF E5 25 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 806BADCC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806BADD0 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 806BADD4 00000020  4B FF E5 25 */	bl _unresolved
 /* 806BADD8 00000024  88 1F 0F 68 */	lbz r0, 0xf68(r31)
 /* 806BADDC 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 806BADE0 0000002C  41 82 00 10 */	beq lbl_806BADF0
 /* 806BADE4 00000030  38 00 00 00 */	li r0, 0
-/* 806BADE8 00000034  3C 60 00 00 */	lis r3, struct_806BB910@ha
-/* 806BADEC 00000038  98 03 00 00 */	stb r0, struct_806BB910@l(r3)
+/* 806BADE8 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806BADEC 00000038  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_806BADF0:
 /* 806BADF0 00000000  38 7F 0C 4C */	addi r3, r31, 0xc4c
 /* 806BADF4 00000004  81 9F 0C 4C */	lwz r12, 0xc4c(r31)

@@ -3,21 +3,66 @@
 # Module: 261
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_guard_mng", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80837AA0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_guard_mng", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80837ACC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_guard_mng", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80837AF8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
-	's_sub__FPvPv': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837B18, 'size': 0x0084, 'padding': 0x00, 'name': "s_sub__FPvPv", 'reference_count': 0, 'type': "Function"},
-	'checkMerchantNum__12daGuardMng_cFv': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837B9C, 'size': 0x0050, 'padding': 0x00, 'name': "checkMerchantNum__12daGuardMng_cFv", 'reference_count': 1, 'type': "Function"},
-	'checkAppearTag__12daGuardMng_cFP12daTagGuard_c': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837BEC, 'size': 0x0080, 'padding': 0x00, 'name': "checkAppearTag__12daGuardMng_cFP12daTagGuard_c", 'reference_count': 1, 'type': "Function"},
-	'daGuardMng_Execute__FP12daGuardMng_c': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837C6C, 'size': 0x00D8, 'padding': 0x00, 'name': "daGuardMng_Execute__FP12daGuardMng_c", 'reference_count': 1, 'type': "Function"},
-	'daGuardMng_IsDelete__FP12daGuardMng_c': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837D44, 'size': 0x0008, 'padding': 0x00, 'name': "daGuardMng_IsDelete__FP12daGuardMng_c", 'reference_count': 1, 'type': "Function"},
-	'daGuardMng_Delete__FP12daGuardMng_c': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837D4C, 'size': 0x0030, 'padding': 0x00, 'name': "daGuardMng_Delete__FP12daGuardMng_c", 'reference_count': 1, 'type': "Function"},
-	'daGuardMng_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".text", 'addr': 0x80837D7C, 'size': 0x0060, 'padding': 0x00, 'name': "daGuardMng_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80837DDC': {'library': "d/a/d_a_guard_mng", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80837DDC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80837DE0': {'library': "d/a/d_a_guard_mng", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80837DE0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80837DE4': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".rodata", 'addr': 0x80837DE4, 'size': 0x0008, 'padding': 0x00, 'name': "mGuardDataTbl$localstatic3$getGuardParam__12daGuardMng_cFv", 'reference_count': 0, 'type': "InitData"},
-	'lit_3663': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".rodata", 'addr': 0x80837DEC, 'size': 0x0004, 'padding': 0x00, 'name': "@3663", 'reference_count': 0, 'type': "Integer"},
-	'l_daGuardMng_Method': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".data", 'addr': 0x80837DF4, 'size': 0x0020, 'padding': 0x00, 'name': "l_daGuardMng_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_GUARD_MNG': {'library': "d/a/d_a_guard_mng", 'translation_unit': "d_a_guard_mng", 'section': ".data", 'addr': 0x80837E14, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_GUARD_MNG", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_guard_mng",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_guard_mng",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80837AA0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837ACC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837AF8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':8,'type':"Function"},
+	{'addr':0x80837B18,'size':132,'pad':0,'label':"s_sub__FPvPv",'name':"s_sub__FPvPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837B9C,'size':80,'pad':0,'label':"checkMerchantNum__12daGuardMng_cFv",'name':"checkMerchantNum__12daGuardMng_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80837BEC,'size':128,'pad':0,'label':"checkAppearTag__12daGuardMng_cFP12daTagGuard_c",'name':"checkAppearTag__12daGuardMng_cFP12daTagGuard_c",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80837C6C,'size':216,'pad':0,'label':"daGuardMng_Execute__FP12daGuardMng_c",'name':"daGuardMng_Execute__FP12daGuardMng_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837D44,'size':8,'pad':0,'label':"daGuardMng_IsDelete__FP12daGuardMng_c",'name':"daGuardMng_IsDelete__FP12daGuardMng_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837D4C,'size':48,'pad':0,'label':"daGuardMng_Delete__FP12daGuardMng_c",'name':"daGuardMng_Delete__FP12daGuardMng_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837D7C,'size':96,'pad':0,'label':"daGuardMng_Create__FP10fopAc_ac_c",'name':"daGuardMng_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80837DDC,'size':4,'pad':0,'label':"data_80837DDC",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80837DE0,'size':4,'pad':0,'label':"data_80837DE0",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80837DE4,'size':8,'pad':0,'label':"data_80837DE4",'name':"mGuardDataTbl$localstatic3$getGuardParam__12daGuardMng_cFv",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80837DEC,'size':4,'pad':0,'label':"lit_3663",'name':"@3663",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80837DF0,'size':32,'pad':0,'label':"l_daGuardMng_Method",'name':"l_daGuardMng_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80837E10,'size':48,'pad':0,'label':"g_profile_GUARD_MNG",'name':"g_profile_GUARD_MNG",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"s_sub__FPvPv":3,
+	"checkMerchantNum__12daGuardMng_cFv":4,
+	"checkAppearTag__12daGuardMng_cFP12daTagGuard_c":5,
+	"daGuardMng_Execute__FP12daGuardMng_c":6,
+	"daGuardMng_IsDelete__FP12daGuardMng_c":7,
+	"daGuardMng_Delete__FP12daGuardMng_c":8,
+	"daGuardMng_Create__FP10fopAc_ac_c":9,
+	"data_80837DDC":10,
+	"data_80837DE0":11,
+	"data_80837DE4":12,
+	"lit_3663":13,
+	"l_daGuardMng_Method":14,
+	"g_profile_GUARD_MNG":15,
 }
+

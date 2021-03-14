@@ -4,11 +4,11 @@ lbl_80CA7374:
 /* 80CA737C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CA7380 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CA7384 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CA7388 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CA738C 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CA7388 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CA738C 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CA7390 0000001C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CA7394 00000020  38 9F 0A 70 */	addi r4, r31, 0xa70
-/* 80CA7398 00000024  4B FF F3 61 */	bl GetRoomId__4dBgSFRC13cBgS_PolyInfo
+/* 80CA7398 00000024  4B FF F3 61 */	bl _unresolved
 /* 80CA739C 00000028  98 7F 04 E2 */	stb r3, 0x4e2(r31)
 /* 80CA73A0 0000002C  98 7F 07 8A */	stb r3, 0x78a(r31)
 /* 80CA73A4 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)

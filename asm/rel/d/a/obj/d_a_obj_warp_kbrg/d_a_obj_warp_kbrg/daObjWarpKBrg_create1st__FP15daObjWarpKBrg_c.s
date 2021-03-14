@@ -11,12 +11,12 @@ lbl_80D294B0:
 /* 80D294D4 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80D294D8 00000028  41 82 00 20 */	beq lbl_80D294F8
 /* 80D294DC 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80D294E0 00000030  4B FF DA 39 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80D294E4 00000034  3C 60 00 00 */	lis r3, __vt__15daObjWarpKBrg_c@ha
-/* 80D294E8 00000038  38 03 00 00 */	addi r0, r3, __vt__15daObjWarpKBrg_c@l
+/* 80D294E0 00000030  4B FF DA 39 */	bl _unresolved
+/* 80D294E4 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D294E8 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D294EC 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
 /* 80D294F0 00000040  38 7E 05 DC */	addi r3, r30, 0x5dc
-/* 80D294F4 00000044  4B FF DA 25 */	bl __ct__10dMsgFlow_cFv
+/* 80D294F4 00000044  4B FF DA 25 */	bl _unresolved
 lbl_80D294F8:
 /* 80D294F8 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80D294FC 00000004  60 00 00 08 */	ori r0, r0, 8

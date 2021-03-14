@@ -4,28 +4,28 @@ lbl_80C25BB8:
 /* 80C25BC0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C25BC4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C25BC8 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C25BCC 00000014  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80C25BD0 00000018  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80C25BCC 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C25BD0 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C25BD4 0000001C  38 80 00 00 */	li r4, 0
 /* 80C25BD8 00000020  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C25BDC 00000024  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80C25BE0 00000028  4B FF EB 19 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80C25BE4 0000002C  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80C25BE8 00000030  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80C25BE0 00000028  4B FF EB 19 */	bl _unresolved
+/* 80C25BE4 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C25BE8 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C25BEC 00000034  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80C25BF0 00000038  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C25BF4 0000003C  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80C25BF8 00000040  4B FF EB 01 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80C25BF8 00000040  4B FF EB 01 */	bl _unresolved
 /* 80C25BFC 00000044  80 7F 09 04 */	lwz r3, 0x904(r31)
 /* 80C25C00 00000048  28 03 00 00 */	cmplwi r3, 0
 /* 80C25C04 0000004C  41 82 00 14 */	beq lbl_80C25C18
 /* 80C25C08 00000050  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80C25C0C 00000054  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C25C10 00000058  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80C25C14 0000005C  4B FF EA E5 */	bl entry__13mDoExt_bckAnmFP12J3DModelDataf
+/* 80C25C14 0000005C  4B FF EA E5 */	bl _unresolved
 lbl_80C25C18:
 /* 80C25C18 00000000  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80C25C1C 00000004  4B FF EA DD */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80C25C1C 00000004  4B FF EA DD */	bl _unresolved
 /* 80C25C20 00000008  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80C25C24 0000000C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80C25C28 00000010  80 63 00 28 */	lwz r3, 0x28(r3)

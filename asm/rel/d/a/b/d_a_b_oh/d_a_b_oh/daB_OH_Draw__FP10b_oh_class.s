@@ -13,30 +13,30 @@ lbl_8061B8B0:
 lbl_8061B8DC:
 /* 8061B8DC 00000000  80 7E 05 B4 */	lwz r3, 0x5b4(r30)
 /* 8061B8E0 00000004  83 E3 00 04 */	lwz r31, 4(r3)
-/* 8061B8E4 00000008  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 8061B8E8 0000000C  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 8061B8E4 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8061B8E8 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8061B8EC 00000010  38 80 00 00 */	li r4, 0
 /* 8061B8F0 00000014  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8061B8F4 00000018  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 8061B8F8 0000001C  4B FF FD A1 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 8061B8FC 00000020  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 8061B900 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 8061B8F8 0000001C  4B FF FD A1 */	bl _unresolved
+/* 8061B8FC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8061B900 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8061B904 00000028  80 9F 00 04 */	lwz r4, 4(r31)
 /* 8061B908 0000002C  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 8061B90C 00000030  4B FF FD 8D */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 8061B90C 00000030  4B FF FD 8D */	bl _unresolved
 /* 8061B910 00000034  80 9F 00 04 */	lwz r4, 4(r31)
 /* 8061B914 00000038  80 7E 05 C0 */	lwz r3, 0x5c0(r30)
 /* 8061B918 0000003C  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8061B91C 00000040  38 84 00 58 */	addi r4, r4, 0x58
-/* 8061B920 00000044  4B FF FD 79 */	bl entry__13mDoExt_btkAnmFP16J3DMaterialTablef
+/* 8061B920 00000044  4B FF FD 79 */	bl _unresolved
 /* 8061B924 00000048  80 9F 00 04 */	lwz r4, 4(r31)
 /* 8061B928 0000004C  80 7E 05 C4 */	lwz r3, 0x5c4(r30)
 /* 8061B92C 00000050  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8061B930 00000054  38 84 00 58 */	addi r4, r4, 0x58
-/* 8061B934 00000058  4B FF FD 65 */	bl entry__13mDoExt_brkAnmFP16J3DMaterialTablef
+/* 8061B934 00000058  4B FF FD 65 */	bl _unresolved
 /* 8061B938 0000005C  38 7E 05 B8 */	addi r3, r30, 0x5b8
 /* 8061B93C 00000060  38 80 00 00 */	li r4, 0
-/* 8061B940 00000064  4B FF FD 59 */	bl entryDL__21mDoExt_invisibleModelFP4cXyz
+/* 8061B940 00000064  4B FF FD 59 */	bl _unresolved
 /* 8061B944 00000068  38 60 00 01 */	li r3, 1
 lbl_8061B948:
 /* 8061B948 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

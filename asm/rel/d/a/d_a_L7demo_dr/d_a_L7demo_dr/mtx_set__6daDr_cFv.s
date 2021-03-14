@@ -10,11 +10,11 @@ lbl_805A9304:
 /* 805A9324 00000020  80 7F 00 84 */	lwz r3, 0x84(r31)
 /* 805A9328 00000024  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 805A932C 00000028  38 63 00 30 */	addi r3, r3, 0x30
-/* 805A9330 0000002C  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 805A9334 00000030  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 805A9338 00000034  4B FF FE E1 */	bl PSMTXCopy
-/* 805A933C 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805A9340 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805A9330 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805A9334 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805A9338 00000034  4B FF FE E1 */	bl _unresolved
+/* 805A933C 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805A9340 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805A9344 00000040  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805A9348 00000044  D0 1E 06 18 */	stfs f0, 0x618(r30)
 /* 805A934C 00000048  C0 03 00 1C */	lfs f0, 0x1c(r3)
@@ -22,21 +22,21 @@ lbl_805A9304:
 /* 805A9354 00000050  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805A9358 00000054  D0 1E 06 20 */	stfs f0, 0x620(r30)
 /* 805A935C 00000058  38 7E 04 D0 */	addi r3, r30, 0x4d0
-/* 805A9360 0000005C  4B FF FE B9 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 805A9360 0000005C  4B FF FE B9 */	bl _unresolved
 /* 805A9364 00000060  38 7E 04 DC */	addi r3, r30, 0x4dc
-/* 805A9368 00000064  4B FF FE B1 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 805A9368 00000064  4B FF FE B1 */	bl _unresolved
 /* 805A936C 00000068  C0 1E 04 EC */	lfs f0, 0x4ec(r30)
 /* 805A9370 0000006C  D0 1F 00 18 */	stfs f0, 0x18(r31)
 /* 805A9374 00000070  C0 1E 04 F0 */	lfs f0, 0x4f0(r30)
 /* 805A9378 00000074  D0 1F 00 1C */	stfs f0, 0x1c(r31)
 /* 805A937C 00000078  C0 1E 04 F4 */	lfs f0, 0x4f4(r30)
 /* 805A9380 0000007C  D0 1F 00 20 */	stfs f0, 0x20(r31)
-/* 805A9384 00000080  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805A9388 00000084  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805A9384 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805A9388 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805A938C 00000088  38 9F 00 24 */	addi r4, r31, 0x24
-/* 805A9390 0000008C  4B FF FE 89 */	bl PSMTXCopy
+/* 805A9390 0000008C  4B FF FE 89 */	bl _unresolved
 /* 805A9394 00000090  80 7E 05 70 */	lwz r3, 0x570(r30)
-/* 805A9398 00000094  4B FF FE 81 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 805A9398 00000094  4B FF FE 81 */	bl _unresolved
 /* 805A939C 00000098  38 1F 00 24 */	addi r0, r31, 0x24
 /* 805A93A0 0000009C  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 805A93A4 000000A0  C0 1E 06 18 */	lfs f0, 0x618(r30)

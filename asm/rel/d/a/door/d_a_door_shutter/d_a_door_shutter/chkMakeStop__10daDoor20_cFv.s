@@ -5,10 +5,10 @@ lbl_80465AC0:
 /* 80465ACC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80465AD0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80465AD4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80465AD8 00000018  4B FF B0 41 */	bl getFrontOption__13door_param2_cFP10fopAc_ac_c
+/* 80465AD8 00000018  4B FF B0 41 */	bl _unresolved
 /* 80465ADC 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 80465AE0 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80465AE4 00000024  4B FF B0 35 */	bl getBackOption__13door_param2_cFP10fopAc_ac_c
+/* 80465AE4 00000024  4B FF B0 35 */	bl _unresolved
 /* 80465AE8 00000028  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80465AEC 0000002C  28 00 00 01 */	cmplwi r0, 1
 /* 80465AF0 00000030  41 82 00 20 */	beq lbl_80465B10

@@ -7,10 +7,10 @@ lbl_80AA4128:
 /* 80AA413C 00000014  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80AA4140 00000018  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80AA4144 0000001C  41 82 00 08 */	beq lbl_80AA414C
-/* 80AA4148 00000020  4B FF EA B1 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80AA4148 00000020  4B FF EA B1 */	bl _unresolved
 lbl_80AA414C:
 /* 80AA414C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80AA4150 00000004  4B FF EA A9 */	bl checkFearSituation__10daNpcCd2_cFv
+/* 80AA4150 00000004  4B FF EA A9 */	bl _unresolved
 /* 80AA4154 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AA4158 0000000C  41 82 00 64 */	beq lbl_80AA41BC
 /* 80AA415C 00000010  80 1F 0B 00 */	lwz r0, 0xb00(r31)
@@ -33,19 +33,19 @@ lbl_80AA418C:
 lbl_80AA4198:
 /* 80AA4198 00000000  80 1F 04 A4 */	lwz r0, 0x4a4(r31)
 /* 80AA419C 00000004  90 01 00 08 */	stw r0, 8(r1)
-/* 80AA41A0 00000008  3C 60 00 00 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
-/* 80AA41A4 0000000C  38 63 00 00 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
+/* 80AA41A0 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AA41A4 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AA41A8 00000010  38 81 00 08 */	addi r4, r1, 8
-/* 80AA41AC 00000014  4B FF EA 4D */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80AA41AC 00000014  4B FF EA 4D */	bl _unresolved
 /* 80AA41B0 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80AA41B4 0000001C  41 82 00 08 */	beq lbl_80AA41BC
-/* 80AA41B8 00000020  4B FF EA 41 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80AA41B8 00000020  4B FF EA 41 */	bl _unresolved
 lbl_80AA41BC:
 /* 80AA41BC 00000000  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 80AA41C0 00000004  A8 9F 0B 20 */	lha r4, 0xb20(r31)
 /* 80AA41C4 00000008  38 A0 00 03 */	li r5, 3
 /* 80AA41C8 0000000C  38 C0 06 00 */	li r6, 0x600
-/* 80AA41CC 00000010  4B FF EA 2D */	bl cLib_addCalcAngleS2__FPssss
+/* 80AA41CC 00000010  4B FF EA 2D */	bl _unresolved
 /* 80AA41D0 00000014  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80AA41D4 00000018  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80AA41D8 0000001C  7C 08 03 A6 */	mtlr r0

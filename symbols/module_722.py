@@ -3,16 +3,55 @@
 # Module: 722
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D59780, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D597AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D597D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'getAppearPoint__12daTagGuard_cFP3Vec': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".text", 'addr': 0x80D597F8, 'size': 0x0064, 'padding': 0x00, 'name': "getAppearPoint__12daTagGuard_cFP3Vec", 'reference_count': 0, 'type': "Function"},
-	'createGuard__12daTagGuard_cFUl': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".text", 'addr': 0x80D5985C, 'size': 0x00CC, 'padding': 0x00, 'name': "createGuard__12daTagGuard_cFUl", 'reference_count': 0, 'type': "Function"},
-	'daTagGuard_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".text", 'addr': 0x80D59928, 'size': 0x00B8, 'padding': 0x00, 'name': "daTagGuard_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daTagGuard_Delete__FP12daTagGuard_c': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".text", 'addr': 0x80D599E0, 'size': 0x0030, 'padding': 0x00, 'name': "daTagGuard_Delete__FP12daTagGuard_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D59A10': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D59A10, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D59A14': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D59A14, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daTagGuard_Method': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".data", 'addr': 0x80D59A1C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagGuard_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_TAG_GUARD': {'library': "d/a/tag/d_a_tag_guard", 'translation_unit': "d_a_tag_guard", 'section': ".data", 'addr': 0x80D59A3C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_GUARD", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_guard",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_guard",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D59780,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D597AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D597D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80D597F8,'size':100,'pad':0,'label':"getAppearPoint__12daTagGuard_cFP3Vec",'name':"getAppearPoint__12daTagGuard_cFP3Vec",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5985C,'size':204,'pad':0,'label':"createGuard__12daTagGuard_cFUl",'name':"createGuard__12daTagGuard_cFUl",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D59928,'size':184,'pad':0,'label':"daTagGuard_Create__FP10fopAc_ac_c",'name':"daTagGuard_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D599E0,'size':48,'pad':0,'label':"daTagGuard_Delete__FP12daTagGuard_c",'name':"daTagGuard_Delete__FP12daTagGuard_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D59A10,'size':4,'pad':0,'label':"data_80D59A10",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D59A14,'size':4,'pad':0,'label':"data_80D59A14",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D59A18,'size':32,'pad':0,'label':"l_daTagGuard_Method",'name':"l_daTagGuard_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D59A38,'size':48,'pad':0,'label':"g_profile_TAG_GUARD",'name':"g_profile_TAG_GUARD",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"getAppearPoint__12daTagGuard_cFP3Vec":3,
+	"createGuard__12daTagGuard_cFUl":4,
+	"daTagGuard_Create__FP10fopAc_ac_c":5,
+	"daTagGuard_Delete__FP12daTagGuard_c":6,
+	"data_80D59A10":7,
+	"data_80D59A14":8,
+	"l_daTagGuard_Method":9,
+	"g_profile_TAG_GUARD":10,
 }
+

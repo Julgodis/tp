@@ -7,8 +7,8 @@ lbl_80CE2EAC:
 /* 80CE2EC0 00000014  A8 63 0D AC */	lha r3, 0xdac(r3)
 /* 80CE2EC4 00000018  38 03 00 01 */	addi r0, r3, 1
 /* 80CE2EC8 0000001C  B0 1F 0D AC */	sth r0, 0xdac(r31)
-/* 80CE2ECC 00000020  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 80CE2ED0 00000024  38 63 00 00 */	addi r3, r3, l_HIO@l
+/* 80CE2ECC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE2ED0 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE2ED4 00000028  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CE2ED8 0000002C  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80CE2EDC 00000030  38 60 00 00 */	li r3, 0
@@ -28,7 +28,7 @@ lbl_80CE2F00:
 /* 80CE2F0C 0000000C  4B FF E3 CD */	bl action__FP12obj_so_class
 /* 80CE2F10 00000010  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80CE2F14 00000014  7C 03 07 74 */	extsb r3, r0
-/* 80CE2F18 00000018  4B FF D4 21 */	bl dComIfGp_getReverb__Fi
+/* 80CE2F18 00000018  4B FF D4 21 */	bl _unresolved
 /* 80CE2F1C 0000001C  7C 65 1B 78 */	mr r5, r3
 /* 80CE2F20 00000020  38 7F 0D 1C */	addi r3, r31, 0xd1c
 /* 80CE2F24 00000024  38 80 00 00 */	li r4, 0

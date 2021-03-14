@@ -352,6 +352,13 @@ def search(context: Context,
                     symbol._translation_unit = translation_unit.name
                     symbol._section = section.name
 
+                    if isinstance(symbol, Function):
+                        for block in symbol.blocks:
+                            block._module = module.index
+                            block._library = library.name
+                            block._translation_unit = translation_unit.name
+                            block._section = section.name
+
                 # clear data
                 section.data = None
 

@@ -3,12 +3,12 @@ lbl_805BE9B4:
 /* 805BE9B8 00000004  7C 08 02 A6 */	mflr r0
 /* 805BE9BC 00000008  90 01 00 94 */	stw r0, 0x94(r1)
 /* 805BE9C0 0000000C  39 61 00 90 */	addi r11, r1, 0x90
-/* 805BE9C4 00000010  4B FF C4 15 */	bl _savegpr_27
+/* 805BE9C4 00000010  4B FF C4 15 */	bl _unresolved
 /* 805BE9C8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 805BE9CC 00000018  3C 80 00 00 */	lis r4, lit_3800@ha
-/* 805BE9D0 0000001C  3B C4 00 00 */	addi r30, r4, lit_3800@l
-/* 805BE9D4 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 805BE9D8 00000024  3B A4 00 00 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 805BE9CC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805BE9D0 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
+/* 805BE9D4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805BE9D8 00000024  3B A4 00 00 */	addi r29, r4, 0x0000 /* 0x00000000@l */
 /* 805BE9DC 00000028  83 9D 5D AC */	lwz r28, 0x5dac(r29)
 /* 805BE9E0 0000002C  80 03 07 0C */	lwz r0, 0x70c(r3)
 /* 805BE9E4 00000030  2C 00 00 04 */	cmpwi r0, 4
@@ -40,24 +40,24 @@ lbl_805BEA2C:
 /* 805BEA40 00000014  88 9F 07 ED */	lbz r4, 0x7ed(r31)
 /* 805BEA44 00000018  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BEA48 0000001C  41 82 00 18 */	beq lbl_805BEA60
-/* 805BEA4C 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEA50 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEA4C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEA50 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEA54 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BEA58 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 805BEA5C 00000030  4B FF C3 7D */	bl onSwitch__10dSv_info_cFii
+/* 805BEA5C 00000030  4B FF C3 7D */	bl _unresolved
 lbl_805BEA60:
 /* 805BEA60 00000000  7F E3 FB 78 */	mr r3, r31
 /* 805BEA64 00000004  4B FF E1 B5 */	bl mAllClr__8daB_DR_cFv
 /* 805BEA68 00000008  C0 3E 00 04 */	lfs f1, 4(r30)
-/* 805BEA6C 0000000C  4B FF C3 6D */	bl cM_rndF__Ff
+/* 805BEA6C 0000000C  4B FF C3 6D */	bl _unresolved
 /* 805BEA70 00000010  FC 00 08 1E */	fctiwz f0, f1
 /* 805BEA74 00000014  D8 01 00 70 */	stfd f0, 0x70(r1)
 /* 805BEA78 00000018  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 805BEA7C 0000001C  98 1F 07 E4 */	stb r0, 0x7e4(r31)
 /* 805BEA80 00000020  38 80 00 00 */	li r4, 0
 /* 805BEA84 00000024  98 9F 07 E5 */	stb r4, 0x7e5(r31)
-/* 805BEA88 00000028  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 805BEA8C 0000002C  38 63 00 00 */	addi r3, r3, l_HIO@l
+/* 805BEA88 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEA8C 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEA90 00000030  A8 03 00 4E */	lha r0, 0x4e(r3)
 /* 805BEA94 00000034  90 1F 07 C8 */	stw r0, 0x7c8(r31)
 /* 805BEA98 00000038  98 9F 07 D0 */	stb r4, 0x7d0(r31)
@@ -77,12 +77,12 @@ lbl_805BEAB0:
 /* 805BEACC 0000001C  C0 3E 00 24 */	lfs f1, 0x24(r30)
 /* 805BEAD0 00000020  C0 5E 00 34 */	lfs f2, 0x34(r30)
 /* 805BEAD4 00000024  4B FF C9 35 */	bl setBck__8daB_DR_cFiUcff
-/* 805BEAD8 00000028  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 805BEADC 0000002C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 805BEAD8 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEADC 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEAE0 00000030  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BEAE4 00000034  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805BEAE8 00000038  38 80 00 01 */	li r4, 1
-/* 805BEAEC 0000003C  4B FF C2 ED */	bl changeBgmStatus__8Z2SeqMgrFl
+/* 805BEAEC 0000003C  4B FF C2 ED */	bl _unresolved
 /* 805BEAF0 00000040  38 00 00 64 */	li r0, 0x64
 /* 805BEAF4 00000044  90 1F 07 0C */	stw r0, 0x70c(r31)
 /* 805BEAF8 00000048  C0 1E 00 30 */	lfs f0, 0x30(r30)
@@ -110,13 +110,13 @@ lbl_805BEB04:
 /* 805BEB4C 00000048  C0 1E 00 34 */	lfs f0, 0x34(r30)
 /* 805BEB50 0000004C  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 805BEB54 00000050  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 805BEB58 00000054  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEB5C 00000058  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEB58 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEB5C 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEB60 0000005C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805BEB64 00000060  38 80 00 02 */	li r4, 2
 /* 805BEB68 00000064  38 A0 00 4F */	li r5, 0x4f
 /* 805BEB6C 00000068  38 C1 00 3C */	addi r6, r1, 0x3c
-/* 805BEB70 0000006C  4B FF C2 69 */	bl StartShock__12dVibration_cFii4cXyz
+/* 805BEB70 0000006C  4B FF C2 69 */	bl _unresolved
 /* 805BEB74 00000070  38 00 00 01 */	li r0, 1
 /* 805BEB78 00000074  98 1F 07 E5 */	stb r0, 0x7e5(r31)
 lbl_805BEB7C:
@@ -178,15 +178,15 @@ lbl_805BEBE8:
 /* 805BEC4C 00000064  C0 1E 00 34 */	lfs f0, 0x34(r30)
 /* 805BEC50 00000068  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 805BEC54 0000006C  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 805BEC58 00000070  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEC5C 00000074  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEC58 00000070  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEC5C 00000074  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEC60 00000078  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805BEC64 0000007C  38 80 00 05 */	li r4, 5
 /* 805BEC68 00000080  38 A0 00 1F */	li r5, 0x1f
 /* 805BEC6C 00000084  38 C1 00 30 */	addi r6, r1, 0x30
-/* 805BEC70 00000088  4B FF C1 69 */	bl StartShock__12dVibration_cFii4cXyz
-/* 805BEC74 0000008C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEC78 00000090  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEC70 00000088  4B FF C1 69 */	bl _unresolved
+/* 805BEC74 0000008C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEC78 00000090  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEC7C 00000094  88 03 00 14 */	lbz r0, 0x14(r3)
 /* 805BEC80 00000098  28 00 00 28 */	cmplwi r0, 0x28
 /* 805BEC84 0000009C  40 82 00 2C */	bne lbl_805BECB0
@@ -201,7 +201,7 @@ lbl_805BEBE8:
 /* 805BECA8 000000C0  B0 1F 05 62 */	sth r0, 0x562(r31)
 /* 805BECAC 000000C4  48 00 00 34 */	b lbl_805BECE0
 lbl_805BECB0:
-/* 805BECB0 00000000  4B FF C1 29 */	bl checkMasterSwordEquip__9daPy_py_cFv
+/* 805BECB0 00000000  4B FF C1 29 */	bl _unresolved
 /* 805BECB4 00000004  2C 03 00 00 */	cmpwi r3, 0
 /* 805BECB8 00000008  41 82 00 28 */	beq lbl_805BECE0
 /* 805BECBC 0000000C  A8 7F 05 62 */	lha r3, 0x562(r31)
@@ -217,8 +217,8 @@ lbl_805BECE0:
 /* 805BECE0 00000000  88 7F 07 E8 */	lbz r3, 0x7e8(r31)
 /* 805BECE4 00000004  38 03 00 01 */	addi r0, r3, 1
 /* 805BECE8 00000008  98 1F 07 E8 */	stb r0, 0x7e8(r31)
-/* 805BECEC 0000000C  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 805BECF0 00000010  38 63 00 00 */	addi r3, r3, l_HIO@l
+/* 805BECEC 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BECF0 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BECF4 00000014  A8 03 00 4E */	lha r0, 0x4e(r3)
 /* 805BECF8 00000018  90 1F 07 C8 */	stw r0, 0x7c8(r31)
 /* 805BECFC 0000001C  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
@@ -226,19 +226,19 @@ lbl_805BECE0:
 /* 805BED04 00000024  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 805BED08 00000028  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 805BED0C 0000002C  38 63 02 D0 */	addi r3, r3, 0x2d0
-/* 805BED10 00000030  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 805BED14 00000034  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 805BED18 00000038  4B FF C0 C1 */	bl PSMTXCopy
-/* 805BED1C 0000003C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805BED20 00000040  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805BED10 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805BED14 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805BED18 00000038  4B FF C0 C1 */	bl _unresolved
+/* 805BED1C 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BED20 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BED24 00000044  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805BED28 00000048  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 805BED2C 0000004C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805BED30 00000050  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 805BED34 00000054  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805BED38 00000058  D0 01 00 68 */	stfs f0, 0x68(r1)
-/* 805BED3C 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BED40 00000060  3B 63 00 00 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 805BED3C 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BED40 00000060  3B 63 00 00 */	addi r27, r3, 0x0000 /* 0x00000000@l */
 /* 805BED44 00000064  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 805BED48 00000068  38 80 00 00 */	li r4, 0
 /* 805BED4C 0000006C  90 81 00 08 */	stw r4, 8(r1)
@@ -256,7 +256,7 @@ lbl_805BECE0:
 /* 805BED7C 0000009C  39 20 00 00 */	li r9, 0
 /* 805BED80 000000A0  39 40 00 FF */	li r10, 0xff
 /* 805BED84 000000A4  C0 3E 00 34 */	lfs f1, 0x34(r30)
-/* 805BED88 000000A8  4B FF C0 51 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 805BED88 000000A8  4B FF C0 51 */	bl _unresolved
 /* 805BED8C 000000AC  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 805BED90 000000B0  38 80 00 00 */	li r4, 0
 /* 805BED94 000000B4  90 81 00 08 */	stw r4, 8(r1)
@@ -274,7 +274,7 @@ lbl_805BECE0:
 /* 805BEDC4 000000E4  39 20 00 00 */	li r9, 0
 /* 805BEDC8 000000E8  39 40 00 FF */	li r10, 0xff
 /* 805BEDCC 000000EC  C0 3E 00 34 */	lfs f1, 0x34(r30)
-/* 805BEDD0 000000F0  4B FF C0 09 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 805BEDD0 000000F0  4B FF C0 09 */	bl _unresolved
 /* 805BEDD4 000000F4  A8 1F 05 62 */	lha r0, 0x562(r31)
 /* 805BEDD8 000000F8  2C 00 00 00 */	cmpwi r0, 0
 /* 805BEDDC 000000FC  40 81 00 10 */	ble lbl_805BEDEC
@@ -304,40 +304,40 @@ lbl_805BEDEC:
 /* 805BEE38 0000004C  88 9F 07 ED */	lbz r4, 0x7ed(r31)
 /* 805BEE3C 00000050  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BEE40 00000054  41 82 00 18 */	beq lbl_805BEE58
-/* 805BEE44 00000058  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEE48 0000005C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEE44 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEE48 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEE4C 00000060  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BEE50 00000064  7C 05 07 74 */	extsb r5, r0
-/* 805BEE54 00000068  4B FF BF 85 */	bl offSwitch__10dSv_info_cFii
+/* 805BEE54 00000068  4B FF BF 85 */	bl _unresolved
 lbl_805BEE58:
 /* 805BEE58 00000000  88 9F 07 EE */	lbz r4, 0x7ee(r31)
 /* 805BEE5C 00000004  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BEE60 00000008  41 82 00 18 */	beq lbl_805BEE78
-/* 805BEE64 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEE68 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEE64 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEE68 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEE6C 00000014  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BEE70 00000018  7C 05 07 74 */	extsb r5, r0
-/* 805BEE74 0000001C  4B FF BF 65 */	bl onSwitch__10dSv_info_cFii
+/* 805BEE74 0000001C  4B FF BF 65 */	bl _unresolved
 lbl_805BEE78:
-/* 805BEE78 00000000  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 805BEE7C 00000004  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 805BEE78 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEE7C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEE80 00000008  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BEE84 0000000C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805BEE88 00000010  38 80 00 1E */	li r4, 0x1e
 /* 805BEE8C 00000014  38 A0 00 00 */	li r5, 0
-/* 805BEE90 00000018  4B FF BF 49 */	bl bgmStop__8Z2SeqMgrFUll
-/* 805BEE94 0000001C  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 805BEE98 00000020  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 805BEE90 00000018  4B FF BF 49 */	bl _unresolved
+/* 805BEE94 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEE98 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEE9C 00000024  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BEEA0 00000028  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805BEEA4 0000002C  3C 80 02 00 */	lis r4, 0x0200 /* 0x02000049@ha */
 /* 805BEEA8 00000030  38 84 00 49 */	addi r4, r4, 0x0049 /* 0x02000049@l */
-/* 805BEEAC 00000034  4B FF BF 2D */	bl bgmStreamPrepare__8Z2SeqMgrFUl
-/* 805BEEB0 00000038  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 805BEEB4 0000003C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 805BEEAC 00000034  4B FF BF 2D */	bl _unresolved
+/* 805BEEB0 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEEB4 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEEB8 00000040  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BEEBC 00000044  38 63 03 D0 */	addi r3, r3, 0x3d0
-/* 805BEEC0 00000048  4B FF BF 19 */	bl bgmStreamPlay__8Z2SeqMgrFv
+/* 805BEEC0 00000048  4B FF BF 19 */	bl _unresolved
 /* 805BEEC4 0000004C  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 805BEEC8 00000050  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 805BEECC 00000054  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
@@ -364,7 +364,7 @@ lbl_805BEF10:
 /* 805BEF18 00000008  39 1F 04 E4 */	addi r8, r31, 0x4e4
 /* 805BEF1C 0000000C  39 20 00 00 */	li r9, 0
 /* 805BEF20 00000010  39 40 FF FF */	li r10, -1
-/* 805BEF24 00000014  4B FF BE B5 */	bl fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i
+/* 805BEF24 00000014  4B FF BE B5 */	bl _unresolved
 /* 805BEF28 00000018  90 7F 04 A4 */	stw r3, 0x4a4(r31)
 /* 805BEF2C 0000001C  38 00 00 14 */	li r0, 0x14
 /* 805BEF30 00000020  90 1F 07 C0 */	stw r0, 0x7c0(r31)
@@ -385,20 +385,20 @@ lbl_805BEF40:
 /* 805BEF68 00000028  88 9F 07 ED */	lbz r4, 0x7ed(r31)
 /* 805BEF6C 0000002C  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BEF70 00000030  41 82 00 18 */	beq lbl_805BEF88
-/* 805BEF74 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEF78 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEF74 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEF78 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEF7C 0000003C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BEF80 00000040  7C 05 07 74 */	extsb r5, r0
-/* 805BEF84 00000044  4B FF BE 55 */	bl offSwitch__10dSv_info_cFii
+/* 805BEF84 00000044  4B FF BE 55 */	bl _unresolved
 lbl_805BEF88:
 /* 805BEF88 00000000  88 9F 07 EE */	lbz r4, 0x7ee(r31)
 /* 805BEF8C 00000004  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BEF90 00000008  41 82 00 18 */	beq lbl_805BEFA8
-/* 805BEF94 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BEF98 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BEF94 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEF98 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEF9C 00000014  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BEFA0 00000018  7C 05 07 74 */	extsb r5, r0
-/* 805BEFA4 0000001C  4B FF BE 35 */	bl onSwitch__10dSv_info_cFii
+/* 805BEFA4 0000001C  4B FF BE 35 */	bl _unresolved
 lbl_805BEFA8:
 /* 805BEFA8 00000000  A8 1F 05 62 */	lha r0, 0x562(r31)
 /* 805BEFAC 00000004  2C 00 00 08 */	cmpwi r0, 8
@@ -417,16 +417,16 @@ lbl_805BEFC0:
 /* 805BEFDC 0000001C  4B FF C4 2D */	bl setBck__8daB_DR_cFiUcff
 /* 805BEFE0 00000020  38 00 00 00 */	li r0, 0
 /* 805BEFE4 00000024  90 1F 07 C8 */	stw r0, 0x7c8(r31)
-/* 805BEFE8 00000028  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 805BEFEC 0000002C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 805BEFE8 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BEFEC 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BEFF0 00000030  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BEFF4 00000034  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805BEFF8 00000038  38 80 00 01 */	li r4, 1
-/* 805BEFFC 0000003C  4B FF BD DD */	bl changeBgmStatus__8Z2SeqMgrFl
+/* 805BEFFC 0000003C  4B FF BD DD */	bl _unresolved
 /* 805BF000 00000040  38 60 00 19 */	li r3, 0x19
 /* 805BF004 00000044  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 805BF008 00000048  7C 04 07 74 */	extsb r4, r0
-/* 805BF00C 0000004C  4B FF BD CD */	bl dComIfGs_onZoneSwitch__Fii
+/* 805BF00C 0000004C  4B FF BD CD */	bl _unresolved
 /* 805BF010 00000050  80 7F 07 0C */	lwz r3, 0x70c(r31)
 /* 805BF014 00000054  38 03 00 01 */	addi r0, r3, 1
 /* 805BF018 00000058  90 1F 07 0C */	stw r0, 0x70c(r31)
@@ -516,11 +516,11 @@ lbl_805BF13C:
 /* 805BF14C 00000010  88 9F 07 EE */	lbz r4, 0x7ee(r31)
 /* 805BF150 00000014  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BF154 00000018  41 82 00 18 */	beq lbl_805BF16C
-/* 805BF158 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF15C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF158 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF15C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF160 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BF164 00000028  7C 05 07 74 */	extsb r5, r0
-/* 805BF168 0000002C  4B FF BC 71 */	bl offSwitch__10dSv_info_cFii
+/* 805BF168 0000002C  4B FF BC 71 */	bl _unresolved
 lbl_805BF16C:
 /* 805BF16C 00000000  80 1F 07 10 */	lwz r0, 0x710(r31)
 /* 805BF170 00000004  2C 00 00 22 */	cmpwi r0, 0x22
@@ -639,7 +639,7 @@ lbl_805BF30C:
 /* 805BF30C 00000000  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 805BF310 00000004  38 63 00 0C */	addi r3, r3, 0xc
 /* 805BF314 00000008  C0 3E 00 58 */	lfs f1, 0x58(r30)
-/* 805BF318 0000000C  4B FF BA C1 */	bl checkPass__12J3DFrameCtrlFf
+/* 805BF318 0000000C  4B FF BA C1 */	bl _unresolved
 /* 805BF31C 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 805BF320 00000014  41 82 00 88 */	beq lbl_805BF3A8
 /* 805BF324 00000018  7F 83 E3 78 */	mr r3, r28
@@ -652,30 +652,30 @@ lbl_805BF30C:
 /* 805BF340 00000034  C0 1E 00 34 */	lfs f0, 0x34(r30)
 /* 805BF344 00000038  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 805BF348 0000003C  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 805BF34C 00000040  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF350 00000044  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF34C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF350 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF354 00000048  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805BF358 0000004C  38 80 00 05 */	li r4, 5
 /* 805BF35C 00000050  38 A0 00 4F */	li r5, 0x4f
 /* 805BF360 00000054  38 C1 00 24 */	addi r6, r1, 0x24
-/* 805BF364 00000058  4B FF BA 75 */	bl StartShock__12dVibration_cFii4cXyz
+/* 805BF364 00000058  4B FF BA 75 */	bl _unresolved
 /* 805BF368 0000005C  88 9F 07 ED */	lbz r4, 0x7ed(r31)
 /* 805BF36C 00000060  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BF370 00000064  41 82 00 18 */	beq lbl_805BF388
-/* 805BF374 00000068  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF378 0000006C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF374 00000068  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF378 0000006C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF37C 00000070  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BF380 00000074  7C 05 07 74 */	extsb r5, r0
-/* 805BF384 00000078  4B FF BA 55 */	bl offSwitch__10dSv_info_cFii
+/* 805BF384 00000078  4B FF BA 55 */	bl _unresolved
 lbl_805BF388:
 /* 805BF388 00000000  88 9F 07 EE */	lbz r4, 0x7ee(r31)
 /* 805BF38C 00000004  28 04 00 FF */	cmplwi r4, 0xff
 /* 805BF390 00000008  41 82 00 18 */	beq lbl_805BF3A8
-/* 805BF394 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF398 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF394 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF398 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF39C 00000014  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BF3A0 00000018  7C 05 07 74 */	extsb r5, r0
-/* 805BF3A4 0000001C  4B FF BA 35 */	bl offSwitch__10dSv_info_cFii
+/* 805BF3A4 0000001C  4B FF BA 35 */	bl _unresolved
 lbl_805BF3A8:
 /* 805BF3A8 00000000  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 805BF3AC 00000004  38 80 00 01 */	li r4, 1
@@ -706,35 +706,35 @@ lbl_805BF404:
 /* 805BF408 00000004  48 00 77 D5 */	bl func_805C6BDC
 /* 805BF40C 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 805BF410 0000000C  40 82 00 40 */	bne lbl_805BF450
-/* 805BF414 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF418 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF414 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF418 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF41C 00000018  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 805BF420 0000001C  38 80 20 02 */	li r4, 0x2002
-/* 805BF424 00000020  4B FF B9 B5 */	bl onEventBit__11dSv_event_cFUs
+/* 805BF424 00000020  4B FF B9 B5 */	bl _unresolved
 /* 805BF428 00000024  38 60 00 16 */	li r3, 0x16
-/* 805BF42C 00000028  4B FF B9 AD */	bl dComIfGs_onStageBossEnemy__Fi
-/* 805BF430 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805BF434 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BF42C 00000028  4B FF B9 AD */	bl _unresolved
+/* 805BF430 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF434 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF438 00000034  38 80 00 38 */	li r4, 0x38
 /* 805BF43C 00000038  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805BF440 0000003C  7C 05 07 74 */	extsb r5, r0
-/* 805BF444 00000040  4B FF B9 95 */	bl onSwitch__10dSv_info_cFii
+/* 805BF444 00000040  4B FF B9 95 */	bl _unresolved
 /* 805BF448 00000044  7F E3 FB 78 */	mr r3, r31
-/* 805BF44C 00000048  4B FF B9 8D */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 805BF44C 00000048  4B FF B9 8D */	bl _unresolved
 lbl_805BF450:
 /* 805BF450 00000000  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 805BF454 00000004  4B FF B9 85 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 805BF454 00000004  4B FF B9 85 */	bl _unresolved
 /* 805BF458 00000008  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 805BF45C 0000000C  4B FF B9 7D */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 805BF460 00000010  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805BF464 00000014  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805BF45C 0000000C  4B FF B9 7D */	bl _unresolved
+/* 805BF460 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF464 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF468 00000018  7C 64 1B 78 */	mr r4, r3
-/* 805BF46C 0000001C  4B FF B9 6D */	bl PSMTXInverse
-/* 805BF470 00000020  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805BF474 00000024  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805BF46C 0000001C  4B FF B9 6D */	bl _unresolved
+/* 805BF470 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805BF474 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805BF478 00000028  38 9F 05 38 */	addi r4, r31, 0x538
 /* 805BF47C 0000002C  38 A1 00 48 */	addi r5, r1, 0x48
-/* 805BF480 00000030  4B FF B9 59 */	bl PSMTXMultVec
+/* 805BF480 00000030  4B FF B9 59 */	bl _unresolved
 /* 805BF484 00000034  80 7D 5D AC */	lwz r3, 0x5dac(r29)
 /* 805BF488 00000038  28 1F 00 00 */	cmplwi r31, 0
 /* 805BF48C 0000003C  41 82 00 0C */	beq lbl_805BF498
@@ -750,7 +750,7 @@ lbl_805BF49C:
 /* 805BF4AC 00000010  4E 80 04 21 */	bctrl 
 lbl_805BF4B0:
 /* 805BF4B0 00000000  39 61 00 90 */	addi r11, r1, 0x90
-/* 805BF4B4 00000004  4B FF B9 25 */	bl _restgpr_27
+/* 805BF4B4 00000004  4B FF B9 25 */	bl _unresolved
 /* 805BF4B8 00000008  80 01 00 94 */	lwz r0, 0x94(r1)
 /* 805BF4BC 0000000C  7C 08 03 A6 */	mtlr r0
 /* 805BF4C0 00000010  38 21 00 90 */	addi r1, r1, 0x90

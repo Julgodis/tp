@@ -3,31 +3,86 @@
 # Module: 34
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048D8E0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048D90C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048D938, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'create__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048D958, 'size': 0x0064, 'padding': 0x00, 'name': "create__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'destroy__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048D9BC, 'size': 0x0008, 'padding': 0x00, 'name': "destroy__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048D9C4, 'size': 0x0060, 'padding': 0x00, 'name': "execute__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DA24, 'size': 0x0008, 'padding': 0x00, 'name': "draw__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'isAreaCheck__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DA2C, 'size': 0x01F0, 'padding': 0x00, 'name': "isAreaCheck__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'getParam__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DC1C, 'size': 0x004C, 'padding': 0x00, 'name': "getParam__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'getSwitchBit__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DC68, 'size': 0x000C, 'padding': 0x00, 'name': "getSwitchBit__12daTag_Howl_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTag_Howl_Create__FPv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DC74, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Howl_Create__FPv", 'reference_count': 1, 'type': "Function"},
-	'daTag_Howl_Delete__FPv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DC94, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Howl_Delete__FPv", 'reference_count': 1, 'type': "Function"},
-	'daTag_Howl_Execute__FPv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DCB4, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Howl_Execute__FPv", 'reference_count': 1, 'type': "Function"},
-	'daTag_Howl_Draw__FPv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DCD4, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Howl_Draw__FPv", 'reference_count': 1, 'type': "Function"},
-	'daTag_Howl_IsDelete__FPv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DCF4, 'size': 0x0008, 'padding': 0x00, 'name': "daTag_Howl_IsDelete__FPv", 'reference_count': 1, 'type': "Function"},
-	'__dt__12daTag_Howl_cFv': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".text", 'addr': 0x8048DCFC, 'size': 0x0060, 'padding': 0x00, 'name': "__dt__12daTag_Howl_cFv", 'reference_count': 0, 'type': "Function"},
-	'data_8048DD5C': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x8048DD5C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_8048DD60': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8048DD60, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3739': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".rodata", 'addr': 0x8048DD64, 'size': 0x0004, 'padding': 0x04, 'name': "@3739", 'reference_count': 0, 'type': "InitData"},
-	'lit_3740': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".rodata", 'addr': 0x8048DD6C, 'size': 0x0008, 'padding': 0x00, 'name': "@3740", 'reference_count': 0, 'type': "InitData"},
-	'lit_3741': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".rodata", 'addr': 0x8048DD74, 'size': 0x0008, 'padding': 0x00, 'name': "@3741", 'reference_count': 0, 'type': "InitData"},
-	'lit_3742': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".rodata", 'addr': 0x8048DD7C, 'size': 0x0008, 'padding': 0x00, 'name': "@3742", 'reference_count': 0, 'type': "InitData"},
-	'lit_3752': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".rodata", 'addr': 0x8048DD84, 'size': 0x0004, 'padding': 0x00, 'name': "@3752", 'reference_count': 0, 'type': "Integer"},
-	'daTag_Howl_MethodTable': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".data", 'addr': 0x8048DD8C, 'size': 0x0020, 'padding': 0x00, 'name': "daTag_Howl_MethodTable", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_TAG_HOWL': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".data", 'addr': 0x8048DDAC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_HOWL", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12daTag_Howl_c': {'library': "d/a/tag/d_a_tag_howl", 'translation_unit': "d_a_tag_howl", 'section': ".data", 'addr': 0x8048DDDC, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12daTag_Howl_c", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_howl",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_howl",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x8048D8E0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048D90C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048D938,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x8048D958,'size':100,'pad':0,'label':"create__12daTag_Howl_cFv",'name':"create__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048D9BC,'size':8,'pad':0,'label':"destroy__12daTag_Howl_cFv",'name':"destroy__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048D9C4,'size':96,'pad':0,'label':"execute__12daTag_Howl_cFv",'name':"execute__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048DA24,'size':8,'pad':0,'label':"draw__12daTag_Howl_cFv",'name':"draw__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048DA2C,'size':496,'pad':0,'label':"isAreaCheck__12daTag_Howl_cFv",'name':"isAreaCheck__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048DC1C,'size':76,'pad':0,'label':"getParam__12daTag_Howl_cFv",'name':"getParam__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048DC68,'size':12,'pad':0,'label':"getSwitchBit__12daTag_Howl_cFv",'name':"getSwitchBit__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x8048DC74,'size':32,'pad':0,'label':"daTag_Howl_Create__FPv",'name':"daTag_Howl_Create__FPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DC94,'size':32,'pad':0,'label':"daTag_Howl_Delete__FPv",'name':"daTag_Howl_Delete__FPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DCB4,'size':32,'pad':0,'label':"daTag_Howl_Execute__FPv",'name':"daTag_Howl_Execute__FPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DCD4,'size':32,'pad':0,'label':"daTag_Howl_Draw__FPv",'name':"daTag_Howl_Draw__FPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DCF4,'size':8,'pad':0,'label':"daTag_Howl_IsDelete__FPv",'name':"daTag_Howl_IsDelete__FPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DCFC,'size':96,'pad':0,'label':"__dt__12daTag_Howl_cFv",'name':"__dt__12daTag_Howl_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048DD5C,'size':4,'pad':0,'label':"data_8048DD5C",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD60,'size':4,'pad':0,'label':"data_8048DD60",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD64,'size':4,'pad':4,'label':"lit_3739",'name':"@3739",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD6C,'size':8,'pad':0,'label':"lit_3740",'name':"@3740",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD74,'size':8,'pad':0,'label':"lit_3741",'name':"@3741",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD7C,'size':8,'pad':0,'label':"lit_3742",'name':"@3742",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8048DD84,'size':4,'pad':0,'label':"lit_3752",'name':"@3752",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8048DD88,'size':32,'pad':0,'label':"daTag_Howl_MethodTable",'name':"daTag_Howl_MethodTable",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x8048DDA8,'size':48,'pad':0,'label':"g_profile_TAG_HOWL",'name':"g_profile_TAG_HOWL",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x8048DDD8,'size':12,'pad':0,'label':"__vt__12daTag_Howl_c",'name':"__vt__12daTag_Howl_c",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create__12daTag_Howl_cFv":3,
+	"destroy__12daTag_Howl_cFv":4,
+	"execute__12daTag_Howl_cFv":5,
+	"draw__12daTag_Howl_cFv":6,
+	"isAreaCheck__12daTag_Howl_cFv":7,
+	"getParam__12daTag_Howl_cFv":8,
+	"getSwitchBit__12daTag_Howl_cFv":9,
+	"daTag_Howl_Create__FPv":10,
+	"daTag_Howl_Delete__FPv":11,
+	"daTag_Howl_Execute__FPv":12,
+	"daTag_Howl_Draw__FPv":13,
+	"daTag_Howl_IsDelete__FPv":14,
+	"__dt__12daTag_Howl_cFv":15,
+	"data_8048DD5C":16,
+	"data_8048DD60":17,
+	"lit_3739":18,
+	"lit_3740":19,
+	"lit_3741":20,
+	"lit_3742":21,
+	"lit_3752":22,
+	"daTag_Howl_MethodTable":23,
+	"g_profile_TAG_HOWL":24,
+	"__vt__12daTag_Howl_c":25,
 }
+

@@ -7,12 +7,12 @@ lbl_80CC2310:
 /* 80CC2324 00000014  88 03 05 BC */	lbz r0, 0x5bc(r3)
 /* 80CC2328 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80CC232C 0000001C  40 82 00 24 */	bne lbl_80CC2350
-/* 80CC2330 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC2334 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC2330 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC2334 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC2338 00000028  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC233C 0000002C  80 9F 05 C0 */	lwz r4, 0x5c0(r31)
 /* 80CC2340 00000030  7F E5 FB 78 */	mr r5, r31
-/* 80CC2344 00000034  4B FF F1 F5 */	bl Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
+/* 80CC2344 00000034  4B FF F1 F5 */	bl _unresolved
 /* 80CC2348 00000038  38 00 00 01 */	li r0, 1
 /* 80CC234C 0000003C  98 1F 05 BC */	stb r0, 0x5bc(r31)
 lbl_80CC2350:

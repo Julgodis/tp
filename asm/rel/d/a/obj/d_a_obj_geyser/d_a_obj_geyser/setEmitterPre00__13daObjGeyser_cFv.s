@@ -10,8 +10,8 @@ lbl_80BF8914:
 /* 80BF8934 00000020  D0 03 07 88 */	stfs f0, 0x788(r3)
 /* 80BF8938 00000024  D0 23 07 8C */	stfs f1, 0x78c(r3)
 /* 80BF893C 00000028  D0 43 07 90 */	stfs f2, 0x790(r3)
-/* 80BF8940 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BF8944 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BF8940 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BF8944 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BF8948 00000034  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80BF894C 00000038  38 80 00 00 */	li r4, 0
 /* 80BF8950 0000003C  90 81 00 08 */	stw r4, 8(r1)
@@ -28,9 +28,9 @@ lbl_80BF8914:
 /* 80BF897C 00000068  39 1F 04 DC */	addi r8, r31, 0x4dc
 /* 80BF8980 0000006C  39 3F 07 88 */	addi r9, r31, 0x788
 /* 80BF8984 00000070  39 40 00 FF */	li r10, 0xff
-/* 80BF8988 00000074  3D 60 00 00 */	lis r11, lit_3760@ha
-/* 80BF898C 00000078  C0 2B 00 00 */	lfs f1, lit_3760@l(r11)
-/* 80BF8990 0000007C  4B FF E5 69 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80BF8988 00000074  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 80BF898C 00000078  C0 2B 00 00 */	lfs f1, 0x0000(r11)
+/* 80BF8990 0000007C  4B FF E5 69 */	bl _unresolved
 /* 80BF8994 00000080  90 7F 07 78 */	stw r3, 0x778(r31)
 /* 80BF8998 00000084  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 80BF899C 00000088  80 01 00 34 */	lwz r0, 0x34(r1)

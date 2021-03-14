@@ -3,7 +3,7 @@ lbl_80A69CD8:
 /* 80A69CDC 00000004  7C 08 02 A6 */	mflr r0
 /* 80A69CE0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A69CE4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A69CE8 00000010  4B FF FD F1 */	bl _savegpr_28
+/* 80A69CE8 00000010  4B FF FD F1 */	bl _unresolved
 /* 80A69CEC 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 80A69CF0 00000018  3B FC 05 BC */	addi r31, r28, 0x5bc
 /* 80A69CF4 0000001C  3B C0 00 00 */	li r30, 0
@@ -15,12 +15,12 @@ lbl_80A69D00:
 /* 80A69D08 00000008  40 82 00 58 */	bne lbl_80A69D60
 /* 80A69D0C 0000000C  7F C0 07 75 */	extsb. r0, r30
 /* 80A69D10 00000010  40 82 00 1C */	bne lbl_80A69D2C
-/* 80A69D14 00000014  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80A69D18 00000018  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80A69D14 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A69D18 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A69D1C 0000001C  38 80 00 00 */	li r4, 0
 /* 80A69D20 00000020  38 BF 00 04 */	addi r5, r31, 4
 /* 80A69D24 00000024  38 DC 01 0C */	addi r6, r28, 0x10c
-/* 80A69D28 00000028  4B FF FD B1 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80A69D28 00000028  4B FF FD B1 */	bl _unresolved
 lbl_80A69D2C:
 /* 80A69D2C 00000000  3B DE 00 01 */	addi r30, r30, 1
 /* 80A69D30 00000004  7F C0 07 74 */	extsb r0, r30
@@ -28,14 +28,14 @@ lbl_80A69D2C:
 /* 80A69D38 0000000C  40 82 00 08 */	bne lbl_80A69D40
 /* 80A69D3C 00000010  3B C0 00 00 */	li r30, 0
 lbl_80A69D40:
-/* 80A69D40 00000000  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80A69D44 00000004  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80A69D40 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A69D44 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A69D48 00000008  80 9F 00 00 */	lwz r4, 0(r31)
 /* 80A69D4C 0000000C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80A69D50 00000010  38 BC 01 0C */	addi r5, r28, 0x10c
-/* 80A69D54 00000014  4B FF FD 85 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80A69D54 00000014  4B FF FD 85 */	bl _unresolved
 /* 80A69D58 00000018  80 7F 00 00 */	lwz r3, 0(r31)
-/* 80A69D5C 0000001C  4B FF FD 7D */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80A69D5C 0000001C  4B FF FD 7D */	bl _unresolved
 lbl_80A69D60:
 /* 80A69D60 00000000  3B BD 00 01 */	addi r29, r29, 1
 /* 80A69D64 00000004  3B FF 00 68 */	addi r31, r31, 0x68
@@ -45,7 +45,7 @@ lbl_80A69D68:
 /* 80A69D70 00000008  41 80 FF 90 */	blt lbl_80A69D00
 /* 80A69D74 0000000C  38 60 00 01 */	li r3, 1
 /* 80A69D78 00000010  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A69D7C 00000014  4B FF FD 5D */	bl _restgpr_28
+/* 80A69D7C 00000014  4B FF FD 5D */	bl _unresolved
 /* 80A69D80 00000018  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A69D84 0000001C  7C 08 03 A6 */	mtlr r0
 /* 80A69D88 00000020  38 21 00 20 */	addi r1, r1, 0x20

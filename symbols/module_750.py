@@ -3,22 +3,68 @@
 # Module: 750
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D64260, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D6428C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D642B8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'draw__14daTagWatchGe_cFv': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D642D8, 'size': 0x0008, 'padding': 0x00, 'name': "draw__14daTagWatchGe_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagWatchGe_Draw__FP14daTagWatchGe_c': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D642E0, 'size': 0x0020, 'padding': 0x00, 'name': "daTagWatchGe_Draw__FP14daTagWatchGe_c", 'reference_count': 1, 'type': "Function"},
-	's_watchge__FPvPv': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D64300, 'size': 0x0038, 'padding': 0x00, 'name': "s_watchge__FPvPv", 'reference_count': 0, 'type': "Function"},
-	'execute__14daTagWatchGe_cFv': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D64338, 'size': 0x0090, 'padding': 0x00, 'name': "execute__14daTagWatchGe_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagWatchGe_Execute__FP14daTagWatchGe_c': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D643C8, 'size': 0x0020, 'padding': 0x00, 'name': "daTagWatchGe_Execute__FP14daTagWatchGe_c", 'reference_count': 1, 'type': "Function"},
-	'daTagWatchGe_IsDelete__FP14daTagWatchGe_c': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D643E8, 'size': 0x0008, 'padding': 0x00, 'name': "daTagWatchGe_IsDelete__FP14daTagWatchGe_c", 'reference_count': 1, 'type': "Function"},
-	'daTagWatchGe_Delete__FP14daTagWatchGe_c': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D643F0, 'size': 0x0008, 'padding': 0x00, 'name': "daTagWatchGe_Delete__FP14daTagWatchGe_c", 'reference_count': 1, 'type': "Function"},
-	'create__14daTagWatchGe_cFv': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D643F8, 'size': 0x00B8, 'padding': 0x00, 'name': "create__14daTagWatchGe_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagWatchGe_Create__FP14daTagWatchGe_c': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".text", 'addr': 0x80D644B0, 'size': 0x0020, 'padding': 0x00, 'name': "daTagWatchGe_Create__FP14daTagWatchGe_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D644D0': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D644D0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D644D4': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D644D4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daTagWatchGe_Method': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".data", 'addr': 0x80D644DC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagWatchGe_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_WatchGe': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".data", 'addr': 0x80D644FC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_WatchGe", 'reference_count': 0, 'type': "ReferenceArray"},
-	'm_group_count': {'library': "d/a/tag/d_a_tag_watchge", 'translation_unit': "d_a_tag_watchge", 'section': ".bss", 'addr': 0x80D64544, 'size': 0x0004, 'padding': 0x00, 'name': "m_group_count", 'reference_count': 0, 'type': "ZeroData"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_watchge",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_watchge",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+	".bss",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D64260,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6428C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D642B8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x80D642D8,'size':8,'pad':0,'label':"draw__14daTagWatchGe_cFv",'name':"draw__14daTagWatchGe_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D642E0,'size':32,'pad':0,'label':"daTagWatchGe_Draw__FP14daTagWatchGe_c",'name':"daTagWatchGe_Draw__FP14daTagWatchGe_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D64300,'size':56,'pad':0,'label':"s_watchge__FPvPv",'name':"s_watchge__FPvPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D64338,'size':144,'pad':0,'label':"execute__14daTagWatchGe_cFv",'name':"execute__14daTagWatchGe_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D643C8,'size':32,'pad':0,'label':"daTagWatchGe_Execute__FP14daTagWatchGe_c",'name':"daTagWatchGe_Execute__FP14daTagWatchGe_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D643E8,'size':8,'pad':0,'label':"daTagWatchGe_IsDelete__FP14daTagWatchGe_c",'name':"daTagWatchGe_IsDelete__FP14daTagWatchGe_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D643F0,'size':8,'pad':0,'label':"daTagWatchGe_Delete__FP14daTagWatchGe_c",'name':"daTagWatchGe_Delete__FP14daTagWatchGe_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D643F8,'size':184,'pad':0,'label':"create__14daTagWatchGe_cFv",'name':"create__14daTagWatchGe_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D644B0,'size':32,'pad':0,'label':"daTagWatchGe_Create__FP14daTagWatchGe_c",'name':"daTagWatchGe_Create__FP14daTagWatchGe_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D644D0,'size':4,'pad':0,'label':"data_80D644D0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D644D4,'size':4,'pad':0,'label':"data_80D644D4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D644D8,'size':32,'pad':0,'label':"l_daTagWatchGe_Method",'name':"l_daTagWatchGe_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D644F8,'size':48,'pad':0,'label':"g_profile_Tag_WatchGe",'name':"g_profile_Tag_WatchGe",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D64528,'size':4,'pad':0,'label':"m_group_count",'name':"m_group_count",'lib':-1,'tu':4,'section':4,'rc':0,'type':"ZeroData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"draw__14daTagWatchGe_cFv":3,
+	"daTagWatchGe_Draw__FP14daTagWatchGe_c":4,
+	"s_watchge__FPvPv":5,
+	"execute__14daTagWatchGe_cFv":6,
+	"daTagWatchGe_Execute__FP14daTagWatchGe_c":7,
+	"daTagWatchGe_IsDelete__FP14daTagWatchGe_c":8,
+	"daTagWatchGe_Delete__FP14daTagWatchGe_c":9,
+	"create__14daTagWatchGe_cFv":10,
+	"daTagWatchGe_Create__FP14daTagWatchGe_c":11,
+	"data_80D644D0":12,
+	"data_80D644D4":13,
+	"l_daTagWatchGe_Method":14,
+	"g_profile_Tag_WatchGe":15,
+	"m_group_count":16,
 }
+

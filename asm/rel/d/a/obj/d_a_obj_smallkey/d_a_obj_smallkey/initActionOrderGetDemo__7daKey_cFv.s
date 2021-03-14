@@ -13,13 +13,13 @@ lbl_80CDAB74:
 /* 80CDABA0 0000002C  80 03 08 0C */	lwz r0, 0x80c(r3)
 /* 80CDABA4 00000030  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80CDABA8 00000034  90 03 08 0C */	stw r0, 0x80c(r3)
-/* 80CDABAC 00000038  4B FF EB ED */	bl hide__12daItemBase_cFv
+/* 80CDABAC 00000038  4B FF EB ED */	bl _unresolved
 /* 80CDABB0 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80CDABB4 00000040  48 00 05 25 */	bl effectStop__7daKey_cFv
 /* 80CDABB8 00000044  7F E3 FB 78 */	mr r3, r31
 /* 80CDABBC 00000048  38 80 00 00 */	li r4, 0
 /* 80CDABC0 0000004C  38 A0 00 00 */	li r5, 0
-/* 80CDABC4 00000050  4B FF EB D5 */	bl fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs
+/* 80CDABC4 00000050  4B FF EB D5 */	bl _unresolved
 /* 80CDABC8 00000054  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CDABCC 00000058  60 00 00 08 */	ori r0, r0, 8
 /* 80CDABD0 0000005C  B0 1F 00 FA */	sth r0, 0xfa(r31)
@@ -30,7 +30,7 @@ lbl_80CDAB74:
 /* 80CDABE4 00000070  7C 06 07 74 */	extsb r6, r0
 /* 80CDABE8 00000074  38 E0 00 00 */	li r7, 0
 /* 80CDABEC 00000078  39 00 00 00 */	li r8, 0
-/* 80CDABF0 0000007C  4B FF EB A9 */	bl fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz
+/* 80CDABF0 0000007C  4B FF EB A9 */	bl _unresolved
 /* 80CDABF4 00000080  90 7F 09 2C */	stw r3, 0x92c(r31)
 /* 80CDABF8 00000084  38 00 00 03 */	li r0, 3
 /* 80CDABFC 00000088  98 1F 09 34 */	stb r0, 0x934(r31)

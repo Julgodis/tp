@@ -4,21 +4,21 @@ lbl_80D4A920:
 /* 80D4A928 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D4A92C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D4A930 00000010  38 63 0E 48 */	addi r3, r3, 0xe48
-/* 80D4A934 00000014  4B FF C5 25 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80D4A934 00000014  4B FF C5 25 */	bl _unresolved
 /* 80D4A938 00000018  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80D4A93C 0000001C  41 82 00 34 */	beq lbl_80D4A970
 /* 80D4A940 00000020  38 00 88 00 */	li r0, -30720
 /* 80D4A944 00000024  B0 1F 06 64 */	sth r0, 0x664(r31)
 /* 80D4A948 00000028  38 00 78 00 */	li r0, 0x7800
 /* 80D4A94C 0000002C  B0 1F 07 5C */	sth r0, 0x75c(r31)
-/* 80D4A950 00000030  4B FF C5 09 */	bl setBaseMtx__14daObjCatDoor_cFv
-/* 80D4A954 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4A958 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4A950 00000030  4B FF C5 09 */	bl _unresolved
+/* 80D4A954 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4A958 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D4A95C 0000003C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D4A960 00000040  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D4A964 00000044  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4A968 00000048  7C 05 07 74 */	extsb r5, r0
-/* 80D4A96C 0000004C  4B FF C4 ED */	bl onSwitch__10dSv_info_cFii
+/* 80D4A96C 0000004C  4B FF C4 ED */	bl _unresolved
 lbl_80D4A970:
 /* 80D4A970 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D4A974 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -3,18 +3,60 @@
 # Module: 56
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_suspend", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D50A0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_suspend", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D50CC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_suspend", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D50F8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'create__7daSus_cFv': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".text", 'addr': 0x804D5118, 'size': 0x00C8, 'padding': 0x00, 'name': "create__7daSus_cFv", 'reference_count': 1, 'type': "Function"},
-	'daSus_create__FP7daSus_c': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".text", 'addr': 0x804D51E0, 'size': 0x0054, 'padding': 0x00, 'name': "daSus_create__FP7daSus_c", 'reference_count': 1, 'type': "Function"},
-	'data_804D5234': {'library': "d/a/d_a_suspend", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x804D5234, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_804D5238': {'library': "d/a/d_a_suspend", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x804D5238, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3640': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".rodata", 'addr': 0x804D523C, 'size': 0x0004, 'padding': 0x00, 'name': "@3640", 'reference_count': 0, 'type': "Integer"},
-	'lit_3641': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".rodata", 'addr': 0x804D5240, 'size': 0x0004, 'padding': 0x00, 'name': "@3641", 'reference_count': 0, 'type': "Integer"},
-	'lit_3642': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".rodata", 'addr': 0x804D5244, 'size': 0x0004, 'padding': 0x00, 'name': "@3642", 'reference_count': 0, 'type': "Integer"},
-	'lit_3643': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".rodata", 'addr': 0x804D5248, 'size': 0x0004, 'padding': 0x00, 'name': "@3643", 'reference_count': 0, 'type': "Integer"},
-	'daSus_METHODS': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".data", 'addr': 0x804D524C, 'size': 0x0020, 'padding': 0x00, 'name': "daSus_METHODS", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_SUSPEND': {'library': "d/a/d_a_suspend", 'translation_unit': "d_a_suspend", 'section': ".data", 'addr': 0x804D526C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_SUSPEND", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_suspend",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_suspend",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x804D50A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D50CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D50F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x804D5118,'size':200,'pad':0,'label':"create__7daSus_cFv",'name':"create__7daSus_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D51E0,'size':84,'pad':0,'label':"daSus_create__FP7daSus_c",'name':"daSus_create__FP7daSus_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D5234,'size':4,'pad':0,'label':"data_804D5234",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x804D5238,'size':4,'pad':0,'label':"data_804D5238",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x804D523C,'size':4,'pad':0,'label':"lit_3640",'name':"@3640",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x804D5240,'size':4,'pad':0,'label':"lit_3641",'name':"@3641",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x804D5244,'size':4,'pad':0,'label':"lit_3642",'name':"@3642",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x804D5248,'size':4,'pad':0,'label':"lit_3643",'name':"@3643",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x804D524C,'size':32,'pad':0,'label':"daSus_METHODS",'name':"daSus_METHODS",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x804D526C,'size':48,'pad':0,'label':"g_profile_SUSPEND",'name':"g_profile_SUSPEND",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create__7daSus_cFv":3,
+	"daSus_create__FP7daSus_c":4,
+	"data_804D5234":5,
+	"data_804D5238":6,
+	"lit_3640":7,
+	"lit_3641":8,
+	"lit_3642":9,
+	"lit_3643":10,
+	"daSus_METHODS":11,
+	"g_profile_SUSPEND":12,
 }
+

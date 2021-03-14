@@ -3,14 +3,51 @@
 # Module: 738
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D60020, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D6004C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D60078, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'daTagSchedule_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "d_a_tag_schedule", 'section': ".text", 'addr': 0x80D60098, 'size': 0x0050, 'padding': 0x00, 'name': "daTagSchedule_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daTagSchedule_Delete__FP15daTagSchedule_c': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "d_a_tag_schedule", 'section': ".text", 'addr': 0x80D600E8, 'size': 0x0030, 'padding': 0x00, 'name': "daTagSchedule_Delete__FP15daTagSchedule_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D60118': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D60118, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D6011C': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D6011C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daTagSchedule_Method': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "d_a_tag_schedule", 'section': ".data", 'addr': 0x80D60124, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagSchedule_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Schedule': {'library': "d/a/tag/d_a_tag_schedule", 'translation_unit': "d_a_tag_schedule", 'section': ".data", 'addr': 0x80D60144, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Schedule", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_schedule",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_schedule",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D60020,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6004C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D60078,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x80D60098,'size':80,'pad':0,'label':"daTagSchedule_Create__FP10fopAc_ac_c",'name':"daTagSchedule_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D600E8,'size':48,'pad':0,'label':"daTagSchedule_Delete__FP15daTagSchedule_c",'name':"daTagSchedule_Delete__FP15daTagSchedule_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D60118,'size':4,'pad':0,'label':"data_80D60118",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D6011C,'size':4,'pad':0,'label':"data_80D6011C",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D60120,'size':32,'pad':0,'label':"l_daTagSchedule_Method",'name':"l_daTagSchedule_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D60140,'size':48,'pad':0,'label':"g_profile_Tag_Schedule",'name':"g_profile_Tag_Schedule",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daTagSchedule_Create__FP10fopAc_ac_c":3,
+	"daTagSchedule_Delete__FP15daTagSchedule_c":4,
+	"data_80D60118":5,
+	"data_80D6011C":6,
+	"l_daTagSchedule_Method":7,
+	"g_profile_Tag_Schedule":8,
 }
+

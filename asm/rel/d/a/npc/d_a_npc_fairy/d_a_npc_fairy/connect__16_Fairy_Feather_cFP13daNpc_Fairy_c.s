@@ -9,17 +9,17 @@ lbl_809B1F6C:
 /* 809B1F88 0000001C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 809B1F8C 00000020  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 809B1F90 00000024  38 63 00 60 */	addi r3, r3, 0x60
-/* 809B1F94 00000028  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 809B1F98 0000002C  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 809B1F9C 00000030  4B FF FA DD */	bl PSMTXCopy
+/* 809B1F94 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809B1F98 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809B1F9C 00000030  4B FF FA DD */	bl _unresolved
 /* 809B1FA0 00000034  80 7F 00 00 */	lwz r3, 0(r31)
 /* 809B1FA4 00000038  80 83 00 04 */	lwz r4, 4(r3)
-/* 809B1FA8 0000003C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809B1FAC 00000040  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 809B1FA8 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B1FAC 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B1FB0 00000044  38 84 00 24 */	addi r4, r4, 0x24
-/* 809B1FB4 00000048  4B FF FA C5 */	bl PSMTXCopy
+/* 809B1FB4 00000048  4B FF FA C5 */	bl _unresolved
 /* 809B1FB8 0000004C  80 7F 00 00 */	lwz r3, 0(r31)
-/* 809B1FBC 00000050  4B FF FA BD */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 809B1FBC 00000050  4B FF FA BD */	bl _unresolved
 /* 809B1FC0 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809B1FC4 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 809B1FC8 0000005C  7C 08 03 A6 */	mtlr r0

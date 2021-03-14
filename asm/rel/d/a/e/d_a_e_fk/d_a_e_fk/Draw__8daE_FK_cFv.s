@@ -7,17 +7,17 @@ lbl_806BACEC:
 /* 806BAD00 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 806BAD04 00000018  80 63 0C 30 */	lwz r3, 0xc30(r3)
 /* 806BAD08 0000001C  83 E3 00 04 */	lwz r31, 4(r3)
-/* 806BAD0C 00000020  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 806BAD10 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 806BAD0C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806BAD10 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806BAD14 00000028  38 80 00 07 */	li r4, 7
 /* 806BAD18 0000002C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 806BAD1C 00000030  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 806BAD20 00000034  4B FF E5 D9 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 806BAD24 00000038  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 806BAD28 0000003C  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 806BAD20 00000034  4B FF E5 D9 */	bl _unresolved
+/* 806BAD24 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806BAD28 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806BAD2C 00000040  80 9F 00 04 */	lwz r4, 4(r31)
 /* 806BAD30 00000044  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 806BAD34 00000048  4B FF E5 C5 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 806BAD34 00000048  4B FF E5 C5 */	bl _unresolved
 /* 806BAD38 0000004C  80 7F 00 04 */	lwz r3, 4(r31)
 /* 806BAD3C 00000050  80 63 00 60 */	lwz r3, 0x60(r3)
 /* 806BAD40 00000054  80 63 00 00 */	lwz r3, 0(r3)
@@ -27,12 +27,12 @@ lbl_806BACEC:
 /* 806BAD50 00000064  81 8C 00 74 */	lwz r12, 0x74(r12)
 /* 806BAD54 00000068  7D 89 03 A6 */	mtctr r12
 /* 806BAD58 0000006C  4E 80 04 21 */	bctrl 
-/* 806BAD5C 00000070  3C 80 00 00 */	lis r4, lit_4618@ha
-/* 806BAD60 00000074  C0 24 00 00 */	lfs f1, lit_4618@l(r4)
+/* 806BAD5C 00000070  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806BAD60 00000074  C0 24 00 00 */	lfs f1, 0x0000(r4)
 /* 806BAD64 00000078  C0 1E 06 04 */	lfs f0, 0x604(r30)
 /* 806BAD68 0000007C  EC 21 00 32 */	fmuls f1, f1, f0
-/* 806BAD6C 00000080  3C 80 00 00 */	lis r4, l_HIO@ha
-/* 806BAD70 00000084  38 84 00 00 */	addi r4, r4, l_HIO@l
+/* 806BAD6C 00000080  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806BAD70 00000084  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 806BAD74 00000088  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 806BAD78 0000008C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 806BAD7C 00000090  FC 00 00 1E */	fctiwz f0, f0
@@ -41,7 +41,7 @@ lbl_806BACEC:
 /* 806BAD88 0000009C  98 03 00 03 */	stb r0, 3(r3)
 /* 806BAD8C 000000A0  38 7E 0C 34 */	addi r3, r30, 0xc34
 /* 806BAD90 000000A4  38 80 00 00 */	li r4, 0
-/* 806BAD94 000000A8  4B FF E5 65 */	bl entryDL__21mDoExt_invisibleModelFP4cXyz
+/* 806BAD94 000000A8  4B FF E5 65 */	bl _unresolved
 /* 806BAD98 000000AC  38 60 00 01 */	li r3, 1
 /* 806BAD9C 000000B0  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 806BADA0 000000B4  83 C1 00 18 */	lwz r30, 0x18(r1)

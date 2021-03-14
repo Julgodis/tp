@@ -9,17 +9,17 @@ lbl_80D15E98:
 /* 80D15EB4 0000001C  88 1F 05 E4 */	lbz r0, 0x5e4(r31)
 /* 80D15EB8 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80D15EBC 00000024  40 82 00 38 */	bne lbl_80D15EF4
-/* 80D15EC0 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D15EC4 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D15EC0 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D15EC4 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D15EC8 00000030  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80D15ECC 00000034  38 80 00 1F */	li r4, 0x1f
-/* 80D15ED0 00000038  4B FF FB 49 */	bl StopQuake__12dVibration_cFi
-/* 80D15ED4 0000003C  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 80D15ED8 00000040  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80D15ED0 00000038  4B FF FB 49 */	bl _unresolved
+/* 80D15ED4 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D15ED8 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D15EDC 00000044  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D15EE0 00000048  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80D15EE4 0000004C  38 80 00 1E */	li r4, 0x1e
-/* 80D15EE8 00000050  4B FF FB 31 */	bl bgmStreamStop__8Z2SeqMgrFUl
+/* 80D15EE8 00000050  4B FF FB 31 */	bl _unresolved
 /* 80D15EEC 00000054  38 00 00 01 */	li r0, 1
 /* 80D15EF0 00000058  98 1F 05 E4 */	stb r0, 0x5e4(r31)
 lbl_80D15EF4:

@@ -9,7 +9,7 @@ lbl_80ACCE58:
 /* 80ACCE74 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80ACCE78 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80ACCE7C 00000024  40 82 00 1C */	bne lbl_80ACCE98
-/* 80ACCE80 00000028  4B FF E8 B9 */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80ACCE80 00000028  4B FF E8 B9 */	bl _unresolved
 /* 80ACCE84 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACCE88 00000030  40 82 00 14 */	bne lbl_80ACCE9C
 /* 80ACCE8C 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

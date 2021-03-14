@@ -9,7 +9,7 @@ lbl_80B73194:
 /* 80B731B0 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80B731B4 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80B731B8 00000024  40 82 00 1C */	bne lbl_80B731D4
-/* 80B731BC 00000028  4B FF ED 5D */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80B731BC 00000028  4B FF ED 5D */	bl _unresolved
 /* 80B731C0 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80B731C4 00000030  40 82 00 14 */	bne lbl_80B731D8
 /* 80B731C8 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

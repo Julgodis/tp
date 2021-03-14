@@ -5,37 +5,37 @@ lbl_80969F54:
 /* 80969F60 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80969F64 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80969F68 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80969F6C 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80969F70 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80969F6C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80969F70 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80969F74 00000020  38 80 00 58 */	li r4, 0x58
 /* 80969F78 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80969F7C 00000028  7C 05 07 74 */	extsb r5, r0
-/* 80969F80 0000002C  4B FF E9 59 */	bl isSwitch__10dSv_info_cCFii
+/* 80969F80 0000002C  4B FF E9 59 */	bl _unresolved
 /* 80969F84 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80969F88 00000034  41 82 00 3C */	beq lbl_80969FC4
 /* 80969F8C 00000038  7F E3 FB 78 */	mr r3, r31
 /* 80969F90 0000003C  38 80 00 01 */	li r4, 1
 /* 80969F94 00000040  4B FF F5 71 */	bl create_Yamijin__13daNpcBlueNS_cFi
 /* 80969F98 00000044  90 7F 0E 00 */	stw r3, 0xe00(r31)
-/* 80969F9C 00000048  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80969FA0 0000004C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80969F9C 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80969FA0 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80969FA4 00000050  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80969FA8 00000054  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80969FAC 00000058  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80969FB0 0000005C  7C 05 07 74 */	extsb r5, r0
-/* 80969FB4 00000060  4B FF E9 25 */	bl onSwitch__10dSv_info_cFii
+/* 80969FB4 00000060  4B FF E9 25 */	bl _unresolved
 /* 80969FB8 00000064  7F E3 FB 78 */	mr r3, r31
-/* 80969FBC 00000068  4B FF E9 1D */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80969FBC 00000068  4B FF E9 1D */	bl _unresolved
 /* 80969FC0 0000006C  48 00 00 B4 */	b lbl_8096A074
 lbl_80969FC4:
 /* 80969FC4 00000000  38 7F 0D C4 */	addi r3, r31, 0xdc4
-/* 80969FC8 00000004  4B FF E9 11 */	bl __ptmf_test
+/* 80969FC8 00000004  4B FF E9 11 */	bl _unresolved
 /* 80969FCC 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 80969FD0 0000000C  41 82 00 18 */	beq lbl_80969FE8
 /* 80969FD4 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80969FD8 00000014  38 80 00 00 */	li r4, 0
 /* 80969FDC 00000018  39 9F 0D C4 */	addi r12, r31, 0xdc4
-/* 80969FE0 0000001C  4B FF E8 F9 */	bl __ptmf_scall
+/* 80969FE0 0000001C  4B FF E8 F9 */	bl _unresolved
 /* 80969FE4 00000020  60 00 00 00 */	nop 
 lbl_80969FE8:
 /* 80969FE8 00000000  7F E3 FB 78 */	mr r3, r31

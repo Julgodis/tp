@@ -5,19 +5,19 @@ lbl_809B4450:
 /* 809B445C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809B4460 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 809B4464 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 809B4468 00000018  3C 60 00 00 */	lis r3, m__19daNpc_Fairy_Param_c@ha
-/* 809B446C 0000001C  3B C3 00 00 */	addi r30, r3, m__19daNpc_Fairy_Param_c@l
+/* 809B4468 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B446C 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 809B4470 00000020  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 809B4474 00000024  28 00 00 04 */	cmplwi r0, 4
 /* 809B4478 00000028  40 82 00 74 */	bne lbl_809B44EC
 /* 809B447C 0000002C  38 60 01 F9 */	li r3, 0x1f9
-/* 809B4480 00000030  4B FF D5 F9 */	bl daNpcT_chkEvtBit__FUl
+/* 809B4480 00000030  4B FF D5 F9 */	bl _unresolved
 /* 809B4484 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 809B4488 00000038  41 82 00 34 */	beq lbl_809B44BC
-/* 809B448C 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809B4490 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B448C 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B4490 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B4494 00000044  38 63 00 9C */	addi r3, r3, 0x9c
-/* 809B4498 00000048  4B FF D5 E1 */	bl checkEmptyBottle__17dSv_player_item_cFv
+/* 809B4498 00000048  4B FF D5 E1 */	bl _unresolved
 /* 809B449C 0000004C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809B44A0 00000050  41 82 00 10 */	beq lbl_809B44B0
 /* 809B44A4 00000054  38 00 00 0D */	li r0, 0xd
@@ -28,10 +28,10 @@ lbl_809B44B0:
 /* 809B44B4 00000004  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 809B44B8 00000008  48 00 00 B0 */	b lbl_809B4568
 lbl_809B44BC:
-/* 809B44BC 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809B44C0 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B44BC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B44C0 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B44C4 00000008  38 63 00 9C */	addi r3, r3, 0x9c
-/* 809B44C8 0000000C  4B FF D5 B1 */	bl checkEmptyBottle__17dSv_player_item_cFv
+/* 809B44C8 0000000C  4B FF D5 B1 */	bl _unresolved
 /* 809B44CC 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809B44D0 00000014  41 82 00 10 */	beq lbl_809B44E0
 /* 809B44D4 00000018  38 00 00 09 */	li r0, 9
@@ -47,7 +47,7 @@ lbl_809B44EC:
 /* 809B44F4 00000008  7C 03 02 2E */	lhzx r0, r3, r0
 /* 809B44F8 0000000C  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 809B44FC 00000010  38 60 01 F9 */	li r3, 0x1f9
-/* 809B4500 00000014  4B FF D5 79 */	bl daNpcT_chkEvtBit__FUl
+/* 809B4500 00000014  4B FF D5 79 */	bl _unresolved
 /* 809B4504 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 809B4508 0000001C  41 82 00 1C */	beq lbl_809B4524
 /* 809B450C 00000020  88 1F 0F 80 */	lbz r0, 0xf80(r31)
@@ -61,7 +61,7 @@ lbl_809B4524:
 /* 809B4528 00000004  54 00 08 3C */	slwi r0, r0, 1
 /* 809B452C 00000008  38 7E 01 90 */	addi r3, r30, 0x190
 /* 809B4530 0000000C  7C 63 02 AE */	lhax r3, r3, r0
-/* 809B4534 00000010  4B FF D5 45 */	bl daNpcT_chkEvtBit__FUl
+/* 809B4534 00000010  4B FF D5 45 */	bl _unresolved
 /* 809B4538 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 809B453C 00000018  41 82 00 18 */	beq lbl_809B4554
 /* 809B4540 0000001C  88 1F 0F 80 */	lbz r0, 0xf80(r31)

@@ -3,10 +3,10 @@ lbl_807348DC:
 /* 807348E0 00000004  7C 08 02 A6 */	mflr r0
 /* 807348E4 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 807348E8 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 807348EC 00000010  4B FF 7C 4D */	bl _savegpr_29
+/* 807348EC 00000010  4B FF 7C 4D */	bl _unresolved
 /* 807348F0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 807348F4 00000018  3C 60 00 00 */	lis r3, lit_3911@ha
-/* 807348F8 0000001C  3B E3 00 00 */	addi r31, r3, lit_3911@l
+/* 807348F4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807348F8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 807348FC 00000020  A8 7E 06 C0 */	lha r3, 0x6c0(r30)
 /* 80734900 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 80734904 00000028  41 82 00 0C */	beq lbl_80734910
@@ -63,8 +63,8 @@ lbl_8073499C:
 /* 807349B0 00000014  A8 1E 06 C8 */	lha r0, 0x6c8(r30)
 /* 807349B4 00000018  2C 00 00 00 */	cmpwi r0, 0
 /* 807349B8 0000001C  40 82 00 F0 */	bne lbl_80734AA8
-/* 807349BC 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 807349C0 00000024  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 807349BC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807349C0 00000024  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 807349C4 00000028  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 807349C8 0000002C  7C 00 07 74 */	extsb r0, r0
 /* 807349CC 00000030  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -100,23 +100,23 @@ lbl_8073499C:
 /* 80734A44 000000A8  38 A1 00 08 */	addi r5, r1, 8
 /* 80734A48 000000AC  C0 3E 07 04 */	lfs f1, 0x704(r30)
 /* 80734A4C 000000B0  38 C0 00 00 */	li r6, 0
-/* 80734A50 000000B4  4B FF 7A E9 */	bl Reset__9dCamera_cF4cXyz4cXyzfs
+/* 80734A50 000000B4  4B FF 7A E9 */	bl _unresolved
 /* 80734A54 000000B8  38 7D 02 48 */	addi r3, r29, 0x248
-/* 80734A58 000000BC  4B FF 7A E1 */	bl Start__9dCamera_cFv
+/* 80734A58 000000BC  4B FF 7A E1 */	bl _unresolved
 /* 80734A5C 000000C0  38 7D 02 48 */	addi r3, r29, 0x248
 /* 80734A60 000000C4  38 80 00 00 */	li r4, 0
-/* 80734A64 000000C8  4B FF 7A D5 */	bl SetTrimSize__9dCamera_cFl
-/* 80734A68 000000CC  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80734A6C 000000D0  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80734A64 000000C8  4B FF 7A D5 */	bl _unresolved
+/* 80734A68 000000CC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80734A6C 000000D0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80734A70 000000D4  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80734A74 000000D8  4B FF 7A C5 */	bl reset__14dEvt_control_cFv
+/* 80734A74 000000D8  4B FF 7A C5 */	bl _unresolved
 /* 80734A78 000000DC  80 1E 04 9C */	lwz r0, 0x49c(r30)
 /* 80734A7C 000000E0  54 00 04 A0 */	rlwinm r0, r0, 0, 0x12, 0x10
 /* 80734A80 000000E4  90 1E 04 9C */	stw r0, 0x49c(r30)
-/* 80734A84 000000E8  3C 60 00 00 */	lis r3, s_demo_oc__FPvPv@ha
-/* 80734A88 000000EC  38 63 00 00 */	addi r3, r3, s_demo_oc__FPvPv@l
+/* 80734A84 000000E8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80734A88 000000EC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80734A8C 000000F0  7F C4 F3 78 */	mr r4, r30
-/* 80734A90 000000F4  4B FF 7A A9 */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80734A90 000000F4  4B FF 7A A9 */	bl _unresolved
 /* 80734A94 000000F8  28 03 00 00 */	cmplwi r3, 0
 /* 80734A98 000000FC  41 82 00 10 */	beq lbl_80734AA8
 /* 80734A9C 00000100  80 03 04 9C */	lwz r0, 0x49c(r3)
@@ -134,11 +134,11 @@ lbl_80734AA8:
 /* 80734AC8 00000020  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 80734ACC 00000024  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80734AD0 00000028  38 63 00 30 */	addi r3, r3, 0x30
-/* 80734AD4 0000002C  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 80734AD8 00000030  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 80734ADC 00000034  4B FF 7A 5D */	bl PSMTXCopy
-/* 80734AE0 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80734AE4 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80734AD4 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80734AD8 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80734ADC 00000034  4B FF 7A 5D */	bl _unresolved
+/* 80734AE0 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80734AE4 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80734AE8 00000040  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80734AEC 00000044  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80734AF0 00000048  C0 03 00 1C */	lfs f0, 0x1c(r3)
@@ -157,7 +157,7 @@ lbl_80734AA8:
 /* 80734B24 0000007C  48 00 0B A1 */	bl setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz
 /* 80734B28 00000080  38 60 00 01 */	li r3, 1
 /* 80734B2C 00000084  39 61 00 50 */	addi r11, r1, 0x50
-/* 80734B30 00000088  4B FF 7A 09 */	bl _restgpr_29
+/* 80734B30 00000088  4B FF 7A 09 */	bl _unresolved
 /* 80734B34 0000008C  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80734B38 00000090  7C 08 03 A6 */	mtlr r0
 /* 80734B3C 00000094  38 21 00 50 */	addi r1, r1, 0x50

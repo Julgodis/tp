@@ -7,30 +7,30 @@ lbl_80C18D68:
 /* 80C18D7C 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80C18D80 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80C18D84 0000001C  41 82 00 60 */	beq lbl_80C18DE4
-/* 80C18D88 00000020  3C 60 00 00 */	lis r3, __vt__11daObjHata_c@ha
-/* 80C18D8C 00000024  38 03 00 00 */	addi r0, r3, __vt__11daObjHata_c@l
+/* 80C18D88 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C18D8C 00000024  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C18D90 00000028  90 1E 05 70 */	stw r0, 0x570(r30)
 /* 80C18D94 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 80C18D98 00000030  41 82 00 08 */	beq lbl_80C18DA0
 /* 80C18D9C 00000034  38 63 05 68 */	addi r3, r3, 0x568
 lbl_80C18DA0:
-/* 80C18DA0 00000000  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80C18DA4 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80C18DA0 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C18DA4 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C18DA8 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C18DAC 0000000C  4B FF FD ED */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C18DAC 0000000C  4B FF FD ED */	bl _unresolved
 /* 80C18DB0 00000010  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80C18DB4 00000014  3C 80 00 00 */	lis r4, __dt__5csXyzFv@ha
-/* 80C18DB8 00000018  38 84 00 00 */	addi r4, r4, __dt__5csXyzFv@l
+/* 80C18DB4 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C18DB8 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C18DBC 0000001C  38 A0 00 06 */	li r5, 6
 /* 80C18DC0 00000020  38 C0 00 03 */	li r6, 3
-/* 80C18DC4 00000024  4B FF FD D5 */	bl __destroy_arr
+/* 80C18DC4 00000024  4B FF FD D5 */	bl _unresolved
 /* 80C18DC8 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80C18DCC 0000002C  38 80 00 00 */	li r4, 0
-/* 80C18DD0 00000030  4B FF FD C9 */	bl __dt__10fopAc_ac_cFv
+/* 80C18DD0 00000030  4B FF FD C9 */	bl _unresolved
 /* 80C18DD4 00000034  7F E0 07 35 */	extsh. r0, r31
 /* 80C18DD8 00000038  40 81 00 0C */	ble lbl_80C18DE4
 /* 80C18DDC 0000003C  7F C3 F3 78 */	mr r3, r30
-/* 80C18DE0 00000040  4B FF FD B9 */	bl __dl__FPv
+/* 80C18DE0 00000040  4B FF FD B9 */	bl _unresolved
 lbl_80C18DE4:
 /* 80C18DE4 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80C18DE8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

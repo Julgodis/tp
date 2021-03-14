@@ -3,24 +3,24 @@ lbl_80AB6700:
 /* 80AB6704 00000004  7C 08 02 A6 */	mflr r0
 /* 80AB6708 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80AB670C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80AB6710 00000010  4B FF F5 09 */	bl _savegpr_27
+/* 80AB6710 00000010  4B FF F5 09 */	bl _unresolved
 /* 80AB6714 00000014  7C 7B 1B 78 */	mr r27, r3
 /* 80AB6718 00000018  38 7B 0F 84 */	addi r3, r27, 0xf84
-/* 80AB671C 0000001C  4B FF F4 FD */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80AB671C 0000001C  4B FF F4 FD */	bl _unresolved
 /* 80AB6720 00000020  7C 7C 1B 78 */	mr r28, r3
 /* 80AB6724 00000024  38 00 00 00 */	li r0, 0
-/* 80AB6728 00000028  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
-/* 80AB672C 0000002C  90 03 00 00 */	stw r0, mFindCount__8daNpcT_c@l(r3)
-/* 80AB6730 00000030  3C 60 00 00 */	lis r3, srchNi__12daNpc_Raca_cFPvPv@ha
-/* 80AB6734 00000034  38 63 00 00 */	addi r3, r3, srchNi__12daNpc_Raca_cFPvPv@l
+/* 80AB6728 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AB672C 0000002C  90 03 00 00 */	stw r0, 0x0000(r3)
+/* 80AB6730 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AB6734 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AB6738 00000038  7F 64 DB 78 */	mr r4, r27
-/* 80AB673C 0000003C  4B FF F4 DD */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80AB673C 0000003C  4B FF F4 DD */	bl _unresolved
 /* 80AB6740 00000040  3B 60 00 00 */	li r27, 0
 /* 80AB6744 00000044  3B E0 00 00 */	li r31, 0
-/* 80AB6748 00000048  3C 60 00 00 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
-/* 80AB674C 0000004C  3B A3 00 00 */	addi r29, r3, mFindActorPtrs__8daNpcT_c@l
-/* 80AB6750 00000050  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
-/* 80AB6754 00000054  3B C3 00 00 */	addi r30, r3, mFindCount__8daNpcT_c@l
+/* 80AB6748 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AB674C 0000004C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
+/* 80AB6750 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AB6754 00000054  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80AB6758 00000058  48 00 00 4C */	b lbl_80AB67A4
 lbl_80AB675C:
 /* 80AB675C 00000000  28 1C 00 00 */	cmplwi r28, 0
@@ -49,7 +49,7 @@ lbl_80AB67A4:
 /* 80AB67B0 0000000C  38 60 00 00 */	li r3, 0
 lbl_80AB67B4:
 /* 80AB67B4 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 80AB67B8 00000004  4B FF F4 61 */	bl _restgpr_27
+/* 80AB67B8 00000004  4B FF F4 61 */	bl _unresolved
 /* 80AB67BC 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80AB67C0 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80AB67C4 00000010  38 21 00 30 */	addi r1, r1, 0x30

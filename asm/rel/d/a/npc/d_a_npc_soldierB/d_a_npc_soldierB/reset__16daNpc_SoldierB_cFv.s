@@ -3,23 +3,23 @@ lbl_80AF426C:
 /* 80AF4270 00000004  7C 08 02 A6 */	mflr r0
 /* 80AF4274 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80AF4278 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80AF427C 00000010  4B FF E9 9D */	bl _savegpr_29
+/* 80AF427C 00000010  4B FF E9 9D */	bl _unresolved
 /* 80AF4280 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80AF4284 00000018  4B FF E9 95 */	bl initialize__8daNpcF_cFv
+/* 80AF4284 00000018  4B FF E9 95 */	bl _unresolved
 /* 80AF4288 0000001C  38 7F 0B DC */	addi r3, r31, 0xbdc
-/* 80AF428C 00000020  4B FF E9 8D */	bl initialize__15daNpcF_Lookat_cFv
+/* 80AF428C 00000020  4B FF E9 8D */	bl _unresolved
 /* 80AF4290 00000024  3B A0 00 00 */	li r29, 0
 /* 80AF4294 00000028  3B C0 00 00 */	li r30, 0
 lbl_80AF4298:
 /* 80AF4298 00000000  38 7E 0C 78 */	addi r3, r30, 0xc78
 /* 80AF429C 00000004  7C 7F 1A 14 */	add r3, r31, r3
-/* 80AF42A0 00000008  4B FF E9 79 */	bl initialize__18daNpcF_ActorMngr_cFv
+/* 80AF42A0 00000008  4B FF E9 79 */	bl _unresolved
 /* 80AF42A4 0000000C  3B BD 00 01 */	addi r29, r29, 1
 /* 80AF42A8 00000010  2C 1D 00 03 */	cmpwi r29, 3
 /* 80AF42AC 00000014  3B DE 00 08 */	addi r30, r30, 8
 /* 80AF42B0 00000018  41 80 FF E8 */	blt lbl_80AF4298
-/* 80AF42B4 0000001C  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 80AF42B8 00000020  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 80AF42B4 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AF42B8 00000020  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80AF42BC 00000024  80 64 00 00 */	lwz r3, 0(r4)
 /* 80AF42C0 00000028  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AF42C4 0000002C  90 7F 0D D0 */	stw r3, 0xdd0(r31)
@@ -80,8 +80,8 @@ lbl_80AF4298:
 /* 80AF43A0 00000108  B0 1F 08 F8 */	sth r0, 0x8f8(r31)
 /* 80AF43A4 0000010C  A8 1F 08 F4 */	lha r0, 0x8f4(r31)
 /* 80AF43A8 00000110  B0 1F 08 FA */	sth r0, 0x8fa(r31)
-/* 80AF43AC 00000114  3C 60 00 00 */	lis r3, lit_4454@ha
-/* 80AF43B0 00000118  C0 03 00 00 */	lfs f0, lit_4454@l(r3)
+/* 80AF43AC 00000114  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AF43B0 00000118  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80AF43B4 0000011C  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80AF43B8 00000120  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 80AF43BC 00000124  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
@@ -89,7 +89,7 @@ lbl_80AF4298:
 /* 80AF43C4 0000012C  38 00 00 01 */	li r0, 1
 /* 80AF43C8 00000130  98 1F 09 EE */	stb r0, 0x9ee(r31)
 /* 80AF43CC 00000134  39 61 00 20 */	addi r11, r1, 0x20
-/* 80AF43D0 00000138  4B FF E8 49 */	bl _restgpr_29
+/* 80AF43D0 00000138  4B FF E8 49 */	bl _unresolved
 /* 80AF43D4 0000013C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80AF43D8 00000140  7C 08 03 A6 */	mtlr r0
 /* 80AF43DC 00000144  38 21 00 20 */	addi r1, r1, 0x20

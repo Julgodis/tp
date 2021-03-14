@@ -7,15 +7,15 @@ lbl_80AEBF64:
 /* 80AEBF78 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80AEBF7C 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80AEBF80 0000001C  41 82 00 28 */	beq lbl_80AEBFA8
-/* 80AEBF84 00000020  3C 80 00 00 */	lis r4, __vt__16daNpc_shopMaro_c@ha
-/* 80AEBF88 00000024  38 04 00 00 */	addi r0, r4, __vt__16daNpc_shopMaro_c@l
+/* 80AEBF84 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AEBF88 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80AEBF8C 00000028  90 1E 0E 3C */	stw r0, 0xe3c(r30)
 /* 80AEBF90 0000002C  38 80 00 00 */	li r4, 0
-/* 80AEBF94 00000030  4B FF FE A5 */	bl __dt__13dShopSystem_cFv
+/* 80AEBF94 00000030  4B FF FE A5 */	bl _unresolved
 /* 80AEBF98 00000034  7F E0 07 35 */	extsh. r0, r31
 /* 80AEBF9C 00000038  40 81 00 0C */	ble lbl_80AEBFA8
 /* 80AEBFA0 0000003C  7F C3 F3 78 */	mr r3, r30
-/* 80AEBFA4 00000040  4B FF FE 95 */	bl __dl__FPv
+/* 80AEBFA4 00000040  4B FF FE 95 */	bl _unresolved
 lbl_80AEBFA8:
 /* 80AEBFA8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80AEBFAC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

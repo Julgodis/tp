@@ -15,7 +15,7 @@ lbl_80ACA4A4:
 lbl_80ACA4D8:
 /* 80ACA4D8 00000000  80 9F 0A 7C */	lwz r4, 0xa7c(r31)
 /* 80ACA4DC 00000004  38 A0 00 00 */	li r5, 0
-/* 80ACA4E0 00000008  4B FF F1 19 */	bl initTalk__8daNpcT_cFiPP10fopAc_ac_c
+/* 80ACA4E0 00000008  4B FF F1 19 */	bl _unresolved
 /* 80ACA4E4 0000000C  38 00 00 00 */	li r0, 0
 /* 80ACA4E8 00000010  98 1F 0E 26 */	stb r0, 0xe26(r31)
 /* 80ACA4EC 00000014  38 00 00 02 */	li r0, 2
@@ -26,13 +26,13 @@ lbl_80ACA4F4:
 /* 80ACA4FC 00000008  38 A0 00 00 */	li r5, 0
 /* 80ACA500 0000000C  38 C0 00 00 */	li r6, 0
 /* 80ACA504 00000010  38 E0 00 00 */	li r7, 0
-/* 80ACA508 00000014  4B FF F0 F1 */	bl talkProc__8daNpcT_cFPiiPP10fopAc_ac_ci
+/* 80ACA508 00000014  4B FF F0 F1 */	bl _unresolved
 /* 80ACA50C 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACA510 0000001C  41 82 00 1C */	beq lbl_80ACA52C
-/* 80ACA514 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80ACA518 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ACA514 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ACA518 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80ACA51C 00000028  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80ACA520 0000002C  4B FF F0 D9 */	bl reset__14dEvt_control_cFv
+/* 80ACA520 0000002C  4B FF F0 D9 */	bl _unresolved
 /* 80ACA524 00000030  38 00 00 03 */	li r0, 3
 /* 80ACA528 00000034  B0 1F 0E 22 */	sth r0, 0xe22(r31)
 lbl_80ACA52C:

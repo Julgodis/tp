@@ -4,8 +4,8 @@ lbl_8059BEE0:
 /* 8059BEE8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8059BEEC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8059BEF0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8059BEF4 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8059BEF8 00000018  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8059BEF4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059BEF8 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8059BEFC 0000001C  80 64 5D AC */	lwz r3, 0x5dac(r4)
 /* 8059BF00 00000020  80 03 05 8C */	lwz r0, 0x58c(r3)
 /* 8059BF04 00000024  60 00 02 00 */	ori r0, r0, 0x200
@@ -17,7 +17,7 @@ lbl_8059BEE0:
 /* 8059BF1C 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 8059BF20 00000040  40 82 00 14 */	bne lbl_8059BF34
 /* 8059BF24 00000044  38 64 4E C8 */	addi r3, r4, 0x4ec8
-/* 8059BF28 00000048  4B FF F5 31 */	bl reset__14dEvt_control_cFv
+/* 8059BF28 00000048  4B FF F5 31 */	bl _unresolved
 /* 8059BF2C 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 8059BF30 00000050  4B FF FE E9 */	bl actionPauseNoneInit__10daObjSw5_cFv
 lbl_8059BF34:

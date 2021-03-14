@@ -5,8 +5,8 @@ lbl_80CE5EC8:
 /* 80CE5ED4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CE5ED8 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CE5EDC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CE5EE0 00000018  3C 60 00 00 */	lis r3, mCcDObjInfo__15daObj_SSDrink_c@ha
-/* 80CE5EE4 0000001C  3B C3 00 00 */	addi r30, r3, mCcDObjInfo__15daObj_SSDrink_c@l
+/* 80CE5EE0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE5EE4 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80CE5EE8 00000020  C0 1E 00 30 */	lfs f0, 0x30(r30)
 /* 80CE5EEC 00000024  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80CE5EF0 00000028  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
@@ -16,14 +16,14 @@ lbl_80CE5EC8:
 /* 80CE5F00 00000038  40 82 00 18 */	bne lbl_80CE5F18
 /* 80CE5F04 0000003C  38 7F 07 A4 */	addi r3, r31, 0x7a4
 /* 80CE5F08 00000040  C0 3E 00 4C */	lfs f1, 0x4c(r30)
-/* 80CE5F0C 00000044  4B FF F0 4D */	bl SetWallR__12dBgS_AcchCirFf
+/* 80CE5F0C 00000044  4B FF F0 4D */	bl _unresolved
 /* 80CE5F10 00000048  C0 1E 00 50 */	lfs f0, 0x50(r30)
 /* 80CE5F14 0000004C  D0 1F 07 D4 */	stfs f0, 0x7d4(r31)
 lbl_80CE5F18:
 /* 80CE5F18 00000000  C0 1E 00 54 */	lfs f0, 0x54(r30)
 /* 80CE5F1C 00000004  D0 1F 05 30 */	stfs f0, 0x530(r31)
-/* 80CE5F20 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CE5F24 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE5F20 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE5F24 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE5F28 00000010  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CE5F2C 00000014  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80CE5F30 00000018  81 8C 00 FC */	lwz r12, 0xfc(r12)
@@ -32,8 +32,8 @@ lbl_80CE5F18:
 /* 80CE5F3C 00000024  3C 03 00 01 */	addis r0, r3, 1
 /* 80CE5F40 00000028  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80CE5F44 0000002C  41 82 00 68 */	beq lbl_80CE5FAC
-/* 80CE5F48 00000030  3C 60 00 00 */	lis r3, lit_4233@ha
-/* 80CE5F4C 00000034  38 83 00 00 */	addi r4, r3, lit_4233@l
+/* 80CE5F48 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE5F4C 00000034  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80CE5F50 00000038  80 64 00 00 */	lwz r3, 0(r4)
 /* 80CE5F54 0000003C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80CE5F58 00000040  90 61 00 08 */	stw r3, 8(r1)
@@ -51,21 +51,21 @@ lbl_80CE5F18:
 /* 80CE5F88 00000070  7F E3 FB 78 */	mr r3, r31
 /* 80CE5F8C 00000074  4B FF FB 81 */	bl getSwitchFromParam__15daObj_SSDrink_cFv
 /* 80CE5F90 00000078  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80CE5F94 0000007C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CE5F98 00000080  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE5F94 0000007C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE5F98 00000080  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE5F9C 00000084  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CE5FA0 00000088  7C 05 07 74 */	extsb r5, r0
-/* 80CE5FA4 0000008C  4B FF EF B5 */	bl offSwitch__10dSv_info_cFii
+/* 80CE5FA4 0000008C  4B FF EF B5 */	bl _unresolved
 /* 80CE5FA8 00000090  48 00 00 24 */	b lbl_80CE5FCC
 lbl_80CE5FAC:
 /* 80CE5FAC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CE5FB0 00000004  4B FF FB 5D */	bl getSwitchFromParam__15daObj_SSDrink_cFv
 /* 80CE5FB4 00000008  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80CE5FB8 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CE5FBC 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE5FB8 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CE5FBC 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CE5FC0 00000014  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CE5FC4 00000018  7C 05 07 74 */	extsb r5, r0
-/* 80CE5FC8 0000001C  4B FF EF 91 */	bl onSwitch__10dSv_info_cFii
+/* 80CE5FC8 0000001C  4B FF EF 91 */	bl _unresolved
 lbl_80CE5FCC:
 /* 80CE5FCC 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80CE5FD0 00000004  83 C1 00 18 */	lwz r30, 0x18(r1)

@@ -3,8 +3,8 @@ lbl_80A99CB8:
 /* 80A99CBC 00000004  7C 08 02 A6 */	mflr r0
 /* 80A99CC0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A99CC4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80A99CC8 00000010  3C A0 00 00 */	lis r5, m__24daNpc_Pachi_Maro_Param_c@ha
-/* 80A99CCC 00000014  38 A5 00 00 */	addi r5, r5, m__24daNpc_Pachi_Maro_Param_c@l
+/* 80A99CC8 00000010  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80A99CCC 00000014  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80A99CD0 00000018  3B E0 00 00 */	li r31, 0
 /* 80A99CD4 0000001C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80A99CD8 00000020  2C 00 00 0A */	cmpwi r0, 0xa

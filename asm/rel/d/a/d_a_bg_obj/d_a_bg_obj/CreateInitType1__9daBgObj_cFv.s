@@ -4,13 +4,13 @@ lbl_8045A160:
 /* 8045A168 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045A16C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045A170 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8045A174 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8045A178 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045A174 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045A178 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8045A17C 0000001C  A0 1F 0C CC */	lhz r0, 0xccc(r31)
 /* 8045A180 00000020  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8045A184 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 8045A188 00000028  7C 05 07 74 */	extsb r5, r0
-/* 8045A18C 0000002C  4B FF F4 AD */	bl isSwitch__10dSv_info_cCFii
+/* 8045A18C 0000002C  4B FF F4 AD */	bl _unresolved
 /* 8045A190 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 8045A194 00000034  41 82 00 30 */	beq lbl_8045A1C4
 /* 8045A198 00000038  38 00 00 01 */	li r0, 1
@@ -53,8 +53,8 @@ lbl_8045A21C:
 /* 8045A21C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8045A220 00000004  88 9F 0C C8 */	lbz r4, 0xcc8(r31)
 /* 8045A224 00000008  4B FF FB E1 */	bl settingCullSizeBoxForCo__9daBgObj_cFi
-/* 8045A228 0000000C  3C 60 00 00 */	lis r3, lit_3873@ha
-/* 8045A22C 00000010  C0 03 00 00 */	lfs f0, lit_3873@l(r3)
+/* 8045A228 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045A22C 00000010  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 8045A230 00000014  C0 3F 0C F0 */	lfs f1, 0xcf0(r31)
 /* 8045A234 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8045A238 0000001C  41 82 00 08 */	beq lbl_8045A240
@@ -64,24 +64,24 @@ lbl_8045A240:
 /* 8045A244 00000004  38 80 00 FF */	li r4, 0xff
 /* 8045A248 00000008  38 A0 00 FF */	li r5, 0xff
 /* 8045A24C 0000000C  7F E6 FB 78 */	mr r6, r31
-/* 8045A250 00000010  4B FF F3 E9 */	bl Init__9dCcD_SttsFiiP10fopAc_ac_c
+/* 8045A250 00000010  4B FF F3 E9 */	bl _unresolved
 /* 8045A254 00000014  7F E3 FB 78 */	mr r3, r31
 /* 8045A258 00000018  48 00 08 99 */	bl setColCommon__9daBgObj_cFv
 /* 8045A25C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 8045A260 00000020  88 9F 0C C8 */	lbz r4, 0xcc8(r31)
 /* 8045A264 00000024  4B FF FC B1 */	bl settingCullSizeBoxForCull__9daBgObj_cFi
-/* 8045A268 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8045A26C 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045A268 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045A26C 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8045A270 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8045A274 00000034  7F E4 FB 78 */	mr r4, r31
 /* 8045A278 00000038  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8045A27C 0000003C  54 05 5E 3E */	rlwinm r5, r0, 0xb, 0x18, 0x1f
-/* 8045A280 00000040  4B FF F3 B9 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc
+/* 8045A280 00000040  4B FF F3 B9 */	bl _unresolved
 /* 8045A284 00000044  B0 7F 0C C6 */	sth r3, 0xcc6(r31)
 /* 8045A288 00000048  80 7F 05 D8 */	lwz r3, 0x5d8(r31)
 /* 8045A28C 0000004C  28 03 00 00 */	cmplwi r3, 0
 /* 8045A290 00000050  41 82 00 08 */	beq lbl_8045A298
-/* 8045A294 00000054  4B FF F3 A5 */	bl Move__4dBgWFv
+/* 8045A294 00000054  4B FF F3 A5 */	bl _unresolved
 lbl_8045A298:
 /* 8045A298 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8045A29C 00000004  4B FF F9 51 */	bl initAtt__9daBgObj_cFv

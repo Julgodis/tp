@@ -7,29 +7,29 @@ lbl_80B4A914:
 /* 80B4A928 00000014  2C 04 00 02 */	cmpwi r4, 2
 /* 80B4A92C 00000018  40 82 00 30 */	bne lbl_80B4A95C
 /* 80B4A930 0000001C  A8 9F 0D 12 */	lha r4, 0xd12(r31)
-/* 80B4A934 00000020  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B4A938 00000024  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B4A93C 00000028  4B FF F2 1D */	bl mDoMtx_YrotM__FPA4_fs
-/* 80B4A940 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B4A944 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80B4A934 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B4A938 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B4A93C 00000028  4B FF F2 1D */	bl _unresolved
+/* 80B4A940 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B4A944 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B4A948 00000034  A8 1F 0D 0E */	lha r0, 0xd0e(r31)
 /* 80B4A94C 00000038  7C 00 00 D0 */	neg r0, r0
 /* 80B4A950 0000003C  7C 04 07 34 */	extsh r4, r0
-/* 80B4A954 00000040  4B FF F2 05 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80B4A954 00000040  4B FF F2 05 */	bl _unresolved
 /* 80B4A958 00000044  48 00 00 34 */	b lbl_80B4A98C
 lbl_80B4A95C:
 /* 80B4A95C 00000000  2C 04 00 04 */	cmpwi r4, 4
 /* 80B4A960 00000004  40 82 00 2C */	bne lbl_80B4A98C
-/* 80B4A964 00000008  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B4A968 0000000C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80B4A964 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B4A968 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B4A96C 00000010  A8 1F 0D 0C */	lha r0, 0xd0c(r31)
 /* 80B4A970 00000014  7C 00 00 D0 */	neg r0, r0
 /* 80B4A974 00000018  7C 04 07 34 */	extsh r4, r0
-/* 80B4A978 0000001C  4B FF F1 E1 */	bl mDoMtx_YrotM__FPA4_fs
+/* 80B4A978 0000001C  4B FF F1 E1 */	bl _unresolved
 /* 80B4A97C 00000020  A8 9F 0D 08 */	lha r4, 0xd08(r31)
-/* 80B4A980 00000024  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80B4A984 00000028  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B4A988 0000002C  4B FF F1 D1 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80B4A980 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B4A984 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B4A988 0000002C  4B FF F1 D1 */	bl _unresolved
 lbl_80B4A98C:
 /* 80B4A98C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80B4A990 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

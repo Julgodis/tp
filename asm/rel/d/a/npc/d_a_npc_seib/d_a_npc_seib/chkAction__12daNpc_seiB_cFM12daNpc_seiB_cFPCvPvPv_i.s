@@ -3,7 +3,7 @@ lbl_80AC5E08:
 /* 80AC5E0C 00000004  7C 08 02 A6 */	mflr r0
 /* 80AC5E10 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80AC5E14 0000000C  38 63 0E 54 */	addi r3, r3, 0xe54
-/* 80AC5E18 00000010  4B FF F2 41 */	bl __ptmf_cmpr
+/* 80AC5E18 00000010  4B FF F2 41 */	bl _unresolved
 /* 80AC5E1C 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 80AC5E20 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 80AC5E24 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

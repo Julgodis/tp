@@ -5,8 +5,8 @@ lbl_807EDCC4:
 /* 807EDCD0 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 807EDCD4 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 807EDCD8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 807EDCDC 00000018  3C 60 00 00 */	lis r3, lit_3905@ha
-/* 807EDCE0 0000001C  3B E3 00 00 */	addi r31, r3, lit_3905@l
+/* 807EDCDC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807EDCE0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 807EDCE4 00000020  80 7E 07 28 */	lwz r3, 0x728(r30)
 /* 807EDCE8 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 807EDCEC 00000028  41 82 00 0C */	beq lbl_807EDCF8
@@ -83,15 +83,15 @@ lbl_807EDDA8:
 /* 807EDDE0 00000038  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 807EDDE4 0000003C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 807EDDE8 00000040  38 63 00 60 */	addi r3, r3, 0x60
-/* 807EDDEC 00000044  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 807EDDF0 00000048  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 807EDDF4 0000004C  4B FF 98 65 */	bl PSMTXCopy
+/* 807EDDEC 00000044  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 807EDDF0 00000048  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 807EDDF4 0000004C  4B FF 98 65 */	bl _unresolved
 /* 807EDDF8 00000050  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 807EDDFC 00000054  FC 40 08 90 */	fmr f2, f1
 /* 807EDE00 00000058  FC 60 08 90 */	fmr f3, f1
-/* 807EDE04 0000005C  4B FF 98 55 */	bl transM__14mDoMtx_stack_cFfff
-/* 807EDE08 00000060  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 807EDE0C 00000064  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 807EDE04 0000005C  4B FF 98 55 */	bl _unresolved
+/* 807EDE08 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807EDE0C 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 807EDE10 00000068  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807EDE14 0000006C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 807EDE18 00000070  C0 03 00 1C */	lfs f0, 0x1c(r3)

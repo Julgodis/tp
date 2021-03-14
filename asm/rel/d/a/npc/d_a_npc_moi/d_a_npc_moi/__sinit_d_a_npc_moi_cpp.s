@@ -2,10 +2,10 @@ lbl_80A7ABBC:
 /* 80A7ABBC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80A7ABC0 00000004  7C 08 02 A6 */	mflr r0
 /* 80A7ABC4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A7ABC8 0000000C  3C 60 00 00 */	lis r3, cNullVec__6Z2Calc@ha
-/* 80A7ABCC 00000010  38 A3 00 00 */	addi r5, r3, cNullVec__6Z2Calc@l
-/* 80A7ABD0 00000014  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 80A7ABD4 00000018  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 80A7ABC8 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A7ABCC 00000010  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
+/* 80A7ABD0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A7ABD4 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80A7ABD8 0000001C  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A7ABDC 00000020  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A7ABE0 00000024  90 65 0B 84 */	stw r3, 0xb84(r5)
@@ -37,14 +37,14 @@ lbl_80A7ABBC:
 /* 80A7AC48 0000008C  90 04 00 34 */	stw r0, 0x34(r4)
 /* 80A7AC4C 00000090  80 05 0B 80 */	lwz r0, 0xb80(r5)
 /* 80A7AC50 00000094  90 04 00 38 */	stw r0, 0x38(r4)
-/* 80A7AC54 00000098  3C 60 00 00 */	lis r3, __vt__17daNpc_Moi_Param_c@ha
-/* 80A7AC58 0000009C  38 03 00 00 */	addi r0, r3, __vt__17daNpc_Moi_Param_c@l
-/* 80A7AC5C 000000A0  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 80A7AC60 000000A4  94 03 00 00 */	stwu r0, l_HIO@l(r3)
-/* 80A7AC64 000000A8  3C 80 00 00 */	lis r4, __dt__17daNpc_Moi_Param_cFv@ha
-/* 80A7AC68 000000AC  38 84 00 00 */	addi r4, r4, __dt__17daNpc_Moi_Param_cFv@l
-/* 80A7AC6C 000000B0  3C A0 00 00 */	lis r5, lit_3839@ha
-/* 80A7AC70 000000B4  38 A5 00 00 */	addi r5, r5, lit_3839@l
+/* 80A7AC54 00000098  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A7AC58 0000009C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80A7AC5C 000000A0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A7AC60 000000A4  94 03 00 00 */	stwu r0, 0x0000(r3)
+/* 80A7AC64 000000A8  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A7AC68 000000AC  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80A7AC6C 000000B0  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80A7AC70 000000B4  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80A7AC74 000000B8  4B FF 92 65 */	bl __register_global_object
 /* 80A7AC78 000000BC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80A7AC7C 000000C0  7C 08 03 A6 */	mtlr r0

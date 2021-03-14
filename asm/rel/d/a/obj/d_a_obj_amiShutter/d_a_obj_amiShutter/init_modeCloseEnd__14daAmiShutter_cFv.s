@@ -7,16 +7,16 @@ lbl_80BA1EEC:
 /* 80BA1F00 00000014  88 03 05 C5 */	lbz r0, 0x5c5(r3)
 /* 80BA1F04 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80BA1F08 0000001C  40 82 00 58 */	bne lbl_80BA1F60
-/* 80BA1F0C 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BA1F10 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BA1F0C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BA1F10 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BA1F14 00000028  38 80 00 04 */	li r4, 4
 /* 80BA1F18 0000002C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80BA1F1C 00000030  7C 05 07 74 */	extsb r5, r0
-/* 80BA1F20 00000034  4B FF F5 19 */	bl isSwitch__10dSv_info_cCFii
+/* 80BA1F20 00000034  4B FF F5 19 */	bl _unresolved
 /* 80BA1F24 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80BA1F28 0000003C  40 82 00 38 */	bne lbl_80BA1F60
-/* 80BA1F2C 00000040  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BA1F30 00000044  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BA1F2C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BA1F30 00000044  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80BA1F34 00000048  80 A4 5D AC */	lwz r5, 0x5dac(r4)
 /* 80BA1F38 0000004C  38 00 00 03 */	li r0, 3
 /* 80BA1F3C 00000050  B0 05 06 04 */	sth r0, 0x604(r5)

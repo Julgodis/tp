@@ -3,17 +3,17 @@ lbl_80C9C25C:
 /* 80C9C260 00000004  7C 08 02 A6 */	mflr r0
 /* 80C9C264 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80C9C268 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C9C26C 00000010  4B FF F1 0D */	bl _savegpr_29
+/* 80C9C26C 00000010  4B FF F1 0D */	bl _unresolved
 /* 80C9C270 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80C9C274 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C9C278 0000001C  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C9C274 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9C278 0000001C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80C9C27C 00000020  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 80C9C280 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80C9C284 00000028  41 82 00 24 */	beq lbl_80C9C2A8
-/* 80C9C288 0000002C  3C 60 00 00 */	lis r3, m_midnaActor__9daPy_py_c@ha
-/* 80C9C28C 00000030  83 C3 00 00 */	lwz r30, m_midnaActor__9daPy_py_c@l(r3)
+/* 80C9C288 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9C28C 00000030  83 C3 00 00 */	lwz r30, 0x0000(r3)
 /* 80C9C290 00000034  80 64 5D B4 */	lwz r3, 0x5db4(r4)
-/* 80C9C294 00000038  4B FF F0 E5 */	bl fopAcM_getTalkEventPartner__FPC10fopAc_ac_c
+/* 80C9C294 00000038  4B FF F0 E5 */	bl _unresolved
 /* 80C9C298 0000003C  7C 03 F0 40 */	cmplw r3, r30
 /* 80C9C29C 00000040  40 82 00 0C */	bne lbl_80C9C2A8
 /* 80C9C2A0 00000044  38 60 00 01 */	li r3, 1
@@ -45,7 +45,7 @@ lbl_80C9C2F4:
 /* 80C9C2F8 00000004  4B FF F7 39 */	bl action__FP15obj_msima_class
 /* 80C9C2FC 00000008  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80C9C300 0000000C  7C 03 07 74 */	extsb r3, r0
-/* 80C9C304 00000010  4B FF F0 75 */	bl dComIfGp_getReverb__Fi
+/* 80C9C304 00000010  4B FF F0 75 */	bl _unresolved
 /* 80C9C308 00000014  7C 65 1B 78 */	mr r5, r3
 /* 80C9C30C 00000018  38 7F 06 00 */	addi r3, r31, 0x600
 /* 80C9C310 0000001C  38 80 00 00 */	li r4, 0
@@ -56,7 +56,7 @@ lbl_80C9C2F4:
 /* 80C9C324 00000030  38 60 00 0C */	li r3, 0xc
 /* 80C9C328 00000034  38 80 00 7B */	li r4, 0x7b
 /* 80C9C32C 00000038  38 A0 00 32 */	li r5, 0x32
-/* 80C9C330 0000003C  4B FF F0 49 */	bl cM_initRnd2__Fiii
+/* 80C9C330 0000003C  4B FF F0 49 */	bl _unresolved
 /* 80C9C334 00000040  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80C9C338 00000044  28 00 00 01 */	cmplwi r0, 1
 /* 80C9C33C 00000048  41 82 00 50 */	beq lbl_80C9C38C
@@ -86,7 +86,7 @@ lbl_80C9C38C:
 /* 80C9C38C 00000000  38 60 00 01 */	li r3, 1
 lbl_80C9C390:
 /* 80C9C390 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C9C394 00000004  4B FF EF E5 */	bl _restgpr_29
+/* 80C9C394 00000004  4B FF EF E5 */	bl _unresolved
 /* 80C9C398 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80C9C39C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80C9C3A0 00000010  38 21 00 20 */	addi r1, r1, 0x20

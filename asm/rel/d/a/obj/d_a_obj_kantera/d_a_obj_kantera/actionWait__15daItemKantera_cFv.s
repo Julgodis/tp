@@ -5,15 +5,15 @@ lbl_80C3911C:
 /* 80C39128 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C3912C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C39130 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80C39134 00000018  3C 80 00 00 */	lis r4, l_cyl_src@ha
-/* 80C39138 0000001C  3B C4 00 00 */	addi r30, r4, l_cyl_src@l
+/* 80C39134 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C39138 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80C3913C 00000020  38 9F 07 A4 */	addi r4, r31, 0x7a4
-/* 80C39140 00000024  4B FF F5 19 */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 80C39140 00000024  4B FF F5 19 */	bl _unresolved
 /* 80C39144 00000028  38 7F 05 8C */	addi r3, r31, 0x58c
-/* 80C39148 0000002C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80C3914C 00000030  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C39148 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C3914C 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C39150 00000034  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80C39154 00000038  4B FF F5 05 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80C39154 00000038  4B FF F5 05 */	bl _unresolved
 /* 80C39158 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80C3915C 00000040  4B FF FE 1D */	bl bg_check__15daItemKantera_cFv
 /* 80C39160 00000044  80 1F 05 B8 */	lwz r0, 0x5b8(r31)
@@ -38,8 +38,8 @@ lbl_80C391A4:
 /* 80C391A8 00000004  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 80C391AC 00000008  90 1F 05 5C */	stw r0, 0x55c(r31)
 lbl_80C391B0:
-/* 80C391B0 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C391B4 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C391B0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C391B4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C391B8 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80C391BC 0000000C  80 1F 04 9C */	lwz r0, 0x49c(r31)
 /* 80C391C0 00000010  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
@@ -51,7 +51,7 @@ lbl_80C391B0:
 /* 80C391D8 00000028  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
 /* 80C391DC 0000002C  41 82 00 24 */	beq lbl_80C39200
 /* 80C391E0 00000030  7F E3 FB 78 */	mr r3, r31
-/* 80C391E4 00000034  4B FF F4 75 */	bl fopAcM_cancelCarryNow__FP10fopAc_ac_c
+/* 80C391E4 00000034  4B FF F4 75 */	bl _unresolved
 /* 80C391E8 00000038  7F E3 FB 78 */	mr r3, r31
 /* 80C391EC 0000003C  48 00 00 49 */	bl initActionOrderGetDemo__15daItemKantera_cFv
 /* 80C391F0 00000040  48 00 00 10 */	b lbl_80C39200

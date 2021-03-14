@@ -4,8 +4,8 @@ lbl_80BB1154:
 /* 80BB115C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BB1160 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BB1164 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BB1168 00000014  3D 00 00 00 */	lis r8, lit_5242@ha
-/* 80BB116C 00000018  C0 28 00 00 */	lfs f1, lit_5242@l(r8)
+/* 80BB1168 00000014  3D 00 00 00 */	lis r8, 0x0000 /* 0x00000000@ha */
+/* 80BB116C 00000018  C0 28 00 00 */	lfs f1, 0x0000(r8)
 /* 80BB1170 0000001C  4B FF FD 65 */	bl wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf
 /* 80BB1174 00000020  80 1F 01 78 */	lwz r0, 0x178(r31)
 /* 80BB1178 00000024  54 00 0F FE */	srwi r0, r0, 0x1f

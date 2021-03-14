@@ -17,25 +17,25 @@ lbl_805F4B48:
 /* 805F4B84 00000020  40 82 00 08 */	bne lbl_805F4B8C
 /* 805F4B88 00000024  38 80 00 0A */	li r4, 0xa
 lbl_805F4B8C:
-/* 805F4B8C 00000000  3C 60 00 00 */	lis r3, stringBase0@ha
-/* 805F4B90 00000004  38 63 00 00 */	addi r3, r3, stringBase0@l
+/* 805F4B8C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805F4B90 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805F4B94 00000008  38 63 00 06 */	addi r3, r3, 6
-/* 805F4B98 0000000C  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 805F4B9C 00000010  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 805F4B98 0000000C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 805F4B9C 00000010  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 805F4BA0 00000014  3C A5 00 02 */	addis r5, r5, 2
 /* 805F4BA4 00000018  38 C0 00 80 */	li r6, 0x80
 /* 805F4BA8 0000001C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 805F4BAC 00000020  4B FF FE 0D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 805F4BAC 00000020  4B FF FE 0D */	bl _unresolved
 /* 805F4BB0 00000024  7C 64 1B 78 */	mr r4, r3
 /* 805F4BB4 00000028  80 7E 05 D4 */	lwz r3, 0x5d4(r30)
 /* 805F4BB8 0000002C  57 E5 06 3E */	clrlwi r5, r31, 0x18
 /* 805F4BBC 00000030  FC 20 F0 90 */	fmr f1, f30
 /* 805F4BC0 00000034  FC 40 F8 90 */	fmr f2, f31
-/* 805F4BC4 00000038  3C C0 00 00 */	lis r6, lit_3835@ha
-/* 805F4BC8 0000003C  C0 66 00 00 */	lfs f3, lit_3835@l(r6)
-/* 805F4BCC 00000040  3C C0 00 00 */	lis r6, lit_3836@ha
-/* 805F4BD0 00000044  C0 86 00 00 */	lfs f4, lit_3836@l(r6)
-/* 805F4BD4 00000048  4B FF FD E5 */	bl setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
+/* 805F4BC4 00000038  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 805F4BC8 0000003C  C0 66 00 00 */	lfs f3, 0x0000(r6)
+/* 805F4BCC 00000040  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 805F4BD0 00000044  C0 86 00 00 */	lfs f4, 0x0000(r6)
+/* 805F4BD4 00000048  4B FF FD E5 */	bl _unresolved
 /* 805F4BD8 0000004C  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 805F4BDC 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 805F4BE0 00000054  E3 C1 00 18 */	psq_l f30, 24(r1), 0, 0 /* qr0 */

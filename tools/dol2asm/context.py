@@ -7,7 +7,6 @@ from typing import Any
 class Context:
     index: int
     output: Queue
-    data: Any = None
 
     def send_command(self, command, *args):
         self.output.put((command, (*args,)))
@@ -21,8 +20,8 @@ class Context:
     def error(self, *args):
         self.send_command('error', *args)
 
-    def complete(self):
-        self.send_command('complete', self.index)
+    def complete(self, result=None):
+        self.send_command('complete', self.index, result)
 
     def exception(self, traceback):
         self.send_command('exception', self.index, traceback)

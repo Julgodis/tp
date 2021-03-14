@@ -5,8 +5,8 @@ lbl_8059EC1C:
 /* 8059EC28 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8059EC2C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8059EC30 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8059EC34 00000018  3C 80 00 00 */	lis r4, m_cullfar_max__12daShopItem_c@ha
-/* 8059EC38 0000001C  3B C4 00 00 */	addi r30, r4, m_cullfar_max__12daShopItem_c@l
+/* 8059EC34 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059EC38 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 8059EC3C 00000020  38 1F 09 2C */	addi r0, r31, 0x92c
 /* 8059EC40 00000024  90 03 05 04 */	stw r0, 0x504(r3)
 /* 8059EC44 00000028  C0 3E 00 34 */	lfs f1, 0x34(r30)
@@ -15,9 +15,9 @@ lbl_8059EC1C:
 /* 8059EC50 00000034  C0 9E 00 3C */	lfs f4, 0x3c(r30)
 /* 8059EC54 00000038  C0 BE 00 40 */	lfs f5, 0x40(r30)
 /* 8059EC58 0000003C  FC C0 20 90 */	fmr f6, f4
-/* 8059EC5C 00000040  4B FF FD 3D */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
-/* 8059EC60 00000044  3C 60 00 00 */	lis r3, mSystemFar__14mDoLib_clipper@ha
-/* 8059EC64 00000048  C0 23 00 00 */	lfs f1, mSystemFar__14mDoLib_clipper@l(r3)
+/* 8059EC5C 00000040  4B FF FD 3D */	bl _unresolved
+/* 8059EC60 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059EC64 00000048  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 8059EC68 0000004C  C0 1E 00 44 */	lfs f0, 0x44(r30)
 /* 8059EC6C 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8059EC70 00000000  40 81 00 10 */	ble lbl_8059EC80
@@ -26,25 +26,25 @@ lbl_8059EC1C:
 /* 8059EC7C 0000000C  D0 1F 05 20 */	stfs f0, 0x520(r31)
 lbl_8059EC80:
 /* 8059EC80 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8059EC84 00000004  4B FF FD 15 */	bl show__12daItemBase_cFv
-/* 8059EC88 00000008  3C 60 00 00 */	lis r3, stringBase0@ha
-/* 8059EC8C 0000000C  38 63 00 00 */	addi r3, r3, stringBase0@l
+/* 8059EC84 00000004  4B FF FD 15 */	bl _unresolved
+/* 8059EC88 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059EC8C 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8059EC90 00000010  38 63 00 08 */	addi r3, r3, 8
-/* 8059EC94 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 8059EC98 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8059EC94 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059EC98 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8059EC9C 0000001C  38 84 4E 00 */	addi r4, r4, 0x4e00
-/* 8059ECA0 00000020  4B FF FC F9 */	bl strcmp
+/* 8059ECA0 00000020  4B FF FC F9 */	bl _unresolved
 /* 8059ECA4 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 8059ECA8 00000028  40 82 00 48 */	bne lbl_8059ECF0
-/* 8059ECAC 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8059ECB0 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8059ECAC 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059ECB0 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8059ECB4 00000034  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
 /* 8059ECB8 00000038  2C 00 00 01 */	cmpwi r0, 1
 /* 8059ECBC 0000003C  40 82 00 34 */	bne lbl_8059ECF0
 /* 8059ECC0 00000040  88 1F 09 64 */	lbz r0, 0x964(r31)
 /* 8059ECC4 00000044  1C 80 00 30 */	mulli r4, r0, 0x30
-/* 8059ECC8 00000048  3C 60 00 00 */	lis r3, mData__12daShopItem_c@ha
-/* 8059ECCC 0000004C  38 03 00 00 */	addi r0, r3, mData__12daShopItem_c@l
+/* 8059ECC8 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059ECCC 0000004C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8059ECD0 00000050  7C 60 22 14 */	add r3, r0, r4
 /* 8059ECD4 00000054  C0 23 00 18 */	lfs f1, 0x18(r3)
 /* 8059ECD8 00000058  C0 1E 00 4C */	lfs f0, 0x4c(r30)
@@ -56,8 +56,8 @@ lbl_8059EC80:
 lbl_8059ECF0:
 /* 8059ECF0 00000000  88 1F 09 64 */	lbz r0, 0x964(r31)
 /* 8059ECF4 00000004  1C 80 00 30 */	mulli r4, r0, 0x30
-/* 8059ECF8 00000008  3C 60 00 00 */	lis r3, mData__12daShopItem_c@ha
-/* 8059ECFC 0000000C  38 03 00 00 */	addi r0, r3, mData__12daShopItem_c@l
+/* 8059ECF8 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059ECFC 0000000C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8059ED00 00000010  7C 60 22 14 */	add r3, r0, r4
 /* 8059ED04 00000014  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8059ED08 00000018  D0 1F 04 EC */	stfs f0, 0x4ec(r31)

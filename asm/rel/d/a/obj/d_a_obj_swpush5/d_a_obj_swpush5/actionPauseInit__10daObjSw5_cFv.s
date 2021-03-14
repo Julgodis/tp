@@ -1,6 +1,6 @@
 lbl_8059BEB4:
-/* 8059BEB4 00000000  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 8059BEB8 00000004  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8059BEB4 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059BEB8 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8059BEBC 00000008  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8059BEC0 0000000C  80 04 05 8C */	lwz r0, 0x58c(r4)
 /* 8059BEC4 00000010  60 00 02 00 */	ori r0, r0, 0x200

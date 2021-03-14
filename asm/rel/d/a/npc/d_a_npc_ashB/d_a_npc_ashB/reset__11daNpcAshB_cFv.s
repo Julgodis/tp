@@ -4,18 +4,18 @@ lbl_8095F0A4:
 /* 8095F0AC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8095F0B0 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8095F0B4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8095F0B8 00000014  4B FF ED 01 */	bl initialize__8daNpcF_cFv
+/* 8095F0B8 00000014  4B FF ED 01 */	bl _unresolved
 /* 8095F0BC 00000018  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
-/* 8095F0C0 0000001C  4B FF EC F9 */	bl initialize__15daNpcF_MatAnm_cFv
+/* 8095F0C0 0000001C  4B FF EC F9 */	bl _unresolved
 /* 8095F0C4 00000020  38 7F 0B E0 */	addi r3, r31, 0xbe0
-/* 8095F0C8 00000024  4B FF EC F1 */	bl initialize__15daNpcF_Lookat_cFv
+/* 8095F0C8 00000024  4B FF EC F1 */	bl _unresolved
 /* 8095F0CC 00000028  38 7F 0C 7C */	addi r3, r31, 0xc7c
-/* 8095F0D0 0000002C  4B FF EC E9 */	bl initialize__18daNpcF_ActorMngr_cFv
+/* 8095F0D0 0000002C  4B FF EC E9 */	bl _unresolved
 /* 8095F0D4 00000030  38 A0 00 00 */	li r5, 0
 /* 8095F0D8 00000034  90 BF 0D DC */	stw r5, 0xddc(r31)
 /* 8095F0DC 00000038  90 BF 0D E0 */	stw r5, 0xde0(r31)
-/* 8095F0E0 0000003C  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 8095F0E4 00000040  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 8095F0E0 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8095F0E4 00000040  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8095F0E8 00000044  80 64 00 00 */	lwz r3, 0(r4)
 /* 8095F0EC 00000048  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095F0F0 0000004C  90 7F 0D C4 */	stw r3, 0xdc4(r31)
@@ -65,8 +65,8 @@ lbl_8095F0A4:
 /* 8095F1A0 000000FC  B0 1F 08 F8 */	sth r0, 0x8f8(r31)
 /* 8095F1A4 00000100  A8 1F 08 F4 */	lha r0, 0x8f4(r31)
 /* 8095F1A8 00000104  B0 1F 08 FA */	sth r0, 0x8fa(r31)
-/* 8095F1AC 00000108  3C 60 00 00 */	lis r3, lit_4238@ha
-/* 8095F1B0 0000010C  C0 03 00 00 */	lfs f0, lit_4238@l(r3)
+/* 8095F1AC 00000108  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8095F1B0 0000010C  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 8095F1B4 00000110  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 8095F1B8 00000114  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 8095F1BC 00000118  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
@@ -77,8 +77,8 @@ lbl_8095F0A4:
 /* 8095F1D0 0000012C  D0 1F 09 7C */	stfs f0, 0x97c(r31)
 /* 8095F1D4 00000130  98 BF 0D ED */	stb r5, 0xded(r31)
 /* 8095F1D8 00000134  98 BF 0D EE */	stb r5, 0xdee(r31)
-/* 8095F1DC 00000138  3C 60 00 00 */	lis r3, lit_4500@ha
-/* 8095F1E0 0000013C  38 83 00 00 */	addi r4, r3, lit_4500@l
+/* 8095F1DC 00000138  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8095F1E0 0000013C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8095F1E4 00000140  80 64 00 00 */	lwz r3, 0(r4)
 /* 8095F1E8 00000144  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095F1EC 00000148  90 61 00 08 */	stw r3, 8(r1)

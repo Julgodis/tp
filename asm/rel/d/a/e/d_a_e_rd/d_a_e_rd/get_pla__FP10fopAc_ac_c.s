@@ -3,17 +3,17 @@ lbl_80504B20:
 /* 80504B24 00000004  7C 08 02 A6 */	mflr r0
 /* 80504B28 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80504B2C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80504B30 00000010  4B FF FE A9 */	bl _savegpr_29
+/* 80504B30 00000010  4B FF FE A9 */	bl _unresolved
 /* 80504B34 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80504B38 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80504B3C 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80504B38 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80504B3C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80504B40 00000020  83 DF 5D AC */	lwz r30, 0x5dac(r31)
 /* 80504B44 00000024  38 00 00 56 */	li r0, 0x56
 /* 80504B48 00000028  B0 01 00 08 */	sth r0, 8(r1)
-/* 80504B4C 0000002C  3C 60 00 00 */	lis r3, fpcSch_JudgeForPName__FPvPv@ha
-/* 80504B50 00000030  38 63 00 00 */	addi r3, r3, fpcSch_JudgeForPName__FPvPv@l
+/* 80504B4C 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80504B50 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80504B54 00000034  38 81 00 08 */	addi r4, r1, 8
-/* 80504B58 00000038  4B FF FE 81 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80504B58 00000038  4B FF FE 81 */	bl _unresolved
 /* 80504B5C 0000003C  28 03 00 00 */	cmplwi r3, 0
 /* 80504B60 00000040  40 82 00 0C */	bne lbl_80504B6C
 /* 80504B64 00000044  80 7F 5D AC */	lwz r3, 0x5dac(r31)
@@ -42,7 +42,7 @@ lbl_80504BB8:
 /* 80504BB8 00000000  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 lbl_80504BBC:
 /* 80504BBC 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80504BC0 00000004  4B FF FE 19 */	bl _restgpr_29
+/* 80504BC0 00000004  4B FF FE 19 */	bl _unresolved
 /* 80504BC4 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80504BC8 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80504BCC 00000010  38 21 00 20 */	addi r1, r1, 0x20

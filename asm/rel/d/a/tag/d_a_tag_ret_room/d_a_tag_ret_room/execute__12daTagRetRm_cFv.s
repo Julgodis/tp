@@ -15,7 +15,7 @@ lbl_80D5EF9C:
 /* 80D5EFD0 00000034  38 60 00 01 */	li r3, 1
 /* 80D5EFD4 00000038  38 80 00 05 */	li r4, 5
 /* 80D5EFD8 0000003C  38 A0 00 C9 */	li r5, 0xc9
-/* 80D5EFDC 00000040  4B FF FE 9D */	bl forceRestartRoom__9daPy_py_cFiUli
+/* 80D5EFDC 00000040  4B FF FE 9D */	bl _unresolved
 /* 80D5EFE0 00000044  48 00 00 18 */	b lbl_80D5EFF8
 lbl_80D5EFE4:
 /* 80D5EFE4 00000000  48 00 00 6D */	bl chkPlyrInTag__12daTagRetRm_cFv

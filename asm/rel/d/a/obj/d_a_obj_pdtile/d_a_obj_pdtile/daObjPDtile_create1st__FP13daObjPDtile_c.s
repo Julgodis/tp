@@ -3,7 +3,7 @@ lbl_80CAC0D8:
 /* 80CAC0DC 00000004  7C 08 02 A6 */	mflr r0
 /* 80CAC0E0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80CAC0E4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80CAC0E8 00000010  4B FF EB B1 */	bl _savegpr_29
+/* 80CAC0E8 00000010  4B FF EB B1 */	bl _unresolved
 /* 80CAC0EC 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80CAC0F0 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80CAC0F4 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
@@ -11,46 +11,46 @@ lbl_80CAC0D8:
 /* 80CAC0FC 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80CAC100 00000028  41 82 00 A8 */	beq lbl_80CAC1A8
 /* 80CAC104 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80CAC108 00000030  4B FF EB 91 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80CAC10C 00000034  3C 60 00 00 */	lis r3, __vt__13daObjPDtile_c@ha
-/* 80CAC110 00000038  38 03 00 00 */	addi r0, r3, __vt__13daObjPDtile_c@l
+/* 80CAC108 00000030  4B FF EB 91 */	bl _unresolved
+/* 80CAC10C 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC110 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC114 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
-/* 80CAC118 00000040  3C 60 00 00 */	lis r3, __vt__9cCcD_Stts@ha
-/* 80CAC11C 00000044  38 03 00 00 */	addi r0, r3, __vt__9cCcD_Stts@l
+/* 80CAC118 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC11C 00000044  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC120 00000048  90 1E 06 4C */	stw r0, 0x64c(r30)
 /* 80CAC124 0000004C  38 7E 06 50 */	addi r3, r30, 0x650
-/* 80CAC128 00000050  4B FF EB 71 */	bl __ct__10dCcD_GSttsFv
-/* 80CAC12C 00000054  3C 60 00 00 */	lis r3, __vt__9dCcD_Stts@ha
-/* 80CAC130 00000058  38 63 00 00 */	addi r3, r3, __vt__9dCcD_Stts@l
+/* 80CAC128 00000050  4B FF EB 71 */	bl _unresolved
+/* 80CAC12C 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC130 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC134 0000005C  90 7E 06 4C */	stw r3, 0x64c(r30)
 /* 80CAC138 00000060  38 03 00 20 */	addi r0, r3, 0x20
 /* 80CAC13C 00000064  90 1E 06 50 */	stw r0, 0x650(r30)
 /* 80CAC140 00000068  3B BE 06 70 */	addi r29, r30, 0x670
 /* 80CAC144 0000006C  7F A3 EB 78 */	mr r3, r29
-/* 80CAC148 00000070  4B FF EB 51 */	bl __ct__12dCcD_GObjInfFv
-/* 80CAC14C 00000074  3C 60 00 00 */	lis r3, __vt__14cCcD_ShapeAttr@ha
-/* 80CAC150 00000078  38 03 00 00 */	addi r0, r3, __vt__14cCcD_ShapeAttr@l
+/* 80CAC148 00000070  4B FF EB 51 */	bl _unresolved
+/* 80CAC14C 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC150 00000078  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC154 0000007C  90 1D 01 20 */	stw r0, 0x120(r29)
-/* 80CAC158 00000080  3C 60 00 00 */	lis r3, __vt__8cM3dGAab@ha
-/* 80CAC15C 00000084  38 03 00 00 */	addi r0, r3, __vt__8cM3dGAab@l
+/* 80CAC158 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC15C 00000084  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC160 00000088  90 1D 01 1C */	stw r0, 0x11c(r29)
-/* 80CAC164 0000008C  3C 60 00 00 */	lis r3, __vt__8cM3dGCyl@ha
-/* 80CAC168 00000090  38 03 00 00 */	addi r0, r3, __vt__8cM3dGCyl@l
+/* 80CAC164 0000008C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC168 00000090  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC16C 00000094  90 1D 01 38 */	stw r0, 0x138(r29)
-/* 80CAC170 00000098  3C 60 00 00 */	lis r3, __vt__12cCcD_CylAttr@ha
-/* 80CAC174 0000009C  38 63 00 00 */	addi r3, r3, __vt__12cCcD_CylAttr@l
+/* 80CAC170 00000098  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC174 0000009C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC178 000000A0  90 7D 01 20 */	stw r3, 0x120(r29)
 /* 80CAC17C 000000A4  38 03 00 58 */	addi r0, r3, 0x58
 /* 80CAC180 000000A8  90 1D 01 38 */	stw r0, 0x138(r29)
-/* 80CAC184 000000AC  3C 60 00 00 */	lis r3, __vt__8dCcD_Cyl@ha
-/* 80CAC188 000000B0  38 63 00 00 */	addi r3, r3, __vt__8dCcD_Cyl@l
+/* 80CAC184 000000AC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC188 000000B0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC18C 000000B4  90 7D 00 3C */	stw r3, 0x3c(r29)
 /* 80CAC190 000000B8  38 03 00 2C */	addi r0, r3, 0x2c
 /* 80CAC194 000000BC  90 1D 01 20 */	stw r0, 0x120(r29)
 /* 80CAC198 000000C0  38 03 00 84 */	addi r0, r3, 0x84
 /* 80CAC19C 000000C4  90 1D 01 38 */	stw r0, 0x138(r29)
 /* 80CAC1A0 000000C8  38 7E 07 DC */	addi r3, r30, 0x7dc
-/* 80CAC1A4 000000CC  4B FF EA F5 */	bl __ct__16Z2SoundObjSimpleFv
+/* 80CAC1A4 000000CC  4B FF EA F5 */	bl _unresolved
 lbl_80CAC1A8:
 /* 80CAC1A8 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80CAC1AC 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -59,7 +59,7 @@ lbl_80CAC1B4:
 /* 80CAC1B4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CAC1B8 00000004  4B FF EB 29 */	bl create1st__13daObjPDtile_cFv
 /* 80CAC1BC 00000008  39 61 00 20 */	addi r11, r1, 0x20
-/* 80CAC1C0 0000000C  4B FF EA D9 */	bl _restgpr_29
+/* 80CAC1C0 0000000C  4B FF EA D9 */	bl _unresolved
 /* 80CAC1C4 00000010  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80CAC1C8 00000014  7C 08 03 A6 */	mtlr r0
 /* 80CAC1CC 00000018  38 21 00 20 */	addi r1, r1, 0x20

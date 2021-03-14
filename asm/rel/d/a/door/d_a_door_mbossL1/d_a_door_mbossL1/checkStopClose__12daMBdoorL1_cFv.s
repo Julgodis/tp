@@ -3,12 +3,12 @@ lbl_806769D0:
 /* 806769D4 00000004  7C 08 02 A6 */	mflr r0
 /* 806769D8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 806769DC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 806769E0 00000010  4B FF BE 39 */	bl _savegpr_28
+/* 806769E0 00000010  4B FF BE 39 */	bl _unresolved
 /* 806769E4 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 806769E8 00000018  4B FF BE 31 */	bl getFRoomNo__13door_param2_cFP10fopAc_ac_c
+/* 806769E8 00000018  4B FF BE 31 */	bl _unresolved
 /* 806769EC 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 806769F0 00000020  7F 83 E3 78 */	mr r3, r28
-/* 806769F4 00000024  4B FF BE 25 */	bl getFRoomNo__13door_param2_cFP10fopAc_ac_c
+/* 806769F4 00000024  4B FF BE 25 */	bl _unresolved
 /* 806769F8 00000028  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 806769FC 0000002C  7C 1E 07 74 */	extsb r30, r0
 /* 80676A00 00000030  80 1C 05 F8 */	lwz r0, 0x5f8(r28)
@@ -18,10 +18,10 @@ lbl_806769D0:
 /* 80676A10 00000040  48 00 00 8C */	b lbl_80676A9C
 lbl_80676A14:
 /* 80676A14 00000000  7F 83 E3 78 */	mr r3, r28
-/* 80676A18 00000004  4B FF BE 01 */	bl getFrontOption__13door_param2_cFP10fopAc_ac_c
+/* 80676A18 00000004  4B FF BE 01 */	bl _unresolved
 /* 80676A1C 00000008  54 7D 06 3E */	clrlwi r29, r3, 0x18
 /* 80676A20 0000000C  7F 83 E3 78 */	mr r3, r28
-/* 80676A24 00000010  4B FF BD F5 */	bl getBackOption__13door_param2_cFP10fopAc_ac_c
+/* 80676A24 00000010  4B FF BD F5 */	bl _unresolved
 /* 80676A28 00000014  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 80676A2C 00000018  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80676A30 0000001C  7C 1E 00 00 */	cmpw r30, r0
@@ -32,7 +32,7 @@ lbl_80676A14:
 /* 80676A44 00000030  48 00 00 58 */	b lbl_80676A9C
 lbl_80676A48:
 /* 80676A48 00000000  7F 83 E3 78 */	mr r3, r28
-/* 80676A4C 00000004  4B FF BD CD */	bl getSwbit__13door_param2_cFP10fopAc_ac_c
+/* 80676A4C 00000004  4B FF BD CD */	bl _unresolved
 /* 80676A50 00000008  48 00 00 1C */	b lbl_80676A6C
 lbl_80676A54:
 /* 80676A54 00000000  2C 03 00 01 */	cmpwi r3, 1
@@ -41,7 +41,7 @@ lbl_80676A54:
 /* 80676A60 0000000C  48 00 00 3C */	b lbl_80676A9C
 lbl_80676A64:
 /* 80676A64 00000000  7F 83 E3 78 */	mr r3, r28
-/* 80676A68 00000004  4B FF BD B1 */	bl getSwbit2__13door_param2_cFP10fopAc_ac_c
+/* 80676A68 00000004  4B FF BD B1 */	bl _unresolved
 lbl_80676A6C:
 /* 80676A6C 00000000  54 64 06 3E */	clrlwi r4, r3, 0x18
 /* 80676A70 00000004  28 04 00 FF */	cmplwi r4, 0xff
@@ -49,16 +49,16 @@ lbl_80676A6C:
 /* 80676A78 0000000C  38 60 00 00 */	li r3, 0
 /* 80676A7C 00000010  48 00 00 20 */	b lbl_80676A9C
 lbl_80676A80:
-/* 80676A80 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80676A84 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80676A80 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80676A84 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80676A88 00000008  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80676A8C 0000000C  7C 05 07 74 */	extsb r5, r0
-/* 80676A90 00000010  4B FF BD 89 */	bl isSwitch__10dSv_info_cCFii
+/* 80676A90 00000010  4B FF BD 89 */	bl _unresolved
 /* 80676A94 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 80676A98 00000018  54 03 D9 7E */	srwi r3, r0, 5
 lbl_80676A9C:
 /* 80676A9C 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80676AA0 00000004  4B FF BD 79 */	bl _restgpr_28
+/* 80676AA0 00000004  4B FF BD 79 */	bl _unresolved
 /* 80676AA4 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80676AA8 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80676AAC 00000010  38 21 00 20 */	addi r1, r1, 0x20

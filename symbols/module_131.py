@@ -3,26 +3,76 @@
 # Module: 131
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A60C0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A60EC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A6118, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'create__12daTagMstop_cFv': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A6138, 'size': 0x01E0, 'padding': 0x00, 'name': "create__12daTagMstop_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagMstop_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A6318, 'size': 0x0020, 'padding': 0x00, 'name': "daTagMstop_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'__dt__12daTagMstop_cFv': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A6338, 'size': 0x0064, 'padding': 0x00, 'name': "__dt__12daTagMstop_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagMstop_Delete__FP12daTagMstop_c': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A639C, 'size': 0x0028, 'padding': 0x00, 'name': "daTagMstop_Delete__FP12daTagMstop_c", 'reference_count': 1, 'type': "Function"},
-	'eventOrder__12daTagMstop_cFv': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A63C4, 'size': 0x0034, 'padding': 0x00, 'name': "eventOrder__12daTagMstop_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__12daTagMstop_cFv': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A63F8, 'size': 0x0544, 'padding': 0x00, 'name': "execute__12daTagMstop_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagMstop_Execute__FP12daTagMstop_c': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A693C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagMstop_Execute__FP12daTagMstop_c", 'reference_count': 1, 'type': "Function"},
-	'daTagMstop_Draw__FP12daTagMstop_c': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".text", 'addr': 0x805A695C, 'size': 0x0008, 'padding': 0x00, 'name': "daTagMstop_Draw__FP12daTagMstop_c", 'reference_count': 1, 'type': "Function"},
-	'data_805A6964': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805A6964, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_805A6968': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805A6968, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3863': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A696C, 'size': 0x0004, 'padding': 0x00, 'name': "@3863", 'reference_count': 0, 'type': "Integer"},
-	'lit_3864': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A6970, 'size': 0x0004, 'padding': 0x00, 'name': "@3864", 'reference_count': 0, 'type': "Integer"},
-	'lit_4056': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A6974, 'size': 0x0004, 'padding': 0x00, 'name': "@4056", 'reference_count': 0, 'type': "Integer"},
-	'lit_4057': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A6978, 'size': 0x0004, 'padding': 0x00, 'name': "@4057", 'reference_count': 0, 'type': "Integer"},
-	'lit_4058': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A697C, 'size': 0x0004, 'padding': 0x00, 'name': "@4058", 'reference_count': 0, 'type': "Integer"},
-	'lit_4059': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".rodata", 'addr': 0x805A6980, 'size': 0x0004, 'padding': 0x00, 'name': "@4059", 'reference_count': 0, 'type': "InitData"},
-	'l_daTagMstop_Method': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".data", 'addr': 0x805A6984, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagMstop_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Mstop': {'library': "d/a/tag/d_a_tag_mstop", 'translation_unit': "d_a_tag_mstop", 'section': ".data", 'addr': 0x805A69A4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Mstop", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_mstop",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_mstop",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x805A60C0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A60EC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6118,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x805A6138,'size':480,'pad':0,'label':"create__12daTagMstop_cFv",'name':"create__12daTagMstop_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A6318,'size':32,'pad':0,'label':"daTagMstop_Create__FP10fopAc_ac_c",'name':"daTagMstop_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6338,'size':100,'pad':0,'label':"__dt__12daTagMstop_cFv",'name':"__dt__12daTagMstop_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A639C,'size':40,'pad':0,'label':"daTagMstop_Delete__FP12daTagMstop_c",'name':"daTagMstop_Delete__FP12daTagMstop_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A63C4,'size':52,'pad':0,'label':"eventOrder__12daTagMstop_cFv",'name':"eventOrder__12daTagMstop_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A63F8,'size':1348,'pad':0,'label':"execute__12daTagMstop_cFv",'name':"execute__12daTagMstop_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A693C,'size':32,'pad':0,'label':"daTagMstop_Execute__FP12daTagMstop_c",'name':"daTagMstop_Execute__FP12daTagMstop_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A695C,'size':8,'pad':0,'label':"daTagMstop_Draw__FP12daTagMstop_c",'name':"daTagMstop_Draw__FP12daTagMstop_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A6964,'size':4,'pad':0,'label':"data_805A6964",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x805A6968,'size':4,'pad':0,'label':"data_805A6968",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x805A696C,'size':4,'pad':0,'label':"lit_3863",'name':"@3863",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6970,'size':4,'pad':0,'label':"lit_3864",'name':"@3864",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6974,'size':4,'pad':0,'label':"lit_4056",'name':"@4056",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6978,'size':4,'pad':0,'label':"lit_4057",'name':"@4057",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A697C,'size':4,'pad':0,'label':"lit_4058",'name':"@4058",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x805A6980,'size':4,'pad':0,'label':"lit_4059",'name':"@4059",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x805A6984,'size':32,'pad':0,'label':"l_daTagMstop_Method",'name':"l_daTagMstop_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x805A69A4,'size':48,'pad':0,'label':"g_profile_Tag_Mstop",'name':"g_profile_Tag_Mstop",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create__12daTagMstop_cFv":3,
+	"daTagMstop_Create__FP10fopAc_ac_c":4,
+	"__dt__12daTagMstop_cFv":5,
+	"daTagMstop_Delete__FP12daTagMstop_c":6,
+	"eventOrder__12daTagMstop_cFv":7,
+	"execute__12daTagMstop_cFv":8,
+	"daTagMstop_Execute__FP12daTagMstop_c":9,
+	"daTagMstop_Draw__FP12daTagMstop_c":10,
+	"data_805A6964":11,
+	"data_805A6968":12,
+	"lit_3863":13,
+	"lit_3864":14,
+	"lit_4056":15,
+	"lit_4057":16,
+	"lit_4058":17,
+	"lit_4059":18,
+	"l_daTagMstop_Method":19,
+	"g_profile_Tag_Mstop":20,
 }
+

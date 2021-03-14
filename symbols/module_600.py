@@ -3,33 +3,90 @@
 # Module: 600
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CB85E0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CB860C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CB8638, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
-	'daObjRCircle_c_createHeap__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8658, 'size': 0x0020, 'padding': 0x00, 'name': "daObjRCircle_c_createHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'__ct__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8678, 'size': 0x008C, 'padding': 0x00, 'name': "__ct__14daObjRCircle_cFv", 'reference_count': 2, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8704, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'__dt__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB874C, 'size': 0x00C8, 'padding': 0x00, 'name': "__dt__14daObjRCircle_cFv", 'reference_count': 0, 'type': "Function"},
-	'createHeap__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8814, 'size': 0x0114, 'padding': 0x00, 'name': "createHeap__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8928, 'size': 0x0100, 'padding': 0x00, 'name': "create__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'Delete__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8A28, 'size': 0x0034, 'padding': 0x00, 'name': "Delete__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8A5C, 'size': 0x00CC, 'padding': 0x00, 'name': "draw__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8B28, 'size': 0x00BC, 'padding': 0x00, 'name': "execute__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'init__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8BE4, 'size': 0x000C, 'padding': 0x00, 'name': "init__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'setModelMtx__14daObjRCircle_cFv': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8BF0, 'size': 0x0054, 'padding': 0x00, 'name': "setModelMtx__14daObjRCircle_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjRCircle_create__FP14daObjRCircle_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8C44, 'size': 0x0054, 'padding': 0x00, 'name': "daObjRCircle_create__FP14daObjRCircle_c", 'reference_count': 1, 'type': "Function"},
-	'daObjRCircle_Delete__FP14daObjRCircle_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8C98, 'size': 0x0020, 'padding': 0x00, 'name': "daObjRCircle_Delete__FP14daObjRCircle_c", 'reference_count': 1, 'type': "Function"},
-	'daObjRCircle_execute__FP14daObjRCircle_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8CB8, 'size': 0x0020, 'padding': 0x00, 'name': "daObjRCircle_execute__FP14daObjRCircle_c", 'reference_count': 1, 'type': "Function"},
-	'daObjRCircle_draw__FP14daObjRCircle_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".text", 'addr': 0x80CB8CD8, 'size': 0x0020, 'padding': 0x00, 'name': "daObjRCircle_draw__FP14daObjRCircle_c", 'reference_count': 1, 'type': "Function"},
-	'data_80CB8CF8': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80CB8CF8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80CB8CFC': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80CB8CFC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3701': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".rodata", 'addr': 0x80CB8D04, 'size': 0x0004, 'padding': 0x00, 'name': "@3701", 'reference_count': 0, 'type': "Integer"},
-	'lit_3702': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".rodata", 'addr': 0x80CB8D08, 'size': 0x0004, 'padding': 0x00, 'name': "@3702", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".rodata", 'addr': 0x80CB8D0C, 'size': 0x0008, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".data", 'addr': 0x80CB8D14, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'daObjRCircle_METHODS': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".data", 'addr': 0x80CB8D18, 'size': 0x0020, 'padding': 0x00, 'name': "daObjRCircle_METHODS", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_RCircle': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".data", 'addr': 0x80CB8D38, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_RCircle", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__14daObjRCircle_c': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".data", 'addr': 0x80CB8D68, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__14daObjRCircle_c", 'reference_count': 0, 'type': "VirtualTable"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/d_a_obj_rcircle", 'translation_unit': "d_a_obj_rcircle", 'section': ".data", 'addr': 0x80CB8D74, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_rcircle",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_rcircle",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80CB85E0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB860C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8638,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':10,'type':"Function"},
+	{'addr':0x80CB8658,'size':32,'pad':0,'label':"daObjRCircle_c_createHeap__FP10fopAc_ac_c",'name':"daObjRCircle_c_createHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8678,'size':140,'pad':0,'label':"__ct__14daObjRCircle_cFv",'name':"__ct__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80CB8704,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB874C,'size':200,'pad':0,'label':"__dt__14daObjRCircle_cFv",'name':"__dt__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8814,'size':276,'pad':0,'label':"createHeap__14daObjRCircle_cFv",'name':"createHeap__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8928,'size':256,'pad':0,'label':"create__14daObjRCircle_cFv",'name':"create__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8A28,'size':52,'pad':0,'label':"Delete__14daObjRCircle_cFv",'name':"Delete__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8A5C,'size':204,'pad':0,'label':"draw__14daObjRCircle_cFv",'name':"draw__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8B28,'size':188,'pad':0,'label':"execute__14daObjRCircle_cFv",'name':"execute__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8BE4,'size':12,'pad':0,'label':"init__14daObjRCircle_cFv",'name':"init__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8BF0,'size':84,'pad':0,'label':"setModelMtx__14daObjRCircle_cFv",'name':"setModelMtx__14daObjRCircle_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CB8C44,'size':84,'pad':0,'label':"daObjRCircle_create__FP14daObjRCircle_c",'name':"daObjRCircle_create__FP14daObjRCircle_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8C98,'size':32,'pad':0,'label':"daObjRCircle_Delete__FP14daObjRCircle_c",'name':"daObjRCircle_Delete__FP14daObjRCircle_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8CB8,'size':32,'pad':0,'label':"daObjRCircle_execute__FP14daObjRCircle_c",'name':"daObjRCircle_execute__FP14daObjRCircle_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8CD8,'size':32,'pad':0,'label':"daObjRCircle_draw__FP14daObjRCircle_c",'name':"daObjRCircle_draw__FP14daObjRCircle_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CB8CF8,'size':4,'pad':0,'label':"data_80CB8CF8",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8CFC,'size':4,'pad':0,'label':"data_80CB8CFC",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8D00,'size':4,'pad':0,'label':"lit_3701",'name':"@3701",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80CB8D04,'size':4,'pad':0,'label':"lit_3702",'name':"@3702",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8D08,'size':8,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80CB8D10,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8D14,'size':32,'pad':0,'label':"daObjRCircle_METHODS",'name':"daObjRCircle_METHODS",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8D34,'size':48,'pad':0,'label':"g_profile_Obj_RCircle",'name':"g_profile_Obj_RCircle",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80CB8D64,'size':12,'pad':0,'label':"__vt__14daObjRCircle_c",'name':"__vt__14daObjRCircle_c",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+	{'addr':0x80CB8D70,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daObjRCircle_c_createHeap__FP10fopAc_ac_c":3,
+	"__ct__14daObjRCircle_cFv":4,
+	"__dt__12J3DFrameCtrlFv":5,
+	"__dt__14daObjRCircle_cFv":6,
+	"createHeap__14daObjRCircle_cFv":7,
+	"create__14daObjRCircle_cFv":8,
+	"Delete__14daObjRCircle_cFv":9,
+	"draw__14daObjRCircle_cFv":10,
+	"execute__14daObjRCircle_cFv":11,
+	"init__14daObjRCircle_cFv":12,
+	"setModelMtx__14daObjRCircle_cFv":13,
+	"daObjRCircle_create__FP14daObjRCircle_c":14,
+	"daObjRCircle_Delete__FP14daObjRCircle_c":15,
+	"daObjRCircle_execute__FP14daObjRCircle_c":16,
+	"daObjRCircle_draw__FP14daObjRCircle_c":17,
+	"data_80CB8CF8":18,
+	"data_80CB8CFC":19,
+	"lit_3701":20,
+	"lit_3702":21,
+	"stringBase0":22,
+	"l_arcName":23,
+	"daObjRCircle_METHODS":24,
+	"g_profile_Obj_RCircle":25,
+	"__vt__14daObjRCircle_c":26,
+	"__vt__12J3DFrameCtrl":27,
 }
+

@@ -23,10 +23,10 @@ lbl_8045A9E8:
 /* 8045AA3C 00000054  B0 1F 04 E4 */	sth r0, 0x4e4(r31)
 lbl_8045AA40:
 /* 8045AA40 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8045AA44 00000004  4B FF EB F5 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
+/* 8045AA44 00000004  4B FF EB F5 */	bl _unresolved
 /* 8045AA48 00000008  7C 64 1B 78 */	mr r4, r3
 /* 8045AA4C 0000000C  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 8045AA50 00000010  4B FF EB E9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8045AA50 00000010  4B FF EB E9 */	bl _unresolved
 /* 8045AA54 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8045AA58 00000018  2C 1E 00 04 */	cmpwi r30, 4
 /* 8045AA5C 0000001C  40 82 00 78 */	bne lbl_8045AAD4
@@ -34,17 +34,17 @@ lbl_8045AA40:
 /* 8045AA64 00000024  4B FF ED 41 */	bl getDzbName__Fi
 /* 8045AA68 00000028  7C 7E 1B 78 */	mr r30, r3
 /* 8045AA6C 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 8045AA70 00000030  4B FF EB C9 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
+/* 8045AA70 00000030  4B FF EB C9 */	bl _unresolved
 /* 8045AA74 00000034  7C 64 1B 78 */	mr r4, r3
-/* 8045AA78 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8045AA7C 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045AA78 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045AA7C 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8045AA80 00000040  3C 63 00 02 */	addis r3, r3, 2
 /* 8045AA84 00000044  7F C5 F3 78 */	mr r5, r30
 /* 8045AA88 00000048  38 63 C2 F8 */	addi r3, r3, -15624
-/* 8045AA8C 0000004C  4B FF EB AD */	bl getObjectResName2Index__14dRes_control_cFPCcPCc
+/* 8045AA8C 0000004C  4B FF EB AD */	bl _unresolved
 /* 8045AA90 00000050  7C 7E 1B 78 */	mr r30, r3
 /* 8045AA94 00000054  7F E3 FB 78 */	mr r3, r31
-/* 8045AA98 00000058  4B FF EB A1 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
+/* 8045AA98 00000058  4B FF EB A1 */	bl _unresolved
 /* 8045AA9C 0000005C  7C 64 1B 78 */	mr r4, r3
 /* 8045AAA0 00000060  7F E3 FB 78 */	mr r3, r31
 /* 8045AAA4 00000064  7F C5 F3 78 */	mr r5, r30
@@ -52,14 +52,14 @@ lbl_8045AA40:
 /* 8045AAAC 0000006C  3C E0 80 02 */	lis r7, 0x8002 /* 0x80022110@ha */
 /* 8045AAB0 00000070  38 E7 21 10 */	addi r7, r7, 0x2110 /* 0x80022110@l */
 /* 8045AAB4 00000074  39 00 00 00 */	li r8, 0
-/* 8045AAB8 00000078  4B FF EB 81 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 8045AAB8 00000078  4B FF EB 81 */	bl _unresolved
 /* 8045AABC 0000007C  7C 7E 1B 78 */	mr r30, r3
 /* 8045AAC0 00000080  2C 1E 00 05 */	cmpwi r30, 5
 /* 8045AAC4 00000084  40 82 00 08 */	bne lbl_8045AACC
 /* 8045AAC8 00000088  48 00 00 10 */	b lbl_8045AAD8
 lbl_8045AACC:
 /* 8045AACC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8045AAD0 00000004  4B FF EB 69 */	bl MoveBGExecute__16dBgS_MoveBgActorFv
+/* 8045AAD0 00000004  4B FF EB 69 */	bl _unresolved
 lbl_8045AAD4:
 /* 8045AAD4 00000000  7F C3 F3 78 */	mr r3, r30
 lbl_8045AAD8:

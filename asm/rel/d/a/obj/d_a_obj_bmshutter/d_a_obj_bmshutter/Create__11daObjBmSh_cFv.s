@@ -11,24 +11,24 @@ lbl_80BB9B84:
 /* 80BB9BA8 00000024  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 80BB9BAC 00000028  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BB9BB0 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 80BB9BB4 00000030  4B FF FE 85 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80BB9BB4 00000030  4B FF FE 85 */	bl _unresolved
 /* 80BB9BB8 00000034  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BB9BBC 00000038  54 00 86 3E */	rlwinm r0, r0, 0x10, 0x18, 0x1f
 /* 80BB9BC0 0000003C  98 1F 05 AE */	stb r0, 0x5ae(r31)
-/* 80BB9BC4 00000040  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BB9BC8 00000044  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB9BC4 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BB9BC8 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BB9BCC 00000048  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80BB9BD0 0000004C  7F E4 FB 78 */	mr r4, r31
 /* 80BB9BD4 00000050  88 BF 05 AE */	lbz r5, 0x5ae(r31)
-/* 80BB9BD8 00000054  4B FF FE 61 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc
+/* 80BB9BD8 00000054  4B FF FE 61 */	bl _unresolved
 /* 80BB9BDC 00000058  B0 7F 05 AC */	sth r3, 0x5ac(r31)
-/* 80BB9BE0 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BB9BE4 00000060  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB9BE0 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BB9BE4 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BB9BE8 00000064  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BB9BEC 00000068  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BB9BF0 0000006C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80BB9BF4 00000070  7C 05 07 74 */	extsb r5, r0
-/* 80BB9BF8 00000074  4B FF FE 41 */	bl isSwitch__10dSv_info_cCFii
+/* 80BB9BF8 00000074  4B FF FE 41 */	bl _unresolved
 /* 80BB9BFC 00000078  2C 03 00 00 */	cmpwi r3, 0
 /* 80BB9C00 0000007C  41 82 00 18 */	beq lbl_80BB9C18
 /* 80BB9C04 00000080  38 00 00 03 */	li r0, 3

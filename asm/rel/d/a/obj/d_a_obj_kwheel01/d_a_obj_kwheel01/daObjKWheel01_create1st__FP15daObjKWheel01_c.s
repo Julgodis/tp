@@ -9,15 +9,15 @@ lbl_80C4F4C0:
 /* 80C4F4DC 0000001C  40 82 00 48 */	bne lbl_80C4F524
 /* 80C4F4E0 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80C4F4E4 00000024  41 82 00 34 */	beq lbl_80C4F518
-/* 80C4F4E8 00000028  4B FF F5 71 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80C4F4EC 0000002C  3C 60 00 00 */	lis r3, __vt__17dEvLib_callback_c@ha
-/* 80C4F4F0 00000030  38 03 00 00 */	addi r0, r3, __vt__17dEvLib_callback_c@l
+/* 80C4F4E8 00000028  4B FF F5 71 */	bl _unresolved
+/* 80C4F4EC 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C4F4F0 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C4F4F4 00000034  90 1F 05 A8 */	stw r0, 0x5a8(r31)
 /* 80C4F4F8 00000038  93 FF 05 AC */	stw r31, 0x5ac(r31)
 /* 80C4F4FC 0000003C  38 00 00 00 */	li r0, 0
 /* 80C4F500 00000040  90 1F 05 B0 */	stw r0, 0x5b0(r31)
-/* 80C4F504 00000044  3C 60 00 00 */	lis r3, __vt__15daObjKWheel01_c@ha
-/* 80C4F508 00000048  38 63 00 00 */	addi r3, r3, __vt__15daObjKWheel01_c@l
+/* 80C4F504 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C4F508 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C4F50C 0000004C  90 7F 05 9C */	stw r3, 0x59c(r31)
 /* 80C4F510 00000050  38 03 00 28 */	addi r0, r3, 0x28
 /* 80C4F514 00000054  90 1F 05 A8 */	stw r0, 0x5a8(r31)

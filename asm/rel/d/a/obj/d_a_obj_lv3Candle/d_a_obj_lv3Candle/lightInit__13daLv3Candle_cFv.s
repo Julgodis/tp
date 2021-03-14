@@ -1,6 +1,6 @@
 lbl_80C57F8C:
-/* 80C57F8C 00000000  3C 80 00 00 */	lis r4, mCcDObjInfo__13daLv3Candle_c@ha
-/* 80C57F90 00000004  38 84 00 00 */	addi r4, r4, mCcDObjInfo__13daLv3Candle_c@l
+/* 80C57F8C 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C57F90 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C57F94 00000008  C0 03 06 EC */	lfs f0, 0x6ec(r3)
 /* 80C57F98 0000000C  D0 03 06 FC */	stfs f0, 0x6fc(r3)
 /* 80C57F9C 00000010  C0 03 06 F0 */	lfs f0, 0x6f0(r3)

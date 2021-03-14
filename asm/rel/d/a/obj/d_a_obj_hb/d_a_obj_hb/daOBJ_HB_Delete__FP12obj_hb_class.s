@@ -5,13 +5,13 @@ lbl_80C1B12C:
 /* 80C1B138 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C1B13C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C1B140 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 80C1B144 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80C1B148 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80C1B14C 00000020  4B FF E4 4D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C1B144 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C1B148 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C1B14C 00000020  4B FF E4 4D */	bl _unresolved
 /* 80C1B150 00000024  38 7F 05 C0 */	addi r3, r31, 0x5c0
-/* 80C1B154 00000028  4B FF E4 45 */	bl stopAnime__10Z2CreatureFv
-/* 80C1B158 0000002C  3C 60 00 00 */	lis r3, data_80C1B7FC@ha
-/* 80C1B15C 00000030  8C 03 00 00 */	lbzu r0, data_80C1B7FC@l(r3)
+/* 80C1B154 00000028  4B FF E4 45 */	bl _unresolved
+/* 80C1B158 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C1B15C 00000030  8C 03 00 00 */	lbzu r0, 0x0000(r3)
 /* 80C1B160 00000034  7C 00 07 75 */	extsb. r0, r0
 /* 80C1B164 00000038  41 82 00 0C */	beq lbl_80C1B170
 /* 80C1B168 0000003C  38 00 00 00 */	li r0, 0

@@ -3,30 +3,84 @@
 # Module: 441
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BE3100, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BE312C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BE3158, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'daObjE_CREATE_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3178, 'size': 0x0020, 'padding': 0x00, 'name': "daObjE_CREATE_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daObjE_CREATE_Delete__FP15daObjE_CREATE_c': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3198, 'size': 0x0024, 'padding': 0x00, 'name': "daObjE_CREATE_Delete__FP15daObjE_CREATE_c", 'reference_count': 1, 'type': "Function"},
-	'NormalAction__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE31BC, 'size': 0x02A0, 'padding': 0x00, 'name': "NormalAction__15daObjE_CREATE_cFv", 'reference_count': 3, 'type': "Function"},
-	'SearchAction__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE345C, 'size': 0x0044, 'padding': 0x00, 'name': "SearchAction__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'LoopAction__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE34A0, 'size': 0x00A4, 'padding': 0x00, 'name': "LoopAction__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'Action__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3544, 'size': 0x0058, 'padding': 0x00, 'name': "Action__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'Execute__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE359C, 'size': 0x0024, 'padding': 0x00, 'name': "Execute__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'Delete__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE35C0, 'size': 0x0030, 'padding': 0x00, 'name': "Delete__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjE_CREATE_Draw__FP15daObjE_CREATE_c': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE35F0, 'size': 0x0008, 'padding': 0x00, 'name': "daObjE_CREATE_Draw__FP15daObjE_CREATE_c", 'reference_count': 1, 'type': "Function"},
-	'daObjE_CREATE_Execute__FP15daObjE_CREATE_c': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE35F8, 'size': 0x0020, 'padding': 0x00, 'name': "daObjE_CREATE_Execute__FP15daObjE_CREATE_c", 'reference_count': 1, 'type': "Function"},
-	'NameChk__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3618, 'size': 0x0158, 'padding': 0x00, 'name': "NameChk__15daObjE_CREATE_cFv", 'reference_count': 2, 'type': "Function"},
-	'create__15daObjE_CREATE_cFv': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3770, 'size': 0x0108, 'padding': 0x00, 'name': "create__15daObjE_CREATE_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".text", 'addr': 0x80BE3878, 'size': 0x0008, 'padding': 0x00, 'name': "daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c", 'reference_count': 1, 'type': "Function"},
-	'data_80BE3880': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80BE3880, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80BE3884': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80BE3884, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3720': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".rodata", 'addr': 0x80BE388C, 'size': 0x0004, 'padding': 0x00, 'name': "@3720", 'reference_count': 0, 'type': "InitData"},
-	'lit_3721': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".rodata", 'addr': 0x80BE3890, 'size': 0x0004, 'padding': 0x00, 'name': "@3721", 'reference_count': 0, 'type': "Integer"},
-	'lit_3722': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".rodata", 'addr': 0x80BE3894, 'size': 0x0004, 'padding': 0x04, 'name': "@3722", 'reference_count': 0, 'type': "Integer"},
-	'lit_3724': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".rodata", 'addr': 0x80BE389C, 'size': 0x0008, 'padding': 0x00, 'name': "@3724", 'reference_count': 0, 'type': "InitData"},
-	'lit_3838': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".data", 'addr': 0x80BE38A4, 'size': 0x0034, 'padding': 0x00, 'name': "@3838", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daObjE_CREATE_Method': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".data", 'addr': 0x80BE38D8, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjE_CREATE_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_E_CREATE': {'library': "d/a/obj/d_a_obj_enemy_create", 'translation_unit': "d_a_obj_enemy_create", 'section': ".data", 'addr': 0x80BE38F8, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_E_CREATE", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_enemy_create",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_enemy_create",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80BE3100,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE312C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE3158,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80BE3178,'size':32,'pad':0,'label':"daObjE_CREATE_Create__FP10fopAc_ac_c",'name':"daObjE_CREATE_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE3198,'size':36,'pad':0,'label':"daObjE_CREATE_Delete__FP15daObjE_CREATE_c",'name':"daObjE_CREATE_Delete__FP15daObjE_CREATE_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE31BC,'size':672,'pad':0,'label':"NormalAction__15daObjE_CREATE_cFv",'name':"NormalAction__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':3,'type':"Function"},
+	{'addr':0x80BE345C,'size':68,'pad':0,'label':"SearchAction__15daObjE_CREATE_cFv",'name':"SearchAction__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE34A0,'size':164,'pad':0,'label':"LoopAction__15daObjE_CREATE_cFv",'name':"LoopAction__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE3544,'size':88,'pad':0,'label':"Action__15daObjE_CREATE_cFv",'name':"Action__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE359C,'size':36,'pad':0,'label':"Execute__15daObjE_CREATE_cFv",'name':"Execute__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE35C0,'size':48,'pad':0,'label':"Delete__15daObjE_CREATE_cFv",'name':"Delete__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE35F0,'size':8,'pad':0,'label':"daObjE_CREATE_Draw__FP15daObjE_CREATE_c",'name':"daObjE_CREATE_Draw__FP15daObjE_CREATE_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE35F8,'size':32,'pad':0,'label':"daObjE_CREATE_Execute__FP15daObjE_CREATE_c",'name':"daObjE_CREATE_Execute__FP15daObjE_CREATE_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE3618,'size':344,'pad':0,'label':"NameChk__15daObjE_CREATE_cFv",'name':"NameChk__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE3770,'size':264,'pad':0,'label':"create__15daObjE_CREATE_cFv",'name':"create__15daObjE_CREATE_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BE3878,'size':8,'pad':0,'label':"daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c",'name':"daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BE3880,'size':4,'pad':0,'label':"data_80BE3880",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80BE3884,'size':4,'pad':0,'label':"data_80BE3884",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80BE3888,'size':4,'pad':0,'label':"lit_3720",'name':"@3720",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BE388C,'size':4,'pad':0,'label':"lit_3721",'name':"@3721",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BE3890,'size':4,'pad':4,'label':"lit_3722",'name':"@3722",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BE3898,'size':8,'pad':0,'label':"lit_3724",'name':"@3724",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BE38A0,'size':52,'pad':0,'label':"lit_3838",'name':"@3838",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BE38D4,'size':32,'pad':0,'label':"l_daObjE_CREATE_Method",'name':"l_daObjE_CREATE_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BE38F4,'size':48,'pad':0,'label':"g_profile_Obj_E_CREATE",'name':"g_profile_Obj_E_CREATE",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daObjE_CREATE_Create__FP10fopAc_ac_c":3,
+	"daObjE_CREATE_Delete__FP15daObjE_CREATE_c":4,
+	"NormalAction__15daObjE_CREATE_cFv":5,
+	"SearchAction__15daObjE_CREATE_cFv":6,
+	"LoopAction__15daObjE_CREATE_cFv":7,
+	"Action__15daObjE_CREATE_cFv":8,
+	"Execute__15daObjE_CREATE_cFv":9,
+	"Delete__15daObjE_CREATE_cFv":10,
+	"daObjE_CREATE_Draw__FP15daObjE_CREATE_c":11,
+	"daObjE_CREATE_Execute__FP15daObjE_CREATE_c":12,
+	"NameChk__15daObjE_CREATE_cFv":13,
+	"create__15daObjE_CREATE_cFv":14,
+	"daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c":15,
+	"data_80BE3880":16,
+	"data_80BE3884":17,
+	"lit_3720":18,
+	"lit_3721":19,
+	"lit_3722":20,
+	"lit_3724":21,
+	"lit_3838":22,
+	"l_daObjE_CREATE_Method":23,
+	"g_profile_Obj_E_CREATE":24,
 }
+

@@ -4,18 +4,18 @@ lbl_80A0F78C:
 /* 80A0F794 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A0F798 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80A0F79C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80A0F7A0 00000014  4B FF EA 19 */	bl initialize__8daNpcF_cFv
+/* 80A0F7A0 00000014  4B FF EA 19 */	bl _unresolved
 /* 80A0F7A4 00000018  80 7F 0B E0 */	lwz r3, 0xbe0(r31)
-/* 80A0F7A8 0000001C  4B FF EA 11 */	bl initialize__15daNpcF_MatAnm_cFv
+/* 80A0F7A8 0000001C  4B FF EA 11 */	bl _unresolved
 /* 80A0F7AC 00000020  38 7F 0B E4 */	addi r3, r31, 0xbe4
-/* 80A0F7B0 00000024  4B FF EA 09 */	bl initialize__15daNpcF_Lookat_cFv
+/* 80A0F7B0 00000024  4B FF EA 09 */	bl _unresolved
 /* 80A0F7B4 00000028  38 7F 0C 80 */	addi r3, r31, 0xc80
-/* 80A0F7B8 0000002C  4B FF EA 01 */	bl initialize__18daNpcF_ActorMngr_cFv
+/* 80A0F7B8 0000002C  4B FF EA 01 */	bl _unresolved
 /* 80A0F7BC 00000030  38 A0 00 00 */	li r5, 0
 /* 80A0F7C0 00000034  90 BF 0D FC */	stw r5, 0xdfc(r31)
 /* 80A0F7C4 00000038  90 BF 0E 00 */	stw r5, 0xe00(r31)
-/* 80A0F7C8 0000003C  3C 60 00 00 */	lis r3, __ptmf_null@ha
-/* 80A0F7CC 00000040  38 83 00 00 */	addi r4, r3, __ptmf_null@l
+/* 80A0F7C8 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A0F7CC 00000040  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80A0F7D0 00000044  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A0F7D4 00000048  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A0F7D8 0000004C  90 7F 0D C8 */	stw r3, 0xdc8(r31)
@@ -27,8 +27,8 @@ lbl_80A0F78C:
 /* 80A0F7F0 00000064  B0 BF 0E 1E */	sth r5, 0xe1e(r31)
 /* 80A0F7F4 00000068  90 1F 0D F8 */	stw r0, 0xdf8(r31)
 /* 80A0F7F8 0000006C  B0 BF 09 E6 */	sth r5, 0x9e6(r31)
-/* 80A0F7FC 00000070  3C 60 00 00 */	lis r3, lit_4415@ha
-/* 80A0F800 00000074  C0 03 00 00 */	lfs f0, lit_4415@l(r3)
+/* 80A0F7FC 00000070  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A0F800 00000074  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80A0F804 00000078  D0 1F 09 74 */	stfs f0, 0x974(r31)
 /* 80A0F808 0000007C  D0 1F 09 7C */	stfs f0, 0x97c(r31)
 /* 80A0F80C 00000080  D0 1F 05 2C */	stfs f0, 0x52c(r31)

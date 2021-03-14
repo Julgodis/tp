@@ -3,29 +3,82 @@
 # Module: 744
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D61680, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D616AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D616D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'CheckCreateHeap__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D616F8, 'size': 0x0020, 'padding': 0x00, 'name': "CheckCreateHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'search_spinner_sub__FPvPv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61718, 'size': 0x018C, 'padding': 0x00, 'name': "search_spinner_sub__FPvPv", 'reference_count': 0, 'type': "Function"},
-	'initBaseMtx__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D618A4, 'size': 0x0020, 'padding': 0x00, 'name': "initBaseMtx__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D618C4, 'size': 0x0058, 'padding': 0x00, 'name': "setBaseMtx__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'Create__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D6191C, 'size': 0x0050, 'padding': 0x00, 'name': "Create__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'CreateHeap__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D6196C, 'size': 0x0008, 'padding': 0x00, 'name': "CreateHeap__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61974, 'size': 0x008C, 'padding': 0x00, 'name': "create__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61A00, 'size': 0x00B4, 'padding': 0x00, 'name': "execute__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__14daTagSpinner_cFv': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61AB4, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__14daTagSpinner_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagSpinner_Execute__FP14daTagSpinner_c': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61ABC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpinner_Execute__FP14daTagSpinner_c", 'reference_count': 1, 'type': "Function"},
-	'daTagSpinner_Delete__FP14daTagSpinner_c': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61ADC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpinner_Delete__FP14daTagSpinner_c", 'reference_count': 1, 'type': "Function"},
-	'daTagSpinner_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".text", 'addr': 0x80D61AFC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagSpinner_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D61B1C': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D61B1C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D61B20': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D61B20, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3689': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".rodata", 'addr': 0x80D61B24, 'size': 0x0004, 'padding': 0x04, 'name': "@3689", 'reference_count': 0, 'type': "InitData"},
-	'lit_3690': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".rodata", 'addr': 0x80D61B2C, 'size': 0x0008, 'padding': 0x00, 'name': "@3690", 'reference_count': 0, 'type': "InitData"},
-	'lit_3691': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".rodata", 'addr': 0x80D61B34, 'size': 0x0008, 'padding': 0x00, 'name': "@3691", 'reference_count': 0, 'type': "InitData"},
-	'lit_3692': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".rodata", 'addr': 0x80D61B3C, 'size': 0x0008, 'padding': 0x00, 'name': "@3692", 'reference_count': 0, 'type': "InitData"},
-	'lit_3715': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".rodata", 'addr': 0x80D61B44, 'size': 0x0004, 'padding': 0x00, 'name': "@3715", 'reference_count': 0, 'type': "Integer"},
-	'l_daTagSpinner_Method': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".data", 'addr': 0x80D61B4C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagSpinner_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Spinner': {'library': "d/a/tag/d_a_tag_spinner", 'translation_unit': "d_a_tag_spinner", 'section': ".data", 'addr': 0x80D61B6C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Spinner", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_spinner",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_spinner",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D61680,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D616AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D616D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80D616F8,'size':32,'pad':0,'label':"CheckCreateHeap__FP10fopAc_ac_c",'name':"CheckCreateHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D61718,'size':396,'pad':0,'label':"search_spinner_sub__FPvPv",'name':"search_spinner_sub__FPvPv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D618A4,'size':32,'pad':0,'label':"initBaseMtx__14daTagSpinner_cFv",'name':"initBaseMtx__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D618C4,'size':88,'pad':0,'label':"setBaseMtx__14daTagSpinner_cFv",'name':"setBaseMtx__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D6191C,'size':80,'pad':0,'label':"Create__14daTagSpinner_cFv",'name':"Create__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D6196C,'size':8,'pad':0,'label':"CreateHeap__14daTagSpinner_cFv",'name':"CreateHeap__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D61974,'size':140,'pad':0,'label':"create__14daTagSpinner_cFv",'name':"create__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D61A00,'size':180,'pad':0,'label':"execute__14daTagSpinner_cFv",'name':"execute__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D61AB4,'size':8,'pad':0,'label':"_delete__14daTagSpinner_cFv",'name':"_delete__14daTagSpinner_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D61ABC,'size':32,'pad':0,'label':"daTagSpinner_Execute__FP14daTagSpinner_c",'name':"daTagSpinner_Execute__FP14daTagSpinner_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D61ADC,'size':32,'pad':0,'label':"daTagSpinner_Delete__FP14daTagSpinner_c",'name':"daTagSpinner_Delete__FP14daTagSpinner_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D61AFC,'size':32,'pad':0,'label':"daTagSpinner_Create__FP10fopAc_ac_c",'name':"daTagSpinner_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D61B1C,'size':4,'pad':0,'label':"data_80D61B1C",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B20,'size':4,'pad':0,'label':"data_80D61B20",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B24,'size':4,'pad':4,'label':"lit_3689",'name':"@3689",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B2C,'size':8,'pad':0,'label':"lit_3690",'name':"@3690",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B34,'size':8,'pad':0,'label':"lit_3691",'name':"@3691",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B3C,'size':8,'pad':0,'label':"lit_3692",'name':"@3692",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B44,'size':4,'pad':0,'label':"lit_3715",'name':"@3715",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D61B48,'size':32,'pad':0,'label':"l_daTagSpinner_Method",'name':"l_daTagSpinner_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D61B68,'size':48,'pad':0,'label':"g_profile_Tag_Spinner",'name':"g_profile_Tag_Spinner",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"CheckCreateHeap__FP10fopAc_ac_c":3,
+	"search_spinner_sub__FPvPv":4,
+	"initBaseMtx__14daTagSpinner_cFv":5,
+	"setBaseMtx__14daTagSpinner_cFv":6,
+	"Create__14daTagSpinner_cFv":7,
+	"CreateHeap__14daTagSpinner_cFv":8,
+	"create__14daTagSpinner_cFv":9,
+	"execute__14daTagSpinner_cFv":10,
+	"_delete__14daTagSpinner_cFv":11,
+	"daTagSpinner_Execute__FP14daTagSpinner_c":12,
+	"daTagSpinner_Delete__FP14daTagSpinner_c":13,
+	"daTagSpinner_Create__FP10fopAc_ac_c":14,
+	"data_80D61B1C":15,
+	"data_80D61B20":16,
+	"lit_3689":17,
+	"lit_3690":18,
+	"lit_3691":19,
+	"lit_3692":20,
+	"lit_3715":21,
+	"l_daTagSpinner_Method":22,
+	"g_profile_Tag_Spinner":23,
 }
+

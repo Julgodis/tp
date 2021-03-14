@@ -8,10 +8,10 @@ lbl_80C4E254:
 lbl_80C4E26C:
 /* 80C4E26C 00000000  80 04 06 20 */	lwz r0, 0x620(r4)
 /* 80C4E270 00000004  54 00 10 3A */	slwi r0, r0, 2
-/* 80C4E274 00000008  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80C4E278 0000000C  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80C4E274 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C4E278 0000000C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C4E27C 00000010  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C4E280 00000014  4B FF F4 59 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C4E280 00000014  4B FF F4 59 */	bl _unresolved
 /* 80C4E284 00000018  38 60 00 01 */	li r3, 1
 /* 80C4E288 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C4E28C 00000020  7C 08 03 A6 */	mtlr r0

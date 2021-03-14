@@ -11,15 +11,15 @@ lbl_80AC1170:
 /* 80AC1194 00000024  48 00 00 2C */	b lbl_80AC11C0
 lbl_80AC1198:
 /* 80AC1198 00000000  38 7F 0F 8C */	addi r3, r31, 0xf8c
-/* 80AC119C 00000004  4B FF F1 FD */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80AC119C 00000004  4B FF F1 FD */	bl _unresolved
 /* 80AC11A0 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80AC11A4 0000000C  40 82 00 1C */	bne lbl_80AC11C0
 /* 80AC11A8 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80AC11AC 00000014  38 80 00 1C */	li r4, 0x1c
-/* 80AC11B0 00000018  4B FF F1 E9 */	bl getNearestActorP__8daNpcT_cFs
+/* 80AC11B0 00000018  4B FF F1 E9 */	bl _unresolved
 /* 80AC11B4 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80AC11B8 00000020  38 7F 0F 8C */	addi r3, r31, 0xf8c
-/* 80AC11BC 00000024  4B FF F1 DD */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80AC11BC 00000024  4B FF F1 DD */	bl _unresolved
 lbl_80AC11C0:
 /* 80AC11C0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80AC11C4 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

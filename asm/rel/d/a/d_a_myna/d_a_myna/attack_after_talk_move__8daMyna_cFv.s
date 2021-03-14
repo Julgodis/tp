@@ -11,13 +11,13 @@ lbl_80946E08:
 /* 80946E2C 00000024  7F E4 FB 78 */	mr r4, r31
 /* 80946E30 00000028  38 A0 00 00 */	li r5, 0
 /* 80946E34 0000002C  38 C0 00 00 */	li r6, 0
-/* 80946E38 00000030  4B FF ED A1 */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
+/* 80946E38 00000030  4B FF ED A1 */	bl _unresolved
 /* 80946E3C 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 80946E40 00000038  41 82 00 30 */	beq lbl_80946E70
-/* 80946E44 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80946E48 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80946E44 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80946E48 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80946E4C 00000044  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80946E50 00000048  4B FF ED 89 */	bl reset__14dEvt_control_cFv
+/* 80946E50 00000048  4B FF ED 89 */	bl _unresolved
 /* 80946E54 0000004C  88 1F 09 2F */	lbz r0, 0x92f(r31)
 /* 80946E58 00000050  60 00 00 04 */	ori r0, r0, 4
 /* 80946E5C 00000054  98 1F 09 2F */	stb r0, 0x92f(r31)

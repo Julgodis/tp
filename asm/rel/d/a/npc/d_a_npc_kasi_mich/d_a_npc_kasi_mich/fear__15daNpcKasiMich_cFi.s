@@ -5,8 +5,8 @@ lbl_80A282B4:
 /* 80A282C0 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80A282C4 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80A282C8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80A282CC 00000018  3C 80 00 00 */	lis r4, m__21daNpcKasiMich_Param_c@ha
-/* 80A282D0 0000001C  3B C4 00 00 */	addi r30, r4, m__21daNpcKasiMich_Param_c@l
+/* 80A282CC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A282D0 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80A282D4 00000020  A8 03 14 04 */	lha r0, 0x1404(r3)
 /* 80A282D8 00000024  2C 00 00 02 */	cmpwi r0, 2
 /* 80A282DC 00000028  41 82 01 98 */	beq lbl_80A28474
@@ -25,14 +25,14 @@ lbl_80A28304:
 /* 80A28308 00000004  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80A2830C 00000008  41 82 01 68 */	beq lbl_80A28474
 /* 80A28310 0000000C  38 7F 0C 94 */	addi r3, r31, 0xc94
-/* 80A28314 00000010  4B FF DE 25 */	bl initialize__13daNpcF_Path_cFv
+/* 80A28314 00000010  4B FF DE 25 */	bl _unresolved
 /* 80A28318 00000014  38 7F 0C 94 */	addi r3, r31, 0xc94
 /* 80A2831C 00000018  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80A28320 0000001C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80A28324 00000020  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80A28328 00000024  7C 05 07 74 */	extsb r5, r0
 /* 80A2832C 00000028  38 C0 00 00 */	li r6, 0
-/* 80A28330 0000002C  4B FF DE 09 */	bl setPathInfo__13daNpcF_Path_cFUcScUc
+/* 80A28330 0000002C  4B FF DE 09 */	bl _unresolved
 /* 80A28334 00000030  7F E3 FB 78 */	mr r3, r31
 /* 80A28338 00000034  48 00 02 91 */	bl getWolfPathNearIdx__15daNpcKasiMich_cFv
 /* 80A2833C 00000038  B0 7F 0C 94 */	sth r3, 0xc94(r31)
@@ -105,7 +105,7 @@ lbl_80A28414:
 /* 80A28438 00000024  38 7F 0C 94 */	addi r3, r31, 0xc94
 /* 80A2843C 00000028  38 81 00 0C */	addi r4, r1, 0xc
 /* 80A28440 0000002C  38 A1 00 18 */	addi r5, r1, 0x18
-/* 80A28444 00000030  4B FF DC F5 */	bl getDstPos__13daNpcF_Path_cF4cXyzR4cXyz
+/* 80A28444 00000030  4B FF DC F5 */	bl _unresolved
 /* 80A28448 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2844C 00000038  41 82 00 18 */	beq lbl_80A28464
 /* 80A28450 0000003C  38 00 00 01 */	li r0, 1

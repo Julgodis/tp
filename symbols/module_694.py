@@ -3,34 +3,92 @@
 # Module: 694
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFA0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFCC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3DFF8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
-	'getNowLevel__Fv': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E018, 'size': 0x0078, 'padding': 0x00, 'name': "getNowLevel__Fv", 'reference_count': 1, 'type': "Function"},
-	'daObj_Ystone_Draw__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E090, 'size': 0x00F0, 'padding': 0x00, 'name': "daObj_Ystone_Draw__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
-	'setModelBaseMtx__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E180, 'size': 0x00DC, 'padding': 0x00, 'name': "setModelBaseMtx__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
-	'action__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E25C, 'size': 0x0490, 'padding': 0x00, 'name': "action__FP16obj_ystone_class", 'reference_count': 2, 'type': "Function"},
-	'daObj_Ystone_Execute__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E6EC, 'size': 0x0084, 'padding': 0x00, 'name': "daObj_Ystone_Execute__FP16obj_ystone_class", 'reference_count': 2, 'type': "Function"},
-	'daObj_Ystone_IsDelete__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E770, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Ystone_IsDelete__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
-	'daObj_Ystone_Delete__FP16obj_ystone_class': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E778, 'size': 0x0040, 'padding': 0x00, 'name': "daObj_Ystone_Delete__FP16obj_ystone_class", 'reference_count': 1, 'type': "Function"},
-	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3E7B8, 'size': 0x0280, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3EA38, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'daObj_Ystone_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".text", 'addr': 0x80D3EA80, 'size': 0x0184, 'padding': 0x00, 'name': "daObj_Ystone_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D3EC04': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D3EC04, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D3EC08': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D3EC08, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_bmdIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC0C, 'size': 0x001C, 'padding': 0x00, 'name': "l_bmdIndex", 'reference_count': 0, 'type': "InitData"},
-	'l_brkIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC28, 'size': 0x000C, 'padding': 0x00, 'name': "l_brkIndex", 'reference_count': 0, 'type': "InitData"},
-	'l_btkIndex': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC34, 'size': 0x001C, 'padding': 0x00, 'name': "l_btkIndex", 'reference_count': 0, 'type': "InitData"},
-	'lit_3967': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC50, 'size': 0x0004, 'padding': 0x00, 'name': "@3967", 'reference_count': 0, 'type': "Integer"},
-	'lit_3968': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC54, 'size': 0x0004, 'padding': 0x00, 'name': "@3968", 'reference_count': 0, 'type': "InitData"},
-	'lit_3969': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC58, 'size': 0x0004, 'padding': 0x00, 'name': "@3969", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".rodata", 'addr': 0x80D3EC5C, 'size': 0x005E, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 2, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECBC, 'size': 0x001C, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_80D3ECD8': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECD8, 'size': 0x0024, 'padding': 0x00, 'name': "l_stageName$3775", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_80D3ECFC': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ECFC, 'size': 0x0014, 'padding': 0x00, 'name': "mirror_effect_id$3870", 'reference_count': 0, 'type': "InitData"},
-	'lit_3970': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED10, 'size': 0x001C, 'padding': 0x00, 'name': "@3970", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daObj_Ystone_Method': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED2C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Ystone_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_OBJ_YSTONE': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED4C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_YSTONE", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/obj/d_a_obj_ystone", 'translation_unit': "d_a_obj_ystone", 'section': ".data", 'addr': 0x80D3ED7C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_ystone",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_ystone",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D3DFA0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3DFCC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3DFF8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':10,'type':"Function"},
+	{'addr':0x80D3E018,'size':120,'pad':0,'label':"getNowLevel__Fv",'name':"getNowLevel__Fv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3E090,'size':240,'pad':0,'label':"daObj_Ystone_Draw__FP16obj_ystone_class",'name':"daObj_Ystone_Draw__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3E180,'size':220,'pad':0,'label':"setModelBaseMtx__FP16obj_ystone_class",'name':"setModelBaseMtx__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3E25C,'size':1168,'pad':0,'label':"action__FP16obj_ystone_class",'name':"action__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3E6EC,'size':132,'pad':0,'label':"daObj_Ystone_Execute__FP16obj_ystone_class",'name':"daObj_Ystone_Execute__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3E770,'size':8,'pad':0,'label':"daObj_Ystone_IsDelete__FP16obj_ystone_class",'name':"daObj_Ystone_IsDelete__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3E778,'size':64,'pad':0,'label':"daObj_Ystone_Delete__FP16obj_ystone_class",'name':"daObj_Ystone_Delete__FP16obj_ystone_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3E7B8,'size':640,'pad':0,'label':"useHeapInit__FP10fopAc_ac_c",'name':"useHeapInit__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3EA38,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3EA80,'size':388,'pad':0,'label':"daObj_Ystone_Create__FP10fopAc_ac_c",'name':"daObj_Ystone_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3EC04,'size':4,'pad':0,'label':"data_80D3EC04",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC08,'size':4,'pad':0,'label':"data_80D3EC08",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC0C,'size':28,'pad':0,'label':"l_bmdIndex",'name':"l_bmdIndex",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC28,'size':12,'pad':0,'label':"l_brkIndex",'name':"l_brkIndex",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC34,'size':28,'pad':0,'label':"l_btkIndex",'name':"l_btkIndex",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC50,'size':4,'pad':0,'label':"lit_3967",'name':"@3967",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D3EC54,'size':4,'pad':0,'label':"lit_3968",'name':"@3968",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3EC58,'size':4,'pad':0,'label':"lit_3969",'name':"@3969",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D3EC5C,'size':94,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80D3ECBC,'size':28,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ECD8,'size':36,'pad':0,'label':"data_80D3ECD8",'name':"l_stageName$3775",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ECFC,'size':20,'pad':0,'label':"data_80D3ECFC",'name':"mirror_effect_id$3870",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ED10,'size':28,'pad':0,'label':"lit_3970",'name':"@3970",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ED2C,'size':32,'pad':0,'label':"l_daObj_Ystone_Method",'name':"l_daObj_Ystone_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ED4C,'size':48,'pad':0,'label':"g_profile_OBJ_YSTONE",'name':"g_profile_OBJ_YSTONE",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D3ED7C,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"getNowLevel__Fv":3,
+	"daObj_Ystone_Draw__FP16obj_ystone_class":4,
+	"setModelBaseMtx__FP16obj_ystone_class":5,
+	"action__FP16obj_ystone_class":6,
+	"daObj_Ystone_Execute__FP16obj_ystone_class":7,
+	"daObj_Ystone_IsDelete__FP16obj_ystone_class":8,
+	"daObj_Ystone_Delete__FP16obj_ystone_class":9,
+	"useHeapInit__FP10fopAc_ac_c":10,
+	"__dt__12J3DFrameCtrlFv":11,
+	"daObj_Ystone_Create__FP10fopAc_ac_c":12,
+	"data_80D3EC04":13,
+	"data_80D3EC08":14,
+	"l_bmdIndex":15,
+	"l_brkIndex":16,
+	"l_btkIndex":17,
+	"lit_3967":18,
+	"lit_3968":19,
+	"lit_3969":20,
+	"stringBase0":21,
+	"l_arcName":22,
+	"data_80D3ECD8":23,
+	"data_80D3ECFC":24,
+	"lit_3970":25,
+	"l_daObj_Ystone_Method":26,
+	"g_profile_OBJ_YSTONE":27,
+	"__vt__12J3DFrameCtrl":28,
 }
+

@@ -14,26 +14,26 @@ lbl_80CC1D1C:
 /* 80CC1D1C 00000000  7F C0 07 74 */	extsb r0, r30
 /* 80CC1D20 00000004  2C 00 00 03 */	cmpwi r0, 3
 /* 80CC1D24 00000008  40 82 00 28 */	bne lbl_80CC1D4C
-/* 80CC1D28 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC1D2C 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC1D28 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC1D2C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC1D30 00000014  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CC1D34 00000018  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CC1D38 0000001C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CC1D3C 00000020  7C 05 07 74 */	extsb r5, r0
-/* 80CC1D40 00000024  4B FF F7 F9 */	bl isSwitch__10dSv_info_cCFii
+/* 80CC1D40 00000024  4B FF F7 F9 */	bl _unresolved
 /* 80CC1D44 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC1D48 0000002C  40 82 00 34 */	bne lbl_80CC1D7C
 lbl_80CC1D4C:
 /* 80CC1D4C 00000000  7F C0 07 74 */	extsb r0, r30
 /* 80CC1D50 00000004  2C 00 00 01 */	cmpwi r0, 1
 /* 80CC1D54 00000008  40 82 00 34 */	bne lbl_80CC1D88
-/* 80CC1D58 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CC1D5C 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC1D58 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC1D5C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC1D60 00000014  A0 1F 05 CA */	lhz r0, 0x5ca(r31)
 /* 80CC1D64 00000018  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CC1D68 0000001C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CC1D6C 00000020  7C 05 07 74 */	extsb r5, r0
-/* 80CC1D70 00000024  4B FF F7 C9 */	bl isSwitch__10dSv_info_cCFii
+/* 80CC1D70 00000024  4B FF F7 C9 */	bl _unresolved
 /* 80CC1D74 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC1D78 0000002C  41 82 00 10 */	beq lbl_80CC1D88
 lbl_80CC1D7C:
@@ -54,8 +54,8 @@ lbl_80CC1D90:
 /* 80CC1DAC 0000001C  88 1F 05 E3 */	lbz r0, 0x5e3(r31)
 /* 80CC1DB0 00000020  7C 00 07 74 */	extsb r0, r0
 /* 80CC1DB4 00000024  54 00 08 3C */	slwi r0, r0, 1
-/* 80CC1DB8 00000028  3C 60 00 00 */	lis r3, l_target_angleY@ha
-/* 80CC1DBC 0000002C  38 63 00 00 */	addi r3, r3, l_target_angleY@l
+/* 80CC1DB8 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC1DBC 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC1DC0 00000030  7C 03 02 AE */	lhax r0, r3, r0
 /* 80CC1DC4 00000034  B0 1F 05 D4 */	sth r0, 0x5d4(r31)
 /* 80CC1DC8 00000038  7F E3 FB 78 */	mr r3, r31

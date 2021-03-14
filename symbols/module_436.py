@@ -3,34 +3,92 @@
 # Module: 436
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BDC5A0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BDC5CC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BDC5F8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'create__14daObjDigholl_cFv': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDC618, 'size': 0x0124, 'padding': 0x00, 'name': "create__14daObjDigholl_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjDigholl_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDC73C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjDigholl_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'__dt__14daObjDigholl_cFv': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDC75C, 'size': 0x0054, 'padding': 0x00, 'name': "__dt__14daObjDigholl_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjDigholl_Delete__FP14daObjDigholl_c': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDC7B0, 'size': 0x0028, 'padding': 0x00, 'name': "daObjDigholl_Delete__FP14daObjDigholl_c", 'reference_count': 1, 'type': "Function"},
-	'execute__14daObjDigholl_cFv': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDC7D8, 'size': 0x0314, 'padding': 0x00, 'name': "execute__14daObjDigholl_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjDigholl_Execute__FP14daObjDigholl_c': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDCAEC, 'size': 0x0020, 'padding': 0x00, 'name': "daObjDigholl_Execute__FP14daObjDigholl_c", 'reference_count': 1, 'type': "Function"},
-	'draw__14daObjDigholl_cFv': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDCB0C, 'size': 0x0008, 'padding': 0x00, 'name': "draw__14daObjDigholl_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjDigholl_Draw__FP14daObjDigholl_c': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".text", 'addr': 0x80BDCB14, 'size': 0x0020, 'padding': 0x00, 'name': "daObjDigholl_Draw__FP14daObjDigholl_c", 'reference_count': 1, 'type': "Function"},
-	'data_80BDCB34': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80BDCB34, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80BDCB38': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80BDCB38, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3678': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB3C, 'size': 0x0004, 'padding': 0x00, 'name': "@3678", 'reference_count': 0, 'type': "Integer"},
-	'lit_3679': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB40, 'size': 0x0004, 'padding': 0x00, 'name': "@3679", 'reference_count': 0, 'type': "InitData"},
-	'lit_3680': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB44, 'size': 0x0004, 'padding': 0x00, 'name': "@3680", 'reference_count': 0, 'type': "Integer"},
-	'lit_3681': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB48, 'size': 0x0004, 'padding': 0x00, 'name': "@3681", 'reference_count': 0, 'type': "Integer"},
-	'lit_3682': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB4C, 'size': 0x0004, 'padding': 0x00, 'name': "@3682", 'reference_count': 0, 'type': "Integer"},
-	'lit_3683': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB50, 'size': 0x0004, 'padding': 0x00, 'name': "@3683", 'reference_count': 0, 'type': "Integer"},
-	'lit_3793': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB54, 'size': 0x0004, 'padding': 0x00, 'name': "@3793", 'reference_count': 0, 'type': "Integer"},
-	'lit_3794': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB58, 'size': 0x0004, 'padding': 0x00, 'name': "@3794", 'reference_count': 0, 'type': "Integer"},
-	'lit_3795': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB5C, 'size': 0x0004, 'padding': 0x00, 'name': "@3795", 'reference_count': 0, 'type': "Integer"},
-	'lit_3796': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB60, 'size': 0x0004, 'padding': 0x00, 'name': "@3796", 'reference_count': 0, 'type': "Integer"},
-	'lit_3797': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB64, 'size': 0x0008, 'padding': 0x00, 'name': "@3797", 'reference_count': 0, 'type': "InitData"},
-	'lit_3798': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB6C, 'size': 0x0008, 'padding': 0x00, 'name': "@3798", 'reference_count': 0, 'type': "InitData"},
-	'lit_3799': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB74, 'size': 0x0008, 'padding': 0x00, 'name': "@3799", 'reference_count': 0, 'type': "InitData"},
-	'lit_3800': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".rodata", 'addr': 0x80BDCB7C, 'size': 0x0004, 'padding': 0x00, 'name': "@3800", 'reference_count': 0, 'type': "Integer"},
-	'l_daObjDigholl_Method': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".data", 'addr': 0x80BDCB84, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjDigholl_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_Digholl': {'library': "d/a/obj/d_a_obj_digholl", 'translation_unit': "d_a_obj_digholl", 'section': ".data", 'addr': 0x80BDCBA4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_Digholl", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_digholl",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_digholl",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80BDC5A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDC5CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDC5F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x80BDC618,'size':292,'pad':0,'label':"create__14daObjDigholl_cFv",'name':"create__14daObjDigholl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BDC73C,'size':32,'pad':0,'label':"daObjDigholl_Create__FP10fopAc_ac_c",'name':"daObjDigholl_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDC75C,'size':84,'pad':0,'label':"__dt__14daObjDigholl_cFv",'name':"__dt__14daObjDigholl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BDC7B0,'size':40,'pad':0,'label':"daObjDigholl_Delete__FP14daObjDigholl_c",'name':"daObjDigholl_Delete__FP14daObjDigholl_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDC7D8,'size':788,'pad':0,'label':"execute__14daObjDigholl_cFv",'name':"execute__14daObjDigholl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BDCAEC,'size':32,'pad':0,'label':"daObjDigholl_Execute__FP14daObjDigholl_c",'name':"daObjDigholl_Execute__FP14daObjDigholl_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDCB0C,'size':8,'pad':0,'label':"draw__14daObjDigholl_cFv",'name':"draw__14daObjDigholl_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BDCB14,'size':32,'pad':0,'label':"daObjDigholl_Draw__FP14daObjDigholl_c",'name':"daObjDigholl_Draw__FP14daObjDigholl_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BDCB34,'size':4,'pad':0,'label':"data_80BDCB34",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB38,'size':4,'pad':0,'label':"data_80BDCB38",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB3C,'size':4,'pad':0,'label':"lit_3678",'name':"@3678",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB40,'size':4,'pad':0,'label':"lit_3679",'name':"@3679",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB44,'size':4,'pad':0,'label':"lit_3680",'name':"@3680",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB48,'size':4,'pad':0,'label':"lit_3681",'name':"@3681",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB4C,'size':4,'pad':0,'label':"lit_3682",'name':"@3682",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB50,'size':4,'pad':0,'label':"lit_3683",'name':"@3683",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB54,'size':4,'pad':0,'label':"lit_3793",'name':"@3793",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB58,'size':4,'pad':0,'label':"lit_3794",'name':"@3794",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB5C,'size':4,'pad':0,'label':"lit_3795",'name':"@3795",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB60,'size':4,'pad':0,'label':"lit_3796",'name':"@3796",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB64,'size':8,'pad':0,'label':"lit_3797",'name':"@3797",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB6C,'size':8,'pad':0,'label':"lit_3798",'name':"@3798",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB74,'size':8,'pad':0,'label':"lit_3799",'name':"@3799",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCB7C,'size':4,'pad':0,'label':"lit_3800",'name':"@3800",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BDCB80,'size':32,'pad':0,'label':"l_daObjDigholl_Method",'name':"l_daObjDigholl_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BDCBA0,'size':48,'pad':0,'label':"g_profile_Obj_Digholl",'name':"g_profile_Obj_Digholl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create__14daObjDigholl_cFv":3,
+	"daObjDigholl_Create__FP10fopAc_ac_c":4,
+	"__dt__14daObjDigholl_cFv":5,
+	"daObjDigholl_Delete__FP14daObjDigholl_c":6,
+	"execute__14daObjDigholl_cFv":7,
+	"daObjDigholl_Execute__FP14daObjDigholl_c":8,
+	"draw__14daObjDigholl_cFv":9,
+	"daObjDigholl_Draw__FP14daObjDigholl_c":10,
+	"data_80BDCB34":11,
+	"data_80BDCB38":12,
+	"lit_3678":13,
+	"lit_3679":14,
+	"lit_3680":15,
+	"lit_3681":16,
+	"lit_3682":17,
+	"lit_3683":18,
+	"lit_3793":19,
+	"lit_3794":20,
+	"lit_3795":21,
+	"lit_3796":22,
+	"lit_3797":23,
+	"lit_3798":24,
+	"lit_3799":25,
+	"lit_3800":26,
+	"l_daObjDigholl_Method":27,
+	"g_profile_Obj_Digholl":28,
 }
+

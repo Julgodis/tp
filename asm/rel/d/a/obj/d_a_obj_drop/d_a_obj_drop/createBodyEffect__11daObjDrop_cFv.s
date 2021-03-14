@@ -3,18 +3,18 @@ lbl_80BE077C:
 /* 80BE0780 00000004  7C 08 02 A6 */	mflr r0
 /* 80BE0784 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80BE0788 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 80BE078C 00000010  4B FF F5 2D */	bl _savegpr_24
+/* 80BE078C 00000010  4B FF F5 2D */	bl _unresolved
 /* 80BE0790 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80BE0794 00000018  3B E0 00 00 */	li r31, 0
 /* 80BE0798 0000001C  3B A0 00 00 */	li r29, 0
 /* 80BE079C 00000020  3B 80 00 00 */	li r28, 0
 /* 80BE07A0 00000024  3B 60 00 00 */	li r27, 0
-/* 80BE07A4 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BE07A8 0000002C  3B 03 00 00 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 80BE07AC 00000030  3C 60 00 00 */	lis r3, l_sizuku_body_effect_list@ha
-/* 80BE07B0 00000034  3B 23 00 00 */	addi r25, r3, l_sizuku_body_effect_list@l
-/* 80BE07B4 00000038  3C 60 00 00 */	lis r3, lit_4119@ha
-/* 80BE07B8 0000003C  3B 43 00 00 */	addi r26, r3, lit_4119@l
+/* 80BE07A4 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE07A8 0000002C  3B 03 00 00 */	addi r24, r3, 0x0000 /* 0x00000000@l */
+/* 80BE07AC 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE07B0 00000034  3B 23 00 00 */	addi r25, r3, 0x0000 /* 0x00000000@l */
+/* 80BE07B4 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE07B8 0000003C  3B 43 00 00 */	addi r26, r3, 0x0000 /* 0x00000000@l */
 lbl_80BE07BC:
 /* 80BE07BC 00000000  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 80BE07C0 00000004  38 1B 06 2C */	addi r0, r27, 0x62c
@@ -34,7 +34,7 @@ lbl_80BE07BC:
 /* 80BE07F8 0000003C  39 3E 04 EC */	addi r9, r30, 0x4ec
 /* 80BE07FC 00000040  39 40 00 FF */	li r10, 0xff
 /* 80BE0800 00000044  C0 3A 00 00 */	lfs f1, 0(r26)
-/* 80BE0804 00000048  4B FF F4 B5 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80BE0804 00000048  4B FF F4 B5 */	bl _unresolved
 /* 80BE0808 0000004C  38 1D 06 14 */	addi r0, r29, 0x614
 /* 80BE080C 00000050  7C 7E 01 2E */	stwx r3, r30, r0
 /* 80BE0810 00000054  3B FF 00 01 */	addi r31, r31, 1
@@ -44,7 +44,7 @@ lbl_80BE07BC:
 /* 80BE0820 00000064  3B 7B 00 14 */	addi r27, r27, 0x14
 /* 80BE0824 00000068  41 80 FF 98 */	blt lbl_80BE07BC
 /* 80BE0828 0000006C  39 61 00 40 */	addi r11, r1, 0x40
-/* 80BE082C 00000070  4B FF F4 8D */	bl _restgpr_24
+/* 80BE082C 00000070  4B FF F4 8D */	bl _unresolved
 /* 80BE0830 00000074  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 80BE0834 00000078  7C 08 03 A6 */	mtlr r0
 /* 80BE0838 0000007C  38 21 00 40 */	addi r1, r1, 0x40

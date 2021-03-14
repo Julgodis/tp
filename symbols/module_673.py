@@ -3,23 +3,70 @@
 # Module: 673
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D20EE0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D20F0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D20F38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
-	'daObj_Usaku_Draw__FP15obj_usaku_class': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D20F58, 'size': 0x0064, 'padding': 0x00, 'name': "daObj_Usaku_Draw__FP15obj_usaku_class", 'reference_count': 1, 'type': "Function"},
-	'daObj_Usaku_Execute__FP15obj_usaku_class': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D20FBC, 'size': 0x008C, 'padding': 0x00, 'name': "daObj_Usaku_Execute__FP15obj_usaku_class", 'reference_count': 2, 'type': "Function"},
-	'daObj_Usaku_IsDelete__FP15obj_usaku_class': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D21048, 'size': 0x0008, 'padding': 0x00, 'name': "daObj_Usaku_IsDelete__FP15obj_usaku_class", 'reference_count': 1, 'type': "Function"},
-	'daObj_Usaku_Delete__FP15obj_usaku_class': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D21050, 'size': 0x0058, 'padding': 0x00, 'name': "daObj_Usaku_Delete__FP15obj_usaku_class", 'reference_count': 1, 'type': "Function"},
-	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D210A8, 'size': 0x0104, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'daObj_Usaku_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".text", 'addr': 0x80D211AC, 'size': 0x0128, 'padding': 0x00, 'name': "daObj_Usaku_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D212D4': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D212D4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D212D8': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D212D8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3744': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".rodata", 'addr': 0x80D212DC, 'size': 0x0004, 'padding': 0x00, 'name': "@3744", 'reference_count': 0, 'type': "Integer"},
-	'lit_3745': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".rodata", 'addr': 0x80D212E0, 'size': 0x0004, 'padding': 0x00, 'name': "@3745", 'reference_count': 0, 'type': "Integer"},
-	'lit_3746': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".rodata", 'addr': 0x80D212E4, 'size': 0x0004, 'padding': 0x00, 'name': "@3746", 'reference_count': 0, 'type': "Integer"},
-	'lit_3747': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".rodata", 'addr': 0x80D212E8, 'size': 0x0004, 'padding': 0x00, 'name': "@3747", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".rodata", 'addr': 0x80D212EC, 'size': 0x000A, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'l_daObj_Usaku_Method': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".data", 'addr': 0x80D212FC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObj_Usaku_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_OBJ_USAKU': {'library': "d/a/obj/d_a_obj_usaku", 'translation_unit': "d_a_obj_usaku", 'section': ".data", 'addr': 0x80D2131C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_OBJ_USAKU", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_usaku",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_usaku",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D20EE0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D20F0C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D20F38,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':7,'type':"Function"},
+	{'addr':0x80D20F58,'size':100,'pad':0,'label':"daObj_Usaku_Draw__FP15obj_usaku_class",'name':"daObj_Usaku_Draw__FP15obj_usaku_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D20FBC,'size':140,'pad':0,'label':"daObj_Usaku_Execute__FP15obj_usaku_class",'name':"daObj_Usaku_Execute__FP15obj_usaku_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D21048,'size':8,'pad':0,'label':"daObj_Usaku_IsDelete__FP15obj_usaku_class",'name':"daObj_Usaku_IsDelete__FP15obj_usaku_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D21050,'size':88,'pad':0,'label':"daObj_Usaku_Delete__FP15obj_usaku_class",'name':"daObj_Usaku_Delete__FP15obj_usaku_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D210A8,'size':260,'pad':0,'label':"useHeapInit__FP10fopAc_ac_c",'name':"useHeapInit__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D211AC,'size':296,'pad':0,'label':"daObj_Usaku_Create__FP10fopAc_ac_c",'name':"daObj_Usaku_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D212D4,'size':4,'pad':0,'label':"data_80D212D4",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D212D8,'size':4,'pad':0,'label':"data_80D212D8",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D212DC,'size':4,'pad':0,'label':"lit_3744",'name':"@3744",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D212E0,'size':4,'pad':0,'label':"lit_3745",'name':"@3745",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D212E4,'size':4,'pad':0,'label':"lit_3746",'name':"@3746",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D212E8,'size':4,'pad':0,'label':"lit_3747",'name':"@3747",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D212EC,'size':10,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80D212F8,'size':32,'pad':0,'label':"l_daObj_Usaku_Method",'name':"l_daObj_Usaku_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D21318,'size':48,'pad':0,'label':"g_profile_OBJ_USAKU",'name':"g_profile_OBJ_USAKU",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daObj_Usaku_Draw__FP15obj_usaku_class":3,
+	"daObj_Usaku_Execute__FP15obj_usaku_class":4,
+	"daObj_Usaku_IsDelete__FP15obj_usaku_class":5,
+	"daObj_Usaku_Delete__FP15obj_usaku_class":6,
+	"useHeapInit__FP10fopAc_ac_c":7,
+	"daObj_Usaku_Create__FP10fopAc_ac_c":8,
+	"data_80D212D4":9,
+	"data_80D212D8":10,
+	"lit_3744":11,
+	"lit_3745":12,
+	"lit_3746":13,
+	"lit_3747":14,
+	"stringBase0":15,
+	"l_daObj_Usaku_Method":16,
+	"g_profile_OBJ_USAKU":17,
 }
+

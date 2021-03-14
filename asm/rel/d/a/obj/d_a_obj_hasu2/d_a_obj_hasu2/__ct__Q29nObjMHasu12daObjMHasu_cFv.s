@@ -5,11 +5,11 @@ lbl_80C182DC:
 /* 80C182E8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C182EC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C182F0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C182F4 00000018  3C 80 00 00 */	lis r4, l_cull_box@ha
-/* 80C182F8 0000001C  3B E4 00 00 */	addi r31, r4, l_cull_box@l
-/* 80C182FC 00000020  4B FF FF 7D */	bl __ct__16dBgS_MoveBgActorFv
-/* 80C18300 00000024  3C 60 00 00 */	lis r3, __vt__Q29nObjMHasu12daObjMHasu_c@ha
-/* 80C18304 00000028  38 03 00 00 */	addi r0, r3, __vt__Q29nObjMHasu12daObjMHasu_c@l
+/* 80C182F4 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C182F8 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80C182FC 00000020  4B FF FF 7D */	bl _unresolved
+/* 80C18300 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C18304 00000028  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C18308 0000002C  90 1E 05 9C */	stw r0, 0x59c(r30)
 /* 80C1830C 00000030  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80C18310 00000034  D0 1E 06 10 */	stfs f0, 0x610(r30)

@@ -7,14 +7,14 @@ lbl_80657CA8:
 /* 80657CBC 00000014  80 63 06 FC */	lwz r3, 0x6fc(r3)
 /* 80657CC0 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80657CC4 0000001C  41 82 00 54 */	beq lbl_80657D18
-/* 80657CC8 00000020  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 80657CCC 00000024  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 80657CD0 00000028  4B FF FE 89 */	bl PSMTXCopy
-/* 80657CD4 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80657CD8 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80657CC8 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80657CCC 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80657CD0 00000028  4B FF FE 89 */	bl _unresolved
+/* 80657CD4 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80657CD8 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80657CDC 00000034  38 9F 07 00 */	addi r4, r31, 0x700
 /* 80657CE0 00000038  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 80657CE4 0000003C  4B FF FE 75 */	bl PSMTXMultVec
+/* 80657CE4 0000003C  4B FF FE 75 */	bl _unresolved
 /* 80657CE8 00000040  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80657CEC 00000044  D0 1F 05 50 */	stfs f0, 0x550(r31)
 /* 80657CF0 00000048  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)

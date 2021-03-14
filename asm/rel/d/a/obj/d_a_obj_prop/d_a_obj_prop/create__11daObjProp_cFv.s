@@ -21,18 +21,18 @@ lbl_80CB5370:
 /* 80CB5378 00000008  41 82 00 08 */	beq lbl_80CB5380
 /* 80CB537C 0000000C  38 7E 05 68 */	addi r3, r30, 0x568
 lbl_80CB5380:
-/* 80CB5380 00000000  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80CB5384 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80CB5380 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CB5384 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CB5388 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80CB538C 0000000C  4B FF FE 2D */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80CB538C 0000000C  4B FF FE 2D */	bl _unresolved
 /* 80CB5390 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CB5394 00000014  2C 1F 00 04 */	cmpwi r31, 4
 /* 80CB5398 00000018  40 82 00 54 */	bne lbl_80CB53EC
 /* 80CB539C 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80CB53A0 00000020  3C 80 00 00 */	lis r4, daObjProp_c_createHeap__FP10fopAc_ac_c@ha
-/* 80CB53A4 00000024  38 84 00 00 */	addi r4, r4, daObjProp_c_createHeap__FP10fopAc_ac_c@l
+/* 80CB53A0 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CB53A4 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CB53A8 00000028  38 A0 10 00 */	li r5, 0x1000
-/* 80CB53AC 0000002C  4B FF FE 0D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80CB53AC 0000002C  4B FF FE 0D */	bl _unresolved
 /* 80CB53B0 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80CB53B4 00000034  40 82 00 0C */	bne lbl_80CB53C0
 /* 80CB53B8 00000038  38 60 00 05 */	li r3, 5
@@ -48,7 +48,7 @@ lbl_80CB53C0:
 /* 80CB53DC 0000001C  80 7E 05 74 */	lwz r3, 0x574(r30)
 /* 80CB53E0 00000020  80 83 00 04 */	lwz r4, 4(r3)
 /* 80CB53E4 00000024  7F C3 F3 78 */	mr r3, r30
-/* 80CB53E8 00000028  4B FF FD D1 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80CB53E8 00000028  4B FF FD D1 */	bl _unresolved
 lbl_80CB53EC:
 /* 80CB53EC 00000000  7F E3 FB 78 */	mr r3, r31
 lbl_80CB53F0:

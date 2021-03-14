@@ -3,14 +3,14 @@ lbl_80A9E778:
 /* 80A9E77C 00000004  7C 08 02 A6 */	mflr r0
 /* 80A9E780 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A9E784 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9E788 00000010  4B FF DA 71 */	bl _savegpr_29
+/* 80A9E788 00000010  4B FF DA 71 */	bl _unresolved
 /* 80A9E78C 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80A9E790 00000018  7C 9E 23 78 */	mr r30, r4
 /* 80A9E794 0000001C  38 7D 0F 8C */	addi r3, r29, 0xf8c
-/* 80A9E798 00000020  4B FF DA 61 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A9E798 00000020  4B FF DA 61 */	bl _unresolved
 /* 80A9E79C 00000024  7C 7F 1B 78 */	mr r31, r3
 /* 80A9E7A0 00000028  38 7D 0F 94 */	addi r3, r29, 0xf94
-/* 80A9E7A4 0000002C  4B FF DA 55 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A9E7A4 0000002C  4B FF DA 55 */	bl _unresolved
 /* 80A9E7A8 00000030  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 80A9E7AC 00000034  D0 5D 0F EC */	stfs f2, 0xfec(r29)
 /* 80A9E7B0 00000038  C0 3E 00 04 */	lfs f1, 4(r30)
@@ -33,7 +33,7 @@ lbl_80A9E7D4:
 /* 80A9E7F0 0000001C  D0 03 0F 8C */	stfs f0, 0xf8c(r3)
 lbl_80A9E7F4:
 /* 80A9E7F4 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9E7F8 00000004  4B FF DA 01 */	bl _restgpr_29
+/* 80A9E7F8 00000004  4B FF DA 01 */	bl _unresolved
 /* 80A9E7FC 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A9E800 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80A9E804 00000010  38 21 00 20 */	addi r1, r1, 0x20

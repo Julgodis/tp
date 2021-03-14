@@ -3,12 +3,12 @@ lbl_80BD85C0:
 /* 80BD85C4 00000004  7C 08 02 A6 */	mflr r0
 /* 80BD85C8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BD85CC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD85D0 00000010  4B FF E3 E9 */	bl _savegpr_27
+/* 80BD85D0 00000010  4B FF E3 E9 */	bl _unresolved
 /* 80BD85D4 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80BD85D8 00000018  3C 80 00 00 */	lis r4, l_wallBmd@ha
-/* 80BD85DC 0000001C  3B C4 00 00 */	addi r30, r4, l_wallBmd@l
-/* 80BD85E0 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80BD85E4 00000024  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BD85D8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BD85DC 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
+/* 80BD85E0 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BD85E4 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BD85E8 00000028  83 84 5D AC */	lwz r28, 0x5dac(r4)
 /* 80BD85EC 0000002C  8B 63 0F 0E */	lbz r27, 0xf0e(r3)
 /* 80BD85F0 00000030  88 03 0E 90 */	lbz r0, 0xe90(r3)
@@ -98,7 +98,7 @@ lbl_80BD8728:
 /* 80BD872C 00000004  98 1F 0F 0E */	stb r0, 0xf0e(r31)
 lbl_80BD8730:
 /* 80BD8730 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD8734 00000004  4B FF E2 85 */	bl _restgpr_27
+/* 80BD8734 00000004  4B FF E2 85 */	bl _unresolved
 /* 80BD8738 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80BD873C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80BD8740 00000010  38 21 00 20 */	addi r1, r1, 0x20

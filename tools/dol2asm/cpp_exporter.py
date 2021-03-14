@@ -48,16 +48,12 @@ class CPPDisassembler(dasm.Disassembler):
         if addr in self.block_map:
             return self.block_map[addr]
 
-        return self.symbol_table[addr]
+        return self.symbol_table[self.function._module, addr]
 
     def addr_to_label(self, addr) -> str:
         symbol = self.get_symbol(addr)
         if not symbol:
             return None
-
-        if isinstance(symbol, Function):
-            if addr % 4 != 0:
-                return None
 
         return symbol.asm_reference(addr)
 
@@ -1216,7 +1212,7 @@ class CPPExporter:
         # if cpp_gen:
         #    g.LOG.debug(f"generated cpp: '{path}'")
 
-        #self.context.debug(f"generated cpp: '{path}' ({tu.name})")
+            self.context.debug(f"generated cpp: '{path}' ({tu.name})")
 
         return tasks
 

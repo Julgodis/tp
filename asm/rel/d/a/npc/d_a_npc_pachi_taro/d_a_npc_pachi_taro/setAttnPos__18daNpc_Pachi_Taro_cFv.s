@@ -5,10 +5,10 @@ lbl_80A9D8B8:
 /* 80A9D8C4 0000000C  DB E1 00 60 */	stfd f31, 0x60(r1)
 /* 80A9D8C8 00000010  F3 E1 00 68 */	psq_st f31, 104(r1), 0, 0 /* qr0 */
 /* 80A9D8CC 00000000  39 61 00 60 */	addi r11, r1, 0x60
-/* 80A9D8D0 00000004  4B FF E9 29 */	bl _savegpr_27
+/* 80A9D8D0 00000004  4B FF E9 29 */	bl _unresolved
 /* 80A9D8D4 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 80A9D8D8 0000000C  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha
-/* 80A9D8DC 00000010  3B E3 00 00 */	addi r31, r3, m__24daNpc_Pachi_Taro_Param_c@l
+/* 80A9D8D8 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9D8DC 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80A9D8E0 00000014  C0 3F 00 A0 */	lfs f1, 0xa0(r31)
 /* 80A9D8E4 00000018  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 80A9D8E8 0000001C  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
@@ -19,14 +19,14 @@ lbl_80A9D8B8:
 /* 80A9D8FC 00000030  2C 00 00 21 */	cmpwi r0, 0x21
 /* 80A9D900 00000034  40 82 00 18 */	bne lbl_80A9D918
 /* 80A9D904 00000038  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 80A9D908 0000003C  4B FF E8 F1 */	bl checkEndSequence__22daNpcT_MotionSeqMngr_cFv
+/* 80A9D908 0000003C  4B FF E8 F1 */	bl _unresolved
 /* 80A9D90C 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 80A9D910 00000044  40 82 00 08 */	bne lbl_80A9D918
 /* 80A9D914 00000048  3B 60 00 01 */	li r27, 1
 lbl_80A9D918:
 /* 80A9D918 00000000  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80A9D91C 00000004  7F 64 DB 78 */	mr r4, r27
-/* 80A9D920 00000008  4B FF E8 D9 */	bl calc__19daNpcT_DmgStagger_cFi
+/* 80A9D920 00000008  4B FF E8 D9 */	bl _unresolved
 /* 80A9D924 0000000C  C0 5F 00 C4 */	lfs f2, 0xc4(r31)
 /* 80A9D928 00000010  A8 7E 0D 80 */	lha r3, 0xd80(r30)
 /* 80A9D92C 00000014  A8 1E 0D 7A */	lha r0, 0xd7a(r30)
@@ -80,14 +80,14 @@ lbl_80A9D918:
 /* 80A9D9EC 000000D4  C0 EA 00 3C */	lfs f7, 0x3c(r10)
 /* 80A9D9F0 000000D8  C1 0A 00 38 */	lfs f8, 0x38(r10)
 /* 80A9D9F4 000000DC  39 40 00 00 */	li r10, 0
-/* 80A9D9F8 000000E0  4B FF E8 01 */	bl setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz
+/* 80A9D9F8 000000E0  4B FF E8 01 */	bl _unresolved
 /* 80A9D9FC 000000E4  38 7E 0B A8 */	addi r3, r30, 0xba8
 /* 80A9DA00 000000E8  C0 3F 00 A8 */	lfs f1, 0xa8(r31)
 /* 80A9DA04 000000EC  C0 5F 00 B4 */	lfs f2, 0xb4(r31)
 /* 80A9DA08 000000F0  FC 60 F8 90 */	fmr f3, f31
-/* 80A9DA0C 000000F4  4B FF E7 ED */	bl calcJntRad__15daNpcT_JntAnm_cFfff
+/* 80A9DA0C 000000F4  4B FF E7 ED */	bl _unresolved
 /* 80A9DA10 000000F8  7F C3 F3 78 */	mr r3, r30
-/* 80A9DA14 000000FC  4B FF E7 E5 */	bl setMtx__8daNpcT_cFv
+/* 80A9DA14 000000FC  4B FF E7 E5 */	bl _unresolved
 /* 80A9DA18 00000100  7F C3 F3 78 */	mr r3, r30
 /* 80A9DA1C 00000104  81 9E 0E 3C */	lwz r12, 0xe3c(r30)
 /* 80A9DA20 00000108  81 8C 00 24 */	lwz r12, 0x24(r12)
@@ -99,14 +99,14 @@ lbl_80A9D918:
 /* 80A9DA38 00000120  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 80A9DA3C 00000124  1C 03 00 30 */	mulli r0, r3, 0x30
 /* 80A9DA40 00000128  7C 64 02 14 */	add r3, r4, r0
-/* 80A9DA44 0000012C  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 80A9DA48 00000130  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 80A9DA4C 00000134  4B FF E7 AD */	bl PSMTXCopy
-/* 80A9DA50 00000138  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80A9DA54 0000013C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80A9DA44 0000012C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A9DA48 00000130  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80A9DA4C 00000134  4B FF E7 AD */	bl _unresolved
+/* 80A9DA50 00000138  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9DA54 0000013C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9DA58 00000140  38 81 00 28 */	addi r4, r1, 0x28
 /* 80A9DA5C 00000144  38 BE 05 38 */	addi r5, r30, 0x538
-/* 80A9DA60 00000148  4B FF E7 99 */	bl PSMTXMultVec
+/* 80A9DA60 00000148  4B FF E7 99 */	bl _unresolved
 /* 80A9DA64 0000014C  C0 1E 05 38 */	lfs f0, 0x538(r30)
 /* 80A9DA68 00000150  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80A9DA6C 00000154  C0 1E 05 3C */	lfs f0, 0x53c(r30)
@@ -144,7 +144,7 @@ lbl_80A9D918:
 /* 80A9DAEC 000001D4  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */
 /* 80A9DAF0 00000000  CB E1 00 60 */	lfd f31, 0x60(r1)
 /* 80A9DAF4 00000004  39 61 00 60 */	addi r11, r1, 0x60
-/* 80A9DAF8 00000008  4B FF E7 01 */	bl _restgpr_27
+/* 80A9DAF8 00000008  4B FF E7 01 */	bl _unresolved
 /* 80A9DAFC 0000000C  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 80A9DB00 00000010  7C 08 03 A6 */	mtlr r0
 /* 80A9DB04 00000014  38 21 00 70 */	addi r1, r1, 0x70

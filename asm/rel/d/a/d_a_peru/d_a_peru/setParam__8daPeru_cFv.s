@@ -7,8 +7,8 @@ lbl_80D47B20:
 /* 80D47B34 00000014  48 00 01 79 */	bl srchActors__8daPeru_cFv
 /* 80D47B38 00000018  38 00 00 0A */	li r0, 0xa
 /* 80D47B3C 0000001C  90 1F 05 5C */	stw r0, 0x55c(r31)
-/* 80D47B40 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D47B44 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D47B40 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D47B44 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D47B48 00000028  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80D47B4C 0000002C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80D47B50 00000030  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
@@ -21,28 +21,28 @@ lbl_80D47B64:
 /* 80D47B68 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80D47B6C 00000008  40 82 00 1C */	bne lbl_80D47B88
 /* 80D47B70 0000000C  38 60 01 27 */	li r3, 0x127
-/* 80D47B74 00000010  4B FF F2 E5 */	bl daNpcT_chkEvtBit__FUl
+/* 80D47B74 00000010  4B FF F2 E5 */	bl _unresolved
 /* 80D47B78 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80D47B7C 00000018  40 82 00 0C */	bne lbl_80D47B88
 /* 80D47B80 0000001C  38 00 00 00 */	li r0, 0
 /* 80D47B84 00000020  90 1F 05 5C */	stw r0, 0x55c(r31)
 lbl_80D47B88:
-/* 80D47B88 00000000  3C 60 00 00 */	lis r3, m__14daPeru_Param_c@ha
-/* 80D47B8C 00000004  38 83 00 00 */	addi r4, r3, m__14daPeru_Param_c@l
+/* 80D47B88 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D47B8C 00000004  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80D47B90 00000008  A8 64 00 4C */	lha r3, 0x4c(r4)
 /* 80D47B94 0000000C  A8 84 00 4E */	lha r4, 0x4e(r4)
-/* 80D47B98 00000010  4B FF F2 C1 */	bl daNpcT_getDistTableIdx__Fii
+/* 80D47B98 00000010  4B FF F2 C1 */	bl _unresolved
 /* 80D47B9C 00000014  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 80D47BA0 00000018  88 1F 05 44 */	lbz r0, 0x544(r31)
 /* 80D47BA4 0000001C  98 1F 05 45 */	stb r0, 0x545(r31)
-/* 80D47BA8 00000020  3C 60 00 00 */	lis r3, m__14daPeru_Param_c@ha
-/* 80D47BAC 00000024  38 83 00 00 */	addi r4, r3, m__14daPeru_Param_c@l
+/* 80D47BA8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D47BAC 00000024  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80D47BB0 00000028  A8 64 00 48 */	lha r3, 0x48(r4)
 /* 80D47BB4 0000002C  A8 84 00 4A */	lha r4, 0x4a(r4)
-/* 80D47BB8 00000030  4B FF F2 A1 */	bl daNpcT_getDistTableIdx__Fii
+/* 80D47BB8 00000030  4B FF F2 A1 */	bl _unresolved
 /* 80D47BBC 00000034  98 7F 05 47 */	stb r3, 0x547(r31)
-/* 80D47BC0 00000038  3C 60 00 00 */	lis r3, m__14daPeru_Param_c@ha
-/* 80D47BC4 0000003C  38 63 00 00 */	addi r3, r3, m__14daPeru_Param_c@l
+/* 80D47BC0 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D47BC4 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D47BC8 00000040  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D47BCC 00000044  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80D47BD0 00000048  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
@@ -58,9 +58,9 @@ lbl_80D47B88:
 /* 80D47BF8 00000070  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
 /* 80D47BFC 00000074  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80D47C00 00000078  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
-/* 80D47C04 0000007C  4B FF F2 55 */	bl SetWallR__12dBgS_AcchCirFf
-/* 80D47C08 00000080  3C 60 00 00 */	lis r3, m__14daPeru_Param_c@ha
-/* 80D47C0C 00000084  38 63 00 00 */	addi r3, r3, m__14daPeru_Param_c@l
+/* 80D47C04 0000007C  4B FF F2 55 */	bl _unresolved
+/* 80D47C08 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D47C0C 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D47C10 00000088  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80D47C14 0000008C  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
 /* 80D47C18 00000090  C0 03 00 0C */	lfs f0, 0xc(r3)

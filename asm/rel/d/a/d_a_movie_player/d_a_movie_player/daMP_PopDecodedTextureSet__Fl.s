@@ -3,10 +3,10 @@ lbl_80875C2C:
 /* 80875C30 00000004  7C 08 02 A6 */	mflr r0
 /* 80875C34 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80875C38 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 80875C3C 00000010  3C 60 00 00 */	lis r3, daMP_DecodedTextureSetQueue@ha
-/* 80875C40 00000014  38 63 00 00 */	addi r3, r3, daMP_DecodedTextureSetQueue@l
+/* 80875C3C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80875C40 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80875C44 00000018  38 81 00 08 */	addi r4, r1, 8
-/* 80875C48 0000001C  4B FF CA F1 */	bl OSReceiveMessage
+/* 80875C48 0000001C  4B FF CA F1 */	bl _unresolved
 /* 80875C4C 00000020  2C 03 00 01 */	cmpwi r3, 1
 /* 80875C50 00000024  40 82 00 0C */	bne lbl_80875C5C
 /* 80875C54 00000028  80 61 00 08 */	lwz r3, 8(r1)

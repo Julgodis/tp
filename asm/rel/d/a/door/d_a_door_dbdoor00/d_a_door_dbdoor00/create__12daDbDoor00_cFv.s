@@ -9,7 +9,7 @@ lbl_8045D9A8:
 /* 8045D9C4 0000001C  40 82 00 1C */	bne lbl_8045D9E0
 /* 8045D9C8 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 8045D9CC 00000024  41 82 00 08 */	beq lbl_8045D9D4
-/* 8045D9D0 00000028  4B FF F9 89 */	bl __ct__10fopAc_ac_cFv
+/* 8045D9D0 00000028  4B FF F9 89 */	bl _unresolved
 lbl_8045D9D4:
 /* 8045D9D4 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 8045D9D8 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -19,7 +19,7 @@ lbl_8045D9E0:
 /* 8045D9E4 00000004  4B FF FA 8D */	bl getAlwaysArcName__12daDbDoor00_cFv
 /* 8045D9E8 00000008  7C 64 1B 78 */	mr r4, r3
 /* 8045D9EC 0000000C  38 7F 05 70 */	addi r3, r31, 0x570
-/* 8045D9F0 00000010  4B FF F9 69 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8045D9F0 00000010  4B FF F9 69 */	bl _unresolved
 /* 8045D9F4 00000014  2C 03 00 04 */	cmpwi r3, 4
 /* 8045D9F8 00000018  41 82 00 08 */	beq lbl_8045DA00
 /* 8045D9FC 0000001C  48 00 00 58 */	b lbl_8045DA54
@@ -28,17 +28,17 @@ lbl_8045DA00:
 /* 8045DA04 00000004  4B FF FA 9D */	bl getBmdArcName__12daDbDoor00_cFv
 /* 8045DA08 00000008  7C 64 1B 78 */	mr r4, r3
 /* 8045DA0C 0000000C  38 7F 05 68 */	addi r3, r31, 0x568
-/* 8045DA10 00000010  4B FF F9 49 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8045DA10 00000010  4B FF F9 49 */	bl _unresolved
 /* 8045DA14 00000014  2C 03 00 04 */	cmpwi r3, 4
 /* 8045DA18 00000018  41 82 00 08 */	beq lbl_8045DA20
 /* 8045DA1C 0000001C  48 00 00 38 */	b lbl_8045DA54
 lbl_8045DA20:
 /* 8045DA20 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8045DA24 00000004  3C 80 00 00 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
-/* 8045DA28 00000008  38 84 00 00 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
+/* 8045DA24 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8045DA28 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8045DA2C 0000000C  3C A0 00 01 */	lis r5, 0x0001 /* 0x00008200@ha */
 /* 8045DA30 00000010  38 A5 82 00 */	addi r5, r5, 0x8200 /* 0x00008200@l */
-/* 8045DA34 00000014  4B FF F9 25 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 8045DA34 00000014  4B FF F9 25 */	bl _unresolved
 /* 8045DA38 00000018  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8045DA3C 0000001C  40 82 00 0C */	bne lbl_8045DA48
 /* 8045DA40 00000020  38 60 00 05 */	li r3, 5

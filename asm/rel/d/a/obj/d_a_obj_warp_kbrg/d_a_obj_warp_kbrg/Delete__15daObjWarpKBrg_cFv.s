@@ -10,15 +10,15 @@ lbl_80D29448:
 /* 80D29468 00000020  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80D2946C 00000024  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D29470 00000028  54 00 1F 7A */	rlwinm r0, r0, 3, 0x1d, 0x1d
-/* 80D29474 0000002C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80D29478 00000030  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80D29474 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D29478 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D2947C 00000034  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80D29480 00000038  4B FF DA 99 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D29480 00000038  4B FF DA 99 */	bl _unresolved
 /* 80D29484 0000003C  38 7F 05 A8 */	addi r3, r31, 0x5a8
-/* 80D29488 00000040  3C 80 00 00 */	lis r4, l_evArcName@ha
-/* 80D2948C 00000044  38 84 00 00 */	addi r4, r4, l_evArcName@l
+/* 80D29488 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D2948C 00000044  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D29490 00000048  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D29494 0000004C  4B FF DA 85 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D29494 0000004C  4B FF DA 85 */	bl _unresolved
 /* 80D29498 00000050  38 60 00 01 */	li r3, 1
 /* 80D2949C 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D294A0 00000058  80 01 00 14 */	lwz r0, 0x14(r1)

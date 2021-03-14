@@ -3,25 +3,74 @@
 # Module: 757
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_warp_bug", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D67DC0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_warp_bug", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D67DEC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_warp_bug", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D67E18, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
-	'create_init__11daWarpBug_cFv': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D67E38, 'size': 0x0004, 'padding': 0x00, 'name': "create_init__11daWarpBug_cFv", 'reference_count': 1, 'type': "Function"},
-	'createSolidHeap__FP10fopAc_ac_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D67E3C, 'size': 0x01C4, 'padding': 0x00, 'name': "createSolidHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D68000, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'daWarpBug_Draw__FP11daWarpBug_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D68048, 'size': 0x0020, 'padding': 0x00, 'name': "daWarpBug_Draw__FP11daWarpBug_c", 'reference_count': 1, 'type': "Function"},
-	'draw__11daWarpBug_cFv': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D68068, 'size': 0x0010, 'padding': 0x00, 'name': "draw__11daWarpBug_cFv", 'reference_count': 1, 'type': "Function"},
-	'daWarpBug_Execute__FP11daWarpBug_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D68078, 'size': 0x0060, 'padding': 0x00, 'name': "daWarpBug_Execute__FP11daWarpBug_c", 'reference_count': 1, 'type': "Function"},
-	'daWarpBug_IsDelete__FP11daWarpBug_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D680D8, 'size': 0x0008, 'padding': 0x00, 'name': "daWarpBug_IsDelete__FP11daWarpBug_c", 'reference_count': 1, 'type': "Function"},
-	'daWarpBug_Delete__FP11daWarpBug_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D680E0, 'size': 0x0050, 'padding': 0x00, 'name': "daWarpBug_Delete__FP11daWarpBug_c", 'reference_count': 1, 'type': "Function"},
-	'daWarpBug_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".text", 'addr': 0x80D68130, 'size': 0x00A4, 'padding': 0x00, 'name': "daWarpBug_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D681D4': {'library': "d/a/d_a_warp_bug", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D681D4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D681D8': {'library': "d/a/d_a_warp_bug", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D681D8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3709': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".rodata", 'addr': 0x80D681DC, 'size': 0x0004, 'padding': 0x00, 'name': "@3709", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".rodata", 'addr': 0x80D681E0, 'size': 0x0026, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".data", 'addr': 0x80D6820C, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daWarpBug_Method': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".data", 'addr': 0x80D68210, 'size': 0x0020, 'padding': 0x00, 'name': "l_daWarpBug_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_WarpBug': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".data", 'addr': 0x80D68230, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_WarpBug", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/d_a_warp_bug", 'translation_unit': "d_a_warp_bug", 'section': ".data", 'addr': 0x80D68260, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_warp_bug",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_warp_bug",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D67DC0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D67DEC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D67E18,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':7,'type':"Function"},
+	{'addr':0x80D67E38,'size':4,'pad':0,'label':"create_init__11daWarpBug_cFv",'name':"create_init__11daWarpBug_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D67E3C,'size':452,'pad':0,'label':"createSolidHeap__FP10fopAc_ac_c",'name':"createSolidHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D68000,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D68048,'size':32,'pad':0,'label':"daWarpBug_Draw__FP11daWarpBug_c",'name':"daWarpBug_Draw__FP11daWarpBug_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D68068,'size':16,'pad':0,'label':"draw__11daWarpBug_cFv",'name':"draw__11daWarpBug_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D68078,'size':96,'pad':0,'label':"daWarpBug_Execute__FP11daWarpBug_c",'name':"daWarpBug_Execute__FP11daWarpBug_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D680D8,'size':8,'pad':0,'label':"daWarpBug_IsDelete__FP11daWarpBug_c",'name':"daWarpBug_IsDelete__FP11daWarpBug_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D680E0,'size':80,'pad':0,'label':"daWarpBug_Delete__FP11daWarpBug_c",'name':"daWarpBug_Delete__FP11daWarpBug_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D68130,'size':164,'pad':0,'label':"daWarpBug_Create__FP10fopAc_ac_c",'name':"daWarpBug_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D681D4,'size':4,'pad':0,'label':"data_80D681D4",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D681D8,'size':4,'pad':0,'label':"data_80D681D8",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D681DC,'size':4,'pad':0,'label':"lit_3709",'name':"@3709",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D681E0,'size':38,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80D68208,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D6820C,'size':32,'pad':0,'label':"l_daWarpBug_Method",'name':"l_daWarpBug_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D6822C,'size':48,'pad':0,'label':"g_profile_WarpBug",'name':"g_profile_WarpBug",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D6825C,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create_init__11daWarpBug_cFv":3,
+	"createSolidHeap__FP10fopAc_ac_c":4,
+	"__dt__12J3DFrameCtrlFv":5,
+	"daWarpBug_Draw__FP11daWarpBug_c":6,
+	"draw__11daWarpBug_cFv":7,
+	"daWarpBug_Execute__FP11daWarpBug_c":8,
+	"daWarpBug_IsDelete__FP11daWarpBug_c":9,
+	"daWarpBug_Delete__FP11daWarpBug_c":10,
+	"daWarpBug_Create__FP10fopAc_ac_c":11,
+	"data_80D681D4":12,
+	"data_80D681D8":13,
+	"lit_3709":14,
+	"stringBase0":15,
+	"l_arcName":16,
+	"l_daWarpBug_Method":17,
+	"g_profile_WarpBug":18,
+	"__vt__12J3DFrameCtrl":19,
 }
+

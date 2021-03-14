@@ -3,10 +3,10 @@ lbl_808089DC:
 /* 808089E0 00000004  7C 08 02 A6 */	mflr r0
 /* 808089E4 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 808089E8 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 808089EC 00000010  4B FF F6 AD */	bl _savegpr_29
+/* 808089EC 00000010  4B FF F6 AD */	bl _unresolved
 /* 808089F0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 808089F4 00000018  3C 60 00 00 */	lis r3, lit_3925@ha
-/* 808089F8 0000001C  3B E3 00 00 */	addi r31, r3, lit_3925@l
+/* 808089F4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 808089F8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 808089FC 00000020  C0 3F 00 58 */	lfs f1, 0x58(r31)
 /* 80808A00 00000024  C0 1E 06 8C */	lfs f0, 0x68c(r30)
 /* 80808A04 00000028  EC 21 00 32 */	fmuls f1, f1, f0
@@ -39,8 +39,8 @@ lbl_80808A54:
 /* 80808A68 00000014  D0 41 00 28 */	stfs f2, 0x28(r1)
 /* 80808A6C 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80808A70 0000001C  4B FF FE 15 */	bl setElecEffect1__8daE_YM_cFv
-/* 80808A74 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80808A78 00000024  3B A3 00 00 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80808A74 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80808A78 00000024  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
 /* 80808A7C 00000028  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80808A80 0000002C  38 00 00 FF */	li r0, 0xff
 /* 80808A84 00000030  90 01 00 08 */	stw r0, 8(r1)
@@ -60,7 +60,7 @@ lbl_80808A54:
 /* 80808ABC 00000068  39 3E 04 E4 */	addi r9, r30, 0x4e4
 /* 80808AC0 0000006C  39 41 00 2C */	addi r10, r1, 0x2c
 /* 80808AC4 00000070  C0 3F 00 08 */	lfs f1, 8(r31)
-/* 80808AC8 00000074  4B FF F5 D1 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80808AC8 00000074  4B FF F5 D1 */	bl _unresolved
 /* 80808ACC 00000078  90 7E 0A E0 */	stw r3, 0xae0(r30)
 /* 80808AD0 0000007C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80808AD4 00000080  38 00 00 FF */	li r0, 0xff
@@ -81,10 +81,10 @@ lbl_80808A54:
 /* 80808B10 000000BC  39 3E 04 E4 */	addi r9, r30, 0x4e4
 /* 80808B14 000000C0  39 41 00 2C */	addi r10, r1, 0x2c
 /* 80808B18 000000C4  C0 3F 00 08 */	lfs f1, 8(r31)
-/* 80808B1C 000000C8  4B FF F5 7D */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80808B1C 000000C8  4B FF F5 7D */	bl _unresolved
 /* 80808B20 000000CC  90 7E 0A E4 */	stw r3, 0xae4(r30)
 /* 80808B24 000000D0  39 61 00 50 */	addi r11, r1, 0x50
-/* 80808B28 000000D4  4B FF F5 71 */	bl _restgpr_29
+/* 80808B28 000000D4  4B FF F5 71 */	bl _unresolved
 /* 80808B2C 000000D8  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80808B30 000000DC  7C 08 03 A6 */	mtlr r0
 /* 80808B34 000000E0  38 21 00 50 */	addi r1, r1, 0x50

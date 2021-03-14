@@ -5,16 +5,16 @@ lbl_80C00790:
 /* 80C0079C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C007A0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C007A4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C007A8 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C007AC 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C007A8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C007AC 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C007B0 00000020  3B E3 5B D4 */	addi r31, r3, 0x5bd4
 /* 80C007B4 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80C007B8 00000028  4B FF F6 C1 */	bl CheckQuake__12dVibration_cFv
+/* 80C007B8 00000028  4B FF F6 C1 */	bl _unresolved
 /* 80C007BC 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C007C0 00000030  41 82 00 10 */	beq lbl_80C007D0
 /* 80C007C4 00000034  7F E3 FB 78 */	mr r3, r31
 /* 80C007C8 00000038  38 80 00 1F */	li r4, 0x1f
-/* 80C007CC 0000003C  4B FF F6 AD */	bl StopQuake__12dVibration_cFi
+/* 80C007CC 0000003C  4B FF F6 AD */	bl _unresolved
 lbl_80C007D0:
 /* 80C007D0 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80C007D4 00000004  38 80 FF FF */	li r4, -1

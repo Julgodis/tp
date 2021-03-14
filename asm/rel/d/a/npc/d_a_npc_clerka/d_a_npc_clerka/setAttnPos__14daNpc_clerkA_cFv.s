@@ -5,10 +5,10 @@ lbl_80993794:
 /* 809937A0 0000000C  DB E1 00 80 */	stfd f31, 0x80(r1)
 /* 809937A4 00000010  F3 E1 00 88 */	psq_st f31, 136(r1), 0, 0 /* qr0 */
 /* 809937A8 00000000  39 61 00 80 */	addi r11, r1, 0x80
-/* 809937AC 00000004  4B FF EC ED */	bl _savegpr_27
+/* 809937AC 00000004  4B FF EC ED */	bl _unresolved
 /* 809937B0 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 809937B4 0000000C  3C 60 00 00 */	lis r3, m__20daNpc_clerkA_Param_c@ha
-/* 809937B8 00000010  3B E3 00 00 */	addi r31, r3, m__20daNpc_clerkA_Param_c@l
+/* 809937B4 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809937B8 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 809937BC 00000014  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 809937C0 00000018  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 809937C4 0000001C  C0 3F 00 D0 */	lfs f1, 0xd0(r31)
@@ -20,7 +20,7 @@ lbl_80993794:
 /* 809937DC 00000034  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 809937E0 00000038  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 809937E4 0000003C  38 80 00 00 */	li r4, 0
-/* 809937E8 00000040  4B FF EC B1 */	bl calc__19daNpcT_DmgStagger_cFi
+/* 809937E8 00000040  4B FF EC B1 */	bl _unresolved
 /* 809937EC 00000044  C0 5F 00 D4 */	lfs f2, 0xd4(r31)
 /* 809937F0 00000048  A8 7E 0D 80 */	lha r3, 0xd80(r30)
 /* 809937F4 0000004C  A8 1E 0D 7A */	lha r0, 0xd7a(r30)
@@ -73,14 +73,14 @@ lbl_80993794:
 /* 809938B0 00000108  C0 EA 00 3C */	lfs f7, 0x3c(r10)
 /* 809938B4 0000010C  C1 0A 00 38 */	lfs f8, 0x38(r10)
 /* 809938B8 00000110  39 41 00 40 */	addi r10, r1, 0x40
-/* 809938BC 00000114  4B FF EB DD */	bl setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz
+/* 809938BC 00000114  4B FF EB DD */	bl _unresolved
 /* 809938C0 00000118  38 7E 0B A8 */	addi r3, r30, 0xba8
 /* 809938C4 0000011C  C0 3F 00 C0 */	lfs f1, 0xc0(r31)
 /* 809938C8 00000120  C0 5F 00 C4 */	lfs f2, 0xc4(r31)
 /* 809938CC 00000124  FC 60 F8 90 */	fmr f3, f31
-/* 809938D0 00000128  4B FF EB C9 */	bl calcJntRad__15daNpcT_JntAnm_cFfff
+/* 809938D0 00000128  4B FF EB C9 */	bl _unresolved
 /* 809938D4 0000012C  7F C3 F3 78 */	mr r3, r30
-/* 809938D8 00000130  4B FF EB C1 */	bl setMtx__8daNpcT_cFv
+/* 809938D8 00000130  4B FF EB C1 */	bl _unresolved
 /* 809938DC 00000134  7F C3 F3 78 */	mr r3, r30
 /* 809938E0 00000138  81 9E 0E 3C */	lwz r12, 0xe3c(r30)
 /* 809938E4 0000013C  81 8C 00 24 */	lwz r12, 0x24(r12)
@@ -92,14 +92,14 @@ lbl_80993794:
 /* 809938FC 00000154  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 80993900 00000158  1C 03 00 30 */	mulli r0, r3, 0x30
 /* 80993904 0000015C  7C 64 02 14 */	add r3, r4, r0
-/* 80993908 00000160  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 8099390C 00000164  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 80993910 00000168  4B FF EB 89 */	bl PSMTXCopy
-/* 80993914 0000016C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80993918 00000170  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80993908 00000160  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8099390C 00000164  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80993910 00000168  4B FF EB 89 */	bl _unresolved
+/* 80993914 0000016C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80993918 00000170  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8099391C 00000174  38 81 00 4C */	addi r4, r1, 0x4c
 /* 80993920 00000178  38 BE 05 38 */	addi r5, r30, 0x538
-/* 80993924 0000017C  4B FF EB 75 */	bl PSMTXMultVec
+/* 80993924 0000017C  4B FF EB 75 */	bl _unresolved
 /* 80993928 00000180  80 1E 0B 7C */	lwz r0, 0xb7c(r30)
 /* 8099392C 00000184  2C 00 00 03 */	cmpwi r0, 3
 /* 80993930 00000188  40 82 00 68 */	bne lbl_80993998
@@ -167,7 +167,7 @@ lbl_809939F8:
 /* 80993A20 00000028  E3 E1 00 88 */	psq_l f31, 136(r1), 0, 0 /* qr0 */
 /* 80993A24 00000000  CB E1 00 80 */	lfd f31, 0x80(r1)
 /* 80993A28 00000004  39 61 00 80 */	addi r11, r1, 0x80
-/* 80993A2C 00000008  4B FF EA 6D */	bl _restgpr_27
+/* 80993A2C 00000008  4B FF EA 6D */	bl _unresolved
 /* 80993A30 0000000C  80 01 00 94 */	lwz r0, 0x94(r1)
 /* 80993A34 00000010  7C 08 03 A6 */	mtlr r0
 /* 80993A38 00000014  38 21 00 90 */	addi r1, r1, 0x90

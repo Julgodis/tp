@@ -3,22 +3,22 @@ lbl_80AE45DC:
 /* 80AE45E0 00000004  7C 08 02 A6 */	mflr r0
 /* 80AE45E4 00000008  90 01 01 E4 */	stw r0, 0x1e4(r1)
 /* 80AE45E8 0000000C  39 61 01 E0 */	addi r11, r1, 0x1e0
-/* 80AE45EC 00000010  4B FF E7 4D */	bl _savegpr_15
+/* 80AE45EC 00000010  4B FF E7 4D */	bl _unresolved
 /* 80AE45F0 00000014  90 61 00 08 */	stw r3, 8(r1)
 /* 80AE45F4 00000018  39 E0 00 00 */	li r15, 0
 /* 80AE45F8 0000001C  3A 00 00 00 */	li r16, 0
 /* 80AE45FC 00000020  3A 20 00 00 */	li r17, 0
 /* 80AE4600 00000024  3A 40 00 00 */	li r18, 0
-/* 80AE4604 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80AE4608 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE4604 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE4608 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AE460C 00000030  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80AE4610 00000034  3A 81 00 0C */	addi r20, r1, 0xc
-/* 80AE4614 00000038  3C 60 00 00 */	lis r3, mEvtBitLabels__11daNpc_Sha_c@ha
-/* 80AE4618 0000003C  3A 63 00 00 */	addi r19, r3, mEvtBitLabels__11daNpc_Sha_c@l
+/* 80AE4614 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE4618 0000003C  3A 63 00 00 */	addi r19, r3, 0x0000 /* 0x00000000@l */
 lbl_80AE461C:
 /* 80AE461C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AE4620 00000004  7C 93 92 2E */	lhzx r4, r19, r18
-/* 80AE4624 00000008  4B FF E7 15 */	bl getEventReg__11dSv_event_cCFUs
+/* 80AE4624 00000008  4B FF E7 15 */	bl _unresolved
 /* 80AE4628 0000000C  38 E0 00 01 */	li r7, 1
 /* 80AE462C 00000010  39 00 00 00 */	li r8, 0
 /* 80AE4630 00000014  54 66 06 3E */	clrlwi r6, r3, 0x18
@@ -50,16 +50,16 @@ lbl_80AE4664:
 /* 80AE4690 0000002C  48 00 02 28 */	b lbl_80AE48B8
 lbl_80AE4694:
 /* 80AE4694 00000000  3B 80 00 02 */	li r28, 2
-/* 80AE4698 00000004  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80AE469C 00000008  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE4698 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE469C 00000008  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AE46A0 0000000C  39 E3 0D D8 */	addi r15, r3, 0xdd8
-/* 80AE46A4 00000010  3C 60 00 00 */	lis r3, mTmpBitLabels__11daNpc_Sha_c@ha
-/* 80AE46A8 00000014  3A 23 00 00 */	addi r17, r3, mTmpBitLabels__11daNpc_Sha_c@l
-/* 80AE46AC 00000018  3C 60 00 00 */	lis r3, mQueries__11daNpc_Sha_c@ha
-/* 80AE46B0 0000001C  38 03 00 00 */	addi r0, r3, mQueries__11daNpc_Sha_c@l
+/* 80AE46A4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE46A8 00000014  3A 23 00 00 */	addi r17, r3, 0x0000 /* 0x00000000@l */
+/* 80AE46AC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE46B0 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80AE46B4 00000020  90 01 01 90 */	stw r0, 0x190(r1)
-/* 80AE46B8 00000024  3C 60 00 00 */	lis r3, mEvtBitLabels__11daNpc_Sha_c@ha
-/* 80AE46BC 00000028  38 03 00 00 */	addi r0, r3, mEvtBitLabels__11daNpc_Sha_c@l
+/* 80AE46B8 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE46BC 00000028  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80AE46C0 0000002C  90 01 01 8C */	stw r0, 0x18c(r1)
 /* 80AE46C4 00000030  7D F0 7B 78 */	mr r16, r15
 lbl_80AE46C8:
@@ -68,16 +68,16 @@ lbl_80AE46C8:
 lbl_80AE46D0:
 /* 80AE46D0 00000000  7D E3 7B 78 */	mr r3, r15
 /* 80AE46D4 00000004  7C 91 92 2E */	lhzx r4, r17, r18
-/* 80AE46D8 00000008  4B FF E6 61 */	bl getEventReg__11dSv_event_cCFUs
+/* 80AE46D8 00000008  4B FF E6 61 */	bl _unresolved
 /* 80AE46DC 0000000C  7C 73 1B 78 */	mr r19, r3
 /* 80AE46E0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80AE46E4 00000014  80 81 01 8C */	lwz r4, 0x18c(r1)
 /* 80AE46E8 00000018  7C 84 92 2E */	lhzx r4, r4, r18
-/* 80AE46EC 0000001C  4B FF E6 4D */	bl getEventReg__11dSv_event_cCFUs
+/* 80AE46EC 0000001C  4B FF E6 4D */	bl _unresolved
 /* 80AE46F0 00000020  7E 65 1B 78 */	or r5, r19, r3
 /* 80AE46F4 00000024  7D E3 7B 78 */	mr r3, r15
 /* 80AE46F8 00000028  7C 91 92 2E */	lhzx r4, r17, r18
-/* 80AE46FC 0000002C  4B FF E6 3D */	bl setEventReg__11dSv_event_cFUsUc
+/* 80AE46FC 0000002C  4B FF E6 3D */	bl _unresolved
 /* 80AE4700 00000030  3A 94 00 01 */	addi r20, r20, 1
 /* 80AE4704 00000034  2C 14 00 06 */	cmpwi r20, 6
 /* 80AE4708 00000038  3A 52 00 02 */	addi r18, r18, 2
@@ -109,7 +109,7 @@ lbl_80AE475C:
 /* 80AE4764 00000008  1C 9E 00 0C */	mulli r4, r30, 0xc
 /* 80AE4768 0000000C  80 01 01 90 */	lwz r0, 0x190(r1)
 /* 80AE476C 00000010  7D 80 22 14 */	add r12, r0, r4
-/* 80AE4770 00000014  4B FF E5 C9 */	bl __ptmf_scall
+/* 80AE4770 00000014  4B FF E5 C9 */	bl _unresolved
 /* 80AE4774 00000018  60 00 00 00 */	nop 
 /* 80AE4778 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 80AE477C 00000020  41 82 00 54 */	beq lbl_80AE47D0
@@ -123,7 +123,7 @@ lbl_80AE475C:
 lbl_80AE479C:
 /* 80AE479C 00000000  7E 03 83 78 */	mr r3, r16
 /* 80AE47A0 00000004  7C 91 A2 2E */	lhzx r4, r17, r20
-/* 80AE47A4 00000008  4B FF E5 95 */	bl getEventReg__11dSv_event_cCFUs
+/* 80AE47A4 00000008  4B FF E5 95 */	bl _unresolved
 /* 80AE47A8 0000000C  57 A4 06 3E */	clrlwi r4, r29, 0x18
 /* 80AE47AC 00000010  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80AE47B0 00000014  7C 80 00 39 */	and. r0, r4, r0
@@ -149,7 +149,7 @@ lbl_80AE47D0:
 /* 80AE47F8 00000028  7D E3 7B 78 */	mr r3, r15
 /* 80AE47FC 0000002C  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F2FF@ha */
 /* 80AE4800 00000030  38 84 F2 FF */	addi r4, r4, 0xF2FF /* 0x0000F2FF@l */
-/* 80AE4804 00000034  4B FF E5 35 */	bl getEventReg__11dSv_event_cCFUs
+/* 80AE4804 00000034  4B FF E5 35 */	bl _unresolved
 /* 80AE4808 00000038  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AE480C 0000003C  41 82 00 1C */	beq lbl_80AE4828
 /* 80AE4810 00000040  28 00 00 2D */	cmplwi r0, 0x2d
@@ -173,8 +173,8 @@ lbl_80AE4840:
 /* 80AE4848 00000008  38 60 00 00 */	li r3, 0
 /* 80AE484C 0000000C  7F 64 DB 78 */	mr r4, r27
 /* 80AE4850 00000010  48 00 1C 05 */	bl func_80AE6454
-/* 80AE4854 00000014  3C 80 00 00 */	lis r4, g_Counter@ha
-/* 80AE4858 00000018  80 04 00 00 */	lwz r0, g_Counter@l(r4)
+/* 80AE4854 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AE4858 00000018  80 04 00 00 */	lwz r0, 0x0000(r4)
 /* 80AE485C 0000001C  7C 63 02 14 */	add r3, r3, r0
 /* 80AE4860 00000020  7C 03 DB 96 */	divwu r0, r3, r27
 /* 80AE4864 00000024  7C 00 D9 D6 */	mullw r0, r0, r27
@@ -192,7 +192,7 @@ lbl_80AE488C:
 /* 80AE488C 00000000  7D E3 7B 78 */	mr r3, r15
 /* 80AE4890 00000004  7C 91 92 2E */	lhzx r4, r17, r18
 /* 80AE4894 00000008  38 A0 00 00 */	li r5, 0
-/* 80AE4898 0000000C  4B FF E4 A1 */	bl setEventReg__11dSv_event_cFUsUc
+/* 80AE4898 0000000C  4B FF E4 A1 */	bl _unresolved
 /* 80AE489C 00000010  3A 73 00 01 */	addi r19, r19, 1
 /* 80AE48A0 00000014  2C 13 00 06 */	cmpwi r19, 6
 /* 80AE48A4 00000018  3A 52 00 02 */	addi r18, r18, 2
@@ -203,7 +203,7 @@ lbl_80AE48B4:
 /* 80AE48B4 00000000  38 60 FF FF */	li r3, -1
 lbl_80AE48B8:
 /* 80AE48B8 00000000  39 61 01 E0 */	addi r11, r1, 0x1e0
-/* 80AE48BC 00000004  4B FF E4 7D */	bl _restgpr_15
+/* 80AE48BC 00000004  4B FF E4 7D */	bl _unresolved
 /* 80AE48C0 00000008  80 01 01 E4 */	lwz r0, 0x1e4(r1)
 /* 80AE48C4 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80AE48C8 00000010  38 21 01 E0 */	addi r1, r1, 0x1e0

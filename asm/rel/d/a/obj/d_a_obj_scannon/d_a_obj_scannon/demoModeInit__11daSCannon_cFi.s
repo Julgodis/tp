@@ -7,8 +7,8 @@ lbl_80CC7FAC:
 /* 80CC7FC0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80CC7FC4 00000018  2C 04 00 00 */	cmpwi r4, 0
 /* 80CC7FC8 0000001C  41 80 00 64 */	blt lbl_80CC802C
-/* 80CC7FCC 00000020  3C 60 00 00 */	lis r3, s_demoTable__11daSCannon_c@ha
-/* 80CC7FD0 00000024  38 A3 00 00 */	addi r5, r3, s_demoTable__11daSCannon_c@l
+/* 80CC7FCC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7FD0 00000024  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
 /* 80CC7FD4 00000028  88 1E 06 18 */	lbz r0, 0x618(r30)
 /* 80CC7FD8 0000002C  1C C0 00 0C */	mulli r6, r0, 0xc
 /* 80CC7FDC 00000030  7C 65 32 14 */	add r3, r5, r6
@@ -20,17 +20,17 @@ lbl_80CC7FF0:
 /* 80CC7FF0 00000000  7C 05 30 2E */	lwzx r0, r5, r6
 /* 80CC7FF4 00000004  1F E4 00 18 */	mulli r31, r4, 0x18
 /* 80CC7FF8 00000008  7C 60 FA 14 */	add r3, r0, r31
-/* 80CC7FFC 0000000C  4B FF EA 7D */	bl __ptmf_test
+/* 80CC7FFC 0000000C  4B FF EA 7D */	bl _unresolved
 /* 80CC8000 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC8004 00000014  41 82 00 28 */	beq lbl_80CC802C
 /* 80CC8008 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80CC800C 0000001C  88 1E 06 18 */	lbz r0, 0x618(r30)
 /* 80CC8010 00000020  1C 00 00 0C */	mulli r0, r0, 0xc
-/* 80CC8014 00000024  3C 80 00 00 */	lis r4, s_demoTable__11daSCannon_c@ha
-/* 80CC8018 00000028  38 84 00 00 */	addi r4, r4, s_demoTable__11daSCannon_c@l
+/* 80CC8014 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CC8018 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CC801C 0000002C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 80CC8020 00000030  7D 80 FA 14 */	add r12, r0, r31
-/* 80CC8024 00000034  4B FF EA 55 */	bl __ptmf_scall
+/* 80CC8024 00000034  4B FF EA 55 */	bl _unresolved
 /* 80CC8028 00000038  60 00 00 00 */	nop 
 lbl_80CC802C:
 /* 80CC802C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

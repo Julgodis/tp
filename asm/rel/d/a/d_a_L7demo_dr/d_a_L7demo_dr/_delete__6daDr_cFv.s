@@ -8,19 +8,19 @@ lbl_805A9FFC:
 /* 805AA014 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 805AA018 0000001C  41 82 00 0C */	beq lbl_805AA024
 /* 805AA01C 00000020  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 805AA020 00000024  4B FF F1 F9 */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 805AA020 00000024  4B FF F1 F9 */	bl _unresolved
 lbl_805AA024:
 /* 805AA024 00000000  38 60 00 00 */	li r3, 0
-/* 805AA028 00000004  4B FF F1 F1 */	bl getLayerNo__14dComIfG_play_cFi
+/* 805AA028 00000004  4B FF F1 F1 */	bl _unresolved
 /* 805AA02C 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 805AA030 0000000C  40 82 00 0C */	bne lbl_805AA03C
 /* 805AA034 00000010  38 60 00 01 */	li r3, 1
 /* 805AA038 00000014  48 00 00 18 */	b lbl_805AA050
 lbl_805AA03C:
 /* 805AA03C 00000000  38 7F 05 68 */	addi r3, r31, 0x568
-/* 805AA040 00000004  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 805AA044 00000008  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 805AA048 0000000C  4B FF F1 D1 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 805AA040 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805AA044 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805AA048 0000000C  4B FF F1 D1 */	bl _unresolved
 /* 805AA04C 00000010  38 60 00 01 */	li r3, 1
 lbl_805AA050:
 /* 805AA050 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

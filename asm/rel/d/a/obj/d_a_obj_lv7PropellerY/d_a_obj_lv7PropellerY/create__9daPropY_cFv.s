@@ -10,9 +10,9 @@ lbl_80C85624:
 /* 80C85644 00000020  40 82 00 28 */	bne lbl_80C8566C
 /* 80C85648 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80C8564C 00000028  41 82 00 14 */	beq lbl_80C85660
-/* 80C85650 0000002C  4B FF FD 89 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80C85654 00000030  3C 60 00 00 */	lis r3, __vt__9daPropY_c@ha
-/* 80C85658 00000034  38 03 00 00 */	addi r0, r3, __vt__9daPropY_c@l
+/* 80C85650 0000002C  4B FF FD 89 */	bl _unresolved
+/* 80C85654 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C85658 00000034  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C8565C 00000038  90 1E 05 9C */	stw r0, 0x59c(r30)
 lbl_80C85660:
 /* 80C85660 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
@@ -25,27 +25,27 @@ lbl_80C8566C:
 /* 80C85678 0000000C  38 7E 05 A0 */	addi r3, r30, 0x5a0
 /* 80C8567C 00000010  88 1E 05 AF */	lbz r0, 0x5af(r30)
 /* 80C85680 00000014  54 00 10 3A */	slwi r0, r0, 2
-/* 80C85684 00000018  3C 80 00 00 */	lis r4, l_type@ha
-/* 80C85688 0000001C  38 84 00 00 */	addi r4, r4, l_type@l
+/* 80C85684 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C85688 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C8568C 00000020  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C85690 00000024  4B FF FD 49 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C85690 00000024  4B FF FD 49 */	bl _unresolved
 /* 80C85694 00000028  7C 7F 1B 78 */	mr r31, r3
 /* 80C85698 0000002C  2C 1F 00 04 */	cmpwi r31, 4
 /* 80C8569C 00000030  40 82 01 58 */	bne lbl_80C857F4
 /* 80C856A0 00000034  88 1E 05 AF */	lbz r0, 0x5af(r30)
 /* 80C856A4 00000038  54 00 10 3A */	slwi r0, r0, 2
 /* 80C856A8 0000003C  7F C3 F3 78 */	mr r3, r30
-/* 80C856AC 00000040  3C 80 00 00 */	lis r4, l_type@ha
-/* 80C856B0 00000044  38 84 00 00 */	addi r4, r4, l_type@l
+/* 80C856AC 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C856B0 00000044  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C856B4 00000048  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C856B8 0000004C  3C A0 00 00 */	lis r5, l_dzbIdx@ha
-/* 80C856BC 00000050  38 A5 00 00 */	addi r5, r5, l_dzbIdx@l
+/* 80C856B8 0000004C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C856BC 00000050  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C856C0 00000054  7C A5 00 2E */	lwzx r5, r5, r0
-/* 80C856C4 00000058  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
-/* 80C856C8 0000005C  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
+/* 80C856C4 00000058  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80C856C8 0000005C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80C856CC 00000060  38 E0 2A 40 */	li r7, 0x2a40
 /* 80C856D0 00000064  39 00 00 00 */	li r8, 0
-/* 80C856D4 00000068  4B FF FD 05 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80C856D4 00000068  4B FF FD 05 */	bl _unresolved
 /* 80C856D8 0000006C  2C 03 00 05 */	cmpwi r3, 5
 /* 80C856DC 00000070  40 82 00 0C */	bne lbl_80C856E8
 /* 80C856E0 00000074  38 60 00 05 */	li r3, 5
@@ -57,7 +57,7 @@ lbl_80C856E8:
 /* 80C856F4 0000000C  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80C856F8 00000010  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C856FC 00000014  7F C3 F3 78 */	mr r3, r30
-/* 80C85700 00000018  4B FF FC D9 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80C85700 00000018  4B FF FC D9 */	bl _unresolved
 /* 80C85704 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 80C85708 00000020  4B FF FE 05 */	bl setBaseMtx__9daPropY_cFv
 /* 80C8570C 00000024  80 1E 00 B0 */	lwz r0, 0xb0(r30)
@@ -103,11 +103,11 @@ lbl_80C85798:
 /* 80C8579C 00000004  48 00 03 6D */	bl init_modeWait__9daPropY_cFv
 /* 80C857A0 00000008  48 00 00 54 */	b lbl_80C857F4
 lbl_80C857A4:
-/* 80C857A4 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C857A8 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C857A4 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C857A8 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C857AC 00000008  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C857B0 0000000C  7C 05 07 74 */	extsb r5, r0
-/* 80C857B4 00000010  4B FF FC 25 */	bl isSwitch__10dSv_info_cCFii
+/* 80C857B4 00000010  4B FF FC 25 */	bl _unresolved
 /* 80C857B8 00000014  98 7E 05 AE */	stb r3, 0x5ae(r30)
 /* 80C857BC 00000018  88 1E 05 AE */	lbz r0, 0x5ae(r30)
 /* 80C857C0 0000001C  28 00 00 00 */	cmplwi r0, 0

@@ -5,16 +5,16 @@ lbl_80464EC4:
 /* 80464ED0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80464ED4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80464ED8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80464EDC 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80464EE0 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80464EDC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80464EE0 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80464EE4 00000020  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80464EE8 00000024  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80464EEC 00000028  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80464EF0 0000002C  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80464EEC 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80464EF0 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80464EF4 00000030  38 84 01 59 */	addi r4, r4, 0x159
 /* 80464EF8 00000034  38 A0 00 00 */	li r5, 0
 /* 80464EFC 00000038  38 C0 00 00 */	li r6, 0
-/* 80464F00 0000003C  4B FF BC 19 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80464F00 0000003C  4B FF BC 19 */	bl _unresolved
 /* 80464F04 00000040  90 7E 06 CC */	stw r3, 0x6cc(r30)
 /* 80464F08 00000044  A8 1E 04 DE */	lha r0, 0x4de(r30)
 /* 80464F0C 00000048  B0 1E 04 E6 */	sth r0, 0x4e6(r30)

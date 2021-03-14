@@ -64,14 +64,17 @@ class Symbol:
     def offset(self):
         return self.addr - self.section.addr
 
+    def valid_reference(self, addr):
+        return addr == self.addr
+
     def cpp_reference(self, accessor, addr):
         if addr != self.addr:
-            raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+            raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}\n{self}")
         return f"&{self.identifier.label}"
 
     def asm_reference(self, addr):
         if addr != self.addr:
-            raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+            return None
         return self.identifier.label
 
     def _get_internal_references(self, context, symbol_table):
@@ -80,6 +83,10 @@ class Symbol:
     def internal_references(self, context, symbol_table):
         if not self._internal_references:
             self._internal_references = self._get_internal_references(context, symbol_table)
+        return self._internal_references
+
+    def internal_references_no_calculate(self):
+        assert self._internal_references
         return self._internal_references
 
     def relocation_symbols(self, context, symbol_table, section):
@@ -133,7 +140,7 @@ class Section:
             if addr < start or addr >= end:
                 continue
 
-            symbol = symbol_table[relocation]
+            symbol = symbol_table[-1, relocation]
             symbols.add(symbol)
         return symbols
 
@@ -242,13 +249,19 @@ class ZeroData(Symbol):
 class ZeroStruct(Symbol):
     members: List[Symbol] = field(default_factory=list)
 
+    def valid_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                return True
+        return False
+
     def cpp_reference(self, accessor, addr):
         for field in self.members:
             if field.addr == addr:
                 offset = field.addr - self.addr
                 return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
 
-        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}\n{self}")
 
     def asm_reference(self, addr):
         for field in self.members:
@@ -256,7 +269,7 @@ class ZeroStruct(Symbol):
                 offset = field.addr - self.addr
                 return f"{self.identifier.label}+0x{offset:X}"
 
-        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        return None
 
     async def export_forward_references(self, exporter, builder: AsyncBuilder):
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
@@ -350,13 +363,19 @@ class InitData(Data):
 class InitStruct(Data):
     members: List[Symbol] = field(default_factory=list)
 
+    def valid_reference(self, addr):
+        for field in self.members:
+            if field.addr == addr:
+                return True
+        return False
+
     def cpp_reference(self, accessor, addr):
         for field in self.members:
             if field.addr == addr:
                 offset = field.addr - self.addr
                 return f"(((char*)&{self.identifier.label})+0x{offset:X}) /* {field.identifier.name} */"
 
-        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}\n{self}")
 
     def asm_reference(self, addr):
         for field in self.members:
@@ -364,7 +383,7 @@ class InitStruct(Data):
                 offset = field.addr - self.addr
                 return f"{self.identifier.label}+0x{offset:X}"
 
-        raise Dol2ZelException(f"invalid reference addr 0x{addr:08X} for {type(self).__name__}")
+        return None
 
     async def export_declaration(self, exporter, builder: AsyncBuilder):
         count = 0
@@ -421,6 +440,9 @@ class InitStruct(Data):
 class VirtualTable(Data):
     functions: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
 
+    def valid_reference(self, addr):
+        return addr % 4 == 0
+
     def resolve_references(self, context, symbol_table, section):
         assert len(self.functions) == 0
         assert len(self.data) % 4 == 0
@@ -429,7 +451,7 @@ class VirtualTable(Data):
             if addr == 0:
                 self.functions.append((addr, None))
             else:
-                symbol = symbol_table[addr]
+                symbol = symbol_table[self._module, addr]
                 if symbol:
                     self.functions.append((addr, symbol))
                 else:
@@ -472,6 +494,9 @@ class ReferenceArray(Data):
     references: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
     rsymbols: List[Symbol] = field(default_factory=list,repr=False)
 
+    def valid_reference(self, addr):
+        return addr % 4 == 0
+
     def resolve_references(self, context, symbol_table, section):
         assert len(self.references) == 0
         assert len(self.data) % 4 == 0
@@ -482,13 +507,13 @@ class ReferenceArray(Data):
         for addr in addresses:
             if offset in relocations:
                 relocation = relocations[offset]
-                addr, symbol = symbol_table[relocation]
+                addr, symbol = symbol_table[-1, relocation]
                 self.rsymbols.append(symbol)
                 self.references.append((addr, symbol))
             elif addr == 0:
                 self.references.append((addr, None))
             else:
-                symbol = symbol_table[addr]
+                symbol = symbol_table[self._module, addr]
                 if symbol:
                     self.references.append((addr, symbol))
                 else:
@@ -646,9 +671,9 @@ class Block(Data):
         collector = AccessCollector([])
         for x in collector.execute_generator(self.addr, self.data, self.size):
             pass
-        self.sda_hack_references = collector.sda_hack_references
-        symbols = [symbol_table.at(x.addr) for x in collector.accesses.values()]
-
+        sda_hack_symbols = [symbol_table[self._module, x] for x in collector.sda_hack_references]
+        self.sda_hack_references = set([ x for x in sda_hack_symbols if x ])
+        symbols = [symbol_table[self._module, x.addr] for x in collector.accesses.values()]
         return set([ x for x in symbols if x ])
 
 @dataclass(eq=False)
@@ -664,6 +689,9 @@ class Function(Symbol):
         for block in self.blocks:
             refs.update(block.sda_hack_references if block.sda_hack_references else set())
         return refs
+
+    def valid_reference(self, addr):
+        return addr % 4 == 0
 
     def cpp_reference(self, accessor, addr):
         if addr == self.addr:

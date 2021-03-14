@@ -4,27 +4,27 @@ lbl_80C11444:
 /* 80C1144C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C11450 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C11454 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C11458 00000014  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C1145C 00000018  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C11458 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C1145C 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C11460 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80C11464 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80C11468 00000024  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80C1146C 00000028  4B FF FC 6D */	bl PSMTXTrans
-/* 80C11470 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C11474 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C1146C 00000028  4B FF FC 6D */	bl _unresolved
+/* 80C11470 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C11474 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C11478 00000034  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 80C1147C 00000038  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80C11480 0000003C  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80C11484 00000040  4B FF FC 55 */	bl mDoMtx_ZXYrotM__FPA4_fsss
-/* 80C11488 00000044  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C1148C 00000048  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C11484 00000040  4B FF FC 55 */	bl _unresolved
+/* 80C11488 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C1148C 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C11490 0000004C  80 9F 05 C8 */	lwz r4, 0x5c8(r31)
 /* 80C11494 00000050  38 84 00 24 */	addi r4, r4, 0x24
-/* 80C11498 00000054  4B FF FC 41 */	bl PSMTXCopy
-/* 80C1149C 00000058  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C114A0 0000005C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C11498 00000054  4B FF FC 41 */	bl _unresolved
+/* 80C1149C 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C114A0 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C114A4 00000060  38 9F 05 6C */	addi r4, r31, 0x56c
-/* 80C114A8 00000064  4B FF FC 31 */	bl PSMTXCopy
+/* 80C114A8 00000064  4B FF FC 31 */	bl _unresolved
 /* 80C114AC 00000068  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C114B0 0000006C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C114B4 00000070  7C 08 03 A6 */	mtlr r0

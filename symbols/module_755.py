@@ -3,21 +3,65 @@
 # Module: 755
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_tboxSw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D667E0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_tboxSw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D6680C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_tboxSw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D66838, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 4, 'type': "Function"},
-	'Create__10daTboxSw_cFv': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66858, 'size': 0x0008, 'padding': 0x00, 'name': "Create__10daTboxSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__10daTboxSw_cFv': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66860, 'size': 0x0068, 'padding': 0x00, 'name': "create__10daTboxSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__10daTboxSw_cFv': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D668C8, 'size': 0x0070, 'padding': 0x00, 'name': "execute__10daTboxSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__10daTboxSw_cFv': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66938, 'size': 0x0008, 'padding': 0x00, 'name': "draw__10daTboxSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__10daTboxSw_cFv': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66940, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__10daTboxSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTboxSw_Draw__FP10daTboxSw_c': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66948, 'size': 0x0020, 'padding': 0x00, 'name': "daTboxSw_Draw__FP10daTboxSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTboxSw_Execute__FP10daTboxSw_c': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66968, 'size': 0x0020, 'padding': 0x00, 'name': "daTboxSw_Execute__FP10daTboxSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTboxSw_Delete__FP10daTboxSw_c': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D66988, 'size': 0x0020, 'padding': 0x00, 'name': "daTboxSw_Delete__FP10daTboxSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTboxSw_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".text", 'addr': 0x80D669A8, 'size': 0x0020, 'padding': 0x00, 'name': "daTboxSw_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D669C8': {'library': "d/a/d_a_tboxSw", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D669C8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D669CC': {'library': "d/a/d_a_tboxSw", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D669CC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daTboxSw_Method': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".data", 'addr': 0x80D669D4, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTboxSw_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_TBOX_SW': {'library': "d/a/d_a_tboxSw", 'translation_unit': "d_a_tboxSw", 'section': ".data", 'addr': 0x80D669F4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TBOX_SW", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_tboxSw",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tboxSw",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D667E0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D6680C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D66838,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x80D66858,'size':8,'pad':0,'label':"Create__10daTboxSw_cFv",'name':"Create__10daTboxSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66860,'size':104,'pad':0,'label':"create__10daTboxSw_cFv",'name':"create__10daTboxSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D668C8,'size':112,'pad':0,'label':"execute__10daTboxSw_cFv",'name':"execute__10daTboxSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66938,'size':8,'pad':0,'label':"draw__10daTboxSw_cFv",'name':"draw__10daTboxSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66940,'size':8,'pad':0,'label':"_delete__10daTboxSw_cFv",'name':"_delete__10daTboxSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D66948,'size':32,'pad':0,'label':"daTboxSw_Draw__FP10daTboxSw_c",'name':"daTboxSw_Draw__FP10daTboxSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D66968,'size':32,'pad':0,'label':"daTboxSw_Execute__FP10daTboxSw_c",'name':"daTboxSw_Execute__FP10daTboxSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D66988,'size':32,'pad':0,'label':"daTboxSw_Delete__FP10daTboxSw_c",'name':"daTboxSw_Delete__FP10daTboxSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D669A8,'size':32,'pad':0,'label':"daTboxSw_Create__FP10fopAc_ac_c",'name':"daTboxSw_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D669C8,'size':4,'pad':0,'label':"data_80D669C8",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D669CC,'size':4,'pad':0,'label':"data_80D669CC",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D669D0,'size':32,'pad':0,'label':"l_daTboxSw_Method",'name':"l_daTboxSw_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D669F0,'size':48,'pad':0,'label':"g_profile_TBOX_SW",'name':"g_profile_TBOX_SW",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"Create__10daTboxSw_cFv":3,
+	"create__10daTboxSw_cFv":4,
+	"execute__10daTboxSw_cFv":5,
+	"draw__10daTboxSw_cFv":6,
+	"_delete__10daTboxSw_cFv":7,
+	"daTboxSw_Draw__FP10daTboxSw_c":8,
+	"daTboxSw_Execute__FP10daTboxSw_c":9,
+	"daTboxSw_Delete__FP10daTboxSw_c":10,
+	"daTboxSw_Create__FP10fopAc_ac_c":11,
+	"data_80D669C8":12,
+	"data_80D669CC":13,
+	"l_daTboxSw_Method":14,
+	"g_profile_TBOX_SW":15,
 }
+

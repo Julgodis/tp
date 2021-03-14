@@ -12,12 +12,12 @@ lbl_80BDB074:
 /* 80BDB09C 00000028  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BDB0A0 0000002C  38 7F 07 10 */	addi r3, r31, 0x710
 /* 80BDB0A4 00000030  38 81 00 08 */	addi r4, r1, 8
-/* 80BDB0A8 00000034  4B FF F4 51 */	bl SetPos__11cBgS_GndChkFPC4cXyz
-/* 80BDB0AC 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BDB0B0 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BDB0A8 00000034  4B FF F4 51 */	bl _unresolved
+/* 80BDB0AC 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BDB0B0 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BDB0B4 00000040  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BDB0B8 00000044  38 9F 07 10 */	addi r4, r31, 0x710
-/* 80BDB0BC 00000048  4B FF F4 3D */	bl GroundCross__4cBgSFP11cBgS_GndChk
+/* 80BDB0BC 00000048  4B FF F4 3D */	bl _unresolved
 /* 80BDB0C0 0000004C  D0 3F 07 64 */	stfs f1, 0x764(r31)
 /* 80BDB0C4 00000050  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80BDB0C8 00000054  80 01 00 24 */	lwz r0, 0x24(r1)

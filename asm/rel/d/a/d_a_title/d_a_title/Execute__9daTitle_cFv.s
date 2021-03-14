@@ -4,18 +4,18 @@ lbl_80D66E9C:
 /* 80D66EA4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D66EA8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D66EAC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D66EB0 00000014  4B FF FB C9 */	bl fopOvlpM_IsPeek__Fv
+/* 80D66EB0 00000014  4B FF FB C9 */	bl _unresolved
 /* 80D66EB4 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80D66EB8 0000001C  41 82 00 0C */	beq lbl_80D66EC4
 /* 80D66EBC 00000020  38 60 00 01 */	li r3, 1
 /* 80D66EC0 00000024  48 00 00 60 */	b lbl_80D66F20
 lbl_80D66EC4:
-/* 80D66EC4 00000000  3C 60 00 00 */	lis r3, lit_4139@ha
-/* 80D66EC8 00000004  C0 03 00 00 */	lfs f0, lit_4139@l(r3)
-/* 80D66ECC 00000008  3C 60 00 00 */	lis r3, mViewOffsetY__17dMenu_Collect3D_c@ha
-/* 80D66ED0 0000000C  D0 03 00 00 */	stfs f0, mViewOffsetY__17dMenu_Collect3D_c@l(r3)
-/* 80D66ED4 00000010  3C 60 00 00 */	lis r3, mResetData__6mDoRst@ha
-/* 80D66ED8 00000014  38 63 00 00 */	addi r3, r3, mResetData__6mDoRst@l
+/* 80D66EC4 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D66EC8 00000004  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80D66ECC 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D66ED0 0000000C  D0 03 00 00 */	stfs f0, 0x0000(r3)
+/* 80D66ED4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D66ED8 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D66EDC 00000018  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D66EE0 0000001C  80 03 00 00 */	lwz r0, 0(r3)
 /* 80D66EE4 00000020  2C 00 00 00 */	cmpwi r0, 0
@@ -26,10 +26,10 @@ lbl_80D66EF4:
 /* 80D66EF4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80D66EF8 00000004  88 1F 05 FB */	lbz r0, 0x5fb(r31)
 /* 80D66EFC 00000008  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80D66F00 0000000C  3C 80 00 00 */	lis r4, daTitleProc@ha
-/* 80D66F04 00000010  38 04 00 00 */	addi r0, r4, daTitleProc@l
+/* 80D66F00 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D66F04 00000010  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80D66F08 00000014  7D 80 2A 14 */	add r12, r0, r5
-/* 80D66F0C 00000018  4B FF FB 6D */	bl __ptmf_scall
+/* 80D66F0C 00000018  4B FF FB 6D */	bl _unresolved
 /* 80D66F10 0000001C  60 00 00 00 */	nop 
 /* 80D66F14 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80D66F18 00000024  48 00 00 1D */	bl KeyWaitAnm__9daTitle_cFv

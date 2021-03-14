@@ -67,10 +67,10 @@ lbl_804D6660:
 /* 804D6668 00000008  7F E3 FB 78 */	mr r3, r31
 /* 804D666C 0000000C  4B FF F7 99 */	bl getSwbit__10daAndsw2_cFv
 /* 804D6670 00000010  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D6674 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D6678 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D6674 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D6678 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D667C 0000001C  7F C5 F3 78 */	mr r5, r30
-/* 804D6680 00000020  4B FF F7 59 */	bl onSwitch__10dSv_info_cFii
+/* 804D6680 00000020  4B FF F7 59 */	bl _unresolved
 /* 804D6684 00000024  7F E3 FB 78 */	mr r3, r31
 /* 804D6688 00000028  4B FF F7 95 */	bl getType__10daAndsw2_cFv
 /* 804D668C 0000002C  54 60 06 3E */	clrlwi r0, r3, 0x18

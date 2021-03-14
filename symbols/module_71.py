@@ -3,24 +3,74 @@
 # Module: 71
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_econt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805194A0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_econt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805194CC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_econt", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805194F8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'daEcont_Draw__FP11econt_class': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x80519518, 'size': 0x0008, 'padding': 0x00, 'name': "daEcont_Draw__FP11econt_class", 'reference_count': 1, 'type': "Function"},
-	's_rd_sub__FPvPv': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x80519520, 'size': 0x0058, 'padding': 0x00, 'name': "s_rd_sub__FPvPv", 'reference_count': 0, 'type': "Function"},
-	'rider_game__FP11econt_class': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x80519578, 'size': 0x00EC, 'padding': 0x00, 'name': "rider_game__FP11econt_class", 'reference_count': 1, 'type': "Function"},
-	'daEcont_Execute__FP11econt_class': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x80519664, 'size': 0x0050, 'padding': 0x00, 'name': "daEcont_Execute__FP11econt_class", 'reference_count': 1, 'type': "Function"},
-	'daEcont_IsDelete__FP11econt_class': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x805196B4, 'size': 0x0008, 'padding': 0x00, 'name': "daEcont_IsDelete__FP11econt_class", 'reference_count': 1, 'type': "Function"},
-	'daEcont_Delete__FP11econt_class': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x805196BC, 'size': 0x0028, 'padding': 0x00, 'name': "daEcont_Delete__FP11econt_class", 'reference_count': 1, 'type': "Function"},
-	'daEcont_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".text", 'addr': 0x805196E4, 'size': 0x0090, 'padding': 0x00, 'name': "daEcont_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80519774': {'library': "d/a/d_a_econt", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80519774, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80519778': {'library': "d/a/d_a_econt", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80519778, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3870': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".rodata", 'addr': 0x8051977C, 'size': 0x0004, 'padding': 0x00, 'name': "@3870", 'reference_count': 0, 'type': "Integer"},
-	'lit_3871': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".rodata", 'addr': 0x80519780, 'size': 0x0004, 'padding': 0x00, 'name': "@3871", 'reference_count': 0, 'type': "Integer"},
-	'lit_3872': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".rodata", 'addr': 0x80519784, 'size': 0x0004, 'padding': 0x00, 'name': "@3872", 'reference_count': 0, 'type': "Integer"},
-	'lit_3873': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".rodata", 'addr': 0x80519788, 'size': 0x0004, 'padding': 0x00, 'name': "@3873", 'reference_count': 0, 'type': "Integer"},
-	'l_daEcont_Method': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".data", 'addr': 0x8051978C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daEcont_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_ECONT': {'library': "d/a/d_a_econt", 'translation_unit': "d_a_econt", 'section': ".data", 'addr': 0x805197AC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_ECONT", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_805197DC': {'library': "d/a/d_a_econt", 'translation_unit': "unknown_translation_unit_bss", 'section': ".bss", 'addr': 0x805197DC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "ZeroData"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_econt",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"unknown_translation_unit_bss",
+	"d_a_econt",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".bss",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x805194A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805194CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805194F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80519518,'size':8,'pad':0,'label':"daEcont_Draw__FP11econt_class",'name':"daEcont_Draw__FP11econt_class",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80519520,'size':88,'pad':0,'label':"s_rd_sub__FPvPv",'name':"s_rd_sub__FPvPv",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80519578,'size':236,'pad':0,'label':"rider_game__FP11econt_class",'name':"rider_game__FP11econt_class",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80519664,'size':80,'pad':0,'label':"daEcont_Execute__FP11econt_class",'name':"daEcont_Execute__FP11econt_class",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805196B4,'size':8,'pad':0,'label':"daEcont_IsDelete__FP11econt_class",'name':"daEcont_IsDelete__FP11econt_class",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805196BC,'size':40,'pad':0,'label':"daEcont_Delete__FP11econt_class",'name':"daEcont_Delete__FP11econt_class",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805196E4,'size':144,'pad':0,'label':"daEcont_Create__FP10fopAc_ac_c",'name':"daEcont_Create__FP10fopAc_ac_c",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80519774,'size':4,'pad':0,'label':"data_80519774",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80519778,'size':4,'pad':0,'label':"data_80519778",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x8051977C,'size':4,'pad':0,'label':"lit_3870",'name':"@3870",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x80519780,'size':4,'pad':0,'label':"lit_3871",'name':"@3871",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x80519784,'size':4,'pad':0,'label':"lit_3872",'name':"@3872",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x80519788,'size':4,'pad':0,'label':"lit_3873",'name':"@3873",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x8051978C,'size':32,'pad':0,'label':"l_daEcont_Method",'name':"l_daEcont_Method",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805197AC,'size':48,'pad':0,'label':"g_profile_ECONT",'name':"g_profile_ECONT",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805197E0,'size':4,'pad':0,'label':"data_805197E0",'name':None,'lib':-1,'tu':4,'section':3,'rc':0,'type':"ZeroData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daEcont_Draw__FP11econt_class":3,
+	"s_rd_sub__FPvPv":4,
+	"rider_game__FP11econt_class":5,
+	"daEcont_Execute__FP11econt_class":6,
+	"daEcont_IsDelete__FP11econt_class":7,
+	"daEcont_Delete__FP11econt_class":8,
+	"daEcont_Create__FP10fopAc_ac_c":9,
+	"data_80519774":10,
+	"data_80519778":11,
+	"lit_3870":12,
+	"lit_3871":13,
+	"lit_3872":14,
+	"lit_3873":15,
+	"l_daEcont_Method":16,
+	"g_profile_ECONT":17,
+	"data_805197E0":18,
 }
+

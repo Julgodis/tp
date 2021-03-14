@@ -12,15 +12,15 @@ lbl_809B7A38:
 lbl_809B7A60:
 /* 809B7A60 00000000  80 83 0A 7C */	lwz r4, 0xa7c(r3)
 /* 809B7A64 00000004  38 A0 00 00 */	li r5, 0
-/* 809B7A68 00000008  4B FF A0 11 */	bl initTalk__8daNpcT_cFiPP10fopAc_ac_c
+/* 809B7A68 00000008  4B FF A0 11 */	bl _unresolved
 /* 809B7A6C 0000000C  48 00 00 1C */	b lbl_809B7A88
 lbl_809B7A70:
-/* 809B7A70 00000000  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 809B7A74 00000004  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 809B7A70 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B7A74 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B7A78 00000008  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B7A7C 0000000C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B7A80 00000010  38 80 00 2D */	li r4, 0x2d
-/* 809B7A84 00000014  4B FF 9F F5 */	bl bgmStreamStop__8Z2SeqMgrFUl
+/* 809B7A84 00000014  4B FF 9F F5 */	bl _unresolved
 lbl_809B7A88:
 /* 809B7A88 00000000  38 60 00 00 */	li r3, 0
 /* 809B7A8C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

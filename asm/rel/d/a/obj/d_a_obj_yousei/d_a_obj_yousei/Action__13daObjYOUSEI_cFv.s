@@ -35,20 +35,20 @@ lbl_804D0B14:
 /* 804D0B4C 00000038  38 BF 04 E6 */	addi r5, r31, 0x4e6
 /* 804D0B50 0000003C  38 C0 00 00 */	li r6, 0
 /* 804D0B54 00000040  38 E0 1C 00 */	li r7, 0x1c00
-/* 804D0B58 00000044  4B FF DB C1 */	bl posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs
+/* 804D0B58 00000044  4B FF DB C1 */	bl _unresolved
 /* 804D0B5C 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 804D0B60 0000004C  41 82 00 14 */	beq lbl_804D0B74
 /* 804D0B64 00000050  38 7F 05 BC */	addi r3, r31, 0x5bc
 /* 804D0B68 00000054  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 804D0B6C 00000058  4B FF DB AD */	bl bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz
+/* 804D0B6C 00000058  4B FF DB AD */	bl _unresolved
 /* 804D0B70 0000005C  48 00 00 54 */	b lbl_804D0BC4
 lbl_804D0B74:
 /* 804D0B74 00000000  38 00 00 00 */	li r0, 0
 /* 804D0B78 00000004  98 1F 05 AF */	stb r0, 0x5af(r31)
-/* 804D0B7C 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D0B80 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D0B7C 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D0B80 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D0B84 00000010  A3 C3 00 02 */	lhz r30, 2(r3)
-/* 804D0B88 00000014  4B FF DB 91 */	bl dComIfGs_getMaxLifeGauge__Fv
+/* 804D0B88 00000014  4B FF DB 91 */	bl _unresolved
 /* 804D0B8C 00000018  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 804D0B90 0000001C  57 C0 04 3E */	clrlwi r0, r30, 0x10
 /* 804D0B94 00000020  7C 00 18 40 */	cmplw r0, r3
@@ -66,29 +66,29 @@ lbl_804D0BA4:
 /* 804D0BC0 0000001C  4B FF FC 4D */	bl CheckGround__13daObjYOUSEI_cFv
 lbl_804D0BC4:
 /* 804D0BC4 00000000  38 7F 06 FC */	addi r3, r31, 0x6fc
-/* 804D0BC8 00000004  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 804D0BCC 00000008  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 804D0BC8 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804D0BCC 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 804D0BD0 0000000C  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 804D0BD4 00000010  4B FF DB 45 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 804D0BD4 00000010  4B FF DB 45 */	bl _unresolved
 /* 804D0BD8 00000014  C0 3F 06 14 */	lfs f1, 0x614(r31)
-/* 804D0BDC 00000018  3C 60 00 00 */	lis r3, lit_4005@ha
-/* 804D0BE0 0000001C  C0 03 00 00 */	lfs f0, lit_4005@l(r3)
+/* 804D0BDC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D0BE0 0000001C  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 804D0BE4 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804D0BE8 00000000  40 80 00 5C */	bge lbl_804D0C44
 /* 804D0BEC 00000004  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 804D0BF0 00000008  3C 60 00 00 */	lis r3, sLink_Pos@ha
-/* 804D0BF4 0000000C  38 63 00 00 */	addi r3, r3, sLink_Pos@l
+/* 804D0BF0 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D0BF4 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D0BF8 00000010  80 63 00 00 */	lwz r3, 0(r3)
 /* 804D0BFC 00000014  C0 03 00 04 */	lfs f0, 4(r3)
 /* 804D0C00 00000018  EC 21 00 28 */	fsubs f1, f1, f0
-/* 804D0C04 0000001C  3C 60 00 00 */	lis r3, lit_4003@ha
-/* 804D0C08 00000020  C0 03 00 00 */	lfs f0, lit_4003@l(r3)
+/* 804D0C04 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D0C08 00000020  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 804D0C0C 00000048  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804D0C10 00000000  40 80 00 34 */	bge lbl_804D0C44
-/* 804D0C14 00000004  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D0C18 00000008  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D0C14 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D0C18 00000008  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D0C1C 0000000C  A3 C3 00 02 */	lhz r30, 2(r3)
-/* 804D0C20 00000010  4B FF DA F9 */	bl dComIfGs_getMaxLifeGauge__Fv
+/* 804D0C20 00000010  4B FF DA F9 */	bl _unresolved
 /* 804D0C24 00000014  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 804D0C28 00000018  57 C0 04 3E */	clrlwi r0, r30, 0x10
 /* 804D0C2C 0000001C  7C 00 18 40 */	cmplw r0, r3

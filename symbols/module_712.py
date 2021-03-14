@@ -3,33 +3,90 @@
 # Module: 712
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D51BC0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D51BEC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D51C18, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
-	'createSolidHeap__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51C38, 'size': 0x0020, 'padding': 0x00, 'name': "createSolidHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'createHeap__14daTagLv8Gate_cFv': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51C58, 'size': 0x0128, 'padding': 0x00, 'name': "createHeap__14daTagLv8Gate_cFv", 'reference_count': 1, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51D80, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'daTagLv8Gate_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51DC8, 'size': 0x0160, 'padding': 0x00, 'name': "daTagLv8Gate_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLv8Gate_Execute__FP14daTagLv8Gate_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51F28, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv8Gate_Execute__FP14daTagLv8Gate_c", 'reference_count': 1, 'type': "Function"},
-	'execute__14daTagLv8Gate_cFv': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D51F48, 'size': 0x03A8, 'padding': 0x00, 'name': "execute__14daTagLv8Gate_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagLv8Gate_Draw__FP14daTagLv8Gate_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D522F0, 'size': 0x017C, 'padding': 0x00, 'name': "daTagLv8Gate_Draw__FP14daTagLv8Gate_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D5246C, 'size': 0x0008, 'padding': 0x00, 'name': "daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLv8Gate_Delete__FP14daTagLv8Gate_c': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".text", 'addr': 0x80D52474, 'size': 0x0050, 'padding': 0x00, 'name': "daTagLv8Gate_Delete__FP14daTagLv8Gate_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D524C4': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D524C4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D524C8': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D524C8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3749': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524CC, 'size': 0x0004, 'padding': 0x00, 'name': "@3749", 'reference_count': 0, 'type': "Integer"},
-	'lit_3805': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524D0, 'size': 0x0004, 'padding': 0x00, 'name': "@3805", 'reference_count': 0, 'type': "Integer"},
-	'lit_3806': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524D4, 'size': 0x0004, 'padding': 0x00, 'name': "@3806", 'reference_count': 0, 'type': "Integer"},
-	'lit_3807': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524D8, 'size': 0x0004, 'padding': 0x00, 'name': "@3807", 'reference_count': 0, 'type': "Integer"},
-	'lit_3808': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524DC, 'size': 0x0004, 'padding': 0x00, 'name': "@3808", 'reference_count': 0, 'type': "Integer"},
-	'lit_3891': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524E0, 'size': 0x0004, 'padding': 0x00, 'name': "@3891", 'reference_count': 0, 'type': "InitData"},
-	'lit_3892': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524E4, 'size': 0x0004, 'padding': 0x00, 'name': "@3892", 'reference_count': 0, 'type': "Integer"},
-	'lit_3893': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524E8, 'size': 0x0004, 'padding': 0x00, 'name': "@3893", 'reference_count': 0, 'type': "Integer"},
-	'lit_3894': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524EC, 'size': 0x0004, 'padding': 0x00, 'name': "@3894", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".rodata", 'addr': 0x80D524F0, 'size': 0x001E, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".data", 'addr': 0x80D52514, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daTagLv8Gate_Method': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".data", 'addr': 0x80D52518, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagLv8Gate_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Lv8Gate': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".data", 'addr': 0x80D52538, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Lv8Gate", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/tag/d_a_tag_Lv8Gate", 'translation_unit': "d_a_tag_Lv8Gate", 'section': ".data", 'addr': 0x80D52568, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_Lv8Gate",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_Lv8Gate",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D51BC0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51BEC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51C18,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':8,'type':"Function"},
+	{'addr':0x80D51C38,'size':32,'pad':0,'label':"createSolidHeap__FP10fopAc_ac_c",'name':"createSolidHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51C58,'size':296,'pad':0,'label':"createHeap__14daTagLv8Gate_cFv",'name':"createHeap__14daTagLv8Gate_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D51D80,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51DC8,'size':352,'pad':0,'label':"daTagLv8Gate_Create__FP10fopAc_ac_c",'name':"daTagLv8Gate_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51F28,'size':32,'pad':0,'label':"daTagLv8Gate_Execute__FP14daTagLv8Gate_c",'name':"daTagLv8Gate_Execute__FP14daTagLv8Gate_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D51F48,'size':936,'pad':0,'label':"execute__14daTagLv8Gate_cFv",'name':"execute__14daTagLv8Gate_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D522F0,'size':380,'pad':0,'label':"daTagLv8Gate_Draw__FP14daTagLv8Gate_c",'name':"daTagLv8Gate_Draw__FP14daTagLv8Gate_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5246C,'size':8,'pad':0,'label':"daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c",'name':"daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D52474,'size':80,'pad':0,'label':"daTagLv8Gate_Delete__FP14daTagLv8Gate_c",'name':"daTagLv8Gate_Delete__FP14daTagLv8Gate_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D524C4,'size':4,'pad':0,'label':"data_80D524C4",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D524C8,'size':4,'pad':0,'label':"data_80D524C8",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D524CC,'size':4,'pad':0,'label':"lit_3749",'name':"@3749",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524D0,'size':4,'pad':0,'label':"lit_3805",'name':"@3805",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524D4,'size':4,'pad':0,'label':"lit_3806",'name':"@3806",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524D8,'size':4,'pad':0,'label':"lit_3807",'name':"@3807",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524DC,'size':4,'pad':0,'label':"lit_3808",'name':"@3808",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524E0,'size':4,'pad':0,'label':"lit_3891",'name':"@3891",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D524E4,'size':4,'pad':0,'label':"lit_3892",'name':"@3892",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524E8,'size':4,'pad':0,'label':"lit_3893",'name':"@3893",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524EC,'size':4,'pad':0,'label':"lit_3894",'name':"@3894",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D524F0,'size':30,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80D52510,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D52514,'size':32,'pad':0,'label':"l_daTagLv8Gate_Method",'name':"l_daTagLv8Gate_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D52534,'size':48,'pad':0,'label':"g_profile_Tag_Lv8Gate",'name':"g_profile_Tag_Lv8Gate",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D52564,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"createSolidHeap__FP10fopAc_ac_c":3,
+	"createHeap__14daTagLv8Gate_cFv":4,
+	"__dt__12J3DFrameCtrlFv":5,
+	"daTagLv8Gate_Create__FP10fopAc_ac_c":6,
+	"daTagLv8Gate_Execute__FP14daTagLv8Gate_c":7,
+	"execute__14daTagLv8Gate_cFv":8,
+	"daTagLv8Gate_Draw__FP14daTagLv8Gate_c":9,
+	"daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c":10,
+	"daTagLv8Gate_Delete__FP14daTagLv8Gate_c":11,
+	"data_80D524C4":12,
+	"data_80D524C8":13,
+	"lit_3749":14,
+	"lit_3805":15,
+	"lit_3806":16,
+	"lit_3807":17,
+	"lit_3808":18,
+	"lit_3891":19,
+	"lit_3892":20,
+	"lit_3893":21,
+	"lit_3894":22,
+	"stringBase0":23,
+	"l_arcName":24,
+	"l_daTagLv8Gate_Method":25,
+	"g_profile_Tag_Lv8Gate":26,
+	"__vt__12J3DFrameCtrl":27,
 }
+

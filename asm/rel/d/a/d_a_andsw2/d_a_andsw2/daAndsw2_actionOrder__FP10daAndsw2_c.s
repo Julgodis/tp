@@ -14,10 +14,10 @@ lbl_804D6704:
 /* 804D6734 00000030  7C 1F 07 74 */	extsb r31, r0
 /* 804D6738 00000034  4B FF F6 CD */	bl getSwbit__10daAndsw2_cFv
 /* 804D673C 00000038  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D6740 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D6744 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D6740 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D6744 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D6748 00000044  7F E5 FB 78 */	mr r5, r31
-/* 804D674C 00000048  4B FF F6 8D */	bl onSwitch__10dSv_info_cFii
+/* 804D674C 00000048  4B FF F6 8D */	bl _unresolved
 /* 804D6750 0000004C  48 00 01 38 */	b lbl_804D6888
 lbl_804D6754:
 /* 804D6754 00000000  4B FF F6 C9 */	bl getType__10daAndsw2_cFv
@@ -71,14 +71,14 @@ lbl_804D67EC:
 /* 804D6800 00000014  7F E3 FB 78 */	mr r3, r31
 /* 804D6804 00000018  4B FF F5 F5 */	bl getEventNo__10daAndsw2_cFv
 /* 804D6808 0000001C  54 63 06 3E */	clrlwi r3, r3, 0x18
-/* 804D680C 00000020  4B FF F5 CD */	bl dLib_getEventSwitchNo__Fi
+/* 804D680C 00000020  4B FF F5 CD */	bl _unresolved
 /* 804D6810 00000024  7C 60 1B 78 */	mr r0, r3
-/* 804D6814 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D6818 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D6814 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D6818 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D681C 00000030  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 804D6820 00000034  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 804D6824 00000038  7C 05 07 74 */	extsb r5, r0
-/* 804D6828 0000003C  4B FF F5 B1 */	bl isSwitch__10dSv_info_cCFii
+/* 804D6828 0000003C  4B FF F5 B1 */	bl _unresolved
 /* 804D682C 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 804D6830 00000044  41 82 00 30 */	beq lbl_804D6860
 /* 804D6834 00000048  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
@@ -86,10 +86,10 @@ lbl_804D67EC:
 /* 804D683C 00000050  7F E3 FB 78 */	mr r3, r31
 /* 804D6840 00000054  4B FF F5 C5 */	bl getSwbit__10daAndsw2_cFv
 /* 804D6844 00000058  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D6848 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D684C 00000060  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D6848 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D684C 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D6850 00000064  7F C5 F3 78 */	mr r5, r30
-/* 804D6854 00000068  4B FF F5 85 */	bl onSwitch__10dSv_info_cFii
+/* 804D6854 00000068  4B FF F5 85 */	bl _unresolved
 /* 804D6858 0000006C  38 00 00 04 */	li r0, 4
 /* 804D685C 00000070  98 1F 05 6C */	stb r0, 0x56c(r31)
 lbl_804D6860:
@@ -102,7 +102,7 @@ lbl_804D6860:
 /* 804D6878 00000018  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 804D687C 0000001C  38 E0 00 00 */	li r7, 0
 /* 804D6880 00000020  39 00 00 01 */	li r8, 1
-/* 804D6884 00000024  4B FF F5 55 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 804D6884 00000024  4B FF F5 55 */	bl _unresolved
 lbl_804D6888:
 /* 804D6888 00000000  38 60 00 01 */	li r3, 1
 /* 804D688C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

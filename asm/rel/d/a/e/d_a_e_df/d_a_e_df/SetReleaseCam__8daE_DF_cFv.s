@@ -3,8 +3,8 @@ lbl_806A7C3C:
 /* 806A7C40 00000004  7C 08 02 A6 */	mflr r0
 /* 806A7C44 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 806A7C48 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 806A7C4C 00000010  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 806A7C50 00000014  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806A7C4C 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806A7C50 00000014  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 806A7C54 00000018  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 806A7C58 0000001C  7C 00 07 74 */	extsb r0, r0
 /* 806A7C5C 00000020  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -25,16 +25,16 @@ lbl_806A7C3C:
 /* 806A7C98 0000005C  38 7F 02 48 */	addi r3, r31, 0x248
 /* 806A7C9C 00000060  38 81 00 14 */	addi r4, r1, 0x14
 /* 806A7CA0 00000064  38 A1 00 08 */	addi r5, r1, 8
-/* 806A7CA4 00000068  4B FF F9 B5 */	bl Reset__9dCamera_cF4cXyz4cXyz
+/* 806A7CA4 00000068  4B FF F9 B5 */	bl _unresolved
 /* 806A7CA8 0000006C  38 7F 02 48 */	addi r3, r31, 0x248
-/* 806A7CAC 00000070  4B FF F9 AD */	bl Start__9dCamera_cFv
+/* 806A7CAC 00000070  4B FF F9 AD */	bl _unresolved
 /* 806A7CB0 00000074  38 7F 02 48 */	addi r3, r31, 0x248
 /* 806A7CB4 00000078  38 80 00 00 */	li r4, 0
-/* 806A7CB8 0000007C  4B FF F9 A1 */	bl SetTrimSize__9dCamera_cFl
-/* 806A7CBC 00000080  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806A7CC0 00000084  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806A7CB8 0000007C  4B FF F9 A1 */	bl _unresolved
+/* 806A7CBC 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806A7CC0 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806A7CC4 00000088  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 806A7CC8 0000008C  4B FF F9 91 */	bl reset__14dEvt_control_cFv
+/* 806A7CC8 0000008C  4B FF F9 91 */	bl _unresolved
 /* 806A7CCC 00000090  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 806A7CD0 00000094  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 806A7CD4 00000098  7C 08 03 A6 */	mtlr r0

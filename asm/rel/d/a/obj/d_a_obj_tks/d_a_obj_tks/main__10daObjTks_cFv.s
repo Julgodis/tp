@@ -3,17 +3,17 @@ lbl_80D116C8:
 /* 80D116CC 00000004  7C 08 02 A6 */	mflr r0
 /* 80D116D0 00000008  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 80D116D4 0000000C  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 80D116D8 00000010  4B FF DB 21 */	bl _savegpr_29
+/* 80D116D8 00000010  4B FF DB 21 */	bl _unresolved
 /* 80D116DC 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80D116E0 00000018  3C 60 00 00 */	lis r3, m__16daObjTks_Param_c@ha
-/* 80D116E4 0000001C  3B E3 00 00 */	addi r31, r3, m__16daObjTks_Param_c@l
+/* 80D116E0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D116E4 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80D116E8 00000020  38 7D 0D B8 */	addi r3, r29, 0xdb8
-/* 80D116EC 00000024  4B FF DB 0D */	bl __ptmf_test
+/* 80D116EC 00000024  4B FF DB 0D */	bl _unresolved
 /* 80D116F0 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80D116F4 0000002C  41 82 00 14 */	beq lbl_80D11708
 /* 80D116F8 00000030  7F A3 EB 78 */	mr r3, r29
 /* 80D116FC 00000034  39 9D 0D B8 */	addi r12, r29, 0xdb8
-/* 80D11700 00000038  4B FF DA F9 */	bl __ptmf_scall
+/* 80D11700 00000038  4B FF DA F9 */	bl _unresolved
 /* 80D11704 0000003C  60 00 00 00 */	nop 
 lbl_80D11708:
 /* 80D11708 00000000  80 7F 00 BC */	lwz r3, 0xbc(r31)
@@ -55,7 +55,7 @@ lbl_80D11708:
 /* 80D11798 00000090  40 80 00 10 */	bge lbl_80D117A8
 /* 80D1179C 00000094  7F A3 EB 78 */	mr r3, r29
 /* 80D117A0 00000098  38 81 00 28 */	addi r4, r1, 0x28
-/* 80D117A4 0000009C  4B FF DA 55 */	bl playExpressionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80D117A4 0000009C  4B FF DA 55 */	bl _unresolved
 lbl_80D117A8:
 /* 80D117A8 00000000  80 7F 00 E4 */	lwz r3, 0xe4(r31)
 /* 80D117AC 00000004  80 1F 00 E8 */	lwz r0, 0xe8(r31)
@@ -129,11 +129,11 @@ lbl_80D117A8:
 /* 80D118BC 00000114  40 80 00 10 */	bge lbl_80D118CC
 /* 80D118C0 00000118  7F A3 EB 78 */	mr r3, r29
 /* 80D118C4 0000011C  38 81 00 60 */	addi r4, r1, 0x60
-/* 80D118C8 00000120  4B FF D9 31 */	bl playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80D118C8 00000120  4B FF D9 31 */	bl _unresolved
 lbl_80D118CC:
 /* 80D118CC 00000000  38 60 00 01 */	li r3, 1
 /* 80D118D0 00000004  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 80D118D4 00000008  4B FF D9 25 */	bl _restgpr_29
+/* 80D118D4 00000008  4B FF D9 25 */	bl _unresolved
 /* 80D118D8 0000000C  80 01 00 A4 */	lwz r0, 0xa4(r1)
 /* 80D118DC 00000010  7C 08 03 A6 */	mtlr r0
 /* 80D118E0 00000014  38 21 00 A0 */	addi r1, r1, 0xa0

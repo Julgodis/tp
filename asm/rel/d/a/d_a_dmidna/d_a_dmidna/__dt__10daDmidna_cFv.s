@@ -8,16 +8,16 @@ lbl_8045D0B4:
 /* 8045D0CC 00000018  7C 9F 23 78 */	mr r31, r4
 /* 8045D0D0 0000001C  41 82 00 30 */	beq lbl_8045D100
 /* 8045D0D4 00000020  38 7E 05 68 */	addi r3, r30, 0x568
-/* 8045D0D8 00000024  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 8045D0DC 00000028  38 84 00 00 */	addi r4, r4, l_arcName@l
-/* 8045D0E0 0000002C  4B FF FD D9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8045D0D8 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8045D0DC 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8045D0E0 0000002C  4B FF FD D9 */	bl _unresolved
 /* 8045D0E4 00000030  7F C3 F3 78 */	mr r3, r30
 /* 8045D0E8 00000034  38 80 00 00 */	li r4, 0
-/* 8045D0EC 00000038  4B FF FD CD */	bl __dt__10fopAc_ac_cFv
+/* 8045D0EC 00000038  4B FF FD CD */	bl _unresolved
 /* 8045D0F0 0000003C  7F E0 07 35 */	extsh. r0, r31
 /* 8045D0F4 00000040  40 81 00 0C */	ble lbl_8045D100
 /* 8045D0F8 00000044  7F C3 F3 78 */	mr r3, r30
-/* 8045D0FC 00000048  4B FF FD BD */	bl __dl__FPv
+/* 8045D0FC 00000048  4B FF FD BD */	bl _unresolved
 lbl_8045D100:
 /* 8045D100 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8045D104 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

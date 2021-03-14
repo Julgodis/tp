@@ -5,20 +5,20 @@ lbl_805CA6C0:
 /* 805CA6CC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805CA6D0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 805CA6D4 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 805CA6D8 00000018  4B FF D3 C1 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 805CA6D8 00000018  4B FF D3 C1 */	bl _unresolved
 /* 805CA6DC 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 805CA6E0 00000020  4B FF D3 B9 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 805CA6E4 00000024  3C 60 00 00 */	lis r3, lit_5006@ha
-/* 805CA6E8 00000028  C0 23 00 00 */	lfs f1, lit_5006@l(r3)
+/* 805CA6E0 00000020  4B FF D3 B9 */	bl _unresolved
+/* 805CA6E4 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805CA6E8 00000028  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 805CA6EC 0000002C  FC 40 08 90 */	fmr f2, f1
 /* 805CA6F0 00000030  FC 60 08 90 */	fmr f3, f1
-/* 805CA6F4 00000034  4B FF D3 A5 */	bl scaleM__14mDoMtx_stack_cFfff
+/* 805CA6F4 00000034  4B FF D3 A5 */	bl _unresolved
 /* 805CA6F8 00000038  80 7F 06 EC */	lwz r3, 0x6ec(r31)
 /* 805CA6FC 0000003C  80 83 00 04 */	lwz r4, 4(r3)
-/* 805CA700 00000040  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 805CA704 00000044  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 805CA700 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805CA704 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805CA708 00000048  38 84 00 24 */	addi r4, r4, 0x24
-/* 805CA70C 0000004C  4B FF D3 8D */	bl PSMTXCopy
+/* 805CA70C 0000004C  4B FF D3 8D */	bl _unresolved
 /* 805CA710 00000050  88 1F 05 B7 */	lbz r0, 0x5b7(r31)
 /* 805CA714 00000054  28 00 00 00 */	cmplwi r0, 0
 /* 805CA718 00000058  40 82 00 4C */	bne lbl_805CA764
@@ -45,7 +45,7 @@ lbl_805CA748:
 /* 805CA760 00000018  41 80 FF C8 */	blt lbl_805CA728
 lbl_805CA764:
 /* 805CA764 00000000  80 7F 06 EC */	lwz r3, 0x6ec(r31)
-/* 805CA768 00000004  4B FF D3 31 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 805CA768 00000004  4B FF D3 31 */	bl _unresolved
 /* 805CA76C 00000008  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 805CA770 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 805CA774 00000010  7C 08 03 A6 */	mtlr r0

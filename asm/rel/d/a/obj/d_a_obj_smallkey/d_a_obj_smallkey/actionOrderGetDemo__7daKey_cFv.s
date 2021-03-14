@@ -13,15 +13,15 @@ lbl_80CDAC18:
 /* 80CDAC44 0000002C  3C 04 00 01 */	addis r0, r4, 1
 /* 80CDAC48 00000030  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80CDAC4C 00000034  41 82 00 30 */	beq lbl_80CDAC7C
-/* 80CDAC50 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CDAC54 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CDAC50 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDAC54 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDAC58 00000040  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80CDAC5C 00000044  4B FF EB 3D */	bl setPtI_Id__14dEvt_control_cFUi
+/* 80CDAC5C 00000044  4B FF EB 3D */	bl _unresolved
 /* 80CDAC60 00000048  48 00 00 1C */	b lbl_80CDAC7C
 lbl_80CDAC64:
 /* 80CDAC64 00000000  38 80 00 00 */	li r4, 0
 /* 80CDAC68 00000004  38 A0 00 00 */	li r5, 0
-/* 80CDAC6C 00000008  4B FF EB 2D */	bl fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs
+/* 80CDAC6C 00000008  4B FF EB 2D */	bl _unresolved
 /* 80CDAC70 0000000C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CDAC74 00000010  60 00 00 08 */	ori r0, r0, 8
 /* 80CDAC78 00000014  B0 1F 00 FA */	sth r0, 0xfa(r31)

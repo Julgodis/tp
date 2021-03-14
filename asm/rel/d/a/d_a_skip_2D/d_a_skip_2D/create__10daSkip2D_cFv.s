@@ -11,9 +11,9 @@ lbl_80D4D4F4:
 /* 80D4D518 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80D4D51C 00000028  41 82 00 20 */	beq lbl_80D4D53C
 /* 80D4D520 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80D4D524 00000030  4B FF FF 35 */	bl __ct__10fopAc_ac_cFv
-/* 80D4D528 00000034  3C 60 00 00 */	lis r3, __vt__10daSkip2D_c@ha
-/* 80D4D52C 00000038  38 03 00 00 */	addi r0, r3, __vt__10daSkip2D_c@l
+/* 80D4D524 00000030  4B FF FF 35 */	bl _unresolved
+/* 80D4D528 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4D52C 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D4D530 0000003C  90 1E 05 68 */	stw r0, 0x568(r30)
 /* 80D4D534 00000040  7F C3 F3 78 */	mr r3, r30
 /* 80D4D538 00000044  48 00 00 A1 */	bl initiate__10daSkip2D_cFv
@@ -23,10 +23,10 @@ lbl_80D4D53C:
 /* 80D4D544 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80D4D548:
 /* 80D4D548 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80D4D54C 00000004  3C 80 00 00 */	lis r4, daSkip2D_createHeap__FP10fopAc_ac_c@ha
-/* 80D4D550 00000008  38 84 00 00 */	addi r4, r4, daSkip2D_createHeap__FP10fopAc_ac_c@l
+/* 80D4D54C 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D4D550 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D4D554 0000000C  38 A0 00 00 */	li r5, 0
-/* 80D4D558 00000010  4B FF FF 01 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80D4D558 00000010  4B FF FF 01 */	bl _unresolved
 /* 80D4D55C 00000014  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D4D560 00000018  40 82 00 0C */	bne lbl_80D4D56C
 /* 80D4D564 0000001C  38 60 00 05 */	li r3, 5

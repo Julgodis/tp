@@ -3,22 +3,68 @@
 # Module: 623
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CDCE00, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CDCE2C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80CDCE58, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'initBaseMtx__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDCE78, 'size': 0x0020, 'padding': 0x00, 'name': "initBaseMtx__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDCE98, 'size': 0x0058, 'padding': 0x00, 'name': "setBaseMtx__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'Create__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDCEF0, 'size': 0x00AC, 'padding': 0x00, 'name': "Create__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDCF9C, 'size': 0x0068, 'padding': 0x00, 'name': "create__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDD004, 'size': 0x00B4, 'padding': 0x00, 'name': "execute__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__12daObjSmoke_cFv': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDD0B8, 'size': 0x0040, 'padding': 0x00, 'name': "_delete__12daObjSmoke_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjSmoke_Execute__FP12daObjSmoke_c': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDD0F8, 'size': 0x0020, 'padding': 0x00, 'name': "daObjSmoke_Execute__FP12daObjSmoke_c", 'reference_count': 1, 'type': "Function"},
-	'daObjSmoke_Delete__FP12daObjSmoke_c': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDD118, 'size': 0x0020, 'padding': 0x00, 'name': "daObjSmoke_Delete__FP12daObjSmoke_c", 'reference_count': 1, 'type': "Function"},
-	'daObjSmoke_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".text", 'addr': 0x80CDD138, 'size': 0x0020, 'padding': 0x00, 'name': "daObjSmoke_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80CDD158': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80CDD158, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80CDD15C': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80CDD15C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3655': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".rodata", 'addr': 0x80CDD164, 'size': 0x0004, 'padding': 0x00, 'name': "@3655", 'reference_count': 0, 'type': "Integer"},
-	'l_daObjSmoke_Method': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".data", 'addr': 0x80CDD16C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjSmoke_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_Smoke': {'library': "d/a/obj/d_a_obj_smoke", 'translation_unit': "d_a_obj_smoke", 'section': ".data", 'addr': 0x80CDD18C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_Smoke", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_smoke",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_smoke",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80CDCE00,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CDCE2C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CDCE58,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80CDCE78,'size':32,'pad':0,'label':"initBaseMtx__12daObjSmoke_cFv",'name':"initBaseMtx__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDCE98,'size':88,'pad':0,'label':"setBaseMtx__12daObjSmoke_cFv",'name':"setBaseMtx__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDCEF0,'size':172,'pad':0,'label':"Create__12daObjSmoke_cFv",'name':"Create__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDCF9C,'size':104,'pad':0,'label':"create__12daObjSmoke_cFv",'name':"create__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDD004,'size':180,'pad':0,'label':"execute__12daObjSmoke_cFv",'name':"execute__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDD0B8,'size':64,'pad':0,'label':"_delete__12daObjSmoke_cFv",'name':"_delete__12daObjSmoke_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80CDD0F8,'size':32,'pad':0,'label':"daObjSmoke_Execute__FP12daObjSmoke_c",'name':"daObjSmoke_Execute__FP12daObjSmoke_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CDD118,'size':32,'pad':0,'label':"daObjSmoke_Delete__FP12daObjSmoke_c",'name':"daObjSmoke_Delete__FP12daObjSmoke_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CDD138,'size':32,'pad':0,'label':"daObjSmoke_Create__FP10fopAc_ac_c",'name':"daObjSmoke_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CDD158,'size':4,'pad':0,'label':"data_80CDD158",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80CDD15C,'size':4,'pad':0,'label':"data_80CDD15C",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80CDD160,'size':4,'pad':0,'label':"lit_3655",'name':"@3655",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80CDD164,'size':32,'pad':0,'label':"l_daObjSmoke_Method",'name':"l_daObjSmoke_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80CDD184,'size':48,'pad':0,'label':"g_profile_Obj_Smoke",'name':"g_profile_Obj_Smoke",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"initBaseMtx__12daObjSmoke_cFv":3,
+	"setBaseMtx__12daObjSmoke_cFv":4,
+	"Create__12daObjSmoke_cFv":5,
+	"create__12daObjSmoke_cFv":6,
+	"execute__12daObjSmoke_cFv":7,
+	"_delete__12daObjSmoke_cFv":8,
+	"daObjSmoke_Execute__FP12daObjSmoke_c":9,
+	"daObjSmoke_Delete__FP12daObjSmoke_c":10,
+	"daObjSmoke_Create__FP10fopAc_ac_c":11,
+	"data_80CDD158":12,
+	"data_80CDD15C":13,
+	"lit_3655":14,
+	"l_daObjSmoke_Method":15,
+	"g_profile_Obj_Smoke":16,
 }
+

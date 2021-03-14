@@ -3,20 +3,20 @@ lbl_80B0D5A4:
 /* 80B0D5A8 00000004  7C 08 02 A6 */	mflr r0
 /* 80B0D5AC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80B0D5B0 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B0D5B4 00000010  4B FF F1 85 */	bl _savegpr_29
+/* 80B0D5B4 00000010  4B FF F1 85 */	bl _unresolved
 /* 80B0D5B8 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80B0D5BC 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80B0D5C0 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80B0D5C4 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80B0D5C0 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B0D5C4 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80B0D5C8 00000024  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B0D5CC 00000028  57 FD 18 38 */	slwi r29, r31, 3
-/* 80B0D5D0 0000002C  3C A0 00 00 */	lis r5, l_btpGetParamList@ha
-/* 80B0D5D4 00000030  38 A5 00 00 */	addi r5, r5, l_btpGetParamList@l
+/* 80B0D5D0 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80B0D5D4 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80B0D5D8 00000034  7C A5 E8 2E */	lwzx r5, r5, r29
-/* 80B0D5DC 00000038  4B FF F1 5D */	bl getTexPtrnAnmP__8daNpcF_cFPci
+/* 80B0D5DC 00000038  4B FF F1 5D */	bl _unresolved
 /* 80B0D5E0 0000003C  7C 64 1B 79 */	or. r4, r3, r3
-/* 80B0D5E4 00000040  3C 60 00 00 */	lis r3, l_btpGetParamList@ha
-/* 80B0D5E8 00000044  38 03 00 00 */	addi r0, r3, l_btpGetParamList@l
+/* 80B0D5E4 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B0D5E8 00000044  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80B0D5EC 00000048  7C 60 EA 14 */	add r3, r0, r29
 /* 80B0D5F0 0000004C  80 C3 00 04 */	lwz r6, 4(r3)
 /* 80B0D5F4 00000050  80 7E 09 9C */	lwz r3, 0x99c(r30)
@@ -31,9 +31,9 @@ lbl_80B0D610:
 /* 80B0D614 00000004  80 63 00 04 */	lwz r3, 4(r3)
 /* 80B0D618 00000008  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80B0D61C 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 80B0D620 00000010  3C E0 00 00 */	lis r7, lit_4358@ha
-/* 80B0D624 00000014  C0 27 00 00 */	lfs f1, lit_4358@l(r7)
-/* 80B0D628 00000018  4B FF F1 11 */	bl setBtpAnm__8daNpcF_cFP16J3DAnmTexPatternP12J3DModelDatafi
+/* 80B0D620 00000010  3C E0 00 00 */	lis r7, 0x0000 /* 0x00000000@ha */
+/* 80B0D624 00000014  C0 27 00 00 */	lfs f1, 0x0000(r7)
+/* 80B0D628 00000018  4B FF F1 11 */	bl _unresolved
 /* 80B0D62C 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 80B0D630 00000020  41 82 00 2C */	beq lbl_80B0D65C
 /* 80B0D634 00000024  80 1E 09 9C */	lwz r0, 0x99c(r30)
@@ -51,7 +51,7 @@ lbl_80B0D65C:
 /* 80B0D65C 00000000  38 60 00 00 */	li r3, 0
 lbl_80B0D660:
 /* 80B0D660 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B0D664 00000004  4B FF F0 D5 */	bl _restgpr_29
+/* 80B0D664 00000004  4B FF F0 D5 */	bl _unresolved
 /* 80B0D668 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80B0D66C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80B0D670 00000010  38 21 00 20 */	addi r1, r1, 0x20

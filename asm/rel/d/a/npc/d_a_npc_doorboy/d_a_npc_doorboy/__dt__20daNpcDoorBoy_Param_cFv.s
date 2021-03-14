@@ -5,12 +5,12 @@ lbl_809AD93C:
 /* 809AD948 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809AD94C 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 809AD950 00000014  41 82 00 1C */	beq lbl_809AD96C
-/* 809AD954 00000018  3C A0 00 00 */	lis r5, __vt__20daNpcDoorBoy_Param_c@ha
-/* 809AD958 0000001C  38 05 00 00 */	addi r0, r5, __vt__20daNpcDoorBoy_Param_c@l
+/* 809AD954 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 809AD958 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 809AD95C 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 809AD960 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 809AD964 00000028  40 81 00 08 */	ble lbl_809AD96C
-/* 809AD968 0000002C  4B FF D2 91 */	bl __dl__FPv
+/* 809AD968 0000002C  4B FF D2 91 */	bl _unresolved
 lbl_809AD96C:
 /* 809AD96C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 809AD970 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

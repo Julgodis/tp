@@ -3,33 +3,90 @@
 # Module: 14
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8046CAE0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8046CB0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8046CB38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
-	'daKytag04_Draw__FP13kytag04_class': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046CB58, 'size': 0x0490, 'padding': 0x00, 'name': "daKytag04_Draw__FP13kytag04_class", 'reference_count': 1, 'type': "Function"},
-	'daKytag04_Execute__FP13kytag04_class': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046CFE8, 'size': 0x036C, 'padding': 0x00, 'name': "daKytag04_Execute__FP13kytag04_class", 'reference_count': 1, 'type': "Function"},
-	'daKytag04_IsDelete__FP13kytag04_class': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046D354, 'size': 0x0008, 'padding': 0x00, 'name': "daKytag04_IsDelete__FP13kytag04_class", 'reference_count': 1, 'type': "Function"},
-	'daKytag04_Delete__FP13kytag04_class': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046D35C, 'size': 0x0118, 'padding': 0x00, 'name': "daKytag04_Delete__FP13kytag04_class", 'reference_count': 1, 'type': "Function"},
-	'useHeapInit__FP10fopAc_ac_c': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046D474, 'size': 0x0128, 'padding': 0x00, 'name': "useHeapInit__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'daKytag04_Create__FP10fopAc_ac_c': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046D59C, 'size': 0x042C, 'padding': 0x00, 'name': "daKytag04_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'__dt__12J3DFrameCtrlFv': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".text", 'addr': 0x8046D9C8, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__12J3DFrameCtrlFv", 'reference_count': 0, 'type': "Function"},
-	'data_8046DA10': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x8046DA10, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_8046DA14': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8046DA14, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3960': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA1C, 'size': 0x0004, 'padding': 0x00, 'name': "@3960", 'reference_count': 0, 'type': "Integer"},
-	'lit_3961': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA20, 'size': 0x0004, 'padding': 0x00, 'name': "@3961", 'reference_count': 0, 'type': "Integer"},
-	'lit_3962': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA24, 'size': 0x0004, 'padding': 0x00, 'name': "@3962", 'reference_count': 0, 'type': "InitData"},
-	'lit_3963': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA28, 'size': 0x0004, 'padding': 0x00, 'name': "@3963", 'reference_count': 0, 'type': "Integer"},
-	'lit_3964': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA2C, 'size': 0x0004, 'padding': 0x00, 'name': "@3964", 'reference_count': 0, 'type': "Integer"},
-	'lit_3965': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA30, 'size': 0x0004, 'padding': 0x00, 'name': "@3965", 'reference_count': 0, 'type': "Integer"},
-	'lit_3966': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA34, 'size': 0x0004, 'padding': 0x00, 'name': "@3966", 'reference_count': 0, 'type': "Integer"},
-	'lit_3967': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA38, 'size': 0x0004, 'padding': 0x00, 'name': "@3967", 'reference_count': 0, 'type': "Integer"},
-	'lit_3968': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA3C, 'size': 0x0004, 'padding': 0x00, 'name': "@3968", 'reference_count': 0, 'type': "Integer"},
-	'lit_3969': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA40, 'size': 0x0004, 'padding': 0x00, 'name': "@3969", 'reference_count': 0, 'type': "Integer"},
-	'lit_4066': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA44, 'size': 0x0004, 'padding': 0x04, 'name': "@4066", 'reference_count': 0, 'type': "Integer"},
-	'lit_4326': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA4C, 'size': 0x0008, 'padding': 0x00, 'name': "@4326", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".rodata", 'addr': 0x8046DA54, 'size': 0x0026, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'l_daKytag04_Method': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".data", 'addr': 0x8046DA7C, 'size': 0x0020, 'padding': 0x00, 'name': "l_daKytag04_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_KYTAG04': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".data", 'addr': 0x8046DA9C, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_KYTAG04", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__12J3DFrameCtrl': {'library': "d/a/kytag/d_a_kytag04", 'translation_unit': "d_a_kytag04", 'section': ".data", 'addr': 0x8046DACC, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__12J3DFrameCtrl", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/kytag/d_a_kytag04",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_kytag04",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x8046CAE0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046CB0C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046CB38,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':8,'type':"Function"},
+	{'addr':0x8046CB58,'size':1168,'pad':0,'label':"daKytag04_Draw__FP13kytag04_class",'name':"daKytag04_Draw__FP13kytag04_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046CFE8,'size':876,'pad':0,'label':"daKytag04_Execute__FP13kytag04_class",'name':"daKytag04_Execute__FP13kytag04_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046D354,'size':8,'pad':0,'label':"daKytag04_IsDelete__FP13kytag04_class",'name':"daKytag04_IsDelete__FP13kytag04_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046D35C,'size':280,'pad':0,'label':"daKytag04_Delete__FP13kytag04_class",'name':"daKytag04_Delete__FP13kytag04_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046D474,'size':296,'pad':0,'label':"useHeapInit__FP10fopAc_ac_c",'name':"useHeapInit__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046D59C,'size':1068,'pad':0,'label':"daKytag04_Create__FP10fopAc_ac_c",'name':"daKytag04_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046D9C8,'size':72,'pad':0,'label':"__dt__12J3DFrameCtrlFv",'name':"__dt__12J3DFrameCtrlFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8046DA10,'size':4,'pad':0,'label':"data_8046DA10",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x8046DA14,'size':4,'pad':0,'label':"data_8046DA14",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x8046DA18,'size':4,'pad':0,'label':"lit_3960",'name':"@3960",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA1C,'size':4,'pad':0,'label':"lit_3961",'name':"@3961",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA20,'size':4,'pad':0,'label':"lit_3962",'name':"@3962",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8046DA24,'size':4,'pad':0,'label':"lit_3963",'name':"@3963",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA28,'size':4,'pad':0,'label':"lit_3964",'name':"@3964",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA2C,'size':4,'pad':0,'label':"lit_3965",'name':"@3965",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA30,'size':4,'pad':0,'label':"lit_3966",'name':"@3966",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA34,'size':4,'pad':0,'label':"lit_3967",'name':"@3967",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA38,'size':4,'pad':0,'label':"lit_3968",'name':"@3968",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA3C,'size':4,'pad':0,'label':"lit_3969",'name':"@3969",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA40,'size':4,'pad':4,'label':"lit_4066",'name':"@4066",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x8046DA48,'size':8,'pad':0,'label':"lit_4326",'name':"@4326",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x8046DA50,'size':38,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x8046DA78,'size':32,'pad':0,'label':"l_daKytag04_Method",'name':"l_daKytag04_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x8046DA98,'size':48,'pad':0,'label':"g_profile_KYTAG04",'name':"g_profile_KYTAG04",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x8046DAC8,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daKytag04_Draw__FP13kytag04_class":3,
+	"daKytag04_Execute__FP13kytag04_class":4,
+	"daKytag04_IsDelete__FP13kytag04_class":5,
+	"daKytag04_Delete__FP13kytag04_class":6,
+	"useHeapInit__FP10fopAc_ac_c":7,
+	"daKytag04_Create__FP10fopAc_ac_c":8,
+	"__dt__12J3DFrameCtrlFv":9,
+	"data_8046DA10":10,
+	"data_8046DA14":11,
+	"lit_3960":12,
+	"lit_3961":13,
+	"lit_3962":14,
+	"lit_3963":15,
+	"lit_3964":16,
+	"lit_3965":17,
+	"lit_3966":18,
+	"lit_3967":19,
+	"lit_3968":20,
+	"lit_3969":21,
+	"lit_4066":22,
+	"lit_4326":23,
+	"stringBase0":24,
+	"l_daKytag04_Method":25,
+	"g_profile_KYTAG04":26,
+	"__vt__12J3DFrameCtrl":27,
 }
+

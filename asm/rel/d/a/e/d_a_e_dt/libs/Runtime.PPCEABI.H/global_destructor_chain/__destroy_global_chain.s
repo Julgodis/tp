@@ -3,8 +3,8 @@ lbl_806AD8B4:
 /* 806AD8B8 00000004  7C 08 02 A6 */	mflr r0
 /* 806AD8BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806AD8C0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 806AD8C4 00000010  3C 60 00 00 */	lis r3, __global_destructor_chain@ha
-/* 806AD8C8 00000014  3B E3 00 00 */	addi r31, r3, __global_destructor_chain@l
+/* 806AD8C4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806AD8C8 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 806AD8CC 00000018  48 00 00 20 */	b lbl_806AD8EC
 lbl_806AD8D0:
 /* 806AD8D0 00000000  80 05 00 00 */	lwz r0, 0(r5)

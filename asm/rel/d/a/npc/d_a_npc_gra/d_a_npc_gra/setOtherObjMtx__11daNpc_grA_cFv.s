@@ -20,16 +20,16 @@ lbl_809C3A84:
 /* 809C3A98 00000014  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 809C3A9C 00000018  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 809C3AA0 0000001C  C0 23 00 1C */	lfs f1, 0x1c(r3)
-/* 809C3AA4 00000020  4B FF AE 15 */	bl __cvt_fp2unsigned
+/* 809C3AA4 00000020  4B FF AE 15 */	bl _unresolved
 /* 809C3AA8 00000024  38 80 00 1F */	li r4, 0x1f
 /* 809C3AAC 00000028  7C 03 23 96 */	divwu r0, r3, r4
 /* 809C3AB0 0000002C  7C 00 21 D6 */	mullw r0, r0, r4
 /* 809C3AB4 00000030  7C 00 18 50 */	subf r0, r0, r3
-/* 809C3AB8 00000034  3C 60 00 00 */	lis r3, l_offsetHeight@ha
-/* 809C3ABC 00000038  38 63 00 00 */	addi r3, r3, l_offsetHeight@l
+/* 809C3AB8 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809C3ABC 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809C3AC0 0000003C  7C 03 00 AE */	lbzx r0, r3, r0
-/* 809C3AC4 00000040  3C 60 00 00 */	lis r3, lit_6463@ha
-/* 809C3AC8 00000044  C8 23 00 00 */	lfd f1, lit_6463@l(r3)
+/* 809C3AC4 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809C3AC8 00000044  C8 23 00 00 */	lfd f1, 0x0000(r3)
 /* 809C3ACC 00000048  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 809C3AD0 0000004C  3C 00 43 30 */	lis r0, 0x4330
 /* 809C3AD4 00000050  90 01 00 18 */	stw r0, 0x18(r1)
@@ -39,15 +39,15 @@ lbl_809C3A84:
 /* 809C3AE4 00000060  EC 00 08 2A */	fadds f0, f0, f1
 /* 809C3AE8 00000064  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 809C3AEC 00000068  38 61 00 08 */	addi r3, r1, 8
-/* 809C3AF0 0000006C  4B FF AD C9 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 809C3AF0 0000006C  4B FF AD C9 */	bl _unresolved
 /* 809C3AF4 00000070  38 7F 08 F0 */	addi r3, r31, 0x8f0
-/* 809C3AF8 00000074  4B FF AD C1 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 809C3AF8 00000074  4B FF AD C1 */	bl _unresolved
 /* 809C3AFC 00000078  38 7F 04 EC */	addi r3, r31, 0x4ec
-/* 809C3B00 0000007C  4B FF AD B9 */	bl scaleM__14mDoMtx_stack_cFRC4cXyz
-/* 809C3B04 00000080  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 809C3B08 00000084  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 809C3B00 0000007C  4B FF AD B9 */	bl _unresolved
+/* 809C3B04 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809C3B08 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809C3B0C 00000088  38 9F 14 DC */	addi r4, r31, 0x14dc
-/* 809C3B10 0000008C  4B FF AD A9 */	bl PSMTXCopy
+/* 809C3B10 0000008C  4B FF AD A9 */	bl _unresolved
 lbl_809C3B14:
 /* 809C3B14 00000000  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 809C3B18 00000004  80 01 00 34 */	lwz r0, 0x34(r1)

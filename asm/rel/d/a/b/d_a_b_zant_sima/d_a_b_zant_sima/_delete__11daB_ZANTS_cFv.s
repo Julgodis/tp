@@ -5,16 +5,16 @@ lbl_80652EC0:
 /* 80652ECC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80652ED0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80652ED4 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80652ED8 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80652EDC 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80652EE0 00000020  4B FF FA D9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80652ED8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80652EDC 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80652EE0 00000020  4B FF FA D9 */	bl _unresolved
 /* 80652EE4 00000024  80 9F 05 C4 */	lwz r4, 0x5c4(r31)
 /* 80652EE8 00000028  28 04 00 00 */	cmplwi r4, 0
 /* 80652EEC 0000002C  41 82 00 14 */	beq lbl_80652F00
-/* 80652EF0 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80652EF4 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80652EF0 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80652EF4 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80652EF8 00000038  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80652EFC 0000003C  4B FF FA BD */	bl Release__4cBgSFP9dBgW_Base
+/* 80652EFC 0000003C  4B FF FA BD */	bl _unresolved
 lbl_80652F00:
 /* 80652F00 00000000  38 60 00 01 */	li r3, 1
 /* 80652F04 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

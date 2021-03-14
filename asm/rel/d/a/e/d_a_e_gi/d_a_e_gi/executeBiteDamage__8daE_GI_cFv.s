@@ -3,12 +3,12 @@ lbl_806CF410:
 /* 806CF414 00000004  7C 08 02 A6 */	mflr r0
 /* 806CF418 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 806CF41C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 806CF420 00000010  4B FF DF D9 */	bl _savegpr_29
+/* 806CF420 00000010  4B FF DF D9 */	bl _unresolved
 /* 806CF424 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 806CF428 00000018  3C 60 00 00 */	lis r3, lit_3907@ha
-/* 806CF42C 0000001C  3B E3 00 00 */	addi r31, r3, lit_3907@l
-/* 806CF430 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806CF434 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806CF428 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806CF42C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 806CF430 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806CF434 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806CF438 00000028  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 806CF43C 0000002C  80 1D 06 74 */	lwz r0, 0x674(r29)
 /* 806CF440 00000030  2C 00 00 01 */	cmpwi r0, 1
@@ -41,13 +41,13 @@ lbl_806CF458:
 /* 806CF4A8 00000050  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 806CF4AC 00000054  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 806CF4B0 00000058  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 806CF4B4 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806CF4B8 00000060  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806CF4B4 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806CF4B8 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806CF4BC 00000064  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806CF4C0 00000068  38 80 00 03 */	li r4, 3
 /* 806CF4C4 0000006C  38 A0 00 1F */	li r5, 0x1f
 /* 806CF4C8 00000070  38 C1 00 14 */	addi r6, r1, 0x14
-/* 806CF4CC 00000074  4B FF DF 2D */	bl StartShock__12dVibration_cFii4cXyz
+/* 806CF4CC 00000074  4B FF DF 2D */	bl _unresolved
 /* 806CF4D0 00000078  7F A3 EB 78 */	mr r3, r29
 /* 806CF4D4 0000007C  4B FF EC B1 */	bl setDamageEffect__8daE_GI_cFv
 /* 806CF4D8 00000080  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -91,13 +91,13 @@ lbl_806CF550:
 /* 806CF564 00000014  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 806CF568 00000018  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 806CF56C 0000001C  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 806CF570 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 806CF574 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806CF570 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806CF574 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806CF578 00000028  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806CF57C 0000002C  38 80 00 03 */	li r4, 3
 /* 806CF580 00000030  38 A0 00 1F */	li r5, 0x1f
 /* 806CF584 00000034  38 C1 00 08 */	addi r6, r1, 8
-/* 806CF588 00000038  4B FF DE 71 */	bl StartShock__12dVibration_cFii4cXyz
+/* 806CF588 00000038  4B FF DE 71 */	bl _unresolved
 /* 806CF58C 0000003C  A0 1D 05 8E */	lhz r0, 0x58e(r29)
 /* 806CF590 00000040  54 00 06 B0 */	rlwinm r0, r0, 0, 0x1a, 0x18
 /* 806CF594 00000044  B0 1D 05 8E */	sth r0, 0x58e(r29)
@@ -198,7 +198,7 @@ lbl_806CF6A8:
 /* 806CF704 0000005C  4B FF E2 09 */	bl setActionMode__8daE_GI_cFii
 lbl_806CF708:
 /* 806CF708 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 806CF70C 00000004  4B FF DC ED */	bl _restgpr_29
+/* 806CF70C 00000004  4B FF DC ED */	bl _unresolved
 /* 806CF710 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 806CF714 0000000C  7C 08 03 A6 */	mtlr r0
 /* 806CF718 00000010  38 21 00 30 */	addi r1, r1, 0x30

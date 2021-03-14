@@ -7,27 +7,27 @@ lbl_80D37A68:
 /* 80D37A7C 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80D37A80 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80D37A84 0000001C  41 82 00 54 */	beq lbl_80D37AD8
-/* 80D37A88 00000020  3C 60 00 00 */	lis r3, __vt__13daWindStone_c@ha
-/* 80D37A8C 00000024  38 03 00 00 */	addi r0, r3, __vt__13daWindStone_c@l
+/* 80D37A88 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D37A8C 00000024  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D37A90 00000028  90 1E 05 70 */	stw r0, 0x570(r30)
 /* 80D37A94 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 80D37A98 00000030  41 82 00 08 */	beq lbl_80D37AA0
 /* 80D37A9C 00000034  38 63 05 68 */	addi r3, r3, 0x568
 lbl_80D37AA0:
-/* 80D37AA0 00000000  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80D37AA4 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80D37AA0 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D37AA4 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D37AA8 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D37AAC 0000000C  4B FF FF 2D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D37AAC 0000000C  4B FF FF 2D */	bl _unresolved
 /* 80D37AB0 00000010  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80D37AB4 00000014  38 80 FF FF */	li r4, -1
-/* 80D37AB8 00000018  4B FF FF 21 */	bl __dt__13cBgS_PolyInfoFv
+/* 80D37AB8 00000018  4B FF FF 21 */	bl _unresolved
 /* 80D37ABC 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 80D37AC0 00000020  38 80 00 00 */	li r4, 0
-/* 80D37AC4 00000024  4B FF FF 15 */	bl __dt__10fopAc_ac_cFv
+/* 80D37AC4 00000024  4B FF FF 15 */	bl _unresolved
 /* 80D37AC8 00000028  7F E0 07 35 */	extsh. r0, r31
 /* 80D37ACC 0000002C  40 81 00 0C */	ble lbl_80D37AD8
 /* 80D37AD0 00000030  7F C3 F3 78 */	mr r3, r30
-/* 80D37AD4 00000034  4B FF FF 05 */	bl __dl__FPv
+/* 80D37AD4 00000034  4B FF FF 05 */	bl _unresolved
 lbl_80D37AD8:
 /* 80D37AD8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80D37ADC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

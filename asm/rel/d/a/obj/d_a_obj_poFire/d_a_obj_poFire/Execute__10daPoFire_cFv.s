@@ -5,7 +5,7 @@ lbl_80CB2BB8:
 /* 80CB2BC4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CB2BC8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CB2BCC 00000014  38 7F 05 70 */	addi r3, r31, 0x570
-/* 80CB2BD0 00000018  4B FF FC E9 */	bl eventUpdate__17dEvLib_callback_cFv
+/* 80CB2BD0 00000018  4B FF FC E9 */	bl _unresolved
 /* 80CB2BD4 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 80CB2BD8 00000020  48 00 00 25 */	bl procMain__10daPoFire_cFv
 /* 80CB2BDC 00000024  7F E3 FB 78 */	mr r3, r31

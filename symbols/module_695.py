@@ -3,32 +3,87 @@
 # Module: 695
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3EDA0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3EDCC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D3EDF8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 9, 'type': "Function"},
-	'initBaseMtx__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3EE18, 'size': 0x003C, 'padding': 0x00, 'name': "initBaseMtx__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3EE54, 'size': 0x006C, 'padding': 0x00, 'name': "setBaseMtx__13daObjZCloth_cFv", 'reference_count': 2, 'type': "Function"},
-	'Create__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3EEC0, 'size': 0x004C, 'padding': 0x00, 'name': "Create__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3EF0C, 'size': 0x01A0, 'padding': 0x00, 'name': "create__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'__dt__8cM3dGCylFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F0AC, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGCylFv", 'reference_count': 0, 'type': "Function"},
-	'__dt__8cM3dGAabFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F0F4, 'size': 0x0048, 'padding': 0x00, 'name': "__dt__8cM3dGAabFv", 'reference_count': 0, 'type': "Function"},
-	'__dt__12dBgS_ObjAcchFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F13C, 'size': 0x0070, 'padding': 0x00, 'name': "__dt__12dBgS_ObjAcchFv", 'reference_count': 2, 'type': "Function"},
-	'execute__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F1AC, 'size': 0x0024, 'padding': 0x00, 'name': "execute__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F1D0, 'size': 0x0030, 'padding': 0x00, 'name': "draw__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__13daObjZCloth_cFv': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F200, 'size': 0x003C, 'padding': 0x00, 'name': "_delete__13daObjZCloth_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjZCloth_Draw__FP13daObjZCloth_c': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F23C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjZCloth_Draw__FP13daObjZCloth_c", 'reference_count': 1, 'type': "Function"},
-	'daObjZCloth_Execute__FP13daObjZCloth_c': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F25C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjZCloth_Execute__FP13daObjZCloth_c", 'reference_count': 1, 'type': "Function"},
-	'daObjZCloth_Delete__FP13daObjZCloth_c': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F27C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjZCloth_Delete__FP13daObjZCloth_c", 'reference_count': 1, 'type': "Function"},
-	'daObjZCloth_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F29C, 'size': 0x0020, 'padding': 0x00, 'name': "daObjZCloth_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'func_80D3F2BC': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F2BC, 'size': 0x0008, 'padding': 0x00, 'name': "@36@__dt__12dBgS_ObjAcchFv", 'reference_count': 0, 'type': "Function"},
-	'func_80D3F2C4': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".text", 'addr': 0x80D3F2C4, 'size': 0x0008, 'padding': 0x00, 'name': "@20@__dt__12dBgS_ObjAcchFv", 'reference_count': 0, 'type': "Function"},
-	'data_80D3F2CC': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D3F2CC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D3F2D0': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D3F2D0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_daObjZCloth_Method': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F2D4, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjZCloth_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_ZoraCloth': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F2F4, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_ZoraCloth", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__13daObjZCloth_c': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F324, 'size': 0x0044, 'padding': 0x00, 'name': "__vt__13daObjZCloth_c", 'reference_count': 0, 'type': "VirtualTable"},
-	'__vt__8cM3dGCyl': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F368, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGCyl", 'reference_count': 0, 'type': "VirtualTable"},
-	'__vt__8cM3dGAab': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F374, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__8cM3dGAab", 'reference_count': 0, 'type': "VirtualTable"},
-	'__vt__12dBgS_ObjAcch': {'library': "d/a/obj/d_a_obj_zcloth", 'translation_unit': "d_a_obj_zcloth", 'section': ".data", 'addr': 0x80D3F380, 'size': 0x0024, 'padding': 0x00, 'name': "__vt__12dBgS_ObjAcch", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_zcloth",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_zcloth",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D3EDA0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3EDCC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3EDF8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':9,'type':"Function"},
+	{'addr':0x80D3EE18,'size':60,'pad':0,'label':"initBaseMtx__13daObjZCloth_cFv",'name':"initBaseMtx__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3EE54,'size':108,'pad':0,'label':"setBaseMtx__13daObjZCloth_cFv",'name':"setBaseMtx__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D3EEC0,'size':76,'pad':0,'label':"Create__13daObjZCloth_cFv",'name':"Create__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3EF0C,'size':416,'pad':0,'label':"create__13daObjZCloth_cFv",'name':"create__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3F0AC,'size':72,'pad':0,'label':"__dt__8cM3dGCylFv",'name':"__dt__8cM3dGCylFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F0F4,'size':72,'pad':0,'label':"__dt__8cM3dGAabFv",'name':"__dt__8cM3dGAabFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F13C,'size':112,'pad':0,'label':"__dt__12dBgS_ObjAcchFv",'name':"__dt__12dBgS_ObjAcchFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D3F1AC,'size':36,'pad':0,'label':"execute__13daObjZCloth_cFv",'name':"execute__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3F1D0,'size':48,'pad':0,'label':"draw__13daObjZCloth_cFv",'name':"draw__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3F200,'size':60,'pad':0,'label':"_delete__13daObjZCloth_cFv",'name':"_delete__13daObjZCloth_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D3F23C,'size':32,'pad':0,'label':"daObjZCloth_Draw__FP13daObjZCloth_c",'name':"daObjZCloth_Draw__FP13daObjZCloth_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F25C,'size':32,'pad':0,'label':"daObjZCloth_Execute__FP13daObjZCloth_c",'name':"daObjZCloth_Execute__FP13daObjZCloth_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F27C,'size':32,'pad':0,'label':"daObjZCloth_Delete__FP13daObjZCloth_c",'name':"daObjZCloth_Delete__FP13daObjZCloth_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F29C,'size':32,'pad':0,'label':"daObjZCloth_Create__FP10fopAc_ac_c",'name':"daObjZCloth_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F2BC,'size':8,'pad':0,'label':"func_80D3F2BC",'name':"@36@__dt__12dBgS_ObjAcchFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F2C4,'size':8,'pad':0,'label':"func_80D3F2C4",'name':"@20@__dt__12dBgS_ObjAcchFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D3F2CC,'size':4,'pad':0,'label':"data_80D3F2CC",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D3F2D0,'size':4,'pad':0,'label':"data_80D3F2D0",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D3F2D4,'size':32,'pad':0,'label':"l_daObjZCloth_Method",'name':"l_daObjZCloth_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3F2F4,'size':48,'pad':0,'label':"g_profile_Obj_ZoraCloth",'name':"g_profile_Obj_ZoraCloth",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D3F324,'size':68,'pad':0,'label':"__vt__13daObjZCloth_c",'name':"__vt__13daObjZCloth_c",'lib':-1,'tu':4,'section':3,'rc':0,'type':"VirtualTable"},
+	{'addr':0x80D3F368,'size':12,'pad':0,'label':"__vt__8cM3dGCyl",'name':"__vt__8cM3dGCyl",'lib':-1,'tu':4,'section':3,'rc':0,'type':"VirtualTable"},
+	{'addr':0x80D3F374,'size':12,'pad':0,'label':"__vt__8cM3dGAab",'name':"__vt__8cM3dGAab",'lib':-1,'tu':4,'section':3,'rc':0,'type':"VirtualTable"},
+	{'addr':0x80D3F380,'size':36,'pad':0,'label':"__vt__12dBgS_ObjAcch",'name':"__vt__12dBgS_ObjAcch",'lib':-1,'tu':4,'section':3,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"initBaseMtx__13daObjZCloth_cFv":3,
+	"setBaseMtx__13daObjZCloth_cFv":4,
+	"Create__13daObjZCloth_cFv":5,
+	"create__13daObjZCloth_cFv":6,
+	"__dt__8cM3dGCylFv":7,
+	"__dt__8cM3dGAabFv":8,
+	"__dt__12dBgS_ObjAcchFv":9,
+	"execute__13daObjZCloth_cFv":10,
+	"draw__13daObjZCloth_cFv":11,
+	"_delete__13daObjZCloth_cFv":12,
+	"daObjZCloth_Draw__FP13daObjZCloth_c":13,
+	"daObjZCloth_Execute__FP13daObjZCloth_c":14,
+	"daObjZCloth_Delete__FP13daObjZCloth_c":15,
+	"daObjZCloth_Create__FP10fopAc_ac_c":16,
+	"func_80D3F2BC":17,
+	"func_80D3F2C4":18,
+	"data_80D3F2CC":19,
+	"data_80D3F2D0":20,
+	"l_daObjZCloth_Method":21,
+	"g_profile_Obj_ZoraCloth":22,
+	"__vt__13daObjZCloth_c":23,
+	"__vt__8cM3dGCyl":24,
+	"__vt__8cM3dGAab":25,
+	"__vt__12dBgS_ObjAcch":26,
 }
+

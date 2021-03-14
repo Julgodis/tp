@@ -3,29 +3,82 @@
 # Module: 424
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BCC780, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BCC7AC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BCC7D8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 10, 'type': "Function"},
-	'setBaseMtx__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCC7F8, 'size': 0x0074, 'padding': 0x00, 'name': "setBaseMtx__11daCowdoor_cFv", 'reference_count': 2, 'type': "Function"},
-	'Create__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCC86C, 'size': 0x0058, 'padding': 0x00, 'name': "Create__11daCowdoor_cFv", 'reference_count': 0, 'type': "Function"},
-	'CreateHeap__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCC8C4, 'size': 0x0078, 'padding': 0x00, 'name': "CreateHeap__11daCowdoor_cFv", 'reference_count': 0, 'type': "Function"},
-	'create__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCC93C, 'size': 0x00E0, 'padding': 0x00, 'name': "create__11daCowdoor_cFv", 'reference_count': 1, 'type': "Function"},
-	'Execute__11daCowdoor_cFPPA3_A4_f': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCA1C, 'size': 0x002C, 'padding': 0x00, 'name': "Execute__11daCowdoor_cFPPA3_A4_f", 'reference_count': 0, 'type': "Function"},
-	'Draw__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCA48, 'size': 0x00A4, 'padding': 0x00, 'name': "Draw__11daCowdoor_cFv", 'reference_count': 0, 'type': "Function"},
-	'Delete__11daCowdoor_cFv': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCAEC, 'size': 0x0034, 'padding': 0x00, 'name': "Delete__11daCowdoor_cFv", 'reference_count': 0, 'type': "Function"},
-	'daCowdoor_Draw__FP11daCowdoor_c': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCB20, 'size': 0x002C, 'padding': 0x00, 'name': "daCowdoor_Draw__FP11daCowdoor_c", 'reference_count': 1, 'type': "Function"},
-	'daCowdoor_Execute__FP11daCowdoor_c': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCB4C, 'size': 0x0020, 'padding': 0x00, 'name': "daCowdoor_Execute__FP11daCowdoor_c", 'reference_count': 1, 'type': "Function"},
-	'daCowdoor_Delete__FP11daCowdoor_c': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCB6C, 'size': 0x0020, 'padding': 0x00, 'name': "daCowdoor_Delete__FP11daCowdoor_c", 'reference_count': 1, 'type': "Function"},
-	'daCowdoor_Create__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".text", 'addr': 0x80BCCB8C, 'size': 0x0020, 'padding': 0x00, 'name': "daCowdoor_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80BCCBAC': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80BCCBAC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80BCCBB0': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80BCCBB0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3648': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".rodata", 'addr': 0x80BCCBB4, 'size': 0x0004, 'padding': 0x00, 'name': "@3648", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".rodata", 'addr': 0x80BCCBB8, 'size': 0x0023, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 3, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCBDC, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_bmdName': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCBE0, 'size': 0x0004, 'padding': 0x00, 'name': "l_bmdName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_dzbName': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCBE4, 'size': 0x0004, 'padding': 0x00, 'name': "l_dzbName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daCowdoor_Method': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCBE8, 'size': 0x0020, 'padding': 0x00, 'name': "l_daCowdoor_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_Cowdoor': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCC08, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_Cowdoor", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__11daCowdoor_c': {'library': "d/a/obj/d_a_obj_cowdoor", 'translation_unit': "d_a_obj_cowdoor", 'section': ".data", 'addr': 0x80BCCC38, 'size': 0x0028, 'padding': 0x00, 'name': "__vt__11daCowdoor_c", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_cowdoor",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_cowdoor",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80BCC780,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCC7AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCC7D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':10,'type':"Function"},
+	{'addr':0x80BCC7F8,'size':116,'pad':0,'label':"setBaseMtx__11daCowdoor_cFv",'name':"setBaseMtx__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80BCC86C,'size':88,'pad':0,'label':"Create__11daCowdoor_cFv",'name':"Create__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCC8C4,'size':120,'pad':0,'label':"CreateHeap__11daCowdoor_cFv",'name':"CreateHeap__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCC93C,'size':224,'pad':0,'label':"create__11daCowdoor_cFv",'name':"create__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BCCA1C,'size':44,'pad':0,'label':"Execute__11daCowdoor_cFPPA3_A4_f",'name':"Execute__11daCowdoor_cFPPA3_A4_f",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCA48,'size':164,'pad':0,'label':"Draw__11daCowdoor_cFv",'name':"Draw__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCAEC,'size':52,'pad':0,'label':"Delete__11daCowdoor_cFv",'name':"Delete__11daCowdoor_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCB20,'size':44,'pad':0,'label':"daCowdoor_Draw__FP11daCowdoor_c",'name':"daCowdoor_Draw__FP11daCowdoor_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCB4C,'size':32,'pad':0,'label':"daCowdoor_Execute__FP11daCowdoor_c",'name':"daCowdoor_Execute__FP11daCowdoor_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCB6C,'size':32,'pad':0,'label':"daCowdoor_Delete__FP11daCowdoor_c",'name':"daCowdoor_Delete__FP11daCowdoor_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCB8C,'size':32,'pad':0,'label':"daCowdoor_Create__FP10fopAc_ac_c",'name':"daCowdoor_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BCCBAC,'size':4,'pad':0,'label':"data_80BCCBAC",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCBB0,'size':4,'pad':0,'label':"data_80BCCBB0",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCBB4,'size':4,'pad':0,'label':"lit_3648",'name':"@3648",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BCCBB8,'size':35,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80BCCBDC,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCBE0,'size':4,'pad':0,'label':"l_bmdName",'name':"l_bmdName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCBE4,'size':4,'pad':0,'label':"l_dzbName",'name':"l_dzbName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCBE8,'size':32,'pad':0,'label':"l_daCowdoor_Method",'name':"l_daCowdoor_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCC08,'size':48,'pad':0,'label':"g_profile_Obj_Cowdoor",'name':"g_profile_Obj_Cowdoor",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BCCC38,'size':40,'pad':0,'label':"__vt__11daCowdoor_c",'name':"__vt__11daCowdoor_c",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"setBaseMtx__11daCowdoor_cFv":3,
+	"Create__11daCowdoor_cFv":4,
+	"CreateHeap__11daCowdoor_cFv":5,
+	"create__11daCowdoor_cFv":6,
+	"Execute__11daCowdoor_cFPPA3_A4_f":7,
+	"Draw__11daCowdoor_cFv":8,
+	"Delete__11daCowdoor_cFv":9,
+	"daCowdoor_Draw__FP11daCowdoor_c":10,
+	"daCowdoor_Execute__FP11daCowdoor_c":11,
+	"daCowdoor_Delete__FP11daCowdoor_c":12,
+	"daCowdoor_Create__FP10fopAc_ac_c":13,
+	"data_80BCCBAC":14,
+	"data_80BCCBB0":15,
+	"lit_3648":16,
+	"stringBase0":17,
+	"l_arcName":18,
+	"l_bmdName":19,
+	"l_dzbName":20,
+	"l_daCowdoor_Method":21,
+	"g_profile_Obj_Cowdoor":22,
+	"__vt__11daCowdoor_c":23,
 }
+

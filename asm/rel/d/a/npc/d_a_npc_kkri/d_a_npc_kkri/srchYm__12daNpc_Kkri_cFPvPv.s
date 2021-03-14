@@ -4,8 +4,8 @@ lbl_8054FD78:
 /* 8054FD80 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8054FD84 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8054FD88 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8054FD8C 00000014  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
-/* 8054FD90 00000018  80 03 00 00 */	lwz r0, mFindCount__8daNpcT_c@l(r3)
+/* 8054FD8C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8054FD90 00000018  80 03 00 00 */	lwz r0, 0x0000(r3)
 /* 8054FD94 0000001C  2C 00 00 32 */	cmpwi r0, 0x32
 /* 8054FD98 00000020  40 80 00 70 */	bge lbl_8054FE08
 /* 8054FD9C 00000024  28 1F 00 00 */	cmplwi r31, 0
@@ -19,7 +19,7 @@ lbl_8054FD78:
 lbl_8054FDBC:
 /* 8054FDBC 00000000  38 60 FF FF */	li r3, -1
 lbl_8054FDC0:
-/* 8054FDC0 00000000  4B FF F5 59 */	bl fpcEx_IsExist__FUi
+/* 8054FDC0 00000000  4B FF F5 59 */	bl _unresolved
 /* 8054FDC4 00000004  2C 03 00 00 */	cmpwi r3, 0
 /* 8054FDC8 00000008  41 82 00 40 */	beq lbl_8054FE08
 /* 8054FDCC 0000000C  A8 1F 00 08 */	lha r0, 8(r31)
@@ -28,12 +28,12 @@ lbl_8054FDC0:
 /* 8054FDD8 00000018  88 1F 06 A4 */	lbz r0, 0x6a4(r31)
 /* 8054FDDC 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8054FDE0 00000020  40 82 00 28 */	bne lbl_8054FE08
-/* 8054FDE4 00000024  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha
-/* 8054FDE8 00000028  38 A3 00 00 */	addi r5, r3, mFindCount__8daNpcT_c@l
+/* 8054FDE4 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8054FDE8 00000028  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
 /* 8054FDEC 0000002C  80 85 00 00 */	lwz r4, 0(r5)
 /* 8054FDF0 00000030  54 80 10 3A */	slwi r0, r4, 2
-/* 8054FDF4 00000034  3C 60 00 00 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
-/* 8054FDF8 00000038  38 63 00 00 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
+/* 8054FDF4 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8054FDF8 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8054FDFC 0000003C  7F E3 01 2E */	stwx r31, r3, r0
 /* 8054FE00 00000040  38 04 00 01 */	addi r0, r4, 1
 /* 8054FE04 00000044  90 05 00 00 */	stw r0, 0(r5)

@@ -5,8 +5,8 @@ lbl_808788D4:
 /* 808788E0 0000000C  4B FF FA 65 */	bl daMP_THPPlayerStop__Fv
 /* 808788E4 00000010  4B FF EE 09 */	bl daMP_THPPlayerClose__Fv
 /* 808788E8 00000014  4B FF E9 E5 */	bl daMP_THPPlayerQuit__Fv
-/* 808788EC 00000018  3C 60 00 00 */	lis r3, daMP_buffer@ha
-/* 808788F0 0000001C  38 63 00 00 */	addi r3, r3, daMP_buffer@l
+/* 808788EC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 808788F0 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 808788F4 00000020  80 63 00 00 */	lwz r3, 0(r3)
 /* 808788F8 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 808788FC 00000028  41 82 00 08 */	beq lbl_80878904

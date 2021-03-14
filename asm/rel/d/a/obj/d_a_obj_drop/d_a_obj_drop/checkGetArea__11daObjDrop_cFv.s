@@ -6,14 +6,14 @@ lbl_80BE0430:
 /* 80BE0440 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
 /* 80BE0444 00000000  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80BE0448 00000004  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 80BE044C 00000008  3C 80 00 00 */	lis r4, l_sizuku_body_effect_list@ha
-/* 80BE0450 0000000C  3B C4 00 00 */	addi r30, r4, l_sizuku_body_effect_list@l
-/* 80BE0454 00000010  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80BE0458 00000014  3B E4 00 00 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80BE044C 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE0450 0000000C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
+/* 80BE0454 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE0458 00000014  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80BE045C 00000018  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80BE0460 0000001C  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 80BE0464 00000020  38 84 04 D0 */	addi r4, r4, 0x4d0
-/* 80BE0468 00000024  4B FF F8 51 */	bl PSVECSquareDistance
+/* 80BE0468 00000024  4B FF F8 51 */	bl _unresolved
 /* 80BE046C 00000028  C0 1E 00 58 */	lfs f0, 0x58(r30)
 /* 80BE0470 00000040  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BE0474 00000000  40 81 00 58 */	ble lbl_80BE04CC
@@ -42,8 +42,8 @@ lbl_80BE04CC:
 /* 80BE04CC 00000000  C8 1E 00 70 */	lfd f0, 0x70(r30)
 /* 80BE04D0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BE04D4 00000000  40 80 00 10 */	bge lbl_80BE04E4
-/* 80BE04D8 00000004  3C 60 00 00 */	lis r3, __float_nan@ha
-/* 80BE04DC 00000008  C3 E3 00 00 */	lfs f31, __float_nan@l(r3)
+/* 80BE04D8 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE04DC 00000008  C3 E3 00 00 */	lfs f31, 0x0000(r3)
 /* 80BE04E0 0000000C  48 00 00 78 */	b lbl_80BE0558
 lbl_80BE04E4:
 /* 80BE04E4 00000000  D0 21 00 08 */	stfs f1, 8(r1)
@@ -77,8 +77,8 @@ lbl_80BE053C:
 lbl_80BE0540:
 /* 80BE0540 00000000  2C 00 00 01 */	cmpwi r0, 1
 /* 80BE0544 00000004  40 82 00 10 */	bne lbl_80BE0554
-/* 80BE0548 00000008  3C 60 00 00 */	lis r3, __float_nan@ha
-/* 80BE054C 0000000C  C3 E3 00 00 */	lfs f31, __float_nan@l(r3)
+/* 80BE0548 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE054C 0000000C  C3 E3 00 00 */	lfs f31, 0x0000(r3)
 /* 80BE0550 00000010  48 00 00 08 */	b lbl_80BE0558
 lbl_80BE0554:
 /* 80BE0554 00000000  FF E0 08 90 */	fmr f31, f1
@@ -87,23 +87,23 @@ lbl_80BE0558:
 /* 80BE055C 00000004  88 03 05 6A */	lbz r0, 0x56a(r3)
 /* 80BE0560 00000008  28 00 00 2C */	cmplwi r0, 0x2c
 /* 80BE0564 0000000C  40 82 00 24 */	bne lbl_80BE0588
-/* 80BE0568 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BE056C 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BE0568 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE056C 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BE0570 00000018  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 80BE0574 0000001C  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80BE0578 00000020  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80BE057C 00000024  4B FF F7 3D */	bl strcmp
+/* 80BE0574 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BE0578 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BE057C 00000024  4B FF F7 3D */	bl _unresolved
 /* 80BE0580 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80BE0584 0000002C  41 82 00 2C */	beq lbl_80BE05B0
 lbl_80BE0588:
 /* 80BE0588 00000000  C0 1E 00 78 */	lfs f0, 0x78(r30)
 /* 80BE058C 00000004  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 80BE0590 00000000  40 80 00 28 */	bge lbl_80BE05B8
-/* 80BE0594 00000004  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BE0598 00000008  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BE0594 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE0598 00000008  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80BE059C 0000000C  38 64 01 14 */	addi r3, r4, 0x114
 /* 80BE05A0 00000010  88 84 4E 0C */	lbz r4, 0x4e0c(r4)
-/* 80BE05A4 00000014  4B FF F7 15 */	bl isLightDropGetFlag__16dSv_light_drop_cCFUc
+/* 80BE05A4 00000014  4B FF F7 15 */	bl _unresolved
 /* 80BE05A8 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80BE05AC 0000001C  41 82 00 0C */	beq lbl_80BE05B8
 lbl_80BE05B0:

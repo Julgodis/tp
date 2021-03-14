@@ -5,8 +5,8 @@ lbl_8065AD2C:
 /* 8065AD38 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8065AD3C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8065AD40 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8065AD44 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8065AD48 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8065AD44 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8065AD48 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8065AD4C 00000020  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 /* 8065AD50 00000024  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8065AD54 00000028  81 8C 01 88 */	lwz r12, 0x188(r12)
@@ -20,7 +20,7 @@ lbl_8065AD2C:
 lbl_8065AD74:
 /* 8065AD74 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8065AD78 00000004  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 8065AD7C 00000008  4B FF D7 BD */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8065AD7C 00000008  4B FF D7 BD */	bl _unresolved
 /* 8065AD80 0000000C  C0 1E 0C 78 */	lfs f0, 0xc78(r30)
 /* 8065AD84 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8065AD88 00000000  40 80 00 0C */	bge lbl_8065AD94

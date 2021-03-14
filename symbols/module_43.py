@@ -3,22 +3,68 @@
 # Module: 43
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_vrbox", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804984A0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_vrbox", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804984CC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_vrbox", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804984F8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'daVrbox_Draw__FP11vrbox_class': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x80498518, 'size': 0x01A0, 'padding': 0x00, 'name': "daVrbox_Draw__FP11vrbox_class", 'reference_count': 1, 'type': "Function"},
-	'daVrbox_color_set__FP11vrbox_class': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x804986B8, 'size': 0x0198, 'padding': 0x00, 'name': "daVrbox_color_set__FP11vrbox_class", 'reference_count': 1, 'type': "Function"},
-	'daVrbox_Execute__FP11vrbox_class': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x80498850, 'size': 0x0008, 'padding': 0x00, 'name': "daVrbox_Execute__FP11vrbox_class", 'reference_count': 1, 'type': "Function"},
-	'daVrbox_IsDelete__FP11vrbox_class': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x80498858, 'size': 0x0008, 'padding': 0x00, 'name': "daVrbox_IsDelete__FP11vrbox_class", 'reference_count': 1, 'type': "Function"},
-	'daVrbox_Delete__FP11vrbox_class': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x80498860, 'size': 0x0008, 'padding': 0x00, 'name': "daVrbox_Delete__FP11vrbox_class", 'reference_count': 1, 'type': "Function"},
-	'daVrbox_solidHeapCB__FP10fopAc_ac_c': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x80498868, 'size': 0x0074, 'padding': 0x00, 'name': "daVrbox_solidHeapCB__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'daVrbox_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".text", 'addr': 0x804988DC, 'size': 0x00AC, 'padding': 0x00, 'name': "daVrbox_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80498988': {'library': "d/a/d_a_vrbox", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80498988, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_8049898C': {'library': "d/a/d_a_vrbox", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8049898C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3695': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".rodata", 'addr': 0x80498994, 'size': 0x0004, 'padding': 0x00, 'name': "@3695", 'reference_count': 0, 'type': "InitData"},
-	'lit_3696': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".rodata", 'addr': 0x80498998, 'size': 0x0004, 'padding': 0x00, 'name': "@3696", 'reference_count': 0, 'type': "Integer"},
-	'stringBase0': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".rodata", 'addr': 0x8049899C, 'size': 0x000F, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'l_daVrbox_Method': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".data", 'addr': 0x804989AC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daVrbox_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_VRBOX': {'library': "d/a/d_a_vrbox", 'translation_unit': "d_a_vrbox", 'section': ".data", 'addr': 0x804989CC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_VRBOX", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_vrbox",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_vrbox",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x804984A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804984CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804984F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80498518,'size':416,'pad':0,'label':"daVrbox_Draw__FP11vrbox_class",'name':"daVrbox_Draw__FP11vrbox_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804986B8,'size':408,'pad':0,'label':"daVrbox_color_set__FP11vrbox_class",'name':"daVrbox_color_set__FP11vrbox_class",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80498850,'size':8,'pad':0,'label':"daVrbox_Execute__FP11vrbox_class",'name':"daVrbox_Execute__FP11vrbox_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80498858,'size':8,'pad':0,'label':"daVrbox_IsDelete__FP11vrbox_class",'name':"daVrbox_IsDelete__FP11vrbox_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80498860,'size':8,'pad':0,'label':"daVrbox_Delete__FP11vrbox_class",'name':"daVrbox_Delete__FP11vrbox_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80498868,'size':116,'pad':0,'label':"daVrbox_solidHeapCB__FP10fopAc_ac_c",'name':"daVrbox_solidHeapCB__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804988DC,'size':172,'pad':0,'label':"daVrbox_Create__FP10fopAc_ac_c",'name':"daVrbox_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80498988,'size':4,'pad':0,'label':"data_80498988",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x8049898C,'size':4,'pad':0,'label':"data_8049898C",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80498990,'size':4,'pad':0,'label':"lit_3695",'name':"@3695",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80498994,'size':4,'pad':0,'label':"lit_3696",'name':"@3696",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80498998,'size':15,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x804989A8,'size':32,'pad':0,'label':"l_daVrbox_Method",'name':"l_daVrbox_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x804989C8,'size':48,'pad':0,'label':"g_profile_VRBOX",'name':"g_profile_VRBOX",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"daVrbox_Draw__FP11vrbox_class":3,
+	"daVrbox_color_set__FP11vrbox_class":4,
+	"daVrbox_Execute__FP11vrbox_class":5,
+	"daVrbox_IsDelete__FP11vrbox_class":6,
+	"daVrbox_Delete__FP11vrbox_class":7,
+	"daVrbox_solidHeapCB__FP10fopAc_ac_c":8,
+	"daVrbox_Create__FP10fopAc_ac_c":9,
+	"data_80498988":10,
+	"data_8049898C":11,
+	"lit_3695":12,
+	"lit_3696":13,
+	"stringBase0":14,
+	"l_daVrbox_Method":15,
+	"g_profile_VRBOX":16,
 }
+

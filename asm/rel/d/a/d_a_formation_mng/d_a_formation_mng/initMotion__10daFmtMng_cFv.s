@@ -3,10 +3,10 @@ lbl_80836C64:
 /* 80836C68 00000004  7C 08 02 A6 */	mflr r0
 /* 80836C6C 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80836C70 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 80836C74 00000010  4B FF E8 C5 */	bl _savegpr_25
+/* 80836C74 00000010  4B FF E8 C5 */	bl _unresolved
 /* 80836C78 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80836C7C 00000018  3C 60 00 00 */	lis r3, M_attr__10daFmtMng_c@ha
-/* 80836C80 0000001C  3B E3 00 00 */	addi r31, r3, M_attr__10daFmtMng_c@l
+/* 80836C7C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80836C80 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80836C84 00000020  C0 1F 00 24 */	lfs f0, 0x24(r31)
 /* 80836C88 00000024  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80836C8C 00000028  80 9E 05 68 */	lwz r4, 0x568(r30)
@@ -17,30 +17,30 @@ lbl_80836C64:
 /* 80836CA0 0000003C  7C 63 02 14 */	add r3, r3, r0
 /* 80836CA4 00000040  88 03 00 03 */	lbz r0, 3(r3)
 /* 80836CA8 00000044  7C 1C 07 74 */	extsb r28, r0
-/* 80836CAC 00000048  4B FF E8 8D */	bl dKy_darkworld_check__Fv
+/* 80836CAC 00000048  4B FF E8 8D */	bl _unresolved
 /* 80836CB0 0000004C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80836CB4 00000050  41 82 00 10 */	beq lbl_80836CC4
-/* 80836CB8 00000054  4B FF E8 81 */	bl dKy_getDarktime_minute__Fv
+/* 80836CB8 00000054  4B FF E8 81 */	bl _unresolved
 /* 80836CBC 00000058  7C 7D 1B 78 */	mr r29, r3
 /* 80836CC0 0000005C  48 00 00 0C */	b lbl_80836CCC
 lbl_80836CC4:
-/* 80836CC4 00000000  4B FF E8 75 */	bl dKy_getdaytime_minute__Fv
+/* 80836CC4 00000000  4B FF E8 75 */	bl _unresolved
 /* 80836CC8 00000004  7C 7D 1B 78 */	mr r29, r3
 lbl_80836CCC:
-/* 80836CCC 00000000  4B FF E8 6D */	bl dKy_darkworld_check__Fv
+/* 80836CCC 00000000  4B FF E8 6D */	bl _unresolved
 /* 80836CD0 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80836CD4 00000008  41 82 00 0C */	beq lbl_80836CE0
-/* 80836CD8 0000000C  4B FF E8 61 */	bl dKy_getDarktime_hour__Fv
+/* 80836CD8 0000000C  4B FF E8 61 */	bl _unresolved
 /* 80836CDC 00000010  48 00 00 08 */	b lbl_80836CE4
 lbl_80836CE0:
-/* 80836CE0 00000000  4B FF E8 59 */	bl dKy_getdaytime_hour__Fv
+/* 80836CE0 00000000  4B FF E8 59 */	bl _unresolved
 lbl_80836CE4:
 /* 80836CE4 00000000  1C 63 00 3C */	mulli r3, r3, 0x3c
 /* 80836CE8 00000004  1C 1C 00 0A */	mulli r0, r28, 0xa
 /* 80836CEC 00000008  7C 03 02 14 */	add r0, r3, r0
 /* 80836CF0 0000000C  7C 1D 02 14 */	add r0, r29, r0
 /* 80836CF4 00000010  90 1E 05 9C */	stw r0, 0x59c(r30)
-/* 80836CF8 00000014  4B FF E8 41 */	bl dKy_get_dayofweek__Fv
+/* 80836CF8 00000014  4B FF E8 41 */	bl _unresolved
 /* 80836CFC 00000018  90 7E 05 94 */	stw r3, 0x594(r30)
 /* 80836D00 0000001C  80 7E 05 9C */	lwz r3, 0x59c(r30)
 /* 80836D04 00000020  2C 03 05 A0 */	cmpwi r3, 0x5a0
@@ -88,19 +88,19 @@ lbl_80836D7C:
 lbl_80836D90:
 /* 80836D90 00000000  80 7A 00 00 */	lwz r3, 0(r26)
 /* 80836D94 00000004  38 81 00 08 */	addi r4, r1, 8
-/* 80836D98 00000008  4B FF E7 A1 */	bl fopAcM_SearchByID__FUiPP10fopAc_ac_c
+/* 80836D98 00000008  4B FF E7 A1 */	bl _unresolved
 /* 80836D9C 0000000C  83 81 00 08 */	lwz r28, 8(r1)
 /* 80836DA0 00000010  28 1C 00 00 */	cmplwi r28, 0
 /* 80836DA4 00000014  41 82 00 48 */	beq lbl_80836DEC
 /* 80836DA8 00000018  C0 3F 00 20 */	lfs f1, 0x20(r31)
-/* 80836DAC 0000001C  4B FF E7 8D */	bl cM_rndF__Ff
+/* 80836DAC 0000001C  4B FF E7 8D */	bl _unresolved
 /* 80836DB0 00000020  FC 00 08 1E */	fctiwz f0, f1
 /* 80836DB4 00000024  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80836DB8 00000028  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 80836DBC 0000002C  7F 83 E3 78 */	mr r3, r28
 /* 80836DC0 00000030  7F 64 DB 78 */	mr r4, r27
 /* 80836DC4 00000034  80 BC 0A CC */	lwz r5, 0xacc(r28)
-/* 80836DC8 00000038  4B FF E7 71 */	bl getAnmP__10daNpcCd2_cFii
+/* 80836DC8 00000038  4B FF E7 71 */	bl _unresolved
 /* 80836DCC 0000003C  7C 64 1B 78 */	mr r4, r3
 /* 80836DD0 00000040  7F 83 E3 78 */	mr r3, r28
 /* 80836DD4 00000044  C0 3F 00 18 */	lfs f1, 0x18(r31)
@@ -108,7 +108,7 @@ lbl_80836D90:
 /* 80836DDC 0000004C  38 A0 00 02 */	li r5, 2
 /* 80836DE0 00000050  7F A6 EB 78 */	mr r6, r29
 /* 80836DE4 00000054  38 E0 FF FF */	li r7, -1
-/* 80836DE8 00000058  4B FF E7 51 */	bl setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
+/* 80836DE8 00000058  4B FF E7 51 */	bl _unresolved
 lbl_80836DEC:
 /* 80836DEC 00000000  3B 39 00 01 */	addi r25, r25, 1
 /* 80836DF0 00000004  3B 5A 00 20 */	addi r26, r26, 0x20
@@ -119,7 +119,7 @@ lbl_80836DF4:
 /* 80836E00 0000000C  7C 19 00 00 */	cmpw r25, r0
 /* 80836E04 00000010  41 80 FF 8C */	blt lbl_80836D90
 /* 80836E08 00000014  39 61 00 40 */	addi r11, r1, 0x40
-/* 80836E0C 00000018  4B FF E7 2D */	bl _restgpr_25
+/* 80836E0C 00000018  4B FF E7 2D */	bl _unresolved
 /* 80836E10 0000001C  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 80836E14 00000020  7C 08 03 A6 */	mtlr r0
 /* 80836E18 00000024  38 21 00 40 */	addi r1, r1, 0x40

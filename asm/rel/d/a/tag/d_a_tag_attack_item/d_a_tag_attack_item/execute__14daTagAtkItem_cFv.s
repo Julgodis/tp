@@ -8,15 +8,15 @@ lbl_805A2C48:
 /* 805A2C60 00000018  7F E3 FB 78 */	mr r3, r31
 /* 805A2C64 0000001C  4B FF FC F5 */	bl setBaseMtx__14daTagAtkItem_cFv
 /* 805A2C68 00000020  38 7F 05 68 */	addi r3, r31, 0x568
-/* 805A2C6C 00000024  4B FF FC CD */	bl eventUpdate__17dEvLib_callback_cFv
+/* 805A2C6C 00000024  4B FF FC CD */	bl _unresolved
 /* 805A2C70 00000028  38 7F 06 E4 */	addi r3, r31, 0x6e4
 /* 805A2C74 0000002C  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 805A2C78 00000030  4B FF FC C1 */	bl SetC__8cM3dGCylFRC4cXyz
-/* 805A2C7C 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805A2C80 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A2C78 00000030  4B FF FC C1 */	bl _unresolved
+/* 805A2C7C 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805A2C80 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805A2C84 0000003C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 805A2C88 00000040  38 9F 05 C0 */	addi r4, r31, 0x5c0
-/* 805A2C8C 00000044  4B FF FC AD */	bl Set__4cCcSFP8cCcD_Obj
+/* 805A2C8C 00000044  4B FF FC AD */	bl _unresolved
 /* 805A2C90 00000048  38 60 00 01 */	li r3, 1
 /* 805A2C94 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 805A2C98 00000050  80 01 00 14 */	lwz r0, 0x14(r1)

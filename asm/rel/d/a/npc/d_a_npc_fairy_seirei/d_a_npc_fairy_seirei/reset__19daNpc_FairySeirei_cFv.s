@@ -3,33 +3,33 @@ lbl_80540334:
 /* 80540338 00000004  7C 08 02 A6 */	mflr r0
 /* 8054033C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80540340 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80540344 00000010  4B FF FB 95 */	bl _savegpr_29
+/* 80540344 00000010  4B FF FB 95 */	bl _unresolved
 /* 80540348 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8054034C 00000018  3C 60 00 00 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha
-/* 80540350 0000001C  3B C3 00 00 */	addi r30, r3, m__25daNpc_FairySeirei_Param_c@l
+/* 8054034C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80540350 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80540354 00000020  38 7F 0F 84 */	addi r3, r31, 0xf84
 /* 80540358 00000024  38 1F 0F AC */	addi r0, r31, 0xfac
 /* 8054035C 00000028  7F A3 00 50 */	subf r29, r3, r0
 /* 80540360 0000002C  80 7F 09 6C */	lwz r3, 0x96c(r31)
 /* 80540364 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80540368 00000034  41 82 00 08 */	beq lbl_80540370
-/* 8054036C 00000038  4B FF FB 6D */	bl initialize__15daNpcT_MatAnm_cFv
+/* 8054036C 00000038  4B FF FB 6D */	bl _unresolved
 lbl_80540370:
 /* 80540370 00000000  38 7F 0D 24 */	addi r3, r31, 0xd24
 /* 80540374 00000004  38 80 00 00 */	li r4, 0
 /* 80540378 00000008  38 1F 0E 38 */	addi r0, r31, 0xe38
 /* 8054037C 0000000C  7C A3 00 50 */	subf r5, r3, r0
-/* 80540380 00000010  4B FF FB 59 */	bl memset
+/* 80540380 00000010  4B FF FB 59 */	bl _unresolved
 /* 80540384 00000014  38 7F 0B 50 */	addi r3, r31, 0xb50
-/* 80540388 00000018  4B FF FB 51 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80540388 00000018  4B FF FB 51 */	bl _unresolved
 /* 8054038C 0000001C  38 7F 0B 74 */	addi r3, r31, 0xb74
-/* 80540390 00000020  4B FF FB 49 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80540390 00000020  4B FF FB 49 */	bl _unresolved
 /* 80540394 00000024  38 7F 0B 98 */	addi r3, r31, 0xb98
-/* 80540398 00000028  4B FF FB 41 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80540398 00000028  4B FF FB 41 */	bl _unresolved
 /* 8054039C 0000002C  38 7F 0B A0 */	addi r3, r31, 0xba0
-/* 805403A0 00000030  4B FF FB 39 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 805403A0 00000030  4B FF FB 39 */	bl _unresolved
 /* 805403A4 00000034  38 7F 0B A8 */	addi r3, r31, 0xba8
-/* 805403A8 00000038  4B FF FB 31 */	bl initialize__15daNpcT_JntAnm_cFv
+/* 805403A8 00000038  4B FF FB 31 */	bl _unresolved
 /* 805403AC 0000003C  38 A0 00 00 */	li r5, 0
 /* 805403B0 00000040  38 60 00 00 */	li r3, 0
 /* 805403B4 00000044  7C A4 2B 78 */	mr r4, r5
@@ -55,7 +55,7 @@ lbl_805403C4:
 /* 80540400 0000003C  38 00 00 01 */	li r0, 1
 /* 80540404 00000040  98 1F 0E 26 */	stb r0, 0xe26(r31)
 /* 80540408 00000044  C0 3E 00 9C */	lfs f1, 0x9c(r30)
-/* 8054040C 00000048  4B FF FA CD */	bl cM_rndF__Ff
+/* 8054040C 00000048  4B FF FA CD */	bl _unresolved
 /* 80540410 0000004C  FC 00 08 1E */	fctiwz f0, f1
 /* 80540414 00000050  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80540418 00000054  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -66,13 +66,13 @@ lbl_805403C4:
 /* 8054042C 00000068  38 7F 0F 84 */	addi r3, r31, 0xf84
 /* 80540430 0000006C  38 80 00 00 */	li r4, 0
 /* 80540434 00000070  7F A5 EB 78 */	mr r5, r29
-/* 80540438 00000074  4B FF FA A1 */	bl memset
+/* 80540438 00000074  4B FF FA A1 */	bl _unresolved
 /* 8054043C 00000078  80 1F 0B 7C */	lwz r0, 0xb7c(r31)
 /* 80540440 0000007C  2C 00 00 00 */	cmpwi r0, 0
 /* 80540444 00000080  41 82 00 24 */	beq lbl_80540468
 /* 80540448 00000084  83 BF 0B 80 */	lwz r29, 0xb80(r31)
 /* 8054044C 00000088  38 7F 0B 74 */	addi r3, r31, 0xb74
-/* 80540450 0000008C  4B FF FA 89 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80540450 0000008C  4B FF FA 89 */	bl _unresolved
 /* 80540454 00000090  93 BF 0B 80 */	stw r29, 0xb80(r31)
 /* 80540458 00000094  38 00 00 00 */	li r0, 0
 /* 8054045C 00000098  90 1F 0B 7C */	stw r0, 0xb7c(r31)
@@ -81,9 +81,9 @@ lbl_805403C4:
 lbl_80540468:
 /* 80540468 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8054046C 00000004  A8 9F 04 B6 */	lha r4, 0x4b6(r31)
-/* 80540470 00000008  4B FF FA 69 */	bl setAngle__8daNpcT_cFs
+/* 80540470 00000008  4B FF FA 69 */	bl _unresolved
 /* 80540474 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80540478 00000010  4B FF FA 61 */	bl _restgpr_29
+/* 80540478 00000010  4B FF FA 61 */	bl _unresolved
 /* 8054047C 00000014  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80540480 00000018  7C 08 03 A6 */	mtlr r0
 /* 80540484 0000001C  38 21 00 20 */	addi r1, r1, 0x20

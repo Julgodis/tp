@@ -3,10 +3,10 @@ lbl_80AE1320:
 /* 80AE1324 00000004  7C 08 02 A6 */	mflr r0
 /* 80AE1328 00000008  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80AE132C 0000000C  39 61 00 60 */	addi r11, r1, 0x60
-/* 80AE1330 00000010  4B FF 6E 49 */	bl _savegpr_28
+/* 80AE1330 00000010  4B FF 6E 49 */	bl _unresolved
 /* 80AE1334 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 80AE1338 00000018  3C 60 00 00 */	lis r3, m__17daNpcShad_Param_c@ha
-/* 80AE133C 0000001C  38 83 00 00 */	addi r4, r3, m__17daNpcShad_Param_c@l
+/* 80AE1338 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE133C 0000001C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80AE1340 00000020  38 A0 00 00 */	li r5, 0
 /* 80AE1344 00000024  80 7C 05 68 */	lwz r3, 0x568(r28)
 /* 80AE1348 00000028  83 E3 00 04 */	lwz r31, 4(r3)
@@ -82,8 +82,8 @@ lbl_80AE144C:
 /* 80AE144C 00000000  3B C0 00 01 */	li r30, 1
 /* 80AE1450 00000004  48 00 00 18 */	b lbl_80AE1468
 lbl_80AE1454:
-/* 80AE1454 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80AE1458 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE1454 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE1458 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AE145C 00000008  80 A3 5D AC */	lwz r5, 0x5dac(r3)
 /* 80AE1460 0000000C  48 00 00 08 */	b lbl_80AE1468
 lbl_80AE1464:
@@ -131,7 +131,7 @@ lbl_80AE14D4:
 /* 80AE14F4 00000020  FD 00 28 90 */	fmr f8, f5
 /* 80AE14F8 00000024  A8 9C 08 F2 */	lha r4, 0x8f2(r28)
 /* 80AE14FC 00000028  38 A1 00 24 */	addi r5, r1, 0x24
-/* 80AE1500 0000002C  4B FF 6C 79 */	bl setParam__15daNpcF_Lookat_cFffffffffffffsP4cXyz
+/* 80AE1500 0000002C  4B FF 6C 79 */	bl _unresolved
 /* 80AE1504 00000030  38 7C 0B E4 */	addi r3, r28, 0xbe4
 /* 80AE1508 00000034  7F 84 E3 78 */	mr r4, r28
 /* 80AE150C 00000038  38 BF 00 24 */	addi r5, r31, 0x24
@@ -139,9 +139,9 @@ lbl_80AE14D4:
 /* 80AE1514 00000040  7F C7 F3 78 */	mr r7, r30
 /* 80AE1518 00000044  7F A8 EB 78 */	mr r8, r29
 /* 80AE151C 00000048  39 20 00 00 */	li r9, 0
-/* 80AE1520 0000004C  4B FF 6C 59 */	bl calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii
+/* 80AE1520 0000004C  4B FF 6C 59 */	bl _unresolved
 /* 80AE1524 00000050  39 61 00 60 */	addi r11, r1, 0x60
-/* 80AE1528 00000054  4B FF 6C 51 */	bl _restgpr_28
+/* 80AE1528 00000054  4B FF 6C 51 */	bl _unresolved
 /* 80AE152C 00000058  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 80AE1530 0000005C  7C 08 03 A6 */	mtlr r0
 /* 80AE1534 00000060  38 21 00 60 */	addi r1, r1, 0x60

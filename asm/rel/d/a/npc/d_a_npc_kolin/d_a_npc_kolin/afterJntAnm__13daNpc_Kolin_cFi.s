@@ -6,30 +6,30 @@ lbl_80554EBC:
 /* 80554ECC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80554ED0 00000014  2C 04 00 01 */	cmpwi r4, 1
 /* 80554ED4 00000018  40 82 00 30 */	bne lbl_80554F04
-/* 80554ED8 0000001C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80554EDC 00000020  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80554ED8 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80554EDC 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80554EE0 00000024  A8 1F 0D 12 */	lha r0, 0xd12(r31)
 /* 80554EE4 00000028  7C 00 00 D0 */	neg r0, r0
 /* 80554EE8 0000002C  7C 04 07 34 */	extsh r4, r0
-/* 80554EEC 00000030  4B FF F0 6D */	bl mDoMtx_YrotM__FPA4_fs
+/* 80554EEC 00000030  4B FF F0 6D */	bl _unresolved
 /* 80554EF0 00000034  A8 9F 0D 0E */	lha r4, 0xd0e(r31)
-/* 80554EF4 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80554EF8 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80554EFC 00000040  4B FF F0 5D */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80554EF4 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80554EF8 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80554EFC 00000040  4B FF F0 5D */	bl _unresolved
 /* 80554F00 00000044  48 00 00 34 */	b lbl_80554F34
 lbl_80554F04:
 /* 80554F04 00000000  2C 04 00 04 */	cmpwi r4, 4
 /* 80554F08 00000004  40 82 00 2C */	bne lbl_80554F34
-/* 80554F0C 00000008  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80554F10 0000000C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80554F0C 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80554F10 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80554F14 00000010  A8 1F 0D 0C */	lha r0, 0xd0c(r31)
 /* 80554F18 00000014  7C 00 00 D0 */	neg r0, r0
 /* 80554F1C 00000018  7C 04 07 34 */	extsh r4, r0
-/* 80554F20 0000001C  4B FF F0 39 */	bl mDoMtx_YrotM__FPA4_fs
+/* 80554F20 0000001C  4B FF F0 39 */	bl _unresolved
 /* 80554F24 00000020  A8 9F 0D 08 */	lha r4, 0xd08(r31)
-/* 80554F28 00000024  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80554F2C 00000028  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80554F30 0000002C  4B FF F0 29 */	bl mDoMtx_ZrotM__FPA4_fs
+/* 80554F28 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80554F2C 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80554F30 0000002C  4B FF F0 29 */	bl _unresolved
 lbl_80554F34:
 /* 80554F34 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80554F38 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -3,28 +3,80 @@
 # Module: 737
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5FA80, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5FAAC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5FAD8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 6, 'type': "Function"},
-	'__ct__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FAF8, 'size': 0x003C, 'padding': 0x00, 'name': "__ct__14daTagRmbitSw_cFv", 'reference_count': 2, 'type': "Function"},
-	'__dt__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FB34, 'size': 0x0060, 'padding': 0x00, 'name': "__dt__14daTagRmbitSw_cFv", 'reference_count': 0, 'type': "Function"},
-	'create__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FB94, 'size': 0x0058, 'padding': 0x00, 'name': "create__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'Delete__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FBEC, 'size': 0x0008, 'padding': 0x00, 'name': "Delete__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FBF4, 'size': 0x0008, 'padding': 0x00, 'name': "draw__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FBFC, 'size': 0x01BC, 'padding': 0x00, 'name': "execute__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'init__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FDB8, 'size': 0x0038, 'padding': 0x00, 'name': "init__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'chkPlyrInTag__14daTagRmbitSw_cFv': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FDF0, 'size': 0x00FC, 'padding': 0x00, 'name': "chkPlyrInTag__14daTagRmbitSw_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagRmbitSw_create__FP14daTagRmbitSw_c': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FEEC, 'size': 0x0054, 'padding': 0x00, 'name': "daTagRmbitSw_create__FP14daTagRmbitSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTagRmbitSw_Delete__FP14daTagRmbitSw_c': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FF40, 'size': 0x0020, 'padding': 0x00, 'name': "daTagRmbitSw_Delete__FP14daTagRmbitSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTagRmbitSw_execute__FP14daTagRmbitSw_c': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FF60, 'size': 0x0020, 'padding': 0x00, 'name': "daTagRmbitSw_execute__FP14daTagRmbitSw_c", 'reference_count': 1, 'type': "Function"},
-	'daTagRmbitSw_draw__FP14daTagRmbitSw_c': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".text", 'addr': 0x80D5FF80, 'size': 0x0020, 'padding': 0x00, 'name': "daTagRmbitSw_draw__FP14daTagRmbitSw_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D5FFA0': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D5FFA0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D5FFA4': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D5FFA4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3817': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".rodata", 'addr': 0x80D5FFAC, 'size': 0x0004, 'padding': 0x00, 'name': "@3817", 'reference_count': 0, 'type': "Integer"},
-	'lit_3818': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".rodata", 'addr': 0x80D5FFB0, 'size': 0x0004, 'padding': 0x00, 'name': "@3818", 'reference_count': 0, 'type': "Integer"},
-	'lit_3853': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".rodata", 'addr': 0x80D5FFB4, 'size': 0x0004, 'padding': 0x00, 'name': "@3853", 'reference_count': 0, 'type': "InitData"},
-	'daTagRmbitSw_METHODS': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".data", 'addr': 0x80D5FFBC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagRmbitSw_METHODS", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_RmbitSw': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".data", 'addr': 0x80D5FFDC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_RmbitSw", 'reference_count': 0, 'type': "ReferenceArray"},
-	'__vt__14daTagRmbitSw_c': {'library': "d/a/tag/d_a_tag_rmbit_sw", 'translation_unit': "d_a_tag_rmbit_sw", 'section': ".data", 'addr': 0x80D6000C, 'size': 0x000C, 'padding': 0x00, 'name': "__vt__14daTagRmbitSw_c", 'reference_count': 0, 'type': "VirtualTable"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_rmbit_sw",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_rmbit_sw",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D5FA80,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FAAC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FAD8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x80D5FAF8,'size':60,'pad':0,'label':"__ct__14daTagRmbitSw_cFv",'name':"__ct__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80D5FB34,'size':96,'pad':0,'label':"__dt__14daTagRmbitSw_cFv",'name':"__dt__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FB94,'size':88,'pad':0,'label':"create__14daTagRmbitSw_cFv",'name':"create__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FBEC,'size':8,'pad':0,'label':"Delete__14daTagRmbitSw_cFv",'name':"Delete__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FBF4,'size':8,'pad':0,'label':"draw__14daTagRmbitSw_cFv",'name':"draw__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FBFC,'size':444,'pad':0,'label':"execute__14daTagRmbitSw_cFv",'name':"execute__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FDB8,'size':56,'pad':0,'label':"init__14daTagRmbitSw_cFv",'name':"init__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FDF0,'size':252,'pad':0,'label':"chkPlyrInTag__14daTagRmbitSw_cFv",'name':"chkPlyrInTag__14daTagRmbitSw_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5FEEC,'size':84,'pad':0,'label':"daTagRmbitSw_create__FP14daTagRmbitSw_c",'name':"daTagRmbitSw_create__FP14daTagRmbitSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FF40,'size':32,'pad':0,'label':"daTagRmbitSw_Delete__FP14daTagRmbitSw_c",'name':"daTagRmbitSw_Delete__FP14daTagRmbitSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FF60,'size':32,'pad':0,'label':"daTagRmbitSw_execute__FP14daTagRmbitSw_c",'name':"daTagRmbitSw_execute__FP14daTagRmbitSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FF80,'size':32,'pad':0,'label':"daTagRmbitSw_draw__FP14daTagRmbitSw_c",'name':"daTagRmbitSw_draw__FP14daTagRmbitSw_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5FFA0,'size':4,'pad':0,'label':"data_80D5FFA0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D5FFA4,'size':4,'pad':0,'label':"data_80D5FFA4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D5FFA8,'size':4,'pad':0,'label':"lit_3817",'name':"@3817",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D5FFAC,'size':4,'pad':0,'label':"lit_3818",'name':"@3818",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D5FFB0,'size':4,'pad':0,'label':"lit_3853",'name':"@3853",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D5FFB4,'size':32,'pad':0,'label':"daTagRmbitSw_METHODS",'name':"daTagRmbitSw_METHODS",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D5FFD4,'size':48,'pad':0,'label':"g_profile_Tag_RmbitSw",'name':"g_profile_Tag_RmbitSw",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D60004,'size':12,'pad':0,'label':"__vt__14daTagRmbitSw_c",'name':"__vt__14daTagRmbitSw_c",'lib':-1,'tu':4,'section':4,'rc':0,'type':"VirtualTable"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"__ct__14daTagRmbitSw_cFv":3,
+	"__dt__14daTagRmbitSw_cFv":4,
+	"create__14daTagRmbitSw_cFv":5,
+	"Delete__14daTagRmbitSw_cFv":6,
+	"draw__14daTagRmbitSw_cFv":7,
+	"execute__14daTagRmbitSw_cFv":8,
+	"init__14daTagRmbitSw_cFv":9,
+	"chkPlyrInTag__14daTagRmbitSw_cFv":10,
+	"daTagRmbitSw_create__FP14daTagRmbitSw_c":11,
+	"daTagRmbitSw_Delete__FP14daTagRmbitSw_c":12,
+	"daTagRmbitSw_execute__FP14daTagRmbitSw_c":13,
+	"daTagRmbitSw_draw__FP14daTagRmbitSw_c":14,
+	"data_80D5FFA0":15,
+	"data_80D5FFA4":16,
+	"lit_3817":17,
+	"lit_3818":18,
+	"lit_3853":19,
+	"daTagRmbitSw_METHODS":20,
+	"g_profile_Tag_RmbitSw":21,
+	"__vt__14daTagRmbitSw_c":22,
 }
+

@@ -18,11 +18,11 @@ lbl_80BEC0EC:
 lbl_80BEC0F4:
 /* 80BEC0F4 00000000  3B E0 00 01 */	li r31, 1
 /* 80BEC0F8 00000004  38 61 00 08 */	addi r3, r1, 8
-/* 80BEC0FC 00000008  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80BEC100 0000000C  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80BEC0FC 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BEC100 0000000C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BEC104 00000010  38 84 00 09 */	addi r4, r4, 9
 /* 80BEC108 00000014  4C C6 31 82 */	crclr 6
-/* 80BEC10C 00000018  4B FF F6 4D */	bl sprintf
+/* 80BEC10C 00000018  4B FF F6 4D */	bl _unresolved
 /* 80BEC110 0000001C  38 00 00 00 */	li r0, 0
 /* 80BEC114 00000020  B0 1E 04 E4 */	sth r0, 0x4e4(r30)
 /* 80BEC118 00000024  B0 1E 04 E6 */	sth r0, 0x4e6(r30)
@@ -30,24 +30,24 @@ lbl_80BEC0F4:
 /* 80BEC120 0000002C  B0 1E 04 DC */	sth r0, 0x4dc(r30)
 /* 80BEC124 00000030  B0 1E 04 DE */	sth r0, 0x4de(r30)
 /* 80BEC128 00000034  B0 1E 04 E0 */	sth r0, 0x4e0(r30)
-/* 80BEC12C 00000038  3C 60 00 00 */	lis r3, stringBase0@ha
-/* 80BEC130 0000003C  38 63 00 00 */	addi r3, r3, stringBase0@l
+/* 80BEC12C 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEC130 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BEC134 00000040  38 63 00 16 */	addi r3, r3, 0x16
 /* 80BEC138 00000044  38 81 00 08 */	addi r4, r1, 8
-/* 80BEC13C 00000048  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80BEC140 0000004C  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80BEC13C 00000048  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80BEC140 0000004C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80BEC144 00000050  3C A5 00 02 */	addis r5, r5, 2
 /* 80BEC148 00000054  38 C0 00 80 */	li r6, 0x80
 /* 80BEC14C 00000058  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80BEC150 0000005C  4B FF F6 09 */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 80BEC150 0000005C  4B FF F6 09 */	bl _unresolved
 /* 80BEC154 00000060  3C 80 00 08 */	lis r4, 8
 /* 80BEC158 00000064  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80BEC15C 00000068  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80BEC160 0000006C  4B FF F5 F9 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80BEC160 0000006C  4B FF F5 F9 */	bl _unresolved
 /* 80BEC164 00000070  90 7E 05 68 */	stw r3, 0x568(r30)
 /* 80BEC168 00000074  38 A0 00 00 */	li r5, 0
-/* 80BEC16C 00000078  3C 60 00 00 */	lis r3, nodeCallBack__FP8J3DJointi@ha
-/* 80BEC170 0000007C  38 83 00 00 */	addi r4, r3, nodeCallBack__FP8J3DJointi@l
+/* 80BEC16C 00000078  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BEC170 0000007C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80BEC174 00000080  48 00 00 30 */	b lbl_80BEC1A4
 lbl_80BEC178:
 /* 80BEC178 00000000  80 7E 05 68 */	lwz r3, 0x568(r30)
@@ -68,20 +68,20 @@ lbl_80BEC1A4:
 /* 80BEC1AC 00000008  41 80 FF CC */	blt lbl_80BEC178
 lbl_80BEC1B0:
 /* 80BEC1B0 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80BEC1B4 00000004  4B FF F5 A5 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
-/* 80BEC1B8 00000008  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80BEC1BC 0000000C  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 80BEC1B4 00000004  4B FF F5 A5 */	bl _unresolved
+/* 80BEC1B8 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BEC1BC 0000000C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BEC1C0 00000010  38 84 00 1E */	addi r4, r4, 0x1e
-/* 80BEC1C4 00000014  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80BEC1C8 00000018  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80BEC1C4 00000014  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80BEC1C8 00000018  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80BEC1CC 0000001C  3C A5 00 02 */	addis r5, r5, 2
 /* 80BEC1D0 00000020  38 C0 00 80 */	li r6, 0x80
 /* 80BEC1D4 00000024  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80BEC1D8 00000028  4B FF F5 81 */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 80BEC1D8 00000028  4B FF F5 81 */	bl _unresolved
 /* 80BEC1DC 0000002C  3C 80 00 08 */	lis r4, 8
 /* 80BEC1E0 00000030  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80BEC1E4 00000034  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80BEC1E8 00000038  4B FF F5 71 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80BEC1E8 00000038  4B FF F5 71 */	bl _unresolved
 /* 80BEC1EC 0000003C  90 7E 05 6C */	stw r3, 0x56c(r30)
 /* 80BEC1F0 00000040  80 1E 05 6C */	lwz r0, 0x56c(r30)
 /* 80BEC1F4 00000044  28 00 00 00 */	cmplwi r0, 0

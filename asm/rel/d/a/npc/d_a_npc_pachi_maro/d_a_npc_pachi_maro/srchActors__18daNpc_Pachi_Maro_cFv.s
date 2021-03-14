@@ -10,26 +10,26 @@ lbl_80A98A10:
 /* 80A98A30 00000020  48 00 00 54 */	b lbl_80A98A84
 lbl_80A98A34:
 /* 80A98A34 00000000  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A98A38 00000004  4B FF F1 C1 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A98A38 00000004  4B FF F1 C1 */	bl _unresolved
 /* 80A98A3C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A98A40 0000000C  40 82 00 1C */	bne lbl_80A98A5C
 /* 80A98A44 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A98A48 00000014  38 80 02 70 */	li r4, 0x270
-/* 80A98A4C 00000018  4B FF F1 AD */	bl getNearestActorP__8daNpcT_cFs
+/* 80A98A4C 00000018  4B FF F1 AD */	bl _unresolved
 /* 80A98A50 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A98A54 00000020  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A98A58 00000024  4B FF F1 A1 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A98A58 00000024  4B FF F1 A1 */	bl _unresolved
 lbl_80A98A5C:
 /* 80A98A5C 00000000  38 7F 0F A8 */	addi r3, r31, 0xfa8
-/* 80A98A60 00000004  4B FF F1 99 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A98A60 00000004  4B FF F1 99 */	bl _unresolved
 /* 80A98A64 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A98A68 0000000C  40 82 00 1C */	bne lbl_80A98A84
 /* 80A98A6C 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A98A70 00000014  38 80 02 6F */	li r4, 0x26f
-/* 80A98A74 00000018  4B FF F1 85 */	bl getNearestActorP__8daNpcT_cFs
+/* 80A98A74 00000018  4B FF F1 85 */	bl _unresolved
 /* 80A98A78 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A98A7C 00000020  38 7F 0F A8 */	addi r3, r31, 0xfa8
-/* 80A98A80 00000024  4B FF F1 79 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A98A80 00000024  4B FF F1 79 */	bl _unresolved
 lbl_80A98A84:
 /* 80A98A84 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A98A88 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

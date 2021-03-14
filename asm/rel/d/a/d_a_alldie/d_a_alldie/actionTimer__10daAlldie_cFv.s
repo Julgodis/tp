@@ -7,7 +7,7 @@ lbl_804D5888:
 /* 804D589C 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 804D58A0 00000018  88 03 04 E2 */	lbz r0, 0x4e2(r3)
 /* 804D58A4 0000001C  7C 03 07 74 */	extsb r3, r0
-/* 804D58A8 00000020  4B FF FF 51 */	bl fopAcM_myRoomSearchEnemy__FSc
+/* 804D58A8 00000020  4B FF FF 51 */	bl _unresolved
 /* 804D58AC 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 804D58B0 00000028  41 82 00 10 */	beq lbl_804D58C0
 /* 804D58B4 0000002C  38 00 00 01 */	li r0, 1
@@ -36,10 +36,10 @@ lbl_804D58F8:
 /* 804D5900 00000008  7F C3 F3 78 */	mr r3, r30
 /* 804D5904 0000000C  4B FF FF 21 */	bl getSwbit__10daAlldie_cFv
 /* 804D5908 00000010  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 804D590C 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804D5910 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D590C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804D5910 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804D5914 0000001C  7F E5 FB 78 */	mr r5, r31
-/* 804D5918 00000020  4B FF FE E1 */	bl onSwitch__10dSv_info_cFii
+/* 804D5918 00000020  4B FF FE E1 */	bl _unresolved
 lbl_804D591C:
 /* 804D591C 00000000  38 60 00 01 */	li r3, 1
 /* 804D5920 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

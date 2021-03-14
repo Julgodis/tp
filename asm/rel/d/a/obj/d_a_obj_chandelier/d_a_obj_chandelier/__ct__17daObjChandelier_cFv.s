@@ -4,9 +4,9 @@ lbl_80BC7F38:
 /* 80BC7F40 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BC7F44 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BC7F48 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BC7F4C 00000014  4B FF FF CD */	bl __ct__16dBgS_MoveBgActorFv
-/* 80BC7F50 00000018  3C 60 00 00 */	lis r3, __vt__17daObjChandelier_c@ha
-/* 80BC7F54 0000001C  38 03 00 00 */	addi r0, r3, __vt__17daObjChandelier_c@l
+/* 80BC7F4C 00000014  4B FF FF CD */	bl _unresolved
+/* 80BC7F50 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC7F54 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80BC7F58 00000020  90 1F 05 9C */	stw r0, 0x59c(r31)
 /* 80BC7F5C 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80BC7F60 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)

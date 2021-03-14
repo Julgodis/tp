@@ -49,6 +49,8 @@ typedef int BOOL;
 
 #define SECTION_DEAD extern "C" __declspec(section ".dead")
 
+#define ASM_FUNCTION(NAME) extern "C" asm void NAME()
+
 #define _HUGE_ENUF  1e+300
 #define INFINITY   ((float)(_HUGE_ENUF * _HUGE_ENUF))
 #define HUGE_VAL   ((double)INFINITY)

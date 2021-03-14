@@ -7,8 +7,8 @@ lbl_8063A96C:
 /* 8063A980 00000000  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 8063A984 00000004  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 8063A988 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 8063A98C 0000000C  3C 60 00 00 */	lis r3, lit_3776@ha
-/* 8063A990 00000010  3B E3 00 00 */	addi r31, r3, lit_3776@l
+/* 8063A98C 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8063A990 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8063A994 00000014  38 61 00 18 */	addi r3, r1, 0x18
 /* 8063A998 00000018  80 9E 06 68 */	lwz r4, 0x668(r30)
 /* 8063A99C 0000001C  48 00 32 B9 */	bl getIceCenterPos__8daB_YO_cFv
@@ -38,7 +38,7 @@ lbl_8063A9E8:
 /* 8063A9F4 0000000C  38 00 00 01 */	li r0, 1
 /* 8063A9F8 00000010  90 1E 06 98 */	stw r0, 0x698(r30)
 /* 8063A9FC 00000014  C0 3F 00 1C */	lfs f1, 0x1c(r31)
-/* 8063AA00 00000018  4B FF F6 B9 */	bl cM_rndFX__Ff
+/* 8063AA00 00000018  4B FF F6 B9 */	bl _unresolved
 /* 8063AA04 0000001C  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 8063AA08 00000020  EC 00 08 2A */	fadds f0, f0, f1
 /* 8063AA0C 00000024  FC 00 00 1E */	fctiwz f0, f0
@@ -56,8 +56,8 @@ lbl_8063AA24:
 /* 8063AA38 00000014  38 03 0A AA */	addi r0, r3, 0xaaa
 /* 8063AA3C 00000018  C0 21 00 24 */	lfs f1, 0x24(r1)
 /* 8063AA40 0000001C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 8063AA44 00000020  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha
-/* 8063AA48 00000024  38 63 00 00 */	addi r3, r3, sincosTable___5JMath@l
+/* 8063AA44 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8063AA48 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8063AA4C 00000028  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8063AA50 0000002C  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 8063AA54 00000030  EC 01 00 2A */	fadds f0, f1, f0
@@ -80,13 +80,13 @@ lbl_8063AA24:
 /* 8063AA98 00000074  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8063AA9C 00000078  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8063AAA0 0000007C  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 8063AAA4 00000080  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8063AAA8 00000084  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063AAA4 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8063AAA8 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8063AAAC 00000088  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8063AAB0 0000008C  38 80 00 04 */	li r4, 4
 /* 8063AAB4 00000090  38 A0 00 1F */	li r5, 0x1f
 /* 8063AAB8 00000094  38 C1 00 0C */	addi r6, r1, 0xc
-/* 8063AABC 00000098  4B FF F5 FD */	bl StartShock__12dVibration_cFii4cXyz
+/* 8063AABC 00000098  4B FF F5 FD */	bl _unresolved
 /* 8063AAC0 0000009C  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8063AAC4 000000A0  D0 1E 06 80 */	stfs f0, 0x680(r30)
 /* 8063AAC8 000000A4  38 00 00 02 */	li r0, 2
@@ -113,13 +113,13 @@ lbl_8063AADC:
 /* 8063AB18 00000004  38 7E 04 FC */	addi r3, r30, 0x4fc
 /* 8063AB1C 00000008  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 8063AB20 0000000C  C0 5F 00 20 */	lfs f2, 0x20(r31)
-/* 8063AB24 00000010  4B FF F5 95 */	bl cLib_chaseF__FPfff
+/* 8063AB24 00000010  4B FF F5 95 */	bl _unresolved
 /* 8063AB28 00000014  48 00 00 14 */	b lbl_8063AB3C
 lbl_8063AB2C:
 /* 8063AB2C 00000000  38 7E 04 FC */	addi r3, r30, 0x4fc
 /* 8063AB30 00000004  C0 3F 00 24 */	lfs f1, 0x24(r31)
 /* 8063AB34 00000008  C0 5F 00 20 */	lfs f2, 0x20(r31)
-/* 8063AB38 0000000C  4B FF F5 81 */	bl cLib_chaseF__FPfff
+/* 8063AB38 0000000C  4B FF F5 81 */	bl _unresolved
 lbl_8063AB3C:
 /* 8063AB3C 00000000  80 1E 06 A8 */	lwz r0, 0x6a8(r30)
 /* 8063AB40 00000004  2C 00 00 00 */	cmpwi r0, 0
@@ -127,8 +127,8 @@ lbl_8063AB3C:
 /* 8063AB48 0000000C  80 1E 06 8C */	lwz r0, 0x68c(r30)
 /* 8063AB4C 00000010  1C 00 19 99 */	mulli r0, r0, 0x1999
 /* 8063AB50 00000014  C0 21 00 2C */	lfs f1, 0x2c(r1)
-/* 8063AB54 00000018  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha
-/* 8063AB58 0000001C  38 83 00 00 */	addi r4, r3, sincosTable___5JMath@l
+/* 8063AB54 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8063AB58 0000001C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8063AB5C 00000020  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 8063AB60 00000024  7C 64 02 14 */	add r3, r4, r0
 /* 8063AB64 00000028  C0 03 00 04 */	lfs f0, 4(r3)
@@ -145,7 +145,7 @@ lbl_8063AB3C:
 /* 8063AB90 00000054  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 8063AB94 00000058  38 81 00 24 */	addi r4, r1, 0x24
 /* 8063AB98 0000005C  C0 3F 00 28 */	lfs f1, 0x28(r31)
-/* 8063AB9C 00000060  4B FF F5 1D */	bl cLib_chasePosXZ__FP4cXyzRC4cXyzf
+/* 8063AB9C 00000060  4B FF F5 1D */	bl _unresolved
 lbl_8063ABA0:
 /* 8063ABA0 00000000  E3 E1 00 48 */	psq_l f31, 72(r1), 0, 0 /* qr0 */
 /* 8063ABA4 00000000  CB E1 00 40 */	lfd f31, 0x40(r1)

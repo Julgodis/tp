@@ -6,10 +6,10 @@ lbl_8046EC10:
 /* 8046EC20 00000010  38 64 05 A0 */	addi r3, r4, 0x5a0
 /* 8046EC24 00000014  80 04 00 B0 */	lwz r0, 0xb0(r4)
 /* 8046EC28 00000018  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
-/* 8046EC2C 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 8046EC30 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 8046EC2C 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8046EC30 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8046EC34 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8046EC38 00000028  4B FF FA 41 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8046EC38 00000028  4B FF FA 41 */	bl _unresolved
 /* 8046EC3C 0000002C  38 60 00 01 */	li r3, 1
 /* 8046EC40 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8046EC44 00000034  7C 08 03 A6 */	mtlr r0

@@ -7,10 +7,10 @@ lbl_80658C18:
 /* 80658C2C 00000014  88 03 0C A8 */	lbz r0, 0xca8(r3)
 /* 80658C30 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80658C34 0000001C  40 82 00 30 */	bne lbl_80658C64
-/* 80658C38 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80658C3C 00000024  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80658C38 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80658C3C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80658C40 00000028  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80658C44 0000002C  4B FF F8 F5 */	bl fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80658C44 0000002C  4B FF F8 F5 */	bl _unresolved
 /* 80658C48 00000030  2C 03 60 00 */	cmpwi r3, 0x6000
 /* 80658C4C 00000034  40 80 00 18 */	bge lbl_80658C64
 /* 80658C50 00000038  2C 03 20 00 */	cmpwi r3, 0x2000

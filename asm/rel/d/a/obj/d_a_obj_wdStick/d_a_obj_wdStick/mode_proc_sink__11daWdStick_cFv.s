@@ -5,14 +5,14 @@ lbl_80D33D8C:
 /* 80D33D98 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D33D9C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D33DA0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D33DA4 00000018  3C 60 00 00 */	lis r3, mCcDObjInfo__11daWdStick_c@ha
-/* 80D33DA8 0000001C  3B E3 00 00 */	addi r31, r3, mCcDObjInfo__11daWdStick_c@l
+/* 80D33DA4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D33DA8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80D33DAC 00000020  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 80D33DB0 00000024  C0 3F 00 48 */	lfs f1, 0x48(r31)
 /* 80D33DB4 00000028  C0 5F 00 C8 */	lfs f2, 0xc8(r31)
 /* 80D33DB8 0000002C  C0 7F 00 AC */	lfs f3, 0xac(r31)
 /* 80D33DBC 00000030  C0 9F 00 CC */	lfs f4, 0xcc(r31)
-/* 80D33DC0 00000034  4B FF DC F9 */	bl cLib_addCalc__FPfffff
+/* 80D33DC0 00000034  4B FF DC F9 */	bl _unresolved
 /* 80D33DC4 00000038  C0 1E 04 FC */	lfs f0, 0x4fc(r30)
 /* 80D33DC8 0000003C  C0 3F 00 94 */	lfs f1, 0x94(r31)
 /* 80D33DCC 00000040  FC 00 08 40 */	fcmpo cr0, f0, f1
@@ -48,7 +48,7 @@ lbl_80D33E28:
 lbl_80D33E30:
 /* 80D33E30 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80D33E34 00000004  38 9E 07 B8 */	addi r4, r30, 0x7b8
-/* 80D33E38 00000008  4B FF DC 81 */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 80D33E38 00000008  4B FF DC 81 */	bl _unresolved
 /* 80D33E3C 0000000C  C0 5E 07 6C */	lfs f2, 0x76c(r30)
 /* 80D33E40 00000010  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 80D33E44 00000014  C0 1F 00 C0 */	lfs f0, 0xc0(r31)

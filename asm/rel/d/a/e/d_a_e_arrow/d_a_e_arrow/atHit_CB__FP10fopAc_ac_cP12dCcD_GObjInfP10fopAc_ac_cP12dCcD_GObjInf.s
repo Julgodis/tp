@@ -10,10 +10,10 @@ lbl_8067DAE8:
 /* 8067DB08 00000020  A8 05 00 08 */	lha r0, 8(r5)
 /* 8067DB0C 00000024  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 8067DB10 00000028  40 82 00 34 */	bne lbl_8067DB44
-/* 8067DB14 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8067DB18 00000030  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8067DB14 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8067DB18 00000030  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8067DB1C 00000034  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
-/* 8067DB20 00000038  4B FF EC 19 */	bl checkWoodShieldEquipNotIronBall__9daAlink_cCFv
+/* 8067DB20 00000038  4B FF EC 19 */	bl _unresolved
 /* 8067DB24 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 8067DB28 00000040  41 82 00 1C */	beq lbl_8067DB44
 /* 8067DB2C 00000044  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
@@ -21,7 +21,7 @@ lbl_8067DAE8:
 /* 8067DB34 0000004C  38 BE 04 E4 */	addi r5, r30, 0x4e4
 /* 8067DB38 00000050  38 DE 09 D4 */	addi r6, r30, 0x9d4
 /* 8067DB3C 00000054  38 FE 09 C8 */	addi r7, r30, 0x9c8
-/* 8067DB40 00000058  4B FF EB F9 */	bl getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz
+/* 8067DB40 00000058  4B FF EB F9 */	bl _unresolved
 lbl_8067DB44:
 /* 8067DB44 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8067DB48 00000004  83 C1 00 08 */	lwz r30, 8(r1)

@@ -3,20 +3,64 @@
 # Module: 25
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80485D00, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80485D2C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80485D58, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'CreateInit__12daSetBgObj_cFv': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".text", 'addr': 0x80485D78, 'size': 0x0084, 'padding': 0x00, 'name': "CreateInit__12daSetBgObj_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__12daSetBgObj_cFv': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".text", 'addr': 0x80485DFC, 'size': 0x008C, 'padding': 0x00, 'name': "create__12daSetBgObj_cFv", 'reference_count': 1, 'type': "Function"},
-	'Delete__12daSetBgObj_cFv': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".text", 'addr': 0x80485E88, 'size': 0x0030, 'padding': 0x00, 'name': "Delete__12daSetBgObj_cFv", 'reference_count': 1, 'type': "Function"},
-	'daSetBgObj_Delete__FP12daSetBgObj_c': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".text", 'addr': 0x80485EB8, 'size': 0x0020, 'padding': 0x00, 'name': "daSetBgObj_Delete__FP12daSetBgObj_c", 'reference_count': 1, 'type': "Function"},
-	'daSetBgObj_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".text", 'addr': 0x80485ED8, 'size': 0x0020, 'padding': 0x00, 'name': "daSetBgObj_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80485EF8': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80485EF8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80485EFC': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80485EFC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'l_specName': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".rodata", 'addr': 0x80485F04, 'size': 0x0009, 'padding': 0x03, 'name': "l_specName", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".rodata", 'addr': 0x80485F10, 'size': 0x0003, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 0, 'type': "StringBase"},
-	'data_80485F14': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".data", 'addr': 0x80485F14, 'size': 0x000A, 'padding': 0x02, 'name': "l_bg_profName$3618", 'reference_count': 0, 'type': "InitData"},
-	'l_daSetBgObj_Method': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".data", 'addr': 0x80485F20, 'size': 0x0020, 'padding': 0x00, 'name': "l_daSetBgObj_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_SET_BG_OBJ': {'library': "d/a/d_a_set_bgobj", 'translation_unit': "d_a_set_bgobj", 'section': ".data", 'addr': 0x80485F40, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_SET_BG_OBJ", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_set_bgobj",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_set_bgobj",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80485D00,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485D2C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485D58,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x80485D78,'size':132,'pad':0,'label':"CreateInit__12daSetBgObj_cFv",'name':"CreateInit__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80485DFC,'size':140,'pad':0,'label':"create__12daSetBgObj_cFv",'name':"create__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80485E88,'size':48,'pad':0,'label':"Delete__12daSetBgObj_cFv",'name':"Delete__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80485EB8,'size':32,'pad':0,'label':"daSetBgObj_Delete__FP12daSetBgObj_c",'name':"daSetBgObj_Delete__FP12daSetBgObj_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485ED8,'size':32,'pad':0,'label':"daSetBgObj_Create__FP10fopAc_ac_c",'name':"daSetBgObj_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485EF8,'size':4,'pad':0,'label':"data_80485EF8",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80485EFC,'size':4,'pad':0,'label':"data_80485EFC",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80485F00,'size':9,'pad':3,'label':"l_specName",'name':"l_specName",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80485F0C,'size':3,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80485F10,'size':10,'pad':2,'label':"data_80485F10",'name':"l_bg_profName$3618",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80485F1C,'size':32,'pad':0,'label':"l_daSetBgObj_Method",'name':"l_daSetBgObj_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80485F3C,'size':48,'pad':0,'label':"g_profile_SET_BG_OBJ",'name':"g_profile_SET_BG_OBJ",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"CreateInit__12daSetBgObj_cFv":3,
+	"create__12daSetBgObj_cFv":4,
+	"Delete__12daSetBgObj_cFv":5,
+	"daSetBgObj_Delete__FP12daSetBgObj_c":6,
+	"daSetBgObj_Create__FP10fopAc_ac_c":7,
+	"data_80485EF8":8,
+	"data_80485EFC":9,
+	"l_specName":10,
+	"stringBase0":11,
+	"data_80485F10":12,
+	"l_daSetBgObj_Method":13,
+	"g_profile_SET_BG_OBJ":14,
 }
+

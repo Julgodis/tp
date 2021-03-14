@@ -7,25 +7,25 @@ lbl_80B0FD18:
 /* 80B0FD2C 00000014  80 03 0B D8 */	lwz r0, 0xbd8(r3)
 /* 80B0FD30 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80B0FD34 0000001C  41 82 00 98 */	beq lbl_80B0FDCC
-/* 80B0FD38 00000020  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80B0FD3C 00000024  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80B0FD38 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B0FD3C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80B0FD40 00000028  80 84 00 00 */	lwz r4, 0(r4)
-/* 80B0FD44 0000002C  3C A0 00 00 */	lis r5, l_btkGetParamList@ha
-/* 80B0FD48 00000030  38 A5 00 00 */	addi r5, r5, l_btkGetParamList@l
+/* 80B0FD44 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80B0FD48 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80B0FD4C 00000034  80 A5 00 00 */	lwz r5, 0(r5)
-/* 80B0FD50 00000038  4B FF C9 E9 */	bl getTexSRTKeyAnmP__8daNpcF_cFPci
+/* 80B0FD50 00000038  4B FF C9 E9 */	bl _unresolved
 /* 80B0FD54 0000003C  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 80B0FD58 00000040  7C 03 00 40 */	cmplw r3, r0
 /* 80B0FD5C 00000044  40 82 00 64 */	bne lbl_80B0FDC0
 /* 80B0FD60 00000048  A8 1F 08 FE */	lha r0, 0x8fe(r31)
 /* 80B0FD64 0000004C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 80B0FD68 00000050  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha
-/* 80B0FD6C 00000054  38 83 00 00 */	addi r4, r3, sincosTable___5JMath@l
+/* 80B0FD68 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B0FD6C 00000054  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80B0FD70 00000058  7C 04 04 2E */	lfsx f0, r4, r0
-/* 80B0FD74 0000005C  3C 60 00 00 */	lis r3, lit_4891@ha
-/* 80B0FD78 00000060  C0 43 00 00 */	lfs f2, lit_4891@l(r3)
-/* 80B0FD7C 00000064  3C 60 00 00 */	lis r3, lit_4892@ha
-/* 80B0FD80 00000068  C0 23 00 00 */	lfs f1, lit_4892@l(r3)
+/* 80B0FD74 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B0FD78 00000060  C0 43 00 00 */	lfs f2, 0x0000(r3)
+/* 80B0FD7C 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B0FD80 00000068  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 80B0FD84 0000006C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80B0FD88 00000070  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80B0FD8C 00000074  80 7F 0B D8 */	lwz r3, 0xbd8(r31)

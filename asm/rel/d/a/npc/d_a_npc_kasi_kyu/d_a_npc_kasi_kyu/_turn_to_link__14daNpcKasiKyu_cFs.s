@@ -3,8 +3,8 @@ lbl_80A24CC4:
 /* 80A24CC8 00000004  7C 08 02 A6 */	mflr r0
 /* 80A24CCC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A24CD0 0000000C  7C 85 23 78 */	mr r5, r4
-/* 80A24CD4 00000010  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80A24CD8 00000014  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A24CD4 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A24CD8 00000014  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80A24CDC 00000018  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A24CE0 0000001C  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
 /* 80A24CE4 00000020  D0 01 00 08 */	stfs f0, 8(r1)

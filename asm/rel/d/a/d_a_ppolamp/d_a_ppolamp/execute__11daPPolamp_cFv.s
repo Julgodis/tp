@@ -18,7 +18,7 @@ lbl_80D4CB54:
 /* 80D4CB5C 00000008  7F E3 FB 78 */	mr r3, r31
 /* 80D4CB60 0000000C  48 00 02 49 */	bl setPclModelMtx__11daPPolamp_cFv
 /* 80D4CB64 00000010  38 7F 05 7C */	addi r3, r31, 0x57c
-/* 80D4CB68 00000014  4B FF FD B1 */	bl play__14mDoExt_baseAnmFv
+/* 80D4CB68 00000014  4B FF FD B1 */	bl _unresolved
 /* 80D4CB6C 00000018  38 60 00 01 */	li r3, 1
 /* 80D4CB70 0000001C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D4CB74 00000020  80 01 00 14 */	lwz r0, 0x14(r1)

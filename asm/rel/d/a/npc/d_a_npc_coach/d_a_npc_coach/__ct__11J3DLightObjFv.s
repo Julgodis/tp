@@ -4,9 +4,9 @@ lbl_809A4D40:
 /* 809A4D48 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809A4D4C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809A4D50 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 809A4D54 00000014  3C 80 00 00 */	lis r4, j3dDefaultLightInfo@ha
-/* 809A4D58 00000018  38 84 00 00 */	addi r4, r4, j3dDefaultLightInfo@l
-/* 809A4D5C 0000001C  4B FF 89 5D */	bl __as__12J3DLightInfoFRC12J3DLightInfo
+/* 809A4D54 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809A4D58 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809A4D5C 0000001C  4B FF 89 5D */	bl _unresolved
 /* 809A4D60 00000020  7F E3 FB 78 */	mr r3, r31
 /* 809A4D64 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809A4D68 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

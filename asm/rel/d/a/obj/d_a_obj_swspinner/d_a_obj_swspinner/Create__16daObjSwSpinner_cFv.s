@@ -5,15 +5,15 @@ lbl_80D00284:
 /* 80D00290 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D00294 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D00298 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D0029C 00000018  3C 60 00 00 */	lis r3, lit_3717@ha
-/* 80D002A0 0000001C  3B E3 00 00 */	addi r31, r3, lit_3717@l
-/* 80D002A4 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D002A8 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D0029C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D002A0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80D002A4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D002A8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D002AC 00000028  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80D002B0 0000002C  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D002B4 00000030  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80D002B8 00000034  7C 05 07 74 */	extsb r5, r0
-/* 80D002BC 00000038  4B FF FC 9D */	bl isSwitch__10dSv_info_cCFii
+/* 80D002BC 00000038  4B FF FC 9D */	bl _unresolved
 /* 80D002C0 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 80D002C4 00000040  41 82 00 18 */	beq lbl_80D002DC
 /* 80D002C8 00000044  C0 1F 00 24 */	lfs f0, 0x24(r31)
@@ -39,15 +39,15 @@ lbl_80D002EC:
 /* 80D00310 00000024  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80D00314 00000028  80 83 00 04 */	lwz r4, 4(r3)
 /* 80D00318 0000002C  7F C3 F3 78 */	mr r3, r30
-/* 80D0031C 00000030  4B FF FC 3D */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
-/* 80D00320 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D00324 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D0031C 00000030  4B FF FC 3D */	bl _unresolved
+/* 80D00320 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D00324 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D00328 0000003C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D0032C 00000040  80 9E 05 B0 */	lwz r4, 0x5b0(r30)
 /* 80D00330 00000044  7F C5 F3 78 */	mr r5, r30
-/* 80D00334 00000048  4B FF FC 25 */	bl Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
+/* 80D00334 00000048  4B FF FC 25 */	bl _unresolved
 /* 80D00338 0000004C  80 7E 05 B0 */	lwz r3, 0x5b0(r30)
-/* 80D0033C 00000050  4B FF FC 1D */	bl Move__4dBgWFv
+/* 80D0033C 00000050  4B FF FC 1D */	bl _unresolved
 /* 80D00340 00000054  38 60 00 01 */	li r3, 1
 /* 80D00344 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D00348 0000005C  83 C1 00 08 */	lwz r30, 8(r1)

@@ -9,15 +9,15 @@ lbl_8057A6E0:
 /* 8057A6FC 0000001C  40 82 00 40 */	bne lbl_8057A73C
 /* 8057A700 00000020  38 00 00 05 */	li r0, 5
 /* 8057A704 00000024  98 1F 05 90 */	stb r0, 0x590(r31)
-/* 8057A708 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8057A70C 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8057A708 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8057A70C 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8057A710 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 8057A714 00000034  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8057A718 00000038  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 8057A714 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8057A718 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8057A71C 0000003C  38 84 00 C3 */	addi r4, r4, 0xc3
 /* 8057A720 00000040  38 A0 00 00 */	li r5, 0
 /* 8057A724 00000044  38 C0 00 00 */	li r6, 0
-/* 8057A728 00000048  4B FF EE F1 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 8057A728 00000048  4B FF EE F1 */	bl _unresolved
 /* 8057A72C 0000004C  90 7F 05 9C */	stw r3, 0x59c(r31)
 /* 8057A730 00000050  7F E3 FB 78 */	mr r3, r31
 /* 8057A734 00000054  48 00 03 61 */	bl demoProc__15daObjBossWarp_cFv
@@ -29,7 +29,7 @@ lbl_8057A73C:
 /* 8057A748 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057A74C 00000010  38 E0 00 00 */	li r7, 0
 /* 8057A750 00000014  39 00 00 01 */	li r8, 1
-/* 8057A754 00000018  4B FF EE C5 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 8057A754 00000018  4B FF EE C5 */	bl _unresolved
 /* 8057A758 0000001C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 8057A75C 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 8057A760 00000024  B0 1F 00 FA */	sth r0, 0xfa(r31)

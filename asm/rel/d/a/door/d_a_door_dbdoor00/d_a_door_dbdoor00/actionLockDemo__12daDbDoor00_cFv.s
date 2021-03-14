@@ -5,17 +5,17 @@ lbl_8045E094:
 /* 8045E0A0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045E0A4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045E0A8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8045E0AC 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8045E0B0 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8045E0AC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045E0B0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8045E0B4 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 8045E0B8 00000024  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8045E0BC 00000028  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 8045E0B8 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8045E0BC 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8045E0C0 0000002C  38 84 00 BE */	addi r4, r4, 0xbe
-/* 8045E0C4 00000030  4B FF F2 95 */	bl endCheckOld__16dEvent_manager_cFPCc
+/* 8045E0C4 00000030  4B FF F2 95 */	bl _unresolved
 /* 8045E0C8 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 8045E0CC 00000038  41 82 00 18 */	beq lbl_8045E0E4
 /* 8045E0D0 0000003C  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 8045E0D4 00000040  4B FF F2 85 */	bl reset__14dEvt_control_cFv
+/* 8045E0D4 00000040  4B FF F2 85 */	bl _unresolved
 /* 8045E0D8 00000044  38 00 00 04 */	li r0, 4
 /* 8045E0DC 00000048  98 1E 05 86 */	stb r0, 0x586(r30)
 /* 8045E0E0 0000004C  48 00 00 0C */	b lbl_8045E0EC

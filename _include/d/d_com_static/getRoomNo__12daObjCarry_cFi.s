@@ -1,4 +1,0 @@
-lbl_80031DB8:
-/* 80031DB8 00000000  38 8D 88 4C */	addi r4, r13, 0x80450DCC-0x80458580 /* mRoomNo__12daObjCarry_c-_SDA_BASE_ */
-/* 80031DBC 00000004  7C 64 18 AE */	lbzx r3, r4, r3
-/* 80031DC0 00000008  4E 80 00 20 */	blr 

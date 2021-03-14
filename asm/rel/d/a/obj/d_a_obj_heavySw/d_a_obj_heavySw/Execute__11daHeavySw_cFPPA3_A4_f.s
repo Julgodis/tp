@@ -8,10 +8,10 @@ lbl_80C1CFC0:
 /* 80C1CFD8 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80C1CFDC 0000001C  48 00 00 51 */	bl moveSwitch__11daHeavySw_cFv
 /* 80C1CFE0 00000020  38 7E 06 20 */	addi r3, r30, 0x620
-/* 80C1CFE4 00000024  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80C1CFE8 00000028  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C1CFE4 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C1CFE8 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C1CFEC 0000002C  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80C1CFF0 00000030  4B FF FA 69 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80C1CFF0 00000030  4B FF FA 69 */	bl _unresolved
 /* 80C1CFF4 00000034  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80C1CFF8 00000038  38 03 00 24 */	addi r0, r3, 0x24
 /* 80C1CFFC 0000003C  90 1F 00 00 */	stw r0, 0(r31)

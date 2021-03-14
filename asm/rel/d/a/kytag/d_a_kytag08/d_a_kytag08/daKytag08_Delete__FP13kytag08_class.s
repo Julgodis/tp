@@ -7,7 +7,7 @@ lbl_8085AEA8:
 /* 8085AEBC 00000014  80 63 05 9C */	lwz r3, 0x59c(r3)
 /* 8085AEC0 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 8085AEC4 0000001C  41 82 00 40 */	beq lbl_8085AF04
-/* 8085AEC8 00000020  4B FF F6 91 */	bl deleteAllParticle__14JPABaseEmitterFv
+/* 8085AEC8 00000020  4B FF F6 91 */	bl _unresolved
 /* 8085AECC 00000024  80 7F 05 9C */	lwz r3, 0x59c(r31)
 /* 8085AED0 00000028  80 03 00 F4 */	lwz r0, 0xf4(r3)
 /* 8085AED4 0000002C  60 00 00 01 */	ori r0, r0, 1
@@ -26,7 +26,7 @@ lbl_8085AF04:
 /* 8085AF04 00000000  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
 /* 8085AF08 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 8085AF0C 00000008  41 82 00 40 */	beq lbl_8085AF4C
-/* 8085AF10 0000000C  4B FF F6 49 */	bl deleteAllParticle__14JPABaseEmitterFv
+/* 8085AF10 0000000C  4B FF F6 49 */	bl _unresolved
 /* 8085AF14 00000010  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
 /* 8085AF18 00000014  80 03 00 F4 */	lwz r0, 0xf4(r3)
 /* 8085AF1C 00000018  60 00 00 01 */	ori r0, r0, 1
@@ -43,9 +43,9 @@ lbl_8085AF04:
 /* 8085AF48 00000044  90 1F 05 A0 */	stw r0, 0x5a0(r31)
 lbl_8085AF4C:
 /* 8085AF4C 00000000  38 7F 05 A4 */	addi r3, r31, 0x5a4
-/* 8085AF50 00000004  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8085AF54 00000008  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 8085AF58 0000000C  4B FF F6 01 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8085AF50 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8085AF54 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8085AF58 0000000C  4B FF F6 01 */	bl _unresolved
 /* 8085AF5C 00000010  38 60 00 01 */	li r3, 1
 /* 8085AF60 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8085AF64 00000018  80 01 00 14 */	lwz r0, 0x14(r1)

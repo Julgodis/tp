@@ -6,16 +6,16 @@ lbl_804DB754:
 /* 804DB764 00000010  7C 9F 23 78 */	mr r31, r4
 /* 804DB768 00000014  7F E3 FB 78 */	mr r3, r31
 /* 804DB76C 00000018  38 80 00 01 */	li r4, 1
-/* 804DB770 0000001C  4B FF ED 49 */	bl getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi
+/* 804DB770 0000001C  4B FF ED 49 */	bl _unresolved
 /* 804DB774 00000020  7C 60 07 34 */	extsh r0, r3
 /* 804DB778 00000024  2C 00 01 3E */	cmpwi r0, 0x13e
 /* 804DB77C 00000028  40 82 00 1C */	bne lbl_804DB798
-/* 804DB780 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 804DB784 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DB780 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804DB784 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804DB788 00000034  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804DB78C 00000038  A0 9F 00 02 */	lhz r4, 2(r31)
-/* 804DB790 0000003C  4B FF ED 29 */	bl GetActorPointer__4cBgSCFi
-/* 804DB794 00000040  4B FF ED 25 */	bl BreakSet__15daObjGOMIKABE_cFv
+/* 804DB790 0000003C  4B FF ED 29 */	bl _unresolved
+/* 804DB794 00000040  4B FF ED 25 */	bl _unresolved
 lbl_804DB798:
 /* 804DB798 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804DB79C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

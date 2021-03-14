@@ -3,11 +3,45 @@
 # Module: 23
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_path_line", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80485700, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_path_line", 'translation_unit': "executor", 'section': ".text", 'addr': 0x8048572C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_path_line", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80485758, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 2, 'type': "Function"},
-	'data_80485778': {'library': "d/a/d_a_path_line", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80485778, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_8048577C': {'library': "d/a/d_a_path_line", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x8048577C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'g_profile_PATH_LINE': {'library': "d/a/d_a_path_line", 'translation_unit': "d_a_path_line", 'section': ".data", 'addr': 0x80485784, 'size': 0x0034, 'padding': 0x00, 'name': "g_profile_PATH_LINE", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_path_line",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"executor",
+	"unknown_translation_unit",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_path_line",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80485700,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x8048572C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485758,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80485778,'size':4,'pad':0,'label':"data_80485778",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x8048577C,'size':4,'pad':0,'label':"data_8048577C",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80485780,'size':52,'pad':0,'label':"g_profile_PATH_LINE",'name':"g_profile_PATH_LINE",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"data_80485778":3,
+	"data_8048577C":4,
+	"g_profile_PATH_LINE":5,
 }
+

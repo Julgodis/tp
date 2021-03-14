@@ -11,12 +11,12 @@ lbl_8048F878:
 /* 8048F89C 00000024  7F C0 F3 79 */	or. r0, r30, r30
 /* 8048F8A0 00000028  41 82 00 20 */	beq lbl_8048F8C0
 /* 8048F8A4 0000002C  7C 1F 03 78 */	mr r31, r0
-/* 8048F8A8 00000030  4B FF FF 11 */	bl __ct__10fopAc_ac_cFv
-/* 8048F8AC 00000034  3C 60 00 00 */	lis r3, __vt__11daTag_Msg_c@ha
-/* 8048F8B0 00000038  38 03 00 00 */	addi r0, r3, __vt__11daTag_Msg_c@l
+/* 8048F8A8 00000030  4B FF FF 11 */	bl _unresolved
+/* 8048F8AC 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8048F8B0 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 8048F8B4 0000003C  90 1F 05 68 */	stw r0, 0x568(r31)
 /* 8048F8B8 00000040  38 7F 05 80 */	addi r3, r31, 0x580
-/* 8048F8BC 00000044  4B FF FE FD */	bl __ct__10dMsgFlow_cFv
+/* 8048F8BC 00000044  4B FF FE FD */	bl _unresolved
 lbl_8048F8C0:
 /* 8048F8C0 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
 /* 8048F8C4 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -26,7 +26,7 @@ lbl_8048F8CC:
 /* 8048F8D0 00000004  48 00 06 BD */	bl getResName__11daTag_Msg_cFv
 /* 8048F8D4 00000008  7C 64 1B 78 */	mr r4, r3
 /* 8048F8D8 0000000C  38 7E 05 74 */	addi r3, r30, 0x574
-/* 8048F8DC 00000010  4B FF FE DD */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8048F8DC 00000010  4B FF FE DD */	bl _unresolved
 /* 8048F8E0 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8048F8E4 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 8048F8E8 0000001C  40 82 00 50 */	bne lbl_8048F938
@@ -41,10 +41,10 @@ lbl_8048F8CC:
 /* 8048F90C 00000040  38 00 FF FF */	li r0, -1
 /* 8048F910 00000044  B0 1E 05 D0 */	sth r0, 0x5d0(r30)
 /* 8048F914 00000048  7F C3 F3 78 */	mr r3, r30
-/* 8048F918 0000004C  3C 80 00 00 */	lis r4, createHeapCallBack__FP10fopAc_ac_c@ha
-/* 8048F91C 00000050  38 84 00 00 */	addi r4, r4, createHeapCallBack__FP10fopAc_ac_c@l
+/* 8048F918 0000004C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8048F91C 00000050  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8048F920 00000054  38 A0 00 10 */	li r5, 0x10
-/* 8048F924 00000058  4B FF FE 95 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 8048F924 00000058  4B FF FE 95 */	bl _unresolved
 /* 8048F928 0000005C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8048F92C 00000060  40 82 00 0C */	bne lbl_8048F938
 /* 8048F930 00000064  38 60 00 05 */	li r3, 5

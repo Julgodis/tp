@@ -28,6 +28,8 @@ SECTIONS {
 
 	/* Below are functions that are not matching the original mangled name */
 
+	/* missing symbols */
+
 	/* @stringBase0 */
 	"m_Do_m_Do_main__stringBase0" = 0x803739A0;
 	"m_Do_m_Do_printf__stringBase0" = 0x80373CB0;
@@ -1014,7 +1016,7 @@ FORCEACTIVE {
 	"__vt__12J3DAnmLoader"
 	"__vt__20J3DAnmVisibilityFull"
 
-	/* Unreferenced Symbols */
+	/* unreferenced symbols */
 	"NMWException__lit_211"
 	"lit_232"
 	"lit_240"
@@ -1963,12 +1965,10 @@ FORCEACTIVE {
 	"lit_900"
 	"lit_901"
 	"lit_902"
-	"J3DUClipper__stringBase0"
 	"sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light"
 	"sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle"
 	"sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle"
 	"sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle"
-	"jstudio_object__stringBase0"
 	"sPitchEnvOsc__8JASTrack"
 	"lit_1557"
 	"lit_1566"
@@ -2028,8 +2028,6 @@ FORCEACTIVE {
 	"GCN_EXI2_GDEV_GCN_main__lit_320"
 	"data_803A2F14"
 	"data_803A2F28"
-	"__vt__19mDoExt_3DlineMat1_c"
-	"__vt__19mDoExt_3DlineMat0_c"
 	"data_803A38D8"
 	"data_803A38F8"
 	"ZeroQuat"
@@ -2070,14 +2068,6 @@ FORCEACTIVE {
 	"l_shadowSealDL"
 	"data_803A8D8C"
 	"data_803A8D9C"
-	"__vt__11dDlst_blo_c"
-	"__vt__12dDlst_2DMt_c"
-	"__vt__11dDlst_2Dm_c"
-	"__vt__11dDlst_2DM_c"
-	"__vt__11dDlst_2DT_c"
-	"__vt__15dDlst_2DPoint_c"
-	"__vt__14dDlst_2DQuad_c"
-	"__vt__13dDlst_2DTri_c"
 	"d_a_d_a_alink__lit_4422"
 	"d_a_d_a_alink__lit_4423"
 	"d_a_d_a_alink__lit_4424"
@@ -3469,7 +3459,6 @@ FORCEACTIVE {
 	"lit_540"
 	"lit_541"
 	"lit_542"
-	"__vt__13Z2CreatureGob"
 	"sFontData__14JUTDirectPrint"
 	"sFontData2__14JUTDirectPrint"
 	"data_803CC96C"
@@ -3954,7 +3943,6 @@ FORCEACTIVE {
 	"GXTexTlutIds"
 	"GXTexture__GX2HWFiltConv"
 	"data_80450AD8"
-	"struct_80450C10"
 	"mDoMtx_stack"
 	"mDoExt_resfont1"
 	"JPTracePCB4"
@@ -3963,7 +3951,6 @@ FORCEACTIVE {
 	"fopMsg_MSG_TYPE"
 	"g_fpcBs_type"
 	"data_80450D58"
-	"struct_80450D88"
 	"m_aim_rate__8daYkgr_c"
 	"m_path__8daYkgr_c"
 	"data_80450D9C"
@@ -3983,9 +3970,6 @@ FORCEACTIVE {
 	"mParticleTracePCB__13dPa_control_c"
 	"data_80450F10"
 	"data_80450F50"
-	"struct_8045103C"
-	"struct_80451040"
-	"struct_80451044"
 	"struct_80451048"
 	"data_8045104C"
 	"g_siHIO"

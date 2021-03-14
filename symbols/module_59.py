@@ -3,36 +3,95 @@
 # Module: 59
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5D80, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5DAC, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/d_a_andsw2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x804D5DD8, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 12, 'type': "Function"},
-	'getEventNo__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5DF8, 'size': 0x000C, 'padding': 0x00, 'name': "getEventNo__10daAndsw2_cFv", 'reference_count': 2, 'type': "Function"},
-	'getSwbit__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E04, 'size': 0x000C, 'padding': 0x00, 'name': "getSwbit__10daAndsw2_cFv", 'reference_count': 6, 'type': "Function"},
-	'getSwbit2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E10, 'size': 0x000C, 'padding': 0x00, 'name': "getSwbit2__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
-	'getType__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E1C, 'size': 0x000C, 'padding': 0x00, 'name': "getType__10daAndsw2_cFv", 'reference_count': 6, 'type': "Function"},
-	'getTimer__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E28, 'size': 0x000C, 'padding': 0x00, 'name': "getTimer__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
-	'getNum__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E34, 'size': 0x000C, 'padding': 0x00, 'name': "getNum__10daAndsw2_cFv", 'reference_count': 3, 'type': "Function"},
-	'getTopSw__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5E40, 'size': 0x0070, 'padding': 0x00, 'name': "getTopSw__10daAndsw2_cFv", 'reference_count': 3, 'type': "Function"},
-	'getSwAns__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5EB0, 'size': 0x000C, 'padding': 0x00, 'name': "getSwAns__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
-	'chkAllSw2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5EBC, 'size': 0x00A8, 'padding': 0x00, 'name': "chkAllSw2__10daAndsw2_cFv", 'reference_count': 4, 'type': "Function"},
-	'chkSwStatus__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D5F64, 'size': 0x00C0, 'padding': 0x00, 'name': "chkSwStatus__10daAndsw2_cFv", 'reference_count': 4, 'type': "Function"},
-	'chkSwStatus2__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6024, 'size': 0x00A8, 'padding': 0x00, 'name': "chkSwStatus2__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
-	'__dt__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D60CC, 'size': 0x0054, 'padding': 0x00, 'name': "__dt__10daAndsw2_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__10daAndsw2_cFv': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6120, 'size': 0x0284, 'padding': 0x00, 'name': "create__10daAndsw2_cFv", 'reference_count': 2, 'type': "Function"},
-	'daAndsw2_actionOnAll__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D63A4, 'size': 0x01DC, 'padding': 0x00, 'name': "daAndsw2_actionOnAll__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_actionTimer__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6580, 'size': 0x0184, 'padding': 0x00, 'name': "daAndsw2_actionTimer__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_actionOrder__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6704, 'size': 0x01A0, 'padding': 0x00, 'name': "daAndsw2_actionOrder__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_actionEvent__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D68A4, 'size': 0x00BC, 'padding': 0x00, 'name': "daAndsw2_actionEvent__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_actionOff__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6960, 'size': 0x00D4, 'padding': 0x00, 'name': "daAndsw2_actionOff__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_actionWait__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A34, 'size': 0x0008, 'padding': 0x00, 'name': "daAndsw2_actionWait__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_Execute__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A3C, 'size': 0x003C, 'padding': 0x00, 'name': "daAndsw2_Execute__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_Delete__FP10daAndsw2_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6A78, 'size': 0x0028, 'padding': 0x00, 'name': "daAndsw2_Delete__FP10daAndsw2_c", 'reference_count': 1, 'type': "Function"},
-	'daAndsw2_Create__FP10fopAc_ac_c': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".text", 'addr': 0x804D6AA0, 'size': 0x0020, 'padding': 0x00, 'name': "daAndsw2_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_804D6AC0': {'library': "d/a/d_a_andsw2", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x804D6AC0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_804D6AC4': {'library': "d/a/d_a_andsw2", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x804D6AC4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3821': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6ACC, 'size': 0x001C, 'padding': 0x00, 'name': "@3821", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_804D6AE8': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6AE8, 'size': 0x0018, 'padding': 0x00, 'name': "l_action$localstatic3$execute__10daAndsw2_cFv", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daAndsw2_Method': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6B00, 'size': 0x0020, 'padding': 0x00, 'name': "l_daAndsw2_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_ANDSW2': {'library': "d/a/d_a_andsw2", 'translation_unit': "d_a_andsw2", 'section': ".data", 'addr': 0x804D6B20, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_ANDSW2", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/d_a_andsw2",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_andsw2",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x804D5D80,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D5DAC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D5DD8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':12,'type':"Function"},
+	{'addr':0x804D5DF8,'size':12,'pad':0,'label':"getEventNo__10daAndsw2_cFv",'name':"getEventNo__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x804D5E04,'size':12,'pad':0,'label':"getSwbit__10daAndsw2_cFv",'name':"getSwbit__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x804D5E10,'size':12,'pad':0,'label':"getSwbit2__10daAndsw2_cFv",'name':"getSwbit2__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D5E1C,'size':12,'pad':0,'label':"getType__10daAndsw2_cFv",'name':"getType__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':6,'type':"Function"},
+	{'addr':0x804D5E28,'size':12,'pad':0,'label':"getTimer__10daAndsw2_cFv",'name':"getTimer__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D5E34,'size':12,'pad':0,'label':"getNum__10daAndsw2_cFv",'name':"getNum__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':3,'type':"Function"},
+	{'addr':0x804D5E40,'size':112,'pad':0,'label':"getTopSw__10daAndsw2_cFv",'name':"getTopSw__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':3,'type':"Function"},
+	{'addr':0x804D5EB0,'size':12,'pad':0,'label':"getSwAns__10daAndsw2_cFv",'name':"getSwAns__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D5EBC,'size':168,'pad':0,'label':"chkAllSw2__10daAndsw2_cFv",'name':"chkAllSw2__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x804D5F64,'size':192,'pad':0,'label':"chkSwStatus__10daAndsw2_cFv",'name':"chkSwStatus__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':4,'type':"Function"},
+	{'addr':0x804D6024,'size':168,'pad':0,'label':"chkSwStatus2__10daAndsw2_cFv",'name':"chkSwStatus2__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D60CC,'size':84,'pad':0,'label':"__dt__10daAndsw2_cFv",'name':"__dt__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D6120,'size':644,'pad':0,'label':"create__10daAndsw2_cFv",'name':"create__10daAndsw2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804D63A4,'size':476,'pad':0,'label':"daAndsw2_actionOnAll__FP10daAndsw2_c",'name':"daAndsw2_actionOnAll__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6580,'size':388,'pad':0,'label':"daAndsw2_actionTimer__FP10daAndsw2_c",'name':"daAndsw2_actionTimer__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6704,'size':416,'pad':0,'label':"daAndsw2_actionOrder__FP10daAndsw2_c",'name':"daAndsw2_actionOrder__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D68A4,'size':188,'pad':0,'label':"daAndsw2_actionEvent__FP10daAndsw2_c",'name':"daAndsw2_actionEvent__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6960,'size':212,'pad':0,'label':"daAndsw2_actionOff__FP10daAndsw2_c",'name':"daAndsw2_actionOff__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6A34,'size':8,'pad':0,'label':"daAndsw2_actionWait__FP10daAndsw2_c",'name':"daAndsw2_actionWait__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6A3C,'size':60,'pad':0,'label':"daAndsw2_Execute__FP10daAndsw2_c",'name':"daAndsw2_Execute__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6A78,'size':40,'pad':0,'label':"daAndsw2_Delete__FP10daAndsw2_c",'name':"daAndsw2_Delete__FP10daAndsw2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6AA0,'size':32,'pad':0,'label':"daAndsw2_Create__FP10fopAc_ac_c",'name':"daAndsw2_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D6AC0,'size':4,'pad':0,'label':"data_804D6AC0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x804D6AC4,'size':4,'pad':0,'label':"data_804D6AC4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x804D6AC8,'size':28,'pad':0,'label':"lit_3821",'name':"@3821",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x804D6AE4,'size':24,'pad':0,'label':"data_804D6AE4",'name':"l_action$localstatic3$execute__10daAndsw2_cFv",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x804D6AFC,'size':32,'pad':0,'label':"l_daAndsw2_Method",'name':"l_daAndsw2_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x804D6B1C,'size':48,'pad':0,'label':"g_profile_ANDSW2",'name':"g_profile_ANDSW2",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"getEventNo__10daAndsw2_cFv":3,
+	"getSwbit__10daAndsw2_cFv":4,
+	"getSwbit2__10daAndsw2_cFv":5,
+	"getType__10daAndsw2_cFv":6,
+	"getTimer__10daAndsw2_cFv":7,
+	"getNum__10daAndsw2_cFv":8,
+	"getTopSw__10daAndsw2_cFv":9,
+	"getSwAns__10daAndsw2_cFv":10,
+	"chkAllSw2__10daAndsw2_cFv":11,
+	"chkSwStatus__10daAndsw2_cFv":12,
+	"chkSwStatus2__10daAndsw2_cFv":13,
+	"__dt__10daAndsw2_cFv":14,
+	"create__10daAndsw2_cFv":15,
+	"daAndsw2_actionOnAll__FP10daAndsw2_c":16,
+	"daAndsw2_actionTimer__FP10daAndsw2_c":17,
+	"daAndsw2_actionOrder__FP10daAndsw2_c":18,
+	"daAndsw2_actionEvent__FP10daAndsw2_c":19,
+	"daAndsw2_actionOff__FP10daAndsw2_c":20,
+	"daAndsw2_actionWait__FP10daAndsw2_c":21,
+	"daAndsw2_Execute__FP10daAndsw2_c":22,
+	"daAndsw2_Delete__FP10daAndsw2_c":23,
+	"daAndsw2_Create__FP10fopAc_ac_c":24,
+	"data_804D6AC0":25,
+	"data_804D6AC4":26,
+	"lit_3821":27,
+	"data_804D6AE4":28,
+	"l_daAndsw2_Method":29,
+	"g_profile_ANDSW2":30,
 }
+

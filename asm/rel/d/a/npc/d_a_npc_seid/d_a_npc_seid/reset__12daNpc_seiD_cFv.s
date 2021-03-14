@@ -3,25 +3,25 @@ lbl_80AC9C0C:
 /* 80AC9C10 00000004  7C 08 02 A6 */	mflr r0
 /* 80AC9C14 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80AC9C18 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80AC9C1C 00000010  4B FF F9 DD */	bl _savegpr_29
+/* 80AC9C1C 00000010  4B FF F9 DD */	bl _unresolved
 /* 80AC9C20 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80AC9C24 00000018  3C 60 00 00 */	lis r3, m__18daNpc_seiD_Param_c@ha
-/* 80AC9C28 0000001C  3B C3 00 00 */	addi r30, r3, m__18daNpc_seiD_Param_c@l
+/* 80AC9C24 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AC9C28 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80AC9C2C 00000020  38 7F 0D 24 */	addi r3, r31, 0xd24
 /* 80AC9C30 00000024  38 80 00 00 */	li r4, 0
 /* 80AC9C34 00000028  38 1F 0E 38 */	addi r0, r31, 0xe38
 /* 80AC9C38 0000002C  7C A3 00 50 */	subf r5, r3, r0
-/* 80AC9C3C 00000030  4B FF F9 BD */	bl memset
+/* 80AC9C3C 00000030  4B FF F9 BD */	bl _unresolved
 /* 80AC9C40 00000034  38 7F 0B 50 */	addi r3, r31, 0xb50
-/* 80AC9C44 00000038  4B FF F9 B5 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80AC9C44 00000038  4B FF F9 B5 */	bl _unresolved
 /* 80AC9C48 0000003C  38 7F 0B 74 */	addi r3, r31, 0xb74
-/* 80AC9C4C 00000040  4B FF F9 AD */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80AC9C4C 00000040  4B FF F9 AD */	bl _unresolved
 /* 80AC9C50 00000044  38 7F 0B 98 */	addi r3, r31, 0xb98
-/* 80AC9C54 00000048  4B FF F9 A5 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80AC9C54 00000048  4B FF F9 A5 */	bl _unresolved
 /* 80AC9C58 0000004C  38 7F 0B A0 */	addi r3, r31, 0xba0
-/* 80AC9C5C 00000050  4B FF F9 9D */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80AC9C5C 00000050  4B FF F9 9D */	bl _unresolved
 /* 80AC9C60 00000054  38 7F 0B A8 */	addi r3, r31, 0xba8
-/* 80AC9C64 00000058  4B FF F9 95 */	bl initialize__15daNpcT_JntAnm_cFv
+/* 80AC9C64 00000058  4B FF F9 95 */	bl _unresolved
 /* 80AC9C68 0000005C  38 A0 00 00 */	li r5, 0
 /* 80AC9C6C 00000060  38 60 00 00 */	li r3, 0
 /* 80AC9C70 00000064  7C A4 2B 78 */	mr r4, r5
@@ -47,7 +47,7 @@ lbl_80AC9C80:
 /* 80AC9CBC 0000003C  38 00 00 01 */	li r0, 1
 /* 80AC9CC0 00000040  98 1F 0E 26 */	stb r0, 0xe26(r31)
 /* 80AC9CC4 00000044  C0 3E 00 98 */	lfs f1, 0x98(r30)
-/* 80AC9CC8 00000048  4B FF F9 31 */	bl cM_rndF__Ff
+/* 80AC9CC8 00000048  4B FF F9 31 */	bl _unresolved
 /* 80AC9CCC 0000004C  FC 00 08 1E */	fctiwz f0, f1
 /* 80AC9CD0 00000050  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80AC9CD4 00000054  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -59,21 +59,21 @@ lbl_80AC9C80:
 /* 80AC9CEC 0000006C  38 80 00 00 */	li r4, 0
 /* 80AC9CF0 00000070  38 1F 0E 60 */	addi r0, r31, 0xe60
 /* 80AC9CF4 00000074  7C A3 00 50 */	subf r5, r3, r0
-/* 80AC9CF8 00000078  4B FF F9 01 */	bl memset
+/* 80AC9CF8 00000078  4B FF F9 01 */	bl _unresolved
 /* 80AC9CFC 0000007C  80 7F 09 6C */	lwz r3, 0x96c(r31)
 /* 80AC9D00 00000080  28 03 00 00 */	cmplwi r3, 0
 /* 80AC9D04 00000084  41 82 00 08 */	beq lbl_80AC9D0C
-/* 80AC9D08 00000088  4B FF F8 F1 */	bl initialize__15daNpcT_MatAnm_cFv
+/* 80AC9D08 00000088  4B FF F8 F1 */	bl _unresolved
 lbl_80AC9D0C:
 /* 80AC9D0C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AC9D10 00000004  A8 9F 04 B6 */	lha r4, 0x4b6(r31)
-/* 80AC9D14 00000008  4B FF F8 E5 */	bl setAngle__8daNpcT_cFs
+/* 80AC9D14 00000008  4B FF F8 E5 */	bl _unresolved
 /* 80AC9D18 0000000C  80 1F 0B 7C */	lwz r0, 0xb7c(r31)
 /* 80AC9D1C 00000010  2C 00 00 00 */	cmpwi r0, 0
 /* 80AC9D20 00000014  41 82 00 24 */	beq lbl_80AC9D44
 /* 80AC9D24 00000018  83 BF 0B 80 */	lwz r29, 0xb80(r31)
 /* 80AC9D28 0000001C  38 7F 0B 74 */	addi r3, r31, 0xb74
-/* 80AC9D2C 00000020  4B FF F8 CD */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80AC9D2C 00000020  4B FF F8 CD */	bl _unresolved
 /* 80AC9D30 00000024  93 BF 0B 80 */	stw r29, 0xb80(r31)
 /* 80AC9D34 00000028  38 00 00 00 */	li r0, 0
 /* 80AC9D38 0000002C  90 1F 0B 7C */	stw r0, 0xb7c(r31)
@@ -81,7 +81,7 @@ lbl_80AC9D0C:
 /* 80AC9D40 00000034  D0 1F 0B 8C */	stfs f0, 0xb8c(r31)
 lbl_80AC9D44:
 /* 80AC9D44 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80AC9D48 00000004  4B FF F8 B1 */	bl _restgpr_29
+/* 80AC9D48 00000004  4B FF F8 B1 */	bl _unresolved
 /* 80AC9D4C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80AC9D50 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80AC9D54 00000010  38 21 00 20 */	addi r1, r1, 0x20

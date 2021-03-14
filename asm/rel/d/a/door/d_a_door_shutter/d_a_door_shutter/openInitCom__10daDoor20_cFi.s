@@ -5,10 +5,10 @@ lbl_80465620:
 /* 8046562C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80465630 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80465634 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80465638 00000018  4B FF B4 E1 */	bl getFRoomNo__13door_param2_cFP10fopAc_ac_c
+/* 80465638 00000018  4B FF B4 E1 */	bl _unresolved
 /* 8046563C 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 80465640 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80465644 00000024  4B FF B4 D5 */	bl getBRoomNo__13door_param2_cFP10fopAc_ac_c
+/* 80465644 00000024  4B FF B4 D5 */	bl _unresolved
 /* 80465648 00000028  88 1E 06 8C */	lbz r0, 0x68c(r30)
 /* 8046564C 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80465650 00000030  40 82 00 10 */	bne lbl_80465660
@@ -27,8 +27,8 @@ lbl_80465668:
 /* 8046567C 00000014  41 82 00 3C */	beq lbl_804656B8
 /* 80465680 00000018  28 04 00 3F */	cmplwi r4, 0x3f
 /* 80465684 0000001C  41 82 00 34 */	beq lbl_804656B8
-/* 80465688 00000020  3C 60 00 00 */	lis r3, mStatus__20dStage_roomControl_c@ha
-/* 8046568C 00000024  38 63 00 00 */	addi r3, r3, mStatus__20dStage_roomControl_c@l
+/* 80465688 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8046568C 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80465690 00000028  38 A3 03 F4 */	addi r5, r3, 0x3f4
 /* 80465694 0000002C  1C 64 04 04 */	mulli r3, r4, 0x404
 /* 80465698 00000030  7C 05 18 AE */	lbzx r0, r5, r3
@@ -41,13 +41,13 @@ lbl_80465668:
 /* 804656B4 0000004C  7C 05 19 AE */	stbx r0, r5, r3
 lbl_804656B8:
 /* 804656B8 00000000  88 7E 06 7F */	lbz r3, 0x67f(r30)
-/* 804656BC 00000004  4B FF B4 5D */	bl setNextStayNo__20dStage_roomControl_cFi
-/* 804656C0 00000008  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 804656C4 0000000C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 804656BC 00000004  4B FF B4 5D */	bl _unresolved
+/* 804656C0 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804656C4 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804656C8 00000010  80 63 00 00 */	lwz r3, 0(r3)
 /* 804656CC 00000014  38 63 04 A4 */	addi r3, r3, 0x4a4
 /* 804656D0 00000018  38 80 00 00 */	li r4, 0
-/* 804656D4 0000001C  4B FF B4 45 */	bl setSceneExist__10Z2SceneMgrFb
+/* 804656D4 0000001C  4B FF B4 45 */	bl _unresolved
 /* 804656D8 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804656DC 00000024  83 C1 00 08 */	lwz r30, 8(r1)
 /* 804656E0 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

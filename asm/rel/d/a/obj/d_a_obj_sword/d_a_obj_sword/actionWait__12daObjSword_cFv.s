@@ -4,8 +4,8 @@ lbl_80CFDA14:
 /* 80CFDA1C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CFDA20 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CFDA24 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CFDA28 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80CFDA2C 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CFDA28 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CFDA2C 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CFDA30 0000001C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80CFDA34 00000020  80 03 04 9C */	lwz r0, 0x49c(r3)
 /* 80CFDA38 00000024  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
@@ -16,7 +16,7 @@ lbl_80CFDA14:
 /* 80CFDA4C 00000038  80 04 05 80 */	lwz r0, 0x580(r4)
 /* 80CFDA50 0000003C  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
 /* 80CFDA54 00000040  41 82 00 20 */	beq lbl_80CFDA74
-/* 80CFDA58 00000044  4B FF FA E1 */	bl fopAcM_cancelCarryNow__FP10fopAc_ac_c
+/* 80CFDA58 00000044  4B FF FA E1 */	bl _unresolved
 /* 80CFDA5C 00000048  7F E3 FB 78 */	mr r3, r31
 /* 80CFDA60 0000004C  48 00 00 2D */	bl initActionOrderGetDemo__12daObjSword_cFv
 /* 80CFDA64 00000050  48 00 00 10 */	b lbl_80CFDA74

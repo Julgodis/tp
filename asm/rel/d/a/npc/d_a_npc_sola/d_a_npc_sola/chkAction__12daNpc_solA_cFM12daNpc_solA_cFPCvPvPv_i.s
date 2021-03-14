@@ -3,7 +3,7 @@ lbl_80AEDB10:
 /* 80AEDB14 00000004  7C 08 02 A6 */	mflr r0
 /* 80AEDB18 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80AEDB1C 0000000C  38 63 0F 90 */	addi r3, r3, 0xf90
-/* 80AEDB20 00000010  4B FF EF F9 */	bl __ptmf_cmpr
+/* 80AEDB20 00000010  4B FF EF F9 */	bl _unresolved
 /* 80AEDB24 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 80AEDB28 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 80AEDB2C 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

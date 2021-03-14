@@ -3,13 +3,13 @@ lbl_80482D7C:
 /* 80482D80 00000004  7C 08 02 A6 */	mflr r0
 /* 80482D84 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80482D88 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 80482D8C 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80482D90 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80482D8C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80482D90 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80482D94 00000018  A0 05 05 BC */	lhz r0, 0x5bc(r5)
 /* 80482D98 0000001C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80482D9C 00000020  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 80482DA0 00000024  7C 05 07 74 */	extsb r5, r0
-/* 80482DA4 00000028  4B FF FF 15 */	bl isSwitch__10dSv_info_cCFii
+/* 80482DA4 00000028  4B FF FF 15 */	bl _unresolved
 /* 80482DA8 0000002C  30 03 FF FF */	addic r0, r3, -1
 /* 80482DAC 00000030  7C 00 19 10 */	subfe r0, r0, r3
 /* 80482DB0 00000034  54 03 06 3E */	clrlwi r3, r0, 0x18

@@ -5,11 +5,11 @@ lbl_8057F328:
 /* 8057F334 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057F338 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8057F33C 00000014  38 7F 09 58 */	addi r3, r31, 0x958
-/* 8057F340 00000018  4B FF DC F9 */	bl dKyw_pntwind_cut__FP14WIND_INFLUENCE
+/* 8057F340 00000018  4B FF DC F9 */	bl _unresolved
 /* 8057F344 0000001C  38 7F 05 6C */	addi r3, r31, 0x56c
-/* 8057F348 00000020  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8057F34C 00000024  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 8057F350 00000028  4B FF DC E9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8057F348 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8057F34C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8057F350 00000028  4B FF DC E9 */	bl _unresolved
 /* 8057F354 0000002C  38 60 00 01 */	li r3, 1
 /* 8057F358 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8057F35C 00000034  80 01 00 14 */	lwz r0, 0x14(r1)

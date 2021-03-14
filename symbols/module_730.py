@@ -3,24 +3,72 @@
 # Module: 730
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5C620, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5C64C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5C678, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'create__12daTagMyna2_cFv': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5C698, 'size': 0x0070, 'padding': 0x00, 'name': "create__12daTagMyna2_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__12daTagMyna2_cFv': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5C708, 'size': 0x02A0, 'padding': 0x00, 'name': "execute__12daTagMyna2_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagMyna2_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5C9A8, 'size': 0x0020, 'padding': 0x00, 'name': "daTagMyna2_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'daTagMyna2_Execute__FP12daTagMyna2_c': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5C9C8, 'size': 0x0020, 'padding': 0x00, 'name': "daTagMyna2_Execute__FP12daTagMyna2_c", 'reference_count': 1, 'type': "Function"},
-	'daTagMyna2_Delete__FP12daTagMyna2_c': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5C9E8, 'size': 0x0030, 'padding': 0x00, 'name': "daTagMyna2_Delete__FP12daTagMyna2_c", 'reference_count': 1, 'type': "Function"},
-	'func_80D5CA18': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".text", 'addr': 0x80D5CA18, 'size': 0x001C, 'padding': 0x00, 'name': "cLib_calcTimer<s>__FPs", 'reference_count': 1, 'type': "Function"},
-	'data_80D5CA34': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D5CA34, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D5CA38': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D5CA38, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3743': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA3C, 'size': 0x0004, 'padding': 0x04, 'name': "@3743", 'reference_count': 0, 'type': "InitData"},
-	'lit_3744': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA44, 'size': 0x0008, 'padding': 0x00, 'name': "@3744", 'reference_count': 0, 'type': "InitData"},
-	'lit_3745': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA4C, 'size': 0x0008, 'padding': 0x00, 'name': "@3745", 'reference_count': 0, 'type': "InitData"},
-	'lit_3746': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA54, 'size': 0x0008, 'padding': 0x00, 'name': "@3746", 'reference_count': 0, 'type': "InitData"},
-	'lit_3747': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA5C, 'size': 0x0004, 'padding': 0x00, 'name': "@3747", 'reference_count': 0, 'type': "Integer"},
-	'lit_3748': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".rodata", 'addr': 0x80D5CA60, 'size': 0x0004, 'padding': 0x00, 'name': "@3748", 'reference_count': 0, 'type': "Integer"},
-	'l_daTagMyna2_Method': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".data", 'addr': 0x80D5CA64, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagMyna2_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_TAG_MYNA2': {'library': "d/a/tag/d_a_tag_myna2", 'translation_unit': "d_a_tag_myna2", 'section': ".data", 'addr': 0x80D5CA84, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_TAG_MYNA2", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_myna2",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_myna2",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D5C620,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5C64C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5C678,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x80D5C698,'size':112,'pad':0,'label':"create__12daTagMyna2_cFv",'name':"create__12daTagMyna2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5C708,'size':672,'pad':0,'label':"execute__12daTagMyna2_cFv",'name':"execute__12daTagMyna2_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5C9A8,'size':32,'pad':0,'label':"daTagMyna2_Create__FP10fopAc_ac_c",'name':"daTagMyna2_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5C9C8,'size':32,'pad':0,'label':"daTagMyna2_Execute__FP12daTagMyna2_c",'name':"daTagMyna2_Execute__FP12daTagMyna2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5C9E8,'size':48,'pad':0,'label':"daTagMyna2_Delete__FP12daTagMyna2_c",'name':"daTagMyna2_Delete__FP12daTagMyna2_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5CA18,'size':28,'pad':0,'label':"func_80D5CA18",'name':"cLib_calcTimer<s>__FPs",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D5CA34,'size':4,'pad':0,'label':"data_80D5CA34",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA38,'size':4,'pad':0,'label':"data_80D5CA38",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA3C,'size':4,'pad':4,'label':"lit_3743",'name':"@3743",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA44,'size':8,'pad':0,'label':"lit_3744",'name':"@3744",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA4C,'size':8,'pad':0,'label':"lit_3745",'name':"@3745",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA54,'size':8,'pad':0,'label':"lit_3746",'name':"@3746",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA5C,'size':4,'pad':0,'label':"lit_3747",'name':"@3747",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D5CA60,'size':4,'pad':0,'label':"lit_3748",'name':"@3748",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D5CA64,'size':32,'pad':0,'label':"l_daTagMyna2_Method",'name':"l_daTagMyna2_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D5CA84,'size':48,'pad':0,'label':"g_profile_TAG_MYNA2",'name':"g_profile_TAG_MYNA2",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"create__12daTagMyna2_cFv":3,
+	"execute__12daTagMyna2_cFv":4,
+	"daTagMyna2_Create__FP10fopAc_ac_c":5,
+	"daTagMyna2_Execute__FP12daTagMyna2_c":6,
+	"daTagMyna2_Delete__FP12daTagMyna2_c":7,
+	"func_80D5CA18":8,
+	"data_80D5CA34":9,
+	"data_80D5CA38":10,
+	"lit_3743":11,
+	"lit_3744":12,
+	"lit_3745":13,
+	"lit_3746":14,
+	"lit_3747":15,
+	"lit_3748":16,
+	"l_daTagMyna2_Method":17,
+	"g_profile_TAG_MYNA2":18,
 }
+

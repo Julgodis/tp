@@ -4,10 +4,10 @@ lbl_809CECAC:
 /* 809CECB4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809CECB8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809CECBC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 809CECC0 00000014  3C 80 00 00 */	lis r4, __vt__18daNpcF_ActorMngr_c@ha
-/* 809CECC4 00000018  38 04 00 00 */	addi r0, r4, __vt__18daNpcF_ActorMngr_c@l
+/* 809CECC0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809CECC4 00000018  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 809CECC8 0000001C  90 03 00 04 */	stw r0, 4(r3)
-/* 809CECCC 00000020  4B FF C7 6D */	bl initialize__18daNpcF_ActorMngr_cFv
+/* 809CECCC 00000020  4B FF C7 6D */	bl _unresolved
 /* 809CECD0 00000024  7F E3 FB 78 */	mr r3, r31
 /* 809CECD4 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809CECD8 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)

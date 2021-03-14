@@ -5,20 +5,20 @@ lbl_80AE93A0:
 /* 80AE93AC 0000000C  93 E1 00 AC */	stw r31, 0xac(r1)
 /* 80AE93B0 00000010  93 C1 00 A8 */	stw r30, 0xa8(r1)
 /* 80AE93B4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80AE93B8 00000018  3C 60 00 00 */	lis r3, m__17daNpcShoe_Param_c@ha
-/* 80AE93BC 0000001C  3B E3 00 00 */	addi r31, r3, m__17daNpcShoe_Param_c@l
+/* 80AE93B8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE93BC 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80AE93C0 00000020  38 7E 0D DC */	addi r3, r30, 0xddc
-/* 80AE93C4 00000024  4B FF E4 F5 */	bl __ptmf_test
+/* 80AE93C4 00000024  4B FF E4 F5 */	bl _unresolved
 /* 80AE93C8 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80AE93CC 0000002C  41 82 00 18 */	beq lbl_80AE93E4
 /* 80AE93D0 00000030  7F C3 F3 78 */	mr r3, r30
 /* 80AE93D4 00000034  38 80 00 00 */	li r4, 0
 /* 80AE93D8 00000038  39 9E 0D DC */	addi r12, r30, 0xddc
-/* 80AE93DC 0000003C  4B FF E4 DD */	bl __ptmf_scall
+/* 80AE93DC 0000003C  4B FF E4 DD */	bl _unresolved
 /* 80AE93E0 00000040  60 00 00 00 */	nop 
 lbl_80AE93E4:
-/* 80AE93E4 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80AE93E8 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE93E4 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AE93E8 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AE93EC 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80AE93F0 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80AE93F4 00000010  41 82 00 30 */	beq lbl_80AE9424
@@ -30,7 +30,7 @@ lbl_80AE93E4:
 /* 80AE940C 00000028  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80AE9410 0000002C  41 82 00 14 */	beq lbl_80AE9424
 /* 80AE9414 00000030  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80AE9418 00000034  4B FF E4 A1 */	bl setPtI_Id__14dEvt_control_cFUi
+/* 80AE9418 00000034  4B FF E4 A1 */	bl _unresolved
 /* 80AE941C 00000038  38 00 FF FF */	li r0, -1
 /* 80AE9420 0000003C  90 1E 0E 00 */	stw r0, 0xe00(r30)
 lbl_80AE9424:
@@ -155,7 +155,7 @@ lbl_80AE959C:
 /* 80AE95F8 0000005C  B0 1E 0E 16 */	sth r0, 0xe16(r30)
 /* 80AE95FC 00000060  7F C3 F3 78 */	mr r3, r30
 /* 80AE9600 00000064  38 81 00 88 */	addi r4, r1, 0x88
-/* 80AE9604 00000068  4B FF E2 B5 */	bl playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80AE9604 00000068  4B FF E2 B5 */	bl _unresolved
 lbl_80AE9608:
 /* 80AE9608 00000000  38 60 00 00 */	li r3, 0
 /* 80AE960C 00000004  83 E1 00 AC */	lwz r31, 0xac(r1)

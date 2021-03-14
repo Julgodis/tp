@@ -8,16 +8,16 @@ lbl_80725ED4:
 /* 80725EEC 00000018  38 A0 00 0A */	li r5, 0xa
 /* 80725EF0 0000001C  38 C0 00 00 */	li r6, 0
 /* 80725EF4 00000020  38 E0 00 26 */	li r7, 0x26
-/* 80725EF8 00000024  4B FF FC 01 */	bl fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc
+/* 80725EF8 00000024  4B FF FC 01 */	bl _unresolved
 /* 80725EFC 00000028  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80725F00 0000002C  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80725F04 00000030  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80725F08 00000034  41 82 00 18 */	beq lbl_80725F20
-/* 80725F0C 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80725F10 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80725F0C 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80725F10 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80725F14 00000040  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80725F18 00000044  7C 05 07 74 */	extsb r5, r0
-/* 80725F1C 00000048  4B FF FB DD */	bl onSwitch__10dSv_info_cFii
+/* 80725F1C 00000048  4B FF FB DD */	bl _unresolved
 lbl_80725F20:
 /* 80725F20 00000000  88 1F 05 B6 */	lbz r0, 0x5b6(r31)
 /* 80725F24 00000004  28 00 00 01 */	cmplwi r0, 1
@@ -66,7 +66,7 @@ lbl_80725F20:
 /* 80725FD0 000000B0  48 00 00 0C */	b lbl_80725FDC
 lbl_80725FD4:
 /* 80725FD4 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80725FD8 00000004  4B FF FB 21 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80725FD8 00000004  4B FF FB 21 */	bl _unresolved
 lbl_80725FDC:
 /* 80725FDC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80725FE0 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

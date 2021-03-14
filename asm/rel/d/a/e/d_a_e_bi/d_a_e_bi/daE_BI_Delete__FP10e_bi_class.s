@@ -5,21 +5,21 @@ lbl_8068CAA0:
 /* 8068CAAC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8068CAB0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8068CAB4 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 8068CAB8 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8068CABC 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 8068CAC0 00000020  4B FF DA 99 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8068CAB8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8068CABC 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8068CAC0 00000020  4B FF DA 99 */	bl _unresolved
 /* 8068CAC4 00000024  88 1F 0B FC */	lbz r0, 0xbfc(r31)
 /* 8068CAC8 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8068CACC 0000002C  41 82 00 10 */	beq lbl_8068CADC
 /* 8068CAD0 00000030  38 00 00 00 */	li r0, 0
-/* 8068CAD4 00000034  3C 60 00 00 */	lis r3, struct_8068DB30@ha
-/* 8068CAD8 00000038  98 03 00 00 */	stb r0, struct_8068DB30@l(r3)
+/* 8068CAD4 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8068CAD8 00000038  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_8068CADC:
 /* 8068CADC 00000000  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 8068CAE0 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8068CAE4 00000008  41 82 00 0C */	beq lbl_8068CAF0
 /* 8068CAE8 0000000C  80 7F 05 B8 */	lwz r3, 0x5b8(r31)
-/* 8068CAEC 00000010  4B FF DA 6D */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 8068CAEC 00000010  4B FF DA 6D */	bl _unresolved
 lbl_8068CAF0:
 /* 8068CAF0 00000000  38 60 00 01 */	li r3, 1
 /* 8068CAF4 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -21,23 +21,23 @@ lbl_80BC80B4:
 /* 80BC80BC 00000008  41 82 00 08 */	beq lbl_80BC80C4
 /* 80BC80C0 0000000C  38 7F 05 A0 */	addi r3, r31, 0x5a0
 lbl_80BC80C4:
-/* 80BC80C4 00000000  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80BC80C8 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80BC80C4 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BC80C8 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BC80CC 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BC80D0 0000000C  4B FF FE 49 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80BC80D0 0000000C  4B FF FE 49 */	bl _unresolved
 /* 80BC80D4 00000010  7C 7E 1B 78 */	mr r30, r3
 /* 80BC80D8 00000014  2C 1E 00 04 */	cmpwi r30, 4
 /* 80BC80DC 00000018  40 82 00 68 */	bne lbl_80BC8144
 /* 80BC80E0 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 80BC80E4 00000020  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80BC80E8 00000024  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80BC80E4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BC80E8 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BC80EC 00000028  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BC80F0 0000002C  38 A0 00 07 */	li r5, 7
-/* 80BC80F4 00000030  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
-/* 80BC80F8 00000034  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
+/* 80BC80F4 00000030  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80BC80F8 00000034  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80BC80FC 00000038  38 E0 45 00 */	li r7, 0x4500
 /* 80BC8100 0000003C  39 1F 05 B4 */	addi r8, r31, 0x5b4
-/* 80BC8104 00000040  4B FF FE 15 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80BC8104 00000040  4B FF FE 15 */	bl _unresolved
 /* 80BC8108 00000044  7C 7E 1B 78 */	mr r30, r3
 /* 80BC810C 00000048  2C 1E 00 05 */	cmpwi r30, 5
 /* 80BC8110 0000004C  40 82 00 08 */	bne lbl_80BC8118
@@ -53,7 +53,7 @@ lbl_80BC8118:
 /* 80BC8134 0000001C  80 7F 05 E8 */	lwz r3, 0x5e8(r31)
 /* 80BC8138 00000020  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BC813C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80BC8140 00000028  4B FF FD D9 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80BC8140 00000028  4B FF FD D9 */	bl _unresolved
 lbl_80BC8144:
 /* 80BC8144 00000000  7F C3 F3 78 */	mr r3, r30
 lbl_80BC8148:

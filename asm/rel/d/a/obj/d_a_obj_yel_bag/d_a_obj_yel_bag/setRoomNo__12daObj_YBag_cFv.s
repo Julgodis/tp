@@ -4,11 +4,11 @@ lbl_80D3D4C4:
 /* 80D3D4CC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D3D4D0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D3D4D4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D3D4D8 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D3D4DC 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D3D4D8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D3D4DC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D3D4E0 0000001C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D3D4E4 00000020  38 9F 09 2C */	addi r4, r31, 0x92c
-/* 80D3D4E8 00000024  4B FF EB 71 */	bl GetRoomId__4dBgSFRC13cBgS_PolyInfo
+/* 80D3D4E8 00000024  4B FF EB 71 */	bl _unresolved
 /* 80D3D4EC 00000028  98 7F 04 E2 */	stb r3, 0x4e2(r31)
 /* 80D3D4F0 0000002C  98 7F 07 82 */	stb r3, 0x782(r31)
 /* 80D3D4F4 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)

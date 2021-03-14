@@ -8,18 +8,18 @@ lbl_80656D18:
 /* 80656D30 00000018  41 82 00 08 */	beq lbl_80656D38
 /* 80656D34 0000001C  38 63 05 68 */	addi r3, r3, 0x568
 lbl_80656D38:
-/* 80656D38 00000000  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80656D3C 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80656D38 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80656D3C 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80656D40 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80656D44 0000000C  4B FF FB F5 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80656D44 0000000C  4B FF FB F5 */	bl _unresolved
 /* 80656D48 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80656D4C 00000014  2C 1F 00 04 */	cmpwi r31, 4
 /* 80656D50 00000018  40 82 00 28 */	bne lbl_80656D78
 /* 80656D54 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80656D58 00000020  3C 80 00 00 */	lis r4, daCoach2D_createHeap__FP10fopAc_ac_c@ha
-/* 80656D5C 00000024  38 84 00 00 */	addi r4, r4, daCoach2D_createHeap__FP10fopAc_ac_c@l
+/* 80656D58 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80656D5C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80656D60 00000028  38 A0 50 50 */	li r5, 0x5050
-/* 80656D64 0000002C  4B FF FB D5 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80656D64 0000002C  4B FF FB D5 */	bl _unresolved
 /* 80656D68 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80656D6C 00000034  40 82 00 0C */	bne lbl_80656D78
 /* 80656D70 00000038  38 60 00 05 */	li r3, 5

@@ -3,34 +3,34 @@ lbl_80BD673C:
 /* 80BD6740 00000004  7C 08 02 A6 */	mflr r0
 /* 80BD6744 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BD6748 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD674C 00000010  4B FF FC 2D */	bl _savegpr_27
+/* 80BD674C 00000010  4B FF FC 2D */	bl _unresolved
 /* 80BD6750 00000014  7C 7B 1B 78 */	mr r27, r3
-/* 80BD6754 00000018  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80BD6758 0000001C  38 63 00 00 */	addi r3, r3, g_env_light@l
+/* 80BD6754 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BD6758 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BD675C 00000020  38 80 00 10 */	li r4, 0x10
 /* 80BD6760 00000024  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 80BD6764 00000028  38 DB 01 0C */	addi r6, r27, 0x10c
-/* 80BD6768 0000002C  4B FF FC 11 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80BD6768 0000002C  4B FF FC 11 */	bl _unresolved
 /* 80BD676C 00000030  3B 80 00 00 */	li r28, 0
 /* 80BD6770 00000034  3B E0 00 00 */	li r31, 0
-/* 80BD6774 00000038  3C 60 00 00 */	lis r3, g_env_light@ha
-/* 80BD6778 0000003C  3B C3 00 00 */	addi r30, r3, g_env_light@l
+/* 80BD6774 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BD6778 0000003C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 lbl_80BD677C:
 /* 80BD677C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80BD6780 00000004  3B BF 05 70 */	addi r29, r31, 0x570
 /* 80BD6784 00000008  7C 9B E8 2E */	lwzx r4, r27, r29
 /* 80BD6788 0000000C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80BD678C 00000010  38 BB 01 0C */	addi r5, r27, 0x10c
-/* 80BD6790 00000014  4B FF FB E9 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80BD6790 00000014  4B FF FB E9 */	bl _unresolved
 /* 80BD6794 00000018  7C 7B E8 2E */	lwzx r3, r27, r29
-/* 80BD6798 0000001C  4B FF FB E1 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80BD6798 0000001C  4B FF FB E1 */	bl _unresolved
 /* 80BD679C 00000020  3B 9C 00 01 */	addi r28, r28, 1
 /* 80BD67A0 00000024  2C 1C 00 02 */	cmpwi r28, 2
 /* 80BD67A4 00000028  3B FF 00 04 */	addi r31, r31, 4
 /* 80BD67A8 0000002C  41 80 FF D4 */	blt lbl_80BD677C
 /* 80BD67AC 00000030  38 60 00 01 */	li r3, 1
 /* 80BD67B0 00000034  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD67B4 00000038  4B FF FB C5 */	bl _restgpr_27
+/* 80BD67B4 00000038  4B FF FB C5 */	bl _unresolved
 /* 80BD67B8 0000003C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80BD67BC 00000040  7C 08 03 A6 */	mtlr r0
 /* 80BD67C0 00000044  38 21 00 20 */	addi r1, r1, 0x20

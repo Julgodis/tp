@@ -3,7 +3,7 @@ lbl_80C179B0:
 /* 80C179B4 00000004  7C 08 02 A6 */	mflr r0
 /* 80C179B8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80C179BC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C179C0 00000010  4B FF FA B9 */	bl _savegpr_29
+/* 80C179C0 00000010  4B FF FA B9 */	bl _unresolved
 /* 80C179C4 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80C179C8 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80C179CC 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
@@ -24,31 +24,31 @@ lbl_80C179EC:
 /* 80C17A00 00000014  38 7F 05 68 */	addi r3, r31, 0x568
 lbl_80C17A04:
 /* 80C17A04 00000000  54 1E 10 3A */	slwi r30, r0, 2
-/* 80C17A08 00000004  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80C17A0C 00000008  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80C17A08 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C17A0C 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C17A10 0000000C  7C 84 F0 2E */	lwzx r4, r4, r30
-/* 80C17A14 00000010  4B FF FA 65 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C17A14 00000010  4B FF FA 65 */	bl _unresolved
 /* 80C17A18 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80C17A1C 00000018  2C 1D 00 04 */	cmpwi r29, 4
 /* 80C17A20 0000001C  40 82 00 84 */	bne lbl_80C17AA4
 /* 80C17A24 00000020  7F E3 FB 78 */	mr r3, r31
-/* 80C17A28 00000024  3C 80 00 00 */	lis r4, daObjHFtr_c_createHeap__FP10fopAc_ac_c@ha
-/* 80C17A2C 00000028  38 84 00 00 */	addi r4, r4, daObjHFtr_c_createHeap__FP10fopAc_ac_c@l
-/* 80C17A30 0000002C  3C A0 00 00 */	lis r5, l_heapSize@ha
-/* 80C17A34 00000030  38 A5 00 00 */	addi r5, r5, l_heapSize@l
+/* 80C17A28 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C17A2C 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C17A30 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C17A34 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C17A38 00000034  7C A5 F0 2E */	lwzx r5, r5, r30
-/* 80C17A3C 00000038  4B FF FA 3D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80C17A3C 00000038  4B FF FA 3D */	bl _unresolved
 /* 80C17A40 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C17A44 00000040  40 82 00 0C */	bne lbl_80C17A50
 /* 80C17A48 00000044  38 60 00 05 */	li r3, 5
 /* 80C17A4C 00000048  48 00 00 5C */	b lbl_80C17AA8
 lbl_80C17A50:
-/* 80C17A50 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C17A54 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C17A50 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C17A54 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C17A58 00000008  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C17A5C 0000000C  80 9F 05 A4 */	lwz r4, 0x5a4(r31)
 /* 80C17A60 00000010  7F E5 FB 78 */	mr r5, r31
-/* 80C17A64 00000014  4B FF FA 15 */	bl Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
+/* 80C17A64 00000014  4B FF FA 15 */	bl _unresolved
 /* 80C17A68 00000018  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C17A6C 0000001C  41 82 00 0C */	beq lbl_80C17A78
 /* 80C17A70 00000020  38 60 00 05 */	li r3, 5
@@ -64,12 +64,12 @@ lbl_80C17A78:
 /* 80C17A94 0000001C  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 80C17A98 00000020  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C17A9C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80C17AA0 00000028  4B FF F9 D9 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80C17AA0 00000028  4B FF F9 D9 */	bl _unresolved
 lbl_80C17AA4:
 /* 80C17AA4 00000000  7F A3 EB 78 */	mr r3, r29
 lbl_80C17AA8:
 /* 80C17AA8 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C17AAC 00000004  4B FF F9 CD */	bl _restgpr_29
+/* 80C17AAC 00000004  4B FF F9 CD */	bl _unresolved
 /* 80C17AB0 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80C17AB4 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80C17AB8 00000010  38 21 00 20 */	addi r1, r1, 0x20

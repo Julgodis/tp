@@ -2,8 +2,8 @@ lbl_809EB234:
 /* 809EB234 00000000  94 21 FE C0 */	stwu r1, -0x140(r1)
 /* 809EB238 00000004  7C 08 02 A6 */	mflr r0
 /* 809EB23C 00000008  90 01 01 44 */	stw r0, 0x144(r1)
-/* 809EB240 0000000C  3C 80 00 00 */	lis r4, m__17daNpc_Grz_Param_c@ha
-/* 809EB244 00000010  38 84 00 00 */	addi r4, r4, m__17daNpc_Grz_Param_c@l
+/* 809EB240 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809EB244 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 809EB248 00000014  80 A4 01 3C */	lwz r5, 0x13c(r4)
 /* 809EB24C 00000018  80 04 01 40 */	lwz r0, 0x140(r4)
 /* 809EB250 0000001C  90 A1 00 FC */	stw r5, 0xfc(r1)
@@ -222,7 +222,7 @@ lbl_809EB520:
 /* 809EB5A0 00000080  2C 04 00 0B */	cmpwi r4, 0xb
 /* 809EB5A4 00000084  40 80 00 0C */	bge lbl_809EB5B0
 /* 809EB5A8 00000088  38 81 01 08 */	addi r4, r1, 0x108
-/* 809EB5AC 0000008C  4B FF CD CD */	bl playExpressionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 809EB5AC 0000008C  4B FF CD CD */	bl _unresolved
 lbl_809EB5B0:
 /* 809EB5B0 00000000  80 01 01 44 */	lwz r0, 0x144(r1)
 /* 809EB5B4 00000004  7C 08 03 A6 */	mtlr r0

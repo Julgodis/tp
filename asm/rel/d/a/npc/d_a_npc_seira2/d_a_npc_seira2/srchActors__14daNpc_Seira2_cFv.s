@@ -12,15 +12,15 @@ lbl_80AD1BF8:
 /* 80AD1C20 00000028  48 00 00 2C */	b lbl_80AD1C4C
 lbl_80AD1C24:
 /* 80AD1C24 00000000  38 7F 10 C4 */	addi r3, r31, 0x10c4
-/* 80AD1C28 00000004  4B FF EF 51 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80AD1C28 00000004  4B FF EF 51 */	bl _unresolved
 /* 80AD1C2C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80AD1C30 0000000C  40 82 00 1C */	bne lbl_80AD1C4C
 /* 80AD1C34 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80AD1C38 00000014  38 80 01 0D */	li r4, 0x10d
-/* 80AD1C3C 00000018  4B FF EF 3D */	bl getNearestActorP__8daNpcT_cFs
+/* 80AD1C3C 00000018  4B FF EF 3D */	bl _unresolved
 /* 80AD1C40 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80AD1C44 00000020  38 7F 10 C4 */	addi r3, r31, 0x10c4
-/* 80AD1C48 00000024  4B FF EF 31 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80AD1C48 00000024  4B FF EF 31 */	bl _unresolved
 lbl_80AD1C4C:
 /* 80AD1C4C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80AD1C50 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

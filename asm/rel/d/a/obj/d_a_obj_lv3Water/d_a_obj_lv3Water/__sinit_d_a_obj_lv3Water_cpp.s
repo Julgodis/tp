@@ -3,15 +3,15 @@ lbl_80C59C90:
 /* 80C59C94 00000004  7C 08 02 A6 */	mflr r0
 /* 80C59C98 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C59C9C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80C59CA0 00000010  3C 60 00 00 */	lis r3, cNullVec__6Z2Calc@ha
-/* 80C59CA4 00000014  3B E3 00 00 */	addi r31, r3, cNullVec__6Z2Calc@l
-/* 80C59CA8 00000018  3C 60 00 00 */	lis r3, l_HIO@ha
-/* 80C59CAC 0000001C  38 63 00 00 */	addi r3, r3, l_HIO@l
+/* 80C59CA0 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C59CA4 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80C59CA8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C59CAC 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C59CB0 00000020  4B FF EB 1D */	bl __ct__16daLv3Water_HIO_cFv
-/* 80C59CB4 00000024  3C 80 00 00 */	lis r4, __dt__16daLv3Water_HIO_cFv@ha
-/* 80C59CB8 00000028  38 84 00 00 */	addi r4, r4, __dt__16daLv3Water_HIO_cFv@l
-/* 80C59CBC 0000002C  3C A0 00 00 */	lis r5, lit_3657@ha
-/* 80C59CC0 00000030  38 A5 00 00 */	addi r5, r5, lit_3657@l
+/* 80C59CB4 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C59CB8 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C59CBC 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C59CC0 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C59CC4 00000034  4B FF EA 95 */	bl __register_global_object
 /* 80C59CC8 00000038  80 7F 00 74 */	lwz r3, 0x74(r31)
 /* 80C59CCC 0000003C  80 1F 00 78 */	lwz r0, 0x78(r31)

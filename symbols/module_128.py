@@ -3,31 +3,90 @@
 # Module: 128
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4BE0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4C0C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "executor", 'section': ".text", 'addr': 0x805A4C38, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 7, 'type': "Function"},
-	'Create__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4C58, 'size': 0x0084, 'padding': 0x00, 'name': "Create__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4CDC, 'size': 0x0068, 'padding': 0x00, 'name': "create__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4D44, 'size': 0x0024, 'padding': 0x00, 'name': "execute__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'action__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4D68, 'size': 0x008C, 'padding': 0x00, 'name': "action__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'actionCheck__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A4DF4, 'size': 0x049C, 'padding': 0x00, 'name': "actionCheck__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'actionEnd__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A5290, 'size': 0x0004, 'padding': 0x00, 'name': "actionEnd__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'seStartWrong__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A5294, 'size': 0x0060, 'padding': 0x00, 'name': "seStartWrong__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__15daTagLv2PrChk_cFv': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A52F4, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__15daTagLv2PrChk_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A52FC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A531C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
-	'daTagLv2PrChk_Create__FP15daTagLv2PrChk_c': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".text", 'addr': 0x805A533C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagLv2PrChk_Create__FP15daTagLv2PrChk_c", 'reference_count': 1, 'type': "Function"},
-	'data_805A535C': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x805A535C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_805A5360': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x805A5360, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3844': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".rodata", 'addr': 0x805A5364, 'size': 0x0004, 'padding': 0x00, 'name': "@3844", 'reference_count': 0, 'type': "Integer"},
-	'lit_3845': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".rodata", 'addr': 0x805A5368, 'size': 0x0004, 'padding': 0x00, 'name': "@3845", 'reference_count': 0, 'type': "Integer"},
-	'cNullVec__6Z2Calc': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A536C, 'size': 0x000C, 'padding': 0x00, 'name': "cNullVec__6Z2Calc", 'reference_count': 0, 'type': "InitData"},
-	'lit_1787': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A5378, 'size': 0x0004, 'padding': 0x10, 'name': "@1787", 'reference_count': 0, 'type': "Integer"},
-	'lit_3667': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A538C, 'size': 0x000C, 'padding': 0x00, 'name': "@3667", 'reference_count': 0, 'type': "ReferenceArray"},
-	'lit_3668': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A5398, 'size': 0x000C, 'padding': 0x00, 'name': "@3668", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_805A53A4': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53A4, 'size': 0x0018, 'padding': 0x00, 'name': "l_func$3666", 'reference_count': 0, 'type': "InitData"},
-	'l_daTagLv2PrChk_Method': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53BC, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagLv2PrChk_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_Lv2PrChk': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "d_a_tag_lv2prchk", 'section': ".data", 'addr': 0x805A53DC, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_Lv2PrChk", 'reference_count': 0, 'type': "ReferenceArray"},
-	'data_805A541C': {'library': "d/a/tag/d_a_tag_lv2prchk", 'translation_unit': "unknown_translation_unit_bss", 'section': ".bss", 'addr': 0x805A541C, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "ZeroData"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_lv2prchk",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"unknown_translation_unit_bss",
+	"d_a_tag_lv2prchk",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".bss",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x805A4BE0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A4C0C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A4C38,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':7,'type':"Function"},
+	{'addr':0x805A4C58,'size':132,'pad':0,'label':"Create__15daTagLv2PrChk_cFv",'name':"Create__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A4CDC,'size':104,'pad':0,'label':"create__15daTagLv2PrChk_cFv",'name':"create__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A4D44,'size':36,'pad':0,'label':"execute__15daTagLv2PrChk_cFv",'name':"execute__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A4D68,'size':140,'pad':0,'label':"action__15daTagLv2PrChk_cFv",'name':"action__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A4DF4,'size':1180,'pad':0,'label':"actionCheck__15daTagLv2PrChk_cFv",'name':"actionCheck__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A5290,'size':4,'pad':0,'label':"actionEnd__15daTagLv2PrChk_cFv",'name':"actionEnd__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A5294,'size':96,'pad':0,'label':"seStartWrong__15daTagLv2PrChk_cFv",'name':"seStartWrong__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A52F4,'size':8,'pad':0,'label':"_delete__15daTagLv2PrChk_cFv",'name':"_delete__15daTagLv2PrChk_cFv",'lib':-1,'tu':5,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x805A52FC,'size':32,'pad':0,'label':"daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c",'name':"daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A531C,'size':32,'pad':0,'label':"daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c",'name':"daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A533C,'size':32,'pad':0,'label':"daTagLv2PrChk_Create__FP15daTagLv2PrChk_c",'name':"daTagLv2PrChk_Create__FP15daTagLv2PrChk_c",'lib':-1,'tu':5,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x805A535C,'size':4,'pad':0,'label':"data_805A535C",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x805A5360,'size':4,'pad':0,'label':"data_805A5360",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x805A5364,'size':4,'pad':0,'label':"lit_3844",'name':"@3844",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x805A5368,'size':4,'pad':0,'label':"lit_3845",'name':"@3845",'lib':-1,'tu':5,'section':4,'rc':0,'type':"Integer"},
+	{'addr':0x805A536C,'size':12,'pad':0,'label':"cNullVec__6Z2Calc",'name':"cNullVec__6Z2Calc",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A5378,'size':4,'pad':0,'label':"lit_1787",'name':"@1787",'lib':-1,'tu':5,'section':5,'rc':0,'type':"Integer"},
+	{'addr':0x805A537C,'size':16,'pad':0,'label':"pad_805A537C",'name':None,'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A538C,'size':12,'pad':0,'label':"lit_3667",'name':"@3667",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A5398,'size':12,'pad':0,'label':"lit_3668",'name':"@3668",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A53A4,'size':24,'pad':0,'label':"data_805A53A4",'name':"l_func$3666",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A53BC,'size':32,'pad':0,'label':"l_daTagLv2PrChk_Method",'name':"l_daTagLv2PrChk_Method",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A53DC,'size':48,'pad':0,'label':"g_profile_Tag_Lv2PrChk",'name':"g_profile_Tag_Lv2PrChk",'lib':-1,'tu':5,'section':5,'rc':0,'type':"InitData"},
+	{'addr':0x805A5410,'size':4,'pad':0,'label':"data_805A5410",'name':None,'lib':-1,'tu':4,'section':3,'rc':0,'type':"ZeroData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"Create__15daTagLv2PrChk_cFv":3,
+	"create__15daTagLv2PrChk_cFv":4,
+	"execute__15daTagLv2PrChk_cFv":5,
+	"action__15daTagLv2PrChk_cFv":6,
+	"actionCheck__15daTagLv2PrChk_cFv":7,
+	"actionEnd__15daTagLv2PrChk_cFv":8,
+	"seStartWrong__15daTagLv2PrChk_cFv":9,
+	"_delete__15daTagLv2PrChk_cFv":10,
+	"daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c":11,
+	"daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c":12,
+	"daTagLv2PrChk_Create__FP15daTagLv2PrChk_c":13,
+	"data_805A535C":14,
+	"data_805A5360":15,
+	"lit_3844":16,
+	"lit_3845":17,
+	"cNullVec__6Z2Calc":18,
+	"lit_1787":19,
+	"pad_805A537C":20,
+	"lit_3667":21,
+	"lit_3668":22,
+	"data_805A53A4":23,
+	"l_daTagLv2PrChk_Method":24,
+	"g_profile_Tag_Lv2PrChk":25,
+	"data_805A5410":26,
 }
+

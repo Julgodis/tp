@@ -5,12 +5,12 @@ lbl_8046A6DC:
 /* 8046A6E8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8046A6EC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8046A6F0 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 8046A6F4 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 8046A6F8 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
+/* 8046A6F4 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8046A6F8 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8046A6FC 00000020  38 84 00 23 */	addi r4, r4, 0x23
-/* 8046A700 00000024  4B FF DA D9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8046A700 00000024  4B FF DA D9 */	bl _unresolved
 /* 8046A704 00000028  38 7F 06 14 */	addi r3, r31, 0x614
-/* 8046A708 0000002C  4B FF DA D1 */	bl dKy_plight_cut__FP15LIGHT_INFLUENCE
+/* 8046A708 0000002C  4B FF DA D1 */	bl _unresolved
 /* 8046A70C 00000030  38 60 00 01 */	li r3, 1
 /* 8046A710 00000034  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8046A714 00000038  80 01 00 14 */	lwz r0, 0x14(r1)

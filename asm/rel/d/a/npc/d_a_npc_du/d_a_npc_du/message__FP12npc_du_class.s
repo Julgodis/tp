@@ -13,21 +13,21 @@ lbl_809B0CBC:
 /* 809B0CE8 0000002C  7F E4 FB 78 */	mr r4, r31
 /* 809B0CEC 00000030  38 A0 00 00 */	li r5, 0
 /* 809B0CF0 00000034  38 C0 00 00 */	li r6, 0
-/* 809B0CF4 00000038  4B FF EF C5 */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
+/* 809B0CF4 00000038  4B FF EF C5 */	bl _unresolved
 /* 809B0CF8 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 809B0CFC 00000040  41 82 00 1C */	beq lbl_809B0D18
-/* 809B0D00 00000044  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809B0D04 00000048  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B0D00 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B0D04 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B0D08 0000004C  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 809B0D0C 00000050  4B FF EF AD */	bl reset__14dEvt_control_cFv
+/* 809B0D0C 00000050  4B FF EF AD */	bl _unresolved
 /* 809B0D10 00000054  38 00 00 00 */	li r0, 0
 /* 809B0D14 00000058  B0 1F 09 82 */	sth r0, 0x982(r31)
 lbl_809B0D18:
 /* 809B0D18 00000000  38 60 00 01 */	li r3, 1
 /* 809B0D1C 00000004  48 00 00 B0 */	b lbl_809B0DCC
 lbl_809B0D20:
-/* 809B0D20 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809B0D24 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B0D20 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B0D24 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B0D28 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 809B0D2C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 809B0D30 00000010  41 82 00 30 */	beq lbl_809B0D60
@@ -39,7 +39,7 @@ lbl_809B0D20:
 /* 809B0D48 00000028  A8 BF 09 84 */	lha r5, 0x984(r31)
 /* 809B0D4C 0000002C  38 C0 00 00 */	li r6, 0
 /* 809B0D50 00000030  38 E0 00 00 */	li r7, 0
-/* 809B0D54 00000034  4B FF EF 65 */	bl init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
+/* 809B0D54 00000034  4B FF EF 65 */	bl _unresolved
 /* 809B0D58 00000038  38 00 00 01 */	li r0, 1
 /* 809B0D5C 0000003C  B0 1F 09 82 */	sth r0, 0x982(r31)
 lbl_809B0D60:
@@ -49,8 +49,8 @@ lbl_809B0D60:
 /* 809B0D6C 0000000C  A8 1F 09 84 */	lha r0, 0x984(r31)
 /* 809B0D70 00000010  2C 00 FF FF */	cmpwi r0, -1
 /* 809B0D74 00000014  41 82 00 38 */	beq lbl_809B0DAC
-/* 809B0D78 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 809B0D7C 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B0D78 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809B0D7C 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809B0D80 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 809B0D84 00000024  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 809B0D88 00000028  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6

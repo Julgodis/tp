@@ -3,10 +3,10 @@ lbl_80D1D0AC:
 /* 80D1D0B0 00000004  7C 08 02 A6 */	mflr r0
 /* 80D1D0B4 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80D1D0B8 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 80D1D0BC 00000010  4B FF F3 FD */	bl _savegpr_26
+/* 80D1D0BC 00000010  4B FF F3 FD */	bl _unresolved
 /* 80D1D0C0 00000014  7C 7A 1B 78 */	mr r26, r3
-/* 80D1D0C4 00000018  3C 60 00 00 */	lis r3, l_R02_eff_id@ha
-/* 80D1D0C8 0000001C  3B A3 00 00 */	addi r29, r3, l_R02_eff_id@l
+/* 80D1D0C4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D1D0C8 0000001C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
 /* 80D1D0CC 00000020  3B 80 00 00 */	li r28, 0
 /* 80D1D0D0 00000024  88 1A 04 E2 */	lbz r0, 0x4e2(r26)
 /* 80D1D0D4 00000028  7C 00 07 74 */	extsb r0, r0
@@ -59,8 +59,8 @@ lbl_80D1D160:
 lbl_80D1D16C:
 /* 80D1D16C 00000000  3B 60 00 00 */	li r27, 0
 /* 80D1D170 00000004  3B E0 00 00 */	li r31, 0
-/* 80D1D174 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D1D178 0000000C  3B C3 00 00 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80D1D174 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D1D178 0000000C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 lbl_80D1D17C:
 /* 80D1D17C 00000000  A0 BC 00 00 */	lhz r5, 0(r28)
 /* 80D1D180 00000004  28 05 FF FF */	cmplwi r5, 0xffff
@@ -80,7 +80,7 @@ lbl_80D1D17C:
 /* 80D1D1B8 0000003C  39 20 00 00 */	li r9, 0
 /* 80D1D1BC 00000040  39 40 00 FF */	li r10, 0xff
 /* 80D1D1C0 00000044  C0 3D 00 34 */	lfs f1, 0x34(r29)
-/* 80D1D1C4 00000048  4B FF F2 F5 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80D1D1C4 00000048  4B FF F2 F5 */	bl _unresolved
 /* 80D1D1C8 0000004C  38 1F 07 7C */	addi r0, r31, 0x77c
 /* 80D1D1CC 00000050  7C 7A 01 2E */	stwx r3, r26, r0
 /* 80D1D1D0 00000054  48 00 00 10 */	b lbl_80D1D1E0
@@ -98,7 +98,7 @@ lbl_80D1D1E0:
 /* 80D1D1F8 00000018  48 00 00 B5 */	bl stopParticle__12daObjTrnd2_cFv
 lbl_80D1D1FC:
 /* 80D1D1FC 00000000  39 61 00 40 */	addi r11, r1, 0x40
-/* 80D1D200 00000004  4B FF F2 B9 */	bl _restgpr_26
+/* 80D1D200 00000004  4B FF F2 B9 */	bl _unresolved
 /* 80D1D204 00000008  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 80D1D208 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80D1D20C 00000010  38 21 00 40 */	addi r1, r1, 0x40

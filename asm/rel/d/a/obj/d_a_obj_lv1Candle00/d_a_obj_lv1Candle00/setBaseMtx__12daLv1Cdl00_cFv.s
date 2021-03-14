@@ -4,18 +4,18 @@ lbl_80C55D80:
 /* 80C55D88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C55D8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C55D90 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C55D94 00000014  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C55D98 00000018  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C55D94 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C55D98 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C55D9C 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80C55DA0 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80C55DA4 00000024  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80C55DA8 00000028  4B FF FE D1 */	bl PSMTXTrans
-/* 80C55DAC 0000002C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C55DB0 00000030  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C55DA8 00000028  4B FF FE D1 */	bl _unresolved
+/* 80C55DAC 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C55DB0 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C55DB4 00000034  A8 9F 04 DC */	lha r4, 0x4dc(r31)
 /* 80C55DB8 00000038  A8 BF 04 DE */	lha r5, 0x4de(r31)
 /* 80C55DBC 0000003C  A8 DF 04 E0 */	lha r6, 0x4e0(r31)
-/* 80C55DC0 00000040  4B FF FE B9 */	bl mDoMtx_ZXYrotM__FPA4_fsss
+/* 80C55DC0 00000040  4B FF FE B9 */	bl _unresolved
 /* 80C55DC4 00000044  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80C55DC8 00000048  C0 1F 04 EC */	lfs f0, 0x4ec(r31)
 /* 80C55DCC 0000004C  D0 03 00 18 */	stfs f0, 0x18(r3)
@@ -23,11 +23,11 @@ lbl_80C55D80:
 /* 80C55DD4 00000054  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80C55DD8 00000058  C0 1F 04 F4 */	lfs f0, 0x4f4(r31)
 /* 80C55DDC 0000005C  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80C55DE0 00000060  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80C55DE4 00000064  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80C55DE0 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C55DE4 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C55DE8 00000068  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80C55DEC 0000006C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80C55DF0 00000070  4B FF FE 89 */	bl PSMTXCopy
+/* 80C55DF0 00000070  4B FF FE 89 */	bl _unresolved
 /* 80C55DF4 00000074  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C55DF8 00000078  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C55DFC 0000007C  7C 08 03 A6 */	mtlr r0

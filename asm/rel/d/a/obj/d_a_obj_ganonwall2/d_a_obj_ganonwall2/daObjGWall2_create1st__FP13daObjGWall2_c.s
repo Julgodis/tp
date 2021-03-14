@@ -9,9 +9,9 @@ lbl_80BF6038:
 /* 80BF6054 0000001C  40 82 00 28 */	bne lbl_80BF607C
 /* 80BF6058 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80BF605C 00000024  41 82 00 14 */	beq lbl_80BF6070
-/* 80BF6060 00000028  4B FF F7 59 */	bl __ct__16dBgS_MoveBgActorFv
-/* 80BF6064 0000002C  3C 60 00 00 */	lis r3, __vt__13daObjGWall2_c@ha
-/* 80BF6068 00000030  38 03 00 00 */	addi r0, r3, __vt__13daObjGWall2_c@l
+/* 80BF6060 00000028  4B FF F7 59 */	bl _unresolved
+/* 80BF6064 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BF6068 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80BF606C 00000034  90 1F 05 9C */	stw r0, 0x59c(r31)
 lbl_80BF6070:
 /* 80BF6070 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)

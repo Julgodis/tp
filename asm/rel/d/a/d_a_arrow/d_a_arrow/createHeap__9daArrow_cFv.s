@@ -8,15 +8,15 @@ lbl_80499C6C:
 /* 80499C84 00000018  88 03 09 3C */	lbz r0, 0x93c(r3)
 /* 80499C88 0000001C  28 00 00 02 */	cmplwi r0, 2
 /* 80499C8C 00000020  40 82 00 2C */	bne lbl_80499CB8
-/* 80499C90 00000024  3C 60 00 00 */	lis r3, stringBase0@ha
-/* 80499C94 00000028  38 63 00 00 */	addi r3, r3, stringBase0@l
+/* 80499C90 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80499C94 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80499C98 0000002C  38 80 00 1F */	li r4, 0x1f
-/* 80499C9C 00000030  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80499CA0 00000034  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80499C9C 00000030  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80499CA0 00000034  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80499CA4 00000038  3C A5 00 02 */	addis r5, r5, 2
 /* 80499CA8 0000003C  38 C0 00 80 */	li r6, 0x80
 /* 80499CAC 00000040  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80499CB0 00000044  4B FF FF 29 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 80499CB0 00000044  4B FF FF 29 */	bl _unresolved
 /* 80499CB4 00000048  48 00 00 48 */	b lbl_80499CFC
 lbl_80499CB8:
 /* 80499CB8 00000000  28 00 00 04 */	cmplwi r0, 4
@@ -31,19 +31,19 @@ lbl_80499CC8:
 lbl_80499CD8:
 /* 80499CD8 00000000  3B E0 00 1C */	li r31, 0x1c
 lbl_80499CDC:
-/* 80499CDC 00000000  4B FF FE FD */	bl getAlinkArcName__9daAlink_cFv
+/* 80499CDC 00000000  4B FF FE FD */	bl _unresolved
 /* 80499CE0 00000004  57 E4 04 3E */	clrlwi r4, r31, 0x10
-/* 80499CE4 00000008  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80499CE8 0000000C  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80499CE4 00000008  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80499CE8 0000000C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80499CEC 00000010  3C A5 00 02 */	addis r5, r5, 2
 /* 80499CF0 00000014  38 C0 00 80 */	li r6, 0x80
 /* 80499CF4 00000018  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80499CF8 0000001C  4B FF FE E1 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 80499CF8 0000001C  4B FF FE E1 */	bl _unresolved
 lbl_80499CFC:
 /* 80499CFC 00000000  3C 80 00 08 */	lis r4, 8
 /* 80499D00 00000004  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80499D04 00000008  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80499D08 0000000C  4B FF FE D1 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80499D08 0000000C  4B FF FE D1 */	bl _unresolved
 /* 80499D0C 00000010  90 7E 05 68 */	stw r3, 0x568(r30)
 /* 80499D10 00000014  80 1E 05 68 */	lwz r0, 0x568(r30)
 /* 80499D14 00000018  28 00 00 00 */	cmplwi r0, 0
@@ -60,7 +60,7 @@ lbl_80499D24:
 /* 80499D3C 00000018  4E 80 04 21 */	bctrl 
 /* 80499D40 0000001C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80499D44 00000020  7C 03 07 74 */	extsb r3, r0
-/* 80499D48 00000024  4B FF FE 91 */	bl dComIfGp_getReverb__Fi
+/* 80499D48 00000024  4B FF FE 91 */	bl _unresolved
 /* 80499D4C 00000028  98 7E 09 48 */	stb r3, 0x948(r30)
 /* 80499D50 0000002C  38 60 00 01 */	li r3, 1
 lbl_80499D54:

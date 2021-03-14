@@ -3,31 +3,86 @@
 # Module: 432
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BD6320, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BD634C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80BD6378, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 8, 'type': "Function"},
-	'CheckCreateHeap__FP10fopAc_ac_c': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6398, 'size': 0x0020, 'padding': 0x00, 'name': "CheckCreateHeap__FP10fopAc_ac_c", 'reference_count': 0, 'type': "Function"},
-	'initBaseMtx__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD63B8, 'size': 0x0058, 'padding': 0x00, 'name': "initBaseMtx__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'setBaseMtx__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6410, 'size': 0x0060, 'padding': 0x00, 'name': "setBaseMtx__14daObjCrystal_cFv", 'reference_count': 2, 'type': "Function"},
-	'Create__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6470, 'size': 0x0140, 'padding': 0x00, 'name': "Create__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'CreateHeap__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD65B0, 'size': 0x00B4, 'padding': 0x00, 'name': "CreateHeap__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6664, 'size': 0x00B4, 'padding': 0x00, 'name': "create__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'execute__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6718, 'size': 0x0024, 'padding': 0x00, 'name': "execute__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'draw__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD673C, 'size': 0x008C, 'padding': 0x00, 'name': "draw__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__14daObjCrystal_cFv': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD67C8, 'size': 0x006C, 'padding': 0x00, 'name': "_delete__14daObjCrystal_cFv", 'reference_count': 1, 'type': "Function"},
-	'daObjCrystal_Draw__FP14daObjCrystal_c': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6834, 'size': 0x0020, 'padding': 0x00, 'name': "daObjCrystal_Draw__FP14daObjCrystal_c", 'reference_count': 1, 'type': "Function"},
-	'daObjCrystal_Execute__FP14daObjCrystal_c': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6854, 'size': 0x0020, 'padding': 0x00, 'name': "daObjCrystal_Execute__FP14daObjCrystal_c", 'reference_count': 1, 'type': "Function"},
-	'daObjCrystal_Delete__FP14daObjCrystal_c': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6874, 'size': 0x0020, 'padding': 0x00, 'name': "daObjCrystal_Delete__FP14daObjCrystal_c", 'reference_count': 1, 'type': "Function"},
-	'daObjCrystal_Create__FP14daObjCrystal_c': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".text", 'addr': 0x80BD6894, 'size': 0x0020, 'padding': 0x00, 'name': "daObjCrystal_Create__FP14daObjCrystal_c", 'reference_count': 1, 'type': "Function"},
-	'data_80BD68B4': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80BD68B4, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80BD68B8': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80BD68B8, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3693': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".rodata", 'addr': 0x80BD68BC, 'size': 0x0004, 'padding': 0x00, 'name': "@3693", 'reference_count': 0, 'type': "Integer"},
-	'data_80BD68C0': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".rodata", 'addr': 0x80BD68C0, 'size': 0x0008, 'padding': 0x00, 'name': "l_bmd$3697", 'reference_count': 0, 'type': "InitData"},
-	'data_80BD68C8': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".rodata", 'addr': 0x80BD68C8, 'size': 0x0008, 'padding': 0x00, 'name': "l_diff_flag$3698", 'reference_count': 0, 'type': "InitData"},
-	'data_80BD68D0': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".rodata", 'addr': 0x80BD68D0, 'size': 0x0008, 'padding': 0x00, 'name': "l_flag$3699", 'reference_count': 0, 'type': "InitData"},
-	'stringBase0': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".rodata", 'addr': 0x80BD68D8, 'size': 0x0016, 'padding': 0x00, 'name': "@stringBase0", 'reference_count': 1, 'type': "StringBase"},
-	'l_arcName': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".data", 'addr': 0x80BD68F4, 'size': 0x0004, 'padding': 0x00, 'name': "l_arcName", 'reference_count': 0, 'type': "ReferenceArray"},
-	'l_daObjCrystal_Method': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".data", 'addr': 0x80BD68F8, 'size': 0x0020, 'padding': 0x00, 'name': "l_daObjCrystal_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Obj_Crystal': {'library': "d/a/obj/d_a_obj_crystal", 'translation_unit': "d_a_obj_crystal", 'section': ".data", 'addr': 0x80BD6918, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Obj_Crystal", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/obj/d_a_obj_crystal",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_obj_crystal",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80BD6320,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD634C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD6378,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':8,'type':"Function"},
+	{'addr':0x80BD6398,'size':32,'pad':0,'label':"CheckCreateHeap__FP10fopAc_ac_c",'name':"CheckCreateHeap__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD63B8,'size':88,'pad':0,'label':"initBaseMtx__14daObjCrystal_cFv",'name':"initBaseMtx__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD6410,'size':96,'pad':0,'label':"setBaseMtx__14daObjCrystal_cFv",'name':"setBaseMtx__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':2,'type':"Function"},
+	{'addr':0x80BD6470,'size':320,'pad':0,'label':"Create__14daObjCrystal_cFv",'name':"Create__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD65B0,'size':180,'pad':0,'label':"CreateHeap__14daObjCrystal_cFv",'name':"CreateHeap__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD6664,'size':180,'pad':0,'label':"create__14daObjCrystal_cFv",'name':"create__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD6718,'size':36,'pad':0,'label':"execute__14daObjCrystal_cFv",'name':"execute__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD673C,'size':140,'pad':0,'label':"draw__14daObjCrystal_cFv",'name':"draw__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD67C8,'size':108,'pad':0,'label':"_delete__14daObjCrystal_cFv",'name':"_delete__14daObjCrystal_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80BD6834,'size':32,'pad':0,'label':"daObjCrystal_Draw__FP14daObjCrystal_c",'name':"daObjCrystal_Draw__FP14daObjCrystal_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD6854,'size':32,'pad':0,'label':"daObjCrystal_Execute__FP14daObjCrystal_c",'name':"daObjCrystal_Execute__FP14daObjCrystal_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD6874,'size':32,'pad':0,'label':"daObjCrystal_Delete__FP14daObjCrystal_c",'name':"daObjCrystal_Delete__FP14daObjCrystal_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD6894,'size':32,'pad':0,'label':"daObjCrystal_Create__FP14daObjCrystal_c",'name':"daObjCrystal_Create__FP14daObjCrystal_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80BD68B4,'size':4,'pad':0,'label':"data_80BD68B4",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68B8,'size':4,'pad':0,'label':"data_80BD68B8",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68BC,'size':4,'pad':0,'label':"lit_3693",'name':"@3693",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80BD68C0,'size':8,'pad':0,'label':"data_80BD68C0",'name':"l_bmd$3697",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68C8,'size':8,'pad':0,'label':"data_80BD68C8",'name':"l_diff_flag$3698",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68D0,'size':8,'pad':0,'label':"data_80BD68D0",'name':"l_flag$3699",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68D8,'size':22,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':4,'section':3,'rc':0,'type':"StringBase"},
+	{'addr':0x80BD68F0,'size':4,'pad':0,'label':"l_arcName",'name':"l_arcName",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BD68F4,'size':32,'pad':0,'label':"l_daObjCrystal_Method",'name':"l_daObjCrystal_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80BD6914,'size':48,'pad':0,'label':"g_profile_Obj_Crystal",'name':"g_profile_Obj_Crystal",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"CheckCreateHeap__FP10fopAc_ac_c":3,
+	"initBaseMtx__14daObjCrystal_cFv":4,
+	"setBaseMtx__14daObjCrystal_cFv":5,
+	"Create__14daObjCrystal_cFv":6,
+	"CreateHeap__14daObjCrystal_cFv":7,
+	"create__14daObjCrystal_cFv":8,
+	"execute__14daObjCrystal_cFv":9,
+	"draw__14daObjCrystal_cFv":10,
+	"_delete__14daObjCrystal_cFv":11,
+	"daObjCrystal_Draw__FP14daObjCrystal_c":12,
+	"daObjCrystal_Execute__FP14daObjCrystal_c":13,
+	"daObjCrystal_Delete__FP14daObjCrystal_c":14,
+	"daObjCrystal_Create__FP14daObjCrystal_c":15,
+	"data_80BD68B4":16,
+	"data_80BD68B8":17,
+	"lit_3693":18,
+	"data_80BD68C0":19,
+	"data_80BD68C8":20,
+	"data_80BD68D0":21,
+	"stringBase0":22,
+	"l_arcName":23,
+	"l_daObjCrystal_Method":24,
+	"g_profile_Obj_Crystal":25,
 }
+

@@ -13,18 +13,18 @@ lbl_8061ED5C:
 /* 8061ED88 0000002C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8061ED8C 00000030  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8061ED90 00000034  38 63 00 F0 */	addi r3, r3, 0xf0
-/* 8061ED94 00000038  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha
-/* 8061ED98 0000003C  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 8061ED9C 00000040  4B FF FD BD */	bl PSMTXCopy
-/* 8061EDA0 00000044  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 8061EDA4 00000048  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 8061ED94 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8061ED98 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8061ED9C 00000040  4B FF FD BD */	bl _unresolved
+/* 8061EDA0 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8061EDA4 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8061EDA8 0000004C  38 81 00 08 */	addi r4, r1, 8
-/* 8061EDAC 00000050  4B FF FD AD */	bl mDoMtx_MtxToRot__FPA4_CfP5csXyz
+/* 8061EDAC 00000050  4B FF FD AD */	bl _unresolved
 /* 8061EDB0 00000054  7F E3 FB 78 */	mr r3, r31
-/* 8061EDB4 00000058  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 8061EDB8 0000005C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8061EDB4 00000058  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8061EDB8 0000005C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8061EDBC 00000060  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8061EDC0 00000064  4B FF FD 99 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8061EDC0 00000064  4B FF FD 99 */	bl _unresolved
 /* 8061EDC4 00000068  A8 81 00 0A */	lha r4, 0xa(r1)
 /* 8061EDC8 0000006C  38 04 40 00 */	addi r0, r4, 0x4000
 /* 8061EDCC 00000070  7C 00 18 50 */	subf r0, r0, r3
@@ -41,7 +41,7 @@ lbl_8061EDF0:
 /* 8061EDF0 00000000  38 7F 0A 96 */	addi r3, r31, 0xa96
 /* 8061EDF4 00000004  38 A0 00 04 */	li r5, 4
 /* 8061EDF8 00000008  38 C0 10 00 */	li r6, 0x1000
-/* 8061EDFC 0000000C  4B FF FD 5D */	bl cLib_addCalcAngleS2__FPssss
+/* 8061EDFC 0000000C  4B FF FD 5D */	bl _unresolved
 /* 8061EE00 00000010  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8061EE04 00000014  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8061EE08 00000018  7C 08 03 A6 */	mtlr r0

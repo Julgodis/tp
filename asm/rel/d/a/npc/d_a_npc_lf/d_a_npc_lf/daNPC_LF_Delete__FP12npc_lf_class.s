@@ -5,15 +5,15 @@ lbl_80A6A51C:
 /* 80A6A528 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80A6A52C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80A6A530 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 80A6A534 00000018  3C 80 00 00 */	lis r4, stringBase0@ha
-/* 80A6A538 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l
-/* 80A6A53C 00000020  4B FF F5 9D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80A6A534 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A6A538 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80A6A53C 00000020  4B FF F5 9D */	bl _unresolved
 /* 80A6A540 00000024  88 1F 1F C0 */	lbz r0, 0x1fc0(r31)
 /* 80A6A544 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80A6A548 0000002C  41 82 00 10 */	beq lbl_80A6A558
 /* 80A6A54C 00000030  38 00 00 00 */	li r0, 0
-/* 80A6A550 00000034  3C 60 00 00 */	lis r3, data_80A6AA94@ha
-/* 80A6A554 00000038  98 03 00 00 */	stb r0, data_80A6AA94@l(r3)
+/* 80A6A550 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A6A554 00000038  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_80A6A558:
 /* 80A6A558 00000000  38 60 00 01 */	li r3, 1
 /* 80A6A55C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

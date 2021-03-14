@@ -7,27 +7,27 @@ lbl_80CAE5B0:
 /* 80CAE5C4 00000014  88 03 0D 26 */	lbz r0, 0xd26(r3)
 /* 80CAE5C8 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80CAE5CC 0000001C  40 82 00 58 */	bne lbl_80CAE624
-/* 80CAE5D0 00000020  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80CAE5D4 00000024  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80CAE5D0 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAE5D4 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAE5D8 00000028  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80CAE5DC 0000002C  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80CAE5E0 00000030  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80CAE5E4 00000034  4B FF EC F5 */	bl PSMTXTrans
-/* 80CAE5E8 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80CAE5EC 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80CAE5E4 00000034  4B FF EC F5 */	bl _unresolved
+/* 80CAE5E8 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAE5EC 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAE5F0 00000040  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 80CAE5F4 00000044  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80CAE5F8 00000048  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80CAE5FC 0000004C  4B FF EC DD */	bl mDoMtx_ZXYrotM__FPA4_fsss
-/* 80CAE600 00000050  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80CAE604 00000054  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80CAE5FC 0000004C  4B FF EC DD */	bl _unresolved
+/* 80CAE600 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAE604 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAE608 00000058  38 9F 0C F4 */	addi r4, r31, 0xcf4
-/* 80CAE60C 0000005C  4B FF EC CD */	bl PSMTXCopy
-/* 80CAE610 00000060  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80CAE614 00000064  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80CAE60C 0000005C  4B FF EC CD */	bl _unresolved
+/* 80CAE610 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAE614 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAE618 00000068  80 9F 0C B4 */	lwz r4, 0xcb4(r31)
 /* 80CAE61C 0000006C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CAE620 00000070  4B FF EC B9 */	bl PSMTXCopy
+/* 80CAE620 00000070  4B FF EC B9 */	bl _unresolved
 lbl_80CAE624:
 /* 80CAE624 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CAE628 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

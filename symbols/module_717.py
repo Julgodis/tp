@@ -3,24 +3,72 @@
 # Module: 717
 #
 
-SYMBOLS = {
-	'_prolog': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D566E0, 'size': 0x002C, 'padding': 0x00, 'name': "_prolog", 'reference_count': 0, 'type': "Function"},
-	'_epilog': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D5670C, 'size': 0x002C, 'padding': 0x00, 'name': "_epilog", 'reference_count': 0, 'type': "Function"},
-	'_unresolved': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "executor", 'section': ".text", 'addr': 0x80D56738, 'size': 0x0020, 'padding': 0x00, 'name': "_unresolved", 'reference_count': 5, 'type': "Function"},
-	'Create__17daTagChgRestart_cFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56758, 'size': 0x008C, 'padding': 0x00, 'name': "Create__17daTagChgRestart_cFv", 'reference_count': 1, 'type': "Function"},
-	'create__17daTagChgRestart_cFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D567E4, 'size': 0x0094, 'padding': 0x00, 'name': "create__17daTagChgRestart_cFv", 'reference_count': 1, 'type': "Function"},
-	'__dt__4cXyzFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56878, 'size': 0x003C, 'padding': 0x00, 'name': "__dt__4cXyzFv", 'reference_count': 0, 'type': "Function"},
-	'__ct__4cXyzFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D568B4, 'size': 0x0004, 'padding': 0x00, 'name': "__ct__4cXyzFv", 'reference_count': 0, 'type': "Function"},
-	'execute__17daTagChgRestart_cFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D568B8, 'size': 0x01CC, 'padding': 0x00, 'name': "execute__17daTagChgRestart_cFv", 'reference_count': 1, 'type': "Function"},
-	'_delete__17daTagChgRestart_cFv': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56A84, 'size': 0x0008, 'padding': 0x00, 'name': "_delete__17daTagChgRestart_cFv", 'reference_count': 1, 'type': "Function"},
-	'daTagChgRestart_Execute__FP17daTagChgRestart_c': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56A8C, 'size': 0x0020, 'padding': 0x00, 'name': "daTagChgRestart_Execute__FP17daTagChgRestart_c", 'reference_count': 1, 'type': "Function"},
-	'daTagChgRestart_Delete__FP17daTagChgRestart_c': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56AAC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagChgRestart_Delete__FP17daTagChgRestart_c", 'reference_count': 1, 'type': "Function"},
-	'daTagChgRestart_Create__FP10fopAc_ac_c': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".text", 'addr': 0x80D56ACC, 'size': 0x0020, 'padding': 0x00, 'name': "daTagChgRestart_Create__FP10fopAc_ac_c", 'reference_count': 1, 'type': "Function"},
-	'data_80D56AEC': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "unknown_translation_unit_ctors", 'section': ".ctors", 'addr': 0x80D56AEC, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'data_80D56AF0': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "unknown_translation_unit_dtors", 'section': ".dtors", 'addr': 0x80D56AF0, 'size': 0x0004, 'padding': 0x00, 'name': None, 'reference_count': 0, 'type': "InitData"},
-	'lit_3650': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".rodata", 'addr': 0x80D56AF4, 'size': 0x0004, 'padding': 0x00, 'name': "@3650", 'reference_count': 0, 'type': "Integer"},
-	'lit_3651': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".rodata", 'addr': 0x80D56AF8, 'size': 0x0004, 'padding': 0x00, 'name': "@3651", 'reference_count': 0, 'type': "Integer"},
-	'lit_3652': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".rodata", 'addr': 0x80D56AFC, 'size': 0x0004, 'padding': 0x00, 'name': "@3652", 'reference_count': 0, 'type': "InitData"},
-	'l_daTagChgRestart_Method': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".data", 'addr': 0x80D56B04, 'size': 0x0020, 'padding': 0x00, 'name': "l_daTagChgRestart_Method", 'reference_count': 1, 'type': "ReferenceArray"},
-	'g_profile_Tag_ChgRestart': {'library': "d/a/tag/d_a_tag_chgrestart", 'translation_unit': "d_a_tag_chgrestart", 'section': ".data", 'addr': 0x80D56B24, 'size': 0x0030, 'padding': 0x00, 'name': "g_profile_Tag_ChgRestart", 'reference_count': 0, 'type': "ReferenceArray"},
+# Libraries
+LIBRARIES = [
+	"d/a/tag/d_a_tag_chgrestart",
+]
+
+# Translation Units
+TRANSLATION_UNITS = [
+	"unknown_translation_unit",
+	"executor",
+	"unknown_translation_unit_ctors",
+	"unknown_translation_unit_dtors",
+	"d_a_tag_chgrestart",
+]
+
+# Sections
+SECTIONS = [
+	".text",
+	".ctors",
+	".dtors",
+	".rodata",
+	".data",
+]
+
+# Symbols
+SYMBOLS = [
+	{'addr':0x80D566E0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D5670C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D56738,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
+	{'addr':0x80D56758,'size':140,'pad':0,'label':"Create__17daTagChgRestart_cFv",'name':"Create__17daTagChgRestart_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D567E4,'size':148,'pad':0,'label':"create__17daTagChgRestart_cFv",'name':"create__17daTagChgRestart_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D56878,'size':60,'pad':0,'label':"__dt__4cXyzFv",'name':"__dt__4cXyzFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D568B4,'size':4,'pad':0,'label':"__ct__4cXyzFv",'name':"__ct__4cXyzFv",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D568B8,'size':460,'pad':0,'label':"execute__17daTagChgRestart_cFv",'name':"execute__17daTagChgRestart_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D56A84,'size':8,'pad':0,'label':"_delete__17daTagChgRestart_cFv",'name':"_delete__17daTagChgRestart_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x80D56A8C,'size':32,'pad':0,'label':"daTagChgRestart_Execute__FP17daTagChgRestart_c",'name':"daTagChgRestart_Execute__FP17daTagChgRestart_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D56AAC,'size':32,'pad':0,'label':"daTagChgRestart_Delete__FP17daTagChgRestart_c",'name':"daTagChgRestart_Delete__FP17daTagChgRestart_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D56ACC,'size':32,'pad':0,'label':"daTagChgRestart_Create__FP10fopAc_ac_c",'name':"daTagChgRestart_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80D56AEC,'size':4,'pad':0,'label':"data_80D56AEC",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
+	{'addr':0x80D56AF0,'size':4,'pad':0,'label':"data_80D56AF0",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
+	{'addr':0x80D56AF4,'size':4,'pad':0,'label':"lit_3650",'name':"@3650",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D56AF8,'size':4,'pad':0,'label':"lit_3651",'name':"@3651",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},
+	{'addr':0x80D56AFC,'size':4,'pad':0,'label':"lit_3652",'name':"@3652",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},
+	{'addr':0x80D56B00,'size':32,'pad':0,'label':"l_daTagChgRestart_Method",'name':"l_daTagChgRestart_Method",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+	{'addr':0x80D56B20,'size':48,'pad':0,'label':"g_profile_Tag_ChgRestart",'name':"g_profile_Tag_ChgRestart",'lib':-1,'tu':4,'section':4,'rc':0,'type':"InitData"},
+]
+
+# Names
+SYMBOL_NAMES = {
+	"_prolog":0,
+	"_epilog":1,
+	"_unresolved":2,
+	"Create__17daTagChgRestart_cFv":3,
+	"create__17daTagChgRestart_cFv":4,
+	"__dt__4cXyzFv":5,
+	"__ct__4cXyzFv":6,
+	"execute__17daTagChgRestart_cFv":7,
+	"_delete__17daTagChgRestart_cFv":8,
+	"daTagChgRestart_Execute__FP17daTagChgRestart_c":9,
+	"daTagChgRestart_Delete__FP17daTagChgRestart_c":10,
+	"daTagChgRestart_Create__FP10fopAc_ac_c":11,
+	"data_80D56AEC":12,
+	"data_80D56AF0":13,
+	"lit_3650":14,
+	"lit_3651":15,
+	"lit_3652":16,
+	"l_daTagChgRestart_Method":17,
+	"g_profile_Tag_ChgRestart":18,
 }
+

@@ -44,6 +44,7 @@ import generate_functions
 import generate_symbols
 import merge_symbols
 import symbol_naming
+import symbol_def
 import rellib
 import dollib
 import arclib
@@ -53,30 +54,35 @@ import merge_symbols
 import asyncio
 from functools import wraps
 
-from multiprocessing import Manager, Pool, Queue, TimeoutError
+from multiprocessing import Manager, Pool, Queue, TimeoutError, Process
 from context import Context, MainContext
 from typing import List, Any
 from queue import Empty
+import traceback 
 
-def multiprocess_temp(context, shared_file):
-    try: 
-        shared = {}
-        if shared_file:
-            with open(shared_file, "rb") as file:
-                shared = pickle.load(file)
+def multiprocess_temp(input, output, shared_file):
+    shared = {}
+    if shared_file:
+        with open(shared_file, "rb") as file:
+            shared = pickle.load(file)
 
-        result = callback(context, *data, **shared)
-        context.complete()
-    except:
-        exc_type, exc_value, tb = sys.exc_info()
-        tb = rich.traceback.Traceback.from_exception(
-            exc_type,
-            exc_value,
-            tb.tb_next if tb else tb,
-        )
-        context.exception(tb)
-        raise
-    return result
+    while True:
+        try:  
+            i, task = input.get(block = False)
+            context = Context(index=i, output=output)
+            try:  
+                result = task[0](context, *task[1], **shared)
+                context.complete(result)
+            except:
+                exc_type, exc_value, tb = sys.exc_info()
+                tb = rich.traceback.Traceback.from_exception(
+                    exc_type,
+                    exc_value,
+                    tb.tb_next if tb else tb,
+                )
+                context.exception(tb)
+        except Empty:
+            break
 
 def multiprocess_execute(process_count, input_tasks, shared={}, callback=None) -> List[Any]:
     manager = Manager()
@@ -89,36 +95,22 @@ def multiprocess_execute(process_count, input_tasks, shared={}, callback=None) -
         with open(shared_file, "wb") as file:
             file.write(pickle.dumps(shared))
 
+    for i, task in enumerate(input_tasks):
+        input.put((i, task))
 
     processors = [ 
-        Process(target=multiprocess_temp, args=(Context(input=input, output=output), shared_file))
+        Process(target=multiprocess_temp, args=(input, output, shared_file))
         for i in range(process_count)
     ]
 
     for process in processors:
         process.start()
 
-    for process in processors:
-        process.join()
-
-
-    tasks = []
-    live_tasks = []
-
-
-    for i, input_task in enumerate(input_tasks):
-        context = Context(index=i, output=queue, data=)
-        task = pool.apply_async(multiprocess_temp, )
-        tasks.append(task)
-        live_tasks.append((i, task))
-
-    while True:
-        live_tasks = [(i,r) for i, r in live_tasks if not r.ready()]
-        if len(live_tasks) == 0:
-            break
-
+    waiting = len(input_tasks)
+    results = [None] * len(input_tasks)
+    while waiting > 0:
         try:            
-            command = queue.get(block=True,timeout=1)
+            command = output.get(block=True,timeout=1)
             processing = True
             if callback:
                 processing = callback(command[0], *command[1])
@@ -130,21 +122,23 @@ def multiprocess_execute(process_count, input_tasks, shared={}, callback=None) -
                 elif command[0] == 'error':
                     g.LOG.error(*command[1])
                 elif command[0] == 'complete':
-                    pass
+                    results[command[1][0]] = command[1][1]
+                    waiting -= 1
                 elif command[0] == 'exception':
-                    try:
-                        for task in tasks:
-                            task.get()
-                    except: 
-                        g.LOG.error(f"multiprocess exception:")
-                        g.CONSOLE.print(command[1][1])
-                        sys.exit(1)
+                    waiting -= 1
+                    g.CONSOLE.print(command[1][1])
                 else:
                     g.LOG.warning(f"unknown command: {command}")
         except Empty:
-            pass
-        
-    results = [task.get() for task in tasks]
+            pass  
+
+    for process in processors:
+        process.join()
+
+    while not output.empty():
+        command = output.get(block=False)
+        g.LOG.warning(f"skipped command: {command}")
+
     return results
 
 def multiprocess_execute_func(process_count, func, data, shared={}, callback=None):
@@ -166,6 +160,8 @@ def multiprocess_execute_func_progress(process_count, func, data, shared={}):
             callback=callback)
 
 def main(debug, game_path):
+    total_start_time = time.time()
+
     asm_path = Path("asm/")
     lib_path = Path("libs/")
     src_path = Path("src/")
@@ -207,11 +203,11 @@ def main(debug, game_path):
     g.MAPS_PATH = maps_path
 
     # search for '.rel' files
-    rel_path = util.check_dir(game_path, "rel/Final/Release")
-    rels_path = util.get_files_with_ext(rel_path, ".rel")
+    _rel_path = util.check_dir(game_path, "rel/Final/Release")
+    rels_path = util.get_files_with_ext(_rel_path, ".rel")
     rels_archive_path = util.check_file(game_path, "RELS.arc")
-    g.LOG.debug(f"found {len(rels_path)} RELs at '{rel_path}'")
-    g.REL_PATH = rel_path
+    g.LOG.debug(f"found {len(rels_path)} RELs at '{_rel_path}'")
+    g.REL_PATH = _rel_path
     g.RELS_PATH = rels_path
 
     # read 'main.dol'
@@ -330,25 +326,25 @@ def main(debug, game_path):
     modules = multiprocess_execute_func_progress(process_count, symbol_finder.search, module_tasks)
 
     start_time = time.time()
-    symboltable = GlobalSymbolTable() 
+    symbol_table = GlobalSymbolTable() 
     for module in modules:
         for lib in module.libraries.values():
             for tu in lib.translation_units.values():
                 for section in tu.sections.values():
-                    symboltable.add_section(module, section)
+                    symbol_table.add_section(module, section)
 
     #merge_tasks = [(module, symboltable) for module in modules]
     #multiprocess_execute_func(process_count, module_merge_symbols, merge_tasks)
 
-    main_context = MainContext(0, None, None)
+    main_context = MainContext(0, None)
 
     for module in modules:
         libs = list(module.libraries.values())
         add_list, remove_list = merge_symbols.execute(main_context, libs)
         for symbol in remove_list:
-            symboltable.remove_symbol(symbol)
+            symbol_table.remove_symbol(symbol)
         for symbol in add_list:
-            symboltable.add_symbol(symbol)
+            symbol_table.add_symbol(symbol)
     
     for module in modules:
         libs = list(module.libraries.values())
@@ -385,7 +381,7 @@ def main(debug, game_path):
                         count = len(symbol.data) // 4
                         values = list(struct.unpack(
                             ">" + "I" * count, symbol.data))
-                        is_symbols = [not not symboltable[x] for x in values]
+                        is_symbols = [not not symbol_table[module.index, x] for x in values]
                         if not any(is_symbols):
                             relocations = section.relocations
                             is_relocations = [x in relocations for x in range(symbol.start, symbol.end, 4)]
@@ -406,12 +402,12 @@ def main(debug, game_path):
                             source=symbol.source)
 
                         section.replace_symbol(symbol, new_symbol)
-                        symboltable.remove_symbol(symbol)
-                        symboltable.add_symbol(new_symbol)
+                        symbol_table.remove_symbol(symbol)
+                        symbol_table.add_symbol(new_symbol)
                         require_resolve.append((section, new_symbol))
 
     for section, symbol in require_resolve:
-        symbol.resolve_references(main_context, symboltable, section)
+        symbol.resolve_references(main_context, symbol_table, section)
 
     for module in modules:
         if module.index == 0:
@@ -447,10 +443,16 @@ def main(debug, game_path):
 
     cpp_gen = True
     asm_gen = True
+    mk_gen = True
+    symbols_gen = True
     no_file_generation = True
+
+    cpp_group_count = 32
+    asm_group_count = 512
 
     cpp_tasks = []
     asm_tasks = []
+    symdef_tasks = []
     for module in modules:
         if not module.index in gen_modules:
             continue
@@ -475,7 +477,7 @@ def main(debug, game_path):
                     cpp_tasks.append((tu,tu.source_path(lib),))
 
         if asm_gen:
-            function_files = set()
+            asm_path_tasks = []
             for lib in module.libraries.values():
                 for tu in lib.translation_units.values():
                     for sec in tu.sections.values():
@@ -485,8 +487,17 @@ def main(debug, game_path):
                             if no_file_generation:
                                 if symbol.include_path.exists():
                                     continue
+                            asm_path_tasks.append(util.create_dirs_for_file(symbol.include_path))
                             asm_tasks.append((symbol,))
+            asyncio.run(util.wait_all(asm_path_tasks))
+            
+    if symbols_gen:
+        for module in modules:
+            if not module.index in gen_modules:
+                continue
 
+            symdef_tasks.append((module,))
+            
     for module in modules:
         for lib in module.libraries.values():
             for tu in lib.translation_units.values():
@@ -497,27 +508,57 @@ def main(debug, game_path):
     end_time = time.time()
     print("Setup: {} seconds".format(end_time-start_time))
 
+    if mk_gen:
+        start_time = time.time()
+        makefile_tasks = []  
+        for module in modules:
+            if module.index in gen_modules:
+                if module.index == 0:
+                    for name, lib in module.libraries.items():                        
+                        if name != None:
+                            makefile_tasks.append(makefile.create_library(lib))
+                else:
+                    makefile_tasks.append(makefile.create_rel(module))
+
+        makefile_tasks.append(makefile.create_obj_files(modules))
+        makefile_tasks.append(makefile.create_include_link(modules))
+
+        asyncio.run(util.wait_all(makefile_tasks))
+        end_time = time.time()
+        g.CONSOLE.print(f"generated {len(makefile_tasks)} makefiles in {end_time-start_time:.2f} seconds ({(end_time-start_time)/len(makefile_tasks)} s/mk)")
+
     if len(cpp_tasks) > 0:
         random.shuffle(cpp_tasks)
         start_time = time.time()
-        tasks = [ (x,) for x in util.chunks(cpp_tasks, 32) ]
+        tasks = [ (x,) for x in util.chunks(cpp_tasks, cpp_group_count) ]
         multiprocess_execute_func_progress(process_count, cpp.export_translation_unit_group, tasks, shared={
-            'symbol_table': symboltable,
+            'symbol_table': symbol_table,
         })   
         end_time = time.time()
-        print("C++ Generation: {} seconds".format(end_time-start_time))
+        g.CONSOLE.print(f"generated {len(cpp_tasks)} C++ files in {end_time-start_time:.2f} seconds ({(end_time-start_time)/(cpp_group_count*len(cpp_tasks))} s/C++)")
 
     if len(asm_tasks) > 0:
         random.shuffle(asm_tasks)
         start_time = time.time()
-        tasks = [ (x,) for x in util.chunks(asm_tasks, 512) ]
+        tasks = [ (x,) for x in util.chunks(asm_tasks, asm_group_count) ]
         multiprocess_execute_func_progress(process_count, cpp.export_function, tasks, shared={
-            'symbol_table': symboltable,
+            'symbol_table': symbol_table,
             'no_file_generation': no_file_generation,
         })   
         end_time = time.time()
-        print("ASM Generation: {} seconds".format(end_time-start_time))
+        g.CONSOLE.print(f"generated {len(asm_tasks)} asm files in {end_time-start_time:.2f} seconds ({(end_time-start_time)/(asm_group_count*len(asm_tasks))} s/asm)")
 
+    if len(symdef_tasks) > 0:
+        random.shuffle(symdef_tasks)
+        start_time = time.time()
+        multiprocess_execute_func_progress(process_count, symbol_def.export_file, symdef_tasks, shared={
+            'symbol_table': symbol_table,
+        })   
+        end_time = time.time()
+        g.CONSOLE.print(f"generated {len(symdef_tasks)} module symbol definition files in {end_time-start_time:.2f} seconds ({(end_time-start_time)/len(symdef_tasks)} s/msd)")
+
+    total_end_time = time.time()
+    g.CONSOLE.print(f"completed in {total_end_time-total_start_time:.2f} seconds")
     sys.exit(1)
 
 

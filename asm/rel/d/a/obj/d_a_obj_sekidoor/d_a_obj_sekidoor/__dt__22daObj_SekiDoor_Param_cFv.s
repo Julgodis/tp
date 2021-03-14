@@ -5,12 +5,12 @@ lbl_80CCD9AC:
 /* 80CCD9B8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CCD9BC 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80CCD9C0 00000014  41 82 00 1C */	beq lbl_80CCD9DC
-/* 80CCD9C4 00000018  3C A0 00 00 */	lis r5, __vt__22daObj_SekiDoor_Param_c@ha
-/* 80CCD9C8 0000001C  38 05 00 00 */	addi r0, r5, __vt__22daObj_SekiDoor_Param_c@l
+/* 80CCD9C4 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CCD9C8 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 80CCD9CC 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 80CCD9D0 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80CCD9D4 00000028  40 81 00 08 */	ble lbl_80CCD9DC
-/* 80CCD9D8 0000002C  4B FF F5 C1 */	bl __dl__FPv
+/* 80CCD9D8 0000002C  4B FF F5 C1 */	bl _unresolved
 lbl_80CCD9DC:
 /* 80CCD9DC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CCD9E0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -272,21 +272,25 @@ with open("test.lcf", "w") as file:
     file.write("\n")
     file.write("\t/* Below are functions that are not matching the original mangled name */\n")
 
-    base_names = set(module_0.SYMBOLS.keys())
+    file.write("\n")
+    file.write("\t/* missing symbols */\n")
+    base_names = set(module_0.SYMBOL_NAMES.keys())
     main_names = set([sym.name for sym in SYMBOLS])
     names = base_names - main_names
-    #for name in names:
-    #    if name in undefined_active.STRING_BASE:
-    #        continue
-    #    addr = module_0.SYMBOLS[name][0]
-    #    #print("missing symbol: %s" % name)
-    #    pass#file.write("\t\"%s\" = 0x%08X;\n" % (name, addr))
+    for name in names:
+        symbol = module_0.SYMBOLS[module_0.SYMBOL_NAMES[name]]
+        if symbol['type'] == "StringBase":
+            continue
+        if symbol['type'] == "LinkerGenerated":
+            continue
+
+        file.write(f"\t\"{symbol['name']}\" = 0x{symbol['addr']:08X};\n")
 
     file.write("\n")
     file.write("\t/* @stringBase0 */\n")
-    for k,x in module_0.SYMBOLS.items():
+    for x in module_0.SYMBOLS:
         if x['type'] == "StringBase":
-            file.write("\t\"%s\" = 0x%08X;\n" % (k, x['addr']))     
+            file.write("\t\"%s\" = 0x%08X;\n" % (x['label'], x['addr']))     
 
     file.write("}\n")
     file.write("\n")
@@ -296,13 +300,18 @@ with open("test.lcf", "w") as file:
         file.write("\t\"%s\"\n" % f)
     file.write("\n")
     file.write("\t/* vtables */\n")
-    for k,x in module_0.SYMBOLS.items():
+    for k in module_0.SYMBOL_NAMES.keys():
         if k.startswith("__vt"):
             file.write("\t\"%s\"\n" % (k))     
     file.write("\n")
-    file.write("\t/* Unreferenced Symbols */\n")
-    for k,x in module_0.SYMBOLS.items():
-        if x['reference_count'] == 0:
+    file.write("\t/* unreferenced symbols */\n")
+    for x in module_0.SYMBOLS:
+        k = x['label']
+        if x['type'] == "StringBase":
+            continue
+        if k.startswith("__vt"):
+            continue
+        if x['rc'] == 0:
             file.write("\t\"%s\"\n" % (k))     
     file.write("\n")
     file.write("}\n")

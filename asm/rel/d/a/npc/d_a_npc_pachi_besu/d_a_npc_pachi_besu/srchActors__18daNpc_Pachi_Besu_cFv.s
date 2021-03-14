@@ -10,26 +10,26 @@ lbl_80A93E24:
 /* 80A93E44 00000020  48 00 00 54 */	b lbl_80A93E98
 lbl_80A93E48:
 /* 80A93E48 00000000  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A93E4C 00000004  4B FF EE 8D */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A93E4C 00000004  4B FF EE 8D */	bl _unresolved
 /* 80A93E50 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A93E54 0000000C  40 82 00 1C */	bne lbl_80A93E70
 /* 80A93E58 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A93E5C 00000014  38 80 02 70 */	li r4, 0x270
-/* 80A93E60 00000018  4B FF EE 79 */	bl getNearestActorP__8daNpcT_cFs
+/* 80A93E60 00000018  4B FF EE 79 */	bl _unresolved
 /* 80A93E64 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A93E68 00000020  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A93E6C 00000024  4B FF EE 6D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A93E6C 00000024  4B FF EE 6D */	bl _unresolved
 lbl_80A93E70:
 /* 80A93E70 00000000  38 7F 0F A8 */	addi r3, r31, 0xfa8
-/* 80A93E74 00000004  4B FF EE 65 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A93E74 00000004  4B FF EE 65 */	bl _unresolved
 /* 80A93E78 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A93E7C 0000000C  40 82 00 1C */	bne lbl_80A93E98
 /* 80A93E80 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A93E84 00000014  38 80 02 71 */	li r4, 0x271
-/* 80A93E88 00000018  4B FF EE 51 */	bl getNearestActorP__8daNpcT_cFs
+/* 80A93E88 00000018  4B FF EE 51 */	bl _unresolved
 /* 80A93E8C 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A93E90 00000020  38 7F 0F A8 */	addi r3, r31, 0xfa8
-/* 80A93E94 00000024  4B FF EE 45 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A93E94 00000024  4B FF EE 45 */	bl _unresolved
 lbl_80A93E98:
 /* 80A93E98 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A93E9C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

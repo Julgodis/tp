@@ -13,12 +13,12 @@ lbl_80C49918:
 /* 80C49944 0000002C  98 1F 05 E9 */	stb r0, 0x5e9(r31)
 /* 80C49948 00000030  48 00 00 70 */	b lbl_80C499B8
 lbl_80C4994C:
-/* 80C4994C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C49950 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C4994C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C49950 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C49954 00000008  88 9F 05 EB */	lbz r4, 0x5eb(r31)
 /* 80C49958 0000000C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C4995C 00000010  7C 05 07 74 */	extsb r5, r0
-/* 80C49960 00000014  4B FF E1 39 */	bl isSwitch__10dSv_info_cCFii
+/* 80C49960 00000014  4B FF E1 39 */	bl _unresolved
 /* 80C49964 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80C49968 0000001C  41 82 00 50 */	beq lbl_80C499B8
 /* 80C4996C 00000020  88 1F 05 EA */	lbz r0, 0x5ea(r31)
@@ -37,7 +37,7 @@ lbl_80C4998C:
 /* 80C4999C 00000010  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80C499A0 00000014  38 E0 00 00 */	li r7, 0
 /* 80C499A4 00000018  39 00 00 01 */	li r8, 1
-/* 80C499A8 0000001C  4B FF E0 F1 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80C499A8 0000001C  4B FF E0 F1 */	bl _unresolved
 /* 80C499AC 00000020  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80C499B0 00000024  60 00 00 02 */	ori r0, r0, 2
 /* 80C499B4 00000028  B0 1F 00 FA */	sth r0, 0xfa(r31)

@@ -7,22 +7,22 @@ lbl_80C5C27C:
 /* 80C5C290 00000014  80 63 05 A8 */	lwz r3, 0x5a8(r3)
 /* 80C5C294 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80C5C298 0000001C  41 82 00 24 */	beq lbl_80C5C2BC
-/* 80C5C29C 00000020  4B FF FB 9D */	bl ChkUsed__9cBgW_BgIdCFv
+/* 80C5C29C 00000020  4B FF FB 9D */	bl _unresolved
 /* 80C5C2A0 00000024  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C5C2A4 00000028  41 82 00 18 */	beq lbl_80C5C2BC
-/* 80C5C2A8 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C5C2AC 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C5C2A8 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C5C2AC 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C5C2B0 00000034  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C5C2B4 00000038  80 9F 05 A8 */	lwz r4, 0x5a8(r31)
-/* 80C5C2B8 0000003C  4B FF FB 81 */	bl Release__4cBgSFP9dBgW_Base
+/* 80C5C2B8 0000003C  4B FF FB 81 */	bl _unresolved
 lbl_80C5C2BC:
 /* 80C5C2BC 00000000  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80C5C2C0 00000004  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C5C2C4 00000008  54 00 36 BA */	rlwinm r0, r0, 6, 0x1a, 0x1d
-/* 80C5C2C8 0000000C  3C 80 00 00 */	lis r4, l_arcName@ha
-/* 80C5C2CC 00000010  38 84 00 00 */	addi r4, r4, l_arcName@l
+/* 80C5C2C8 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C5C2CC 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C5C2D0 00000014  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C5C2D4 00000018  4B FF FB 65 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C5C2D4 00000018  4B FF FB 65 */	bl _unresolved
 /* 80C5C2D8 0000001C  38 60 00 01 */	li r3, 1
 /* 80C5C2DC 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C5C2E0 00000024  80 01 00 14 */	lwz r0, 0x14(r1)

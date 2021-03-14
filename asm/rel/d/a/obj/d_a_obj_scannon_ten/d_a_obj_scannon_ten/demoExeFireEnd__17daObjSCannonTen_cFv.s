@@ -6,16 +6,16 @@ lbl_80CCC37C:
 /* 80CCC38C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CCC390 00000014  48 00 03 BD */	bl exeEmtSmoke__17daObjSCannonTen_cFv
 /* 80CCC394 00000018  38 7F 05 78 */	addi r3, r31, 0x578
-/* 80CCC398 0000001C  3C 80 00 00 */	lis r4, lit_4228@ha
-/* 80CCC39C 00000020  C0 24 00 00 */	lfs f1, lit_4228@l(r4)
-/* 80CCC3A0 00000024  4B FF EF 59 */	bl checkPass__12J3DFrameCtrlFf
+/* 80CCC398 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CCC39C 00000020  C0 24 00 00 */	lfs f1, 0x0000(r4)
+/* 80CCC3A0 00000024  4B FF EF 59 */	bl _unresolved
 /* 80CCC3A4 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80CCC3A8 0000002C  41 82 00 18 */	beq lbl_80CCC3C0
-/* 80CCC3AC 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CCC3B0 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCC3AC 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCC3B0 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CCC3B4 00000038  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CCC3B8 0000003C  80 9F 05 E4 */	lwz r4, 0x5e4(r31)
-/* 80CCC3BC 00000040  4B FF EF 3D */	bl cutEnd__16dEvent_manager_cFi
+/* 80CCC3BC 00000040  4B FF EF 3D */	bl _unresolved
 lbl_80CCC3C0:
 /* 80CCC3C0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CCC3C4 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

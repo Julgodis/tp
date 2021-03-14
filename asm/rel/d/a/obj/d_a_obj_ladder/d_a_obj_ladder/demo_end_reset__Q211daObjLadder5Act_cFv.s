@@ -8,15 +8,15 @@ lbl_8058D544:
 /* 8058D55C 00000018  88 03 06 1E */	lbz r0, 0x61e(r3)
 /* 8058D560 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8058D564 00000020  41 82 00 30 */	beq lbl_8058D594
-/* 8058D568 00000024  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8058D56C 00000028  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8058D568 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8058D56C 00000028  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8058D570 0000002C  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 8058D574 00000030  A8 9E 06 1C */	lha r4, 0x61c(r30)
-/* 8058D578 00000034  4B FF FB C1 */	bl endCheck__16dEvent_manager_cFs
+/* 8058D578 00000034  4B FF FB C1 */	bl _unresolved
 /* 8058D57C 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 8058D580 0000003C  41 82 00 14 */	beq lbl_8058D594
 /* 8058D584 00000040  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 8058D588 00000044  4B FF FB B1 */	bl reset__14dEvt_control_cFv
+/* 8058D588 00000044  4B FF FB B1 */	bl _unresolved
 /* 8058D58C 00000048  38 00 00 00 */	li r0, 0
 /* 8058D590 0000004C  98 1E 06 1E */	stb r0, 0x61e(r30)
 lbl_8058D594:

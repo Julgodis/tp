@@ -2,13 +2,13 @@ lbl_80725C80:
 /* 80725C80 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80725C84 00000004  7C 08 02 A6 */	mflr r0
 /* 80725C88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80725C8C 0000000C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80725C90 00000010  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80725C8C 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80725C90 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80725C94 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80725C98 00000018  C0 03 06 80 */	lfs f0, 0x680(r3)
 /* 80725C9C 0000001C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 80725CA0 00000000  40 80 00 18 */	bge lbl_80725CB8
-/* 80725CA4 00000004  4B FF FE 55 */	bl fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80725CA4 00000004  4B FF FE 55 */	bl _unresolved
 /* 80725CA8 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 80725CAC 0000000C  40 82 00 0C */	bne lbl_80725CB8
 /* 80725CB0 00000010  38 60 00 01 */	li r3, 1

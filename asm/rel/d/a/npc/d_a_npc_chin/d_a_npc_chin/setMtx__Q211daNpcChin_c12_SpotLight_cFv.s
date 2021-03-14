@@ -8,16 +8,16 @@ lbl_8098C000:
 /* 8098C018 00000018  2C 00 00 01 */	cmpwi r0, 1
 /* 8098C01C 0000001C  40 82 00 30 */	bne lbl_8098C04C
 /* 8098C020 00000020  38 7F 00 1C */	addi r3, r31, 0x1c
-/* 8098C024 00000024  4B FF FE 55 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 8098C024 00000024  4B FF FE 55 */	bl _unresolved
 /* 8098C028 00000028  38 7F 00 28 */	addi r3, r31, 0x28
-/* 8098C02C 0000002C  4B FF FE 4D */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 8098C02C 0000002C  4B FF FE 4D */	bl _unresolved
 /* 8098C030 00000030  38 7F 00 30 */	addi r3, r31, 0x30
-/* 8098C034 00000034  4B FF FE 45 */	bl scaleM__14mDoMtx_stack_cFRC4cXyz
-/* 8098C038 00000038  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha
-/* 8098C03C 0000003C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 8098C034 00000034  4B FF FE 45 */	bl _unresolved
+/* 8098C038 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8098C03C 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8098C040 00000040  80 9F 00 00 */	lwz r4, 0(r31)
 /* 8098C044 00000044  38 84 00 24 */	addi r4, r4, 0x24
-/* 8098C048 00000048  4B FF FE 31 */	bl PSMTXCopy
+/* 8098C048 00000048  4B FF FE 31 */	bl _unresolved
 lbl_8098C04C:
 /* 8098C04C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8098C050 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
