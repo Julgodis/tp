@@ -23,6 +23,7 @@ import time
 import click
 import asyncio
 import concurrent.futures
+import random
 
 import globals as g
 from exception import Dol2ZelException
@@ -33,6 +34,7 @@ from rich.progress import Progress
 from rich.tree import Tree
 
 from data import *
+from symbol_table import GlobalSymbolTable
 
 import baserom
 import analyze
@@ -50,6 +52,485 @@ import merge_symbols
 
 import asyncio
 from functools import wraps
+
+from multiprocessing import Manager, Pool, Queue, TimeoutError
+from context import Context, MainContext
+from typing import List, Any
+from queue import Empty
+
+def multiprocess_temp(context, shared_file):
+    try: 
+        shared = {}
+        if shared_file:
+            with open(shared_file, "rb") as file:
+                shared = pickle.load(file)
+
+        result = callback(context, *data, **shared)
+        context.complete()
+    except:
+        exc_type, exc_value, tb = sys.exc_info()
+        tb = rich.traceback.Traceback.from_exception(
+            exc_type,
+            exc_value,
+            tb.tb_next if tb else tb,
+        )
+        context.exception(tb)
+        raise
+    return result
+
+def multiprocess_execute(process_count, input_tasks, shared={}, callback=None) -> List[Any]:
+    manager = Manager()
+    input = manager.Queue()
+    output = manager.Queue()
+
+    shared_file = None
+    if len(shared) > 0:
+        shared_file = "mp_shared.p.dump"
+        with open(shared_file, "wb") as file:
+            file.write(pickle.dumps(shared))
+
+
+    processors = [ 
+        Process(target=multiprocess_temp, args=(Context(input=input, output=output), shared_file))
+        for i in range(process_count)
+    ]
+
+    for process in processors:
+        process.start()
+
+    for process in processors:
+        process.join()
+
+
+    tasks = []
+    live_tasks = []
+
+
+    for i, input_task in enumerate(input_tasks):
+        context = Context(index=i, output=queue, data=)
+        task = pool.apply_async(multiprocess_temp, )
+        tasks.append(task)
+        live_tasks.append((i, task))
+
+    while True:
+        live_tasks = [(i,r) for i, r in live_tasks if not r.ready()]
+        if len(live_tasks) == 0:
+            break
+
+        try:            
+            command = queue.get(block=True,timeout=1)
+            processing = True
+            if callback:
+                processing = callback(command[0], *command[1])
+            if processing:
+                if command[0] == 'debug':
+                    g.LOG.debug(*command[1])
+                elif command[0] == 'warning':
+                    g.LOG.warning(*command[1])
+                elif command[0] == 'error':
+                    g.LOG.error(*command[1])
+                elif command[0] == 'complete':
+                    pass
+                elif command[0] == 'exception':
+                    try:
+                        for task in tasks:
+                            task.get()
+                    except: 
+                        g.LOG.error(f"multiprocess exception:")
+                        g.CONSOLE.print(command[1][1])
+                        sys.exit(1)
+                else:
+                    g.LOG.warning(f"unknown command: {command}")
+        except Empty:
+            pass
+        
+    results = [task.get() for task in tasks]
+    return results
+
+def multiprocess_execute_func(process_count, func, data, shared={}, callback=None):
+    return multiprocess_execute(process_count, [ (func, x) for x in data ], shared=shared, callback=callback)
+
+def multiprocess_execute_func_progress(process_count, func, data, shared={}):
+    with Progress(console=CONSOLE, transient=True, refresh_per_second=1) as progress:
+        task = progress.add_task(f"processing...", total=len(data))
+
+        def callback(command, *args):
+            if command == 'complete' or command == 'exception':
+                progress.update(task, advance=1)
+            return True
+
+        return multiprocess_execute(
+            process_count, 
+            [ (func, x) for x in data ], 
+            shared=shared,
+            callback=callback)
+
+def main(debug, game_path):
+    asm_path = Path("asm/")
+    lib_path = Path("libs/")
+    src_path = Path("src/")
+    rel_path = Path("rel/")
+
+    process_count = 8
+
+
+    g.CONSOLE.print("")
+    g.CONSOLE.rule(f"dol2zel v{g.DOL2ZEL_VERSION}")
+    g.CONSOLE.print("")
+
+    if debug:
+        g.LOG.setLevel(logging.DEBUG)
+
+    # check if the game folder exists
+    assert game_path
+    game_path.resolve()
+    if not game_path.exists():
+        g.LOG.error(f"invalid path to game directory, '{game_path}'")
+        sys.exit(1)
+
+    # check if the 'main.dol' and 'frameworkF.map' exists
+    baserom_path = util.check_file(game_path, "main.dol")
+    framework_path = util.check_file(
+        game_path, "map/Final/Release/frameworkF.map")
+
+    g.LOG.debug(f"found 'main.dol' at '{baserom_path}'")
+    g.BASEROM_PATH = baserom_path
+    g.LOG.debug(f"found 'frameworkF.map' at '{framework_path}'")
+    g.FRAMEWORKF_PATH = framework_path
+
+    # search for '.map' files
+    map_path = util.check_dir(game_path, "map/Final/Release")
+    maps_path = [x for x in util.get_files_with_ext(
+        map_path, ".map") if x.name != "frameworkF.map"]
+    g.LOG.debug(f"found {len(maps_path)} map files at '{map_path}'")
+    g.MAP_PATH = map_path
+    g.MAPS_PATH = maps_path
+
+    # search for '.rel' files
+    rel_path = util.check_dir(game_path, "rel/Final/Release")
+    rels_path = util.get_files_with_ext(rel_path, ".rel")
+    rels_archive_path = util.check_file(game_path, "RELS.arc")
+    g.LOG.debug(f"found {len(rels_path)} RELs at '{rel_path}'")
+    g.REL_PATH = rel_path
+    g.RELS_PATH = rels_path
+
+    # read 'main.dol'
+    with g.BASEROM_PATH.open('rb') as file:
+        g.BASEROM_DATA = bytearray(file.read())
+        g.DOL = dollib.read(g.BASEROM_DATA)
+
+        g.LOG.debug(f"'{g.BASEROM_PATH}' sections:")
+        for section in g.DOL.sections:
+            g.LOG.debug(
+                f"\t{section.type:<4} 0x{section.offset:08X} 0x{section.addr:08X} 0x{section.size:06X} ({section.size} bytes)")
+
+    # make sure the checksum for the 'main.dol' match
+    baserom.sha1_check()
+
+    # loads rels
+    g.MAPS = {}
+    for map_filepath in maps_path:
+        g.MAPS[map_filepath.name.lower()] = map_filepath
+
+    g.RELS = {}
+    for rel_filepath in rels_path:
+        with rel_filepath.open('rb') as file:
+            rel = rellib.read(bytearray(file.read()))
+            rel.path = rel_filepath
+            rel.map = g.MAPS[rel_filepath.name.lower().replace(".rel", ".map")]
+            g.RELS[rel.index] = rel
+
+    # extract rels from 'RELs.arc'
+    found_rel_count = 0
+    with rels_archive_path.open('rb') as file:
+        rarc = arclib.read(file.read())
+        for depth, file in rarc.files_and_folders:
+            if not isinstance(file, arclib.File):
+                continue
+            
+            if file.name.endswith(".rel"):
+                rel = rellib.read(file.data)
+                rel.path = Path(file.name)
+                rel.map = g.MAPS[file.name.lower().replace(".rel", ".map")]
+                g.RELS[rel.index] = rel
+                found_rel_count += 1
+        
+    g.LOG.debug(f"found {found_rel_count} RELs in '{rels_archive_path}'")
+
+    #
+    select_modules = []
+    if not select_modules:
+        gen_modules = [0] + [ x for x in g.RELS.keys() ]
+    else:
+        gen_modules = [ int(x) for x in select_modules ]
+    gen_modules.sort()
+
+    # create '.dol' executable sections
+    executable_sections = [
+        # symbol_finder expects the first section to be a "null" section
+        g.ExecutableSection("null", 0, 0, 0, None, [], {})
+    ]
+    for section in g.DOL.sections:
+        cs = []
+        if section.type == "text":
+            if section.name == ".init":
+                # TODO: Comment why!
+                cs.append((0x80003100 - section.addr,
+                            0x800035e4 - section.addr))
+                cs.append((0x80005518 - section.addr,
+                            0x80005544 - section.addr))
+            else:
+                cs.append((0, section.size))
+
+        executable_section = g.ExecutableSection(
+            section.name, section.addr, section.size, 0, section.data, cs, {})
+        executable_sections.append(executable_section)
+
+
+    # find symbols for all modules
+    module_tasks = []
+    module_tasks.append((0, None, g.FRAMEWORKF_PATH, executable_sections, {}))
+
+    rels_items = list(g.RELS.items())
+    rels_items.sort(key=lambda x: x[0])
+    for index, rel in rels_items:
+        # TODO:
+        #break
+        base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
+
+        relocations = defaultdict(list)
+        executable_sections = []
+        for section in rel.sections:
+            offset = section.offset
+            section.addr += base_addr
+            for relocation in section.relocations:
+                relocations[section.index].append(relocation)
+
+            cs = []
+            if section.executable_flag:
+                cs.append((0, section.length))
+
+            exe_section = g.ExecutableSection(
+                section.name, section.addr, section.length, base_addr,
+                section.data, cs, {})
+            exe_section.raw_offset = offset
+            executable_sections.append(exe_section)
+
+        #g.LOG.debug(f"{index:3}: {base_addr:08X} {rel.path.name}")
+        #for section in executable_sections:
+        #    if section.local_size > 0:
+        #        name = section.name
+        #        if not name:
+        #            name = ".unknown"
+        #        g.LOG.debug(f"\t{name:<16} {section.local_addr:08X} {section.local_addr+section.local_size:08X} {section.local_size:04X}")
+
+        name = rel.path.name.replace(".rel", ".o")
+        module_tasks.append((index, name,  rel.map, executable_sections, relocations))
+
+    modules = multiprocess_execute_func_progress(process_count, symbol_finder.search, module_tasks)
+
+    start_time = time.time()
+    symboltable = GlobalSymbolTable() 
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for section in tu.sections.values():
+                    symboltable.add_section(module, section)
+
+    #merge_tasks = [(module, symboltable) for module in modules]
+    #multiprocess_execute_func(process_count, module_merge_symbols, merge_tasks)
+
+    main_context = MainContext(0, None, None)
+
+    for module in modules:
+        libs = list(module.libraries.values())
+        add_list, remove_list = merge_symbols.execute(main_context, libs)
+        for symbol in remove_list:
+            symboltable.remove_symbol(symbol)
+        for symbol in add_list:
+            symboltable.add_symbol(symbol)
+    
+    for module in modules:
+        libs = list(module.libraries.values())
+        symbol_naming.execute(main_context, libs)
+
+
+
+    #
+
+    require_resolve = []
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for section in tu.sections.values():
+                    for symbol in section.symbols:
+                        if isinstance(symbol, VirtualTable):
+                            require_resolve.append((section, symbol))
+                        elif isinstance(symbol, ReferenceArray):
+                            require_resolve.append((section, symbol))
+
+    # Find reference arrays
+    # TODO: MOVE
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for section in tu.sections.values():
+                    for symbol in section.symbols:
+                        if not isinstance(symbol, InitData) and not isinstance(symbol, Integer):
+                            continue
+
+                        if len(symbol.data) % 4 != 0:
+                            continue
+
+                        count = len(symbol.data) // 4
+                        values = list(struct.unpack(
+                            ">" + "I" * count, symbol.data))
+                        is_symbols = [not not symboltable[x] for x in values]
+                        if not any(is_symbols):
+                            relocations = section.relocations
+                            is_relocations = [x in relocations for x in range(symbol.start, symbol.end, 4)]
+                            if not any(is_relocations):
+                                continue
+
+                        new_symbol = ReferenceArray(
+                            symbol.identifier,
+                            symbol.addr,
+                            symbol.size,
+                            data=symbol.data,
+                            padding=symbol.padding,
+                            padding_data=symbol.padding_data,
+                            _module=symbol._module,
+                            _library=symbol._library,
+                            _translation_unit=symbol._translation_unit,
+                            _section=symbol._section,
+                            source=symbol.source)
+
+                        section.replace_symbol(symbol, new_symbol)
+                        symboltable.remove_symbol(symbol)
+                        symboltable.add_symbol(new_symbol)
+                        require_resolve.append((section, new_symbol))
+
+    for section, symbol in require_resolve:
+        symbol.resolve_references(main_context, symboltable, section)
+
+    for module in modules:
+        if module.index == 0:
+            base = module.libraries[None]
+            base.lib_path = src_path
+            base.asm_path = asm_path
+
+            for lib in module.libraries.values():
+                if lib.name != None:
+                    lib.lib_path = lib_path
+                    lib.asm_path = asm_path
+                    lib.mk_path = lib_path
+        else:
+            rel_name = g.RELS[module.index].path.name.replace(".rel", "")
+            for k, v in g.FOLDERS:
+                if rel_name.startswith(k):
+                    rel_name = v + rel_name
+                    break
+
+            for lib in module.libraries.values():
+                if lib.name != None:
+                    lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
+                    lib.asm_path = asm_path.joinpath(
+                        f"rel/{rel_name}/libs/")
+                    lib.mk_path = rel_path.joinpath(
+                        f"{rel_name}/libs/")
+
+            base = module.libraries[None]
+            base.name = rel_name
+            base.lib_path = rel_path
+            base.asm_path = asm_path.joinpath("rel/")
+            base.mk_path = rel_path
+
+    cpp_gen = True
+    asm_gen = True
+    no_file_generation = True
+
+    cpp_tasks = []
+    asm_tasks = []
+    for module in modules:
+        if not module.index in gen_modules:
+            continue
+
+        function_files = set()
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for sec in tu.sections.values():
+                    for symbol in sec.symbols:
+                        if not isinstance(symbol, Function):
+                            continue
+
+                        include_path = f"{tu.asm_function_path(lib)}/{symbol.identifier.label}.s"
+                        if len(include_path) > 240 or (include_path.lower() in function_files):
+                            include_path = f"func_{symbol.addr:08X}"
+
+                        symbol.include_path = Path(include_path)
+                        function_files.add(include_path.lower())
+        if cpp_gen:
+            for lib_name,lib in module.libraries.items():
+                for tu_name,tu in lib.translation_units.items():
+                    cpp_tasks.append((tu,tu.source_path(lib),))
+
+        if asm_gen:
+            function_files = set()
+            for lib in module.libraries.values():
+                for tu in lib.translation_units.values():
+                    for sec in tu.sections.values():
+                        for symbol in sec.symbols:
+                            if not isinstance(symbol, Function):
+                                continue
+                            if no_file_generation:
+                                if symbol.include_path.exists():
+                                    continue
+                            asm_tasks.append((symbol,))
+
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for section in tu.sections.values():
+                    for symbol in section.symbols:
+                        symbol.source = None
+
+    end_time = time.time()
+    print("Setup: {} seconds".format(end_time-start_time))
+
+    if len(cpp_tasks) > 0:
+        random.shuffle(cpp_tasks)
+        start_time = time.time()
+        tasks = [ (x,) for x in util.chunks(cpp_tasks, 32) ]
+        multiprocess_execute_func_progress(process_count, cpp.export_translation_unit_group, tasks, shared={
+            'symbol_table': symboltable,
+        })   
+        end_time = time.time()
+        print("C++ Generation: {} seconds".format(end_time-start_time))
+
+    if len(asm_tasks) > 0:
+        random.shuffle(asm_tasks)
+        start_time = time.time()
+        tasks = [ (x,) for x in util.chunks(asm_tasks, 512) ]
+        multiprocess_execute_func_progress(process_count, cpp.export_function, tasks, shared={
+            'symbol_table': symboltable,
+            'no_file_generation': no_file_generation,
+        })   
+        end_time = time.time()
+        print("ASM Generation: {} seconds".format(end_time-start_time))
+
+    sys.exit(1)
+
+
+
+
+main(debug = True, game_path = Path("game/"))
+
+#
+#
+#
+#
+#
+#
 
 
 def coro(f):
@@ -261,43 +742,38 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
             with cache_path.open('rb') as file:
                 modules = pickle.load(file)
 
+        symboltable = GlobalSymbolTable()
+        
         for module in modules:
             for lib in module.libraries.values():
                 for tu in lib.translation_units:
                     for section in tu.sections:
-                        for symbol in section.symbols:
-                            g.register_symbol(symbol)
+                        symboltable.add_section(module, section)
 
         for module in modules:
             libs = list(module.libraries.values())
             add_list, remove_list = merge_symbols.execute(libs)
             for symbol in remove_list:
-                g.unregister_symbol(symbol)
+                symboltable.remove_symbol(symbol)
             for symbol in add_list:
-                g.register_symbol(symbol)
+                symboltable.add_symbol(symbol)
 
         for module in modules:
             libs = list(module.libraries.values())
             symbol_naming.execute(libs)
 
+
         cpp_tasks = []
         for module in modules:
-            symbol_map = {}
             require_resolve = []
             for lib in module.libraries.values():
                 for tu in lib.translation_units:
                     for section in tu.sections:
                         for symbol in section.symbols:
-                            symbol_map[symbol.addr] = symbol
                             if isinstance(symbol, VirtualTable):
                                 require_resolve.append(symbol)
                             elif isinstance(symbol, ReferenceArray):
                                 require_resolve.append(symbol)
-
-            ait = IntervalTree(
-                [Interval(x.start, x.end, x)
-                 for x in symbol_map.values() if x.size > 0]
-            )
 
             # Find reference arrays
             # TODO: MOVE
@@ -333,12 +809,8 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                                 source=symbol.source)
 
                             section.replace_symbol(symbol, new_symbol)
-                            g.unregister_symbol(symbol)
-                            g.register_symbol(new_symbol)
-
-                            symbol_map[symbol.addr] = new_symbol
-                            ait.remove_overlap(symbol.start, symbol.end)
-                            ait.addi(new_symbol.start,new_symbol.end, new_symbol)
+                            symboltable.remove_symbol(symbol)
+                            symboltable.add_symbol(new_symbol)
                             require_resolve.append(new_symbol)
 
             for symbol in require_resolve:
@@ -349,8 +821,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                 base.lib_path = src_path
                 base.asm_path = asm_path
                 if (cpp_gen or asm_gen) and module.index in gen_modules:
-                    cpp_tasks += cpp.export_all({None: base},
-                                            symbol_map, ait, cpp_gen)
+                    cpp_tasks += cpp.export_library(base, symboltable, cpp_gen)
 
                 for lib in module.libraries.values():
                     if lib.name != None:
@@ -358,8 +829,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                         lib.asm_path = asm_path
                         lib.mk_path = lib_path
                         if (cpp_gen or asm_gen) and module.index in gen_modules:
-                            cpp_tasks += cpp.export_all({lib.name: lib},
-                                                    symbol_map, ait, cpp_gen)
+                            cpp_tasks += cpp.export_library(lib, symboltable, cpp_gen)
             else:
                 rel_name = g.RELS[module.index].path.name.replace(".rel", "")
                 for k, v in g.FOLDERS:
@@ -375,8 +845,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                         lib.mk_path = rel_path.joinpath(
                             f"{rel_name}/libs/")
                         if (cpp_gen or asm_gen) and module.index in gen_modules:
-                            cpp_tasks += cpp.export_all({lib.name: lib},
-                                                    symbol_map, ait, cpp_gen)
+                            cpp_tasks += cpp.export_library(lib, symboltable, cpp_gen)
 
                 base = module.libraries[None]
                 base.name = rel_name
@@ -384,8 +853,7 @@ async def rel_build(asm_path, lib_path, src_path, rel_path, mk_gen, cpp_gen, asm
                 base.asm_path = asm_path.joinpath("rel/")
                 base.mk_path = rel_path
                 if (cpp_gen or asm_gen) and module.index in gen_modules:
-                    cpp_tasks += cpp.export_all({None: base},
-                                            symbol_map, ait, cpp_gen)
+                    cpp_tasks += cpp.export_library(base, symboltable, cpp_gen)
 
         if mk_gen:
             for module in modules:

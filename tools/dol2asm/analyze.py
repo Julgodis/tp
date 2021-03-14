@@ -1,15 +1,12 @@
-import globals as g
-import rich
 import pickle
 import util
-from rich.progress import Progress
 from disassembler import AccessCollector, Access
 from pathlib import Path
 from globals import ExecutableSection
 from typing import Dict
+from context import Context
 
-
-def execute(module_id: int, sections: Dict[str, ExecutableSection], cache=True) -> Dict[int, Access]:
+def execute(context: Context, module_id: int, sections: Dict[str, ExecutableSection], cache=True) -> Dict[int, Access]:
     """Each code segment provided by the sections will be search through 
     to find accesses to possible labels. These accesses are necessary as the linker
     map may include all symbols. An example is symbols in '.init' section where
@@ -26,22 +23,16 @@ def execute(module_id: int, sections: Dict[str, ExecutableSection], cache=True) 
             return pickle.load(input)
 
     accesses = dict()
-    with Progress(console=g.CONSOLE, transient=True, refresh_per_second=4) as progress:
-        for section in sections:
-            for start, stop in section.code_segments:
-                size = stop - start
-                data = section.data[start:stop]
-                task_id = progress.add_task(
-                    "%-14s 0x%08X-0x%08X [0]" % (section.name, start, stop), total=size)
+    for section in sections:
+        for start, stop in section.code_segments:
+            size = stop - start
+            data = section.data[start:stop]
 
-                collector = AccessCollector(sections)
-                for i, addr in collector.execute_generator(start + section.local_addr, data, size):
-                    task = progress._tasks[task_id]
-                    count = (addr - section.local_addr)
-                    progress.update(task_id, description="%-14s 0x%08X-0x%08X [%i]" % (
-                        section.name, start, stop, i), advance=count - task.completed)
+            collector = AccessCollector(sections)
+            for i, addr in collector.execute_generator(start + section.local_addr, data, size):
+                pass
 
-                accesses.update(collector.accesses)
+            accesses.update(collector.accesses)
 
     if cache:
         util._create_dirs_for_file(cache_path)

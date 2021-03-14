@@ -49,7 +49,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
             identifier,
             symbol.addr,
             symbol.size,
-            section=section,
             data=data,
             padding=len(padding_data),
             padding_data=padding_data,
@@ -112,7 +111,11 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 strings.append(string_from_data(
                     symbol.addr + x_offset, bytes(x + [0])))
                 x_offset += len(x) + 1
-            return [StringBase.create(symbol, strings, data, padding_data, section)]
+            return [StringBase.create(symbol, strings, data, padding_data)]
+
+    if section.name == ".init":
+        if symbol.name == "_rom_copy_info" or symbol.name == "_bss_init_info":
+            return [LinkerGenerated(identifier, symbol.addr, symbol.size)]
 
     # both .ctors and .dtors symbols are special
     if section.name == ".ctors":
@@ -133,11 +136,9 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
             return [
                 ReferenceArray(identifier, symbol.addr, symbol.size,
                                data=data,
-                               section=section,
                                source=f".ctors0/{symbol.source}"),
                 ReferenceArray(Identifier("_ctors", symbol.addr + 4, "_ctors"), symbol.addr + 4, len(_ctors_data),
                                data=_ctors_data,
-                               section=section,
                                source=f".ctors1/{symbol.source}"),
             ]
 
@@ -145,7 +146,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
             __destroy_global_chain_reference = ReferenceArray(identifier, symbol.addr, symbol.size,
-                                                              section=section,
                                                               data=data,
                                                               source=f".dtors0/{symbol.source}")
 
@@ -157,7 +157,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 InitData(Identifier('pad', symbol.addr + 4, None),
                          symbol.addr + 4,
                          len(padding_data),
-                         section=section,
                          data=padding_data,
                          source=f".dtors0/padding/{symbol.source}")
             ]
@@ -166,7 +165,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
             assert len(data) == 4
             assert len(padding_data) == 0
             return [ReferenceArray(identifier, symbol.addr, symbol.size,
-                                   section=section,
                                    data=data,
                                    source=f".dtors1/{symbol.source}")]
 
@@ -193,7 +191,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 return [Float32(identifier, symbol.addr, symbol.size,
                         value_type="f32",
                         values=values,
-                        section=section,
                         data=data,
                         padding=len(padding_data),
                         padding_data=padding_data,
@@ -224,7 +221,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 return [Float64(identifier, symbol.addr, symbol.size,
                             value_type="f64",
                             values=values,
-                            section=section,
                             data=data,
                             padding=len(padding_data),
                             padding_data=padding_data,
@@ -240,7 +236,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 return [Integer(identifier, symbol.addr, symbol.size,
                     value_type="u32",
                     values=[f"0x{value:08X}"],
-                    section=section,
                     data=data,
                     padding=len(padding_data),
                     padding_data=padding_data,
@@ -256,7 +251,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
                 return [Integer(identifier, symbol.addr, symbol.size,
                     value_type="u16",
                     values=[f"0x{value:04X}"],
-                    section=section,
                     data=data,
                     padding=len(padding_data),
                     padding_data=padding_data,
@@ -264,7 +258,6 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
 
     # otherwise export it as raw initialized data
     return [InitData(identifier, symbol.addr, symbol.size,
-                     section=section,
                      data=data,
                      padding=len(padding_data),
                      padding_data=padding_data,
@@ -288,17 +281,27 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> List[Symbol]
     # TODO: remove the exception and do a "real" bounds-check
     data = bytes()
     padding_data = bytes()
+    padding_symbols = []
     try:
-        data = section.getData(first.start, first.end)
+        data = section.get_data(first.start, first.end)
         if first.padding > 0:
-            padding_data = section.getData(
+            padding_data = bytes()
+            padding_data = section.get_data(
                 first.end, first.end+first.padding)
+            if first.name != "__init_cpp_exceptions_reference":
+                if not all([x == 0 for x in padding_data]):
+                    padding_symbols += [InitData(Identifier("pad", first.end, None), 
+                                            addr=first.end, 
+                                            size=first.padding,
+                                            data=padding_data,
+                                            source=first.source)]
+                    padding_data = bytes()
         assert len(data) == first.size
     except IndexError:
         raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
                                (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
 
-    return symbol_from_data(section, identifier, first.addr, data, padding_data, first)
+    return symbol_from_data(section, identifier, first.addr, data, padding_data, first) + padding_symbols
 
 
 def groups_from_symbols(symbols: List[linker_map.Symbol]) -> List[List[linker_map.Symbol]]:

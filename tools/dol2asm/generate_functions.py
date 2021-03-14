@@ -180,4 +180,8 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
             return GlobalFunction("load", lg_value, lg_type, lg_section, group, section)
     """
 
-    return Function.create(section, group)
+    first = group[0]
+    if first.size <= 0:
+        return []
+
+    return [Function.create(section, group)]

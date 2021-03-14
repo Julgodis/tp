@@ -1,4 +1,3 @@
-import globals as g
 import util
 from symbols import *
 from collections import defaultdict
@@ -80,43 +79,20 @@ def nameFix(label_collisions, reference_collisions, symbol):
     label_collisions[symbol.identifier.label] += 1
     reference_collisions[symbol.identifier.reference] += 1
 
-def execute(libraries):
+def execute(context, libraries):
     label_collisions = defaultdict(int)
     reference_collisions = defaultdict(int)
 
     for lib in libraries:
-        for tu in lib.translation_units:
-            for sec in tu.sections:
+        for tu in lib.translation_units.values():
+            for sec in tu.sections.values():
                 for symbol in sec.symbols:
                     if isinstance(symbol, StringBaseData):
                         tu.using_string_base = True
                     nameFix(label_collisions, reference_collisions, symbol)
 
-    """
-    for section in g.SECTIONS.values():
-        if section.binaryExport:
-            for symbol in section.symbols:
-                symbol.name = Name("data", symbol.addr, symbol.name)
-                symbol.symbol_data.name = symbol.name
-                util.escape_name(symbol.name)
-                label_collisions[symbol.name.label] += 1
-                reference_collisions[symbol.name.reference] += 1
-
-        # SectionSymbol doesn't have updateName 
-        if hasattr(symbol, 'updateName'):
-            symbol.updateName()
-    """
-
     for lib in libraries:
-        for tu in lib.translation_units:
-            for sec in tu.sections:
+        for tu in lib.translation_units.values():
+            for sec in tu.sections.values():
                 for symbol in sec.symbols:
                     nameCollision(label_collisions, reference_collisions, tu.name, symbol)
-
-    """
-    for section in g.SECTIONS.values():
-        if section.binaryExport:
-            section_name = section.name.replace(".","_")
-            for symbol in section.symbols:
-                nameCollision(label_collisions, reference_collisions, section_name, symbol)
-    """

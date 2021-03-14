@@ -76,6 +76,7 @@ class Section:
     length: int = 0 # Length in bytes of the section. If this is zero, this entry is skipped.
 
     # not part of the section in the rel-file
+    addr: int = None
     name: Optional[str] = None
     data: Optional[bytes] = field(default=None,repr=False)
     relocations: List[Relocation] = field(default_factory=list,repr=False)
@@ -124,6 +125,9 @@ def read_section(index, buffer):
     offset = header[0] & ~3
     length = header[1]
 
+    if length == 0x065C:
+        print(hex(offset))
+
     return Section(index, offset, flag0, flag1, length)
 
 def read(buffer):
@@ -152,16 +156,37 @@ def read(buffer):
     for i in range(rel.numSections):
         section_offset = 0x8 * i
         section = read_section(i, section_buffer[section_offset:])
-        if section.offset > 0 and section.length > 0:
-            section.data = buffer[section.offset:][:section.length]
         rel.sections.append(section)
+
+    addr = 0
+    for section in rel.sections:
+        section.offset_padding = 0
+        section.first_padding = 0
+        section.addr = addr
+        addr += section.length
+
+    for section in reversed(rel.sections):
+        if section.offset > 0 and section.length > 0:
+            offset_aligned = (section.offset + 15) & ~15
+            shift = offset_aligned - section.offset
+            section.offset_padding += 0#shift
+            addr_aligned = (section.addr + 7) & ~7
+            shift = addr_aligned - section.addr
+            section.first_padding += 0#shift
+            break
+
+    for section in rel.sections:
+        if section.offset > 0 and section.length > 0:
+            section.data = buffer[section.offset:][:section.length+section.first_padding+section.offset_padding]
 
     for bss_section in rel.sections[1:]:
         if bss_section.data == None:
-            bss_section.offset = (last_end + 31) & ~31
-        last_end = bss_section.offset + bss_section.length
+            bss_section.addr = (last_end + 7) & ~7
+        last_end = bss_section.addr + bss_section.length
             
-
+    for section in rel.sections:
+        if rel.index==8:
+            g.LOG.debug(f"{section.addr+0x80460ac0:08X} {section.addr:08X}+{section.first_padding:02X}+{section.offset_padding:02X} {section.offset:08X} {section.length:04X}")
 
     rel.relocations = []
     imp_buffer = buffer[rel.impOffset:]

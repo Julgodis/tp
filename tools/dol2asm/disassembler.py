@@ -258,6 +258,9 @@ class Disassembler:
         self.r2_addr = 0x80459A00
 
     def is_label_candidate(self, addr):
+        if len(self.sections) == 0:
+            return True
+
         for section in self.sections:
             if addr in section:
                 if len(section.code_segments):

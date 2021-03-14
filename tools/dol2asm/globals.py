@@ -80,6 +80,8 @@ class ExecutableSection:
     data: bytearray = field(repr=False)
     code_segments: List[Tuple[int,int]] = field(default_factory=list)
     relocations: Dict[int, "relib.Relocation"] = field(default_factory=dict,repr=False)
+    first_padding: int = 0
+    offset_padding: int = 0
 
     def __contains__(self, addr):
         return addr >= self.local_addr and addr < self.local_addr + self.local_size

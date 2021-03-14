@@ -1,14 +1,14 @@
-import globals as g
 import os
 import re
 import rich
+import globals
 from rich.progress import Progress
 from typing import Optional, List, Tuple
 from dataclasses import dataclass, field
 from exception import *
 from collections import defaultdict
 from pathlib import Path
-
+from context import Context
 
 @dataclass
 class Symbol:
@@ -22,6 +22,7 @@ class Symbol:
     is_function: bool = False
     source: str = None
     access: "disassembler.Access" = None
+    first_padding: int = 0
 
     @property
     def start(self):
@@ -70,7 +71,7 @@ SECTION_NAME_ORDER = [
 ]
 
 
-def execute(module_id: int, linker_map_path: Path, executable_sections, base_folder=True):
+def execute(context: Context, module_id: int, linker_map_path: Path, executable_sections, base_folder=True):
     """Read the linker map file to get symbols and section names."""
 
     sections = dict()
@@ -123,12 +124,12 @@ def execute(module_id: int, linker_map_path: Path, executable_sections, base_fol
                 last_section = executable_sections[i - 1]
                 name_index = SECTION_NAME_ORDER.index(last_section.name)
                 section.name = SECTION_NAME_ORDER[name_index + 1]
-                g.LOG.warning(
-                    f"section name could not be determine using the map file, using the next name instead '{section.name}'")
+                context.warning(f"section name could not be determine using the map file, using the next name instead '{section.name}'")
                 assert False  # TODO
 
             sections[section.name] = Section(
                 section.name, section.local_addr, section.local_size, section.code_segments)
+            sections[section.name].first_padding = section.first_padding + section.offset_padding
             sections[section.name].data = section.data
             sections[section.name].index = i
 
@@ -158,7 +159,7 @@ def execute(module_id: int, linker_map_path: Path, executable_sections, base_fol
 
             # group libraries togather (e.g. JSystem)
             if lib:
-                for k, v in g.LIBRARY_LUT:
+                for k, v in globals.LIBRARY_LUT:
                     if lib.startswith(k):
                         lib = v + lib
                         break
@@ -167,7 +168,7 @@ def execute(module_id: int, linker_map_path: Path, executable_sections, base_fol
                 # move translation units into files (e.g. d_a_XXX -> d/a/d_a_XXX)
                 if base_folder:
                     if not lib:
-                        for k, v in g.FOLDERS:
+                        for k, v in globals.FOLDERS:
                             if obj.startswith(k):
                                 obj = v + obj
                                 break
