@@ -19,8 +19,8 @@ def sha1_check():
 
     current = sha1.hexdigest().upper()
     expected = g.BASEROM_SHA1
-    g.LOG.debug("baserom.dol SHA1: 0x{0}".format(current))
-    g.LOG.debug("expected    SHA1: 0x{0}".format(expected))
+    g.LOG.debug("provided SHA1: '{0}'".format(current))
+    g.LOG.debug("expected SHA1: '{0}'".format(expected))
 
     if current != expected:
         raise Dol2ZelException("SHA1 checksum miss-match.\n0x{0}\n0x{1}\nMake sure that the provided dol '{2}' is from '{g.GAME_NAME}'".format(current, expected, g.BASEROM_PATH))

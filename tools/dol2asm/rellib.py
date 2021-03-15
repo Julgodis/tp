@@ -125,9 +125,6 @@ def read_section(index, buffer):
     offset = header[0] & ~3
     length = header[1]
 
-    if length == 0x065C:
-        print(hex(offset))
-
     return Section(index, offset, flag0, flag1, length)
 
 def read(buffer):
@@ -184,10 +181,6 @@ def read(buffer):
             bss_section.addr = (last_end + 7) & ~7
         last_end = bss_section.addr + bss_section.length
             
-    for section in rel.sections:
-        if rel.index==8:
-            g.LOG.debug(f"{section.addr+0x80460ac0:08X} {section.addr:08X}+{section.first_padding:02X}+{section.offset_padding:02X} {section.offset:08X} {section.length:04X}")
-
     rel.relocations = []
     imp_buffer = buffer[rel.impOffset:]
     for i in range(rel.impSize // 8):
