@@ -298,9 +298,11 @@ SECTION_RODATA const u32 lit_4084 = 0x3D4CCCCD;
 SECTION_RODATA const u32 lit_4085 = 0x477FFF00;
 
 /* 80C45F80-80C45F89 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x69, 0x74, 0x61, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C45F80 = "Obj_kita";
+#pragma pop
 
 /* 80C45F8C-80C45FAC 0020+00 .data      l_daObj_Kita_Method                                          */
 u8 l_daObj_Kita_Method[32] = {

@@ -151,7 +151,7 @@ ASM_FUNCTION(Create__12daObjTrnd2_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjTrnd2_cFv) {
 	nofralloc
-#include "func_80D1CC80"
+#include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/func_80D1CC80"
 }
 #pragma pop
 

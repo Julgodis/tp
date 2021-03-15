@@ -731,12 +731,15 @@ ASM_FUNCTION(drawItem3D__Fv) {
 
 /* ############################################################################################## */
 /* 80373DD0-80373DE8 0017+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 m_Do_m_Do_graphic__stringBase0[24] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x34, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x38, 0x00, 0x46,
-	0x5F, 0x53, 0x50, 0x31, 0x32, 0x37, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80373DD0 = "F_SP124";
+SECTION_DEAD char* const stringBase_80373DD8 = "D_MN08";
+SECTION_DEAD char* const stringBase_80373DDF = "F_SP127";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80373DE7 = "";
+#pragma pop
 
 /* 80451AD8-80451ADC 0004+00 .sdata2    @5023                                                        */
 f32 m_Do_m_Do_graphic__lit_5023 = -1.0f;

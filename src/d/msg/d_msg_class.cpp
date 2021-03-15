@@ -1768,15 +1768,22 @@ ASM_FUNCTION(do_character__26jmessage_tMeasureProcessorFi) {
 
 /* ############################################################################################## */
 /* 80399610-80399660 004A+06 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_msg_d_msg_class__stringBase0[80] = {
-	0x27, 0x00, 0x73, 0x00, 0x25, 0x64, 0x00, 0x00, 0x1B, 0x43, 0x52, 0x5B, 0x25, 0x64, 0x5D, 0x00,
-	0x1B, 0x43, 0x44, 0x5B, 0x25, 0x64, 0x5D, 0x00, 0x1B, 0x43, 0x43, 0x5B, 0x25, 0x30, 0x38, 0x78,
-	0x5D, 0x1B, 0x47, 0x43, 0x5B, 0x25, 0x30, 0x38, 0x78, 0x5D, 0x00, 0x1B, 0x46, 0x58, 0x5B, 0x25,
-	0x64, 0x5D, 0x1B, 0x46, 0x59, 0x5B, 0x25, 0x64, 0x5D, 0x00, 0x1B, 0x43, 0x55, 0x5B, 0x25, 0x64,
-	0x5D, 0x00, 0x1B, 0x43, 0x4C, 0x5B, 0x25, 0x64, 0x5D, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399610 = "'";
+SECTION_DEAD char* const stringBase_80399612 = "s";
+SECTION_DEAD char* const stringBase_80399614 = "%d";
+SECTION_DEAD char* const stringBase_80399617 = "";
+SECTION_DEAD char* const stringBase_80399618 = """\x1B""CR[%d]";
+SECTION_DEAD char* const stringBase_80399620 = """\x1B""CD[%d]";
+SECTION_DEAD char* const stringBase_80399628 = """\x1B""CC[%08x]""\x1B""GC[%08x]";
+SECTION_DEAD char* const stringBase_8039963B = """\x1B""FX[%d]""\x1B""FY[%d]";
+SECTION_DEAD char* const stringBase_8039964A = """\x1B""CU[%d]";
+SECTION_DEAD char* const stringBase_80399652 = """\x1B""CL[%d]";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039965A = "\0\0\0\0\0";
+#pragma pop
 
 /* 80454A7C-80454A80 0004+00 .sdata2    @5151                                                        */
 f32 lit_5151 = 100.0f;

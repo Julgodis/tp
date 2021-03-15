@@ -930,7 +930,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AE5920"
+#include "asm/rel/d/a/npc/d_a_npc_shaman/d_a_npc_shaman/func_80AE5920"
 }
 #pragma pop
 
@@ -1304,7 +1304,7 @@ ASM_FUNCTION(__sinit_d_a_npc_shaman_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__11daNpc_Sha_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AE69E0"
+#include "asm/rel/d/a/npc/d_a_npc_shaman/d_a_npc_shaman/func_80AE69E0"
 }
 #pragma pop
 
@@ -1525,13 +1525,21 @@ SECTION_RODATA const u8 lit_4995[12] = {
 };
 
 /* 80AE6CCC-80AE6D18 004C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[76] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x50, 0x45, 0x52,
-	0x46, 0x4F, 0x52, 0x4D, 0x5F, 0x41, 0x55, 0x47, 0x55, 0x52, 0x59, 0x00, 0x41, 0x4C, 0x4C, 0x47,
-	0x45, 0x54, 0x00, 0x4E, 0x4F, 0x4C, 0x4F, 0x4F, 0x4B, 0x00, 0x52, 0x45, 0x54, 0x55, 0x52, 0x4E,
-	0x00, 0x53, 0x68, 0x61, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x6D, 0x73, 0x67, 0x4E, 0x6F, 0x00, 0x6D,
-	0x73, 0x67, 0x4E, 0x6F, 0x32, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AE6CCC = "";
+SECTION_DEAD char* const stringBase_80AE6CCD = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AE6CD9 = "PERFORM_AUGURY";
+SECTION_DEAD char* const stringBase_80AE6CE8 = "ALLGET";
+SECTION_DEAD char* const stringBase_80AE6CEF = "NOLOOK";
+SECTION_DEAD char* const stringBase_80AE6CF6 = "RETURN";
+SECTION_DEAD char* const stringBase_80AE6CFD = "Sha";
+SECTION_DEAD char* const stringBase_80AE6D01 = "prm";
+SECTION_DEAD char* const stringBase_80AE6D05 = "msgNo";
+SECTION_DEAD char* const stringBase_80AE6D0B = "msgNo2";
+SECTION_DEAD char* const stringBase_80AE6D12 = "timer";
+#pragma pop
 
 /* 80AE6D18-80AE6D24 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

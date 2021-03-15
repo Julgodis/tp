@@ -327,10 +327,12 @@ SECTION_RODATA const u8 lit_3791[8] = {
 };
 
 /* 80594F0C-80594F25 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x4A, 0x5F, 0x48, 0x79, 0x6F, 0x73, 0x61, 0x74, 0x75, 0x00, 0x4A, 0x5F, 0x48, 0x79, 0x6F, 0x75,
-	0x73, 0x61, 0x74, 0x75, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80594F0C = "J_Hyosatu";
+SECTION_DEAD char* const stringBase_80594F16 = "J_Hyousatu.bmd";
+#pragma pop
 
 /* 80594F28-80594F2C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

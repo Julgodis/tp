@@ -140,7 +140,7 @@ ASM_FUNCTION(CreateHeap__12daObjChest_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjChest_cFv) {
 	nofralloc
-#include "func_80BC92B0"
+#include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC92B0"
 }
 #pragma pop
 
@@ -489,9 +489,11 @@ SECTION_RODATA const u32 lit_4072 = 0x40200000;
 SECTION_RODATA const u32 lit_4073 = 0x3FD55555;
 
 /* 80BCA0B0-80BCA0B8 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x48, 0x5F, 0x54, 0x61, 0x6E, 0x73, 0x75, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BCA0B0 = "H_Tansu";
+#pragma pop
 
 /* 80BCA0B8-80BCA0C4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

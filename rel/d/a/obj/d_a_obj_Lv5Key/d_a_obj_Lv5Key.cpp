@@ -483,9 +483,11 @@ SECTION_RODATA const u32 lit_3931 = 0xC2956666;
 SECTION_RODATA const u32 lit_3932 = 0x410B3333;
 
 /* 80B9C9AC-80B9C9B4 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4C, 0x76, 0x35, 0x5F, 0x4B, 0x45, 0x59, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B9C9AC = "Lv5_KEY";
+#pragma pop
 
 /* 80B9C9B4-80B9C9B8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

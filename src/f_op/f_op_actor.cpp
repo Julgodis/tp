@@ -283,11 +283,13 @@ ASM_FUNCTION(getFileListInfo__15dStage_roomDt_cCFv) {
 
 /* ############################################################################################## */
 /* 80378878-80378880 0006+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 f_op_f_op_actor__stringBase0[8] = {
-	0x41, 0x6C, 0x69, 0x6E, 0x6B, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80378878 = "Alink";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8037887E = "\0";
+#pragma pop
 
 /* 80019404-800194FC 00F8+00 .text      initBallModel__13fopEn_enemy_cFv                             */
 #pragma push

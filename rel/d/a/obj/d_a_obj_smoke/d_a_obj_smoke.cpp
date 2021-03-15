@@ -71,7 +71,7 @@ ASM_FUNCTION(Create__12daObjSmoke_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjSmoke_cFv) {
 	nofralloc
-#include "func_80CDCF9C"
+#include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/func_80CDCF9C"
 }
 #pragma pop
 

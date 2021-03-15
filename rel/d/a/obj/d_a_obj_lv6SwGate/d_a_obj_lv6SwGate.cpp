@@ -483,9 +483,11 @@ SECTION_RODATA const u32 lit_3994 = 0x3F800000;
 SECTION_RODATA const u32 lit_3995 = 0xBF800000;
 
 /* 80C7558C-80C75595 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4C, 0x36, 0x53, 0x77, 0x47, 0x61, 0x74, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C7558C = "L6SwGate";
+#pragma pop
 
 /* 80C75598-80C755A4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

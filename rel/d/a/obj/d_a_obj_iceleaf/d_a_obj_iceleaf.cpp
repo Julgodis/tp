@@ -175,7 +175,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjIceLeaf_cFv) {
 	nofralloc
-#include "func_80C24E14"
+#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C24E14"
 }
 #pragma pop
 
@@ -515,9 +515,11 @@ SECTION_RODATA const u32 lit_4094 = 0x40A00000;
 SECTION_RODATA const u32 lit_4095 = 0xBF800000;
 
 /* 80C25DA4-80C25DAE 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x56, 0x5F, 0x49, 0x63, 0x65, 0x4C, 0x65, 0x61, 0x66, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C25DA4 = "V_IceLeaf";
+#pragma pop
 
 /* 80C25DB0-80C25DBC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

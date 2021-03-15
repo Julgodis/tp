@@ -108,7 +108,7 @@ ASM_FUNCTION(Create__14daObjFPillar_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjFPillar_cFv) {
 	nofralloc
-#include "func_80BE9230"
+#include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/func_80BE9230"
 }
 #pragma pop
 

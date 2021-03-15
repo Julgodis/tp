@@ -77,7 +77,7 @@ ASM_FUNCTION(CreateHeap__14daObj_Sekizo_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__14daObj_Sekizo_cFv) {
 	nofralloc
-#include "func_80CCDD8C"
+#include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/func_80CCDD8C"
 }
 #pragma pop
 
@@ -216,9 +216,12 @@ ASM_FUNCTION(__dt__20daObj_Sekizo_Param_cFv) {
 
 /* ############################################################################################## */
 /* 80CCE174-80CCE17C 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x00, 0x53, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CCE174 = "";
+SECTION_DEAD char* const stringBase_80CCE175 = "Sekizo";
+#pragma pop
 
 /* 80CCE17C-80CCE188 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

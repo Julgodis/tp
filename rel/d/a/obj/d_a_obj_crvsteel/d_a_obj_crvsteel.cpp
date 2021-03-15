@@ -219,7 +219,7 @@ ASM_FUNCTION(daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjCRVSTEEL_cFv) {
 	nofralloc
-#include "func_80BD60A8"
+#include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD60A8"
 }
 #pragma pop
 
@@ -322,11 +322,13 @@ SECTION_RODATA const u32 lit_3949 = 0x447A0000;
 SECTION_RODATA const u32 lit_3950 = 0x43FA0000;
 
 /* 80BD623C-80BD626B 002F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[47] = {
-	0x43, 0x72, 0x76, 0x53, 0x74, 0x65, 0x65, 0x6C, 0x00, 0x55, 0x5F, 0x43, 0x72, 0x76, 0x53, 0x74,
-	0x65, 0x65, 0x6C, 0x47, 0x61, 0x74, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x55, 0x5F, 0x43, 0x72,
-	0x76, 0x53, 0x74, 0x65, 0x65, 0x6C, 0x47, 0x61, 0x74, 0x65, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BD623C = "CrvSteel";
+SECTION_DEAD char* const stringBase_80BD6245 = "U_CrvSteelGate.bmd";
+SECTION_DEAD char* const stringBase_80BD6258 = "U_CrvSteelGate.dzb";
+#pragma pop
 
 /* 80BD626C-80BD6270 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -1296,11 +1296,14 @@ SECTION_RODATA const u32 lit_4975 = 0x45AB6F61;
 SECTION_RODATA const u32 lit_5035 = 0x3F333333;
 
 /* 8057668C-805766B1 0025+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[37] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x54, 0x6B, 0x6A, 0x00, 0x4C, 0x56, 0x37, 0x5F, 0x46, 0x49, 0x52, 0x53, 0x54, 0x5F, 0x53,
-	0x54, 0x41, 0x52, 0x54, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8057668C = "";
+SECTION_DEAD char* const stringBase_8057668D = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_8057669D = "Tkj";
+SECTION_DEAD char* const stringBase_805766A1 = "LV7_FIRST_START";
+#pragma pop
 
 /* 805766B4-805766C0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

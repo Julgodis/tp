@@ -780,7 +780,7 @@ ASM_FUNCTION(draw__11dDlst_2DM_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(draw__11dDlst_2Dm_cFv) {
 	nofralloc
-#include "func_8005312C"
+#include "asm/d/d_drawlist/func_8005312C"
 }
 #pragma pop
 
@@ -1619,11 +1619,13 @@ ASM_FUNCTION(draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c) {
 
 /* ############################################################################################## */
 /* 8037A1B0-8037A1C0 000C+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_drawlist__stringBase0[16] = {
-	0x77, 0x69, 0x70, 0x65, 0x5F, 0x30, 0x30, 0x2E, 0x62, 0x74, 0x69, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8037A1B0 = "wipe_00.bti";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8037A1BC = "\0\0\0";
+#pragma pop
 
 /* 804248F0-80424938 0048+00 .bss       mWipeDlst__12dDlst_list_c                                    */
 u8 mWipeDlst__12dDlst_list_c[72];

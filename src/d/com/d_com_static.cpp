@@ -306,9 +306,12 @@ ASM_FUNCTION(daNpcMsg_setEvtNum__FUc) {
 
 /* ############################################################################################## */
 /* 803790B0-803790C0 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_com_d_com_static__stringBase0[16] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x33, 0x00, 0x40, 0x62, 0x67, 0x25, 0x30, 0x34, 0x78, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803790B0 = "F_SP103";
+SECTION_DEAD char* const stringBase_803790B8 = "@bg%04x";
+#pragma pop
 
 /* 80031648-800316A8 0060+00 .text      daNpcKakashi_chkSwdTutorialStage__Fv                         */
 #pragma push

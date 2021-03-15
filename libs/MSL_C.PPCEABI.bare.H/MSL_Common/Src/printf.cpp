@@ -147,13 +147,21 @@ ASM_FUNCTION(__FileWrite) {
 
 /* ############################################################################################## */
 /* 803A2318-803A2340 0025+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 MSL_Common_Src_printf__stringBase0[40] = {
-	0x00, 0x2D, 0x49, 0x4E, 0x46, 0x00, 0x2D, 0x69, 0x6E, 0x66, 0x00, 0x49, 0x4E, 0x46, 0x00, 0x69,
-	0x6E, 0x66, 0x00, 0x2D, 0x4E, 0x41, 0x4E, 0x00, 0x2D, 0x6E, 0x61, 0x6E, 0x00, 0x4E, 0x41, 0x4E,
-	0x00, 0x6E, 0x61, 0x6E, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A2318 = "";
+SECTION_DEAD char* const stringBase_803A2319 = "-INF";
+SECTION_DEAD char* const stringBase_803A231E = "-inf";
+SECTION_DEAD char* const stringBase_803A2323 = "INF";
+SECTION_DEAD char* const stringBase_803A2327 = "inf";
+SECTION_DEAD char* const stringBase_803A232B = "-NAN";
+SECTION_DEAD char* const stringBase_803A2330 = "-nan";
+SECTION_DEAD char* const stringBase_803A2335 = "NAN";
+SECTION_DEAD char* const stringBase_803A2339 = "nan";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A233D = "\0\0";
+#pragma pop
 
 /* 80450AD8-80450AE0 0002+06 .sdata     @wstringBase0                                                */
 u8 data_80450AD8[8] = {

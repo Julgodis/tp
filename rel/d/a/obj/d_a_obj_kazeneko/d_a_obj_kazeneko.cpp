@@ -292,10 +292,13 @@ SECTION_RODATA const u8 lit_4119[8] = {
 };
 
 /* 80C3D474-80C3D48E 001A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[26] = {
-	0x4A, 0x5F, 0x4B, 0x61, 0x7A, 0x61, 0x6D, 0x69, 0x00, 0x70, 0x6F, 0x6C, 0x65, 0x2E, 0x62, 0x6D,
-	0x64, 0x00, 0x61, 0x72, 0x6D, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C3D474 = "J_Kazami";
+SECTION_DEAD char* const stringBase_80C3D47D = "pole.bmd";
+SECTION_DEAD char* const stringBase_80C3D486 = "arm.bmd";
+#pragma pop
 
 /* 80C3D490-80C3D494 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

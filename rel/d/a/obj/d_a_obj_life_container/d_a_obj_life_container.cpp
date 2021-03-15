@@ -239,7 +239,7 @@ ASM_FUNCTION(__CreateHeap__11daObjLife_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjLife_cFv) {
 	nofralloc
-#include "func_804CCFE0"
+#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCFE0"
 }
 #pragma pop
 
@@ -717,11 +717,14 @@ SECTION_RODATA const u32 lit_4474 = 0x3E4CCCCD;
 SECTION_RODATA const u32 lit_4538 = 0x43960000;
 
 /* 804CE4A4-804CE4CC 0028+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[40] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x31, 0x31, 0x41, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F,
-	0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x31, 0x00,
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x39, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_804CE4A4 = "D_MN11A";
+SECTION_DEAD char* const stringBase_804CE4AC = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_804CE4BC = "F_SP121";
+SECTION_DEAD char* const stringBase_804CE4C4 = "F_SP109";
+#pragma pop
 
 /* 804CE4CC-804CE4D8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -480,9 +480,11 @@ SECTION_RODATA const u32 lit_4604 = 0xC4898000;
 SECTION_RODATA const u32 lit_4605 = 0x457A0000;
 
 /* 80C9CDEC-80C9CDF6 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x41, 0x47, 0x4E, 0x45, 0x53, 0x49, 0x4D, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C9CDEC = "MAGNESIMA";
+#pragma pop
 
 /* 80C9CDF8-80C9CE18 0020+00 .data      l_daObj_Msima_Method                                         */
 u8 l_daObj_Msima_Method[32] = {

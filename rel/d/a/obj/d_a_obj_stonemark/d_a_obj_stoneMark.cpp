@@ -82,7 +82,7 @@ ASM_FUNCTION(Create__12daObjSMark_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjSMark_cFv) {
 	nofralloc
-#include "func_8059A168"
+#include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A168"
 }
 #pragma pop
 
@@ -199,9 +199,11 @@ SECTION_RODATA const u32 lit_3718 = 0xBF19999A;
 SECTION_RODATA const u32 lit_3719 = 0x3ECCCCCC;
 
 /* 8059A404-8059A40D 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x41, 0x5F, 0x49, 0x77, 0x61, 0x41, 0x74, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8059A404 = "A_IwaAto";
+#pragma pop
 
 /* 8059A410-8059A414 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

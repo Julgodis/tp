@@ -95,11 +95,13 @@ SECTION_RODATA const u8 data_8039A488[12] = {
 };
 
 /* 8039A494-8039A4A0 0006+06 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_k_wmark__stringBase0[12] = {
-	0x41, 0x6C, 0x69, 0x6E, 0x6B, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039A494 = "Alink";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039A49A = "\0\0\0\0\0";
+#pragma pop
 
 /* 80430C90-80430C9C 000C+00 .bss       @3644                                                        */
 u8 lit_3644[12];

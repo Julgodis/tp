@@ -1211,7 +1211,7 @@ ASM_FUNCTION(__sinit_d_a_npc_kkri_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_Kkri_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80553304"
+#include "asm/rel/d/a/npc/d_a_npc_kkri/d_a_npc_kkri/func_80553304"
 }
 #pragma pop
 
@@ -1424,14 +1424,19 @@ SECTION_RODATA const u32 lit_4911 = 0x43160000;
 SECTION_RODATA const u32 lit_5390 = 0x4E6E6B28;
 
 /* 805535A4-805535F8 0054+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[84] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x43, 0x4F, 0x4E,
-	0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x5F, 0x41, 0x42, 0x4F, 0x55, 0x54, 0x5F,
-	0x53, 0x4F, 0x55, 0x50, 0x00, 0x59, 0x4D, 0x5F, 0x4C, 0x4F, 0x4F, 0x4B, 0x00, 0x4B, 0x6B, 0x72,
-	0x69, 0x00, 0x4B, 0x6B, 0x72, 0x69, 0x5F, 0x54, 0x57, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x74, 0x69,
-	0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_805535A4 = "";
+SECTION_DEAD char* const stringBase_805535A5 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_805535B5 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_805535C1 = "CONVERSATION_ABOUT_SOUP";
+SECTION_DEAD char* const stringBase_805535D9 = "YM_LOOK";
+SECTION_DEAD char* const stringBase_805535E1 = "Kkri";
+SECTION_DEAD char* const stringBase_805535E6 = "Kkri_TW";
+SECTION_DEAD char* const stringBase_805535EE = "prm";
+SECTION_DEAD char* const stringBase_805535F2 = "timer";
+#pragma pop
 
 /* 805535F8-80553604 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

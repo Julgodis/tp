@@ -61,11 +61,13 @@ ASM_FUNCTION(dKyeff_Draw__FP8dKyeff_c) {
 
 /* ############################################################################################## */
 /* 80394F38-80394F40 0005+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_kyeff__stringBase0[8] = {
-	0x4E, 0x61, 0x6D, 0x65, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394F38 = "Name";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394F3D = "\0\0";
+#pragma pop
 
 /* 801ADD5C-801ADDB4 0058+00 .text      execute__8dKyeff_cFv                                         */
 #pragma push

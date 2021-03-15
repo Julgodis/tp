@@ -156,7 +156,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjMHole_cFv) {
 	nofralloc
-#include "func_80C934E0"
+#include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/func_80C934E0"
 }
 #pragma pop
 
@@ -350,10 +350,12 @@ SECTION_RODATA const u8 data_80C93DF4[8] = {
 SECTION_RODATA const u32 lit_4217 = 0xBC23D70A;
 
 /* 80C93E00-80C93E14 0014+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[20] = {
-	0x65, 0x66, 0x5F, 0x4D, 0x67, 0x6E, 0x46, 0x5F, 0x4C, 0x00, 0x65, 0x66, 0x5F, 0x4D, 0x67, 0x6E,
-	0x46, 0x5F, 0x53, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C93E00 = "ef_MgnF_L";
+SECTION_DEAD char* const stringBase_80C93E0A = "ef_MgnF_S";
+#pragma pop
 
 /* 80C93E14-80C93E1C 0008+00 .data      l_arcName                                                    */
 u8 l_arcName[8] = {

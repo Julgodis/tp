@@ -2090,10 +2090,14 @@ SECTION_RODATA const u32 lit_11348 = 0x47800000;
 SECTION_RODATA const u32 lit_11462 = 0xC7435000;
 
 /* 804BB830-804BB84D 001D+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[29] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x37, 0x00, 0x41, 0x6C, 0x69, 0x6E, 0x6B, 0x00, 0x54, 0x5F,
-	0x4D, 0x55, 0x4B, 0x41, 0x4F, 0x00, 0x4D, 0x67, 0x5F, 0x72, 0x6F, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_804BB830 = "F_SP127";
+SECTION_DEAD char* const stringBase_804BB838 = "Alink";
+SECTION_DEAD char* const stringBase_804BB83E = "T_MUKAO";
+SECTION_DEAD char* const stringBase_804BB846 = "Mg_rod";
+#pragma pop
 
 /* 804BB850-804BB85C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

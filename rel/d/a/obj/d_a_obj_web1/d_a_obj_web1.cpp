@@ -293,9 +293,11 @@ SECTION_RODATA const u8 lit_4040[8] = {
 };
 
 /* 80D36120-80D36129 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x77, 0x65, 0x62, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D36120 = "Obj_web1";
+#pragma pop
 
 /* 80D3612C-80D36170 0044+00 .data      cc_cyl_src$3969                                              */
 u8 data_80D3612C[68] = {

@@ -355,9 +355,11 @@ SECTION_RODATA const u32 lit_3943 = 0xC46B0000;
 SECTION_RODATA const u32 lit_3944 = 0xBF800000;
 
 /* 80C73198-80C731A1 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4C, 0x36, 0x46, 0x75, 0x72, 0x69, 0x6B, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C73198 = "L6Furiko";
+#pragma pop
 
 /* 80C731A4-80C731E4 0040+00 .data      mCcDSph__17daLv6FurikoTrap_c                                 */
 u8 mCcDSph__17daLv6FurikoTrap_c[64] = {

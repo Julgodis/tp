@@ -372,9 +372,11 @@ SECTION_RODATA const u32 lit_3928 = 0xC0E00000;
 SECTION_RODATA const u32 lit_3929 = 0x47800000;
 
 /* 8060408C-80604091 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x42, 0x5F, 0x67, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8060408C = "B_go";
+#pragma pop
 
 /* 80604094-806040B4 0020+00 .data      l_daB_GO_Method                                              */
 u8 l_daB_GO_Method[32] = {

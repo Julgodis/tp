@@ -113,9 +113,11 @@ SECTION_RODATA const u32 lit_3746 = 0x43960000;
 SECTION_RODATA const u32 lit_3747 = 0x44160000;
 
 /* 80D212EC-80D212F6 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x75, 0x73, 0x61, 0x6B, 0x75, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D212EC = "Obj_usaku";
+#pragma pop
 
 /* 80D212F8-80D21318 0020+00 .data      l_daObj_Usaku_Method                                         */
 u8 l_daObj_Usaku_Method[32] = {

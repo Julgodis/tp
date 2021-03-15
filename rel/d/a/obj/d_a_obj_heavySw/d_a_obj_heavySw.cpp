@@ -481,9 +481,11 @@ SECTION_RODATA const u32 lit_3998 = 0x432A0000;
 SECTION_RODATA const u32 lit_3999 = 0x43FA0000;
 
 /* 80C1DAE0-80C1DAE8 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x48, 0x73, 0x77, 0x69, 0x74, 0x63, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C1DAE0 = "Hswitch";
+#pragma pop
 
 /* 80C1DAE8-80C1DAF4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

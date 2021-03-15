@@ -401,11 +401,13 @@ ASM_FUNCTION(setCalibrationValue__19dMenu_Calibration_cFv) {
 
 /* ############################################################################################## */
 /* 80394F70-80394F78 0001+07 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_menu_d_menu_calibration__stringBase0[8] = {
-	0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394F70 = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394F71 = "\0\0\0\0\0\0";
+#pragma pop
 
 /* 801AF738-801AF7E8 00B0+00 .text      setAButtonString__19dMenu_Calibration_cFUs                   */
 #pragma push

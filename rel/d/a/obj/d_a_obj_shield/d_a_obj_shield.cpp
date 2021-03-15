@@ -175,7 +175,7 @@ ASM_FUNCTION(__CreateHeap__14daItemShield_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daItemShield_cFv) {
 	nofralloc
-#include "func_80CD7254"
+#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD7254"
 }
 #pragma pop
 
@@ -591,9 +591,11 @@ SECTION_RODATA const u32 lit_4336 = 0xC1C80000;
 SECTION_RODATA const u32 lit_4337 = 0x3F666666;
 
 /* 80CD832C-80CD833C 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CD832C = "DEFAULT_GETITEM";
+#pragma pop
 
 /* 80CD833C-80CD8348 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -223,9 +223,11 @@ SECTION_RODATA const u32 lit_3821 = 0x3F800000;
 SECTION_RODATA const u32 lit_3822 = 0xBF800000;
 
 /* 80BAD4CC-80BAD4D3 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4D, 0x5F, 0x42, 0x42, 0x6F, 0x78, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BAD4CC = "M_BBox";
+#pragma pop
 
 /* 80BAD4D4-80BAD4D8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

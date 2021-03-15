@@ -109,9 +109,11 @@ SECTION_RODATA const u32 lit_3708 = 0x3DA3D70A;
 SECTION_RODATA const u32 lit_3709 = 0x3C23D70A;
 
 /* 807F81F4-807F81F9 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x59, 0x44, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807F81F4 = "E_YD";
+#pragma pop
 
 /* 807F81FC-807F821C 0020+00 .data      l_daE_YD_LEAF_Method                                         */
 u8 l_daE_YD_LEAF_Method[32] = {

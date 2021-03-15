@@ -300,9 +300,11 @@ SECTION_RODATA const u32 lit_4582 = 0x469C4000;
 SECTION_RODATA const u32 lit_4583 = 0x47800000;
 
 /* 80D1EE98-80D1EE9F 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x74, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D1EE98 = "Obj_tp";
+#pragma pop
 
 /* 80D1EEA0-80D1EEAC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

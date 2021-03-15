@@ -171,13 +171,15 @@ ASM_FUNCTION(Delete__13daIzumiGate_cFv) {
 
 /* ############################################################################################## */
 /* 80849408-80849438 002E+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[48] = {
-	0x4D, 0x5F, 0x49, 0x7A, 0x6D, 0x47, 0x61, 0x74, 0x65, 0x00, 0x4D, 0x5F, 0x49, 0x7A, 0x75, 0x6D,
-	0x69, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x62, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x4D, 0x5F, 0x49, 0x7A,
-	0x75, 0x6D, 0x69, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x62, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80849408 = "M_IzmGate";
+SECTION_DEAD char* const stringBase_80849412 = "M_IzumiGate_b.dzb";
+SECTION_DEAD char* const stringBase_80849424 = "M_IzumiGate_b.bmd";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80849436 = "\0";
+#pragma pop
 
 /* 80849438-8084943C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

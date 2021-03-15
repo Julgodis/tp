@@ -251,9 +251,11 @@ SECTION_RODATA const u32 lit_3746 = 0xBF800000;
 SECTION_RODATA const u32 lit_3845 = 0x4524C1F0;
 
 /* 80C99794-80C9979D 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4D, 0x52, 0x2D, 0x53, 0x63, 0x72, 0x65, 0x77, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C99794 = "MR-Screw";
+#pragma pop
 
 /* 80C997A0-80C997AC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

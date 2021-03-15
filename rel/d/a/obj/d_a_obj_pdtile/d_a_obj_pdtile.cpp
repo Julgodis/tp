@@ -427,10 +427,13 @@ SECTION_RODATA const u8 lit_4202[8] = {
 SECTION_RODATA const u32 lit_4256 = 0x43480000;
 
 /* 80CAC580-80CAC59C 001C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[28] = {
-	0x50, 0x5F, 0x44, 0x74, 0x69, 0x6C, 0x65, 0x00, 0x50, 0x5F, 0x44, 0x74, 0x69, 0x6C, 0x65, 0x30,
-	0x30, 0x00, 0x4C, 0x76, 0x39, 0x5F, 0x44, 0x74, 0x69, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CAC580 = "P_Dtile";
+SECTION_DEAD char* const stringBase_80CAC588 = "P_Dtile00";
+SECTION_DEAD char* const stringBase_80CAC592 = "Lv9_Dtile";
+#pragma pop
 
 /* 80CAC59C-80CAC5A8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -303,9 +303,11 @@ SECTION_RODATA const u32 lit_4461 = 0x47800000;
 SECTION_RODATA const u32 lit_4462 = 0xC3480000;
 
 /* 80A0E0CC-80A0E0D5 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4E, 0x70, 0x63, 0x5F, 0x69, 0x6E, 0x6B, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80A0E0CC = "Npc_inko";
+#pragma pop
 
 /* 80A0E0D8-80A0E0E8 0010+00 .data      mes_0$3966                                                   */
 u8 data_80A0E0D8[16] = {

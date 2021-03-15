@@ -95,11 +95,13 @@ SECTION_RODATA const f32 data_80379298[4] = {
 };
 
 /* 803792A8-803792B0 0007+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_a_d_a_obj__stringBase0[8] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803792A8 = "Always";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803792AF = "";
+#pragma pop
 
 /* 80451D98-80451D9C 0004+00 .sdata2    @3671                                                        */
 f32 lit_3671 = 1.0f;

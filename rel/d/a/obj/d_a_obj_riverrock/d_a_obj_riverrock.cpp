@@ -323,7 +323,7 @@ ASM_FUNCTION(daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__16daObjRIVERROCK_cFv) {
 	nofralloc
-#include "func_80CBD7B4"
+#include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/func_80CBD7B4"
 }
 #pragma pop
 
@@ -479,11 +479,13 @@ SECTION_RODATA const u32 lit_4119 = 0xC47A0000;
 SECTION_RODATA const u32 lit_4120 = 0x43FA0000;
 
 /* 80CBDB14-80CBDB3E 002A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[42] = {
-	0x52, 0x69, 0x76, 0x65, 0x72, 0x52, 0x6F, 0x63, 0x6B, 0x00, 0x4D, 0x5F, 0x52, 0x69, 0x76, 0x65,
-	0x72, 0x52, 0x6F, 0x63, 0x6B, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4D, 0x5F, 0x52, 0x69, 0x76, 0x65,
-	0x72, 0x52, 0x6F, 0x63, 0x6B, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CBDB14 = "RiverRock";
+SECTION_DEAD char* const stringBase_80CBDB1E = "M_RiverRock.bmd";
+SECTION_DEAD char* const stringBase_80CBDB2E = "M_RiverRock.dzb";
+#pragma pop
 
 /* 80CBDB40-80CBDB44 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

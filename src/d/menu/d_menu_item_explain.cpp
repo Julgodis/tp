@@ -174,14 +174,16 @@ SECTION_RODATA const u8 data_80396970[32] = {
 };
 
 /* 80396990-803969C8 0034+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_menu_d_menu_item_explain__stringBase0[56] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x73, 0x63, 0x72, 0x65, 0x65,
-	0x6E, 0x5F, 0x69, 0x6E, 0x66, 0x6F, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00, 0x74, 0x74, 0x5F, 0x62,
-	0x6C, 0x6F, 0x63, 0x6B, 0x38, 0x78, 0x38, 0x2E, 0x62, 0x74, 0x69, 0x00, 0x1B, 0x43, 0x52, 0x5B,
-	0x25, 0x64, 0x5D, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80396990 = "zelda_item_screen_info.blo";
+SECTION_DEAD char* const stringBase_803969AB = "";
+SECTION_DEAD char* const stringBase_803969AC = "tt_block8x8.bti";
+SECTION_DEAD char* const stringBase_803969BC = """\x1B""CR[%d]";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803969C4 = "\0\0\0";
+#pragma pop
 
 /* 803BD8C8-803BD8D4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 d_menu_d_menu_item_explain__cNullVec__6Z2Calc[12] = {

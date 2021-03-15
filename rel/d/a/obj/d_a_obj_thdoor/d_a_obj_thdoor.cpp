@@ -445,12 +445,17 @@ SECTION_RODATA const u32 lit_3990 = 0xC2C80000;
 SECTION_RODATA const u32 lit_3991 = 0x42C80000;
 
 /* 80D0E620-80D0E655 0035+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[53] = {
-	0x56, 0x5F, 0x43, 0x54, 0x44, 0x6F, 0x6F, 0x72, 0x00, 0x43, 0x48, 0x41, 0x53, 0x45, 0x5F, 0x41,
-	0x57, 0x41, 0x59, 0x5F, 0x57, 0x4F, 0x4C, 0x46, 0x00, 0x74, 0x68, 0x64, 0x6F, 0x6F, 0x72, 0x00,
-	0x57, 0x41, 0x49, 0x54, 0x00, 0x4D, 0x53, 0x47, 0x00, 0x43, 0x4C, 0x4F, 0x53, 0x45, 0x00, 0x54,
-	0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D0E620 = "V_CTDoor";
+SECTION_DEAD char* const stringBase_80D0E629 = "CHASE_AWAY_WOLF";
+SECTION_DEAD char* const stringBase_80D0E639 = "thdoor";
+SECTION_DEAD char* const stringBase_80D0E640 = "WAIT";
+SECTION_DEAD char* const stringBase_80D0E645 = "MSG";
+SECTION_DEAD char* const stringBase_80D0E649 = "CLOSE";
+SECTION_DEAD char* const stringBase_80D0E64F = "Timer";
+#pragma pop
 
 /* 80D0E658-80D0E664 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

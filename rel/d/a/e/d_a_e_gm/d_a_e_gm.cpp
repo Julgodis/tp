@@ -1091,9 +1091,12 @@ SECTION_RODATA const u8 lit_6321[8] = {
 };
 
 /* 806D7AF0-806D7AFA 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x45, 0x5F, 0x67, 0x6D, 0x00, 0x45, 0x5F, 0x6D, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806D7AF0 = "E_gm";
+SECTION_DEAD char* const stringBase_806D7AF5 = "E_mg";
+#pragma pop
 
 /* 806D7AFC-806D7B08 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

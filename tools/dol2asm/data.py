@@ -585,10 +585,84 @@ class ReferenceArray(Data):
                     await builder.write("\tNULL,")
             await builder.write("};")
     
+
+#
+
+def string_to_cstr(data):
+    return "".join(data)
+
+def escape_char(v):
+    if v == "\n":
+        return "\\n"
+    elif v == "\t":
+        return "\\t"
+    elif v == "\v":
+        return "\\v"
+    elif v == "\b":
+        return "\\b"
+    elif v == "\r":
+        return "\\r"
+    elif v == "\f":
+        return "\\f"
+    elif v == "\a":
+        return "\\a"
+    elif v == "\\":
+        return "\\\\"
+    elif v == "\"":
+        return "\\\""
+    elif ord(v) < 32:
+        return "\"\"\\x%02X\"\"" % ord(v)
+    else:
+        return v
+
+def escape_char_hard(v):
+    return "\"\"\\x%02X\"\"" % v
+
+def escape_string(data):
+    return [escape_char(x) for x in data]
+
+def escape_char_hex(v):
+    if v == 0:
+        return "\\0"
+    return "\\x%02X" % v
+
+def escape_full_string(data):
+    return [escape_char_hex(x) for x in data]
+
 @dataclass(eq=False)
 class String(Data):
     encoding: str = None
     decoded_string: str = None
+
+    @staticmethod
+    async def export_string(builder: AsyncBuilder, label: str, data: List[str]):
+        if len(data) < 32:
+            await builder.write(f"const {label} = \"{string_to_cstr(data)}\";")
+        else:
+            await builder.write(f"const {label} = ")
+            data_chunks = util.chunks(data, 48)
+
+            lines = []
+            for chunk in data_chunks:
+                lines += [f"    \"{string_to_cstr(chunk)}\""]
+            lines[-1] += ";"
+
+            for line in lines:
+                await builder.write(line)
+
+    async def export_declaration(self, exporter, builder: AsyncBuilder):
+        assert self.padding == 0
+
+        sjis = self.decoded_string.encode("shift_jisx0213")
+        if 0x5c in sjis:
+            await builder.write("// MWCC ignores mapping of some japanese characters using the ")
+            await builder.write("// byte 0x5C (ASCII '\\'). This is why this string is hex-encoded.")
+            data = escape_full_string(sjis)
+        else:
+            data = escape_string(self.decoded_string)
+
+        await exporter.export_desc(builder, self, "char*", forward=False, dead=True)
+        await String.export_string(builder, self.identifier.label, data)
 
 @dataclass(eq=False)
 class StringBase(Data):
@@ -609,6 +683,22 @@ class StringBase(Data):
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         count = self.size + self.padding
         await builder.write(f"{decl_type} {self.identifier.label}[{count}];")
+
+    async def export_declaration(self, exporter, builder: AsyncBuilder):
+        await builder.write("#pragma push")
+        await builder.write("#pragma force_active on")
+        await builder.write("#pragma section \".dead\"")
+        for string in self.strings:
+            await string.export_declaration(exporter, builder)
+
+        if self.padding > 0:
+            assert len(self.padding_data) == self.padding
+            assert self.padding_data[-1] == 0
+            data = escape_full_string(self.padding_data[:-1])
+            await builder.write("/* @stringBase0 padding */")
+            await exporter.export_desc(builder, self.strings[0], "char*", forward=False, dead=True)
+            await String.export_string(builder, f"pad_{self.end:08X}", data)
+        await builder.write("#pragma pop")
 
 @dataclass(eq=False)
 class Literal(Data):

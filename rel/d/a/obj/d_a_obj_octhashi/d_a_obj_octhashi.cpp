@@ -445,7 +445,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjOCTHASHI_cFv) {
 	nofralloc
-#include "func_80CA62A4"
+#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/func_80CA62A4"
 }
 #pragma pop
 
@@ -597,12 +597,14 @@ SECTION_RODATA const u32 lit_4166 = 0xC3FA0000;
 SECTION_RODATA const u32 lit_4167 = 0x447A0000;
 
 /* 80CA6550-80CA6583 0033+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[51] = {
-	0x4F, 0x63, 0x74, 0x68, 0x61, 0x73, 0x68, 0x69, 0x00, 0x53, 0x5F, 0x6F, 0x63, 0x74, 0x68, 0x61,
-	0x73, 0x68, 0x69, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x31,
-	0x41, 0x00, 0x53, 0x5F, 0x6F, 0x63, 0x74, 0x68, 0x61, 0x73, 0x68, 0x69, 0x30, 0x30, 0x2E, 0x64,
-	0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA6550 = "Octhashi";
+SECTION_DEAD char* const stringBase_80CA6559 = "S_octhashi00.bmd";
+SECTION_DEAD char* const stringBase_80CA656A = "D_MN01A";
+SECTION_DEAD char* const stringBase_80CA6572 = "S_octhashi00.dzb";
+#pragma pop
 
 /* 80CA6584-80CA6588 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

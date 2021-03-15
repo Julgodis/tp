@@ -130,7 +130,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daBkLeaf_cFv) {
 	nofralloc
-#include "func_80BB63F4"
+#include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/func_80BB63F4"
 }
 #pragma pop
 
@@ -222,10 +222,13 @@ SECTION_RODATA const u8 lit_3811[4] = {
 };
 
 /* 80BB6718-80BB6735 001D+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[29] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x6B, 0x6C, 0x00, 0x68, 0x6C, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x68,
-	0x6C, 0x5F, 0x73, 0x68, 0x61, 0x6B, 0x65, 0x31, 0x2E, 0x62, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BB6718 = "Obj_bkl";
+SECTION_DEAD char* const stringBase_80BB6720 = "hl.bmd";
+SECTION_DEAD char* const stringBase_80BB6727 = "hl_shake1.bck";
+#pragma pop
 
 /* 80BB6738-80BB6744 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -631,10 +631,14 @@ SECTION_RODATA const u8 lit_4259[8] = {
 };
 
 /* 80AEBC54-80AEBC74 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x53, 0x68, 0x6F, 0x70, 0x30, 0x00, 0x67, 0x72, 0x41, 0x5F, 0x61, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	0x67, 0x72, 0x41, 0x5F, 0x77, 0x61, 0x69, 0x74, 0x5F, 0x61, 0x00, 0x2E, 0x62, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AEBC54 = "Shop0";
+SECTION_DEAD char* const stringBase_80AEBC5A = "grA_a.bmd";
+SECTION_DEAD char* const stringBase_80AEBC64 = "grA_wait_a";
+SECTION_DEAD char* const stringBase_80AEBC6F = ".bck";
+#pragma pop
 
 /* 80AEBC74-80AEBC78 0004+00 .data      l_resName                                                    */
 u8 l_resName[4] = {

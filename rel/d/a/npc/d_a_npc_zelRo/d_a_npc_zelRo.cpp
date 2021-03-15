@@ -1112,7 +1112,7 @@ ASM_FUNCTION(__sinit_d_a_npc_zelRo_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13daNpc_ZelRo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80B74AE8"
+#include "asm/rel/d/a/npc/d_a_npc_zelRo/d_a_npc_zelRo/func_80B74AE8"
 }
 #pragma pop
 
@@ -1303,10 +1303,14 @@ SECTION_RODATA const u8 lit_4792[8] = {
 };
 
 /* 80B74D3C-80B74D55 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x7A, 0x65, 0x6C,
-	0x52, 0x6F, 0x00, 0x5A, 0x65, 0x6C, 0x52, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B74D3C = "";
+SECTION_DEAD char* const stringBase_80B74D3D = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80B74D49 = "zelRo";
+SECTION_DEAD char* const stringBase_80B74D4F = "ZelRo";
+#pragma pop
 
 /* 80B74D58-80B74D64 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

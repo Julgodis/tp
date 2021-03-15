@@ -920,9 +920,13 @@ SECTION_RODATA const u32 lit_4930 = 0x449F6000;
 SECTION_RODATA const u32 lit_4931 = 0xC2640000;
 
 /* 806BB81C-806BB82B 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x45, 0x5F, 0x66, 0x6B, 0x00, 0x65, 0x5F, 0x66, 0x6B, 0x00, 0x45, 0x5F, 0x46, 0x4B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806BB81C = "E_fk";
+SECTION_DEAD char* const stringBase_806BB821 = "e_fk";
+SECTION_DEAD char* const stringBase_806BB826 = "E_FK";
+#pragma pop
 
 /* 806BB82C-806BB84C 0020+00 .data      l_daE_FK_Method                                              */
 u8 l_daE_FK_Method[32] = {

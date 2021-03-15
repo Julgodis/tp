@@ -972,7 +972,7 @@ ASM_FUNCTION(__sinit_d_a_npc_seib_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_seiB_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AC6F74"
+#include "asm/rel/d/a/npc/d_a_npc_seib/d_a_npc_seib/func_80AC6F74"
 }
 #pragma pop
 
@@ -1046,11 +1046,15 @@ SECTION_RODATA const u32 lit_4247 = 0x42C80000;
 SECTION_RODATA const u32 lit_4292 = 0xBF800000;
 
 /* 80AC70D0-80AC70F7 0027+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[39] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x73, 0x65, 0x69,
-	0x42, 0x00, 0x53, 0x65, 0x69, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AC70D0 = "";
+SECTION_DEAD char* const stringBase_80AC70D1 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80AC70E1 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AC70ED = "seiB";
+SECTION_DEAD char* const stringBase_80AC70F2 = "Seib";
+#pragma pop
 
 /* 80AC70F8-80AC7104 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

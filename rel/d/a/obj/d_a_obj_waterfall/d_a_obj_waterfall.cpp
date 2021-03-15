@@ -158,7 +158,7 @@ ASM_FUNCTION(Create__16daObjWaterFall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16daObjWaterFall_cFv) {
 	nofralloc
-#include "func_80D2F5A0"
+#include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/func_80D2F5A0"
 }
 #pragma pop
 
@@ -359,9 +359,11 @@ SECTION_RODATA const u32 lit_4205 = 0x42700000;
 SECTION_RODATA const u32 lit_4206 = 0xC2700000;
 
 /* 80D2FD7C-80D2FD83 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x73, 0x61, 0x6D, 0x70, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D2FD7C = "sample";
+#pragma pop
 
 /* 80D2FD84-80D2FD88 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

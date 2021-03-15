@@ -1234,7 +1234,7 @@ ASM_FUNCTION(__sinit_d_a_npc_post_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_Post_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AACFF0"
+#include "asm/rel/d/a/npc/d_a_npc_post/d_a_npc_post/func_80AACFF0"
 }
 #pragma pop
 
@@ -1525,14 +1525,21 @@ SECTION_RODATA const u32 lit_5626 = 0x3F000000;
 SECTION_RODATA const u32 lit_5627 = 0x442F0000;
 
 /* 80AAD34C-80AAD3AA 005E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[94] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x44, 0x45, 0x4C,
-	0x49, 0x56, 0x45, 0x52, 0x00, 0x44, 0x45, 0x4C, 0x49, 0x56, 0x45, 0x52, 0x54, 0x4F, 0x5F, 0x50,
-	0x4C, 0x41, 0x59, 0x45, 0x52, 0x5F, 0x4F, 0x4E, 0x5F, 0x48, 0x4F, 0x52, 0x53, 0x45, 0x00, 0x44,
-	0x45, 0x4C, 0x49, 0x56, 0x45, 0x52, 0x54, 0x4F, 0x5F, 0x57, 0x4F, 0x4C, 0x46, 0x00, 0x70, 0x6F,
-	0x73, 0x74, 0x00, 0x70, 0x6F, 0x73, 0x74, 0x31, 0x00, 0x70, 0x6F, 0x73, 0x74, 0x32, 0x00, 0x50,
-	0x6F, 0x73, 0x74, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AAD34C = "";
+SECTION_DEAD char* const stringBase_80AAD34D = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AAD359 = "DELIVER";
+SECTION_DEAD char* const stringBase_80AAD361 = "DELIVERTO_PLAYER_ON_HORSE";
+SECTION_DEAD char* const stringBase_80AAD37B = "DELIVERTO_WOLF";
+SECTION_DEAD char* const stringBase_80AAD38A = "post";
+SECTION_DEAD char* const stringBase_80AAD38F = "post1";
+SECTION_DEAD char* const stringBase_80AAD395 = "post2";
+SECTION_DEAD char* const stringBase_80AAD39B = "Post";
+SECTION_DEAD char* const stringBase_80AAD3A0 = "prm";
+SECTION_DEAD char* const stringBase_80AAD3A4 = "timer";
+#pragma pop
 
 /* 80AAD3AC-80AAD3B8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -655,9 +655,12 @@ SECTION_RODATA const u32 lit_5001 = 0xC3480000;
 SECTION_RODATA const u32 lit_5002 = 0xC47A0000;
 
 /* 80C3C764-80C3C770 000C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[12] = {
-	0x4B, 0x61, 0x74, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C3C764 = "Kat";
+SECTION_DEAD char* const stringBase_80C3C768 = "R_SP160";
+#pragma pop
 
 /* 80C3C770-80C3C790 0020+00 .data      l_daObjKAT_Method                                            */
 u8 l_daObjKAT_Method[32] = {

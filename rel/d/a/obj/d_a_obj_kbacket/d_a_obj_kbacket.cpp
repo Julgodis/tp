@@ -610,9 +610,11 @@ SECTION_RODATA const u32 lit_4650 = 0x43480000;
 SECTION_RODATA const u32 lit_4666 = 0x3F19999A;
 
 /* 80587E70-80587E78 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4B, 0x61, 0x6B, 0x61, 0x73, 0x68, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80587E70 = "Kakashi";
+#pragma pop
 
 /* 80587E78-80587E84 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -354,9 +354,11 @@ SECTION_RODATA const u32 lit_4056 = 0x3F8CCCCD;
 SECTION_RODATA const u32 lit_4126 = 0x477FFF00;
 
 /* 80B2F124-80B2F12A 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x41, 0x6C, 0x69, 0x6E, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B2F124 = "Alink";
+#pragma pop
 
 /* 80B2F12C-80B2F14C 0020+00 .data      l_daNPC_WORM_Method                                          */
 u8 l_daNPC_WORM_Method[32] = {

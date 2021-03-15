@@ -256,7 +256,7 @@ ASM_FUNCTION(CreateHeap__10daObjIta_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__10daObjIta_cFv) {
 	nofralloc
-#include "func_80C28C28"
+#include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C28C28"
 }
 #pragma pop
 
@@ -484,11 +484,13 @@ SECTION_RODATA const u32 lit_4022 = 0x41200000;
 SECTION_RODATA const u32 lit_4023 = 0x3C23D70A;
 
 /* 80C292E8-80C29318 0030+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[48] = {
-	0x4D, 0x5F, 0x49, 0x74, 0x61, 0x00, 0x4D, 0x5F, 0x46, 0x6C, 0x6F, 0x61, 0x74, 0x69, 0x6E, 0x67,
-	0x44, 0x75, 0x73, 0x74, 0x30, 0x30, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x4D, 0x5F, 0x46, 0x6C, 0x6F,
-	0x61, 0x74, 0x69, 0x6E, 0x67, 0x44, 0x75, 0x73, 0x74, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C292E8 = "M_Ita";
+SECTION_DEAD char* const stringBase_80C292EE = "M_FloatingDust00.dzb";
+SECTION_DEAD char* const stringBase_80C29303 = "M_FloatingDust00.bmd";
+#pragma pop
 
 /* 80C29318-80C2931C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

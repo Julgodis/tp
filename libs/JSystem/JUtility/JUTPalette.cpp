@@ -30,13 +30,14 @@ extern "C" extern void _restgpr_29();
 
 /* ############################################################################################## */
 /* 8039D360-8039D390 0029+07 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JUTPalette__stringBase0[48] = {
-	0x4A, 0x55, 0x54, 0x50, 0x61, 0x6C, 0x65, 0x74, 0x74, 0x65, 0x2E, 0x63, 0x70, 0x70, 0x00, 0x4A,
-	0x55, 0x54, 0x54, 0x65, 0x78, 0x74, 0x75, 0x72, 0x65, 0x3A, 0x20, 0x54, 0x4C, 0x55, 0x54, 0x20,
-	0x69, 0x73, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D360 = "JUTPalette.cpp";
+SECTION_DEAD char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D389 = "\0\0\0\0\0\0";
+#pragma pop
 
 /* 802DE890-802DE91C 008C+00 .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
 #pragma push

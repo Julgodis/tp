@@ -111,7 +111,7 @@ ASM_FUNCTION(CreateHeap__13daObjWPndlm_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWPndlm_cFv) {
 	nofralloc
-#include "func_80D39638"
+#include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/func_80D39638"
 }
 #pragma pop
 
@@ -278,9 +278,11 @@ SECTION_RODATA const u8 lit_3860[4] = {
 SECTION_RODATA const u32 lit_3861 = 0xC4960000;
 
 /* 80D39D38-80D39D41 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x41, 0x5F, 0x54, 0x75, 0x72, 0x75, 0x6B, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D39D38 = "A_Turuki";
+#pragma pop
 
 /* 80D39D44-80D39D48 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -48,7 +48,7 @@ ASM_FUNCTION(Create__10daTboxSw_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daTboxSw_cFv) {
 	nofralloc
-#include "func_80D66860"
+#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/func_80D66860"
 }
 #pragma pop
 

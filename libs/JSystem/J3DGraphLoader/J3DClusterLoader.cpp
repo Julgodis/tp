@@ -100,12 +100,13 @@ ASM_FUNCTION(__dt__20J3DClusterLoader_v15Fv) {
 
 /* ############################################################################################## */
 /* 803A2098-803A20B0 0014+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J3DClusterLoader__stringBase0[24] = {
-	0x55, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x62, 0x6C, 0x6F,
-	0x63, 0x6B, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A2098 = "Unknown data block\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A20AC = "\0\0\0";
+#pragma pop
 
 /* 80334244-803342F8 00B4+00 .text      load__20J3DClusterLoader_v15FPCv                             */
 #pragma push

@@ -67,12 +67,14 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 
 /* ############################################################################################## */
 /* 80399B98-80399BB0 0016+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 msg_scrn_d_msg_scrn_staff__stringBase0[24] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x73, 0x74, 0x61, 0x66, 0x66, 0x5F, 0x72, 0x6F, 0x6C, 0x6C,
-	0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399B98 = "zelda_staff_roll.blo";
+SECTION_DEAD char* const stringBase_80399BAD = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399BAE = "\0";
+#pragma pop
 
 /* 803C1340-803C1370 0030+00 .data      t_tag$3752                                                   */
 u8 data_803C1340[48] = {

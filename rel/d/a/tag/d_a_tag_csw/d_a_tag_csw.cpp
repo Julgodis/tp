@@ -403,9 +403,11 @@ SECTION_RODATA const u32 lit_4470 = 0x438C0000;
 SECTION_RODATA const u32 lit_4471 = 0xBF666666;
 
 /* 80D58620-80D58628 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4C, 0x76, 0x36, 0x57, 0x61, 0x72, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D58620 = "Lv6Warp";
+#pragma pop
 
 /* 80D58628-80D58634 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

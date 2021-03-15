@@ -78,7 +78,7 @@ ASM_FUNCTION(CreateHeap__11daCowdoor_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daCowdoor_cFv) {
 	nofralloc
-#include "func_80BCC93C"
+#include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/func_80BCC93C"
 }
 #pragma pop
 
@@ -165,11 +165,13 @@ ASM_FUNCTION(daCowdoor_Create__FP10fopAc_ac_c) {
 SECTION_RODATA const u32 lit_3648 = 0x40A00000;
 
 /* 80BCCBB8-80BCCBDB 0023+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[35] = {
-	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x00, 0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F,
-	0x72, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x2E, 0x64,
-	0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BCCBB8 = "A_UHDoor";
+SECTION_DEAD char* const stringBase_80BCCBC1 = "A_UHDoor.bmd";
+SECTION_DEAD char* const stringBase_80BCCBCE = "A_UHDoor.dzb";
+#pragma pop
 
 /* 80BCCBDC-80BCCBE0 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

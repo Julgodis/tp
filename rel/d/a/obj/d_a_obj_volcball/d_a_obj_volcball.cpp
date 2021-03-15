@@ -209,7 +209,7 @@ ASM_FUNCTION(CreateHeap__15daObjVolcBall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjVolcBall_cFv) {
 	nofralloc
-#include "func_80D21E28"
+#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D21E28"
 }
 #pragma pop
 
@@ -883,9 +883,11 @@ SECTION_RODATA const u8 lit_4411[8] = {
 SECTION_RODATA const u32 lit_4447 = 0x44FA0000;
 
 /* 80D23E80-80D23E8A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x5F, 0x56, 0x6F, 0x6C, 0x63, 0x62, 0x61, 0x6C, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D23E80 = "M_Volcbal";
+#pragma pop
 
 /* 80D23E8C-80D23E98 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

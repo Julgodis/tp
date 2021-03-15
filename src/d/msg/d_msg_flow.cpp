@@ -1283,10 +1283,15 @@ ASM_FUNCTION(__dt__10dMsgFlow_cFv) {
 
 /* ############################################################################################## */
 /* 80399CB0-80399CC8 0018+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_msg_d_msg_flow__stringBase0[24] = {
-	0x46, 0x4C, 0x57, 0x31, 0x00, 0x46, 0x4C, 0x49, 0x31, 0x00, 0x00, 0x49, 0x4E, 0x46, 0x31, 0x00,
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x36, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399CB0 = "FLW1";
+SECTION_DEAD char* const stringBase_80399CB5 = "FLI1";
+SECTION_DEAD char* const stringBase_80399CBA = "";
+SECTION_DEAD char* const stringBase_80399CBB = "INF1";
+SECTION_DEAD char* const stringBase_80399CC0 = "F_SP116";
+#pragma pop
 
 /* 80249F90-8024A13C 01AC+00 .text      init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c             */
 #pragma push

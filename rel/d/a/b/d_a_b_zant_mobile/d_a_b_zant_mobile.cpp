@@ -581,9 +581,12 @@ SECTION_RODATA const u32 lit_4373 = 0xC3C80000;
 SECTION_RODATA const u32 lit_4374 = 0x43C80000;
 
 /* 806527D0-806527DB 000B+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[11] = {
-	0x42, 0x5F, 0x7A, 0x61, 0x6E, 0x00, 0x42, 0x5F, 0x6F, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806527D0 = "B_zan";
+SECTION_DEAD char* const stringBase_806527D6 = "B_oh";
+#pragma pop
 
 /* 806527DC-8065281C 0040+00 .data      cc_zant_src__31@unnamed@d_a_b_zant_mobile_cpp@               */
 u8 data_806527DC[64] = {

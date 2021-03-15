@@ -447,9 +447,11 @@ SECTION_RODATA const u8 lit_3818[4] = {
 };
 
 /* 80C5E8FC-80C5E904 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x5F, 0x41, 0x53, 0x68, 0x74, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C5E8FC = "P_AShtr";
+#pragma pop
 
 /* 80C5E904-80C5E910 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

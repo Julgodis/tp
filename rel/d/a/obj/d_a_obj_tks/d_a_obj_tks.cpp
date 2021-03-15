@@ -1087,11 +1087,15 @@ SECTION_RODATA const u8 lit_5132[8] = {
 SECTION_RODATA const u32 lit_5173 = 0x42200000;
 
 /* 80D128C8-80D128ED 0025+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[37] = {
-	0x54, 0x4B, 0x53, 0x32, 0x00, 0x4F, 0x62, 0x6A, 0x54, 0x6B, 0x73, 0x00, 0x54, 0x79, 0x70, 0x65,
-	0x00, 0x54, 0x4B, 0x53, 0x5F, 0x53, 0x45, 0x43, 0x52, 0x45, 0x54, 0x00, 0x54, 0x4B, 0x53, 0x5F,
-	0x57, 0x41, 0x52, 0x50, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D128C8 = "TKS2";
+SECTION_DEAD char* const stringBase_80D128CD = "ObjTks";
+SECTION_DEAD char* const stringBase_80D128D4 = "Type";
+SECTION_DEAD char* const stringBase_80D128D9 = "TKS_SECRET";
+SECTION_DEAD char* const stringBase_80D128E4 = "TKS_WARP";
+#pragma pop
 
 /* 80D128F0-80D128FC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

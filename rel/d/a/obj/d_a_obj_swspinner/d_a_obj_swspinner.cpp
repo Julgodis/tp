@@ -241,9 +241,11 @@ SECTION_RODATA const u32 lit_3922 = 0x3F800000;
 SECTION_RODATA const u32 lit_3923 = 0xBF800000;
 
 /* 80D00AD4-80D00ADE 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x50, 0x5F, 0x53, 0x73, 0x77, 0x69, 0x74, 0x63, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D00AD4 = "P_Sswitch";
+#pragma pop
 
 /* 80D00AE0-80D00AE4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

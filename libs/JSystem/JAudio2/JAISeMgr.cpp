@@ -404,12 +404,13 @@ ASM_FUNCTION(mixOut__8JAISeMgrFv) {
 
 /* ############################################################################################## */
 /* 8039B8F8-8039B910 0014+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JAISeMgr__stringBase0[24] = {
-	0x63, 0x61, 0x6E, 0x6E, 0x6F, 0x74, 0x20, 0x6E, 0x65, 0x77, 0x20, 0x53, 0x65, 0x20, 0x25, 0x30,
-	0x38, 0x78, 0x2E, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039B8F8 = "cannot new Se %08x.";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039B90C = "\0\0\0";
+#pragma pop
 
 /* 802A0768-802A08D0 0168+00 .text      startSound__8JAISeMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push

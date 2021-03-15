@@ -1568,10 +1568,14 @@ SECTION_RODATA const u32 lit_7219 = 0x43FA0000;
 SECTION_RODATA const u32 lit_7220 = 0xC4480000;
 
 /* 806B5ED0-806B5EEB 001B+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[27] = {
-	0x45, 0x5F, 0x44, 0x54, 0x00, 0x44, 0x61, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x45, 0x5F, 0x4F,
-	0x54, 0x00, 0x42, 0x6F, 0x78, 0x42, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806B5ED0 = "E_DT";
+SECTION_DEAD char* const stringBase_806B5ED5 = "Dalways";
+SECTION_DEAD char* const stringBase_806B5EDD = "E_OT";
+SECTION_DEAD char* const stringBase_806B5EE2 = "BoxB.bmd";
+#pragma pop
 
 /* 806B5EEC-806B5F14 0028+00 .data      eDt_ShakeFrame__6E_DT_n                                      */
 u8 eDt_ShakeFrame__6E_DT_n[40] = {

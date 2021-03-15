@@ -456,14 +456,16 @@ ASM_FUNCTION(__ct__10dGov_HIO_cFv) {
 
 /* ############################################################################################## */
 /* 80394C28-80394C60 0032+06 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_gameover__stringBase0[56] = {
-	0x47, 0x6F, 0x76, 0x65, 0x72, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x31, 0x30, 0x41, 0x00, 0x7A, 0x65,
-	0x6C, 0x64, 0x61, 0x5F, 0x67, 0x61, 0x6D, 0x65, 0x5F, 0x6F, 0x76, 0x65, 0x72, 0x2E, 0x62, 0x6C,
-	0x6F, 0x00, 0x74, 0x74, 0x5F, 0x62, 0x6C, 0x6F, 0x63, 0x6B, 0x38, 0x78, 0x38, 0x2E, 0x62, 0x74,
-	0x69, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394C28 = "Gover";
+SECTION_DEAD char* const stringBase_80394C2E = "D_MN10A";
+SECTION_DEAD char* const stringBase_80394C36 = "zelda_game_over.blo";
+SECTION_DEAD char* const stringBase_80394C4A = "tt_block8x8.bti";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394C5A = "\0\0\0\0\0";
+#pragma pop
 
 /* 803BBDA8-803BBDB8 0010+00 .data      __vt__24dDlst_Gameover_CAPTURE_c                             */
 void* const __vt__24dDlst_Gameover_CAPTURE_c[4] = {

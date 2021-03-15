@@ -81,7 +81,7 @@ ASM_FUNCTION(Create__13daObjZCloth_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjZCloth_cFv) {
 	nofralloc
-#include "func_80D3EF0C"
+#include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3EF0C"
 }
 #pragma pop
 

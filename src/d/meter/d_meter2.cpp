@@ -250,12 +250,15 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80399338-80399350 0017+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_meter_d_meter2__stringBase0[24] = {
-	0x46, 0x5F, 0x53, 0x50, 0x30, 0x30, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x33, 0x00, 0x52,
-	0x5F, 0x53, 0x50, 0x31, 0x32, 0x37, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399338 = "F_SP00";
+SECTION_DEAD char* const stringBase_8039933F = "F_SP103";
+SECTION_DEAD char* const stringBase_80399347 = "R_SP127";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039934F = "";
+#pragma pop
 
 /* 804549C8-804549CC 0004+00 .sdata2    @4662                                                        */
 u8 d_meter_d_meter2__lit_4662[4] = {

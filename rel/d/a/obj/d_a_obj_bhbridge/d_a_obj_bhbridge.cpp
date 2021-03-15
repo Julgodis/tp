@@ -368,11 +368,13 @@ SECTION_RODATA const u32 lit_3900 = 0x3F000000;
 SECTION_RODATA const u32 lit_3901 = 0x3E4CCCCD;
 
 /* 80BB5F84-80BB5FAB 0027+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[39] = {
-	0x42, 0x48, 0x42, 0x72, 0x69, 0x64, 0x67, 0x65, 0x00, 0x4D, 0x5F, 0x42, 0x48, 0x62, 0x72, 0x69,
-	0x64, 0x67, 0x65, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x4D, 0x5F, 0x42, 0x48, 0x62, 0x72, 0x69, 0x64,
-	0x67, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BB5F84 = "BHBridge";
+SECTION_DEAD char* const stringBase_80BB5F8D = "M_BHbridge.dzb";
+SECTION_DEAD char* const stringBase_80BB5F9C = "M_BHbridge.bmd";
+#pragma pop
 
 /* 80BB5FAC-80BB5FB0 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

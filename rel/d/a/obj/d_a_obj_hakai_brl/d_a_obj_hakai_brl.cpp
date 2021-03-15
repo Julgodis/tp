@@ -309,10 +309,13 @@ SECTION_RODATA const u8 data_80C17350[8] = {
 SECTION_RODATA const u32 lit_3953 = 0x3F900000;
 
 /* 80C1735C-80C1737C 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x48, 0x42, 0x61, 0x72, 0x72, 0x65, 0x6C, 0x00, 0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x42,
-	0x72, 0x65, 0x61, 0x6B, 0x57, 0x6F, 0x6F, 0x64, 0x42, 0x6F, 0x78, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C1735C = "HBarrel";
+SECTION_DEAD char* const stringBase_80C17364 = "Always";
+SECTION_DEAD char* const stringBase_80C1736B = "BreakWoodBox.bmd";
+#pragma pop
 
 /* 80C1737C-80C17380 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

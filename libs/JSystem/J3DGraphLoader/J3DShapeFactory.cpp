@@ -75,13 +75,14 @@ ASM_FUNCTION(create__15J3DShapeFactoryFiUlP14_GXVtxDescList) {
 
 /* ############################################################################################## */
 /* 803A2100-803A2130 002C+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J3DShapeFactory__stringBase0[48] = {
-	0x57, 0x52, 0x4F, 0x4E, 0x47, 0x20, 0x53, 0x48, 0x41, 0x50, 0x45, 0x20, 0x4D, 0x41, 0x54, 0x52,
-	0x49, 0x58, 0x20, 0x54, 0x59, 0x50, 0x45, 0x20, 0x28, 0x4A, 0x33, 0x44, 0x4D, 0x6F, 0x64, 0x65,
-	0x6C, 0x49, 0x6E, 0x69, 0x74, 0x2E, 0x63, 0x70, 0x70, 0x29, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A2100 = 
+    "WRONG SHAPE MATRIX TYPE (J3DModelInit.cpp)\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A212C = "\0\0\0";
+#pragma pop
 
 /* 803375BC-8033784C 0290+00 .text      newShapeMtx__15J3DShapeFactoryCFUlii                         */
 #pragma push

@@ -280,9 +280,11 @@ SECTION_RODATA const u32 lit_4021 = 0xC53B8000;
 SECTION_RODATA const u32 lit_4022 = 0x453B8000;
 
 /* 80C53FFC-80C54005 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6C, 0x62, 0x6F, 0x78, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C53FFC = "Obj_lbox";
+#pragma pop
 
 /* 80C54008-80C54048 0040+00 .data      cc_sph_src$3950                                              */
 u8 data_80C54008[64] = {

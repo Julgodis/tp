@@ -772,7 +772,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80994A70"
+#include "asm/rel/d/a/npc/d_a_npc_clerka/d_a_npc_clerka/func_80994A70"
 }
 #pragma pop
 
@@ -1124,7 +1124,7 @@ ASM_FUNCTION(__sinit_d_a_npc_clerka_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__14daNpc_clerkA_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_809955C8"
+#include "asm/rel/d/a/npc/d_a_npc_clerka/d_a_npc_clerka/func_809955C8"
 }
 #pragma pop
 
@@ -1234,7 +1234,7 @@ ASM_FUNCTION(func_80995724) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_8099572C"
+#include "asm/rel/d/a/npc/d_a_npc_clerka/d_a_npc_clerka/func_8099572C"
 }
 #pragma pop
 
@@ -1369,11 +1369,14 @@ SECTION_RODATA const u32 lit_5110 = 0x3F000000;
 SECTION_RODATA const u32 lit_5303 = 0xC2DC0000;
 
 /* 80995970-80995994 0024+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[36] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x63, 0x6C, 0x65,
-	0x72, 0x6B, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80995970 = "";
+SECTION_DEAD char* const stringBase_80995971 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80995981 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_8099598D = "clerkA";
+#pragma pop
 
 /* 80995994-809959A0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

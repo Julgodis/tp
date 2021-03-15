@@ -360,9 +360,11 @@ SECTION_RODATA const u32 lit_3942 = 0xBF800000;
 SECTION_RODATA const u32 lit_3943 = 0x43480000;
 
 /* 80CE8ECC-80CE8ED5 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x53, 0x74, 0x61, 0x42, 0x6C, 0x6F, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CE8ECC = "StaBlock";
+#pragma pop
 
 /* 80CE8ED8-80CE8F18 0040+00 .data      mCcDSph__14daStairBlock_c                                    */
 u8 mCcDSph__14daStairBlock_c[64] = {

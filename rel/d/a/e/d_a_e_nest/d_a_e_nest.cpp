@@ -709,9 +709,12 @@ SECTION_RODATA const u8 lit_5402[8] = {
 };
 
 /* 805047EC-805047FB 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x33, 0x00, 0x45, 0x5F, 0x6E, 0x65, 0x73, 0x74, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_805047EC = "F_SP103";
+SECTION_DEAD char* const stringBase_805047F4 = "E_nest";
+#pragma pop
 
 /* 805047FC-80504808 000C+00 .data      c_x$4617                                                     */
 u8 data_805047FC[12] = {

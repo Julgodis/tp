@@ -116,7 +116,7 @@ ASM_FUNCTION(CreateHeap__14daObjLv4Gear_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjLv4Gear_cFv) {
 	nofralloc
-#include "func_80C68124"
+#include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/func_80C68124"
 }
 #pragma pop
 
@@ -224,9 +224,11 @@ SECTION_RODATA const u32 lit_3773 = 0x3F800000;
 SECTION_RODATA const u32 lit_3774 = 0xBF800000;
 
 /* 80C68524-80C6852B 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x50, 0x5F, 0x47, 0x65, 0x61, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C68524 = "P_Gear";
+#pragma pop
 
 /* 80C6852C-80C68530 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -222,7 +222,7 @@ ASM_FUNCTION(CreateHeap__14daObjStopper_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjStopper_cFv) {
 	nofralloc
-#include "func_80CED258"
+#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CED258"
 }
 #pragma pop
 
@@ -695,9 +695,11 @@ SECTION_RODATA const u32 lit_4311 = 0x3E4CCCCD;
 SECTION_RODATA const u32 lit_4312 = 0x42E60000;
 
 /* 80CEEFF0-80CEEFFE 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x64, 0x6F, 0x6F, 0x72, 0x2D, 0x73, 0x74, 0x6F, 0x70, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CEEFF0 = "door-stop.bmd";
+#pragma pop
 
 /* 80CEF000-80CEF00C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

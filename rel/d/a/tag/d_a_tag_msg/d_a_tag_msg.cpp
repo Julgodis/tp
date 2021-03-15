@@ -288,10 +288,15 @@ SECTION_RODATA const u8 lit_3816[8] = {
 SECTION_RODATA const u32 lit_3880 = 0x42C80000;
 
 /* 804901A4-804901C4 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x54, 0x61, 0x67, 0x4D, 0x73, 0x67, 0x00, 0x53, 0x50, 0x45, 0x41, 0x4B, 0x00, 0x54, 0x61, 0x67,
-	0x5F, 0x6D, 0x73, 0x00, 0x50, 0x41, 0x55, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_804901A4 = "TagMsg";
+SECTION_DEAD char* const stringBase_804901AB = "SPEAK";
+SECTION_DEAD char* const stringBase_804901B1 = "Tag_ms";
+SECTION_DEAD char* const stringBase_804901B8 = "PAUSE";
+SECTION_DEAD char* const stringBase_804901BE = "Timer";
+#pragma pop
 
 /* 804901C4-804901C8 0004+00 .data      l_resName                                                    */
 u8 l_resName[4] = {

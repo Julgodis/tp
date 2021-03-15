@@ -436,9 +436,11 @@ SECTION_RODATA const u32 lit_3838 = 0x43960000;
 SECTION_RODATA const u32 lit_3852 = 0x3F000000;
 
 /* 80C8E6D0-80C8E6DA 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x5F, 0x6D, 0x61, 0x67, 0x6C, 0x69, 0x66, 0x74, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C8E6D0 = "L_maglift";
+#pragma pop
 
 /* 80C8E6DC-80C8E6E8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

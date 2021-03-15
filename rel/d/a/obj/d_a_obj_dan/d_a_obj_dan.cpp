@@ -623,9 +623,12 @@ SECTION_RODATA const u32 lit_4521 = 0xCE6E6B28;
 SECTION_RODATA const u32 lit_4522 = 0xC2480000;
 
 /* 80BDC46C-80BDC47A 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x49, 0x5F, 0x44, 0x61, 0x6E, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BDC46C = "I_Dan";
+SECTION_DEAD char* const stringBase_80BDC472 = "R_SP160";
+#pragma pop
 
 /* 80BDC47C-80BDC49C 0020+00 .data      l_daObjDAN_Method                                            */
 u8 l_daObjDAN_Method[32] = {

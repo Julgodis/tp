@@ -237,11 +237,14 @@ ASM_FUNCTION(dThunder_Create__FP12kankyo_class) {
 
 /* ############################################################################################## */
 /* 80394F40-80394F50 000E+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_ky_thunder__stringBase0[16] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x33, 0x30, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394F40 = "Always";
+SECTION_DEAD char* const stringBase_80394F47 = "R_SP30";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394F4E = "\0";
+#pragma pop
 
 /* 80453E9C-80453EA0 0004+00 .sdata2    @4079                                                        */
 f32 d_d_ky_thunder__lit_4079 = 0.5f;

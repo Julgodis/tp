@@ -963,7 +963,7 @@ ASM_FUNCTION(__sinit_d_a_npc_sola_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_solA_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AEEF40"
+#include "asm/rel/d/a/npc/d_a_npc_sola/d_a_npc_sola/func_80AEEF40"
 }
 #pragma pop
 
@@ -1130,10 +1130,13 @@ SECTION_RODATA const u8 lit_4746[8] = {
 };
 
 /* 80AEF1E0-80AEF1F2 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x73, 0x6F, 0x6C,
-	0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AEF1E0 = "";
+SECTION_DEAD char* const stringBase_80AEF1E1 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AEF1ED = "solA";
+#pragma pop
 
 /* 80AEF1F4-80AEF200 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

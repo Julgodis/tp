@@ -87,12 +87,13 @@ ASM_FUNCTION(__dt__15dKantera_icon_cFv) {
 
 /* ############################################################################################## */
 /* 80394F50-80394F70 001D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_kantera_icon_meter__stringBase0[32] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x6B, 0x61, 0x6E, 0x74, 0x65, 0x72, 0x61, 0x5F, 0x69, 0x63,
-	0x6F, 0x6E, 0x5F, 0x6D, 0x61, 0x74, 0x65, 0x72, 0x2E, 0x62, 0x6C, 0x6F, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394F6D = "\0\0";
+#pragma pop
 
 /* 801AEA68-801AEB7C 0114+00 .text      initiate__15dKantera_icon_cFv                                */
 #pragma push

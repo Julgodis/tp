@@ -1254,7 +1254,7 @@ ASM_FUNCTION(__sinit_d_a_npc_bans_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_Bans_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80967AC4"
+#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967AC4"
 }
 #pragma pop
 
@@ -1364,7 +1364,7 @@ ASM_FUNCTION(func_80967C74) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80967C7C"
+#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967C7C"
 }
 #pragma pop
 
@@ -1552,18 +1552,29 @@ SECTION_RODATA const u32 lit_5655 = 0x41800000;
 SECTION_RODATA const u32 lit_5656 = 0x41100000;
 
 /* 80967F6C-80968000 0094+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[148] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x44, 0x45, 0x4D,
-	0x4F, 0x31, 0x33, 0x5F, 0x53, 0x54, 0x42, 0x00, 0x41, 0x4E, 0x47, 0x45, 0x52, 0x00, 0x41, 0x4E,
-	0x47, 0x45, 0x52, 0x32, 0x00, 0x41, 0x4E, 0x47, 0x45, 0x52, 0x5F, 0x4E, 0x45, 0x41, 0x52, 0x00,
-	0x41, 0x4E, 0x47, 0x45, 0x52, 0x5F, 0x4E, 0x45, 0x41, 0x52, 0x32, 0x00, 0x47, 0x4F, 0x42, 0x41,
-	0x43, 0x4B, 0x00, 0x42, 0x61, 0x6E, 0x73, 0x00, 0x42, 0x61, 0x6E, 0x73, 0x5F, 0x54, 0x57, 0x00,
-	0x42, 0x61, 0x6E, 0x73, 0x31, 0x00, 0x42, 0x61, 0x6E, 0x73, 0x32, 0x00, 0x4C, 0x65, 0x6E, 0x31,
-	0x00, 0x50, 0x55, 0x52, 0x43, 0x48, 0x41, 0x53, 0x45, 0x00, 0x47, 0x4F, 0x5F, 0x42, 0x41, 0x43,
-	0x4B, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x39, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x74, 0x69,
-	0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80967F6C = "";
+SECTION_DEAD char* const stringBase_80967F6D = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80967F7D = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80967F89 = "DEMO13_STB";
+SECTION_DEAD char* const stringBase_80967F94 = "ANGER";
+SECTION_DEAD char* const stringBase_80967F9A = "ANGER2";
+SECTION_DEAD char* const stringBase_80967FA1 = "ANGER_NEAR";
+SECTION_DEAD char* const stringBase_80967FAC = "ANGER_NEAR2";
+SECTION_DEAD char* const stringBase_80967FB8 = "GOBACK";
+SECTION_DEAD char* const stringBase_80967FBF = "Bans";
+SECTION_DEAD char* const stringBase_80967FC4 = "Bans_TW";
+SECTION_DEAD char* const stringBase_80967FCC = "Bans1";
+SECTION_DEAD char* const stringBase_80967FD2 = "Bans2";
+SECTION_DEAD char* const stringBase_80967FD8 = "Len1";
+SECTION_DEAD char* const stringBase_80967FDD = "PURCHASE";
+SECTION_DEAD char* const stringBase_80967FE6 = "GO_BACK";
+SECTION_DEAD char* const stringBase_80967FEE = "R_SP109";
+SECTION_DEAD char* const stringBase_80967FF6 = "prm";
+SECTION_DEAD char* const stringBase_80967FFA = "timer";
+#pragma pop
 
 /* 80968000-8096800C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

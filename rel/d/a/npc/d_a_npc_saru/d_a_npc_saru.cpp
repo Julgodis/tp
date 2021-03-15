@@ -1099,7 +1099,7 @@ ASM_FUNCTION(__sinit_d_a_npc_saru_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_Saru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AC4394"
+#include "asm/rel/d/a/npc/d_a_npc_saru/d_a_npc_saru/func_80AC4394"
 }
 #pragma pop
 
@@ -1325,13 +1325,22 @@ SECTION_RODATA const u32 lit_5143 = 0x41900000;
 SECTION_RODATA const u32 lit_5144 = 0x3F000000;
 
 /* 80AC4654-80AC46A2 004E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[78] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x59, 0x4D, 0x5F,
-	0x4C, 0x4F, 0x4F, 0x4B, 0x00, 0x4E, 0x70, 0x63, 0x5F, 0x6B, 0x73, 0x00, 0x73, 0x61, 0x72, 0x75,
-	0x5F, 0x54, 0x57, 0x00, 0x73, 0x61, 0x72, 0x75, 0x00, 0x46, 0x49, 0x4E, 0x44, 0x5F, 0x4D, 0x4F,
-	0x4E, 0x4B, 0x45, 0x59, 0x00, 0x48, 0x45, 0x4C, 0x50, 0x5F, 0x4D, 0x45, 0x00, 0x53, 0x61, 0x72,
-	0x75, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x40, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AC4654 = "";
+SECTION_DEAD char* const stringBase_80AC4655 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AC4661 = "YM_LOOK";
+SECTION_DEAD char* const stringBase_80AC4669 = "Npc_ks";
+SECTION_DEAD char* const stringBase_80AC4670 = "saru_TW";
+SECTION_DEAD char* const stringBase_80AC4678 = "saru";
+SECTION_DEAD char* const stringBase_80AC467D = "FIND_MONKEY";
+SECTION_DEAD char* const stringBase_80AC4689 = "HELP_ME";
+SECTION_DEAD char* const stringBase_80AC4691 = "Saru";
+SECTION_DEAD char* const stringBase_80AC4696 = "prm";
+SECTION_DEAD char* const stringBase_80AC469A = "timer";
+SECTION_DEAD char* const stringBase_80AC46A0 = "@";
+#pragma pop
 
 /* 80AC46A4-80AC46B0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -1309,7 +1309,7 @@ ASM_FUNCTION(__sinit_d_a_npc_seira_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13daNpc_Seira_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80ACFB48"
+#include "asm/rel/d/a/npc/d_a_npc_seira/d_a_npc_seira/func_80ACFB48"
 }
 #pragma pop
 
@@ -1419,7 +1419,7 @@ ASM_FUNCTION(func_80ACFCA4) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80ACFCAC"
+#include "asm/rel/d/a/npc/d_a_npc_seira/d_a_npc_seira/func_80ACFCAC"
 }
 #pragma pop
 
@@ -1564,17 +1564,22 @@ SECTION_RODATA const u8 lit_5212[12] = {
 };
 
 /* 80ACFF04-80ACFF8E 008A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[138] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x43, 0x4F, 0x4E, 0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x5F, 0x41, 0x42,
-	0x4F, 0x55, 0x54, 0x5F, 0x53, 0x41, 0x52, 0x55, 0x30, 0x31, 0x00, 0x43, 0x4F, 0x4E, 0x56, 0x45,
-	0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x5F, 0x41, 0x42, 0x4F, 0x55, 0x54, 0x5F, 0x53, 0x41,
-	0x52, 0x55, 0x30, 0x32, 0x00, 0x53, 0x65, 0x69, 0x72, 0x61, 0x00, 0x53, 0x65, 0x72, 0x61, 0x42,
-	0x74, 0x6C, 0x00, 0x53, 0x65, 0x72, 0x61, 0x00, 0x53, 0x65, 0x69, 0x72, 0x61, 0x5F, 0x70, 0x31,
-	0x00, 0x43, 0x4F, 0x4E, 0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x5F, 0x41, 0x42,
-	0x4F, 0x55, 0x54, 0x5F, 0x53, 0x41, 0x52, 0x55, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x6D, 0x73, 0x67,
-	0x4E, 0x6F, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x30, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80ACFF04 = "";
+SECTION_DEAD char* const stringBase_80ACFF05 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80ACFF15 = "CONVERSATION_ABOUT_SARU01";
+SECTION_DEAD char* const stringBase_80ACFF2F = "CONVERSATION_ABOUT_SARU02";
+SECTION_DEAD char* const stringBase_80ACFF49 = "Seira";
+SECTION_DEAD char* const stringBase_80ACFF4F = "SeraBtl";
+SECTION_DEAD char* const stringBase_80ACFF57 = "Sera";
+SECTION_DEAD char* const stringBase_80ACFF5C = "Seira_p1";
+SECTION_DEAD char* const stringBase_80ACFF65 = "CONVERSATION_ABOUT_SARU";
+SECTION_DEAD char* const stringBase_80ACFF7D = "prm";
+SECTION_DEAD char* const stringBase_80ACFF81 = "msgNo";
+SECTION_DEAD char* const stringBase_80ACFF87 = "R_SP01";
+#pragma pop
 
 /* 80ACFF90-80ACFF9C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

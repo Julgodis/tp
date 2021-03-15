@@ -395,10 +395,12 @@ SECTION_RODATA const u32 lit_3907 = 0x43200000;
 SECTION_RODATA const u32 lit_3908 = 0x430C0000;
 
 /* 80C4E85C-80C4E870 0014+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[20] = {
-	0x4B, 0x5F, 0x57, 0x68, 0x65, 0x65, 0x6C, 0x30, 0x30, 0x00, 0x53, 0x5F, 0x77, 0x68, 0x65, 0x65,
-	0x6C, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C4E85C = "K_Wheel00";
+SECTION_DEAD char* const stringBase_80C4E866 = "S_wheel00";
+#pragma pop
 
 /* 80C4E870-80C4E878 0008+00 .data      l_arcName                                                    */
 u8 l_arcName[8] = {

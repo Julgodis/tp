@@ -72,12 +72,14 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 
 /* ############################################################################################## */
 /* 80399B78-80399B98 001F+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 msg_scrn_d_msg_scrn_place__stringBase0[32] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x73, 0x74, 0x61, 0x67, 0x65, 0x5F, 0x74, 0x69, 0x74, 0x6C,
-	0x65, 0x5F, 0x66, 0x6F, 0x72, 0x65, 0x69, 0x67, 0x6E, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399B78 = "zelda_stage_title_foreign.blo";
+SECTION_DEAD char* const stringBase_80399B96 = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399B97 = "";
+#pragma pop
 
 /* 803C12B0-803C12E8 0038+00 .data      t_tag$3877                                                   */
 u8 data_803C12B0[56] = {

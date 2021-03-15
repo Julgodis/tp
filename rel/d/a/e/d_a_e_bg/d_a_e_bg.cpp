@@ -695,9 +695,12 @@ SECTION_RODATA const u32 lit_5533 = 0xC2480000;
 SECTION_RODATA const u32 lit_5534 = 0x453B8000;
 
 /* 8068A308-8068A312 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x45, 0x5F, 0x42, 0x47, 0x00, 0x45, 0x5F, 0x62, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8068A308 = "E_BG";
+SECTION_DEAD char* const stringBase_8068A30D = "E_bg";
+#pragma pop
 
 /* 8068A314-8068A354 0040+00 .data      cc_bg_src__22@unnamed@d_a_e_bg_cpp@                          */
 u8 data_8068A314[64] = {

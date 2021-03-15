@@ -276,11 +276,14 @@ SECTION_RODATA const u32 lit_3832 = 0x45D05555;
 SECTION_RODATA const u32 lit_3833 = 0x457A0000;
 
 /* 80BEC554-80BEC57D 0029+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[41] = {
-	0x73, 0x70, 0x65, 0x63, 0x2E, 0x64, 0x61, 0x74, 0x00, 0x66, 0x6C, 0x61, 0x67, 0x25, 0x30, 0x32,
-	0x64, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x46, 0x6C, 0x61, 0x67, 0x4F, 0x62, 0x6A, 0x00, 0x6D, 0x6F,
-	0x64, 0x65, 0x6C, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BEC554 = "spec.dat";
+SECTION_DEAD char* const stringBase_80BEC55D = "flag%02d.bmd";
+SECTION_DEAD char* const stringBase_80BEC56A = "FlagObj";
+SECTION_DEAD char* const stringBase_80BEC572 = "model0.bmd";
+#pragma pop
 
 /* 80BEC580-80BEC5A0 0020+00 .data      l_daObjFlag_Method                                           */
 u8 l_daObjFlag_Method[32] = {

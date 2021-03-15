@@ -1680,11 +1680,15 @@ SECTION_RODATA const u32 lit_5439 = 0x45ADFCC7;
 SECTION_RODATA const u32 lit_5440 = 0x42700000;
 
 /* 80D4C1B0-80D4C1DA 002A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[42] = {
-	0x00, 0x50, 0x45, 0x52, 0x55, 0x5F, 0x41, 0x50, 0x50, 0x45, 0x41, 0x52, 0x00, 0x50, 0x45, 0x52,
-	0x55, 0x5F, 0x41, 0x50, 0x50, 0x45, 0x41, 0x52, 0x5F, 0x53, 0x4B, 0x49, 0x50, 0x00, 0x50, 0x65,
-	0x72, 0x75, 0x00, 0x63, 0x75, 0x74, 0x5F, 0x69, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D4C1B0 = "";
+SECTION_DEAD char* const stringBase_80D4C1B1 = "PERU_APPEAR";
+SECTION_DEAD char* const stringBase_80D4C1BD = "PERU_APPEAR_SKIP";
+SECTION_DEAD char* const stringBase_80D4C1CE = "Peru";
+SECTION_DEAD char* const stringBase_80D4C1D3 = "cut_id";
+#pragma pop
 
 /* 80D4C1DC-80D4C1E8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -249,10 +249,13 @@ SECTION_RODATA const u32 lit_3963 = 0xBE4CCCCD;
 SECTION_RODATA const u32 lit_3964 = 0x41A00000;
 
 /* 80C69974-80C69990 001C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[28] = {
-	0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x39, 0x00, 0x50, 0x5F, 0x52, 0x77, 0x61, 0x6C,
-	0x6C, 0x00, 0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x34, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C69974 = "PRWallR09";
+SECTION_DEAD char* const stringBase_80C6997E = "P_Rwall";
+SECTION_DEAD char* const stringBase_80C69986 = "PRWallR04";
+#pragma pop
 
 /* 80C69990-80C6999C 000C+00 .data      l_arcName                                                    */
 u8 l_arcName[12] = {

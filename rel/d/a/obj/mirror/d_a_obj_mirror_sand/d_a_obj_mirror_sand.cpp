@@ -163,9 +163,11 @@ SECTION_RODATA const u8 lit_3732[8] = {
 };
 
 /* 80C989E8-80C989F0 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4D, 0x52, 0x2D, 0x53, 0x61, 0x6E, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C989E8 = "MR-Sand";
+#pragma pop
 
 /* 80C989F0-80C989F4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

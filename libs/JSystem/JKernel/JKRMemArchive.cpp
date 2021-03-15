@@ -188,13 +188,15 @@ ASM_FUNCTION(removeResource__13JKRMemArchiveFPv) {
 
 /* ############################################################################################## */
 /* 8039D160-8039D188 0027+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRMemArchive__stringBase0[40] = {
-	0x4A, 0x4B, 0x52, 0x4D, 0x65, 0x6D, 0x41, 0x72, 0x63, 0x68, 0x69, 0x76, 0x65, 0x2E, 0x63, 0x70,
-	0x70, 0x00, 0x25, 0x73, 0x00, 0x3F, 0x3F, 0x3F, 0x20, 0x62, 0x61, 0x64, 0x20, 0x73, 0x65, 0x71,
-	0x75, 0x65, 0x6E, 0x63, 0x65, 0x0A, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D160 = "JKRMemArchive.cpp";
+SECTION_DEAD char* const stringBase_8039D172 = "%s";
+SECTION_DEAD char* const stringBase_8039D175 = "??? bad sequence\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D187 = "";
+#pragma pop
 
 /* 802D6F5C-802D7030 00D4+00 .text      fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli        */
 #pragma push

@@ -605,9 +605,11 @@ SECTION_RODATA const u8 lit_4658[8] = {
 };
 
 /* 80D43F98-80D43F9D 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x62, 0x75, 0x6F, 0x79, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D43F98 = "buoy";
+#pragma pop
 
 /* 80D43FA0-80D43FA4 0004+00 .data      None                                                         */
 u8 data_80D43FA0[4] = {

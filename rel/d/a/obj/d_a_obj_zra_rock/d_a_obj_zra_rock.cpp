@@ -122,7 +122,7 @@ ASM_FUNCTION(CreateHeap__14daObjZraRock_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjZraRock_cFv) {
 	nofralloc
-#include "func_80D450E0"
+#include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D450E0"
 }
 #pragma pop
 
@@ -275,10 +275,12 @@ SECTION_RODATA const u8 lit_3816[4] = {
 SECTION_RODATA const u32 lit_3903 = 0x3F800000;
 
 /* 80D455D4-80D455ED 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x48, 0x5F, 0x5A, 0x72, 0x61, 0x52, 0x6F, 0x63, 0x6B, 0x00, 0x48, 0x5F, 0x5A, 0x6F, 0x72, 0x61,
-	0x52, 0x6F, 0x63, 0x6B, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D455D4 = "H_ZraRock";
+SECTION_DEAD char* const stringBase_80D455DE = "H_ZoraRock.dzb";
+#pragma pop
 
 /* 80D455F0-80D455F4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

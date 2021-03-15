@@ -320,11 +320,13 @@ ASM_FUNCTION(__ct__11dCamBGChk_cFv) {
 
 /* ############################################################################################## */
 /* 8037A7E0-8037A7F0 000D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_cam_param__stringBase0[16] = {
-	0x63, 0x61, 0x6D, 0x73, 0x74, 0x79, 0x6C, 0x65, 0x2E, 0x64, 0x61, 0x74, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8037A7E0 = "camstyle.dat";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8037A7ED = "\0\0";
+#pragma pop
 
 /* 800884F0-8008858C 009C+00 .text      __ct__11dCamParam_cFl                                        */
 #pragma push

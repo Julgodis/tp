@@ -500,7 +500,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80541348"
+#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541348"
 }
 #pragma pop
 
@@ -929,7 +929,7 @@ ASM_FUNCTION(__sinit_d_a_npc_fairy_seirei_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__19daNpc_FairySeirei_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80541BE4"
+#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541BE4"
 }
 #pragma pop
 
@@ -1043,9 +1043,12 @@ SECTION_RODATA const u8 data_80541E48[16] = {
 };
 
 /* 80541E58-80541E60 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x00, 0x53, 0x65, 0x69, 0x72, 0x65, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80541E58 = "";
+SECTION_DEAD char* const stringBase_80541E59 = "Seirei";
+#pragma pop
 
 /* 80541E60-80541E6C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

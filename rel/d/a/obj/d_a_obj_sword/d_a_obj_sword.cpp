@@ -100,7 +100,7 @@ ASM_FUNCTION(Create__12daObjSword_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjSword_cFv) {
 	nofralloc
-#include "func_80CFD67C"
+#include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFD67C"
 }
 #pragma pop
 
@@ -316,9 +316,11 @@ ASM_FUNCTION(func_80CFDE74) {
 
 /* ############################################################################################## */
 /* 80CFDE84-80CFDE94 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CFDE84 = "DEFAULT_GETITEM";
+#pragma pop
 
 /* 80CFDE94-80CFDEA0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -106,7 +106,7 @@ ASM_FUNCTION(CreateHeap__13daObjWCover_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWCover_cFv) {
 	nofralloc
-#include "func_80D36404"
+#include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/func_80D36404"
 }
 #pragma pop
 
@@ -273,9 +273,11 @@ SECTION_RODATA const u8 data_80D36A34[8] = {
 SECTION_RODATA const u32 lit_3833 = 0x3F800000;
 
 /* 80D36A40-80D36A4A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x48, 0x5F, 0x49, 0x64, 0x6F, 0x68, 0x75, 0x74, 0x61, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D36A40 = "H_Idohuta";
+#pragma pop
 
 /* 80D36A4C-80D36A58 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

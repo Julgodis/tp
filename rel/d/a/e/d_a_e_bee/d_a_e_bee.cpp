@@ -556,9 +556,11 @@ SECTION_RODATA const u8 lit_4912[8] = {
 };
 
 /* 80685524-8068552A 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x45, 0x5F, 0x62, 0x65, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80685524 = "E_bee";
+#pragma pop
 
 /* 8068552C-80685570 0044+00 .data      cc_cyl_src$4798                                              */
 u8 data_8068552C[68] = {

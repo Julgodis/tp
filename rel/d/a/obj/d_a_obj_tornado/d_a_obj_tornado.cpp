@@ -143,7 +143,7 @@ ASM_FUNCTION(Create__11daObjTrnd_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjTrnd_cFv) {
 	nofralloc
-#include "func_80D1BFB0"
+#include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/func_80D1BFB0"
 }
 #pragma pop
 
@@ -304,9 +304,11 @@ SECTION_RODATA const u32 lit_3909 = 0x3A83126F;
 SECTION_RODATA const u32 lit_3910 = 0x3F666666;
 
 /* 80D1C3B0-80D1C3B1 0001+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[1] = {
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D1C3B0 = "";
+#pragma pop
 
 /* 80D1C3B4-80D1C400 004C+00 .data      l_cps_src                                                    */
 u8 l_cps_src[76] = {

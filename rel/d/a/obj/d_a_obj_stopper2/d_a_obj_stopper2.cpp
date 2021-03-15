@@ -160,7 +160,7 @@ ASM_FUNCTION(CreateHeap__15daObjStopper2_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjStopper2_cFv) {
 	nofralloc
-#include "func_80CEF5C8"
+#include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/func_80CEF5C8"
 }
 #pragma pop
 
@@ -347,14 +347,19 @@ SECTION_RODATA const u32 lit_3925 = 0x42700000;
 SECTION_RODATA const u32 lit_3926 = 0x40C00000;
 
 /* 80CEFEB0-80CEFF02 0052+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[82] = {
-	0x53, 0x74, 0x6F, 0x70, 0x30, 0x30, 0x00, 0x53, 0x54, 0x4F, 0x50, 0x5F, 0x4F, 0x50, 0x45, 0x4E,
-	0x00, 0x53, 0x54, 0x4F, 0x50, 0x5F, 0x43, 0x4C, 0x4F, 0x53, 0x45, 0x00, 0x53, 0x54, 0x4F, 0x50,
-	0x5F, 0x4F, 0x50, 0x45, 0x4E, 0x32, 0x00, 0x53, 0x54, 0x4F, 0x50, 0x5F, 0x43, 0x4C, 0x4F, 0x53,
-	0x45, 0x32, 0x00, 0x64, 0x73, 0x74, 0x6F, 0x70, 0x00, 0x64, 0x6F, 0x6F, 0x72, 0x2D, 0x73, 0x74,
-	0x6F, 0x70, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x54, 0x69, 0x6D, 0x65,
-	0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CEFEB0 = "Stop00";
+SECTION_DEAD char* const stringBase_80CEFEB7 = "STOP_OPEN";
+SECTION_DEAD char* const stringBase_80CEFEC1 = "STOP_CLOSE";
+SECTION_DEAD char* const stringBase_80CEFECC = "STOP_OPEN2";
+SECTION_DEAD char* const stringBase_80CEFED7 = "STOP_CLOSE2";
+SECTION_DEAD char* const stringBase_80CEFEE3 = "dstop";
+SECTION_DEAD char* const stringBase_80CEFEE9 = "door-stop.bmd";
+SECTION_DEAD char* const stringBase_80CEFEF7 = "WAIT";
+SECTION_DEAD char* const stringBase_80CEFEFC = "Timer";
+#pragma pop
 
 /* 80CEFF04-80CEFF10 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

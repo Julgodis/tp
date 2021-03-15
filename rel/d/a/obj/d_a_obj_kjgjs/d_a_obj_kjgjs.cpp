@@ -191,9 +191,11 @@ SECTION_RODATA const u8 l_cull_box[48] = {
 };
 
 /* 80C46584-80C4658B 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4B, 0x5F, 0x6A, 0x67, 0x6A, 0x73, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C46584 = "K_jgjs";
+#pragma pop
 
 /* 80C4658C-80C46590 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

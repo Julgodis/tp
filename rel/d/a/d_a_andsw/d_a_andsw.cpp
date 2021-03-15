@@ -46,7 +46,7 @@ ASM_FUNCTION(Create__9daAndsw_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__9daAndsw_cFv) {
 	nofralloc
-#include "func_804579B8"
+#include "asm/rel/d/a/d_a_andsw/d_a_andsw/func_804579B8"
 }
 #pragma pop
 

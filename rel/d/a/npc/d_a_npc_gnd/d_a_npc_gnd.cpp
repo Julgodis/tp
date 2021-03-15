@@ -1285,10 +1285,13 @@ SECTION_RODATA const u8 lit_4787[8] = {
 };
 
 /* 809BE588-809BE599 0011+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[17] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x47, 0x6E, 0x64,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809BE588 = "";
+SECTION_DEAD char* const stringBase_809BE589 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_809BE595 = "Gnd";
+#pragma pop
 
 /* 809BE59C-809BE5A8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

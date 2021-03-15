@@ -1720,13 +1720,21 @@ SECTION_RODATA const u32 lit_5927 = 0x442F0000;
 SECTION_RODATA const u32 lit_5928 = 0x43348ED1;
 
 /* 80B9369C-80B936E7 004B+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[75] = {
-	0x45, 0x41, 0x52, 0x52, 0x49, 0x4E, 0x47, 0x5F, 0x47, 0x45, 0x54, 0x00, 0x7A, 0x72, 0x43, 0x00,
-	0x7A, 0x72, 0x43, 0x31, 0x00, 0x7A, 0x72, 0x43, 0x32, 0x00, 0x7A, 0x72, 0x43, 0x5F, 0x4D, 0x44,
-	0x4C, 0x00, 0x7A, 0x72, 0x43, 0x5F, 0x54, 0x57, 0x00, 0x7A, 0x72, 0x43, 0x5F, 0x53, 0x69, 0x63,
-	0x6B, 0x00, 0x7A, 0x72, 0x43, 0x5F, 0x45, 0x47, 0x44, 0x00, 0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45,
-	0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x70, 0x72, 0x6D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B9369C = "EARRING_GET";
+SECTION_DEAD char* const stringBase_80B936A8 = "zrC";
+SECTION_DEAD char* const stringBase_80B936AC = "zrC1";
+SECTION_DEAD char* const stringBase_80B936B1 = "zrC2";
+SECTION_DEAD char* const stringBase_80B936B6 = "zrC_MDL";
+SECTION_DEAD char* const stringBase_80B936BE = "zrC_TW";
+SECTION_DEAD char* const stringBase_80B936C5 = "zrC_Sick";
+SECTION_DEAD char* const stringBase_80B936CE = "zrC_EGD";
+SECTION_DEAD char* const stringBase_80B936D6 = "";
+SECTION_DEAD char* const stringBase_80B936D7 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80B936E3 = "prm";
+#pragma pop
 
 /* 80B936E8-80B936F4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

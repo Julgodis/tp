@@ -472,9 +472,11 @@ SECTION_RODATA const u8 data_80C60834[20] = {
 };
 
 /* 80C60848-80C60852 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x34, 0x52, 0x30, 0x32, 0x47, 0x61, 0x74, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C60848 = "L4R02Gate";
+#pragma pop
 
 /* 80C60854-80C60860 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

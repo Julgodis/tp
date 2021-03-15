@@ -340,10 +340,12 @@ SECTION_RODATA const u32 lit_4013 = 0x3F19999A;
 SECTION_RODATA const u32 lit_4036 = 0x40000000;
 
 /* 80C533B0-80C533CA 001A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[26] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x53, 0x52, 0x6F, 0x70, 0x65, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x49, 0x74,
-	0x61, 0x52, 0x6F, 0x70, 0x65, 0x2E, 0x62, 0x74, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C533B0 = "Obj_SRope";
+SECTION_DEAD char* const stringBase_80C533BA = "Obj_ItaRope.bti";
+#pragma pop
 
 /* 80C533CC-80C533D0 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

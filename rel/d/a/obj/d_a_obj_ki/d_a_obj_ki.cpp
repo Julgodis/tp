@@ -306,9 +306,11 @@ SECTION_RODATA const u8 lit_3988[8] = {
 };
 
 /* 80C44B88-80C44B8F 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x4B, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C44B88 = "Obj_Ki";
+#pragma pop
 
 /* 80C44B90-80C44B98 0008+00 .data      ki_bmd                                                       */
 u8 ki_bmd[8] = {

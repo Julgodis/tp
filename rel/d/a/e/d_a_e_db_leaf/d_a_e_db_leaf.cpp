@@ -101,9 +101,11 @@ ASM_FUNCTION(daE_DB_LEAF_Create__FP10fopAc_ac_c) {
 SECTION_RODATA const u32 lit_3699 = 0x3F800000;
 
 /* 806A2118-806A211D 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x44, 0x42, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806A2118 = "E_DB";
+#pragma pop
 
 /* 806A2120-806A2140 0020+00 .data      l_daE_DB_LEAF_Method                                         */
 u8 l_daE_DB_LEAF_Method[32] = {

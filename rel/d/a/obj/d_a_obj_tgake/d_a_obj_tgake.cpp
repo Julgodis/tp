@@ -171,9 +171,11 @@ ASM_FUNCTION(daObjGake_MoveBGDraw__FP11daObjGake_c) {
 
 /* ############################################################################################## */
 /* 80D0C13C-80D0C144 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x41, 0x5F, 0x54, 0x47, 0x61, 0x6B, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D0C13C = "A_TGake";
+#pragma pop
 
 /* 80D0C144-80D0C148 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

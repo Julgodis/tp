@@ -88,7 +88,7 @@ ASM_FUNCTION(CreateHeap__16daObj_SekiDoor_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__16daObj_SekiDoor_cFv) {
 	nofralloc
-#include "func_80CCD1F0"
+#include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/func_80CCD1F0"
 }
 #pragma pop
 
@@ -294,9 +294,12 @@ SECTION_RODATA const u8 data_80CCDA28[8] = {
 };
 
 /* 80CCDA30-80CCDA3A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x00, 0x53, 0x65, 0x6B, 0x69, 0x44, 0x6F, 0x6F, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CCDA30 = "";
+SECTION_DEAD char* const stringBase_80CCDA31 = "SekiDoor";
+#pragma pop
 
 /* 80CCDA3C-80CCDA48 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

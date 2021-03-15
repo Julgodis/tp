@@ -187,11 +187,17 @@ SECTION_RODATA const u8 lit_4211[8] = {
 };
 
 /* 8048EAFC-8048EB2C 0030+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[48] = {
-	0x00, 0x45, 0x58, 0x54, 0x49, 0x4E, 0x43, 0x54, 0x49, 0x4F, 0x4E, 0x00, 0x50, 0x55, 0x52, 0x43,
-	0x48, 0x41, 0x53, 0x45, 0x00, 0x42, 0x61, 0x6E, 0x73, 0x31, 0x00, 0x73, 0x65, 0x6B, 0x69, 0x7A,
-	0x6F, 0x41, 0x00, 0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00, 0x4B, 0x4D, 0x73, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8048EAFC = "";
+SECTION_DEAD char* const stringBase_8048EAFD = "EXTINCTION";
+SECTION_DEAD char* const stringBase_8048EB08 = "PURCHASE";
+SECTION_DEAD char* const stringBase_8048EB11 = "Bans1";
+SECTION_DEAD char* const stringBase_8048EB17 = "sekizoA";
+SECTION_DEAD char* const stringBase_8048EB1F = "Lv6Gate";
+SECTION_DEAD char* const stringBase_8048EB27 = "KMsg";
+#pragma pop
 
 /* 8048EB2C-8048EB44 0018+00 .data      l_evtList                                                    */
 u8 l_evtList[24] = {

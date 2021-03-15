@@ -151,14 +151,16 @@ ASM_FUNCTION(fetchResource__14JKRCompArchiveFPQ210JKRArchive12SDIFileEntryPUl) {
 
 /* ############################################################################################## */
 /* 8039D220-8039D260 0039+07 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRCompArchive__stringBase0[64] = {
-	0x4A, 0x4B, 0x52, 0x43, 0x6F, 0x6D, 0x70, 0x41, 0x72, 0x63, 0x68, 0x69, 0x76, 0x65, 0x2E, 0x63,
-	0x70, 0x70, 0x00, 0x25, 0x73, 0x00, 0x69, 0x6C, 0x6C, 0x65, 0x67, 0x61, 0x6C, 0x20, 0x61, 0x72,
-	0x63, 0x68, 0x69, 0x76, 0x65, 0x2E, 0x00, 0x69, 0x6C, 0x6C, 0x65, 0x67, 0x61, 0x6C, 0x20, 0x72,
-	0x65, 0x73, 0x6F, 0x75, 0x72, 0x63, 0x65, 0x2E, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D220 = "JKRCompArchive.cpp";
+SECTION_DEAD char* const stringBase_8039D233 = "%s";
+SECTION_DEAD char* const stringBase_8039D236 = "illegal archive.";
+SECTION_DEAD char* const stringBase_8039D247 = "illegal resource.";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D259 = "\0\0\0\0\0\0";
+#pragma pop
 
 /* 802D90C0-802D9260 01A0+00 .text      fetchResource__14JKRCompArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push

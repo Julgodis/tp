@@ -290,11 +290,16 @@ ASM_FUNCTION(__sinit_d_a_tag_evtmsg_cpp) {
 SECTION_RODATA const u32 lit_3826 = 0x42C80000;
 
 /* 8048D7EC-8048D815 0029+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[41] = {
-	0x00, 0x54, 0x41, 0x4C, 0x4B, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x45, 0x76, 0x74, 0x4D, 0x73,
-	0x67, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x45, 0x56, 0x54, 0x5F, 0x54, 0x41,
-	0x4C, 0x4B, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8048D7EC = "";
+SECTION_DEAD char* const stringBase_8048D7ED = "TALK";
+SECTION_DEAD char* const stringBase_8048D7F2 = "WAIT";
+SECTION_DEAD char* const stringBase_8048D7F7 = "EvtMsg";
+SECTION_DEAD char* const stringBase_8048D7FE = "DEFAULT_EVT_TALK";
+SECTION_DEAD char* const stringBase_8048D80F = "timer";
+#pragma pop
 
 /* 8048D818-8048D824 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

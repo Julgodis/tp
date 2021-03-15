@@ -321,9 +321,11 @@ SECTION_RODATA const u8 lit_3762[4] = {
 };
 
 /* 80CC4540-80CC4549 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x48, 0x5F, 0x53, 0x61, 0x69, 0x64, 0x61, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CC4540 = "H_Saidan";
+#pragma pop
 
 /* 80CC454C-80CC4558 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -139,11 +139,14 @@ ASM_FUNCTION(daWarpBug_Create__FP10fopAc_ac_c) {
 SECTION_RODATA const u32 lit_3709 = 0x3F800000;
 
 /* 80D681E0-80D68206 0026+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[38] = {
-	0x57, 0x61, 0x72, 0x70, 0x42, 0x75, 0x67, 0x00, 0x6B, 0x69, 0x73, 0x65, 0x69, 0x2E, 0x62, 0x6D,
-	0x64, 0x00, 0x6B, 0x69, 0x73, 0x65, 0x69, 0x2E, 0x62, 0x72, 0x6B, 0x00, 0x6B, 0x69, 0x73, 0x65,
-	0x69, 0x2E, 0x62, 0x74, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D681E0 = "WarpBug";
+SECTION_DEAD char* const stringBase_80D681E8 = "kisei.bmd";
+SECTION_DEAD char* const stringBase_80D681F2 = "kisei.brk";
+SECTION_DEAD char* const stringBase_80D681FC = "kisei.btk";
+#pragma pop
 
 /* 80D68208-80D6820C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

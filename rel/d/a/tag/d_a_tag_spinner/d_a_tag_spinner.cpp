@@ -111,7 +111,7 @@ ASM_FUNCTION(CreateHeap__14daTagSpinner_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daTagSpinner_cFv) {
 	nofralloc
-#include "func_80D61974"
+#include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/func_80D61974"
 }
 #pragma pop
 

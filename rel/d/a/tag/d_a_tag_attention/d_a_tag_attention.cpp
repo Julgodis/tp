@@ -51,7 +51,7 @@ ASM_FUNCTION(Create__8daAttp_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__8daAttp_cFv) {
 	nofralloc
-#include "func_804D5354"
+#include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/func_804D5354"
 }
 #pragma pop
 

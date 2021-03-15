@@ -689,12 +689,16 @@ ASM_FUNCTION(itemRotate__13dShopSystem_cFv) {
 
 /* ############################################################################################## */
 /* 80394C10-80394C28 0016+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_shop_d_shop_system__stringBase0[24] = {
-	0x52, 0x5F, 0x53, 0x50, 0x30, 0x31, 0x00, 0x2E, 0x62, 0x63, 0x6B, 0x00, 0x2E, 0x62, 0x74, 0x70,
-	0x00, 0x2E, 0x62, 0x74, 0x6B, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394C10 = "R_SP01";
+SECTION_DEAD char* const stringBase_80394C17 = ".bck";
+SECTION_DEAD char* const stringBase_80394C1C = ".btp";
+SECTION_DEAD char* const stringBase_80394C21 = ".btk";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394C26 = "\0";
+#pragma pop
 
 /* 80453B24-80453B28 0004+00 .sdata2    @5000                                                        */
 f32 d_shop_d_shop_system__lit_5000 = -25.0f;

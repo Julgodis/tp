@@ -733,9 +733,11 @@ SECTION_RODATA const u32 lit_4682 = 0x3F4CCCCD;
 SECTION_RODATA const u32 lit_4796 = 0xC2480000;
 
 /* 804D1720-804D1727 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_804D1720 = "Always";
+#pragma pop
 
 /* 804D1728-804D1748 0020+00 .data      l_daObjYOUSEI_Method                                         */
 u8 l_daObjYOUSEI_Method[32] = {

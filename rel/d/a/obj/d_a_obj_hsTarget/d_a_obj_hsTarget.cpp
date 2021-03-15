@@ -212,9 +212,12 @@ SECTION_RODATA const u8 l_dzbIdx[8] = {
 };
 
 /* 80C1F8B0-80C1F8C0 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x68, 0x73, 0x4D, 0x61, 0x74, 0x6F, 0x00, 0x4C, 0x37, 0x48, 0x73, 0x4D, 0x61, 0x74, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C1F8B0 = "hsMato";
+SECTION_DEAD char* const stringBase_80C1F8B7 = "L7HsMato";
+#pragma pop
 
 /* 80C1F8C0-80C1F8C8 0008+00 .data      l_resNameIdx                                                 */
 u8 l_resNameIdx[8] = {

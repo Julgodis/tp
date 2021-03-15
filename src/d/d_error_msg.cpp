@@ -18815,12 +18815,13 @@ ASM_FUNCTION(draw__14dDvdErrorMsg_cFl) {
 
 /* ############################################################################################## */
 /* 8038D640-8038D658 0013+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_error_msg__stringBase0[24] = {
-	0x44, 0x56, 0x44, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x21, 0x21, 0x20, 0x3C, 0x25, 0x64,
-	0x3E, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8038D640 = "DVD Error !! <%d>\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8038D653 = "\0\0\0\0";
+#pragma pop
 
 /* 8009D354-8009D410 00BC+00 .text      execute__14dDvdErrorMsg_cFv                                  */
 #pragma push

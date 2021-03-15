@@ -484,10 +484,13 @@ SECTION_RODATA const u32 lit_4366 = 0x41000000;
 SECTION_RODATA const u32 lit_4555 = 0xC3480000;
 
 /* 80C4107C-80C41093 0017+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[23] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x65, 0x79, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x38, 0x00,
-	0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x39, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C4107C = "Obj_key";
+SECTION_DEAD char* const stringBase_80C41084 = "F_SP118";
+SECTION_DEAD char* const stringBase_80C4108C = "D_MN09";
+#pragma pop
 
 /* 80C41094-80C41098 0004+00 .data      key_eno$4387                                                 */
 u8 data_80C41094[4] = {

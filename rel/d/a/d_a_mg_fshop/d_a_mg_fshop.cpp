@@ -1046,9 +1046,11 @@ SECTION_RODATA const u8 lit_5490[8] = {
 };
 
 /* 8087027C-80870282 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x46, 0x73, 0x68, 0x6F, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8087027C = "Fshop";
+#pragma pop
 
 /* 80870284-80870290 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

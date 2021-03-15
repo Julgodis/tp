@@ -300,11 +300,13 @@ SECTION_RODATA const u8 lit_3834[8] = {
 SECTION_RODATA const u32 lit_3973 = 0x3F800000;
 
 /* 80595D38-80595D5E 0026+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[38] = {
-	0x4A, 0x5F, 0x4E, 0x65, 0x63, 0x6B, 0x74, 0x69, 0x65, 0x00, 0x4A, 0x5F, 0x4E, 0x65, 0x63, 0x6B,
-	0x74, 0x69, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4A, 0x5F, 0x4E, 0x65, 0x63, 0x6B, 0x74, 0x69,
-	0x65, 0x2E, 0x62, 0x74, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80595D38 = "J_Necktie";
+SECTION_DEAD char* const stringBase_80595D42 = "J_Necktie.bmd";
+SECTION_DEAD char* const stringBase_80595D50 = "J_Necktie.btk";
+#pragma pop
 
 /* 80595D60-80595D64 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

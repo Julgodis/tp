@@ -2032,10 +2032,13 @@ SECTION_RODATA const u32 lit_8013 = 0xC58E3000;
 SECTION_RODATA const u32 lit_8014 = 0x4483E000;
 
 /* 80757A88-80757AA2 001A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[26] = {
-	0x45, 0x5F, 0x50, 0x4F, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54,
-	0x49, 0x54, 0x45, 0x4D, 0x00, 0x45, 0x5F, 0x70, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80757A88 = "E_PO";
+SECTION_DEAD char* const stringBase_80757A8D = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80757A9D = "E_po";
+#pragma pop
 
 /* 80757AA4-80757AB0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

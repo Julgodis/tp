@@ -115,7 +115,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjVGnd_cFv) {
 	nofralloc
-#include "func_80D216F4"
+#include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/func_80D216F4"
 }
 #pragma pop
 
@@ -213,9 +213,11 @@ SECTION_RODATA const u8 lit_3779[4] = {
 };
 
 /* 80D21A18-80D21A22 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x5F, 0x56, 0x6F, 0x6C, 0x63, 0x47, 0x6E, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D21A18 = "M_VolcGnd";
+#pragma pop
 
 /* 80D21A24-80D21A28 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

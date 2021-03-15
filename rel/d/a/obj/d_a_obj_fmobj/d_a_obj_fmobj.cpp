@@ -111,9 +111,11 @@ SECTION_RODATA const u8 lit_3744[4] = {
 SECTION_RODATA const u32 lit_3745 = 0xC1F00000;
 
 /* 8057CF74-8057CF7E 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x46, 0x6D, 0x6F, 0x62, 0x6A, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8057CF74 = "Obj_Fmobj";
+#pragma pop
 
 /* 8057CF80-8057CFA0 0020+00 .data      l_daObj_Fmobj_Method                                         */
 u8 l_daObj_Fmobj_Method[32] = {

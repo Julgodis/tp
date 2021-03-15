@@ -207,9 +207,11 @@ SECTION_RODATA const u8 data_80CB561C[4] = {
 };
 
 /* 80CB5620-80CB5627 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4C, 0x37, 0x50, 0x72, 0x6F, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CB5620 = "L7Prop";
+#pragma pop
 
 /* 80CB5628-80CB562C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

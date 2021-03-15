@@ -197,11 +197,13 @@ ASM_FUNCTION(getAramAddress__14JKRAramArchiveFPCc) {
 
 /* ############################################################################################## */
 /* 8039D188-8039D1B0 0028+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRAramArchive__stringBase0[40] = {
-	0x4A, 0x4B, 0x52, 0x41, 0x72, 0x61, 0x6D, 0x41, 0x72, 0x63, 0x68, 0x69, 0x76, 0x65, 0x2E, 0x63,
-	0x70, 0x70, 0x00, 0x25, 0x73, 0x00, 0x3F, 0x3F, 0x3F, 0x20, 0x62, 0x61, 0x64, 0x20, 0x73, 0x65,
-	0x71, 0x75, 0x65, 0x6E, 0x63, 0x65, 0x0A, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D188 = "JKRAramArchive.cpp";
+SECTION_DEAD char* const stringBase_8039D19B = "%s";
+SECTION_DEAD char* const stringBase_8039D19E = "??? bad sequence\n";
+#pragma pop
 
 /* 802D7858-802D7914 00BC+00 .text      fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli        */
 #pragma push

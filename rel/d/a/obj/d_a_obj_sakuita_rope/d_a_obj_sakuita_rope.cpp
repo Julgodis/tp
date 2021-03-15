@@ -424,11 +424,13 @@ SECTION_RODATA const u32 lit_4094 = 0x3F19999A;
 SECTION_RODATA const u32 lit_4149 = 0x40000000;
 
 /* 80CC6970-80CC6995 0025+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[37] = {
-	0x41, 0x5F, 0x53, 0x61, 0x6B, 0x75, 0x69, 0x74, 0x61, 0x00, 0x41, 0x5F, 0x53, 0x61, 0x6B, 0x75,
-	0x69, 0x74, 0x61, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x52, 0x6F, 0x70, 0x65,
-	0x2E, 0x62, 0x74, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CC6970 = "A_Sakuita";
+SECTION_DEAD char* const stringBase_80CC697A = "A_Sakuita.bmd";
+SECTION_DEAD char* const stringBase_80CC6988 = "Obj_Rope.bti";
+#pragma pop
 
 /* 80CC6998-80CC699C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -913,7 +913,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AD3BEC"
+#include "asm/rel/d/a/npc/d_a_npc_seira2/d_a_npc_seira2/func_80AD3BEC"
 }
 #pragma pop
 
@@ -1265,7 +1265,7 @@ ASM_FUNCTION(__sinit_d_a_npc_seira2_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__14daNpc_Seira2_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AD47B8"
+#include "asm/rel/d/a/npc/d_a_npc_seira2/d_a_npc_seira2/func_80AD47B8"
 }
 #pragma pop
 
@@ -1375,7 +1375,7 @@ ASM_FUNCTION(func_80AD4914) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AD491C"
+#include "asm/rel/d/a/npc/d_a_npc_seira2/d_a_npc_seira2/func_80AD491C"
 }
 #pragma pop
 
@@ -1510,12 +1510,17 @@ SECTION_RODATA const u8 lit_4920[8] = {
 SECTION_RODATA const u32 lit_5421 = 0x43AF0000;
 
 /* 80AD4B5C-80AD4B8E 0032+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[50] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x53, 0x65, 0x69, 0x72, 0x61, 0x00, 0x53, 0x65, 0x72, 0x61, 0x42, 0x74, 0x6C, 0x00, 0x53,
-	0x65, 0x72, 0x61, 0x00, 0x53, 0x65, 0x69, 0x72, 0x61, 0x32, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x30,
-	0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AD4B5C = "";
+SECTION_DEAD char* const stringBase_80AD4B5D = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80AD4B6D = "Seira";
+SECTION_DEAD char* const stringBase_80AD4B73 = "SeraBtl";
+SECTION_DEAD char* const stringBase_80AD4B7B = "Sera";
+SECTION_DEAD char* const stringBase_80AD4B80 = "Seira2";
+SECTION_DEAD char* const stringBase_80AD4B87 = "R_SP01";
+#pragma pop
 
 /* 80AD4B90-80AD4B9C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -218,10 +218,12 @@ SECTION_RODATA const u8 l_heap_size[8] = {
 SECTION_RODATA const u32 lit_3694 = 0x3F800000;
 
 /* 80CA8148-80CA815A 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x48, 0x5F, 0x4F, 0x6E, 0x73, 0x65, 0x6E, 0x00, 0x48, 0x5F, 0x4B, 0x61, 0x4F, 0x6E, 0x73, 0x65,
-	0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA8148 = "H_Onsen";
+SECTION_DEAD char* const stringBase_80CA8150 = "H_KaOnsen";
+#pragma pop
 
 /* 80CA815C-80CA8164 0008+00 .data      l_arcName                                                    */
 u8 l_arcName[8] = {

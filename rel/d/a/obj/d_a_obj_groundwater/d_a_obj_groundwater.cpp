@@ -373,9 +373,11 @@ SECTION_RODATA const u8 lit_3891[8] = {
 SECTION_RODATA const u32 lit_4253 = 0xBC23D70A;
 
 /* 80C149F4-80C149FA 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x57, 0x61, 0x74, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C149F4 = "Water";
+#pragma pop
 
 /* 80C149FC-80C14A08 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

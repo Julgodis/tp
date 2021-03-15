@@ -107,7 +107,7 @@ ASM_FUNCTION(CreateHeap__13daObjWSword_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWSword_cFv) {
 	nofralloc
-#include "func_80D3BB28"
+#include "asm/rel/d/a/obj/d_a_obj_wsword/d_a_obj_wsword/func_80D3BB28"
 }
 #pragma pop
 
@@ -246,11 +246,13 @@ ASM_FUNCTION(func_80D3BF10) {
 
 /* ############################################################################################## */
 /* 80D3BF20-80D3BF2C 000A+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[12] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x72, 0x6B, 0x73, 0x77, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D3BF20 = "Obj_brksw";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80D3BF2A = "\0";
+#pragma pop
 
 /* 80D3BF2C-80D3BF30 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

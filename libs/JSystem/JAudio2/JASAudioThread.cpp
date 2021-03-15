@@ -112,13 +112,14 @@ ASM_FUNCTION(stop__14JASAudioThreadFv) {
 
 /* ############################################################################################## */
 /* 8039B338-8039B360 0013+15 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JASAudioThread__stringBase0[40] = {
-	0x53, 0x46, 0x52, 0x5F, 0x44, 0x53, 0x50, 0x00, 0x55, 0x50, 0x44, 0x41, 0x54, 0x45, 0x2D, 0x44,
-	0x41, 0x43, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039B338 = "SFR_DSP";
+SECTION_DEAD char* const stringBase_8039B340 = "UPDATE-DAC";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039B34B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+#pragma pop
 
 /* 80431C68-80431C78 000C+04 .bss       @205                                                         */
 u8 lit_205[12 + 4 /* padding */];

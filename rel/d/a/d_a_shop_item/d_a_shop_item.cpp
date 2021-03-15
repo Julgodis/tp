@@ -365,9 +365,12 @@ SECTION_RODATA const u32 lit_3724 = 0x3F4CCCCD;
 SECTION_RODATA const u32 lit_3823 = 0x42A00000;
 
 /* 8059F48C-8059F49C 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x39, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8059F48C = "R_SP160";
+SECTION_DEAD char* const stringBase_8059F494 = "R_SP109";
+#pragma pop
 
 /* 8059F49C-8059F4BC 0020+00 .data      daShopItemMethodTable                                        */
 u8 daShopItemMethodTable[32] = {

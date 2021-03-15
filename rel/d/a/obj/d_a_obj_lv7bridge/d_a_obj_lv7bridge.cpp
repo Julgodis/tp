@@ -498,10 +498,12 @@ SECTION_RODATA const u32 lit_4070 = 0xC3E10000;
 SECTION_RODATA const u32 lit_4071 = 0xC528C000;
 
 /* 80C87A20-80C87A33 0013+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[19] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6C, 0x37, 0x62, 0x72, 0x67, 0x00, 0x4B, 0x5F, 0x62, 0x72, 0x69, 0x64,
-	0x67, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C87A20 = "Obj_l7brg";
+SECTION_DEAD char* const stringBase_80C87A2A = "K_bridge";
+#pragma pop
 
 /* 80C87A34-80C87A40 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -289,9 +289,12 @@ SECTION_RODATA const u32 lit_3785 = 0x41200000;
 SECTION_RODATA const u32 lit_3786 = 0x44FA0000;
 
 /* 80C46F88-80C46F97 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x48, 0x5F, 0x4B, 0x4B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x00, 0x6D, 0x6F, 0x76, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C46F88 = "H_KKanban";
+SECTION_DEAD char* const stringBase_80C46F92 = "move";
+#pragma pop
 
 /* 80C46F98-80C46F9C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -433,9 +433,11 @@ SECTION_RODATA const u32 lit_3763 = 0x3F800000;
 SECTION_RODATA const u32 lit_3764 = 0x41F00000;
 
 /* 80BDD6DC-80BDD6E6 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x59, 0x5F, 0x68, 0x6F, 0x72, 0x69, 0x79, 0x75, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BDD6DC = "Y_horiyuk";
+#pragma pop
 
 /* 80BDD6E8-80BDD6F4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

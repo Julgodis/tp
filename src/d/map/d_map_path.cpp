@@ -117,11 +117,13 @@ SECTION_RODATA const u8 data_80379C30[28] = {
 };
 
 /* 80379C4C-80379C58 0007+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_map_d_map_path__stringBase0[12] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80379C4C = "Always";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80379C53 = "\0\0\0\0";
+#pragma pop
 
 /* 8003C85C-8003C8F4 0098+00 .text      create__Q28dMpath_n18dTexObjAggregate_cFv                    */
 #pragma push

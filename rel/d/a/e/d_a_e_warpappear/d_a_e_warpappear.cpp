@@ -780,9 +780,12 @@ SECTION_RODATA const u32 lit_4895 = 0xC6F7D800;
 SECTION_RODATA const u32 lit_4949 = 0x41A00000;
 
 /* 807D2280-807D2290 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x34, 0x00, 0x4B, 0x79, 0x74, 0x61, 0x67, 0x30, 0x34, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807D2280 = "F_SP104";
+SECTION_DEAD char* const stringBase_807D2288 = "Kytag04";
+#pragma pop
 
 /* 807D2290-807D22B8 0028+00 .data      w_id$4228                                                    */
 u8 data_807D2290[40] = {

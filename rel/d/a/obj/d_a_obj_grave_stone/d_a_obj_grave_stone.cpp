@@ -145,7 +145,7 @@ ASM_FUNCTION(CreateHeap__14daGraveStone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daGraveStone_cFv) {
 	nofralloc
-#include "func_80C12D1C"
+#include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/func_80C12D1C"
 }
 #pragma pop
 
@@ -370,10 +370,13 @@ SECTION_RODATA const u32 lit_3723 = 0xBF800000;
 SECTION_RODATA const u32 lit_3771 = 0x40200000;
 
 /* 80C132E4-80C13301 001D+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[29] = {
-	0x48, 0x5F, 0x48, 0x61, 0x6B, 0x61, 0x00, 0x48, 0x5F, 0x48, 0x61, 0x6B, 0x61, 0x2E, 0x62, 0x6D,
-	0x64, 0x00, 0x48, 0x5F, 0x48, 0x61, 0x6B, 0x61, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C132E4 = "H_Haka";
+SECTION_DEAD char* const stringBase_80C132EB = "H_Haka.bmd";
+SECTION_DEAD char* const stringBase_80C132F6 = "H_Haka.dzb";
+#pragma pop
 
 /* 80C13304-80C13308 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

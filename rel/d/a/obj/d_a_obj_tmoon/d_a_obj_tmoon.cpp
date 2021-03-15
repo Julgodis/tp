@@ -98,7 +98,7 @@ ASM_FUNCTION(CreateHeap__12daObjTMoon_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjTMoon_cFv) {
 	nofralloc
-#include "func_80D12D0C"
+#include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/func_80D12D0C"
 }
 #pragma pop
 
@@ -182,9 +182,11 @@ ASM_FUNCTION(daObjTMoon_Create__FP12daObjTMoon_c) {
 
 /* ############################################################################################## */
 /* 80D12F98-80D12FA0 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x41, 0x5F, 0x54, 0x4D, 0x6F, 0x6F, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D12F98 = "A_TMoon";
+#pragma pop
 
 /* 80D12FA0-80D12FA4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

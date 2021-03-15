@@ -316,9 +316,11 @@ SECTION_RODATA const u32 lit_3803 = 0x3F800000;
 SECTION_RODATA const u32 lit_3804 = 0x3CF5C28F;
 
 /* 80C884F8-80C88502 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x76, 0x38, 0x4B, 0x65, 0x6B, 0x6B, 0x61, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C884F8 = "Lv8Kekkai";
+#pragma pop
 
 /* 80C88504-80C88510 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

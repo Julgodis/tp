@@ -223,7 +223,7 @@ ASM_FUNCTION(__ct__Q211daObjCBlk_c7chain_sFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjCBlk_cFv) {
 	nofralloc
-#include "func_80BC5E98"
+#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/func_80BC5E98"
 }
 #pragma pop
 
@@ -575,9 +575,11 @@ SECTION_RODATA const u32 lit_4441 = 0x41F00000;
 SECTION_RODATA const u32 lit_4442 = 0xC3480000;
 
 /* 80BC6AC8-80BC6AD1 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x50, 0x5F, 0x43, 0x62, 0x6C, 0x6F, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BC6AC8 = "P_Cblock";
+#pragma pop
 
 /* 80BC6AD4-80BC6AE0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

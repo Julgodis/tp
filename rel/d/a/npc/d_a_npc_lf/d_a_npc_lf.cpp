@@ -342,9 +342,11 @@ SECTION_RODATA const u32 lit_4175 = 0x43960000;
 SECTION_RODATA const u32 lit_4176 = 0x47800000;
 
 /* 80A6AA14-80A6AA1B 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4E, 0x50, 0x43, 0x5F, 0x4C, 0x46, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80A6AA14 = "NPC_LF";
+#pragma pop
 
 /* 80A6AA1C-80A6AA28 000C+00 .data      wp$3976                                                      */
 u8 data_80A6AA1C[12] = {

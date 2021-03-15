@@ -65,12 +65,13 @@ ASM_FUNCTION(countMaterialNum__14J3DModelLoaderFPCv) {
 
 /* ############################################################################################## */
 /* 803A20E8-803A2100 0014+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J3DModelLoaderCalcSize__stringBase0[24] = {
-	0x55, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x62, 0x6C, 0x6F,
-	0x63, 0x6B, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A20E8 = "Unknown data block\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A20FC = "\0\0\0";
+#pragma pop
 
 /* 803367D4-803369A0 01CC+00 .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
 #pragma push

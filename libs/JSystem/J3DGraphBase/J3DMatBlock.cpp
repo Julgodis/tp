@@ -2027,12 +2027,13 @@ ASM_FUNCTION(reset__20J3DColorBlockLightOnFP13J3DColorBlock) {
 
 /* ############################################################################################## */
 /* 803A1EA8-803A1EC8 001D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J3DMatBlock__stringBase0[32] = {
-	0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x3A, 0x20, 0x54, 0x65, 0x78, 0x4D, 0x74, 0x78, 0x5B, 0x25,
-	0x64, 0x5D, 0x20, 0x69, 0x73, 0x20, 0x4E, 0x75, 0x6C, 0x6C, 0x2E, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A1EA8 = "Error : TexMtx[%d] is Null.\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A1EC5 = "\0\0";
+#pragma pop
 
 /* 80320084-803201A0 011C+00 .text      reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock             */
 #pragma push

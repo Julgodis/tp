@@ -243,10 +243,12 @@ SECTION_RODATA const u32 lit_3686 = 0x42960000;
 SECTION_RODATA const u32 lit_3687 = 0x3F800000;
 
 /* 8046EEC0-8046EED2 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x4B, 0x6B, 0x69, 0x62, 0x61, 0x5F, 0x30, 0x30, 0x00, 0x4A, 0x5F, 0x74, 0x61, 0x72, 0x75, 0x30,
-	0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8046EEC0 = "Kkiba_00";
+SECTION_DEAD char* const stringBase_8046EEC9 = "J_taru00";
+#pragma pop
 
 /* 8046EED4-8046EEE0 000C+00 .data      l_arcName                                                    */
 u8 l_arcName[12] = {

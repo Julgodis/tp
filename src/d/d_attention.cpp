@@ -223,11 +223,14 @@ ASM_FUNCTION(func_80070018) {
 
 /* ############################################################################################## */
 /* 8037A770-8037A780 000F+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_attention__stringBase0[16] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x39, 0x42, 0x00, 0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8037A770 = "D_MN09B";
+SECTION_DEAD char* const stringBase_8037A778 = "Always";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8037A77F = "";
+#pragma pop
 
 /* 803A9BF8-803A9C04 000C+00 .data      loc_type_tbl__12dAttention_c                                 */
 u8 loc_type_tbl__12dAttention_c[12] = {

@@ -189,9 +189,11 @@ SECTION_RODATA const u32 lit_3966 = 0x47800000;
 SECTION_RODATA const u32 lit_3967 = 0x448FC000;
 
 /* 80C9F2A0-80C9F2A8 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x53, 0x5F, 0x59, 0x4F, 0x47, 0x41, 0x4E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C9F2A0 = "S_YOGAN";
+#pragma pop
 
 /* 80C9F2A8-80C9F2C8 0020+00 .data      l_daObj_Myogan_Method                                        */
 u8 l_daObj_Myogan_Method[32] = {

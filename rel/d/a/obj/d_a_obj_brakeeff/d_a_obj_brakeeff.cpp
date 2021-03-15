@@ -180,9 +180,11 @@ SECTION_RODATA const u32 lit_3881 = 0x42480000;
 SECTION_RODATA const u32 lit_3882 = 0x3F0F5C29;
 
 /* 8046E538-8046E540 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x42, 0x65, 0x66, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8046E538 = "Obj_Bef";
+#pragma pop
 
 /* 8046E540-8046E54C 000A+02 .data      e_name                                                       */
 u8 e_name[12] = {

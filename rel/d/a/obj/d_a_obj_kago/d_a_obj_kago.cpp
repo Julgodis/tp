@@ -716,9 +716,12 @@ SECTION_RODATA const u32 lit_4707 = 0x4424C000;
 SECTION_RODATA const u32 lit_4708 = 0xC3A70000;
 
 /* 80C33D94-80C33D9E 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x00, 0x75, 0x72, 0x69, 0x5F, 0x6B, 0x61, 0x67, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C33D94 = "";
+SECTION_DEAD char* const stringBase_80C33D95 = "uri_kago";
+#pragma pop
 
 /* 80C33DA0-80C33DAC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -556,9 +556,11 @@ SECTION_RODATA const u8 lit_4440[8] = {
 };
 
 /* 80CAF0DC-80CAF0E6 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x39, 0x50, 0x69, 0x63, 0x74, 0x75, 0x72, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CAF0DC = "L9Picture";
+#pragma pop
 
 /* 80CAF0E8-80CAF0EC 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

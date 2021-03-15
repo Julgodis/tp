@@ -326,9 +326,11 @@ SECTION_RODATA const u32 lit_4063 = 0x44BB8000;
 SECTION_RODATA const u32 lit_4064 = 0x43FA0000;
 
 /* 805A9018-805A9020 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x34, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_805A9018 = "D_MN04A";
+#pragma pop
 
 /* 805A9020-805A9040 0020+00 .data      daYkgrMethodTable                                            */
 u8 daYkgrMethodTable[32] = {

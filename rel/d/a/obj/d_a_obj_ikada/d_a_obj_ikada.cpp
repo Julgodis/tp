@@ -352,10 +352,13 @@ SECTION_RODATA const u32 lit_3917 = 0x41700000;
 SECTION_RODATA const u32 lit_3918 = 0x3E4CCCCD;
 
 /* 80C27564-80C27584 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x4D, 0x5F, 0x49, 0x6B, 0x61, 0x64, 0x61, 0x00, 0x4D, 0x5F, 0x49, 0x6B, 0x61, 0x64, 0x61, 0x2E,
-	0x64, 0x7A, 0x62, 0x00, 0x4D, 0x5F, 0x49, 0x6B, 0x61, 0x64, 0x61, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C27564 = "M_Ikada";
+SECTION_DEAD char* const stringBase_80C2756C = "M_Ikada.dzb";
+SECTION_DEAD char* const stringBase_80C27578 = "M_Ikada.bmd";
+#pragma pop
 
 /* 80C27584-80C27588 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

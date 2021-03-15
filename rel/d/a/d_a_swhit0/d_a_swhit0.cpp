@@ -448,12 +448,16 @@ SECTION_RODATA const u8 lit_4212[8] = {
 };
 
 /* 80487388-804873BB 0033+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[51] = {
-	0x53, 0x5F, 0x73, 0x77, 0x48, 0x69, 0x74, 0x30, 0x30, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C,
-	0x54, 0x5F, 0x53, 0x57, 0x49, 0x54, 0x43, 0x48, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x43, 0x48,
-	0x41, 0x4E, 0x47, 0x45, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x36, 0x00, 0x53, 0x57, 0x49, 0x54,
-	0x43, 0x48, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80487388 = "S_swHit00";
+SECTION_DEAD char* const stringBase_80487392 = "DEFAULT_SWITCH";
+SECTION_DEAD char* const stringBase_804873A1 = "WAIT";
+SECTION_DEAD char* const stringBase_804873A6 = "CHANGE";
+SECTION_DEAD char* const stringBase_804873AD = "D_MN06";
+SECTION_DEAD char* const stringBase_804873B4 = "SWITCH";
+#pragma pop
 
 /* 804873BC-804873C0 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -560,10 +560,14 @@ SECTION_RODATA const u32 lit_4377 = 0x3FB33333;
 SECTION_RODATA const u32 lit_4378 = 0xC0A00000;
 
 /* 80CE7F18-80CE7F34 001C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[28] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x50, 0x75, 0x6D, 0x70, 0x6B, 0x69, 0x6E, 0x00, 0x00,
-	0x70, 0x75, 0x6D, 0x70, 0x6B, 0x69, 0x6E, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CE7F18 = "Always";
+SECTION_DEAD char* const stringBase_80CE7F1F = "Pumpkin";
+SECTION_DEAD char* const stringBase_80CE7F27 = "";
+SECTION_DEAD char* const stringBase_80CE7F28 = "pumpkin.bmd";
+#pragma pop
 
 /* 80CE7F34-80CE7F40 000C+00 .data      l_resFileName                                                */
 u8 l_resFileName[12] = {

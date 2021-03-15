@@ -249,11 +249,13 @@ SECTION_RODATA const u8 lit_1956[16] = {
 };
 
 /* 803A1DF0-803A1DF8 0003+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J2DTextBoxEx__stringBase0[8] = {
-	0x25, 0x73, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A1DF0 = "%s";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A1DF3 = "\0\0\0\0";
+#pragma pop
 
 /* 803078AC-80307AF0 0244+00 .text      draw__12J2DTextBoxExFff                                      */
 #pragma push

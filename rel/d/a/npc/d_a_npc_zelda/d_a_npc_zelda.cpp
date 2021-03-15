@@ -1060,7 +1060,7 @@ ASM_FUNCTION(__sinit_d_a_npc_zelda_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80B77DD8"
+#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/func_80B77DD8"
 }
 #pragma pop
 
@@ -1293,10 +1293,13 @@ SECTION_RODATA const u32 lit_4854 = 0x43200000;
 SECTION_RODATA const u32 lit_4855 = 0x42300000;
 
 /* 80B780C4-80B780D7 0013+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[19] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x5A, 0x65, 0x6C,
-	0x64, 0x61, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B780C4 = "";
+SECTION_DEAD char* const stringBase_80B780C5 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80B780D1 = "Zelda";
+#pragma pop
 
 /* 80B780D8-80B780E4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

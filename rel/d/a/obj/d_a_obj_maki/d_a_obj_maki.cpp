@@ -226,10 +226,12 @@ SECTION_RODATA const u32 lit_4076 = 0xC3480000;
 SECTION_RODATA const u32 lit_4077 = 0x43FA0000;
 
 /* 80C90960-80C90971 0011+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[17] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6D, 0x61, 0x6B, 0x69, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x38,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C90960 = "Obj_maki";
+SECTION_DEAD char* const stringBase_80C90969 = "F_SP118";
+#pragma pop
 
 /* 80C90974-80C90980 000A+02 .data      eff_id$3814                                                  */
 u8 data_80C90974[12] = {

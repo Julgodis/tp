@@ -282,10 +282,12 @@ SECTION_RODATA const u8 lit_3781[8] = {
 };
 
 /* 80CC5114-80CC512C 0018+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[24] = {
-	0x41, 0x5F, 0x53, 0x61, 0x6B, 0x75, 0x69, 0x74, 0x61, 0x00, 0x41, 0x5F, 0x53, 0x61, 0x6B, 0x75,
-	0x69, 0x74, 0x61, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CC5114 = "A_Sakuita";
+SECTION_DEAD char* const stringBase_80CC511E = "A_Sakuita.bmd";
+#pragma pop
 
 /* 80CC512C-80CC5130 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

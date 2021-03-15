@@ -140,11 +140,13 @@ ASM_FUNCTION(printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb) {
 
 /* ############################################################################################## */
 /* 8039D9A0-8039D9A8 0003+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JUTDirectPrint__stringBase0[8] = {
-	0x25, 0x73, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D9A0 = "%s";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D9A3 = "\0\0\0\0";
+#pragma pop
 
 /* 802E46D8-802E4708 0030+00 .text      drawString__14JUTDirectPrintFUsUsPc                          */
 #pragma push

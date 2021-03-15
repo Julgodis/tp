@@ -580,11 +580,13 @@ SECTION_RODATA const u32 lit_4210 = 0x43480000;
 SECTION_RODATA const u32 lit_4211 = 0x47800000;
 
 /* 80C3F108-80C3F129 0021+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[33] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x42, 0x72, 0x65, 0x61, 0x6B, 0x57, 0x6F, 0x6F, 0x64,
-	0x42, 0x6F, 0x78, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x62, 0x6F, 0x78,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C3F108 = "Always";
+SECTION_DEAD char* const stringBase_80C3F10F = "BreakWoodBox.bmd";
+SECTION_DEAD char* const stringBase_80C3F120 = "Obj_kbox";
+#pragma pop
 
 /* 80C3F12C-80C3F134 0008+00 .data      w_eff_id$3979                                                */
 u8 data_80C3F12C[8] = {

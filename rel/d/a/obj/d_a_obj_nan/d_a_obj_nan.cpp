@@ -675,9 +675,12 @@ SECTION_RODATA const u32 l_heapsize = 0x0EE00EC0;
 SECTION_RODATA const u32 lit_5034 = 0xC2480000;
 
 /* 80CA32A0-80CA32AE 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x49, 0x5F, 0x4E, 0x61, 0x6E, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA32A0 = "I_Nan";
+SECTION_DEAD char* const stringBase_80CA32A6 = "R_SP160";
+#pragma pop
 
 /* 80CA32B0-80CA32BC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

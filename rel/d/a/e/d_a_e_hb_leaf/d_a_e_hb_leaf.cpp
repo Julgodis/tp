@@ -101,9 +101,11 @@ ASM_FUNCTION(daE_HB_LEAF_Create__FP10fopAc_ac_c) {
 SECTION_RODATA const u32 lit_3690 = 0x3F800000;
 
 /* 806E0294-806E0299 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x48, 0x42, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806E0294 = "E_HB";
+#pragma pop
 
 /* 806E029C-806E02BC 0020+00 .data      l_daE_HB_LEAF_Method                                         */
 u8 l_daE_HB_LEAF_Method[32] = {

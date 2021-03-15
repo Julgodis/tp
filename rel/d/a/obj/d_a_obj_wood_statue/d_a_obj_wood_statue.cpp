@@ -216,7 +216,7 @@ ASM_FUNCTION(__CreateHeap__14daObjWStatue_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjWStatue_cFv) {
 	nofralloc
-#include "func_80D3A47C"
+#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A47C"
 }
 #pragma pop
 
@@ -714,13 +714,18 @@ SECTION_RODATA const u32 lit_4323 = 0x41A00000;
 SECTION_RODATA const u32 lit_4324 = 0x42C80000;
 
 /* 80D3B6D4-80D3B719 0045+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[69] = {
-	0x4F, 0x5F, 0x77, 0x6F, 0x6F, 0x64, 0x00, 0x47, 0x45, 0x54, 0x5F, 0x57, 0x4F, 0x4F, 0x44, 0x5F,
-	0x53, 0x54, 0x41, 0x54, 0x55, 0x45, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47,
-	0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x4D, 0x4F, 0x56, 0x45,
-	0x00, 0x53, 0x45, 0x54, 0x50, 0x4F, 0x53, 0x00, 0x4E, 0x4F, 0x54, 0x45, 0x4E, 0x44, 0x00, 0x54,
-	0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D3B6D4 = "O_wood";
+SECTION_DEAD char* const stringBase_80D3B6DB = "GET_WOOD_STATUE";
+SECTION_DEAD char* const stringBase_80D3B6EB = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80D3B6FB = "WAIT";
+SECTION_DEAD char* const stringBase_80D3B700 = "MOVE";
+SECTION_DEAD char* const stringBase_80D3B705 = "SETPOS";
+SECTION_DEAD char* const stringBase_80D3B70C = "NOTEND";
+SECTION_DEAD char* const stringBase_80D3B713 = "Timer";
+#pragma pop
 
 /* 80D3B71C-80D3B728 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

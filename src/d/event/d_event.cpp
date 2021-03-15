@@ -239,15 +239,20 @@ ASM_FUNCTION(beforeFlagProc__14dEvt_control_cFP12dEvt_order_c) {
 
 /* ############################################################################################## */
 /* 80379D80-80379DD0 004E+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_event_d_event__stringBase0[80] = {
-	0x81, 0x48, 0x81, 0x48, 0x81, 0x48, 0x00, 0x41, 0x4C, 0x4C, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55,
-	0x4C, 0x54, 0x5F, 0x54, 0x41, 0x4C, 0x4B, 0x00, 0x4D, 0x48, 0x49, 0x4E, 0x54, 0x5F, 0x54, 0x41,
-	0x4C, 0x4B, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x54, 0x41, 0x4C, 0x4B, 0x5F,
-	0x58, 0x59, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54,
-	0x45, 0x4D, 0x00, 0x24, 0x30, 0x00, 0x47, 0x49, 0x56, 0x45, 0x4D, 0x41, 0x4E, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80379D80 = "？？？";
+SECTION_DEAD char* const stringBase_80379D87 = "ALL";
+SECTION_DEAD char* const stringBase_80379D8B = "DEFAULT_TALK";
+SECTION_DEAD char* const stringBase_80379D98 = "MHINT_TALK";
+SECTION_DEAD char* const stringBase_80379DA3 = "DEFAULT_TALK_XY";
+SECTION_DEAD char* const stringBase_80379DB3 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80379DC3 = "$0";
+SECTION_DEAD char* const stringBase_80379DC6 = "GIVEMAN";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80379DCE = "\0";
+#pragma pop
 
 /* 80041964-800419A8 0044+00 .text      afterFlagProc__14dEvt_control_cFP12dEvt_order_c              */
 #pragma push

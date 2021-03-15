@@ -114,7 +114,7 @@ ASM_FUNCTION(Create__11daSwLBall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daSwLBall_cFv) {
 	nofralloc
-#include "func_80D4EEF8"
+#include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/func_80D4EEF8"
 }
 #pragma pop
 

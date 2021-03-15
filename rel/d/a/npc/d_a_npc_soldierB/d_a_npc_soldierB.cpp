@@ -1015,10 +1015,14 @@ SECTION_RODATA const u32 lit_5103 = 0x42A00000;
 SECTION_RODATA const u32 lit_5104 = 0x42200000;
 
 /* 80AF5BF4-80AF5C0D 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x63, 0x68, 0x74, 0x53, 0x6F, 0x6C, 0x42, 0x00, 0x00, 0x4C, 0x49, 0x53, 0x54, 0x45, 0x4E, 0x5F,
-	0x4C, 0x41, 0x4B, 0x45, 0x00, 0x70, 0x72, 0x6D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AF5BF4 = "chtSolB";
+SECTION_DEAD char* const stringBase_80AF5BFC = "";
+SECTION_DEAD char* const stringBase_80AF5BFD = "LISTEN_LAKE";
+SECTION_DEAD char* const stringBase_80AF5C09 = "prm";
+#pragma pop
 
 /* 80AF5C10-80AF5C1C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -641,11 +641,15 @@ SECTION_RODATA const u32 lit_4630 = 0x43938000;
 SECTION_RODATA const u32 lit_4631 = 0x42700000;
 
 /* 80C43ABC-80C43AEC 0030+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[48] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x65, 0x79, 0x68, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x6B, 0x65,
-	0x79, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x6B, 0x65, 0x79, 0x32, 0x00, 0x4F, 0x62, 0x6A, 0x5F,
-	0x62, 0x6B, 0x65, 0x79, 0x33, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x6B, 0x65, 0x79, 0x35, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C43ABC = "Obj_keyh";
+SECTION_DEAD char* const stringBase_80C43AC5 = "Obj_bkey";
+SECTION_DEAD char* const stringBase_80C43ACE = "Obj_bkey2";
+SECTION_DEAD char* const stringBase_80C43AD8 = "Obj_bkey3";
+SECTION_DEAD char* const stringBase_80C43AE2 = "Obj_bkey5";
+#pragma pop
 
 /* 80C43AEC-80C43AF8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

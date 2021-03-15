@@ -172,11 +172,13 @@ ASM_FUNCTION(findVolume__13JKRFileLoaderFPPCc) {
 
 /* ############################################################################################## */
 /* 8039D150-8039D158 0002+06 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRFileLoader__stringBase0[8] = {
-	0x2F, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D150 = "/";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D152 = "\0\0\0\0\0";
+#pragma pop
 
 /* 804508C0-804508C8 0002+06 .sdata     rootPath$2498                                                */
 u8 data_804508C0[8] = {

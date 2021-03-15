@@ -1587,9 +1587,11 @@ SECTION_RODATA const u32 lit_7435 = 0x461C4000;
 SECTION_RODATA const u32 lit_7436 = 0x42700000;
 
 /* 807617B4-807617B9 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x50, 0x5A, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807617B4 = "E_PZ";
+#pragma pop
 
 /* 807617BC-807617C8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

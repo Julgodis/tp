@@ -1065,11 +1065,15 @@ SECTION_RODATA const u32 lit_5125 = 0x42A00000;
 SECTION_RODATA const u32 lit_5126 = 0x42200000;
 
 /* 80AF2864-80AF2887 0023+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[35] = {
-	0x54, 0x41, 0x4C, 0x4B, 0x5F, 0x4C, 0x41, 0x4B, 0x45, 0x00, 0x63, 0x68, 0x74, 0x53, 0x6F, 0x6C,
-	0x41, 0x00, 0x00, 0x4C, 0x49, 0x53, 0x54, 0x45, 0x4E, 0x5F, 0x4C, 0x41, 0x4B, 0x45, 0x00, 0x70,
-	0x72, 0x6D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AF2864 = "TALK_LAKE";
+SECTION_DEAD char* const stringBase_80AF286E = "chtSolA";
+SECTION_DEAD char* const stringBase_80AF2876 = "";
+SECTION_DEAD char* const stringBase_80AF2877 = "LISTEN_LAKE";
+SECTION_DEAD char* const stringBase_80AF2883 = "prm";
+#pragma pop
 
 /* 80AF2888-80AF2894 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

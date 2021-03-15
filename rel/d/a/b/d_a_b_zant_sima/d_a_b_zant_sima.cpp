@@ -248,9 +248,11 @@ SECTION_RODATA const u32 lit_3969 = 0x43480000;
 SECTION_RODATA const u32 lit_3970 = 0x43FA0000;
 
 /* 80653364-8065336E 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x41, 0x47, 0x4E, 0x45, 0x53, 0x49, 0x4D, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80653364 = "MAGNESIMA";
+#pragma pop
 
 /* 80653370-80653390 0020+00 .data      l_daB_ZANTS_Method                                           */
 u8 l_daB_ZANTS_Method[32] = {

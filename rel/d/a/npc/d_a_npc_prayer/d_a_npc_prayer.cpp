@@ -1003,10 +1003,14 @@ SECTION_RODATA const u32 lit_4840 = 0x42DC0000;
 SECTION_RODATA const u32 lit_4841 = 0xC3960000;
 
 /* 80AB5964-80AB5984 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x50, 0x72, 0x61, 0x79, 0x65, 0x72, 0x00, 0x57, 0x67, 0x65, 0x6E, 0x65, 0x72, 0x61, 0x6C, 0x00,
-	0x47, 0x45, 0x54, 0x5F, 0x48, 0x45, 0x41, 0x52, 0x54, 0x00, 0x63, 0x75, 0x74, 0x49, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AB5964 = "Prayer";
+SECTION_DEAD char* const stringBase_80AB596B = "Wgeneral";
+SECTION_DEAD char* const stringBase_80AB5974 = "GET_HEART";
+SECTION_DEAD char* const stringBase_80AB597E = "cutId";
+#pragma pop
 
 /* 80AB5984-80AB5990 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

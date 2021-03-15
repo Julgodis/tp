@@ -376,11 +376,13 @@ SECTION_RODATA const u32 lit_4097 = 0xBF800000;
 SECTION_RODATA const u32 lit_4203 = 0x3F800000;
 
 /* 80C520C8-80C520EE 0026+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[38] = {
-	0x4A, 0x5F, 0x53, 0x65, 0x6E, 0x74, 0x61, 0x6B, 0x75, 0x00, 0x4A, 0x5F, 0x53, 0x65, 0x6E, 0x74,
-	0x61, 0x6B, 0x75, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4A, 0x5F, 0x53, 0x65, 0x6E, 0x74, 0x61, 0x6B,
-	0x75, 0x2E, 0x62, 0x74, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C520C8 = "J_Sentaku";
+SECTION_DEAD char* const stringBase_80C520D2 = "J_Sentaku.bmd";
+SECTION_DEAD char* const stringBase_80C520E0 = "J_Sentaku.btk";
+#pragma pop
 
 /* 80C520F0-80C520F4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

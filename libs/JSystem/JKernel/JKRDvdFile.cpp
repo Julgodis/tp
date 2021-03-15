@@ -168,13 +168,15 @@ ASM_FUNCTION(open__10JKRDvdFileFl) {
 
 /* ############################################################################################## */
 /* 8039D260-8039D290 0029+07 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRDvdFile__stringBase0[48] = {
-	0x4A, 0x4B, 0x52, 0x44, 0x76, 0x64, 0x46, 0x69, 0x6C, 0x65, 0x2E, 0x63, 0x70, 0x70, 0x00, 0x25,
-	0x73, 0x00, 0x63, 0x61, 0x6E, 0x6E, 0x6F, 0x74, 0x20, 0x63, 0x6C, 0x6F, 0x73, 0x65, 0x20, 0x44,
-	0x56, 0x44, 0x20, 0x66, 0x69, 0x6C, 0x65, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D260 = "JKRDvdFile.cpp";
+SECTION_DEAD char* const stringBase_8039D26F = "%s";
+SECTION_DEAD char* const stringBase_8039D272 = "cannot close DVD file\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D289 = "\0\0\0\0\0\0";
+#pragma pop
 
 /* 802D9938-802D99B4 007C+00 .text      close__10JKRDvdFileFv                                        */
 #pragma push

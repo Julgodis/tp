@@ -135,7 +135,7 @@ ASM_FUNCTION(CreateHeap__11daObjSwPr_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjSwPr_cFv) {
 	nofralloc
-#include "func_8059A888"
+#include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059A888"
 }
 #pragma pop
 
@@ -378,10 +378,14 @@ SECTION_RODATA const u8 lit_4091[8] = {
 };
 
 /* 8059B360-8059B380 0020+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[32] = {
-	0x4B, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x30, 0x30, 0x00, 0x4C, 0x76, 0x39, 0x5F, 0x70, 0x75, 0x72,
-	0x6F, 0x00, 0x6B, 0x61, 0x69, 0x74, 0x65, 0x6E, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x35, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8059B360 = "K_prop00";
+SECTION_DEAD char* const stringBase_8059B369 = "Lv9_puro";
+SECTION_DEAD char* const stringBase_8059B372 = "kaiten";
+SECTION_DEAD char* const stringBase_8059B379 = "D_MN05";
+#pragma pop
 
 /* 8059B380-8059B388 0008+00 .data      l_arcName                                                    */
 u8 l_arcName[8] = {

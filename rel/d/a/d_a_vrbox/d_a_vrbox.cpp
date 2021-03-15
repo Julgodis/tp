@@ -119,9 +119,11 @@ SECTION_RODATA const u8 lit_3695[4] = {
 SECTION_RODATA const u32 lit_3696 = 0x3DB851EC;
 
 /* 80498998-804989A7 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x76, 0x72, 0x62, 0x6F, 0x78, 0x5F, 0x73, 0x6F, 0x72, 0x61, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80498998 = "vrbox_sora.bmd";
+#pragma pop
 
 /* 804989A8-804989C8 0020+00 .data      l_daVrbox_Method                                             */
 u8 l_daVrbox_Method[32] = {

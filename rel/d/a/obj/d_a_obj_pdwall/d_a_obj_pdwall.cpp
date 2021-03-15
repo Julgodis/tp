@@ -214,9 +214,11 @@ SECTION_RODATA const u32 lit_3789 = 0x3F800000;
 SECTION_RODATA const u32 lit_3790 = 0xBF800000;
 
 /* 80CAD1F4-80CAD1FC 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x5F, 0x44, 0x77, 0x61, 0x6C, 0x6C, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CAD1F4 = "P_Dwall";
+#pragma pop
 
 /* 80CAD1FC-80CAD200 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

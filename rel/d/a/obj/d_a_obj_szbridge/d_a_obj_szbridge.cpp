@@ -362,9 +362,11 @@ SECTION_RODATA const u8 lit_3739[4] = {
 };
 
 /* 80D04C80-80D04C8A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x53, 0x5F, 0x5A, 0x62, 0x72, 0x69, 0x64, 0x67, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D04C80 = "S_Zbridge";
+#pragma pop
 
 /* 80D04C8C-80D04C90 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

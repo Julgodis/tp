@@ -150,9 +150,12 @@ SECTION_RODATA const u32 lit_3847 = 0x3C23D70A;
 SECTION_RODATA const u32 lit_3848 = 0x322BCC77;
 
 /* 80860B68-80860B78 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x4B, 0x79, 0x74, 0x61, 0x67, 0x31, 0x35, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x38, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80860B68 = "Kytag15";
+SECTION_DEAD char* const stringBase_80860B70 = "F_SP118";
+#pragma pop
 
 /* 80860B78-80860B98 0020+00 .data      l_daKytag15_Method                                           */
 u8 l_daKytag15_Method[32] = {

@@ -537,10 +537,13 @@ SECTION_RODATA const u8 lit_4359[8] = {
 };
 
 /* 80BBC518-80BBC52B 0013+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[19] = {
-	0x00, 0x48, 0x5F, 0x42, 0x6F, 0x75, 0x4D, 0x61, 0x74, 0x6F, 0x00, 0x42, 0x6F, 0x75, 0x4D, 0x61,
-	0x74, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BBC518 = "";
+SECTION_DEAD char* const stringBase_80BBC519 = "H_BouMato";
+SECTION_DEAD char* const stringBase_80BBC523 = "BouMato";
+#pragma pop
 
 /* 80BBC52C-80BBC570 0044+00 .data      l_ccDCyl                                                     */
 u8 l_ccDCyl[68] = {

@@ -362,10 +362,13 @@ SECTION_RODATA const u8 data_80C18160[8] = {
 };
 
 /* 80C18168-80C1817C 0014+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[20] = {
-	0x48, 0x43, 0x68, 0x61, 0x69, 0x72, 0x00, 0x48, 0x53, 0x6F, 0x66, 0x61, 0x00, 0x48, 0x54, 0x61,
-	0x62, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C18168 = "HChair";
+SECTION_DEAD char* const stringBase_80C1816F = "HSofa";
+SECTION_DEAD char* const stringBase_80C18175 = "HTable";
+#pragma pop
 
 /* 80C1817C-80C18188 000C+00 .data      l_arcName                                                    */
 u8 l_arcName[12] = {

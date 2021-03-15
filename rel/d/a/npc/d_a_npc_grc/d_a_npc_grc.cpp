@@ -1318,11 +1318,16 @@ SECTION_RODATA const u32 lit_5318 = 0x42A00000;
 SECTION_RODATA const u32 lit_5319 = 0x42200000;
 
 /* 809CF7F0-809CF81C 002C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[44] = {
-	0x67, 0x72, 0x43, 0x00, 0x67, 0x72, 0x43, 0x5F, 0x4D, 0x64, 0x6C, 0x00, 0x67, 0x72, 0x43, 0x5F,
-	0x54, 0x57, 0x00, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x30, 0x00, 0x44, 0x45, 0x46, 0x41,
-	0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809CF7F0 = "grC";
+SECTION_DEAD char* const stringBase_809CF7F4 = "grC_Mdl";
+SECTION_DEAD char* const stringBase_809CF7FC = "grC_TW";
+SECTION_DEAD char* const stringBase_809CF803 = "";
+SECTION_DEAD char* const stringBase_809CF804 = "F_SP110";
+SECTION_DEAD char* const stringBase_809CF80C = "DEFAULT_GETITEM";
+#pragma pop
 
 /* 809CF81C-809CF828 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

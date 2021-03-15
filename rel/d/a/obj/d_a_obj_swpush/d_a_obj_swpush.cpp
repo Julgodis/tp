@@ -765,12 +765,17 @@ SECTION_RODATA const u32 lit_4214 = 0x3F666666;
 SECTION_RODATA const u32 lit_4554 = 0x43160000;
 
 /* 80484E4C-80484E84 0038+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[56] = {
-	0x4B, 0x62, 0x6F, 0x74, 0x61, 0x5F, 0x30, 0x30, 0x00, 0x53, 0x5F, 0x6C, 0x76, 0x33, 0x62, 0x6F,
-	0x74, 0x61, 0x00, 0x53, 0x5F, 0x6C, 0x76, 0x36, 0x62, 0x6F, 0x74, 0x61, 0x00, 0x62, 0x6F, 0x74,
-	0x74, 0x61, 0x6E, 0x00, 0x62, 0x6F, 0x74, 0x61, 0x6E, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x31, 0x31,
-	0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x36, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80484E4C = "Kbota_00";
+SECTION_DEAD char* const stringBase_80484E55 = "S_lv3bota";
+SECTION_DEAD char* const stringBase_80484E5F = "S_lv6bota";
+SECTION_DEAD char* const stringBase_80484E69 = "bottan";
+SECTION_DEAD char* const stringBase_80484E70 = "botan";
+SECTION_DEAD char* const stringBase_80484E76 = "D_MN11";
+SECTION_DEAD char* const stringBase_80484E7D = "D_MN06";
+#pragma pop
 
 /* 80484E84-80484E90 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

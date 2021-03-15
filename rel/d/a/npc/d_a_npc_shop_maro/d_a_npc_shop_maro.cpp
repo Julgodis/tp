@@ -190,7 +190,7 @@ ASM_FUNCTION(__dt__16daNpc_shopMaro_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AEBFC4"
+#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/func_80AEBFC4"
 }
 #pragma pop
 
@@ -256,7 +256,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AEC16C"
+#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/func_80AEC16C"
 }
 #pragma pop
 

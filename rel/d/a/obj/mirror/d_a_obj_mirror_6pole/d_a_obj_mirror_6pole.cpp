@@ -219,9 +219,11 @@ SECTION_RODATA const u8 lit_3757[8] = {
 };
 
 /* 80C96520-80C96529 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4D, 0x52, 0x2D, 0x36, 0x50, 0x6F, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C96520 = "MR-6Pole";
+#pragma pop
 
 /* 80C9652C-80C96538 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

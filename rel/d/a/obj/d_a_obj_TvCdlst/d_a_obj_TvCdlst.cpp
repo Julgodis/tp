@@ -347,9 +347,11 @@ SECTION_RODATA const u32 lit_3938 = 0x41C80000;
 SECTION_RODATA const u32 lit_3939 = 0x430C0000;
 
 /* 80B9F8F4-80B9F8FE 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x48, 0x53, 0x68, 0x6F, 0x6B, 0x75, 0x64, 0x61, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B9F8F4 = "HShokudai";
+#pragma pop
 
 /* 80B9F900-80B9F944 0044+00 .data      mCcDCyl__11daTvCdlst_c                                       */
 u8 mCcDCyl__11daTvCdlst_c[68] = {

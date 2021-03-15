@@ -314,9 +314,11 @@ SECTION_RODATA const u8 lit_3758[8] = {
 };
 
 /* 80C83848-80C83852 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x76, 0x36, 0x45, 0x6C, 0x65, 0x76, 0x74, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C83848 = "Lv6ElevtA";
+#pragma pop
 
 /* 80C83854-80C83858 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

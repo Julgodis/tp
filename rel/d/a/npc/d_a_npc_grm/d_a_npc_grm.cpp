@@ -748,7 +748,7 @@ ASM_FUNCTION(func_809D6028) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_809D6030"
+#include "asm/rel/d/a/npc/d_a_npc_grm/d_a_npc_grm/func_809D6030"
 }
 #pragma pop
 
@@ -1246,12 +1246,17 @@ SECTION_RODATA const u8 lit_4860[8] = {
 };
 
 /* 809D6E60-809D6E93 0033+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[51] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x67, 0x72, 0x41, 0x5F, 0x62, 0x61, 0x73, 0x65, 0x00, 0x67, 0x72, 0x41, 0x5F, 0x6D, 0x64,
-	0x6C, 0x00, 0x54, 0x41, 0x4C, 0x4B, 0x5F, 0x53, 0x50, 0x41, 0x00, 0x67, 0x72, 0x4D, 0x00, 0x70,
-	0x72, 0x6D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809D6E60 = "";
+SECTION_DEAD char* const stringBase_809D6E61 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_809D6E71 = "grA_base";
+SECTION_DEAD char* const stringBase_809D6E7A = "grA_mdl";
+SECTION_DEAD char* const stringBase_809D6E82 = "TALK_SPA";
+SECTION_DEAD char* const stringBase_809D6E8B = "grM";
+SECTION_DEAD char* const stringBase_809D6E8F = "prm";
+#pragma pop
 
 /* 809D6E94-809D6EA0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

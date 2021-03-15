@@ -582,7 +582,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_grMC_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_809D8E5C"
+#include "asm/rel/d/a/npc/d_a_npc_grmc/d_a_npc_grmc/func_809D8E5C"
 }
 #pragma pop
 
@@ -725,7 +725,7 @@ ASM_FUNCTION(func_809D9064) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_809D906C"
+#include "asm/rel/d/a/npc/d_a_npc_grmc/d_a_npc_grmc/func_809D906C"
 }
 #pragma pop
 
@@ -1220,11 +1220,15 @@ SECTION_RODATA const u8 lit_4798[8] = {
 };
 
 /* 809D9E68-809D9E8A 0022+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[34] = {
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00, 0x67, 0x72, 0x43, 0x00, 0x67, 0x72, 0x43, 0x5F, 0x4D, 0x64, 0x6C, 0x00, 0x67, 0x72, 0x4D,
-	0x43, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809D9E68 = "";
+SECTION_DEAD char* const stringBase_809D9E69 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_809D9E79 = "grC";
+SECTION_DEAD char* const stringBase_809D9E7D = "grC_Mdl";
+SECTION_DEAD char* const stringBase_809D9E85 = "grMC";
+#pragma pop
 
 /* 809D9E8C-809D9E98 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

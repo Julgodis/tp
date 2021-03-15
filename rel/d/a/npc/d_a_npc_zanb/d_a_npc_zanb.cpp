@@ -1058,7 +1058,7 @@ ASM_FUNCTION(__sinit_d_a_npc_zanb_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_zanB_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80B6BADC"
+#include "asm/rel/d/a/npc/d_a_npc_zanb/d_a_npc_zanb/func_80B6BADC"
 }
 #pragma pop
 
@@ -1277,10 +1277,13 @@ SECTION_RODATA const u32 lit_4763 = 0xC1A00000;
 SECTION_RODATA const u32 lit_4764 = 0x42700000;
 
 /* 80B6BDBC-80B6BDCE 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x7A, 0x61, 0x6E,
-	0x42, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B6BDBC = "";
+SECTION_DEAD char* const stringBase_80B6BDBD = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80B6BDC9 = "zanB";
+#pragma pop
 
 /* 80B6BDD0-80B6BDDC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

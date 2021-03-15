@@ -338,9 +338,12 @@ SECTION_RODATA const u8 data_80CDE37C[8] = {
 SECTION_RODATA const u32 lit_4194 = 0x437F0000;
 
 /* 80CDE388-80CDE392 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x00, 0x41, 0x5F, 0x53, 0x4D, 0x54, 0x69, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CDE388 = "";
+SECTION_DEAD char* const stringBase_80CDE389 = "A_SMTile";
+#pragma pop
 
 /* 80CDE394-80CDE39C 0008+00 .data      l_bmdData                                                    */
 u8 l_bmdData[8] = {

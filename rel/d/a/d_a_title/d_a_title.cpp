@@ -465,11 +465,13 @@ SECTION_RODATA const u8 lit_4337[8] = {
 SECTION_RODATA const u32 lit_4453 = 0xC3D70000;
 
 /* 80D67C10-80D67C3F 002F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[47] = {
-	0x2F, 0x72, 0x65, 0x73, 0x2F, 0x4C, 0x61, 0x79, 0x6F, 0x75, 0x74, 0x2F, 0x54, 0x69, 0x74, 0x6C,
-	0x65, 0x32, 0x44, 0x2E, 0x61, 0x72, 0x63, 0x00, 0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x70, 0x72,
-	0x65, 0x73, 0x73, 0x5F, 0x73, 0x74, 0x61, 0x72, 0x74, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D67C10 = "/res/Layout/Title2D.arc";
+SECTION_DEAD char* const stringBase_80D67C28 = "zelda_press_start.blo";
+SECTION_DEAD char* const stringBase_80D67C3E = "";
+#pragma pop
 
 /* 80D67C40-80D67C4C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -394,9 +394,11 @@ SECTION_RODATA const u32 lit_4040 = 0x433E0000;
 SECTION_RODATA const u32 lit_4041 = 0x44520000;
 
 /* 80C92CD4-80C92CDB 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x42, 0x5F, 0x6C, 0x69, 0x6E, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C92CD4 = "B_ling";
+#pragma pop
 
 /* 80C92CDC-80C92D20 0044+00 .data      cc_cyl_src__26@unnamed@d_a_obj_mato_cpp@                     */
 u8 data_80C92CDC[68] = {

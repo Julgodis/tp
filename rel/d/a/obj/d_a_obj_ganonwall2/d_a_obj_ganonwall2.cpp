@@ -253,9 +253,12 @@ SECTION_RODATA const u8 lit_3833[8] = {
 };
 
 /* 80BF61FC-80BF620C 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x56, 0x5F, 0x43, 0x54, 0x47, 0x57, 0x61, 0x6C, 0x6C, 0x00, 0x6D, 0x61, 0x74, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BF61FC = "V_CTGWall";
+SECTION_DEAD char* const stringBase_80BF6206 = "mat00";
+#pragma pop
 
 /* 80BF620C-80BF6210 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

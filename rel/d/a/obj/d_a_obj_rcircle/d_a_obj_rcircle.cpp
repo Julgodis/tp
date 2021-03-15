@@ -218,9 +218,11 @@ SECTION_RODATA const u8 lit_3702[4] = {
 };
 
 /* 80CB8D08-80CB8D10 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x52, 0x43, 0x69, 0x72, 0x63, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CB8D08 = "RCircle";
+#pragma pop
 
 /* 80CB8D10-80CB8D14 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

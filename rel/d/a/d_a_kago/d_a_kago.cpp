@@ -1659,12 +1659,17 @@ SECTION_RODATA const u32 lit_7912 = 0x41D00000;
 SECTION_RODATA const u32 lit_7981 = 0x3FC00000;
 
 /* 80854D14-80854D4C 0038+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[56] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x32, 0x00, 0x45, 0x5F, 0x59, 0x43, 0x00, 0x4B, 0x41, 0x47,
-	0x4F, 0x5F, 0x59, 0x41, 0x4D, 0x49, 0x00, 0x45, 0x5F, 0x4B, 0x43, 0x00, 0x4B, 0x41, 0x47, 0x4F,
-	0x5F, 0x48, 0x49, 0x4B, 0x41, 0x52, 0x49, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x35, 0x00,
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x36, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80854D14 = "F_SP112";
+SECTION_DEAD char* const stringBase_80854D1C = "E_YC";
+SECTION_DEAD char* const stringBase_80854D21 = "KAGO_YAMI";
+SECTION_DEAD char* const stringBase_80854D2B = "E_KC";
+SECTION_DEAD char* const stringBase_80854D30 = "KAGO_HIKARI";
+SECTION_DEAD char* const stringBase_80854D3C = "F_SP115";
+SECTION_DEAD char* const stringBase_80854D44 = "F_SP126";
+#pragma pop
 
 /* 80854D4C-80854D8C 0040+00 .data      cc_sph_src__22@unnamed@d_a_kago_cpp@                         */
 u8 data_80854D4C[64] = {

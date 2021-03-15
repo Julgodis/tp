@@ -345,9 +345,11 @@ SECTION_RODATA const u32 lit_4176 = 0x3F800000;
 SECTION_RODATA const u32 lit_4243 = 0x471C4000;
 
 /* 80D38628-80D38632 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x57, 0x69, 0x6E, 0x64, 0x53, 0x74, 0x6F, 0x6E, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D38628 = "WindStone";
+#pragma pop
 
 /* 80D38634-80D38638 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

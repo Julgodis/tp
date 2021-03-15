@@ -680,11 +680,15 @@ SECTION_RODATA const u32 lit_4763 = 0x43700000;
 SECTION_RODATA const u32 lit_4764 = 0x437F0000;
 
 /* 8046B0D0-8046B0F6 0026+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[38] = {
-	0x53, 0x48, 0x4F, 0x4B, 0x55, 0x44, 0x41, 0x49, 0x5F, 0x53, 0x57, 0x49, 0x54, 0x43, 0x48, 0x00,
-	0x53, 0x48, 0x4F, 0x4B, 0x55, 0x44, 0x41, 0x49, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x46, 0x49,
-	0x52, 0x45, 0x00, 0x45, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8046B0D0 = "SHOKUDAI_SWITCH";
+SECTION_DEAD char* const stringBase_8046B0E0 = "SHOKUDAI";
+SECTION_DEAD char* const stringBase_8046B0E9 = "WAIT";
+SECTION_DEAD char* const stringBase_8046B0EE = "FIRE";
+SECTION_DEAD char* const stringBase_8046B0F3 = "Ep";
+#pragma pop
 
 /* 8046B0F8-8046B104 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

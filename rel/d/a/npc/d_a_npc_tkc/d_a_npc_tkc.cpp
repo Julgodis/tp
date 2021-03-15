@@ -1191,12 +1191,18 @@ SECTION_RODATA const u8 lit_5581[8] = {
 };
 
 /* 80B10A2C-80B10A5E 0032+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[50] = {
-	0x00, 0x54, 0x4B, 0x53, 0x5F, 0x53, 0x45, 0x43, 0x52, 0x45, 0x54, 0x00, 0x54, 0x4B, 0x53, 0x5F,
-	0x57, 0x41, 0x52, 0x50, 0x00, 0x54, 0x4B, 0x43, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x00, 0x54, 0x6B,
-	0x63, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x37, 0x00, 0x54, 0x79, 0x70, 0x65, 0x00, 0x70, 0x72,
-	0x6D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B10A2C = "";
+SECTION_DEAD char* const stringBase_80B10A2D = "TKS_SECRET";
+SECTION_DEAD char* const stringBase_80B10A38 = "TKS_WARP";
+SECTION_DEAD char* const stringBase_80B10A41 = "TKC_WARP";
+SECTION_DEAD char* const stringBase_80B10A4A = "Tkc";
+SECTION_DEAD char* const stringBase_80B10A4E = "D_MN07";
+SECTION_DEAD char* const stringBase_80B10A55 = "Type";
+SECTION_DEAD char* const stringBase_80B10A5A = "prm";
+#pragma pop
 
 /* 80B10A60-80B10A6C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

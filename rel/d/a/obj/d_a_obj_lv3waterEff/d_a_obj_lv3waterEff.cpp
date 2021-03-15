@@ -57,7 +57,7 @@ ASM_FUNCTION(Create__15daObjWaterEff_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjWaterEff_cFv) {
 	nofralloc
-#include "func_80C5C5DC"
+#include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/func_80C5C5DC"
 }
 #pragma pop
 

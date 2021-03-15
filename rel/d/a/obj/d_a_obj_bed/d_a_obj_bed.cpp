@@ -377,9 +377,11 @@ SECTION_RODATA const u32 lit_3985 = 0x41A00000;
 SECTION_RODATA const u32 lit_3986 = 0x3F800000;
 
 /* 80BAE190-80BAE197 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4B, 0x48, 0x5F, 0x42, 0x65, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BAE190 = "KH_Bed";
+#pragma pop
 
 /* 80BAE198-80BAE19C 0004+00 .data      l_resName                                                    */
 u8 l_resName[4] = {

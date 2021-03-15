@@ -1363,12 +1363,17 @@ SECTION_RODATA const u32 lit_5875 = 0x41700000;
 SECTION_RODATA const u32 lit_5876 = 0x40000000;
 
 /* 80BB3A40-80BB3A74 0034+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[52] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x62, 0x6D, 0x00, 0x62, 0x6D, 0x45, 0x79, 0x65, 0x00, 0x68, 0x65, 0x61,
-	0x64, 0x00, 0x63, 0x6F, 0x67, 0x52, 0x65, 0x64, 0x00, 0x63, 0x6F, 0x67, 0x42, 0x6C, 0x75, 0x65,
-	0x00, 0x63, 0x6F, 0x67, 0x47, 0x72, 0x65, 0x65, 0x6E, 0x00, 0x63, 0x6F, 0x67, 0x59, 0x65, 0x6C,
-	0x6C, 0x6F, 0x77, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BB3A40 = "Obj_bm";
+SECTION_DEAD char* const stringBase_80BB3A47 = "bmEye";
+SECTION_DEAD char* const stringBase_80BB3A4D = "head";
+SECTION_DEAD char* const stringBase_80BB3A52 = "cogRed";
+SECTION_DEAD char* const stringBase_80BB3A59 = "cogBlue";
+SECTION_DEAD char* const stringBase_80BB3A61 = "cogGreen";
+SECTION_DEAD char* const stringBase_80BB3A6A = "cogYellow";
+#pragma pop
 
 /* 80BB3A74-80BB3A80 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

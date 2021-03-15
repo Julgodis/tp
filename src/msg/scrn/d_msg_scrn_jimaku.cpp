@@ -80,12 +80,14 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 
 /* ############################################################################################## */
 /* 80399A80-80399AA0 001F+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 msg_scrn_d_msg_scrn_jimaku__stringBase0[32] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x6A, 0x69, 0x6D, 0x61, 0x6B, 0x75, 0x5F, 0x6D, 0x65, 0x73,
-	0x73, 0x61, 0x67, 0x65, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399A80 = "zelda_jimaku_message_text.blo";
+SECTION_DEAD char* const stringBase_80399A9E = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399A9F = "";
+#pragma pop
 
 /* 803C11E8-803C1240 0058+00 .data      __vt__16dMsgScrnJimaku_c                                     */
 void* const __vt__16dMsgScrnJimaku_c[22] = {

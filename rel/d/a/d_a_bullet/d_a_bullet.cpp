@@ -442,10 +442,12 @@ SECTION_RODATA const u32 lit_3908 = 0xC1200000;
 SECTION_RODATA const u32 lit_3909 = 0x41200000;
 
 /* 80656774-8065678B 0017+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[23] = {
-	0x48, 0x61, 0x6E, 0x6A, 0x6F, 0x31, 0x00, 0x68, 0x61, 0x6E, 0x6A, 0x6F, 0x5F, 0x73, 0x74, 0x6F,
-	0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80656774 = "Hanjo1";
+SECTION_DEAD char* const stringBase_8065677B = "hanjo_stone.bmd";
+#pragma pop
 
 /* 8065678C-80656790 0004+00 .data      l_resFileNameList                                            */
 u8 l_resFileNameList[4] = {

@@ -207,7 +207,7 @@ ASM_FUNCTION(CreateHeap__10daObjSw5_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daObjSw5_cFv) {
 	nofralloc
-#include "func_8059BB1C"
+#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/func_8059BB1C"
 }
 #pragma pop
 
@@ -578,9 +578,11 @@ SECTION_RODATA const u32 lit_4041 = 0xBF800000;
 SECTION_RODATA const u32 lit_4042 = 0x3F4CCCCD;
 
 /* 8059C6D0-8059C6D9 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x44, 0x5F, 0x48, 0x66, 0x73, 0x77, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8059C6D0 = "D_Hfsw00";
+#pragma pop
 
 /* 8059C6DC-8059C6E8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

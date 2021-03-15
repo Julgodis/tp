@@ -335,9 +335,11 @@ SECTION_RODATA const u8 data_80BC40AC[8] = {
 };
 
 /* 80BC40B4-80BC40BC 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4D, 0x5F, 0x43, 0x72, 0x61, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BC40B4 = "M_Crack";
+#pragma pop
 
 /* 80BC40BC-80BC40C8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

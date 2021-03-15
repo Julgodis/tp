@@ -960,7 +960,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80CD4DA4"
+#include "asm/rel/d/a/obj/d_a_obj_sekizoa/d_a_obj_sekizoa/func_80CD4DA4"
 }
 #pragma pop
 
@@ -1323,7 +1323,7 @@ ASM_FUNCTION(__sinit_d_a_obj_sekizoa_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__15daObj_Sekizoa_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80CD5A40"
+#include "asm/rel/d/a/obj/d_a_obj_sekizoa/d_a_obj_sekizoa/func_80CD5A40"
 }
 #pragma pop
 
@@ -1551,16 +1551,28 @@ SECTION_RODATA const u32 lit_7373 = 0x44E10000;
 SECTION_RODATA const u32 lit_7374 = 0x44160000;
 
 /* 80CD5E64-80CD5ED5 0071+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[113] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x53, 0x54, 0x41,
-	0x52, 0x54, 0x00, 0x52, 0x45, 0x53, 0x54, 0x41, 0x52, 0x54, 0x00, 0x54, 0x55, 0x52, 0x4E, 0x00,
-	0x4A, 0x55, 0x4D, 0x50, 0x00, 0x47, 0x4F, 0x41, 0x4C, 0x00, 0x45, 0x58, 0x49, 0x54, 0x00, 0x46,
-	0x52, 0x45, 0x45, 0x00, 0x45, 0x58, 0x54, 0x49, 0x4E, 0x43, 0x54, 0x49, 0x4F, 0x4E, 0x00, 0x73,
-	0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x41, 0x00, 0x73, 0x65, 0x6B, 0x69, 0x5F, 0x31, 0x6B, 0x00, 0x53,
-	0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x61, 0x00, 0x53, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x62, 0x00, 0x70,
-	0x72, 0x6D, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x6D, 0x73, 0x67, 0x4E, 0x6F, 0x00, 0x40,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CD5E64 = "";
+SECTION_DEAD char* const stringBase_80CD5E65 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80CD5E71 = "START";
+SECTION_DEAD char* const stringBase_80CD5E77 = "RESTART";
+SECTION_DEAD char* const stringBase_80CD5E7F = "TURN";
+SECTION_DEAD char* const stringBase_80CD5E84 = "JUMP";
+SECTION_DEAD char* const stringBase_80CD5E89 = "GOAL";
+SECTION_DEAD char* const stringBase_80CD5E8E = "EXIT";
+SECTION_DEAD char* const stringBase_80CD5E93 = "FREE";
+SECTION_DEAD char* const stringBase_80CD5E98 = "EXTINCTION";
+SECTION_DEAD char* const stringBase_80CD5EA3 = "sekizoA";
+SECTION_DEAD char* const stringBase_80CD5EAB = "seki_1k";
+SECTION_DEAD char* const stringBase_80CD5EB3 = "Sekizoa";
+SECTION_DEAD char* const stringBase_80CD5EBB = "Sekizob";
+SECTION_DEAD char* const stringBase_80CD5EC3 = "prm";
+SECTION_DEAD char* const stringBase_80CD5EC7 = "timer";
+SECTION_DEAD char* const stringBase_80CD5ECD = "msgNo";
+SECTION_DEAD char* const stringBase_80CD5ED3 = "@";
+#pragma pop
 
 /* 80CD5ED8-80CD5EE4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

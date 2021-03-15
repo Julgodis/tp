@@ -376,7 +376,7 @@ ASM_FUNCTION(daObjBHASHI_IsDelete__FP13daObjBHASHI_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__13daObjBHASHI_cFv) {
 	nofralloc
-#include "func_80578788"
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/func_80578788"
 }
 #pragma pop
 
@@ -586,13 +586,14 @@ SECTION_RODATA const u32 lit_4626 = 0x43C80000;
 SECTION_RODATA const u32 lit_4627 = 0x42B40000;
 
 /* 80578BA8-80578BEF 0047+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[71] = {
-	0x42, 0x5F, 0x48, 0x61, 0x73, 0x68, 0x69, 0x00, 0x4C, 0x76, 0x39, 0x5F, 0x52, 0x30, 0x37, 0x5F,
-	0x70, 0x69, 0x6C, 0x6C, 0x61, 0x72, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4C, 0x76, 0x39, 0x5F, 0x52,
-	0x30, 0x37, 0x5F, 0x70, 0x69, 0x6C, 0x6C, 0x61, 0x72, 0x5F, 0x68, 0x61, 0x68, 0x65, 0x6E, 0x2E,
-	0x62, 0x6D, 0x64, 0x00, 0x4C, 0x76, 0x39, 0x5F, 0x52, 0x30, 0x37, 0x5F, 0x70, 0x69, 0x6C, 0x6C,
-	0x61, 0x72, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80578BA8 = "B_Hashi";
+SECTION_DEAD char* const stringBase_80578BB0 = "Lv9_R07_pillar.bmd";
+SECTION_DEAD char* const stringBase_80578BC3 = "Lv9_R07_pillar_hahen.bmd";
+SECTION_DEAD char* const stringBase_80578BDC = "Lv9_R07_pillar.dzb";
+#pragma pop
 
 /* 80578BF0-80578BF4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

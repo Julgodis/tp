@@ -442,9 +442,11 @@ SECTION_RODATA const u32 lit_4060 = 0x41A00000;
 SECTION_RODATA const u32 lit_4061 = 0x3F800000;
 
 /* 80CA49F8-80CA49FF 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4A, 0x61, 0x67, 0x61, 0x72, 0x34, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA49F8 = "Jagar4";
+#pragma pop
 
 /* 80CA4A00-80CA4A40 0040+00 .data      mCcDSph__13daObj_Nougu_c                                     */
 u8 mCcDSph__13daObj_Nougu_c[64] = {

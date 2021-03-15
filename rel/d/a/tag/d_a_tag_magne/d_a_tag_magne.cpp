@@ -44,7 +44,7 @@ ASM_FUNCTION(Create__12daTagMagne_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daTagMagne_cFv) {
 	nofralloc
-#include "func_805A54DC"
+#include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/func_805A54DC"
 }
 #pragma pop
 

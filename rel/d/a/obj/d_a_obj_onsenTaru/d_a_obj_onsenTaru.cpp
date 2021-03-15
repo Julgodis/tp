@@ -603,11 +603,13 @@ SECTION_RODATA const u32 lit_4136 = 0xC0C00000;
 SECTION_RODATA const u32 lit_4186 = 0x3F400000;
 
 /* 80CA9BF4-80CA9C15 0021+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[33] = {
-	0x6D, 0x61, 0x72, 0x6F, 0x54, 0x61, 0x72, 0x75, 0x00, 0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-	0x42, 0x72, 0x65, 0x61, 0x6B, 0x57, 0x6F, 0x6F, 0x64, 0x42, 0x6F, 0x78, 0x2E, 0x62, 0x6D, 0x64,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA9BF4 = "maroTaru";
+SECTION_DEAD char* const stringBase_80CA9BFD = "Always";
+SECTION_DEAD char* const stringBase_80CA9C04 = "BreakWoodBox.bmd";
+#pragma pop
 
 /* 80CA9C18-80CA9C24 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

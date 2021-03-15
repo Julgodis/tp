@@ -238,9 +238,11 @@ SECTION_RODATA const u32 lit_4040 = 0x42340000;
 SECTION_RODATA const u32 lit_4041 = 0x41F00000;
 
 /* 8085B310-8085B318 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4B, 0x79, 0x74, 0x61, 0x67, 0x30, 0x38, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8085B310 = "Kytag08";
+#pragma pop
 
 /* 8085B318-8085B338 0020+00 .data      l_daKytag08_Method                                           */
 u8 l_daKytag08_Method[32] = {

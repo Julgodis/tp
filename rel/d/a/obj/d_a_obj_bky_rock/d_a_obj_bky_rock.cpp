@@ -613,9 +613,11 @@ SECTION_RODATA const u32 lit_4123 = 0x45800000;
 SECTION_RODATA const u32 lit_4165 = 0x3A83126F;
 
 /* 80BB8014-80BB801B 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x42, 0x59, 0x52, 0x6F, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BB8014 = "BYRock";
+#pragma pop
 
 /* 80BB801C-80BB8028 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

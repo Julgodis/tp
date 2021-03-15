@@ -168,7 +168,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjFPillar2_cFv) {
 	nofralloc
-#include "func_80BEA228"
+#include "asm/rel/d/a/obj/d_a_obj_firepillar2/d_a_obj_firepillar2/func_80BEA228"
 }
 #pragma pop
 
@@ -485,9 +485,11 @@ SECTION_RODATA const u32 lit_4294 = 0x3B83126E;
 SECTION_RODATA const u32 lit_4295 = 0x42700000;
 
 /* 80BEB51C-80BEB526 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x79, 0x6F, 0x67, 0x61, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BEB51C = "Obj_yogan";
+#pragma pop
 
 /* 80BEB528-80BEB534 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

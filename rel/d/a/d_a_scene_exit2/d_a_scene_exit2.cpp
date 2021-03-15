@@ -97,7 +97,7 @@ ASM_FUNCTION(Create__10daScExit_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daScExit_cFv) {
 	nofralloc
-#include "func_8059E230"
+#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/func_8059E230"
 }
 #pragma pop
 
@@ -286,11 +286,16 @@ SECTION_RODATA const u8 lit_3800[4] = {
 };
 
 /* 8059E808-8059E838 0030+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[48] = {
-	0x53, 0x63, 0x65, 0x6E, 0x65, 0x45, 0x78, 0x69, 0x74, 0x00, 0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F,
-	0x45, 0x58, 0x49, 0x54, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x53, 0x54, 0x41, 0x52, 0x54, 0x00,
-	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8059E808 = "SceneExit";
+SECTION_DEAD char* const stringBase_8059E812 = "SCENE_EXIT";
+SECTION_DEAD char* const stringBase_8059E81D = "WAIT";
+SECTION_DEAD char* const stringBase_8059E822 = "START";
+SECTION_DEAD char* const stringBase_8059E828 = "SCENE_CHG";
+SECTION_DEAD char* const stringBase_8059E832 = "Timer";
+#pragma pop
 
 /* 8059E838-8059E844 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

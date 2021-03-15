@@ -88,9 +88,11 @@ ASM_FUNCTION(destroyVideo__Fv) {
 
 /* ############################################################################################## */
 /* 80374198-803741A8 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 m_Do_m_Do_Reset__stringBase0[16] = {
-	0x44, 0x56, 0x44, 0x5F, 0x53, 0x54, 0x41, 0x54, 0x45, 0x5F, 0x42, 0x55, 0x53, 0x59, 0x0A, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
+#pragma pop
 
 /* 80450C78-80450C80 0004+04 .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];

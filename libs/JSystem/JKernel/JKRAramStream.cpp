@@ -140,13 +140,15 @@ ASM_FUNCTION(readFromAram__13JKRAramStreamFv) {
 
 /* ############################################################################################## */
 /* 8039D120-8039D150 002D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRAramStream__stringBase0[48] = {
-	0x4A, 0x4B, 0x52, 0x41, 0x72, 0x61, 0x6D, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x2E, 0x63, 0x70,
-	0x70, 0x00, 0x25, 0x73, 0x00, 0x3A, 0x3A, 0x3A, 0x43, 0x61, 0x6E, 0x6E, 0x6F, 0x74, 0x20, 0x61,
-	0x6C, 0x6C, 0x6F, 0x63, 0x20, 0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D120 = "JKRAramStream.cpp";
+SECTION_DEAD char* const stringBase_8039D132 = "%s";
+SECTION_DEAD char* const stringBase_8039D135 = ":::Cannot alloc memory\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D14D = "\0\0";
+#pragma pop
 
 /* 802D3CE0-802D3ED0 01F0+00 .text      writeToAram__13JKRAramStreamFP20JKRAramStreamCommand         */
 #pragma push

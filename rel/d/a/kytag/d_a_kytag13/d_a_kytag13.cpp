@@ -349,9 +349,11 @@ SECTION_RODATA const u8 lit_4337[8] = {
 };
 
 /* 80860538-8086053F 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x31, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80860538 = "D_MN11";
+#pragma pop
 
 /* 80860540-80860560 0020+00 .data      l_daKytag13_Method                                           */
 u8 l_daKytag13_Method[32] = {

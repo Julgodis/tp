@@ -206,10 +206,12 @@ SECTION_RODATA const u32 lit_4030 = 0xC6E96E00;
 SECTION_RODATA const u32 lit_4031 = 0x4706C400;
 
 /* 80C268C4-80C268D6 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x69, 0x68, 0x61, 0x73, 0x69, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32,
-	0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C268C4 = "Obj_ihasi";
+SECTION_DEAD char* const stringBase_80C268CE = "F_SP121";
+#pragma pop
 
 /* 80C268D8-80C268F8 0020+00 .data      l_daObj_Ihasi_Method                                         */
 u8 l_daObj_Ihasi_Method[32] = {

@@ -680,9 +680,12 @@ SECTION_RODATA const u32 lit_4828 = 0xC47A0000;
 SECTION_RODATA const u32 lit_4829 = 0x44FA0000;
 
 /* 807B7FC0-807B7FCF 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x45, 0x5F, 0x74, 0x68, 0x00, 0x45, 0x5F, 0x74, 0x68, 0x5F, 0x62, 0x61, 0x6C, 0x6C, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807B7FC0 = "E_th";
+SECTION_DEAD char* const stringBase_807B7FC5 = "E_th_ball";
+#pragma pop
 
 /* 807B7FD0-807B8010 0040+00 .data      cc_sph_src$4795                                              */
 u8 data_807B7FD0[64] = {

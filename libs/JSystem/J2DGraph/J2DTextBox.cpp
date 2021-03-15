@@ -280,11 +280,14 @@ ASM_FUNCTION(setFont__10J2DTextBoxFP7JUTFont) {
 
 /* ############################################################################################## */
 /* 803A1C58-803A1C60 0004+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 J2DTextBox__stringBase0[8] = {
-	0x25, 0x73, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803A1C58 = "%s";
+SECTION_DEAD char* const stringBase_803A1C5B = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_803A1C5C = "\0\0\0";
+#pragma pop
 
 /* 803002E8-80300490 01A8+00 .text      draw__10J2DTextBoxFff                                        */
 #pragma push

@@ -199,11 +199,13 @@ ASM_FUNCTION(__sinit_d_a_obj_lv4HsTarget_cpp) {
 
 /* ############################################################################################## */
 /* 80C5FA3C-80C5FA48 0009+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[12] = {
-	0x4C, 0x34, 0x48, 0x73, 0x4D, 0x61, 0x74, 0x6F, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C5FA3C = "L4HsMato";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80C5FA45 = "\0\0";
+#pragma pop
 
 /* 80C5FA48-80C5FA68 0020+00 .data      l_daLv4HsTarget_Method                                       */
 u8 l_daLv4HsTarget_Method[32] = {

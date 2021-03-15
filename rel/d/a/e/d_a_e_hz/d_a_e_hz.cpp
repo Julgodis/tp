@@ -1115,10 +1115,14 @@ SECTION_RODATA const u32 lit_6338 = 0x43480000;
 SECTION_RODATA const u32 lit_6339 = 0xC2700000;
 
 /* 806F095C-806F0973 0017+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[23] = {
-	0x45, 0x5F, 0x48, 0x5A, 0x00, 0x45, 0x5F, 0x68, 0x7A, 0x70, 0x00, 0x45, 0x5F, 0x68, 0x7A, 0x70,
-	0x32, 0x00, 0x45, 0x5F, 0x68, 0x7A, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806F095C = "E_HZ";
+SECTION_DEAD char* const stringBase_806F0961 = "E_hzp";
+SECTION_DEAD char* const stringBase_806F0967 = "E_hzp2";
+SECTION_DEAD char* const stringBase_806F096E = "E_hz";
+#pragma pop
 
 /* 806F0974-806F0980 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -973,10 +973,14 @@ SECTION_RODATA const u8 lit_5791[8] = {
 };
 
 /* 807C20B0-807C20C6 0016+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[22] = {
-	0x45, 0x5F, 0x54, 0x54, 0x00, 0x45, 0x5F, 0x54, 0x54, 0x52, 0x00, 0x45, 0x5F, 0x54, 0x54, 0x42,
-	0x00, 0x45, 0x5F, 0x74, 0x74, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807C20B0 = "E_TT";
+SECTION_DEAD char* const stringBase_807C20B5 = "E_TTR";
+SECTION_DEAD char* const stringBase_807C20BB = "E_TTB";
+SECTION_DEAD char* const stringBase_807C20C1 = "E_tt";
+#pragma pop
 
 /* 807C20C8-807C20D4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

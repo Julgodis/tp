@@ -2607,12 +2607,19 @@ SECTION_RODATA const u32 lit_11466 = 0x47A4FC00;
 SECTION_RODATA const u32 lit_12066 = 0x47C35000;
 
 /* 80518968-805189A8 0040+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[64] = {
-	0x45, 0x5F, 0x72, 0x64, 0x62, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x31, 0x00, 0x46, 0x5F,
-	0x53, 0x50, 0x31, 0x32, 0x38, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x32, 0x00, 0x45, 0x5F,
-	0x52, 0x44, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x34, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31,
-	0x31, 0x38, 0x00, 0x45, 0x5F, 0x72, 0x64, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x35, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80518968 = "E_rdb";
+SECTION_DEAD char* const stringBase_8051896E = "F_SP121";
+SECTION_DEAD char* const stringBase_80518976 = "F_SP128";
+SECTION_DEAD char* const stringBase_8051897E = "F_SP102";
+SECTION_DEAD char* const stringBase_80518986 = "E_RD";
+SECTION_DEAD char* const stringBase_8051898B = "F_SP124";
+SECTION_DEAD char* const stringBase_80518993 = "F_SP118";
+SECTION_DEAD char* const stringBase_8051899B = "E_rd";
+SECTION_DEAD char* const stringBase_805189A0 = "F_SP115";
+#pragma pop
 
 /* 805189A8-805189B4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

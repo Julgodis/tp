@@ -232,9 +232,11 @@ SECTION_RODATA const u32 lit_3893 = 0xC3480000;
 SECTION_RODATA const u32 lit_3894 = 0x43480000;
 
 /* 806DFE2C-806DFE31 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x67, 0x73, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806DFE2C = "E_gs";
+#pragma pop
 
 /* 806DFE34-806DFE54 0020+00 .data      l_daE_GS_Method                                              */
 u8 l_daE_GS_Method[32] = {

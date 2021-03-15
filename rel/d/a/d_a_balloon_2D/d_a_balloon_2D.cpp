@@ -484,11 +484,13 @@ SECTION_RODATA const u8 lit_4175[8] = {
 };
 
 /* 806555EC-8065560E 0022+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[34] = {
-	0x42, 0x61, 0x6C, 0x6C, 0x6F, 0x6F, 0x6E, 0x32, 0x44, 0x00, 0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F,
-	0x62, 0x61, 0x6C, 0x6C, 0x6F, 0x6F, 0x6E, 0x5F, 0x67, 0x61, 0x6D, 0x65, 0x2E, 0x62, 0x6C, 0x6F,
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806555EC = "Balloon2D";
+SECTION_DEAD char* const stringBase_806555F6 = "zelda_balloon_game.blo";
+SECTION_DEAD char* const stringBase_8065560D = "";
+#pragma pop
 
 /* 80655610-806556D4 00C4+00 .data      aParam$localstatic3$__ct__17daBalloon2D_HIO_cFv              */
 u8 data_80655610[196] = {

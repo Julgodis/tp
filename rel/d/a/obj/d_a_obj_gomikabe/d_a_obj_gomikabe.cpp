@@ -465,7 +465,7 @@ ASM_FUNCTION(daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjGOMIKABE_cFv) {
 	nofralloc
-#include "func_80BFF8D8"
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFF8D8"
 }
 #pragma pop
 
@@ -666,12 +666,14 @@ SECTION_RODATA const u32 lit_4607 = 0x43FA0000;
 SECTION_RODATA const u32 lit_4620 = 0xC0A00000;
 
 /* 80BFFCF4-80BFFD30 003C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[60] = {
-	0x47, 0x6F, 0x6D, 0x69, 0x4B, 0x61, 0x62, 0x65, 0x00, 0x4D, 0x5F, 0x47, 0x6F, 0x6D, 0x69, 0x6B,
-	0x61, 0x62, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4D, 0x5F, 0x47, 0x6F, 0x6D, 0x69, 0x6B, 0x61,
-	0x62, 0x65, 0x5F, 0x48, 0x61, 0x68, 0x65, 0x6E, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4D, 0x5F, 0x47,
-	0x6F, 0x6D, 0x69, 0x6B, 0x61, 0x62, 0x65, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BFFCF4 = "GomiKabe";
+SECTION_DEAD char* const stringBase_80BFFCFD = "M_Gomikabe.bmd";
+SECTION_DEAD char* const stringBase_80BFFD0C = "M_Gomikabe_Hahen.bmd";
+SECTION_DEAD char* const stringBase_80BFFD21 = "M_Gomikabe.dzb";
+#pragma pop
 
 /* 80BFFD30-80BFFD34 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

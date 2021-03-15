@@ -588,7 +588,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AD732C"
+#include "asm/rel/d/a/npc/d_a_npc_seirei/d_a_npc_seirei/func_80AD732C"
 }
 #pragma pop
 
@@ -1017,7 +1017,7 @@ ASM_FUNCTION(__sinit_d_a_npc_seirei_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__14daNpc_Seirei_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80AD7BF8"
+#include "asm/rel/d/a/npc/d_a_npc_seirei/d_a_npc_seirei/func_80AD7BF8"
 }
 #pragma pop
 
@@ -1120,14 +1120,19 @@ SECTION_RODATA const u8 data_80AD7D78[16] = {
 };
 
 /* 80AD7D88-80AD7DE1 0059+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[89] = {
-	0x00, 0x43, 0x4F, 0x4E, 0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x5F, 0x41, 0x42,
-	0x4F, 0x55, 0x54, 0x5F, 0x59, 0x4D, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47,
-	0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E,
-	0x53, 0x45, 0x00, 0x53, 0x65, 0x69, 0x72, 0x65, 0x69, 0x00, 0x53, 0x65, 0x69, 0x72, 0x65, 0x69,
-	0x31, 0x00, 0x43, 0x4F, 0x4E, 0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x00, 0x70,
-	0x72, 0x6D, 0x00, 0x74, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80AD7D88 = "";
+SECTION_DEAD char* const stringBase_80AD7D89 = "CONVERSATION_ABOUT_YM";
+SECTION_DEAD char* const stringBase_80AD7D9F = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_80AD7DAF = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80AD7DBB = "Seirei";
+SECTION_DEAD char* const stringBase_80AD7DC2 = "Seirei1";
+SECTION_DEAD char* const stringBase_80AD7DCA = "CONVERSATION";
+SECTION_DEAD char* const stringBase_80AD7DD7 = "prm";
+SECTION_DEAD char* const stringBase_80AD7DDB = "timer";
+#pragma pop
 
 /* 80AD7DE4-80AD7DF0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

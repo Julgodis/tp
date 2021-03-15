@@ -713,9 +713,11 @@ SECTION_RODATA const u8 lit_5134[8] = {
 };
 
 /* 8078DEAC-8078DEB1 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x73, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8078DEAC = "E_sg";
+#pragma pop
 
 /* 8078DEB4-8078DF34 0080+00 .data      stick_bit                                                    */
 u8 stick_bit[128] = {

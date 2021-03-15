@@ -314,10 +314,12 @@ SECTION_RODATA const u8 lit_3881[8] = {
 SECTION_RODATA const u32 lit_3939 = 0x41200000;
 
 /* 80CBF6C4-80CBF6D7 0013+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[19] = {
-	0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69, 0x64, 0x67, 0x65, 0x00, 0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69,
-	0x64, 0x39, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CBF6C4 = "P_Mbridge";
+SECTION_DEAD char* const stringBase_80CBF6CE = "P_Mbrid9";
+#pragma pop
 
 /* 80CBF6D8-80CBF6E4 000C+00 .data      l_resNameIdx                                                 */
 u8 l_resNameIdx[12] = {

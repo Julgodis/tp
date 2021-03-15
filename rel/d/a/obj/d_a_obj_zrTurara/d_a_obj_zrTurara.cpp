@@ -383,9 +383,11 @@ SECTION_RODATA const u32 lit_4059 = 0x43480000;
 SECTION_RODATA const u32 lit_4060 = 0x41A00000;
 
 /* 80D415FC-80D41606 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x5F, 0x44, 0x72, 0x70, 0x52, 0x6F, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D415FC = "M_DrpRock";
+#pragma pop
 
 /* 80D41608-80D41614 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

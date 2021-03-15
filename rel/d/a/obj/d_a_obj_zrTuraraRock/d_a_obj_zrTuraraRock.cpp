@@ -465,9 +465,11 @@ SECTION_RODATA const u8 lit_3885[4] = {
 };
 
 /* 80D42434-80D4243E 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4D, 0x5F, 0x44, 0x52, 0x6F, 0x63, 0x6B, 0x48, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D42434 = "M_DRockHn";
+#pragma pop
 
 /* 80D42440-80D4244C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

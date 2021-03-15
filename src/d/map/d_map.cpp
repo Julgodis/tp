@@ -738,11 +738,14 @@ ASM_FUNCTION(resCopy__6dMap_cFv) {
 
 /* ############################################################################################## */
 /* 80378F24-80378F38 000F+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_map_d_map__stringBase0[20] = {
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x31, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80378F24 = "Always";
+SECTION_DEAD char* const stringBase_80378F2B = "F_SP121";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80378F33 = "\0\0\0\0";
+#pragma pop
 
 /* 803A6F6C-803A6F88 001C+00 .data      @4694                                                        */
 void* d_map_d_map__lit_4694[7] = {

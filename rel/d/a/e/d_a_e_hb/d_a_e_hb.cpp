@@ -854,9 +854,11 @@ SECTION_RODATA const u8 lit_5446[8] = {
 };
 
 /* 80500C34-80500C39 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x45, 0x5F, 0x68, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80500C34 = "E_hb";
+#pragma pop
 
 /* 80500C3C-80500C48 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

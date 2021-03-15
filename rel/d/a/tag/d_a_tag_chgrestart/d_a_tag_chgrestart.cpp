@@ -51,7 +51,7 @@ ASM_FUNCTION(Create__17daTagChgRestart_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__17daTagChgRestart_cFv) {
 	nofralloc
-#include "func_80D567E4"
+#include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/func_80D567E4"
 }
 #pragma pop
 

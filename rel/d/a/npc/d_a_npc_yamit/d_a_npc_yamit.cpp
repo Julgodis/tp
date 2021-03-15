@@ -1149,7 +1149,7 @@ ASM_FUNCTION(__sinit_d_a_npc_yamit_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13daNpc_yamiT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80B4CC38"
+#include "asm/rel/d/a/npc/d_a_npc_yamit/d_a_npc_yamit/func_80B4CC38"
 }
 #pragma pop
 
@@ -1329,10 +1329,14 @@ SECTION_RODATA const u8 lit_4767[8] = {
 };
 
 /* 80B4CE84-80B4CE99 0015+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[21] = {
-	0x00, 0x53, 0x54, 0x4F, 0x50, 0x50, 0x45, 0x52, 0x00, 0x79, 0x61, 0x6D, 0x69, 0x54, 0x00, 0x63,
-	0x75, 0x74, 0x49, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80B4CE84 = "";
+SECTION_DEAD char* const stringBase_80B4CE85 = "STOPPER";
+SECTION_DEAD char* const stringBase_80B4CE8D = "yamiT";
+SECTION_DEAD char* const stringBase_80B4CE93 = "cutId";
+#pragma pop
 
 /* 80B4CE9C-80B4CEA8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

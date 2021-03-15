@@ -123,7 +123,7 @@ ASM_FUNCTION(CreateHeap__11daObjBmSh_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjBmSh_cFv) {
 	nofralloc
-#include "func_80BB9CC0"
+#include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/func_80BB9CC0"
 }
 #pragma pop
 
@@ -384,9 +384,11 @@ SECTION_RODATA const u32 lit_3973 = 0xC35C0000;
 SECTION_RODATA const u32 lit_3981 = 0x40000000;
 
 /* 80BBA820-80BBA829 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4B, 0x5F, 0x73, 0x61, 0x6B, 0x75, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BBA820 = "K_saku00";
+#pragma pop
 
 /* 80BBA82C-80BBA838 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

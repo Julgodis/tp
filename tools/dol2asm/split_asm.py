@@ -93,7 +93,7 @@ def main(debug, game_path):
     asm_group_count = 16
 
     step_count = 1
-    process_count = 1
+    process_count = 12
 
     g.CONSOLE.print(f"dol2asm {g.VERSION} for '{g.GAME_NAME}'")
 

@@ -261,9 +261,11 @@ SECTION_RODATA const u32 lit_4094 = 0x3F800000;
 SECTION_RODATA const u32 lit_4131 = 0x47800000;
 
 /* 80D378C0-80D378CA 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x77, 0x66, 0x6C, 0x61, 0x67, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D378C0 = "Obj_wflag";
+#pragma pop
 
 /* 80D378CC-80D37918 004C+00 .data      pd$3822                                                      */
 u8 data_80D378CC[76] = {

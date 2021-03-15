@@ -336,10 +336,12 @@ SECTION_RODATA const u32 lit_3995 = 0x447A0000;
 SECTION_RODATA const u32 lit_3996 = 0x43FA0000;
 
 /* 80BD4048-80BD4062 001A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[26] = {
-	0x43, 0x72, 0x76, 0x46, 0x65, 0x6E, 0x63, 0x65, 0x00, 0x43, 0x61, 0x72, 0x61, 0x76, 0x61, 0x6E,
-	0x50, 0x69, 0x65, 0x63, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BD4048 = "CrvFence";
+SECTION_DEAD char* const stringBase_80BD4051 = "CaravanPiece.bmd";
+#pragma pop
 
 /* 80BD4064-80BD4068 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -77,12 +77,14 @@ SECTION_BSS extern u8 g_meter2_info[248];
 
 /* ############################################################################################## */
 /* 803949F0-80394A10 001C+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_scope__stringBase0[32] = {
-	0x77, 0x69, 0x70, 0x65, 0x5F, 0x30, 0x30, 0x2E, 0x62, 0x74, 0x69, 0x00, 0x74, 0x74, 0x5F, 0x62,
-	0x6C, 0x6F, 0x63, 0x6B, 0x38, 0x78, 0x38, 0x2E, 0x62, 0x74, 0x69, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803949F0 = "wipe_00.bti";
+SECTION_DEAD char* const stringBase_803949FC = "tt_block8x8.bti";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80394A0C = "\0\0\0";
+#pragma pop
 
 /* 803BB618-803BB624 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 d_d_scope__cNullVec__6Z2Calc[12] = {

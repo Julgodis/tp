@@ -549,9 +549,11 @@ SECTION_RODATA const u32 lit_5044 = 0x40066666;
 SECTION_RODATA const u32 lit_5045 = 0x45DAC000;
 
 /* 80CFB790-80CFB798 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x5F, 0x43, 0x68, 0x61, 0x69, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CFB790 = "P_Chain";
+#pragma pop
 
 /* 80CFB798-80CFB79C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

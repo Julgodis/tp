@@ -776,10 +776,13 @@ SECTION_RODATA const u8 lit_5514[8] = {
 };
 
 /* 806EA2CC-806EA2E6 001A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[26] = {
-	0x45, 0x5F, 0x48, 0x50, 0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54,
-	0x49, 0x54, 0x45, 0x4D, 0x00, 0x45, 0x5F, 0x68, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_806EA2CC = "E_HP";
+SECTION_DEAD char* const stringBase_806EA2D1 = "DEFAULT_GETITEM";
+SECTION_DEAD char* const stringBase_806EA2E1 = "E_hp";
+#pragma pop
 
 /* 806EA2E8-806EA2F4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

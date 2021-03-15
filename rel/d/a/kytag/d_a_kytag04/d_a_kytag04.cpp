@@ -163,11 +163,14 @@ SECTION_RODATA const u8 lit_4326[8] = {
 };
 
 /* 8046DA50-8046DA76 0026+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[38] = {
-	0x57, 0x49, 0x54, 0x48, 0x57, 0x41, 0x52, 0x50, 0x5F, 0x4F, 0x50, 0x45, 0x4E, 0x00, 0x46, 0x5F,
-	0x53, 0x50, 0x31, 0x30, 0x34, 0x00, 0x4B, 0x79, 0x74, 0x61, 0x67, 0x30, 0x34, 0x00, 0x46, 0x5F,
-	0x53, 0x50, 0x31, 0x31, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8046DA50 = "WITHWARP_OPEN";
+SECTION_DEAD char* const stringBase_8046DA5E = "F_SP104";
+SECTION_DEAD char* const stringBase_8046DA66 = "Kytag04";
+SECTION_DEAD char* const stringBase_8046DA6E = "F_SP110";
+#pragma pop
 
 /* 8046DA78-8046DA98 0020+00 .data      l_daKytag04_Method                                           */
 u8 l_daKytag04_Method[32] = {

@@ -73,7 +73,7 @@ ASM_FUNCTION(Create__16daTagLightBall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16daTagLightBall_cFv) {
 	nofralloc
-#include "func_80D5A9B8"
+#include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/func_80D5A9B8"
 }
 #pragma pop
 

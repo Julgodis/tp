@@ -601,9 +601,11 @@ SECTION_RODATA const u8 data_80BA11C8[12] = {
 };
 
 /* 80BA11D4-80BA11DD 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x59, 0x5F, 0x74, 0x61, 0x69, 0x68, 0x6F, 0x75, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BA11D4 = "Y_taihou";
+#pragma pop
 
 /* 80BA11E0-80BA11E4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

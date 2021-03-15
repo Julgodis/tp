@@ -287,9 +287,11 @@ SECTION_RODATA const u8 lit_3774[8] = {
 };
 
 /* 80D1F8E8-80D1F8F1 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4D, 0x5F, 0x54, 0x72, 0x65, 0x65, 0x53, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D1F8E8 = "M_TreeSh";
+#pragma pop
 
 /* 80D1F8F4-80D1F8F8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

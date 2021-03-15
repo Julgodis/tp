@@ -281,9 +281,11 @@ SECTION_RODATA const u8 data_80CE0268[12] = {
 };
 
 /* 80CE0274-80CE027D 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x53, 0x6E, 0x6F, 0x77, 0x53, 0x6F, 0x75, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CE0274 = "SnowSoup";
+#pragma pop
 
 /* 80CE0280-80CE0284 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

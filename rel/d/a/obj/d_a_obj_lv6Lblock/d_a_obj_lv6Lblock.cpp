@@ -334,9 +334,11 @@ SECTION_RODATA const u8 lit_3781[4] = {
 };
 
 /* 80C73CD8-80C73CE1 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4C, 0x36, 0x4C, 0x62, 0x6C, 0x6F, 0x63, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C73CD8 = "L6Lblock";
+#pragma pop
 
 /* 80C73CE4-80C73CF0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

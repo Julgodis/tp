@@ -395,9 +395,11 @@ SECTION_RODATA const u32 lit_4025 = 0x41A00000;
 SECTION_RODATA const u32 lit_4026 = 0x3F800000;
 
 /* 80CB1890-80CB1899 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4A, 0x5F, 0x48, 0x61, 0x74, 0x61, 0x6B, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CB1890 = "J_Hatake";
+#pragma pop
 
 /* 80CB189C-80CB18A0 0004+00 .data      l_resName                                                    */
 u8 l_resName[4] = {

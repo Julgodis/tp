@@ -297,9 +297,11 @@ SECTION_RODATA const u32 lit_4239 = 0x3F800000;
 SECTION_RODATA const u32 lit_4350 = 0x471C4000;
 
 /* 80CDEF14-80CDEF1C 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x57, 0x53, 0x74, 0x6F, 0x6E, 0x65, 0x46, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CDEF14 = "WStoneF";
+#pragma pop
 
 /* 80CDEF1C-80CDEF20 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

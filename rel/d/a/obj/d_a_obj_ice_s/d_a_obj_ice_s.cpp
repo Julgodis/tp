@@ -241,7 +241,7 @@ ASM_FUNCTION(CreateHeap__12daObjIce_s_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__12daObjIce_s_cFv) {
 	nofralloc
-#include "func_80C215F4"
+#include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/func_80C215F4"
 }
 #pragma pop
 
@@ -410,10 +410,13 @@ SECTION_RODATA const u32 lit_4067 = 0x3E4CCCCD;
 SECTION_RODATA const u32 lit_4068 = 0x3D4CCCCD;
 
 /* 80C21B8C-80C21BA8 001C+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[28] = {
-	0x56, 0x5F, 0x49, 0x63, 0x65, 0x5F, 0x73, 0x00, 0x49, 0x63, 0x65, 0x5F, 0x73, 0x2E, 0x64, 0x7A,
-	0x62, 0x00, 0x49, 0x63, 0x65, 0x5F, 0x73, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C21B8C = "V_Ice_s";
+SECTION_DEAD char* const stringBase_80C21B94 = "Ice_s.dzb";
+SECTION_DEAD char* const stringBase_80C21B9E = "Ice_s.bmd";
+#pragma pop
 
 /* 80C21BA8-80C21BAC 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

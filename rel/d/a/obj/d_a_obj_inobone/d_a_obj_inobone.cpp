@@ -149,7 +149,7 @@ ASM_FUNCTION(CreateHeap__12daObjIBone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjIBone_cFv) {
 	nofralloc
-#include "func_80C27A20"
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20"
 }
 #pragma pop
 
@@ -311,12 +311,14 @@ SECTION_RODATA const u32 lit_3963 = 0x3F800000;
 SECTION_RODATA const u32 lit_3964 = 0xBF800000;
 
 /* 80C281C4-80C281F5 0031+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[49] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x49, 0x62, 0x6F, 0x6E, 0x65, 0x00, 0x41, 0x5F, 0x49, 0x6E, 0x6F, 0x42,
-	0x6F, 0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x42, 0x72, 0x65, 0x61, 0x6B, 0x42, 0x6F, 0x61,
-	0x72, 0x42, 0x6F, 0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x41, 0x6C, 0x77, 0x61, 0x79, 0x73,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C281C4 = "Obj_Ibone";
+SECTION_DEAD char* const stringBase_80C281CE = "A_InoBone.bmd";
+SECTION_DEAD char* const stringBase_80C281DC = "BreakBoarBone.bmd";
+SECTION_DEAD char* const stringBase_80C281EE = "Always";
+#pragma pop
 
 /* 80C281F8-80C281FC 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

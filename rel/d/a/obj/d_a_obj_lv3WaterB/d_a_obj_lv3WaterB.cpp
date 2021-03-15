@@ -156,10 +156,12 @@ SECTION_RODATA const u32 lit_3754 = 0x3D4CCCCD;
 SECTION_RODATA const u32 lit_3755 = 0x41200000;
 
 /* 80C5BD70-80C5BD84 0014+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[20] = {
-	0x4C, 0x33, 0x5F, 0x62, 0x77, 0x61, 0x74, 0x65, 0x72, 0x00, 0x53, 0x5F, 0x6F, 0x63, 0x74, 0x68,
-	0x69, 0x62, 0x69, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C5BD70 = "L3_bwater";
+SECTION_DEAD char* const stringBase_80C5BD7A = "S_octhibi";
+#pragma pop
 
 /* 80C5BD84-80C5BDA4 0020+00 .data      l_daObj_Lv3waterB_Method                                     */
 u8 l_daObj_Lv3waterB_Method[32] = {

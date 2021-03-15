@@ -703,9 +703,12 @@ SECTION_RODATA const u32 l_musiya_num = 0x01A701A8;
 SECTION_RODATA const u32 lit_4994 = 0xC2480000;
 
 /* 80C31260-80C3126E 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x49, 0x5F, 0x4B, 0x61, 0x67, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C31260 = "I_Kag";
+SECTION_DEAD char* const stringBase_80C31266 = "R_SP160";
+#pragma pop
 
 /* 80C31270-80C3127C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -159,9 +159,11 @@ SECTION_RODATA const u8 lit_3839[8] = {
 };
 
 /* 80CA3A6C-80CA3A76 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6E, 0x64, 0x6F, 0x6F, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA3A6C = "Obj_ndoor";
+#pragma pop
 
 /* 80CA3A78-80CA3AB8 0040+00 .data      cc_sph_src$3869                                              */
 u8 data_80CA3A78[64] = {

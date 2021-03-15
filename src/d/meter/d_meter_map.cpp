@@ -328,9 +328,11 @@ ASM_FUNCTION(_delete__11dMeterMap_cFv) {
 
 /* ############################################################################################## */
 /* 80398208-80398210 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_meter_d_meter_map__stringBase0[8] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x35, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80398208 = "F_SP115";
+#pragma pop
 
 /* 8020DCE4-8020DF1C 0238+00 .text      _move__11dMeterMap_cFUl                                      */
 #pragma push

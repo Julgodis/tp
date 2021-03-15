@@ -380,7 +380,7 @@ ASM_FUNCTION(daObjHHASHI_IsDelete__FP13daObjHHASHI_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__13daObjHHASHI_cFv) {
 	nofralloc
-#include "func_805811CC"
+#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/func_805811CC"
 }
 #pragma pop
 
@@ -566,12 +566,14 @@ SECTION_RODATA const u32 lit_4446 = 0x43FA0000;
 SECTION_RODATA const u32 lit_4485 = 0x43480000;
 
 /* 805815AC-805815E2 0036+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[54] = {
-	0x4C, 0x5F, 0x68, 0x68, 0x61, 0x73, 0x68, 0x69, 0x00, 0x4C, 0x5F, 0x68, 0x68, 0x61, 0x73, 0x68,
-	0x69, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4C, 0x5F, 0x68, 0x68, 0x61, 0x73, 0x68, 0x69,
-	0x30, 0x32, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x4C, 0x5F, 0x68, 0x68, 0x61, 0x73, 0x68, 0x69, 0x30,
-	0x30, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_805815AC = "L_hhashi";
+SECTION_DEAD char* const stringBase_805815B5 = "L_hhashi00.bmd";
+SECTION_DEAD char* const stringBase_805815C4 = "L_hhashi02.bmd";
+SECTION_DEAD char* const stringBase_805815D3 = "L_hhashi00.dzb";
+#pragma pop
 
 /* 805815E4-805815E8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

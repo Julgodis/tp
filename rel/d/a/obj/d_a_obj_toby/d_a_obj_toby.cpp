@@ -538,10 +538,13 @@ SECTION_RODATA const u8 lit_4764[8] = {
 };
 
 /* 80D156B8-80D156D1 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x37, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x54, 0x6F, 0x62, 0x37, 0x00,
-	0x4F, 0x62, 0x6A, 0x5F, 0x54, 0x6F, 0x62, 0x79, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D156B8 = "D_MN07";
+SECTION_DEAD char* const stringBase_80D156BF = "Obj_Tob7";
+SECTION_DEAD char* const stringBase_80D156C8 = "Obj_Toby";
+#pragma pop
 
 /* 80D156D4-80D15794 00C0+00 .data      r05yuka_image                                                */
 u8 r05yuka_image[192] = {

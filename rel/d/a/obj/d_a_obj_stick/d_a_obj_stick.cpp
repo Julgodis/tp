@@ -396,9 +396,11 @@ SECTION_RODATA const u32 lit_4045 = 0x41A00000;
 SECTION_RODATA const u32 lit_4046 = 0x3F800000;
 
 /* 80599E68-80599E6E 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x54, 0x61, 0x72, 0x6F, 0x36, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80599E68 = "Taro6";
+#pragma pop
 
 /* 80599E70-80599EB0 0040+00 .data      mCcDSph__13daObj_Stick_c                                     */
 u8 mCcDSph__13daObj_Stick_c[64] = {

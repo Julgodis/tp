@@ -1237,12 +1237,16 @@ SECTION_RODATA const u32 lit_6541 = 0xC5B60800;
 SECTION_RODATA const u32 lit_6542 = 0xC2480000;
 
 /* 8076B6C4-8076B6F7 0033+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[51] = {
-	0x45, 0x5F, 0x72, 0x64, 0x62, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x39, 0x00, 0x66, 0x6F, 0x72,
-	0x63, 0x65, 0x5F, 0x73, 0x74, 0x61, 0x72, 0x74, 0x00, 0x66, 0x6F, 0x72, 0x63, 0x65, 0x5F, 0x65,
-	0x6E, 0x64, 0x00, 0x54, 0x5F, 0x44, 0x45, 0x53, 0x45, 0x52, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31,
-	0x31, 0x38, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8076B6C4 = "E_rdb";
+SECTION_DEAD char* const stringBase_8076B6CA = "D_MN09";
+SECTION_DEAD char* const stringBase_8076B6D1 = "force_start";
+SECTION_DEAD char* const stringBase_8076B6DD = "force_end";
+SECTION_DEAD char* const stringBase_8076B6E7 = "T_DESER";
+SECTION_DEAD char* const stringBase_8076B6EF = "F_SP118";
+#pragma pop
 
 /* 8076B6F8-8076B704 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

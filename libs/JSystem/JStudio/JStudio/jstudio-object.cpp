@@ -2260,11 +2260,13 @@ ASM_FUNCTION(func_8028892C) {
 
 /* ############################################################################################## */
 /* 8039AB78-8039AB88 000A+06 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 jstudio_object__stringBase0[16] = {
-	0x28, 0x75, 0x6E, 0x6E, 0x61, 0x6D, 0x65, 0x64, 0x29, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039AB78 = "(unnamed)";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039AB82 = "\0\0\0\0\0";
+#pragma pop
 
 /* 8043109C-804310A8 000C+00 .bss       @759                                                         */
 u8 lit_759[12];

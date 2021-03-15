@@ -5202,11 +5202,13 @@ ASM_FUNCTION(isInsect__FUc) {
 
 /* ############################################################################################## */
 /* 8037B0D0-8037B0D8 0007+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_item__stringBase0[8] = {
-	0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x38, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8037B0D0 = "D_MN08";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8037B0D7 = "";
+#pragma pop
 
 /* 8009B7C4-8009B940 017C+00 .text      check_itemno__Fi                                             */
 #pragma push

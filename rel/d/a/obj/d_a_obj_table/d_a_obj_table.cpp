@@ -155,9 +155,12 @@ SECTION_RODATA const u32 lit_4017 = 0x42C80000;
 SECTION_RODATA const u32 lit_4077 = 0x43FA0000;
 
 /* 80D06C0C-80D06C1C 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x54, 0x61, 0x62, 0x6C, 0x65, 0x00, 0x54, 0x41, 0x42, 0x4C, 0x45, 0x5F, 0x4D, 0x41, 0x50, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D06C0C = "Table";
+SECTION_DEAD char* const stringBase_80D06C12 = "TABLE_MAP";
+#pragma pop
 
 /* 80D06C1C-80D06C20 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

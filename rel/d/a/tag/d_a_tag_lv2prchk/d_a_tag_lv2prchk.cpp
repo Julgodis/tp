@@ -58,7 +58,7 @@ ASM_FUNCTION(Create__15daTagLv2PrChk_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daTagLv2PrChk_cFv) {
 	nofralloc
-#include "func_805A4CDC"
+#include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/func_805A4CDC"
 }
 #pragma pop
 

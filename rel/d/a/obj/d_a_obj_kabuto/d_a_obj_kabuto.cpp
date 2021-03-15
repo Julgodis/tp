@@ -681,9 +681,12 @@ SECTION_RODATA const u32 lit_5058 = 0xC2480000;
 SECTION_RODATA const u32 lit_5059 = 0x3F8CCCCD;
 
 /* 80C2E218-80C2E226 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x4B, 0x61, 0x62, 0x5F, 0x6D, 0x00, 0x52, 0x5F, 0x53, 0x50, 0x31, 0x36, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C2E218 = "Kab_m";
+SECTION_DEAD char* const stringBase_80C2E21E = "R_SP160";
+#pragma pop
 
 /* 80C2E228-80C2E248 0020+00 .data      l_daObjKABUTO_Method                                         */
 u8 l_daObjKABUTO_Method[32] = {

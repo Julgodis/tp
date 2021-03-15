@@ -247,12 +247,15 @@ ASM_FUNCTION(__ct__9dSn_HIO_cFv) {
 
 /* ############################################################################################## */
 /* 8039A2A8-8039A2C8 001D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_s_d_s_name__stringBase0[32] = {
-	0x2F, 0x72, 0x65, 0x73, 0x2F, 0x4F, 0x62, 0x6A, 0x65, 0x63, 0x74, 0x2F, 0x00, 0x66, 0x69, 0x6C,
-	0x65, 0x53, 0x65, 0x6C, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x38, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039A2A8 = "/res/Object/";
+SECTION_DEAD char* const stringBase_8039A2B5 = "fileSel";
+SECTION_DEAD char* const stringBase_8039A2BD = "F_SP108";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039A2C5 = "\0\0";
+#pragma pop
 
 /* 802587A4-80258820 007C+00 .text      phase_1__FPc                                                 */
 #pragma push

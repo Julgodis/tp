@@ -391,9 +391,11 @@ SECTION_RODATA const u8 lit_3955[4] = {
 };
 
 /* 8048B840-8048B843 0003+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[3] = {
-	0x42, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8048B840 = "Bk";
+#pragma pop
 
 /* 8048B844-8048B864 0020+00 .data      l_daTag_Event_Method                                         */
 u8 l_daTag_Event_Method[32] = {

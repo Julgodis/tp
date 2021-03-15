@@ -102,7 +102,7 @@ ASM_FUNCTION(CreateHeap__14daObjCrystal_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjCrystal_cFv) {
 	nofralloc
-#include "func_80BD6664"
+#include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/func_80BD6664"
 }
 #pragma pop
 
@@ -204,10 +204,12 @@ SECTION_RODATA const u8 data_80BD68D0[8] = {
 };
 
 /* 80BD68D8-80BD68EE 0016+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[22] = {
-	0x48, 0x5F, 0x53, 0x75, 0x69, 0x73, 0x68, 0x6F, 0x00, 0x70, 0x6F, 0x6C, 0x79, 0x53, 0x75, 0x72,
-	0x66, 0x61, 0x63, 0x65, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BD68D8 = "H_Suisho";
+SECTION_DEAD char* const stringBase_80BD68E1 = "polySurface1";
+#pragma pop
 
 /* 80BD68F0-80BD68F4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

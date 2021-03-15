@@ -513,9 +513,11 @@ SECTION_RODATA const u8 data_80BB97F4[12] = {
 };
 
 /* 80BB9800-80BB9809 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x48, 0x5F, 0x57, 0x69, 0x6E, 0x64, 0x6F, 0x77, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BB9800 = "H_Window";
+#pragma pop
 
 /* 80BB980C-80BB9818 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

@@ -101,12 +101,14 @@ ASM_FUNCTION(__dt__16dMsgStringBase_cFv) {
 
 /* ############################################################################################## */
 /* 80399C98-80399CB0 0013+05 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_msg_d_msg_string_base__stringBase0[24] = {
-	0x7A, 0x65, 0x6C, 0x5F, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x67, 0x00, 0x1B, 0x43, 0x52, 0x5B, 0x25,
-	0x64, 0x5D, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399C98 = "zel_00.bmg";
+SECTION_DEAD char* const stringBase_80399CA3 = """\x1B""CR[%d]";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399CAB = "\0\0\0\0";
+#pragma pop
 
 /* 80249700-80249768 0068+00 .text      getResource__16dMsgStringBase_cFv                            */
 #pragma push

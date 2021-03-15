@@ -357,9 +357,11 @@ SECTION_RODATA const u8 lit_3894[8] = {
 };
 
 /* 80C6E9E8-80C6E9F2 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x59, 0x63, 0x68, 0x61, 0x6E, 0x64, 0x65, 0x6C, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C6E9E8 = "Ychandelr";
+#pragma pop
 
 /* 80C6E9F4-80C6E9F8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

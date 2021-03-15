@@ -96,7 +96,7 @@ ASM_FUNCTION(CreateHeap__11daObjMBox_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjMBox_cFv) {
 	nofralloc
-#include "func_80593044"
+#include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_80593044"
 }
 #pragma pop
 
@@ -238,9 +238,11 @@ ASM_FUNCTION(func_8059345C) {
 SECTION_RODATA const u32 lit_3655 = 0x41F00000;
 
 /* 80593470-8059347A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4C, 0x5F, 0x6D, 0x62, 0x6F, 0x78, 0x5F, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80593470 = "L_mbox_00";
+#pragma pop
 
 /* 8059347C-80593480 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -230,9 +230,11 @@ SECTION_RODATA const u8 lit_3912[4] = {
 SECTION_RODATA const u32 lit_3913 = 0x3F666666;
 
 /* 80658454-8065845A 0006+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[6] = {
-	0x43, 0x6F, 0x61, 0x63, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80658454 = "Coach";
+#pragma pop
 
 /* 8065845C-8065847C 0020+00 .data      l_daCoachFire_Method                                         */
 u8 l_daCoachFire_Method[32] = {

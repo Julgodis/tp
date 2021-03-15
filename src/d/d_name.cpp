@@ -856,60 +856,253 @@ ASM_FUNCTION(setMoji__7dName_cFi) {
 
 /* ############################################################################################## */
 /* 80399CC8-80399FE0 0314+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_name__stringBase0[792] = {
-	0x82, 0xA0, 0x00, 0x82, 0xA2, 0x00, 0x82, 0xA4, 0x00, 0x82, 0xA6, 0x00, 0x82, 0xA8, 0x00, 0x82,
-	0xA9, 0x00, 0x82, 0xAB, 0x00, 0x82, 0xAD, 0x00, 0x82, 0xAF, 0x00, 0x82, 0xB1, 0x00, 0x82, 0xB3,
-	0x00, 0x82, 0xB5, 0x00, 0x82, 0xB7, 0x00, 0x82, 0xB9, 0x00, 0x82, 0xBB, 0x00, 0x82, 0xBD, 0x00,
-	0x82, 0xBF, 0x00, 0x82, 0xC2, 0x00, 0x82, 0xC4, 0x00, 0x82, 0xC6, 0x00, 0x82, 0xC8, 0x00, 0x82,
-	0xC9, 0x00, 0x82, 0xCA, 0x00, 0x82, 0xCB, 0x00, 0x82, 0xCC, 0x00, 0x82, 0xCD, 0x00, 0x82, 0xD0,
-	0x00, 0x82, 0xD3, 0x00, 0x82, 0xD6, 0x00, 0x82, 0xD9, 0x00, 0x82, 0xDC, 0x00, 0x82, 0xDD, 0x00,
-	0x82, 0xDE, 0x00, 0x82, 0xDF, 0x00, 0x82, 0xE0, 0x00, 0x82, 0xE2, 0x00, 0x81, 0x40, 0x00, 0x82,
-	0xE4, 0x00, 0x82, 0xE6, 0x00, 0x82, 0xE7, 0x00, 0x82, 0xE8, 0x00, 0x82, 0xE9, 0x00, 0x82, 0xEA,
-	0x00, 0x82, 0xEB, 0x00, 0x82, 0xED, 0x00, 0x82, 0xF0, 0x00, 0x82, 0xF1, 0x00, 0x82, 0x9F, 0x00,
-	0x82, 0xA1, 0x00, 0x82, 0xA3, 0x00, 0x82, 0xA5, 0x00, 0x82, 0xA7, 0x00, 0x82, 0xE1, 0x00, 0x82,
-	0xE3, 0x00, 0x82, 0xE5, 0x00, 0x82, 0xC1, 0x00, 0x81, 0x5B, 0x00, 0x81, 0x4A, 0x00, 0x81, 0x4B,
-	0x00, 0x81, 0x8F, 0x00, 0x82, 0xAA, 0x00, 0x82, 0xAC, 0x00, 0x82, 0xAE, 0x00, 0x82, 0xB0, 0x00,
-	0x82, 0xB2, 0x00, 0x82, 0xB4, 0x00, 0x82, 0xB6, 0x00, 0x82, 0xB8, 0x00, 0x82, 0xBA, 0x00, 0x82,
-	0xBC, 0x00, 0x82, 0xBE, 0x00, 0x82, 0xC0, 0x00, 0x82, 0xC3, 0x00, 0x82, 0xC5, 0x00, 0x82, 0xC7,
-	0x00, 0x82, 0xCE, 0x00, 0x82, 0xD1, 0x00, 0x82, 0xD4, 0x00, 0x82, 0xD7, 0x00, 0x82, 0xDA, 0x00,
-	0x82, 0xCF, 0x00, 0x82, 0xD2, 0x00, 0x82, 0xD5, 0x00, 0x82, 0xD8, 0x00, 0x82, 0xDB, 0x00, 0x83,
-	0x41, 0x00, 0x83, 0x43, 0x00, 0x83, 0x45, 0x00, 0x83, 0x47, 0x00, 0x83, 0x49, 0x00, 0x83, 0x4A,
-	0x00, 0x83, 0x4C, 0x00, 0x83, 0x4E, 0x00, 0x83, 0x50, 0x00, 0x83, 0x52, 0x00, 0x83, 0x54, 0x00,
-	0x83, 0x56, 0x00, 0x83, 0x58, 0x00, 0x83, 0x5A, 0x00, 0x83, 0x5C, 0x00, 0x83, 0x5E, 0x00, 0x83,
-	0x60, 0x00, 0x83, 0x63, 0x00, 0x83, 0x65, 0x00, 0x83, 0x67, 0x00, 0x83, 0x69, 0x00, 0x83, 0x6A,
-	0x00, 0x83, 0x6B, 0x00, 0x83, 0x6C, 0x00, 0x83, 0x6D, 0x00, 0x83, 0x6E, 0x00, 0x83, 0x71, 0x00,
-	0x83, 0x74, 0x00, 0x83, 0x77, 0x00, 0x83, 0x7A, 0x00, 0x83, 0x7D, 0x00, 0x83, 0x7E, 0x00, 0x83,
-	0x80, 0x00, 0x83, 0x81, 0x00, 0x83, 0x82, 0x00, 0x83, 0x84, 0x00, 0x83, 0x86, 0x00, 0x83, 0x88,
-	0x00, 0x83, 0x89, 0x00, 0x83, 0x8A, 0x00, 0x83, 0x8B, 0x00, 0x83, 0x8C, 0x00, 0x83, 0x8D, 0x00,
-	0x83, 0x8F, 0x00, 0x83, 0x92, 0x00, 0x83, 0x93, 0x00, 0x83, 0x40, 0x00, 0x83, 0x42, 0x00, 0x83,
-	0x44, 0x00, 0x83, 0x46, 0x00, 0x83, 0x48, 0x00, 0x83, 0x83, 0x00, 0x83, 0x85, 0x00, 0x83, 0x87,
-	0x00, 0x83, 0x62, 0x00, 0x83, 0x94, 0x00, 0x83, 0x4B, 0x00, 0x83, 0x4D, 0x00, 0x83, 0x4F, 0x00,
-	0x83, 0x51, 0x00, 0x83, 0x53, 0x00, 0x83, 0x55, 0x00, 0x83, 0x57, 0x00, 0x83, 0x59, 0x00, 0x83,
-	0x5B, 0x00, 0x83, 0x5D, 0x00, 0x83, 0x5F, 0x00, 0x83, 0x61, 0x00, 0x83, 0x64, 0x00, 0x83, 0x66,
-	0x00, 0x83, 0x68, 0x00, 0x83, 0x6F, 0x00, 0x83, 0x72, 0x00, 0x83, 0x75, 0x00, 0x83, 0x78, 0x00,
-	0x83, 0x7B, 0x00, 0x83, 0x70, 0x00, 0x83, 0x73, 0x00, 0x83, 0x76, 0x00, 0x83, 0x79, 0x00, 0x83,
-	0x7C, 0x00, 0x41, 0x00, 0x4E, 0x00, 0x61, 0x00, 0x6E, 0x00, 0x31, 0x00, 0x42, 0x00, 0x4F, 0x00,
-	0x62, 0x00, 0x6F, 0x00, 0x32, 0x00, 0x43, 0x00, 0x50, 0x00, 0x63, 0x00, 0x70, 0x00, 0x33, 0x00,
-	0x44, 0x00, 0x51, 0x00, 0x64, 0x00, 0x71, 0x00, 0x34, 0x00, 0x45, 0x00, 0x52, 0x00, 0x65, 0x00,
-	0x72, 0x00, 0x35, 0x00, 0x46, 0x00, 0x53, 0x00, 0x66, 0x00, 0x73, 0x00, 0x36, 0x00, 0x47, 0x00,
-	0x54, 0x00, 0x67, 0x00, 0x74, 0x00, 0x37, 0x00, 0x48, 0x00, 0x55, 0x00, 0x68, 0x00, 0x75, 0x00,
-	0x38, 0x00, 0x49, 0x00, 0x56, 0x00, 0x69, 0x00, 0x76, 0x00, 0x39, 0x00, 0x4A, 0x00, 0x57, 0x00,
-	0x6A, 0x00, 0x77, 0x00, 0x30, 0x00, 0x4B, 0x00, 0x58, 0x00, 0x6B, 0x00, 0x78, 0x00, 0x2C, 0x00,
-	0x4C, 0x00, 0x59, 0x00, 0x6C, 0x00, 0x79, 0x00, 0x2E, 0x00, 0x4D, 0x00, 0x5A, 0x00, 0x6D, 0x00,
-	0x7A, 0x00, 0x20, 0x00, 0x1B, 0x43, 0x44, 0x1B, 0x43, 0x52, 0x1B, 0x43, 0x43, 0x5B, 0x30, 0x30,
-	0x30, 0x30, 0x30, 0x30, 0x5D, 0x1B, 0x47, 0x4D, 0x5B, 0x30, 0x5D, 0x25, 0x63, 0x1B, 0x48, 0x4D,
-	0x1B, 0x43, 0x43, 0x5B, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x5D, 0x1B, 0x47, 0x4D, 0x5B, 0x30,
-	0x5D, 0x25, 0x63, 0x00, 0x1B, 0x43, 0x44, 0x1B, 0x43, 0x52, 0x1B, 0x43, 0x43, 0x5B, 0x30, 0x30,
-	0x30, 0x30, 0x30, 0x30, 0x5D, 0x1B, 0x47, 0x4D, 0x5B, 0x30, 0x5D, 0x00, 0x1B, 0x48, 0x4D, 0x1B,
-	0x43, 0x43, 0x5B, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x5D, 0x1B, 0x47, 0x4D, 0x5B, 0x30, 0x5D,
-	0x00, 0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x70, 0x6C, 0x61, 0x79, 0x65, 0x72, 0x5F, 0x6E, 0x61,
-	0x6D, 0x65, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x70, 0x6C, 0x61,
-	0x79, 0x65, 0x72, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x2E, 0x62, 0x70, 0x6B, 0x00, 0x7A, 0x65, 0x6C,
-	0x64, 0x61, 0x5F, 0x70, 0x6C, 0x61, 0x79, 0x65, 0x72, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x2E, 0x62,
-	0x74, 0x6B, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80399CC8 = "あ";
+SECTION_DEAD char* const stringBase_80399CCB = "い";
+SECTION_DEAD char* const stringBase_80399CCE = "う";
+SECTION_DEAD char* const stringBase_80399CD1 = "え";
+SECTION_DEAD char* const stringBase_80399CD4 = "お";
+SECTION_DEAD char* const stringBase_80399CD7 = "か";
+SECTION_DEAD char* const stringBase_80399CDA = "き";
+SECTION_DEAD char* const stringBase_80399CDD = "く";
+SECTION_DEAD char* const stringBase_80399CE0 = "け";
+SECTION_DEAD char* const stringBase_80399CE3 = "こ";
+SECTION_DEAD char* const stringBase_80399CE6 = "さ";
+SECTION_DEAD char* const stringBase_80399CE9 = "し";
+SECTION_DEAD char* const stringBase_80399CEC = "す";
+SECTION_DEAD char* const stringBase_80399CEF = "せ";
+SECTION_DEAD char* const stringBase_80399CF2 = "そ";
+SECTION_DEAD char* const stringBase_80399CF5 = "た";
+SECTION_DEAD char* const stringBase_80399CF8 = "ち";
+SECTION_DEAD char* const stringBase_80399CFB = "つ";
+SECTION_DEAD char* const stringBase_80399CFE = "て";
+SECTION_DEAD char* const stringBase_80399D01 = "と";
+SECTION_DEAD char* const stringBase_80399D04 = "な";
+SECTION_DEAD char* const stringBase_80399D07 = "に";
+SECTION_DEAD char* const stringBase_80399D0A = "ぬ";
+SECTION_DEAD char* const stringBase_80399D0D = "ね";
+SECTION_DEAD char* const stringBase_80399D10 = "の";
+SECTION_DEAD char* const stringBase_80399D13 = "は";
+SECTION_DEAD char* const stringBase_80399D16 = "ひ";
+SECTION_DEAD char* const stringBase_80399D19 = "ふ";
+SECTION_DEAD char* const stringBase_80399D1C = "へ";
+SECTION_DEAD char* const stringBase_80399D1F = "ほ";
+SECTION_DEAD char* const stringBase_80399D22 = "ま";
+SECTION_DEAD char* const stringBase_80399D25 = "み";
+SECTION_DEAD char* const stringBase_80399D28 = "む";
+SECTION_DEAD char* const stringBase_80399D2B = "め";
+SECTION_DEAD char* const stringBase_80399D2E = "も";
+SECTION_DEAD char* const stringBase_80399D31 = "や";
+SECTION_DEAD char* const stringBase_80399D34 = "　";
+SECTION_DEAD char* const stringBase_80399D37 = "ゆ";
+SECTION_DEAD char* const stringBase_80399D3A = "よ";
+SECTION_DEAD char* const stringBase_80399D3D = "ら";
+SECTION_DEAD char* const stringBase_80399D40 = "り";
+SECTION_DEAD char* const stringBase_80399D43 = "る";
+SECTION_DEAD char* const stringBase_80399D46 = "れ";
+SECTION_DEAD char* const stringBase_80399D49 = "ろ";
+SECTION_DEAD char* const stringBase_80399D4C = "わ";
+SECTION_DEAD char* const stringBase_80399D4F = "を";
+SECTION_DEAD char* const stringBase_80399D52 = "ん";
+SECTION_DEAD char* const stringBase_80399D55 = "ぁ";
+SECTION_DEAD char* const stringBase_80399D58 = "ぃ";
+SECTION_DEAD char* const stringBase_80399D5B = "ぅ";
+SECTION_DEAD char* const stringBase_80399D5E = "ぇ";
+SECTION_DEAD char* const stringBase_80399D61 = "ぉ";
+SECTION_DEAD char* const stringBase_80399D64 = "ゃ";
+SECTION_DEAD char* const stringBase_80399D67 = "ゅ";
+SECTION_DEAD char* const stringBase_80399D6A = "ょ";
+SECTION_DEAD char* const stringBase_80399D6D = "っ";
+SECTION_DEAD char* const stringBase_80399D70 = "ー";
+SECTION_DEAD char* const stringBase_80399D73 = "゛";
+SECTION_DEAD char* const stringBase_80399D76 = "゜";
+SECTION_DEAD char* const stringBase_80399D79 = "￥";
+SECTION_DEAD char* const stringBase_80399D7C = "が";
+SECTION_DEAD char* const stringBase_80399D7F = "ぎ";
+SECTION_DEAD char* const stringBase_80399D82 = "ぐ";
+SECTION_DEAD char* const stringBase_80399D85 = "げ";
+SECTION_DEAD char* const stringBase_80399D88 = "ご";
+SECTION_DEAD char* const stringBase_80399D8B = "ざ";
+SECTION_DEAD char* const stringBase_80399D8E = "じ";
+SECTION_DEAD char* const stringBase_80399D91 = "ず";
+SECTION_DEAD char* const stringBase_80399D94 = "ぜ";
+SECTION_DEAD char* const stringBase_80399D97 = "ぞ";
+SECTION_DEAD char* const stringBase_80399D9A = "だ";
+SECTION_DEAD char* const stringBase_80399D9D = "ぢ";
+SECTION_DEAD char* const stringBase_80399DA0 = "づ";
+SECTION_DEAD char* const stringBase_80399DA3 = "で";
+SECTION_DEAD char* const stringBase_80399DA6 = "ど";
+SECTION_DEAD char* const stringBase_80399DA9 = "ば";
+SECTION_DEAD char* const stringBase_80399DAC = "び";
+SECTION_DEAD char* const stringBase_80399DAF = "ぶ";
+SECTION_DEAD char* const stringBase_80399DB2 = "べ";
+SECTION_DEAD char* const stringBase_80399DB5 = "ぼ";
+SECTION_DEAD char* const stringBase_80399DB8 = "ぱ";
+SECTION_DEAD char* const stringBase_80399DBB = "ぴ";
+SECTION_DEAD char* const stringBase_80399DBE = "ぷ";
+SECTION_DEAD char* const stringBase_80399DC1 = "ぺ";
+SECTION_DEAD char* const stringBase_80399DC4 = "ぽ";
+SECTION_DEAD char* const stringBase_80399DC7 = "ア";
+SECTION_DEAD char* const stringBase_80399DCA = "イ";
+SECTION_DEAD char* const stringBase_80399DCD = "ウ";
+SECTION_DEAD char* const stringBase_80399DD0 = "エ";
+SECTION_DEAD char* const stringBase_80399DD3 = "オ";
+SECTION_DEAD char* const stringBase_80399DD6 = "カ";
+SECTION_DEAD char* const stringBase_80399DD9 = "キ";
+SECTION_DEAD char* const stringBase_80399DDC = "ク";
+SECTION_DEAD char* const stringBase_80399DDF = "ケ";
+SECTION_DEAD char* const stringBase_80399DE2 = "コ";
+SECTION_DEAD char* const stringBase_80399DE5 = "サ";
+SECTION_DEAD char* const stringBase_80399DE8 = "シ";
+SECTION_DEAD char* const stringBase_80399DEB = "ス";
+SECTION_DEAD char* const stringBase_80399DEE = "セ";
+// MWCC ignores mapping of some japanese characters using the 
+// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
+SECTION_DEAD char* const stringBase_80399DF1 = "\x83\x5C";
+SECTION_DEAD char* const stringBase_80399DF4 = "タ";
+SECTION_DEAD char* const stringBase_80399DF7 = "チ";
+SECTION_DEAD char* const stringBase_80399DFA = "ツ";
+SECTION_DEAD char* const stringBase_80399DFD = "テ";
+SECTION_DEAD char* const stringBase_80399E00 = "ト";
+SECTION_DEAD char* const stringBase_80399E03 = "ナ";
+SECTION_DEAD char* const stringBase_80399E06 = "ニ";
+SECTION_DEAD char* const stringBase_80399E09 = "ヌ";
+SECTION_DEAD char* const stringBase_80399E0C = "ネ";
+SECTION_DEAD char* const stringBase_80399E0F = "ノ";
+SECTION_DEAD char* const stringBase_80399E12 = "ハ";
+SECTION_DEAD char* const stringBase_80399E15 = "ヒ";
+SECTION_DEAD char* const stringBase_80399E18 = "フ";
+SECTION_DEAD char* const stringBase_80399E1B = "ヘ";
+SECTION_DEAD char* const stringBase_80399E1E = "ホ";
+SECTION_DEAD char* const stringBase_80399E21 = "マ";
+SECTION_DEAD char* const stringBase_80399E24 = "ミ";
+SECTION_DEAD char* const stringBase_80399E27 = "ム";
+SECTION_DEAD char* const stringBase_80399E2A = "メ";
+SECTION_DEAD char* const stringBase_80399E2D = "モ";
+SECTION_DEAD char* const stringBase_80399E30 = "ヤ";
+SECTION_DEAD char* const stringBase_80399E33 = "ユ";
+SECTION_DEAD char* const stringBase_80399E36 = "ヨ";
+SECTION_DEAD char* const stringBase_80399E39 = "ラ";
+SECTION_DEAD char* const stringBase_80399E3C = "リ";
+SECTION_DEAD char* const stringBase_80399E3F = "ル";
+SECTION_DEAD char* const stringBase_80399E42 = "レ";
+SECTION_DEAD char* const stringBase_80399E45 = "ロ";
+SECTION_DEAD char* const stringBase_80399E48 = "ワ";
+SECTION_DEAD char* const stringBase_80399E4B = "ヲ";
+SECTION_DEAD char* const stringBase_80399E4E = "ン";
+SECTION_DEAD char* const stringBase_80399E51 = "ァ";
+SECTION_DEAD char* const stringBase_80399E54 = "ィ";
+SECTION_DEAD char* const stringBase_80399E57 = "ゥ";
+SECTION_DEAD char* const stringBase_80399E5A = "ェ";
+SECTION_DEAD char* const stringBase_80399E5D = "ォ";
+SECTION_DEAD char* const stringBase_80399E60 = "ャ";
+SECTION_DEAD char* const stringBase_80399E63 = "ュ";
+SECTION_DEAD char* const stringBase_80399E66 = "ョ";
+SECTION_DEAD char* const stringBase_80399E69 = "ッ";
+SECTION_DEAD char* const stringBase_80399E6C = "ヴ";
+SECTION_DEAD char* const stringBase_80399E6F = "ガ";
+SECTION_DEAD char* const stringBase_80399E72 = "ギ";
+SECTION_DEAD char* const stringBase_80399E75 = "グ";
+SECTION_DEAD char* const stringBase_80399E78 = "ゲ";
+SECTION_DEAD char* const stringBase_80399E7B = "ゴ";
+SECTION_DEAD char* const stringBase_80399E7E = "ザ";
+SECTION_DEAD char* const stringBase_80399E81 = "ジ";
+SECTION_DEAD char* const stringBase_80399E84 = "ズ";
+SECTION_DEAD char* const stringBase_80399E87 = "ゼ";
+SECTION_DEAD char* const stringBase_80399E8A = "ゾ";
+SECTION_DEAD char* const stringBase_80399E8D = "ダ";
+SECTION_DEAD char* const stringBase_80399E90 = "ヂ";
+SECTION_DEAD char* const stringBase_80399E93 = "ヅ";
+SECTION_DEAD char* const stringBase_80399E96 = "デ";
+SECTION_DEAD char* const stringBase_80399E99 = "ド";
+SECTION_DEAD char* const stringBase_80399E9C = "バ";
+SECTION_DEAD char* const stringBase_80399E9F = "ビ";
+SECTION_DEAD char* const stringBase_80399EA2 = "ブ";
+SECTION_DEAD char* const stringBase_80399EA5 = "ベ";
+SECTION_DEAD char* const stringBase_80399EA8 = "ボ";
+SECTION_DEAD char* const stringBase_80399EAB = "パ";
+SECTION_DEAD char* const stringBase_80399EAE = "ピ";
+SECTION_DEAD char* const stringBase_80399EB1 = "プ";
+SECTION_DEAD char* const stringBase_80399EB4 = "ペ";
+SECTION_DEAD char* const stringBase_80399EB7 = "ポ";
+SECTION_DEAD char* const stringBase_80399EBA = "A";
+SECTION_DEAD char* const stringBase_80399EBC = "N";
+SECTION_DEAD char* const stringBase_80399EBE = "a";
+SECTION_DEAD char* const stringBase_80399EC0 = "n";
+SECTION_DEAD char* const stringBase_80399EC2 = "1";
+SECTION_DEAD char* const stringBase_80399EC4 = "B";
+SECTION_DEAD char* const stringBase_80399EC6 = "O";
+SECTION_DEAD char* const stringBase_80399EC8 = "b";
+SECTION_DEAD char* const stringBase_80399ECA = "o";
+SECTION_DEAD char* const stringBase_80399ECC = "2";
+SECTION_DEAD char* const stringBase_80399ECE = "C";
+SECTION_DEAD char* const stringBase_80399ED0 = "P";
+SECTION_DEAD char* const stringBase_80399ED2 = "c";
+SECTION_DEAD char* const stringBase_80399ED4 = "p";
+SECTION_DEAD char* const stringBase_80399ED6 = "3";
+SECTION_DEAD char* const stringBase_80399ED8 = "D";
+SECTION_DEAD char* const stringBase_80399EDA = "Q";
+SECTION_DEAD char* const stringBase_80399EDC = "d";
+SECTION_DEAD char* const stringBase_80399EDE = "q";
+SECTION_DEAD char* const stringBase_80399EE0 = "4";
+SECTION_DEAD char* const stringBase_80399EE2 = "E";
+SECTION_DEAD char* const stringBase_80399EE4 = "R";
+SECTION_DEAD char* const stringBase_80399EE6 = "e";
+SECTION_DEAD char* const stringBase_80399EE8 = "r";
+SECTION_DEAD char* const stringBase_80399EEA = "5";
+SECTION_DEAD char* const stringBase_80399EEC = "F";
+SECTION_DEAD char* const stringBase_80399EEE = "S";
+SECTION_DEAD char* const stringBase_80399EF0 = "f";
+SECTION_DEAD char* const stringBase_80399EF2 = "s";
+SECTION_DEAD char* const stringBase_80399EF4 = "6";
+SECTION_DEAD char* const stringBase_80399EF6 = "G";
+SECTION_DEAD char* const stringBase_80399EF8 = "T";
+SECTION_DEAD char* const stringBase_80399EFA = "g";
+SECTION_DEAD char* const stringBase_80399EFC = "t";
+SECTION_DEAD char* const stringBase_80399EFE = "7";
+SECTION_DEAD char* const stringBase_80399F00 = "H";
+SECTION_DEAD char* const stringBase_80399F02 = "U";
+SECTION_DEAD char* const stringBase_80399F04 = "h";
+SECTION_DEAD char* const stringBase_80399F06 = "u";
+SECTION_DEAD char* const stringBase_80399F08 = "8";
+SECTION_DEAD char* const stringBase_80399F0A = "I";
+SECTION_DEAD char* const stringBase_80399F0C = "V";
+SECTION_DEAD char* const stringBase_80399F0E = "i";
+SECTION_DEAD char* const stringBase_80399F10 = "v";
+SECTION_DEAD char* const stringBase_80399F12 = "9";
+SECTION_DEAD char* const stringBase_80399F14 = "J";
+SECTION_DEAD char* const stringBase_80399F16 = "W";
+SECTION_DEAD char* const stringBase_80399F18 = "j";
+SECTION_DEAD char* const stringBase_80399F1A = "w";
+SECTION_DEAD char* const stringBase_80399F1C = "0";
+SECTION_DEAD char* const stringBase_80399F1E = "K";
+SECTION_DEAD char* const stringBase_80399F20 = "X";
+SECTION_DEAD char* const stringBase_80399F22 = "k";
+SECTION_DEAD char* const stringBase_80399F24 = "x";
+SECTION_DEAD char* const stringBase_80399F26 = ",";
+SECTION_DEAD char* const stringBase_80399F28 = "L";
+SECTION_DEAD char* const stringBase_80399F2A = "Y";
+SECTION_DEAD char* const stringBase_80399F2C = "l";
+SECTION_DEAD char* const stringBase_80399F2E = "y";
+SECTION_DEAD char* const stringBase_80399F30 = ".";
+SECTION_DEAD char* const stringBase_80399F32 = "M";
+SECTION_DEAD char* const stringBase_80399F34 = "Z";
+SECTION_DEAD char* const stringBase_80399F36 = "m";
+SECTION_DEAD char* const stringBase_80399F38 = "z";
+SECTION_DEAD char* const stringBase_80399F3A = " ";
+SECTION_DEAD char* const stringBase_80399F3C = 
+    """\x1B""CD""\x1B""CR""\x1B""CC[000000]""\x1B""GM[0]%c""\x1B""HM""\x1B""CC[ffffff]""\x1B""GM[0]%c";
+SECTION_DEAD char* const stringBase_80399F6C = """\x1B""CD""\x1B""CR""\x1B""CC[000000]""\x1B""GM[0]";
+SECTION_DEAD char* const stringBase_80399F84 = """\x1B""HM""\x1B""CC[ffffff]""\x1B""GM[0]";
+SECTION_DEAD char* const stringBase_80399F99 = "zelda_player_name.blo";
+SECTION_DEAD char* const stringBase_80399FAF = "zelda_player_name.bpk";
+SECTION_DEAD char* const stringBase_80399FC5 = "zelda_player_name.btk";
+SECTION_DEAD char* const stringBase_80399FDB = "";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399FDC = "\0\0\0";
+#pragma pop
 
 /* 8024F88C-8024F914 0088+00 .text      setNameText__7dName_cFv                                      */
 #pragma push

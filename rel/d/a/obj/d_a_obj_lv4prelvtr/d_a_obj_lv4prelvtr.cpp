@@ -204,9 +204,11 @@ SECTION_RODATA const u8 lit_3697[8] = {
 };
 
 /* 80C68B90-80C68B98 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x52, 0x45, 0x6C, 0x76, 0x74, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C68B90 = "PRElvtr";
+#pragma pop
 
 /* 80C68B98-80C68B9C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

@@ -76,12 +76,18 @@ ASM_FUNCTION(__dt__10dMsgUnit_cFv) {
 
 /* ############################################################################################## */
 /* 803996E8-80399708 001D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_msg_d_msg_unit__stringBase0[32] = {
-	0x25, 0x64, 0x00, 0x25, 0x64, 0x2D, 0x25, 0x64, 0x00, 0x25, 0x64, 0x3A, 0x25, 0x30, 0x32, 0x64,
-	0x00, 0x00, 0x25, 0x64, 0x25, 0x73, 0x00, 0x25, 0x64, 0x20, 0x25, 0x73, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803996E8 = "%d";
+SECTION_DEAD char* const stringBase_803996EB = "%d-%d";
+SECTION_DEAD char* const stringBase_803996F1 = "%d:%02d";
+SECTION_DEAD char* const stringBase_803996F9 = "";
+SECTION_DEAD char* const stringBase_803996FA = "%d%s";
+SECTION_DEAD char* const stringBase_803996FF = "%d %s";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80399705 = "\0\0";
+#pragma pop
 
 /* 80454B40-80454B44 0004+00 .sdata2    @3702                                                        */
 f32 d_msg_d_msg_unit__lit_3702 = 1000000.0f;

@@ -151,9 +151,11 @@ SECTION_RODATA const u32 lit_3926 = 0x47800000;
 SECTION_RODATA const u32 lit_3927 = 0xC3480000;
 
 /* 80C31990-80C31999 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x61, 0x67, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C31990 = "Obj_kage";
+#pragma pop
 
 /* 80C3199C-80C319BC 0020+00 .data      l_daObj_Kage_Method                                          */
 u8 l_daObj_Kage_Method[32] = {

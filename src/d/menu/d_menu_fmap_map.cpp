@@ -222,11 +222,13 @@ SECTION_RODATA const u8 data_80396218[36] = {
 };
 
 /* 8039623C-80396248 0008+04 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_menu_d_menu_fmap_map__stringBase0[12] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x31, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039623C = "F_SP121";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80396244 = "\0\0\0";
+#pragma pop
 
 /* 801CE224-801CE288 0064+00 .text      isSwitchSpecialOff__15renderingFmap_cFi                      */
 #pragma push

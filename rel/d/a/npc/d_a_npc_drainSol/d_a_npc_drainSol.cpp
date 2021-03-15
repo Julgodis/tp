@@ -762,10 +762,13 @@ SECTION_RODATA const u32 lit_4499 = 0x41200000;
 SECTION_RODATA const u32 lit_4500 = 0x41700000;
 
 /* 809AFAB0-809AFAC9 0019+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[25] = {
-	0x44, 0x72, 0x61, 0x69, 0x6E, 0x53, 0x6F, 0x6C, 0x31, 0x00, 0x44, 0x72, 0x61, 0x69, 0x6E, 0x53,
-	0x6F, 0x6C, 0x32, 0x00, 0x53, 0x68, 0x6F, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809AFAB0 = "DrainSol1";
+SECTION_DEAD char* const stringBase_809AFABA = "DrainSol2";
+SECTION_DEAD char* const stringBase_809AFAC4 = "Shoe";
+#pragma pop
 
 /* 809AFACC-809AFAD4 0008+00 .data      l_bmdGetParamList                                            */
 u8 l_bmdGetParamList[8] = {

@@ -903,11 +903,13 @@ SECTION_RODATA const u32 lit_4985 = 0x42A00000;
 SECTION_RODATA const u32 lit_4986 = 0x42200000;
 
 /* 809ADB04-809ADB25 0021+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[33] = {
-	0x44, 0x6F, 0x6F, 0x72, 0x42, 0x6F, 0x79, 0x00, 0x4D, 0x67, 0x65, 0x6E, 0x65, 0x72, 0x61, 0x6C,
-	0x00, 0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809ADB04 = "DoorBoy";
+SECTION_DEAD char* const stringBase_809ADB0C = "Mgeneral";
+SECTION_DEAD char* const stringBase_809ADB15 = "DEFAULT_GETITEM";
+#pragma pop
 
 /* 809ADB28-809ADB34 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

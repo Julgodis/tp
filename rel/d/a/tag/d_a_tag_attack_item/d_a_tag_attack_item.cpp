@@ -89,7 +89,7 @@ ASM_FUNCTION(Create__14daTagAtkItem_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daTagAtkItem_cFv) {
 	nofralloc
-#include "func_805A2A34"
+#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A2A34"
 }
 #pragma pop
 

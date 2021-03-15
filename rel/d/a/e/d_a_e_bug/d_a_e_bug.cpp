@@ -656,9 +656,12 @@ SECTION_RODATA const u8 lit_5142[8] = {
 };
 
 /* 80697D98-80697DA6 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x45, 0x5F, 0x62, 0x75, 0x67, 0x00, 0x54, 0x5F, 0x45, 0x4E, 0x45, 0x4D, 0x59, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80697D98 = "E_bug";
+SECTION_DEAD char* const stringBase_80697D9E = "T_ENEMY";
+#pragma pop
 
 /* 80697DA8-80697DB8 0010+00 .data      c_x$3877                                                     */
 u8 data_80697DA8[16] = {

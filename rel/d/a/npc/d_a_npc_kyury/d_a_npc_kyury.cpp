@@ -1123,7 +1123,7 @@ ASM_FUNCTION(__sinit_d_a_npc_kyury_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13daNpc_Kyury_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "func_80A63720"
+#include "asm/rel/d/a/npc/d_a_npc_kyury/d_a_npc_kyury/func_80A63720"
 }
 #pragma pop
 
@@ -1337,13 +1337,20 @@ SECTION_RODATA const u32 lit_5155 = 0x42F00000;
 SECTION_RODATA const u32 lit_5156 = 0x42480000;
 
 /* 80A639C4-80A63A14 0050+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[80] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x46, 0x49, 0x52,
-	0x53, 0x54, 0x5F, 0x43, 0x4F, 0x4E, 0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x00,
-	0x4B, 0x79, 0x75, 0x72, 0x79, 0x00, 0x4B, 0x79, 0x75, 0x72, 0x79, 0x31, 0x00, 0x43, 0x4F, 0x4E,
-	0x56, 0x45, 0x52, 0x53, 0x41, 0x54, 0x49, 0x4F, 0x4E, 0x00, 0x70, 0x72, 0x6D, 0x00, 0x6D, 0x73,
-	0x67, 0x4E, 0x6F, 0x00, 0x6D, 0x73, 0x67, 0x4E, 0x6F, 0x32, 0x00, 0x73, 0x65, 0x6E, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80A639C4 = "";
+SECTION_DEAD char* const stringBase_80A639C5 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_80A639D1 = "FIRST_CONVERSATION";
+SECTION_DEAD char* const stringBase_80A639E4 = "Kyury";
+SECTION_DEAD char* const stringBase_80A639EA = "Kyury1";
+SECTION_DEAD char* const stringBase_80A639F1 = "CONVERSATION";
+SECTION_DEAD char* const stringBase_80A639FE = "prm";
+SECTION_DEAD char* const stringBase_80A63A02 = "msgNo";
+SECTION_DEAD char* const stringBase_80A63A08 = "msgNo2";
+SECTION_DEAD char* const stringBase_80A63A0F = "send";
+#pragma pop
 
 /* 80A63A14-80A63A20 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

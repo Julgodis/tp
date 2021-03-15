@@ -69,7 +69,7 @@ ASM_FUNCTION(Create__16daTagRiverBack_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16daTagRiverBack_cFv) {
 	nofralloc
-#include "func_80D5F360"
+#include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/func_80D5F360"
 }
 #pragma pop
 
@@ -219,11 +219,16 @@ SECTION_RODATA const u8 lit_3815[4] = {
 };
 
 /* 80D5F950-80D5F97E 002E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[46] = {
-	0x52, 0x76, 0x42, 0x61, 0x63, 0x6B, 0x00, 0x52, 0x49, 0x56, 0x45, 0x52, 0x5F, 0x42, 0x41, 0x43,
-	0x4B, 0x00, 0x72, 0x76, 0x62, 0x61, 0x63, 0x6B, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x53, 0x43,
-	0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D5F950 = "RvBack";
+SECTION_DEAD char* const stringBase_80D5F957 = "RIVER_BACK";
+SECTION_DEAD char* const stringBase_80D5F962 = "rvback";
+SECTION_DEAD char* const stringBase_80D5F969 = "WAIT";
+SECTION_DEAD char* const stringBase_80D5F96E = "SCENE_CHG";
+SECTION_DEAD char* const stringBase_80D5F978 = "Timer";
+#pragma pop
 
 /* 80D5F980-80D5F98C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

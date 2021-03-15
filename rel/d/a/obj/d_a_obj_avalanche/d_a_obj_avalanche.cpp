@@ -361,12 +361,16 @@ SECTION_RODATA const u32 lit_3846 = 0x42200000;
 SECTION_RODATA const u32 lit_3964 = 0xBF800000;
 
 /* 80BA7D3C-80BA7D6D 0031+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[49] = {
-	0x56, 0x5F, 0x59, 0x75, 0x6B, 0x69, 0x00, 0x53, 0x4E, 0x4F, 0x57, 0x5F, 0x43, 0x4F, 0x4C, 0x4C,
-	0x41, 0x50, 0x53, 0x45, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x61, 0x76, 0x61, 0x00, 0x57, 0x41, 0x49,
-	0x54, 0x00, 0x43, 0x4F, 0x4C, 0x4C, 0x41, 0x50, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BA7D3C = "V_Yuki";
+SECTION_DEAD char* const stringBase_80BA7D43 = "SNOW_COLLAPSE";
+SECTION_DEAD char* const stringBase_80BA7D51 = "Obj_ava";
+SECTION_DEAD char* const stringBase_80BA7D59 = "WAIT";
+SECTION_DEAD char* const stringBase_80BA7D5E = "COLLAPSE";
+SECTION_DEAD char* const stringBase_80BA7D67 = "Timer";
+#pragma pop
 
 /* 80BA7D70-80BA7D7C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

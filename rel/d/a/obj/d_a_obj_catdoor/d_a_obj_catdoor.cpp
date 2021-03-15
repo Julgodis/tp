@@ -184,9 +184,11 @@ SECTION_RODATA const u32 lit_3863 = 0x43820000;
 SECTION_RODATA const u32 lit_3864 = 0x42C80000;
 
 /* 80BC49D8-80BC49E0 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x43, 0x61, 0x74, 0x44, 0x6F, 0x6F, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BC49D8 = "CatDoor";
+#pragma pop
 
 /* 80BC49E0-80BC49E4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

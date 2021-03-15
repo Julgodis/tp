@@ -459,9 +459,11 @@ SECTION_RODATA const u8 data_80CA03F4[8] = {
 SECTION_RODATA const u32 lit_4029 = 0x3FA00000;
 
 /* 80CA0400-80CA0408 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x4E, 0x61, 0x67, 0x61, 0x69, 0x73, 0x75, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CA0400 = "Nagaisu";
+#pragma pop
 
 /* 80CA0408-80CA040C 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

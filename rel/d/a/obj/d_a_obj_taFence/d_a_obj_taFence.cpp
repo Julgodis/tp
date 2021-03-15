@@ -497,9 +497,11 @@ SECTION_RODATA const u32 lit_3981 = 0xBF800000;
 SECTION_RODATA const u32 lit_4028 = 0x41F00000;
 
 /* 80D06198-80D061A1 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x50, 0x5F, 0x4D, 0x66, 0x65, 0x6E, 0x63, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D06198 = "P_Mfence";
+#pragma pop
 
 /* 80D061A4-80D061B0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

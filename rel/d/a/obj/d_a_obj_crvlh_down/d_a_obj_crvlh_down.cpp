@@ -234,7 +234,7 @@ ASM_FUNCTION(daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjCRVLH_DW_cFv) {
 	nofralloc
-#include "func_80BD4A84"
+#include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/func_80BD4A84"
 }
 #pragma pop
 
@@ -333,12 +333,14 @@ SECTION_RODATA const u32 lit_4043 = 0x41A00000;
 SECTION_RODATA const u32 lit_4044 = 0x453B8000;
 
 /* 80BD4D88-80BD4DC2 003A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[58] = {
-	0x43, 0x72, 0x76, 0x4C, 0x48, 0x5F, 0x44, 0x77, 0x00, 0x52, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65,
-	0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x0A, 0x00, 0x55, 0x5F, 0x43, 0x72, 0x76, 0x4C, 0x48, 0x5F,
-	0x44, 0x6F, 0x77, 0x6E, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x55, 0x5F, 0x43, 0x72, 0x76, 0x4C, 0x48,
-	0x5F, 0x44, 0x6F, 0x77, 0x6E, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BD4D88 = "CrvLH_Dw";
+SECTION_DEAD char* const stringBase_80BD4D91 = "Release Error\n";
+SECTION_DEAD char* const stringBase_80BD4DA0 = "U_CrvLH_Down.bmd";
+SECTION_DEAD char* const stringBase_80BD4DB1 = "U_CrvLH_Down.dzb";
+#pragma pop
 
 /* 80BD4DC4-80BD4DC8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

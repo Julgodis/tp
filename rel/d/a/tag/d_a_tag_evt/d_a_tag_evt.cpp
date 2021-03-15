@@ -253,12 +253,18 @@ SECTION_RODATA const u8 lit_3788[8] = {
 SECTION_RODATA const u32 lit_3815 = 0x41200000;
 
 /* 8048C3BC-8048C3F9 003D+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[61] = {
-	0x4A, 0x55, 0x4D, 0x50, 0x5F, 0x44, 0x45, 0x4D, 0x4F, 0x53, 0x54, 0x41, 0x47, 0x45, 0x00, 0x54,
-	0x41, 0x47, 0x45, 0x56, 0x54, 0x00, 0x57, 0x41, 0x49, 0x54, 0x00, 0x54, 0x41, 0x4C, 0x4B, 0x00,
-	0x4E, 0x45, 0x58, 0x54, 0x00, 0x54, 0x61, 0x67, 0x45, 0x76, 0x74, 0x00, 0x74, 0x69, 0x6D, 0x65,
-	0x72, 0x00, 0x66, 0x6C, 0x6F, 0x77, 0x4E, 0x6F, 0x64, 0x65, 0x4E, 0x6F, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8048C3BC = "JUMP_DEMOSTAGE";
+SECTION_DEAD char* const stringBase_8048C3CB = "TAGEVT";
+SECTION_DEAD char* const stringBase_8048C3D2 = "WAIT";
+SECTION_DEAD char* const stringBase_8048C3D7 = "TALK";
+SECTION_DEAD char* const stringBase_8048C3DC = "NEXT";
+SECTION_DEAD char* const stringBase_8048C3E1 = "TagEvt";
+SECTION_DEAD char* const stringBase_8048C3E8 = "timer";
+SECTION_DEAD char* const stringBase_8048C3EE = "flowNodeNo";
+#pragma pop
 
 /* 8048C3FC-8048C404 0008+00 .data      l_evtNameList                                                */
 u8 l_evtNameList[8] = {

@@ -101,11 +101,14 @@ ASM_FUNCTION(mount__12JKRFileCacheFPCcP7JKRHeapPCc) {
 
 /* ############################################################################################## */
 /* 8039D158-8039D160 0006+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRFileCache__stringBase0[8] = {
-	0x2F, 0x00, 0x64, 0x76, 0x64, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039D158 = "/";
+SECTION_DEAD char* const stringBase_8039D15A = "dvd";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039D15E = "\0";
+#pragma pop
 
 /* 803CC238-803CC288 004C+04 .data      __vt__12JKRFileCache                                         */
 void* const __vt__12JKRFileCache[20] = {

@@ -176,12 +176,13 @@ SECTION_RODATA const u8 cResetFilterTable[16] = {
 };
 
 /* 8039B9D0-8039B9F0 001D+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 Z2SoundMgr__stringBase0[32] = {
-	0x55, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20, 0x53, 0x6F, 0x75, 0x6E, 0x64, 0x2D, 0x54, 0x79,
-	0x70, 0x65, 0x20, 0x69, 0x64, 0x20, 0x3A, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039B9D0 = "Unknown Sound-Type id :%08x\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039B9ED = "\0\0";
+#pragma pop
 
 /* 80455840-80455844 0004+00 .sdata2    @3904                                                        */
 f32 Z2SoundMgr__lit_3904 = 3.0f / 10.0f;

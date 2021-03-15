@@ -120,7 +120,7 @@ ASM_FUNCTION(CreateHeap__14daObjGrzRock_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjGrzRock_cFv) {
 	nofralloc
-#include "func_80C14F50"
+#include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/func_80C14F50"
 }
 #pragma pop
 
@@ -264,10 +264,12 @@ SECTION_RODATA const u8 lit_3886[4] = {
 };
 
 /* 80C15378-80C1538C 0014+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[20] = {
-	0x67, 0x72, 0x5A, 0x52, 0x6F, 0x63, 0x6B, 0x00, 0x67, 0x72, 0x5A, 0x52, 0x6F, 0x63, 0x6B, 0x2E,
-	0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C15378 = "grZRock";
+SECTION_DEAD char* const stringBase_80C15380 = "grZRock.dzb";
+#pragma pop
 
 /* 80C1538C-80C15390 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

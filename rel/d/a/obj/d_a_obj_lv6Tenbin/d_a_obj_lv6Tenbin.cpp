@@ -353,9 +353,11 @@ SECTION_RODATA const u32 lit_3973 = 0x3DCCCCCD;
 SECTION_RODATA const u32 lit_3974 = 0xBF800000;
 
 /* 80C779FC-80C77A05 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4C, 0x36, 0x54, 0x65, 0x6E, 0x62, 0x69, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C779FC = "L6Tenbin";
+#pragma pop
 
 /* 80C77A08-80C77A20 0018+00 .data      l_cull_box                                                   */
 u8 l_cull_box[24] = {

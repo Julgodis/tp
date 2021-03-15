@@ -495,12 +495,15 @@ ASM_FUNCTION(copyMemory__7JKRHeapFPvPvUl) {
 
 /* ############################################################################################## */
 /* 8039CAD8-8039CAF0 0016+02 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 JKRHeap__stringBase0[24] = {
-	0x4A, 0x4B, 0x52, 0x48, 0x65, 0x61, 0x70, 0x2E, 0x63, 0x70, 0x70, 0x00, 0x25, 0x73, 0x00, 0x61,
-	0x62, 0x6F, 0x72, 0x74, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8039CAD8 = "JKRHeap.cpp";
+SECTION_DEAD char* const stringBase_8039CAE4 = "%s";
+SECTION_DEAD char* const stringBase_8039CAE7 = "abort\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039CAEE = "\0";
+#pragma pop
 
 /* 802CEB40-802CEB78 0038+00 .text      JKRDefaultMemoryErrorRoutine__FPvUli                         */
 #pragma push

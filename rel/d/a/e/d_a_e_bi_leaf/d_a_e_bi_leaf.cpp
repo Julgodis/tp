@@ -109,11 +109,13 @@ ASM_FUNCTION(daE_BI_LEAF_Create__FP10fopAc_ac_c) {
 
 /* ############################################################################################## */
 /* 8068DFE0-8068DFE8 0005+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x45, 0x5F, 0x42, 0x49, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8068DFE0 = "E_BI";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8068DFE5 = "\0\0";
+#pragma pop
 
 /* 8068DFE8-8068E008 0020+00 .data      l_daE_BI_LEAF_Method                                         */
 u8 l_daE_BI_LEAF_Method[32] = {

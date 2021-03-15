@@ -282,9 +282,11 @@ SECTION_RODATA const u32 lit_4053 = 0x3F800000;
 SECTION_RODATA const u32 lit_4054 = 0xBF800000;
 
 /* 80CAAB40-80CAAB4A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x56, 0x5F, 0x4F, 0x73, 0x75, 0x44, 0x6F, 0x6F, 0x72, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CAAB40 = "V_OsuDoor";
+#pragma pop
 
 /* 80CAAB4C-80CAAB58 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

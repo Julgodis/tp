@@ -634,9 +634,11 @@ SECTION_RODATA const u32 lit_4239 = 0x43960000;
 SECTION_RODATA const u32 lit_4285 = 0x3F000000;
 
 /* 80C79AE4-80C79AEC 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x74, 0x6F, 0x67, 0x65, 0x52, 0x6F, 0x6C, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C79AE4 = "togeRol";
+#pragma pop
 
 /* 80C79AEC-80C79AF8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

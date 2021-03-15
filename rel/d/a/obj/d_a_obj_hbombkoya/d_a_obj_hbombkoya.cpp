@@ -350,9 +350,11 @@ SECTION_RODATA const u8 lit_3853[4] = {
 };
 
 /* 80C1C728-80C1C732 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x48, 0x5F, 0x42, 0x6F, 0x6D, 0x62, 0x6B, 0x6F, 0x79, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C1C728 = "H_Bombkoy";
+#pragma pop
 
 /* 80C1C734-80C1C738 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

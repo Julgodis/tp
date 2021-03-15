@@ -1354,10 +1354,14 @@ SECTION_RODATA const u8 lit_5113[8] = {
 };
 
 /* 809AA428-809AA43E 0016+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[22] = {
-	0x00, 0x4E, 0x4F, 0x5F, 0x52, 0x45, 0x53, 0x50, 0x4F, 0x4E, 0x53, 0x45, 0x00, 0x44, 0x6F, 0x63,
-	0x00, 0x44, 0x6F, 0x63, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_809AA428 = "";
+SECTION_DEAD char* const stringBase_809AA429 = "NO_RESPONSE";
+SECTION_DEAD char* const stringBase_809AA435 = "Doc";
+SECTION_DEAD char* const stringBase_809AA439 = "Doc1";
+#pragma pop
 
 /* 809AA440-809AA44C 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

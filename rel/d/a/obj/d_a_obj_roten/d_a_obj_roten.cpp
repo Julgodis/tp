@@ -108,7 +108,7 @@ ASM_FUNCTION(CreateHeap__13daObj_Roten_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObj_Roten_cFv) {
 	nofralloc
-#include "func_80CC0F40"
+#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40"
 }
 #pragma pop
 
@@ -275,9 +275,11 @@ SECTION_RODATA const u32 lit_3880 = 0x38D1B717;
 SECTION_RODATA const u32 lit_3881 = 0x358637BD;
 
 /* 80CC1440-80CC144A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x72, 0x6F, 0x74, 0x65, 0x6E, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CC1440 = "Obj_roten";
+#pragma pop
 
 /* 80CC144C-80CC1450 0004+00 .data      l_resFileName                                                */
 u8 l_resFileName[4] = {

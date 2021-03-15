@@ -132,10 +132,12 @@ SECTION_RODATA const u8 lit_3863[4] = {
 SECTION_RODATA const u32 lit_3906 = 0x3F800000;
 
 /* 8085BA4C-8085BA5E 0012+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[18] = {
-	0x4B, 0x79, 0x74, 0x61, 0x67, 0x30, 0x39, 0x00, 0x6B, 0x79, 0x74, 0x61, 0x67, 0x30, 0x39, 0x5F,
-	0x32, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8085BA4C = "Kytag09";
+SECTION_DEAD char* const stringBase_8085BA54 = "kytag09_2";
+#pragma pop
 
 /* 8085BA60-8085BA80 0020+00 .data      l_daKytag09_Method                                           */
 u8 l_daKytag09_Method[32] = {

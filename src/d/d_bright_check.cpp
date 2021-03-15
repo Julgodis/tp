@@ -162,10 +162,12 @@ SECTION_RODATA const u8 data_803949B0[40] = {
 };
 
 /* 803949D8-803949F0 0018+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_bright_check__stringBase0[24] = {
-	0x7A, 0x65, 0x6C, 0x64, 0x61, 0x5F, 0x6F, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x5F, 0x63, 0x68, 0x65,
-	0x63, 0x6B, 0x2E, 0x62, 0x6C, 0x6F, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803949D8 = "zelda_option_check.blo";
+SECTION_DEAD char* const stringBase_803949EF = "";
+#pragma pop
 
 /* 80453A00-80453A04 0004+00 .sdata2    @3792                                                        */
 u8 d_d_bright_check__lit_3792[4] = {

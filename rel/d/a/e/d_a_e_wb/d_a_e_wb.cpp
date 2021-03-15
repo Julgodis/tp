@@ -3088,13 +3088,20 @@ SECTION_RODATA const u32 lit_10533 = 0x46EA6000;
 SECTION_RODATA const u32 lit_10638 = 0xC668D000;
 
 /* 807E2F0C-807E2F55 0049+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[73] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x38, 0x00, 0x52, 0x69, 0x64, 0x65, 0x72, 0x42, 0x6F, 0x73,
-	0x73, 0x00, 0x61, 0x63, 0x74, 0x69, 0x6F, 0x6E, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x34,
-	0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x39, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x32, 0x00,
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x31, 0x00, 0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x45,
-	0x5F, 0x62, 0x62, 0x00, 0x45, 0x5F, 0x77, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807E2F0C = "F_SP118";
+SECTION_DEAD char* const stringBase_807E2F14 = "RiderBoss";
+SECTION_DEAD char* const stringBase_807E2F1E = "action";
+SECTION_DEAD char* const stringBase_807E2F25 = "F_SP124";
+SECTION_DEAD char* const stringBase_807E2F2D = "D_MN09";
+SECTION_DEAD char* const stringBase_807E2F34 = "F_SP102";
+SECTION_DEAD char* const stringBase_807E2F3C = "F_SP121";
+SECTION_DEAD char* const stringBase_807E2F44 = "Always";
+SECTION_DEAD char* const stringBase_807E2F4B = "E_bb";
+SECTION_DEAD char* const stringBase_807E2F50 = "E_wb";
+#pragma pop
 
 /* 807E2F58-807E2F64 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

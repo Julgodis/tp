@@ -2020,9 +2020,11 @@ SECTION_RODATA const u32 lit_7869 = 0x460B5000;
 SECTION_RODATA const u32 lit_7870 = 0x446D8000;
 
 /* 8061B09C-8061B0A1 0005+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[5] = {
-	0x42, 0x5F, 0x6F, 0x68, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8061B09C = "B_oh";
+#pragma pop
 
 /* 8061B0A4-8061B0B0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

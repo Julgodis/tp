@@ -112,11 +112,13 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 /* ############################################################################################## */
 /* 8046B5D4-8046B5DC 0007+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x48, 0x69, 0x74, 0x6F, 0x62, 0x6A, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_8046B5D4 = "Hitobj";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8046B5DB = "";
+#pragma pop
 
 /* 8046B5DC-8046B61C 0040+00 .data      cc_sph_src$3657                                              */
 u8 data_8046B5DC[64] = {

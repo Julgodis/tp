@@ -402,10 +402,13 @@ SECTION_RODATA const u32 lit_3966 = 0x442F0000;
 SECTION_RODATA const u32 lit_3967 = 0x45DAC000;
 
 /* 80C16520-80C1653D 001D+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[29] = {
-	0x48, 0x5F, 0x53, 0x61, 0x6B, 0x75, 0x00, 0x48, 0x5F, 0x53, 0x61, 0x6B, 0x75, 0x2E, 0x64, 0x7A,
-	0x62, 0x00, 0x48, 0x5F, 0x53, 0x61, 0x6B, 0x75, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C16520 = "H_Saku";
+SECTION_DEAD char* const stringBase_80C16527 = "H_Saku.dzb";
+SECTION_DEAD char* const stringBase_80C16532 = "H_Saku.bmd";
+#pragma pop
 
 /* 80C16540-80C16544 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

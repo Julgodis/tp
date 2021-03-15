@@ -122,7 +122,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjGWall_cFv) {
 	nofralloc
-#include "func_80BF4FF0"
+#include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/func_80BF4FF0"
 }
 #pragma pop
 
@@ -263,9 +263,12 @@ SECTION_RODATA const u8 lit_3842[8] = {
 };
 
 /* 80BF56D4-80BF56E2 000E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[14] = {
-	0x59, 0x5F, 0x67, 0x77, 0x61, 0x6C, 0x6C, 0x00, 0x6D, 0x61, 0x74, 0x30, 0x30, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BF56D4 = "Y_gwall";
+SECTION_DEAD char* const stringBase_80BF56DC = "mat00";
+#pragma pop
 
 /* 80BF56E4-80BF56E8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

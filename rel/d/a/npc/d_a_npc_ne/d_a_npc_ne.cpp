@@ -1210,10 +1210,14 @@ SECTION_RODATA const u32 lit_7659 = 0x407FEF9E;
 SECTION_RODATA const u32 lit_7660 = 0x3F200000;
 
 /* 80A925D0-80A925EE 001E+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[30] = {
-	0x4E, 0x70, 0x63, 0x5F, 0x6E, 0x65, 0x74, 0x00, 0x20, 0x50, 0x4E, 0x20, 0x25, 0x64, 0x00, 0x46,
-	0x5F, 0x53, 0x50, 0x31, 0x30, 0x33, 0x00, 0x4E, 0x70, 0x63, 0x5F, 0x6E, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80A925D0 = "Npc_net";
+SECTION_DEAD char* const stringBase_80A925D8 = " PN %d";
+SECTION_DEAD char* const stringBase_80A925DF = "F_SP103";
+SECTION_DEAD char* const stringBase_80A925E7 = "Npc_ne";
+#pragma pop
 
 /* 80A925F0-80A92850 0260+00 .data      home_path                                                    */
 u8 home_path[608] = {

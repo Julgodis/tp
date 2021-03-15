@@ -363,9 +363,11 @@ SECTION_RODATA const u8 data_80BA9BB0[4] = {
 };
 
 /* 80BA9BB4-80BA9BBB 0007+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[7] = {
-	0x4B, 0x48, 0x64, 0x65, 0x73, 0x6B, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BA9BB4 = "KHdesk";
+#pragma pop
 
 /* 80BA9BBC-80BA9BC8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

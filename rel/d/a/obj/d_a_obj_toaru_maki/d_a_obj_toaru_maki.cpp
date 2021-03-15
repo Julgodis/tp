@@ -195,9 +195,12 @@ SECTION_RODATA const u8 l_heapSize[8] = {
 };
 
 /* 80D13614-80D13624 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x54, 0x5F, 0x4D, 0x61, 0x6B, 0x69, 0x31, 0x00, 0x54, 0x5F, 0x4D, 0x61, 0x6B, 0x69, 0x32, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D13614 = "T_Maki1";
+SECTION_DEAD char* const stringBase_80D1361C = "T_Maki2";
+#pragma pop
 
 /* 80D13624-80D1362C 0008+00 .data      l_arcName                                                    */
 u8 l_arcName[8] = {

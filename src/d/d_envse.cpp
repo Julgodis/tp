@@ -100,11 +100,13 @@ ASM_FUNCTION(dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath) {
 
 /* ############################################################################################## */
 /* 80394308-80394310 0007+01 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_envse__stringBase0[8] = {
-	0x73, 0x6E, 0x64, 0x74, 0x61, 0x67, 0x00,
-	/* padding */
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80394308 = "sndtag";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_8039430F = "";
+#pragma pop
 
 /* 80182FD8-80183480 04A8+00 .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
 #pragma push

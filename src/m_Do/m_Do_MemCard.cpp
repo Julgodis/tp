@@ -147,11 +147,13 @@ ASM_FUNCTION(load__15mDoMemCd_Ctrl_cFv) {
 
 /* ############################################################################################## */
 /* 803743F8-80374408 0009+07 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 m_Do_m_Do_MemCard__stringBase0[16] = {
-	0x67, 0x63, 0x7A, 0x65, 0x6C, 0x64, 0x61, 0x32, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_803743F8 = "gczelda2";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80374401 = "\0\0\0\0\0\0";
+#pragma pop
 
 /* 80016A0C-80016AB0 00A4+00 .text      restore__15mDoMemCd_Ctrl_cFv                                 */
 #pragma push

@@ -230,9 +230,11 @@ SECTION_RODATA const u32 lit_3780 = 0x41F00000;
 SECTION_RODATA const u32 lit_3781 = 0x42340000;
 
 /* 80D611E8-80D611F0 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x30, 0x39, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D611E8 = "F_SP109";
+#pragma pop
 
 /* 80D611F0-80D61210 0020+00 .data      daTag_ShopItem_MethodTable                                   */
 u8 daTag_ShopItem_MethodTable[32] = {

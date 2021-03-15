@@ -2332,12 +2332,13 @@ ASM_FUNCTION(markMemSize__5dMw_cFv) {
 
 /* ############################################################################################## */
 /* 80397E38-80397E50 0015+03 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_menu_d_menu_window__stringBase0[24] = {
-	0x6D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x66, 0x72, 0x65, 0x65, 0x20, 0x65, 0x72, 0x72, 0x6F,
-	0x72, 0x21, 0x21, 0x0A, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80397E38 = "memory free error!!\n";
+/* @stringBase0 padding */
+SECTION_DEAD char* const pad_80397E4D = "\0\0";
+#pragma pop
 
 /* 801FD0D4-801FD140 006C+00 .text      checkMemSize__5dMw_cFv                                       */
 #pragma push

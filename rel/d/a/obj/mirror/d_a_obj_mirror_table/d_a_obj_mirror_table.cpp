@@ -307,10 +307,12 @@ SECTION_RODATA const u32 lit_4511 = 0xC6A12000;
 SECTION_RODATA const u32 lit_4512 = 0x3FACCCCD;
 
 /* 80C9B290-80C9B2A1 0011+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[17] = {
-	0x4D, 0x52, 0x2D, 0x54, 0x61, 0x62, 0x6C, 0x65, 0x00, 0x46, 0x5F, 0x53, 0x50, 0x31, 0x32, 0x35,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C9B290 = "MR-Table";
+SECTION_DEAD char* const stringBase_80C9B299 = "F_SP125";
+#pragma pop
 
 /* 80C9B2A4-80C9B2A8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

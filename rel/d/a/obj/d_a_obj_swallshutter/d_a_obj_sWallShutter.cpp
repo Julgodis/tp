@@ -379,9 +379,12 @@ SECTION_RODATA const u32 lit_3826 = 0x3F800000;
 SECTION_RODATA const u32 lit_3827 = 0xBF800000;
 
 /* 80598FB8-80598FC7 000F+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[15] = {
-	0x50, 0x5F, 0x52, 0x67, 0x61, 0x74, 0x65, 0x00, 0x53, 0x44, 0x47, 0x61, 0x74, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80598FB8 = "P_Rgate";
+SECTION_DEAD char* const stringBase_80598FC0 = "SDGate";
+#pragma pop
 
 /* 80598FC8-80598FD4 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

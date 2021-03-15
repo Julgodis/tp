@@ -343,9 +343,12 @@ SECTION_RODATA const u8 lit_3835[8] = {
 SECTION_RODATA const u32 lit_3926 = 0xBF800000;
 
 /* 80CB4FDC-80CB4FEC 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x70, 0x6F, 0x75, 0x42, 0x6F, 0x78, 0x30, 0x00, 0x70, 0x6F, 0x75, 0x42, 0x6F, 0x78, 0x31, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CB4FDC = "pouBox0";
+SECTION_DEAD char* const stringBase_80CB4FE4 = "pouBox1";
+#pragma pop
 
 /* 80CB4FEC-80CB4FF8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

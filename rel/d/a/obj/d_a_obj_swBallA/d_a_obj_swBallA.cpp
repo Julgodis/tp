@@ -176,7 +176,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjSwBallA_cFv) {
 	nofralloc
-#include "func_80CF3970"
+#include "asm/rel/d/a/obj/d_a_obj_swBallA/d_a_obj_swBallA/func_80CF3970"
 }
 #pragma pop
 
@@ -392,9 +392,11 @@ SECTION_RODATA const u32 lit_4032 = 0xBF800000;
 SECTION_RODATA const u32 lit_4122 = 0x43960000;
 
 /* 80CF4410-80CF4418 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x5F, 0x4C, 0x42, 0x73, 0x77, 0x41, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CF4410 = "P_LBswA";
+#pragma pop
 
 /* 80CF4418-80CF4424 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

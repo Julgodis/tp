@@ -179,9 +179,11 @@ SECTION_RODATA const u8 lit_3913[8] = {
 };
 
 /* 80861194-8086119C 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x46, 0x5F, 0x53, 0x50, 0x31, 0x31, 0x37, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80861194 = "F_SP117";
+#pragma pop
 
 /* 8086119C-808611BC 0020+00 .data      @3917                                                        */
 u8 lit_3917[32] = {

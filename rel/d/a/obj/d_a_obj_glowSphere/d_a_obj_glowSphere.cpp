@@ -724,9 +724,11 @@ SECTION_RODATA const u32 lit_4031 = 0xBF800000;
 SECTION_RODATA const u32 lit_4103 = 0x41200000;
 
 /* 80BFA9C4-80BFA9CE 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x67, 0x6C, 0x77, 0x53, 0x70, 0x68, 0x65, 0x72, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BFA9C4 = "glwSphere";
+#pragma pop
 
 /* 80BFA9D0-80BFA9DC 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

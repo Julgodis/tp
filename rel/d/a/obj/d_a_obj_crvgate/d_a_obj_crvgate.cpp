@@ -527,7 +527,7 @@ ASM_FUNCTION(daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__14daObjCRVGATE_cFv) {
 	nofralloc
-#include "func_80BD2E88"
+#include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD2E88"
 }
 #pragma pop
 
@@ -732,12 +732,14 @@ SECTION_RODATA const u32 lit_5064 = 0xC3FA0000;
 SECTION_RODATA const u32 lit_5065 = 0x447A0000;
 
 /* 80BD31BC-80BD31F3 0037+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[55] = {
-	0x43, 0x72, 0x76, 0x47, 0x61, 0x74, 0x65, 0x00, 0x43, 0x61, 0x72, 0x61, 0x76, 0x61, 0x6E, 0x47,
-	0x61, 0x74, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x43, 0x61, 0x72, 0x61, 0x76, 0x61, 0x6E, 0x4B,
-	0x65, 0x79, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x43, 0x61, 0x72, 0x61, 0x76, 0x61, 0x6E, 0x47, 0x61,
-	0x74, 0x65, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80BD31BC = "CrvGate";
+SECTION_DEAD char* const stringBase_80BD31C4 = "CaravanGate.bmd";
+SECTION_DEAD char* const stringBase_80BD31D4 = "CaravanKey.bmd";
+SECTION_DEAD char* const stringBase_80BD31E3 = "CaravanGate.dzb";
+#pragma pop
 
 /* 80BD31F4-80BD31F8 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

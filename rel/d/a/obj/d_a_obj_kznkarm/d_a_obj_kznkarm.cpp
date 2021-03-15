@@ -449,10 +449,12 @@ SECTION_RODATA const u32 lit_4020 = 0xC2700000;
 SECTION_RODATA const u32 lit_4114 = 0x44160000;
 
 /* 80C50D90-80C50DA1 0011+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[17] = {
-	0x4A, 0x5F, 0x4B, 0x61, 0x7A, 0x61, 0x6D, 0x69, 0x00, 0x61, 0x72, 0x6D, 0x2E, 0x62, 0x6D, 0x64,
-	0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80C50D90 = "J_Kazami";
+SECTION_DEAD char* const stringBase_80C50D99 = "arm.bmd";
+#pragma pop
 
 /* 80C50DA4-80C50DB0 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

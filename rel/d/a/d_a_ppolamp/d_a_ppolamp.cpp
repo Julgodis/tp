@@ -321,9 +321,11 @@ SECTION_RODATA const u8 lit_3928[8] = {
 SECTION_RODATA const u32 lit_3936 = 0x3E4CCCCD;
 
 /* 80D4D2C8-80D4D2D0 0008+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[8] = {
-	0x50, 0x50, 0x6F, 0x6C, 0x61, 0x6D, 0x70, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80D4D2C8 = "PPolamp";
+#pragma pop
 
 /* 80D4D2D0-80D4D2D4 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

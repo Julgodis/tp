@@ -232,7 +232,7 @@ ASM_FUNCTION(CreateHeap__12daObjStone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjStone_cFv) {
 	nofralloc
-#include "func_80CE9840"
+#include "asm/rel/d/a/obj/d_a_obj_stone/d_a_obj_stone/func_80CE9840"
 }
 #pragma pop
 
@@ -923,10 +923,13 @@ SECTION_RODATA const u8 data_80CECC34[8] = {
 };
 
 /* 80CECC3C-80CECC53 0017+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[23] = {
-	0x44, 0x5F, 0x53, 0x72, 0x6F, 0x63, 0x6B, 0x00, 0x44, 0x5F, 0x42, 0x72, 0x6F, 0x63, 0x6B, 0x00,
-	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CECC3C = "D_Srock";
+SECTION_DEAD char* const stringBase_80CECC44 = "D_Brock";
+SECTION_DEAD char* const stringBase_80CECC4C = "Always";
+#pragma pop
 
 /* 80CECC54-80CECC60 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

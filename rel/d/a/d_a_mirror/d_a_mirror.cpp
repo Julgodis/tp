@@ -400,9 +400,12 @@ SECTION_RODATA const u32 lit_4544 = 0x41200000;
 SECTION_RODATA const u32 lit_4574 = 0x471C4000;
 
 /* 80872650-80872660 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[16] = {
-	0x4D, 0x69, 0x72, 0x72, 0x6F, 0x72, 0x00, 0x4D, 0x52, 0x2D, 0x54, 0x61, 0x62, 0x6C, 0x65, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80872650 = "Mirror";
+SECTION_DEAD char* const stringBase_80872657 = "MR-Table";
+#pragma pop
 
 /* 80872660-80872664 0004+00 .data      l_arcName                                                    */
 u8 l_arcName[4] = {

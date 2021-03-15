@@ -1358,9 +1358,12 @@ SECTION_RODATA const u32 lit_6541 = 0x46EA6000;
 SECTION_RODATA const u32 lit_6852 = 0x42820000;
 
 /* 807AFE70-807AFE7A 000A+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[10] = {
-	0x45, 0x5F, 0x53, 0x57, 0x00, 0x45, 0x5F, 0x73, 0x77, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_807AFE70 = "E_SW";
+SECTION_DEAD char* const stringBase_807AFE75 = "E_sw";
+#pragma pop
 
 /* 807AFE7C-807AFE88 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

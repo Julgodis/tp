@@ -94,9 +94,11 @@ SECTION_RODATA const u8 l_specName[12] = {
 };
 
 /* 80485F0C-80485F0F 0003+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[3] = {
-	0x25, 0x73, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80485F0C = "%s";
+#pragma pop
 
 /* 80485F10-80485F1C 000A+02 .data      l_bg_profName$3618                                           */
 u8 data_80485F10[12] = {

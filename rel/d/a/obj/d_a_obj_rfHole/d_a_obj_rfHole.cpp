@@ -402,9 +402,11 @@ SECTION_RODATA const u8 data_80CB9AB4[12] = {
 };
 
 /* 80CB9AC0-80CB9AC9 0009+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 stringBase0[9] = {
-	0x4F, 0x74, 0x6F, 0x73, 0x69, 0x61, 0x6E, 0x61, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80CB9AC0 = "Otosiana";
+#pragma pop
 
 /* 80CB9ACC-80CB9AD8 000C+00 .data      cNullVec__6Z2Calc                                            */
 u8 cNullVec__6Z2Calc[12] = {

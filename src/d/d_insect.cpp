@@ -71,9 +71,11 @@ ASM_FUNCTION(__ct__9dInsect_cFv) {
 
 /* ############################################################################################## */
 /* 80393D98-80393DA8 0010+00 .rodata    @stringBase0                                                 */
-SECTION_RODATA const u8 d_d_insect__stringBase0[16] = {
-	0x44, 0x45, 0x46, 0x41, 0x55, 0x4C, 0x54, 0x5F, 0x47, 0x45, 0x54, 0x49, 0x54, 0x45, 0x4D, 0x00,
-};
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char* const stringBase_80393D98 = "DEFAULT_GETITEM";
+#pragma pop
 
 /* 8015E078-8015E26C 01F4+00 .text      Insect_GetDemoMain__9dInsect_cFv                             */
 #pragma push
