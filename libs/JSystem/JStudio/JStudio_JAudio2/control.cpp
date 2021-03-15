@@ -56,7 +56,7 @@ ASM_FUNCTION(__dt__Q215JStudio_JAudio213TCreateObjectFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/control/create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/control/func_8028D5B0.s"
 }
 #pragma pop
 
@@ -67,7 +67,7 @@ ASM_FUNCTION(create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ4
 #pragma optimizewithasm off
 ASM_FUNCTION(createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/control/createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/control/func_8028D624.s"
 }
 #pragma pop
 

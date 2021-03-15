@@ -98,7 +98,7 @@ ASM_FUNCTION(checkPlayerPos__FP13daObjThDoor_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/func_80D0D59C.s"
 }
 #pragma pop
 

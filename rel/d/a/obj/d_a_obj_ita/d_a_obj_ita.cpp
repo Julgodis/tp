@@ -256,7 +256,7 @@ ASM_FUNCTION(CreateHeap__10daObjIta_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__10daObjIta_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C28C28"
+#include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C28C28.s"
 }
 #pragma pop
 

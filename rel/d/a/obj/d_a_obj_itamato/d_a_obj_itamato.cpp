@@ -265,7 +265,7 @@ ASM_FUNCTION(createHeapCallBack__15daObj_ItaMato_cFP10fopAc_ac_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(tgHitCallBack__15daObj_ItaMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/tgHitCallBack__15daObj_ItaMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/func_80C2A5F0.s"
 }
 #pragma pop
 

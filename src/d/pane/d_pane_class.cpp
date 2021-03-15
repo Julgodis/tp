@@ -365,7 +365,7 @@ f64 d_pane_d_pane_class__lit_4349 = 4503599627370496.0 /* cast u32 to float */;
 #pragma optimizewithasm off
 ASM_FUNCTION(colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc) {
 	nofralloc
-#include "asm/d/pane/d_pane_class/colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc.s"
+#include "asm/d/pane/d_pane_class/func_802548BC.s"
 }
 #pragma pop
 

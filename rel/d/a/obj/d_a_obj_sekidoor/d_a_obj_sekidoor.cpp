@@ -88,7 +88,7 @@ ASM_FUNCTION(CreateHeap__16daObj_SekiDoor_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__16daObj_SekiDoor_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/func_80CCD1F0"
+#include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/func_80CCD1F0.s"
 }
 #pragma pop
 

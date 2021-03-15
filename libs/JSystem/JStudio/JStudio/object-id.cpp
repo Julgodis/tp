@@ -26,7 +26,7 @@ extern "C" extern void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TI
 #pragma optimizewithasm off
 ASM_FUNCTION(isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/object-id/isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData.s"
+#include "asm/JSystem/JStudio/JStudio/object-id/func_80288988.s"
 }
 #pragma pop
 

@@ -98,7 +98,7 @@ ASM_FUNCTION(CreateHeap__12daObjTMoon_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjTMoon_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/func_80D12D0C"
+#include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/func_80D12D0C.s"
 }
 #pragma pop
 

@@ -2543,7 +2543,7 @@ ASM_FUNCTION(do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl) {
 	nofralloc
-#include "asm/d/msg/d_msg_class/__ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl.s"
+#include "asm/d/msg/d_msg_class/func_80230A08.s"
 }
 #pragma pop
 

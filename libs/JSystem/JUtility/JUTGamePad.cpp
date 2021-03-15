@@ -428,7 +428,7 @@ f32 JUTGamePad__lit_1121 = 10430.37890625f;
 #pragma optimizewithasm off
 ASM_FUNCTION(update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl) {
 	nofralloc
-#include "asm/JSystem/JUtility/JUTGamePad/update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl.s"
+#include "asm/JSystem/JUtility/JUTGamePad/func_802E1238.s"
 }
 #pragma pop
 

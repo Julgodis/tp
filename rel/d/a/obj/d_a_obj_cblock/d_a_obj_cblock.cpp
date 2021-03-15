@@ -223,7 +223,7 @@ ASM_FUNCTION(__ct__Q211daObjCBlk_c7chain_sFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjCBlk_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/func_80BC5E98"
+#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/func_80BC5E98.s"
 }
 #pragma pop
 

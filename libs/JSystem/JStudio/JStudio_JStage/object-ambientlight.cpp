@@ -58,7 +58,7 @@ void* const __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-ambientlight/__ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-ambientlight/func_8028B610.s"
 }
 #pragma pop
 
@@ -124,7 +124,7 @@ ASM_FUNCTION(adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-ambientlight/adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-ambientlight/func_8028B87C.s"
 }
 #pragma pop
 

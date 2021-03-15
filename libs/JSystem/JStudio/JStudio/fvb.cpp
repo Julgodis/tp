@@ -243,7 +243,7 @@ ASM_FUNCTION(__dt__Q37JStudio3fvb7TObjectFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_80283FC8.s"
 }
 #pragma pop
 
@@ -374,7 +374,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb17TObject_compositeFRCQ47JStudio3fvb4data13TPar
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb17TObject_compositeFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb17TObject_compositeFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_802842D4.s"
 }
 #pragma pop
 
@@ -396,7 +396,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb16TObject_constantFRCQ47JStudio3fvb4data13TPars
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb16TObject_constantFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb16TObject_constantFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_802843B8.s"
 }
 #pragma pop
 
@@ -418,7 +418,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb18TObject_transitionFRCQ47JStudio3fvb4data13TPa
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb18TObject_transitionFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb18TObject_transitionFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_80284448.s"
 }
 #pragma pop
 
@@ -440,7 +440,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb12TObject_listFRCQ47JStudio3fvb4data13TParse_TB
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb12TObject_listFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb12TObject_listFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_802844E0.s"
 }
 #pragma pop
 
@@ -462,7 +462,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb22TObject_list_parameterFRCQ47JStudio3fvb4data1
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb22TObject_list_parameterFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb22TObject_list_parameterFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_80284580.s"
 }
 #pragma pop
 
@@ -484,7 +484,7 @@ ASM_FUNCTION(__ct__Q37JStudio3fvb15TObject_hermiteFRCQ47JStudio3fvb4data13TParse
 #pragma optimizewithasm off
 ASM_FUNCTION(prepare_data___Q37JStudio3fvb15TObject_hermiteFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb/prepare_data___Q37JStudio3fvb15TObject_hermiteFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl.s"
+#include "asm/JSystem/JStudio/JStudio/fvb/func_80284630.s"
 }
 #pragma pop
 

@@ -208,7 +208,7 @@ ASM_FUNCTION(CreateHeap__12daObjIce_l_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__12daObjIce_l_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/func_80C20384"
+#include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/func_80C20384.s"
 }
 #pragma pop
 

@@ -201,7 +201,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjBossWarp_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/func_80579B70"
+#include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/func_80579B70.s"
 }
 #pragma pop
 

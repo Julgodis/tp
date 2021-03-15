@@ -140,7 +140,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCB1C.s"
 }
 #pragma pop
 
@@ -151,7 +151,7 @@ ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma optimizewithasm off
 ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCB78.s"
 }
 #pragma pop
 
@@ -239,7 +239,7 @@ ASM_FUNCTION(__CreateHeap__11daObjLife_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjLife_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCFE0"
+#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCFE0.s"
 }
 #pragma pop
 

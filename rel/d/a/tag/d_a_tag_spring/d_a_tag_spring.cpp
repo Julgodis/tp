@@ -77,7 +77,7 @@ ASM_FUNCTION(Create__13daTagSpring_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daTagSpring_cFv) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/func_805A6AF4"
+#include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/func_805A6AF4.s"
 }
 #pragma pop
 

@@ -1258,7 +1258,7 @@ ASM_FUNCTION(update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValu
 #pragma optimizewithasm off
 ASM_FUNCTION(update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80285F08.s"
 }
 #pragma pop
 
@@ -1357,7 +1357,7 @@ ASM_FUNCTION(adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028602C.s"
 }
 #pragma pop
 
@@ -1368,7 +1368,7 @@ ASM_FUNCTION(adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlU
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802860CC.s"
 }
 #pragma pop
 
@@ -1379,7 +1379,7 @@ ASM_FUNCTION(adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TContro
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802861C0.s"
 }
 #pragma pop
 
@@ -1454,7 +1454,7 @@ ASM_FUNCTION(adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TContr
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028656C.s"
 }
 #pragma pop
 
@@ -1465,7 +1465,7 @@ ASM_FUNCTION(adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAd
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286584.s"
 }
 #pragma pop
 
@@ -1476,7 +1476,7 @@ ASM_FUNCTION(adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudi
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802865B0.s"
 }
 #pragma pop
 
@@ -1487,7 +1487,7 @@ ASM_FUNCTION(adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAd
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802865DC.s"
 }
 #pragma pop
 
@@ -1498,7 +1498,7 @@ ASM_FUNCTION(adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286648.s"
 }
 #pragma pop
 
@@ -1575,7 +1575,7 @@ ASM_FUNCTION(do_data__Q27JStudio7TObjectFPCvUlPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286864.s"
 }
 #pragma pop
 
@@ -1597,7 +1597,7 @@ ASM_FUNCTION(__dt__Q27JStudio14TAdaptor_actorFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286910.s"
 }
 #pragma pop
 
@@ -1651,7 +1651,7 @@ ASM_FUNCTION(__dt__Q27JStudio21TAdaptor_ambientLightFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286CFC.s"
 }
 #pragma pop
 
@@ -1705,7 +1705,7 @@ ASM_FUNCTION(__dt__Q27JStudio15TAdaptor_cameraFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80286E7C.s"
 }
 #pragma pop
 
@@ -1766,7 +1766,7 @@ ASM_FUNCTION(__dt__Q27JStudio12TAdaptor_fogFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802871DC.s"
 }
 #pragma pop
 
@@ -1815,7 +1815,7 @@ ASM_FUNCTION(__dt__Q27JStudio14TAdaptor_lightFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80287368.s"
 }
 #pragma pop
 
@@ -1860,7 +1860,7 @@ ASM_FUNCTION(__dt__Q27JStudio16TAdaptor_messageFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80287640.s"
 }
 #pragma pop
 
@@ -1893,7 +1893,7 @@ ASM_FUNCTION(__dt__Q27JStudio17TAdaptor_particleFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028776C.s"
 }
 #pragma pop
 
@@ -1926,7 +1926,7 @@ ASM_FUNCTION(__dt__Q27JStudio14TAdaptor_soundFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80287B9C.s"
 }
 #pragma pop
 

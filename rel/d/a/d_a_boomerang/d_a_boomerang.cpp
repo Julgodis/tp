@@ -356,7 +356,7 @@ ASM_FUNCTION(lockLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_8049F63C.s"
 }
 #pragma pop
 
@@ -378,7 +378,7 @@ ASM_FUNCTION(moveLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_8049F6EC.s"
 }
 #pragma pop
 

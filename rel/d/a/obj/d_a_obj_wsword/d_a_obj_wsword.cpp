@@ -107,7 +107,7 @@ ASM_FUNCTION(CreateHeap__13daObjWSword_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWSword_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wsword/d_a_obj_wsword/func_80D3BB28"
+#include "asm/rel/d/a/obj/d_a_obj_wsword/d_a_obj_wsword/func_80D3BB28.s"
 }
 #pragma pop
 

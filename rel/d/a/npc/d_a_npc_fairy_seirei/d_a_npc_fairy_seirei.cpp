@@ -346,7 +346,7 @@ ASM_FUNCTION(selectAction__19daNpc_FairySeirei_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setAction__19daNpc_FairySeirei_cFM19daNpc_FairySeirei_cFPCvPvi_i) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/setAction__19daNpc_FairySeirei_cFM19daNpc_FairySeirei_cFPCvPvi_i.s"
+#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80540A80.s"
 }
 #pragma pop
 
@@ -500,7 +500,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541348"
+#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541348.s"
 }
 #pragma pop
 
@@ -929,7 +929,7 @@ ASM_FUNCTION(__sinit_d_a_npc_fairy_seirei_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__19daNpc_FairySeirei_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541BE4"
+#include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80541BE4.s"
 }
 #pragma pop
 

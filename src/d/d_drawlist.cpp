@@ -780,7 +780,7 @@ ASM_FUNCTION(draw__11dDlst_2DM_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(draw__11dDlst_2Dm_cFv) {
 	nofralloc
-#include "asm/d/d_drawlist/func_8005312C"
+#include "asm/d/d_drawlist/func_8005312C.s"
 }
 #pragma pop
 

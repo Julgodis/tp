@@ -308,7 +308,7 @@ ASM_FUNCTION(parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_T
 #pragma optimizewithasm off
 ASM_FUNCTION(parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-control/parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-control/func_80285844.s"
 }
 #pragma pop
 
@@ -319,7 +319,7 @@ ASM_FUNCTION(parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TPa
 #pragma optimizewithasm off
 ASM_FUNCTION(parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-control/parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl.s"
+#include "asm/JSystem/JStudio/JStudio/jstudio-control/func_802858F0.s"
 }
 #pragma pop
 

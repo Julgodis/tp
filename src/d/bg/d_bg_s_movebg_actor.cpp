@@ -207,7 +207,7 @@ ASM_FUNCTION(MoveBGCreateHeap__16dBgS_MoveBgActorFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f) {
 	nofralloc
-#include "asm/d/bg/d_bg_s_movebg_actor/MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f.s"
+#include "asm/d/bg/d_bg_s_movebg_actor/func_800787BC.s"
 }
 #pragma pop
 

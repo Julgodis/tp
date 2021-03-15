@@ -362,7 +362,7 @@ ASM_FUNCTION(countStages__18J3DMaterialFactoryCFi) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl.s"
+#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_803303C4.s"
 }
 #pragma pop
 
@@ -585,7 +585,7 @@ ASM_FUNCTION(createLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl.s"
+#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80331A7C.s"
 }
 #pragma pop
 

@@ -175,7 +175,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjIceLeaf_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C24E14"
+#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C24E14.s"
 }
 #pragma pop
 

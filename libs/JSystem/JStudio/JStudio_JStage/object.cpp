@@ -37,7 +37,7 @@ extern "C" extern void PSMTXTrans();
 #pragma optimizewithasm off
 ASM_FUNCTION(transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A1F8.s"
 }
 #pragma pop
 
@@ -48,7 +48,7 @@ ASM_FUNCTION(transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TCo
 #pragma optimizewithasm off
 ASM_FUNCTION(transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A290.s"
 }
 #pragma pop
 
@@ -59,7 +59,7 @@ ASM_FUNCTION(transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TCo
 #pragma optimizewithasm off
 ASM_FUNCTION(transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A328.s"
 }
 #pragma pop
 
@@ -70,7 +70,7 @@ ASM_FUNCTION(transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TCo
 #pragma optimizewithasm off
 ASM_FUNCTION(transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A3CC.s"
 }
 #pragma pop
 
@@ -103,7 +103,7 @@ ASM_FUNCTION(adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A50C.s"
 }
 #pragma pop
 
@@ -114,7 +114,7 @@ ASM_FUNCTION(adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_obj
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object/adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A550.s"
 }
 #pragma pop
 

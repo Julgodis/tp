@@ -175,7 +175,7 @@ ASM_FUNCTION(CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts) {
 #pragma optimizewithasm off
 ASM_FUNCTION(ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts) {
 	nofralloc
-#include "asm/d/cc/d_cc_s/ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts.s"
+#include "asm/d/cc/d_cc_s/func_800861B4.s"
 }
 #pragma pop
 
@@ -266,7 +266,7 @@ ASM_FUNCTION(CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csX
 #pragma optimizewithasm off
 ASM_FUNCTION(ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10dCcD_GSttsP10dCcD_GSttsP4cXyzb) {
 	nofralloc
-#include "asm/d/cc/d_cc_s/ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10dCcD_GSttsP10dCcD_GSttsP4cXyzb.s"
+#include "asm/d/cc/d_cc_s/func_8008685C.s"
 }
 #pragma pop
 
@@ -277,7 +277,7 @@ ASM_FUNCTION(ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD
 #pragma optimizewithasm off
 ASM_FUNCTION(SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz) {
 	nofralloc
-#include "asm/d/cc/d_cc_s/SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz.s"
+#include "asm/d/cc/d_cc_s/func_80086AC0.s"
 }
 #pragma pop
 

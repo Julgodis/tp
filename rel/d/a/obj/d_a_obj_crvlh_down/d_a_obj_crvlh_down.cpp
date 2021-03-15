@@ -234,7 +234,7 @@ ASM_FUNCTION(daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjCRVLH_DW_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/func_80BD4A84"
+#include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/func_80BD4A84.s"
 }
 #pragma pop
 

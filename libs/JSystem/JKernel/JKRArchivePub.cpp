@@ -92,7 +92,7 @@ ASM_FUNCTION(check_mount_already__10JKRArchiveFlP7JKRHeap) {
 #pragma optimizewithasm off
 ASM_FUNCTION(mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRArchivePub/mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection.s"
+#include "asm/JSystem/JKernel/JKRArchivePub/func_802D57E4.s"
 }
 #pragma pop
 
@@ -114,7 +114,7 @@ ASM_FUNCTION(mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection) {
 #pragma optimizewithasm off
 ASM_FUNCTION(mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRArchivePub/mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection.s"
+#include "asm/JSystem/JKernel/JKRArchivePub/func_802D58C8.s"
 }
 #pragma pop
 

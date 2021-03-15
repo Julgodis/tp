@@ -61,7 +61,7 @@ extern "C" extern void _unresolved();
 #pragma optimizewithasm off
 ASM_FUNCTION(bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C276B8.s"
 }
 #pragma pop
 
@@ -72,7 +72,7 @@ ASM_FUNCTION(bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_G
 #pragma optimizewithasm off
 ASM_FUNCTION(bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27714.s"
 }
 #pragma pop
 
@@ -149,7 +149,7 @@ ASM_FUNCTION(CreateHeap__12daObjIBone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjIBone_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20"
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20.s"
 }
 #pragma pop
 

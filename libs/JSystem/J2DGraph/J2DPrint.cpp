@@ -138,7 +138,7 @@ void* const __vt__8J2DPrint[4] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DPrint/__ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor.s"
+#include "asm/JSystem/J2DGraph/J2DPrint/func_802F4394.s"
 }
 #pragma pop
 
@@ -167,7 +167,7 @@ f64 lit_650 = 4503601774854144.0 /* cast s32 to float */;
 #pragma optimizewithasm off
 ASM_FUNCTION(private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DPrint/private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb.s"
+#include "asm/JSystem/J2DGraph/J2DPrint/func_802F4468.s"
 }
 #pragma pop
 

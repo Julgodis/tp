@@ -160,7 +160,7 @@ ASM_FUNCTION(CreateHeap__15daObjStopper2_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daObjStopper2_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/func_80CEF5C8"
+#include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/func_80CEF5C8.s"
 }
 #pragma pop
 

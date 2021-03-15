@@ -260,7 +260,7 @@ extern "C" extern void __register_global_object();
 #pragma optimizewithasm off
 ASM_FUNCTION(PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
+#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BAE36C.s"
 }
 #pragma pop
 

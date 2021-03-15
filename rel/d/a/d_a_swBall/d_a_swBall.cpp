@@ -112,7 +112,7 @@ ASM_FUNCTION(Create__10daSwBall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daSwBall_cFv) {
 	nofralloc
-#include "asm/rel/d/a/d_a_swBall/d_a_swBall/func_80D4E42C"
+#include "asm/rel/d/a/d_a_swBall/d_a_swBall/func_80D4E42C.s"
 }
 #pragma pop
 

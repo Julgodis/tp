@@ -82,7 +82,7 @@ ASM_FUNCTION(Create__12daObjSMark_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjSMark_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A168"
+#include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A168.s"
 }
 #pragma pop
 

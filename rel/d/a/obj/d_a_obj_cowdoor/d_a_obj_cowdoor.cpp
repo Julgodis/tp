@@ -78,7 +78,7 @@ ASM_FUNCTION(CreateHeap__11daCowdoor_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daCowdoor_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/func_80BCC93C"
+#include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/func_80BCC93C.s"
 }
 #pragma pop
 

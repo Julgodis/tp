@@ -215,7 +215,7 @@ void* const __vt__Q214JStudio_JStage14TAdaptor_actor[40] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/__ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028A5F0.s"
 }
 #pragma pop
 
@@ -314,7 +314,7 @@ ASM_FUNCTION(adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028A998.s"
 }
 #pragma pop
 
@@ -325,7 +325,7 @@ ASM_FUNCTION(adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4dat
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028A9F0.s"
 }
 #pragma pop
 
@@ -336,7 +336,7 @@ ASM_FUNCTION(adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AA48.s"
 }
 #pragma pop
 
@@ -347,7 +347,7 @@ ASM_FUNCTION(adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AA5C.s"
 }
 #pragma pop
 
@@ -358,7 +358,7 @@ ASM_FUNCTION(adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ3
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AAB4.s"
 }
 #pragma pop
 
@@ -369,7 +369,7 @@ ASM_FUNCTION(adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_act
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AAC8.s"
 }
 #pragma pop
 
@@ -380,7 +380,7 @@ ASM_FUNCTION(adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4da
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AB0C.s"
 }
 #pragma pop
 
@@ -391,7 +391,7 @@ ASM_FUNCTION(adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStud
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AB68.s"
 }
 #pragma pop
 
@@ -402,7 +402,7 @@ ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JSt
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028ABF0.s"
 }
 #pragma pop
 
@@ -413,7 +413,7 @@ ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37J
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AC04.s"
 }
 #pragma pop
 
@@ -424,7 +424,7 @@ ASM_FUNCTION(adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028AC48.s"
 }
 #pragma pop
 
@@ -435,7 +435,7 @@ ASM_FUNCTION(adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JSt
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028ACA4.s"
 }
 #pragma pop
 
@@ -446,7 +446,7 @@ ASM_FUNCTION(adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37J
 #pragma optimizewithasm off
 ASM_FUNCTION(setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028ACFC.s"
 }
 #pragma pop
 
@@ -487,7 +487,7 @@ u8 lit_1081[8] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028B064.s"
 }
 #pragma pop
 

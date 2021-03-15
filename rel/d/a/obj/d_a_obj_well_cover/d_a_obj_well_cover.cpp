@@ -106,7 +106,7 @@ ASM_FUNCTION(CreateHeap__13daObjWCover_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWCover_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/func_80D36404"
+#include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/func_80D36404.s"
 }
 #pragma pop
 

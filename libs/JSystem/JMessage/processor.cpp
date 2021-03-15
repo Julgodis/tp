@@ -546,7 +546,7 @@ ASM_FUNCTION(on_isReady__Q28JMessage18TSequenceProcessorFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl) {
 	nofralloc
-#include "asm/JSystem/JMessage/processor/on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl.s"
+#include "asm/JSystem/JMessage/processor/func_802A85D0.s"
 }
 #pragma pop
 
@@ -579,7 +579,7 @@ ASM_FUNCTION(on_jump__Q28JMessage18TSequenceProcessorFPCvPCc) {
 #pragma optimizewithasm off
 ASM_FUNCTION(on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl) {
 	nofralloc
-#include "asm/JSystem/JMessage/processor/on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl.s"
+#include "asm/JSystem/JMessage/processor/func_802A8690.s"
 }
 #pragma pop
 
@@ -755,7 +755,7 @@ ASM_FUNCTION(process_setMessageIndex_reserved___Q28JMessage18TSequenceProcessorF
 #pragma optimizewithasm off
 ASM_FUNCTION(process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs) {
 	nofralloc
-#include "asm/JSystem/JMessage/processor/process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs.s"
+#include "asm/JSystem/JMessage/processor/func_802A8944.s"
 }
 #pragma pop
 
@@ -766,7 +766,7 @@ ASM_FUNCTION(process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMess
 #pragma optimizewithasm off
 ASM_FUNCTION(process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor) {
 	nofralloc
-#include "asm/JSystem/JMessage/processor/process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor.s"
+#include "asm/JSystem/JMessage/processor/func_802A89B8.s"
 }
 #pragma pop
 
@@ -788,7 +788,7 @@ ASM_FUNCTION(process_onJump___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSe
 #pragma optimizewithasm off
 ASM_FUNCTION(process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl) {
 	nofralloc
-#include "asm/JSystem/JMessage/processor/process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl.s"
+#include "asm/JSystem/JMessage/processor/func_802A8A18.s"
 }
 #pragma pop
 

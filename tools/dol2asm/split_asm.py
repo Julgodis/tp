@@ -93,7 +93,7 @@ def main(debug, game_path):
     asm_group_count = 16
 
     step_count = 1
-    process_count = 12
+    process_count = 8
 
     g.CONSOLE.print(f"dol2asm {g.VERSION} for '{g.GAME_NAME}'")
 
@@ -409,8 +409,8 @@ def main(debug, game_path):
                             continue
 
                         include_path = f"{tu.asm_function_path(lib)}/{symbol.identifier.label}.s"
-                        if len(include_path) > 240 or (include_path.lower() in function_files):
-                            include_path = f"{tu.asm_function_path(lib)}/func_{symbol.addr:08X}"
+                        if len(include_path) > 120 or (include_path.lower() in function_files):
+                            include_path = f"{tu.asm_function_path(lib)}/func_{symbol.addr:08X}.s"
 
                         symbol.include_path = Path(include_path)
                         function_files.add(include_path.lower())

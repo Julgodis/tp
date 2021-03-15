@@ -175,7 +175,7 @@ ASM_FUNCTION(__CreateHeap__14daItemShield_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daItemShield_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD7254"
+#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD7254.s"
 }
 #pragma pop
 

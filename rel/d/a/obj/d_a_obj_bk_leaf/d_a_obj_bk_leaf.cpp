@@ -130,7 +130,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daBkLeaf_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/func_80BB63F4"
+#include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/func_80BB63F4.s"
 }
 #pragma pop
 

@@ -133,7 +133,7 @@ ASM_FUNCTION(initialize__18daTag_BottleItem_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i.s"
+#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/func_80D561E8.s"
 }
 #pragma pop
 
@@ -144,7 +144,7 @@ ASM_FUNCTION(checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i)
 #pragma optimizewithasm off
 ASM_FUNCTION(setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i.s"
+#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/func_80D56214.s"
 }
 #pragma pop
 

@@ -283,7 +283,7 @@ f32 lit_1051 = 16.0f;
 #pragma optimizewithasm off
 ASM_FUNCTION(J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy) {
 	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy.s"
+#include "asm/JSystem/J3DGraphBase/J3DGD/func_8030E438.s"
 }
 #pragma pop
 
@@ -364,7 +364,7 @@ ASM_FUNCTION(J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc) {
 #pragma optimizewithasm off
 ASM_FUNCTION(J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale) {
 	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale.s"
+#include "asm/JSystem/J3DGraphBase/J3DGD/func_8030EE10.s"
 }
 #pragma pop
 
@@ -375,7 +375,7 @@ ASM_FUNCTION(J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXI
 #pragma optimizewithasm off
 ASM_FUNCTION(J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID) {
 	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID.s"
+#include "asm/JSystem/J3DGraphBase/J3DGD/func_8030EF08.s"
 }
 #pragma pop
 
@@ -394,7 +394,7 @@ u8 data_803CD880[32] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID) {
 	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID.s"
+#include "asm/JSystem/J3DGraphBase/J3DGD/func_8030F108.s"
 }
 #pragma pop
 

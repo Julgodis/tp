@@ -757,7 +757,7 @@ ASM_FUNCTION(getValue__Q27JStudio19TFunctionValue_listFd) {
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282C10.s"
 }
 #pragma pop
 
@@ -768,7 +768,7 @@ ASM_FUNCTION(update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStu
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282C24.s"
 }
 #pragma pop
 
@@ -779,7 +779,7 @@ ASM_FUNCTION(update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JS
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282C58.s"
 }
 #pragma pop
 
@@ -790,7 +790,7 @@ ASM_FUNCTION(update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27J
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282CA8.s"
 }
 #pragma pop
 
@@ -878,7 +878,7 @@ ASM_FUNCTION(getValue__Q27JStudio29TFunctionValue_list_parameterFd) {
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282FE8.s"
 }
 #pragma pop
 
@@ -889,7 +889,7 @@ ASM_FUNCTION(update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameter
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282FF4.s"
 }
 #pragma pop
 
@@ -900,7 +900,7 @@ ASM_FUNCTION(update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_paramet
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283024.s"
 }
 #pragma pop
 
@@ -911,7 +911,7 @@ ASM_FUNCTION(update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parame
 #pragma optimizewithasm off
 ASM_FUNCTION(update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/functionvalue/update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd.s"
+#include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283060.s"
 }
 #pragma pop
 

@@ -140,7 +140,7 @@ ASM_FUNCTION(CreateHeap__12daObjChest_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjChest_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC92B0"
+#include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC92B0.s"
 }
 #pragma pop
 

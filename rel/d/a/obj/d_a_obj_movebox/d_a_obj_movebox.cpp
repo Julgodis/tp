@@ -225,7 +225,7 @@ ASM_FUNCTION(__ct__4cXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(gnd_pos__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cif) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/gnd_pos__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cif.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047DBF0.s"
 }
 #pragma pop
 
@@ -247,7 +247,7 @@ ASM_FUNCTION(wrt_pos__Q212daObjMovebox5Bgc_cFRC4cXyz) {
 #pragma optimizewithasm off
 ASM_FUNCTION(wall_pos__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cisf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/wall_pos__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cisf.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047DE58.s"
 }
 #pragma pop
 
@@ -269,7 +269,7 @@ ASM_FUNCTION(proc_vertical__Q212daObjMovebox5Bgc_cFPQ212daObjMovebox5Act_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(chk_wall_pre__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/chk_wall_pre__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047E2D4.s"
 }
 #pragma pop
 
@@ -280,7 +280,7 @@ ASM_FUNCTION(chk_wall_pre__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212
 #pragma optimizewithasm off
 ASM_FUNCTION(chk_wall_touch__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cs) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/chk_wall_touch__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cs.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047E350.s"
 }
 #pragma pop
 
@@ -291,7 +291,7 @@ ASM_FUNCTION(chk_wall_touch__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ2
 #pragma optimizewithasm off
 ASM_FUNCTION(chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047E5A0.s"
 }
 #pragma pop
 
@@ -412,7 +412,7 @@ ASM_FUNCTION(RideCallBack__Q212daObjMovebox5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac
 #pragma optimizewithasm off
 ASM_FUNCTION(PPCallBack__Q212daObjMovebox5Act_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/PPCallBack__Q212daObjMovebox5Act_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_8047ED10.s"
 }
 #pragma pop
 

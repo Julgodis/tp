@@ -153,7 +153,7 @@ ASM_FUNCTION(__CreateHeap__15daItemKantera_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15daItemKantera_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/func_80C38BB0"
+#include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/func_80C38BB0.s"
 }
 #pragma pop
 

@@ -77,7 +77,7 @@ ASM_FUNCTION(CreateHeap__14daObj_Sekizo_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__14daObj_Sekizo_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/func_80CCDD8C"
+#include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/func_80CCDD8C.s"
 }
 #pragma pop
 

@@ -2419,7 +2419,7 @@ ASM_FUNCTION(frameUpdate__13mDoExt_morf_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/__ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_8000FC4C.s"
 }
 #pragma pop
 
@@ -2445,7 +2445,7 @@ f32 lit_5939 = -1.0f;
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_8000FD94.s"
 }
 #pragma pop
 
@@ -2522,7 +2522,7 @@ ASM_FUNCTION(getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/__ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_800107D0.s"
 }
 #pragma pop
 
@@ -2544,7 +2544,7 @@ ASM_FUNCTION(__dt__16mDoExt_McaMorfSOFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_800108F0.s"
 }
 #pragma pop
 
@@ -2643,7 +2643,7 @@ ASM_FUNCTION(stopZelAnime__16mDoExt_McaMorfSOFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/__ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_80011348.s"
 }
 #pragma pop
 
@@ -2665,7 +2665,7 @@ ASM_FUNCTION(__dt__15mDoExt_McaMorf2Fv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl) {
 	nofralloc
-#include "asm/m_Do/m_Do_ext/create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl.s"
+#include "asm/m_Do/m_Do_ext/func_80011464.s"
 }
 #pragma pop
 

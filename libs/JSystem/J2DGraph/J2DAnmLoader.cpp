@@ -218,7 +218,7 @@ ASM_FUNCTION(readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData)
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_80309598.s"
 }
 #pragma pop
 
@@ -240,7 +240,7 @@ ASM_FUNCTION(readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyDat
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030965C.s"
 }
 #pragma pop
 
@@ -350,7 +350,7 @@ ASM_FUNCTION(readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullDat
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_80309D88.s"
 }
 #pragma pop
 
@@ -394,7 +394,7 @@ ASM_FUNCTION(readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullD
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_80309F38.s"
 }
 #pragma pop
 
@@ -438,7 +438,7 @@ ASM_FUNCTION(readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullD
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A1B8.s"
 }
 #pragma pop
 
@@ -460,7 +460,7 @@ ASM_FUNCTION(readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData)
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DAnmLoader/setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData.s"
+#include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A25C.s"
 }
 #pragma pop
 

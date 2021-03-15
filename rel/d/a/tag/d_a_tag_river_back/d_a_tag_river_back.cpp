@@ -69,7 +69,7 @@ ASM_FUNCTION(Create__16daTagRiverBack_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16daTagRiverBack_cFv) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/func_80D5F360"
+#include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/func_80D5F360.s"
 }
 #pragma pop
 

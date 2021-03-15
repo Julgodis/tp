@@ -96,7 +96,7 @@ ASM_FUNCTION(CreateHeap__11daObjMBox_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjMBox_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_80593044"
+#include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_80593044.s"
 }
 #pragma pop
 

@@ -146,7 +146,7 @@ u8 d_msg_d_msg_string_base__lit_4046[8] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
 	nofralloc
-#include "asm/d/msg/d_msg_string_base/getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
+#include "asm/d/msg/d_msg_string_base/func_802498D8.s"
 }
 #pragma pop
 

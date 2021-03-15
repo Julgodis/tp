@@ -102,7 +102,7 @@ ASM_FUNCTION(CreateHeap__14daObjCrystal_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjCrystal_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/func_80BD6664"
+#include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/func_80BD6664.s"
 }
 #pragma pop
 

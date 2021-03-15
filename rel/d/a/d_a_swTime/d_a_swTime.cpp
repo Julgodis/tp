@@ -46,7 +46,7 @@ ASM_FUNCTION(Create__10daSwTime_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daSwTime_cFv) {
 	nofralloc
-#include "asm/rel/d/a/d_a_swTime/d_a_swTime/func_80D4F660"
+#include "asm/rel/d/a/d_a_swTime/d_a_swTime/func_80D4F660.s"
 }
 #pragma pop
 

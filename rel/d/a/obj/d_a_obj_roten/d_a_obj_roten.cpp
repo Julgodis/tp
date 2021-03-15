@@ -108,7 +108,7 @@ ASM_FUNCTION(CreateHeap__13daObj_Roten_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObj_Roten_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40"
+#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40.s"
 }
 #pragma pop
 

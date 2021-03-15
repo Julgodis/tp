@@ -68,7 +68,7 @@ ASM_FUNCTION(__dt__Q214JStudio_JStage13TCreateObjectFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/control/create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289B60.s"
 }
 #pragma pop
 

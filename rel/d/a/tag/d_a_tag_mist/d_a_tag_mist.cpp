@@ -87,7 +87,7 @@ ASM_FUNCTION(Create__11daTagMist_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daTagMist_cFv) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/func_8048F444"
+#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/func_8048F444.s"
 }
 #pragma pop
 

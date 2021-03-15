@@ -30,7 +30,7 @@ SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data
 #pragma optimizewithasm off
 ASM_FUNCTION(getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/stb-data-parse/getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData.s"
+#include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_802899BC.s"
 }
 #pragma pop
 
@@ -41,7 +41,7 @@ ASM_FUNCTION(getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4dat
 #pragma optimizewithasm off
 ASM_FUNCTION(getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/stb-data-parse/getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData.s"
+#include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_80289A08.s"
 }
 #pragma pop
 
@@ -52,7 +52,7 @@ ASM_FUNCTION(getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4da
 #pragma optimizewithasm off
 ASM_FUNCTION(getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/stb-data-parse/getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData.s"
+#include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_80289A80.s"
 }
 #pragma pop
 

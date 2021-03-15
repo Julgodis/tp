@@ -88,7 +88,7 @@ ASM_FUNCTION(checkPlayerPos__FP9daZdoor_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D3F4DC.s"
 }
 #pragma pop
 
@@ -99,7 +99,7 @@ ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma optimizewithasm off
 ASM_FUNCTION(doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D3F570.s"
 }
 #pragma pop
 

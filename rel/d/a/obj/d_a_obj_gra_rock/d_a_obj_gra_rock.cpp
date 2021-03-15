@@ -188,7 +188,7 @@ ASM_FUNCTION(CreateHeap__14daObjGraRock_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjGraRock_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C11C64"
+#include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C11C64.s"
 }
 #pragma pop
 

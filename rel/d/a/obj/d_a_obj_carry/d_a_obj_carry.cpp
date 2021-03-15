@@ -436,7 +436,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F33C.s"
 }
 #pragma pop
 
@@ -447,7 +447,7 @@ ASM_FUNCTION(TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma optimizewithasm off
 ASM_FUNCTION(TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F340.s"
 }
 #pragma pop
 
@@ -458,7 +458,7 @@ ASM_FUNCTION(TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12
 #pragma optimizewithasm off
 ASM_FUNCTION(CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F3E0.s"
 }
 #pragma pop
 
@@ -469,7 +469,7 @@ ASM_FUNCTION(CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma optimizewithasm off
 ASM_FUNCTION(CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F3E4.s"
 }
 #pragma pop
 
@@ -865,7 +865,7 @@ ASM_FUNCTION(CreateHeap__12daObjCarry_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjCarry_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_80470BF4"
+#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_80470BF4.s"
 }
 #pragma pop
 

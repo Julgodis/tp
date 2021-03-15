@@ -108,7 +108,7 @@ void* const __vt__Q214JStudio_JStage12TAdaptor_fog[16] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-fog/__ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-fog/func_8028C574.s"
 }
 #pragma pop
 

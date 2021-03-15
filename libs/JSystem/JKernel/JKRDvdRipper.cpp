@@ -91,7 +91,7 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 #pragma optimizewithasm off
 ASM_FUNCTION(loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRDvdRipper/loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl.s"
+#include "asm/JSystem/JKernel/JKRDvdRipper/func_802D9B98.s"
 }
 #pragma pop
 
@@ -102,7 +102,7 @@ ASM_FUNCTION(loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ21
 #pragma optimizewithasm off
 ASM_FUNCTION(loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRDvdRipper/loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl.s"
+#include "asm/JSystem/JKernel/JKRDvdRipper/func_802D9C54.s"
 }
 #pragma pop
 
@@ -131,7 +131,7 @@ u32 data_804508C8 = 0x01000000;
 #pragma optimizewithasm off
 ASM_FUNCTION(loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRDvdRipper/loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl.s"
+#include "asm/JSystem/JKernel/JKRDvdRipper/func_802D9D10.s"
 }
 #pragma pop
 

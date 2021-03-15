@@ -265,7 +265,7 @@ ASM_FUNCTION(readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullDat
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80338828.s"
 }
 #pragma pop
 
@@ -309,7 +309,7 @@ ASM_FUNCTION(readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullD
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_803389D8.s"
 }
 #pragma pop
 
@@ -331,7 +331,7 @@ ASM_FUNCTION(readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullD
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80338AA4.s"
 }
 #pragma pop
 
@@ -353,7 +353,7 @@ ASM_FUNCTION(readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80338B48.s"
 }
 #pragma pop
 
@@ -375,7 +375,7 @@ ASM_FUNCTION(readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData)
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80338BDC.s"
 }
 #pragma pop
 
@@ -419,7 +419,7 @@ ASM_FUNCTION(readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData)
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339014.s"
 }
 #pragma pop
 
@@ -441,7 +441,7 @@ ASM_FUNCTION(readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyDat
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_803390D8.s"
 }
 #pragma pop
 
@@ -485,7 +485,7 @@ ASM_FUNCTION(readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_803393EC.s"
 }
 #pragma pop
 
@@ -529,7 +529,7 @@ ASM_FUNCTION(readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData) {
 	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData.s"
+#include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339634.s"
 }
 #pragma pop
 

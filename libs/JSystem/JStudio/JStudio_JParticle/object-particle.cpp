@@ -120,7 +120,7 @@ void* const __vt__Q217JStudio_JParticle17TAdaptor_particle[19] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/__ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028E60C.s"
 }
 #pragma pop
 
@@ -131,7 +131,7 @@ ASM_FUNCTION(__ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JPartic
 #pragma optimizewithasm off
 ASM_FUNCTION(__dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/__dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028E700.s"
 }
 #pragma pop
 
@@ -202,7 +202,7 @@ ASM_FUNCTION(adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EA68.s"
 }
 #pragma pop
 
@@ -213,7 +213,7 @@ ASM_FUNCTION(adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EA7C.s"
 }
 #pragma pop
 
@@ -224,7 +224,7 @@ ASM_FUNCTION(adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStud
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EAB0.s"
 }
 #pragma pop
 
@@ -235,7 +235,7 @@ ASM_FUNCTION(adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleF
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EAF8.s"
 }
 #pragma pop
 
@@ -246,7 +246,7 @@ ASM_FUNCTION(adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EB24.s"
 }
 #pragma pop
 
@@ -257,7 +257,7 @@ ASM_FUNCTION(adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EB6C.s"
 }
 #pragma pop
 
@@ -268,7 +268,7 @@ ASM_FUNCTION(adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStu
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EBD8.s"
 }
 #pragma pop
 
@@ -279,7 +279,7 @@ ASM_FUNCTION(adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ3
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC58.s"
 }
 #pragma pop
 
@@ -290,7 +290,7 @@ ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleF
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC74.s"
 }
 #pragma pop
 
@@ -301,7 +301,7 @@ ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particl
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC88.s"
 }
 #pragma pop
 
@@ -312,7 +312,7 @@ ASM_FUNCTION(adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStu
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028ECA4.s"
 }
 #pragma pop
 
@@ -339,7 +339,7 @@ f64 lit_1629 = 4503599627370496.0 /* cast u32 to float */;
 #pragma optimizewithasm off
 ASM_FUNCTION(execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028ECC0.s"
 }
 #pragma pop
 
@@ -350,7 +350,7 @@ ASM_FUNCTION(execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emi
 #pragma optimizewithasm off
 ASM_FUNCTION(executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F060.s"
 }
 #pragma pop
 
@@ -361,7 +361,7 @@ ASM_FUNCTION(executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallbac
 #pragma optimizewithasm off
 ASM_FUNCTION(draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F098.s"
 }
 #pragma pop
 
@@ -372,7 +372,7 @@ ASM_FUNCTION(draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitte
 #pragma optimizewithasm off
 ASM_FUNCTION(drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F0D0.s"
 }
 #pragma pop
 
@@ -383,7 +383,7 @@ ASM_FUNCTION(drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_e
 #pragma optimizewithasm off
 ASM_FUNCTION(beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F108.s"
 }
 #pragma pop
 
@@ -394,7 +394,7 @@ ASM_FUNCTION(beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv) 
 #pragma optimizewithasm off
 ASM_FUNCTION(endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F1C0.s"
 }
 #pragma pop
 

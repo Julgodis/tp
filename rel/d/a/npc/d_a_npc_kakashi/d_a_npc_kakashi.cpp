@@ -742,7 +742,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/func_8054DF14"
+#include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/func_8054DF14.s"
 }
 #pragma pop
 
@@ -1149,7 +1149,7 @@ ASM_FUNCTION(__sinit_d_a_npc_kakashi_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__15daNpc_Kakashi_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/func_8054E804"
+#include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/func_8054E804.s"
 }
 #pragma pop
 

@@ -122,7 +122,7 @@ ASM_FUNCTION(CreateHeap__14daObjZraRock_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjZraRock_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D450E0"
+#include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D450E0.s"
 }
 #pragma pop
 

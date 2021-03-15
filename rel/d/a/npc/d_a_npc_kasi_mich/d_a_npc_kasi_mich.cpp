@@ -494,7 +494,7 @@ ASM_FUNCTION(playMotion__15daNpcKasiMich_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(playMotionAnmLoop__15daNpcKasiMich_cFPPPQ28daNpcF_c18daNpcF_anmPlayData) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/playMotionAnmLoop__15daNpcKasiMich_cFPPPQ28daNpcF_c18daNpcF_anmPlayData.s"
+#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/func_80A2790C.s"
 }
 #pragma pop
 

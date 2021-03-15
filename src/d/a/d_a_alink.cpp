@@ -13595,7 +13595,7 @@ ASM_FUNCTION(setDoubleAnimeBlendRatio__9daAlink_cFf) {
 #pragma optimizewithasm off
 ASM_FUNCTION(commonDoubleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformfffi) {
 	nofralloc
-#include "asm/d/a/d_a_alink/commonDoubleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformfffi.s"
+#include "asm/d/a/d_a_alink/func_800AC754.s"
 }
 #pragma pop
 

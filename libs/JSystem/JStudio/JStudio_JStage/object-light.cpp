@@ -105,7 +105,7 @@ void* const __vt__Q214JStudio_JStage14TAdaptor_light[10] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-light/__ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028CB50.s"
 }
 #pragma pop
 
@@ -230,7 +230,7 @@ ASM_FUNCTION(adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D1B0.s"
 }
 #pragma pop
 
@@ -241,7 +241,7 @@ ASM_FUNCTION(adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4d
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D228.s"
 }
 #pragma pop
 
@@ -252,7 +252,7 @@ ASM_FUNCTION(adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4da
 #pragma optimizewithasm off
 ASM_FUNCTION(__cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-light/__cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D24C.s"
 }
 #pragma pop
 

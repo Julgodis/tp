@@ -145,7 +145,7 @@ ASM_FUNCTION(Create__11daObjDrop_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjDrop_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/func_80BDFE58"
+#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/func_80BDFE58.s"
 }
 #pragma pop
 

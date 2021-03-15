@@ -131,7 +131,7 @@ extern "C" extern void _unresolved();
 #pragma optimizewithasm off
 ASM_FUNCTION(PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
+#include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C21CD8.s"
 }
 #pragma pop
 

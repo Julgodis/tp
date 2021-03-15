@@ -819,7 +819,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80998B74"
+#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80998B74.s"
 }
 #pragma pop
 
@@ -1149,7 +1149,7 @@ ASM_FUNCTION(__sinit_d_a_npc_clerkb_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__14daNpc_clerkB_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80999680"
+#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80999680.s"
 }
 #pragma pop
 
@@ -1270,7 +1270,7 @@ ASM_FUNCTION(func_8099983C) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80999844"
+#include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/func_80999844.s"
 }
 #pragma pop
 

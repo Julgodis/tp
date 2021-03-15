@@ -116,7 +116,7 @@ ASM_FUNCTION(CreateHeap__14daObjLv4Gear_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjLv4Gear_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/func_80C68124"
+#include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/func_80C68124.s"
 }
 #pragma pop
 

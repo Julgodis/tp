@@ -121,7 +121,7 @@ ASM_FUNCTION(countStages__18J2DMaterialFactoryCFi) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMaterialFactory/create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive.s"
+#include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F2D1C.s"
 }
 #pragma pop
 

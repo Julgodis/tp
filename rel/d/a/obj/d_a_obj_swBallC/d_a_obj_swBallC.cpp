@@ -184,7 +184,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjSwBallC_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/func_80CF606C"
+#include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/func_80CF606C.s"
 }
 #pragma pop
 

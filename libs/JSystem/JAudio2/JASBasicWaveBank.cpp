@@ -225,7 +225,7 @@ ASM_FUNCTION(getWaveHandle__16JASBasicWaveBankCFUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo) {
 	nofralloc
-#include "asm/JSystem/JAudio2/JASBasicWaveBank/setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo.s"
+#include "asm/JSystem/JAudio2/JASBasicWaveBank/func_80298910.s"
 }
 #pragma pop
 

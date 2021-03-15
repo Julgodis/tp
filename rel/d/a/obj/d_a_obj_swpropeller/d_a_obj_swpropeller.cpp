@@ -135,7 +135,7 @@ ASM_FUNCTION(CreateHeap__11daObjSwPr_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjSwPr_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059A888"
+#include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059A888.s"
 }
 #pragma pop
 

@@ -1737,7 +1737,7 @@ ASM_FUNCTION(setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPf
 #pragma optimizewithasm off
 ASM_FUNCTION(dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f) {
 	nofralloc
-#include "asm/d/kankyo/d_kankyo/dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f.s"
+#include "asm/d/kankyo/d_kankyo/func_801A0340.s"
 }
 #pragma pop
 
@@ -1821,7 +1821,7 @@ ASM_FUNCTION(setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P
 #pragma optimizewithasm off
 ASM_FUNCTION(settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf) {
 	nofralloc
-#include "asm/d/kankyo/d_kankyo/settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf.s"
+#include "asm/d/kankyo/d_kankyo/func_801A1D64.s"
 }
 #pragma pop
 
@@ -1897,7 +1897,7 @@ f32 lit_6774 = 1.0f / 25.0f;
 #pragma optimizewithasm off
 ASM_FUNCTION(settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc) {
 	nofralloc
-#include "asm/d/kankyo/d_kankyo/settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc.s"
+#include "asm/d/kankyo/d_kankyo/func_801A2128.s"
 }
 #pragma pop
 

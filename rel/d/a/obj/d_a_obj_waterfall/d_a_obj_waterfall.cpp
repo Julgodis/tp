@@ -158,7 +158,7 @@ ASM_FUNCTION(Create__16daObjWaterFall_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__16daObjWaterFall_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/func_80D2F5A0"
+#include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/func_80D2F5A0.s"
 }
 #pragma pop
 

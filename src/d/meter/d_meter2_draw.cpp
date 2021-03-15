@@ -941,7 +941,7 @@ ASM_FUNCTION(playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor) {
 #pragma optimizewithasm off
 ASM_FUNCTION(drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc) {
 	nofralloc
-#include "asm/d/meter/d_meter2_draw/drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc.s"
+#include "asm/d/meter/d_meter2_draw/func_80213FF0.s"
 }
 #pragma pop
 
@@ -962,7 +962,7 @@ f32 lit_5786 = -1.0f;
 #pragma optimizewithasm off
 ASM_FUNCTION(drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc) {
 	nofralloc
-#include "asm/d/meter/d_meter2_draw/drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc.s"
+#include "asm/d/meter/d_meter2_draw/func_802140DC.s"
 }
 #pragma pop
 
@@ -973,7 +973,7 @@ ASM_FUNCTION(drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TCol
 #pragma optimizewithasm off
 ASM_FUNCTION(drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
 	nofralloc
-#include "asm/d/meter/d_meter2_draw/drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor.s"
+#include "asm/d/meter/d_meter2_draw/func_8021462C.s"
 }
 #pragma pop
 

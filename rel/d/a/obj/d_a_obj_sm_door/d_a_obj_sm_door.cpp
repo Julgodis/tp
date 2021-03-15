@@ -246,7 +246,7 @@ ASM_FUNCTION(CreateHeap__14daObjSM_DOOR_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__14daObjSM_DOOR_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/func_80CD9258"
+#include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/func_80CD9258.s"
 }
 #pragma pop
 

@@ -141,7 +141,7 @@ extern "C" extern void __register_global_object();
 #pragma optimizewithasm off
 ASM_FUNCTION(ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80B9FAEC.s"
 }
 #pragma pop
 
@@ -152,7 +152,7 @@ ASM_FUNCTION(ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GO
 #pragma optimizewithasm off
 ASM_FUNCTION(pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
+#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80B9FC40.s"
 }
 #pragma pop
 

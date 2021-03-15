@@ -88,7 +88,7 @@ ASM_FUNCTION(__ct__12J3DJointTreeFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable) {
 	nofralloc
-#include "asm/JSystem/J3DGraphAnimator/J3DJointTree/makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable.s"
+#include "asm/JSystem/J3DGraphAnimator/J3DJointTree/func_80325A9C.s"
 }
 #pragma pop
 

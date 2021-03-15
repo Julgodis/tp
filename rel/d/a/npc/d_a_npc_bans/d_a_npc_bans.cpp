@@ -913,7 +913,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc.s"
+#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80966F14.s"
 }
 #pragma pop
 
@@ -1254,7 +1254,7 @@ ASM_FUNCTION(__sinit_d_a_npc_bans_cpp) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__12daNpc_Bans_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967AC4"
+#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967AC4.s"
 }
 #pragma pop
 
@@ -1364,7 +1364,7 @@ ASM_FUNCTION(func_80967C74) {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
 	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967C7C"
+#include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/func_80967C7C.s"
 }
 #pragma pop
 

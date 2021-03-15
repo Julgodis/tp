@@ -373,7 +373,7 @@ ASM_FUNCTION(daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjCRVFENCE_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BCFFC8"
+#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BCFFC8.s"
 }
 #pragma pop
 

@@ -190,7 +190,7 @@ void* const __vt__Q215JStudio_JAudio214TAdaptor_sound[20] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/__ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028D828.s"
 }
 #pragma pop
 
@@ -270,7 +270,7 @@ ASM_FUNCTION(adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DC20.s"
 }
 #pragma pop
 
@@ -281,7 +281,7 @@ ASM_FUNCTION(adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4da
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DC54.s"
 }
 #pragma pop
 
@@ -292,7 +292,7 @@ ASM_FUNCTION(adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4da
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DC88.s"
 }
 #pragma pop
 
@@ -303,7 +303,7 @@ ASM_FUNCTION(adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DCD0.s"
 }
 #pragma pop
 
@@ -314,7 +314,7 @@ ASM_FUNCTION(adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DD00.s"
 }
 #pragma pop
 
@@ -325,7 +325,7 @@ ASM_FUNCTION(adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JSt
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DD48.s"
 }
 #pragma pop
 
@@ -336,7 +336,7 @@ ASM_FUNCTION(adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4d
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DDB4.s"
 }
 #pragma pop
 
@@ -347,7 +347,7 @@ ASM_FUNCTION(adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStu
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DE34.s"
 }
 #pragma pop
 
@@ -358,7 +358,7 @@ ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DE50.s"
 }
 #pragma pop
 
@@ -369,7 +369,7 @@ ASM_FUNCTION(adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4d
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DE6C.s"
 }
 #pragma pop
 
@@ -380,7 +380,7 @@ ASM_FUNCTION(adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStud
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DE88.s"
 }
 #pragma pop
 
@@ -391,7 +391,7 @@ ASM_FUNCTION(adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DEB0.s"
 }
 #pragma pop
 
@@ -402,7 +402,7 @@ ASM_FUNCTION(adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37
 #pragma optimizewithasm off
 ASM_FUNCTION(__cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/__cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor.s"
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/func_8028DECC.s"
 }
 #pragma pop
 

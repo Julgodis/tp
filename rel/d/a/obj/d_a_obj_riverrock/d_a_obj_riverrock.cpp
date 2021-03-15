@@ -323,7 +323,7 @@ ASM_FUNCTION(daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__16daObjRIVERROCK_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/func_80CBD7B4"
+#include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/func_80CBD7B4.s"
 }
 #pragma pop
 

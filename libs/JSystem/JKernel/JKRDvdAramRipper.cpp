@@ -130,7 +130,7 @@ ASM_FUNCTION(loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUl
 #pragma optimizewithasm off
 ASM_FUNCTION(loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRDvdAramRipper/loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl.s"
+#include "asm/JSystem/JKernel/JKRDvdAramRipper/func_802DA9C0.s"
 }
 #pragma pop
 

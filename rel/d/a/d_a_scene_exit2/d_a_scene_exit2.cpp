@@ -97,7 +97,7 @@ ASM_FUNCTION(Create__10daScExit_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daScExit_cFv) {
 	nofralloc
-#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/func_8059E230"
+#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/func_8059E230.s"
 }
 #pragma pop
 

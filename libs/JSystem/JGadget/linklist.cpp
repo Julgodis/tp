@@ -61,7 +61,7 @@ ASM_FUNCTION(erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator
 #pragma optimizewithasm off
 ASM_FUNCTION(erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator) {
 	nofralloc
-#include "asm/JSystem/JGadget/linklist/erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator.s"
+#include "asm/JSystem/JGadget/linklist/func_802DCAA0.s"
 }
 #pragma pop
 
@@ -72,7 +72,7 @@ ASM_FUNCTION(erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator
 #pragma optimizewithasm off
 ASM_FUNCTION(splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator) {
 	nofralloc
-#include "asm/JSystem/JGadget/linklist/splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator.s"
+#include "asm/JSystem/JGadget/linklist/func_802DCB08.s"
 }
 #pragma pop
 
@@ -83,7 +83,7 @@ ASM_FUNCTION(splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterato
 #pragma optimizewithasm off
 ASM_FUNCTION(Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode) {
 	nofralloc
-#include "asm/JSystem/JGadget/linklist/Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode.s"
+#include "asm/JSystem/JGadget/linklist/func_802DCBA8.s"
 }
 #pragma pop
 

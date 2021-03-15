@@ -316,7 +316,7 @@ ASM_FUNCTION(daObjTHASHI_IsDelete__FP13daObjTHASHI_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__13daObjTHASHI_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thashi/d_a_obj_thashi/func_80D0CE70"
+#include "asm/rel/d/a/obj/d_a_obj_thashi/d_a_obj_thashi/func_80D0CE70.s"
 }
 #pragma pop
 

@@ -51,7 +51,7 @@ ASM_FUNCTION(Create__14daTagRestart_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daTagRestart_cFv) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/func_80D6048C"
+#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/func_80D6048C.s"
 }
 #pragma pop
 

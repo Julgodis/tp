@@ -145,7 +145,7 @@ ASM_FUNCTION(CreateHeap__14daGraveStone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daGraveStone_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/func_80C12D1C"
+#include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/func_80C12D1C.s"
 }
 #pragma pop
 

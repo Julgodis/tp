@@ -143,7 +143,7 @@ ASM_FUNCTION(setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive) {
 #pragma optimizewithasm off
 ASM_FUNCTION(getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab) {
 	nofralloc
-#include "asm/JSystem/JAudio2/JAUSeqDataBlockMgr/getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab.s"
+#include "asm/JSystem/JAudio2/JAUSeqDataBlockMgr/func_802A6AA8.s"
 }
 #pragma pop
 

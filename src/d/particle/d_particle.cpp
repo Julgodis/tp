@@ -1803,7 +1803,7 @@ u32 d_particle_d_particle__lit_5199 = 0xFFFFFFFF;
 #pragma optimizewithasm off
 ASM_FUNCTION(set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf) {
 	nofralloc
-#include "asm/d/particle/d_particle/set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf.s"
+#include "asm/d/particle/d_particle/func_8004CA90.s"
 }
 #pragma pop
 
@@ -1825,7 +1825,7 @@ ASM_FUNCTION(getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColor
 #pragma optimizewithasm off
 ASM_FUNCTION(setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz) {
 	nofralloc
-#include "asm/d/particle/d_particle/setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz.s"
+#include "asm/d/particle/d_particle/func_8004D068.s"
 }
 #pragma pop
 
@@ -1893,7 +1893,7 @@ ASM_FUNCTION(dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC
 #pragma optimizewithasm off
 ASM_FUNCTION(set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf) {
 	nofralloc
-#include "asm/d/particle/d_particle/set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf.s"
+#include "asm/d/particle/d_particle/func_8004D4CC.s"
 }
 #pragma pop
 
@@ -1904,7 +1904,7 @@ ASM_FUNCTION(set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUc
 #pragma optimizewithasm off
 ASM_FUNCTION(setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz) {
 	nofralloc
-#include "asm/d/particle/d_particle/setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz.s"
+#include "asm/d/particle/d_particle/func_8004D6A4.s"
 }
 #pragma pop
 
@@ -1926,7 +1926,7 @@ ASM_FUNCTION(setStopContinue__13dPa_control_cFUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz) {
 	nofralloc
-#include "asm/d/particle/d_particle/setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz.s"
+#include "asm/d/particle/d_particle/func_8004D7C4.s"
 }
 #pragma pop
 
@@ -1937,7 +1937,7 @@ ASM_FUNCTION(setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_
 #pragma optimizewithasm off
 ASM_FUNCTION(setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc) {
 	nofralloc
-#include "asm/d/particle/d_particle/setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc.s"
+#include "asm/d/particle/d_particle/func_8004D988.s"
 }
 #pragma pop
 

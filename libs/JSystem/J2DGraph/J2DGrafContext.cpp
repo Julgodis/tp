@@ -174,7 +174,7 @@ ASM_FUNCTION(func_802E90E4) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DGrafContext/setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor.s"
+#include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9118.s"
 }
 #pragma pop
 

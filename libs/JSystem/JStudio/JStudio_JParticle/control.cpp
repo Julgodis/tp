@@ -63,7 +63,7 @@ ASM_FUNCTION(__dt__Q217JStudio_JParticle13TCreateObjectFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/control/create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/control/func_8028E400.s"
 }
 #pragma pop
 
@@ -104,7 +104,7 @@ ASM_FUNCTION(emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmi
 #pragma optimizewithasm off
 ASM_FUNCTION(createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/control/createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject.s"
+#include "asm/JSystem/JStudio/JStudio_JParticle/control/func_8028E508.s"
 }
 #pragma pop
 

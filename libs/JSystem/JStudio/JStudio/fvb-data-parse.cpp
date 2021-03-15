@@ -27,7 +27,7 @@ extern "C" extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvP
 #pragma optimizewithasm off
 ASM_FUNCTION(getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio/fvb-data-parse/getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData.s"
+#include "asm/JSystem/JStudio/JStudio/fvb-data-parse/func_802850AC.s"
 }
 #pragma pop
 

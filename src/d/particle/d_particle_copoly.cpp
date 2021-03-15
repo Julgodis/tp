@@ -146,7 +146,7 @@ ASM_FUNCTION(clearID__7dPaPo_cFPUlPUc) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff) {
 	nofralloc
-#include "asm/d/particle/d_particle_copoly/setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff.s"
+#include "asm/d/particle/d_particle_copoly/func_8005115C.s"
 }
 #pragma pop
 
@@ -168,7 +168,7 @@ ASM_FUNCTION(clearTwoAllID__8dPaPoT_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff) {
 	nofralloc
-#include "asm/d/particle/d_particle_copoly/setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff.s"
+#include "asm/d/particle/d_particle_copoly/func_800512E8.s"
 }
 #pragma pop
 

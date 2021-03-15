@@ -113,7 +113,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii.s"
+#include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/func_80C1BB7C.s"
 }
 #pragma pop
 

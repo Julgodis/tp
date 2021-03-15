@@ -469,7 +469,7 @@ ASM_FUNCTION(coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/d_a_horse/d_a_horse/func_80838A20.s"
 }
 #pragma pop
 

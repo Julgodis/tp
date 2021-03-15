@@ -380,7 +380,7 @@ ASM_FUNCTION(daObjHHASHI_IsDelete__FP13daObjHHASHI_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__13daObjHHASHI_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/func_805811CC"
+#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/func_805811CC.s"
 }
 #pragma pop
 

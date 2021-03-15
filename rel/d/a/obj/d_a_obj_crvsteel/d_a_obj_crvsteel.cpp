@@ -219,7 +219,7 @@ ASM_FUNCTION(daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjCRVSTEEL_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD60A8"
+#include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD60A8.s"
 }
 #pragma pop
 

@@ -152,7 +152,7 @@ u8 J3DCluster__lit_866[4] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf) {
 	nofralloc
-#include "asm/JSystem/J3DGraphAnimator/J3DCluster/deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf.s"
+#include "asm/JSystem/J3DGraphAnimator/J3DCluster/func_8032E4A4.s"
 }
 #pragma pop
 
@@ -185,7 +185,7 @@ f64 lit_1027 = 4503599627370496.0 /* cast u32 to float */;
 #pragma optimizewithasm off
 ASM_FUNCTION(deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf) {
 	nofralloc
-#include "asm/JSystem/J3DGraphAnimator/J3DCluster/deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf.s"
+#include "asm/JSystem/J3DGraphAnimator/J3DCluster/func_8032E60C.s"
 }
 #pragma pop
 

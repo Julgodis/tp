@@ -318,7 +318,7 @@ ASM_FUNCTION(makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP1
 #pragma optimizewithasm off
 ASM_FUNCTION(createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DScreen/createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive.s"
+#include "asm/JSystem/J2DGraph/J2DScreen/func_802F8B98.s"
 }
 #pragma pop
 

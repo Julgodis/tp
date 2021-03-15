@@ -335,7 +335,7 @@ ASM_FUNCTION(resize__9J2DWindowFff) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
 	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor.s"
+#include "asm/JSystem/J2DGraph/J2DWindow/func_802FB12C.s"
 }
 #pragma pop
 

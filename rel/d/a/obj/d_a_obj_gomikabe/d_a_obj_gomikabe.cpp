@@ -465,7 +465,7 @@ ASM_FUNCTION(daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjGOMIKABE_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFF8D8"
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFF8D8.s"
 }
 #pragma pop
 

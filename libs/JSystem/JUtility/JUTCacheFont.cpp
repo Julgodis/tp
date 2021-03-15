@@ -258,7 +258,7 @@ u8 lit_721[8] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi) {
 	nofralloc
-#include "asm/JSystem/JUtility/JUTCacheFont/getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi.s"
+#include "asm/JSystem/JUtility/JUTCacheFont/func_802DDBBC.s"
 }
 #pragma pop
 

@@ -445,7 +445,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__15daObjOCTHASHI_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/func_80CA62A4"
+#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/func_80CA62A4.s"
 }
 #pragma pop
 

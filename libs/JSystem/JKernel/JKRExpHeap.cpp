@@ -470,7 +470,7 @@ ASM_FUNCTION(appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRExpHeap/setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock.s"
+#include "asm/JSystem/JKernel/JKRExpHeap/func_802CFE68.s"
 }
 #pragma pop
 
@@ -566,7 +566,7 @@ ASM_FUNCTION(dump_sort__10JKRExpHeapFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRExpHeap/initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc.s"
+#include "asm/JSystem/JKernel/JKRExpHeap/func_802D0810.s"
 }
 #pragma pop
 

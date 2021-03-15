@@ -212,7 +212,7 @@ f32 d_shop_d_shop_camera__lit_3992 = 45.0f;
 #pragma optimizewithasm off
 ASM_FUNCTION(setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz) {
 	nofralloc
-#include "asm/d/shop/d_shop_camera/setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz.s"
+#include "asm/d/shop/d_shop_camera/func_80196544.s"
 }
 #pragma pop
 
@@ -223,7 +223,7 @@ ASM_FUNCTION(setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopA
 #pragma optimizewithasm off
 ASM_FUNCTION(setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz) {
 	nofralloc
-#include "asm/d/shop/d_shop_camera/setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz.s"
+#include "asm/d/shop/d_shop_camera/func_80196608.s"
 }
 #pragma pop
 

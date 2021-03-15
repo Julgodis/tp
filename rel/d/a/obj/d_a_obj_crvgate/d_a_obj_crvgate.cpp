@@ -527,7 +527,7 @@ ASM_FUNCTION(daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c) {
 #pragma optimizewithasm off
 ASM_FUNCTION(Create__14daObjCRVGATE_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD2E88"
+#include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD2E88.s"
 }
 #pragma pop
 

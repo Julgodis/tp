@@ -139,7 +139,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A17C.s"
 }
 #pragma pop
 
@@ -150,7 +150,7 @@ ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma optimizewithasm off
 ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A1D8.s"
 }
 #pragma pop
 
@@ -216,7 +216,7 @@ ASM_FUNCTION(__CreateHeap__14daObjWStatue_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__14daObjWStatue_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A47C"
+#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A47C.s"
 }
 #pragma pop
 

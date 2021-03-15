@@ -165,7 +165,7 @@ void* const __vt__Q214JStudio_JStage15TAdaptor_camera[30] = {
 #pragma optimizewithasm off
 ASM_FUNCTION(__ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/__ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028B8A0.s"
 }
 #pragma pop
 
@@ -261,7 +261,7 @@ ASM_FUNCTION(adaptor_do_data__Q214JStudio_JStage15TAdaptor_cameraFPCvUlPCvUl) {
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BBD0.s"
 }
 #pragma pop
 
@@ -272,7 +272,7 @@ ASM_FUNCTION(adaptor_do_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4d
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BC14.s"
 }
 #pragma pop
 
@@ -283,7 +283,7 @@ ASM_FUNCTION(adaptor_do_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStu
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BC70.s"
 }
 #pragma pop
 
@@ -294,7 +294,7 @@ ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_cameraFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BCEC.s"
 }
 #pragma pop
 
@@ -305,7 +305,7 @@ ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage15TAdaptor_cameraFQ37
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_TARGET_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_TARGET_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BD00.s"
 }
 #pragma pop
 
@@ -316,7 +316,7 @@ ASM_FUNCTION(adaptor_do_TARGET_PARENT__Q214JStudio_JStage15TAdaptor_cameraFQ37JS
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_TARGET_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_TARGET_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BD44.s"
 }
 #pragma pop
 
@@ -327,7 +327,7 @@ ASM_FUNCTION(adaptor_do_TARGET_PARENT_NODE__Q214JStudio_JStage15TAdaptor_cameraF
 #pragma optimizewithasm off
 ASM_FUNCTION(adaptor_do_TARGET_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/adaptor_do_TARGET_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_cameraFQ37JStudio4data15TEOperationDataPCvUl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BDA0.s"
 }
 #pragma pop
 
@@ -338,7 +338,7 @@ ASM_FUNCTION(adaptor_do_TARGET_PARENT_ENABLE__Q214JStudio_JStage15TAdaptor_camer
 #pragma optimizewithasm off
 ASM_FUNCTION(setJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/setJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BDBC.s"
 }
 #pragma pop
 
@@ -349,7 +349,7 @@ ASM_FUNCTION(setJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8
 #pragma optimizewithasm off
 ASM_FUNCTION(getJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/getJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BEB8.s"
 }
 #pragma pop
 
@@ -360,7 +360,7 @@ ASM_FUNCTION(getJSG_position___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8
 #pragma optimizewithasm off
 ASM_FUNCTION(setJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/setJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028BFBC.s"
 }
 #pragma pop
 
@@ -371,7 +371,7 @@ ASM_FUNCTION(setJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JS
 #pragma optimizewithasm off
 ASM_FUNCTION(getJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl) {
 	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/getJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ27JStudio8TControl.s"
+#include "asm/JSystem/JStudio/JStudio_JStage/object-camera/func_8028C09C.s"
 }
 #pragma pop
 

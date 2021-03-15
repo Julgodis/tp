@@ -140,7 +140,7 @@ ASM_FUNCTION(create1st__14daObjLv4Chan_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_obj_ci) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_obj_ci.s"
+#include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C634CC.s"
 }
 #pragma pop
 
@@ -206,7 +206,7 @@ ASM_FUNCTION(Create__14daObjLv4Chan_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi.s"
+#include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C6449C.s"
 }
 #pragma pop
 

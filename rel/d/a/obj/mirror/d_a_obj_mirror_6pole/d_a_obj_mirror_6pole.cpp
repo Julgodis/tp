@@ -111,7 +111,7 @@ ASM_FUNCTION(setBaseMtx__18daObjMirror6Pole_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c) {
 	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c.s"
+#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/func_80C95F50.s"
 }
 #pragma pop
 

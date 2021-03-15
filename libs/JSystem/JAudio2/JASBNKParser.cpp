@@ -163,7 +163,7 @@ f32 JASBNKParser__lit_1047 = 0.5f;
 #pragma optimizewithasm off
 ASM_FUNCTION(findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc) {
 	nofralloc
-#include "asm/JSystem/JAudio2/JASBNKParser/findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc.s"
+#include "asm/JSystem/JAudio2/JASBNKParser/func_80299E68.s"
 }
 #pragma pop
 

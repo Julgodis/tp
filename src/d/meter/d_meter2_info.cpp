@@ -753,7 +753,7 @@ ASM_FUNCTION(getItemType__13dMeter2Info_cFUc) {
 #pragma optimizewithasm off
 ASM_FUNCTION(readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei) {
 	nofralloc
-#include "asm/d/meter/d_meter2_info/readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei.s"
+#include "asm/d/meter/d_meter2_info/func_8021CF08.s"
 }
 #pragma pop
 

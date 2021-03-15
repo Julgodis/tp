@@ -156,7 +156,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CD9E84.s"
 }
 #pragma pop
 
@@ -167,7 +167,7 @@ ASM_FUNCTION(keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD
 #pragma optimizewithasm off
 ASM_FUNCTION(keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
+#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CD9EE0.s"
 }
 #pragma pop
 
@@ -222,7 +222,7 @@ ASM_FUNCTION(__CreateHeap__7daKey_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__7daKey_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDA164"
+#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDA164.s"
 }
 #pragma pop
 

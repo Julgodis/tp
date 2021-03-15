@@ -100,7 +100,7 @@ ASM_FUNCTION(Create__12daObjSword_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjSword_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFD67C"
+#include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFD67C.s"
 }
 #pragma pop
 

@@ -379,7 +379,7 @@ ASM_FUNCTION(SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj) {
 #pragma optimizewithasm off
 ASM_FUNCTION(SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts) {
 	nofralloc
-#include "asm/SSystem/SComponent/c_cc_s/SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts.s"
+#include "asm/SSystem/SComponent/c_cc_s/func_80265DF8.s"
 }
 #pragma pop
 
@@ -390,7 +390,7 @@ ASM_FUNCTION(SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cC
 #pragma optimizewithasm off
 ASM_FUNCTION(SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz) {
 	nofralloc
-#include "asm/SSystem/SComponent/c_cc_s/SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz.s"
+#include "asm/SSystem/SComponent/c_cc_s/func_80265DFC.s"
 }
 #pragma pop
 
@@ -412,7 +412,7 @@ ASM_FUNCTION(ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP
 #pragma optimizewithasm off
 ASM_FUNCTION(ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts) {
 	nofralloc
-#include "asm/SSystem/SComponent/c_cc_s/ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts.s"
+#include "asm/SSystem/SComponent/c_cc_s/func_80265E08.s"
 }
 #pragma pop
 

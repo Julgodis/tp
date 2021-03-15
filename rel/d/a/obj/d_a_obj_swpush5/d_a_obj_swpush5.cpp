@@ -207,7 +207,7 @@ ASM_FUNCTION(CreateHeap__10daObjSw5_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__10daObjSw5_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/func_8059BB1C"
+#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/func_8059BB1C.s"
 }
 #pragma pop
 

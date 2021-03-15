@@ -123,7 +123,7 @@ ASM_FUNCTION(CreateHeap__11daObjBmSh_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__11daObjBmSh_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/func_80BB9CC0"
+#include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/func_80BB9CC0.s"
 }
 #pragma pop
 

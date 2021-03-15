@@ -294,7 +294,7 @@ f64 lit_714 = 4503599627370496.0 /* cast u32 to float */;
 #pragma optimizewithasm off
 ASM_FUNCTION(updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams) {
 	nofralloc
-#include "asm/JSystem/JAudio2/JASChannel/updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams.s"
+#include "asm/JSystem/JAudio2/JASChannel/func_8029AD38.s"
 }
 #pragma pop
 

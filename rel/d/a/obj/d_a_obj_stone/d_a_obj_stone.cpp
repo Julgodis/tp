@@ -232,7 +232,7 @@ ASM_FUNCTION(CreateHeap__12daObjStone_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__12daObjStone_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stone/d_a_obj_stone/func_80CE9840"
+#include "asm/rel/d/a/obj/d_a_obj_stone/d_a_obj_stone/func_80CE9840.s"
 }
 #pragma pop
 

@@ -111,7 +111,7 @@ ASM_FUNCTION(CreateHeap__13daObjWPndlm_cFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daObjWPndlm_cFv) {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/func_80D39638"
+#include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/func_80D39638.s"
 }
 #pragma pop
 

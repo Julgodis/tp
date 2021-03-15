@@ -161,7 +161,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma optimizewithasm off
 ASM_FUNCTION(create__13daTagStatue_cFv) {
 	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/func_805A7424"
+#include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/func_805A7424.s"
 }
 #pragma pop
 
