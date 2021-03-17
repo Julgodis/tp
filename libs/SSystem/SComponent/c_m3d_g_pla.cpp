@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build cM3dGPla (cM3dGPla) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cM3dGPla (['cM3dGPla']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGPla) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGPla) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin ['cM3dGPla']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 	/* 8026F4C4 */ void SetupNP0(Vec const&, Vec const&);
@@ -38,8 +38,8 @@ struct cM3dGPla {
 	/* 8026F624 */ void Set(cM3dGPla const*);
 };
 
-// build cXyz (cXyz) True/True
-// build Vec (Vec) True/True
+// build cXyz (['cXyz']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

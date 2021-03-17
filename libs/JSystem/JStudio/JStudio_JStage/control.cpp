@@ -9,40 +9,82 @@
 // Types:
 // 
 
-// build JStudio_JStage (JStudio_JStage) False/False
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::TAdaptor_light
-// outer dependency: JStudio::TAdaptor_ambientLight
-// outer dependency: JStudio::TAdaptor_actor
-// outer dependency: JStudio::TAdaptor_fog
-// outer dependency: JStudio::TAdaptor_camera
-/* top-level dependencies (end JStudio) */
+// build JStudio_JStage (['JStudio_JStage']) False/False
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
+struct JStage {
+	// build TSystem (['JStage', 'TSystem']) False/False
+	/* dependencies (begin ['JStage', 'TSystem']) */
+	/* dependencies (end ['JStage', 'TSystem']) */
+	struct TSystem {
+	};
+
+	// build TActor (['JStage', 'TActor']) False/False
+	/* dependencies (begin ['JStage', 'TActor']) */
+	/* dependencies (end ['JStage', 'TActor']) */
+	struct TActor {
+	};
+
+	// build TAmbientLight (['JStage', 'TAmbientLight']) False/False
+	/* dependencies (begin ['JStage', 'TAmbientLight']) */
+	/* dependencies (end ['JStage', 'TAmbientLight']) */
+	struct TAmbientLight {
+	};
+
+	// build TCamera (['JStage', 'TCamera']) False/False
+	/* dependencies (begin ['JStage', 'TCamera']) */
+	/* dependencies (end ['JStage', 'TCamera']) */
+	struct TCamera {
+	};
+
+	// build TFog (['JStage', 'TFog']) False/False
+	/* dependencies (begin ['JStage', 'TFog']) */
+	/* dependencies (end ['JStage', 'TFog']) */
+	struct TFog {
+	};
+
+	// build TLight (['JStage', 'TLight']) False/False
+	/* dependencies (begin ['JStage', 'TLight']) */
+	/* dependencies (end ['JStage', 'TLight']) */
+	struct TLight {
+	};
+
+};
+
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'TAdaptor_camera')
+// outer dependency: ('JStudio', 'TAdaptor_actor')
+// outer dependency: ('JStudio', 'TAdaptor_ambientLight')
+// outer dependency: ('JStudio', 'TAdaptor_light')
+// outer dependency: ('JStudio', 'TAdaptor_fog')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TObject (JStudio::TObject) False/False
-	/* dependencies (begin JStudio::TObject) */
-	/* dependencies (end JStudio::TObject) */
+	// build TObject (['JStudio', 'TObject']) False/False
+	/* dependencies (begin ['JStudio', 'TObject']) */
+	/* dependencies (end ['JStudio', 'TObject']) */
 	struct TObject {
 	};
 
-	// build stb (JStudio::stb) False/False
-	/* dependencies (begin JStudio::stb) */
-	/* dependencies (end JStudio::stb) */
+	// build stb (['JStudio', 'stb']) False/False
+	/* dependencies (begin ['JStudio', 'stb']) */
+	/* dependencies (end ['JStudio', 'stb']) */
 	struct stb {
-		// build data (JStudio::stb::data) False/False
-		/* dependencies (begin JStudio::stb::data) */
-		/* dependencies (end JStudio::stb::data) */
+		// build data (['JStudio', 'stb', 'data']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'data']) */
+		/* dependencies (end ['JStudio', 'stb', 'data']) */
 		struct data {
-			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
-			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
@@ -50,228 +92,198 @@ namespace JStudio {
 
 	};
 
-	// build TCreateObject (JStudio::TCreateObject) False/False
-	/* dependencies (begin JStudio::TCreateObject) */
-	/* dependencies (end JStudio::TCreateObject) */
+	// build TCreateObject (['JStudio', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio', 'TCreateObject']) */
+	/* dependencies (end ['JStudio', 'TCreateObject']) */
 	struct TCreateObject {
 		/* 80285488 */ ~TCreateObject();
 	};
 
-	// build TObject_actor (JStudio::TObject_actor) False/False
-	/* dependencies (begin JStudio::TObject_actor) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_actor)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_actor (JStudio::TAdaptor_actor) True False (for JStudio::TObject_actor)
-	// build TAdaptor_actor (JStudio::TAdaptor_actor) False/False
-	/* dependencies (begin JStudio::TAdaptor_actor) */
-	/* dependencies (end JStudio::TAdaptor_actor) */
+	// build TObject_actor (['JStudio', 'TObject_actor']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_actor']) */
+	// inner dependency: 1 ('JStudio', 'TAdaptor_actor') (for ['JStudio', 'TObject_actor'])
+	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_actor']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
 	};
 
-	/* dependencies (end JStudio::TObject_actor) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_actor'])
+	// build stb (['JStudio', 'stb']) True/True
+	/* dependencies (end ['JStudio', 'TObject_actor']) */
 	struct TObject_actor {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_actor
+		// ('JStudio', 'TAdaptor_actor')
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80286910 */ TObject_actor(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_actor*);
 	};
 
-	// build TAdaptor_actor (JStudio::TAdaptor_actor) True/True
-	// build TObject_ambientLight (JStudio::TObject_ambientLight) False/False
-	/* dependencies (begin JStudio::TObject_ambientLight) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_ambientLight)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True False (for JStudio::TObject_ambientLight)
-	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) False/False
-	/* dependencies (begin JStudio::TAdaptor_ambientLight) */
-	/* dependencies (end JStudio::TAdaptor_ambientLight) */
+	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) True/True
+	// build TObject_ambientLight (['JStudio', 'TObject_ambientLight']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_ambientLight']) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_ambientLight'])
+	// build stb (['JStudio', 'stb']) True/True
+	// inner dependency: 1 ('JStudio', 'TAdaptor_ambientLight') (for ['JStudio', 'TObject_ambientLight'])
+	// build TAdaptor_ambientLight (['JStudio', 'TAdaptor_ambientLight']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_ambientLight']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_ambientLight']) */
 	struct TAdaptor_ambientLight {
 	};
 
-	/* dependencies (end JStudio::TObject_ambientLight) */
+	/* dependencies (end ['JStudio', 'TObject_ambientLight']) */
 	struct TObject_ambientLight {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_ambientLight
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+		// ('JStudio', 'TAdaptor_ambientLight')
 		/* 80286CFC */ TObject_ambientLight(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_ambientLight*);
 	};
 
-	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True/True
-	// build TObject_camera (JStudio::TObject_camera) False/False
-	/* dependencies (begin JStudio::TObject_camera) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_camera)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_camera (JStudio::TAdaptor_camera) True False (for JStudio::TObject_camera)
-	// build TAdaptor_camera (JStudio::TAdaptor_camera) False/False
-	/* dependencies (begin JStudio::TAdaptor_camera) */
-	/* dependencies (end JStudio::TAdaptor_camera) */
+	// build TAdaptor_ambientLight (['JStudio', 'TAdaptor_ambientLight']) True/True
+	// build TObject_camera (['JStudio', 'TObject_camera']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_camera']) */
+	// inner dependency: 1 ('JStudio', 'TAdaptor_camera') (for ['JStudio', 'TObject_camera'])
+	// build TAdaptor_camera (['JStudio', 'TAdaptor_camera']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_camera']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_camera']) */
 	struct TAdaptor_camera {
 	};
 
-	/* dependencies (end JStudio::TObject_camera) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_camera'])
+	// build stb (['JStudio', 'stb']) True/True
+	/* dependencies (end ['JStudio', 'TObject_camera']) */
 	struct TObject_camera {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_camera
+		// ('JStudio', 'TAdaptor_camera')
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80286E7C */ TObject_camera(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_camera*);
 	};
 
-	// build TAdaptor_camera (JStudio::TAdaptor_camera) True/True
-	// build TObject_fog (JStudio::TObject_fog) False/False
-	/* dependencies (begin JStudio::TObject_fog) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_fog)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_fog (JStudio::TAdaptor_fog) True False (for JStudio::TObject_fog)
-	// build TAdaptor_fog (JStudio::TAdaptor_fog) False/False
-	/* dependencies (begin JStudio::TAdaptor_fog) */
-	/* dependencies (end JStudio::TAdaptor_fog) */
+	// build TAdaptor_camera (['JStudio', 'TAdaptor_camera']) True/True
+	// build TObject_fog (['JStudio', 'TObject_fog']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_fog']) */
+	// inner dependency: 1 ('JStudio', 'TAdaptor_fog') (for ['JStudio', 'TObject_fog'])
+	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_fog']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_fog']) */
 	struct TAdaptor_fog {
 	};
 
-	/* dependencies (end JStudio::TObject_fog) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_fog'])
+	// build stb (['JStudio', 'stb']) True/True
+	/* dependencies (end ['JStudio', 'TObject_fog']) */
 	struct TObject_fog {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_fog
+		// ('JStudio', 'TAdaptor_fog')
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 802871DC */ TObject_fog(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_fog*);
 	};
 
-	// build TAdaptor_fog (JStudio::TAdaptor_fog) True/True
-	// build TObject_light (JStudio::TObject_light) False/False
-	/* dependencies (begin JStudio::TObject_light) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_light)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_light (JStudio::TAdaptor_light) True False (for JStudio::TObject_light)
-	// build TAdaptor_light (JStudio::TAdaptor_light) False/False
-	/* dependencies (begin JStudio::TAdaptor_light) */
-	/* dependencies (end JStudio::TAdaptor_light) */
+	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) True/True
+	// build TObject_light (['JStudio', 'TObject_light']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_light']) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_light'])
+	// build stb (['JStudio', 'stb']) True/True
+	// inner dependency: 1 ('JStudio', 'TAdaptor_light') (for ['JStudio', 'TObject_light'])
+	// build TAdaptor_light (['JStudio', 'TAdaptor_light']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_light']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_light']) */
 	struct TAdaptor_light {
 	};
 
-	/* dependencies (end JStudio::TObject_light) */
+	/* dependencies (end ['JStudio', 'TObject_light']) */
 	struct TObject_light {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_light
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+		// ('JStudio', 'TAdaptor_light')
 		/* 80287368 */ TObject_light(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_light*);
 	};
 
-	// build TAdaptor_light (JStudio::TAdaptor_light) True/True
+	// build TAdaptor_light (['JStudio', 'TAdaptor_light']) True/True
 };
 
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
-struct JStage {
-	// build TSystem (JStage::TSystem) False/False
-	/* dependencies (begin JStage::TSystem) */
-	/* dependencies (end JStage::TSystem) */
-	struct TSystem {
-	};
-
-	// build TActor (JStage::TActor) False/False
-	/* dependencies (begin JStage::TActor) */
-	/* dependencies (end JStage::TActor) */
-	struct TActor {
-	};
-
-	// build TAmbientLight (JStage::TAmbientLight) False/False
-	/* dependencies (begin JStage::TAmbientLight) */
-	/* dependencies (end JStage::TAmbientLight) */
-	struct TAmbientLight {
-	};
-
-	// build TCamera (JStage::TCamera) False/False
-	/* dependencies (begin JStage::TCamera) */
-	/* dependencies (end JStage::TCamera) */
-	struct TCamera {
-	};
-
-	// build TFog (JStage::TFog) False/False
-	/* dependencies (begin JStage::TFog) */
-	/* dependencies (end JStage::TFog) */
-	struct TFog {
-	};
-
-	// build TLight (JStage::TLight) False/False
-	/* dependencies (begin JStage::TLight) */
-	/* dependencies (end JStage::TLight) */
-	struct TLight {
-	};
-
-};
-
-// build JStage (JStage) True/True
-// build JStage (JStage) True/True
-// build JStudio (JStudio) True/True
-// build JStage (JStage) True/True
-// build JStage (JStage) True/True
-// build JStage (JStage) True/True
-/* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStage::TSystem
-// outer dependency: JStage::TFog
-// outer dependency: JStage::TActor
-// outer dependency: JStudio::TObject
-// outer dependency: JStage::TLight
-// outer dependency: JStage::TAmbientLight
-// outer dependency: JStage::TCamera
-/* top-level dependencies (end JStudio_JStage) */
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) True/True
+// build JStage (['JStage']) True/True
+// build JStage (['JStage']) True/True
+// build JStage (['JStage']) True/True
+// build JStage (['JStage']) True/True
+/* top-level dependencies (begin ['JStudio_JStage']) */
+// outer dependency: ('JStage', 'TSystem')
+// outer dependency: ('JStudio', 'TObject')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+// outer dependency: ('JStage', 'TLight')
+// outer dependency: ('JStage', 'TFog')
+// outer dependency: ('JStage', 'TActor')
+// outer dependency: ('JStage', 'TAmbientLight')
+// outer dependency: ('JStage', 'TCamera')
+/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// build TCreateObject (JStudio_JStage::TCreateObject) False/False
-	/* dependencies (begin JStudio_JStage::TCreateObject) */
-	/* dependencies (end JStudio_JStage::TCreateObject) */
+	// build TCreateObject (['JStudio_JStage', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TCreateObject']) */
+	// inner dependency: 0 ('JStudio', 'TObject') (for ['JStudio_JStage', 'TCreateObject'])
+	// inner dependency: 0 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio_JStage', 'TCreateObject'])
+	/* dependencies (end ['JStudio_JStage', 'TCreateObject']) */
 	struct TCreateObject {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TObject
+		// ('JStudio', 'TObject')
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80289B00 */ ~TCreateObject();
 		/* 80289B60 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 	};
 
-	// build TAdaptor_actor (JStudio_JStage::TAdaptor_actor) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_actor) */
-	/* dependencies (end JStudio_JStage::TAdaptor_actor) */
+	// build TAdaptor_actor (['JStudio_JStage', 'TAdaptor_actor']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_actor']) */
+	// inner dependency: 0 ('JStage', 'TActor') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
-		// JStage::TActor
-		// JStage::TSystem
+		// ('JStage', 'TActor')
+		// ('JStage', 'TSystem')
 		/* 8028A5F0 */ TAdaptor_actor(JStage::TSystem const*, JStage::TActor*);
 	};
 
-	// build TAdaptor_ambientLight (JStudio_JStage::TAdaptor_ambientLight) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_ambientLight) */
-	/* dependencies (end JStudio_JStage::TAdaptor_ambientLight) */
+	// build TAdaptor_ambientLight (['JStudio_JStage', 'TAdaptor_ambientLight']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_ambientLight']) */
+	// inner dependency: 0 ('JStage', 'TAmbientLight') (for ['JStudio_JStage', 'TAdaptor_ambientLight'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_ambientLight'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_ambientLight']) */
 	struct TAdaptor_ambientLight {
-		// JStage::TAmbientLight
-		// JStage::TSystem
+		// ('JStage', 'TAmbientLight')
+		// ('JStage', 'TSystem')
 		/* 8028B610 */ TAdaptor_ambientLight(JStage::TSystem const*, JStage::TAmbientLight*);
 	};
 
-	// build TAdaptor_camera (JStudio_JStage::TAdaptor_camera) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_camera) */
-	/* dependencies (end JStudio_JStage::TAdaptor_camera) */
+	// build TAdaptor_camera (['JStudio_JStage', 'TAdaptor_camera']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_camera']) */
+	// inner dependency: 0 ('JStage', 'TCamera') (for ['JStudio_JStage', 'TAdaptor_camera'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_camera'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_camera']) */
 	struct TAdaptor_camera {
-		// JStage::TCamera
-		// JStage::TSystem
+		// ('JStage', 'TCamera')
+		// ('JStage', 'TSystem')
 		/* 8028B8A0 */ TAdaptor_camera(JStage::TSystem const*, JStage::TCamera*);
 	};
 
-	// build TAdaptor_fog (JStudio_JStage::TAdaptor_fog) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_fog) */
-	/* dependencies (end JStudio_JStage::TAdaptor_fog) */
+	// build TAdaptor_fog (['JStudio_JStage', 'TAdaptor_fog']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_fog']) */
+	// inner dependency: 0 ('JStage', 'TFog') (for ['JStudio_JStage', 'TAdaptor_fog'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_fog'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_fog']) */
 	struct TAdaptor_fog {
-		// JStage::TFog
-		// JStage::TSystem
+		// ('JStage', 'TFog')
+		// ('JStage', 'TSystem')
 		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
 	};
 
-	// build TAdaptor_light (JStudio_JStage::TAdaptor_light) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_light) */
-	/* dependencies (end JStudio_JStage::TAdaptor_light) */
+	// build TAdaptor_light (['JStudio_JStage', 'TAdaptor_light']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_light']) */
+	// inner dependency: 0 ('JStage', 'TLight') (for ['JStudio_JStage', 'TAdaptor_light'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_light'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_light']) */
 	struct TAdaptor_light {
-		// JStage::TLight
-		// JStage::TSystem
+		// ('JStage', 'TLight')
+		// ('JStage', 'TSystem')
 		/* 8028CB50 */ TAdaptor_light(JStage::TSystem const*, JStage::TLight*);
 	};
 
 };
 
-// build JStudio (JStudio) True/True
-// build JStage (JStage) True/True
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) True/True
 // 
 // Forward References:
 // 

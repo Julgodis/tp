@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build dBgS_GrpPassChk (dBgS_GrpPassChk) False/False
-/* top-level dependencies (begin dBgS_GrpPassChk) */
-/* top-level dependencies (end dBgS_GrpPassChk) */
+// build dBgS_GrpPassChk (['dBgS_GrpPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_GrpPassChk']) */
+/* top-level dependencies (end ['dBgS_GrpPassChk']) */
 struct dBgS_GrpPassChk {
 	/* 80077BA0 */ dBgS_GrpPassChk();
 	/* 80077BC4 */ ~dBgS_GrpPassChk();
 };
 
-// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
-/* top-level dependencies (begin cBgS_GrpPassChk) */
-/* top-level dependencies (end cBgS_GrpPassChk) */
+// build cBgS_GrpPassChk (['cBgS_GrpPassChk']) False/False
+/* top-level dependencies (begin ['cBgS_GrpPassChk']) */
+/* top-level dependencies (end ['cBgS_GrpPassChk']) */
 struct cBgS_GrpPassChk {
 	/* 80077C20 */ ~cBgS_GrpPassChk();
 };

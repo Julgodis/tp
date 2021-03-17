@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A4AC4 */ JAISoundHandle();
 };

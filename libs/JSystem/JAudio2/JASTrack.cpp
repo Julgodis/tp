@@ -9,54 +9,14 @@
 // Types:
 // 
 
-// build JASTrack (JASTrack) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
-struct JASSoundParams {
-};
-
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
-struct JASOscillator {
-	// build Point (JASOscillator::Point) False/False
-	/* dependencies (begin JASOscillator::Point) */
-	/* dependencies (end JASOscillator::Point) */
-	struct Point {
-	};
-
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
-	struct Data {
-	};
-
-};
-
-// build JASChannel (JASChannel) False/False
-// build JASOscillator (JASOscillator) True/True
-/* top-level dependencies (begin JASChannel) */
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASChannel) */
-struct JASChannel {
-	// JASOscillator::Data
-	/* 8029AAD0 */ void release(u16);
-	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
-	/* 8029AB98 */ void setMixConfig(u32, u16);
-	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
-	/* 8029BBFC */ void free();
-};
-
-// build JASTrack (JASTrack) True/False
-struct JASTrack;
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
+// build JASTrack (['JASTrack']) False/False
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
+	// build TChannel (['JASDsp', 'TChannel']) False/False
+	/* dependencies (begin ['JASDsp', 'TChannel']) */
+	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
 		/* 8029E00C */ void setFilterMode(u16);
 		/* 8029E044 */ void setIIRFilterParam(s16*);
@@ -66,25 +26,65 @@ struct JASDsp {
 
 };
 
-/* top-level dependencies (begin JASTrack) */
-// outer dependency: JASSoundParams
-// outer dependency: JASOscillator::Point
-// outer dependency: JASChannel
-// outer dependency: JASTrack::TChannelMgr
-// outer dependency: JASDsp::TChannel
-/* top-level dependencies (end JASTrack) */
+// build JASTrack (['JASTrack']) True/False
+struct JASTrack;
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
+struct JASSoundParams {
+};
+
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
+struct JASOscillator {
+	// build Point (['JASOscillator', 'Point']) False/False
+	/* dependencies (begin ['JASOscillator', 'Point']) */
+	/* dependencies (end ['JASOscillator', 'Point']) */
+	struct Point {
+	};
+
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
+	struct Data {
+	};
+
+};
+
+// build JASChannel (['JASChannel']) False/False
+// build JASOscillator (['JASOscillator']) True/True
+/* top-level dependencies (begin ['JASChannel']) */
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASChannel']) */
+struct JASChannel {
+	// ('JASOscillator', 'Data')
+	/* 8029AAD0 */ void release(u16);
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+	/* 8029AB98 */ void setMixConfig(u32, u16);
+	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
+	/* 8029BBFC */ void free();
+};
+
+/* top-level dependencies (begin ['JASTrack']) */
+// outer dependency: ('JASDsp', 'TChannel')
+// outer dependency: ('JASTrack', 'TChannelMgr')
+// outer dependency: ('JASSoundParams',)
+// outer dependency: ('JASOscillator', 'Point')
+// outer dependency: ('JASChannel',)
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// JASSoundParams
-	// JASChannel
-	// JASTrack::TChannelMgr
-	// JASDsp::TChannel
-	// JASOscillator::Point
-	// build TChannelMgr (JASTrack::TChannelMgr) False/False
-	/* dependencies (begin JASTrack::TChannelMgr) */
-	// inner dependency:  (JASTrack) False False (for JASTrack::TChannelMgr)
-	/* dependencies (end JASTrack::TChannelMgr) */
+	// ('JASTrack', 'TChannelMgr')
+	// ('JASOscillator', 'Point')
+	// ('JASDsp', 'TChannel')
+	// ('JASSoundParams',)
+	// ('JASChannel',)
+	// build TChannelMgr (['JASTrack', 'TChannelMgr']) False/False
+	/* dependencies (begin ['JASTrack', 'TChannelMgr']) */
+	// inner dependency: 0 ('JASTrack',) (for ['JASTrack', 'TChannelMgr'])
+	/* dependencies (end ['JASTrack', 'TChannelMgr']) */
 	struct TChannelMgr {
-		// JASTrack
+		// ('JASTrack',)
 		/* 802930DC */ TChannelMgr(JASTrack*);
 		/* 80293148 */ void init();
 		/* 802931B0 */ void releaseAll();
@@ -92,21 +92,21 @@ struct JASTrack {
 		/* 802932A0 */ void setPauseFlag(bool);
 	};
 
-	// build TList (JASTrack::TList) False/False
-	/* dependencies (begin JASTrack::TList) */
-	// inner dependency:  (JASTrack) False False (for JASTrack::TList)
-	/* dependencies (end JASTrack::TList) */
+	// build TList (['JASTrack', 'TList']) False/False
+	/* dependencies (begin ['JASTrack', 'TList']) */
+	// inner dependency: 0 ('JASTrack',) (for ['JASTrack', 'TList'])
+	/* dependencies (end ['JASTrack', 'TList']) */
 	struct TList {
-		// JASTrack
+		// ('JASTrack',)
 		/* 80292F6C */ void cbSeqMain(void*);
 		/* 80292F90 */ void append(JASTrack*);
 		/* 8029301C */ void seqMain();
 		/* 8029345C */ ~TList();
 	};
 
-	// build MoveParam_ (JASTrack::MoveParam_) False/False
-	/* dependencies (begin JASTrack::MoveParam_) */
-	/* dependencies (end JASTrack::MoveParam_) */
+	// build MoveParam_ (['JASTrack', 'MoveParam_']) False/False
+	/* dependencies (begin ['JASTrack', 'MoveParam_']) */
+	/* dependencies (end ['JASTrack', 'MoveParam_']) */
 	struct MoveParam_ {
 		/* 802932C8 */ MoveParam_();
 	};
@@ -165,20 +165,20 @@ struct JASTrack {
 	/* 80292E9C */ void seqMain();
 };
 
-// build JASSoundParams (JASSoundParams) True/True
-// build JASChannel (JASChannel) True/True
-// build JASOscillator (JASOscillator) True/True
-// build JASDsp (JASDsp) True/True
-// build JASDefaultBankTable (JASDefaultBankTable) False/False
-/* top-level dependencies (begin JASDefaultBankTable) */
-/* top-level dependencies (end JASDefaultBankTable) */
+// build JASSoundParams (['JASSoundParams']) True/True
+// build JASChannel (['JASChannel']) True/True
+// build JASOscillator (['JASOscillator']) True/True
+// build JASDsp (['JASDsp']) True/True
+// build JASDefaultBankTable (['JASDefaultBankTable']) False/False
+/* top-level dependencies (begin ['JASDefaultBankTable']) */
+/* top-level dependencies (end ['JASDefaultBankTable']) */
 struct JASDefaultBankTable {
 	/* 802934B4 */ ~JASDefaultBankTable();
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -186,9 +186,9 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASTrackPort (JASTrackPort) False/False
-/* top-level dependencies (begin JASTrackPort) */
-/* top-level dependencies (end JASTrackPort) */
+// build JASTrackPort (['JASTrackPort']) False/False
+/* top-level dependencies (begin ['JASTrackPort']) */
+/* top-level dependencies (end ['JASTrackPort']) */
 struct JASTrackPort {
 	/* 8029354C */ void init();
 	/* 8029357C */ void readImport(u32);
@@ -197,28 +197,28 @@ struct JASTrackPort {
 	/* 802935E8 */ void writeExport(u32, u16);
 };
 
-// build JASRegisterParam (JASRegisterParam) False/False
-/* top-level dependencies (begin JASRegisterParam) */
-/* top-level dependencies (end JASRegisterParam) */
+// build JASRegisterParam (['JASRegisterParam']) False/False
+/* top-level dependencies (begin ['JASRegisterParam']) */
+/* top-level dependencies (end ['JASRegisterParam']) */
 struct JASRegisterParam {
 	/* 80293644 */ JASRegisterParam();
 	/* 80293664 */ void init();
 };
 
-// build JASSeqCtrl (JASSeqCtrl) False/False
-// build JASTrack (JASTrack) True/True
-// build JASSeqCtrl (JASSeqCtrl) True/False
+// build JASSeqCtrl (['JASSeqCtrl']) False/False
+// build JASTrack (['JASTrack']) True/True
+// build JASSeqCtrl (['JASSeqCtrl']) True/False
 struct JASSeqCtrl;
-/* top-level dependencies (begin JASSeqCtrl) */
-// outer dependency: JASTrack
-// outer dependency: JASSeqCtrl::IntrType
-/* top-level dependencies (end JASSeqCtrl) */
+/* top-level dependencies (begin ['JASSeqCtrl']) */
+// outer dependency: ('JASTrack',)
+// outer dependency: ('JASSeqCtrl', 'IntrType')
+/* top-level dependencies (end ['JASSeqCtrl']) */
 struct JASSeqCtrl {
-	// JASTrack
-	// JASSeqCtrl::IntrType
-	// build IntrType (JASSeqCtrl::IntrType) False/False
-	/* dependencies (begin JASSeqCtrl::IntrType) */
-	/* dependencies (end JASSeqCtrl::IntrType) */
+	// ('JASTrack',)
+	// ('JASSeqCtrl', 'IntrType')
+	// build IntrType (['JASSeqCtrl', 'IntrType']) False/False
+	/* dependencies (begin ['JASSeqCtrl', 'IntrType']) */
+	/* dependencies (end ['JASSeqCtrl', 'IntrType']) */
 	struct IntrType {
 	};
 
@@ -229,40 +229,40 @@ struct JASSeqCtrl {
 	/* 80293ABC */ void interrupt(JASSeqCtrl::IntrType);
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 	/* 8029C9F0 */ void getSubFrames();
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -271,7 +271,7 @@ struct JGadget {
 		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 

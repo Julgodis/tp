@@ -9,23 +9,23 @@
 // Types:
 // 
 
-// build daShopItem_c (daShopItem_c) False/False
-/* top-level dependencies (begin daShopItem_c) */
-/* top-level dependencies (end daShopItem_c) */
+// build daShopItem_c (['daShopItem_c']) False/False
+/* top-level dependencies (begin ['daShopItem_c']) */
+/* top-level dependencies (end ['daShopItem_c']) */
 struct daShopItem_c {
 	/* 80037C14 */ void getRotateP();
 	/* 80037C1C */ void getPosP();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build daItemBase_c (daItemBase_c) False/False
-/* top-level dependencies (begin daItemBase_c) */
-/* top-level dependencies (end daItemBase_c) */
+// build daItemBase_c (['daItemBase_c']) False/False
+/* top-level dependencies (begin ['daItemBase_c']) */
+/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
 };

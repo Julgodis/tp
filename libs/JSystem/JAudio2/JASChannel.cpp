@@ -9,54 +9,24 @@
 // Types:
 // 
 
-// build JASChannel (JASChannel) False/False
-// build JASOscillator (JASOscillator) False/False
-// build JASOscillator (JASOscillator) True/False
-struct JASOscillator;
-/* top-level dependencies (begin JASOscillator) */
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASOscillator) */
-struct JASOscillator {
-	// JASOscillator::Data
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
-	struct Data {
-	};
-
-	// build EffectParams (JASOscillator::EffectParams) False/False
-	/* dependencies (begin JASOscillator::EffectParams) */
-	/* dependencies (end JASOscillator::EffectParams) */
-	struct EffectParams {
-	};
-
-	/* 8029BE94 */ JASOscillator();
-	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
-	/* 8029BF68 */ void incCounter(f32);
-	/* 8029BFC8 */ void getValue() const;
-	/* 8029BFE4 */ void release();
-	/* 8029C0E0 */ void update();
-};
-
-// build JASOscillator (JASOscillator) True/True
-// build JASChannel (JASChannel) True/False
-struct JASChannel;
-// build JASDsp (JASDsp) False/False
-// build JASWaveInfo (JASWaveInfo) False/False
-/* top-level dependencies (begin JASWaveInfo) */
-/* top-level dependencies (end JASWaveInfo) */
+// build JASChannel (['JASChannel']) False/False
+// build JASDsp (['JASDsp']) False/False
+// build JASWaveInfo (['JASWaveInfo']) False/False
+/* top-level dependencies (begin ['JASWaveInfo']) */
+/* top-level dependencies (end ['JASWaveInfo']) */
 struct JASWaveInfo {
 };
 
-/* top-level dependencies (begin JASDsp) */
-// outer dependency: JASWaveInfo
-/* top-level dependencies (end JASDsp) */
+/* top-level dependencies (begin ['JASDsp']) */
+// outer dependency: ('JASWaveInfo',)
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
+	// build TChannel (['JASDsp', 'TChannel']) False/False
+	/* dependencies (begin ['JASDsp', 'TChannel']) */
+	// inner dependency: 0 ('JASWaveInfo',) (for ['JASDsp', 'TChannel'])
+	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
-		// JASWaveInfo
+		// ('JASWaveInfo',)
 		/* 8029DD8C */ void setWaveInfo(JASWaveInfo const&, u32, u32);
 		/* 8029DEAC */ void setOscInfo(u32);
 		/* 8029DEC4 */ void initAutoMixer();
@@ -70,20 +40,51 @@ struct JASDsp {
 
 };
 
-/* top-level dependencies (begin JASChannel) */
-// outer dependency: JASOscillator::EffectParams
-// outer dependency: JASOscillator::Data
-// outer dependency: JASChannel::PanVector
-// outer dependency: JASDsp::TChannel
-/* top-level dependencies (end JASChannel) */
+// build JASOscillator (['JASOscillator']) False/False
+// build JASOscillator (['JASOscillator']) True/False
+struct JASOscillator;
+/* top-level dependencies (begin ['JASOscillator']) */
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASOscillator']) */
+struct JASOscillator {
+	// ('JASOscillator', 'Data')
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
+	struct Data {
+	};
+
+	// build EffectParams (['JASOscillator', 'EffectParams']) False/False
+	/* dependencies (begin ['JASOscillator', 'EffectParams']) */
+	/* dependencies (end ['JASOscillator', 'EffectParams']) */
+	struct EffectParams {
+	};
+
+	/* 8029BE94 */ JASOscillator();
+	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
+	/* 8029BF68 */ void incCounter(f32);
+	/* 8029BFC8 */ void getValue() const;
+	/* 8029BFE4 */ void release();
+	/* 8029C0E0 */ void update();
+};
+
+// build JASChannel (['JASChannel']) True/False
+struct JASChannel;
+// build JASOscillator (['JASOscillator']) True/True
+/* top-level dependencies (begin ['JASChannel']) */
+// outer dependency: ('JASDsp', 'TChannel')
+// outer dependency: ('JASOscillator', 'Data')
+// outer dependency: ('JASChannel', 'PanVector')
+// outer dependency: ('JASOscillator', 'EffectParams')
+/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// JASOscillator::EffectParams
-	// JASOscillator::Data
-	// JASChannel::PanVector
-	// JASDsp::TChannel
-	// build PanVector (JASChannel::PanVector) False/False
-	/* dependencies (begin JASChannel::PanVector) */
-	/* dependencies (end JASChannel::PanVector) */
+	// ('JASDsp', 'TChannel')
+	// ('JASOscillator', 'Data')
+	// ('JASChannel', 'PanVector')
+	// ('JASOscillator', 'EffectParams')
+	// build PanVector (['JASChannel', 'PanVector']) False/False
+	/* dependencies (begin ['JASChannel', 'PanVector']) */
+	/* dependencies (end ['JASChannel', 'PanVector']) */
 	struct PanVector {
 	};
 
@@ -109,26 +110,26 @@ struct JASChannel {
 	/* 8029BCC0 */ void checkBankDispose() const;
 };
 
-// build JASOscillator (JASOscillator) True/True
-// build JASDsp (JASDsp) True/True
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASOscillator (['JASOscillator']) True/True
+// build JASDsp (['JASDsp']) True/True
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F578 */ void pow2(f32);
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASLfo (JASLfo) False/False
-/* top-level dependencies (begin JASLfo) */
-/* top-level dependencies (end JASLfo) */
+// build JASLfo (['JASLfo']) False/False
+/* top-level dependencies (begin ['JASLfo']) */
+/* top-level dependencies (end ['JASLfo']) */
 struct JASLfo {
 	/* 8029BD14 */ JASLfo();
 	/* 8029BD44 */ void getValue() const;
@@ -136,18 +137,18 @@ struct JASLfo {
 	/* 8029BE2C */ void resetCounter();
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 	/* 8029E150 */ void getChannelLevel_dsp();
 	/* 8029E180 */ void getOutputMode();
 };
 
-// build JASDSPChannel (JASDSPChannel) False/False
-/* top-level dependencies (begin JASDSPChannel) */
-/* top-level dependencies (end JASDSPChannel) */
+// build JASDSPChannel (['JASDSPChannel']) False/False
+/* top-level dependencies (begin ['JASDSPChannel']) */
+/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D320 */ void free();
 	/* 8029D330 */ void start();
@@ -155,7 +156,7 @@ struct JASDSPChannel {
 	/* 8029D534 */ void setPriority(u8);
 };
 
-// build JASWaveInfo (JASWaveInfo) True/True
+// build JASWaveInfo (['JASWaveInfo']) True/True
 // 
 // Forward References:
 // 

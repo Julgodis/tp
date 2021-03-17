@@ -9,50 +9,50 @@
 // Types:
 // 
 
-// build JPAResource (JPAResource) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAResource (['JPAResource']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-/* top-level dependencies (begin JPABaseParticle) */
-// outer dependency: JPAEmitterWorkData
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+/* top-level dependencies (begin ['JPABaseParticle']) */
+// outer dependency: ('JPAEmitterWorkData',)
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// JPAEmitterWorkData
+	// ('JPAEmitterWorkData',)
 	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
 	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 	/* 8027EDD4 */ void processTillStartFrame();
 	/* 8027EE14 */ void processTermination();
 };
 
-/* top-level dependencies (begin JPAResource) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JKRHeap
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAResource) */
+/* top-level dependencies (begin ['JPAResource']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JPABaseParticle',)
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
-	// JPAEmitterWorkData
-	// JKRHeap
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPAEmitterWorkData',)
+	// ('JKRHeap',)
+	// ('JPABaseParticle',)
+	// ('JPABaseEmitter',)
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
 	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
@@ -69,72 +69,72 @@ struct JPAResource {
 	/* 80276A0C */ void calcWorkData_d(JPAEmitterWorkData*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPAFieldBase (JPAFieldBase) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) False/False
-/* top-level dependencies (begin JPAFieldBlock) */
-/* top-level dependencies (end JPAFieldBlock) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+// build JPAFieldBase (['JPAFieldBase']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) False/False
+/* top-level dependencies (begin ['JPAFieldBlock']) */
+/* top-level dependencies (end ['JPAFieldBlock']) */
 struct JPAFieldBlock {
 };
 
-/* top-level dependencies (begin JPAFieldBase) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-/* top-level dependencies (end JPAFieldBase) */
+/* top-level dependencies (begin ['JPAFieldBase']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+/* top-level dependencies (end ['JPAFieldBase']) */
 struct JPAFieldBase {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
 	/* 80276A8C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 };
 
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseShape (JPABaseShape) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-/* top-level dependencies (begin JPABaseShape) */
-// outer dependency: JPAEmitterWorkData
-/* top-level dependencies (end JPABaseShape) */
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseShape (['JPABaseShape']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+/* top-level dependencies (begin ['JPABaseShape']) */
+// outer dependency: ('JPAEmitterWorkData',)
+/* top-level dependencies (end ['JPABaseShape']) */
 struct JPABaseShape {
-	// JPAEmitterWorkData
+	// ('JPAEmitterWorkData',)
 	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
 };
 
-// build JPADynamicsBlock (JPADynamicsBlock) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-/* top-level dependencies (begin JPADynamicsBlock) */
-// outer dependency: JPAEmitterWorkData
-/* top-level dependencies (end JPADynamicsBlock) */
+// build JPADynamicsBlock (['JPADynamicsBlock']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+/* top-level dependencies (begin ['JPADynamicsBlock']) */
+// outer dependency: ('JPAEmitterWorkData',)
+/* top-level dependencies (end ['JPADynamicsBlock']) */
 struct JPADynamicsBlock {
-	// JPAEmitterWorkData
+	// ('JPAEmitterWorkData',)
 	/* 8027BBE8 */ void create(JPAEmitterWorkData*);
 };
 
-// build JPAKeyBlock (JPAKeyBlock) False/False
-/* top-level dependencies (begin JPAKeyBlock) */
-/* top-level dependencies (end JPAKeyBlock) */
+// build JPAKeyBlock (['JPAKeyBlock']) False/False
+/* top-level dependencies (begin ['JPAKeyBlock']) */
+/* top-level dependencies (end ['JPAKeyBlock']) */
 struct JPAKeyBlock {
 	/* 8027D740 */ void calc(f32);
 };
 
-// build JUTTexture (JUTTexture) False/False
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end JUTTexture) */
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build _GXTexMapID (_GXTexMapID) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
 // 
 // Forward References:
 // 

@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build dSmplMdl_draw_c (dSmplMdl_draw_c) False/False
-// build J3DModel (J3DModel) True/True
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build dSmplMdl_draw_c (['dSmplMdl_draw_c']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-/* top-level dependencies (begin dSmplMdl_draw_c) */
-// outer dependency: J3DModel
-// outer dependency: J3DModelData
-/* top-level dependencies (end dSmplMdl_draw_c) */
+// build J3DModel (['J3DModel']) True/True
+/* top-level dependencies (begin ['dSmplMdl_draw_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('J3DModel',)
+/* top-level dependencies (end ['dSmplMdl_draw_c']) */
 struct dSmplMdl_draw_c {
-	// J3DModel
-	// J3DModelData
+	// ('J3DModelData',)
+	// ('J3DModel',)
 	/* 80048CB4 */ dSmplMdl_draw_c();
 	/* 80048D80 */ ~dSmplMdl_draw_c();
 	/* 80048E0C */ void draw();
@@ -38,21 +38,21 @@ struct dSmplMdl_draw_c {
 	/* 80049058 */ void removeModel(J3DModelData*, int);
 };
 
-// build diff_model_c (diff_model_c) False/False
-// build modelList_c (modelList_c) False/False
-/* top-level dependencies (begin modelList_c) */
-/* top-level dependencies (end modelList_c) */
+// build diff_model_c (['diff_model_c']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+// build modelList_c (['modelList_c']) False/False
+/* top-level dependencies (begin ['modelList_c']) */
+/* top-level dependencies (end ['modelList_c']) */
 struct modelList_c {
 };
 
-// build J3DModelData (J3DModelData) True/True
-/* top-level dependencies (begin diff_model_c) */
-// outer dependency: modelList_c
-// outer dependency: J3DModelData
-/* top-level dependencies (end diff_model_c) */
+/* top-level dependencies (begin ['diff_model_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('modelList_c',)
+/* top-level dependencies (end ['diff_model_c']) */
 struct diff_model_c {
-	// modelList_c
-	// J3DModelData
+	// ('J3DModelData',)
+	// ('modelList_c',)
 	/* 80048D60 */ diff_model_c();
 	/* 800490EC */ void create(J3DModelData*, int, u8);
 	/* 800491F4 */ void getModelData();
@@ -64,33 +64,33 @@ struct diff_model_c {
 	/* 80049408 */ void insert(modelList_c*);
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build modelList_c (modelList_c) True/True
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build J3DModelData (['J3DModelData']) True/True
+// build modelList_c (['modelList_c']) True/True
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-// build J3DModelData (J3DModelData) True/True
-/* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: dKy_tevstr_c
-// outer dependency: J3DModelData
-/* top-level dependencies (end dScnKy_env_light_c) */
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// dKy_tevstr_c
-	// J3DModelData
+	// ('J3DModelData',)
+	// ('dKy_tevstr_c',)
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
 // 
 // Forward References:
 // 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dScope_c (dScope_c) False/False
-/* top-level dependencies (begin dScope_c) */
-/* top-level dependencies (end dScope_c) */
+// build dScope_c (['dScope_c']) False/False
+/* top-level dependencies (begin ['dScope_c']) */
+/* top-level dependencies (end ['dScope_c']) */
 struct dScope_c {
 	/* 80193690 */ dScope_c(u8);
 	/* 8019396C */ ~dScope_c();
@@ -26,22 +26,22 @@ struct dScope_c {
 	/* 80194054 */ void close_proc();
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build dMeterSub_c (dMeterSub_c) False/False
-/* top-level dependencies (begin dMeterSub_c) */
-/* top-level dependencies (end dMeterSub_c) */
+// build dMeterSub_c (['dMeterSub_c']) False/False
+/* top-level dependencies (begin ['dMeterSub_c']) */
+/* top-level dependencies (end ['dMeterSub_c']) */
 struct dMeterSub_c {
 	/* 801940D4 */ ~dMeterSub_c();
 	/* 8019411C */ bool _create();
@@ -51,22 +51,22 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-// build J2DPicture (J2DPicture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J2DPicture (['J2DPicture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J2DPicture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J2DPicture) */
+/* top-level dependencies (begin ['J2DPicture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (ResTIMG) True/True
+// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 

@@ -9,44 +9,44 @@
 // Types:
 // 
 
-// build mDoRst (mDoRst) False/False
-/* top-level dependencies (begin mDoRst) */
-/* top-level dependencies (end mDoRst) */
+// build mDoRst (['mDoRst']) False/False
+/* top-level dependencies (begin ['mDoRst']) */
+/* top-level dependencies (end ['mDoRst']) */
 struct mDoRst {
 	/* 800157F4 */ void getResetData();
 };
 
-// build JASTaskThread (JASTaskThread) False/False
-/* top-level dependencies (begin JASTaskThread) */
-/* top-level dependencies (end JASTaskThread) */
+// build JASTaskThread (['JASTaskThread']) False/False
+/* top-level dependencies (begin ['JASTaskThread']) */
+/* top-level dependencies (end ['JASTaskThread']) */
 struct JASTaskThread {
 	/* 8028FE88 */ void pause(bool);
 };
 
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build Z2AudioMgr (Z2AudioMgr) False/False
-/* top-level dependencies (begin Z2AudioMgr) */
-/* top-level dependencies (end Z2AudioMgr) */
+// build Z2AudioMgr (['Z2AudioMgr']) False/False
+/* top-level dependencies (begin ['Z2AudioMgr']) */
+/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
 	/* 802CDA6C */ void hasReset() const;
 };
 
-// build JUTVideo (JUTVideo) False/False
-/* top-level dependencies (begin JUTVideo) */
-/* top-level dependencies (end JUTVideo) */
+// build JUTVideo (['JUTVideo']) False/False
+/* top-level dependencies (begin ['JUTVideo']) */
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
 	/* 802E4CAC */ void destroyManager();
 };
 
-// build JUTXfb (JUTXfb) False/False
-/* top-level dependencies (begin JUTXfb) */
-/* top-level dependencies (end JUTXfb) */
+// build JUTXfb (['JUTXfb']) False/False
+/* top-level dependencies (begin ['JUTXfb']) */
+/* top-level dependencies (end ['JUTXfb']) */
 struct JUTXfb {
 	/* 802E5214 */ void clearIndex();
 };

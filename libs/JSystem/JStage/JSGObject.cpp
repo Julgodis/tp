@@ -9,16 +9,13 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TObject
-/* top-level dependencies (end JStage) */
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;

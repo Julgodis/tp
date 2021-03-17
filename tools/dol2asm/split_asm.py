@@ -63,6 +63,7 @@ import traceback
 import hashlib
 
 """
+
 def dm(name):
     g.LOG.info("---------------------------------------------------------")
     g.LOG.info(name)
@@ -70,12 +71,16 @@ def dm(name):
         p = demangle.ParseCtx(name)
         p.demangle()
         g.LOG.info(p.to_str())
+        g.LOG.info(p.full_name)
+        g.LOG.info(p.full_name.to_str())
         g.LOG.info(p.func_name)
+        g.LOG.info(p.func_name.to_str())
         g.LOG.info(p.class_name)
+        g.LOG.info(p.class_name.to_str())
+        
         g.LOG.info(p.demangled)
     except demangle.ParseError as e:
         g.LOG.error(e)
-
 dm("mDoExt_J3DModel__create__FP12J3DModelDataUlUl")
 dm("JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience")
 dm("checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i")
@@ -104,8 +109,12 @@ dm("panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct")
 dm("printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb")
 dm("TRK__write_aram")
 dm("TRK__read_aram")
+
+dm("JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience")
+
 sys.exit(1)
 """
+
 
 def sha1_check(path, data, expected):
     sha1 = hashlib.sha1()
@@ -126,8 +135,8 @@ def main(debug, game_path):
 
     cpp_gen = True
     asm_gen = False
-    mk_gen = True
-    symbols_gen = True
+    mk_gen = False
+    symbols_gen = False
     no_file_generation = False
     select_modules = [0]
 
@@ -402,38 +411,39 @@ def main(debug, game_path):
         symbol.resolve_references(main_context, symbol_table, section)
 
 
-    g.CONSOLE.print(f"{step_count:2} Calculate reference count")
-    step_count += 1
+    if True:
+        g.CONSOLE.print(f"{step_count:2} Calculate reference count")
+        step_count += 1
 
-    # add reference to entrypoint
-    entrypoint = symbol_table[0, globals.ENTRY_POINT]
-    entrypoint.add_reference(None)
+        # add reference to entrypoint
+        entrypoint = symbol_table[0, globals.ENTRY_POINT]
+        entrypoint.add_reference(None)
 
-    # these symbols are required to be external, because otherwise the linker will not find them
-    __fini_cpp_exceptions = symbol_table[0, 0x8036283C]
-    __init_cpp_exceptions = symbol_table[0, 0x80362870]
-    __fini_cpp_exceptions.add_reference(None)
-    __init_cpp_exceptions.add_reference(None)
+        # these symbols are required to be external, because otherwise the linker will not find them
+        __fini_cpp_exceptions = symbol_table[0, 0x8036283C]
+        __init_cpp_exceptions = symbol_table[0, 0x80362870]
+        __fini_cpp_exceptions.add_reference(None)
+        __init_cpp_exceptions.add_reference(None)
 
-    total_rc_step_count = 0
-    for module in modules:
-        for lib in module.libraries.values():
-            for tu in lib.translation_units.values():
-                total_rc_step_count += sum([ len(x.symbols) for x in tu.sections.values() ])
-
-    with Progress(console=g.CONSOLE, transient=True, refresh_per_second=1) as progress:
-        task = progress.add_task(f"processing...", total=total_rc_step_count)
+        total_rc_step_count = 0
         for module in modules:
             for lib in module.libraries.values():
                 for tu in lib.translation_units.values():
-                    count = 0
-                    for section in tu.sections.values():
-                        for symbol in section.symbols:
-                            refs = symbol.internal_references(main_context, symbol_table)
-                            for reference in refs:
-                                reference.add_reference(symbol)
-                        count += len(section.symbols)
-                    progress.update(task, advance=count)    
+                    total_rc_step_count += sum([ len(x.symbols) for x in tu.sections.values() ])
+
+        with Progress(console=g.CONSOLE, transient=True, refresh_per_second=1) as progress:
+            task = progress.add_task(f"processing...", total=total_rc_step_count)
+            for module in modules:
+                for lib in module.libraries.values():
+                    for tu in lib.translation_units.values():
+                        count = 0
+                        for section in tu.sections.values():
+                            for symbol in section.symbols:
+                                refs = symbol.internal_references(main_context, symbol_table)
+                                for reference in refs:
+                                    reference.add_reference(symbol)
+                            count += len(section.symbols)
+                        progress.update(task, advance=count)    
 
     g.CONSOLE.print(f"{step_count:2} Determine library paths")
     step_count += 1 

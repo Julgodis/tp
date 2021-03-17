@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build node_class (node_class) False/False
-/* top-level dependencies (begin node_class) */
-/* top-level dependencies (end node_class) */
+// build node_class (['node_class']) False/False
+/* top-level dependencies (begin ['node_class']) */
+/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 

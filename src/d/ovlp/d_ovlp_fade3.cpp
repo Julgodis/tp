@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build dDlst_snapShot_c (dDlst_snapShot_c) False/False
-/* top-level dependencies (begin dDlst_snapShot_c) */
-/* top-level dependencies (end dDlst_snapShot_c) */
+// build dDlst_snapShot_c (['dDlst_snapShot_c']) False/False
+/* top-level dependencies (begin ['dDlst_snapShot_c']) */
+/* top-level dependencies (end ['dDlst_snapShot_c']) */
 struct dDlst_snapShot_c {
 	/* 80252ED4 */ void draw();
 };
 
-// build dOvlpFd3_dlst_c (dOvlpFd3_dlst_c) False/False
-/* top-level dependencies (begin dOvlpFd3_dlst_c) */
-/* top-level dependencies (end dOvlpFd3_dlst_c) */
+// build dOvlpFd3_dlst_c (['dOvlpFd3_dlst_c']) False/False
+/* top-level dependencies (begin ['dOvlpFd3_dlst_c']) */
+/* top-level dependencies (end ['dOvlpFd3_dlst_c']) */
 struct dOvlpFd3_dlst_c {
 	/* 80252F28 */ void draw();
 	/* 802538E8 */ ~dOvlpFd3_dlst_c();
 };
 
-// build dOvlpFd3_c (dOvlpFd3_c) False/False
-/* top-level dependencies (begin dOvlpFd3_c) */
-/* top-level dependencies (end dOvlpFd3_c) */
+// build dOvlpFd3_c (['dOvlpFd3_c']) False/False
+/* top-level dependencies (begin ['dOvlpFd3_c']) */
+/* top-level dependencies (end ['dOvlpFd3_c']) */
 struct dOvlpFd3_c {
 	/* 8025343C */ dOvlpFd3_c();
 	/* 80253518 */ void execFirstSnap();
@@ -35,38 +35,38 @@ struct dOvlpFd3_c {
 	/* 80253730 */ void execFadeIn();
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-/* top-level dependencies (begin mDoMtx_stack_c) */
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build overlap_task_class (overlap_task_class) False/False
-/* top-level dependencies (begin overlap_task_class) */
-/* top-level dependencies (end overlap_task_class) */
+// build overlap_task_class (['overlap_task_class']) False/False
+/* top-level dependencies (begin ['overlap_task_class']) */
+/* top-level dependencies (end ['overlap_task_class']) */
 struct overlap_task_class {
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dCamera_c (dCamera_c) False/False
-/* top-level dependencies (begin dCamera_c) */
-/* top-level dependencies (end dCamera_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dCamera_c (['dCamera_c']) False/False
+/* top-level dependencies (begin ['dCamera_c']) */
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 801614D0 */ void Stop();
 };

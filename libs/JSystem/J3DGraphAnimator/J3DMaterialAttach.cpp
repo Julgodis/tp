@@ -9,42 +9,42 @@
 // Types:
 // 
 
-// build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-/* top-level dependencies (begin J3DAnmTevRegKey) */
-/* top-level dependencies (end J3DAnmTevRegKey) */
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
+/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
+/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
 };
 
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-/* top-level dependencies (begin J3DAnmTexPattern) */
-/* top-level dependencies (end J3DAnmTexPattern) */
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J3DAnmTexPattern']) */
+/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 };
 
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J3DAnmTextureSRTKey) */
-/* top-level dependencies (end J3DAnmTextureSRTKey) */
+// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
+/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
+/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 };
 
-// build J3DAnmColor (J3DAnmColor) False/False
-/* top-level dependencies (begin J3DAnmColor) */
-/* top-level dependencies (end J3DAnmColor) */
+// build J3DAnmColor (['J3DAnmColor']) False/False
+/* top-level dependencies (begin ['J3DAnmColor']) */
+/* top-level dependencies (end ['J3DAnmColor']) */
 struct J3DAnmColor {
 };
 
-/* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DAnmTexPattern
-// outer dependency: J3DAnmTextureSRTKey
-// outer dependency: J3DAnmColor
-/* top-level dependencies (end J3DMaterialTable) */
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+// outer dependency: ('J3DAnmTevRegKey',)
+// outer dependency: ('J3DAnmTexPattern',)
+// outer dependency: ('J3DAnmTextureSRTKey',)
+// outer dependency: ('J3DAnmColor',)
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// J3DAnmTevRegKey
-	// J3DAnmTexPattern
-	// J3DAnmTextureSRTKey
-	// J3DAnmColor
+	// ('J3DAnmTevRegKey',)
+	// ('J3DAnmTexPattern',)
+	// ('J3DAnmTextureSRTKey',)
+	// ('J3DAnmColor',)
 	/* 8032F5A8 */ void clear();
 	/* 8032F5D0 */ J3DMaterialTable();
 	/* 8032F604 */ ~J3DMaterialTable();
@@ -59,61 +59,61 @@ struct J3DMaterialTable {
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
 };
 
-// build J3DAnmColor (J3DAnmColor) True/True
-// build J3DAnmTexPattern (J3DAnmTexPattern) True/True
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
-// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
-/* top-level dependencies (begin J3DTexMtxInfo) */
-/* top-level dependencies (end J3DTexMtxInfo) */
+// build J3DAnmColor (['J3DAnmColor']) True/True
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
+// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
+// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
+/* top-level dependencies (begin ['J3DTexMtxInfo']) */
+/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-// build J3DMaterialAnm (J3DMaterialAnm) False/False
-// build J3DMatColorAnm (J3DMatColorAnm) False/False
-/* top-level dependencies (begin J3DMatColorAnm) */
-/* top-level dependencies (end J3DMatColorAnm) */
-struct J3DMatColorAnm {
-};
-
-// build J3DTexNoAnm (J3DTexNoAnm) False/False
-/* top-level dependencies (begin J3DTexNoAnm) */
-/* top-level dependencies (end J3DTexNoAnm) */
-struct J3DTexNoAnm {
-};
-
-// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
-/* top-level dependencies (begin J3DTevKColorAnm) */
-/* top-level dependencies (end J3DTevKColorAnm) */
-struct J3DTevKColorAnm {
-};
-
-// build J3DTevColorAnm (J3DTevColorAnm) False/False
-/* top-level dependencies (begin J3DTevColorAnm) */
-/* top-level dependencies (end J3DTevColorAnm) */
-struct J3DTevColorAnm {
-};
-
-// build J3DTexMtxAnm (J3DTexMtxAnm) False/False
-/* top-level dependencies (begin J3DTexMtxAnm) */
-/* top-level dependencies (end J3DTexMtxAnm) */
+// build J3DMaterialAnm (['J3DMaterialAnm']) False/False
+// build J3DTexMtxAnm (['J3DTexMtxAnm']) False/False
+/* top-level dependencies (begin ['J3DTexMtxAnm']) */
+/* top-level dependencies (end ['J3DTexMtxAnm']) */
 struct J3DTexMtxAnm {
 };
 
-/* top-level dependencies (begin J3DMaterialAnm) */
-// outer dependency: J3DMatColorAnm
-// outer dependency: J3DTexNoAnm
-// outer dependency: J3DTevKColorAnm
-// outer dependency: J3DTevColorAnm
-// outer dependency: J3DTexMtxAnm
-/* top-level dependencies (end J3DMaterialAnm) */
+// build J3DTevColorAnm (['J3DTevColorAnm']) False/False
+/* top-level dependencies (begin ['J3DTevColorAnm']) */
+/* top-level dependencies (end ['J3DTevColorAnm']) */
+struct J3DTevColorAnm {
+};
+
+// build J3DMatColorAnm (['J3DMatColorAnm']) False/False
+/* top-level dependencies (begin ['J3DMatColorAnm']) */
+/* top-level dependencies (end ['J3DMatColorAnm']) */
+struct J3DMatColorAnm {
+};
+
+// build J3DTexNoAnm (['J3DTexNoAnm']) False/False
+/* top-level dependencies (begin ['J3DTexNoAnm']) */
+/* top-level dependencies (end ['J3DTexNoAnm']) */
+struct J3DTexNoAnm {
+};
+
+// build J3DTevKColorAnm (['J3DTevKColorAnm']) False/False
+/* top-level dependencies (begin ['J3DTevKColorAnm']) */
+/* top-level dependencies (end ['J3DTevKColorAnm']) */
+struct J3DTevKColorAnm {
+};
+
+/* top-level dependencies (begin ['J3DMaterialAnm']) */
+// outer dependency: ('J3DTexMtxAnm',)
+// outer dependency: ('J3DTevColorAnm',)
+// outer dependency: ('J3DMatColorAnm',)
+// outer dependency: ('J3DTexNoAnm',)
+// outer dependency: ('J3DTevKColorAnm',)
+/* top-level dependencies (end ['J3DMaterialAnm']) */
 struct J3DMaterialAnm {
-	// J3DTevColorAnm
-	// J3DTexMtxAnm
-	// J3DMatColorAnm
-	// J3DTevKColorAnm
-	// J3DTexNoAnm
+	// ('J3DTexMtxAnm',)
+	// ('J3DTevColorAnm',)
+	// ('J3DMatColorAnm',)
+	// ('J3DTexNoAnm',)
+	// ('J3DTevKColorAnm',)
 	/* 8032C5A4 */ void setMatColorAnm(int, J3DMatColorAnm*);
 	/* 8032C5E4 */ void setTexMtxAnm(int, J3DTexMtxAnm*);
 	/* 8032C624 */ void setTexNoAnm(int, J3DTexNoAnm*);
@@ -121,11 +121,11 @@ struct J3DMaterialAnm {
 	/* 8032C6A4 */ void setTevKColorAnm(int, J3DTevKColorAnm*);
 };
 
-// build J3DMatColorAnm (J3DMatColorAnm) True/True
-// build J3DTexMtxAnm (J3DTexMtxAnm) True/True
-// build J3DTexNoAnm (J3DTexNoAnm) True/True
-// build J3DTevColorAnm (J3DTevColorAnm) True/True
-// build J3DTevKColorAnm (J3DTevKColorAnm) True/True
+// build J3DMatColorAnm (['J3DMatColorAnm']) True/True
+// build J3DTexMtxAnm (['J3DTexMtxAnm']) True/True
+// build J3DTexNoAnm (['J3DTexNoAnm']) True/True
+// build J3DTevColorAnm (['J3DTevColorAnm']) True/True
+// build J3DTevKColorAnm (['J3DTevKColorAnm']) True/True
 // 
 // Forward References:
 // 

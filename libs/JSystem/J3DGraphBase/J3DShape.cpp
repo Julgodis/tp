@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build J3DShape (J3DShape) False/False
-// build _GXAttr (_GXAttr) False/False
-/* top-level dependencies (begin _GXAttr) */
-/* top-level dependencies (end _GXAttr) */
-struct _GXAttr {
-};
-
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DShape (['J3DShape']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DShape) */
-// outer dependency: _GXAttr
-// outer dependency: Vec
-/* top-level dependencies (end J3DShape) */
+// build _GXAttr (['_GXAttr']) False/False
+/* top-level dependencies (begin ['_GXAttr']) */
+/* top-level dependencies (end ['_GXAttr']) */
+struct _GXAttr {
+};
+
+/* top-level dependencies (begin ['J3DShape']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('_GXAttr',)
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
-	// _GXAttr
-	// Vec
+	// ('Vec',)
+	// ('_GXAttr',)
 	/* 80314B48 */ void initialize();
 	/* 80314BB8 */ void addTexMtxIndexInDL(_GXAttr, u32);
 	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
@@ -46,30 +46,30 @@ struct J3DShape {
 	/* 803156AC */ void simpleDrawCache() const;
 };
 
-// build _GXAttr (_GXAttr) True/True
-// build Vec (Vec) True/True
-// build _GXVtxFmt (_GXVtxFmt) False/False
-/* top-level dependencies (begin _GXVtxFmt) */
-/* top-level dependencies (end _GXVtxFmt) */
+// build _GXAttr (['_GXAttr']) True/True
+// build Vec (['Vec']) True/True
+// build _GXVtxFmt (['_GXVtxFmt']) False/False
+/* top-level dependencies (begin ['_GXVtxFmt']) */
+/* top-level dependencies (end ['_GXVtxFmt']) */
 struct _GXVtxFmt {
 };
 
-// build _GXVtxAttrFmtList (_GXVtxAttrFmtList) False/False
-/* top-level dependencies (begin _GXVtxAttrFmtList) */
-/* top-level dependencies (end _GXVtxAttrFmtList) */
+// build _GXVtxAttrFmtList (['_GXVtxAttrFmtList']) False/False
+/* top-level dependencies (begin ['_GXVtxAttrFmtList']) */
+/* top-level dependencies (end ['_GXVtxAttrFmtList']) */
 struct _GXVtxAttrFmtList {
 };
 
-// build J3DShapeMtx (J3DShapeMtx) False/False
-/* top-level dependencies (begin J3DShapeMtx) */
-/* top-level dependencies (end J3DShapeMtx) */
+// build J3DShapeMtx (['J3DShapeMtx']) False/False
+/* top-level dependencies (begin ['J3DShapeMtx']) */
+/* top-level dependencies (end ['J3DShapeMtx']) */
 struct J3DShapeMtx {
 	/* 803130A8 */ void resetMtxLoadCache();
 };
 
-// build J3DShapeDraw (J3DShapeDraw) False/False
-/* top-level dependencies (begin J3DShapeDraw) */
-/* top-level dependencies (end J3DShapeDraw) */
+// build J3DShapeDraw (['J3DShapeDraw']) False/False
+/* top-level dependencies (begin ['J3DShapeDraw']) */
+/* top-level dependencies (end ['J3DShapeDraw']) */
 struct J3DShapeDraw {
 	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);
 	/* 80314AD4 */ void draw() const;

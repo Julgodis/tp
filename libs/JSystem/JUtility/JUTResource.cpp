@@ -9,38 +9,38 @@
 // Types:
 // 
 
-// build JUTResReference (JUTResReference) False/False
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JUTResReference (['JUTResReference']) False/False
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
-/* top-level dependencies (begin JUTResReference) */
-// outer dependency: JSUInputStream
-// outer dependency: JKRArchive
-/* top-level dependencies (end JUTResReference) */
+/* top-level dependencies (begin ['JUTResReference']) */
+// outer dependency: ('JSUInputStream',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JUTResReference']) */
 struct JUTResReference {
-	// JSUInputStream
-	// JKRArchive
+	// ('JSUInputStream',)
+	// ('JKRArchive',)
 	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 	/* 802DE1BC */ void getResource(u32, JKRArchive*);
 };
 
-// build JSUInputStream (JSUInputStream) True/True
-// build JKRArchive (JKRArchive) True/True
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JSUInputStream (['JSUInputStream']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4224 */ void getGlbResource(char const*);
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);

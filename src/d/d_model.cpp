@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build dMdl_c (dMdl_c) False/False
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
-struct dKy_tevstr_c {
-};
-
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build dMdl_c (['dMdl_c']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build dMdl_obj_c (dMdl_obj_c) False/False
-/* top-level dependencies (begin dMdl_obj_c) */
-/* top-level dependencies (end dMdl_obj_c) */
+// build dMdl_obj_c (['dMdl_obj_c']) False/False
+/* top-level dependencies (begin ['dMdl_obj_c']) */
+/* top-level dependencies (end ['dMdl_obj_c']) */
 struct dMdl_obj_c {
 };
 
-/* top-level dependencies (begin dMdl_c) */
-// outer dependency: dKy_tevstr_c
-// outer dependency: J3DModelData
-// outer dependency: dMdl_obj_c
-/* top-level dependencies (end dMdl_c) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin ['dMdl_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('dMdl_obj_c',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dMdl_c']) */
 struct dMdl_c {
-	// dKy_tevstr_c
-	// J3DModelData
-	// dMdl_obj_c
+	// ('J3DModelData',)
+	// ('dMdl_obj_c',)
+	// ('dKy_tevstr_c',)
 	/* 8009C4FC */ void draw();
 	/* 8009C650 */ void create(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C668 */ void entryObj(dMdl_obj_c*);
@@ -44,19 +44,19 @@ struct dMdl_c {
 	/* 8009C930 */ dMdl_c();
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build dMdl_obj_c (dMdl_obj_c) True/True
-// build dMdl_mng_c (dMdl_mng_c) False/False
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build J3DModelData (J3DModelData) True/True
-/* top-level dependencies (begin dMdl_mng_c) */
-// outer dependency: dKy_tevstr_c
-// outer dependency: J3DModelData
-/* top-level dependencies (end dMdl_mng_c) */
+// build J3DModelData (['J3DModelData']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build dMdl_obj_c (['dMdl_obj_c']) True/True
+// build dMdl_mng_c (['dMdl_mng_c']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+/* top-level dependencies (begin ['dMdl_mng_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dMdl_mng_c']) */
 struct dMdl_mng_c {
-	// dKy_tevstr_c
-	// J3DModelData
+	// ('J3DModelData',)
+	// ('dKy_tevstr_c',)
 	/* 8009C6DC */ void search(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C724 */ void entry(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C7AC */ void create();
@@ -65,30 +65,30 @@ struct dMdl_mng_c {
 	/* 8009C8D8 */ void entry(J3DModelData*, u16, int);
 };
 
-// build J3DPacket (J3DPacket) False/False
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-// build J3DPacket (J3DPacket) True/False
+// build J3DPacket (['J3DPacket']) False/False
+// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
+// build J3DPacket (['J3DPacket']) True/False
 struct J3DPacket;
-/* top-level dependencies (begin J3DDrawBuffer) */
-// outer dependency: J3DPacket
-/* top-level dependencies (end J3DDrawBuffer) */
+/* top-level dependencies (begin ['J3DDrawBuffer']) */
+// outer dependency: ('J3DPacket',)
+/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// J3DPacket
+	// ('J3DPacket',)
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
-/* top-level dependencies (begin J3DPacket) */
-// outer dependency: J3DDrawBuffer
-/* top-level dependencies (end J3DPacket) */
+/* top-level dependencies (begin ['J3DPacket']) */
+// outer dependency: ('J3DDrawBuffer',)
+/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
-	// J3DDrawBuffer
+	// ('J3DDrawBuffer',)
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };

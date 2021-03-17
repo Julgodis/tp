@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build cSAngle (cSAngle) False/False
-/* top-level dependencies (begin cSAngle) */
-/* top-level dependencies (end cSAngle) */
+// build cSAngle (['cSAngle']) False/False
+/* top-level dependencies (begin ['cSAngle']) */
+/* top-level dependencies (end ['cSAngle']) */
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80270F68 */ cSAngle(cSAngle const&);
@@ -39,9 +39,9 @@ struct cSAngle {
 	/* 802712B4 */ void operator*=(f32);
 };
 
-// build cDegree (cDegree) False/False
-/* top-level dependencies (begin cDegree) */
-/* top-level dependencies (end cDegree) */
+// build cDegree (['cDegree']) False/False
+/* top-level dependencies (begin ['cDegree']) */
+/* top-level dependencies (end ['cDegree']) */
 struct cDegree {
 	/* 8027134C */ cDegree(f32);
 	/* 8027137C */ void Formal();
@@ -52,27 +52,27 @@ struct cDegree {
 	/* 80271440 */ void Tan() const;
 };
 
-// build cSPolar (cSPolar) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cSPolar (['cSPolar']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build cSGlobe (cSGlobe) False/False
-// build cSAngle (cSAngle) True/True
-// build cSPolar (cSPolar) True/False
+// build cSGlobe (['cSGlobe']) False/False
+// build cSAngle (['cSAngle']) True/True
+// build cXyz (['cXyz']) True/True
+// build cSPolar (['cSPolar']) True/False
 struct cSPolar;
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cSGlobe) */
-// outer dependency: cSAngle
-// outer dependency: cSPolar
-// outer dependency: cXyz
-/* top-level dependencies (end cSGlobe) */
+/* top-level dependencies (begin ['cSGlobe']) */
+// outer dependency: ('cSAngle',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cSPolar',)
+/* top-level dependencies (end ['cSGlobe']) */
 struct cSGlobe {
-	// cSAngle
-	// cSPolar
-	// cXyz
+	// ('cSAngle',)
+	// ('cXyz',)
+	// ('cSPolar',)
 	/* 802717F0 */ cSGlobe(cSGlobe const&);
 	/* 80271820 */ cSGlobe(f32, s16, s16);
 	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
@@ -88,13 +88,13 @@ struct cSGlobe {
 	/* 80271B7C */ void Invert();
 };
 
-/* top-level dependencies (begin cSPolar) */
-// outer dependency: cXyz
-// outer dependency: cSGlobe
-/* top-level dependencies (end cSPolar) */
+/* top-level dependencies (begin ['cSPolar']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('cSGlobe',)
+/* top-level dependencies (end ['cSPolar']) */
 struct cSPolar {
-	// cXyz
-	// cSGlobe
+	// ('cXyz',)
+	// ('cSGlobe',)
 	/* 80271468 */ cSPolar(cXyz const&);
 	/* 80271498 */ void Formal();
 	/* 80271558 */ void Val(f32, s16, s16);
@@ -103,8 +103,8 @@ struct cSPolar {
 	/* 802717B4 */ void Globe(cSGlobe*) const;
 };
 
-// build cXyz (cXyz) True/True
-// build cSGlobe (cSGlobe) True/True
+// build cXyz (['cXyz']) True/True
+// build cSGlobe (['cSGlobe']) True/True
 // 
 // Forward References:
 // 

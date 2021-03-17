@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build cBgW_BgId (cBgW_BgId) False/False
-/* top-level dependencies (begin cBgW_BgId) */
-/* top-level dependencies (end cBgW_BgId) */
+// build cBgW_BgId (['cBgW_BgId']) False/False
+/* top-level dependencies (begin ['cBgW_BgId']) */
+/* top-level dependencies (end ['cBgW_BgId']) */
 struct cBgW_BgId {
 	/* 802681C0 */ void Regist(int);
 	/* 802681C8 */ void Release();

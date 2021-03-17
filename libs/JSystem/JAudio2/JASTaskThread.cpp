@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASTaskThread (JASTaskThread) False/False
-/* top-level dependencies (begin JASTaskThread) */
-/* top-level dependencies (end JASTaskThread) */
+// build JASTaskThread (['JASTaskThread']) False/False
+/* top-level dependencies (begin ['JASTaskThread']) */
+/* top-level dependencies (end ['JASTaskThread']) */
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 	/* 8028F724 */ ~JASTaskThread();
@@ -19,34 +19,34 @@ struct JASTaskThread {
 	/* 8028FE88 */ void pause(bool);
 };
 
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F354 */ void bcopy(void const*, void*, u32);
 };
 
-// build JASKernel (JASKernel) False/False
-/* top-level dependencies (begin JASKernel) */
-/* top-level dependencies (end JASKernel) */
+// build JASKernel (['JASKernel']) False/False
+/* top-level dependencies (begin ['JASKernel']) */
+/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290AC8 */ void getCommandHeap();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (JKRThread) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRThread) */
+// build JKRThread (['JKRThread']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };

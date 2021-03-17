@@ -9,29 +9,29 @@
 // Types:
 // 
 
-// build overlap1_class (overlap1_class) False/False
-/* top-level dependencies (begin overlap1_class) */
-/* top-level dependencies (end overlap1_class) */
+// build overlap1_class (['overlap1_class']) False/False
+/* top-level dependencies (begin ['overlap1_class']) */
+/* top-level dependencies (end ['overlap1_class']) */
 struct overlap1_class {
 };
 
-// build overlap_task_class (overlap_task_class) False/False
-/* top-level dependencies (begin overlap_task_class) */
-/* top-level dependencies (end overlap_task_class) */
+// build overlap_task_class (['overlap_task_class']) False/False
+/* top-level dependencies (begin ['overlap_task_class']) */
+/* top-level dependencies (end ['overlap_task_class']) */
 struct overlap_task_class {
 };
 
-// build JUTFader (JUTFader) False/False
-// build JUTFader (JUTFader) True/False
+// build JUTFader (['JUTFader']) False/False
+// build JUTFader (['JUTFader']) True/False
 struct JUTFader;
-/* top-level dependencies (begin JUTFader) */
-// outer dependency: JUTFader::EStatus
-/* top-level dependencies (end JUTFader) */
+/* top-level dependencies (begin ['JUTFader']) */
+// outer dependency: ('JUTFader', 'EStatus')
+/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
-	// JUTFader::EStatus
-	// build EStatus (JUTFader::EStatus) False/False
-	/* dependencies (begin JUTFader::EStatus) */
-	/* dependencies (end JUTFader::EStatus) */
+	// ('JUTFader', 'EStatus')
+	// build EStatus (['JUTFader', 'EStatus']) False/False
+	/* dependencies (begin ['JUTFader', 'EStatus']) */
+	/* dependencies (end ['JUTFader', 'EStatus']) */
 	struct EStatus {
 	};
 

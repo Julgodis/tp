@@ -9,48 +9,48 @@
 // Types:
 // 
 
-// build cM3dGTri (cM3dGTri) False/False
-// build cM3dGPla (cM3dGPla) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cM3dGTri (['cM3dGTri']) False/False
+// build cM3dGCyl (['cM3dGCyl']) False/False
+/* top-level dependencies (begin ['cM3dGCyl']) */
+/* top-level dependencies (end ['cM3dGCyl']) */
+struct cM3dGCyl {
+};
+
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGPla) */
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGPla) */
+// build cM3dGPla (['cM3dGPla']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['cM3dGPla']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// Vec
+	// ('Vec',)
 	/* 8026F52C */ void SetupNP(Vec const&, Vec const&);
 	/* 8026F624 */ void Set(cM3dGPla const*);
 };
 
-// build cM3dGCyl (cM3dGCyl) False/False
-/* top-level dependencies (begin cM3dGCyl) */
-/* top-level dependencies (end cM3dGCyl) */
-struct cM3dGCyl {
-};
-
-// build Vec (Vec) True/True
-/* top-level dependencies (begin cM3dGTri) */
-// outer dependency: cM3dGPla
-// outer dependency: cM3dGCyl
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGTri) */
+/* top-level dependencies (begin ['cM3dGTri']) */
+// outer dependency: ('cM3dGCyl',)
+// outer dependency: ('Vec',)
+// outer dependency: ('cM3dGPla',)
+/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
-	// cM3dGPla
-	// cM3dGCyl
-	// Vec
+	// ('cM3dGCyl',)
+	// ('Vec',)
+	// ('cM3dGPla',)
 	/* 8026F7B0 */ void cross(cM3dGCyl const*, Vec*) const;
 	/* 8026F7DC */ void setPos(Vec const*, Vec const*, Vec const*);
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 	/* 8026F8C8 */ void set(Vec const*, Vec const*, Vec const*, Vec const*);
 };
 
-// build cM3dGCyl (cM3dGCyl) True/True
-// build Vec (Vec) True/True
-// build cM3dGPla (cM3dGPla) True/True
+// build cM3dGCyl (['cM3dGCyl']) True/True
+// build Vec (['Vec']) True/True
+// build cM3dGPla (['cM3dGPla']) True/True
 // 
 // Forward References:
 // 

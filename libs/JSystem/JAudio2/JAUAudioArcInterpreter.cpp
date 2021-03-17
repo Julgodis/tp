@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAUAudioArcInterpreter (JAUAudioArcInterpreter) False/False
-/* top-level dependencies (begin JAUAudioArcInterpreter) */
-/* top-level dependencies (end JAUAudioArcInterpreter) */
+// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
+/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
+/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4244 */ JAUAudioArcInterpreter();
 	/* 802A4260 */ ~JAUAudioArcInterpreter();

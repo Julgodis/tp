@@ -9,95 +9,95 @@
 // Types:
 // 
 
-// build J2DPane (J2DPane) False/False
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
+// build J2DPane (['J2DPane']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) False/False
+/* top-level dependencies (begin ['J2DAnmTransform']) */
+/* top-level dependencies (end ['J2DAnmTransform']) */
 struct J2DAnmTransform {
 };
 
-// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
-/* top-level dependencies (begin J2DAnmVisibilityFull) */
-/* top-level dependencies (end J2DAnmVisibilityFull) */
-struct J2DAnmVisibilityFull {
-};
-
-// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
-/* top-level dependencies (begin J2DAnmVtxColor) */
-/* top-level dependencies (end J2DAnmVtxColor) */
+// build J2DAnmVtxColor (['J2DAnmVtxColor']) False/False
+/* top-level dependencies (begin ['J2DAnmVtxColor']) */
+/* top-level dependencies (end ['J2DAnmVtxColor']) */
 struct J2DAnmVtxColor {
 };
 
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
+// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) False/False
+/* top-level dependencies (begin ['J2DAnmVisibilityFull']) */
+/* top-level dependencies (end ['J2DAnmVisibilityFull']) */
+struct J2DAnmVisibilityFull {
+};
+
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J2DAnmTexPattern']) */
+/* top-level dependencies (end ['J2DAnmTexPattern']) */
 struct J2DAnmTexPattern {
 };
 
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DAnmTransform
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmVtxColor
-// outer dependency: J2DAnmTexPattern
-/* top-level dependencies (end J2DPane) */
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DAnmTransform',)
+// outer dependency: ('J2DAnmVtxColor',)
+// outer dependency: ('J2DAnmVisibilityFull',)
+// outer dependency: ('J2DAnmTexPattern',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DAnmTransform
-	// J2DAnmVisibilityFull
-	// J2DAnmVtxColor
-	// J2DAnmTexPattern
+	// ('J2DAnmTransform',)
+	// ('J2DAnmVtxColor',)
+	// ('J2DAnmVisibilityFull',)
+	// ('J2DAnmTexPattern',)
 	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
 	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
 	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
 	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
 };
 
-// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
-// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
-// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
-// build J2DTextBoxEx (J2DTextBoxEx) False/False
-// build J2DAnmTransform (J2DAnmTransform) True/True
-/* top-level dependencies (begin J2DTextBoxEx) */
-// outer dependency: J2DAnmTransform
-/* top-level dependencies (end J2DTextBoxEx) */
+// build J2DAnmVtxColor (['J2DAnmVtxColor']) True/True
+// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) True/True
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
+// build J2DTextBoxEx (['J2DTextBoxEx']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+/* top-level dependencies (begin ['J2DTextBoxEx']) */
+// outer dependency: ('J2DAnmTransform',)
+/* top-level dependencies (end ['J2DTextBoxEx']) */
 struct J2DTextBoxEx {
-	// J2DAnmTransform
+	// ('J2DAnmTransform',)
 	/* 80256024 */ void getMaterial() const;
 	/* 80256044 */ void setAnimation(J2DAnmTransform*);
 };
 
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 8025602C */ bool getMaterial() const;
 };
 
-// build J2DPictureEx (J2DPictureEx) False/False
-// build J2DAnmTransform (J2DAnmTransform) True/True
-/* top-level dependencies (begin J2DPictureEx) */
-// outer dependency: J2DAnmTransform
-/* top-level dependencies (end J2DPictureEx) */
+// build J2DPictureEx (['J2DPictureEx']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+/* top-level dependencies (begin ['J2DPictureEx']) */
+// outer dependency: ('J2DAnmTransform',)
+/* top-level dependencies (end ['J2DPictureEx']) */
 struct J2DPictureEx {
-	// J2DAnmTransform
+	// ('J2DAnmTransform',)
 	/* 80256034 */ void getMaterial() const;
 	/* 80256064 */ void setAnimation(J2DAnmTransform*);
 };
 
-// build J2DPicture (J2DPicture) False/False
-/* top-level dependencies (begin J2DPicture) */
-/* top-level dependencies (end J2DPicture) */
+// build J2DPicture (['J2DPicture']) False/False
+/* top-level dependencies (begin ['J2DPicture']) */
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 	/* 8025603C */ bool getMaterial() const;
 };
 
-// build J2DAnmTransform (J2DAnmTransform) True/True
-// build J2DWindowEx (J2DWindowEx) False/False
-// build J2DAnmTransform (J2DAnmTransform) True/True
-/* top-level dependencies (begin J2DWindowEx) */
-// outer dependency: J2DAnmTransform
-/* top-level dependencies (end J2DWindowEx) */
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+// build J2DWindowEx (['J2DWindowEx']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+/* top-level dependencies (begin ['J2DWindowEx']) */
+// outer dependency: ('J2DAnmTransform',)
+/* top-level dependencies (end ['J2DWindowEx']) */
 struct J2DWindowEx {
-	// J2DAnmTransform
+	// ('J2DAnmTransform',)
 	/* 80256084 */ void setAnimation(J2DAnmTransform*);
 };
 

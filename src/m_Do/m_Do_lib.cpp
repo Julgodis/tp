@@ -9,40 +9,40 @@
 // Types:
 // 
 
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build _GXTexObj (_GXTexObj) False/False
-/* top-level dependencies (begin _GXTexObj) */
-/* top-level dependencies (end _GXTexObj) */
+// build _GXTexObj (['_GXTexObj']) False/False
+/* top-level dependencies (begin ['_GXTexObj']) */
+/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build _GXTlutObj (_GXTlutObj) False/False
-/* top-level dependencies (begin _GXTlutObj) */
-/* top-level dependencies (end _GXTlutObj) */
+// build _GXTlutObj (['_GXTlutObj']) False/False
+/* top-level dependencies (begin ['_GXTlutObj']) */
+/* top-level dependencies (end ['_GXTlutObj']) */
 struct _GXTlutObj {
 };
 
-// build mDoLib_clipper (mDoLib_clipper) False/False
-/* top-level dependencies (begin mDoLib_clipper) */
-/* top-level dependencies (end mDoLib_clipper) */
+// build mDoLib_clipper (['mDoLib_clipper']) False/False
+/* top-level dependencies (begin ['mDoLib_clipper']) */
+/* top-level dependencies (end ['mDoLib_clipper']) */
 struct mDoLib_clipper {
 	/* 8001528C */ void setup(f32, f32, f32, f32);
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build J3DUClipper (J3DUClipper) False/False
-/* top-level dependencies (begin J3DUClipper) */
-/* top-level dependencies (end J3DUClipper) */
+// build J3DUClipper (['J3DUClipper']) False/False
+/* top-level dependencies (begin ['J3DUClipper']) */
+/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
 	/* 80015590 */ ~J3DUClipper();
 	/* 80273778 */ void init();

@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build cM3dGCir (cM3dGCir) False/False
-/* top-level dependencies (begin cM3dGCir) */
-/* top-level dependencies (end cM3dGCir) */
+// build cM3dGCir (['cM3dGCir']) False/False
+/* top-level dependencies (begin ['cM3dGCir']) */
+/* top-level dependencies (end ['cM3dGCir']) */
 struct cM3dGCir {
 	/* 8026EEB4 */ cM3dGCir();
 	/* 8026EF18 */ ~cM3dGCir();
 	/* 8026EF74 */ void Set(f32, f32, f32, f32);
 };
 
-// build cM2dGCir (cM2dGCir) False/False
-/* top-level dependencies (begin cM2dGCir) */
-/* top-level dependencies (end cM2dGCir) */
+// build cM2dGCir (['cM2dGCir']) False/False
+/* top-level dependencies (begin ['cM2dGCir']) */
+/* top-level dependencies (end ['cM2dGCir']) */
 struct cM2dGCir {
 	/* 8026EED0 */ ~cM2dGCir();
 };

@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build JKRHeap (JKRHeap) False/False
-// build JKRHeap (JKRHeap) True/False
+// build JKRHeap (['JKRHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/False
 struct JKRHeap;
-/* top-level dependencies (begin JKRHeap) */
-// outer dependency: JKRHeap::TState
-/* top-level dependencies (end JKRHeap) */
+/* top-level dependencies (begin ['JKRHeap']) */
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// JKRHeap::TState
-	// build TState (JKRHeap::TState) False/False
-	/* dependencies (begin JKRHeap::TState) */
-	/* dependencies (end JKRHeap::TState) */
+	// ('JKRHeap', 'TState')
+	// build TState (['JKRHeap', 'TState']) False/False
+	/* dependencies (begin ['JKRHeap', 'TState']) */
+	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -63,38 +63,38 @@ struct JKRHeap {
 	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

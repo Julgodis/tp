@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build dMsgUnit_c (dMsgUnit_c) False/False
-/* top-level dependencies (begin dMsgUnit_c) */
-/* top-level dependencies (end dMsgUnit_c) */
+// build dMsgUnit_c (['dMsgUnit_c']) False/False
+/* top-level dependencies (begin ['dMsgUnit_c']) */
+/* top-level dependencies (end ['dMsgUnit_c']) */
 struct dMsgUnit_c {
 	/* 80238C94 */ dMsgUnit_c();
 	/* 80238CA4 */ ~dMsgUnit_c();
 	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-/* top-level dependencies (begin dScnKy_env_light_c) */
-/* top-level dependencies (end dScnKy_env_light_c) */
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
 	/* 8019FA08 */ void getDaytime();
 };

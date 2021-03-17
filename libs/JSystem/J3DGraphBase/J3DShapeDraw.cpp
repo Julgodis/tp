@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build J3DShapeDraw (J3DShapeDraw) False/False
-/* top-level dependencies (begin J3DShapeDraw) */
-/* top-level dependencies (end J3DShapeDraw) */
+// build J3DShapeDraw (['J3DShapeDraw']) False/False
+/* top-level dependencies (begin ['J3DShapeDraw']) */
+/* top-level dependencies (end ['J3DShapeDraw']) */
 struct J3DShapeDraw {
 	/* 80314924 */ void countVertex(u32);
 	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);

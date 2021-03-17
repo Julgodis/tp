@@ -9,36 +9,36 @@
 // Types:
 // 
 
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
+// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
+// build J2DScreen (['J2DScreen']) False/False
+/* top-level dependencies (begin ['J2DScreen']) */
+/* top-level dependencies (end ['J2DScreen']) */
+struct J2DScreen {
+};
+
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
+// build J2DPane (['J2DPane']) False/False
+/* top-level dependencies (begin ['J2DPane']) */
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F7A8C */ void getFirstChildPane();
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
-// build J2DScreen (J2DScreen) False/False
-/* top-level dependencies (begin J2DScreen) */
-/* top-level dependencies (end J2DScreen) */
-struct J2DScreen {
-};
-
-/* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgrAlpha) */
+/* top-level dependencies (begin ['CPaneMgrAlpha']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// JKRExpHeap
-	// J2DPane
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
+	// ('J2DPane',)
 	/* 802553EC */ CPaneMgrAlpha();
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 8025546C */ ~CPaneMgrAlpha();
@@ -57,22 +57,22 @@ struct CPaneMgrAlpha {
 	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
-// build J2DScreen (J2DScreen) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
-// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
-// build J2DScreen (J2DScreen) True/True
-/* top-level dependencies (begin CPaneMgrAlphaMorf) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgrAlphaMorf) */
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DPane (['J2DPane']) True/True
+// build CPaneMgrAlphaMorf (['CPaneMgrAlphaMorf']) False/False
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DPane (['J2DPane']) True/True
+/* top-level dependencies (begin ['CPaneMgrAlphaMorf']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgrAlphaMorf']) */
 struct CPaneMgrAlphaMorf {
-	// JKRExpHeap
-	// J2DPane
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
+	// ('J2DPane',)
 	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255CAC */ ~CPaneMgrAlphaMorf();
 	/* 80255D48 */ void initiateAlphaMorf();
@@ -82,9 +82,9 @@ struct CPaneMgrAlphaMorf {
 	/* 80255F28 */ void childPaneSetAlphaMorf(J2DPane*, f32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);

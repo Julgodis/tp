@@ -9,35 +9,35 @@
 // Types:
 // 
 
-// build ShopCam_action_c (ShopCam_action_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build ShopCam_action_c (['ShopCam_action_c']) False/False
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ShopCam_action_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end ShopCam_action_c) */
+/* top-level dependencies (begin ['ShopCam_action_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['ShopCam_action_c']) */
 struct ShopCam_action_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80195C9C */ void shop_cam_action_init();
 	/* 80195E18 */ void shop_cam_action();
 	/* 8019630C */ void Save();
@@ -50,15 +50,15 @@ struct ShopCam_action_c {
 	/* 801968B8 */ void setMasterCamCtrPos(cXyz*);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build cXyz (cXyz) True/True
-// build dCamera_c (dCamera_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dCamera_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dCamera_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cXyz (['cXyz']) True/True
+// build dCamera_c (['dCamera_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dCamera_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
-	// cXyz
+	// ('cXyz',)
 	/* 801614E8 */ void Stay();
 	/* 8016300C */ void SetTrimSize(s32);
 	/* 80180A40 */ void EventRecoverNotime();
@@ -66,7 +66,7 @@ struct dCamera_c {
 	/* 80180BA0 */ void Reset(cXyz, cXyz, f32, s16);
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

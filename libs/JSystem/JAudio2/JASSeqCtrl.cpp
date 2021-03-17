@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build JASSeqCtrl (JASSeqCtrl) False/False
-// build JASTrack (JASTrack) False/False
-/* top-level dependencies (begin JASTrack) */
-/* top-level dependencies (end JASTrack) */
+// build JASSeqCtrl (['JASSeqCtrl']) False/False
+// build JASTrack (['JASTrack']) False/False
+/* top-level dependencies (begin ['JASTrack']) */
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 80292220 */ void checkNoteStop(u32) const;
 };
 
-// build JASSeqCtrl (JASSeqCtrl) True/False
+// build JASSeqCtrl (['JASSeqCtrl']) True/False
 struct JASSeqCtrl;
-/* top-level dependencies (begin JASSeqCtrl) */
-// outer dependency: JASTrack
-// outer dependency: JASSeqCtrl::IntrType
-/* top-level dependencies (end JASSeqCtrl) */
+/* top-level dependencies (begin ['JASSeqCtrl']) */
+// outer dependency: ('JASTrack',)
+// outer dependency: ('JASSeqCtrl', 'IntrType')
+/* top-level dependencies (end ['JASSeqCtrl']) */
 struct JASSeqCtrl {
-	// JASTrack
-	// JASSeqCtrl::IntrType
-	// build IntrType (JASSeqCtrl::IntrType) False/False
-	/* dependencies (begin JASSeqCtrl::IntrType) */
-	/* dependencies (end JASSeqCtrl::IntrType) */
+	// ('JASTrack',)
+	// ('JASSeqCtrl', 'IntrType')
+	// build IntrType (['JASSeqCtrl', 'IntrType']) False/False
+	/* dependencies (begin ['JASSeqCtrl', 'IntrType']) */
+	/* dependencies (end ['JASSeqCtrl', 'IntrType']) */
 	struct IntrType {
 	};
 
@@ -45,17 +45,17 @@ struct JASSeqCtrl {
 	/* 80293BE8 */ void timerProcess();
 };
 
-// build JASTrack (JASTrack) True/True
-// build JASSeqParser (JASSeqParser) False/False
-/* top-level dependencies (begin JASSeqParser) */
-/* top-level dependencies (end JASSeqParser) */
+// build JASTrack (['JASTrack']) True/True
+// build JASSeqParser (['JASSeqParser']) False/False
+/* top-level dependencies (begin ['JASSeqParser']) */
+/* top-level dependencies (end ['JASSeqParser']) */
 struct JASSeqParser {
 	/* 80293CAC */ ~JASSeqParser();
 };
 
-// build JASSeqReader (JASSeqReader) False/False
-/* top-level dependencies (begin JASSeqReader) */
-/* top-level dependencies (end JASSeqReader) */
+// build JASSeqReader (['JASSeqReader']) False/False
+/* top-level dependencies (begin ['JASSeqReader']) */
+/* top-level dependencies (end ['JASSeqReader']) */
 struct JASSeqReader {
 	/* 80296108 */ void init();
 	/* 80296148 */ void init(void*);

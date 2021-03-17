@@ -9,40 +9,40 @@
 // Types:
 // 
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
 };
 
-// build JASChannel (JASChannel) False/False
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
+// build JASChannel (['JASChannel']) False/False
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-/* top-level dependencies (begin JASChannel) */
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASChannel) */
+/* top-level dependencies (begin ['JASChannel']) */
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// JASOscillator::Data
+	// ('JASOscillator', 'Data')
 	/* 8029A9F0 */ void play();
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 };
 
-// build JASOscillator (JASOscillator) True/True
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASOscillator (['JASOscillator']) True/True
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 };

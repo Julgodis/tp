@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build scene_class (scene_class) False/False
-/* top-level dependencies (begin scene_class) */
-/* top-level dependencies (end scene_class) */
+// build scene_class (['scene_class']) False/False
+/* top-level dependencies (begin ['scene_class']) */
+/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 

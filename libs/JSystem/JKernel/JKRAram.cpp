@@ -9,37 +9,37 @@
 // Types:
 // 
 
-// build JKRAram (JKRAram) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
-struct JKRExpandSwitch {
-};
-
-// build JKRAramBlock (JKRAramBlock) False/False
-/* top-level dependencies (begin JKRAramBlock) */
-/* top-level dependencies (end JKRAramBlock) */
+// build JKRAram (['JKRAram']) False/False
+// build JKRAramBlock (['JKRAramBlock']) False/False
+/* top-level dependencies (begin ['JKRAramBlock']) */
+/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-/* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRAramBlock
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAram) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
+struct JKRExpandSwitch {
+};
+
+/* top-level dependencies (begin ['JKRAram']) */
+// outer dependency: ('JKRAramBlock',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// JKRExpandSwitch
-	// JKRAramBlock
-	// JKRHeap
+	// ('JKRAramBlock',)
+	// ('JKRHeap',)
+	// ('JKRExpandSwitch',)
 	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
 	/* 802D2040 */ JKRAram(u32, u32, s32);
 	/* 802D214C */ ~JKRAram();
@@ -50,28 +50,28 @@ struct JKRAram {
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRAramBlock (JKRAramBlock) True/True
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JKRThread (JKRThread) False/False
-/* top-level dependencies (begin JKRThread) */
-/* top-level dependencies (end JKRThread) */
+// build JKRAramBlock (['JKRAramBlock']) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRThread (['JKRThread']) False/False
+/* top-level dependencies (begin ['JKRThread']) */
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JKRAramHeap (JKRAramHeap) False/False
-// build JKRAramHeap (JKRAramHeap) True/False
+// build JKRAramHeap (['JKRAramHeap']) False/False
+// build JKRAramHeap (['JKRAramHeap']) True/False
 struct JKRAramHeap;
-/* top-level dependencies (begin JKRAramHeap) */
-// outer dependency: JKRAramHeap::EAllocMode
-/* top-level dependencies (end JKRAramHeap) */
+/* top-level dependencies (begin ['JKRAramHeap']) */
+// outer dependency: ('JKRAramHeap', 'EAllocMode')
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// JKRAramHeap::EAllocMode
-	// build EAllocMode (JKRAramHeap::EAllocMode) False/False
-	/* dependencies (begin JKRAramHeap::EAllocMode) */
-	/* dependencies (end JKRAramHeap::EAllocMode) */
+	// ('JKRAramHeap', 'EAllocMode')
+	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
+	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
+	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
@@ -79,53 +79,53 @@ struct JKRAramHeap {
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-// build JKRAramPiece (JKRAramPiece) False/False
-// build JKRAramBlock (JKRAramBlock) True/True
-// build JKRAMCommand (JKRAMCommand) False/False
-/* top-level dependencies (begin JKRAMCommand) */
-/* top-level dependencies (end JKRAMCommand) */
+// build JKRAramPiece (['JKRAramPiece']) False/False
+// build JKRAMCommand (['JKRAMCommand']) False/False
+/* top-level dependencies (begin ['JKRAMCommand']) */
+/* top-level dependencies (end ['JKRAMCommand']) */
 struct JKRAMCommand {
 };
 
-/* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAramBlock
-// outer dependency: JKRAMCommand
-/* top-level dependencies (end JKRAramPiece) */
+// build JKRAramBlock (['JKRAramBlock']) True/True
+/* top-level dependencies (begin ['JKRAramPiece']) */
+// outer dependency: ('JKRAMCommand',)
+// outer dependency: ('JKRAramBlock',)
+/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// JKRAramBlock
-	// JKRAMCommand
+	// ('JKRAMCommand',)
+	// ('JKRAramBlock',)
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 	/* 802D38CC */ void startDMA(JKRAMCommand*);
 };
 
-// build JKRAMCommand (JKRAMCommand) True/True
-// build JKRAramStream (JKRAramStream) False/False
-/* top-level dependencies (begin JKRAramStream) */
-/* top-level dependencies (end JKRAramStream) */
+// build JKRAMCommand (['JKRAMCommand']) True/True
+// build JKRAramStream (['JKRAramStream']) False/False
+/* top-level dependencies (begin ['JKRAramStream']) */
+/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
 	/* 802D3B48 */ void create(s32);
 };
 
-// build JKRDecomp (JKRDecomp) False/False
-/* top-level dependencies (begin JKRDecomp) */
-/* top-level dependencies (end JKRDecomp) */
+// build JKRDecomp (['JKRDecomp']) False/False
+/* top-level dependencies (begin ['JKRDecomp']) */
+/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
 	/* 802DB680 */ void create(s32);
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-/* top-level dependencies (begin JSUPtrList) */
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+/* top-level dependencies (begin ['JSUPtrList']) */
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

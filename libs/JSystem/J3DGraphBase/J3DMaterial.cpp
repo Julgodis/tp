@@ -9,10 +9,10 @@
 // Types:
 // 
 
-// build J3DMaterial (J3DMaterial) False/False
-// build J3DDisplayListObj (J3DDisplayListObj) False/False
-/* top-level dependencies (begin J3DDisplayListObj) */
-/* top-level dependencies (end J3DDisplayListObj) */
+// build J3DMaterial (['J3DMaterial']) False/False
+// build J3DDisplayListObj (['J3DDisplayListObj']) False/False
+/* top-level dependencies (begin ['J3DDisplayListObj']) */
+/* top-level dependencies (end ['J3DDisplayListObj']) */
 struct J3DDisplayListObj {
 	/* 80312488 */ void newDisplayList(u32);
 	/* 80312508 */ void newSingleDisplayList(u32);
@@ -23,11 +23,11 @@ struct J3DDisplayListObj {
 	/* 80312714 */ void endPatch();
 };
 
-/* top-level dependencies (begin J3DMaterial) */
-// outer dependency: J3DDisplayListObj
-/* top-level dependencies (end J3DMaterial) */
+/* top-level dependencies (begin ['J3DMaterial']) */
+// outer dependency: ('J3DDisplayListObj',)
+/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
-	// J3DDisplayListObj
+	// ('J3DDisplayListObj',)
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
 	/* 80315B04 */ void createTevBlock(int);
@@ -58,10 +58,10 @@ struct J3DMaterial {
 	/* 80316F24 */ void newSingleSharedDisplayList(u32);
 };
 
-// build J3DDisplayListObj (J3DDisplayListObj) True/True
-// build J3DPatchedMaterial (J3DPatchedMaterial) False/False
-/* top-level dependencies (begin J3DPatchedMaterial) */
-/* top-level dependencies (end J3DPatchedMaterial) */
+// build J3DDisplayListObj (['J3DDisplayListObj']) True/True
+// build J3DPatchedMaterial (['J3DPatchedMaterial']) False/False
+/* top-level dependencies (begin ['J3DPatchedMaterial']) */
+/* top-level dependencies (end ['J3DPatchedMaterial']) */
 struct J3DPatchedMaterial {
 	/* 80316FB8 */ void initialize();
 	/* 80316FD8 */ void makeDisplayList();
@@ -72,9 +72,9 @@ struct J3DPatchedMaterial {
 	/* 80317040 */ void change();
 };
 
-// build J3DLockedMaterial (J3DLockedMaterial) False/False
-/* top-level dependencies (begin J3DLockedMaterial) */
-/* top-level dependencies (end J3DLockedMaterial) */
+// build J3DLockedMaterial (['J3DLockedMaterial']) False/False
+/* top-level dependencies (begin ['J3DLockedMaterial']) */
+/* top-level dependencies (end ['J3DLockedMaterial']) */
 struct J3DLockedMaterial {
 	/* 80317044 */ void initialize();
 	/* 80317064 */ void makeDisplayList();
@@ -88,44 +88,44 @@ struct J3DLockedMaterial {
 	/* 803170D8 */ void change();
 };
 
-// build J3DColorBlockLightOff (J3DColorBlockLightOff) False/False
-/* top-level dependencies (begin J3DColorBlockLightOff) */
-/* top-level dependencies (end J3DColorBlockLightOff) */
+// build J3DColorBlockLightOff (['J3DColorBlockLightOff']) False/False
+/* top-level dependencies (begin ['J3DColorBlockLightOff']) */
+/* top-level dependencies (end ['J3DColorBlockLightOff']) */
 struct J3DColorBlockLightOff {
 	/* 803170DC */ ~J3DColorBlockLightOff();
 	/* 8031747C */ void initialize();
 };
 
-// build J3DColorBlock (J3DColorBlock) False/False
-// build J3DColorChan (J3DColorChan) False/False
-/* top-level dependencies (begin J3DColorChan) */
-/* top-level dependencies (end J3DColorChan) */
+// build J3DColorBlock (['J3DColorBlock']) False/False
+// build J3DLightObj (['J3DLightObj']) False/False
+/* top-level dependencies (begin ['J3DLightObj']) */
+/* top-level dependencies (end ['J3DLightObj']) */
+struct J3DLightObj {
+};
+
+// build J3DColorChan (['J3DColorChan']) False/False
+/* top-level dependencies (begin ['J3DColorChan']) */
+/* top-level dependencies (end ['J3DColorChan']) */
 struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
 };
 
-// build J3DGXColor (J3DGXColor) False/False
-/* top-level dependencies (begin J3DGXColor) */
-/* top-level dependencies (end J3DGXColor) */
+// build J3DGXColor (['J3DGXColor']) False/False
+/* top-level dependencies (begin ['J3DGXColor']) */
+/* top-level dependencies (end ['J3DGXColor']) */
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
 };
 
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
-struct J3DLightObj {
-};
-
-/* top-level dependencies (begin J3DColorBlock) */
-// outer dependency: J3DColorChan
-// outer dependency: J3DGXColor
-// outer dependency: J3DLightObj
-/* top-level dependencies (end J3DColorBlock) */
+/* top-level dependencies (begin ['J3DColorBlock']) */
+// outer dependency: ('J3DLightObj',)
+// outer dependency: ('J3DColorChan',)
+// outer dependency: ('J3DGXColor',)
+/* top-level dependencies (end ['J3DColorBlock']) */
 struct J3DColorBlock {
-	// J3DColorChan
-	// J3DGXColor
-	// J3DLightObj
+	// ('J3DLightObj',)
+	// ('J3DColorChan',)
+	// ('J3DGXColor',)
 	/* 8000DBD0 */ void patchLight();
 	/* 8000DFF0 */ bool getAmbColor(u32);
 	/* 8000DFF8 */ bool getColorChan(u32);
@@ -161,43 +161,43 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
-// build J3DTexGenBlockPatched (J3DTexGenBlockPatched) False/False
-/* top-level dependencies (begin J3DTexGenBlockPatched) */
-/* top-level dependencies (end J3DTexGenBlockPatched) */
+// build J3DTexGenBlockPatched (['J3DTexGenBlockPatched']) False/False
+/* top-level dependencies (begin ['J3DTexGenBlockPatched']) */
+/* top-level dependencies (end ['J3DTexGenBlockPatched']) */
 struct J3DTexGenBlockPatched {
 	/* 80317180 */ ~J3DTexGenBlockPatched();
 	/* 80317644 */ void initialize();
 };
 
-// build J3DTexGenBlock (J3DTexGenBlock) False/False
-// build J3DTexMtx (J3DTexMtx) False/False
-/* top-level dependencies (begin J3DTexMtx) */
-/* top-level dependencies (end J3DTexMtx) */
-struct J3DTexMtx {
-};
-
-// build J3DNBTScale (J3DNBTScale) False/False
-/* top-level dependencies (begin J3DNBTScale) */
-/* top-level dependencies (end J3DNBTScale) */
+// build J3DTexGenBlock (['J3DTexGenBlock']) False/False
+// build J3DNBTScale (['J3DNBTScale']) False/False
+/* top-level dependencies (begin ['J3DNBTScale']) */
+/* top-level dependencies (end ['J3DNBTScale']) */
 struct J3DNBTScale {
 };
 
-// build J3DTexCoord (J3DTexCoord) False/False
-/* top-level dependencies (begin J3DTexCoord) */
-/* top-level dependencies (end J3DTexCoord) */
+// build J3DTexCoord (['J3DTexCoord']) False/False
+/* top-level dependencies (begin ['J3DTexCoord']) */
+/* top-level dependencies (end ['J3DTexCoord']) */
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
 };
 
-/* top-level dependencies (begin J3DTexGenBlock) */
-// outer dependency: J3DTexMtx
-// outer dependency: J3DNBTScale
-// outer dependency: J3DTexCoord
-/* top-level dependencies (end J3DTexGenBlock) */
+// build J3DTexMtx (['J3DTexMtx']) False/False
+/* top-level dependencies (begin ['J3DTexMtx']) */
+/* top-level dependencies (end ['J3DTexMtx']) */
+struct J3DTexMtx {
+};
+
+/* top-level dependencies (begin ['J3DTexGenBlock']) */
+// outer dependency: ('J3DNBTScale',)
+// outer dependency: ('J3DTexCoord',)
+// outer dependency: ('J3DTexMtx',)
+/* top-level dependencies (end ['J3DTexGenBlock']) */
 struct J3DTexGenBlock {
-	// J3DTexMtx
-	// J3DNBTScale
-	// J3DTexCoord
+	// ('J3DNBTScale',)
+	// ('J3DTexCoord',)
+	// ('J3DTexMtx',)
 	/* 8000DFD8 */ bool getTexMtx(u32);
 	/* 8000DFE0 */ bool getTexCoord(u32);
 	/* 8000DFE8 */ bool getTexGenNum() const;
@@ -215,9 +215,9 @@ struct J3DTexGenBlock {
 	/* 80317430 */ void setTexMtxOffset(u32);
 };
 
-// build J3DTevBlock (J3DTevBlock) False/False
-/* top-level dependencies (begin J3DTevBlock) */
-/* top-level dependencies (end J3DTevBlock) */
+// build J3DTevBlock (['J3DTevBlock']) False/False
+/* top-level dependencies (begin ['J3DTevBlock']) */
+/* top-level dependencies (end ['J3DTevBlock']) */
 struct J3DTevBlock {
 	/* 80317224 */ ~J3DTevBlock();
 	/* 8031730C */ bool countDLSize();
@@ -225,39 +225,39 @@ struct J3DTevBlock {
 	/* 80317350 */ void reset(J3DTevBlock*);
 };
 
-// build J3DIndBlock (J3DIndBlock) False/False
-// build J3DIndTexOrder (J3DIndTexOrder) False/False
-/* top-level dependencies (begin J3DIndTexOrder) */
-/* top-level dependencies (end J3DIndTexOrder) */
-struct J3DIndTexOrder {
-	/* 8000E128 */ J3DIndTexOrder();
-};
-
-// build J3DIndTexMtx (J3DIndTexMtx) False/False
-/* top-level dependencies (begin J3DIndTexMtx) */
-/* top-level dependencies (end J3DIndTexMtx) */
+// build J3DIndBlock (['J3DIndBlock']) False/False
+// build J3DIndTexMtx (['J3DIndTexMtx']) False/False
+/* top-level dependencies (begin ['J3DIndTexMtx']) */
+/* top-level dependencies (end ['J3DIndTexMtx']) */
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 	/* 8000E0F0 */ J3DIndTexMtx();
 };
 
-// build J3DIndTexCoordScale (J3DIndTexCoordScale) False/False
-/* top-level dependencies (begin J3DIndTexCoordScale) */
-/* top-level dependencies (end J3DIndTexCoordScale) */
+// build J3DIndTexOrder (['J3DIndTexOrder']) False/False
+/* top-level dependencies (begin ['J3DIndTexOrder']) */
+/* top-level dependencies (end ['J3DIndTexOrder']) */
+struct J3DIndTexOrder {
+	/* 8000E128 */ J3DIndTexOrder();
+};
+
+// build J3DIndTexCoordScale (['J3DIndTexCoordScale']) False/False
+/* top-level dependencies (begin ['J3DIndTexCoordScale']) */
+/* top-level dependencies (end ['J3DIndTexCoordScale']) */
 struct J3DIndTexCoordScale {
 	/* 8000E024 */ ~J3DIndTexCoordScale();
 	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
-/* top-level dependencies (begin J3DIndBlock) */
-// outer dependency: J3DIndTexOrder
-// outer dependency: J3DIndTexMtx
-// outer dependency: J3DIndTexCoordScale
-/* top-level dependencies (end J3DIndBlock) */
+/* top-level dependencies (begin ['J3DIndBlock']) */
+// outer dependency: ('J3DIndTexMtx',)
+// outer dependency: ('J3DIndTexOrder',)
+// outer dependency: ('J3DIndTexCoordScale',)
+/* top-level dependencies (end ['J3DIndBlock']) */
 struct J3DIndBlock {
-	// J3DIndTexOrder
-	// J3DIndTexMtx
-	// J3DIndTexCoordScale
+	// ('J3DIndTexMtx',)
+	// ('J3DIndTexOrder',)
+	// ('J3DIndTexCoordScale',)
 	/* 8000DF64 */ bool getIndTexCoordScale(u32);
 	/* 8000DF6C */ bool getIndTexMtx(u32);
 	/* 8000DF74 */ bool getIndTexOrder(u32);
@@ -274,42 +274,42 @@ struct J3DIndBlock {
 	/* 80317418 */ void setIndTexCoordScale(u32, J3DIndTexCoordScale const*);
 };
 
-// build J3DPEBlock (J3DPEBlock) False/False
-// build J3DAlphaComp (J3DAlphaComp) False/False
-/* top-level dependencies (begin J3DAlphaComp) */
-/* top-level dependencies (end J3DAlphaComp) */
+// build J3DPEBlock (['J3DPEBlock']) False/False
+// build J3DAlphaComp (['J3DAlphaComp']) False/False
+/* top-level dependencies (begin ['J3DAlphaComp']) */
+/* top-level dependencies (end ['J3DAlphaComp']) */
 struct J3DAlphaComp {
 };
 
-// build J3DFog (J3DFog) False/False
-/* top-level dependencies (begin J3DFog) */
-/* top-level dependencies (end J3DFog) */
-struct J3DFog {
-};
-
-// build J3DBlend (J3DBlend) False/False
-/* top-level dependencies (begin J3DBlend) */
-/* top-level dependencies (end J3DBlend) */
-struct J3DBlend {
-};
-
-// build J3DZMode (J3DZMode) False/False
-/* top-level dependencies (begin J3DZMode) */
-/* top-level dependencies (end J3DZMode) */
+// build J3DZMode (['J3DZMode']) False/False
+/* top-level dependencies (begin ['J3DZMode']) */
+/* top-level dependencies (end ['J3DZMode']) */
 struct J3DZMode {
 };
 
-/* top-level dependencies (begin J3DPEBlock) */
-// outer dependency: J3DAlphaComp
-// outer dependency: J3DFog
-// outer dependency: J3DBlend
-// outer dependency: J3DZMode
-/* top-level dependencies (end J3DPEBlock) */
+// build J3DFog (['J3DFog']) False/False
+/* top-level dependencies (begin ['J3DFog']) */
+/* top-level dependencies (end ['J3DFog']) */
+struct J3DFog {
+};
+
+// build J3DBlend (['J3DBlend']) False/False
+/* top-level dependencies (begin ['J3DBlend']) */
+/* top-level dependencies (end ['J3DBlend']) */
+struct J3DBlend {
+};
+
+/* top-level dependencies (begin ['J3DPEBlock']) */
+// outer dependency: ('J3DAlphaComp',)
+// outer dependency: ('J3DZMode',)
+// outer dependency: ('J3DFog',)
+// outer dependency: ('J3DBlend',)
+/* top-level dependencies (end ['J3DPEBlock']) */
 struct J3DPEBlock {
-	// J3DAlphaComp
-	// J3DFog
-	// J3DZMode
-	// J3DBlend
+	// ('J3DAlphaComp',)
+	// ('J3DZMode',)
+	// ('J3DFog',)
+	// ('J3DBlend',)
 	/* 8000DBCC */ void patch();
 	/* 8000DF3C */ bool getZCompLoc() const;
 	/* 8000DF44 */ bool getZMode();
@@ -339,17 +339,17 @@ struct J3DPEBlock {
 	/* 80317394 */ void setFogOffset(u32);
 };
 
-// build J3DFog (J3DFog) True/True
-// build J3DAlphaComp (J3DAlphaComp) True/True
-// build J3DBlend (J3DBlend) True/True
-// build J3DZMode (J3DZMode) True/True
-// build J3DIndBlockNull (J3DIndBlockNull) False/False
-// build J3DIndBlock (J3DIndBlock) True/True
-/* top-level dependencies (begin J3DIndBlockNull) */
-// outer dependency: J3DIndBlock
-/* top-level dependencies (end J3DIndBlockNull) */
+// build J3DFog (['J3DFog']) True/True
+// build J3DAlphaComp (['J3DAlphaComp']) True/True
+// build J3DBlend (['J3DBlend']) True/True
+// build J3DZMode (['J3DZMode']) True/True
+// build J3DIndBlockNull (['J3DIndBlockNull']) False/False
+// build J3DIndBlock (['J3DIndBlock']) True/True
+/* top-level dependencies (begin ['J3DIndBlockNull']) */
+// outer dependency: ('J3DIndBlock',)
+/* top-level dependencies (end ['J3DIndBlockNull']) */
 struct J3DIndBlockNull {
-	// J3DIndBlock
+	// ('J3DIndBlock',)
 	/* 80317398 */ void diff(u32);
 	/* 8031739C */ void load();
 	/* 803173A0 */ void reset(J3DIndBlock*);
@@ -357,144 +357,144 @@ struct J3DIndBlockNull {
 	/* 803173B0 */ ~J3DIndBlockNull();
 };
 
-// build J3DIndTexOrder (J3DIndTexOrder) True/True
-// build J3DIndTexMtx (J3DIndTexMtx) True/True
-// build J3DIndTexCoordScale (J3DIndTexCoordScale) True/True
-// build J3DNBTScale (J3DNBTScale) True/True
-// build J3DGXColor (J3DGXColor) True/True
-// build J3DColorChan (J3DColorChan) True/True
-// build J3DTexCoord (J3DTexCoord) True/True
-// build J3DTevSwapModeTable (J3DTevSwapModeTable) False/False
-/* top-level dependencies (begin J3DTevSwapModeTable) */
-/* top-level dependencies (end J3DTevSwapModeTable) */
+// build J3DIndTexOrder (['J3DIndTexOrder']) True/True
+// build J3DIndTexMtx (['J3DIndTexMtx']) True/True
+// build J3DIndTexCoordScale (['J3DIndTexCoordScale']) True/True
+// build J3DNBTScale (['J3DNBTScale']) True/True
+// build J3DGXColor (['J3DGXColor']) True/True
+// build J3DColorChan (['J3DColorChan']) True/True
+// build J3DTexCoord (['J3DTexCoord']) True/True
+// build J3DTevSwapModeTable (['J3DTevSwapModeTable']) False/False
+/* top-level dependencies (begin ['J3DTevSwapModeTable']) */
+/* top-level dependencies (end ['J3DTevSwapModeTable']) */
 struct J3DTevSwapModeTable {
 	/* 8000E134 */ J3DTevSwapModeTable();
 };
 
-// build J3DTevOrder (J3DTevOrder) False/False
-/* top-level dependencies (begin J3DTevOrder) */
-/* top-level dependencies (end J3DTevOrder) */
+// build J3DTevOrder (['J3DTevOrder']) False/False
+/* top-level dependencies (begin ['J3DTevOrder']) */
+/* top-level dependencies (end ['J3DTevOrder']) */
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
 
-// build J3DIndTevStage (J3DIndTevStage) False/False
-/* top-level dependencies (begin J3DIndTevStage) */
-/* top-level dependencies (end J3DIndTevStage) */
+// build J3DIndTevStage (['J3DIndTevStage']) False/False
+/* top-level dependencies (begin ['J3DIndTevStage']) */
+/* top-level dependencies (end ['J3DIndTevStage']) */
 struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
 };
 
-// build J3DTevStage (J3DTevStage) False/False
-/* top-level dependencies (begin J3DTevStage) */
-/* top-level dependencies (end J3DTevStage) */
+// build J3DTevStage (['J3DTevStage']) False/False
+/* top-level dependencies (begin ['J3DTevStage']) */
+/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
 	/* 8000E230 */ J3DTevStage();
 };
 
-// build J3DGXColorS10 (J3DGXColorS10) False/False
-/* top-level dependencies (begin J3DGXColorS10) */
-/* top-level dependencies (end J3DGXColorS10) */
+// build J3DGXColorS10 (['J3DGXColorS10']) False/False
+/* top-level dependencies (begin ['J3DGXColorS10']) */
+/* top-level dependencies (end ['J3DGXColorS10']) */
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
 
-// build J3DTexMtx (J3DTexMtx) True/True
-// build J3DLightObj (J3DLightObj) True/True
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
+// build J3DTexMtx (['J3DTexMtx']) True/True
+// build J3DLightObj (['J3DLightObj']) True/True
+// build _GXCullMode (['_GXCullMode']) False/False
+/* top-level dependencies (begin ['_GXCullMode']) */
+/* top-level dependencies (end ['_GXCullMode']) */
 struct _GXCullMode {
 };
 
-// build J3DMatPacket (J3DMatPacket) False/False
-/* top-level dependencies (begin J3DMatPacket) */
-/* top-level dependencies (end J3DMatPacket) */
+// build J3DMatPacket (['J3DMatPacket']) False/False
+/* top-level dependencies (begin ['J3DMatPacket']) */
+/* top-level dependencies (end ['J3DMatPacket']) */
 struct J3DMatPacket {
 	/* 80312A24 */ void beginDiff();
 	/* 80312A4C */ void endDiff();
 };
 
-// build J3DColorBlockAmbientOn (J3DColorBlockAmbientOn) False/False
-/* top-level dependencies (begin J3DColorBlockAmbientOn) */
-/* top-level dependencies (end J3DColorBlockAmbientOn) */
+// build J3DColorBlockAmbientOn (['J3DColorBlockAmbientOn']) False/False
+/* top-level dependencies (begin ['J3DColorBlockAmbientOn']) */
+/* top-level dependencies (end ['J3DColorBlockAmbientOn']) */
 struct J3DColorBlockAmbientOn {
 	/* 803174DC */ void initialize();
 };
 
-// build J3DColorBlockLightOn (J3DColorBlockLightOn) False/False
-/* top-level dependencies (begin J3DColorBlockLightOn) */
-/* top-level dependencies (end J3DColorBlockLightOn) */
+// build J3DColorBlockLightOn (['J3DColorBlockLightOn']) False/False
+/* top-level dependencies (begin ['J3DColorBlockLightOn']) */
+/* top-level dependencies (end ['J3DColorBlockLightOn']) */
 struct J3DColorBlockLightOn {
 	/* 80317580 */ void initialize();
 };
 
-// build J3DTexGenBlock4 (J3DTexGenBlock4) False/False
-/* top-level dependencies (begin J3DTexGenBlock4) */
-/* top-level dependencies (end J3DTexGenBlock4) */
+// build J3DTexGenBlock4 (['J3DTexGenBlock4']) False/False
+/* top-level dependencies (begin ['J3DTexGenBlock4']) */
+/* top-level dependencies (end ['J3DTexGenBlock4']) */
 struct J3DTexGenBlock4 {
 	/* 80317674 */ void initialize();
 };
 
-// build J3DTexGenBlockBasic (J3DTexGenBlockBasic) False/False
-/* top-level dependencies (begin J3DTexGenBlockBasic) */
-/* top-level dependencies (end J3DTexGenBlockBasic) */
+// build J3DTexGenBlockBasic (['J3DTexGenBlockBasic']) False/False
+/* top-level dependencies (begin ['J3DTexGenBlockBasic']) */
+/* top-level dependencies (end ['J3DTexGenBlockBasic']) */
 struct J3DTexGenBlockBasic {
 	/* 803176A4 */ void initialize();
 };
 
-// build J3DTevBlock1 (J3DTevBlock1) False/False
-/* top-level dependencies (begin J3DTevBlock1) */
-/* top-level dependencies (end J3DTevBlock1) */
+// build J3DTevBlock1 (['J3DTevBlock1']) False/False
+/* top-level dependencies (begin ['J3DTevBlock1']) */
+/* top-level dependencies (end ['J3DTevBlock1']) */
 struct J3DTevBlock1 {
 	/* 803177E8 */ void initialize();
 };
 
-// build J3DTevBlock2 (J3DTevBlock2) False/False
-/* top-level dependencies (begin J3DTevBlock2) */
-/* top-level dependencies (end J3DTevBlock2) */
+// build J3DTevBlock2 (['J3DTevBlock2']) False/False
+/* top-level dependencies (begin ['J3DTevBlock2']) */
+/* top-level dependencies (end ['J3DTevBlock2']) */
 struct J3DTevBlock2 {
 	/* 80317810 */ void initialize();
 };
 
-// build J3DTevBlock4 (J3DTevBlock4) False/False
-/* top-level dependencies (begin J3DTevBlock4) */
-/* top-level dependencies (end J3DTevBlock4) */
+// build J3DTevBlock4 (['J3DTevBlock4']) False/False
+/* top-level dependencies (begin ['J3DTevBlock4']) */
+/* top-level dependencies (end ['J3DTevBlock4']) */
 struct J3DTevBlock4 {
 	/* 803178EC */ void initialize();
 };
 
-// build J3DTevBlock16 (J3DTevBlock16) False/False
-/* top-level dependencies (begin J3DTevBlock16) */
-/* top-level dependencies (end J3DTevBlock16) */
+// build J3DTevBlock16 (['J3DTevBlock16']) False/False
+/* top-level dependencies (begin ['J3DTevBlock16']) */
+/* top-level dependencies (end ['J3DTevBlock16']) */
 struct J3DTevBlock16 {
 	/* 80317A00 */ void initialize();
 };
 
-// build J3DIndBlockFull (J3DIndBlockFull) False/False
-/* top-level dependencies (begin J3DIndBlockFull) */
-/* top-level dependencies (end J3DIndBlockFull) */
+// build J3DIndBlockFull (['J3DIndBlockFull']) False/False
+/* top-level dependencies (begin ['J3DIndBlockFull']) */
+/* top-level dependencies (end ['J3DIndBlockFull']) */
 struct J3DIndBlockFull {
 	/* 80317B28 */ void initialize();
 };
 
-// build J3DPEBlockFogOff (J3DPEBlockFogOff) False/False
-/* top-level dependencies (begin J3DPEBlockFogOff) */
-/* top-level dependencies (end J3DPEBlockFogOff) */
+// build J3DPEBlockFogOff (['J3DPEBlockFogOff']) False/False
+/* top-level dependencies (begin ['J3DPEBlockFogOff']) */
+/* top-level dependencies (end ['J3DPEBlockFogOff']) */
 struct J3DPEBlockFogOff {
 	/* 80317B34 */ void initialize();
 };
 
-// build J3DPEBlockFull (J3DPEBlockFull) False/False
-/* top-level dependencies (begin J3DPEBlockFull) */
-/* top-level dependencies (end J3DPEBlockFull) */
+// build J3DPEBlockFull (['J3DPEBlockFull']) False/False
+/* top-level dependencies (begin ['J3DPEBlockFull']) */
+/* top-level dependencies (end ['J3DPEBlockFull']) */
 struct J3DPEBlockFull {
 	/* 80317B58 */ void initialize();
 };
 
-// build J3DFogInfo (J3DFogInfo) False/False
-/* top-level dependencies (begin J3DFogInfo) */
-/* top-level dependencies (end J3DFogInfo) */
+// build J3DFogInfo (['J3DFogInfo']) False/False
+/* top-level dependencies (begin ['J3DFogInfo']) */
+/* top-level dependencies (end ['J3DFogInfo']) */
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
 };

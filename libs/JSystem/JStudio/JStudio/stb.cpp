@@ -9,79 +9,77 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
-// outer dependency: JStudio::stb::data::TParse_TBlock
-// outer dependency: JStudio::stb::TControl
-// outer dependency: JStudio::stb::data::TParse_TSequence::TData
-// outer dependency: JStudio::object::TIDData
-// outer dependency: JStudio::stb::data::TParse_THeader
-// outer dependency: JStudio::stb::TObject
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'stb', 'TObject')
+// outer dependency: ('JStudio', 'stb', 'TControl')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_THeader')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build stb (JStudio::stb) False/False
-	/* dependencies (begin JStudio::stb) */
-	/* dependencies (end JStudio::stb) */
+	// build stb (['JStudio', 'stb']) False/False
+	/* dependencies (begin ['JStudio', 'stb']) */
+	/* dependencies (end ['JStudio', 'stb']) */
 	struct stb {
-		// build TObject (JStudio::stb::TObject) False/False
-		/* dependencies (begin JStudio::stb::TObject) */
-		// inner dependency: data (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::stb::TObject)
-		// build data (JStudio::stb::data) False/False
-		/* dependencies (begin JStudio::stb::data) */
-		/* dependencies (end JStudio::stb::data) */
+		// build TObject (['JStudio', 'stb', 'TObject']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'TObject']) */
+		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'stb', 'TObject'])
+		// build data (['JStudio', 'stb', 'data']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'data']) */
+		/* dependencies (end ['JStudio', 'stb', 'data']) */
 		struct data {
-			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
-			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
-			// build TParse_THeader (JStudio::stb::data::TParse_THeader) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_THeader) */
-			/* dependencies (end JStudio::stb::data::TParse_THeader) */
+			// build TParse_THeader (['JStudio', 'stb', 'data', 'TParse_THeader']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_THeader']) */
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_THeader']) */
 			struct TParse_THeader {
 			};
 
-			// build TParse_TBlock (JStudio::stb::data::TParse_TBlock) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TBlock) */
-			/* dependencies (end JStudio::stb::data::TParse_TBlock) */
+			// build TParse_TBlock (['JStudio', 'stb', 'data', 'TParse_TBlock']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock']) */
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock']) */
 			struct TParse_TBlock {
 			};
 
-			// build TParse_TSequence (JStudio::stb::data::TParse_TSequence) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TSequence) */
-			// inner dependency: TParse_TSequence (JStudio::stb::data::TParse_TSequence::TData) True False (for JStudio::stb::data::TParse_TSequence)
-			/* dependencies (end JStudio::stb::data::TParse_TSequence) */
+			// build TParse_TSequence (['JStudio', 'stb', 'data', 'TParse_TSequence']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TSequence']) */
+			// inner dependency: 3 ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData') (for ['JStudio', 'stb', 'data', 'TParse_TSequence'])
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TSequence']) */
 			struct TParse_TSequence {
-				// JStudio::stb::data::TParse_TSequence::TData
-				// build TData (JStudio::stb::data::TParse_TSequence::TData) False/False
-				/* dependencies (begin JStudio::stb::data::TParse_TSequence::TData) */
-				/* dependencies (end JStudio::stb::data::TParse_TSequence::TData) */
+				// ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData')
+				// build TData (['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) False/False
+				/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) */
+				/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) */
 				struct TData {
 				};
 
 				/* 802899BC */ void getData(JStudio::stb::data::TParse_TSequence::TData*) const;
 			};
 
-			// build TParse_TParagraph (JStudio::stb::data::TParse_TParagraph) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TParagraph) */
-			// inner dependency: TParse_TParagraph (JStudio::stb::data::TParse_TParagraph::TData) True False (for JStudio::stb::data::TParse_TParagraph)
-			/* dependencies (end JStudio::stb::data::TParse_TParagraph) */
+			// build TParse_TParagraph (['JStudio', 'stb', 'data', 'TParse_TParagraph']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph']) */
+			// inner dependency: 3 ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'stb', 'data', 'TParse_TParagraph'])
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph']) */
 			struct TParse_TParagraph {
-				// JStudio::stb::data::TParse_TParagraph::TData
-				// build TData (JStudio::stb::data::TParse_TParagraph::TData) False/False
-				/* dependencies (begin JStudio::stb::data::TParse_TParagraph::TData) */
-				/* dependencies (end JStudio::stb::data::TParse_TParagraph::TData) */
+				// ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData')
+				// build TData (['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) False/False
+				/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) */
+				/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) */
 				struct TData {
 				};
 
@@ -90,9 +88,9 @@ namespace JStudio {
 
 		};
 
-		/* dependencies (end JStudio::stb::TObject) */
+		/* dependencies (end ['JStudio', 'stb', 'TObject']) */
 		struct TObject {
-			// JStudio::stb::data::TParse_TBlock_object
+			// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 			/* 80288A78 */ TObject(u32, void const*, u32);
 			/* 80288AC0 */ TObject(JStudio::stb::data::TParse_TBlock_object const&);
 			/* 80288B30 */ ~TObject();
@@ -108,22 +106,22 @@ namespace JStudio {
 			/* 80288F80 */ void process_paragraph_reserved_(u32, void const*, u32);
 		};
 
-		// build data (JStudio::stb::data) True/True
-		// build TObject_control (JStudio::stb::TObject_control) False/False
-		/* dependencies (begin JStudio::stb::TObject_control) */
-		/* dependencies (end JStudio::stb::TObject_control) */
+		// build data (['JStudio', 'stb', 'data']) True/True
+		// build TObject_control (['JStudio', 'stb', 'TObject_control']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'TObject_control']) */
+		/* dependencies (end ['JStudio', 'stb', 'TObject_control']) */
 		struct TObject_control {
 			/* 80289068 */ TObject_control(void const*, u32);
 			/* 80289134 */ ~TObject_control();
 		};
 
-		// build TControl (JStudio::stb::TControl) False/False
-		/* dependencies (begin JStudio::stb::TControl) */
-		// inner dependency: TObject (JStudio::stb::TObject) True False (for JStudio::stb::TControl)
-		// build TObject (JStudio::stb::TObject) True/True
-		/* dependencies (end JStudio::stb::TControl) */
+		// build TControl (['JStudio', 'stb', 'TControl']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'TControl']) */
+		// inner dependency: 2 ('JStudio', 'stb', 'TObject') (for ['JStudio', 'stb', 'TControl'])
+		// build TObject (['JStudio', 'stb', 'TObject']) True/True
+		/* dependencies (end ['JStudio', 'stb', 'TControl']) */
 		struct TControl {
-			// JStudio::stb::TObject
+			// ('JStudio', 'stb', 'TObject')
 			/* 802890B4 */ TControl();
 			/* 80289194 */ ~TControl();
 			/* 80289228 */ void appendObject(JStudio::stb::TObject*);
@@ -135,37 +133,37 @@ namespace JStudio {
 			/* 802894B4 */ void forward(u32);
 		};
 
-		// build TFactory (JStudio::stb::TFactory) False/False
-		/* dependencies (begin JStudio::stb::TFactory) */
-		// inner dependency: data (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::stb::TFactory)
-		// build data (JStudio::stb::data) True/True
-		// inner dependency: TObject (JStudio::stb::TObject) True False (for JStudio::stb::TFactory)
-		// build TObject (JStudio::stb::TObject) True/True
-		/* dependencies (end JStudio::stb::TFactory) */
+		// build TFactory (['JStudio', 'stb', 'TFactory']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'TFactory']) */
+		// inner dependency: 2 ('JStudio', 'stb', 'TObject') (for ['JStudio', 'stb', 'TFactory'])
+		// build TObject (['JStudio', 'stb', 'TObject']) True/True
+		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'stb', 'TFactory'])
+		// build data (['JStudio', 'stb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'stb', 'TFactory']) */
 		struct TFactory {
-			// JStudio::stb::data::TParse_TBlock_object
-			// JStudio::stb::TObject
+			// ('JStudio', 'stb', 'TObject')
+			// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 			/* 802895B4 */ ~TFactory();
 			/* 802895FC */ bool create(JStudio::stb::data::TParse_TBlock_object const&);
 			/* 80289604 */ void destroy(JStudio::stb::TObject*);
 		};
 
-		// build TParse (JStudio::stb::TParse) False/False
-		/* dependencies (begin JStudio::stb::TParse) */
-		// inner dependency: data (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::stb::TParse)
-		// build data (JStudio::stb::data) True/True
-		// inner dependency: TControl (JStudio::stb::TControl) True False (for JStudio::stb::TParse)
-		// build TControl (JStudio::stb::TControl) True/True
-		// inner dependency: data (JStudio::stb::data::TParse_TBlock) True False (for JStudio::stb::TParse)
-		// build data (JStudio::stb::data) True/True
-		// inner dependency: data (JStudio::stb::data::TParse_THeader) True False (for JStudio::stb::TParse)
-		// build data (JStudio::stb::data) True/True
-		/* dependencies (end JStudio::stb::TParse) */
+		// build TParse (['JStudio', 'stb', 'TParse']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'TParse']) */
+		// inner dependency: 2 ('JStudio', 'stb', 'TControl') (for ['JStudio', 'stb', 'TParse'])
+		// build TControl (['JStudio', 'stb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_TBlock') (for ['JStudio', 'stb', 'TParse'])
+		// build data (['JStudio', 'stb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'stb', 'TParse'])
+		// build data (['JStudio', 'stb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_THeader') (for ['JStudio', 'stb', 'TParse'])
+		// build data (['JStudio', 'stb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'stb', 'TParse']) */
 		struct TParse {
-			// JStudio::stb::data::TParse_TBlock_object
-			// JStudio::stb::TControl
-			// JStudio::stb::data::TParse_TBlock
-			// JStudio::stb::data::TParse_THeader
+			// ('JStudio', 'stb', 'TControl')
+			// ('JStudio', 'stb', 'data', 'TParse_TBlock')
+			// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+			// ('JStudio', 'stb', 'data', 'TParse_THeader')
 			/* 80289640 */ TParse(JStudio::stb::TControl*);
 			/* 80289660 */ ~TParse();
 			/* 802896C0 */ void parseHeader_next(void const**, u32*, u32);
@@ -177,13 +175,13 @@ namespace JStudio {
 
 	};
 
-	// build object (JStudio::object) False/False
-	/* dependencies (begin JStudio::object) */
-	/* dependencies (end JStudio::object) */
+	// build object (['JStudio', 'object']) False/False
+	/* dependencies (begin ['JStudio', 'object']) */
+	/* dependencies (end ['JStudio', 'object']) */
 	struct object {
-		// build TIDData (JStudio::object::TIDData) False/False
-		/* dependencies (begin JStudio::object::TIDData) */
-		/* dependencies (end JStudio::object::TIDData) */
+		// build TIDData (['JStudio', 'object', 'TIDData']) False/False
+		/* dependencies (begin ['JStudio', 'object', 'TIDData']) */
+		/* dependencies (end ['JStudio', 'object', 'TIDData']) */
 		struct TIDData {
 			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
 		};
@@ -192,45 +190,45 @@ namespace JStudio {
 
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
-		/* dependencies (begin JGadget::binary::TParse_header_block) */
-		/* dependencies (end JGadget::binary::TParse_header_block) */
+		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
+		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 		};
 
 	};
 
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -239,7 +237,7 @@ struct JGadget {
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 

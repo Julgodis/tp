@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build dMsgStringBase_c (dMsgStringBase_c) False/False
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
+// build dMsgStringBase_c (['dMsgStringBase_c']) False/False
+// build COutFont_c (['COutFont_c']) False/False
+/* top-level dependencies (begin ['COutFont_c']) */
+/* top-level dependencies (end ['COutFont_c']) */
 struct COutFont_c {
 };
 
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 };
 
-/* top-level dependencies (begin dMsgStringBase_c) */
-// outer dependency: COutFont_c
-// outer dependency: JUTFont
-// outer dependency: J2DTextBox
-/* top-level dependencies (end dMsgStringBase_c) */
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
+struct JUTFont {
+};
+
+/* top-level dependencies (begin ['dMsgStringBase_c']) */
+// outer dependency: ('COutFont_c',)
+// outer dependency: ('J2DTextBox',)
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['dMsgStringBase_c']) */
 struct dMsgStringBase_c {
-	// COutFont_c
-	// JUTFont
-	// J2DTextBox
+	// ('COutFont_c',)
+	// ('J2DTextBox',)
+	// ('JUTFont',)
 	/* 802493B4 */ dMsgStringBase_c();
 	/* 80249528 */ ~dMsgStringBase_c();
 	/* 80249700 */ void getResource();
@@ -52,67 +52,67 @@ struct dMsgStringBase_c {
 	/* 80249C1C */ void drawOutFontLocal(J2DTextBox*, f32);
 };
 
-// build J2DTextBox (J2DTextBox) True/True
-// build JUTFont (JUTFont) True/True
-// build COutFont_c (COutFont_c) True/True
-// build jmessage_string_tReference (jmessage_string_tReference) False/False
-// build COutFont_c (COutFont_c) True/True
-// build JUTFont (JUTFont) True/True
-// build J2DTextBox (J2DTextBox) True/True
-/* top-level dependencies (begin jmessage_string_tReference) */
-// outer dependency: COutFont_c
-// outer dependency: JUTFont
-// outer dependency: J2DTextBox
-/* top-level dependencies (end jmessage_string_tReference) */
+// build J2DTextBox (['J2DTextBox']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build COutFont_c (['COutFont_c']) True/True
+// build jmessage_string_tReference (['jmessage_string_tReference']) False/False
+// build COutFont_c (['COutFont_c']) True/True
+// build J2DTextBox (['J2DTextBox']) True/True
+// build JUTFont (['JUTFont']) True/True
+/* top-level dependencies (begin ['jmessage_string_tReference']) */
+// outer dependency: ('COutFont_c',)
+// outer dependency: ('J2DTextBox',)
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['jmessage_string_tReference']) */
 struct jmessage_string_tReference {
-	// COutFont_c
-	// JUTFont
-	// J2DTextBox
+	// ('COutFont_c',)
+	// ('J2DTextBox',)
+	// ('JUTFont',)
 	/* 8022F8C0 */ jmessage_string_tReference();
 	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 8022FA38 */ void getLineLength(int);
 };
 
-// build jmessage_string_tControl (jmessage_string_tControl) False/False
-/* top-level dependencies (begin jmessage_string_tControl) */
-/* top-level dependencies (end jmessage_string_tControl) */
+// build jmessage_string_tControl (['jmessage_string_tControl']) False/False
+/* top-level dependencies (begin ['jmessage_string_tControl']) */
+/* top-level dependencies (end ['jmessage_string_tControl']) */
 struct jmessage_string_tControl {
 	/* 8022FB5C */ jmessage_string_tControl();
 };
 
-// build jmessage_string_tSequenceProcessor (jmessage_string_tSequenceProcessor) False/False
-// build jmessage_string_tControl (jmessage_string_tControl) True/True
-// build jmessage_string_tReference (jmessage_string_tReference) True/True
-/* top-level dependencies (begin jmessage_string_tSequenceProcessor) */
-// outer dependency: jmessage_string_tControl
-// outer dependency: jmessage_string_tReference
-/* top-level dependencies (end jmessage_string_tSequenceProcessor) */
+// build jmessage_string_tSequenceProcessor (['jmessage_string_tSequenceProcessor']) False/False
+// build jmessage_string_tControl (['jmessage_string_tControl']) True/True
+// build jmessage_string_tReference (['jmessage_string_tReference']) True/True
+/* top-level dependencies (begin ['jmessage_string_tSequenceProcessor']) */
+// outer dependency: ('jmessage_string_tControl',)
+// outer dependency: ('jmessage_string_tReference',)
+/* top-level dependencies (end ['jmessage_string_tSequenceProcessor']) */
 struct jmessage_string_tSequenceProcessor {
-	// jmessage_string_tControl
-	// jmessage_string_tReference
+	// ('jmessage_string_tControl',)
+	// ('jmessage_string_tReference',)
 	/* 80230A08 */ jmessage_string_tSequenceProcessor(jmessage_string_tReference const*, jmessage_string_tControl*);
 };
 
-// build jmessage_string_tRenderingProcessor (jmessage_string_tRenderingProcessor) False/False
-// build jmessage_string_tReference (jmessage_string_tReference) True/True
-/* top-level dependencies (begin jmessage_string_tRenderingProcessor) */
-// outer dependency: jmessage_string_tReference
-/* top-level dependencies (end jmessage_string_tRenderingProcessor) */
+// build jmessage_string_tRenderingProcessor (['jmessage_string_tRenderingProcessor']) False/False
+// build jmessage_string_tReference (['jmessage_string_tReference']) True/True
+/* top-level dependencies (begin ['jmessage_string_tRenderingProcessor']) */
+// outer dependency: ('jmessage_string_tReference',)
+/* top-level dependencies (end ['jmessage_string_tRenderingProcessor']) */
 struct jmessage_string_tRenderingProcessor {
-	// jmessage_string_tReference
+	// ('jmessage_string_tReference',)
 	/* 80230BC8 */ jmessage_string_tRenderingProcessor(jmessage_string_tReference const*);
 };
 
-// build JMessage (JMessage) False/False
-// build JMessage (JMessage) True/False
+// build JMessage (['JMessage']) False/False
+// build JMessage (['JMessage']) True/False
 struct JMessage;
-/* top-level dependencies (begin JMessage) */
-// outer dependency: JMessage::TResourceContainer
-/* top-level dependencies (end JMessage) */
+/* top-level dependencies (begin ['JMessage']) */
+// outer dependency: ('JMessage', 'TResourceContainer')
+/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TControl (JMessage::TControl) False/False
-	/* dependencies (begin JMessage::TControl) */
-	/* dependencies (end JMessage::TControl) */
+	// build TControl (['JMessage', 'TControl']) False/False
+	/* dependencies (begin ['JMessage', 'TControl']) */
+	/* dependencies (end ['JMessage', 'TControl']) */
 	struct TControl {
 		/* 802A75D4 */ void reset();
 		/* 802A7634 */ void update();
@@ -120,13 +120,13 @@ struct JMessage {
 		/* 802A78F4 */ void setMessageID(u32, u32, bool*);
 	};
 
-	// build TResourceContainer (JMessage::TResourceContainer) False/False
-	/* dependencies (begin JMessage::TResourceContainer) */
-	/* dependencies (end JMessage::TResourceContainer) */
+	// build TResourceContainer (['JMessage', 'TResourceContainer']) False/False
+	/* dependencies (begin ['JMessage', 'TResourceContainer']) */
+	/* dependencies (end ['JMessage', 'TResourceContainer']) */
 	struct TResourceContainer {
-		// build TCResource (JMessage::TResourceContainer::TCResource) False/False
-		/* dependencies (begin JMessage::TResourceContainer::TCResource) */
-		/* dependencies (end JMessage::TResourceContainer::TCResource) */
+		// build TCResource (['JMessage', 'TResourceContainer', 'TCResource']) False/False
+		/* dependencies (begin ['JMessage', 'TResourceContainer', 'TCResource']) */
+		/* dependencies (end ['JMessage', 'TResourceContainer', 'TCResource']) */
 		struct TCResource {
 			/* 802A8EF8 */ ~TCResource();
 		};
@@ -134,54 +134,54 @@ struct JMessage {
 		/* 802A906C */ TResourceContainer();
 	};
 
-	// build TParse (JMessage::TParse) False/False
-	/* dependencies (begin JMessage::TParse) */
-	// inner dependency: TResourceContainer (JMessage::TResourceContainer) True False (for JMessage::TParse)
-	// build TResourceContainer (JMessage::TResourceContainer) True/True
-	/* dependencies (end JMessage::TParse) */
+	// build TParse (['JMessage', 'TParse']) False/False
+	/* dependencies (begin ['JMessage', 'TParse']) */
+	// inner dependency: 1 ('JMessage', 'TResourceContainer') (for ['JMessage', 'TParse'])
+	// build TResourceContainer (['JMessage', 'TResourceContainer']) True/True
+	/* dependencies (end ['JMessage', 'TParse']) */
 	struct TParse {
-		// JMessage::TResourceContainer
+		// ('JMessage', 'TResourceContainer')
 		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
 	};
 
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
-		/* dependencies (begin JGadget::binary::TParse_header_block) */
-		/* dependencies (end JGadget::binary::TParse_header_block) */
+		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
+		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC910 */ void parse_next(void const**, u32);
 		};
 
 	};
 
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 

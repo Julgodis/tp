@@ -9,25 +9,25 @@
 // Types:
 // 
 
-// build dDlst_Gameover_CAPTURE_c (dDlst_Gameover_CAPTURE_c) False/False
-/* top-level dependencies (begin dDlst_Gameover_CAPTURE_c) */
-/* top-level dependencies (end dDlst_Gameover_CAPTURE_c) */
+// build dDlst_Gameover_CAPTURE_c (['dDlst_Gameover_CAPTURE_c']) False/False
+/* top-level dependencies (begin ['dDlst_Gameover_CAPTURE_c']) */
+/* top-level dependencies (end ['dDlst_Gameover_CAPTURE_c']) */
 struct dDlst_Gameover_CAPTURE_c {
 	/* 8019ACF8 */ void draw();
 	/* 8019C2CC */ ~dDlst_Gameover_CAPTURE_c();
 };
 
-// build dGov_HIO_c (dGov_HIO_c) False/False
-/* top-level dependencies (begin dGov_HIO_c) */
-/* top-level dependencies (end dGov_HIO_c) */
+// build dGov_HIO_c (['dGov_HIO_c']) False/False
+/* top-level dependencies (begin ['dGov_HIO_c']) */
+/* top-level dependencies (end ['dGov_HIO_c']) */
 struct dGov_HIO_c {
 	/* 8019AFE0 */ dGov_HIO_c();
 	/* 8019C06C */ ~dGov_HIO_c();
 };
 
-// build dGameover_c (dGameover_c) False/False
-/* top-level dependencies (begin dGameover_c) */
-/* top-level dependencies (end dGameover_c) */
+// build dGameover_c (['dGameover_c']) False/False
+/* top-level dependencies (begin ['dGameover_c']) */
+/* top-level dependencies (end ['dGameover_c']) */
 struct dGameover_c {
 	/* 8019B044 */ void _create();
 	/* 8019B2F4 */ void _execute();
@@ -53,34 +53,34 @@ struct dGameover_c {
 	/* 8019B864 */ void _delete();
 };
 
-// build dDlst_GameOverScrnDraw_c (dDlst_GameOverScrnDraw_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build dDlst_GameOverScrnDraw_c (['dDlst_GameOverScrnDraw_c']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin dDlst_GameOverScrnDraw_c) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end dDlst_GameOverScrnDraw_c) */
+/* top-level dependencies (begin ['dDlst_GameOverScrnDraw_c']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dDlst_GameOverScrnDraw_c']) */
 struct dDlst_GameOverScrnDraw_c {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 8019B940 */ dDlst_GameOverScrnDraw_c(JKRArchive*);
 	/* 8019BBFC */ ~dDlst_GameOverScrnDraw_c();
 	/* 8019BCB0 */ void setBackAlpha(f32);
 	/* 8019BCF4 */ void draw();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build msg_class (msg_class) False/False
-/* top-level dependencies (begin msg_class) */
-/* top-level dependencies (end msg_class) */
+// build JKRArchive (['JKRArchive']) True/True
+// build msg_class (['msg_class']) False/False
+/* top-level dependencies (begin ['msg_class']) */
+/* top-level dependencies (end ['msg_class']) */
 struct msg_class {
 };
 
-// build dMenu_save_c (dMenu_save_c) False/False
-/* top-level dependencies (begin dMenu_save_c) */
-/* top-level dependencies (end dMenu_save_c) */
+// build dMenu_save_c (['dMenu_save_c']) False/False
+/* top-level dependencies (begin ['dMenu_save_c']) */
+/* top-level dependencies (end ['dMenu_save_c']) */
 struct dMenu_save_c {
 	/* 8019C314 */ ~dMenu_save_c();
 	/* 801EF6A0 */ dMenu_save_c();
@@ -91,139 +91,139 @@ struct dMenu_save_c {
 	/* 801F69FC */ void _draw2();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build dSv_player_item_c (dSv_player_item_c) False/False
-/* top-level dependencies (begin dSv_player_item_c) */
-/* top-level dependencies (end dSv_player_item_c) */
+// build dSv_player_item_c (['dSv_player_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_c']) */
+/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 	/* 80033030 */ void getItem(int, bool) const;
 };
 
-// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
-/* top-level dependencies (begin dSv_player_get_item_c) */
-/* top-level dependencies (end dSv_player_get_item_c) */
+// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_get_item_c']) */
+/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349A4 */ void offEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
-/* top-level dependencies (begin JMSMesgEntry_c) */
-/* top-level dependencies (end JMSMesgEntry_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
+/* top-level dependencies (begin ['JMSMesgEntry_c']) */
+/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JMSMesgEntry_c
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('JMSMesgEntry_c',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// JMSMesgEntry_c
+	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021E0C4 */ void resetMiniGameItem(bool);
 };
 
-// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
-// build dMsgScrnLight_c (dMsgScrnLight_c) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
+// build dMsgScrnLight_c (['dMsgScrnLight_c']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin dMsgScrnLight_c) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end dMsgScrnLight_c) */
+/* top-level dependencies (begin ['dMsgScrnLight_c']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['dMsgScrnLight_c']) */
 struct dMsgScrnLight_c {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 };
 
-// build JUtility (JUtility) True/True
-// build J2DScreen (J2DScreen) False/False
-// build JKRArchive (JKRArchive) True/True
-// build J2DGrafContext (J2DGrafContext) False/False
-/* top-level dependencies (begin J2DGrafContext) */
-/* top-level dependencies (end J2DGrafContext) */
+// build JUtility (['JUtility']) True/True
+// build J2DScreen (['J2DScreen']) False/False
+// build J2DGrafContext (['J2DGrafContext']) False/False
+/* top-level dependencies (begin ['J2DGrafContext']) */
+/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: JKRArchive
-// outer dependency: J2DGrafContext
-/* top-level dependencies (end J2DScreen) */
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['J2DScreen']) */
+// outer dependency: ('J2DGrafContext',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// JKRArchive
-	// J2DGrafContext
+	// ('J2DGrafContext',)
+	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build J2DGrafContext (J2DGrafContext) True/True
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build J2DGrafContext (['J2DGrafContext']) True/True
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300660 */ void setString(char const*, ...);
 };

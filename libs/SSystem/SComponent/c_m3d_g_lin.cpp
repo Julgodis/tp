@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build cM3dGLin (cM3dGLin) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cM3dGLin (['cM3dGLin']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGLin) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGLin) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin ['cM3dGLin']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
@@ -36,8 +36,8 @@ struct cM3dGLin {
 	/* 8026F3C0 */ void SetEnd(cXyz const&);
 };
 
-// build cXyz (cXyz) True/True
-// build Vec (Vec) True/True
+// build cXyz (['cXyz']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

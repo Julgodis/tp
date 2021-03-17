@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build daObj_SSBase_c (daObj_SSBase_c) False/False
-/* top-level dependencies (begin daObj_SSBase_c) */
-/* top-level dependencies (end daObj_SSBase_c) */
+// build daObj_SSBase_c (['daObj_SSBase_c']) False/False
+/* top-level dependencies (begin ['daObj_SSBase_c']) */
+/* top-level dependencies (end ['daObj_SSBase_c']) */
 struct daObj_SSBase_c {
 	/* 8015E3F8 */ daObj_SSBase_c();
 	/* 8015E450 */ ~daObj_SSBase_c();
@@ -19,9 +19,9 @@ struct daObj_SSBase_c {
 	/* 8015E4C8 */ void setSoldOut();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();

@@ -9,39 +9,39 @@
 // Types:
 // 
 
-// build _GXFogType (_GXFogType) False/False
-/* top-level dependencies (begin _GXFogType) */
-/* top-level dependencies (end _GXFogType) */
+// build _GXFogType (['_GXFogType']) False/False
+/* top-level dependencies (begin ['_GXFogType']) */
+/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXBlendMode (_GXBlendMode) False/False
-/* top-level dependencies (begin _GXBlendMode) */
-/* top-level dependencies (end _GXBlendMode) */
+// build _GXBlendMode (['_GXBlendMode']) False/False
+/* top-level dependencies (begin ['_GXBlendMode']) */
+/* top-level dependencies (end ['_GXBlendMode']) */
 struct _GXBlendMode {
 };
 
-// build _GXBlendFactor (_GXBlendFactor) False/False
-/* top-level dependencies (begin _GXBlendFactor) */
-/* top-level dependencies (end _GXBlendFactor) */
+// build _GXBlendFactor (['_GXBlendFactor']) False/False
+/* top-level dependencies (begin ['_GXBlendFactor']) */
+/* top-level dependencies (end ['_GXBlendFactor']) */
 struct _GXBlendFactor {
 };
 
-// build _GXLogicOp (_GXLogicOp) False/False
-/* top-level dependencies (begin _GXLogicOp) */
-/* top-level dependencies (end _GXLogicOp) */
+// build _GXLogicOp (['_GXLogicOp']) False/False
+/* top-level dependencies (begin ['_GXLogicOp']) */
+/* top-level dependencies (end ['_GXLogicOp']) */
 struct _GXLogicOp {
 };
 
-// build _GXCompare (_GXCompare) False/False
-/* top-level dependencies (begin _GXCompare) */
-/* top-level dependencies (end _GXCompare) */
+// build _GXCompare (['_GXCompare']) False/False
+/* top-level dependencies (begin ['_GXCompare']) */
+/* top-level dependencies (end ['_GXCompare']) */
 struct _GXCompare {
 };
 

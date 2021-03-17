@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build JKRAramPiece (JKRAramPiece) False/False
-// build JKRAramBlock (JKRAramBlock) False/False
-/* top-level dependencies (begin JKRAramBlock) */
-/* top-level dependencies (end JKRAramBlock) */
-struct JKRAramBlock {
-};
-
-// build JKRAMCommand (JKRAMCommand) False/False
-/* top-level dependencies (begin JKRAMCommand) */
-/* top-level dependencies (end JKRAMCommand) */
+// build JKRAramPiece (['JKRAramPiece']) False/False
+// build JKRAMCommand (['JKRAMCommand']) False/False
+/* top-level dependencies (begin ['JKRAMCommand']) */
+/* top-level dependencies (end ['JKRAMCommand']) */
 struct JKRAMCommand {
 	/* 802D39EC */ JKRAMCommand();
 	/* 802D3A5C */ ~JKRAMCommand();
 };
 
-/* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAramBlock
-// outer dependency: JKRAMCommand
-/* top-level dependencies (end JKRAramPiece) */
+// build JKRAramBlock (['JKRAramBlock']) False/False
+/* top-level dependencies (begin ['JKRAramBlock']) */
+/* top-level dependencies (end ['JKRAramBlock']) */
+struct JKRAramBlock {
+};
+
+/* top-level dependencies (begin ['JKRAramPiece']) */
+// outer dependency: ('JKRAMCommand',)
+// outer dependency: ('JKRAramBlock',)
+/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// JKRAramBlock
-	// JKRAMCommand
+	// ('JKRAMCommand',)
+	// ('JKRAramBlock',)
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
 	/* 802D3770 */ void sync(JKRAMCommand*, int);
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
@@ -38,54 +38,54 @@ struct JKRAramPiece {
 	/* 802D3944 */ void doneDMA(u32);
 };
 
-// build JKRAMCommand (JKRAMCommand) True/True
-// build JKRAramBlock (JKRAramBlock) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRAMCommand (['JKRAMCommand']) True/True
+// build JKRAramBlock (['JKRAramBlock']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRDecomp (JKRDecomp) False/False
-// build JKRDecompCommand (JKRDecompCommand) False/False
-/* top-level dependencies (begin JKRDecompCommand) */
-/* top-level dependencies (end JKRDecompCommand) */
+// build JKRDecomp (['JKRDecomp']) False/False
+// build JKRDecompCommand (['JKRDecompCommand']) False/False
+/* top-level dependencies (begin ['JKRDecompCommand']) */
+/* top-level dependencies (end ['JKRDecompCommand']) */
 struct JKRDecompCommand {
 };
 
-/* top-level dependencies (begin JKRDecomp) */
-// outer dependency: JKRDecompCommand
-/* top-level dependencies (end JKRDecomp) */
+/* top-level dependencies (begin ['JKRDecomp']) */
+// outer dependency: ('JKRDecompCommand',)
+/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
-	// JKRDecompCommand
+	// ('JKRDecompCommand',)
 	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
 };
 
-// build JKRDecompCommand (JKRDecompCommand) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JKRDecompCommand (['JKRDecompCommand']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

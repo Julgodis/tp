@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass, field
 import re
@@ -53,26 +53,63 @@ def is_builtin_type(t):
 
 
 @dataclass
+class ClassName:
+    name: str
+    template_types: List["Param"] = field(default_factory=list)
+
+    def to_str(self, without_template: bool = False) -> str:
+        if self.template_types and not without_template:
+            args = ", ".join([ x.to_str() for x in self.template_types ])
+            return f"{self.name}<{args}>"
+        return self.name
+
+@dataclass
+class QualifiedName:
+    parts: List[ClassName] = field(default_factory=list)
+
+    def to_str(self) -> str:
+        return "::".join([ x.to_str() for x in self.parts ])
+
+    def is_simple(self) -> bool:
+        return len(self.parts) == 1 and not self.parts[0].template_types
+
+    @property
+    def has_class(self):
+        return len(self.parts) > 1
+
+    @property
+    def name(self):
+        return self.to_str()
+
+    @property
+    def last(self):
+        return self.parts[-1]
+
+    @property
+    def first(self):
+        return self.parts[0]
+
+@dataclass
 class Param:
-    name: str = ''
+    name: QualifiedName = None
     pointer_lvl: int = 0
     is_const: bool = False
     is_ref: bool = False
     is_unsigned: bool = False
     is_signed: bool = False
-    is_array: bool = False
 
     def to_str(self) -> str:
         ret = ''
         if self.is_const:
             ret += 'const '
-        if self.name in short_type_names and (self.is_signed or self.is_unsigned):
+        if self.name and self.name.is_simple() and (self.name.name in short_type_names) and (self.is_signed or self.is_unsigned):
             ret += 'u' if self.is_unsigned else 's'
-            ret += short_type_names[self.name]
+            ret += short_type_names[self.name.name]
         else:
             if self.is_unsigned:
                 ret += 'unsigned '
-            ret += self.name
+            if self.name:
+                ret += self.name.to_str()
         for _ in range(self.pointer_lvl):
             ret += '*'
         if self.is_ref:
@@ -96,7 +133,7 @@ class FuncParam:
 
         class_name = ""
         if self.class_name:
-            class_name = f"{self.class_name}::"
+            class_name = f"{self.class_name.to_str()}::"
         ret += f' ({class_name}{self.inner_type.to_str()})('
         ret += ', '.join([x.to_str() for x in self.params])
         ret += ')'
@@ -151,14 +188,23 @@ class ParseCtx:
         while self.index < len(self.mangled):
             self.demangled.append(self.demangle_next_type())
         if self.func_name == '.ctor':
-            self.func_name = self.class_name.split("::")[-1]
+            self.func_name = self.class_name.last.to_str(without_template=True)
         if self.func_name == '.dtor':
-            self.func_name = '~' + self.class_name.split("::")[-1]
+            self.func_name = '~' + self.class_name.last.to_str(without_template=True)
+        self.func_name = QualifiedName([
+            self.demangle_str_to_class_name(x)
+            for x in self.func_name.split("::")
+        ])
+        parts = []
+        if self.class_name:
+            parts += self.class_name.parts
+        parts += self.func_name.parts
+        self.full_name = QualifiedName(parts)
     
     def demangle_first_class(self):
         #print(self.func_name, self.mangled, self.peek_next_char())
         if self.peek_next_char().isdecimal():
-            self.class_name = self.demangle_class()
+            self.class_name = QualifiedName([self.demangle_class()])
             if self.peek_next_char() == 'C':
                 self.is_const = True
                 self.index += 1
@@ -182,11 +228,11 @@ class ParseCtx:
             cur_char = self.peek_next_char()
             if cur_char.isdecimal():
                 class_name = self.demangle_class()
-                cur_type.name = class_name
+                cur_type.name = QualifiedName([class_name])
                 return cur_type
             elif cur_char in types:
                 type_name = self.demangle_prim_type()
-                cur_type.name = type_name
+                cur_type.name = QualifiedName([type_name])
                 return cur_type
             elif cur_char == 'U':
                 cur_type.is_unsigned = True
@@ -256,12 +302,12 @@ class ParseCtx:
                 return func_param
             func_param.params.append(self.demangle_next_type())
 
-    def demangle_qualified_name(self) -> str:
+    def demangle_qualified_name(self) -> QualifiedName:
         part_count = int(self.consume_next_char())
         parts = []
         for _ in range(part_count):
             parts.append(self.demangle_class())
-        return '::'.join(parts)
+        return QualifiedName(parts)
 
     def read_next_int(self) -> int:
         class_len_str = ''
@@ -271,21 +317,62 @@ class ParseCtx:
             self.index += 1
             cur_char = self.peek_next_char()
         return int(class_len_str)
+
+    def demangle_template_args(self):
+        if self.peek_next_char() != '<':
+            raise ParseError(f"expected character '<'")
+        self.index += 1
+
+        types = []
+        while True:
+            types.append(self.demangle_next_type())
+            if self.peek_next_char() == '>':
+                self.index += 1
+                break
+            if self.peek_next_char() != ',':
+                raise ParseError(f"expected character '<' or ','")
+            self.index += 1
+
+        return types
+
+
+    def demangle_template(self, name) -> Tuple[str, List[Param]]:
+        if not "<" in name or not name.endswith(">"):
+            return name, []
+
+        index = name.find("<")
+        prefix = name[0:index]
+        inner = name[index:]
+
+        ctx = ParseCtx(inner)
+        types = ctx.demangle_template_args()
+        type_str = ", ".join([ x.to_str() for x in types ])
+        return prefix, types
+
+    def demangle_str_to_class_name(self, text) -> ClassName:
+        return ClassName(*self.demangle_template(text))
     
-    def demangle_class(self) -> str:
+    def demangle_class(self) -> ClassName:
         if not self.peek_next_char().isdecimal():
             raise ParseError(f'class mangling must start with number')
         class_len = self.read_next_int()
-        class_name = self.mangled[self.index : self.index + class_len]
+        full_class_name = self.mangled[self.index : self.index + class_len]
+        class_name, argument_types = self.demangle_template(full_class_name)
         self.index += class_len
+        """
         if self.peek_next_char() == 'M':
+            print(full_class_name)
+            print(self.mangled)
+            print(self.mangled[self.index:])
+            assert False
             self.index += 1
             class_name += '::' + self.demangle_class()
-        return class_name
+        """
+        return ClassName(class_name, argument_types)
 
-    def demangle_prim_type(self) -> str:
+    def demangle_prim_type(self) -> ClassName:
         ret = types[self.consume_next_char()]
-        return ret
+        return ClassName(ret, [])
     
     def consume_next_char(self) -> str:
         next_char = self.mangled[self.index]
@@ -301,9 +388,9 @@ class ParseCtx:
         if self.func_name is None:
             return ''
         elif self.class_name is None:
-            return self.func_name + '(' + ', '.join([x.to_str() for x in self.demangled]) + ')'
+            return self.func_name.to_str() + '(' + ', '.join([x.to_str() for x in self.demangled]) + ')'
         else:
-            return self.class_name + '::' + self.func_name + '(' + ', '.join([x.to_str() for x in self.demangled]) + ')' + (' const' if self.is_const else '')
+            return self.class_name.to_str() + '::' + self.func_name.to_str() + '(' + ', '.join([x.to_str() for x in self.demangled]) + ')' + (' const' if self.is_const else '')
 
 
 def demangle(s):

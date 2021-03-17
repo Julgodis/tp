@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build JKRCompArchive (JKRCompArchive) False/False
-// build JKRArchive (JKRArchive) False/False
-// build JKRArchive (JKRArchive) True/False
+// build JKRCompArchive (['JKRCompArchive']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/False
 struct JKRArchive;
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::SDIFileEntry
-// outer dependency: JKRArchive::EMountMode
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRArchive']) */
+// outer dependency: ('JKRArchive', 'SDIFileEntry')
+// outer dependency: ('JKRArchive', 'EMountMode')
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// JKRArchive::SDIFileEntry
-	// JKRArchive::EMountMode
-	// build EMountDirection (JKRArchive::EMountDirection) False/False
-	/* dependencies (begin JKRArchive::EMountDirection) */
-	/* dependencies (end JKRArchive::EMountDirection) */
+	// ('JKRArchive', 'SDIFileEntry')
+	// ('JKRArchive', 'EMountMode')
+	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
+	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
-	// build SDIFileEntry (JKRArchive::SDIFileEntry) False/False
-	/* dependencies (begin JKRArchive::SDIFileEntry) */
-	/* dependencies (end JKRArchive::SDIFileEntry) */
+	// build SDIFileEntry (['JKRArchive', 'SDIFileEntry']) False/False
+	/* dependencies (begin ['JKRArchive', 'SDIFileEntry']) */
+	/* dependencies (end ['JKRArchive', 'SDIFileEntry']) */
 	struct SDIFileEntry {
 	};
 
-	// build EMountMode (JKRArchive::EMountMode) False/False
-	/* dependencies (begin JKRArchive::EMountMode) */
-	/* dependencies (end JKRArchive::EMountMode) */
+	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
+	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
@@ -55,14 +55,14 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRCompArchive) */
-// outer dependency: JKRArchive::EMountDirection
-// outer dependency: JKRArchive::SDIFileEntry
-/* top-level dependencies (end JKRCompArchive) */
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRCompArchive']) */
+// outer dependency: ('JKRArchive', 'SDIFileEntry')
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRCompArchive']) */
 struct JKRCompArchive {
-	// JKRArchive::EMountDirection
-	// JKRArchive::SDIFileEntry
+	// ('JKRArchive', 'SDIFileEntry')
+	// ('JKRArchive', 'EMountDirection')
 	/* 802D87D4 */ JKRCompArchive(s32, JKRArchive::EMountDirection);
 	/* 802D887C */ ~JKRCompArchive();
 	/* 802D89BC */ void open(s32);
@@ -73,10 +73,10 @@ struct JKRCompArchive {
 	/* 802D9360 */ void getExpandedResSize(void const*) const;
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
@@ -85,146 +85,146 @@ struct JKRHeap {
 	/* 802CEB18 */ void copyMemory(void*, void*, u32);
 };
 
-// build JKRAram (JKRAram) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
+// build JKRAram (['JKRAram']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAram) */
+/* top-level dependencies (begin ['JKRAram']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// JKRExpandSwitch
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRExpandSwitch',)
 	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRAramHeap (JKRAramHeap) False/False
-// build JKRAramHeap (JKRAramHeap) True/False
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JKRAramHeap (['JKRAramHeap']) False/False
+// build JKRAramHeap (['JKRAramHeap']) True/False
 struct JKRAramHeap;
-/* top-level dependencies (begin JKRAramHeap) */
-// outer dependency: JKRAramHeap::EAllocMode
-/* top-level dependencies (end JKRAramHeap) */
+/* top-level dependencies (begin ['JKRAramHeap']) */
+// outer dependency: ('JKRAramHeap', 'EAllocMode')
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// JKRAramHeap::EAllocMode
-	// build EAllocMode (JKRAramHeap::EAllocMode) False/False
-	/* dependencies (begin JKRAramHeap::EAllocMode) */
-	/* dependencies (end JKRAramHeap::EAllocMode) */
+	// ('JKRAramHeap', 'EAllocMode')
+	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
+	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
+	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D41D4 */ void unmount();
 };
 
-// build JKRMemArchive (JKRMemArchive) False/False
-/* top-level dependencies (begin JKRMemArchive) */
-/* top-level dependencies (end JKRMemArchive) */
+// build JKRMemArchive (['JKRMemArchive']) False/False
+/* top-level dependencies (begin ['JKRMemArchive']) */
+/* top-level dependencies (end ['JKRMemArchive']) */
 struct JKRMemArchive {
 	/* 802D6F5C */ void fetchResource_subroutine(u8*, u32, u8*, u32, int);
 };
 
-// build JKRAramArchive (JKRAramArchive) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRAramArchive) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAramArchive) */
+// build JKRAramArchive (['JKRAramArchive']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRAramArchive']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D7858 */ void fetchResource_subroutine(u32, u32, u8*, u32, int);
 	/* 802D7914 */ void fetchResource_subroutine(u32, u32, JKRHeap*, int, u8**);
 };
 
-// build JKRDvdArchive (JKRDvdArchive) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRDvdArchive) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRDvdArchive) */
+// build JKRDvdArchive (['JKRDvdArchive']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRDvdArchive']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRDvdArchive']) */
 struct JKRDvdArchive {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, u8*, u32, int, int);
 	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, int, int, u8**);
 };
 
-// build JKRDvdFile (JKRDvdFile) False/False
-/* top-level dependencies (begin JKRDvdFile) */
-/* top-level dependencies (end JKRDvdFile) */
+// build JKRDvdFile (['JKRDvdFile']) False/False
+/* top-level dependencies (begin ['JKRDvdFile']) */
+/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
 	/* 802D96A0 */ JKRDvdFile(s32);
 };
 
-// build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JKRDvdRipper (JKRDvdRipper) True/False
+// build JKRDvdRipper (['JKRDvdRipper']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRDvdRipper (['JKRDvdRipper']) True/False
 struct JKRDvdRipper;
-/* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-// outer dependency: JKRDvdRipper::EAllocDirection
-/* top-level dependencies (end JKRDvdRipper) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+/* top-level dependencies (begin ['JKRDvdRipper']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRDvdRipper', 'EAllocDirection')
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRDvdRipper']) */
 struct JKRDvdRipper {
-	// JKRExpandSwitch
-	// JKRHeap
-	// JKRDvdRipper::EAllocDirection
-	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
-	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
-	/* dependencies (end JKRDvdRipper::EAllocDirection) */
+	// ('JKRHeap',)
+	// ('JKRDvdRipper', 'EAllocDirection')
+	// ('JKRExpandSwitch',)
+	// build EAllocDirection (['JKRDvdRipper', 'EAllocDirection']) False/False
+	/* dependencies (begin ['JKRDvdRipper', 'EAllocDirection']) */
+	/* dependencies (end ['JKRDvdRipper', 'EAllocDirection']) */
 	struct EAllocDirection {
 	};
 
 	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
-// build JKRDvdAramRipper (JKRDvdAramRipper) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-/* top-level dependencies (begin JKRDvdAramRipper) */
-// outer dependency: JKRExpandSwitch
-/* top-level dependencies (end JKRDvdAramRipper) */
+// build JKRDvdAramRipper (['JKRDvdAramRipper']) False/False
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+/* top-level dependencies (begin ['JKRDvdAramRipper']) */
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRDvdAramRipper']) */
 struct JKRDvdAramRipper {
-	// JKRExpandSwitch
+	// ('JKRExpandSwitch',)
 	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
 };
 
-// build JKRDecomp (JKRDecomp) False/False
-/* top-level dependencies (begin JKRDecomp) */
-/* top-level dependencies (end JKRDecomp) */
+// build JKRDecomp (['JKRDecomp']) False/False
+/* top-level dependencies (begin ['JKRDecomp']) */
+/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBFF0 */ void prepend(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUPtrLink (JSUPtrLink) True/True
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JSUPtrLink (['JSUPtrLink']) True/True
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

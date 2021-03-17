@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASAudioThread (JASAudioThread) False/False
-/* top-level dependencies (begin JASAudioThread) */
-/* top-level dependencies (end JASAudioThread) */
+// build JASAudioThread (['JASAudioThread']) False/False
+/* top-level dependencies (begin ['JASAudioThread']) */
+/* top-level dependencies (end ['JASAudioThread']) */
 struct JASAudioThread {
 	/* 8029CCDC */ JASAudioThread(int, int, u32);
 	/* 8029CD4C */ void create(s32);
@@ -22,25 +22,25 @@ struct JASAudioThread {
 	/* 8029D028 */ ~JASAudioThread();
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-// build JASProbe (JASProbe) False/False
-/* top-level dependencies (begin JASProbe) */
-/* top-level dependencies (end JASProbe) */
+// build JASProbe (['JASProbe']) False/False
+/* top-level dependencies (begin ['JASProbe']) */
+/* top-level dependencies (end ['JASProbe']) */
 struct JASProbe {
 	/* 80290EE4 */ void start(s32, char const*);
 	/* 80290F24 */ void stop(s32);
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C4E4 */ void startDMA();
 	/* 8029C504 */ void stopDMA();
@@ -50,34 +50,34 @@ struct JASDriver {
 	/* 8029E2F8 */ void updateDacCallback();
 };
 
-// build JASDSPChannel (JASDSPChannel) False/False
-/* top-level dependencies (begin JASDSPChannel) */
-/* top-level dependencies (end JASDSPChannel) */
+// build JASDSPChannel (['JASDSPChannel']) False/False
+/* top-level dependencies (begin ['JASDSPChannel']) */
+/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D3C8 */ void initAll();
 };
 
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
 	/* 8029D9C4 */ void finishWork(u16);
 	/* 8029DAC8 */ void initBuffer();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (JKRThread) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRThread) */
+// build JKRThread (['JKRThread']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };

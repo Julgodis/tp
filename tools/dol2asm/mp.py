@@ -89,6 +89,22 @@ def execute_tasks(process_count: int,
     """
 
     manager = Manager()
+    results = [None] * len(input_tasks)
+
+    if process_count == 0:
+        output = manager.Queue()
+        for i, task in enumerate(input_tasks):
+            context = MainContext(i, output)
+            results[i] = task[0](context, *task[1], **shared)
+            callback("complete", i)
+            while not output.empty():
+                command = output.get(block=True)
+                callback(command[0], *command[1])
+
+        return results
+
+
+
     input = manager.Queue()
     output = manager.Queue()
     timeout = 5 * 60 # if one single task takes more then 5 minutes, something is wrong
@@ -128,7 +144,6 @@ def execute_tasks(process_count: int,
 
     # receive messages
     waiting = len(input_tasks)
-    results = [None] * len(input_tasks)
     while waiting > 0:
         try:
             command = output.get(block=True, timeout=timeout)

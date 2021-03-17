@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build dShopItemCtrl_c (dShopItemCtrl_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dShopItemCtrl_c (['dShopItemCtrl_c']) False/False
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-/* top-level dependencies (begin dShopItemCtrl_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dShopItemCtrl_c) */
+/* top-level dependencies (begin ['dShopItemCtrl_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dShopItemCtrl_c']) */
 struct dShopItemCtrl_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80196914 */ dShopItemCtrl_c();
 	/* 80196958 */ ~dShopItemCtrl_c();
 	/* 801969A0 */ void getCurrentPos(int);
@@ -38,16 +38,16 @@ struct dShopItemCtrl_c {
 	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
 };
 
-// build cXyz (cXyz) True/True
-// build daShopItem_c (daShopItem_c) False/False
-/* top-level dependencies (begin daShopItem_c) */
-/* top-level dependencies (end daShopItem_c) */
+// build cXyz (['cXyz']) True/True
+// build daShopItem_c (['daShopItem_c']) False/False
+/* top-level dependencies (begin ['daShopItem_c']) */
+/* top-level dependencies (end ['daShopItem_c']) */
 struct daShopItem_c {
 	/* 80037C14 */ void getRotateP();
 	/* 80037C1C */ void getPosP();
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

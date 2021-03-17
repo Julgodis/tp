@@ -33,4 +33,5 @@ powerpc-linux-gnu-objdump -h build/dolzel2/libMSL_C.PPCEABI.bare.H.a > main_a.du
 
 
 
+python3 tools/sort_objdump_t.py -s .text -o t_text.dump main_t_text.dump
 python3 tools/sort_objdump_t.py -s .sdata2 -o t_sdata2.dump main_t_sdata2.dump

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
-/* top-level dependencies (begin dBgS_PolyPassChk) */
-/* top-level dependencies (end dBgS_PolyPassChk) */
+// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
+/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078D64 */ dBgS_PolyPassChk();
 	/* 80078DB0 */ ~dBgS_PolyPassChk();
@@ -36,9 +36,9 @@ struct dBgS_PolyPassChk {
 	/* 80078FA0 */ void ClrIronBall();
 };
 
-// build cBgS_PolyPassChk (cBgS_PolyPassChk) False/False
-/* top-level dependencies (begin cBgS_PolyPassChk) */
-/* top-level dependencies (end cBgS_PolyPassChk) */
+// build cBgS_PolyPassChk (['cBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['cBgS_PolyPassChk']) */
+/* top-level dependencies (end ['cBgS_PolyPassChk']) */
 struct cBgS_PolyPassChk {
 	/* 80078FAC */ ~cBgS_PolyPassChk();
 };

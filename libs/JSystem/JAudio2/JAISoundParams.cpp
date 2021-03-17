@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);

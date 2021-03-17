@@ -9,33 +9,32 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build _GXFogType (_GXFogType) False/False
-/* top-level dependencies (begin _GXFogType) */
-/* top-level dependencies (end _GXFogType) */
+// build JStage (['JStage']) False/False
+// build _GXFogType (['_GXFogType']) False/False
+/* top-level dependencies (begin ['_GXFogType']) */
+/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build JStage (JStage) True/False
-struct JStage;
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin JStage) */
-// outer dependency: _GXFogType
-// outer dependency: JStage::TObject
-// outer dependency: _GXColor
-/* top-level dependencies (end JStage) */
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('_GXFogType',)
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TFog (JStage::TFog) False/False
-	/* dependencies (begin JStage::TFog) */
-	/* dependencies (end JStage::TFog) */
+	// build TFog (['JStage', 'TFog']) False/False
+	/* dependencies (begin ['JStage', 'TFog']) */
+	// inner dependency: 0 ('_GXFogType',) (for ['JStage', 'TFog'])
+	// inner dependency: 0 ('_GXColor',) (for ['JStage', 'TFog'])
+	/* dependencies (end ['JStage', 'TFog']) */
 	struct TFog {
-		// _GXFogType
-		// _GXColor
+		// ('_GXFogType',)
+		// ('_GXColor',)
 		/* 80280C80 */ ~TFog();
 		/* 80280CE0 */ s32 JSGFGetType() const;
 		/* 80280CE8 */ bool JSGGetFogFunction() const;
@@ -48,9 +47,9 @@ struct JStage {
 		/* 80280D24 */ void JSGSetColor(_GXColor);
 	};
 
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -68,8 +67,8 @@ struct JStage {
 
 };
 
-// build _GXFogType (_GXFogType) True/True
-// build _GXColor (_GXColor) True/True
+// build _GXFogType (['_GXFogType']) True/True
+// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 

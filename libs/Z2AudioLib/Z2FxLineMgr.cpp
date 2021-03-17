@@ -9,37 +9,37 @@
 // Types:
 // 
 
-// build Z2FxLineMgr (Z2FxLineMgr) False/False
-// build Z2FxLineConfig (Z2FxLineConfig) False/False
-/* top-level dependencies (begin Z2FxLineConfig) */
-/* top-level dependencies (end Z2FxLineConfig) */
-struct Z2FxLineConfig {
+// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
+// build Z2FxLineConfig (['Z2FxLineConfig']) False/False
+/* top-level dependencies (begin ['Z2FxLineConfig']) */
+/* top-level dependencies (end ['Z2FxLineConfig']) */
+struct Z2FxLineConfig {
 };
 
-/* top-level dependencies (begin Z2FxLineMgr) */
-// outer dependency: Z2FxLineConfig
-// outer dependency: JKRArchive
-// outer dependency: JKRHeap
-/* top-level dependencies (end Z2FxLineMgr) */
+/* top-level dependencies (begin ['Z2FxLineMgr']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('Z2FxLineConfig',)
+/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
-	// Z2FxLineConfig
-	// JKRArchive
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRArchive',)
+	// ('Z2FxLineConfig',)
 	/* 802BA7DC */ Z2FxLineMgr();
 	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
 	/* 802BAC28 */ void setLineID(s8, bool, bool);
@@ -49,37 +49,37 @@ struct Z2FxLineMgr {
 	/* 802BAEB8 */ void setSceneFx(s32);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JKRHeap (JKRHeap) True/True
-// build Z2FxLineConfig (Z2FxLineConfig) True/True
-// build JASDsp (JASDsp) False/False
-// build JASDsp (JASDsp) True/False
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build Z2FxLineConfig (['Z2FxLineConfig']) True/True
+// build JASDsp (['JASDsp']) False/False
+// build JASDsp (['JASDsp']) True/False
 struct JASDsp;
-/* top-level dependencies (begin JASDsp) */
-// outer dependency: JASDsp::FxlineConfig_
-/* top-level dependencies (end JASDsp) */
+/* top-level dependencies (begin ['JASDsp']) */
+// outer dependency: ('JASDsp', 'FxlineConfig_')
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// JASDsp::FxlineConfig_
-	// build FxlineConfig_ (JASDsp::FxlineConfig_) False/False
-	/* dependencies (begin JASDsp::FxlineConfig_) */
-	/* dependencies (end JASDsp::FxlineConfig_) */
+	// ('JASDsp', 'FxlineConfig_')
+	// build FxlineConfig_ (['JASDsp', 'FxlineConfig_']) False/False
+	/* dependencies (begin ['JASDsp', 'FxlineConfig_']) */
+	/* dependencies (end ['JASDsp', 'FxlineConfig_']) */
 	struct FxlineConfig_ {
 	};
 
 	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUMemoryInputStream (JSUMemoryInputStream) False/False
-/* top-level dependencies (begin JSUMemoryInputStream) */
-/* top-level dependencies (end JSUMemoryInputStream) */
+// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
+/* top-level dependencies (begin ['JSUMemoryInputStream']) */
+/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
 	/* 802DC520 */ void setBuffer(void const*, s32);
 };

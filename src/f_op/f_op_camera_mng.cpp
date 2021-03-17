@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build camera_class (camera_class) False/False
-/* top-level dependencies (begin camera_class) */
-/* top-level dependencies (end camera_class) */
+// build camera_class (['camera_class']) False/False
+/* top-level dependencies (begin ['camera_class']) */
+/* top-level dependencies (end ['camera_class']) */
 struct camera_class {
 };
 

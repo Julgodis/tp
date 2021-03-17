@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build fapGm_HIO_c (fapGm_HIO_c) False/False
-/* top-level dependencies (begin fapGm_HIO_c) */
-/* top-level dependencies (end fapGm_HIO_c) */
+// build fapGm_HIO_c (['fapGm_HIO_c']) False/False
+/* top-level dependencies (begin ['fapGm_HIO_c']) */
+/* top-level dependencies (end ['fapGm_HIO_c']) */
 struct fapGm_HIO_c {
 	/* 80018944 */ fapGm_HIO_c();
 	/* 80018AE0 */ ~fapGm_HIO_c();

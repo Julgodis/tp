@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build room_of_scene_class (room_of_scene_class) False/False
-/* top-level dependencies (begin room_of_scene_class) */
-/* top-level dependencies (end room_of_scene_class) */
+// build room_of_scene_class (['room_of_scene_class']) False/False
+/* top-level dependencies (begin ['room_of_scene_class']) */
+/* top-level dependencies (end ['room_of_scene_class']) */
 struct room_of_scene_class {
 };
 
-// build create_tag (create_tag) False/False
-/* top-level dependencies (begin create_tag) */
-/* top-level dependencies (end create_tag) */
+// build create_tag (['create_tag']) False/False
+/* top-level dependencies (begin ['create_tag']) */
+/* top-level dependencies (end ['create_tag']) */
 struct create_tag {
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 	/* 800243B0 */ void getMemoryBlock(int);
@@ -34,74 +34,74 @@ struct dStage_roomControl_c {
 	/* 8025BAAC */ void setZoneNo(int, int);
 };
 
-// build scene_class (scene_class) False/False
-/* top-level dependencies (begin scene_class) */
-/* top-level dependencies (end scene_class) */
+// build scene_class (['scene_class']) False/False
+/* top-level dependencies (begin ['scene_class']) */
+/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build dStage_dt_c (dStage_dt_c) False/False
-/* top-level dependencies (begin dStage_dt_c) */
-/* top-level dependencies (end dStage_dt_c) */
+// build dStage_dt_c (['dStage_dt_c']) False/False
+/* top-level dependencies (begin ['dStage_dt_c']) */
+/* top-level dependencies (end ['dStage_dt_c']) */
 struct dStage_dt_c {
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_zoneBit_c (dSv_zoneBit_c) False/False
-/* top-level dependencies (begin dSv_zoneBit_c) */
-/* top-level dependencies (end dSv_zoneBit_c) */
+// build dSv_zoneBit_c (['dSv_zoneBit_c']) False/False
+/* top-level dependencies (begin ['dSv_zoneBit_c']) */
+/* top-level dependencies (end ['dSv_zoneBit_c']) */
 struct dSv_zoneBit_c {
 	/* 80034CEC */ void clearRoomSwitch();
 	/* 80034CF8 */ void clearRoomItem();
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 800351A4 */ void createZone(int);
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-// outer dependency: JKRHeap
-/* top-level dependencies (end dRes_control_c) */
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
-	// JKRHeap
+	// ('dRes_info_c',)
+	// ('JKRHeap',)
 	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
 	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
@@ -109,32 +109,32 @@ struct dRes_control_c {
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dEvent_manager_c (dEvent_manager_c) False/False
-/* top-level dependencies (begin dEvent_manager_c) */
-/* top-level dependencies (end dEvent_manager_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80046888 */ void demoInit();
 	/* 80046904 */ void roomInit(int);
 	/* 800469EC */ void roomFinish(int);
 };
 
-// build dPa_control_c (dPa_control_c) False/False
-/* top-level dependencies (begin dPa_control_c) */
-/* top-level dependencies (end dPa_control_c) */
+// build dPa_control_c (['dPa_control_c']) False/False
+/* top-level dependencies (begin ['dPa_control_c']) */
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// build level_c (dPa_control_c::level_c) False/False
-	/* dependencies (begin dPa_control_c::level_c) */
-	/* dependencies (end dPa_control_c::level_c) */
+	// build level_c (['dPa_control_c', 'level_c']) False/False
+	/* dependencies (begin ['dPa_control_c', 'level_c']) */
+	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
 		/* 8004B8E8 */ void allForceOnEventMove();
 	};
 
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 	/* 802CFD64 */ void getTotalUsedSize() const;
 };

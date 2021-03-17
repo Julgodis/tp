@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build J3DSys (J3DSys) False/False
-// build _GXTexCacheSize (_GXTexCacheSize) False/False
-/* top-level dependencies (begin _GXTexCacheSize) */
-/* top-level dependencies (end _GXTexCacheSize) */
+// build J3DSys (['J3DSys']) False/False
+// build _GXTexCacheSize (['_GXTexCacheSize']) False/False
+/* top-level dependencies (begin ['_GXTexCacheSize']) */
+/* top-level dependencies (end ['_GXTexCacheSize']) */
 struct _GXTexCacheSize {
 };
 
-/* top-level dependencies (begin J3DSys) */
-// outer dependency: _GXTexCacheSize
-/* top-level dependencies (end J3DSys) */
+/* top-level dependencies (begin ['J3DSys']) */
+// outer dependency: ('_GXTexCacheSize',)
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
-	// _GXTexCacheSize
+	// ('_GXTexCacheSize',)
 	/* 8030FDE8 */ J3DSys();
 	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
 	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
@@ -36,10 +36,10 @@ struct J3DSys {
 	/* 80310E3C */ void reinitPixelProc();
 };
 
-// build _GXTexCacheSize (_GXTexCacheSize) True/True
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build _GXTexCacheSize (['_GXTexCacheSize']) True/True
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 

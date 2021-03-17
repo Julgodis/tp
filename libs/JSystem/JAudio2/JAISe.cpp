@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build JAISe (JAISe) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JAISe (['JAISe']) False/False
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 };
 
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
+// build JAISoundActivity (['JAISoundActivity']) False/False
+/* top-level dependencies (begin ['JAISoundActivity']) */
+/* top-level dependencies (end ['JAISoundActivity']) */
 struct JAISoundActivity {
 };
 
-/* top-level dependencies (begin JAISe) */
-// outer dependency: JASSoundParams
-// outer dependency: JAISoundActivity
-/* top-level dependencies (end JAISe) */
+/* top-level dependencies (begin ['JAISe']) */
+// outer dependency: ('JASSoundParams',)
+// outer dependency: ('JAISoundActivity',)
+/* top-level dependencies (end ['JAISe']) */
 struct JAISe {
-	// JASSoundParams
-	// JAISoundActivity
+	// ('JASSoundParams',)
+	// ('JAISoundActivity',)
 	/* 8029F0F8 */ void mixOut_(JASSoundParams const&);
 	/* 8029F214 */ void stopTrack_();
 	/* 8029F250 */ void startTrack_(JASSoundParams const&);
@@ -46,15 +46,15 @@ struct JAISe {
 	/* 8029F868 */ void getTempoMgr();
 };
 
-// build JASSoundParams (JASSoundParams) True/True
-// build JAISoundActivity (JAISoundActivity) True/True
-// build JASTrack (JASTrack) False/False
-// build JASSoundParams (JASSoundParams) True/True
-/* top-level dependencies (begin JASTrack) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JASTrack) */
+// build JASSoundParams (['JASSoundParams']) True/True
+// build JAISoundActivity (['JAISoundActivity']) True/True
+// build JASTrack (['JASTrack']) False/False
+// build JASSoundParams (['JASSoundParams']) True/True
+/* top-level dependencies (begin ['JASTrack']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 80291228 */ JASTrack();
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802915D4 */ void init();
@@ -67,23 +67,23 @@ struct JASTrack {
 	/* 80292B8C */ void setTempoRate(f32);
 };
 
-// build JAISoundParams (JAISoundParams) False/False
-// build JASSoundParams (JASSoundParams) True/True
-/* top-level dependencies (begin JAISoundParams) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JAISoundParams) */
+// build JAISoundParams (['JAISoundParams']) False/False
+// build JASSoundParams (['JASSoundParams']) True/True
+/* top-level dependencies (begin ['JAISoundParams']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JAISoundParams']) */
 struct JAISoundParams {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
 };
 
-// build JAISound (JAISound) False/False
-// build JASTrack (JASTrack) True/True
-/* top-level dependencies (begin JAISound) */
-// outer dependency: JASTrack
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+// build JASTrack (['JASTrack']) True/True
+/* top-level dependencies (begin ['JAISound']) */
+// outer dependency: ('JASTrack',)
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
-	// JASTrack
+	// ('JASTrack',)
 	/* 802A22F8 */ JAISound();
 	/* 802A25E0 */ bool asSeq();
 	/* 802A25E8 */ bool asStream();
@@ -93,9 +93,9 @@ struct JAISound {
 	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 };

@@ -9,69 +9,69 @@
 // Types:
 // 
 
-// build J3DClusterLoaderDataBase (J3DClusterLoaderDataBase) False/False
-/* top-level dependencies (begin J3DClusterLoaderDataBase) */
-/* top-level dependencies (end J3DClusterLoaderDataBase) */
+// build J3DClusterLoaderDataBase (['J3DClusterLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J3DClusterLoaderDataBase']) */
+/* top-level dependencies (end ['J3DClusterLoaderDataBase']) */
 struct J3DClusterLoaderDataBase {
 	/* 80334130 */ void load(void const*);
 };
 
-// build J3DClusterLoader_v15 (J3DClusterLoader_v15) False/False
-// build J3DClusterBlock (J3DClusterBlock) False/False
-/* top-level dependencies (begin J3DClusterBlock) */
-/* top-level dependencies (end J3DClusterBlock) */
+// build J3DClusterLoader_v15 (['J3DClusterLoader_v15']) False/False
+// build J3DClusterBlock (['J3DClusterBlock']) False/False
+/* top-level dependencies (begin ['J3DClusterBlock']) */
+/* top-level dependencies (end ['J3DClusterBlock']) */
 struct J3DClusterBlock {
 };
 
-/* top-level dependencies (begin J3DClusterLoader_v15) */
-// outer dependency: J3DClusterBlock
-/* top-level dependencies (end J3DClusterLoader_v15) */
+/* top-level dependencies (begin ['J3DClusterLoader_v15']) */
+// outer dependency: ('J3DClusterBlock',)
+/* top-level dependencies (end ['J3DClusterLoader_v15']) */
 struct J3DClusterLoader_v15 {
-	// J3DClusterBlock
+	// ('J3DClusterBlock',)
 	/* 803341CC */ J3DClusterLoader_v15();
 	/* 803341E8 */ ~J3DClusterLoader_v15();
 	/* 80334244 */ void load(void const*);
 	/* 803342F8 */ void readCluster(J3DClusterBlock const*);
 };
 
-// build J3DClusterBlock (J3DClusterBlock) True/True
-// build J3DClusterLoader (J3DClusterLoader) False/False
-/* top-level dependencies (begin J3DClusterLoader) */
-/* top-level dependencies (end J3DClusterLoader) */
+// build J3DClusterBlock (['J3DClusterBlock']) True/True
+// build J3DClusterLoader (['J3DClusterLoader']) False/False
+/* top-level dependencies (begin ['J3DClusterLoader']) */
+/* top-level dependencies (end ['J3DClusterLoader']) */
 struct J3DClusterLoader {
 	/* 803345FC */ ~J3DClusterLoader();
 };
 
-// build JUTNameTab (JUTNameTab) False/False
-// build ResNTAB (ResNTAB) False/False
-/* top-level dependencies (begin ResNTAB) */
-/* top-level dependencies (end ResNTAB) */
+// build JUTNameTab (['JUTNameTab']) False/False
+// build ResNTAB (['ResNTAB']) False/False
+/* top-level dependencies (begin ['ResNTAB']) */
+/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin JUTNameTab) */
-// outer dependency: ResNTAB
-/* top-level dependencies (end JUTNameTab) */
+/* top-level dependencies (begin ['JUTNameTab']) */
+// outer dependency: ('ResNTAB',)
+/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ResNTAB
+	// ('ResNTAB',)
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-// build ResNTAB (ResNTAB) True/True
-// build J3DDeformData (J3DDeformData) False/False
-/* top-level dependencies (begin J3DDeformData) */
-/* top-level dependencies (end J3DDeformData) */
+// build ResNTAB (['ResNTAB']) True/True
+// build J3DDeformData (['J3DDeformData']) False/False
+/* top-level dependencies (begin ['J3DDeformData']) */
+/* top-level dependencies (end ['J3DDeformData']) */
 struct J3DDeformData {
 	/* 8032E1F8 */ J3DDeformData();
 };
 
-// build J3DDeformer (J3DDeformer) False/False
-// build J3DDeformData (J3DDeformData) True/True
-/* top-level dependencies (begin J3DDeformer) */
-// outer dependency: J3DDeformData
-/* top-level dependencies (end J3DDeformer) */
+// build J3DDeformer (['J3DDeformer']) False/False
+// build J3DDeformData (['J3DDeformData']) True/True
+/* top-level dependencies (begin ['J3DDeformer']) */
+// outer dependency: ('J3DDeformData',)
+/* top-level dependencies (end ['J3DDeformer']) */
 struct J3DDeformer {
-	// J3DDeformData
+	// ('J3DDeformData',)
 	/* 8032E39C */ J3DDeformer(J3DDeformData*);
 };
 

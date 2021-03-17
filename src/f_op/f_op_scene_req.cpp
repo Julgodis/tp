@@ -9,39 +9,39 @@
 // Types:
 // 
 
-// build scene_request_class (scene_request_class) False/False
-/* top-level dependencies (begin scene_request_class) */
-/* top-level dependencies (end scene_request_class) */
+// build scene_request_class (['scene_request_class']) False/False
+/* top-level dependencies (begin ['scene_request_class']) */
+/* top-level dependencies (end ['scene_request_class']) */
 struct scene_request_class {
 };
 
-// build scene_class (scene_class) False/False
-/* top-level dependencies (begin scene_class) */
-/* top-level dependencies (end scene_class) */
+// build scene_class (['scene_class']) False/False
+/* top-level dependencies (begin ['scene_class']) */
+/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
-// build node_create_request (node_create_request) False/False
-/* top-level dependencies (begin node_create_request) */
-/* top-level dependencies (end node_create_request) */
+// build node_create_request (['node_create_request']) False/False
+/* top-level dependencies (begin ['node_create_request']) */
+/* top-level dependencies (end ['node_create_request']) */
 struct node_create_request {
 };
 
-// build process_node_class (process_node_class) False/False
-/* top-level dependencies (begin process_node_class) */
-/* top-level dependencies (end process_node_class) */
+// build process_node_class (['process_node_class']) False/False
+/* top-level dependencies (begin ['process_node_class']) */
+/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build node_create_request_method_class (node_create_request_method_class) False/False
-/* top-level dependencies (begin node_create_request_method_class) */
-/* top-level dependencies (end node_create_request_method_class) */
+// build node_create_request_method_class (['node_create_request_method_class']) False/False
+/* top-level dependencies (begin ['node_create_request_method_class']) */
+/* top-level dependencies (end ['node_create_request_method_class']) */
 struct node_create_request_method_class {
 };
 
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 

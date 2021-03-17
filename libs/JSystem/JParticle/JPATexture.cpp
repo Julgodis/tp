@@ -9,31 +9,31 @@
 // Types:
 // 
 
-// build JPATexture (JPATexture) False/False
-/* top-level dependencies (begin JPATexture) */
-/* top-level dependencies (end JPATexture) */
+// build JPATexture (['JPATexture']) False/False
+/* top-level dependencies (begin ['JPATexture']) */
+/* top-level dependencies (end ['JPATexture']) */
 struct JPATexture {
 	/* 8027D7D4 */ JPATexture(u8 const*);
 	/* 8027D83C */ ~JPATexture();
 };
 
-// build JUTTexture (JUTTexture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build JUTTexture (['JUTTexture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end JUTTexture) */
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
-// build ResTIMG (ResTIMG) True/True
+// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 

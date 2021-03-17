@@ -9,214 +9,214 @@
 // Types:
 // 
 
-// build JPAFieldBase (JPAFieldBase) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAFieldBase (['JPAFieldBase']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPAFieldBlock (JPAFieldBlock) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JPAFieldBlock (['JPAFieldBlock']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JPAFieldBlock) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JPAFieldBlock) */
+/* top-level dependencies (begin ['JPAFieldBlock']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JPAFieldBlock']) */
 struct JPAFieldBlock {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-/* top-level dependencies (begin JPABaseParticle) */
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+/* top-level dependencies (begin ['JPABaseParticle']) */
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-/* top-level dependencies (begin JPAFieldBase) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldBase) */
+/* top-level dependencies (begin ['JPAFieldBase']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldBase']) */
 struct JPAFieldBase {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 80276A8C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027BDEC */ void calcAffect(JPAFieldBlock*, JPABaseParticle*);
 	/* 8027BF18 */ void calcFadeAffect(JPAFieldBlock*, f32) const;
 	/* 8027D3AC */ ~JPAFieldBase();
 };
 
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPAFieldGravity (JPAFieldGravity) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldGravity) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldGravity) */
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+// build JPAFieldGravity (['JPAFieldGravity']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldGravity']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldGravity']) */
 struct JPAFieldGravity {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027BFB4 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C054 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D6D4 */ ~JPAFieldGravity();
 };
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldAir (JPAFieldAir) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldAir) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldAir) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldAir (['JPAFieldAir']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldAir']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldAir']) */
 struct JPAFieldAir {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027C07C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C1B8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D678 */ ~JPAFieldAir();
 };
 
-// build JPAFieldMagnet (JPAFieldMagnet) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldMagnet) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldMagnet) */
+// build JPAFieldMagnet (['JPAFieldMagnet']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldMagnet']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldMagnet']) */
 struct JPAFieldMagnet {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027C24C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C29C */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D61C */ ~JPAFieldMagnet();
 };
 
-// build JPAFieldNewton (JPAFieldNewton) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldNewton) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldNewton) */
+// build JPAFieldNewton (['JPAFieldNewton']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldNewton']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldNewton']) */
 struct JPAFieldNewton {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027C36C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C3E0 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D5C0 */ ~JPAFieldNewton();
 };
 
-// build JPAFieldVortex (JPAFieldVortex) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldVortex) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldVortex) */
+// build JPAFieldVortex (['JPAFieldVortex']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldVortex']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldVortex']) */
 struct JPAFieldVortex {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027C56C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C674 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D564 */ ~JPAFieldVortex();
 };
 
-// build JPAFieldConvection (JPAFieldConvection) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldConvection) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldConvection) */
+// build JPAFieldConvection (['JPAFieldConvection']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldConvection']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldConvection']) */
 struct JPAFieldConvection {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027C814 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027CA94 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D508 */ ~JPAFieldConvection();
 };
 
-// build JPAFieldRandom (JPAFieldRandom) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldRandom) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldRandom) */
+// build JPAFieldRandom (['JPAFieldRandom']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldRandom']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldRandom']) */
 struct JPAFieldRandom {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027CCCC */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D4AC */ ~JPAFieldRandom();
 };
 
-// build JPAFieldDrag (JPAFieldDrag) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldDrag) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldDrag) */
+// build JPAFieldDrag (['JPAFieldDrag']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldDrag']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldDrag']) */
 struct JPAFieldDrag {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027CDE4 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D450 */ ~JPAFieldDrag();
 };
 
-// build JPAFieldSpin (JPAFieldSpin) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPAFieldBlock (JPAFieldBlock) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAFieldSpin) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPAFieldBlock
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAFieldSpin) */
+// build JPAFieldSpin (['JPAFieldSpin']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPAFieldBlock (['JPAFieldBlock']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAFieldSpin']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPAFieldBlock',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAFieldSpin']) */
 struct JPAFieldSpin {
-	// JPAEmitterWorkData
-	// JPAFieldBlock
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPAFieldBlock',)
+	// ('JPABaseParticle',)
 	/* 8027CE64 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027CFA8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D3F4 */ ~JPAFieldSpin();
 };
 
-// build JKRHeap (JKRHeap) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

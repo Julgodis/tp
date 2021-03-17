@@ -9,23 +9,23 @@
 // Types:
 // 
 
-// build Z2Calc (Z2Calc) False/False
-// build Z2Calc (Z2Calc) True/False
+// build Z2Calc (['Z2Calc']) False/False
+// build Z2Calc (['Z2Calc']) True/False
 struct Z2Calc;
-/* top-level dependencies (begin Z2Calc) */
-// outer dependency: Z2Calc::CurveSign
-/* top-level dependencies (end Z2Calc) */
+/* top-level dependencies (begin ['Z2Calc']) */
+// outer dependency: ('Z2Calc', 'CurveSign')
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// Z2Calc::CurveSign
-	// build CurveSign (Z2Calc::CurveSign) False/False
-	/* dependencies (begin Z2Calc::CurveSign) */
-	/* dependencies (end Z2Calc::CurveSign) */
+	// ('Z2Calc', 'CurveSign')
+	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
+	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
+	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
-	// build FNoise1f (Z2Calc::FNoise1f) False/False
-	/* dependencies (begin Z2Calc::FNoise1f) */
-	/* dependencies (end Z2Calc::FNoise1f) */
+	// build FNoise1f (['Z2Calc', 'FNoise1f']) False/False
+	/* dependencies (begin ['Z2Calc', 'FNoise1f']) */
+	/* dependencies (end ['Z2Calc', 'FNoise1f']) */
 	struct FNoise1f {
 		/* 802A9944 */ void setParam(f32, f32, f32);
 		/* 802A9958 */ void tau(f32);
@@ -38,13 +38,13 @@ struct Z2Calc {
 	/* 802A98D4 */ void getRandom_0_1();
 };
 
-// build JMath (JMath) False/False
-/* top-level dependencies (begin JMath) */
-/* top-level dependencies (end JMath) */
+// build JMath (['JMath']) False/False
+/* top-level dependencies (begin ['JMath']) */
+/* top-level dependencies (end ['JMath']) */
 struct JMath {
-	// build TRandom_fast_ (JMath::TRandom_fast_) False/False
-	/* dependencies (begin JMath::TRandom_fast_) */
-	/* dependencies (end JMath::TRandom_fast_) */
+	// build TRandom_fast_ (['JMath', 'TRandom_fast_']) False/False
+	/* dependencies (begin ['JMath', 'TRandom_fast_']) */
+	/* dependencies (end ['JMath', 'TRandom_fast_']) */
 	struct TRandom_fast_ {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};

@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
@@ -28,15 +28,15 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build daItemBase_c (daItemBase_c) False/False
-/* top-level dependencies (begin daItemBase_c) */
-/* top-level dependencies (end daItemBase_c) */
+// build daItemBase_c (['daItemBase_c']) False/False
+/* top-level dependencies (begin ['daItemBase_c']) */
+/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 	/* 80037A74 */ void show();
@@ -61,9 +61,9 @@ struct daItemBase_c {
 	/* 8015B0B8 */ void getData();
 };
 
-// build daItem_c (daItem_c) False/False
-/* top-level dependencies (begin daItem_c) */
-/* top-level dependencies (end daItem_c) */
+// build daItem_c (['daItem_c']) False/False
+/* top-level dependencies (begin ['daItem_c']) */
+/* top-level dependencies (end ['daItem_c']) */
 struct daItem_c {
 	/* 8015B0C4 */ void initBaseMtx();
 	/* 8015B108 */ void setBaseMtx();
@@ -117,16 +117,16 @@ struct daItem_c {
 	/* 8015DE38 */ void initAngle();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build dCcD_GObjInf (dCcD_GObjInf) False/False
-/* top-level dependencies (begin dCcD_GObjInf) */
-/* top-level dependencies (end dCcD_GObjInf) */
+// build dCcD_GObjInf (['dCcD_GObjInf']) False/False
+/* top-level dependencies (begin ['dCcD_GObjInf']) */
+/* top-level dependencies (end ['dCcD_GObjInf']) */
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 80084460 */ void ChkTgHit();
@@ -134,197 +134,197 @@ struct dCcD_GObjInf {
 	/* 80084658 */ void ChkCoHit();
 };
 
-// build Z2SoundObjSimple (Z2SoundObjSimple) False/False
-/* top-level dependencies (begin Z2SoundObjSimple) */
-/* top-level dependencies (end Z2SoundObjSimple) */
+// build Z2SoundObjSimple (['Z2SoundObjSimple']) False/False
+/* top-level dependencies (begin ['Z2SoundObjSimple']) */
+/* top-level dependencies (end ['Z2SoundObjSimple']) */
 struct Z2SoundObjSimple {
 	/* 8015BA3C */ ~Z2SoundObjSimple();
 	/* 802BE844 */ Z2SoundObjSimple();
 };
 
-// build daPy_py_c (daPy_py_c) False/False
-/* top-level dependencies (begin daPy_py_c) */
-/* top-level dependencies (end daPy_py_c) */
+// build daPy_py_c (['daPy_py_c']) False/False
+/* top-level dependencies (begin ['daPy_py_c']) */
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015DFD8 */ void getItemPos() const;
 	/* 8015DFF4 */ void getLeftHandPos() const;
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-/* top-level dependencies (begin mDoMtx_stack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// cXyz
-	// csXyz
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-// build csXyz (csXyz) True/True
-// build fopAcM_lc_c (fopAcM_lc_c) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin fopAcM_lc_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end fopAcM_lc_c) */
+// build csXyz (['csXyz']) True/True
+// build fopAcM_lc_c (['fopAcM_lc_c']) False/False
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['fopAcM_lc_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['fopAcM_lc_c']) */
 struct fopAcM_lc_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
-/* top-level dependencies (begin dSv_player_get_item_c) */
-/* top-level dependencies (end dSv_player_get_item_c) */
+// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_get_item_c']) */
+/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E94 */ void offFirstBit(u8);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 	/* 800354E0 */ void onItem(int, int);
 	/* 80035590 */ void isItem(int, int) const;
 };
 
-// build dEvt_control_c (dEvt_control_c) False/False
-/* top-level dependencies (begin dEvt_control_c) */
-/* top-level dependencies (end dEvt_control_c) */
+// build dEvt_control_c (['dEvt_control_c']) False/False
+/* top-level dependencies (begin ['dEvt_control_c']) */
+/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(u32);
 };
 
-// build dEvent_manager_c (dEvent_manager_c) False/False
-/* top-level dependencies (begin dEvent_manager_c) */
-/* top-level dependencies (end dEvent_manager_c) */
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-// build dPa_followEcallBack (dPa_followEcallBack) False/False
-/* top-level dependencies (begin dPa_followEcallBack) */
-/* top-level dependencies (end dPa_followEcallBack) */
+// build dPa_followEcallBack (['dPa_followEcallBack']) False/False
+/* top-level dependencies (begin ['dPa_followEcallBack']) */
+/* top-level dependencies (end ['dPa_followEcallBack']) */
 struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-// build dPa_control_c (dPa_control_c) False/False
-// build cXyz (cXyz) True/True
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build dPa_control_c (['dPa_control_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
-};
-
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin dPa_control_c) */
-// outer dependency: cXyz
-// outer dependency: _GXColor
-// outer dependency: dPa_levelEcallBack
-// outer dependency: dKy_tevstr_c
-// outer dependency: csXyz
-/* top-level dependencies (end dPa_control_c) */
+// build cXyz (['cXyz']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
+/* top-level dependencies (begin ['dPa_levelEcallBack']) */
+/* top-level dependencies (end ['dPa_levelEcallBack']) */
+struct dPa_levelEcallBack {
+};
+
+/* top-level dependencies (begin ['dPa_control_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('_GXColor',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dPa_levelEcallBack',)
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// dPa_levelEcallBack
-	// dKy_tevstr_c
-	// csXyz
-	// cXyz
-	// _GXColor
+	// ('_GXColor',)
+	// ('dKy_tevstr_c',)
+	// ('dPa_levelEcallBack',)
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
-// build _GXColor (_GXColor) True/True
-// build cBgS (cBgS) False/False
-// build cM3dGPla (cM3dGPla) False/False
-/* top-level dependencies (begin cM3dGPla) */
-/* top-level dependencies (end cM3dGPla) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build cBgS (['cBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+// build cM3dGPla (['cM3dGPla']) False/False
+/* top-level dependencies (begin ['cM3dGPla']) */
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin cBgS) */
-// outer dependency: cM3dGPla
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end cBgS) */
+/* top-level dependencies (begin ['cBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+// outer dependency: ('cM3dGPla',)
+/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// cM3dGPla
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
+	// ('cM3dGPla',)
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cM3dGPla (cM3dGPla) True/True
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build cM3dGPla (['cM3dGPla']) True/True
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
-// build dBgS_AcchCir (dBgS_AcchCir) False/False
-/* top-level dependencies (begin dBgS_AcchCir) */
-/* top-level dependencies (end dBgS_AcchCir) */
+// build dBgS_AcchCir (['dBgS_AcchCir']) False/False
+/* top-level dependencies (begin ['dBgS_AcchCir']) */
+/* top-level dependencies (end ['dBgS_AcchCir']) */
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-// build dBgS_Acch (dBgS_Acch) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build dBgS_AcchCir (dBgS_AcchCir) True/True
-// build dBgS (dBgS) True/True
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin dBgS_Acch) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-// outer dependency: dBgS_AcchCir
-// outer dependency: dBgS
-// outer dependency: csXyz
-/* top-level dependencies (end dBgS_Acch) */
+// build dBgS_Acch (['dBgS_Acch']) False/False
+// build dBgS_AcchCir (['dBgS_AcchCir']) True/True
+// build csXyz (['csXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cXyz (['cXyz']) True/True
+// build dBgS (['dBgS']) True/True
+/* top-level dependencies (begin ['dBgS_Acch']) */
+// outer dependency: ('dBgS_AcchCir',)
+// outer dependency: ('csXyz',)
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dBgS',)
+/* top-level dependencies (end ['dBgS_Acch']) */
 struct dBgS_Acch {
-	// csXyz
-	// cXyz
-	// fopAc_ac_c
-	// dBgS_AcchCir
-	// dBgS
+	// ('dBgS_AcchCir',)
+	// ('csXyz',)
+	// ('fopAc_ac_c',)
+	// ('cXyz',)
+	// ('dBgS',)
 	/* 800760A0 */ dBgS_Acch();
 	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 	/* 80076AAC */ void CrrPos(dBgS&);
@@ -332,135 +332,135 @@ struct dBgS_Acch {
 	/* 800773A4 */ void ClrMoveBGOnly();
 };
 
-// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
-/* top-level dependencies (begin dBgS_PolyPassChk) */
-/* top-level dependencies (end dBgS_PolyPassChk) */
+// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
+/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 };
 
-// build dCcD_GStts (dCcD_GStts) False/False
-/* top-level dependencies (begin dCcD_GStts) */
-/* top-level dependencies (end dCcD_GStts) */
+// build dCcD_GStts (['dCcD_GStts']) False/False
+/* top-level dependencies (begin ['dCcD_GStts']) */
+/* top-level dependencies (end ['dCcD_GStts']) */
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 };
 
-// build dCcD_Stts (dCcD_Stts) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dCcD_Stts) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dCcD_Stts) */
+// build dCcD_Stts (['dCcD_Stts']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['dCcD_Stts']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dCcD_Stts']) */
 struct dCcD_Stts {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-// build dCcD_Cyl (dCcD_Cyl) False/False
-// build dCcD_SrcCyl (dCcD_SrcCyl) False/False
-/* top-level dependencies (begin dCcD_SrcCyl) */
-/* top-level dependencies (end dCcD_SrcCyl) */
+// build dCcD_Cyl (['dCcD_Cyl']) False/False
+// build dCcD_SrcCyl (['dCcD_SrcCyl']) False/False
+/* top-level dependencies (begin ['dCcD_SrcCyl']) */
+/* top-level dependencies (end ['dCcD_SrcCyl']) */
 struct dCcD_SrcCyl {
 };
 
-/* top-level dependencies (begin dCcD_Cyl) */
-// outer dependency: dCcD_SrcCyl
-/* top-level dependencies (end dCcD_Cyl) */
+/* top-level dependencies (begin ['dCcD_Cyl']) */
+// outer dependency: ('dCcD_SrcCyl',)
+/* top-level dependencies (end ['dCcD_Cyl']) */
 struct dCcD_Cyl {
-	// dCcD_SrcCyl
+	// ('dCcD_SrcCyl',)
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-// build dCcD_SrcCyl (dCcD_SrcCyl) True/True
-// build daPy_boomerangMove_c (daPy_boomerangMove_c) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin daPy_boomerangMove_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daPy_boomerangMove_c) */
+// build dCcD_SrcCyl (['dCcD_SrcCyl']) True/True
+// build daPy_boomerangMove_c (['daPy_boomerangMove_c']) False/False
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['daPy_boomerangMove_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daPy_boomerangMove_c']) */
 struct daPy_boomerangMove_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 8015E5B0 */ void initOffset(cXyz const*);
 	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
 	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
 };
 
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build cXyz (cXyz) True/True
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-/* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModelData
-// outer dependency: dKy_tevstr_c
-/* top-level dependencies (end dScnKy_env_light_c) */
+// build cXyz (['cXyz']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// cXyz
-	// J3DModelData
-	// dKy_tevstr_c
+	// ('J3DModelData',)
+	// ('cXyz',)
+	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build cCcS (cCcS) False/False
-// build cCcD_Obj (cCcD_Obj) False/False
-/* top-level dependencies (begin cCcD_Obj) */
-/* top-level dependencies (end cCcD_Obj) */
+// build J3DModelData (['J3DModelData']) True/True
+// build cCcS (['cCcS']) False/False
+// build cCcD_Obj (['cCcD_Obj']) False/False
+/* top-level dependencies (begin ['cCcD_Obj']) */
+/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
 };
 
-/* top-level dependencies (begin cCcS) */
-// outer dependency: cCcD_Obj
-/* top-level dependencies (end cCcS) */
+/* top-level dependencies (begin ['cCcS']) */
+// outer dependency: ('cCcD_Obj',)
+/* top-level dependencies (end ['cCcS']) */
 struct cCcS {
-	// cCcD_Obj
+	// ('cCcD_Obj',)
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-// build cCcD_Obj (cCcD_Obj) True/True
-// build Vec (Vec) True/True
-// build cM3dGCyl (cM3dGCyl) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGCyl) */
+// build cCcD_Obj (['cCcD_Obj']) True/True
+// build Vec (['Vec']) True/True
+// build cM3dGCyl (['cM3dGCyl']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGCyl']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// cXyz
+	// ('cXyz',)
 	/* 8026F1DC */ void SetC(cXyz const&);
 	/* 8026F1F8 */ void SetH(f32);
 	/* 8026F200 */ void SetR(f32);
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Z2SoundObjBase (Z2SoundObjBase) False/False
-/* top-level dependencies (begin Z2SoundObjBase) */
-/* top-level dependencies (end Z2SoundObjBase) */
+// build JAISoundID (['JAISoundID']) True/True
+// build Z2SoundObjBase (['Z2SoundObjBase']) False/False
+/* top-level dependencies (begin ['Z2SoundObjBase']) */
+/* top-level dependencies (end ['Z2SoundObjBase']) */
 struct Z2SoundObjBase {
 	/* 802BDF48 */ ~Z2SoundObjBase();
 	/* 802BDFF8 */ void deleteObject();

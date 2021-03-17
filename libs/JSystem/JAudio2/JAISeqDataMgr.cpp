@@ -9,16 +9,16 @@
 // Types:
 // 
 
-// build JAISeqDataUser (JAISeqDataUser) False/False
-/* top-level dependencies (begin JAISeqDataUser) */
-/* top-level dependencies (end JAISeqDataUser) */
+// build JAISeqDataUser (['JAISeqDataUser']) False/False
+/* top-level dependencies (begin ['JAISeqDataUser']) */
+/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
 };
 
-// build JAISeqDataMgr (JAISeqDataMgr) False/False
-/* top-level dependencies (begin JAISeqDataMgr) */
-/* top-level dependencies (end JAISeqDataMgr) */
+// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
+/* top-level dependencies (begin ['JAISeqDataMgr']) */
+/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };

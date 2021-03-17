@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dInsect_c (dInsect_c) False/False
-/* top-level dependencies (begin dInsect_c) */
-/* top-level dependencies (end dInsect_c) */
+// build dInsect_c (['dInsect_c']) False/False
+/* top-level dependencies (begin ['dInsect_c']) */
+/* top-level dependencies (end ['dInsect_c']) */
 struct dInsect_c {
 	/* 80110648 */ void Insect_Release();
 	/* 8015E010 */ dInsect_c();
@@ -19,63 +19,63 @@ struct dInsect_c {
 	/* 8015E26C */ void CalcZBuffer(f32);
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dEvt_control_c (dEvt_control_c) False/False
-/* top-level dependencies (begin dEvt_control_c) */
-/* top-level dependencies (end dEvt_control_c) */
+// build dEvt_control_c (['dEvt_control_c']) False/False
+/* top-level dependencies (begin ['dEvt_control_c']) */
+/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(u32);
 };
 
-// build dEvent_manager_c (dEvent_manager_c) False/False
-/* top-level dependencies (begin dEvent_manager_c) */
-/* top-level dependencies (end dEvent_manager_c) */
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-// build dDlst_peekZ_c (dDlst_peekZ_c) False/False
-/* top-level dependencies (begin dDlst_peekZ_c) */
-/* top-level dependencies (end dDlst_peekZ_c) */
+// build dDlst_peekZ_c (['dDlst_peekZ_c']) False/False
+/* top-level dependencies (begin ['dDlst_peekZ_c']) */
+/* top-level dependencies (end ['dDlst_peekZ_c']) */
 struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-// build dMenu_Insect_c (dMenu_Insect_c) False/False
-/* top-level dependencies (begin dMenu_Insect_c) */
-/* top-level dependencies (end dMenu_Insect_c) */
+// build dMenu_Insect_c (['dMenu_Insect_c']) False/False
+/* top-level dependencies (begin ['dMenu_Insect_c']) */
+/* top-level dependencies (end ['dMenu_Insect_c']) */
 struct dMenu_Insect_c {
 	/* 801D9F3C */ void isCatchNotGiveInsect(u8);
 };

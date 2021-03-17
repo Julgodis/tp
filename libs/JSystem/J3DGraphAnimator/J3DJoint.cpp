@@ -9,71 +9,71 @@
 // Types:
 // 
 
-// build J3DMtxCalcJ3DSysInitBasic (J3DMtxCalcJ3DSysInitBasic) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DMtxCalcJ3DSysInitBasic (['J3DMtxCalcJ3DSysInitBasic']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DMtxCalcJ3DSysInitBasic) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DMtxCalcJ3DSysInitBasic) */
+/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitBasic']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitBasic']) */
 struct J3DMtxCalcJ3DSysInitBasic {
-	// Vec
+	// ('Vec',)
 	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build Vec (Vec) True/True
-// build J3DMtxCalcJ3DSysInitMaya (J3DMtxCalcJ3DSysInitMaya) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin J3DMtxCalcJ3DSysInitMaya) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DMtxCalcJ3DSysInitMaya) */
+// build Vec (['Vec']) True/True
+// build J3DMtxCalcJ3DSysInitMaya (['J3DMtxCalcJ3DSysInitMaya']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitMaya']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitMaya']) */
 struct J3DMtxCalcJ3DSysInitMaya {
-	// Vec
+	// ('Vec',)
 	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build J3DMtxCalcCalcTransformBasic (J3DMtxCalcCalcTransformBasic) False/False
-// build J3DTransformInfo (J3DTransformInfo) False/False
-/* top-level dependencies (begin J3DTransformInfo) */
-/* top-level dependencies (end J3DTransformInfo) */
+// build J3DMtxCalcCalcTransformBasic (['J3DMtxCalcCalcTransformBasic']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) False/False
+/* top-level dependencies (begin ['J3DTransformInfo']) */
+/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin J3DMtxCalcCalcTransformBasic) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DMtxCalcCalcTransformBasic) */
+/* top-level dependencies (begin ['J3DMtxCalcCalcTransformBasic']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DMtxCalcCalcTransformBasic']) */
 struct J3DMtxCalcCalcTransformBasic {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DTransformInfo (J3DTransformInfo) True/True
-// build J3DMtxCalcCalcTransformSoftimage (J3DMtxCalcCalcTransformSoftimage) False/False
-// build J3DTransformInfo (J3DTransformInfo) True/True
-/* top-level dependencies (begin J3DMtxCalcCalcTransformSoftimage) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DMtxCalcCalcTransformSoftimage) */
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+// build J3DMtxCalcCalcTransformSoftimage (['J3DMtxCalcCalcTransformSoftimage']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+/* top-level dependencies (begin ['J3DMtxCalcCalcTransformSoftimage']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DMtxCalcCalcTransformSoftimage']) */
 struct J3DMtxCalcCalcTransformSoftimage {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DMtxCalcCalcTransformMaya (J3DMtxCalcCalcTransformMaya) False/False
-// build J3DTransformInfo (J3DTransformInfo) True/True
-/* top-level dependencies (begin J3DMtxCalcCalcTransformMaya) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DMtxCalcCalcTransformMaya) */
+// build J3DMtxCalcCalcTransformMaya (['J3DMtxCalcCalcTransformMaya']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+/* top-level dependencies (begin ['J3DMtxCalcCalcTransformMaya']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DMtxCalcCalcTransformMaya']) */
 struct J3DMtxCalcCalcTransformMaya {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DJoint (J3DJoint) False/False
-/* top-level dependencies (begin J3DJoint) */
-/* top-level dependencies (end J3DJoint) */
+// build J3DJoint (['J3DJoint']) False/False
+/* top-level dependencies (begin ['J3DJoint']) */
+/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 	/* 8032F13C */ void appendChild(J3DJoint*);
 	/* 8032F170 */ J3DJoint();
@@ -81,9 +81,9 @@ struct J3DJoint {
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
-// build J3DMaterial (J3DMaterial) False/False
-/* top-level dependencies (begin J3DMaterial) */
-/* top-level dependencies (end J3DMaterial) */
+// build J3DMaterial (['J3DMaterial']) False/False
+/* top-level dependencies (begin ['J3DMaterial']) */
+/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 80316AB0 */ void setCurrentMtx();
 };

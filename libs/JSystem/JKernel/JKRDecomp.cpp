@@ -9,20 +9,20 @@
 // Types:
 // 
 
-// build JKRDecomp (JKRDecomp) False/False
-// build JKRDecompCommand (JKRDecompCommand) False/False
-/* top-level dependencies (begin JKRDecompCommand) */
-/* top-level dependencies (end JKRDecompCommand) */
+// build JKRDecomp (['JKRDecomp']) False/False
+// build JKRDecompCommand (['JKRDecompCommand']) False/False
+/* top-level dependencies (begin ['JKRDecompCommand']) */
+/* top-level dependencies (end ['JKRDecompCommand']) */
 struct JKRDecompCommand {
 	/* 802DBD70 */ JKRDecompCommand();
 	/* 802DBDC0 */ ~JKRDecompCommand();
 };
 
-/* top-level dependencies (begin JKRDecomp) */
-// outer dependency: JKRDecompCommand
-/* top-level dependencies (end JKRDecomp) */
+/* top-level dependencies (begin ['JKRDecomp']) */
+// outer dependency: ('JKRDecompCommand',)
+/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
-	// JKRDecompCommand
+	// ('JKRDecompCommand',)
 	/* 802DB680 */ void create(s32);
 	/* 802DB6E0 */ JKRDecomp(s32);
 	/* 802DB730 */ ~JKRDecomp();
@@ -36,37 +36,37 @@ struct JKRDecomp {
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JKRDecompCommand (JKRDecompCommand) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRDecompCommand (['JKRDecompCommand']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (JKRThread) False/False
-/* top-level dependencies (begin JKRThread) */
-/* top-level dependencies (end JKRThread) */
+// build JKRThread (['JKRThread']) False/False
+/* top-level dependencies (begin ['JKRThread']) */
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JKRAramPiece (JKRAramPiece) False/False
-// build JKRAMCommand (JKRAMCommand) False/False
-/* top-level dependencies (begin JKRAMCommand) */
-/* top-level dependencies (end JKRAMCommand) */
+// build JKRAramPiece (['JKRAramPiece']) False/False
+// build JKRAMCommand (['JKRAMCommand']) False/False
+/* top-level dependencies (begin ['JKRAMCommand']) */
+/* top-level dependencies (end ['JKRAMCommand']) */
 struct JKRAMCommand {
 };
 
-/* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAMCommand
-/* top-level dependencies (end JKRAramPiece) */
+/* top-level dependencies (begin ['JKRAramPiece']) */
+// outer dependency: ('JKRAMCommand',)
+/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// JKRAMCommand
+	// ('JKRAMCommand',)
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
 };
 
-// build JKRAMCommand (JKRAMCommand) True/True
+// build JKRAMCommand (['JKRAMCommand']) True/True
 // 
 // Forward References:
 // 

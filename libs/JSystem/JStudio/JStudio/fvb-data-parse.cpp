@@ -9,29 +9,29 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::fvb::data::TParse_TParagraph::TData
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build fvb (JStudio::fvb) False/False
-	/* dependencies (begin JStudio::fvb) */
-	/* dependencies (end JStudio::fvb) */
-	namespace fvb {
-		// build data (JStudio::fvb::data) False/False
-		/* dependencies (begin JStudio::fvb::data) */
-		/* dependencies (end JStudio::fvb::data) */
+	// build fvb (['JStudio', 'fvb']) False/False
+	/* dependencies (begin ['JStudio', 'fvb']) */
+	/* dependencies (end ['JStudio', 'fvb']) */
+	struct fvb {
+		// build data (['JStudio', 'fvb', 'data']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'data']) */
+		/* dependencies (end ['JStudio', 'fvb', 'data']) */
 		struct data {
-			// build TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph) False/False
-			/* dependencies (begin JStudio::fvb::data::TParse_TParagraph) */
-			// inner dependency: TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::data::TParse_TParagraph)
-			/* dependencies (end JStudio::fvb::data::TParse_TParagraph) */
+			// build TParse_TParagraph (['JStudio', 'fvb', 'data', 'TParse_TParagraph']) False/False
+			/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
+			// inner dependency: 3 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'data', 'TParse_TParagraph'])
+			/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
 			struct TParse_TParagraph {
-				// JStudio::fvb::data::TParse_TParagraph::TData
-				// build TData (JStudio::fvb::data::TParse_TParagraph::TData) False/False
-				/* dependencies (begin JStudio::fvb::data::TParse_TParagraph::TData) */
-				/* dependencies (end JStudio::fvb::data::TParse_TParagraph::TData) */
+				// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+				// build TData (['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) False/False
+				/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
+				/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
 				struct TData {
 				};
 
@@ -44,22 +44,22 @@ namespace JStudio {
 
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::binary::TEBit
-/* top-level dependencies (end JGadget) */
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'binary', 'TEBit')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	// inner dependency: binary (JGadget::binary::TEBit) True False (for JGadget::binary)
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	// inner dependency: 1 ('JGadget', 'binary', 'TEBit') (for ['JGadget', 'binary'])
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// JGadget::binary::TEBit
-		// build TEBit (JGadget::binary::TEBit) False/False
-		/* dependencies (begin JGadget::binary::TEBit) */
-		/* dependencies (end JGadget::binary::TEBit) */
+		// ('JGadget', 'binary', 'TEBit')
+		// build TEBit (['JGadget', 'binary', 'TEBit']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TEBit']) */
+		/* dependencies (end ['JGadget', 'binary', 'TEBit']) */
 		struct TEBit {
 		};
 

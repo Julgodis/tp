@@ -9,42 +9,42 @@
 // Types:
 // 
 
-// build dSi_HIO_c (dSi_HIO_c) False/False
-/* top-level dependencies (begin dSi_HIO_c) */
-/* top-level dependencies (end dSi_HIO_c) */
+// build dSi_HIO_c (['dSi_HIO_c']) False/False
+/* top-level dependencies (begin ['dSi_HIO_c']) */
+/* top-level dependencies (end ['dSi_HIO_c']) */
 struct dSi_HIO_c {
 	/* 80195A2C */ dSi_HIO_c();
 	/* 80195C1C */ ~dSi_HIO_c();
 };
 
-// build dSelect_icon_c (dSelect_icon_c) False/False
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
+// build dSelect_icon_c (['dSelect_icon_c']) False/False
+// build J2DPane (['J2DPane']) False/False
+/* top-level dependencies (begin ['J2DPane']) */
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 };
 
-/* top-level dependencies (begin dSelect_icon_c) */
-// outer dependency: J2DPane
-/* top-level dependencies (end dSelect_icon_c) */
+/* top-level dependencies (begin ['dSelect_icon_c']) */
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['dSelect_icon_c']) */
 struct dSelect_icon_c {
-	// J2DPane
+	// ('J2DPane',)
 	/* 80195A3C */ void animation();
 	/* 80195B40 */ void setAlpha(u8);
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-// build J2DPane (J2DPane) True/True
-// build CPaneMgr (CPaneMgr) False/False
-/* top-level dependencies (begin CPaneMgr) */
-/* top-level dependencies (end CPaneMgr) */
+// build J2DPane (['J2DPane']) True/True
+// build CPaneMgr (['CPaneMgr']) False/False
+/* top-level dependencies (begin ['CPaneMgr']) */
+/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
 	/* 80254638 */ void paneScale(f32, f32);
 };
 
-// build J2DScreen (J2DScreen) False/False
-/* top-level dependencies (begin J2DScreen) */
-/* top-level dependencies (end J2DScreen) */
+// build J2DScreen (['J2DScreen']) False/False
+/* top-level dependencies (begin ['J2DScreen']) */
+/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
 	/* 802F9690 */ void animation();
 };

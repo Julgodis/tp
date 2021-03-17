@@ -9,45 +9,45 @@
 // Types:
 // 
 
-// build dPath (dPath) False/False
-/* top-level dependencies (begin dPath) */
-/* top-level dependencies (end dPath) */
+// build dPath (['dPath']) False/False
+/* top-level dependencies (begin ['dPath']) */
+/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074FE0 */ void GetRoomPathId(cBgS_PolyInfo const&);
 	/* 80075030 */ void GetRoomPathPntNo(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build J3DShapeMtx (J3DShapeMtx) False/False
-/* top-level dependencies (begin J3DShapeMtx) */
-/* top-level dependencies (end J3DShapeMtx) */
+// build J3DShapeMtx (['J3DShapeMtx']) False/False
+/* top-level dependencies (begin ['J3DShapeMtx']) */
+/* top-level dependencies (end ['J3DShapeMtx']) */
 struct J3DShapeMtx {
 	/* 80273E08 */ bool getUseMtxNum() const;
 };

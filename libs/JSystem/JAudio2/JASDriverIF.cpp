@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029CCD4 */ void getSubFrameCounter();
 	/* 8029E130 */ void setDSPLevel(f32);
@@ -25,13 +25,13 @@ struct JASDriver {
 	/* 8029E2F8 */ void updateDacCallback();
 };
 
-// build JASCallbackMgr (JASCallbackMgr) False/False
-/* top-level dependencies (begin JASCallbackMgr) */
-/* top-level dependencies (end JASCallbackMgr) */
+// build JASCallbackMgr (['JASCallbackMgr']) False/False
+/* top-level dependencies (begin ['JASCallbackMgr']) */
+/* top-level dependencies (end ['JASCallbackMgr']) */
 struct JASCallbackMgr {
-	// build TCallback (JASCallbackMgr::TCallback) False/False
-	/* dependencies (begin JASCallbackMgr::TCallback) */
-	/* dependencies (end JASCallbackMgr::TCallback) */
+	// build TCallback (['JASCallbackMgr', 'TCallback']) False/False
+	/* dependencies (begin ['JASCallbackMgr', 'TCallback']) */
+	/* dependencies (end ['JASCallbackMgr', 'TCallback']) */
 	struct TCallback {
 		/* 8029E3A0 */ TCallback();
 	};
@@ -39,9 +39,9 @@ struct JASCallbackMgr {
 	/* 802900C4 */ void callback();
 };
 
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
 	/* 8029DA04 */ void setDSPMixerLevel(f32);
 	/* 8029DA30 */ void getDSPMixerLevel();

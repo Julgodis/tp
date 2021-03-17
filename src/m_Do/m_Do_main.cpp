@@ -9,96 +9,96 @@
 // Types:
 // 
 
-// build HeapCheck (HeapCheck) False/False
-/* top-level dependencies (begin HeapCheck) */
-/* top-level dependencies (end HeapCheck) */
+// build HeapCheck (['HeapCheck']) False/False
+/* top-level dependencies (begin ['HeapCheck']) */
+/* top-level dependencies (end ['HeapCheck']) */
 struct HeapCheck {
 	/* 80005728 */ void CheckHeap1();
 	/* 800058A0 */ void getUsedCount() const;
 	/* 800058C4 */ void heapDisplay() const;
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 	/* 802CFD64 */ void getTotalUsedSize() const;
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 800065D8 */ bool dump_sort();
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build mDoCPd_c (mDoCPd_c) False/False
-/* top-level dependencies (begin mDoCPd_c) */
-/* top-level dependencies (end mDoCPd_c) */
+// build mDoCPd_c (['mDoCPd_c']) False/False
+/* top-level dependencies (begin ['mDoCPd_c']) */
+/* top-level dependencies (end ['mDoCPd_c']) */
 struct mDoCPd_c {
 	/* 80007954 */ void create();
 	/* 80007A94 */ void read();
 };
 
-// build mDoMemCd_Ctrl_c (mDoMemCd_Ctrl_c) False/False
-/* top-level dependencies (begin mDoMemCd_Ctrl_c) */
-/* top-level dependencies (end mDoMemCd_Ctrl_c) */
+// build mDoMemCd_Ctrl_c (['mDoMemCd_Ctrl_c']) False/False
+/* top-level dependencies (begin ['mDoMemCd_Ctrl_c']) */
+/* top-level dependencies (end ['mDoMemCd_Ctrl_c']) */
 struct mDoMemCd_Ctrl_c {
 	/* 80016894 */ void update();
 };
 
-// build dComIfG_inf_c (dComIfG_inf_c) False/False
-/* top-level dependencies (begin dComIfG_inf_c) */
-/* top-level dependencies (end dComIfG_inf_c) */
+// build dComIfG_inf_c (['dComIfG_inf_c']) False/False
+/* top-level dependencies (begin ['dComIfG_inf_c']) */
+/* top-level dependencies (end ['dComIfG_inf_c']) */
 struct dComIfG_inf_c {
 	/* 8002CBE4 */ void ct();
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-/* top-level dependencies (begin dRes_control_c) */
-/* top-level dependencies (end dRes_control_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+/* top-level dependencies (begin ['dRes_control_c']) */
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
 	/* 8003C638 */ void dump();
 };
 
-// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
-/* top-level dependencies (begin DynamicModuleControlBase) */
-/* top-level dependencies (end DynamicModuleControlBase) */
+// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
+/* top-level dependencies (begin ['DynamicModuleControlBase']) */
+/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 80262470 */ void dump();
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRSolidHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-// build JKRAramHeap (JKRAramHeap) False/False
-/* top-level dependencies (begin JKRAramHeap) */
-/* top-level dependencies (end JKRAramHeap) */
+// build JKRAramHeap (['JKRAramHeap']) False/False
+/* top-level dependencies (begin ['JKRAramHeap']) */
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 	/* 802D3134 */ void getFreeSize();
 	/* 802D31AC */ void getTotalFreeSize();
 	/* 802D3218 */ void dump();
 };
 
-// build JUTAssertion (JUTAssertion) False/False
-/* top-level dependencies (begin JUTAssertion) */
-/* top-level dependencies (end JUTAssertion) */
+// build JUTAssertion (['JUTAssertion']) False/False
+/* top-level dependencies (begin ['JUTAssertion']) */
+/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
 };
 
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
+// build JUTConsole (['JUTConsole']) False/False
+/* top-level dependencies (begin ['JUTConsole']) */
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7F7C */ void dumpToTerminal(u32);

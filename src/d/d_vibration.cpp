@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build dVibration_c (dVibration_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dVibration_c (['dVibration_c']) False/False
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266CE4 */ void norm() const;
 };
 
-/* top-level dependencies (begin dVibration_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dVibration_c) */
+/* top-level dependencies (begin ['dVibration_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dVibration_c']) */
 struct dVibration_c {
-	// cXyz
+	// ('cXyz',)
 	/* 8006F268 */ void Run();
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 	/* 8006FB10 */ void StartQuake(int, int, cXyz);
@@ -44,42 +44,42 @@ struct dVibration_c {
 	/* 8006FFF8 */ void Remove();
 };
 
-// build cXyz (cXyz) True/True
-// build dSv_player_config_c (dSv_player_config_c) False/False
-/* top-level dependencies (begin dSv_player_config_c) */
-/* top-level dependencies (end dSv_player_config_c) */
+// build cXyz (['cXyz']) True/True
+// build dSv_player_config_c (['dSv_player_config_c']) False/False
+/* top-level dependencies (begin ['dSv_player_config_c']) */
+/* top-level dependencies (end ['dSv_player_config_c']) */
 struct dSv_player_config_c {
 	/* 80034644 */ void checkVibration() const;
 };
 
-// build dCamera_c (dCamera_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dCamera_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dCamera_c) */
+// build dCamera_c (['dCamera_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dCamera_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80181000 */ void StartShake(s32, u8*, s32, cXyz);
 	/* 80181158 */ void StopShake();
 };
 
-// build Vec (Vec) True/True
-// build JUTGamePad (JUTGamePad) False/False
-// build JUTGamePad (JUTGamePad) True/False
+// build Vec (['Vec']) True/True
+// build JUTGamePad (['JUTGamePad']) False/False
+// build JUTGamePad (['JUTGamePad']) True/False
 struct JUTGamePad;
-/* top-level dependencies (begin JUTGamePad) */
-// outer dependency: JUTGamePad::CRumble::ERumble
-/* top-level dependencies (end JUTGamePad) */
+/* top-level dependencies (begin ['JUTGamePad']) */
+// outer dependency: ('JUTGamePad', 'CRumble', 'ERumble')
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// build CRumble (JUTGamePad::CRumble) False/False
-	/* dependencies (begin JUTGamePad::CRumble) */
-	// inner dependency: CRumble (JUTGamePad::CRumble::ERumble) True False (for JUTGamePad::CRumble)
-	/* dependencies (end JUTGamePad::CRumble) */
+	// build CRumble (['JUTGamePad', 'CRumble']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
+	// inner dependency: 1 ('JUTGamePad', 'CRumble', 'ERumble') (for ['JUTGamePad', 'CRumble'])
+	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
-		// JUTGamePad::CRumble::ERumble
-		// build ERumble (JUTGamePad::CRumble::ERumble) False/False
-		/* dependencies (begin JUTGamePad::CRumble::ERumble) */
-		/* dependencies (end JUTGamePad::CRumble::ERumble) */
+		// ('JUTGamePad', 'CRumble', 'ERumble')
+		// build ERumble (['JUTGamePad', 'CRumble', 'ERumble']) False/False
+		/* dependencies (begin ['JUTGamePad', 'CRumble', 'ERumble']) */
+		/* dependencies (end ['JUTGamePad', 'CRumble', 'ERumble']) */
 		struct ERumble {
 		};
 

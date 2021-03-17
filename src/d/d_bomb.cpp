@@ -9,25 +9,25 @@
 // Types:
 // 
 
-// build dBomb_c (dBomb_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build dBomb_c (['dBomb_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin dBomb_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dBomb_c) */
+/* top-level dependencies (begin ['dBomb_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dBomb_c']) */
 struct dBomb_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80031F94 */ void checkStateCarry();
 	/* 80031FCC */ void checkFlowerBombWait(fopAc_ac_c*);
 	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
 	/* 8003201C */ void checkInsectBombMove(fopAc_ac_c*);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
 // 
 // Forward References:
 // 

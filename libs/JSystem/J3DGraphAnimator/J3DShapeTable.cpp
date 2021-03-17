@@ -9,37 +9,37 @@
 // Types:
 // 
 
-// build J3DShapeTable (J3DShapeTable) False/False
-// build J3DDrawMtxData (J3DDrawMtxData) False/False
-/* top-level dependencies (begin J3DDrawMtxData) */
-/* top-level dependencies (end J3DDrawMtxData) */
-struct J3DDrawMtxData {
-};
-
-// build J3DVertexData (J3DVertexData) False/False
-/* top-level dependencies (begin J3DVertexData) */
-/* top-level dependencies (end J3DVertexData) */
+// build J3DShapeTable (['J3DShapeTable']) False/False
+// build J3DVertexData (['J3DVertexData']) False/False
+/* top-level dependencies (begin ['J3DVertexData']) */
+/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 };
 
-/* top-level dependencies (begin J3DShapeTable) */
-// outer dependency: J3DDrawMtxData
-// outer dependency: J3DVertexData
-/* top-level dependencies (end J3DShapeTable) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
+/* top-level dependencies (begin ['J3DDrawMtxData']) */
+/* top-level dependencies (end ['J3DDrawMtxData']) */
+struct J3DDrawMtxData {
+};
+
+/* top-level dependencies (begin ['J3DShapeTable']) */
+// outer dependency: ('J3DVertexData',)
+// outer dependency: ('J3DDrawMtxData',)
+/* top-level dependencies (end ['J3DShapeTable']) */
 struct J3DShapeTable {
-	// J3DDrawMtxData
-	// J3DVertexData
+	// ('J3DVertexData',)
+	// ('J3DDrawMtxData',)
 	/* 803258A0 */ void hide();
 	/* 803258D8 */ void show();
 	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-// build J3DDrawMtxData (J3DDrawMtxData) True/True
-// build J3DVertexData (J3DVertexData) True/True
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) True/True
+// build J3DVertexData (['J3DVertexData']) True/True
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314F5C */ void isSameVcdVatCmd(J3DShape*);
 	/* 80315260 */ void makeVcdVatCmd();

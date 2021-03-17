@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build _GXChannelID (_GXChannelID) False/False
-/* top-level dependencies (begin _GXChannelID) */
-/* top-level dependencies (end _GXChannelID) */
+// build _GXChannelID (['_GXChannelID']) False/False
+/* top-level dependencies (begin ['_GXChannelID']) */
+/* top-level dependencies (end ['_GXChannelID']) */
 struct _GXChannelID {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 

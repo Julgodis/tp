@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dMsgScrnHowl_c (dMsgScrnHowl_c) False/False
-/* top-level dependencies (begin dMsgScrnHowl_c) */
-/* top-level dependencies (end dMsgScrnHowl_c) */
+// build dMsgScrnHowl_c (['dMsgScrnHowl_c']) False/False
+/* top-level dependencies (begin ['dMsgScrnHowl_c']) */
+/* top-level dependencies (end ['dMsgScrnHowl_c']) */
 struct dMsgScrnHowl_c {
 	/* 8024096C */ dMsgScrnHowl_c();
 	/* 80241784 */ ~dMsgScrnHowl_c();
@@ -52,47 +52,47 @@ struct dMsgScrnHowl_c {
 	/* 8024438C */ void getGuideDataType(int);
 };
 
-// build dMeter2Draw_c (dMeter2Draw_c) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build dMeter2Draw_c (['dMeter2Draw_c']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin dMeter2Draw_c) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end dMeter2Draw_c) */
+/* top-level dependencies (begin ['dMeter2Draw_c']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['dMeter2Draw_c']) */
 struct dMeter2Draw_c {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
-// build JUtility (JUtility) True/True
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
-/* top-level dependencies (begin JMSMesgEntry_c) */
-/* top-level dependencies (end JMSMesgEntry_c) */
+// build JUtility (['JUtility']) True/True
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
+/* top-level dependencies (begin ['JMSMesgEntry_c']) */
+/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JMSMesgEntry_c
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('JMSMesgEntry_c',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// JMSMesgEntry_c
+	// ('JMSMesgEntry_c',)
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
-// build dMsgScrnBase_c (dMsgScrnBase_c) False/False
-/* top-level dependencies (begin dMsgScrnBase_c) */
-/* top-level dependencies (end dMsgScrnBase_c) */
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
+// build dMsgScrnBase_c (['dMsgScrnBase_c']) False/False
+/* top-level dependencies (begin ['dMsgScrnBase_c']) */
+/* top-level dependencies (end ['dMsgScrnBase_c']) */
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
@@ -113,45 +113,45 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-// build CPaneMgr (CPaneMgr) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
-// build J2DScreen (J2DScreen) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build CPaneMgr (['CPaneMgr']) False/False
+// build J2DScreen (['J2DScreen']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end J2DScreen) */
+/* top-level dependencies (begin ['J2DScreen']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-/* top-level dependencies (begin CPaneMgr) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgr) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (['J2DPane']) False/False
+/* top-level dependencies (begin ['J2DPane']) */
+/* top-level dependencies (end ['J2DPane']) */
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+/* top-level dependencies (begin ['CPaneMgr']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// JKRExpHeap
-	// J2DPane
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
+	// ('J2DPane',)
 	/* 80253930 */ CPaneMgr();
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
@@ -162,20 +162,20 @@ struct CPaneMgr {
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build J2DScreen (J2DScreen) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-/* top-level dependencies (begin CPaneMgrAlpha) */
-/* top-level dependencies (end CPaneMgrAlpha) */
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DPane (['J2DPane']) True/True
+// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
+/* top-level dependencies (begin ['CPaneMgrAlpha']) */
+/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
 };
 
-// build Z2WolfHowlMgr (Z2WolfHowlMgr) False/False
-/* top-level dependencies (begin Z2WolfHowlMgr) */
-/* top-level dependencies (end Z2WolfHowlMgr) */
+// build Z2WolfHowlMgr (['Z2WolfHowlMgr']) False/False
+/* top-level dependencies (begin ['Z2WolfHowlMgr']) */
+/* top-level dependencies (end ['Z2WolfHowlMgr']) */
 struct Z2WolfHowlMgr {
 	/* 802CACCC */ void getNowInputValue();
 	/* 802CB320 */ void getCorrectLine(u8);
@@ -184,26 +184,26 @@ struct Z2WolfHowlMgr {
 	/* 802CBA88 */ void startGuideMelody(bool);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build J2DPicture (J2DPicture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build JKRArchive (['JKRArchive']) True/True
+// build J2DPicture (['J2DPicture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J2DPicture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J2DPicture) */
+/* top-level dependencies (begin ['J2DPicture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);

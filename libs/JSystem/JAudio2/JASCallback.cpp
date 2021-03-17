@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASCallbackMgr (JASCallbackMgr) False/False
-/* top-level dependencies (begin JASCallbackMgr) */
-/* top-level dependencies (end JASCallbackMgr) */
+// build JASCallbackMgr (['JASCallbackMgr']) False/False
+/* top-level dependencies (begin ['JASCallbackMgr']) */
+/* top-level dependencies (end ['JASCallbackMgr']) */
 struct JASCallbackMgr {
 	/* 802900C4 */ void callback();
 };

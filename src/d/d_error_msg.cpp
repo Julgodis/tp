@@ -9,110 +9,110 @@
 // Types:
 // 
 
-// build dDvdErrorMsg_c (dDvdErrorMsg_c) False/False
-/* top-level dependencies (begin dDvdErrorMsg_c) */
-/* top-level dependencies (end dDvdErrorMsg_c) */
+// build dDvdErrorMsg_c (['dDvdErrorMsg_c']) False/False
+/* top-level dependencies (begin ['dDvdErrorMsg_c']) */
+/* top-level dependencies (end ['dDvdErrorMsg_c']) */
 struct dDvdErrorMsg_c {
 	/* 8009D194 */ void draw(s32);
 	/* 8009D354 */ void execute();
 };
 
-// build dShutdownErrorMsg_c (dShutdownErrorMsg_c) False/False
-/* top-level dependencies (begin dShutdownErrorMsg_c) */
-/* top-level dependencies (end dShutdownErrorMsg_c) */
+// build dShutdownErrorMsg_c (['dShutdownErrorMsg_c']) False/False
+/* top-level dependencies (begin ['dShutdownErrorMsg_c']) */
+/* top-level dependencies (end ['dShutdownErrorMsg_c']) */
 struct dShutdownErrorMsg_c {
 	/* 8009D790 */ void execute();
 };
 
-// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
-/* top-level dependencies (begin mDoGph_gInf_c) */
-/* top-level dependencies (end mDoGph_gInf_c) */
+// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
+/* top-level dependencies (begin ['mDoGph_gInf_c']) */
+/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
 	/* 80007F90 */ void beginRender();
 };
 
-// build Z2AudioMgr (Z2AudioMgr) False/False
-/* top-level dependencies (begin Z2AudioMgr) */
-/* top-level dependencies (end Z2AudioMgr) */
+// build Z2AudioMgr (['Z2AudioMgr']) False/False
+/* top-level dependencies (begin ['Z2AudioMgr']) */
+/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-// build JUTResFont (JUTResFont) False/False
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
+// build JUTResFont (['JUTResFont']) False/False
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JUTResFont) */
-// outer dependency: ResFONT
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTResFont) */
+/* top-level dependencies (begin ['JUTResFont']) */
+// outer dependency: ('ResFONT',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ResFONT
-	// JKRHeap
+	// ('ResFONT',)
+	// ('JKRHeap',)
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 	/* 802DF000 */ ~JUTResFont();
 };
 
-// build ResFONT (ResFONT) True/True
-// build JKRHeap (JKRHeap) True/True
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build ResFONT (['ResFONT']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
 };
 
-// build J2DPicture (J2DPicture) False/False
-/* top-level dependencies (begin J2DPicture) */
-/* top-level dependencies (end J2DPicture) */
+// build J2DPicture (['J2DPicture']) False/False
+/* top-level dependencies (begin ['J2DPicture']) */
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 	/* 802FCFF0 */ ~J2DPicture();
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-// build J2DTextBox (J2DTextBox) False/False
-// build ResFONT (ResFONT) True/True
-// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
-/* top-level dependencies (begin J2DTextBoxVBinding) */
-/* top-level dependencies (end J2DTextBoxVBinding) */
+// build J2DTextBox (['J2DTextBox']) False/False
+// build ResFONT (['ResFONT']) True/True
+// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) False/False
+/* top-level dependencies (begin ['J2DTextBoxVBinding']) */
+/* top-level dependencies (end ['J2DTextBoxVBinding']) */
 struct J2DTextBoxVBinding {
 };
 
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
-/* top-level dependencies (begin J2DTextBoxHBinding) */
-/* top-level dependencies (end J2DTextBoxHBinding) */
+// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) False/False
+/* top-level dependencies (begin ['J2DTextBoxHBinding']) */
+/* top-level dependencies (end ['J2DTextBoxHBinding']) */
 struct J2DTextBoxHBinding {
 };
 
-/* top-level dependencies (begin J2DTextBox) */
-// outer dependency: ResFONT
-// outer dependency: J2DTextBoxVBinding
-// outer dependency: J2DTextBoxHBinding
-/* top-level dependencies (end J2DTextBox) */
+/* top-level dependencies (begin ['J2DTextBox']) */
+// outer dependency: ('ResFONT',)
+// outer dependency: ('J2DTextBoxVBinding',)
+// outer dependency: ('J2DTextBoxHBinding',)
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// ResFONT
-	// J2DTextBoxVBinding
-	// J2DTextBoxHBinding
+	// ('ResFONT',)
+	// ('J2DTextBoxVBinding',)
+	// ('J2DTextBoxHBinding',)
 	/* 802FFC58 */ void initiate(ResFONT const*, char const*, s16, J2DTextBoxHBinding, J2DTextBoxVBinding);
 	/* 803001E0 */ ~J2DTextBox();
 	/* 80300490 */ void draw(f32, f32, f32, J2DTextBoxHBinding);
 };
 
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
-// build J2DTextBoxVBinding (J2DTextBoxVBinding) True/True
-// build J3DSys (J3DSys) False/False
-/* top-level dependencies (begin J3DSys) */
-/* top-level dependencies (end J3DSys) */
+// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) True/True
+// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) True/True
+// build J3DSys (['J3DSys']) False/False
+/* top-level dependencies (begin ['J3DSys']) */
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 803100BC */ void drawInit();
 };

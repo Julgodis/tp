@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build cM2dGCir (cM2dGCir) False/False
-/* top-level dependencies (begin cM2dGCir) */
-/* top-level dependencies (end cM2dGCir) */
+// build cM2dGCir (['cM2dGCir']) False/False
+/* top-level dependencies (begin ['cM2dGCir']) */
+/* top-level dependencies (end ['cM2dGCir']) */
 struct cM2dGCir {
 };
 

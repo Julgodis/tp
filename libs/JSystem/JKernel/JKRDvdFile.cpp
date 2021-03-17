@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JKRDvdFile (JKRDvdFile) False/False
-// build DVDFileInfo (DVDFileInfo) False/False
-/* top-level dependencies (begin DVDFileInfo) */
-/* top-level dependencies (end DVDFileInfo) */
+// build JKRDvdFile (['JKRDvdFile']) False/False
+// build DVDFileInfo (['DVDFileInfo']) False/False
+/* top-level dependencies (begin ['DVDFileInfo']) */
+/* top-level dependencies (end ['DVDFileInfo']) */
 struct DVDFileInfo {
 };
 
-/* top-level dependencies (begin JKRDvdFile) */
-// outer dependency: DVDFileInfo
-/* top-level dependencies (end JKRDvdFile) */
+/* top-level dependencies (begin ['JKRDvdFile']) */
+// outer dependency: ('DVDFileInfo',)
+/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
-	// DVDFileInfo
+	// ('DVDFileInfo',)
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D95F8 */ JKRDvdFile(char const*);
 	/* 802D96A0 */ JKRDvdFile(s32);
@@ -36,39 +36,39 @@ struct JKRDvdFile {
 	/* 802D9AF8 */ void getFileSize() const;
 };
 
-// build DVDFileInfo (DVDFileInfo) True/True
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build DVDFileInfo (['DVDFileInfo']) True/True
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build JUTXfb (JUTXfb) False/False
-// build JUTXfb (JUTXfb) True/False
-struct JUTXfb;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUTXfb (['JUTXfb']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
 struct _GXRenderModeObj {
 };
 
-/* top-level dependencies (begin JUTXfb) */
-// outer dependency: JUTXfb::EXfbNumber
-// outer dependency: JKRHeap
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTXfb) */
+// build JUTXfb (['JUTXfb']) True/False
+struct JUTXfb;
+/* top-level dependencies (begin ['JUTXfb']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('_GXRenderModeObj',)
+// outer dependency: ('JUTXfb', 'EXfbNumber')
+/* top-level dependencies (end ['JUTXfb']) */
 struct JUTXfb {
-	// JUTXfb::EXfbNumber
-	// JKRHeap
-	// _GXRenderModeObj
-	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
-	/* dependencies (begin JUTXfb::EXfbNumber) */
-	/* dependencies (end JUTXfb::EXfbNumber) */
+	// ('JKRHeap',)
+	// ('_GXRenderModeObj',)
+	// ('JUTXfb', 'EXfbNumber')
+	// build EXfbNumber (['JUTXfb', 'EXfbNumber']) False/False
+	/* dependencies (begin ['JUTXfb', 'EXfbNumber']) */
+	/* dependencies (end ['JUTXfb', 'EXfbNumber']) */
 	struct EXfbNumber {
 	};
 
@@ -49,8 +49,8 @@ struct JUTXfb {
 	/* 802E5454 */ void initiate(u16, u16, JKRHeap*, JUTXfb::EXfbNumber);
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build JKRHeap (JKRHeap) True/True
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

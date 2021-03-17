@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build JUTException (JUTException) False/False
-// build OSContext (OSContext) False/False
-/* top-level dependencies (begin OSContext) */
-/* top-level dependencies (end OSContext) */
-struct OSContext {
-};
-
-// build JUTException (JUTException) True/False
-struct JUTException;
-// build JUTDirectPrint (JUTDirectPrint) False/False
-/* top-level dependencies (begin JUTDirectPrint) */
-/* top-level dependencies (end JUTDirectPrint) */
+// build JUTException (['JUTException']) False/False
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
-/* top-level dependencies (begin JUTException) */
-// outer dependency: OSContext
-// outer dependency: JUTException::EInfoPage
-// outer dependency: JUTDirectPrint
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) True/False
+struct JUTException;
+// build OSContext (['OSContext']) False/False
+/* top-level dependencies (begin ['OSContext']) */
+/* top-level dependencies (end ['OSContext']) */
+struct OSContext {
+};
+
+/* top-level dependencies (begin ['JUTException']) */
+// outer dependency: ('JUTDirectPrint',)
+// outer dependency: ('JUTException', 'EInfoPage')
+// outer dependency: ('OSContext',)
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
-	// OSContext
-	// JUTException::EInfoPage
-	// JUTDirectPrint
-	// build EInfoPage (JUTException::EInfoPage) False/False
-	/* dependencies (begin JUTException::EInfoPage) */
-	/* dependencies (end JUTException::EInfoPage) */
+	// ('JUTDirectPrint',)
+	// ('JUTException', 'EInfoPage')
+	// ('OSContext',)
+	// build EInfoPage (['JUTException', 'EInfoPage']) False/False
+	/* dependencies (begin ['JUTException', 'EInfoPage']) */
+	/* dependencies (end ['JUTException', 'EInfoPage']) */
 	struct EInfoPage {
 	};
 
@@ -68,77 +68,77 @@ struct JUTException {
 	/* 802E40EC */ ~JUTException();
 };
 
-// build JUTDirectPrint (JUTDirectPrint) True/True
-// build OSContext (OSContext) True/True
-// build JUTExternalFB (JUTExternalFB) False/False
-// build _GXGamma (_GXGamma) False/False
-/* top-level dependencies (begin _GXGamma) */
-/* top-level dependencies (end _GXGamma) */
+// build JUTDirectPrint (['JUTDirectPrint']) True/True
+// build OSContext (['OSContext']) True/True
+// build JUTExternalFB (['JUTExternalFB']) False/False
+// build _GXGamma (['_GXGamma']) False/False
+/* top-level dependencies (begin ['_GXGamma']) */
+/* top-level dependencies (end ['_GXGamma']) */
 struct _GXGamma {
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
 struct _GXRenderModeObj {
 };
 
-/* top-level dependencies (begin JUTExternalFB) */
-// outer dependency: _GXGamma
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTExternalFB) */
+/* top-level dependencies (begin ['JUTExternalFB']) */
+// outer dependency: ('_GXGamma',)
+// outer dependency: ('_GXRenderModeObj',)
+/* top-level dependencies (end ['JUTExternalFB']) */
 struct JUTExternalFB {
-	// _GXGamma
-	// _GXRenderModeObj
+	// ('_GXGamma',)
+	// ('_GXRenderModeObj',)
 	/* 802E40CC */ JUTExternalFB(_GXRenderModeObj*, _GXGamma, void*, u32);
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build _GXGamma (_GXGamma) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build _GXGamma (['_GXGamma']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (JKRThread) False/False
-/* top-level dependencies (begin JKRThread) */
-/* top-level dependencies (end JKRThread) */
+// build JKRThread (['JKRThread']) False/False
+/* top-level dependencies (begin ['JKRThread']) */
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBE74 */ JSUPtrList(bool);
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
-// build JUTGamePad (JUTGamePad) False/False
-// build JUTGamePad (JUTGamePad) True/False
+// build JUTGamePad (['JUTGamePad']) False/False
+// build JUTGamePad (['JUTGamePad']) True/False
 struct JUTGamePad;
-/* top-level dependencies (begin JUTGamePad) */
-// outer dependency: JUTGamePad::EPadPort
-/* top-level dependencies (end JUTGamePad) */
+/* top-level dependencies (begin ['JUTGamePad']) */
+// outer dependency: ('JUTGamePad', 'EPadPort')
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// JUTGamePad::EPadPort
-	// build EPadPort (JUTGamePad::EPadPort) False/False
-	/* dependencies (begin JUTGamePad::EPadPort) */
-	/* dependencies (end JUTGamePad::EPadPort) */
+	// ('JUTGamePad', 'EPadPort')
+	// build EPadPort (['JUTGamePad', 'EPadPort']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EPadPort']) */
+	/* dependencies (end ['JUTGamePad', 'EPadPort']) */
 	struct EPadPort {
 	};
 
@@ -148,9 +148,9 @@ struct JUTGamePad {
 	/* 802E0C6C */ void checkResetCallback(s64);
 };
 
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
+// build JUTConsole (['JUTConsole']) False/False
+/* top-level dependencies (begin ['JUTConsole']) */
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E73E4 */ void create(u32, void*, u32);
 	/* 802E75DC */ void getLineFromObjectSize(u32, u32);
@@ -161,20 +161,20 @@ struct JUTConsole {
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
-// build JUTConsoleManager (JUTConsoleManager) False/False
-// build JUTConsole (JUTConsole) True/True
-/* top-level dependencies (begin JUTConsoleManager) */
-// outer dependency: JUTConsole
-/* top-level dependencies (end JUTConsoleManager) */
+// build JUTConsoleManager (['JUTConsoleManager']) False/False
+// build JUTConsole (['JUTConsole']) True/True
+/* top-level dependencies (begin ['JUTConsoleManager']) */
+// outer dependency: ('JUTConsole',)
+/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
-	// JUTConsole
+	// ('JUTConsole',)
 	/* 802E8450 */ void drawDirect(bool) const;
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
 };
 
-// build JUTDirectFile (JUTDirectFile) False/False
-/* top-level dependencies (begin JUTDirectFile) */
-/* top-level dependencies (end JUTDirectFile) */
+// build JUTDirectFile (['JUTDirectFile']) False/False
+/* top-level dependencies (begin ['JUTDirectFile']) */
+/* top-level dependencies (end ['JUTDirectFile']) */
 struct JUTDirectFile {
 	/* 802E87F8 */ JUTDirectFile();
 	/* 802E881C */ ~JUTDirectFile();

@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build base_process_class (base_process_class) False/False
-/* top-level dependencies (begin base_process_class) */
-/* top-level dependencies (end base_process_class) */
+// build base_process_class (['base_process_class']) False/False
+/* top-level dependencies (begin ['base_process_class']) */
+/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 

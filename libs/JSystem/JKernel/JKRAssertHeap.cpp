@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JKRAssertHeap (JKRAssertHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-// build JKRHeap (JKRHeap) True/False
+// build JKRAssertHeap (['JKRAssertHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/False
 struct JKRHeap;
-/* top-level dependencies (begin JKRHeap) */
-// outer dependency: JKRHeap::TState
-/* top-level dependencies (end JKRHeap) */
+/* top-level dependencies (begin ['JKRHeap']) */
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// JKRHeap::TState
-	// build TState (JKRHeap::TState) False/False
-	/* dependencies (begin JKRHeap::TState) */
-	/* dependencies (end JKRHeap::TState) */
+	// ('JKRHeap', 'TState')
+	// build TState (['JKRHeap', 'TState']) False/False
+	/* dependencies (begin ['JKRHeap', 'TState']) */
+	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -34,11 +34,11 @@ struct JKRHeap {
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
 };
 
-/* top-level dependencies (begin JKRAssertHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAssertHeap) */
+/* top-level dependencies (begin ['JKRAssertHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRAssertHeap']) */
 struct JKRAssertHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D12C4 */ JKRAssertHeap(void*, u32, JKRHeap*, bool);
 	/* 802D1300 */ ~JKRAssertHeap();
 	/* 802D1368 */ void create(JKRHeap*);
@@ -61,7 +61,7 @@ struct JKRAssertHeap {
 	/* 802D1474 */ bool do_getTotalFreeSize();
 };
 
-// build JKRHeap (JKRHeap) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

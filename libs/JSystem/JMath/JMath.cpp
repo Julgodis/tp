@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build Quaternion (Quaternion) False/False
-/* top-level dependencies (begin Quaternion) */
-/* top-level dependencies (end Quaternion) */
+// build Quaternion (['Quaternion']) False/False
+/* top-level dependencies (begin ['Quaternion']) */
+/* top-level dependencies (end ['Quaternion']) */
 struct Quaternion {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAIAudience (JAIAudience) False/False
-/* top-level dependencies (begin JAIAudience) */
-/* top-level dependencies (end JAIAudience) */
+// build JAIAudience (['JAIAudience']) False/False
+/* top-level dependencies (begin ['JAIAudience']) */
+/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 	/* 8029EFF4 */ ~JAIAudience();
 };

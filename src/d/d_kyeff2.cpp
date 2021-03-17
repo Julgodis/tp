@@ -9,16 +9,16 @@
 // Types:
 // 
 
-// build dKyeff2_c (dKyeff2_c) False/False
-/* top-level dependencies (begin dKyeff2_c) */
-/* top-level dependencies (end dKyeff2_c) */
+// build dKyeff2_c (['dKyeff2_c']) False/False
+/* top-level dependencies (begin ['dKyeff2_c']) */
+/* top-level dependencies (end ['dKyeff2_c']) */
 struct dKyeff2_c {
 	/* 801ADEC4 */ void execute();
 };
 
-// build kankyo_class (kankyo_class) False/False
-/* top-level dependencies (begin kankyo_class) */
-/* top-level dependencies (end kankyo_class) */
+// build kankyo_class (['kankyo_class']) False/False
+/* top-level dependencies (begin ['kankyo_class']) */
+/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 

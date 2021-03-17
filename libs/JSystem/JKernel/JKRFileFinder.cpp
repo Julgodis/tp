@@ -9,47 +9,47 @@
 // Types:
 // 
 
-// build JKRArcFinder (JKRArcFinder) False/False
-// build JKRArchive (JKRArchive) False/False
-// build JKRArchive (JKRArchive) True/False
+// build JKRArcFinder (['JKRArcFinder']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/False
 struct JKRArchive;
-/* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::SDirEntry
-/* top-level dependencies (end JKRArchive) */
+/* top-level dependencies (begin ['JKRArchive']) */
+// outer dependency: ('JKRArchive', 'SDirEntry')
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// JKRArchive::SDirEntry
-	// build SDirEntry (JKRArchive::SDirEntry) False/False
-	/* dependencies (begin JKRArchive::SDirEntry) */
-	/* dependencies (end JKRArchive::SDirEntry) */
+	// ('JKRArchive', 'SDirEntry')
+	// build SDirEntry (['JKRArchive', 'SDirEntry']) False/False
+	/* dependencies (begin ['JKRArchive', 'SDirEntry']) */
+	/* dependencies (end ['JKRArchive', 'SDirEntry']) */
 	struct SDirEntry {
 	};
 
 	/* 802D5AC0 */ void getDirEntry(JKRArchive::SDirEntry*, u32) const;
 };
 
-/* top-level dependencies (begin JKRArcFinder) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JKRArcFinder) */
+/* top-level dependencies (begin ['JKRArcFinder']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JKRArcFinder']) */
 struct JKRArcFinder {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
 	/* 802D46C4 */ void findNextFile();
 	/* 802D4958 */ ~JKRArcFinder();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JKRDvdFinder (JKRDvdFinder) False/False
-/* top-level dependencies (begin JKRDvdFinder) */
-/* top-level dependencies (end JKRDvdFinder) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRDvdFinder (['JKRDvdFinder']) False/False
+/* top-level dependencies (begin ['JKRDvdFinder']) */
+/* top-level dependencies (end ['JKRDvdFinder']) */
 struct JKRDvdFinder {
 	/* 802D4770 */ JKRDvdFinder(char const*);
 	/* 802D47F4 */ ~JKRDvdFinder();
 	/* 802D4874 */ void findNextFile();
 };
 
-// build JKRFileFinder (JKRFileFinder) False/False
-/* top-level dependencies (begin JKRFileFinder) */
-/* top-level dependencies (end JKRFileFinder) */
+// build JKRFileFinder (['JKRFileFinder']) False/False
+/* top-level dependencies (begin ['JKRFileFinder']) */
+/* top-level dependencies (end ['JKRFileFinder']) */
 struct JKRFileFinder {
 	/* 802D4910 */ ~JKRFileFinder();
 };

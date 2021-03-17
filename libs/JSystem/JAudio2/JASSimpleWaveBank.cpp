@@ -9,29 +9,29 @@
 // Types:
 // 
 
-// build JASSimpleWaveBank (JASSimpleWaveBank) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JASSimpleWaveBank (['JASSimpleWaveBank']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JASWaveInfo (JASWaveInfo) False/False
-/* top-level dependencies (begin JASWaveInfo) */
-/* top-level dependencies (end JASWaveInfo) */
+// build JASWaveInfo (['JASWaveInfo']) False/False
+/* top-level dependencies (begin ['JASWaveInfo']) */
+/* top-level dependencies (end ['JASWaveInfo']) */
 struct JASWaveInfo {
 };
 
-/* top-level dependencies (begin JASSimpleWaveBank) */
-// outer dependency: JKRHeap
-// outer dependency: JASWaveInfo
-/* top-level dependencies (end JASSimpleWaveBank) */
+/* top-level dependencies (begin ['JASSimpleWaveBank']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASWaveInfo',)
+/* top-level dependencies (end ['JASSimpleWaveBank']) */
 struct JASSimpleWaveBank {
-	// JKRHeap
-	// JASWaveInfo
-	// build TWaveHandle (JASSimpleWaveBank::TWaveHandle) False/False
-	/* dependencies (begin JASSimpleWaveBank::TWaveHandle) */
-	/* dependencies (end JASSimpleWaveBank::TWaveHandle) */
+	// ('JKRHeap',)
+	// ('JASWaveInfo',)
+	// build TWaveHandle (['JASSimpleWaveBank', 'TWaveHandle']) False/False
+	/* dependencies (begin ['JASSimpleWaveBank', 'TWaveHandle']) */
+	/* dependencies (end ['JASSimpleWaveBank', 'TWaveHandle']) */
 	struct TWaveHandle {
 		/* 80298D84 */ ~TWaveHandle();
 		/* 80298F38 */ void getWavePtr() const;
@@ -48,11 +48,11 @@ struct JASSimpleWaveBank {
 	/* 80298F98 */ bool getArcCount() const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASWaveInfo (JASWaveInfo) True/True
-// build JASWaveArc (JASWaveArc) False/False
-/* top-level dependencies (begin JASWaveArc) */
-/* top-level dependencies (end JASWaveArc) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASWaveInfo (['JASWaveInfo']) True/True
+// build JASWaveArc (['JASWaveArc']) False/False
+/* top-level dependencies (begin ['JASWaveArc']) */
+/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
 	/* 80298FA0 */ void onLoadDone();
 	/* 80298FA4 */ void onEraseDone();

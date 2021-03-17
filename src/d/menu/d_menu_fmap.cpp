@@ -9,63 +9,63 @@
 // Types:
 // 
 
-// build dMf_HIO_c (dMf_HIO_c) False/False
-/* top-level dependencies (begin dMf_HIO_c) */
-/* top-level dependencies (end dMf_HIO_c) */
+// build dMf_HIO_c (['dMf_HIO_c']) False/False
+/* top-level dependencies (begin ['dMf_HIO_c']) */
+/* top-level dependencies (end ['dMf_HIO_c']) */
 struct dMf_HIO_c {
 	/* 801C65F8 */ dMf_HIO_c();
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
-// build dMenu_Fmap_c (dMenu_Fmap_c) False/False
-// build CSTControl (CSTControl) False/False
-/* top-level dependencies (begin CSTControl) */
-/* top-level dependencies (end CSTControl) */
-struct CSTControl {
+// build dMenu_Fmap_c (['dMenu_Fmap_c']) False/False
+// build STControl (['STControl']) False/False
+/* top-level dependencies (begin ['STControl']) */
+/* top-level dependencies (end ['STControl']) */
+struct STControl {
+	/* 8003219C */ void checkTrigger();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_stage_data_c) */
-/* top-level dependencies (end dMenu_Fmap_stage_data_c) */
+// build CSTControl (['CSTControl']) False/False
+/* top-level dependencies (begin ['CSTControl']) */
+/* top-level dependencies (end ['CSTControl']) */
+struct CSTControl {
+};
+
+// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_stage_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_stage_data_c']) */
 struct dMenu_Fmap_stage_data_c {
 };
 
-// build STControl (STControl) False/False
-/* top-level dependencies (begin STControl) */
-/* top-level dependencies (end STControl) */
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-};
-
-/* top-level dependencies (begin dMenu_Fmap_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: dMenu_Fmap_stage_data_c
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap_c) */
+/* top-level dependencies (begin ['dMenu_Fmap_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+// outer dependency: ('dMenu_Fmap_stage_data_c',)
+/* top-level dependencies (end ['dMenu_Fmap_c']) */
 struct dMenu_Fmap_c {
-	// CSTControl
-	// JKRExpHeap
-	// dMenu_Fmap_stage_data_c
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
+	// ('dMenu_Fmap_stage_data_c',)
 	/* 801C66E4 */ dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8, u8, f32, f32, u8);
 	/* 801C6AC8 */ ~dMenu_Fmap_c();
 	/* 801C6D64 */ void _create();
@@ -188,160 +188,160 @@ struct dMenu_Fmap_c {
 	/* 801CD95C */ void getPlayerPos2D();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-// build CSTControl (CSTControl) True/True
-// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) True/True
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build STControl (['STControl']) True/True
+// build CSTControl (['CSTControl']) True/True
+// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) True/True
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 801CC284 */ void getExpandedResSize(void const*) const;
 };
 
-// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+// build mDoDvdThd_mountArchive_c (['mDoDvdThd_mountArchive_c']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['mDoDvdThd_mountArchive_c']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['mDoDvdThd_mountArchive_c']) */
 struct mDoDvdThd_mountArchive_c {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build dStage_dt_c (dStage_dt_c) False/False
-/* top-level dependencies (begin dStage_dt_c) */
-/* top-level dependencies (end dStage_dt_c) */
+// build JKRHeap (['JKRHeap']) True/True
+// build dStage_dt_c (['dStage_dt_c']) False/False
+/* top-level dependencies (begin ['dStage_dt_c']) */
+/* top-level dependencies (end ['dStage_dt_c']) */
 struct dStage_dt_c {
 };
 
-// build JKRAramArchive (JKRAramArchive) False/False
-/* top-level dependencies (begin JKRAramArchive) */
-/* top-level dependencies (end JKRAramArchive) */
+// build JKRAramArchive (['JKRAramArchive']) False/False
+/* top-level dependencies (begin ['JKRAramArchive']) */
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
-/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_region_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_region_data_c']) */
 struct dMenu_Fmap_region_data_c {
 	/* 8003DB48 */ void getMenuFmapStageData(int);
 	/* 8003DEE0 */ void buildFmapRegionData(int);
 };
 
-// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-/* top-level dependencies (begin dMenu_Fmap_world_data_c) */
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end dMenu_Fmap_world_data_c) */
+// build dMenu_Fmap_world_data_c (['dMenu_Fmap_world_data_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+/* top-level dependencies (begin ['dMenu_Fmap_world_data_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+/* top-level dependencies (end ['dMenu_Fmap_world_data_c']) */
 struct dMenu_Fmap_world_data_c {
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
 	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
 };
 
-// build dMenuFmapIconPointer_c (dMenuFmapIconPointer_c) False/False
-// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) True/True
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-/* top-level dependencies (begin dMenuFmapIconPointer_c) */
-// outer dependency: dMenu_Fmap_stage_data_c
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end dMenuFmapIconPointer_c) */
+// build dMenuFmapIconPointer_c (['dMenuFmapIconPointer_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) True/True
+/* top-level dependencies (begin ['dMenuFmapIconPointer_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+// outer dependency: ('dMenu_Fmap_stage_data_c',)
+/* top-level dependencies (end ['dMenuFmapIconPointer_c']) */
 struct dMenuFmapIconPointer_c {
-	// dMenu_Fmap_stage_data_c
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
+	// ('dMenu_Fmap_stage_data_c',)
 	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
 	/* 8003E490 */ void nextData();
 	/* 8003E510 */ void getValidData();
 };
 
-// build dMenuFmapIconDisp_c (dMenuFmapIconDisp_c) False/False
-// build dTres_c (dTres_c) False/False
-/* top-level dependencies (begin dTres_c) */
-/* top-level dependencies (end dTres_c) */
+// build dMenuFmapIconDisp_c (['dMenuFmapIconDisp_c']) False/False
+// build dTres_c (['dTres_c']) False/False
+/* top-level dependencies (begin ['dTres_c']) */
+/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// build data_s (dTres_c::data_s) False/False
-	/* dependencies (begin dTres_c::data_s) */
-	/* dependencies (end dTres_c::data_s) */
+	// build data_s (['dTres_c', 'data_s']) False/False
+	/* dependencies (begin ['dTres_c', 'data_s']) */
+	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
 };
 
-/* top-level dependencies (begin dMenuFmapIconDisp_c) */
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end dMenuFmapIconDisp_c) */
+/* top-level dependencies (begin ['dMenuFmapIconDisp_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+/* top-level dependencies (end ['dMenuFmapIconDisp_c']) */
 struct dMenuFmapIconDisp_c {
-	// dTres_c::data_s
+	// ('dTres_c', 'data_s')
 	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
 	/* 8003E6E8 */ void isDrawDisp();
 };
 
-// build dTres_c (dTres_c) True/True
-// build fmpTresTypeGroupDataList_c (fmpTresTypeGroupDataList_c) False/False
-/* top-level dependencies (begin fmpTresTypeGroupDataList_c) */
-/* top-level dependencies (end fmpTresTypeGroupDataList_c) */
+// build dTres_c (['dTres_c']) True/True
+// build fmpTresTypeGroupDataList_c (['fmpTresTypeGroupDataList_c']) False/False
+/* top-level dependencies (begin ['fmpTresTypeGroupDataList_c']) */
+/* top-level dependencies (end ['fmpTresTypeGroupDataList_c']) */
 struct fmpTresTypeGroupDataList_c {
 	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
 };
 
-// build dMapInfo_n (dMapInfo_n) False/False
-/* top-level dependencies (begin dMapInfo_n) */
-/* top-level dependencies (end dMapInfo_n) */
+// build dMapInfo_n (['dMapInfo_n']) False/False
+/* top-level dependencies (begin ['dMapInfo_n']) */
+/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
 	/* 8003EE5C */ void getMapPlayerPos();
 	/* 8003F02C */ void getMapRestartPos();
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
-/* top-level dependencies (begin dMenuMapCommon_c) */
-/* top-level dependencies (end dMenuMapCommon_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dMenuMapCommon_c (['dMenuMapCommon_c']) False/False
+/* top-level dependencies (begin ['dMenuMapCommon_c']) */
+/* top-level dependencies (end ['dMenuMapCommon_c']) */
 struct dMenuMapCommon_c {
 	/* 801C3EC4 */ void iconScale(int, f32, f32, f32);
 	/* 801C443C */ void clearIconInfo();
 };
 
-// build renderingFmap_c (renderingFmap_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-/* top-level dependencies (begin renderingFmap_c) */
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end renderingFmap_c) */
+// build renderingFmap_c (['renderingFmap_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+/* top-level dependencies (begin ['renderingFmap_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+/* top-level dependencies (end ['renderingFmap_c']) */
 struct renderingFmap_c {
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
 	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 };
 
-// build dMenu_FmapMap_c (dMenu_FmapMap_c) False/False
-// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) True/True
-/* top-level dependencies (begin dMenu_FmapMap_c) */
-// outer dependency: dMenu_Fmap_world_data_c
-/* top-level dependencies (end dMenu_FmapMap_c) */
+// build dMenu_FmapMap_c (['dMenu_FmapMap_c']) False/False
+// build dMenu_Fmap_world_data_c (['dMenu_Fmap_world_data_c']) True/True
+/* top-level dependencies (begin ['dMenu_FmapMap_c']) */
+// outer dependency: ('dMenu_Fmap_world_data_c',)
+/* top-level dependencies (end ['dMenu_FmapMap_c']) */
 struct dMenu_FmapMap_c {
-	// dMenu_Fmap_world_data_c
+	// ('dMenu_Fmap_world_data_c',)
 	/* 801CEC24 */ dMenu_FmapMap_c();
 	/* 801CEDE8 */ void _create(u16, u16, u16, u16, void*);
 	/* 801CEE3C */ void _delete();
@@ -349,21 +349,21 @@ struct dMenu_FmapMap_c {
 	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, int, f32, f32, f32, f32);
 };
 
-// build dMenu_Fmap2DBack_c (dMenu_Fmap2DBack_c) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build dMenu_Fmap2DBack_c (['dMenu_Fmap2DBack_c']) False/False
+// build STControl (['STControl']) True/True
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Fmap2DBack_c) */
-// outer dependency: ResTIMG
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap2DBack_c) */
+/* top-level dependencies (begin ['dMenu_Fmap2DBack_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['dMenu_Fmap2DBack_c']) */
 struct dMenu_Fmap2DBack_c {
-	// ResTIMG
-	// STControl
+	// ('STControl',)
+	// ('ResTIMG',)
 	/* 801CF56C */ dMenu_Fmap2DBack_c();
 	/* 801D0804 */ void setRegionTexData(u8, ResTIMG*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
 	/* 801D0AC8 */ void calcAllMapPos();
@@ -395,25 +395,25 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build dMenu_Fmap2DTop_c (dMenu_Fmap2DTop_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
+// build ResTIMG (['ResTIMG']) True/True
+// build dMenu_Fmap2DTop_c (['dMenu_Fmap2DTop_c']) False/False
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
+/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
+/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
 struct J2DAnmTextureSRTKey {
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Fmap2DTop_c) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap2DTop_c) */
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+/* top-level dependencies (begin ['dMenu_Fmap2DTop_c']) */
+// outer dependency: ('J2DAnmTextureSRTKey',)
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+/* top-level dependencies (end ['dMenu_Fmap2DTop_c']) */
 struct dMenu_Fmap2DTop_c {
-	// JKRExpHeap
-	// J2DAnmTextureSRTKey
-	// STControl
+	// ('J2DAnmTextureSRTKey',)
+	// ('STControl',)
+	// ('JKRExpHeap',)
 	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
 	/* 801D6A44 */ void _execute();
 	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
@@ -435,33 +435,33 @@ struct dMenu_Fmap2DTop_c {
 	/* 801D8088 */ void isWarpAccept();
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build dMeterMap_c (dMeterMap_c) False/False
-/* top-level dependencies (begin dMeterMap_c) */
-/* top-level dependencies (end dMeterMap_c) */
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
+// build dMeterMap_c (['dMeterMap_c']) False/False
+/* top-level dependencies (begin ['dMeterMap_c']) */
+/* top-level dependencies (end ['dMeterMap_c']) */
 struct dMeterMap_c {
 	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
 };
 
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// cXyz
+	// ('cXyz',)
 	/* 8021CC0C */ void setWarpInfo(char const*, cXyz const&, s16, u8, u8, u8);
 };
 
-// build cXyz (cXyz) True/True
-// build dMsgObject_c (dMsgObject_c) False/False
-/* top-level dependencies (begin dMsgObject_c) */
-/* top-level dependencies (end dMsgObject_c) */
+// build cXyz (['cXyz']) True/True
+// build dMsgObject_c (['dMsgObject_c']) False/False
+/* top-level dependencies (begin ['dMsgObject_c']) */
+/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 80237AE0 */ void setTalkHeap(void*);
 	/* 80237B54 */ void getTalkHeap();
@@ -471,58 +471,58 @@ struct dMsgObject_c {
 	/* 8023849C */ void setPortalMessageID(u16);
 };
 
-// build dMsgScrnExplain_c (dMsgScrnExplain_c) False/False
-/* top-level dependencies (begin dMsgScrnExplain_c) */
-/* top-level dependencies (end dMsgScrnExplain_c) */
+// build dMsgScrnExplain_c (['dMsgScrnExplain_c']) False/False
+/* top-level dependencies (begin ['dMsgScrnExplain_c']) */
+/* top-level dependencies (end ['dMsgScrnExplain_c']) */
 struct dMsgScrnExplain_c {
 	/* 8023D7D8 */ void move();
 	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
 };
 
-// build dMsgFlow_c (dMsgFlow_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build dMsgFlow_c (['dMsgFlow_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin dMsgFlow_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dMsgFlow_c) */
+/* top-level dependencies (begin ['dMsgFlow_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dMsgFlow_c']) */
 struct dMsgFlow_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

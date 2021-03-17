@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002B36C */ void setItemBombNumCount(u8, s16);
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
-/* top-level dependencies (begin dSv_player_status_a_c) */
-/* top-level dependencies (end dSv_player_status_a_c) */
+// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
+/* top-level dependencies (begin ['dSv_player_status_a_c']) */
+/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
-// build dSv_player_item_c (dSv_player_item_c) False/False
-/* top-level dependencies (begin dSv_player_item_c) */
-/* top-level dependencies (end dSv_player_item_c) */
+// build dSv_player_item_c (['dSv_player_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_c']) */
+/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 	/* 80033030 */ void getItem(int, bool) const;
@@ -41,63 +41,63 @@ struct dSv_player_item_c {
 	/* 80033CBC */ void setRodTypeLevelUp();
 };
 
-// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
-/* top-level dependencies (begin dSv_player_get_item_c) */
-/* top-level dependencies (end dSv_player_get_item_c) */
+// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_get_item_c']) */
+/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E60 */ void onFirstBit(u8);
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
-/* top-level dependencies (begin dSv_player_item_record_c) */
-/* top-level dependencies (end dSv_player_item_record_c) */
+// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_record_c']) */
+/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F7C */ void getBombNum(u8) const;
 	/* 80033F8C */ void setBottleNum(u8, u8);
 };
 
-// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
-/* top-level dependencies (begin dSv_player_item_max_c) */
-/* top-level dependencies (end dSv_player_item_max_c) */
+// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_max_c']) */
+/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_player_collect_c (dSv_player_collect_c) False/False
-/* top-level dependencies (begin dSv_player_collect_c) */
-/* top-level dependencies (end dSv_player_collect_c) */
+// build dSv_player_collect_c (['dSv_player_collect_c']) False/False
+/* top-level dependencies (begin ['dSv_player_collect_c']) */
+/* top-level dependencies (end ['dSv_player_collect_c']) */
 struct dSv_player_collect_c {
 	/* 800341E8 */ void setCollect(int, u8);
 	/* 80034208 */ void isCollect(int, u8) const;
 };
 
-// build dSv_light_drop_c (dSv_light_drop_c) False/False
-/* top-level dependencies (begin dSv_light_drop_c) */
-/* top-level dependencies (end dSv_light_drop_c) */
+// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
+/* top-level dependencies (begin ['dSv_light_drop_c']) */
+/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 80034368 */ void onLightDropGetFlag(u8);
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034918 */ void onDungeonItem(int);
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 };

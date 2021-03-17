@@ -9,35 +9,35 @@
 // Types:
 // 
 
-// build JASTrack (JASTrack) False/False
-/* top-level dependencies (begin JASTrack) */
-/* top-level dependencies (end JASTrack) */
+// build JASTrack (['JASTrack']) False/False
+/* top-level dependencies (begin ['JASTrack']) */
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 8029285C */ void setFIR(s16 const*);
 	/* 8029289C */ void setIIR(s16 const*);
 	/* 80292918 */ void writePort(u32, u16);
 };
 
-// build Z2SoundMgr (Z2SoundMgr) False/False
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build Z2SoundMgr (['Z2SoundMgr']) False/False
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SoundMgr) */
-// outer dependency: JAISound
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundMgr) */
+/* top-level dependencies (begin ['Z2SoundMgr']) */
+// outer dependency: ('JAISound',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
-	// JAISound
-	// JAISoundID
+	// ('JAISound',)
+	// ('JAISoundID',)
 	/* 802A9E80 */ Z2SoundMgr();
 	/* 802AA1B0 */ void calc();
 	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
@@ -54,29 +54,29 @@ struct Z2SoundMgr {
 	/* 802AAAC4 */ void isPlayingSoundID(JAISoundID);
 };
 
-// build JAISound (JAISound) True/True
-// build JAISoundID (JAISoundID) True/True
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JAISound (['JAISound']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029E188 */ void waitSubFrame();
 };
 
-// build JAISeCategoryMgr (JAISeCategoryMgr) False/False
-/* top-level dependencies (begin JAISeCategoryMgr) */
-/* top-level dependencies (end JAISeCategoryMgr) */
+// build JAISeCategoryMgr (['JAISeCategoryMgr']) False/False
+/* top-level dependencies (begin ['JAISeCategoryMgr']) */
+/* top-level dependencies (end ['JAISeCategoryMgr']) */
 struct JAISeCategoryMgr {
 	/* 8029FEEC */ void pause(bool);
 };
 
-// build JAISeMgr (JAISeMgr) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAISeMgr) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAISeMgr) */
+// build JAISeMgr (['JAISeMgr']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAISeMgr']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAISeMgr']) */
 struct JAISeMgr {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A0074 */ JAISeMgr(bool);
 	/* 802A02A0 */ void stop();
 	/* 802A02F4 */ void stopSoundID(JAISoundID);
@@ -86,13 +86,13 @@ struct JAISeMgr {
 	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
-// build JAISeqMgr (JAISeqMgr) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAISeqMgr) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAISeqMgr) */
+// build JAISeqMgr (['JAISeqMgr']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAISeqMgr']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAISeqMgr']) */
 struct JAISeqMgr {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A1914 */ JAISeqMgr(bool);
 	/* 802A1C90 */ void calc();
 	/* 802A1DFC */ void stop();
@@ -100,20 +100,20 @@ struct JAISeqMgr {
 	/* 802A1EFC */ void mixOut();
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-// build JAIStreamMgr (JAIStreamMgr) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAIStreamMgr) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAIStreamMgr) */
+// build JAIStreamMgr (['JAIStreamMgr']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAIStreamMgr']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAIStreamMgr']) */
 struct JAIStreamMgr {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A3B68 */ JAIStreamMgr(bool);
 	/* 802A3EBC */ void calc();
 	/* 802A4028 */ void stop();
@@ -122,36 +122,36 @@ struct JAIStreamMgr {
 	/* 802A4118 */ void mixOut();
 };
 
-// build JAUSectionHeap (JAUSectionHeap) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAUSectionHeap) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSectionHeap) */
+// build JAUSectionHeap (['JAUSectionHeap']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAUSectionHeap']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A5EC0 */ void loadDynamicSeq(JAISoundID, bool);
 	/* 802A5EF8 */ void releaseIdleDynamicSeqDataBlock();
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-/* top-level dependencies (begin Z2SeMgr) */
-/* top-level dependencies (end Z2SeMgr) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+/* top-level dependencies (begin ['Z2SeMgr']) */
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
 	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
 };
 
-// build Z2SeqMgr (Z2SeqMgr) False/False
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 };
 
-/* top-level dependencies (begin Z2SeqMgr) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end Z2SeqMgr) */
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B299C */ void onVariantBgmJumpEnd(bool);
@@ -160,20 +160,20 @@ struct Z2SeqMgr {
 	/* 802B579C */ void onFieldBgmJumpEnd();
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
-// build Z2SoundInfo (Z2SoundInfo) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin Z2SoundInfo) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundInfo) */
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build Z2SoundInfo (['Z2SoundInfo']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2SoundInfo']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundInfo']) */
 struct Z2SoundInfo {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
 };
 
-// build Z2SpeechMgr2 (Z2SpeechMgr2) False/False
-/* top-level dependencies (begin Z2SpeechMgr2) */
-/* top-level dependencies (end Z2SpeechMgr2) */
+// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
+/* top-level dependencies (begin ['Z2SpeechMgr2']) */
+/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
 	/* 802CC190 */ void speakOneWord(bool);
 };

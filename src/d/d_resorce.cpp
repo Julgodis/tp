@@ -9,25 +9,27 @@
 // Types:
 // 
 
-// build dRes_info_c (dRes_info_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build dRes_info_c (['dRes_info_c']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
@@ -35,25 +37,23 @@ struct JKRArchive {
 	/* 802D66AC */ void findNameResource(char const*) const;
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
 };
 
-/* top-level dependencies (begin dRes_info_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModelData
-// outer dependency: JKRArchive
-// outer dependency: JKRHeap
-/* top-level dependencies (end dRes_info_c) */
+/* top-level dependencies (begin ['dRes_info_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
-	// J3DModelData
-	// JKRArchive
-	// cXyz
-	// JKRHeap
+	// ('J3DModelData',)
+	// ('JKRHeap',)
+	// ('JKRArchive',)
+	// ('cXyz',)
 	/* 8003A260 */ dRes_info_c();
 	/* 8003A280 */ ~dRes_info_c();
 	/* 8003A348 */ void set(char const*, char const*, u8, JKRHeap*);
@@ -69,127 +69,127 @@ struct dRes_info_c {
 	/* 8003BE38 */ void dump(dRes_info_c*, int);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build J3DMaterialTable (J3DMaterialTable) False/False
-/* top-level dependencies (begin J3DMaterialTable) */
-/* top-level dependencies (end J3DMaterialTable) */
+// build JKRHeap (['JKRHeap']) True/True
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build J3DTevStage (J3DTevStage) False/False
-// build J3DTevStageInfo (J3DTevStageInfo) False/False
-/* top-level dependencies (begin J3DTevStageInfo) */
-/* top-level dependencies (end J3DTevStageInfo) */
+// build J3DModelData (['J3DModelData']) True/True
+// build J3DTevStage (['J3DTevStage']) False/False
+// build J3DTevStageInfo (['J3DTevStageInfo']) False/False
+/* top-level dependencies (begin ['J3DTevStageInfo']) */
+/* top-level dependencies (end ['J3DTevStageInfo']) */
 struct J3DTevStageInfo {
 };
 
-/* top-level dependencies (begin J3DTevStage) */
-// outer dependency: J3DTevStageInfo
-/* top-level dependencies (end J3DTevStage) */
+/* top-level dependencies (begin ['J3DTevStage']) */
+// outer dependency: ('J3DTevStageInfo',)
+/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
-	// J3DTevStageInfo
+	// ('J3DTevStageInfo',)
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-// build J3DTevStageInfo (J3DTevStageInfo) True/True
-// build J3DTexGenBlock (J3DTexGenBlock) False/False
-// build J3DTexMtx (J3DTexMtx) False/False
-/* top-level dependencies (begin J3DTexMtx) */
-/* top-level dependencies (end J3DTexMtx) */
+// build J3DTevStageInfo (['J3DTevStageInfo']) True/True
+// build J3DTexGenBlock (['J3DTexGenBlock']) False/False
+// build J3DTexMtx (['J3DTexMtx']) False/False
+/* top-level dependencies (begin ['J3DTexMtx']) */
+/* top-level dependencies (end ['J3DTexMtx']) */
 struct J3DTexMtx {
 };
 
-/* top-level dependencies (begin J3DTexGenBlock) */
-// outer dependency: J3DTexMtx
-/* top-level dependencies (end J3DTexGenBlock) */
+/* top-level dependencies (begin ['J3DTexGenBlock']) */
+// outer dependency: ('J3DTexMtx',)
+/* top-level dependencies (end ['J3DTexGenBlock']) */
 struct J3DTexGenBlock {
-	// J3DTexMtx
+	// ('J3DTexMtx',)
 	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
 };
 
-// build J3DTexMtx (J3DTexMtx) True/True
-// build cXyz (cXyz) True/True
-// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
-/* top-level dependencies (begin J3DTevKColorAnm) */
-/* top-level dependencies (end J3DTevKColorAnm) */
+// build J3DTexMtx (['J3DTexMtx']) True/True
+// build cXyz (['cXyz']) True/True
+// build J3DTevKColorAnm (['J3DTevKColorAnm']) False/False
+/* top-level dependencies (begin ['J3DTevKColorAnm']) */
+/* top-level dependencies (end ['J3DTevKColorAnm']) */
 struct J3DTevKColorAnm {
 	/* 8003B150 */ ~J3DTevKColorAnm();
 	/* 8003B18C */ J3DTevKColorAnm();
 };
 
-// build J3DTevColorAnm (J3DTevColorAnm) False/False
-/* top-level dependencies (begin J3DTevColorAnm) */
-/* top-level dependencies (end J3DTevColorAnm) */
+// build J3DTevColorAnm (['J3DTevColorAnm']) False/False
+/* top-level dependencies (begin ['J3DTevColorAnm']) */
+/* top-level dependencies (end ['J3DTevColorAnm']) */
 struct J3DTevColorAnm {
 	/* 8003B1A4 */ ~J3DTevColorAnm();
 	/* 8003B1E0 */ J3DTevColorAnm();
 };
 
-// build J3DTexNoAnm (J3DTexNoAnm) False/False
-/* top-level dependencies (begin J3DTexNoAnm) */
-/* top-level dependencies (end J3DTexNoAnm) */
+// build J3DTexNoAnm (['J3DTexNoAnm']) False/False
+/* top-level dependencies (begin ['J3DTexNoAnm']) */
+/* top-level dependencies (end ['J3DTexNoAnm']) */
 struct J3DTexNoAnm {
 	/* 8003B1F8 */ ~J3DTexNoAnm();
 	/* 8003B240 */ J3DTexNoAnm();
 	/* 8003C82C */ void calc(u16*) const;
 };
 
-// build J3DTexMtxAnm (J3DTexMtxAnm) False/False
-/* top-level dependencies (begin J3DTexMtxAnm) */
-/* top-level dependencies (end J3DTexMtxAnm) */
+// build J3DTexMtxAnm (['J3DTexMtxAnm']) False/False
+/* top-level dependencies (begin ['J3DTexMtxAnm']) */
+/* top-level dependencies (end ['J3DTexMtxAnm']) */
 struct J3DTexMtxAnm {
 	/* 8003B264 */ ~J3DTexMtxAnm();
 	/* 8003B2A0 */ J3DTexMtxAnm();
 };
 
-// build J3DMatColorAnm (J3DMatColorAnm) False/False
-/* top-level dependencies (begin J3DMatColorAnm) */
-/* top-level dependencies (end J3DMatColorAnm) */
+// build J3DMatColorAnm (['J3DMatColorAnm']) False/False
+/* top-level dependencies (begin ['J3DMatColorAnm']) */
+/* top-level dependencies (end ['J3DMatColorAnm']) */
 struct J3DMatColorAnm {
 	/* 8003B2B8 */ ~J3DMatColorAnm();
 	/* 8003B2F4 */ J3DMatColorAnm();
 };
 
-// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
-// build J3DTransformInfo (J3DTransformInfo) False/False
-/* top-level dependencies (begin J3DTransformInfo) */
-/* top-level dependencies (end J3DTransformInfo) */
+// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) False/False
+/* top-level dependencies (begin ['J3DTransformInfo']) */
+/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin J3DAnmTransformKey) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DAnmTransformKey) */
+/* top-level dependencies (begin ['J3DAnmTransformKey']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DAnmTransformKey']) */
 struct J3DAnmTransformKey {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8003B8D0 */ ~J3DAnmTransformKey();
 	/* 8003C800 */ s32 getKind() const;
 	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
+// build J3DAnmTransform (['J3DAnmTransform']) False/False
+/* top-level dependencies (begin ['J3DAnmTransform']) */
+/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 	/* 8003B93C */ ~J3DAnmTransform();
 	/* 8003C77C */ bool getKind() const;
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) True/True
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-// outer dependency: JKRHeap
-/* top-level dependencies (end dRes_control_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
-	// JKRHeap
+	// ('dRes_info_c',)
+	// ('JKRHeap',)
 	/* 8003BFB0 */ ~dRes_control_c();
 	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
@@ -207,162 +207,162 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-// build J3DAnmBase (J3DAnmBase) False/False
-/* top-level dependencies (begin J3DAnmBase) */
-/* top-level dependencies (end J3DAnmBase) */
+// build J3DAnmBase (['J3DAnmBase']) False/False
+/* top-level dependencies (begin ['J3DAnmBase']) */
+/* top-level dependencies (end ['J3DAnmBase']) */
 struct J3DAnmBase {
 	/* 8003C734 */ ~J3DAnmBase();
 };
 
-// build mDoExt_transAnmBas (mDoExt_transAnmBas) False/False
-/* top-level dependencies (begin mDoExt_transAnmBas) */
-/* top-level dependencies (end mDoExt_transAnmBas) */
+// build mDoExt_transAnmBas (['mDoExt_transAnmBas']) False/False
+/* top-level dependencies (begin ['mDoExt_transAnmBas']) */
+/* top-level dependencies (end ['mDoExt_transAnmBas']) */
 struct mDoExt_transAnmBas {
 	/* 8003C784 */ ~mDoExt_transAnmBas();
 };
 
-// build J3DTransformInfo (J3DTransformInfo) True/True
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+// build mDoDvdThd_mountArchive_c (['mDoDvdThd_mountArchive_c']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['mDoDvdThd_mountArchive_c']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['mDoDvdThd_mountArchive_c']) */
 struct mDoDvdThd_mountArchive_c {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-// build cBgS (cBgS) False/False
-/* top-level dependencies (begin cBgS) */
-/* top-level dependencies (end cBgS) */
+// build cBgS (['cBgS']) False/False
+/* top-level dependencies (begin ['cBgS']) */
+/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
 	/* 80074578 */ void ConvDzb(void*);
 };
 
-// build dBgWKCol (dBgWKCol) False/False
-/* top-level dependencies (begin dBgWKCol) */
-/* top-level dependencies (end dBgWKCol) */
+// build dBgWKCol (['dBgWKCol']) False/False
+/* top-level dependencies (begin ['dBgWKCol']) */
+/* top-level dependencies (end ['dBgWKCol']) */
 struct dBgWKCol {
 	/* 8007E7D0 */ void initKCollision(void*);
 };
 
-// build JKRMemArchive (JKRMemArchive) False/False
-// build JKRMemBreakFlag (JKRMemBreakFlag) False/False
-/* top-level dependencies (begin JKRMemBreakFlag) */
-/* top-level dependencies (end JKRMemBreakFlag) */
+// build JKRMemArchive (['JKRMemArchive']) False/False
+// build JKRMemBreakFlag (['JKRMemBreakFlag']) False/False
+/* top-level dependencies (begin ['JKRMemBreakFlag']) */
+/* top-level dependencies (end ['JKRMemBreakFlag']) */
 struct JKRMemBreakFlag {
 };
 
-/* top-level dependencies (begin JKRMemArchive) */
-// outer dependency: JKRMemBreakFlag
-/* top-level dependencies (end JKRMemArchive) */
+/* top-level dependencies (begin ['JKRMemArchive']) */
+// outer dependency: ('JKRMemBreakFlag',)
+/* top-level dependencies (end ['JKRMemArchive']) */
 struct JKRMemArchive {
-	// JKRMemBreakFlag
+	// ('JKRMemBreakFlag',)
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
 
-// build JKRMemBreakFlag (JKRMemBreakFlag) True/True
-// build JUTNameTab (JUTNameTab) False/False
-/* top-level dependencies (begin JUTNameTab) */
-/* top-level dependencies (end JUTNameTab) */
+// build JKRMemBreakFlag (['JKRMemBreakFlag']) True/True
+// build JUTNameTab (['JUTNameTab']) False/False
+/* top-level dependencies (begin ['JUTNameTab']) */
+/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
 
-// build J3DTexture (J3DTexture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J3DTexture (['J3DTexture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J3DTexture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J3DTexture) */
+/* top-level dependencies (begin ['J3DTexture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build J3DShape (J3DShape) False/False
-// build _GXAttr (_GXAttr) False/False
-/* top-level dependencies (begin _GXAttr) */
-/* top-level dependencies (end _GXAttr) */
+// build ResTIMG (['ResTIMG']) True/True
+// build J3DShape (['J3DShape']) False/False
+// build _GXAttr (['_GXAttr']) False/False
+/* top-level dependencies (begin ['_GXAttr']) */
+/* top-level dependencies (end ['_GXAttr']) */
 struct _GXAttr {
 };
 
-/* top-level dependencies (begin J3DShape) */
-// outer dependency: _GXAttr
-/* top-level dependencies (end J3DShape) */
+/* top-level dependencies (begin ['J3DShape']) */
+// outer dependency: ('_GXAttr',)
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
-	// _GXAttr
+	// ('_GXAttr',)
 	/* 80314BB8 */ void addTexMtxIndexInDL(_GXAttr, u32);
 	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
 };
 
-// build _GXAttr (_GXAttr) True/True
-// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
-/* top-level dependencies (begin J3DTexMtxInfo) */
-/* top-level dependencies (end J3DTexMtxInfo) */
+// build _GXAttr (['_GXAttr']) True/True
+// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
+/* top-level dependencies (begin ['J3DTexMtxInfo']) */
+/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-/* top-level dependencies (begin J3DAnmTexPattern) */
-/* top-level dependencies (end J3DAnmTexPattern) */
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J3DAnmTexPattern']) */
+/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-// build J3DMaterialAnm (J3DMaterialAnm) False/False
-/* top-level dependencies (begin J3DMaterialAnm) */
-/* top-level dependencies (end J3DMaterialAnm) */
+// build J3DMaterialAnm (['J3DMaterialAnm']) False/False
+/* top-level dependencies (begin ['J3DMaterialAnm']) */
+/* top-level dependencies (end ['J3DMaterialAnm']) */
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
-// build J3DClusterLoaderDataBase (J3DClusterLoaderDataBase) False/False
-/* top-level dependencies (begin J3DClusterLoaderDataBase) */
-/* top-level dependencies (end J3DClusterLoaderDataBase) */
+// build J3DClusterLoaderDataBase (['J3DClusterLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J3DClusterLoaderDataBase']) */
+/* top-level dependencies (end ['J3DClusterLoaderDataBase']) */
 struct J3DClusterLoaderDataBase {
 	/* 80334130 */ void load(void const*);
 };
 
-// build J3DModelLoaderDataBase (J3DModelLoaderDataBase) False/False
-/* top-level dependencies (begin J3DModelLoaderDataBase) */
-/* top-level dependencies (end J3DModelLoaderDataBase) */
+// build J3DModelLoaderDataBase (['J3DModelLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J3DModelLoaderDataBase']) */
+/* top-level dependencies (end ['J3DModelLoaderDataBase']) */
 struct J3DModelLoaderDataBase {
 	/* 803346BC */ void load(void const*, u32);
 };
 
-// build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
-// build J3DAnmBase (J3DAnmBase) True/True
-// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
-/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
-/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
+// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
+// build J3DAnmBase (['J3DAnmBase']) True/True
+// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
+/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
+/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin J3DAnmLoaderDataBase) */
-// outer dependency: J3DAnmBase
-// outer dependency: J3DAnmLoaderDataBaseFlag
-/* top-level dependencies (end J3DAnmLoaderDataBase) */
+/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
+// outer dependency: ('J3DAnmBase',)
+// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
+/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// J3DAnmBase
-	// J3DAnmLoaderDataBaseFlag
+	// ('J3DAnmBase',)
+	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) True/True
+// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
 // 
 // Forward References:
 // 

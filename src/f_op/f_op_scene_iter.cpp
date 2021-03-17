@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build judge_filter (judge_filter) False/False
-/* top-level dependencies (begin judge_filter) */
-/* top-level dependencies (end judge_filter) */
+// build judge_filter (['judge_filter']) False/False
+/* top-level dependencies (begin ['judge_filter']) */
+/* top-level dependencies (end ['judge_filter']) */
 struct judge_filter {
 };
 

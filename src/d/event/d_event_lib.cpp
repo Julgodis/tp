@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dEvLib_callback_c (dEvLib_callback_c) False/False
-/* top-level dependencies (begin dEvLib_callback_c) */
-/* top-level dependencies (end dEvLib_callback_c) */
+// build dEvLib_callback_c (['dEvLib_callback_c']) False/False
+/* top-level dependencies (begin ['dEvLib_callback_c']) */
+/* top-level dependencies (end ['dEvLib_callback_c']) */
 struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 800488A4 */ void setEvent(int, int, int);
@@ -24,26 +24,26 @@ struct dEvLib_callback_c {
 	/* 80048B48 */ void executeRun();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dEvt_control_c (dEvt_control_c) False/False
-/* top-level dependencies (begin dEvt_control_c) */
-/* top-level dependencies (end dEvt_control_c) */
+// build dEvt_control_c (['dEvt_control_c']) False/False
+/* top-level dependencies (begin ['dEvt_control_c']) */
+/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-// build dEvent_manager_c (dEvent_manager_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dEvent_manager_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dEvent_manager_c) */
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
 	/* 80047A78 */ void endCheck(s16);
 };

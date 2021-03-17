@@ -9,60 +9,59 @@
 // Types:
 // 
 
-// build JStudio_JStage (JStudio_JStage) False/False
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStudio_JStage (['JStudio_JStage']) False/False
+// build JStudio (['JStudio']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TVariableValue
-// outer dependency: Vec
-/* top-level dependencies (end JStudio) */
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build data (JStudio::data) False/False
-	/* dependencies (begin JStudio::data) */
-	/* dependencies (end JStudio::data) */
+	// build data (['JStudio', 'data']) False/False
+	/* dependencies (begin ['JStudio', 'data']) */
+	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (JStudio::data::TEOperationData) False/False
-		/* dependencies (begin JStudio::data::TEOperationData) */
-		/* dependencies (end JStudio::data::TEOperationData) */
+		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
+		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
+		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build TControl (JStudio::TControl) False/False
-	/* dependencies (begin JStudio::TControl) */
-	/* dependencies (end JStudio::TControl) */
+	// build TControl (['JStudio', 'TControl']) False/False
+	/* dependencies (begin ['JStudio', 'TControl']) */
+	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_translation_rotation_scaling (JStudio::TControl::TTransform_translation_rotation_scaling) False/False
-		/* dependencies (begin JStudio::TControl::TTransform_translation_rotation_scaling) */
-		/* dependencies (end JStudio::TControl::TTransform_translation_rotation_scaling) */
+		// build TTransform_translation_rotation_scaling (['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) False/False
+		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
+		/* dependencies (end ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
 		struct TTransform_translation_rotation_scaling {
 		};
 
 	};
 
-	// build TAdaptor (JStudio::TAdaptor) False/False
-	/* dependencies (begin JStudio::TAdaptor) */
-	/* dependencies (end JStudio::TAdaptor) */
+	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor']) */
+	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
+	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// Vec
+		// ('Vec',)
 		/* 80286204 */ void adaptor_setVariableValue_Vec(u32 const*, Vec const&);
 		/* 80286274 */ void adaptor_getVariableValue_Vec(Vec*, u32 const*) const;
 	};
 
-	// build TVariableValue (JStudio::TVariableValue) False/False
-	/* dependencies (begin JStudio::TVariableValue) */
-	/* dependencies (end JStudio::TVariableValue) */
+	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
+	/* dependencies (begin ['JStudio', 'TVariableValue']) */
+	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
-		// build TOutput (JStudio::TVariableValue::TOutput) False/False
-		/* dependencies (begin JStudio::TVariableValue::TOutput) */
-		/* dependencies (end JStudio::TVariableValue::TOutput) */
+		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
+		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
+		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
 		struct TOutput {
 			/* 80285E0C */ ~TOutput();
 		};
@@ -71,84 +70,90 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-	// build TFunctionValue (JStudio::TFunctionValue) False/False
-	/* dependencies (begin JStudio::TFunctionValue) */
-	/* dependencies (end JStudio::TFunctionValue) */
+	// build TFunctionValue (['JStudio', 'TFunctionValue']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue']) */
 	struct TFunctionValue {
 		/* 80281648 */ void toFunction_outside(int);
 	};
 
-	// build math (JStudio::math) False/False
-	/* dependencies (begin JStudio::math) */
-	/* dependencies (end JStudio::math) */
+	// build math (['JStudio', 'math']) False/False
+	/* dependencies (begin ['JStudio', 'math']) */
+	// inner dependency: 0 ('Vec',) (for ['JStudio', 'math'])
+	/* dependencies (end ['JStudio', 'math']) */
 	struct math {
-		// Vec
+		// ('Vec',)
 		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
 	};
 
-	// build TAdaptor_actor (JStudio::TAdaptor_actor) False/False
-	/* dependencies (begin JStudio::TAdaptor_actor) */
-	/* dependencies (end JStudio::TAdaptor_actor) */
+	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_actor']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
 	};
 
 };
 
-// build JStudio (JStudio) True/True
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (JStage::TSystem) False/False
-	/* dependencies (begin JStage::TSystem) */
-	/* dependencies (end JStage::TSystem) */
+	// build TSystem (['JStage', 'TSystem']) False/False
+	/* dependencies (begin ['JStage', 'TSystem']) */
+	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
 	};
 
-	// build TActor (JStage::TActor) False/False
-	/* dependencies (begin JStage::TActor) */
-	/* dependencies (end JStage::TActor) */
+	// build TActor (['JStage', 'TActor']) False/False
+	/* dependencies (begin ['JStage', 'TActor']) */
+	/* dependencies (end ['JStage', 'TActor']) */
 	struct TActor {
 	};
 
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 	};
 
 };
 
-// build JStage (JStage) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStage (JStage) True/True
-/* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::TAdaptor
-// outer dependency: JStudio::TControl
-// outer dependency: JStage::TObject
-// outer dependency: JStage::TActor
-// outer dependency: JStudio::TControl::TTransform_translation_rotation_scaling
-// outer dependency: JStudio::data::TEOperationData
-// outer dependency: JStage::TSystem
-/* top-level dependencies (end JStudio_JStage) */
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) True/True
+/* top-level dependencies (begin ['JStudio_JStage']) */
+// outer dependency: ('JStudio', 'TAdaptor')
+// outer dependency: ('JStudio', 'TControl')
+// outer dependency: ('JStage', 'TSystem')
+// outer dependency: ('JStudio', 'data', 'TEOperationData')
+// outer dependency: ('JStage', 'TActor')
+// outer dependency: ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
+// outer dependency: ('JStage', 'TObject')
+/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// JStudio::TControl::TTransform_translation_rotation_scaling
-	// JStage::TObject
-	// build TAdaptor_actor (JStudio_JStage::TAdaptor_actor) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_actor) */
-	/* dependencies (end JStudio_JStage::TAdaptor_actor) */
+	// ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
+	// ('JStage', 'TObject')
+	// build TAdaptor_actor (['JStudio_JStage', 'TAdaptor_actor']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_actor']) */
+	// inner dependency: 0 ('JStage', 'TActor') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	// inner dependency: 0 ('JStudio', 'TControl') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JStage', 'TAdaptor_actor'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
-		// JStage::TActor
-		// JStudio::TControl
-		// JStudio::data::TEOperationData
-		// JStage::TSystem
-		// build TVVOutput_ANIMATION_FRAME_ (JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_) False/False
-		/* dependencies (begin JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_) */
-		/* dependencies (end JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_) */
+		// ('JStage', 'TActor')
+		// ('JStudio', 'TControl')
+		// ('JStage', 'TSystem')
+		// ('JStudio', 'data', 'TEOperationData')
+		// build TVVOutput_ANIMATION_FRAME_ (['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) False/False
+		/* dependencies (begin ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) */
+		// inner dependency: 0 ('JStudio', 'TAdaptor') (for ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_'])
+		/* dependencies (end ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) */
 		struct TVVOutput_ANIMATION_FRAME_ {
-			// JStudio::TAdaptor
+			// ('JStudio', 'TAdaptor')
 			/* 8028B064 */ void operator()(f32, JStudio::TAdaptor*) const;
 			/* 8028B138 */ ~TVVOutput_ANIMATION_FRAME_();
 		};
@@ -176,11 +181,12 @@ struct JStudio_JStage {
 		/* 8028AECC */ void getJSG_SRT_(JStudio::TControl const*);
 	};
 
-	// build TAdaptor_object_ (JStudio_JStage::TAdaptor_object_) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_object_) */
-	/* dependencies (end JStudio_JStage::TAdaptor_object_) */
+	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
+	// inner dependency: 0 ('JStage', 'TObject') (for ['JStudio_JStage', 'TAdaptor_object_'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
 	struct TAdaptor_object_ {
-		// JStage::TObject
+		// ('JStage', 'TObject')
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 		/* 8028A4BC */ void adaptor_object_findJSGObject_(char const*);
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
@@ -190,9 +196,9 @@ struct JStudio_JStage {
 	/* 8028A328 */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
-// build JStage (JStage) True/True
-// build JStudio (JStudio) True/True
-// build Vec (Vec) True/True
+// build JStage (['JStage']) True/True
+// build JStudio (['JStudio']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASProbe (JASProbe) False/False
-/* top-level dependencies (begin JASProbe) */
-/* top-level dependencies (end JASProbe) */
+// build JASProbe (['JASProbe']) False/False
+/* top-level dependencies (begin ['JASProbe']) */
+/* top-level dependencies (end ['JASProbe']) */
 struct JASProbe {
 	/* 80290D74 */ void start(char const*);
 	/* 80290DC4 */ void stop();

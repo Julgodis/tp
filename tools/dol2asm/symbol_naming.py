@@ -3,7 +3,7 @@ import demangle
 import data_types
 from collections import defaultdict
 from data import *
-from data_types import ConstType, ReferenceType, PointerType, ArrayType
+from data_types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType
 
 def is_demangled_safe(parts, pointer_types):
     for part in parts:
@@ -16,10 +16,6 @@ def is_demangled_safe(parts, pointer_types):
             if not is_demangled_safe([part.base_type], pointer_types):
                 return False    
         else:
-            str_type = part.to_str()
-            if ":" in str_type or "<" in str_type:
-                return False
-
             if part.is_ref or part.is_array or part.pointer_lvl > 0:
                 if not demangle.is_builtin_type(part.name) and not part.is_array:
                     pointer_types.append(part)
@@ -58,6 +54,18 @@ type_map = {
     "...": data_types.VARIADIC,
 }
 
+def class_name_from(name):
+    return ClassName(name.name, [
+        type_from_demangled_param(param)
+        for param in name.template_types
+    ])
+
+def named_type_from_qulified_name(qname):
+    return NamedType([
+        class_name_from(part)
+        for part in qname.parts
+    ])
+
 def type_from_demangled_param(param):
     if isinstance(param, demangle.FuncParam):
         return None
@@ -68,15 +76,23 @@ def type_from_demangled_param(param):
             sizes = param.sizes
         )
 
-    integer_key = (param.name, param.is_unsigned, param.is_signed)
-    if integer_key in integer_types:
-        type = integer_types[integer_key]
-    elif param.name in type_map:
-        assert not param.is_unsigned and not param.is_signed
-        type = type_map[param.name]
-    elif not demangle.is_builtin_type(param.name):
-        type = NamedType(name = param.name)
+    if not param.name:
+        # used for making types like: A (*)[3] easier to work with. 
+        # the will be constructed like this: A (EmptyType*)[3]
+        type = EmptyType()
+    elif param.name.is_simple():
+        integer_key = (param.name.name, param.is_unsigned, param.is_signed)
+        if integer_key in integer_types:
+            type = integer_types[integer_key]
+        elif param.name.name in type_map:
+            assert not param.is_unsigned and not param.is_signed
+            type = type_map[param.name.name]
+        elif not demangle.is_builtin_type(param.name):
+            type = NamedType([class_name_from(param.name.first)])
     else:
+        type = named_type_from_qulified_name(param.name)
+
+    if not type:
         return None
 
     if param.is_const:
@@ -95,7 +111,6 @@ def nameCollision(context, label_collisions, reference_collisions, parent_name, 
         #    symbol.name.is_static = True
         #else:
         symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
-
 
 special_func_return_types = {
     'ct': None,
@@ -136,8 +151,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                         break
 
                 if valid:
-                    symbol.func_name = p.func_name
-                    symbol.class_name = p.class_name
+                    symbol.func_name = p.full_name
                     symbol.func_is_const = p.is_const
                     symbol.special_func_name = p.special_func_name
                     symbol.argument_types = [x for x in types if x != data_types.VOID]

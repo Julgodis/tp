@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
-/* top-level dependencies (begin Z2SoundObjMgr) */
-/* top-level dependencies (end Z2SoundObjMgr) */
+// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundObjMgr']) */
+/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF920 */ Z2SoundObjMgr();
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
@@ -23,26 +23,26 @@ struct Z2SoundObjMgr {
 	/* 802C01E4 */ void isTwilightBattle();
 };
 
-// build Z2Calc (Z2Calc) False/False
-// build Z2Calc (Z2Calc) True/False
+// build Z2Calc (['Z2Calc']) False/False
+// build Z2Calc (['Z2Calc']) True/False
 struct Z2Calc;
-/* top-level dependencies (begin Z2Calc) */
-// outer dependency: Z2Calc::CurveSign
-/* top-level dependencies (end Z2Calc) */
+/* top-level dependencies (begin ['Z2Calc']) */
+// outer dependency: ('Z2Calc', 'CurveSign')
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// Z2Calc::CurveSign
-	// build CurveSign (Z2Calc::CurveSign) False/False
-	/* dependencies (begin Z2Calc::CurveSign) */
-	/* dependencies (end Z2Calc::CurveSign) */
+	// ('Z2Calc', 'CurveSign')
+	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
+	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
+	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SeqMgr (Z2SeqMgr) False/False
-/* top-level dependencies (begin Z2SeqMgr) */
-/* top-level dependencies (end Z2SeqMgr) */
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B1DF4 */ void changeSubBgmStatus(s32);
@@ -52,24 +52,24 @@ struct Z2SeqMgr {
 	/* 802B5204 */ void stopBattleBgm(u8, u8);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUPtrLink (JSUPtrLink) True/True
+// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 

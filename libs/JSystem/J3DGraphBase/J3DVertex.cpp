@@ -9,20 +9,20 @@
 // Types:
 // 
 
-// build J3DVertexData (J3DVertexData) False/False
-/* top-level dependencies (begin J3DVertexData) */
-/* top-level dependencies (end J3DVertexData) */
+// build J3DVertexData (['J3DVertexData']) False/False
+/* top-level dependencies (begin ['J3DVertexData']) */
+/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 	/* 80310EF8 */ J3DVertexData();
 };
 
-// build J3DVertexBuffer (J3DVertexBuffer) False/False
-// build J3DVertexData (J3DVertexData) True/True
-/* top-level dependencies (begin J3DVertexBuffer) */
-// outer dependency: J3DVertexData
-/* top-level dependencies (end J3DVertexBuffer) */
+// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
+// build J3DVertexData (['J3DVertexData']) True/True
+/* top-level dependencies (begin ['J3DVertexBuffer']) */
+// outer dependency: ('J3DVertexData',)
+/* top-level dependencies (end ['J3DVertexBuffer']) */
 struct J3DVertexBuffer {
-	// J3DVertexData
+	// ('J3DVertexData',)
 	/* 80310F78 */ void setVertexData(J3DVertexData*);
 	/* 80310FD8 */ void init();
 	/* 80311030 */ ~J3DVertexBuffer();
@@ -34,9 +34,9 @@ struct J3DVertexBuffer {
 	/* 8031152C */ void allocTransformedVtxNrmArray();
 };
 
-// build J3DDrawMtxData (J3DDrawMtxData) False/False
-/* top-level dependencies (begin J3DDrawMtxData) */
-/* top-level dependencies (end J3DDrawMtxData) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
+/* top-level dependencies (begin ['J3DDrawMtxData']) */
+/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 	/* 803115E0 */ J3DDrawMtxData();
 	/* 803115F4 */ ~J3DDrawMtxData();

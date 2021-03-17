@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build STRUCT_DSP_TASK (STRUCT_DSP_TASK) False/False
-/* top-level dependencies (begin STRUCT_DSP_TASK) */
-/* top-level dependencies (end STRUCT_DSP_TASK) */
+// build STRUCT_DSP_TASK (['STRUCT_DSP_TASK']) False/False
+/* top-level dependencies (begin ['STRUCT_DSP_TASK']) */
+/* top-level dependencies (end ['STRUCT_DSP_TASK']) */
 struct STRUCT_DSP_TASK {
 };
 

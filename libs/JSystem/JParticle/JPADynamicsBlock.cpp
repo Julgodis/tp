@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPADynamicsBlock (JPADynamicsBlock) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-/* top-level dependencies (begin JPADynamicsBlock) */
-// outer dependency: JPAEmitterWorkData
-/* top-level dependencies (end JPADynamicsBlock) */
+// build JPADynamicsBlock (['JPADynamicsBlock']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+/* top-level dependencies (begin ['JPADynamicsBlock']) */
+// outer dependency: ('JPAEmitterWorkData',)
+/* top-level dependencies (end ['JPADynamicsBlock']) */
 struct JPADynamicsBlock {
-	// JPAEmitterWorkData
+	// ('JPAEmitterWorkData',)
 	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 	/* 8027BB4C */ void init();
 	/* 8027BBE8 */ void create(JPAEmitterWorkData*);
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 	/* 8027EA40 */ void createParticle();
 };

@@ -9,79 +9,79 @@
 // Types:
 // 
 
-// build J2DMaterial (J2DMaterial) False/False
-// build J2DAnmColor (J2DAnmColor) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-/* top-level dependencies (begin J2DAnmColor) */
-// outer dependency: _GXColor
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-	// _GXColor
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-};
-
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-// build _GXColor (_GXColor) True/True
-// build _GXColorS10 (_GXColorS10) False/False
-/* top-level dependencies (begin _GXColorS10) */
-/* top-level dependencies (end _GXColorS10) */
-struct _GXColorS10 {
-};
-
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-// outer dependency: _GXColor
-// outer dependency: _GXColorS10
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
-	// _GXColor
-	// _GXColorS10
-	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
-};
-
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
+// build J2DMaterial (['J2DMaterial']) False/False
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J2DAnmTexPattern']) */
+/* top-level dependencies (end ['J2DAnmTexPattern']) */
 struct J2DAnmTexPattern {
 	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
 	/* 8030BF9C */ void getResTIMG(u16) const;
 	/* 8030BFF0 */ void getPalette(u16) const;
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
+// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) False/False
+/* top-level dependencies (begin ['J3DTextureSRTInfo']) */
+/* top-level dependencies (end ['J3DTextureSRTInfo']) */
 struct J3DTextureSRTInfo {
 };
 
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-// outer dependency: J3DTextureSRTInfo
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
+/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
+// outer dependency: ('J3DTextureSRTInfo',)
+/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
 struct J2DAnmTextureSRTKey {
-	// J3DTextureSRTInfo
+	// ('J3DTextureSRTInfo',)
 	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
 };
 
-/* top-level dependencies (begin J2DMaterial) */
-// outer dependency: J2DAnmColor
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmTexPattern
-// outer dependency: J2DAnmTextureSRTKey
-/* top-level dependencies (end J2DMaterial) */
+// build J2DAnmColor (['J2DAnmColor']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
+struct _GXColor {
+};
+
+/* top-level dependencies (begin ['J2DAnmColor']) */
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['J2DAnmColor']) */
+struct J2DAnmColor {
+	// ('_GXColor',)
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
+};
+
+// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) False/False
+// build _GXColorS10 (['_GXColorS10']) False/False
+/* top-level dependencies (begin ['_GXColorS10']) */
+/* top-level dependencies (end ['_GXColorS10']) */
+struct _GXColorS10 {
+};
+
+// build _GXColor (['_GXColor']) True/True
+/* top-level dependencies (begin ['J2DAnmTevRegKey']) */
+// outer dependency: ('_GXColorS10',)
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['J2DAnmTevRegKey']) */
+struct J2DAnmTevRegKey {
+	// ('_GXColorS10',)
+	// ('_GXColor',)
+	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
+};
+
+/* top-level dependencies (begin ['J2DMaterial']) */
+// outer dependency: ('J2DAnmTexPattern',)
+// outer dependency: ('J2DAnmTextureSRTKey',)
+// outer dependency: ('J2DAnmColor',)
+// outer dependency: ('J2DAnmTevRegKey',)
+/* top-level dependencies (end ['J2DMaterial']) */
 struct J2DMaterial {
-	// J2DAnmColor
-	// J2DAnmTevRegKey
-	// J2DAnmTexPattern
-	// J2DAnmTextureSRTKey
-	// build J2DMaterialAnmPointer (J2DMaterial::J2DMaterialAnmPointer) False/False
-	/* dependencies (begin J2DMaterial::J2DMaterialAnmPointer) */
-	/* dependencies (end J2DMaterial::J2DMaterialAnmPointer) */
+	// ('J2DAnmTexPattern',)
+	// ('J2DAnmTextureSRTKey',)
+	// ('J2DAnmColor',)
+	// ('J2DAnmTevRegKey',)
+	// build J2DMaterialAnmPointer (['J2DMaterial', 'J2DMaterialAnmPointer']) False/False
+	/* dependencies (begin ['J2DMaterial', 'J2DMaterialAnmPointer']) */
+	/* dependencies (end ['J2DMaterial', 'J2DMaterialAnmPointer']) */
 	struct J2DMaterialAnmPointer {
 		/* 802EA79C */ J2DMaterialAnmPointer();
 	};
@@ -99,52 +99,52 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-// build J2DAnmColor (J2DAnmColor) True/True
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
-// build J2DColorBlock (J2DColorBlock) False/False
-/* top-level dependencies (begin J2DColorBlock) */
-/* top-level dependencies (end J2DColorBlock) */
+// build J2DAnmColor (['J2DAnmColor']) True/True
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
+// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) True/True
+// build J2DColorBlock (['J2DColorBlock']) False/False
+/* top-level dependencies (begin ['J2DColorBlock']) */
+/* top-level dependencies (end ['J2DColorBlock']) */
 struct J2DColorBlock {
 	/* 802EB0F4 */ ~J2DColorBlock();
 	/* 802EB394 */ void initialize();
 	/* 802EB424 */ void setGX();
 };
 
-// build J2DIndBlock (J2DIndBlock) False/False
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
-/* top-level dependencies (begin J2DIndTexCoordScale) */
-/* top-level dependencies (end J2DIndTexCoordScale) */
-struct J2DIndTexCoordScale {
-	/* 802EB290 */ ~J2DIndTexCoordScale();
-	/* 802EB2CC */ J2DIndTexCoordScale();
-};
-
-// build J2DIndTexOrder (J2DIndTexOrder) False/False
-/* top-level dependencies (begin J2DIndTexOrder) */
-/* top-level dependencies (end J2DIndTexOrder) */
+// build J2DIndBlock (['J2DIndBlock']) False/False
+// build J2DIndTexOrder (['J2DIndTexOrder']) False/False
+/* top-level dependencies (begin ['J2DIndTexOrder']) */
+/* top-level dependencies (end ['J2DIndTexOrder']) */
 struct J2DIndTexOrder {
 	/* 802EB378 */ J2DIndTexOrder();
 };
 
-// build J2DIndTexMtx (J2DIndTexMtx) False/False
-/* top-level dependencies (begin J2DIndTexMtx) */
-/* top-level dependencies (end J2DIndTexMtx) */
+// build J2DIndTexMtx (['J2DIndTexMtx']) False/False
+/* top-level dependencies (begin ['J2DIndTexMtx']) */
+/* top-level dependencies (end ['J2DIndTexMtx']) */
 struct J2DIndTexMtx {
 	/* 802EB2E4 */ ~J2DIndTexMtx();
 	/* 802EB320 */ J2DIndTexMtx();
 };
 
-/* top-level dependencies (begin J2DIndBlock) */
-// outer dependency: J2DIndTexCoordScale
-// outer dependency: J2DIndTexOrder
-// outer dependency: J2DIndTexMtx
-/* top-level dependencies (end J2DIndBlock) */
+// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) False/False
+/* top-level dependencies (begin ['J2DIndTexCoordScale']) */
+/* top-level dependencies (end ['J2DIndTexCoordScale']) */
+struct J2DIndTexCoordScale {
+	/* 802EB290 */ ~J2DIndTexCoordScale();
+	/* 802EB2CC */ J2DIndTexCoordScale();
+};
+
+/* top-level dependencies (begin ['J2DIndBlock']) */
+// outer dependency: ('J2DIndTexOrder',)
+// outer dependency: ('J2DIndTexMtx',)
+// outer dependency: ('J2DIndTexCoordScale',)
+/* top-level dependencies (end ['J2DIndBlock']) */
 struct J2DIndBlock {
-	// J2DIndTexCoordScale
-	// J2DIndTexOrder
-	// J2DIndTexMtx
+	// ('J2DIndTexOrder',)
+	// ('J2DIndTexMtx',)
+	// ('J2DIndTexCoordScale',)
 	/* 802EA18C */ bool getIndTexCoordScale(u32);
 	/* 802EA194 */ bool getIndTexMtx(u32);
 	/* 802EA19C */ bool getIndTexOrder(u32);
@@ -158,33 +158,33 @@ struct J2DIndBlock {
 	/* 802EB25C */ void setIndTexCoordScale(u32, J2DIndTexCoordScale);
 };
 
-// build J2DTevBlock (J2DTevBlock) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build J2DTevBlock (['J2DTevBlock']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build J2DGXColorS10 (J2DGXColorS10) False/False
-/* top-level dependencies (begin J2DGXColorS10) */
-/* top-level dependencies (end J2DGXColorS10) */
+// build J2DGXColorS10 (['J2DGXColorS10']) False/False
+/* top-level dependencies (begin ['J2DGXColorS10']) */
+/* top-level dependencies (end ['J2DGXColorS10']) */
 struct J2DGXColorS10 {
 };
 
-/* top-level dependencies (begin J2DTevBlock) */
-// outer dependency: JUtility::TColor
-// outer dependency: J2DGXColorS10
-/* top-level dependencies (end J2DTevBlock) */
+/* top-level dependencies (begin ['J2DTevBlock']) */
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DGXColorS10',)
+/* top-level dependencies (end ['J2DTevBlock']) */
 struct J2DTevBlock {
-	// JUtility::TColor
-	// J2DGXColorS10
+	// ('JUtility', 'TColor')
+	// ('J2DGXColorS10',)
 	/* 802EB184 */ ~J2DTevBlock();
 	/* 802EB1D0 */ void setGX();
 	/* 802EB1D4 */ void setTevKColor(u32, JUtility::TColor);
@@ -192,81 +192,81 @@ struct J2DTevBlock {
 	/* 802EB1DC */ void setTexNo(u32, u16);
 };
 
-// build JUtility (JUtility) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DIndBlockNull (J2DIndBlockNull) False/False
-/* top-level dependencies (begin J2DIndBlockNull) */
-/* top-level dependencies (end J2DIndBlockNull) */
+// build JUtility (['JUtility']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build J2DIndBlockNull (['J2DIndBlockNull']) False/False
+/* top-level dependencies (begin ['J2DIndBlockNull']) */
+/* top-level dependencies (end ['J2DIndBlockNull']) */
 struct J2DIndBlockNull {
 	/* 802EB1E0 */ void setGX();
 	/* 802EB1E4 */ void getType();
 	/* 802EB1F0 */ ~J2DIndBlockNull();
 };
 
-// build J2DIndTexOrder (J2DIndTexOrder) True/True
-// build J2DIndTexMtx (J2DIndTexMtx) True/True
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) True/True
-// build J2DTexCoord (J2DTexCoord) False/False
-/* top-level dependencies (begin J2DTexCoord) */
-/* top-level dependencies (end J2DTexCoord) */
+// build J2DIndTexOrder (['J2DIndTexOrder']) True/True
+// build J2DIndTexMtx (['J2DIndTexMtx']) True/True
+// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) True/True
+// build J2DTexCoord (['J2DTexCoord']) False/False
+/* top-level dependencies (begin ['J2DTexCoord']) */
+/* top-level dependencies (end ['J2DTexCoord']) */
 struct J2DTexCoord {
 	/* 802EB260 */ J2DTexCoord();
 };
 
-// build J2DColorChan (J2DColorChan) False/False
-/* top-level dependencies (begin J2DColorChan) */
-/* top-level dependencies (end J2DColorChan) */
+// build J2DColorChan (['J2DColorChan']) False/False
+/* top-level dependencies (begin ['J2DColorChan']) */
+/* top-level dependencies (end ['J2DColorChan']) */
 struct J2DColorChan {
 	/* 802EB280 */ J2DColorChan();
 };
 
-// build _GXColor (_GXColor) True/True
-// build JUTTexture (JUTTexture) False/False
-// build JUTPalette (JUTPalette) False/False
-/* top-level dependencies (begin JUTPalette) */
-/* top-level dependencies (end JUTPalette) */
-struct JUTPalette {
-};
-
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
+// build _GXColor (['_GXColor']) True/True
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTlut (['_GXTlut']) False/False
+/* top-level dependencies (begin ['_GXTlut']) */
+/* top-level dependencies (end ['_GXTlut']) */
 struct _GXTlut {
 };
 
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: JUTPalette
-// outer dependency: ResTIMG
-// outer dependency: _GXTlut
-/* top-level dependencies (end JUTTexture) */
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
+struct ResTIMG {
+};
+
+// build JUTPalette (['JUTPalette']) False/False
+/* top-level dependencies (begin ['JUTPalette']) */
+/* top-level dependencies (end ['JUTPalette']) */
+struct JUTPalette {
+};
+
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTlut',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('JUTPalette',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// JUTPalette
-	// ResTIMG
-	// _GXTlut
+	// ('_GXTlut',)
+	// ('ResTIMG',)
+	// ('JUTPalette',)
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build JUTPalette (JUTPalette) True/True
-// build _GXTlut (_GXTlut) True/True
-// build J2DTexGenBlock (J2DTexGenBlock) False/False
-// build J2DTexMtx (J2DTexMtx) False/False
-/* top-level dependencies (begin J2DTexMtx) */
-/* top-level dependencies (end J2DTexMtx) */
+// build ResTIMG (['ResTIMG']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build _GXTlut (['_GXTlut']) True/True
+// build J2DTexGenBlock (['J2DTexGenBlock']) False/False
+// build J2DTexMtx (['J2DTexMtx']) False/False
+/* top-level dependencies (begin ['J2DTexMtx']) */
+/* top-level dependencies (end ['J2DTexMtx']) */
 struct J2DTexMtx {
 };
 
-/* top-level dependencies (begin J2DTexGenBlock) */
-// outer dependency: J2DTexMtx
-/* top-level dependencies (end J2DTexGenBlock) */
+/* top-level dependencies (begin ['J2DTexGenBlock']) */
+// outer dependency: ('J2DTexMtx',)
+/* top-level dependencies (end ['J2DTexGenBlock']) */
 struct J2DTexGenBlock {
-	// J2DTexMtx
+	// ('J2DTexMtx',)
 	/* 802EB510 */ void initialize();
 	/* 802EB570 */ void setGX();
 	/* 802EB620 */ ~J2DTexGenBlock();
@@ -274,52 +274,52 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-// build J2DTexMtx (J2DTexMtx) True/True
-// build J2DTevBlock1 (J2DTevBlock1) False/False
-/* top-level dependencies (begin J2DTevBlock1) */
-/* top-level dependencies (end J2DTevBlock1) */
+// build J2DTexMtx (['J2DTexMtx']) True/True
+// build J2DTevBlock1 (['J2DTevBlock1']) False/False
+/* top-level dependencies (begin ['J2DTevBlock1']) */
+/* top-level dependencies (end ['J2DTevBlock1']) */
 struct J2DTevBlock1 {
 	/* 802EB88C */ J2DTevBlock1();
 };
 
-// build J2DTevBlock2 (J2DTevBlock2) False/False
-/* top-level dependencies (begin J2DTevBlock2) */
-/* top-level dependencies (end J2DTevBlock2) */
+// build J2DTevBlock2 (['J2DTevBlock2']) False/False
+/* top-level dependencies (begin ['J2DTevBlock2']) */
+/* top-level dependencies (end ['J2DTevBlock2']) */
 struct J2DTevBlock2 {
 	/* 802EC5B8 */ J2DTevBlock2();
 };
 
-// build J2DTevBlock4 (J2DTevBlock4) False/False
-/* top-level dependencies (begin J2DTevBlock4) */
-/* top-level dependencies (end J2DTevBlock4) */
+// build J2DTevBlock4 (['J2DTevBlock4']) False/False
+/* top-level dependencies (begin ['J2DTevBlock4']) */
+/* top-level dependencies (end ['J2DTevBlock4']) */
 struct J2DTevBlock4 {
 	/* 802ED8BC */ J2DTevBlock4();
 };
 
-// build J2DTevBlock8 (J2DTevBlock8) False/False
-/* top-level dependencies (begin J2DTevBlock8) */
-/* top-level dependencies (end J2DTevBlock8) */
+// build J2DTevBlock8 (['J2DTevBlock8']) False/False
+/* top-level dependencies (begin ['J2DTevBlock8']) */
+/* top-level dependencies (end ['J2DTevBlock8']) */
 struct J2DTevBlock8 {
 	/* 802EED64 */ J2DTevBlock8();
 };
 
-// build J2DTevBlock16 (J2DTevBlock16) False/False
-/* top-level dependencies (begin J2DTevBlock16) */
-/* top-level dependencies (end J2DTevBlock16) */
+// build J2DTevBlock16 (['J2DTevBlock16']) False/False
+/* top-level dependencies (begin ['J2DTevBlock16']) */
+/* top-level dependencies (end ['J2DTevBlock16']) */
 struct J2DTevBlock16 {
 	/* 802F01E4 */ J2DTevBlock16();
 };
 
-// build J2DPEBlock (J2DPEBlock) False/False
-/* top-level dependencies (begin J2DPEBlock) */
-/* top-level dependencies (end J2DPEBlock) */
+// build J2DPEBlock (['J2DPEBlock']) False/False
+/* top-level dependencies (begin ['J2DPEBlock']) */
+/* top-level dependencies (end ['J2DPEBlock']) */
 struct J2DPEBlock {
 	/* 802F17FC */ void initialize();
 	/* 802F1840 */ void setGX();
 };
 
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) True/True
-// build _GXColorS10 (_GXColorS10) True/True
+// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) True/True
+// build _GXColorS10 (['_GXColorS10']) True/True
 // 
 // Forward References:
 // 

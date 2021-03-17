@@ -9,106 +9,106 @@
 // Types:
 // 
 
-// build JPAResourceLoader (JPAResourceLoader) False/False
-// build JPAResourceManager (JPAResourceManager) False/False
-// build JPATexture (JPATexture) False/False
-/* top-level dependencies (begin JPATexture) */
-/* top-level dependencies (end JPATexture) */
+// build JPAResourceLoader (['JPAResourceLoader']) False/False
+// build JPAResourceManager (['JPAResourceManager']) False/False
+// build JPATexture (['JPATexture']) False/False
+/* top-level dependencies (begin ['JPATexture']) */
+/* top-level dependencies (end ['JPATexture']) */
 struct JPATexture {
 	/* 8027D7D4 */ JPATexture(u8 const*);
 };
 
-// build JPAResource (JPAResource) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JPAResource (['JPAResource']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JPAResource) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JPAResource) */
+/* top-level dependencies (begin ['JPAResource']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
 };
 
-/* top-level dependencies (begin JPAResourceManager) */
-// outer dependency: JPATexture
-// outer dependency: JPAResource
-/* top-level dependencies (end JPAResourceManager) */
+/* top-level dependencies (begin ['JPAResourceManager']) */
+// outer dependency: ('JPATexture',)
+// outer dependency: ('JPAResource',)
+/* top-level dependencies (end ['JPAResourceManager']) */
 struct JPAResourceManager {
-	// JPATexture
-	// JPAResource
+	// ('JPATexture',)
+	// ('JPAResource',)
 	/* 80273F8C */ void registRes(JPAResource*);
 	/* 80273FAC */ void registTex(JPATexture*);
 };
 
-/* top-level dependencies (begin JPAResourceLoader) */
-// outer dependency: JPAResourceManager
-/* top-level dependencies (end JPAResourceLoader) */
+/* top-level dependencies (begin ['JPAResourceLoader']) */
+// outer dependency: ('JPAResourceManager',)
+/* top-level dependencies (end ['JPAResourceLoader']) */
 struct JPAResourceLoader {
-	// JPAResourceManager
+	// ('JPAResourceManager',)
 	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
 	/* 8027D8E0 */ void load_jpc(u8 const*, JPAResourceManager*);
 };
 
-// build JPAResourceManager (JPAResourceManager) True/True
-// build JPAResource (JPAResource) True/True
-// build JPATexture (JPATexture) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JPABaseShape (JPABaseShape) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JPABaseShape) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JPABaseShape) */
+// build JPAResourceManager (['JPAResourceManager']) True/True
+// build JPAResource (['JPAResource']) True/True
+// build JPATexture (['JPATexture']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JPABaseShape (['JPABaseShape']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JPABaseShape']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JPABaseShape']) */
 struct JPABaseShape {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 };
 
-// build JPAExtraShape (JPAExtraShape) False/False
-/* top-level dependencies (begin JPAExtraShape) */
-/* top-level dependencies (end JPAExtraShape) */
+// build JPAExtraShape (['JPAExtraShape']) False/False
+/* top-level dependencies (begin ['JPAExtraShape']) */
+/* top-level dependencies (end ['JPAExtraShape']) */
 struct JPAExtraShape {
 	/* 8027AD88 */ JPAExtraShape(u8 const*);
 };
 
-// build JPAChildShape (JPAChildShape) False/False
-/* top-level dependencies (begin JPAChildShape) */
-/* top-level dependencies (end JPAChildShape) */
+// build JPAChildShape (['JPAChildShape']) False/False
+/* top-level dependencies (begin ['JPAChildShape']) */
+/* top-level dependencies (end ['JPAChildShape']) */
 struct JPAChildShape {
 	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
-// build JPAExTexShape (JPAExTexShape) False/False
-/* top-level dependencies (begin JPAExTexShape) */
-/* top-level dependencies (end JPAExTexShape) */
+// build JPAExTexShape (['JPAExTexShape']) False/False
+/* top-level dependencies (begin ['JPAExTexShape']) */
+/* top-level dependencies (end ['JPAExTexShape']) */
 struct JPAExTexShape {
 	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
-// build JPADynamicsBlock (JPADynamicsBlock) False/False
-/* top-level dependencies (begin JPADynamicsBlock) */
-/* top-level dependencies (end JPADynamicsBlock) */
+// build JPADynamicsBlock (['JPADynamicsBlock']) False/False
+/* top-level dependencies (begin ['JPADynamicsBlock']) */
+/* top-level dependencies (end ['JPADynamicsBlock']) */
 struct JPADynamicsBlock {
 	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 };
 
-// build JPAFieldBlock (JPAFieldBlock) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JPAFieldBlock) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JPAFieldBlock) */
+// build JPAFieldBlock (['JPAFieldBlock']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JPAFieldBlock']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JPAFieldBlock']) */
 struct JPAFieldBlock {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 };
 
-// build JPAKeyBlock (JPAKeyBlock) False/False
-/* top-level dependencies (begin JPAKeyBlock) */
-/* top-level dependencies (end JPAKeyBlock) */
+// build JPAKeyBlock (['JPAKeyBlock']) False/False
+/* top-level dependencies (begin ['JPAKeyBlock']) */
+/* top-level dependencies (end ['JPAKeyBlock']) */
 struct JPAKeyBlock {
 	/* 8027D730 */ JPAKeyBlock(u8 const*);
 };

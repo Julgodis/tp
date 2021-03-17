@@ -9,198 +9,198 @@
 // Types:
 // 
 
-// build J3DPacket (J3DPacket) False/False
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-// build J3DPacket (J3DPacket) True/False
+// build J3DPacket (['J3DPacket']) False/False
+// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
+// build J3DPacket (['J3DPacket']) True/False
 struct J3DPacket;
-/* top-level dependencies (begin J3DDrawBuffer) */
-// outer dependency: J3DPacket
-/* top-level dependencies (end J3DDrawBuffer) */
+/* top-level dependencies (begin ['J3DDrawBuffer']) */
+// outer dependency: ('J3DPacket',)
+/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// J3DPacket
+	// ('J3DPacket',)
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
-/* top-level dependencies (begin J3DPacket) */
-// outer dependency: J3DDrawBuffer
-/* top-level dependencies (end J3DPacket) */
+/* top-level dependencies (begin ['J3DPacket']) */
+// outer dependency: ('J3DDrawBuffer',)
+/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
-	// J3DDrawBuffer
+	// ('J3DDrawBuffer',)
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-// build dKankyo_sun_Packet (dKankyo_sun_Packet) False/False
-/* top-level dependencies (begin dKankyo_sun_Packet) */
-/* top-level dependencies (end dKankyo_sun_Packet) */
+// build dKankyo_sun_Packet (['dKankyo_sun_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_sun_Packet']) */
+/* top-level dependencies (end ['dKankyo_sun_Packet']) */
 struct dKankyo_sun_Packet {
 	/* 80056C60 */ void draw();
 	/* 80058128 */ ~dKankyo_sun_Packet();
 };
 
-// build dKankyo_sunlenz_Packet (dKankyo_sunlenz_Packet) False/False
-/* top-level dependencies (begin dKankyo_sunlenz_Packet) */
-/* top-level dependencies (end dKankyo_sunlenz_Packet) */
+// build dKankyo_sunlenz_Packet (['dKankyo_sunlenz_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_sunlenz_Packet']) */
+/* top-level dependencies (end ['dKankyo_sunlenz_Packet']) */
 struct dKankyo_sunlenz_Packet {
 	/* 80056C98 */ void draw();
 	/* 800580A4 */ ~dKankyo_sunlenz_Packet();
 };
 
-// build RAIN_EFF (RAIN_EFF) False/False
-/* top-level dependencies (begin RAIN_EFF) */
-/* top-level dependencies (end RAIN_EFF) */
+// build RAIN_EFF (['RAIN_EFF']) False/False
+/* top-level dependencies (begin ['RAIN_EFF']) */
+/* top-level dependencies (end ['RAIN_EFF']) */
 struct RAIN_EFF {
 	/* 80056CD0 */ ~RAIN_EFF();
 	/* 80056D0C */ RAIN_EFF();
 };
 
-// build dKankyo_rain_Packet (dKankyo_rain_Packet) False/False
-/* top-level dependencies (begin dKankyo_rain_Packet) */
-/* top-level dependencies (end dKankyo_rain_Packet) */
+// build dKankyo_rain_Packet (['dKankyo_rain_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_rain_Packet']) */
+/* top-level dependencies (end ['dKankyo_rain_Packet']) */
 struct dKankyo_rain_Packet {
 	/* 80056D10 */ void draw();
 	/* 80058020 */ ~dKankyo_rain_Packet();
 };
 
-// build SNOW_EFF (SNOW_EFF) False/False
-/* top-level dependencies (begin SNOW_EFF) */
-/* top-level dependencies (end SNOW_EFF) */
+// build SNOW_EFF (['SNOW_EFF']) False/False
+/* top-level dependencies (begin ['SNOW_EFF']) */
+/* top-level dependencies (end ['SNOW_EFF']) */
 struct SNOW_EFF {
 	/* 80056D58 */ ~SNOW_EFF();
 	/* 80056D94 */ SNOW_EFF();
 };
 
-// build dKankyo_snow_Packet (dKankyo_snow_Packet) False/False
-/* top-level dependencies (begin dKankyo_snow_Packet) */
-/* top-level dependencies (end dKankyo_snow_Packet) */
+// build dKankyo_snow_Packet (['dKankyo_snow_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_snow_Packet']) */
+/* top-level dependencies (end ['dKankyo_snow_Packet']) */
 struct dKankyo_snow_Packet {
 	/* 80056D98 */ void draw();
 	/* 80057F9C */ ~dKankyo_snow_Packet();
 };
 
-// build STAR_EFF (STAR_EFF) False/False
-/* top-level dependencies (begin STAR_EFF) */
-/* top-level dependencies (end STAR_EFF) */
+// build STAR_EFF (['STAR_EFF']) False/False
+/* top-level dependencies (begin ['STAR_EFF']) */
+/* top-level dependencies (end ['STAR_EFF']) */
 struct STAR_EFF {
 	/* 80056DC8 */ ~STAR_EFF();
 	/* 80056E04 */ STAR_EFF();
 };
 
-// build dKankyo_star_Packet (dKankyo_star_Packet) False/False
-/* top-level dependencies (begin dKankyo_star_Packet) */
-/* top-level dependencies (end dKankyo_star_Packet) */
+// build dKankyo_star_Packet (['dKankyo_star_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_star_Packet']) */
+/* top-level dependencies (end ['dKankyo_star_Packet']) */
 struct dKankyo_star_Packet {
 	/* 80056E08 */ void draw();
 	/* 80057F18 */ ~dKankyo_star_Packet();
 };
 
-// build CLOUD_EFF (CLOUD_EFF) False/False
-/* top-level dependencies (begin CLOUD_EFF) */
-/* top-level dependencies (end CLOUD_EFF) */
+// build CLOUD_EFF (['CLOUD_EFF']) False/False
+/* top-level dependencies (begin ['CLOUD_EFF']) */
+/* top-level dependencies (end ['CLOUD_EFF']) */
 struct CLOUD_EFF {
 	/* 80056E38 */ ~CLOUD_EFF();
 	/* 80056E74 */ CLOUD_EFF();
 };
 
-// build dKankyo_cloud_Packet (dKankyo_cloud_Packet) False/False
-/* top-level dependencies (begin dKankyo_cloud_Packet) */
-/* top-level dependencies (end dKankyo_cloud_Packet) */
+// build dKankyo_cloud_Packet (['dKankyo_cloud_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_cloud_Packet']) */
+/* top-level dependencies (end ['dKankyo_cloud_Packet']) */
 struct dKankyo_cloud_Packet {
 	/* 80056E78 */ void draw();
 	/* 80057E10 */ ~dKankyo_cloud_Packet();
 };
 
-// build HOUSI_EFF (HOUSI_EFF) False/False
-/* top-level dependencies (begin HOUSI_EFF) */
-/* top-level dependencies (end HOUSI_EFF) */
+// build HOUSI_EFF (['HOUSI_EFF']) False/False
+/* top-level dependencies (begin ['HOUSI_EFF']) */
+/* top-level dependencies (end ['HOUSI_EFF']) */
 struct HOUSI_EFF {
 	/* 80056EA8 */ ~HOUSI_EFF();
 	/* 80056EE4 */ HOUSI_EFF();
 };
 
-// build dKankyo_housi_Packet (dKankyo_housi_Packet) False/False
-/* top-level dependencies (begin dKankyo_housi_Packet) */
-/* top-level dependencies (end dKankyo_housi_Packet) */
+// build dKankyo_housi_Packet (['dKankyo_housi_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_housi_Packet']) */
+/* top-level dependencies (end ['dKankyo_housi_Packet']) */
 struct dKankyo_housi_Packet {
 	/* 80056EE8 */ void draw();
 	/* 80057E94 */ ~dKankyo_housi_Packet();
 };
 
-// build VRKUMO_EFF (VRKUMO_EFF) False/False
-/* top-level dependencies (begin VRKUMO_EFF) */
-/* top-level dependencies (end VRKUMO_EFF) */
+// build VRKUMO_EFF (['VRKUMO_EFF']) False/False
+/* top-level dependencies (begin ['VRKUMO_EFF']) */
+/* top-level dependencies (end ['VRKUMO_EFF']) */
 struct VRKUMO_EFF {
 	/* 80056F18 */ ~VRKUMO_EFF();
 	/* 80056F54 */ VRKUMO_EFF();
 };
 
-// build dKankyo_vrkumo_Packet (dKankyo_vrkumo_Packet) False/False
-/* top-level dependencies (begin dKankyo_vrkumo_Packet) */
-/* top-level dependencies (end dKankyo_vrkumo_Packet) */
+// build dKankyo_vrkumo_Packet (['dKankyo_vrkumo_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_vrkumo_Packet']) */
+/* top-level dependencies (end ['dKankyo_vrkumo_Packet']) */
 struct dKankyo_vrkumo_Packet {
 	/* 80056F58 */ void draw();
 	/* 8005820C */ ~dKankyo_vrkumo_Packet();
 };
 
-// build EF_ODOUR_EFF (EF_ODOUR_EFF) False/False
-/* top-level dependencies (begin EF_ODOUR_EFF) */
-/* top-level dependencies (end EF_ODOUR_EFF) */
+// build EF_ODOUR_EFF (['EF_ODOUR_EFF']) False/False
+/* top-level dependencies (begin ['EF_ODOUR_EFF']) */
+/* top-level dependencies (end ['EF_ODOUR_EFF']) */
 struct EF_ODOUR_EFF {
 	/* 80056F8C */ ~EF_ODOUR_EFF();
 	/* 80056FC8 */ EF_ODOUR_EFF();
 };
 
-// build dKankyo_odour_Packet (dKankyo_odour_Packet) False/False
-/* top-level dependencies (begin dKankyo_odour_Packet) */
-/* top-level dependencies (end dKankyo_odour_Packet) */
+// build dKankyo_odour_Packet (['dKankyo_odour_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_odour_Packet']) */
+/* top-level dependencies (end ['dKankyo_odour_Packet']) */
 struct dKankyo_odour_Packet {
 	/* 80056FCC */ void draw();
 	/* 80057D8C */ ~dKankyo_odour_Packet();
 };
 
-// build EF_MUD_EFF (EF_MUD_EFF) False/False
-/* top-level dependencies (begin EF_MUD_EFF) */
-/* top-level dependencies (end EF_MUD_EFF) */
+// build EF_MUD_EFF (['EF_MUD_EFF']) False/False
+/* top-level dependencies (begin ['EF_MUD_EFF']) */
+/* top-level dependencies (end ['EF_MUD_EFF']) */
 struct EF_MUD_EFF {
 	/* 80056FFC */ ~EF_MUD_EFF();
 	/* 80057038 */ EF_MUD_EFF();
 };
 
-// build dKankyo_mud_Packet (dKankyo_mud_Packet) False/False
-/* top-level dependencies (begin dKankyo_mud_Packet) */
-/* top-level dependencies (end dKankyo_mud_Packet) */
+// build dKankyo_mud_Packet (['dKankyo_mud_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_mud_Packet']) */
+/* top-level dependencies (end ['dKankyo_mud_Packet']) */
 struct dKankyo_mud_Packet {
 	/* 8005703C */ void draw();
 	/* 80057D08 */ ~dKankyo_mud_Packet();
 };
 
-// build EF_EVIL_EFF (EF_EVIL_EFF) False/False
-/* top-level dependencies (begin EF_EVIL_EFF) */
-/* top-level dependencies (end EF_EVIL_EFF) */
+// build EF_EVIL_EFF (['EF_EVIL_EFF']) False/False
+/* top-level dependencies (begin ['EF_EVIL_EFF']) */
+/* top-level dependencies (end ['EF_EVIL_EFF']) */
 struct EF_EVIL_EFF {
 	/* 8005706C */ ~EF_EVIL_EFF();
 	/* 800570A8 */ EF_EVIL_EFF();
 };
 
-// build dKankyo_evil_Packet (dKankyo_evil_Packet) False/False
-/* top-level dependencies (begin dKankyo_evil_Packet) */
-/* top-level dependencies (end dKankyo_evil_Packet) */
+// build dKankyo_evil_Packet (['dKankyo_evil_Packet']) False/False
+/* top-level dependencies (begin ['dKankyo_evil_Packet']) */
+/* top-level dependencies (end ['dKankyo_evil_Packet']) */
 struct dKankyo_evil_Packet {
 	/* 800570AC */ void draw();
 	/* 80057C84 */ ~dKankyo_evil_Packet();
 };
 
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
@@ -209,129 +209,129 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-// build WIND_INFLUENCE (WIND_INFLUENCE) False/False
-/* top-level dependencies (begin WIND_INFLUENCE) */
-/* top-level dependencies (end WIND_INFLUENCE) */
+// build WIND_INFLUENCE (['WIND_INFLUENCE']) False/False
+/* top-level dependencies (begin ['WIND_INFLUENCE']) */
+/* top-level dependencies (end ['WIND_INFLUENCE']) */
 struct WIND_INFLUENCE {
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dPa_control_c (dPa_control_c) False/False
-// build cXyz (cXyz) True/True
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
-};
-
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
-struct dKy_tevstr_c {
-};
-
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dPa_control_c (['dPa_control_c']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-/* top-level dependencies (begin dPa_control_c) */
-// outer dependency: cXyz
-// outer dependency: _GXColor
-// outer dependency: dPa_levelEcallBack
-// outer dependency: dKy_tevstr_c
-// outer dependency: csXyz
-/* top-level dependencies (end dPa_control_c) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
+struct _GXColor {
+};
+
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
+struct dKy_tevstr_c {
+};
+
+// build cXyz (['cXyz']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
+/* top-level dependencies (begin ['dPa_levelEcallBack']) */
+/* top-level dependencies (end ['dPa_levelEcallBack']) */
+struct dPa_levelEcallBack {
+};
+
+/* top-level dependencies (begin ['dPa_control_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('_GXColor',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dPa_levelEcallBack',)
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// dPa_levelEcallBack
-	// dKy_tevstr_c
-	// csXyz
-	// cXyz
-	// _GXColor
+	// ('_GXColor',)
+	// ('dKy_tevstr_c',)
+	// ('dPa_levelEcallBack',)
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build csXyz (csXyz) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
-// build _GXColor (_GXColor) True/True
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-/* top-level dependencies (begin dScnKy_env_light_c) */
-/* top-level dependencies (end dScnKy_env_light_c) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build csXyz (['csXyz']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
 	/* 8019FA08 */ void getDaytime();
 };
 
-// build Vec (Vec) True/True
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Vec (['Vec']) True/True
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin Z2EnvSeMgr) */
-// outer dependency: Vec
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build JAISoundID (['JAISoundID']) True/True
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// Vec
+	// ('Vec',)
 	/* 802C7830 */ void startRainSe(s32, s8);
 	/* 802C7FBC */ void initStrongWindSe();
 	/* 802C7FC8 */ void setWindDirection(Vec*);
 	/* 802C800C */ void startStrongWindSe(s8);
 };
 
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
+// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
 // 
 // Forward References:
 // 

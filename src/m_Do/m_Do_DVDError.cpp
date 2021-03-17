@@ -9,49 +9,49 @@
 // Types:
 // 
 
-// build OSAlarm (OSAlarm) False/False
-/* top-level dependencies (begin OSAlarm) */
-/* top-level dependencies (end OSAlarm) */
+// build OSAlarm (['OSAlarm']) False/False
+/* top-level dependencies (begin ['OSAlarm']) */
+/* top-level dependencies (end ['OSAlarm']) */
 struct OSAlarm {
 };
 
-// build OSContext (OSContext) False/False
-/* top-level dependencies (begin OSContext) */
-/* top-level dependencies (end OSContext) */
+// build OSContext (['OSContext']) False/False
+/* top-level dependencies (begin ['OSContext']) */
+/* top-level dependencies (end ['OSContext']) */
 struct OSContext {
 };
 
-// build mDoDvdThd (mDoDvdThd) False/False
-/* top-level dependencies (begin mDoDvdThd) */
-/* top-level dependencies (end mDoDvdThd) */
+// build mDoDvdThd (['mDoDvdThd']) False/False
+/* top-level dependencies (begin ['mDoDvdThd']) */
+/* top-level dependencies (end ['mDoDvdThd']) */
 struct mDoDvdThd {
 	/* 800158B4 */ void suspend();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
 
-// build JKRThread (JKRThread) False/False
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build JKRThread (['JKRThread']) False/False
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// OSThread
+	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build OSThread (OSThread) True/True
+// build OSThread (['OSThread']) True/True
 // 
 // Forward References:
 // 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F2E8 */ void imixcopy(s16 const*, s16 const*, s16*, u32);
 	/* 8028F318 */ void bcopyfast(void const*, void*, u32);

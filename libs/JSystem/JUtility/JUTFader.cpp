@@ -9,31 +9,31 @@
 // Types:
 // 
 
-// build JUTFader (JUTFader) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTFader (['JUTFader']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JUTFader (JUTFader) True/False
+// build JUTFader (['JUTFader']) True/False
 struct JUTFader;
-/* top-level dependencies (begin JUTFader) */
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFader::EStatus
-/* top-level dependencies (end JUTFader) */
+/* top-level dependencies (begin ['JUTFader']) */
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JUTFader', 'EStatus')
+/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
-	// JUtility::TColor
-	// JUTFader::EStatus
-	// build EStatus (JUTFader::EStatus) False/False
-	/* dependencies (begin JUTFader::EStatus) */
-	/* dependencies (end JUTFader::EStatus) */
+	// ('JUtility', 'TColor')
+	// ('JUTFader', 'EStatus')
+	// build EStatus (['JUTFader', 'EStatus']) False/False
+	/* dependencies (begin ['JUTFader', 'EStatus']) */
+	/* dependencies (end ['JUTFader', 'EStatus']) */
 	struct EStatus {
 	};
 
@@ -46,20 +46,20 @@ struct JUTFader {
 	/* 802E5840 */ ~JUTFader();
 };
 
-// build JUtility (JUtility) True/True
-// build J2DGrafContext (J2DGrafContext) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin J2DGrafContext) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end J2DGrafContext) */
+// build JUtility (['JUtility']) True/True
+// build J2DGrafContext (['J2DGrafContext']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['J2DGrafContext']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E9670 */ J2DOrthoGraph();
 };

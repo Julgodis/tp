@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JUTVideo (JUTVideo) False/False
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
+// build JUTVideo (['JUTVideo']) False/False
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
 struct _GXRenderModeObj {
 };
 
-/* top-level dependencies (begin JUTVideo) */
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTVideo) */
+/* top-level dependencies (begin ['JUTVideo']) */
+// outer dependency: ('_GXRenderModeObj',)
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
-	// _GXRenderModeObj
+	// ('_GXRenderModeObj',)
 	/* 802E4C54 */ void createManager(_GXRenderModeObj const*);
 	/* 802E4CAC */ void destroyManager();
 	/* 802E4CF4 */ JUTVideo(_GXRenderModeObj const*);
@@ -34,10 +34,10 @@ struct JUTVideo {
 	/* 802E5210 */ void waitRetraceIfNeed();
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build JUTDirectPrint (JUTDirectPrint) False/False
-/* top-level dependencies (begin JUTDirectPrint) */
-/* top-level dependencies (end JUTDirectPrint) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };

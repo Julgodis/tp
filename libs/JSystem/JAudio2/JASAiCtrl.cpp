@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JASDriver (JASDriver) False/False
-// build JASOutputRate (JASOutputRate) False/False
-/* top-level dependencies (begin JASOutputRate) */
-/* top-level dependencies (end JASOutputRate) */
+// build JASDriver (['JASDriver']) False/False
+// build JASOutputRate (['JASOutputRate']) False/False
+/* top-level dependencies (begin ['JASOutputRate']) */
+/* top-level dependencies (end ['JASOutputRate']) */
 struct JASOutputRate {
 };
 
-/* top-level dependencies (begin JASDriver) */
-// outer dependency: JASOutputRate
-/* top-level dependencies (end JASDriver) */
+/* top-level dependencies (begin ['JASDriver']) */
+// outer dependency: ('JASOutputRate',)
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
-	// JASOutputRate
+	// ('JASOutputRate',)
 	/* 8029C4E4 */ void startDMA();
 	/* 8029C504 */ void stopDMA();
 	/* 8029C524 */ void setOutputRate(JASOutputRate);
@@ -37,64 +37,64 @@ struct JASDriver {
 	/* 8029E2D0 */ void DSPSyncCallback();
 };
 
-// build JASOutputRate (JASOutputRate) True/True
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASOutputRate (['JASOutputRate']) True/True
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F2E8 */ void imixcopy(s16 const*, s16 const*, s16*, u32);
 	/* 8028F480 */ void bzero(void*, u32);
 };
 
-// build JASProbe (JASProbe) False/False
-/* top-level dependencies (begin JASProbe) */
-/* top-level dependencies (end JASProbe) */
+// build JASProbe (['JASProbe']) False/False
+/* top-level dependencies (begin ['JASProbe']) */
+/* top-level dependencies (end ['JASProbe']) */
 struct JASProbe {
 	/* 80290EE4 */ void start(s32, char const*);
 	/* 80290F24 */ void stop(s32);
 };
 
-// build JASPortCmd (JASPortCmd) False/False
-/* top-level dependencies (begin JASPortCmd) */
-/* top-level dependencies (end JASPortCmd) */
+// build JASPortCmd (['JASPortCmd']) False/False
+/* top-level dependencies (begin ['JASPortCmd']) */
+/* top-level dependencies (end ['JASPortCmd']) */
 struct JASPortCmd {
 	/* 80291060 */ void execAllCommand();
 };
 
-// build JASChannel (JASChannel) False/False
-/* top-level dependencies (begin JASChannel) */
-/* top-level dependencies (end JASChannel) */
+// build JASChannel (['JASChannel']) False/False
+/* top-level dependencies (begin ['JASChannel']) */
+/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
 	/* 8029BC0C */ void initBankDisposeMsgQueue();
 	/* 8029BC48 */ void receiveBankDisposeMsg();
 };
 
-// build JASLfo (JASLfo) False/False
-/* top-level dependencies (begin JASLfo) */
-/* top-level dependencies (end JASLfo) */
+// build JASLfo (['JASLfo']) False/False
+/* top-level dependencies (begin ['JASLfo']) */
+/* top-level dependencies (end ['JASLfo']) */
 struct JASLfo {
 	/* 8029BDD8 */ void incCounter(f32);
 };
 
-// build JASDSPChannel (JASDSPChannel) False/False
-/* top-level dependencies (begin JASDSPChannel) */
-/* top-level dependencies (end JASDSPChannel) */
+// build JASDSPChannel (['JASDSPChannel']) False/False
+/* top-level dependencies (begin ['JASDSPChannel']) */
+/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D89C */ void updateAll();
 	/* 8029D910 */ void killActiveChannel();
 };
 
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
 	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
 	/* 8029DAA0 */ void invalChannelAll();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

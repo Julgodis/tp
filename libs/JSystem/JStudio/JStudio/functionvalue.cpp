@@ -9,35 +9,31 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TFunctionValue_list::TIndexData_
-// outer dependency: JStudio::TFunctionValue_list
-// outer dependency: JStudio::TFunctionValue_list_parameter
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'TFunctionValue_list', 'TIndexData_')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TFunctionValue (JStudio::TFunctionValue) False/False
-	/* dependencies (begin JStudio::TFunctionValue) */
-	/* dependencies (end JStudio::TFunctionValue) */
+	// build TFunctionValue (['JStudio', 'TFunctionValue']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue']) */
 	struct TFunctionValue {
 		/* 80281648 */ void toFunction_outside(int);
 		/* 80281690 */ TFunctionValue();
 		/* 802816A0 */ ~TFunctionValue();
 	};
 
-	// build TFunctionValueAttribute_refer (JStudio::TFunctionValueAttribute_refer) False/False
-	/* dependencies (begin JStudio::TFunctionValueAttribute_refer) */
-	/* dependencies (end JStudio::TFunctionValueAttribute_refer) */
+	// build TFunctionValueAttribute_refer (['JStudio', 'TFunctionValueAttribute_refer']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValueAttribute_refer']) */
+	/* dependencies (end ['JStudio', 'TFunctionValueAttribute_refer']) */
 	struct TFunctionValueAttribute_refer {
 		/* 802816E8 */ void refer_initialize();
 	};
 
-	// build functionvalue (JStudio::functionvalue) False/False
-	/* dependencies (begin JStudio::functionvalue) */
-	/* dependencies (end JStudio::functionvalue) */
+	// build functionvalue (['JStudio', 'functionvalue']) False/False
+	/* dependencies (begin ['JStudio', 'functionvalue']) */
+	/* dependencies (end ['JStudio', 'functionvalue']) */
 	struct functionvalue {
 		/* 80281710 */ void interpolateValue_hermite(f64, f64, f64, f64, f64, f64, f64);
 		/* 80281774 */ void interpolateValue_BSpline_uniform(f64, f64, f64, f64, f64);
@@ -48,9 +44,9 @@ namespace JStudio {
 		/* 802835B0 */ void extrapolateParameter_clamp(f64, f64);
 	};
 
-	// build TFunctionValueAttribute_range (JStudio::TFunctionValueAttribute_range) False/False
-	/* dependencies (begin JStudio::TFunctionValueAttribute_range) */
-	/* dependencies (end JStudio::TFunctionValueAttribute_range) */
+	// build TFunctionValueAttribute_range (['JStudio', 'TFunctionValueAttribute_range']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValueAttribute_range']) */
+	/* dependencies (end ['JStudio', 'TFunctionValueAttribute_range']) */
 	struct TFunctionValueAttribute_range {
 		/* 80281918 */ void range_initialize();
 		/* 8028194C */ void range_prepare();
@@ -59,9 +55,9 @@ namespace JStudio {
 		/* 80281D18 */ TFunctionValueAttribute_range();
 	};
 
-	// build TFunctionValue_composite (JStudio::TFunctionValue_composite) False/False
-	/* dependencies (begin JStudio::TFunctionValue_composite) */
-	/* dependencies (end JStudio::TFunctionValue_composite) */
+	// build TFunctionValue_composite (['JStudio', 'TFunctionValue_composite']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_composite']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_composite']) */
 	struct TFunctionValue_composite {
 		/* 80281D5C */ TFunctionValue_composite();
 		/* 80281DB8 */ bool getType() const;
@@ -72,9 +68,9 @@ namespace JStudio {
 		/* 80283DA4 */ ~TFunctionValue_composite();
 	};
 
-	// build TFunctionValue_constant (JStudio::TFunctionValue_constant) False/False
-	/* dependencies (begin JStudio::TFunctionValue_constant) */
-	/* dependencies (end JStudio::TFunctionValue_constant) */
+	// build TFunctionValue_constant (['JStudio', 'TFunctionValue_constant']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_constant']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_constant']) */
 	struct TFunctionValue_constant {
 		/* 8028236C */ TFunctionValue_constant();
 		/* 802823B4 */ s32 getType() const;
@@ -85,9 +81,9 @@ namespace JStudio {
 		/* 80283D44 */ ~TFunctionValue_constant();
 	};
 
-	// build TFunctionValue_transition (JStudio::TFunctionValue_transition) False/False
-	/* dependencies (begin JStudio::TFunctionValue_transition) */
-	/* dependencies (end JStudio::TFunctionValue_transition) */
+	// build TFunctionValue_transition (['JStudio', 'TFunctionValue_transition']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_transition']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_transition']) */
 	struct TFunctionValue_transition {
 		/* 802823EC */ TFunctionValue_transition();
 		/* 8028244C */ s32 getType() const;
@@ -98,15 +94,15 @@ namespace JStudio {
 		/* 80283CE4 */ ~TFunctionValue_transition();
 	};
 
-	// build TFunctionValue_list (JStudio::TFunctionValue_list) False/False
-	/* dependencies (begin JStudio::TFunctionValue_list) */
-	// inner dependency: TFunctionValue_list (JStudio::TFunctionValue_list::TIndexData_) True False (for JStudio::TFunctionValue_list)
-	/* dependencies (end JStudio::TFunctionValue_list) */
+	// build TFunctionValue_list (['JStudio', 'TFunctionValue_list']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_list']) */
+	// inner dependency: 1 ('JStudio', 'TFunctionValue_list', 'TIndexData_') (for ['JStudio', 'TFunctionValue_list'])
+	/* dependencies (end ['JStudio', 'TFunctionValue_list']) */
 	struct TFunctionValue_list {
-		// JStudio::TFunctionValue_list::TIndexData_
-		// build TIndexData_ (JStudio::TFunctionValue_list::TIndexData_) False/False
-		/* dependencies (begin JStudio::TFunctionValue_list::TIndexData_) */
-		/* dependencies (end JStudio::TFunctionValue_list::TIndexData_) */
+		// ('JStudio', 'TFunctionValue_list', 'TIndexData_')
+		// build TIndexData_ (['JStudio', 'TFunctionValue_list', 'TIndexData_']) False/False
+		/* dependencies (begin ['JStudio', 'TFunctionValue_list', 'TIndexData_']) */
+		/* dependencies (end ['JStudio', 'TFunctionValue_list', 'TIndexData_']) */
 		struct TIndexData_ {
 		};
 
@@ -123,9 +119,9 @@ namespace JStudio {
 		/* 80283C84 */ ~TFunctionValue_list();
 	};
 
-	// build TFunctionValue_list_parameter (JStudio::TFunctionValue_list_parameter) False/False
-	/* dependencies (begin JStudio::TFunctionValue_list_parameter) */
-	/* dependencies (end JStudio::TFunctionValue_list_parameter) */
+	// build TFunctionValue_list_parameter (['JStudio', 'TFunctionValue_list_parameter']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_list_parameter']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_list_parameter']) */
 	struct TFunctionValue_list_parameter {
 		/* 80282D34 */ TFunctionValue_list_parameter();
 		/* 80282DA0 */ s32 getType() const;
@@ -141,9 +137,9 @@ namespace JStudio {
 		/* 80283C24 */ ~TFunctionValue_list_parameter();
 	};
 
-	// build TFunctionValue_hermite (JStudio::TFunctionValue_hermite) False/False
-	/* dependencies (begin JStudio::TFunctionValue_hermite) */
-	/* dependencies (end JStudio::TFunctionValue_hermite) */
+	// build TFunctionValue_hermite (['JStudio', 'TFunctionValue_hermite']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_hermite']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_hermite']) */
 	struct TFunctionValue_hermite {
 		/* 802832C4 */ TFunctionValue_hermite();
 		/* 80283344 */ s32 getType() const;
@@ -157,13 +153,13 @@ namespace JStudio {
 
 };
 
-// build JGadget (JGadget) False/False
-/* top-level dependencies (begin JGadget) */
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) False/False
+/* top-level dependencies (begin ['JGadget']) */
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build TVector_pointer_void (JGadget::TVector_pointer_void) False/False
-	/* dependencies (begin JGadget::TVector_pointer_void) */
-	/* dependencies (end JGadget::TVector_pointer_void) */
+	// build TVector_pointer_void (['JGadget', 'TVector_pointer_void']) False/False
+	/* dependencies (begin ['JGadget', 'TVector_pointer_void']) */
+	/* dependencies (end ['JGadget', 'TVector_pointer_void']) */
 	struct TVector_pointer_void {
 		/* 802DCCFC */ ~TVector_pointer_void();
 		/* 802DCDC4 */ void erase(void**, void**);

@@ -9,57 +9,57 @@
 // Types:
 // 
 
-// build J3DSkinNList (J3DSkinNList) False/False
-/* top-level dependencies (begin J3DSkinNList) */
-/* top-level dependencies (end J3DSkinNList) */
+// build J3DSkinNList (['J3DSkinNList']) False/False
+/* top-level dependencies (begin ['J3DSkinNList']) */
+/* top-level dependencies (end ['J3DSkinNList']) */
 struct J3DSkinNList {
 	/* 8032C6E4 */ J3DSkinNList();
 	/* 8032C85C */ void calcSkin_VtxPosF32(f32 (* )[4], void*, void*);
 	/* 8032C8E4 */ void calcSkin_VtxNrmF32(f32 (* )[4], void*, void*);
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build J3DSkinDeform (J3DSkinDeform) False/False
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DSkinDeform (['J3DSkinDeform']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DVertexBuffer (J3DVertexBuffer) False/False
-/* top-level dependencies (begin J3DVertexBuffer) */
-/* top-level dependencies (end J3DVertexBuffer) */
-struct J3DVertexBuffer {
-};
-
-// build J3DMtxBuffer (J3DMtxBuffer) False/False
-/* top-level dependencies (begin J3DMtxBuffer) */
-/* top-level dependencies (end J3DMtxBuffer) */
-struct J3DMtxBuffer {
-};
-
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-/* top-level dependencies (begin J3DSkinDeform) */
-// outer dependency: J3DModelData
-// outer dependency: J3DVertexBuffer
-// outer dependency: J3DMtxBuffer
-// outer dependency: J3DModel
-/* top-level dependencies (end J3DSkinDeform) */
+// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
+/* top-level dependencies (begin ['J3DVertexBuffer']) */
+/* top-level dependencies (end ['J3DVertexBuffer']) */
+struct J3DVertexBuffer {
+};
+
+// build J3DMtxBuffer (['J3DMtxBuffer']) False/False
+/* top-level dependencies (begin ['J3DMtxBuffer']) */
+/* top-level dependencies (end ['J3DMtxBuffer']) */
+struct J3DMtxBuffer {
+};
+
+/* top-level dependencies (begin ['J3DSkinDeform']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('J3DModel',)
+// outer dependency: ('J3DVertexBuffer',)
+// outer dependency: ('J3DMtxBuffer',)
+/* top-level dependencies (end ['J3DSkinDeform']) */
 struct J3DSkinDeform {
-	// J3DModelData
-	// J3DVertexBuffer
-	// J3DMtxBuffer
-	// J3DModel
+	// ('J3DModelData',)
+	// ('J3DModel',)
+	// ('J3DVertexBuffer',)
+	// ('J3DMtxBuffer',)
 	/* 8032C96C */ J3DSkinDeform();
 	/* 8032C9B0 */ void initSkinInfo(J3DModelData*);
 	/* 8032CF44 */ void initMtxIndexArray(J3DModelData*);
@@ -78,23 +78,23 @@ struct J3DSkinDeform {
 	/* 8032E1B0 */ ~J3DSkinDeform();
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build J3DMtxBuffer (J3DMtxBuffer) True/True
-// build J3DVertexBuffer (J3DVertexBuffer) True/True
-// build J3DModel (J3DModel) True/True
-// build J3DVtxColorCalc (J3DVtxColorCalc) False/False
-// build J3DModel (J3DModel) True/True
-/* top-level dependencies (begin J3DVtxColorCalc) */
-// outer dependency: J3DModel
-/* top-level dependencies (end J3DVtxColorCalc) */
+// build J3DModelData (['J3DModelData']) True/True
+// build J3DMtxBuffer (['J3DMtxBuffer']) True/True
+// build J3DVertexBuffer (['J3DVertexBuffer']) True/True
+// build J3DModel (['J3DModel']) True/True
+// build J3DVtxColorCalc (['J3DVtxColorCalc']) False/False
+// build J3DModel (['J3DModel']) True/True
+/* top-level dependencies (begin ['J3DVtxColorCalc']) */
+// outer dependency: ('J3DModel',)
+/* top-level dependencies (end ['J3DVtxColorCalc']) */
 struct J3DVtxColorCalc {
-	// J3DModel
+	// ('J3DModel',)
 	/* 8032E180 */ void calc(J3DModel*);
 };
 
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315260 */ void makeVcdVatCmd();
 };

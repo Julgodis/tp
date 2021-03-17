@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build JUTDirectPrint (JUTDirectPrint) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTDirectPrint) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTDirectPrint) */
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E41E8 */ JUTDirectPrint();
 	/* 802E4240 */ void start();
 	/* 802E4288 */ void erase(int, int, int, int);
@@ -38,20 +38,20 @@ struct JUTDirectPrint {
 	/* 802E47C8 */ void setCharColor(u8, u8, u8);
 };
 
-// build JUtility (JUtility) True/True
-// build base_process_class (base_process_class) False/False
-/* top-level dependencies (begin base_process_class) */
-/* top-level dependencies (end base_process_class) */
+// build JUtility (['JUtility']) True/True
+// build base_process_class (['base_process_class']) False/False
+/* top-level dependencies (begin ['base_process_class']) */
+/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build JStudio (JStudio) False/False
-/* top-level dependencies (begin JStudio) */
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+/* top-level dependencies (begin ['JStudio']) */
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TFunctionValue_list_parameter (JStudio::TFunctionValue_list_parameter) False/False
-	/* dependencies (begin JStudio::TFunctionValue_list_parameter) */
-	/* dependencies (end JStudio::TFunctionValue_list_parameter) */
+	// build TFunctionValue_list_parameter (['JStudio', 'TFunctionValue_list_parameter']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_list_parameter']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_list_parameter']) */
 	struct TFunctionValue_list_parameter {
 		/* 80283C24 */ ~TFunctionValue_list_parameter();
 	};

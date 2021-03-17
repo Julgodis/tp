@@ -9,34 +9,32 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build JStage (['JStage']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TObject
-// outer dependency: _GXColor
-/* top-level dependencies (end JStage) */
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TAmbientLight (JStage::TAmbientLight) False/False
-	/* dependencies (begin JStage::TAmbientLight) */
-	/* dependencies (end JStage::TAmbientLight) */
+	// build TAmbientLight (['JStage', 'TAmbientLight']) False/False
+	/* dependencies (begin ['JStage', 'TAmbientLight']) */
+	// inner dependency: 0 ('_GXColor',) (for ['JStage', 'TAmbientLight'])
+	/* dependencies (end ['JStage', 'TAmbientLight']) */
 	struct TAmbientLight {
-		// _GXColor
+		// ('_GXColor',)
 		/* 80280B20 */ ~TAmbientLight();
 		/* 80280B80 */ s32 JSGFGetType() const;
 		/* 80280B88 */ void JSGGetColor() const;
 		/* 80280B9C */ void JSGSetColor(_GXColor);
 	};
 
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -54,7 +52,7 @@ struct JStage {
 
 };
 
-// build _GXColor (_GXColor) True/True
+// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 

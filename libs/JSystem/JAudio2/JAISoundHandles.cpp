@@ -9,23 +9,23 @@
 // Types:
 // 
 
-// build JAISoundHandles (JAISoundHandles) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundHandles (['JAISoundHandles']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin JAISoundHandles) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAISoundHandles) */
+/* top-level dependencies (begin ['JAISoundHandles']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAISoundHandles']) */
 struct JAISoundHandles {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A2C98 */ void getHandleSoundID(JAISoundID);
 	/* 802A2CF4 */ void getFreeHandle();
 };
 
-// build JAISoundID (JAISoundID) True/True
+// build JAISoundID (['JAISoundID']) True/True
 // 
 // Forward References:
 // 

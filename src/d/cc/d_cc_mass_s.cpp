@@ -9,72 +9,72 @@
 // Types:
 // 
 
-// build dCcMassS_Obj (dCcMassS_Obj) False/False
-/* top-level dependencies (begin dCcMassS_Obj) */
-/* top-level dependencies (end dCcMassS_Obj) */
+// build dCcMassS_Obj (['dCcMassS_Obj']) False/False
+/* top-level dependencies (begin ['dCcMassS_Obj']) */
+/* top-level dependencies (end ['dCcMassS_Obj']) */
 struct dCcMassS_Obj {
 	/* 800300F4 */ ~dCcMassS_Obj();
 	/* 800852F0 */ void Clear();
 	/* 800855C8 */ dCcMassS_Obj();
 };
 
-// build dCcMassS_HitInf (dCcMassS_HitInf) False/False
-/* top-level dependencies (begin dCcMassS_HitInf) */
-/* top-level dependencies (end dCcMassS_HitInf) */
+// build dCcMassS_HitInf (['dCcMassS_HitInf']) False/False
+/* top-level dependencies (begin ['dCcMassS_HitInf']) */
+/* top-level dependencies (end ['dCcMassS_HitInf']) */
 struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
 
-// build dCcMassS_Mng (dCcMassS_Mng) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dCcMassS_Mng (['dCcMassS_Mng']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
+struct fopAc_ac_c {
+};
+
+// build dCcMassS_HitInf (['dCcMassS_HitInf']) True/True
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
+struct Vec {
+};
+
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dCcMassS_HitInf (dCcMassS_HitInf) True/True
-// build cCcD_Obj (cCcD_Obj) False/False
-/* top-level dependencies (begin cCcD_Obj) */
-/* top-level dependencies (end cCcD_Obj) */
-struct cCcD_Obj {
-};
-
-// build cM3dGCps (cM3dGCps) False/False
-/* top-level dependencies (begin cM3dGCps) */
-/* top-level dependencies (end cM3dGCps) */
+// build cM3dGCps (['cM3dGCps']) False/False
+/* top-level dependencies (begin ['cM3dGCps']) */
+/* top-level dependencies (end ['cM3dGCps']) */
 struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
+// build cCcD_Obj (['cCcD_Obj']) False/False
+/* top-level dependencies (begin ['cCcD_Obj']) */
+/* top-level dependencies (end ['cCcD_Obj']) */
+struct cCcD_Obj {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
-/* top-level dependencies (begin dCcMassS_Mng) */
-// outer dependency: cXyz
-// outer dependency: dCcMassS_HitInf
-// outer dependency: cCcD_Obj
-// outer dependency: cM3dGCps
-// outer dependency: fopAc_ac_c
-// outer dependency: Vec
-/* top-level dependencies (end dCcMassS_Mng) */
+/* top-level dependencies (begin ['dCcMassS_Mng']) */
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('dCcMassS_HitInf',)
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cM3dGCps',)
+// outer dependency: ('cCcD_Obj',)
+/* top-level dependencies (end ['dCcMassS_Mng']) */
 struct dCcMassS_Mng {
-	// dCcMassS_HitInf
-	// cCcD_Obj
-	// cXyz
-	// cM3dGCps
-	// fopAc_ac_c
-	// Vec
+	// ('dCcMassS_HitInf',)
+	// ('Vec',)
+	// ('cM3dGCps',)
+	// ('cCcD_Obj',)
+	// ('fopAc_ac_c',)
+	// ('cXyz',)
 	/* 80085350 */ dCcMassS_Mng();
 	/* 800855E4 */ void Ct();
 	/* 80085630 */ void SetAttr(f32, f32, u8, u8);
@@ -87,77 +87,77 @@ struct dCcMassS_Mng {
 	/* 80085EB8 */ void GetCamTopPos(Vec*);
 };
 
-// build cCcD_CpsAttr (cCcD_CpsAttr) False/False
-/* top-level dependencies (begin cCcD_CpsAttr) */
-/* top-level dependencies (end cCcD_CpsAttr) */
+// build cCcD_CpsAttr (['cCcD_CpsAttr']) False/False
+/* top-level dependencies (begin ['cCcD_CpsAttr']) */
+/* top-level dependencies (end ['cCcD_CpsAttr']) */
 struct cCcD_CpsAttr {
 	/* 80085450 */ ~cCcD_CpsAttr();
 };
 
-// build cCcD_CylAttr (cCcD_CylAttr) False/False
-/* top-level dependencies (begin cCcD_CylAttr) */
-/* top-level dependencies (end cCcD_CylAttr) */
+// build cCcD_CylAttr (['cCcD_CylAttr']) False/False
+/* top-level dependencies (begin ['cCcD_CylAttr']) */
+/* top-level dependencies (end ['cCcD_CylAttr']) */
 struct cCcD_CylAttr {
 	/* 800854E0 */ ~cCcD_CylAttr();
 };
 
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) False/False
-/* top-level dependencies (begin cCcD_ShapeAttr) */
-/* top-level dependencies (end cCcD_ShapeAttr) */
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) False/False
+/* top-level dependencies (begin ['cCcD_ShapeAttr']) */
+/* top-level dependencies (end ['cCcD_ShapeAttr']) */
 struct cCcD_ShapeAttr {
 	/* 8008556C */ ~cCcD_ShapeAttr();
 };
 
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build cCcD_Obj (cCcD_Obj) True/True
-// build cM3dGCps (cM3dGCps) True/True
-// build Vec (Vec) True/True
-// build cCcD_DivideInfo (cCcD_DivideInfo) False/False
-/* top-level dependencies (begin cCcD_DivideInfo) */
-/* top-level dependencies (end cCcD_DivideInfo) */
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cCcD_Obj (['cCcD_Obj']) True/True
+// build cM3dGCps (['cM3dGCps']) True/True
+// build Vec (['Vec']) True/True
+// build cCcD_DivideInfo (['cCcD_DivideInfo']) False/False
+/* top-level dependencies (begin ['cCcD_DivideInfo']) */
+/* top-level dependencies (end ['cCcD_DivideInfo']) */
 struct cCcD_DivideInfo {
 	/* 80263358 */ void Set(u32, u32, u32);
 	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
 };
 
-// build cCcD_DivideArea (cCcD_DivideArea) False/False
-// build cM3dGAab (cM3dGAab) False/False
-/* top-level dependencies (begin cM3dGAab) */
-/* top-level dependencies (end cM3dGAab) */
+// build cCcD_DivideArea (['cCcD_DivideArea']) False/False
+// build cM3dGAab (['cM3dGAab']) False/False
+/* top-level dependencies (begin ['cM3dGAab']) */
+/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
 	/* 8026ECF8 */ void ClearForMinMax();
 	/* 8026ED60 */ void SetMinMax(cM3dGAab const&);
 };
 
-// build cCcD_DivideInfo (cCcD_DivideInfo) True/True
-/* top-level dependencies (begin cCcD_DivideArea) */
-// outer dependency: cM3dGAab
-// outer dependency: cCcD_DivideInfo
-/* top-level dependencies (end cCcD_DivideArea) */
+// build cCcD_DivideInfo (['cCcD_DivideInfo']) True/True
+/* top-level dependencies (begin ['cCcD_DivideArea']) */
+// outer dependency: ('cM3dGAab',)
+// outer dependency: ('cCcD_DivideInfo',)
+/* top-level dependencies (end ['cCcD_DivideArea']) */
 struct cCcD_DivideArea {
-	// cM3dGAab
-	// cCcD_DivideInfo
+	// ('cM3dGAab',)
+	// ('cCcD_DivideInfo',)
 	/* 802633A8 */ void SetArea(cM3dGAab const&);
 	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
 	/* 802636A0 */ void CalcDivideInfoOverArea(cCcD_DivideInfo*, cM3dGAab const&);
 };
 
-// build cM3dGAab (cM3dGAab) True/True
-// build cCcD_Stts (cCcD_Stts) False/False
-/* top-level dependencies (begin cCcD_Stts) */
-/* top-level dependencies (end cCcD_Stts) */
+// build cM3dGAab (['cM3dGAab']) True/True
+// build cCcD_Stts (['cCcD_Stts']) False/False
+/* top-level dependencies (begin ['cCcD_Stts']) */
+/* top-level dependencies (end ['cCcD_Stts']) */
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 };
 
-// build cM3dGCyl (cM3dGCyl) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGCyl) */
+// build cM3dGCyl (['cM3dGCyl']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGCyl']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// cXyz
+	// ('cXyz',)
 	/* 8026F1DC */ void SetC(cXyz const&);
 	/* 8026F1F8 */ void SetH(f32);
 	/* 8026F200 */ void SetR(f32);

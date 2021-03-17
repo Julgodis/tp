@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build Z2SoundHandles (Z2SoundHandles) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Z2SoundHandles (['Z2SoundHandles']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SoundHandles) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundHandles) */
+/* top-level dependencies (begin ['Z2SoundHandles']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundHandles']) */
 struct Z2SoundHandles {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802AB07C */ Z2SoundHandles();
 	/* 802AB0B4 */ ~Z2SoundHandles();
 	/* 802AB118 */ void initHandlesPool(u8);
@@ -33,10 +33,10 @@ struct Z2SoundHandles {
 	/* 802AB504 */ void isActive() const;
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JAISoundID (['JAISoundID']) True/True
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -44,35 +44,35 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);

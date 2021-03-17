@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build cM3dGCps (cM3dGCps) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cM3dGCps (['cM3dGCps']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build cM3dGCpsS (cM3dGCpsS) False/False
-/* top-level dependencies (begin cM3dGCpsS) */
-/* top-level dependencies (end cM3dGCpsS) */
+// build cM3dGCpsS (['cM3dGCpsS']) False/False
+/* top-level dependencies (begin ['cM3dGCpsS']) */
+/* top-level dependencies (end ['cM3dGCpsS']) */
 struct cM3dGCpsS {
 };
 
-/* top-level dependencies (begin cM3dGCps) */
-// outer dependency: cXyz
-// outer dependency: cM3dGCpsS
-/* top-level dependencies (end cM3dGCps) */
+/* top-level dependencies (begin ['cM3dGCps']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('cM3dGCpsS',)
+/* top-level dependencies (end ['cM3dGCps']) */
 struct cM3dGCps {
-	// cXyz
-	// cM3dGCpsS
+	// ('cXyz',)
+	// ('cM3dGCpsS',)
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
@@ -36,28 +36,28 @@ struct cM3dGCps {
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
 };
 
-// build cXyz (cXyz) True/True
-// build cM3dGCpsS (cM3dGCpsS) True/True
-// build cM3dGLin (cM3dGLin) False/False
-// build cXyz (cXyz) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cXyz (['cXyz']) True/True
+// build cM3dGCpsS (['cM3dGCpsS']) True/True
+// build cM3dGLin (['cM3dGLin']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGLin) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGLin) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGLin']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

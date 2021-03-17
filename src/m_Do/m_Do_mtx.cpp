@@ -9,49 +9,49 @@
 // Types:
 // 
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build Quaternion (Quaternion) False/False
-/* top-level dependencies (begin Quaternion) */
-/* top-level dependencies (end Quaternion) */
+// build Quaternion (['Quaternion']) False/False
+/* top-level dependencies (begin ['Quaternion']) */
+/* top-level dependencies (end ['Quaternion']) */
 struct Quaternion {
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 80266FDC */ void normalizeRS();
 };
 
-// build csXyz (csXyz) True/True
-// build Quaternion (Quaternion) True/True
-/* top-level dependencies (begin mDoMtx_stack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: Quaternion
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build Quaternion (['Quaternion']) True/True
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('Quaternion',)
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// cXyz
-	// csXyz
-	// Quaternion
+	// ('csXyz',)
+	// ('cXyz',)
+	// ('Quaternion',)
 	/* 8000CCC8 */ void push();
 	/* 8000CD14 */ void pop();
 	/* 8000CD64 */ void transS(cXyz const&);
@@ -68,10 +68,10 @@ struct mDoMtx_stack_c {
 	/* 8000D070 */ ~mDoMtx_stack_c();
 };
 
-// build cXyz (cXyz) True/True
-// build mDoMtx_quatStack_c (mDoMtx_quatStack_c) False/False
-/* top-level dependencies (begin mDoMtx_quatStack_c) */
-/* top-level dependencies (end mDoMtx_quatStack_c) */
+// build cXyz (['cXyz']) True/True
+// build mDoMtx_quatStack_c (['mDoMtx_quatStack_c']) False/False
+/* top-level dependencies (begin ['mDoMtx_quatStack_c']) */
+/* top-level dependencies (end ['mDoMtx_quatStack_c']) */
 struct mDoMtx_quatStack_c {
 	/* 8000D034 */ ~mDoMtx_quatStack_c();
 };

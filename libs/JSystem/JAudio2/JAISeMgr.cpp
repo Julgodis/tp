@@ -9,42 +9,42 @@
 // Types:
 // 
 
-// build JAISeCategoryMgr (JAISeCategoryMgr) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
-};
-
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISeCategoryMgr (['JAISeCategoryMgr']) False/False
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 };
 
-// build JAISeqDataRegion (JAISeqDataRegion) False/False
-/* top-level dependencies (begin JAISeqDataRegion) */
-/* top-level dependencies (end JAISeqDataRegion) */
-struct JAISeqDataRegion {
-};
-
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin JAISeCategoryMgr) */
-// outer dependency: JAISoundActivity
-// outer dependency: JAISoundParamsMove
-// outer dependency: JAISeqDataRegion
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAISeCategoryMgr) */
+// build JAISoundActivity (['JAISoundActivity']) False/False
+/* top-level dependencies (begin ['JAISoundActivity']) */
+/* top-level dependencies (end ['JAISoundActivity']) */
+struct JAISoundActivity {
+};
+
+// build JAISeqDataRegion (['JAISeqDataRegion']) False/False
+/* top-level dependencies (begin ['JAISeqDataRegion']) */
+/* top-level dependencies (end ['JAISeqDataRegion']) */
+struct JAISeqDataRegion {
+};
+
+/* top-level dependencies (begin ['JAISeCategoryMgr']) */
+// outer dependency: ('JAISoundParamsMove',)
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('JAISoundActivity',)
+// outer dependency: ('JAISeqDataRegion',)
+/* top-level dependencies (end ['JAISeCategoryMgr']) */
 struct JAISeCategoryMgr {
-	// JAISoundActivity
-	// JAISoundParamsMove
-	// JAISeqDataRegion
-	// JAISoundID
+	// ('JAISoundParamsMove',)
+	// ('JAISoundID',)
+	// ('JAISoundActivity',)
+	// ('JAISeqDataRegion',)
 	/* 800078DC */ ~JAISeCategoryMgr();
 	/* 8029F8B0 */ void isUsingSeqData(JAISeqDataRegion const&);
 	/* 8029F91C */ void releaseSeqData(JAISeqDataRegion const&);
@@ -60,44 +60,44 @@ struct JAISeCategoryMgr {
 	/* 802A0994 */ JAISeCategoryMgr();
 };
 
-// build JAISeqDataRegion (JAISeqDataRegion) True/True
-// build JAISoundID (JAISoundID) True/True
-// build JAISoundParamsMove (JAISoundParamsMove) True/True
-// build JAISoundActivity (JAISoundActivity) True/True
-// build JAISeMgr (JAISeMgr) False/False
-// build JAISeqDataMgr (JAISeqDataMgr) False/False
-/* top-level dependencies (begin JAISeqDataMgr) */
-/* top-level dependencies (end JAISeqDataMgr) */
-struct JAISeqDataMgr {
-};
-
-// build JAIAudience (JAIAudience) False/False
-/* top-level dependencies (begin JAIAudience) */
-/* top-level dependencies (end JAIAudience) */
+// build JAISeqDataRegion (['JAISeqDataRegion']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build JAISoundParamsMove (['JAISoundParamsMove']) True/True
+// build JAISoundActivity (['JAISoundActivity']) True/True
+// build JAISeMgr (['JAISeMgr']) False/False
+// build JAIAudience (['JAIAudience']) False/False
+/* top-level dependencies (begin ['JAIAudience']) */
+/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 };
 
-// build JAISeCategoryArrangement (JAISeCategoryArrangement) False/False
-/* top-level dependencies (begin JAISeCategoryArrangement) */
-/* top-level dependencies (end JAISeCategoryArrangement) */
+// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) False/False
+/* top-level dependencies (begin ['JAISeCategoryArrangement']) */
+/* top-level dependencies (end ['JAISeCategoryArrangement']) */
 struct JAISeCategoryArrangement {
 };
 
-// build JAISeqDataRegion (JAISeqDataRegion) True/True
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAISeMgr) */
-// outer dependency: JAISeqDataMgr
-// outer dependency: JAIAudience
-// outer dependency: JAISeCategoryArrangement
-// outer dependency: JAISeqDataRegion
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAISeMgr) */
+// build JAISoundID (['JAISoundID']) True/True
+// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
+/* top-level dependencies (begin ['JAISeqDataMgr']) */
+/* top-level dependencies (end ['JAISeqDataMgr']) */
+struct JAISeqDataMgr {
+};
+
+// build JAISeqDataRegion (['JAISeqDataRegion']) True/True
+/* top-level dependencies (begin ['JAISeMgr']) */
+// outer dependency: ('JAIAudience',)
+// outer dependency: ('JAISeCategoryArrangement',)
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('JAISeqDataMgr',)
+// outer dependency: ('JAISeqDataRegion',)
+/* top-level dependencies (end ['JAISeMgr']) */
 struct JAISeMgr {
-	// JAISeCategoryArrangement
-	// JAISoundID
-	// JAISeqDataMgr
-	// JAIAudience
-	// JAISeqDataRegion
+	// ('JAIAudience',)
+	// ('JAISoundID',)
+	// ('JAISeqDataMgr',)
+	// ('JAISeCategoryArrangement',)
+	// ('JAISeqDataRegion',)
 	/* 802A0074 */ JAISeMgr(bool);
 	/* 802A0168 */ void isUsingSeqData(JAISeqDataRegion const&);
 	/* 802A01D8 */ void releaseSeqData(JAISeqDataRegion const&);
@@ -115,12 +115,12 @@ struct JAISeMgr {
 	/* 802A08FC */ ~JAISeMgr();
 };
 
-// build JAISeCategoryArrangement (JAISeCategoryArrangement) True/True
-// build JAIAudience (JAIAudience) True/True
-// build JAISeqDataMgr (JAISeqDataMgr) True/True
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) True/True
+// build JAIAudience (['JAIAudience']) True/True
+// build JAISeqDataMgr (['JAISeqDataMgr']) True/True
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -128,73 +128,73 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASTrack (JASTrack) False/False
-/* top-level dependencies (begin JASTrack) */
-/* top-level dependencies (end JASTrack) */
+// build JASTrack (['JASTrack']) False/False
+/* top-level dependencies (begin ['JASTrack']) */
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 8029131C */ ~JASTrack();
 };
 
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
 };
 
-// build JAISe (JAISe) False/False
-// build JASSoundParams (JASSoundParams) True/True
-// build JAISoundActivity (JAISoundActivity) True/True
-/* top-level dependencies (begin JAISe) */
-// outer dependency: JASSoundParams
-// outer dependency: JAISoundActivity
-/* top-level dependencies (end JAISe) */
+// build JAISe (['JAISe']) False/False
+// build JASSoundParams (['JASSoundParams']) True/True
+// build JAISoundActivity (['JAISoundActivity']) True/True
+/* top-level dependencies (begin ['JAISe']) */
+// outer dependency: ('JASSoundParams',)
+// outer dependency: ('JAISoundActivity',)
+/* top-level dependencies (end ['JAISe']) */
 struct JAISe {
-	// JASSoundParams
-	// JAISoundActivity
+	// ('JASSoundParams',)
+	// ('JAISoundActivity',)
 	/* 8029F304 */ void JAISeCategoryMgr_mixOut_(bool, JASSoundParams const&, JAISoundActivity);
 	/* 8029F4CC */ void JAISeCategoryMgr_calc_();
 };
 
-// build JAISeqDataUser (JAISeqDataUser) False/False
-/* top-level dependencies (begin JAISeqDataUser) */
-/* top-level dependencies (end JAISeqDataUser) */
+// build JAISeqDataUser (['JAISeqDataUser']) False/False
+/* top-level dependencies (begin ['JAISeqDataUser']) */
+/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
 };
 
-// build JAISound (JAISound) False/False
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build JAISound (['JAISound']) False/False
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 };
 
-/* top-level dependencies (begin JAISound) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end JAISound) */
+/* top-level dependencies (begin ['JAISound']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802A21BC */ void attachHandle(JAISoundHandle*);
 	/* 802A24DC */ void stop(u32);
 	/* 802A2598 */ void stop();
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);

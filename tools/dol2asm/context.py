@@ -37,3 +37,5 @@ class MainContext(Context):
             self.log.warning(*args)
         elif command == 'error':
             self.log.error(*args)
+        elif self.output:
+            self.output.put((command, (*args,)))

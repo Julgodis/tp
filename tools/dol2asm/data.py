@@ -3,6 +3,7 @@ import struct
 import dataclasses
 import data_types
 import globals
+import demangle
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Dict, Tuple, Set
@@ -115,14 +116,7 @@ class Symbol:
         if not self._internal_references:
             refs = self._get_internal_references(context, symbol_table)
             refs.discard((self._module, self.addr))
-
             self._internal_references = frozenset(refs)
-
-            if self.label == "setDemoName__11Z2StatusMgrFPc":
-                context.error(f"### CALCULATE {id(self)} {self.label} ({len(self._internal_references)}) ###")
-        else:
-            if self.label == "setDemoName__11Z2StatusMgrFPc":
-                context.error(f"### RE-CALCULATE {id(self)} {self.label} ({len(self._internal_references)}) ###")
 
         return self._internal_references
 
@@ -837,8 +831,7 @@ special_func_no_return = set([
 class Function(Symbol):
     return_type: Type = None
     argument_types: List[Type] = field(default_factory=list)
-    class_name: str = None
-    func_name: str = None
+    func_name: demangle.QualifiedName  = None
     special_func_name: str = None
     func_is_const: bool = False
 
@@ -848,9 +841,10 @@ class Function(Symbol):
 
     def function_name(self, original, in_class):
         if self.func_name and not original:
-            if self.class_name and not in_class:
-                return f"{self.class_name}::{self.func_name}"
-            return self.func_name.split("::")[-1]
+            if in_class:
+                return self.func_name.last.to_str()
+            else:
+                return self.func_name.to_str()
 
         return self.identifier.label
 
@@ -872,6 +866,10 @@ class Function(Symbol):
 
     def types(self):
         return set()
+
+    @property
+    def has_class(self):
+        return self.func_name and self.func_name.has_class
 
     async def export_function_header(self, exporter, builder: AsyncBuilder, forward: bool, asm: bool = False, original: bool = False, in_class: bool = False):
         # prints internal references for the function
@@ -895,7 +893,7 @@ class Function(Symbol):
         if asm and not forward:
             await builder.write_nonewline(f"asm ")
 
-        if not in_class and not self.class_name:
+        if not in_class and not self.has_class:
             # this symbol is only referenced by other symbol in the same translation unit
             if self.reference_count > 0 and self.external_reference_count == 0:
                 await builder.write_nonewline(f"static ")
@@ -914,7 +912,7 @@ class Function(Symbol):
             else:
                 arg_type = ", ".join([x.decl(f"field_{i}") for i, x in zip(range(len(self.argument_types)), self.argument_types)])
         await builder.write_nonewline(f"({arg_type})")
-        if not original and self.class_name and self.func_is_const:
+        if not original and self.has_class and self.func_is_const:
             await builder.write_nonewline(f" const")
 
 
@@ -926,7 +924,7 @@ class Function(Symbol):
                 await builder.write(f";")
             elif self.is_demangled():
                 # forward references are not written for class functions
-                if not self.class_name:
+                if not self.has_class:
                     await self.export_function_header(exporter, builder, forward = True)
                     await builder.write(f";")
         else:

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build request_base_class (request_base_class) False/False
-/* top-level dependencies (begin request_base_class) */
-/* top-level dependencies (end request_base_class) */
+// build request_base_class (['request_base_class']) False/False
+/* top-level dependencies (begin ['request_base_class']) */
+/* top-level dependencies (end ['request_base_class']) */
 struct request_base_class {
 };
 

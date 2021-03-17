@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build draw_priority_class (draw_priority_class) False/False
-/* top-level dependencies (begin draw_priority_class) */
-/* top-level dependencies (end draw_priority_class) */
+// build draw_priority_class (['draw_priority_class']) False/False
+/* top-level dependencies (begin ['draw_priority_class']) */
+/* top-level dependencies (end ['draw_priority_class']) */
 struct draw_priority_class {
 };
 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JUTDirectFile (JUTDirectFile) False/False
-/* top-level dependencies (begin JUTDirectFile) */
-/* top-level dependencies (end JUTDirectFile) */
+// build JUTDirectFile (['JUTDirectFile']) False/False
+/* top-level dependencies (begin ['JUTDirectFile']) */
+/* top-level dependencies (end ['JUTDirectFile']) */
 struct JUTDirectFile {
 	/* 802E8730 */ void fetch32byte();
 	/* 802E87F8 */ JUTDirectFile();

@@ -9,63 +9,63 @@
 // Types:
 // 
 
-// build JUTTexture (JUTTexture) False/False
-// build JUTPalette (JUTPalette) False/False
-// build JUTTransparency (JUTTransparency) False/False
-/* top-level dependencies (begin JUTTransparency) */
-/* top-level dependencies (end JUTTransparency) */
-struct JUTTransparency {
-};
-
-// build _GXTlutFmt (_GXTlutFmt) False/False
-/* top-level dependencies (begin _GXTlutFmt) */
-/* top-level dependencies (end _GXTlutFmt) */
-struct _GXTlutFmt {
-};
-
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTlut (['_GXTlut']) False/False
+/* top-level dependencies (begin ['_GXTlut']) */
+/* top-level dependencies (end ['_GXTlut']) */
 struct _GXTlut {
 };
 
-/* top-level dependencies (begin JUTPalette) */
-// outer dependency: JUTTransparency
-// outer dependency: _GXTlutFmt
-// outer dependency: _GXTlut
-/* top-level dependencies (end JUTPalette) */
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
+struct ResTIMG {
+};
+
+// build JUTPalette (['JUTPalette']) False/False
+// build _GXTlut (['_GXTlut']) True/True
+// build JUTTransparency (['JUTTransparency']) False/False
+/* top-level dependencies (begin ['JUTTransparency']) */
+/* top-level dependencies (end ['JUTTransparency']) */
+struct JUTTransparency {
+};
+
+// build _GXTlutFmt (['_GXTlutFmt']) False/False
+/* top-level dependencies (begin ['_GXTlutFmt']) */
+/* top-level dependencies (end ['_GXTlutFmt']) */
+struct _GXTlutFmt {
+};
+
+/* top-level dependencies (begin ['JUTPalette']) */
+// outer dependency: ('_GXTlut',)
+// outer dependency: ('JUTTransparency',)
+// outer dependency: ('_GXTlutFmt',)
+/* top-level dependencies (end ['JUTPalette']) */
 struct JUTPalette {
-	// JUTTransparency
-	// _GXTlutFmt
-	// _GXTlut
+	// ('_GXTlut',)
+	// ('JUTTransparency',)
+	// ('_GXTlutFmt',)
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
 };
 
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
-// build _GXTlut (_GXTlut) True/True
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: JUTPalette
-// outer dependency: _GXTexMapID
-// outer dependency: ResTIMG
-// outer dependency: _GXTlut
-/* top-level dependencies (end JUTTexture) */
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTlut',)
+// outer dependency: ('_GXTexMapID',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('JUTPalette',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// JUTPalette
-	// _GXTexMapID
-	// ResTIMG
-	// _GXTlut
+	// ('_GXTlut',)
+	// ('_GXTexMapID',)
+	// ('ResTIMG',)
+	// ('JUTPalette',)
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
@@ -77,12 +77,12 @@ struct JUTTexture {
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build JUTPalette (JUTPalette) True/True
-// build _GXTlut (_GXTlut) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build _GXTlutFmt (_GXTlutFmt) True/True
-// build JUTTransparency (JUTTransparency) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build _GXTlut (['_GXTlut']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build _GXTlutFmt (['_GXTlutFmt']) True/True
+// build JUTTransparency (['JUTTransparency']) True/True
 // 
 // Forward References:
 // 

@@ -9,118 +9,118 @@
 // Types:
 // 
 
-// build dThunder_c (dThunder_c) False/False
-/* top-level dependencies (begin dThunder_c) */
-/* top-level dependencies (end dThunder_c) */
+// build dThunder_c (['dThunder_c']) False/False
+/* top-level dependencies (begin ['dThunder_c']) */
+/* top-level dependencies (end ['dThunder_c']) */
 struct dThunder_c {
 	/* 801ADF58 */ void createHeap();
 	/* 801ADFB4 */ void adjustHeap();
 	/* 801AE458 */ void create();
 };
 
-// build kankyo_class (kankyo_class) False/False
-/* top-level dependencies (begin kankyo_class) */
-/* top-level dependencies (end kankyo_class) */
+// build kankyo_class (['kankyo_class']) False/False
+/* top-level dependencies (begin ['kankyo_class']) */
+/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build mDoExt_baseAnm (mDoExt_baseAnm) False/False
-/* top-level dependencies (begin mDoExt_baseAnm) */
-/* top-level dependencies (end mDoExt_baseAnm) */
+// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
+/* top-level dependencies (begin ['mDoExt_baseAnm']) */
+/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_brkAnm (mDoExt_brkAnm) False/False
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-/* top-level dependencies (begin J3DAnmTevRegKey) */
-/* top-level dependencies (end J3DAnmTevRegKey) */
+// build mDoExt_brkAnm (['mDoExt_brkAnm']) False/False
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
+/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
+/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
 };
 
-// build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
-/* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTevRegKey
-/* top-level dependencies (end J3DMaterialTable) */
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+// outer dependency: ('J3DAnmTevRegKey',)
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// J3DAnmTevRegKey
+	// ('J3DAnmTevRegKey',)
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
 };
 
-/* top-level dependencies (begin mDoExt_brkAnm) */
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DMaterialTable
-/* top-level dependencies (end mDoExt_brkAnm) */
+/* top-level dependencies (begin ['mDoExt_brkAnm']) */
+// outer dependency: ('J3DAnmTevRegKey',)
+// outer dependency: ('J3DMaterialTable',)
+/* top-level dependencies (end ['mDoExt_brkAnm']) */
 struct mDoExt_brkAnm {
-	// J3DAnmTevRegKey
-	// J3DMaterialTable
+	// ('J3DAnmTevRegKey',)
+	// ('J3DMaterialTable',)
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (J3DMaterialTable) True/True
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build J3DMaterialTable (['J3DMaterialTable']) True/True
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin Z2EnvSeMgr) */
-// outer dependency: Vec
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// Vec
+	// ('Vec',)
 	/* 802C7E68 */ void startFarThunderSe(Vec*, s8);
 };
 
-// build J3DFrameCtrl (J3DFrameCtrl) False/False
-/* top-level dependencies (begin J3DFrameCtrl) */
-/* top-level dependencies (end J3DFrameCtrl) */
+// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
+/* top-level dependencies (begin ['J3DFrameCtrl']) */
+/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };

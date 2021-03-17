@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::binary::TEBit
-/* top-level dependencies (end JGadget) */
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'binary', 'TEBit')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	// inner dependency: binary (JGadget::binary::TEBit) True False (for JGadget::binary)
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	// inner dependency: 1 ('JGadget', 'binary', 'TEBit') (for ['JGadget', 'binary'])
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// JGadget::binary::TEBit
-		// build TEBit (JGadget::binary::TEBit) False/False
-		/* dependencies (begin JGadget::binary::TEBit) */
-		/* dependencies (end JGadget::binary::TEBit) */
+		// ('JGadget', 'binary', 'TEBit')
+		// build TEBit (['JGadget', 'binary', 'TEBit']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TEBit']) */
+		/* dependencies (end ['JGadget', 'binary', 'TEBit']) */
 		struct TEBit {
 		};
 
-		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
-		/* dependencies (begin JGadget::binary::TParse_header_block) */
-		/* dependencies (end JGadget::binary::TParse_header_block) */
+		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
+		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 			/* 802DC910 */ void parse_next(void const**, u32);

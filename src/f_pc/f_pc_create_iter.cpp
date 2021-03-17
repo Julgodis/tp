@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build create_tag (create_tag) False/False
-/* top-level dependencies (begin create_tag) */
-/* top-level dependencies (end create_tag) */
+// build create_tag (['create_tag']) False/False
+/* top-level dependencies (begin ['create_tag']) */
+/* top-level dependencies (end ['create_tag']) */
 struct create_tag {
 };
 
-// build fpcCtIt_jilprm_c (fpcCtIt_jilprm_c) False/False
-/* top-level dependencies (begin fpcCtIt_jilprm_c) */
-/* top-level dependencies (end fpcCtIt_jilprm_c) */
+// build fpcCtIt_jilprm_c (['fpcCtIt_jilprm_c']) False/False
+/* top-level dependencies (begin ['fpcCtIt_jilprm_c']) */
+/* top-level dependencies (end ['fpcCtIt_jilprm_c']) */
 struct fpcCtIt_jilprm_c {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build method_filter (method_filter) False/False
-/* top-level dependencies (begin method_filter) */
-/* top-level dependencies (end method_filter) */
+// build method_filter (['method_filter']) False/False
+/* top-level dependencies (begin ['method_filter']) */
+/* top-level dependencies (end ['method_filter']) */
 struct method_filter {
 };
 
-// build judge_filter (judge_filter) False/False
-/* top-level dependencies (begin judge_filter) */
-/* top-level dependencies (end judge_filter) */
+// build judge_filter (['judge_filter']) False/False
+/* top-level dependencies (begin ['judge_filter']) */
+/* top-level dependencies (end ['judge_filter']) */
 struct judge_filter {
 };
 

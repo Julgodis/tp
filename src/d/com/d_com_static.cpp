@@ -9,37 +9,39 @@
 // Types:
 // 
 
-// build daSus_c (daSus_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build daSus_c (['daSus_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build daSus_c (daSus_c) True/False
+// build daSus_c (['daSus_c']) True/False
 struct daSus_c;
-/* top-level dependencies (begin daSus_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-// outer dependency: daSus_c::data_c
-/* top-level dependencies (end daSus_c) */
+/* top-level dependencies (begin ['daSus_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('daSus_c', 'data_c')
+/* top-level dependencies (end ['daSus_c']) */
 struct daSus_c {
-	// cXyz
-	// fopAc_ac_c
-	// build data_c (daSus_c::data_c) False/False
-	/* dependencies (begin daSus_c::data_c) */
-	/* dependencies (end daSus_c::data_c) */
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
+	// build data_c (['daSus_c', 'data_c']) False/False
+	/* dependencies (begin ['daSus_c', 'data_c']) */
+	// inner dependency: 0 ('cXyz',) (for ['daSus_c', 'data_c'])
+	// inner dependency: 0 ('fopAc_ac_c',) (for ['daSus_c', 'data_c'])
+	/* dependencies (end ['daSus_c', 'data_c']) */
 	struct data_c {
-		// cXyz
-		// fopAc_ac_c
+		// ('cXyz',)
+		// ('fopAc_ac_c',)
 		/* 80030F14 */ void set(s8, cXyz const&, cXyz const&, u8, u8, u8);
 		/* 80030FBC */ void reset();
 		/* 80030FCC */ void isSwitch();
@@ -50,13 +52,13 @@ struct daSus_c {
 		/* 80031F64 */ data_c();
 	};
 
-	// build room_c (daSus_c::room_c) False/False
-	/* dependencies (begin daSus_c::room_c) */
-	// inner dependency: data_c (daSus_c::data_c) True False (for daSus_c::room_c)
-	// build data_c (daSus_c::data_c) True/True
-	/* dependencies (end daSus_c::room_c) */
+	// build room_c (['daSus_c', 'room_c']) False/False
+	/* dependencies (begin ['daSus_c', 'room_c']) */
+	// inner dependency: 1 ('daSus_c', 'data_c') (for ['daSus_c', 'room_c'])
+	// build data_c (['daSus_c', 'data_c']) True/True
+	/* dependencies (end ['daSus_c', 'room_c']) */
 	struct room_c {
-		// daSus_c::data_c
+		// ('daSus_c', 'data_c')
 		/* 80031190 */ void add(daSus_c::data_c*);
 		/* 800311FC */ void reset();
 		/* 80031EE4 */ room_c();
@@ -69,56 +71,56 @@ struct daSus_c {
 	/* 800315A4 */ void execute();
 };
 
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build daSetBgObj_c (daSetBgObj_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin daSetBgObj_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daSetBgObj_c) */
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build daSetBgObj_c (['daSetBgObj_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['daSetBgObj_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daSetBgObj_c']) */
 struct daSetBgObj_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
-// build daTagStream_c (daTagStream_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin daTagStream_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end daTagStream_c) */
+// build daTagStream_c (['daTagStream_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['daTagStream_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['daTagStream_c']) */
 struct daTagStream_c {
-	// cXyz
+	// ('cXyz',)
 	/* 800318B4 */ void checkArea(cXyz const*);
 };
 
-// build daMirror_c (daMirror_c) False/False
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build daMirror_c (['daMirror_c']) False/False
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-/* top-level dependencies (begin daMirror_c) */
-// outer dependency: J3DModel
-/* top-level dependencies (end daMirror_c) */
+/* top-level dependencies (begin ['daMirror_c']) */
+// outer dependency: ('J3DModel',)
+/* top-level dependencies (end ['daMirror_c']) */
 struct daMirror_c {
-	// J3DModel
+	// ('J3DModel',)
 	/* 8003194C */ void entry(J3DModel*);
 	/* 80031990 */ void remove();
 };
 
-// build J3DModel (J3DModel) True/True
-// build daGrass_c (daGrass_c) False/False
-/* top-level dependencies (begin daGrass_c) */
-/* top-level dependencies (end daGrass_c) */
+// build J3DModel (['J3DModel']) True/True
+// build daGrass_c (['daGrass_c']) False/False
+/* top-level dependencies (begin ['daGrass_c']) */
+/* top-level dependencies (end ['daGrass_c']) */
 struct daGrass_c {
 	/* 800319C8 */ void deleteRoomGrass(int);
 	/* 80031A20 */ void deleteRoomFlower(int);
 };
 
-// build daMP_c (daMP_c) False/False
-/* top-level dependencies (begin daMP_c) */
-/* top-level dependencies (end daMP_c) */
+// build daMP_c (['daMP_c']) False/False
+/* top-level dependencies (begin ['daMP_c']) */
+/* top-level dependencies (end ['daMP_c']) */
 struct daMP_c {
 	/* 80031A78 */ void daMP_c_Get_MovieRestFrame();
 	/* 80031AA4 */ void daMP_c_Set_PercentMovieVolume(f32);
@@ -126,39 +128,39 @@ struct daMP_c {
 	/* 80031B24 */ void daMP_c_THPPlayerPause();
 };
 
-// build daTagMagne_c (daTagMagne_c) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build daTagMagne_c (['daTagMagne_c']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin daTagMagne_c) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end daTagMagne_c) */
+/* top-level dependencies (begin ['daTagMagne_c']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['daTagMagne_c']) */
 struct daTagMagne_c {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80031B50 */ void checkMagnetCode(cBgS_PolyInfo&);
 	/* 80031BF4 */ void checkMagneA();
 	/* 80031C48 */ void checkMagneB();
 	/* 80031C9C */ void checkMagneC();
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-// build daTagMist_c (daTagMist_c) False/False
-/* top-level dependencies (begin daTagMist_c) */
-/* top-level dependencies (end daTagMist_c) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+// build daTagMist_c (['daTagMist_c']) False/False
+/* top-level dependencies (begin ['daTagMist_c']) */
+/* top-level dependencies (end ['daTagMist_c']) */
 struct daTagMist_c {
 	/* 80031CF0 */ void getPlayerNo();
 };
 
-// build daObjCarry_c (daObjCarry_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin daObjCarry_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end daObjCarry_c) */
+// build daObjCarry_c (['daObjCarry_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['daObjCarry_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['daObjCarry_c']) */
 struct daObjCarry_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80031CF8 */ void clrSaveFlag();
 	/* 80031D04 */ void setSaveFlag();
 	/* 80031D10 */ void chkSaveFlag();
@@ -171,16 +173,16 @@ struct daObjCarry_c {
 	/* 80031DB8 */ void getRoomNo(int);
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
@@ -189,20 +191,20 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074D0C */ void GetMagnetCode(cBgS_PolyInfo const&);
 };
 

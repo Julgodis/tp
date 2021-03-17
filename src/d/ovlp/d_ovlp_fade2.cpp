@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build dOvlpFd2_dlst_c (dOvlpFd2_dlst_c) False/False
-/* top-level dependencies (begin dOvlpFd2_dlst_c) */
-/* top-level dependencies (end dOvlpFd2_dlst_c) */
+// build dOvlpFd2_dlst_c (['dOvlpFd2_dlst_c']) False/False
+/* top-level dependencies (begin ['dOvlpFd2_dlst_c']) */
+/* top-level dependencies (end ['dOvlpFd2_dlst_c']) */
 struct dOvlpFd2_dlst_c {
 	/* 8025247C */ void draw();
 	/* 80252E8C */ ~dOvlpFd2_dlst_c();
 };
 
-// build dOvlpFd2_c (dOvlpFd2_c) False/False
-/* top-level dependencies (begin dOvlpFd2_c) */
-/* top-level dependencies (end dOvlpFd2_c) */
+// build dOvlpFd2_c (['dOvlpFd2_c']) False/False
+/* top-level dependencies (begin ['dOvlpFd2_c']) */
+/* top-level dependencies (end ['dOvlpFd2_c']) */
 struct dOvlpFd2_c {
 	/* 80252990 */ dOvlpFd2_c();
 	/* 802529F4 */ void execFirstSnap();
@@ -28,35 +28,35 @@ struct dOvlpFd2_c {
 	/* 80252C68 */ void execFadeIn();
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-/* top-level dependencies (begin mDoMtx_stack_c) */
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build overlap_task_class (overlap_task_class) False/False
-/* top-level dependencies (begin overlap_task_class) */
-/* top-level dependencies (end overlap_task_class) */
+// build overlap_task_class (['overlap_task_class']) False/False
+/* top-level dependencies (begin ['overlap_task_class']) */
+/* top-level dependencies (end ['overlap_task_class']) */
 struct overlap_task_class {
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
+// build dDlst_base_c (['dDlst_base_c']) True/True
 // 
 // Forward References:
 // 

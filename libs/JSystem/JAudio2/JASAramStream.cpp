@@ -9,50 +9,50 @@
 // Types:
 // 
 
-// build JASAramStream (JASAramStream) False/False
-// build JASChannel (JASChannel) False/False
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
+// build JASAramStream (['JASAramStream']) False/False
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
+struct JASDsp {
+	// build TChannel (['JASDsp', 'TChannel']) False/False
+	/* dependencies (begin ['JASDsp', 'TChannel']) */
+	/* dependencies (end ['JASDsp', 'TChannel']) */
+	struct TChannel {
+	};
+
+};
+
+// build JASChannel (['JASChannel']) False/False
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-/* top-level dependencies (begin JASChannel) */
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASChannel) */
+/* top-level dependencies (begin ['JASChannel']) */
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// JASOscillator::Data
+	// ('JASOscillator', 'Data')
 	/* 8029AA60 */ void playForce();
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 };
 
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
-struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
-	struct TChannel {
-	};
-
-};
-
-/* top-level dependencies (begin JASAramStream) */
-// outer dependency: JASChannel
-// outer dependency: JASDsp::TChannel
-/* top-level dependencies (end JASAramStream) */
+/* top-level dependencies (begin ['JASAramStream']) */
+// outer dependency: ('JASDsp', 'TChannel')
+// outer dependency: ('JASChannel',)
+/* top-level dependencies (end ['JASAramStream']) */
 struct JASAramStream {
-	// JASChannel
-	// JASDsp::TChannel
+	// ('JASDsp', 'TChannel')
+	// ('JASChannel',)
 	/* 8029631C */ void initSystem(u32, u32);
 	/* 802963A8 */ JASAramStream();
 	/* 8029655C */ void prepare(s32, int);
@@ -77,57 +77,57 @@ struct JASAramStream {
 	/* 80297870 */ void channelStop(u16);
 };
 
-// build JASChannel (JASChannel) True/True
-// build JASDsp (JASDsp) True/True
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASChannel (['JASChannel']) True/True
+// build JASDsp (['JASDsp']) True/True
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
 };
 
-// build JASOscillator (JASOscillator) True/True
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASOscillator (['JASOscillator']) True/True
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRAram (JKRAram) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
+// build JKRAram (['JKRAram']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAram) */
+/* top-level dependencies (begin ['JKRAram']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// JKRExpandSwitch
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRExpandSwitch',)
 	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
 // 
 // Forward References:
 // 

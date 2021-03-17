@@ -9,16 +9,16 @@
 // Types:
 // 
 
-// build dBgS_WtrChk (dBgS_WtrChk) False/False
-/* top-level dependencies (begin dBgS_WtrChk) */
-/* top-level dependencies (end dBgS_WtrChk) */
+// build dBgS_WtrChk (['dBgS_WtrChk']) False/False
+/* top-level dependencies (begin ['dBgS_WtrChk']) */
+/* top-level dependencies (end ['dBgS_WtrChk']) */
 struct dBgS_WtrChk {
 	/* 80079164 */ dBgS_WtrChk();
 };
 
-// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
-/* top-level dependencies (begin dBgS_SplGrpChk) */
-/* top-level dependencies (end dBgS_SplGrpChk) */
+// build dBgS_SplGrpChk (['dBgS_SplGrpChk']) False/False
+/* top-level dependencies (begin ['dBgS_SplGrpChk']) */
+/* top-level dependencies (end ['dBgS_SplGrpChk']) */
 struct dBgS_SplGrpChk {
 	/* 80078BB0 */ dBgS_SplGrpChk();
 };

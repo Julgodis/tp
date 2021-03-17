@@ -9,39 +9,39 @@
 // Types:
 // 
 
-// build process_method_tag_class (process_method_tag_class) False/False
-/* top-level dependencies (begin process_method_tag_class) */
-/* top-level dependencies (end process_method_tag_class) */
+// build process_method_tag_class (['process_method_tag_class']) False/False
+/* top-level dependencies (begin ['process_method_tag_class']) */
+/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build node_class (node_class) False/False
-/* top-level dependencies (begin node_class) */
-/* top-level dependencies (end node_class) */
+// build node_class (['node_class']) False/False
+/* top-level dependencies (begin ['node_class']) */
+/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
-// build node_lists_tree_class (node_lists_tree_class) False/False
-/* top-level dependencies (begin node_lists_tree_class) */
-/* top-level dependencies (end node_lists_tree_class) */
+// build node_lists_tree_class (['node_lists_tree_class']) False/False
+/* top-level dependencies (begin ['node_lists_tree_class']) */
+/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 

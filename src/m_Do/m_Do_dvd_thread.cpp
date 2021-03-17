@@ -9,30 +9,30 @@
 // Types:
 // 
 
-// build mDoDvdThd (mDoDvdThd) False/False
-/* top-level dependencies (begin mDoDvdThd) */
-/* top-level dependencies (end mDoDvdThd) */
+// build mDoDvdThd (['mDoDvdThd']) False/False
+/* top-level dependencies (begin ['mDoDvdThd']) */
+/* top-level dependencies (end ['mDoDvdThd']) */
 struct mDoDvdThd {
 	/* 800157FC */ void main(void*);
 	/* 80015858 */ void create(s32);
 	/* 800158B4 */ void suspend();
 };
 
-// build mDoDvdThd_command_c (mDoDvdThd_command_c) False/False
-/* top-level dependencies (begin mDoDvdThd_command_c) */
-/* top-level dependencies (end mDoDvdThd_command_c) */
+// build mDoDvdThd_command_c (['mDoDvdThd_command_c']) False/False
+/* top-level dependencies (begin ['mDoDvdThd_command_c']) */
+/* top-level dependencies (end ['mDoDvdThd_command_c']) */
 struct mDoDvdThd_command_c {
 	/* 800158FC */ ~mDoDvdThd_command_c();
 	/* 80015B74 */ mDoDvdThd_command_c();
 };
 
-// build mDoDvdThd_param_c (mDoDvdThd_param_c) False/False
-// build mDoDvdThd_command_c (mDoDvdThd_command_c) True/True
-/* top-level dependencies (begin mDoDvdThd_param_c) */
-// outer dependency: mDoDvdThd_command_c
-/* top-level dependencies (end mDoDvdThd_param_c) */
+// build mDoDvdThd_param_c (['mDoDvdThd_param_c']) False/False
+// build mDoDvdThd_command_c (['mDoDvdThd_command_c']) True/True
+/* top-level dependencies (begin ['mDoDvdThd_param_c']) */
+// outer dependency: ('mDoDvdThd_command_c',)
+/* top-level dependencies (end ['mDoDvdThd_param_c']) */
 struct mDoDvdThd_param_c {
-	// mDoDvdThd_command_c
+	// ('mDoDvdThd_command_c',)
 	/* 80015944 */ mDoDvdThd_param_c();
 	/* 8001598C */ void kick();
 	/* 800159B4 */ void waitForKick();
@@ -42,168 +42,168 @@ struct mDoDvdThd_param_c {
 	/* 80015AD8 */ void mainLoop();
 };
 
-// build mDoDvdThd_callback_c (mDoDvdThd_callback_c) False/False
-/* top-level dependencies (begin mDoDvdThd_callback_c) */
-/* top-level dependencies (end mDoDvdThd_callback_c) */
+// build mDoDvdThd_callback_c (['mDoDvdThd_callback_c']) False/False
+/* top-level dependencies (begin ['mDoDvdThd_callback_c']) */
+/* top-level dependencies (end ['mDoDvdThd_callback_c']) */
 struct mDoDvdThd_callback_c {
 	/* 80015BB8 */ ~mDoDvdThd_callback_c();
 	/* 80015CF0 */ void execute();
 };
 
-// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build mDoDvdThd_mountArchive_c (['mDoDvdThd_mountArchive_c']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE700 */ void getSize(void*);
 };
 
-/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+/* top-level dependencies (begin ['mDoDvdThd_mountArchive_c']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['mDoDvdThd_mountArchive_c']) */
 struct mDoDvdThd_mountArchive_c {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80015D44 */ ~mDoDvdThd_mountArchive_c();
 	/* 80015DA4 */ mDoDvdThd_mountArchive_c(u8);
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 	/* 80015EDC */ void execute();
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
-// build JKRHeap (JKRHeap) True/True
-// build JKRArchive (JKRArchive) False/False
-// build JKRArchive (JKRArchive) True/False
+// build JKRHeap (['JKRHeap']) True/True
+// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRArchive (['JKRArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/False
 struct JKRArchive;
-// build JKRHeap (JKRHeap) True/True
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountDirection
-// outer dependency: JKRHeap
-// outer dependency: JKRArchive::EMountMode
-/* top-level dependencies (end JKRArchive) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive', 'EMountMode')
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// JKRArchive::EMountDirection
-	// JKRHeap
-	// JKRArchive::EMountMode
-	// build EMountMode (JKRArchive::EMountMode) False/False
-	/* dependencies (begin JKRArchive::EMountMode) */
-	/* dependencies (end JKRArchive::EMountMode) */
+	// ('JKRArchive', 'EMountDirection')
+	// ('JKRHeap',)
+	// ('JKRArchive', 'EMountMode')
+	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
+	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
-	// build EMountDirection (JKRArchive::EMountDirection) False/False
-	/* dependencies (begin JKRArchive::EMountDirection) */
-	/* dependencies (end JKRArchive::EMountDirection) */
+	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
+	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
 	/* 802D58C8 */ void mount(s32, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection);
 };
 
-/* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
-// outer dependency: JKRHeap
-// outer dependency: JKRArchive::EMountMode
-/* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
+/* top-level dependencies (begin ['mDoDvdThd_mountXArchive_c']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive', 'EMountMode')
+/* top-level dependencies (end ['mDoDvdThd_mountXArchive_c']) */
 struct mDoDvdThd_mountXArchive_c {
-	// JKRHeap
-	// JKRArchive::EMountMode
+	// ('JKRHeap',)
+	// ('JKRArchive', 'EMountMode')
 	/* 80016108 */ ~mDoDvdThd_mountXArchive_c();
 	/* 80016168 */ mDoDvdThd_mountXArchive_c(u8, JKRArchive::EMountMode);
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 	/* 800162B0 */ void execute();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin mDoDvdThd_toMainRam_c) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end mDoDvdThd_toMainRam_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['mDoDvdThd_toMainRam_c']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['mDoDvdThd_toMainRam_c']) */
 struct mDoDvdThd_toMainRam_c {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80016338 */ mDoDvdThd_toMainRam_c(u8);
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 	/* 8001645C */ ~mDoDvdThd_toMainRam_c();
 	/* 800164BC */ void execute();
 };
 
-// build node_class (node_class) False/False
-/* top-level dependencies (begin node_class) */
-/* top-level dependencies (end node_class) */
+// build node_class (['node_class']) False/False
+/* top-level dependencies (begin ['node_class']) */
+/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build JKRThread (JKRThread) False/False
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build JKRThread (['JKRThread']) False/False
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// OSThread
+	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build OSThread (OSThread) True/True
-// build JKRMemArchive (JKRMemArchive) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRMemArchive) */
-// outer dependency: JKRArchive::EMountDirection
-/* top-level dependencies (end JKRMemArchive) */
+// build OSThread (['OSThread']) True/True
+// build JKRMemArchive (['JKRMemArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRMemArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRMemArchive']) */
 struct JKRMemArchive {
-	// JKRArchive::EMountDirection
+	// ('JKRArchive', 'EMountDirection')
 	/* 802D69B8 */ JKRMemArchive(s32, JKRArchive::EMountDirection);
 };
 
-// build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
+// build JKRDvdRipper (['JKRDvdRipper']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRDvdRipper (['JKRDvdRipper']) True/False
+struct JKRDvdRipper;
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JKRDvdRipper (JKRDvdRipper) True/False
-struct JKRDvdRipper;
-/* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-// outer dependency: JKRDvdRipper::EAllocDirection
-/* top-level dependencies (end JKRDvdRipper) */
+/* top-level dependencies (begin ['JKRDvdRipper']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRDvdRipper', 'EAllocDirection')
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRDvdRipper']) */
 struct JKRDvdRipper {
-	// JKRExpandSwitch
-	// JKRHeap
-	// JKRDvdRipper::EAllocDirection
-	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
-	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
-	/* dependencies (end JKRDvdRipper::EAllocDirection) */
+	// ('JKRHeap',)
+	// ('JKRDvdRipper', 'EAllocDirection')
+	// ('JKRExpandSwitch',)
+	// build EAllocDirection (['JKRDvdRipper', 'EAllocDirection']) False/False
+	/* dependencies (begin ['JKRDvdRipper', 'EAllocDirection']) */
+	/* dependencies (end ['JKRDvdRipper', 'EAllocDirection']) */
 	struct EAllocDirection {
 	};
 
 	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
 // 
 // Forward References:
 // 

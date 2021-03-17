@@ -9,156 +9,156 @@
 // Types:
 // 
 
-// build kankyo_class (kankyo_class) False/False
-/* top-level dependencies (begin kankyo_class) */
-/* top-level dependencies (end kankyo_class) */
+// build kankyo_class (['kankyo_class']) False/False
+/* top-level dependencies (begin ['kankyo_class']) */
+/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
-// build dkWmark_c (dkWmark_c) False/False
-/* top-level dependencies (begin dkWmark_c) */
-/* top-level dependencies (end dkWmark_c) */
+// build dkWmark_c (['dkWmark_c']) False/False
+/* top-level dependencies (begin ['dkWmark_c']) */
+/* top-level dependencies (end ['dkWmark_c']) */
 struct dkWmark_c {
 	/* 80261640 */ ~dkWmark_c();
 	/* 802616C4 */ void setMatrix();
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 80267128 */ void atan2sX_Z() const;
 };
 
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
+// build J3DLightObj (['J3DLightObj']) False/False
+/* top-level dependencies (begin ['J3DLightObj']) */
+/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80018C0C */ J3DLightObj();
 };
 
-// build fopAcM_gc_c (fopAcM_gc_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin fopAcM_gc_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end fopAcM_gc_c) */
+// build fopAcM_gc_c (['fopAcM_gc_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['fopAcM_gc_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['fopAcM_gc_c']) */
 struct fopAcM_gc_c {
-	// cXyz
+	// ('cXyz',)
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build cBgS (cBgS) False/False
-// build cM3dGPla (cM3dGPla) False/False
-/* top-level dependencies (begin cM3dGPla) */
-/* top-level dependencies (end cM3dGPla) */
-struct cM3dGPla {
-};
-
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build cBgS (['cBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin cBgS) */
-// outer dependency: cM3dGPla
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end cBgS) */
+// build cM3dGPla (['cM3dGPla']) False/False
+/* top-level dependencies (begin ['cM3dGPla']) */
+/* top-level dependencies (end ['cM3dGPla']) */
+struct cM3dGPla {
+};
+
+/* top-level dependencies (begin ['cBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+// outer dependency: ('cM3dGPla',)
+/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// cM3dGPla
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
+	// ('cM3dGPla',)
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-// build cM3dGPla (cM3dGPla) True/True
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+// build cM3dGPla (['cM3dGPla']) True/True
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
 };
 
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build cXyz (cXyz) True/True
-// build J3DModelData (J3DModelData) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+// build cXyz (['cXyz']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModelData
-// outer dependency: dKy_tevstr_c
-/* top-level dependencies (end dScnKy_env_light_c) */
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// cXyz
-	// J3DModelData
-	// dKy_tevstr_c
+	// ('J3DModelData',)
+	// ('cXyz',)
+	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build J3DUClipper (J3DUClipper) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build J3DUClipper (['J3DUClipper']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DUClipper) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DUClipper) */
+/* top-level dependencies (begin ['J3DUClipper']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// Vec
+	// ('Vec',)
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
 };
 
-// build Vec (Vec) True/True
-// build J3DLightInfo (J3DLightInfo) False/False
-/* top-level dependencies (begin J3DLightInfo) */
-/* top-level dependencies (end J3DLightInfo) */
+// build Vec (['Vec']) True/True
+// build J3DLightInfo (['J3DLightInfo']) False/False
+/* top-level dependencies (begin ['J3DLightInfo']) */
+/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };

@@ -9,22 +9,23 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStudio (['JStudio']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin JStudio) */
-// outer dependency: Vec
-/* top-level dependencies (end JStudio) */
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build math (JStudio::math) False/False
-	/* dependencies (begin JStudio::math) */
-	/* dependencies (end JStudio::math) */
+	// build math (['JStudio', 'math']) False/False
+	/* dependencies (begin ['JStudio', 'math']) */
+	// inner dependency: 0 ('Vec',) (for ['JStudio', 'math'])
+	/* dependencies (end ['JStudio', 'math']) */
 	struct math {
-		// Vec
+		// ('Vec',)
 		/* 802859DC */ void getRotation_xyz(f32 (* )[4], f32, f32, f32);
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
 		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
@@ -32,7 +33,7 @@ namespace JStudio {
 
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

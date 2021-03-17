@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build J3DMtxBuffer (J3DMtxBuffer) False/False
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DMtxBuffer (['J3DMtxBuffer']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DMtxBuffer) */
-// outer dependency: J3DModelData
-// outer dependency: Vec
-/* top-level dependencies (end J3DMtxBuffer) */
+/* top-level dependencies (begin ['J3DMtxBuffer']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DMtxBuffer']) */
 struct J3DMtxBuffer {
-	// J3DModelData
-	// Vec
+	// ('J3DModelData',)
+	// ('Vec',)
 	/* 80326214 */ void initialize();
 	/* 80326258 */ void create(J3DModelData*, u32);
 	/* 80326364 */ void createAnmMtx(J3DModelData*);
@@ -42,11 +42,11 @@ struct J3DMtxBuffer {
 	/* 80326EF0 */ void calcBBoardMtx();
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build Vec (Vec) True/True
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DModelData (['J3DModelData']) True/True
+// build Vec (['Vec']) True/True
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314E28 */ void countBumpMtxNum() const;
 };

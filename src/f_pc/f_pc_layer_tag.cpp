@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build layer_management_tag_class (layer_management_tag_class) False/False
-/* top-level dependencies (begin layer_management_tag_class) */
-/* top-level dependencies (end layer_management_tag_class) */
+// build layer_management_tag_class (['layer_management_tag_class']) False/False
+/* top-level dependencies (begin ['layer_management_tag_class']) */
+/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 

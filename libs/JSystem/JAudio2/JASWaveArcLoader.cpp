@@ -9,41 +9,41 @@
 // Types:
 // 
 
-// build JASWaveArcLoader (JASWaveArcLoader) False/False
-/* top-level dependencies (begin JASWaveArcLoader) */
-/* top-level dependencies (end JASWaveArcLoader) */
+// build JASWaveArcLoader (['JASWaveArcLoader']) False/False
+/* top-level dependencies (begin ['JASWaveArcLoader']) */
+/* top-level dependencies (end ['JASWaveArcLoader']) */
 struct JASWaveArcLoader {
 	/* 8029A0A0 */ void getRootHeap();
 	/* 8029A0D0 */ void setCurrentDir(char const*);
 	/* 8029A130 */ void getCurrentDir();
 };
 
-// build JASWaveArc (JASWaveArc) False/False
-// build JASHeap (JASHeap) False/False
-// build JASDisposer (JASDisposer) False/False
-/* top-level dependencies (begin JASDisposer) */
-/* top-level dependencies (end JASDisposer) */
+// build JASWaveArc (['JASWaveArc']) False/False
+// build JASHeap (['JASHeap']) False/False
+// build JASDisposer (['JASDisposer']) False/False
+/* top-level dependencies (begin ['JASDisposer']) */
+/* top-level dependencies (end ['JASDisposer']) */
 struct JASDisposer {
 	/* 80290BCC */ void onDispose();
 	/* 8029A7B8 */ ~JASDisposer();
 };
 
-/* top-level dependencies (begin JASHeap) */
-// outer dependency: JASDisposer
-/* top-level dependencies (end JASHeap) */
+/* top-level dependencies (begin ['JASHeap']) */
+// outer dependency: ('JASDisposer',)
+/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
-	// JASDisposer
+	// ('JASDisposer',)
 	/* 80290140 */ JASHeap(JASDisposer*);
 	/* 8029021C */ void alloc(JASHeap*, u32);
 	/* 802903F4 */ void allocTail(JASHeap*, u32);
 	/* 802904E4 */ void free();
 };
 
-/* top-level dependencies (begin JASWaveArc) */
-// outer dependency: JASHeap
-/* top-level dependencies (end JASWaveArc) */
+/* top-level dependencies (begin ['JASWaveArc']) */
+// outer dependency: ('JASHeap',)
+/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
-	// JASHeap
+	// ('JASHeap',)
 	/* 80298FA0 */ void onLoadDone();
 	/* 80298FA4 */ void onEraseDone();
 	/* 8029A13C */ JASWaveArc();
@@ -60,55 +60,55 @@ struct JASWaveArc {
 	/* 8029A70C */ void setFileName(char const*);
 };
 
-// build JASHeap (JASHeap) True/True
-// build JASDisposer (JASDisposer) True/True
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASHeap (['JASHeap']) True/True
+// build JASDisposer (['JASDisposer']) True/True
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build JASKernel (JASKernel) False/False
-/* top-level dependencies (begin JASKernel) */
-/* top-level dependencies (end JASKernel) */
+// build JASKernel (['JASKernel']) False/False
+/* top-level dependencies (begin ['JASKernel']) */
+/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRDvdAramRipper (JKRDvdAramRipper) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
+// build JKRDvdAramRipper (['JKRDvdAramRipper']) False/False
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin JKRDvdAramRipper) */
-// outer dependency: JKRExpandSwitch
-/* top-level dependencies (end JKRDvdAramRipper) */
+/* top-level dependencies (begin ['JKRDvdAramRipper']) */
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRDvdAramRipper']) */
 struct JKRDvdAramRipper {
-	// JKRExpandSwitch
+	// ('JKRExpandSwitch',)
 	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-/* top-level dependencies (begin JSUPtrList) */
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+/* top-level dependencies (begin ['JSUPtrList']) */
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 };

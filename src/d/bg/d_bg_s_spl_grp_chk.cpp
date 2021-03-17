@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dBgS_SplGrpChk (['dBgS_SplGrpChk']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin dBgS_SplGrpChk) */
-// outer dependency: cXyz
-/* top-level dependencies (end dBgS_SplGrpChk) */
+/* top-level dependencies (begin ['dBgS_SplGrpChk']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dBgS_SplGrpChk']) */
 struct dBgS_SplGrpChk {
-	// cXyz
+	// ('cXyz',)
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078BB0 */ dBgS_SplGrpChk();
 	/* 80078C78 */ ~dBgS_SplGrpChk();
 	/* 80078D0C */ void Init();
 };
 
-// build cXyz (cXyz) True/True
-// build dBgS_Chk (dBgS_Chk) False/False
-/* top-level dependencies (begin dBgS_Chk) */
-/* top-level dependencies (end dBgS_Chk) */
+// build cXyz (['cXyz']) True/True
+// build dBgS_Chk (['dBgS_Chk']) False/False
+/* top-level dependencies (begin ['dBgS_Chk']) */
+/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -38,17 +38,17 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build cBgS_Chk (cBgS_Chk) False/False
-/* top-level dependencies (begin cBgS_Chk) */
-/* top-level dependencies (end cBgS_Chk) */
+// build cBgS_Chk (['cBgS_Chk']) False/False
+/* top-level dependencies (begin ['cBgS_Chk']) */
+/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();

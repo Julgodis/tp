@@ -9,50 +9,50 @@
 // Types:
 // 
 
-// build Z2SoundInfo (Z2SoundInfo) False/False
-// build JAIStream (JAIStream) False/False
-/* top-level dependencies (begin JAIStream) */
-/* top-level dependencies (end JAIStream) */
+// build Z2SoundInfo (['Z2SoundInfo']) False/False
+// build JAIStream (['JAIStream']) False/False
+/* top-level dependencies (begin ['JAIStream']) */
+/* top-level dependencies (end ['JAIStream']) */
 struct JAIStream {
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
-struct JAISound {
-};
-
-// build JAISeq (JAISeq) False/False
-/* top-level dependencies (begin JAISeq) */
-/* top-level dependencies (end JAISeq) */
-struct JAISeq {
-};
-
-// build JAISe (JAISe) False/False
-/* top-level dependencies (begin JAISe) */
-/* top-level dependencies (end JAISe) */
-struct JAISe {
-};
-
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SoundInfo) */
-// outer dependency: JAIStream
-// outer dependency: JAISound
-// outer dependency: JAISeq
-// outer dependency: JAISe
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundInfo) */
+// build JAISeq (['JAISeq']) False/False
+/* top-level dependencies (begin ['JAISeq']) */
+/* top-level dependencies (end ['JAISeq']) */
+struct JAISeq {
+};
+
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
+struct JAISound {
+};
+
+// build JAISe (['JAISe']) False/False
+/* top-level dependencies (begin ['JAISe']) */
+/* top-level dependencies (end ['JAISe']) */
+struct JAISe {
+};
+
+/* top-level dependencies (begin ['Z2SoundInfo']) */
+// outer dependency: ('JAIStream',)
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('JAISeq',)
+// outer dependency: ('JAISound',)
+// outer dependency: ('JAISe',)
+/* top-level dependencies (end ['Z2SoundInfo']) */
 struct Z2SoundInfo {
-	// JAIStream
-	// JAISound
-	// JAISoundID
-	// JAISeq
-	// JAISe
+	// ('JAISoundID',)
+	// ('JAISound',)
+	// ('JAISe',)
+	// ('JAIStream',)
+	// ('JAISeq',)
 	/* 802BB00C */ void getBgmSeqResourceID(JAISoundID) const;
 	/* 802BB090 */ void getSoundType(JAISoundID) const;
 	/* 802BB0D8 */ void getCategory(JAISoundID) const;
@@ -69,39 +69,39 @@ struct Z2SoundInfo {
 	/* 802BBBE0 */ ~Z2SoundInfo();
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build JAISe (JAISe) True/True
-// build JAISeq (JAISeq) True/True
-// build JAIStream (JAIStream) True/True
-// build JAISound (JAISound) True/True
-// build JAISoundInfo (JAISoundInfo) False/False
-/* top-level dependencies (begin JAISoundInfo) */
-/* top-level dependencies (end JAISoundInfo) */
+// build JAISoundID (['JAISoundID']) True/True
+// build JAISe (['JAISe']) True/True
+// build JAISeq (['JAISeq']) True/True
+// build JAIStream (['JAIStream']) True/True
+// build JAISound (['JAISound']) True/True
+// build JAISoundInfo (['JAISoundInfo']) False/False
+/* top-level dependencies (begin ['JAISoundInfo']) */
+/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D50 */ ~JAISoundInfo();
 };
 
-// build JAIStreamDataMgr (JAIStreamDataMgr) False/False
-/* top-level dependencies (begin JAIStreamDataMgr) */
-/* top-level dependencies (end JAIStreamDataMgr) */
+// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamDataMgr']) */
+/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAUSoundTable (JAUSoundTable) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAUSoundTable) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSoundTable) */
+// build JAUSoundTable (['JAUSoundTable']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAUSoundTable']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A7160 */ void getTypeID(JAISoundID) const;
 	/* 802A728C */ void getData(JAISoundID) const;
 };
 
-// build Z2Calc (Z2Calc) False/False
-/* top-level dependencies (begin Z2Calc) */
-/* top-level dependencies (end Z2Calc) */
+// build Z2Calc (['Z2Calc']) False/False
+/* top-level dependencies (begin ['Z2Calc']) */
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
 	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
 	/* 802A98D4 */ void getRandom_0_1();

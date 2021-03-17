@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build cBgS_GndChk (cBgS_GndChk) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cBgS_GndChk (['cBgS_GndChk']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cBgS_GndChk) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cBgS_GndChk) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin ['cBgS_GndChk']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D0C */ void SetPos(Vec const*);
@@ -36,19 +36,19 @@ struct cBgS_GndChk {
 	/* 80267D44 */ void PreCheck();
 };
 
-// build Vec (Vec) True/True
-// build cXyz (cXyz) True/True
-// build cBgS_Chk (cBgS_Chk) False/False
-/* top-level dependencies (begin cBgS_Chk) */
-/* top-level dependencies (end cBgS_Chk) */
+// build Vec (['Vec']) True/True
+// build cXyz (['cXyz']) True/True
+// build cBgS_Chk (['cBgS_Chk']) False/False
+/* top-level dependencies (begin ['cBgS_Chk']) */
+/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();

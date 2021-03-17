@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build JSUFileInputStream (JSUFileInputStream) False/False
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
-/* top-level dependencies (begin JSUStreamSeekFrom) */
-/* top-level dependencies (end JSUStreamSeekFrom) */
-struct JSUStreamSeekFrom {
-};
-
-// build JKRFile (JKRFile) False/False
-/* top-level dependencies (begin JKRFile) */
-/* top-level dependencies (end JKRFile) */
+// build JSUFileInputStream (['JSUFileInputStream']) False/False
+// build JKRFile (['JKRFile']) False/False
+/* top-level dependencies (begin ['JKRFile']) */
+/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 };
 
-/* top-level dependencies (begin JSUFileInputStream) */
-// outer dependency: JSUStreamSeekFrom
-// outer dependency: JKRFile
-/* top-level dependencies (end JSUFileInputStream) */
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
+/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
+/* top-level dependencies (end ['JSUStreamSeekFrom']) */
+struct JSUStreamSeekFrom {
+};
+
+/* top-level dependencies (begin ['JSUFileInputStream']) */
+// outer dependency: ('JKRFile',)
+// outer dependency: ('JSUStreamSeekFrom',)
+/* top-level dependencies (end ['JSUFileInputStream']) */
 struct JSUFileInputStream {
-	// JSUStreamSeekFrom
-	// JKRFile
+	// ('JKRFile',)
+	// ('JSUStreamSeekFrom',)
 	/* 802DADD8 */ ~JSUFileInputStream();
 	/* 802DC638 */ JSUFileInputStream(JKRFile*);
 	/* 802DC67C */ void readData(void*, s32);
@@ -37,11 +37,11 @@ struct JSUFileInputStream {
 	/* 802DC85C */ void getPosition() const;
 };
 
-// build JKRFile (JKRFile) True/True
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
-// build JSURandomInputStream (JSURandomInputStream) False/False
-/* top-level dependencies (begin JSURandomInputStream) */
-/* top-level dependencies (end JSURandomInputStream) */
+// build JKRFile (['JKRFile']) True/True
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC3FC */ void skip(s32);

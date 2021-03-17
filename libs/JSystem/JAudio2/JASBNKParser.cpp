@@ -9,94 +9,98 @@
 // Types:
 // 
 
-// build JASBNKParser (JASBNKParser) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JASBNKParser (['JASBNKParser']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
+// build JASBNKParser (['JASBNKParser']) True/False
+struct JASBNKParser;
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Point (JASOscillator::Point) False/False
-	/* dependencies (begin JASOscillator::Point) */
-	/* dependencies (end JASOscillator::Point) */
+	// build Point (['JASOscillator', 'Point']) False/False
+	/* dependencies (begin ['JASOscillator', 'Point']) */
+	/* dependencies (end ['JASOscillator', 'Point']) */
 	struct Point {
 	};
 
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-// build JASBNKParser (JASBNKParser) True/False
-struct JASBNKParser;
-// build JASBasicBank (JASBasicBank) False/False
-// build JASInst (JASInst) False/False
-/* top-level dependencies (begin JASInst) */
-/* top-level dependencies (end JASInst) */
+// build JASBasicBank (['JASBasicBank']) False/False
+// build JASInst (['JASInst']) False/False
+/* top-level dependencies (begin ['JASInst']) */
+/* top-level dependencies (end ['JASInst']) */
 struct JASInst {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JASBasicBank) */
-// outer dependency: JASInst
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASBasicBank) */
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JASBasicBank']) */
+// outer dependency: ('JASInst',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JASBasicBank']) */
 struct JASBasicBank {
-	// JASInst
-	// JKRHeap
+	// ('JASInst',)
+	// ('JKRHeap',)
 	/* 80297D78 */ JASBasicBank();
 	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
 	/* 80297E68 */ void setInst(int, JASInst*);
 	/* 80297E80 */ void getInst(int) const;
 };
 
-// build JASBNKParser (JASBNKParser) True/True
-/* top-level dependencies (begin JASBNKParser) */
-// outer dependency: JKRHeap
-// outer dependency: JASOscillator::Point
-// outer dependency: JASBNKParser::Ver0::THeader
-// outer dependency: JASBasicBank
-// outer dependency: JASBNKParser::Ver0::TOsc
-/* top-level dependencies (end JASBNKParser) */
+// build JASBNKParser (['JASBNKParser']) True/True
+/* top-level dependencies (begin ['JASBNKParser']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASBNKParser', 'Ver0', 'TOsc')
+// outer dependency: ('JASOscillator', 'Point')
+// outer dependency: ('JASBasicBank',)
+// outer dependency: ('JASBNKParser', 'Ver0', 'THeader')
+/* top-level dependencies (end ['JASBNKParser']) */
 struct JASBNKParser {
-	// JKRHeap
-	// build Ver1 (JASBNKParser::Ver1) False/False
-	/* dependencies (begin JASBNKParser::Ver1) */
-	/* dependencies (end JASBNKParser::Ver1) */
+	// ('JKRHeap',)
+	// build Ver1 (['JASBNKParser', 'Ver1']) False/False
+	/* dependencies (begin ['JASBNKParser', 'Ver1']) */
+	// inner dependency: 0 ('JKRHeap',) (for ['JASBNKParser', 'Ver1'])
+	/* dependencies (end ['JASBNKParser', 'Ver1']) */
 	struct Ver1 {
-		// JKRHeap
+		// ('JKRHeap',)
 		/* 80299600 */ void findChunk(void const*, u32);
 		/* 8029963C */ void createBasicBank(void const*, JKRHeap*);
 	};
 
-	// build Ver0 (JASBNKParser::Ver0) False/False
-	/* dependencies (begin JASBNKParser::Ver0) */
-	// inner dependency: Ver0 (JASBNKParser::Ver0::THeader) True False (for JASBNKParser::Ver0)
-	// inner dependency: Ver0 (JASBNKParser::Ver0::TOsc) True False (for JASBNKParser::Ver0)
-	/* dependencies (end JASBNKParser::Ver0) */
+	// build Ver0 (['JASBNKParser', 'Ver0']) False/False
+	/* dependencies (begin ['JASBNKParser', 'Ver0']) */
+	// inner dependency: 0 ('JKRHeap',) (for ['JASBNKParser', 'Ver0'])
+	// inner dependency: 0 ('JASOscillator', 'Point') (for ['JASBNKParser', 'Ver0'])
+	// inner dependency: 1 ('JASBNKParser', 'Ver0', 'THeader') (for ['JASBNKParser', 'Ver0'])
+	// inner dependency: 1 ('JASBNKParser', 'Ver0', 'TOsc') (for ['JASBNKParser', 'Ver0'])
+	// inner dependency: 0 ('JASBasicBank',) (for ['JASBNKParser', 'Ver0'])
+	/* dependencies (end ['JASBNKParser', 'Ver0']) */
 	struct Ver0 {
-		// JASBNKParser::Ver0::THeader
-		// JASOscillator::Point
-		// JKRHeap
-		// JASBasicBank
-		// JASBNKParser::Ver0::TOsc
-		// build THeader (JASBNKParser::Ver0::THeader) False/False
-		/* dependencies (begin JASBNKParser::Ver0::THeader) */
-		/* dependencies (end JASBNKParser::Ver0::THeader) */
+		// ('JKRHeap',)
+		// ('JASOscillator', 'Point')
+		// ('JASBNKParser', 'Ver0', 'THeader')
+		// ('JASBNKParser', 'Ver0', 'TOsc')
+		// ('JASBasicBank',)
+		// build THeader (['JASBNKParser', 'Ver0', 'THeader']) False/False
+		/* dependencies (begin ['JASBNKParser', 'Ver0', 'THeader']) */
+		/* dependencies (end ['JASBNKParser', 'Ver0', 'THeader']) */
 		struct THeader {
 		};
 
-		// build TOsc (JASBNKParser::Ver0::TOsc) False/False
-		/* dependencies (begin JASBNKParser::Ver0::TOsc) */
-		/* dependencies (end JASBNKParser::Ver0::TOsc) */
+		// build TOsc (['JASBNKParser', 'Ver0', 'TOsc']) False/False
+		/* dependencies (begin ['JASBNKParser', 'Ver0', 'TOsc']) */
+		/* dependencies (end ['JASBNKParser', 'Ver0', 'TOsc']) */
 		struct TOsc {
 		};
 
@@ -109,54 +113,54 @@ struct JASBNKParser {
 	/* 80299558 */ void createBasicBank(void const*, JKRHeap*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASBasicBank (JASBasicBank) True/True
-// build JASOscillator (JASOscillator) True/True
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASBasicBank (['JASBasicBank']) True/True
+// build JASOscillator (['JASOscillator']) True/True
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F354 */ void bcopy(void const*, void*, u32);
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 };
 
-// build JASInst (JASInst) True/True
-// build JASBasicInst (JASBasicInst) False/False
-// build JKRHeap (JKRHeap) True/True
-// build JASOscillator (JASOscillator) True/True
-/* top-level dependencies (begin JASBasicInst) */
-// outer dependency: JKRHeap
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASBasicInst) */
+// build JASInst (['JASInst']) True/True
+// build JASBasicInst (['JASBasicInst']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JASOscillator (['JASOscillator']) True/True
+/* top-level dependencies (begin ['JASBasicInst']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASBasicInst']) */
 struct JASBasicInst {
-	// JKRHeap
-	// JASOscillator::Data
+	// ('JKRHeap',)
+	// ('JASOscillator', 'Data')
 	/* 80298014 */ JASBasicInst();
 	/* 8029819C */ void setKeyRegionCount(u32, JKRHeap*);
 	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
 	/* 8029822C */ void getKeyRegion(int);
 };
 
-// build JASDrumSet (JASDrumSet) False/False
-// build JASDrumSet (JASDrumSet) True/False
+// build JASDrumSet (['JASDrumSet']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JASDrumSet (['JASDrumSet']) True/False
 struct JASDrumSet;
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JASDrumSet) */
-// outer dependency: JASDrumSet::TPerc
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASDrumSet) */
+/* top-level dependencies (begin ['JASDrumSet']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASDrumSet', 'TPerc')
+/* top-level dependencies (end ['JASDrumSet']) */
 struct JASDrumSet {
-	// JASDrumSet::TPerc
-	// JKRHeap
-	// build TPerc (JASDrumSet::TPerc) False/False
-	/* dependencies (begin JASDrumSet::TPerc) */
-	/* dependencies (end JASDrumSet::TPerc) */
+	// ('JKRHeap',)
+	// ('JASDrumSet', 'TPerc')
+	// build TPerc (['JASDrumSet', 'TPerc']) False/False
+	/* dependencies (begin ['JASDrumSet', 'TPerc']) */
+	/* dependencies (end ['JASDrumSet', 'TPerc']) */
 	struct TPerc {
 		/* 802984C4 */ TPerc();
 		/* 802984E4 */ void setRelease(u32);

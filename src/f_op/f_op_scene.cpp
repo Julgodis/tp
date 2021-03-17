@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build scene_class (scene_class) False/False
-/* top-level dependencies (begin scene_class) */
-/* top-level dependencies (end scene_class) */
+// build scene_class (['scene_class']) False/False
+/* top-level dependencies (begin ['scene_class']) */
+/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
-// build scene_tag_class (scene_tag_class) False/False
-/* top-level dependencies (begin scene_tag_class) */
-/* top-level dependencies (end scene_tag_class) */
+// build scene_tag_class (['scene_tag_class']) False/False
+/* top-level dependencies (begin ['scene_tag_class']) */
+/* top-level dependencies (end ['scene_tag_class']) */
 struct scene_tag_class {
 };
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
-// build nodedraw_method_class (nodedraw_method_class) False/False
-/* top-level dependencies (begin nodedraw_method_class) */
-/* top-level dependencies (end nodedraw_method_class) */
+// build nodedraw_method_class (['nodedraw_method_class']) False/False
+/* top-level dependencies (begin ['nodedraw_method_class']) */
+/* top-level dependencies (end ['nodedraw_method_class']) */
 struct nodedraw_method_class {
 };
 

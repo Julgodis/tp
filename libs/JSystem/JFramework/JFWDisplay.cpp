@@ -9,26 +9,39 @@
 // Types:
 // 
 
-// build JFWDisplay (JFWDisplay) False/False
-// build JUTXfb (JUTXfb) False/False
-// build JUTXfb (JUTXfb) True/False
-struct JUTXfb;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JFWDisplay (['JFWDisplay']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
+struct _GXColor {
+};
+
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JUTXfb) */
-// outer dependency: JUTXfb::EXfbNumber
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTXfb) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
+struct _GXRenderModeObj {
+};
+
+// build JUTXfb (['JUTXfb']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTXfb (['JUTXfb']) True/False
+struct JUTXfb;
+/* top-level dependencies (begin ['JUTXfb']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JUTXfb', 'EXfbNumber')
+/* top-level dependencies (end ['JUTXfb']) */
 struct JUTXfb {
-	// JUTXfb::EXfbNumber
-	// JKRHeap
-	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
-	/* dependencies (begin JUTXfb::EXfbNumber) */
-	/* dependencies (end JUTXfb::EXfbNumber) */
+	// ('JKRHeap',)
+	// ('JUTXfb', 'EXfbNumber')
+	// build EXfbNumber (['JUTXfb', 'EXfbNumber']) False/False
+	/* dependencies (begin ['JUTXfb', 'EXfbNumber']) */
+	/* dependencies (end ['JUTXfb', 'EXfbNumber']) */
 	struct EXfbNumber {
 	};
 
@@ -36,30 +49,17 @@ struct JUTXfb {
 	/* 802E5424 */ void destroyManager();
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build JKRHeap (JKRHeap) True/True
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
-struct _GXRenderModeObj {
-};
-
-/* top-level dependencies (begin JFWDisplay) */
-// outer dependency: JUTXfb::EXfbNumber
-// outer dependency: _GXColor
-// outer dependency: JKRHeap
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JFWDisplay) */
+/* top-level dependencies (begin ['JFWDisplay']) */
+// outer dependency: ('_GXColor',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('_GXRenderModeObj',)
+// outer dependency: ('JUTXfb', 'EXfbNumber')
+/* top-level dependencies (end ['JFWDisplay']) */
 struct JFWDisplay {
-	// JUTXfb::EXfbNumber
-	// _GXColor
-	// JKRHeap
-	// _GXRenderModeObj
+	// ('_GXColor',)
+	// ('JKRHeap',)
+	// ('_GXRenderModeObj',)
+	// ('JUTXfb', 'EXfbNumber')
 	/* 80272040 */ void ctor_subroutine(bool);
 	/* 802720F8 */ JFWDisplay(JKRHeap*, JUTXfb::EXfbNumber, bool);
 	/* 80272160 */ ~JFWDisplay();
@@ -83,88 +83,88 @@ struct JFWDisplay {
 	/* 8027331C */ void calcCombinationRatio();
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JUTXfb (JUTXfb) True/True
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build OSAlarm (OSAlarm) False/False
-/* top-level dependencies (begin OSAlarm) */
-/* top-level dependencies (end OSAlarm) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTXfb (['JUTXfb']) True/True
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build OSAlarm (['OSAlarm']) False/False
+/* top-level dependencies (begin ['OSAlarm']) */
+/* top-level dependencies (end ['OSAlarm']) */
 struct OSAlarm {
 };
 
-// build OSContext (OSContext) False/False
-/* top-level dependencies (begin OSContext) */
-/* top-level dependencies (end OSContext) */
+// build OSContext (['OSContext']) False/False
+/* top-level dependencies (begin ['OSContext']) */
+/* top-level dependencies (end ['OSContext']) */
 struct OSContext {
 };
 
-// build _GXColor (_GXColor) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build _GXColor (['_GXColor']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBE74 */ JSUPtrList(bool);
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTDbPrint (JUTDbPrint) False/False
-/* top-level dependencies (begin JUTDbPrint) */
-/* top-level dependencies (end JUTDbPrint) */
+// build JUTDbPrint (['JUTDbPrint']) False/False
+/* top-level dependencies (begin ['JUTDbPrint']) */
+/* top-level dependencies (end ['JUTDbPrint']) */
 struct JUTDbPrint {
 	/* 802E02A4 */ void flush();
 };
 
-// build JUTDirectPrint (JUTDirectPrint) False/False
-/* top-level dependencies (begin JUTDirectPrint) */
-/* top-level dependencies (end JUTDirectPrint) */
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
-// build JUTAssertion (JUTAssertion) False/False
-/* top-level dependencies (begin JUTAssertion) */
-/* top-level dependencies (end JUTAssertion) */
+// build JUTAssertion (['JUTAssertion']) False/False
+/* top-level dependencies (begin ['JUTAssertion']) */
+/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E499C */ void flushMessage();
 	/* 802E4A54 */ void flushMessage_dbPrint();
 };
 
-// build JUTVideo (JUTVideo) False/False
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-/* top-level dependencies (begin JUTVideo) */
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTVideo) */
+// build JUTVideo (['JUTVideo']) False/False
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+/* top-level dependencies (begin ['JUTVideo']) */
+// outer dependency: ('_GXRenderModeObj',)
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
-	// _GXRenderModeObj
+	// ('_GXRenderModeObj',)
 	/* 802E5088 */ void drawDoneStart();
 	/* 802E50B0 */ void dummyNoDrawWait();
 	/* 802E5198 */ void setRenderMode(_GXRenderModeObj const*);
 	/* 802E5210 */ void waitRetraceIfNeed();
 };
 
-// build JUTFader (JUTFader) False/False
-/* top-level dependencies (begin JUTFader) */
-/* top-level dependencies (end JUTFader) */
+// build JUTFader (['JUTFader']) False/False
+/* top-level dependencies (begin ['JUTFader']) */
+/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
 	/* 802E55DC */ void control();
 };
 
-// build JUTProcBar (JUTProcBar) False/False
-/* top-level dependencies (begin JUTProcBar) */
-/* top-level dependencies (end JUTProcBar) */
+// build JUTProcBar (['JUTProcBar']) False/False
+/* top-level dependencies (begin ['JUTProcBar']) */
+/* top-level dependencies (end ['JUTProcBar']) */
 struct JUTProcBar {
 	/* 802E59E0 */ void create();
 	/* 802E5A28 */ void destroy();
@@ -172,16 +172,16 @@ struct JUTProcBar {
 	/* 802E5E08 */ void draw();
 };
 
-// build JUTConsoleManager (JUTConsoleManager) False/False
-/* top-level dependencies (begin JUTConsoleManager) */
-/* top-level dependencies (end JUTConsoleManager) */
+// build JUTConsoleManager (['JUTConsoleManager']) False/False
+/* top-level dependencies (begin ['JUTConsoleManager']) */
+/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
 	/* 802E8384 */ void draw() const;
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();

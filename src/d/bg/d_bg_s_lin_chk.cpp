@@ -9,108 +9,108 @@
 // Types:
 // 
 
-// build dBgS_LinChk (dBgS_LinChk) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dBgS_LinChk (['dBgS_LinChk']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin dBgS_LinChk) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dBgS_LinChk) */
+/* top-level dependencies (begin ['dBgS_LinChk']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dBgS_LinChk']) */
 struct dBgS_LinChk {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80077C68 */ dBgS_LinChk();
 	/* 80077CDC */ ~dBgS_LinChk();
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build dBgS_CamLinChk (dBgS_CamLinChk) False/False
-/* top-level dependencies (begin dBgS_CamLinChk) */
-/* top-level dependencies (end dBgS_CamLinChk) */
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build dBgS_CamLinChk (['dBgS_CamLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_CamLinChk']) */
+/* top-level dependencies (end ['dBgS_CamLinChk']) */
 struct dBgS_CamLinChk {
 	/* 80077DA4 */ dBgS_CamLinChk();
 	/* 80077E00 */ ~dBgS_CamLinChk();
 };
 
-// build dBgS_CamLinChk_NorWtr (dBgS_CamLinChk_NorWtr) False/False
-/* top-level dependencies (begin dBgS_CamLinChk_NorWtr) */
-/* top-level dependencies (end dBgS_CamLinChk_NorWtr) */
+// build dBgS_CamLinChk_NorWtr (['dBgS_CamLinChk_NorWtr']) False/False
+/* top-level dependencies (begin ['dBgS_CamLinChk_NorWtr']) */
+/* top-level dependencies (end ['dBgS_CamLinChk_NorWtr']) */
 struct dBgS_CamLinChk_NorWtr {
 	/* 80077E78 */ dBgS_CamLinChk_NorWtr();
 	/* 80077EE4 */ ~dBgS_CamLinChk_NorWtr();
 };
 
-// build dBgS_ObjLinChk (dBgS_ObjLinChk) False/False
-/* top-level dependencies (begin dBgS_ObjLinChk) */
-/* top-level dependencies (end dBgS_ObjLinChk) */
+// build dBgS_ObjLinChk (['dBgS_ObjLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_ObjLinChk']) */
+/* top-level dependencies (end ['dBgS_ObjLinChk']) */
 struct dBgS_ObjLinChk {
 	/* 80077F5C */ dBgS_ObjLinChk();
 	/* 80077FB8 */ ~dBgS_ObjLinChk();
 };
 
-// build dBgS_LinkLinChk (dBgS_LinkLinChk) False/False
-/* top-level dependencies (begin dBgS_LinkLinChk) */
-/* top-level dependencies (end dBgS_LinkLinChk) */
+// build dBgS_LinkLinChk (['dBgS_LinkLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_LinkLinChk']) */
+/* top-level dependencies (end ['dBgS_LinkLinChk']) */
 struct dBgS_LinkLinChk {
 	/* 80078030 */ dBgS_LinkLinChk();
 	/* 8007808C */ ~dBgS_LinkLinChk();
 };
 
-// build dBgS_BombLinChk (dBgS_BombLinChk) False/False
-/* top-level dependencies (begin dBgS_BombLinChk) */
-/* top-level dependencies (end dBgS_BombLinChk) */
+// build dBgS_BombLinChk (['dBgS_BombLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_BombLinChk']) */
+/* top-level dependencies (end ['dBgS_BombLinChk']) */
 struct dBgS_BombLinChk {
 	/* 80078104 */ dBgS_BombLinChk();
 	/* 80078160 */ ~dBgS_BombLinChk();
 };
 
-// build dBgS_ArrowLinChk (dBgS_ArrowLinChk) False/False
-/* top-level dependencies (begin dBgS_ArrowLinChk) */
-/* top-level dependencies (end dBgS_ArrowLinChk) */
+// build dBgS_ArrowLinChk (['dBgS_ArrowLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_ArrowLinChk']) */
+/* top-level dependencies (end ['dBgS_ArrowLinChk']) */
 struct dBgS_ArrowLinChk {
 	/* 800781D8 */ dBgS_ArrowLinChk();
 	/* 80078240 */ ~dBgS_ArrowLinChk();
 };
 
-// build dBgS_BoomerangLinChk (dBgS_BoomerangLinChk) False/False
-/* top-level dependencies (begin dBgS_BoomerangLinChk) */
-/* top-level dependencies (end dBgS_BoomerangLinChk) */
+// build dBgS_BoomerangLinChk (['dBgS_BoomerangLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_BoomerangLinChk']) */
+/* top-level dependencies (end ['dBgS_BoomerangLinChk']) */
 struct dBgS_BoomerangLinChk {
 	/* 800782B8 */ dBgS_BoomerangLinChk();
 	/* 80078314 */ ~dBgS_BoomerangLinChk();
 };
 
-// build dBgS_RopeLinChk (dBgS_RopeLinChk) False/False
-/* top-level dependencies (begin dBgS_RopeLinChk) */
-/* top-level dependencies (end dBgS_RopeLinChk) */
+// build dBgS_RopeLinChk (['dBgS_RopeLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_RopeLinChk']) */
+/* top-level dependencies (end ['dBgS_RopeLinChk']) */
 struct dBgS_RopeLinChk {
 	/* 8007838C */ dBgS_RopeLinChk();
 	/* 800783E8 */ ~dBgS_RopeLinChk();
 };
 
-// build dBgS_HorseLinChk (dBgS_HorseLinChk) False/False
-/* top-level dependencies (begin dBgS_HorseLinChk) */
-/* top-level dependencies (end dBgS_HorseLinChk) */
+// build dBgS_HorseLinChk (['dBgS_HorseLinChk']) False/False
+/* top-level dependencies (begin ['dBgS_HorseLinChk']) */
+/* top-level dependencies (end ['dBgS_HorseLinChk']) */
 struct dBgS_HorseLinChk {
 	/* 80078460 */ dBgS_HorseLinChk();
 	/* 800784BC */ ~dBgS_HorseLinChk();
 };
 
-// build dBgS_Chk (dBgS_Chk) False/False
-/* top-level dependencies (begin dBgS_Chk) */
-/* top-level dependencies (end dBgS_Chk) */
+// build dBgS_Chk (['dBgS_Chk']) False/False
+/* top-level dependencies (begin ['dBgS_Chk']) */
+/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -118,9 +118,9 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
-/* top-level dependencies (begin dBgS_PolyPassChk) */
-/* top-level dependencies (end dBgS_PolyPassChk) */
+// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
+/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 	/* 80078E80 */ void SetCam();
@@ -132,13 +132,13 @@ struct dBgS_PolyPassChk {
 	/* 80078EF8 */ void SetHorse();
 };
 
-// build cBgS_LinChk (cBgS_LinChk) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cBgS_LinChk) */
-// outer dependency: cXyz
-/* top-level dependencies (end cBgS_LinChk) */
+// build cBgS_LinChk (['cBgS_LinChk']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cBgS_LinChk']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cBgS_LinChk']) */
 struct cBgS_LinChk {
-	// cXyz
+	// ('cXyz',)
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, u32);

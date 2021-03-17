@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 

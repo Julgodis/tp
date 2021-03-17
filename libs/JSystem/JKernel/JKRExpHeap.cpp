@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-// build JKRHeap (JKRHeap) True/False
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/False
 struct JKRHeap;
-/* top-level dependencies (begin JKRHeap) */
-// outer dependency: JKRHeap::TState
-/* top-level dependencies (end JKRHeap) */
+/* top-level dependencies (begin ['JKRHeap']) */
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// JKRHeap::TState
-	// build TState (JKRHeap::TState) False/False
-	/* dependencies (begin JKRHeap::TState) */
-	/* dependencies (end JKRHeap::TState) */
+	// ('JKRHeap', 'TState')
+	// build TState (['JKRHeap', 'TState']) False/False
+	/* dependencies (begin ['JKRHeap', 'TState']) */
+	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -38,24 +38,24 @@ struct JKRHeap {
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JKRExpHeap (JKRExpHeap) True/False
+// build JKRExpHeap (['JKRExpHeap']) True/False
 struct JKRExpHeap;
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap::TState
-// outer dependency: JKRHeap
-// outer dependency: JKRExpHeap::CMemBlock
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpHeap', 'CMemBlock')
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap::TState
-	// JKRHeap
-	// JKRExpHeap::CMemBlock
-	// build CMemBlock (JKRExpHeap::CMemBlock) False/False
-	/* dependencies (begin JKRExpHeap::CMemBlock) */
-	// inner dependency:  (JKRExpHeap) False False (for JKRExpHeap::CMemBlock)
-	/* dependencies (end JKRExpHeap::CMemBlock) */
+	// ('JKRHeap',)
+	// ('JKRExpHeap', 'CMemBlock')
+	// ('JKRHeap', 'TState')
+	// build CMemBlock (['JKRExpHeap', 'CMemBlock']) False/False
+	/* dependencies (begin ['JKRExpHeap', 'CMemBlock']) */
+	// inner dependency: 0 ('JKRExpHeap',) (for ['JKRExpHeap', 'CMemBlock'])
+	/* dependencies (end ['JKRExpHeap', 'CMemBlock']) */
 	struct CMemBlock {
-		// JKRExpHeap
+		// ('JKRExpHeap',)
 		/* 802D0810 */ void initiate(JKRExpHeap::CMemBlock*, JKRExpHeap::CMemBlock*, u32, u8, u8);
 		/* 802D0830 */ void allocFore(u32, u8, u8, u8, u8);
 		/* 802D0874 */ void allocBack(u32, u8, u8, u8, u8);
@@ -101,10 +101,10 @@ struct JKRExpHeap {
 	/* 802D0A1C */ void do_getCurrentGroupId();
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

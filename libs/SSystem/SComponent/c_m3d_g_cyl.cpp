@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build cM3dGCyl (cM3dGCyl) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build cM3dGCylS (cM3dGCylS) False/False
-/* top-level dependencies (begin cM3dGCylS) */
-/* top-level dependencies (end cM3dGCylS) */
+// build cM3dGCyl (['cM3dGCyl']) False/False
+// build cM3dGCylS (['cM3dGCylS']) False/False
+/* top-level dependencies (begin ['cM3dGCylS']) */
+/* top-level dependencies (end ['cM3dGCylS']) */
 struct cM3dGCylS {
 };
 
-// build cM3dGSph (cM3dGSph) False/False
-/* top-level dependencies (begin cM3dGSph) */
-/* top-level dependencies (end cM3dGSph) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+};
+
+// build cM3dGSph (['cM3dGSph']) False/False
+/* top-level dependencies (begin ['cM3dGSph']) */
+/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
 };
 
-/* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cXyz
-// outer dependency: cM3dGCylS
-// outer dependency: cM3dGSph
-/* top-level dependencies (end cM3dGCyl) */
+/* top-level dependencies (begin ['cM3dGCyl']) */
+// outer dependency: ('cM3dGCylS',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cM3dGSph',)
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// cXyz
-	// cM3dGCylS
-	// cM3dGSph
+	// ('cM3dGCylS',)
+	// ('cXyz',)
+	// ('cM3dGSph',)
 	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
 	/* 8026F114 */ void Set(cM3dGCylS const&);
 	/* 8026F180 */ void Set(cXyz const&, f32, f32);
@@ -48,12 +48,12 @@ struct cM3dGCyl {
 	/* 8026F24C */ void calcMinMax(cXyz*, cXyz*);
 };
 
-// build cXyz (cXyz) True/True
-// build cM3dGCylS (cM3dGCylS) True/True
-// build cM3dGSph (cM3dGSph) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cXyz (['cXyz']) True/True
+// build cM3dGCylS (['cM3dGCylS']) True/True
+// build cM3dGSph (['cM3dGSph']) True/True
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 

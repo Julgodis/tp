@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build JASDrumSet (JASDrumSet) False/False
-// build JASDrumSet (JASDrumSet) True/False
-struct JASDrumSet;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JASDrumSet (['JASDrumSet']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
+// build JASInstParam (['JASInstParam']) False/False
+/* top-level dependencies (begin ['JASInstParam']) */
+/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-/* top-level dependencies (begin JASDrumSet) */
-// outer dependency: JASDrumSet::TPerc
-// outer dependency: JKRHeap
-// outer dependency: JASInstParam
-/* top-level dependencies (end JASDrumSet) */
+// build JASDrumSet (['JASDrumSet']) True/False
+struct JASDrumSet;
+/* top-level dependencies (begin ['JASDrumSet']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASInstParam',)
+// outer dependency: ('JASDrumSet', 'TPerc')
+/* top-level dependencies (end ['JASDrumSet']) */
 struct JASDrumSet {
-	// JASDrumSet::TPerc
-	// JKRHeap
-	// JASInstParam
-	// build TPerc (JASDrumSet::TPerc) False/False
-	/* dependencies (begin JASDrumSet::TPerc) */
-	/* dependencies (end JASDrumSet::TPerc) */
+	// ('JKRHeap',)
+	// ('JASInstParam',)
+	// ('JASDrumSet', 'TPerc')
+	// build TPerc (['JASDrumSet', 'TPerc']) False/False
+	/* dependencies (begin ['JASDrumSet', 'TPerc']) */
+	/* dependencies (end ['JASDrumSet', 'TPerc']) */
 	struct TPerc {
 		/* 802984C4 */ TPerc();
 		/* 802984E4 */ void setRelease(u32);
@@ -49,11 +49,11 @@ struct JASDrumSet {
 	/* 802984EC */ void getType() const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASInstParam (JASInstParam) True/True
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASInstParam (['JASInstParam']) True/True
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };

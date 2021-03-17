@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dMw_c (dMw_c) False/False
-/* top-level dependencies (begin dMw_c) */
-/* top-level dependencies (end dMw_c) */
+// build dMw_c (['dMw_c']) False/False
+/* top-level dependencies (begin ['dMw_c']) */
+/* top-level dependencies (end ['dMw_c']) */
 struct dMw_c {
 	/* 801FA13C */ void key_wait_init(u8);
 	/* 801FA220 */ void ring_open_init(u8);
@@ -122,84 +122,84 @@ struct dMw_c {
 	/* 801FD67C */ void _delete();
 };
 
-// build msg_class (msg_class) False/False
-/* top-level dependencies (begin msg_class) */
-/* top-level dependencies (end msg_class) */
+// build msg_class (['msg_class']) False/False
+/* top-level dependencies (begin ['msg_class']) */
+/* top-level dependencies (end ['msg_class']) */
 struct msg_class {
 };
 
-// build dDlst_MENU_CAPTURE_c (dDlst_MENU_CAPTURE_c) False/False
-/* top-level dependencies (begin dDlst_MENU_CAPTURE_c) */
-/* top-level dependencies (end dDlst_MENU_CAPTURE_c) */
+// build dDlst_MENU_CAPTURE_c (['dDlst_MENU_CAPTURE_c']) False/False
+/* top-level dependencies (begin ['dDlst_MENU_CAPTURE_c']) */
+/* top-level dependencies (end ['dDlst_MENU_CAPTURE_c']) */
 struct dDlst_MENU_CAPTURE_c {
 	/* 801FDFCC */ void draw();
 	/* 801FE2E8 */ ~dDlst_MENU_CAPTURE_c();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build STControl (STControl) False/False
-/* top-level dependencies (begin STControl) */
-/* top-level dependencies (end STControl) */
+// build STControl (['STControl']) False/False
+/* top-level dependencies (begin ['STControl']) */
+/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 8003219C */ void checkTrigger();
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dMenu_Collect2D_c (dMenu_Collect2D_c) False/False
-/* top-level dependencies (begin dMenu_Collect2D_c) */
-/* top-level dependencies (end dMenu_Collect2D_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dMenu_Collect2D_c (['dMenu_Collect2D_c']) False/False
+/* top-level dependencies (begin ['dMenu_Collect2D_c']) */
+/* top-level dependencies (end ['dMenu_Collect2D_c']) */
 struct dMenu_Collect2D_c {
 	/* 801B5F84 */ void isKeyCheck();
 	/* 801B5FAC */ bool isOutCheck();
 };
 
-// build dMenu_Collect_c (dMenu_Collect_c) False/False
-// build CSTControl (CSTControl) False/False
-/* top-level dependencies (begin CSTControl) */
-/* top-level dependencies (end CSTControl) */
-struct CSTControl {
-};
-
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
+// build dMenu_Collect_c (['dMenu_Collect_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Collect_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Collect_c) */
+// build CSTControl (['CSTControl']) False/False
+/* top-level dependencies (begin ['CSTControl']) */
+/* top-level dependencies (end ['CSTControl']) */
+struct CSTControl {
+};
+
+/* top-level dependencies (begin ['dMenu_Collect_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Collect_c']) */
 struct dMenu_Collect_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801B7A0C */ void _create();
 	/* 801B7A44 */ void _delete();
@@ -207,21 +207,21 @@ struct dMenu_Collect_c {
 	/* 801B7AC0 */ void draw();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build CSTControl (CSTControl) True/True
-// build dMenu_Dmap_c (dMenu_Dmap_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Dmap_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Dmap_c) */
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+// build dMenu_Dmap_c (['dMenu_Dmap_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Dmap_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Dmap_c']) */
 struct dMenu_Dmap_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
 	/* 801BDDA4 */ void _move();
 	/* 801BE328 */ void isOpen();
@@ -231,38 +231,38 @@ struct dMenu_Dmap_c {
 	/* 801BF410 */ void isSync();
 };
 
-// build dMenu_Fishing_c (dMenu_Fishing_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Fishing_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fishing_c) */
+// build dMenu_Fishing_c (['dMenu_Fishing_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Fishing_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Fishing_c']) */
 struct dMenu_Fishing_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C50B4 */ void _move();
 	/* 801C5204 */ void isSync();
 	/* 801C52E4 */ void _open();
 };
 
-// build dMenu_Fmap_c (dMenu_Fmap_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Fmap_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap_c) */
+// build dMenu_Fmap_c (['dMenu_Fmap_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Fmap_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Fmap_c']) */
 struct dMenu_Fmap_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801C66E4 */ dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8, u8, f32, f32, u8);
 	/* 801C74A4 */ void _delete();
 	/* 801C74A8 */ void _move();
@@ -278,59 +278,59 @@ struct dMenu_Fmap_c {
 	/* 801CB290 */ void getStageTransZ();
 };
 
-// build dMenu_Insect_c (dMenu_Insect_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Insect_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Insect_c) */
+// build dMenu_Insect_c (['dMenu_Insect_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Insect_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Insect_c']) */
 struct dMenu_Insect_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D86C8 */ void _move();
 	/* 801D88EC */ void isSync();
 	/* 801D894C */ void _open();
 };
 
-// build dMenu_Letter_c (dMenu_Letter_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Letter_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Letter_c) */
+// build dMenu_Letter_c (['dMenu_Letter_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Letter_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Letter_c']) */
 struct dMenu_Letter_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DD474 */ void _move();
 	/* 801DD934 */ void isSync();
 	/* 801DDA74 */ void _open();
 };
 
-// build dMenu_Option_c (dMenu_Option_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build dMenu_Option_c (['dMenu_Option_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Option_c) */
-// outer dependency: JKRArchive
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Option_c) */
+/* top-level dependencies (begin ['dMenu_Option_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dMenu_Option_c']) */
 struct dMenu_Option_c {
-	// JKRArchive
-	// STControl
+	// ('STControl',)
+	// ('JKRArchive',)
 	/* 801E1F10 */ dMenu_Option_c(JKRArchive*, STControl*);
 	/* 801E2C1C */ void _delete();
 	/* 801E3408 */ void _move();
@@ -338,20 +338,20 @@ struct dMenu_Option_c {
 	/* 801E3B98 */ void _open();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build dMenu_Ring_c (dMenu_Ring_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Ring_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Ring_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build dMenu_Ring_c (['dMenu_Ring_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Ring_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Ring_c']) */
 struct dMenu_Ring_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801EAB7C */ void _create();
 	/* 801EABE8 */ void _delete();
@@ -361,9 +361,9 @@ struct dMenu_Ring_c {
 	/* 801EB3CC */ void isClose();
 };
 
-// build dMenu_save_c (dMenu_save_c) False/False
-/* top-level dependencies (begin dMenu_save_c) */
-/* top-level dependencies (end dMenu_save_c) */
+// build dMenu_save_c (['dMenu_save_c']) False/False
+/* top-level dependencies (begin ['dMenu_save_c']) */
+/* top-level dependencies (end ['dMenu_save_c']) */
 struct dMenu_save_c {
 	/* 801EF6A0 */ dMenu_save_c();
 	/* 801EF7AC */ void _create();
@@ -374,81 +374,81 @@ struct dMenu_save_c {
 	/* 801F69FC */ void _draw2();
 };
 
-// build dMenu_Skill_c (dMenu_Skill_c) False/False
-// build CSTControl (CSTControl) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Skill_c) */
-// outer dependency: CSTControl
-// outer dependency: JKRExpHeap
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Skill_c) */
+// build dMenu_Skill_c (['dMenu_Skill_c']) False/False
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build CSTControl (['CSTControl']) True/True
+/* top-level dependencies (begin ['dMenu_Skill_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CSTControl',)
+/* top-level dependencies (end ['dMenu_Skill_c']) */
 struct dMenu_Skill_c {
-	// CSTControl
-	// JKRExpHeap
-	// STControl
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CSTControl',)
 	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801F7718 */ void _move();
 	/* 801F7950 */ void isSync();
 	/* 801F7A40 */ void _open();
 };
 
-// build dMeterMap_c (dMeterMap_c) False/False
-/* top-level dependencies (begin dMeterMap_c) */
-/* top-level dependencies (end dMeterMap_c) */
+// build dMeterMap_c (['dMeterMap_c']) False/False
+/* top-level dependencies (begin ['dMeterMap_c']) */
+/* top-level dependencies (end ['dMeterMap_c']) */
 struct dMeterMap_c {
 	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
 	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
 	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
 };
 
-// build dMeter2Info_c (dMeter2Info_c) False/False
-/* top-level dependencies (begin dMeter2Info_c) */
-/* top-level dependencies (end dMeter2Info_c) */
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
 	/* 8021C9DC */ void resetWarpStatus();
 };
 
-// build dMeter2_c (dMeter2_c) False/False
-/* top-level dependencies (begin dMeter2_c) */
-/* top-level dependencies (end dMeter2_c) */
+// build dMeter2_c (['dMeter2_c']) False/False
+/* top-level dependencies (begin ['dMeter2_c']) */
+/* top-level dependencies (end ['dMeter2_c']) */
 struct dMeter2_c {
 	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-// build dMsgObject_c (dMsgObject_c) False/False
-/* top-level dependencies (begin dMsgObject_c) */
-/* top-level dependencies (end dMsgObject_c) */
+// build dMsgObject_c (['dMsgObject_c']) False/False
+/* top-level dependencies (begin ['dMsgObject_c']) */
+/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802379AC */ void setKillMessageFlag();
 	/* 8023822C */ void getStatus();
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

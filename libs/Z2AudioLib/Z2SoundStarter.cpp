@@ -9,37 +9,37 @@
 // Types:
 // 
 
-// build Z2SoundStarter (Z2SoundStarter) False/False
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build Z2SoundStarter (['Z2SoundStarter']) False/False
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 };
 
-/* top-level dependencies (begin Z2SoundStarter) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end Z2SoundStarter) */
+/* top-level dependencies (begin ['Z2SoundStarter']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802AAB94 */ Z2SoundStarter(bool);
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 	/* 802AAFF0 */ ~Z2SoundStarter();
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
-// build JASTrack (JASTrack) False/False
-/* top-level dependencies (begin JASTrack) */
-/* top-level dependencies (end JASTrack) */
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build JASTrack (['JASTrack']) False/False
+/* top-level dependencies (begin ['JASTrack']) */
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 80291C30 */ void openChild(u32);
 	/* 80292918 */ void writePort(u32, u16);
 	/* 8029297C */ void readPort(u32);
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);
@@ -48,17 +48,17 @@ struct JAISoundParamsMove {
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build JAISoundStarter (JAISoundStarter) False/False
-/* top-level dependencies (begin JAISoundStarter) */
-/* top-level dependencies (end JAISoundStarter) */
+// build JAISoundStarter (['JAISoundStarter']) False/False
+/* top-level dependencies (begin ['JAISoundStarter']) */
+/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F6C */ JAISoundStarter(bool);
 	/* 802A2F88 */ ~JAISoundStarter();
 };
 
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-/* top-level dependencies (begin Z2EnvSeMgr) */
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C93E4 */ void getFogDensity();
 };

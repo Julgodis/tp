@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
-/* top-level dependencies (begin dSv_player_status_a_c) */
-/* top-level dependencies (end dSv_player_status_a_c) */
+// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
+/* top-level dependencies (begin ['dSv_player_status_a_c']) */
+/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032958 */ void init();
 	/* 80032A48 */ void setSelectItemIndex(int, u8);
@@ -22,9 +22,9 @@ struct dSv_player_status_a_c {
 	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
-// build dSv_player_status_b_c (dSv_player_status_b_c) False/False
-/* top-level dependencies (begin dSv_player_status_b_c) */
-/* top-level dependencies (end dSv_player_status_b_c) */
+// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
+/* top-level dependencies (begin ['dSv_player_status_b_c']) */
+/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032B50 */ void init();
 	/* 80032B94 */ void onDarkClearLV(int);
@@ -33,58 +33,58 @@ struct dSv_player_status_b_c {
 	/* 80032BEC */ void isTransformLV(int) const;
 };
 
-// build dSv_horse_place_c (dSv_horse_place_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dSv_horse_place_c (['dSv_horse_place_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin dSv_horse_place_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dSv_horse_place_c) */
+/* top-level dependencies (begin ['dSv_horse_place_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dSv_horse_place_c']) */
 struct dSv_horse_place_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80032C0C */ void init();
 	/* 80032C64 */ void set(char const*, cXyz const&, s16, s8);
 };
 
-// build cXyz (cXyz) True/True
-// build dSv_player_return_place_c (dSv_player_return_place_c) False/False
-/* top-level dependencies (begin dSv_player_return_place_c) */
-/* top-level dependencies (end dSv_player_return_place_c) */
+// build cXyz (['cXyz']) True/True
+// build dSv_player_return_place_c (['dSv_player_return_place_c']) False/False
+/* top-level dependencies (begin ['dSv_player_return_place_c']) */
+/* top-level dependencies (end ['dSv_player_return_place_c']) */
 struct dSv_player_return_place_c {
 	/* 80032CC8 */ void init();
 	/* 80032D1C */ void set(char const*, s8, u8);
 };
 
-// build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dSv_player_field_last_stay_info_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dSv_player_field_last_stay_info_c) */
+// build dSv_player_field_last_stay_info_c (['dSv_player_field_last_stay_info_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dSv_player_field_last_stay_info_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dSv_player_field_last_stay_info_c']) */
 struct dSv_player_field_last_stay_info_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80032D60 */ void init();
 	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
 	/* 80032E4C */ void onRegionBit(int);
 	/* 80032E78 */ void isRegionBit(int) const;
 };
 
-// build dSv_player_last_mark_info_c (dSv_player_last_mark_info_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dSv_player_last_mark_info_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dSv_player_last_mark_info_c) */
+// build dSv_player_last_mark_info_c (['dSv_player_last_mark_info_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dSv_player_last_mark_info_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dSv_player_last_mark_info_c']) */
 struct dSv_player_last_mark_info_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80032EB0 */ void init();
 	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, s8, u8, u8);
 };
 
-// build dSv_player_item_c (dSv_player_item_c) False/False
-/* top-level dependencies (begin dSv_player_item_c) */
-/* top-level dependencies (end dSv_player_item_c) */
+// build dSv_player_item_c (['dSv_player_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_c']) */
+/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032F90 */ void init();
 	/* 80032FB8 */ void setItem(int, u8);
@@ -112,9 +112,9 @@ struct dSv_player_item_c {
 	/* 80033D40 */ void setBaitItem(u8);
 };
 
-// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
-/* top-level dependencies (begin dSv_player_get_item_c) */
-/* top-level dependencies (end dSv_player_get_item_c) */
+// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_get_item_c']) */
+/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E40 */ void init();
 	/* 80033E60 */ void onFirstBit(u8);
@@ -122,9 +122,9 @@ struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
-/* top-level dependencies (begin dSv_player_item_record_c) */
-/* top-level dependencies (end dSv_player_item_record_c) */
+// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_record_c']) */
+/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F00 */ void init();
 	/* 80033F6C */ void setBombNum(u8, u8);
@@ -134,18 +134,18 @@ struct dSv_player_item_record_c {
 	/* 80034030 */ void getBottleNum(u8) const;
 };
 
-// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
-/* top-level dependencies (begin dSv_player_item_max_c) */
-/* top-level dependencies (end dSv_player_item_max_c) */
+// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
+/* top-level dependencies (begin ['dSv_player_item_max_c']) */
+/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 80034040 */ void init();
 	/* 800340B8 */ void setBombNum(u8, u8);
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_player_collect_c (dSv_player_collect_c) False/False
-/* top-level dependencies (begin dSv_player_collect_c) */
-/* top-level dependencies (end dSv_player_collect_c) */
+// build dSv_player_collect_c (['dSv_player_collect_c']) False/False
+/* top-level dependencies (begin ['dSv_player_collect_c']) */
+/* top-level dependencies (end ['dSv_player_collect_c']) */
 struct dSv_player_collect_c {
 	/* 800341AC */ void init();
 	/* 800341E8 */ void setCollect(int, u8);
@@ -156,16 +156,16 @@ struct dSv_player_collect_c {
 	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
-// build dSv_player_wolf_c (dSv_player_wolf_c) False/False
-/* top-level dependencies (begin dSv_player_wolf_c) */
-/* top-level dependencies (end dSv_player_wolf_c) */
+// build dSv_player_wolf_c (['dSv_player_wolf_c']) False/False
+/* top-level dependencies (begin ['dSv_player_wolf_c']) */
+/* top-level dependencies (end ['dSv_player_wolf_c']) */
 struct dSv_player_wolf_c {
 	/* 800342B4 */ void init();
 };
 
-// build dSv_light_drop_c (dSv_light_drop_c) False/False
-/* top-level dependencies (begin dSv_light_drop_c) */
-/* top-level dependencies (end dSv_light_drop_c) */
+// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
+/* top-level dependencies (begin ['dSv_light_drop_c']) */
+/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 800342DC */ void init();
 	/* 80034320 */ void setLightDropNum(u8, u8);
@@ -174,9 +174,9 @@ struct dSv_light_drop_c {
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_letter_info_c (dSv_letter_info_c) False/False
-/* top-level dependencies (begin dSv_letter_info_c) */
-/* top-level dependencies (end dSv_letter_info_c) */
+// build dSv_letter_info_c (['dSv_letter_info_c']) False/False
+/* top-level dependencies (begin ['dSv_letter_info_c']) */
+/* top-level dependencies (end ['dSv_letter_info_c']) */
 struct dSv_letter_info_c {
 	/* 800343DC */ void init();
 	/* 80034428 */ void onLetterGetFlag(int);
@@ -185,24 +185,24 @@ struct dSv_letter_info_c {
 	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
-// build dSv_fishing_info_c (dSv_fishing_info_c) False/False
-/* top-level dependencies (begin dSv_fishing_info_c) */
-/* top-level dependencies (end dSv_fishing_info_c) */
+// build dSv_fishing_info_c (['dSv_fishing_info_c']) False/False
+/* top-level dependencies (begin ['dSv_fishing_info_c']) */
+/* top-level dependencies (end ['dSv_fishing_info_c']) */
 struct dSv_fishing_info_c {
 	/* 800344C8 */ void init();
 	/* 800344FC */ void addFishCount(u8);
 };
 
-// build dSv_player_info_c (dSv_player_info_c) False/False
-/* top-level dependencies (begin dSv_player_info_c) */
-/* top-level dependencies (end dSv_player_info_c) */
+// build dSv_player_info_c (['dSv_player_info_c']) False/False
+/* top-level dependencies (begin ['dSv_player_info_c']) */
+/* top-level dependencies (end ['dSv_player_info_c']) */
 struct dSv_player_info_c {
 	/* 80034518 */ void init();
 };
 
-// build dSv_player_config_c (dSv_player_config_c) False/False
-/* top-level dependencies (begin dSv_player_config_c) */
-/* top-level dependencies (end dSv_player_config_c) */
+// build dSv_player_config_c (['dSv_player_config_c']) False/False
+/* top-level dependencies (begin ['dSv_player_config_c']) */
+/* top-level dependencies (end ['dSv_player_config_c']) */
 struct dSv_player_config_c {
 	/* 800345AC */ void init();
 	/* 80034644 */ void checkVibration() const;
@@ -212,16 +212,16 @@ struct dSv_player_config_c {
 	/* 8003469C */ void setVibration(u8);
 };
 
-// build dSv_player_c (dSv_player_c) False/False
-/* top-level dependencies (begin dSv_player_c) */
-/* top-level dependencies (end dSv_player_c) */
+// build dSv_player_c (['dSv_player_c']) False/False
+/* top-level dependencies (begin ['dSv_player_c']) */
+/* top-level dependencies (end ['dSv_player_c']) */
 struct dSv_player_c {
 	/* 800346A4 */ void init();
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034750 */ void init();
 	/* 800347A0 */ void onTbox(int);
@@ -237,9 +237,9 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 80034954 */ void init();
 	/* 8003498C */ void onEventBit(u16);
@@ -249,24 +249,24 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dSv_MiniGame_c (dSv_MiniGame_c) False/False
-/* top-level dependencies (begin dSv_MiniGame_c) */
-/* top-level dependencies (end dSv_MiniGame_c) */
+// build dSv_MiniGame_c (['dSv_MiniGame_c']) False/False
+/* top-level dependencies (begin ['dSv_MiniGame_c']) */
+/* top-level dependencies (end ['dSv_MiniGame_c']) */
 struct dSv_MiniGame_c {
 	/* 80034A1C */ void init();
 };
 
-// build dSv_memory_c (dSv_memory_c) False/False
-/* top-level dependencies (begin dSv_memory_c) */
-/* top-level dependencies (end dSv_memory_c) */
+// build dSv_memory_c (['dSv_memory_c']) False/False
+/* top-level dependencies (begin ['dSv_memory_c']) */
+/* top-level dependencies (end ['dSv_memory_c']) */
 struct dSv_memory_c {
 	/* 80030DB0 */ dSv_memory_c();
 	/* 80034A64 */ void init();
 };
 
-// build dSv_memory2_c (dSv_memory2_c) False/False
-/* top-level dependencies (begin dSv_memory2_c) */
-/* top-level dependencies (end dSv_memory2_c) */
+// build dSv_memory2_c (['dSv_memory2_c']) False/False
+/* top-level dependencies (begin ['dSv_memory2_c']) */
+/* top-level dependencies (end ['dSv_memory2_c']) */
 struct dSv_memory2_c {
 	/* 80030D80 */ dSv_memory2_c();
 	/* 80034A84 */ void init();
@@ -275,9 +275,9 @@ struct dSv_memory2_c {
 	/* 80034AEC */ void isVisitedRoom(int);
 };
 
-// build dSv_danBit_c (dSv_danBit_c) False/False
-/* top-level dependencies (begin dSv_danBit_c) */
-/* top-level dependencies (end dSv_danBit_c) */
+// build dSv_danBit_c (['dSv_danBit_c']) False/False
+/* top-level dependencies (begin ['dSv_danBit_c']) */
+/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034B14 */ void init(s8);
 	/* 80034B98 */ void onSwitch(int);
@@ -288,9 +288,9 @@ struct dSv_danBit_c {
 	/* 80034C74 */ void isItem(int) const;
 };
 
-// build dSv_zoneBit_c (dSv_zoneBit_c) False/False
-/* top-level dependencies (begin dSv_zoneBit_c) */
-/* top-level dependencies (end dSv_zoneBit_c) */
+// build dSv_zoneBit_c (['dSv_zoneBit_c']) False/False
+/* top-level dependencies (begin ['dSv_zoneBit_c']) */
+/* top-level dependencies (end ['dSv_zoneBit_c']) */
 struct dSv_zoneBit_c {
 	/* 80034CA0 */ void init();
 	/* 80034CEC */ void clearRoomSwitch();
@@ -309,9 +309,9 @@ struct dSv_zoneBit_c {
 	/* 80034E98 */ void isOneItem(int) const;
 };
 
-// build dSv_zoneActor_c (dSv_zoneActor_c) False/False
-/* top-level dependencies (begin dSv_zoneActor_c) */
-/* top-level dependencies (end dSv_zoneActor_c) */
+// build dSv_zoneActor_c (['dSv_zoneActor_c']) False/False
+/* top-level dependencies (begin ['dSv_zoneActor_c']) */
+/* top-level dependencies (end ['dSv_zoneActor_c']) */
 struct dSv_zoneActor_c {
 	/* 80034EB4 */ void init();
 	/* 80034ED4 */ void on(int);
@@ -319,36 +319,36 @@ struct dSv_zoneActor_c {
 	/* 80034F1C */ void is(int) const;
 };
 
-// build dSv_zone_c (dSv_zone_c) False/False
-/* top-level dependencies (begin dSv_zone_c) */
-/* top-level dependencies (end dSv_zone_c) */
+// build dSv_zone_c (['dSv_zone_c']) False/False
+/* top-level dependencies (begin ['dSv_zone_c']) */
+/* top-level dependencies (end ['dSv_zone_c']) */
 struct dSv_zone_c {
 	/* 80034F44 */ void init(int);
 };
 
-// build dSv_restart_c (dSv_restart_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dSv_restart_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dSv_restart_c) */
+// build dSv_restart_c (['dSv_restart_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dSv_restart_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dSv_restart_c']) */
 struct dSv_restart_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
 };
 
-// build dSv_turnRestart_c (dSv_turnRestart_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dSv_turnRestart_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dSv_turnRestart_c) */
+// build dSv_turnRestart_c (['dSv_turnRestart_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dSv_turnRestart_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dSv_turnRestart_c']) */
 struct dSv_turnRestart_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80034FCC */ void init();
 	/* 800350BC */ void getSave(int);
@@ -369,58 +369,58 @@ struct dSv_info_c {
 	/* 80035BD0 */ void initdata_to_card(char*, int);
 };
 
-// build dSv_save_c (dSv_save_c) False/False
-/* top-level dependencies (begin dSv_save_c) */
-/* top-level dependencies (end dSv_save_c) */
+// build dSv_save_c (['dSv_save_c']) False/False
+/* top-level dependencies (begin ['dSv_save_c']) */
+/* top-level dependencies (end ['dSv_save_c']) */
 struct dSv_save_c {
 	/* 8003501C */ void init();
 	/* 800350A8 */ void getSave2(int);
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002B3A8 */ void setNowVibration(u8);
 	/* 8002B3B0 */ void getNowVibration();
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 8002D9B0 */ void getZoneNo(int);
 };
 
-// build daObjCarry_c (daObjCarry_c) False/False
-/* top-level dependencies (begin daObjCarry_c) */
-/* top-level dependencies (end daObjCarry_c) */
+// build daObjCarry_c (['daObjCarry_c']) False/False
+/* top-level dependencies (begin ['daObjCarry_c']) */
+/* top-level dependencies (end ['daObjCarry_c']) */
 struct daObjCarry_c {
 	/* 80031CF8 */ void clrSaveFlag();
 	/* 80031D04 */ void setSaveFlag();
 };
 
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
-/* top-level dependencies (begin JMSMesgEntry_c) */
-/* top-level dependencies (end JMSMesgEntry_c) */
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
+/* top-level dependencies (begin ['JMSMesgEntry_c']) */
+/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JMSMesgEntry_c
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('JMSMesgEntry_c',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// JMSMesgEntry_c
+	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021DCC4 */ void setHotSpringTimer(u8);
 	/* 8021E290 */ void setSaveStageName(char const*);
 };
 
-// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
-// build Z2AudioMgr (Z2AudioMgr) False/False
-/* top-level dependencies (begin Z2AudioMgr) */
-/* top-level dependencies (end Z2AudioMgr) */
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
+// build Z2AudioMgr (['Z2AudioMgr']) False/False
+/* top-level dependencies (begin ['Z2AudioMgr']) */
+/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
 	/* 802CD888 */ void setOutputMode(u32);
 };

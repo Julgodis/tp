@@ -9,51 +9,51 @@
 // Types:
 // 
 
-// build base_process_class (base_process_class) False/False
-/* top-level dependencies (begin base_process_class) */
-/* top-level dependencies (end base_process_class) */
+// build base_process_class (['base_process_class']) False/False
+/* top-level dependencies (begin ['base_process_class']) */
+/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build delete_tag_class (delete_tag_class) False/False
-/* top-level dependencies (begin delete_tag_class) */
-/* top-level dependencies (end delete_tag_class) */
+// build delete_tag_class (['delete_tag_class']) False/False
+/* top-level dependencies (begin ['delete_tag_class']) */
+/* top-level dependencies (end ['delete_tag_class']) */
 struct delete_tag_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build layer_management_tag_class (layer_management_tag_class) False/False
-/* top-level dependencies (begin layer_management_tag_class) */
-/* top-level dependencies (end layer_management_tag_class) */
+// build layer_management_tag_class (['layer_management_tag_class']) False/False
+/* top-level dependencies (begin ['layer_management_tag_class']) */
+/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
-// build process_priority_class (process_priority_class) False/False
-/* top-level dependencies (begin process_priority_class) */
-/* top-level dependencies (end process_priority_class) */
+// build process_priority_class (['process_priority_class']) False/False
+/* top-level dependencies (begin ['process_priority_class']) */
+/* top-level dependencies (end ['process_priority_class']) */
 struct process_priority_class {
 };
 
-// build line_tag (line_tag) False/False
-/* top-level dependencies (begin line_tag) */
-/* top-level dependencies (end line_tag) */
+// build line_tag (['line_tag']) False/False
+/* top-level dependencies (begin ['line_tag']) */
+/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build cMl (cMl) False/False
-/* top-level dependencies (begin cMl) */
-/* top-level dependencies (end cMl) */
+// build cMl (['cMl']) False/False
+/* top-level dependencies (begin ['cMl']) */
+/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);

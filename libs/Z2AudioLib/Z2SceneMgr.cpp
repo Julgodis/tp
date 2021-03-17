@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build Z2SceneMgr (Z2SceneMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Z2SceneMgr (['Z2SceneMgr']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 	/* 802B995C */ JAISoundID(JAISoundID const&);
 	/* 802B9A88 */ void operator=(JAISoundID const&);
 	/* 802B9B60 */ JAISoundID(u32);
 };
 
-/* top-level dependencies (begin Z2SceneMgr) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SceneMgr) */
+/* top-level dependencies (begin ['Z2SceneMgr']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802B6840 */ Z2SceneMgr();
 	/* 802B68B0 */ void setInDarkness(bool);
 	/* 802B68E0 */ void setSceneExist(bool);
@@ -47,10 +47,10 @@ struct Z2SceneMgr {
 	/* 802BA770 */ void loadBgmWave(u32);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Z2SeqMgr (Z2SeqMgr) False/False
-/* top-level dependencies (begin Z2SeqMgr) */
-/* top-level dependencies (end Z2SeqMgr) */
+// build JAISoundID (['JAISoundID']) True/True
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AF408 */ void bgmStop(u32, s32);
@@ -70,24 +70,24 @@ struct Z2SeqMgr {
 	/* 802B9AFC */ void setWindStoneVol(f32, u32);
 };
 
-// build JAIStreamMgr (JAIStreamMgr) False/False
-/* top-level dependencies (begin JAIStreamMgr) */
-/* top-level dependencies (end JAIStreamMgr) */
+// build JAIStreamMgr (['JAIStreamMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamMgr']) */
+/* top-level dependencies (end ['JAIStreamMgr']) */
 struct JAIStreamMgr {
 	/* 802B9978 */ void isActive() const;
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
 	/* 802B9988 */ void getID() const;
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-/* top-level dependencies (begin Z2SeMgr) */
-/* top-level dependencies (end Z2SeMgr) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+/* top-level dependencies (begin ['Z2SeMgr']) */
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
 	/* 802AB80C */ void resetModY();
 	/* 802AD94C */ void seStopAll(u32);
@@ -95,97 +95,97 @@ struct Z2SeMgr {
 	/* 802B9AC4 */ void resetCrowdSize();
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034860 */ void isSwitch(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build JASWaveArc (JASWaveArc) False/False
-// build JASHeap (JASHeap) False/False
-/* top-level dependencies (begin JASHeap) */
-/* top-level dependencies (end JASHeap) */
+// build JASWaveArc (['JASWaveArc']) False/False
+// build JASHeap (['JASHeap']) False/False
+/* top-level dependencies (begin ['JASHeap']) */
+/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
 };
 
-/* top-level dependencies (begin JASWaveArc) */
-// outer dependency: JASHeap
-/* top-level dependencies (end JASWaveArc) */
+/* top-level dependencies (begin ['JASWaveArc']) */
+// outer dependency: ('JASHeap',)
+/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
-	// JASHeap
+	// ('JASHeap',)
 	/* 8029A4C0 */ void load(JASHeap*);
 	/* 8029A580 */ void loadTail(JASHeap*);
 	/* 8029A640 */ void erase();
 };
 
-// build JASHeap (JASHeap) True/True
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JASHeap (['JASHeap']) True/True
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-// build JAUSoundTable (JAUSoundTable) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAUSoundTable) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSoundTable) */
+// build JAUSoundTable (['JAUSoundTable']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAUSoundTable']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A7160 */ void getTypeID(JAISoundID) const;
 };
 
-// build Z2SoundMgr (Z2SoundMgr) False/False
-/* top-level dependencies (begin Z2SoundMgr) */
-/* top-level dependencies (end Z2SoundMgr) */
+// build Z2SoundMgr (['Z2SoundMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundMgr']) */
+/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
 	/* 802AA430 */ void resetFilterAll();
 };
 
-// build Z2StatusMgr (Z2StatusMgr) False/False
-/* top-level dependencies (begin Z2StatusMgr) */
-/* top-level dependencies (end Z2StatusMgr) */
+// build Z2StatusMgr (['Z2StatusMgr']) False/False
+/* top-level dependencies (begin ['Z2StatusMgr']) */
+/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B617C */ void menuOut();
 	/* 802B61E8 */ void setDemoName(char*);
 	/* 802B6734 */ void checkDayTime();
 };
 
-// build Z2FxLineMgr (Z2FxLineMgr) False/False
-/* top-level dependencies (begin Z2FxLineMgr) */
-/* top-level dependencies (end Z2FxLineMgr) */
+// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
+/* top-level dependencies (begin ['Z2FxLineMgr']) */
+/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
 	/* 802BAEB8 */ void setSceneFx(s32);
 };
 
-// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
-/* top-level dependencies (begin Z2SoundObjMgr) */
-/* top-level dependencies (end Z2SoundObjMgr) */
+// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundObjMgr']) */
+/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
 	/* 802BFFEC */ void setGhostEnemyState(u8);
 	/* 802C013C */ void deleteEnemyAll();
 };
 
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-/* top-level dependencies (begin Z2EnvSeMgr) */
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C699C */ void resetSceneInner();
 	/* 802C6AC0 */ void initSceneEnvSe(s32, s8, f32);

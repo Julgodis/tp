@@ -9,48 +9,48 @@
 // Types:
 // 
 
-// build dPa_followEcallBack (dPa_followEcallBack) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80267128 */ void atan2sX_Z() const;
-};
-
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build dPa_followEcallBack (['dPa_followEcallBack']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end JPABaseEmitter) */
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 8027EA40 */ void createParticle();
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
 };
 
-/* top-level dependencies (begin dPa_followEcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_followEcallBack) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80267128 */ void atan2sX_Z() const;
+};
+
+/* top-level dependencies (begin ['dPa_followEcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_followEcallBack']) */
 struct dPa_followEcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 	/* 800495BC */ void execute(JPABaseEmitter*);
 	/* 800496B0 */ void draw(JPABaseEmitter*);
@@ -60,134 +60,136 @@ struct dPa_followEcallBack {
 	/* 80050284 */ void cleanup();
 };
 
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build dPa_light8EcallBack (dPa_light8EcallBack) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_light8EcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_light8EcallBack) */
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+// build csXyz (['csXyz']) True/True
+// build dPa_light8EcallBack (['dPa_light8EcallBack']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_light8EcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_light8EcallBack']) */
 struct dPa_light8EcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 8004979C */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A340 */ void draw(JPABaseEmitter*);
 	/* 8005015C */ ~dPa_light8EcallBack();
 	/* 800501E0 */ void drawAfter(JPABaseEmitter*);
 };
 
-// build dPa_gen_b_light8EcallBack (dPa_gen_b_light8EcallBack) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_gen_b_light8EcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_gen_b_light8EcallBack) */
+// build dPa_gen_b_light8EcallBack (['dPa_gen_b_light8EcallBack']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_gen_b_light8EcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_gen_b_light8EcallBack']) */
 struct dPa_gen_b_light8EcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 800497B0 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A364 */ void draw(JPABaseEmitter*);
 	/* 800500B8 */ ~dPa_gen_b_light8EcallBack();
 	/* 8005013C */ void drawAfter(JPABaseEmitter*);
 };
 
-// build dPa_gen_d_light8EcallBack (dPa_gen_d_light8EcallBack) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_gen_d_light8EcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_gen_d_light8EcallBack) */
+// build dPa_gen_d_light8EcallBack (['dPa_gen_d_light8EcallBack']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_gen_d_light8EcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_gen_d_light8EcallBack']) */
 struct dPa_gen_d_light8EcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 800497CC */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A388 */ void draw(JPABaseEmitter*);
 	/* 80050098 */ void drawAfter(JPABaseEmitter*);
 	/* 800503FC */ ~dPa_gen_d_light8EcallBack();
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin JPABaseParticle) */
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+/* top-level dependencies (begin ['JPABaseParticle']) */
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
 	/* 80280548 */ void getWidth(JPABaseEmitter const*) const;
 	/* 80280568 */ void getHeight(JPABaseEmitter const*) const;
 };
 
-// build dPa_modelPcallBack (dPa_modelPcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_modelPcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_modelPcallBack) */
+// build dPa_modelPcallBack (['dPa_modelPcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_modelPcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_modelPcallBack']) */
 struct dPa_modelPcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004A460 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
-// build dPa_modelEcallBack (dPa_modelEcallBack) False/False
-// build cXyz (cXyz) True/True
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build dPa_modelEcallBack (['dPa_modelEcallBack']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_modelEcallBack) */
-// outer dependency: cXyz
-// outer dependency: J3DModelData
-// outer dependency: dKy_tevstr_c
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_modelEcallBack) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_modelEcallBack']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_modelEcallBack']) */
 struct dPa_modelEcallBack {
-	// J3DModelData
-	// dKy_tevstr_c
-	// csXyz
-	// JPABaseEmitter
-	// cXyz
-	// build model_c (dPa_modelEcallBack::model_c) False/False
-	/* dependencies (begin dPa_modelEcallBack::model_c) */
-	/* dependencies (end dPa_modelEcallBack::model_c) */
+	// ('J3DModelData',)
+	// ('JPABaseEmitter',)
+	// ('dKy_tevstr_c',)
+	// ('csXyz',)
+	// ('cXyz',)
+	// build model_c (['dPa_modelEcallBack', 'model_c']) False/False
+	/* dependencies (begin ['dPa_modelEcallBack', 'model_c']) */
+	// inner dependency: 0 ('J3DModelData',) (for ['dPa_modelEcallBack', 'model_c'])
+	// inner dependency: 0 ('dKy_tevstr_c',) (for ['dPa_modelEcallBack', 'model_c'])
+	/* dependencies (end ['dPa_modelEcallBack', 'model_c']) */
 	struct model_c {
-		// dKy_tevstr_c
-		// J3DModelData
+		// ('J3DModelData',)
+		// ('dKy_tevstr_c',)
 		/* 8004A608 */ void set(J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 		/* 8004A7AC */ void setup();
 		/* 8004A88C */ void cleanup();
@@ -211,72 +213,75 @@ struct dPa_modelEcallBack {
 	/* 80050378 */ ~dPa_modelEcallBack();
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build dPa_selectTexEcallBack (dPa_selectTexEcallBack) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_selectTexEcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_selectTexEcallBack) */
+// build J3DModelData (['J3DModelData']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build dPa_selectTexEcallBack (['dPa_selectTexEcallBack']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_selectTexEcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_selectTexEcallBack']) */
 struct dPa_selectTexEcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 8004ADC4 */ void draw(JPABaseEmitter*);
 	/* 8004FF8C */ ~dPa_selectTexEcallBack();
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-// build dPa_simpleEcallBack (dPa_simpleEcallBack) False/False
-// build cXyz (cXyz) True/True
-// build JPAEmitterManager (JPAEmitterManager) False/False
-// build JPADrawInfo (JPADrawInfo) False/False
-/* top-level dependencies (begin JPADrawInfo) */
-/* top-level dependencies (end JPADrawInfo) */
+// build dPa_simpleEcallBack (['dPa_simpleEcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build cXyz (['cXyz']) True/True
+// build JPAEmitterManager (['JPAEmitterManager']) False/False
+// build JPADrawInfo (['JPADrawInfo']) False/False
+/* top-level dependencies (begin ['JPADrawInfo']) */
+/* top-level dependencies (end ['JPADrawInfo']) */
 struct JPADrawInfo {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JPAResourceManager (JPAResourceManager) False/False
-// build JKRHeap (JKRHeap) True/True
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build JPAResourceManager (['JPAResourceManager']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin JPAResourceManager) */
-// outer dependency: JKRHeap
-// outer dependency: ResTIMG
-/* top-level dependencies (end JPAResourceManager) */
+/* top-level dependencies (begin ['JPAResourceManager']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['JPAResourceManager']) */
 struct JPAResourceManager {
-	// JKRHeap
-	// ResTIMG
+	// ('JKRHeap',)
+	// ('ResTIMG',)
 	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-/* top-level dependencies (begin JPAEmitterManager) */
-// outer dependency: JPADrawInfo
-// outer dependency: JKRHeap
-// outer dependency: JPAResourceManager
-/* top-level dependencies (end JPAEmitterManager) */
+/* top-level dependencies (begin ['JPAEmitterManager']) */
+// outer dependency: ('JPADrawInfo',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JPAResourceManager',)
+/* top-level dependencies (end ['JPAEmitterManager']) */
 struct JPAEmitterManager {
-	// JPADrawInfo
-	// JKRHeap
-	// JPAResourceManager
+	// ('JPADrawInfo',)
+	// ('JKRHeap',)
+	// ('JPAResourceManager',)
 	/* 8027DCA0 */ JPAEmitterManager(u32, u32, JKRHeap*, u8, u8);
 	/* 8027DFA0 */ void calc(u8);
 	/* 8027E028 */ void draw(JPADrawInfo const*, u8);
@@ -285,22 +290,19 @@ struct JPAEmitterManager {
 	/* 8027E354 */ void clearResourceManager(u8);
 };
 
-// build _GXColor (_GXColor) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_simpleEcallBack) */
-// outer dependency: cXyz
-// outer dependency: JPAEmitterManager
-// outer dependency: _GXColor
-// outer dependency: dKy_tevstr_c
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_simpleEcallBack) */
+/* top-level dependencies (begin ['dPa_simpleEcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('_GXColor',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('JPAEmitterManager',)
+/* top-level dependencies (end ['dPa_simpleEcallBack']) */
 struct dPa_simpleEcallBack {
-	// dKy_tevstr_c
-	// JPABaseEmitter
-	// cXyz
-	// JPAEmitterManager
-	// _GXColor
+	// ('JPABaseEmitter',)
+	// ('_GXColor',)
+	// ('dKy_tevstr_c',)
+	// ('JPAEmitterManager',)
+	// ('cXyz',)
 	/* 8004ADF4 */ dPa_simpleEcallBack();
 	/* 8004AE1C */ void executeAfter(JPABaseEmitter*);
 	/* 8004AF94 */ void draw(JPABaseEmitter*);
@@ -310,105 +312,109 @@ struct dPa_simpleEcallBack {
 	/* 8004FC08 */ ~dPa_simpleEcallBack();
 };
 
-// build JPAEmitterManager (JPAEmitterManager) True/True
-// build dPa_simpleData_c (dPa_simpleData_c) False/False
-/* top-level dependencies (begin dPa_simpleData_c) */
-/* top-level dependencies (end dPa_simpleData_c) */
+// build JPAEmitterManager (['JPAEmitterManager']) True/True
+// build dPa_simpleData_c (['dPa_simpleData_c']) False/False
+/* top-level dependencies (begin ['dPa_simpleData_c']) */
+/* top-level dependencies (end ['dPa_simpleData_c']) */
 struct dPa_simpleData_c {
 	/* 8004B024 */ ~dPa_simpleData_c();
 	/* 8004B060 */ dPa_simpleData_c();
 };
 
-// build dPa_windPcallBack (dPa_windPcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_windPcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_windPcallBack) */
+// build dPa_windPcallBack (['dPa_windPcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_windPcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_windPcallBack']) */
 struct dPa_windPcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004B4E0 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-// build dPa_control_c (dPa_control_c) False/False
-// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin mDoDvdThd_toMainRam_c) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end mDoDvdThd_toMainRam_c) */
-struct mDoDvdThd_toMainRam_c {
-	// JKRHeap
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
-};
-
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
+// build dPa_control_c (['dPa_control_c']) False/False
+// build JPADrawInfo (['JPADrawInfo']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build dPa_control_c (['dPa_control_c']) True/False
+struct dPa_control_c;
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
+/* top-level dependencies (begin ['dPa_levelEcallBack']) */
+/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 	/* 8004FB18 */ ~dPa_levelEcallBack();
 	/* 8004FB8C */ void cleanup();
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build csXyz (csXyz) True/True
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['mDoDvdThd_toMainRam_c']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['mDoDvdThd_toMainRam_c']) */
+struct mDoDvdThd_toMainRam_c {
+	// ('JKRHeap',)
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+};
+
+// build csXyz (['csXyz']) True/True
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build cXyz (cXyz) True/True
-// build JPADrawInfo (JPADrawInfo) True/True
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build _GXColor (_GXColor) True/True
-// build dPa_control_c (dPa_control_c) True/False
-struct dPa_control_c;
-/* top-level dependencies (begin dPa_control_c) */
-// outer dependency: mDoDvdThd_toMainRam_c
-// outer dependency: dPa_levelEcallBack
-// outer dependency: dKy_tevstr_c
-// outer dependency: csXyz
-// outer dependency: cBgS_PolyInfo
-// outer dependency: JPABaseEmitter
-// outer dependency: cXyz
-// outer dependency: JPADrawInfo
-// outer dependency: fopAc_ac_c
-// outer dependency: _GXColor
-// outer dependency: dPa_control_c::level_c::emitter_c
-/* top-level dependencies (end dPa_control_c) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_control_c']) */
+// outer dependency: ('JPADrawInfo',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('_GXColor',)
+// outer dependency: ('dPa_control_c', 'level_c', 'emitter_c')
+// outer dependency: ('dPa_levelEcallBack',)
+// outer dependency: ('mDoDvdThd_toMainRam_c',)
+// outer dependency: ('csXyz',)
+// outer dependency: ('cBgS_PolyInfo',)
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// mDoDvdThd_toMainRam_c
-	// dPa_levelEcallBack
-	// dKy_tevstr_c
-	// csXyz
-	// cBgS_PolyInfo
-	// cXyz
-	// JPADrawInfo
-	// fopAc_ac_c
-	// _GXColor
-	// build level_c (dPa_control_c::level_c) False/False
-	/* dependencies (begin dPa_control_c::level_c) */
-	// inner dependency: level_c (dPa_control_c::level_c::emitter_c) True False (for dPa_control_c::level_c)
-	/* dependencies (end dPa_control_c::level_c) */
+	// ('JPADrawInfo',)
+	// ('dKy_tevstr_c',)
+	// ('_GXColor',)
+	// ('dPa_levelEcallBack',)
+	// ('mDoDvdThd_toMainRam_c',)
+	// ('csXyz',)
+	// ('cBgS_PolyInfo',)
+	// ('fopAc_ac_c',)
+	// ('cXyz',)
+	// build level_c (['dPa_control_c', 'level_c']) False/False
+	/* dependencies (begin ['dPa_control_c', 'level_c']) */
+	// inner dependency: 1 ('dPa_control_c', 'level_c', 'emitter_c') (for ['dPa_control_c', 'level_c'])
+	// inner dependency: 0 ('dPa_levelEcallBack',) (for ['dPa_control_c', 'level_c'])
+	// inner dependency: 0 ('JPABaseEmitter',) (for ['dPa_control_c', 'level_c'])
+	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
-		// dPa_levelEcallBack
-		// dPa_control_c::level_c::emitter_c
-		// JPABaseEmitter
-		// build emitter_c (dPa_control_c::level_c::emitter_c) False/False
-		/* dependencies (begin dPa_control_c::level_c::emitter_c) */
-		/* dependencies (end dPa_control_c::level_c::emitter_c) */
+		// ('dPa_control_c', 'level_c', 'emitter_c')
+		// ('dPa_levelEcallBack',)
+		// ('JPABaseEmitter',)
+		// build emitter_c (['dPa_control_c', 'level_c', 'emitter_c']) False/False
+		/* dependencies (begin ['dPa_control_c', 'level_c', 'emitter_c']) */
+		// inner dependency: 0 ('JPABaseEmitter',) (for ['dPa_control_c', 'level_c', 'emitter_c'])
+		// inner dependency: 0 ('dPa_levelEcallBack',) (for ['dPa_control_c', 'level_c', 'emitter_c'])
+		/* dependencies (end ['dPa_control_c', 'level_c', 'emitter_c']) */
 		struct emitter_c {
-			// dPa_levelEcallBack
-			// JPABaseEmitter
+			// ('JPABaseEmitter',)
+			// ('dPa_levelEcallBack',)
 			/* 8004B504 */ void onActive();
 			/* 8004B544 */ void entry(u32, u16, JPABaseEmitter*, dPa_levelEcallBack*);
 			/* 8004B5AC */ void cleanup();
@@ -456,143 +462,143 @@ struct dPa_control_c {
 	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, s8);
 };
 
-// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
-// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) True/True
-// build JPADrawInfo (JPADrawInfo) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-// build dPa_wbPcallBack_c (dPa_wbPcallBack_c) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_wbPcallBack_c) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_wbPcallBack_c) */
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
+// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) True/True
+// build JPADrawInfo (['JPADrawInfo']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+// build dPa_wbPcallBack_c (['dPa_wbPcallBack_c']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_wbPcallBack_c']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_wbPcallBack_c']) */
 struct dPa_wbPcallBack_c {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004DC28 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FECC */ ~dPa_wbPcallBack_c();
 };
 
-// build dPa_fsenthPcallBack (dPa_fsenthPcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_fsenthPcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_fsenthPcallBack) */
+// build dPa_fsenthPcallBack (['dPa_fsenthPcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_fsenthPcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_fsenthPcallBack']) */
 struct dPa_fsenthPcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004DCA0 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004DD0C */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FE6C */ ~dPa_fsenthPcallBack();
 };
 
-// build dPa_light8PcallBack (dPa_light8PcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_light8PcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_light8PcallBack) */
+// build dPa_light8PcallBack (['dPa_light8PcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_light8PcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_light8PcallBack']) */
 struct dPa_light8PcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004DD10 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004DD1C */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FE0C */ ~dPa_light8PcallBack();
 };
 
-// build dPa_gen_b_light8PcallBack (dPa_gen_b_light8PcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_gen_b_light8PcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_gen_b_light8PcallBack) */
+// build dPa_gen_b_light8PcallBack (['dPa_gen_b_light8PcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_gen_b_light8PcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_gen_b_light8PcallBack']) */
 struct dPa_gen_b_light8PcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004DD14 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004E6A8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FDAC */ ~dPa_gen_b_light8PcallBack();
 };
 
-// build dPa_gen_d_light8PcallBack (dPa_gen_d_light8PcallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_gen_d_light8PcallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_gen_d_light8PcallBack) */
+// build dPa_gen_d_light8PcallBack (['dPa_gen_d_light8PcallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_gen_d_light8PcallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_gen_d_light8PcallBack']) */
 struct dPa_gen_d_light8PcallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004DD18 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004ED44 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FD4C */ ~dPa_gen_d_light8PcallBack();
 };
 
-// build dPa_hermiteEcallBack_c (dPa_hermiteEcallBack_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_hermiteEcallBack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_hermiteEcallBack_c) */
+// build dPa_hermiteEcallBack_c (['dPa_hermiteEcallBack_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_hermiteEcallBack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_hermiteEcallBack_c']) */
 struct dPa_hermiteEcallBack_c {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 	/* 8004F6C4 */ void executeAfter(JPABaseEmitter*);
 	/* 8004FABC */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004FCC8 */ ~dPa_hermiteEcallBack_c();
 };
 
-// build dPa_particleTracePcallBack_c (dPa_particleTracePcallBack_c) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_particleTracePcallBack_c) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_particleTracePcallBack_c) */
+// build dPa_particleTracePcallBack_c (['dPa_particleTracePcallBack_c']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['dPa_particleTracePcallBack_c']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['dPa_particleTracePcallBack_c']) */
 struct dPa_particleTracePcallBack_c {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 8004FAD4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FC68 */ ~dPa_particleTracePcallBack_c();
 };
 
-// build dPa_setColorEcallBack (dPa_setColorEcallBack) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin dPa_setColorEcallBack) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end dPa_setColorEcallBack) */
+// build dPa_setColorEcallBack (['dPa_setColorEcallBack']) False/False
+// build csXyz (['csXyz']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dPa_setColorEcallBack']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dPa_setColorEcallBack']) */
 struct dPa_setColorEcallBack {
-	// cXyz
-	// csXyz
-	// JPABaseEmitter
+	// ('csXyz',)
+	// ('JPABaseEmitter',)
+	// ('cXyz',)
 	/* 800502B0 */ void draw(JPABaseEmitter*);
 	/* 800502E0 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 800502E4 */ ~dPa_setColorEcallBack();
 };
 
-// build JPAEmitterCallBack (JPAEmitterCallBack) False/False
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin JPAEmitterCallBack) */
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAEmitterCallBack) */
+// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+/* top-level dependencies (begin ['JPAEmitterCallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPAEmitterCallBack']) */
 struct JPAEmitterCallBack {
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
 	/* 80050368 */ void execute(JPABaseEmitter*);
 	/* 8005036C */ void draw(JPABaseEmitter*);
 	/* 80050370 */ void drawAfter(JPABaseEmitter*);
@@ -600,185 +606,185 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JPAParticleCallBack (JPAParticleCallBack) False/False
-// build JPABaseParticle (JPABaseParticle) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin JPAParticleCallBack) */
-// outer dependency: JPABaseParticle
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAParticleCallBack) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JPAParticleCallBack (['JPAParticleCallBack']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAParticleCallBack']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAParticleCallBack']) */
 struct JPAParticleCallBack {
-	// JPABaseParticle
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
+	// ('JPABaseParticle',)
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
+// build J3DLightObj (['J3DLightObj']) False/False
+/* top-level dependencies (begin ['J3DLightObj']) */
+/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80018C0C */ J3DLightObj();
 };
 
-// build fopAcM_wt_c (fopAcM_wt_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin fopAcM_wt_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end fopAcM_wt_c) */
+// build fopAcM_wt_c (['fopAcM_wt_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['fopAcM_wt_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['fopAcM_wt_c']) */
 struct fopAcM_wt_c {
-	// cXyz
+	// ('cXyz',)
 	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
-// build dJntCol_c (dJntCol_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin dJntCol_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-/* top-level dependencies (end dJntCol_c) */
+// build dJntCol_c (['dJntCol_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dJntCol_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dJntCol_c']) */
 struct dJntCol_c {
-	// cXyz
-	// csXyz
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
-// build cBgS (cBgS) False/False
-// build cM3dGPla (cM3dGPla) False/False
-/* top-level dependencies (begin cM3dGPla) */
-/* top-level dependencies (end cM3dGPla) */
+// build cBgS (['cBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+// build cM3dGPla (['cM3dGPla']) False/False
+/* top-level dependencies (begin ['cM3dGPla']) */
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin cBgS) */
-// outer dependency: cM3dGPla
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end cBgS) */
+/* top-level dependencies (begin ['cBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+// outer dependency: ('cM3dGPla',)
+/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// cM3dGPla
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
+	// ('cM3dGPla',)
 	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cM3dGPla (cM3dGPla) True/True
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build cM3dGPla (['cM3dGPla']) True/True
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
-// build daPy_py_c (daPy_py_c) False/False
-/* top-level dependencies (begin daPy_py_c) */
-/* top-level dependencies (end daPy_py_c) */
+// build daPy_py_c (['daPy_py_c']) False/False
+/* top-level dependencies (begin ['daPy_py_c']) */
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build J3DUClipper (J3DUClipper) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DUClipper (['J3DUClipper']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DUClipper) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DUClipper) */
+/* top-level dependencies (begin ['J3DUClipper']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// Vec
+	// ('Vec',)
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
 };
 
-// build Vec (Vec) True/True
-// build JPAResourceManager (JPAResourceManager) True/True
-// build ResTIMG (ResTIMG) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+// build Vec (['Vec']) True/True
+// build JPAResourceManager (['JPAResourceManager']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build J3DSys (J3DSys) False/False
-/* top-level dependencies (begin J3DSys) */
-/* top-level dependencies (end J3DSys) */
+// build J3DSys (['J3DSys']) False/False
+/* top-level dependencies (begin ['J3DSys']) */
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DTexture (J3DTexture) False/False
-// build _GXTexMapID (_GXTexMapID) True/True
-/* top-level dependencies (begin J3DTexture) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end J3DTexture) */
+// build J3DTexture (['J3DTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J3DTexture']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 8031204C */ void loadGX(u16, _GXTexMapID) const;
 };
 
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-// build J3DLightInfo (J3DLightInfo) False/False
-/* top-level dependencies (begin J3DLightInfo) */
-/* top-level dependencies (end J3DLightInfo) */
+// build J3DLightInfo (['J3DLightInfo']) False/False
+/* top-level dependencies (begin ['J3DLightInfo']) */
+/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-// build J3DModelData (J3DModelData) True/True
-/* top-level dependencies (begin J3DAnmTexPattern) */
-// outer dependency: J3DModelData
-/* top-level dependencies (end J3DAnmTexPattern) */
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+/* top-level dependencies (begin ['J3DAnmTexPattern']) */
+// outer dependency: ('J3DModelData',)
+/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
-	// J3DModelData
+	// ('J3DModelData',)
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-// build J3DModelData (J3DModelData) True/True
-/* top-level dependencies (begin J3DAnmTevRegKey) */
-// outer dependency: J3DModelData
-/* top-level dependencies (end J3DAnmTevRegKey) */
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
+// outer dependency: ('J3DModelData',)
+/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
-	// J3DModelData
+	// ('J3DModelData',)
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-// build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
-// build J3DAnmTexPattern (J3DAnmTexPattern) True/True
-/* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DAnmTexPattern
-/* top-level dependencies (end J3DMaterialTable) */
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
+// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+// outer dependency: ('J3DAnmTexPattern',)
+// outer dependency: ('J3DAnmTevRegKey',)
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// J3DAnmTevRegKey
-	// J3DAnmTexPattern
+	// ('J3DAnmTexPattern',)
+	// ('J3DAnmTevRegKey',)
 	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);

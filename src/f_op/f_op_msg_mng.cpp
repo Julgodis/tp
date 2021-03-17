@@ -9,87 +9,87 @@
 // Types:
 // 
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
+// build J2DPane (['J2DPane']) False/False
+/* top-level dependencies (begin ['J2DPane']) */
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 80020158 */ void setAlpha(u8);
 };
 
-// build J2DPicture (J2DPicture) False/False
-/* top-level dependencies (begin J2DPicture) */
-/* top-level dependencies (end J2DPicture) */
+// build J2DPicture (['J2DPicture']) False/False
+/* top-level dependencies (begin ['J2DPicture']) */
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 	/* 800202CC */ void setBlendRatio(f32, f32);
 	/* 80020338 */ void append(char const*, f32);
 	/* 80020368 */ void insert(char const*, u8, f32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE448 */ void destroy();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build process_priority_class (process_priority_class) False/False
-/* top-level dependencies (begin process_priority_class) */
-/* top-level dependencies (end process_priority_class) */
+// build process_priority_class (['process_priority_class']) False/False
+/* top-level dependencies (begin ['process_priority_class']) */
+/* top-level dependencies (end ['process_priority_class']) */
 struct process_priority_class {
 };
 
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
-/* top-level dependencies (begin JMSMesgEntry_c) */
-/* top-level dependencies (end JMSMesgEntry_c) */
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
+/* top-level dependencies (begin ['JMSMesgEntry_c']) */
+/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JMSMesgEntry_c
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('JMSMesgEntry_c',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// JMSMesgEntry_c
+	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
-// build dMeter2_c (dMeter2_c) False/False
-/* top-level dependencies (begin dMeter2_c) */
-/* top-level dependencies (end dMeter2_c) */
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
+// build dMeter2_c (['dMeter2_c']) False/False
+/* top-level dependencies (begin ['dMeter2_c']) */
+/* top-level dependencies (end ['dMeter2_c']) */
 struct dMeter2_c {
 	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-// build dMsgObject_c (dMsgObject_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dMsgObject_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dMsgObject_c) */
+// build dMsgObject_c (['dMsgObject_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['dMsgObject_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80233D04 */ void setMessageIndex(u32, u32, bool);
 	/* 80233E70 */ void setMessageIndexDemo(u32, bool);
 	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
@@ -97,9 +97,9 @@ struct dMsgObject_c {
 	/* 8023826C */ void setTalkActor(fopAc_ac_c*);
 };
 
-// build cMl (cMl) False/False
-/* top-level dependencies (begin cMl) */
-/* top-level dependencies (end cMl) */
+// build cMl (['cMl']) False/False
+/* top-level dependencies (begin ['cMl']) */
+/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 };

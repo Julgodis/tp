@@ -9,22 +9,22 @@
 // Types:
 // 
 
-// build dKyeff_c (dKyeff_c) False/False
-/* top-level dependencies (begin dKyeff_c) */
-/* top-level dependencies (end dKyeff_c) */
+// build dKyeff_c (['dKyeff_c']) False/False
+/* top-level dependencies (begin ['dKyeff_c']) */
+/* top-level dependencies (end ['dKyeff_c']) */
 struct dKyeff_c {
 	/* 801ADD5C */ void execute();
 };
 
-// build kankyo_class (kankyo_class) False/False
-/* top-level dependencies (begin kankyo_class) */
-/* top-level dependencies (end kankyo_class) */
+// build kankyo_class (['kankyo_class']) False/False
+/* top-level dependencies (begin ['kankyo_class']) */
+/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-/* top-level dependencies (begin Z2EnvSeMgr) */
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C66B0 */ void framework();
 };

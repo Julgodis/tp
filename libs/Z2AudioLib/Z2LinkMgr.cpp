@@ -9,35 +9,36 @@
 // Types:
 // 
 
-// build Z2CreatureLink (Z2CreatureLink) False/False
-// build Z2SoundObjBase (Z2SoundObjBase) False/False
-// build Z2SoundHandlePool (Z2SoundHandlePool) False/False
-/* top-level dependencies (begin Z2SoundHandlePool) */
-/* top-level dependencies (end Z2SoundHandlePool) */
-struct Z2SoundHandlePool {
-};
-
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Z2CreatureLink (['Z2CreatureLink']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Z2SoundObjBase (['Z2SoundObjBase']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SoundObjBase) */
-// outer dependency: Z2SoundHandlePool
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundObjBase) */
+// build Vec (['Vec']) True/True
+// build Z2SoundHandlePool (['Z2SoundHandlePool']) False/False
+/* top-level dependencies (begin ['Z2SoundHandlePool']) */
+/* top-level dependencies (end ['Z2SoundHandlePool']) */
+struct Z2SoundHandlePool {
+};
+
+/* top-level dependencies (begin ['Z2SoundObjBase']) */
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('Vec',)
+// outer dependency: ('Z2SoundHandlePool',)
+/* top-level dependencies (end ['Z2SoundObjBase']) */
 struct Z2SoundObjBase {
-	// Z2SoundHandlePool
-	// Vec
-	// JAISoundID
+	// ('JAISoundID',)
+	// ('Vec',)
+	// ('Z2SoundHandlePool',)
 	/* 802BDEF0 */ Z2SoundObjBase();
 	/* 802BDF48 */ ~Z2SoundObjBase();
 	/* 802BDFB0 */ void init(Vec*, u8);
@@ -50,17 +51,16 @@ struct Z2SoundObjBase {
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin Z2CreatureLink) */
-// outer dependency: Z2SoundObjBase
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2CreatureLink) */
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2CreatureLink']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('Z2SoundObjBase',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2CreatureLink']) */
 struct Z2CreatureLink {
-	// Z2SoundObjBase
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('Z2SoundObjBase',)
+	// ('JAISoundID',)
 	/* 802C321C */ void setLinkGroupInfo(u8);
 	/* 802C3220 */ void setLinkHp(s32, s32);
 	/* 802C3228 */ void setLinkSwordType(s32, s32);
@@ -88,24 +88,24 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
-// build Z2LinkSoundStarter (Z2LinkSoundStarter) False/False
-/* top-level dependencies (begin Z2LinkSoundStarter) */
-/* top-level dependencies (end Z2LinkSoundStarter) */
+// build Z2LinkSoundStarter (['Z2LinkSoundStarter']) False/False
+/* top-level dependencies (begin ['Z2LinkSoundStarter']) */
+/* top-level dependencies (end ['Z2LinkSoundStarter']) */
 struct Z2LinkSoundStarter {
 	/* 802C3464 */ ~Z2LinkSoundStarter();
 	/* 802C48E8 */ Z2LinkSoundStarter();
 };
 
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) True/True
-// build Z2SoundObjBase (Z2SoundObjBase) True/True
-// build Z2CreatureRide (Z2CreatureRide) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin Z2CreatureRide) */
-// outer dependency: Vec
-/* top-level dependencies (end Z2CreatureRide) */
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build Z2SoundObjBase (['Z2SoundObjBase']) True/True
+// build Z2CreatureRide (['Z2CreatureRide']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['Z2CreatureRide']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['Z2CreatureRide']) */
 struct Z2CreatureRide {
-	// Vec
+	// ('Vec',)
 	/* 802C4FFC */ Z2CreatureRide();
 	/* 802C5114 */ ~Z2CreatureRide();
 	/* 802C51EC */ void deleteObject();
@@ -113,27 +113,27 @@ struct Z2CreatureRide {
 	/* 802C522C */ void setLinkRiding(bool);
 };
 
-// build Z2RideSoundStarter (Z2RideSoundStarter) False/False
-// build Z2CreatureRide (Z2CreatureRide) True/True
-/* top-level dependencies (begin Z2RideSoundStarter) */
-// outer dependency: Z2CreatureRide
-/* top-level dependencies (end Z2RideSoundStarter) */
+// build Z2RideSoundStarter (['Z2RideSoundStarter']) False/False
+// build Z2CreatureRide (['Z2CreatureRide']) True/True
+/* top-level dependencies (begin ['Z2RideSoundStarter']) */
+// outer dependency: ('Z2CreatureRide',)
+/* top-level dependencies (end ['Z2RideSoundStarter']) */
 struct Z2RideSoundStarter {
-	// Z2CreatureRide
+	// ('Z2CreatureRide',)
 	/* 802C5078 */ ~Z2RideSoundStarter();
 	/* 802C5234 */ Z2RideSoundStarter(Z2CreatureRide*);
 };
 
-// build Z2SoundObjCoach (Z2SoundObjCoach) False/False
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin Z2SoundObjCoach) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundObjCoach) */
+// build Z2SoundObjCoach (['Z2SoundObjCoach']) False/False
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2SoundObjCoach']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundObjCoach']) */
 struct Z2SoundObjCoach {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802C54B8 */ Z2SoundObjCoach();
 	/* 802C54FC */ void init(Vec*, u8);
 	/* 802C551C */ void startWheelSound(f32);
@@ -141,46 +141,46 @@ struct Z2SoundObjCoach {
 	/* 802C57C0 */ void startSound(JAISoundID, u32, s8);
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-// build JAISoundStarter (JAISoundStarter) False/False
-/* top-level dependencies (begin JAISoundStarter) */
-/* top-level dependencies (end JAISoundStarter) */
+// build JAISoundStarter (['JAISoundStarter']) False/False
+/* top-level dependencies (begin ['JAISoundStarter']) */
+/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F88 */ ~JAISoundStarter();
 };
 
-// build Z2Calc (Z2Calc) False/False
-// build Z2Calc (Z2Calc) True/False
+// build Z2Calc (['Z2Calc']) False/False
+// build Z2Calc (['Z2Calc']) True/False
 struct Z2Calc;
-/* top-level dependencies (begin Z2Calc) */
-// outer dependency: Z2Calc::CurveSign
-/* top-level dependencies (end Z2Calc) */
+/* top-level dependencies (begin ['Z2Calc']) */
+// outer dependency: ('Z2Calc', 'CurveSign')
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// Z2Calc::CurveSign
-	// build CurveSign (Z2Calc::CurveSign) False/False
-	/* dependencies (begin Z2Calc::CurveSign) */
-	/* dependencies (end Z2Calc::CurveSign) */
+	// ('Z2Calc', 'CurveSign')
+	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
+	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
+	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -188,99 +188,99 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundStarter (Z2SoundStarter) False/False
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build Z2SoundStarter (['Z2SoundStarter']) False/False
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 };
 
-/* top-level dependencies (begin Z2SoundStarter) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end Z2SoundStarter) */
+/* top-level dependencies (begin ['Z2SoundStarter']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802AAB94 */ Z2SoundStarter(bool);
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
-// build Z2SoundHandles (Z2SoundHandles) False/False
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin Z2SoundHandles) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundHandles) */
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build Z2SoundHandles (['Z2SoundHandles']) False/False
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2SoundHandles']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundHandles']) */
 struct Z2SoundHandles {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802AB254 */ void getHandleSoundID(JAISoundID);
 	/* 802AB4A0 */ void stopAllSounds(u32);
 	/* 802AB504 */ void isActive() const;
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build Z2SeqMgr (Z2SeqMgr) False/False
-/* top-level dependencies (begin Z2SeqMgr) */
-/* top-level dependencies (end Z2SeqMgr) */
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802B4844 */ void setBattleSeqState(u8);
 	/* 802B4AFC */ void setBattleLastHit(u8);
 };
 
-// build Z2FxLineMgr (Z2FxLineMgr) False/False
-/* top-level dependencies (begin Z2FxLineMgr) */
-/* top-level dependencies (end Z2FxLineMgr) */
+// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
+/* top-level dependencies (begin ['Z2FxLineMgr']) */
+/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
 	/* 802BAE1C */ void setFxForceOff(bool);
 };
 
-// build Z2Audience (Z2Audience) False/False
-/* top-level dependencies (begin Z2Audience) */
-/* top-level dependencies (end Z2Audience) */
+// build Z2Audience (['Z2Audience']) False/False
+/* top-level dependencies (begin ['Z2Audience']) */
+/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
 	/* 802BD90C */ void setTargetVolume(f32, int);
 };
 
-// build Z2SoundHandlePool (Z2SoundHandlePool) True/True
-// build Z2SoundObjSimple (Z2SoundObjSimple) False/False
-/* top-level dependencies (begin Z2SoundObjSimple) */
-/* top-level dependencies (end Z2SoundObjSimple) */
+// build Z2SoundHandlePool (['Z2SoundHandlePool']) True/True
+// build Z2SoundObjSimple (['Z2SoundObjSimple']) False/False
+/* top-level dependencies (begin ['Z2SoundObjSimple']) */
+/* top-level dependencies (end ['Z2SoundObjSimple']) */
 struct Z2SoundObjSimple {
 	/* 802BE844 */ Z2SoundObjSimple();
 };
 
-// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
-/* top-level dependencies (begin Z2SoundObjMgr) */
-/* top-level dependencies (end Z2SoundObjMgr) */
+// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundObjMgr']) */
+/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BFFEC */ void setGhostEnemyState(u8);
 };
 
-// build Z2Creature (Z2Creature) False/False
-// build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
-// build Z2SoundStarter (Z2SoundStarter) True/True
-/* top-level dependencies (begin Z2Creature) */
-// outer dependency: JAISoundID
-// outer dependency: Vec
-// outer dependency: Z2SoundStarter
-/* top-level dependencies (end Z2Creature) */
+// build Z2Creature (['Z2Creature']) False/False
+// build Vec (['Vec']) True/True
+// build Z2SoundStarter (['Z2SoundStarter']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['Z2Creature']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('Z2SoundStarter',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2Creature']) */
 struct Z2Creature {
-	// JAISoundID
-	// Vec
-	// Z2SoundStarter
+	// ('Vec',)
+	// ('Z2SoundStarter',)
+	// ('JAISoundID',)
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C04E8 */ void deleteObject();

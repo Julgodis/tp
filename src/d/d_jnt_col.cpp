@@ -9,19 +9,44 @@
 // Types:
 // 
 
-// build dJntCol_c (dJntCol_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dJntCol_c (['dJntCol_c']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
+struct csXyz {
+};
+
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
+struct J3DModel {
+};
+
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
+struct fopAc_ac_c {
+};
+
+// build dJntColData_c (['dJntColData_c']) False/False
+/* top-level dependencies (begin ['dJntColData_c']) */
+/* top-level dependencies (end ['dJntColData_c']) */
+struct dJntColData_c {
+};
+
+// build cM3dGLin (['cM3dGLin']) False/False
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
@@ -31,56 +56,31 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
-// build cM3dGLin (cM3dGLin) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGLin) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGLin) */
+/* top-level dependencies (begin ['cM3dGLin']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// cXyz
+	// ('cXyz',)
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
-};
-
-// build dJntColData_c (dJntColData_c) False/False
-/* top-level dependencies (begin dJntColData_c) */
-/* top-level dependencies (end dJntColData_c) */
-struct dJntColData_c {
-};
-
-/* top-level dependencies (begin dJntCol_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModel
-// outer dependency: cM3dGLin
-// outer dependency: csXyz
-// outer dependency: fopAc_ac_c
-// outer dependency: dJntColData_c
-/* top-level dependencies (end dJntCol_c) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dJntCol_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('J3DModel',)
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('dJntColData_c',)
+// outer dependency: ('cM3dGLin',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dJntCol_c']) */
 struct dJntCol_c {
-	// J3DModel
-	// cM3dGLin
-	// dJntColData_c
-	// csXyz
-	// cXyz
-	// fopAc_ac_c
+	// ('J3DModel',)
+	// ('cM3dGLin',)
+	// ('csXyz',)
+	// ('fopAc_ac_c',)
+	// ('dJntColData_c',)
+	// ('cXyz',)
 	/* 80035C8C */ dJntCol_c();
 	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, int);
 	/* 80035CC8 */ void setNowLine(cM3dGLin*, cXyz const*, csXyz const*, cXyz*);
@@ -90,60 +90,60 @@ struct dJntCol_c {
 	/* 80036FA8 */ void setArrowPosAndAngle(cXyz const*, cXyz const*, int, cXyz*, csXyz*);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build dJntColData_c (dJntColData_c) True/True
-// build J3DModel (J3DModel) True/True
-// build cM3dGLin (cM3dGLin) True/True
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-// build cM3dGSph (cM3dGSph) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGSph) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGSph) */
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build dJntColData_c (['dJntColData_c']) True/True
+// build J3DModel (['J3DModel']) True/True
+// build cM3dGLin (['cM3dGLin']) True/True
+// build cXyz (['cXyz']) True/True
+// build csXyz (['csXyz']) True/True
+// build cM3dGSph (['cM3dGSph']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGSph']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// cXyz
+	// ('cXyz',)
 	/* 80036AA4 */ ~cM3dGSph();
 	/* 8026F664 */ void Set(cXyz const&, f32);
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin mDoMtx_stack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// cXyz
-	// csXyz
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-// build Vec (Vec) True/True
-// build cM3dGPla (cM3dGPla) False/False
-// build cXyz (cXyz) True/True
-// build Vec (Vec) True/True
-/* top-level dependencies (begin cM3dGPla) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGPla) */
+// build Vec (['Vec']) True/True
+// build cM3dGPla (['cM3dGPla']) False/False
+// build Vec (['Vec']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGPla']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 	/* 8026F4C4 */ void SetupNP0(Vec const&, Vec const&);
 };
 
-// build cM3dGCyl (cM3dGCyl) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGCyl) */
+// build cM3dGCyl (['cM3dGCyl']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGCyl']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// cXyz
+	// ('cXyz',)
 	/* 8026F180 */ void Set(cXyz const&, f32, f32);
 };
 

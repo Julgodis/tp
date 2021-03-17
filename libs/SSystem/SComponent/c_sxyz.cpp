@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);

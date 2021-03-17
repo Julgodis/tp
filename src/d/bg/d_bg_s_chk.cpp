@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dBgS_Chk (dBgS_Chk) False/False
-/* top-level dependencies (begin dBgS_Chk) */
-/* top-level dependencies (end dBgS_Chk) */
+// build dBgS_Chk (['dBgS_Chk']) False/False
+/* top-level dependencies (begin ['dBgS_Chk']) */
+/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -19,17 +19,17 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_GrpPassChk (dBgS_GrpPassChk) False/False
-/* top-level dependencies (begin dBgS_GrpPassChk) */
-/* top-level dependencies (end dBgS_GrpPassChk) */
+// build dBgS_GrpPassChk (['dBgS_GrpPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_GrpPassChk']) */
+/* top-level dependencies (end ['dBgS_GrpPassChk']) */
 struct dBgS_GrpPassChk {
 	/* 80077BA0 */ dBgS_GrpPassChk();
 	/* 80077BC4 */ ~dBgS_GrpPassChk();
 };
 
-// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
-/* top-level dependencies (begin dBgS_PolyPassChk) */
-/* top-level dependencies (end dBgS_PolyPassChk) */
+// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
+/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078D64 */ dBgS_PolyPassChk();
 	/* 80078DB0 */ ~dBgS_PolyPassChk();

@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
-// build JASTaskThread (JASTaskThread) False/False
-/* top-level dependencies (begin JASTaskThread) */
-/* top-level dependencies (end JASTaskThread) */
+// build JASTaskThread (['JASTaskThread']) False/False
+/* top-level dependencies (begin ['JASTaskThread']) */
+/* top-level dependencies (end ['JASTaskThread']) */
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

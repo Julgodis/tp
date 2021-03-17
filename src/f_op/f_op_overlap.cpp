@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build leafdraw_method_class (leafdraw_method_class) False/False
-/* top-level dependencies (begin leafdraw_method_class) */
-/* top-level dependencies (end leafdraw_method_class) */
+// build leafdraw_method_class (['leafdraw_method_class']) False/False
+/* top-level dependencies (begin ['leafdraw_method_class']) */
+/* top-level dependencies (end ['leafdraw_method_class']) */
 struct leafdraw_method_class {
 };
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
-// build request_base_class (request_base_class) False/False
-/* top-level dependencies (begin request_base_class) */
-/* top-level dependencies (end request_base_class) */
+// build request_base_class (['request_base_class']) False/False
+/* top-level dependencies (begin ['request_base_class']) */
+/* top-level dependencies (end ['request_base_class']) */
 struct request_base_class {
 };
 

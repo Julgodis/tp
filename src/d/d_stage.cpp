@@ -9,39 +9,39 @@
 // Types:
 // 
 
-// build dStage_nextStage_c (dStage_nextStage_c) False/False
-/* top-level dependencies (begin dStage_nextStage_c) */
-/* top-level dependencies (end dStage_nextStage_c) */
+// build dStage_nextStage_c (['dStage_nextStage_c']) False/False
+/* top-level dependencies (begin ['dStage_nextStage_c']) */
+/* top-level dependencies (end ['dStage_nextStage_c']) */
 struct dStage_nextStage_c {
 	/* 80023E28 */ void set(char const*, s8, s16, s8, s8, u8);
 };
 
-// build dStage_dt_c (dStage_dt_c) False/False
-/* top-level dependencies (begin dStage_dt_c) */
-/* top-level dependencies (end dStage_dt_c) */
+// build dStage_dt_c (['dStage_dt_c']) False/False
+/* top-level dependencies (begin ['dStage_dt_c']) */
+/* top-level dependencies (end ['dStage_dt_c']) */
 struct dStage_dt_c {
 };
 
-// build stage_tgsc_class (stage_tgsc_class) False/False
-/* top-level dependencies (begin stage_tgsc_class) */
-/* top-level dependencies (end stage_tgsc_class) */
+// build stage_tgsc_class (['stage_tgsc_class']) False/False
+/* top-level dependencies (begin ['stage_tgsc_class']) */
+/* top-level dependencies (end ['stage_tgsc_class']) */
 struct stage_tgsc_class {
 };
 
-// build dStage_startStage_c (dStage_startStage_c) False/False
-/* top-level dependencies (begin dStage_startStage_c) */
-/* top-level dependencies (end dStage_startStage_c) */
+// build dStage_startStage_c (['dStage_startStage_c']) False/False
+/* top-level dependencies (begin ['dStage_startStage_c']) */
+/* top-level dependencies (end ['dStage_startStage_c']) */
 struct dStage_startStage_c {
 	/* 8002419C */ void set(char const*, s8, s16, s8);
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
-	// build roomDzs_c (dStage_roomControl_c::roomDzs_c) False/False
-	/* dependencies (begin dStage_roomControl_c::roomDzs_c) */
-	/* dependencies (end dStage_roomControl_c::roomDzs_c) */
+	// build roomDzs_c (['dStage_roomControl_c', 'roomDzs_c']) False/False
+	/* dependencies (begin ['dStage_roomControl_c', 'roomDzs_c']) */
+	/* dependencies (end ['dStage_roomControl_c', 'roomDzs_c']) */
 	struct roomDzs_c {
 		/* 80024A34 */ void create(u8);
 		/* 80024ABC */ void remove();
@@ -65,245 +65,245 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-// build dStage_stageDt_c (dStage_stageDt_c) False/False
-// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) False/False
-/* top-level dependencies (begin stage_scls_info_dummy_class) */
-/* top-level dependencies (end stage_scls_info_dummy_class) */
-struct stage_scls_info_dummy_class {
-};
-
-// build dStage_MemoryMap_c (dStage_MemoryMap_c) False/False
-/* top-level dependencies (begin dStage_MemoryMap_c) */
-/* top-level dependencies (end dStage_MemoryMap_c) */
-struct dStage_MemoryMap_c {
-};
-
-// build stage_map_info_class (stage_map_info_class) False/False
-/* top-level dependencies (begin stage_map_info_class) */
-/* top-level dependencies (end stage_map_info_class) */
-struct stage_map_info_class {
-};
-
-// build stage_palette_info_class (stage_palette_info_class) False/False
-/* top-level dependencies (begin stage_palette_info_class) */
-/* top-level dependencies (end stage_palette_info_class) */
-struct stage_palette_info_class {
-};
-
-// build dStage_FileList_dt_c (dStage_FileList_dt_c) False/False
-/* top-level dependencies (begin dStage_FileList_dt_c) */
-/* top-level dependencies (end dStage_FileList_dt_c) */
-struct dStage_FileList_dt_c {
-};
-
-// build dStage_Multi_c (dStage_Multi_c) False/False
-/* top-level dependencies (begin dStage_Multi_c) */
-/* top-level dependencies (end dStage_Multi_c) */
-struct dStage_Multi_c {
-};
-
-// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) False/False
-/* top-level dependencies (begin dStage_MemoryConfig_c) */
-/* top-level dependencies (end dStage_MemoryConfig_c) */
-struct dStage_MemoryConfig_c {
-};
-
-// build stage_stag_info_class (stage_stag_info_class) False/False
-/* top-level dependencies (begin stage_stag_info_class) */
-/* top-level dependencies (end stage_stag_info_class) */
-struct stage_stag_info_class {
-};
-
-// build roomRead_class (roomRead_class) False/False
-/* top-level dependencies (begin roomRead_class) */
-/* top-level dependencies (end roomRead_class) */
-struct roomRead_class {
-};
-
-// build dStage_dPath_c (dStage_dPath_c) False/False
-/* top-level dependencies (begin dStage_dPath_c) */
-/* top-level dependencies (end dStage_dPath_c) */
-struct dStage_dPath_c {
-};
-
-// build stage_arrow_class (stage_arrow_class) False/False
-/* top-level dependencies (begin stage_arrow_class) */
-/* top-level dependencies (end stage_arrow_class) */
-struct stage_arrow_class {
-};
-
-// build stage_map_info_dummy_class (stage_map_info_dummy_class) False/False
-/* top-level dependencies (begin stage_map_info_dummy_class) */
-/* top-level dependencies (end stage_map_info_dummy_class) */
-struct stage_map_info_dummy_class {
-};
-
-// build stage_actor_class (stage_actor_class) False/False
-/* top-level dependencies (begin stage_actor_class) */
-/* top-level dependencies (end stage_actor_class) */
-struct stage_actor_class {
-};
-
-// build stage_tgsc_class (stage_tgsc_class) True/True
-// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) False/False
-/* top-level dependencies (begin stage_vrboxcol_info_class) */
-/* top-level dependencies (end stage_vrboxcol_info_class) */
-struct stage_vrboxcol_info_class {
-};
-
-// build stage_camera_class (stage_camera_class) False/False
-/* top-level dependencies (begin stage_camera_class) */
-/* top-level dependencies (end stage_camera_class) */
-struct stage_camera_class {
-};
-
-// build stage_tresure_class (stage_tresure_class) False/False
-/* top-level dependencies (begin stage_tresure_class) */
-/* top-level dependencies (end stage_tresure_class) */
-struct stage_tresure_class {
-};
-
-// build dStage_DMap_c (dStage_DMap_c) False/False
-/* top-level dependencies (begin dStage_DMap_c) */
-/* top-level dependencies (end dStage_DMap_c) */
-struct dStage_DMap_c {
-};
-
-// build stage_plight_info_class (stage_plight_info_class) False/False
-/* top-level dependencies (begin stage_plight_info_class) */
-/* top-level dependencies (end stage_plight_info_class) */
-struct stage_plight_info_class {
-};
-
-// build dStage_SoundInfo_c (dStage_SoundInfo_c) False/False
-/* top-level dependencies (begin dStage_SoundInfo_c) */
-/* top-level dependencies (end dStage_SoundInfo_c) */
-struct dStage_SoundInfo_c {
-};
-
-// build dStage_dPnt_c (dStage_dPnt_c) False/False
-/* top-level dependencies (begin dStage_dPnt_c) */
-/* top-level dependencies (end dStage_dPnt_c) */
-struct dStage_dPnt_c {
-};
-
-// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) False/False
-/* top-level dependencies (begin dStage_MapEventInfo_c) */
-/* top-level dependencies (end dStage_MapEventInfo_c) */
-struct dStage_MapEventInfo_c {
-};
-
-// build dStage_Lbnk_c (dStage_Lbnk_c) False/False
-/* top-level dependencies (begin dStage_Lbnk_c) */
-/* top-level dependencies (end dStage_Lbnk_c) */
-struct dStage_Lbnk_c {
-};
-
-// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) False/False
-/* top-level dependencies (begin dStage_FileList2_dt_c) */
-/* top-level dependencies (end dStage_FileList2_dt_c) */
-struct dStage_FileList2_dt_c {
-};
-
-// build stage_vrbox_info_class (stage_vrbox_info_class) False/False
-/* top-level dependencies (begin stage_vrbox_info_class) */
-/* top-level dependencies (end stage_vrbox_info_class) */
-struct stage_vrbox_info_class {
-};
-
-// build dStage_FloorInfo_c (dStage_FloorInfo_c) False/False
-/* top-level dependencies (begin dStage_FloorInfo_c) */
-/* top-level dependencies (end dStage_FloorInfo_c) */
-struct dStage_FloorInfo_c {
-};
-
-// build dStage_Elst_c (dStage_Elst_c) False/False
-/* top-level dependencies (begin dStage_Elst_c) */
-/* top-level dependencies (end dStage_Elst_c) */
-struct dStage_Elst_c {
-};
-
-// build stage_envr_info_class (stage_envr_info_class) False/False
-/* top-level dependencies (begin stage_envr_info_class) */
-/* top-level dependencies (end stage_envr_info_class) */
-struct stage_envr_info_class {
-};
-
-// build stage_pselect_info_class (stage_pselect_info_class) False/False
-/* top-level dependencies (begin stage_pselect_info_class) */
-/* top-level dependencies (end stage_pselect_info_class) */
+// build dStage_stageDt_c (['dStage_stageDt_c']) False/False
+// build stage_pselect_info_class (['stage_pselect_info_class']) False/False
+/* top-level dependencies (begin ['stage_pselect_info_class']) */
+/* top-level dependencies (end ['stage_pselect_info_class']) */
 struct stage_pselect_info_class {
 };
 
-// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) False/False
-/* top-level dependencies (begin stage_pure_lightvec_info_class) */
-/* top-level dependencies (end stage_pure_lightvec_info_class) */
+// build stage_camera_class (['stage_camera_class']) False/False
+/* top-level dependencies (begin ['stage_camera_class']) */
+/* top-level dependencies (end ['stage_camera_class']) */
+struct stage_camera_class {
+};
+
+// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) False/False
+/* top-level dependencies (begin ['dStage_SoundInfo_c']) */
+/* top-level dependencies (end ['dStage_SoundInfo_c']) */
+struct dStage_SoundInfo_c {
+};
+
+// build stage_arrow_class (['stage_arrow_class']) False/False
+/* top-level dependencies (begin ['stage_arrow_class']) */
+/* top-level dependencies (end ['stage_arrow_class']) */
+struct stage_arrow_class {
+};
+
+// build dStage_FloorInfo_c (['dStage_FloorInfo_c']) False/False
+/* top-level dependencies (begin ['dStage_FloorInfo_c']) */
+/* top-level dependencies (end ['dStage_FloorInfo_c']) */
+struct dStage_FloorInfo_c {
+};
+
+// build dStage_FileList2_dt_c (['dStage_FileList2_dt_c']) False/False
+/* top-level dependencies (begin ['dStage_FileList2_dt_c']) */
+/* top-level dependencies (end ['dStage_FileList2_dt_c']) */
+struct dStage_FileList2_dt_c {
+};
+
+// build stage_stag_info_class (['stage_stag_info_class']) False/False
+/* top-level dependencies (begin ['stage_stag_info_class']) */
+/* top-level dependencies (end ['stage_stag_info_class']) */
+struct stage_stag_info_class {
+};
+
+// build stage_vrbox_info_class (['stage_vrbox_info_class']) False/False
+/* top-level dependencies (begin ['stage_vrbox_info_class']) */
+/* top-level dependencies (end ['stage_vrbox_info_class']) */
+struct stage_vrbox_info_class {
+};
+
+// build stage_plight_info_class (['stage_plight_info_class']) False/False
+/* top-level dependencies (begin ['stage_plight_info_class']) */
+/* top-level dependencies (end ['stage_plight_info_class']) */
+struct stage_plight_info_class {
+};
+
+// build stage_scls_info_dummy_class (['stage_scls_info_dummy_class']) False/False
+/* top-level dependencies (begin ['stage_scls_info_dummy_class']) */
+/* top-level dependencies (end ['stage_scls_info_dummy_class']) */
+struct stage_scls_info_dummy_class {
+};
+
+// build stage_envr_info_class (['stage_envr_info_class']) False/False
+/* top-level dependencies (begin ['stage_envr_info_class']) */
+/* top-level dependencies (end ['stage_envr_info_class']) */
+struct stage_envr_info_class {
+};
+
+// build dStage_Lbnk_c (['dStage_Lbnk_c']) False/False
+/* top-level dependencies (begin ['dStage_Lbnk_c']) */
+/* top-level dependencies (end ['dStage_Lbnk_c']) */
+struct dStage_Lbnk_c {
+};
+
+// build dStage_MemoryConfig_c (['dStage_MemoryConfig_c']) False/False
+/* top-level dependencies (begin ['dStage_MemoryConfig_c']) */
+/* top-level dependencies (end ['dStage_MemoryConfig_c']) */
+struct dStage_MemoryConfig_c {
+};
+
+// build dStage_Elst_c (['dStage_Elst_c']) False/False
+/* top-level dependencies (begin ['dStage_Elst_c']) */
+/* top-level dependencies (end ['dStage_Elst_c']) */
+struct dStage_Elst_c {
+};
+
+// build dStage_MemoryMap_c (['dStage_MemoryMap_c']) False/False
+/* top-level dependencies (begin ['dStage_MemoryMap_c']) */
+/* top-level dependencies (end ['dStage_MemoryMap_c']) */
+struct dStage_MemoryMap_c {
+};
+
+// build stage_tgsc_class (['stage_tgsc_class']) True/True
+// build stage_tresure_class (['stage_tresure_class']) False/False
+/* top-level dependencies (begin ['stage_tresure_class']) */
+/* top-level dependencies (end ['stage_tresure_class']) */
+struct stage_tresure_class {
+};
+
+// build stage_map_info_dummy_class (['stage_map_info_dummy_class']) False/False
+/* top-level dependencies (begin ['stage_map_info_dummy_class']) */
+/* top-level dependencies (end ['stage_map_info_dummy_class']) */
+struct stage_map_info_dummy_class {
+};
+
+// build stage_pure_lightvec_info_class (['stage_pure_lightvec_info_class']) False/False
+/* top-level dependencies (begin ['stage_pure_lightvec_info_class']) */
+/* top-level dependencies (end ['stage_pure_lightvec_info_class']) */
 struct stage_pure_lightvec_info_class {
 };
 
-/* top-level dependencies (begin dStage_stageDt_c) */
-// outer dependency: stage_scls_info_dummy_class
-// outer dependency: dStage_MemoryMap_c
-// outer dependency: stage_map_info_class
-// outer dependency: stage_palette_info_class
-// outer dependency: dStage_FileList_dt_c
-// outer dependency: dStage_Multi_c
-// outer dependency: dStage_MemoryConfig_c
-// outer dependency: stage_stag_info_class
-// outer dependency: roomRead_class
-// outer dependency: dStage_dPath_c
-// outer dependency: stage_arrow_class
-// outer dependency: stage_map_info_dummy_class
-// outer dependency: stage_actor_class
-// outer dependency: stage_tgsc_class
-// outer dependency: stage_vrboxcol_info_class
-// outer dependency: stage_camera_class
-// outer dependency: stage_tresure_class
-// outer dependency: dStage_DMap_c
-// outer dependency: stage_plight_info_class
-// outer dependency: dStage_SoundInfo_c
-// outer dependency: dStage_dPnt_c
-// outer dependency: dStage_MapEventInfo_c
-// outer dependency: dStage_Lbnk_c
-// outer dependency: dStage_FileList2_dt_c
-// outer dependency: stage_vrbox_info_class
-// outer dependency: dStage_FloorInfo_c
-// outer dependency: dStage_Elst_c
-// outer dependency: stage_envr_info_class
-// outer dependency: stage_pselect_info_class
-// outer dependency: stage_pure_lightvec_info_class
-/* top-level dependencies (end dStage_stageDt_c) */
+// build dStage_Multi_c (['dStage_Multi_c']) False/False
+/* top-level dependencies (begin ['dStage_Multi_c']) */
+/* top-level dependencies (end ['dStage_Multi_c']) */
+struct dStage_Multi_c {
+};
+
+// build dStage_dPnt_c (['dStage_dPnt_c']) False/False
+/* top-level dependencies (begin ['dStage_dPnt_c']) */
+/* top-level dependencies (end ['dStage_dPnt_c']) */
+struct dStage_dPnt_c {
+};
+
+// build dStage_FileList_dt_c (['dStage_FileList_dt_c']) False/False
+/* top-level dependencies (begin ['dStage_FileList_dt_c']) */
+/* top-level dependencies (end ['dStage_FileList_dt_c']) */
+struct dStage_FileList_dt_c {
+};
+
+// build dStage_DMap_c (['dStage_DMap_c']) False/False
+/* top-level dependencies (begin ['dStage_DMap_c']) */
+/* top-level dependencies (end ['dStage_DMap_c']) */
+struct dStage_DMap_c {
+};
+
+// build stage_map_info_class (['stage_map_info_class']) False/False
+/* top-level dependencies (begin ['stage_map_info_class']) */
+/* top-level dependencies (end ['stage_map_info_class']) */
+struct stage_map_info_class {
+};
+
+// build stage_palette_info_class (['stage_palette_info_class']) False/False
+/* top-level dependencies (begin ['stage_palette_info_class']) */
+/* top-level dependencies (end ['stage_palette_info_class']) */
+struct stage_palette_info_class {
+};
+
+// build stage_vrboxcol_info_class (['stage_vrboxcol_info_class']) False/False
+/* top-level dependencies (begin ['stage_vrboxcol_info_class']) */
+/* top-level dependencies (end ['stage_vrboxcol_info_class']) */
+struct stage_vrboxcol_info_class {
+};
+
+// build dStage_dPath_c (['dStage_dPath_c']) False/False
+/* top-level dependencies (begin ['dStage_dPath_c']) */
+/* top-level dependencies (end ['dStage_dPath_c']) */
+struct dStage_dPath_c {
+};
+
+// build dStage_MapEventInfo_c (['dStage_MapEventInfo_c']) False/False
+/* top-level dependencies (begin ['dStage_MapEventInfo_c']) */
+/* top-level dependencies (end ['dStage_MapEventInfo_c']) */
+struct dStage_MapEventInfo_c {
+};
+
+// build stage_actor_class (['stage_actor_class']) False/False
+/* top-level dependencies (begin ['stage_actor_class']) */
+/* top-level dependencies (end ['stage_actor_class']) */
+struct stage_actor_class {
+};
+
+// build roomRead_class (['roomRead_class']) False/False
+/* top-level dependencies (begin ['roomRead_class']) */
+/* top-level dependencies (end ['roomRead_class']) */
+struct roomRead_class {
+};
+
+/* top-level dependencies (begin ['dStage_stageDt_c']) */
+// outer dependency: ('stage_pselect_info_class',)
+// outer dependency: ('stage_camera_class',)
+// outer dependency: ('dStage_SoundInfo_c',)
+// outer dependency: ('stage_arrow_class',)
+// outer dependency: ('dStage_FloorInfo_c',)
+// outer dependency: ('dStage_FileList2_dt_c',)
+// outer dependency: ('stage_stag_info_class',)
+// outer dependency: ('stage_vrbox_info_class',)
+// outer dependency: ('stage_plight_info_class',)
+// outer dependency: ('stage_scls_info_dummy_class',)
+// outer dependency: ('stage_envr_info_class',)
+// outer dependency: ('dStage_Lbnk_c',)
+// outer dependency: ('dStage_MemoryConfig_c',)
+// outer dependency: ('dStage_Elst_c',)
+// outer dependency: ('dStage_MemoryMap_c',)
+// outer dependency: ('stage_tgsc_class',)
+// outer dependency: ('stage_tresure_class',)
+// outer dependency: ('stage_map_info_dummy_class',)
+// outer dependency: ('stage_pure_lightvec_info_class',)
+// outer dependency: ('dStage_Multi_c',)
+// outer dependency: ('dStage_dPnt_c',)
+// outer dependency: ('dStage_FileList_dt_c',)
+// outer dependency: ('dStage_DMap_c',)
+// outer dependency: ('stage_map_info_class',)
+// outer dependency: ('stage_palette_info_class',)
+// outer dependency: ('stage_vrboxcol_info_class',)
+// outer dependency: ('dStage_dPath_c',)
+// outer dependency: ('dStage_MapEventInfo_c',)
+// outer dependency: ('stage_actor_class',)
+// outer dependency: ('roomRead_class',)
+/* top-level dependencies (end ['dStage_stageDt_c']) */
 struct dStage_stageDt_c {
-	// stage_scls_info_dummy_class
-	// dStage_MemoryMap_c
-	// stage_map_info_class
-	// stage_palette_info_class
-	// stage_stag_info_class
-	// dStage_dPath_c
-	// stage_arrow_class
-	// stage_tgsc_class
-	// stage_camera_class
-	// stage_tresure_class
-	// stage_plight_info_class
-	// dStage_SoundInfo_c
-	// dStage_dPnt_c
-	// dStage_FileList2_dt_c
-	// stage_vrbox_info_class
-	// stage_envr_info_class
-	// dStage_FileList_dt_c
-	// dStage_Multi_c
-	// dStage_MemoryConfig_c
-	// roomRead_class
-	// stage_map_info_dummy_class
-	// stage_actor_class
-	// stage_vrboxcol_info_class
-	// dStage_DMap_c
-	// dStage_MapEventInfo_c
-	// dStage_Lbnk_c
-	// dStage_FloorInfo_c
-	// dStage_Elst_c
-	// stage_pselect_info_class
-	// stage_pure_lightvec_info_class
+	// ('stage_vrbox_info_class',)
+	// ('dStage_Lbnk_c',)
+	// ('dStage_Elst_c',)
+	// ('dStage_MemoryMap_c',)
+	// ('stage_tresure_class',)
+	// ('stage_map_info_dummy_class',)
+	// ('dStage_Multi_c',)
+	// ('dStage_DMap_c',)
+	// ('stage_actor_class',)
+	// ('roomRead_class',)
+	// ('stage_camera_class',)
+	// ('dStage_SoundInfo_c',)
+	// ('stage_arrow_class',)
+	// ('dStage_FloorInfo_c',)
+	// ('dStage_FileList2_dt_c',)
+	// ('stage_stag_info_class',)
+	// ('stage_plight_info_class',)
+	// ('stage_scls_info_dummy_class',)
+	// ('stage_envr_info_class',)
+	// ('dStage_MemoryConfig_c',)
+	// ('stage_tgsc_class',)
+	// ('stage_pure_lightvec_info_class',)
+	// ('dStage_dPnt_c',)
+	// ('dStage_FileList_dt_c',)
+	// ('stage_map_info_class',)
+	// ('stage_palette_info_class',)
+	// ('dStage_dPath_c',)
+	// ('dStage_MapEventInfo_c',)
+	// ('stage_pselect_info_class',)
+	// ('stage_vrboxcol_info_class',)
 	/* 8002483C */ void getStagInfo() const;
 	/* 80024C1C */ void init();
 	/* 80024DB8 */ void getRoom() const;
@@ -397,100 +397,100 @@ struct dStage_stageDt_c {
 	/* 80028244 */ void setElst(dStage_Elst_c*);
 };
 
-// build dStage_roomDt_c (dStage_roomDt_c) False/False
-// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) True/True
-// build dStage_MemoryMap_c (dStage_MemoryMap_c) True/True
-// build stage_map_info_class (stage_map_info_class) True/True
-// build stage_palette_info_class (stage_palette_info_class) True/True
-// build dStage_FileList_dt_c (dStage_FileList_dt_c) True/True
-// build dStage_Multi_c (dStage_Multi_c) True/True
-// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) True/True
-// build stage_stag_info_class (stage_stag_info_class) True/True
-// build roomRead_class (roomRead_class) True/True
-// build dStage_dPath_c (dStage_dPath_c) True/True
-// build stage_arrow_class (stage_arrow_class) True/True
-// build stage_map_info_dummy_class (stage_map_info_dummy_class) True/True
-// build stage_actor_class (stage_actor_class) True/True
-// build stage_tgsc_class (stage_tgsc_class) True/True
-// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) True/True
-// build stage_camera_class (stage_camera_class) True/True
-// build stage_tresure_class (stage_tresure_class) True/True
-// build dStage_DMap_c (dStage_DMap_c) True/True
-// build stage_plight_info_class (stage_plight_info_class) True/True
-// build dStage_SoundInfo_c (dStage_SoundInfo_c) True/True
-// build dStage_dPnt_c (dStage_dPnt_c) True/True
-// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) True/True
-// build dStage_Lbnk_c (dStage_Lbnk_c) True/True
-// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) True/True
-// build stage_vrbox_info_class (stage_vrbox_info_class) True/True
-// build dStage_FloorInfo_c (dStage_FloorInfo_c) True/True
-// build dStage_Elst_c (dStage_Elst_c) True/True
-// build stage_envr_info_class (stage_envr_info_class) True/True
-// build stage_pselect_info_class (stage_pselect_info_class) True/True
-// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) True/True
-/* top-level dependencies (begin dStage_roomDt_c) */
-// outer dependency: stage_scls_info_dummy_class
-// outer dependency: dStage_MemoryMap_c
-// outer dependency: stage_map_info_class
-// outer dependency: stage_palette_info_class
-// outer dependency: dStage_FileList_dt_c
-// outer dependency: dStage_Multi_c
-// outer dependency: dStage_MemoryConfig_c
-// outer dependency: stage_stag_info_class
-// outer dependency: roomRead_class
-// outer dependency: dStage_dPath_c
-// outer dependency: stage_arrow_class
-// outer dependency: stage_map_info_dummy_class
-// outer dependency: stage_actor_class
-// outer dependency: stage_tgsc_class
-// outer dependency: stage_vrboxcol_info_class
-// outer dependency: stage_camera_class
-// outer dependency: stage_tresure_class
-// outer dependency: dStage_DMap_c
-// outer dependency: stage_plight_info_class
-// outer dependency: dStage_SoundInfo_c
-// outer dependency: dStage_dPnt_c
-// outer dependency: dStage_MapEventInfo_c
-// outer dependency: dStage_Lbnk_c
-// outer dependency: dStage_FileList2_dt_c
-// outer dependency: stage_vrbox_info_class
-// outer dependency: dStage_FloorInfo_c
-// outer dependency: dStage_Elst_c
-// outer dependency: stage_envr_info_class
-// outer dependency: stage_pselect_info_class
-// outer dependency: stage_pure_lightvec_info_class
-/* top-level dependencies (end dStage_roomDt_c) */
+// build dStage_roomDt_c (['dStage_roomDt_c']) False/False
+// build stage_pselect_info_class (['stage_pselect_info_class']) True/True
+// build stage_camera_class (['stage_camera_class']) True/True
+// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) True/True
+// build stage_arrow_class (['stage_arrow_class']) True/True
+// build dStage_FloorInfo_c (['dStage_FloorInfo_c']) True/True
+// build dStage_FileList2_dt_c (['dStage_FileList2_dt_c']) True/True
+// build stage_stag_info_class (['stage_stag_info_class']) True/True
+// build stage_vrbox_info_class (['stage_vrbox_info_class']) True/True
+// build stage_plight_info_class (['stage_plight_info_class']) True/True
+// build stage_scls_info_dummy_class (['stage_scls_info_dummy_class']) True/True
+// build stage_envr_info_class (['stage_envr_info_class']) True/True
+// build dStage_Lbnk_c (['dStage_Lbnk_c']) True/True
+// build dStage_MemoryConfig_c (['dStage_MemoryConfig_c']) True/True
+// build dStage_Elst_c (['dStage_Elst_c']) True/True
+// build dStage_MemoryMap_c (['dStage_MemoryMap_c']) True/True
+// build stage_tgsc_class (['stage_tgsc_class']) True/True
+// build stage_tresure_class (['stage_tresure_class']) True/True
+// build stage_map_info_dummy_class (['stage_map_info_dummy_class']) True/True
+// build stage_pure_lightvec_info_class (['stage_pure_lightvec_info_class']) True/True
+// build dStage_Multi_c (['dStage_Multi_c']) True/True
+// build dStage_dPnt_c (['dStage_dPnt_c']) True/True
+// build dStage_FileList_dt_c (['dStage_FileList_dt_c']) True/True
+// build dStage_DMap_c (['dStage_DMap_c']) True/True
+// build stage_map_info_class (['stage_map_info_class']) True/True
+// build stage_palette_info_class (['stage_palette_info_class']) True/True
+// build stage_vrboxcol_info_class (['stage_vrboxcol_info_class']) True/True
+// build dStage_dPath_c (['dStage_dPath_c']) True/True
+// build dStage_MapEventInfo_c (['dStage_MapEventInfo_c']) True/True
+// build stage_actor_class (['stage_actor_class']) True/True
+// build roomRead_class (['roomRead_class']) True/True
+/* top-level dependencies (begin ['dStage_roomDt_c']) */
+// outer dependency: ('stage_pselect_info_class',)
+// outer dependency: ('stage_camera_class',)
+// outer dependency: ('dStage_SoundInfo_c',)
+// outer dependency: ('stage_arrow_class',)
+// outer dependency: ('dStage_FloorInfo_c',)
+// outer dependency: ('dStage_FileList2_dt_c',)
+// outer dependency: ('stage_stag_info_class',)
+// outer dependency: ('stage_vrbox_info_class',)
+// outer dependency: ('stage_plight_info_class',)
+// outer dependency: ('stage_scls_info_dummy_class',)
+// outer dependency: ('stage_envr_info_class',)
+// outer dependency: ('dStage_Lbnk_c',)
+// outer dependency: ('dStage_MemoryConfig_c',)
+// outer dependency: ('dStage_Elst_c',)
+// outer dependency: ('dStage_MemoryMap_c',)
+// outer dependency: ('stage_tgsc_class',)
+// outer dependency: ('stage_tresure_class',)
+// outer dependency: ('stage_map_info_dummy_class',)
+// outer dependency: ('stage_pure_lightvec_info_class',)
+// outer dependency: ('dStage_Multi_c',)
+// outer dependency: ('dStage_dPnt_c',)
+// outer dependency: ('dStage_FileList_dt_c',)
+// outer dependency: ('dStage_DMap_c',)
+// outer dependency: ('stage_map_info_class',)
+// outer dependency: ('stage_palette_info_class',)
+// outer dependency: ('stage_vrboxcol_info_class',)
+// outer dependency: ('dStage_dPath_c',)
+// outer dependency: ('dStage_MapEventInfo_c',)
+// outer dependency: ('stage_actor_class',)
+// outer dependency: ('roomRead_class',)
+/* top-level dependencies (end ['dStage_roomDt_c']) */
 struct dStage_roomDt_c {
-	// stage_scls_info_dummy_class
-	// dStage_MemoryMap_c
-	// stage_map_info_class
-	// stage_palette_info_class
-	// stage_stag_info_class
-	// dStage_dPath_c
-	// stage_arrow_class
-	// stage_tgsc_class
-	// stage_camera_class
-	// stage_tresure_class
-	// stage_plight_info_class
-	// dStage_SoundInfo_c
-	// dStage_dPnt_c
-	// dStage_FileList2_dt_c
-	// stage_vrbox_info_class
-	// stage_envr_info_class
-	// dStage_FileList_dt_c
-	// dStage_Multi_c
-	// dStage_MemoryConfig_c
-	// roomRead_class
-	// stage_map_info_dummy_class
-	// stage_actor_class
-	// stage_vrboxcol_info_class
-	// dStage_DMap_c
-	// dStage_MapEventInfo_c
-	// dStage_Lbnk_c
-	// dStage_FloorInfo_c
-	// dStage_Elst_c
-	// stage_pselect_info_class
-	// stage_pure_lightvec_info_class
+	// ('stage_vrbox_info_class',)
+	// ('dStage_Lbnk_c',)
+	// ('dStage_Elst_c',)
+	// ('dStage_MemoryMap_c',)
+	// ('stage_tresure_class',)
+	// ('stage_map_info_dummy_class',)
+	// ('dStage_Multi_c',)
+	// ('dStage_DMap_c',)
+	// ('stage_actor_class',)
+	// ('roomRead_class',)
+	// ('stage_camera_class',)
+	// ('dStage_SoundInfo_c',)
+	// ('stage_arrow_class',)
+	// ('dStage_FloorInfo_c',)
+	// ('dStage_FileList2_dt_c',)
+	// ('stage_stag_info_class',)
+	// ('stage_plight_info_class',)
+	// ('stage_scls_info_dummy_class',)
+	// ('stage_envr_info_class',)
+	// ('dStage_MemoryConfig_c',)
+	// ('stage_tgsc_class',)
+	// ('stage_pure_lightvec_info_class',)
+	// ('dStage_dPnt_c',)
+	// ('dStage_FileList_dt_c',)
+	// ('stage_map_info_class',)
+	// ('stage_palette_info_class',)
+	// ('dStage_dPath_c',)
+	// ('dStage_MapEventInfo_c',)
+	// ('stage_pselect_info_class',)
+	// ('stage_vrboxcol_info_class',)
 	/* 800193FC */ void getFileListInfo() const;
 	/* 80024CA8 */ void initFileList2();
 	/* 80024CB4 */ void init();
@@ -585,98 +585,98 @@ struct dStage_roomDt_c {
 	/* 80027DD8 */ void getElst();
 };
 
-// build stage_actor_data_class (stage_actor_data_class) False/False
-/* top-level dependencies (begin stage_actor_data_class) */
-/* top-level dependencies (end stage_actor_data_class) */
+// build stage_actor_data_class (['stage_actor_data_class']) False/False
+/* top-level dependencies (begin ['stage_actor_data_class']) */
+/* top-level dependencies (end ['stage_actor_data_class']) */
 struct stage_actor_data_class {
 };
 
-// build fopAcM_prm_class (fopAcM_prm_class) False/False
-/* top-level dependencies (begin fopAcM_prm_class) */
-/* top-level dependencies (end fopAcM_prm_class) */
+// build fopAcM_prm_class (['fopAcM_prm_class']) False/False
+/* top-level dependencies (begin ['fopAcM_prm_class']) */
+/* top-level dependencies (end ['fopAcM_prm_class']) */
 struct fopAcM_prm_class {
 };
 
-// build stage_camera2_data_class (stage_camera2_data_class) False/False
-/* top-level dependencies (begin stage_camera2_data_class) */
-/* top-level dependencies (end stage_camera2_data_class) */
+// build stage_camera2_data_class (['stage_camera2_data_class']) False/False
+/* top-level dependencies (begin ['stage_camera2_data_class']) */
+/* top-level dependencies (end ['stage_camera2_data_class']) */
 struct stage_camera2_data_class {
 };
 
-// build stage_stag_info_class (stage_stag_info_class) True/True
-// build roomRead_class (roomRead_class) True/True
-// build FuncTable (FuncTable) False/False
-/* top-level dependencies (begin FuncTable) */
-/* top-level dependencies (end FuncTable) */
+// build stage_stag_info_class (['stage_stag_info_class']) True/True
+// build roomRead_class (['roomRead_class']) True/True
+// build FuncTable (['FuncTable']) False/False
+/* top-level dependencies (begin ['FuncTable']) */
+/* top-level dependencies (end ['FuncTable']) */
 struct FuncTable {
 };
 
-// build dStage_Multi_c (dStage_Multi_c) True/True
-// build cBgS_GndChk (cBgS_GndChk) False/False
-/* top-level dependencies (begin cBgS_GndChk) */
-/* top-level dependencies (end cBgS_GndChk) */
+// build dStage_Multi_c (['dStage_Multi_c']) True/True
+// build cBgS_GndChk (['cBgS_GndChk']) False/False
+/* top-level dependencies (begin ['cBgS_GndChk']) */
+/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build stage_camera_class (stage_camera_class) True/True
-// build stage_arrow_class (stage_arrow_class) True/True
-// build stage_actor_class (stage_actor_class) True/True
-// build stage_map_info_class (stage_map_info_class) True/True
-// build stage_map_info_dummy_class (stage_map_info_dummy_class) True/True
-// build stage_palette_info_class (stage_palette_info_class) True/True
-// build stage_pselect_info_class (stage_pselect_info_class) True/True
-// build stage_envr_info_class (stage_envr_info_class) True/True
-// build stage_vrbox_info_class (stage_vrbox_info_class) True/True
-// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) True/True
-// build stage_plight_info_class (stage_plight_info_class) True/True
-// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) True/True
-// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) True/True
-// build dStage_dPnt_c (dStage_dPnt_c) True/True
-// build dStage_dPath_c (dStage_dPath_c) True/True
-// build dStage_SoundInfo_c (dStage_SoundInfo_c) True/True
-// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) True/True
-// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) True/True
-// build dStage_FileList_dt_c (dStage_FileList_dt_c) True/True
-// build dStage_FloorInfo_c (dStage_FloorInfo_c) True/True
-// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) True/True
-// build dStage_MemoryMap_c (dStage_MemoryMap_c) True/True
-// build dStage_Lbnk_c (dStage_Lbnk_c) True/True
-// build stage_tresure_class (stage_tresure_class) True/True
-// build dStage_DMap_c (dStage_DMap_c) True/True
-// build dStage_Elst_c (dStage_Elst_c) True/True
-// build dStage_roomStatus_c (dStage_roomStatus_c) False/False
-/* top-level dependencies (begin dStage_roomStatus_c) */
-/* top-level dependencies (end dStage_roomStatus_c) */
+// build stage_camera_class (['stage_camera_class']) True/True
+// build stage_arrow_class (['stage_arrow_class']) True/True
+// build stage_actor_class (['stage_actor_class']) True/True
+// build stage_map_info_class (['stage_map_info_class']) True/True
+// build stage_map_info_dummy_class (['stage_map_info_dummy_class']) True/True
+// build stage_palette_info_class (['stage_palette_info_class']) True/True
+// build stage_pselect_info_class (['stage_pselect_info_class']) True/True
+// build stage_envr_info_class (['stage_envr_info_class']) True/True
+// build stage_vrbox_info_class (['stage_vrbox_info_class']) True/True
+// build stage_vrboxcol_info_class (['stage_vrboxcol_info_class']) True/True
+// build stage_plight_info_class (['stage_plight_info_class']) True/True
+// build stage_pure_lightvec_info_class (['stage_pure_lightvec_info_class']) True/True
+// build stage_scls_info_dummy_class (['stage_scls_info_dummy_class']) True/True
+// build dStage_dPnt_c (['dStage_dPnt_c']) True/True
+// build dStage_dPath_c (['dStage_dPath_c']) True/True
+// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) True/True
+// build dStage_MapEventInfo_c (['dStage_MapEventInfo_c']) True/True
+// build dStage_FileList2_dt_c (['dStage_FileList2_dt_c']) True/True
+// build dStage_FileList_dt_c (['dStage_FileList_dt_c']) True/True
+// build dStage_FloorInfo_c (['dStage_FloorInfo_c']) True/True
+// build dStage_MemoryConfig_c (['dStage_MemoryConfig_c']) True/True
+// build dStage_MemoryMap_c (['dStage_MemoryMap_c']) True/True
+// build dStage_Lbnk_c (['dStage_Lbnk_c']) True/True
+// build stage_tresure_class (['stage_tresure_class']) True/True
+// build dStage_DMap_c (['dStage_DMap_c']) True/True
+// build dStage_Elst_c (['dStage_Elst_c']) True/True
+// build dStage_roomStatus_c (['dStage_roomStatus_c']) False/False
+/* top-level dependencies (begin ['dStage_roomStatus_c']) */
+/* top-level dependencies (end ['dStage_roomStatus_c']) */
 struct dStage_roomStatus_c {
 	/* 80028360 */ ~dStage_roomStatus_c();
 	/* 8002839C */ dStage_roomStatus_c();
 };
 
-// build dStage_KeepDoorInfo (dStage_KeepDoorInfo) False/False
-/* top-level dependencies (begin dStage_KeepDoorInfo) */
-/* top-level dependencies (end dStage_KeepDoorInfo) */
+// build dStage_KeepDoorInfo (['dStage_KeepDoorInfo']) False/False
+/* top-level dependencies (begin ['dStage_KeepDoorInfo']) */
+/* top-level dependencies (end ['dStage_KeepDoorInfo']) */
 struct dStage_KeepDoorInfo {
 	/* 80028418 */ ~dStage_KeepDoorInfo();
 };
 
-// build stage_tgsc_data_class (stage_tgsc_data_class) False/False
-/* top-level dependencies (begin stage_tgsc_data_class) */
-/* top-level dependencies (end stage_tgsc_data_class) */
+// build stage_tgsc_data_class (['stage_tgsc_data_class']) False/False
+/* top-level dependencies (begin ['stage_tgsc_data_class']) */
+/* top-level dependencies (end ['stage_tgsc_data_class']) */
 struct stage_tgsc_data_class {
 	/* 8002847C */ ~stage_tgsc_data_class();
 	/* 800284B8 */ stage_tgsc_data_class();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
@@ -684,75 +684,75 @@ struct JKRHeap {
 	/* 802CE548 */ void free(void*);
 };
 
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
+// build J3DLightObj (['J3DLightObj']) False/False
+/* top-level dependencies (begin ['J3DLightObj']) */
+/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80018C0C */ J3DLightObj();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build daSus_c (daSus_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build daSus_c (['daSus_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin daSus_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end daSus_c) */
+/* top-level dependencies (begin ['daSus_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['daSus_c']) */
 struct daSus_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80031434 */ void check(s8, cXyz const&);
 	/* 800315A4 */ void execute();
 };
 
-// build cXyz (cXyz) True/True
-// build JKRAramArchive (JKRAramArchive) False/False
-/* top-level dependencies (begin JKRAramArchive) */
-/* top-level dependencies (end JKRAramArchive) */
+// build cXyz (['cXyz']) True/True
+// build JKRAramArchive (['JKRAramArchive']) False/False
+/* top-level dependencies (begin ['JKRAramArchive']) */
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 };
 
-// build dSv_danBit_c (dSv_danBit_c) False/False
-/* top-level dependencies (begin dSv_danBit_c) */
-/* top-level dependencies (end dSv_danBit_c) */
+// build dSv_danBit_c (['dSv_danBit_c']) False/False
+/* top-level dependencies (begin ['dSv_danBit_c']) */
+/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034B14 */ void init(s8);
 };
 
-// build dSv_zoneBit_c (dSv_zoneBit_c) False/False
-/* top-level dependencies (begin dSv_zoneBit_c) */
-/* top-level dependencies (end dSv_zoneBit_c) */
+// build dSv_zoneBit_c (['dSv_zoneBit_c']) False/False
+/* top-level dependencies (begin ['dSv_zoneBit_c']) */
+/* top-level dependencies (end ['dSv_zoneBit_c']) */
 struct dSv_zoneBit_c {
 	/* 80034CEC */ void clearRoomSwitch();
 	/* 80034CF8 */ void clearRoomItem();
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 800350BC */ void getSave(int);
 	/* 800350F0 */ void putSave(int);
@@ -760,101 +760,101 @@ struct dSv_info_c {
 	/* 80035724 */ void isActor(int, int) const;
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
 	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
 	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dMpath_c (dMpath_c) False/False
-// build dDrawPath_c (dDrawPath_c) False/False
-/* top-level dependencies (begin dDrawPath_c) */
-/* top-level dependencies (end dDrawPath_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dMpath_c (['dMpath_c']) False/False
+// build dDrawPath_c (['dDrawPath_c']) False/False
+/* top-level dependencies (begin ['dDrawPath_c']) */
+/* top-level dependencies (end ['dDrawPath_c']) */
 struct dDrawPath_c {
-	// build room_class (dDrawPath_c::room_class) False/False
-	/* dependencies (begin dDrawPath_c::room_class) */
-	/* dependencies (end dDrawPath_c::room_class) */
+	// build room_class (['dDrawPath_c', 'room_class']) False/False
+	/* dependencies (begin ['dDrawPath_c', 'room_class']) */
+	/* dependencies (end ['dDrawPath_c', 'room_class']) */
 	struct room_class {
 	};
 
 };
 
-/* top-level dependencies (begin dMpath_c) */
-// outer dependency: dDrawPath_c::room_class
-/* top-level dependencies (end dMpath_c) */
+/* top-level dependencies (begin ['dMpath_c']) */
+// outer dependency: ('dDrawPath_c', 'room_class')
+/* top-level dependencies (end ['dMpath_c']) */
 struct dMpath_c {
-	// dDrawPath_c::room_class
+	// ('dDrawPath_c', 'room_class')
 	/* 8003F810 */ void setPointer(dDrawPath_c::room_class*, s8*, s8*);
 	/* 8003FA40 */ void setPointer(s8, void*, int);
 };
 
-// build dDrawPath_c (dDrawPath_c) True/True
-// build dEvent_manager_c (dEvent_manager_c) False/False
-/* top-level dependencies (begin dEvent_manager_c) */
-/* top-level dependencies (end dEvent_manager_c) */
+// build dDrawPath_c (['dDrawPath_c']) True/True
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80046710 */ void create();
 	/* 80046C0C */ void remove();
 };
 
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074B98 */ void GetExitId(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build dTres_c (dTres_c) False/False
-// build dTres_c (dTres_c) True/False
+// build dTres_c (['dTres_c']) False/False
+// build dTres_c (['dTres_c']) True/False
 struct dTres_c;
-/* top-level dependencies (begin dTres_c) */
-// outer dependency: dTres_c::list_class
-/* top-level dependencies (end dTres_c) */
+/* top-level dependencies (begin ['dTres_c']) */
+// outer dependency: ('dTres_c', 'list_class')
+/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// dTres_c::list_class
-	// build list_class (dTres_c::list_class) False/False
-	/* dependencies (begin dTres_c::list_class) */
-	/* dependencies (end dTres_c::list_class) */
+	// ('dTres_c', 'list_class')
+	// build list_class (['dTres_c', 'list_class']) False/False
+	/* dependencies (begin ['dTres_c', 'list_class']) */
+	/* dependencies (end ['dTres_c', 'list_class']) */
 	struct list_class {
 	};
 
 	/* 8009BCB4 */ void addData(dTres_c::list_class*, s8);
 };
 
-// build dSvBit_HIO_c (dSvBit_HIO_c) False/False
-/* top-level dependencies (begin dSvBit_HIO_c) */
-/* top-level dependencies (end dSvBit_HIO_c) */
+// build dSvBit_HIO_c (['dSvBit_HIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_HIO_c']) */
+/* top-level dependencies (end ['dSvBit_HIO_c']) */
 struct dSvBit_HIO_c {
 	/* 8025C1F8 */ void init();
 };
 
-// build cMl (cMl) False/False
-/* top-level dependencies (begin cMl) */
-/* top-level dependencies (end cMl) */
+// build cMl (['cMl']) False/False
+/* top-level dependencies (begin ['cMl']) */
+/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build J3DLightInfo (J3DLightInfo) False/False
-/* top-level dependencies (begin J3DLightInfo) */
-/* top-level dependencies (end J3DLightInfo) */
+// build JKRHeap (['JKRHeap']) True/True
+// build J3DLightInfo (['J3DLightInfo']) False/False
+/* top-level dependencies (begin ['J3DLightInfo']) */
+/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };

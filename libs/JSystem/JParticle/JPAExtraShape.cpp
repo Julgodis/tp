@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-/* top-level dependencies (begin JPABaseParticle) */
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+/* top-level dependencies (begin ['JPABaseParticle']) */
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-// build JPAExtraShape (JPAExtraShape) False/False
-/* top-level dependencies (begin JPAExtraShape) */
-/* top-level dependencies (end JPAExtraShape) */
+// build JPAExtraShape (['JPAExtraShape']) False/False
+/* top-level dependencies (begin ['JPAExtraShape']) */
+/* top-level dependencies (end ['JPAExtraShape']) */
 struct JPAExtraShape {
 	/* 8027AD88 */ JPAExtraShape(u8 const*);
 	/* 8027ADBC */ void init();

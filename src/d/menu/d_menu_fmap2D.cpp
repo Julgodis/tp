@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build dMenu_Fmap2DBack_c (dMenu_Fmap2DBack_c) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
-// build STControl (STControl) False/False
-/* top-level dependencies (begin STControl) */
-/* top-level dependencies (end STControl) */
+// build dMenu_Fmap2DBack_c (['dMenu_Fmap2DBack_c']) False/False
+// build STControl (['STControl']) False/False
+/* top-level dependencies (begin ['STControl']) */
+/* top-level dependencies (end ['STControl']) */
 struct STControl {
 };
 
-/* top-level dependencies (begin dMenu_Fmap2DBack_c) */
-// outer dependency: ResTIMG
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap2DBack_c) */
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin ['dMenu_Fmap2DBack_c']) */
+// outer dependency: ('STControl',)
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['dMenu_Fmap2DBack_c']) */
 struct dMenu_Fmap2DBack_c {
-	// ResTIMG
-	// STControl
+	// ('STControl',)
+	// ('ResTIMG',)
 	/* 801CF56C */ dMenu_Fmap2DBack_c();
 	/* 801CFCDC */ ~dMenu_Fmap2DBack_c();
 	/* 801CFF34 */ void draw();
@@ -98,74 +98,74 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build STControl (STControl) True/True
-// build dMenu_Fmap2DTop_c (dMenu_Fmap2DTop_c) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
+// build ResTIMG (['ResTIMG']) True/True
+// build STControl (['STControl']) True/True
+// build dMenu_Fmap2DTop_c (['dMenu_Fmap2DTop_c']) False/False
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
+/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
+/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
 struct J2DAnmTextureSRTKey {
 };
 
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DScreen (J2DScreen) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
+// build STControl (['STControl']) True/True
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
+struct JKRExpHeap {
 };
 
-// build J2DGrafContext (J2DGrafContext) False/False
-/* top-level dependencies (begin J2DGrafContext) */
-/* top-level dependencies (end J2DGrafContext) */
+// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
+// build J2DScreen (['J2DScreen']) False/False
+// build J2DGrafContext (['J2DGrafContext']) False/False
+/* top-level dependencies (begin ['J2DGrafContext']) */
+/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: JKRArchive
-// outer dependency: J2DGrafContext
-/* top-level dependencies (end J2DScreen) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin ['J2DScreen']) */
+// outer dependency: ('J2DGrafContext',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// JKRArchive
-	// J2DGrafContext
+	// ('J2DGrafContext',)
+	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
 };
 
-/* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgrAlpha) */
+// build JKRExpHeap (['JKRExpHeap']) True/True
+/* top-level dependencies (begin ['CPaneMgrAlpha']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// JKRExpHeap
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMenu_Fmap2DTop_c) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: CPaneMgrAlpha
-// outer dependency: STControl
-/* top-level dependencies (end dMenu_Fmap2DTop_c) */
+/* top-level dependencies (begin ['dMenu_Fmap2DTop_c']) */
+// outer dependency: ('J2DAnmTextureSRTKey',)
+// outer dependency: ('STControl',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('CPaneMgrAlpha',)
+/* top-level dependencies (end ['dMenu_Fmap2DTop_c']) */
 struct dMenu_Fmap2DTop_c {
-	// JKRExpHeap
-	// J2DAnmTextureSRTKey
-	// CPaneMgrAlpha
-	// STControl
+	// ('J2DAnmTextureSRTKey',)
+	// ('STControl',)
+	// ('JKRExpHeap',)
+	// ('CPaneMgrAlpha',)
 	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
 	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
 	/* 801D6A44 */ void _execute();
@@ -194,36 +194,36 @@ struct dMenu_Fmap2DTop_c {
 	/* 801D8088 */ void isWarpAccept();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build CPaneMgrAlpha (CPaneMgrAlpha) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
+// build CPaneMgrAlpha (['CPaneMgrAlpha']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
-/* top-level dependencies (begin dSv_player_field_last_stay_info_c) */
-/* top-level dependencies (end dSv_player_field_last_stay_info_c) */
+// build dSv_player_field_last_stay_info_c (['dSv_player_field_last_stay_info_c']) False/False
+/* top-level dependencies (begin ['dSv_player_field_last_stay_info_c']) */
+/* top-level dependencies (end ['dSv_player_field_last_stay_info_c']) */
 struct dSv_player_field_last_stay_info_c {
 	/* 80032E78 */ void isRegionBit(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin dMenuMapCommon_c) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end dMenuMapCommon_c) */
+// build dMenuMapCommon_c (['dMenuMapCommon_c']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['dMenuMapCommon_c']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dMenuMapCommon_c']) */
 struct dMenuMapCommon_c {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
@@ -233,184 +233,184 @@ struct dMenuMapCommon_c {
 	/* 801C4600 */ void moveLightDropAnime();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build renderingFmap_c (renderingFmap_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
-/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build renderingFmap_c (['renderingFmap_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_region_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_region_data_c']) */
 struct dMenu_Fmap_region_data_c {
 };
 
-/* top-level dependencies (begin renderingFmap_c) */
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end renderingFmap_c) */
+/* top-level dependencies (begin ['renderingFmap_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+/* top-level dependencies (end ['renderingFmap_c']) */
 struct renderingFmap_c {
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
 	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 };
 
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-// build dMeterHaihai_c (dMeterHaihai_c) False/False
-/* top-level dependencies (begin dMeterHaihai_c) */
-/* top-level dependencies (end dMeterHaihai_c) */
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+// build dMeterHaihai_c (['dMeterHaihai_c']) False/False
+/* top-level dependencies (begin ['dMeterHaihai_c']) */
+/* top-level dependencies (end ['dMeterHaihai_c']) */
 struct dMeterHaihai_c {
 	/* 8020AE8C */ dMeterHaihai_c(u8);
 	/* 8020B518 */ void drawHaihai(u8);
 };
 
-// build dMeter2Info_c (dMeter2Info_c) False/False
-// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
-/* top-level dependencies (begin JMSMesgEntry_c) */
-/* top-level dependencies (end JMSMesgEntry_c) */
+// build dMeter2Info_c (['dMeter2Info_c']) False/False
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
+/* top-level dependencies (begin ['JMSMesgEntry_c']) */
+/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JMSMesgEntry_c
-/* top-level dependencies (end dMeter2Info_c) */
+/* top-level dependencies (begin ['dMeter2Info_c']) */
+// outer dependency: ('JMSMesgEntry_c',)
+/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// JMSMesgEntry_c
+	// ('JMSMesgEntry_c',)
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
-// build dMsgScrnExplain_c (dMsgScrnExplain_c) False/False
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
+// build dMsgScrnExplain_c (['dMsgScrnExplain_c']) False/False
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 };
 
-// build STControl (STControl) True/True
-/* top-level dependencies (begin dMsgScrnExplain_c) */
-// outer dependency: J2DOrthoGraph
-// outer dependency: STControl
-/* top-level dependencies (end dMsgScrnExplain_c) */
+// build STControl (['STControl']) True/True
+/* top-level dependencies (begin ['dMsgScrnExplain_c']) */
+// outer dependency: ('J2DOrthoGraph',)
+// outer dependency: ('STControl',)
+/* top-level dependencies (end ['dMsgScrnExplain_c']) */
 struct dMsgScrnExplain_c {
-	// J2DOrthoGraph
-	// STControl
+	// ('J2DOrthoGraph',)
+	// ('STControl',)
 	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
 	/* 8023D918 */ void draw(J2DOrthoGraph*);
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) True/True
-// build CPaneMgr (CPaneMgr) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) False/False
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) True/True
+// build CPaneMgr (['CPaneMgr']) False/False
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DPane (['J2DPane']) False/False
+// build J2DRotateAxis (['J2DRotateAxis']) False/False
+/* top-level dependencies (begin ['J2DRotateAxis']) */
+/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DRotateAxis
-/* top-level dependencies (end J2DPane) */
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DRotateAxis',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DRotateAxis
+	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7AFC */ void getParentPane();
 };
 
-// build J2DScreen (J2DScreen) True/True
-/* top-level dependencies (begin CPaneMgr) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgr) */
+/* top-level dependencies (begin ['CPaneMgr']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// JKRExpHeap
-	// J2DPane
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
+	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 };
 
-// build J2DScreen (J2DScreen) True/True
-// build J2DPane (J2DPane) True/True
-// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DScreen (J2DScreen) True/True
-/* top-level dependencies (begin CPaneMgrAlphaMorf) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgrAlphaMorf) */
+// build J2DScreen (['J2DScreen']) True/True
+// build J2DPane (['J2DPane']) True/True
+// build CPaneMgrAlphaMorf (['CPaneMgrAlphaMorf']) False/False
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+/* top-level dependencies (begin ['CPaneMgrAlphaMorf']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+/* top-level dependencies (end ['CPaneMgrAlphaMorf']) */
 struct CPaneMgrAlphaMorf {
-	// JKRExpHeap
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
 	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255DD0 */ void setBackupAlpha();
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JAISoundID (['JAISoundID']) True/True
+// build Vec (['Vec']) True/True
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build J2DRotateAxis (J2DRotateAxis) True/True
-// build J2DGrafContext (J2DGrafContext) True/True
-// build J2DPicture (J2DPicture) False/False
-// build ResTIMG (ResTIMG) True/True
-/* top-level dependencies (begin J2DPicture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J2DPicture) */
+// build J2DRotateAxis (['J2DRotateAxis']) True/True
+// build J2DGrafContext (['J2DGrafContext']) True/True
+// build J2DPicture (['J2DPicture']) False/False
+// build ResTIMG (['ResTIMG']) True/True
+/* top-level dependencies (begin ['J2DPicture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
-/* top-level dependencies (begin J2DAnmLoaderDataBase) */
-/* top-level dependencies (end J2DAnmLoaderDataBase) */
+// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
+/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };

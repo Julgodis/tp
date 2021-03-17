@@ -9,159 +9,159 @@
 // Types:
 // 
 
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
+// build _GXCullMode (['_GXCullMode']) False/False
+/* top-level dependencies (begin ['_GXCullMode']) */
+/* top-level dependencies (end ['_GXCullMode']) */
 struct _GXCullMode {
 };
 
-// build _GXLightID (_GXLightID) False/False
-/* top-level dependencies (begin _GXLightID) */
-/* top-level dependencies (end _GXLightID) */
+// build _GXLightID (['_GXLightID']) False/False
+/* top-level dependencies (begin ['_GXLightID']) */
+/* top-level dependencies (end ['_GXLightID']) */
 struct _GXLightID {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXVtxFmt (_GXVtxFmt) False/False
-/* top-level dependencies (begin _GXVtxFmt) */
-/* top-level dependencies (end _GXVtxFmt) */
+// build _GXVtxFmt (['_GXVtxFmt']) False/False
+/* top-level dependencies (begin ['_GXVtxFmt']) */
+/* top-level dependencies (end ['_GXVtxFmt']) */
 struct _GXVtxFmt {
 };
 
-// build _GXVtxAttrFmtList (_GXVtxAttrFmtList) False/False
-/* top-level dependencies (begin _GXVtxAttrFmtList) */
-/* top-level dependencies (end _GXVtxAttrFmtList) */
+// build _GXVtxAttrFmtList (['_GXVtxAttrFmtList']) False/False
+/* top-level dependencies (begin ['_GXVtxAttrFmtList']) */
+/* top-level dependencies (end ['_GXVtxAttrFmtList']) */
 struct _GXVtxAttrFmtList {
 };
 
-// build _GXTexGenType (_GXTexGenType) False/False
-/* top-level dependencies (begin _GXTexGenType) */
-/* top-level dependencies (end _GXTexGenType) */
+// build _GXTexGenType (['_GXTexGenType']) False/False
+/* top-level dependencies (begin ['_GXTexGenType']) */
+/* top-level dependencies (end ['_GXTexGenType']) */
 struct _GXTexGenType {
 };
 
-// build _GXTexGenSrc (_GXTexGenSrc) False/False
-/* top-level dependencies (begin _GXTexGenSrc) */
-/* top-level dependencies (end _GXTexGenSrc) */
+// build _GXTexGenSrc (['_GXTexGenSrc']) False/False
+/* top-level dependencies (begin ['_GXTexGenSrc']) */
+/* top-level dependencies (end ['_GXTexGenSrc']) */
 struct _GXTexGenSrc {
 };
 
-// build _GXTexCoordID (_GXTexCoordID) False/False
-/* top-level dependencies (begin _GXTexCoordID) */
-/* top-level dependencies (end _GXTexCoordID) */
+// build _GXTexCoordID (['_GXTexCoordID']) False/False
+/* top-level dependencies (begin ['_GXTexCoordID']) */
+/* top-level dependencies (end ['_GXTexCoordID']) */
 struct _GXTexCoordID {
 };
 
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-// build _GXTexWrapMode (_GXTexWrapMode) False/False
-/* top-level dependencies (begin _GXTexWrapMode) */
-/* top-level dependencies (end _GXTexWrapMode) */
+// build _GXTexWrapMode (['_GXTexWrapMode']) False/False
+/* top-level dependencies (begin ['_GXTexWrapMode']) */
+/* top-level dependencies (end ['_GXTexWrapMode']) */
 struct _GXTexWrapMode {
 };
 
-// build _GXTexFilter (_GXTexFilter) False/False
-/* top-level dependencies (begin _GXTexFilter) */
-/* top-level dependencies (end _GXTexFilter) */
+// build _GXTexFilter (['_GXTexFilter']) False/False
+/* top-level dependencies (begin ['_GXTexFilter']) */
+/* top-level dependencies (end ['_GXTexFilter']) */
 struct _GXTexFilter {
 };
 
-// build _GXAnisotropy (_GXAnisotropy) False/False
-/* top-level dependencies (begin _GXAnisotropy) */
-/* top-level dependencies (end _GXAnisotropy) */
+// build _GXAnisotropy (['_GXAnisotropy']) False/False
+/* top-level dependencies (begin ['_GXAnisotropy']) */
+/* top-level dependencies (end ['_GXAnisotropy']) */
 struct _GXAnisotropy {
 };
 
-// build _GXTexFmt (_GXTexFmt) False/False
-/* top-level dependencies (begin _GXTexFmt) */
-/* top-level dependencies (end _GXTexFmt) */
+// build _GXTexFmt (['_GXTexFmt']) False/False
+/* top-level dependencies (begin ['_GXTexFmt']) */
+/* top-level dependencies (end ['_GXTexFmt']) */
 struct _GXTexFmt {
 };
 
-// build _GXTlutFmt (_GXTlutFmt) False/False
-/* top-level dependencies (begin _GXTlutFmt) */
-/* top-level dependencies (end _GXTlutFmt) */
+// build _GXTlutFmt (['_GXTlutFmt']) False/False
+/* top-level dependencies (begin ['_GXTlutFmt']) */
+/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-// build _GXTlutSize (_GXTlutSize) False/False
-/* top-level dependencies (begin _GXTlutSize) */
-/* top-level dependencies (end _GXTlutSize) */
+// build _GXTlutSize (['_GXTlutSize']) False/False
+/* top-level dependencies (begin ['_GXTlutSize']) */
+/* top-level dependencies (end ['_GXTlutSize']) */
 struct _GXTlutSize {
 };
 
-// build _GXIndTexMtxID (_GXIndTexMtxID) False/False
-/* top-level dependencies (begin _GXIndTexMtxID) */
-/* top-level dependencies (end _GXIndTexMtxID) */
+// build _GXIndTexMtxID (['_GXIndTexMtxID']) False/False
+/* top-level dependencies (begin ['_GXIndTexMtxID']) */
+/* top-level dependencies (end ['_GXIndTexMtxID']) */
 struct _GXIndTexMtxID {
 };
 
-// build _GXIndTexStageID (_GXIndTexStageID) False/False
-/* top-level dependencies (begin _GXIndTexStageID) */
-/* top-level dependencies (end _GXIndTexStageID) */
+// build _GXIndTexStageID (['_GXIndTexStageID']) False/False
+/* top-level dependencies (begin ['_GXIndTexStageID']) */
+/* top-level dependencies (end ['_GXIndTexStageID']) */
 struct _GXIndTexStageID {
 };
 
-// build _GXIndTexScale (_GXIndTexScale) False/False
-/* top-level dependencies (begin _GXIndTexScale) */
-/* top-level dependencies (end _GXIndTexScale) */
+// build _GXIndTexScale (['_GXIndTexScale']) False/False
+/* top-level dependencies (begin ['_GXIndTexScale']) */
+/* top-level dependencies (end ['_GXIndTexScale']) */
 struct _GXIndTexScale {
 };
 
-// build _GXTevStageID (_GXTevStageID) False/False
-/* top-level dependencies (begin _GXTevStageID) */
-/* top-level dependencies (end _GXTevStageID) */
+// build _GXTevStageID (['_GXTevStageID']) False/False
+/* top-level dependencies (begin ['_GXTevStageID']) */
+/* top-level dependencies (end ['_GXTevStageID']) */
 struct _GXTevStageID {
 };
 
-// build _GXChannelID (_GXChannelID) False/False
-/* top-level dependencies (begin _GXChannelID) */
-/* top-level dependencies (end _GXChannelID) */
+// build _GXChannelID (['_GXChannelID']) False/False
+/* top-level dependencies (begin ['_GXChannelID']) */
+/* top-level dependencies (end ['_GXChannelID']) */
 struct _GXChannelID {
 };
 
-// build _GXTevKColorID (_GXTevKColorID) False/False
-/* top-level dependencies (begin _GXTevKColorID) */
-/* top-level dependencies (end _GXTevKColorID) */
+// build _GXTevKColorID (['_GXTevKColorID']) False/False
+/* top-level dependencies (begin ['_GXTevKColorID']) */
+/* top-level dependencies (end ['_GXTevKColorID']) */
 struct _GXTevKColorID {
 };
 
-// build _GXTevRegID (_GXTevRegID) False/False
-/* top-level dependencies (begin _GXTevRegID) */
-/* top-level dependencies (end _GXTevRegID) */
+// build _GXTevRegID (['_GXTevRegID']) False/False
+/* top-level dependencies (begin ['_GXTevRegID']) */
+/* top-level dependencies (end ['_GXTevRegID']) */
 struct _GXTevRegID {
 };
 
-// build _GXColorS10 (_GXColorS10) False/False
-/* top-level dependencies (begin _GXColorS10) */
-/* top-level dependencies (end _GXColorS10) */
+// build _GXColorS10 (['_GXColorS10']) False/False
+/* top-level dependencies (begin ['_GXColorS10']) */
+/* top-level dependencies (end ['_GXColorS10']) */
 struct _GXColorS10 {
 };
 
-// build _GXFogType (_GXFogType) False/False
-/* top-level dependencies (begin _GXFogType) */
-/* top-level dependencies (end _GXFogType) */
+// build _GXFogType (['_GXFogType']) False/False
+/* top-level dependencies (begin ['_GXFogType']) */
+/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build _GXFogAdjTable (_GXFogAdjTable) False/False
-/* top-level dependencies (begin _GXFogAdjTable) */
-/* top-level dependencies (end _GXFogAdjTable) */
+// build _GXFogAdjTable (['_GXFogAdjTable']) False/False
+/* top-level dependencies (begin ['_GXFogAdjTable']) */
+/* top-level dependencies (end ['_GXFogAdjTable']) */
 struct _GXFogAdjTable {
 };
 
-// build _GXTexCacheSize (_GXTexCacheSize) False/False
-/* top-level dependencies (begin _GXTexCacheSize) */
-/* top-level dependencies (end _GXTexCacheSize) */
+// build _GXTexCacheSize (['_GXTexCacheSize']) False/False
+/* top-level dependencies (begin ['_GXTexCacheSize']) */
+/* top-level dependencies (end ['_GXTexCacheSize']) */
 struct _GXTexCacheSize {
 };
 

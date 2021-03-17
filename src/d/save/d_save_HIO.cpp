@@ -9,178 +9,178 @@
 // Types:
 // 
 
-// build dSvBit_childSwPerfectionHIO_c (dSvBit_childSwPerfectionHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childSwPerfectionHIO_c) */
-/* top-level dependencies (end dSvBit_childSwPerfectionHIO_c) */
+// build dSvBit_childSwPerfectionHIO_c (['dSvBit_childSwPerfectionHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childSwPerfectionHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childSwPerfectionHIO_c']) */
 struct dSvBit_childSwPerfectionHIO_c {
 	/* 8025BB78 */ dSvBit_childSwPerfectionHIO_c();
 	/* 8025BBAC */ void init();
 	/* 8025C5B4 */ ~dSvBit_childSwPerfectionHIO_c();
 };
 
-// build dSvBit_childSwDungeonHIO_c (dSvBit_childSwDungeonHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childSwDungeonHIO_c) */
-/* top-level dependencies (end dSvBit_childSwDungeonHIO_c) */
+// build dSvBit_childSwDungeonHIO_c (['dSvBit_childSwDungeonHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childSwDungeonHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childSwDungeonHIO_c']) */
 struct dSvBit_childSwDungeonHIO_c {
 	/* 8025BC14 */ dSvBit_childSwDungeonHIO_c();
 	/* 8025BC48 */ void init();
 	/* 8025C56C */ ~dSvBit_childSwDungeonHIO_c();
 };
 
-// build dSvBit_childSwZoneHIO_c (dSvBit_childSwZoneHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childSwZoneHIO_c) */
-/* top-level dependencies (end dSvBit_childSwZoneHIO_c) */
+// build dSvBit_childSwZoneHIO_c (['dSvBit_childSwZoneHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childSwZoneHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childSwZoneHIO_c']) */
 struct dSvBit_childSwZoneHIO_c {
 	/* 8025BCB0 */ dSvBit_childSwZoneHIO_c();
 	/* 8025BCE4 */ void init();
 	/* 8025C524 */ ~dSvBit_childSwZoneHIO_c();
 };
 
-// build dSvBit_childSwOneZoneHIO_c (dSvBit_childSwOneZoneHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childSwOneZoneHIO_c) */
-/* top-level dependencies (end dSvBit_childSwOneZoneHIO_c) */
+// build dSvBit_childSwOneZoneHIO_c (['dSvBit_childSwOneZoneHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childSwOneZoneHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childSwOneZoneHIO_c']) */
 struct dSvBit_childSwOneZoneHIO_c {
 	/* 8025BD10 */ dSvBit_childSwOneZoneHIO_c();
 	/* 8025BD44 */ void init();
 	/* 8025C4DC */ ~dSvBit_childSwOneZoneHIO_c();
 };
 
-// build dSvBit_childItPerfectionHIO_c (dSvBit_childItPerfectionHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childItPerfectionHIO_c) */
-/* top-level dependencies (end dSvBit_childItPerfectionHIO_c) */
+// build dSvBit_childItPerfectionHIO_c (['dSvBit_childItPerfectionHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childItPerfectionHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childItPerfectionHIO_c']) */
 struct dSvBit_childItPerfectionHIO_c {
 	/* 8025BD70 */ dSvBit_childItPerfectionHIO_c();
 	/* 8025BDA4 */ void init();
 	/* 8025C494 */ ~dSvBit_childItPerfectionHIO_c();
 };
 
-// build dSvBit_childItDungeonHIO_c (dSvBit_childItDungeonHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childItDungeonHIO_c) */
-/* top-level dependencies (end dSvBit_childItDungeonHIO_c) */
+// build dSvBit_childItDungeonHIO_c (['dSvBit_childItDungeonHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childItDungeonHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childItDungeonHIO_c']) */
 struct dSvBit_childItDungeonHIO_c {
 	/* 8025BE0C */ dSvBit_childItDungeonHIO_c();
 	/* 8025BE40 */ void init();
 	/* 8025C44C */ ~dSvBit_childItDungeonHIO_c();
 };
 
-// build dSvBit_childItZoneHIO_c (dSvBit_childItZoneHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childItZoneHIO_c) */
-/* top-level dependencies (end dSvBit_childItZoneHIO_c) */
+// build dSvBit_childItZoneHIO_c (['dSvBit_childItZoneHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childItZoneHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childItZoneHIO_c']) */
 struct dSvBit_childItZoneHIO_c {
 	/* 8025BEA8 */ dSvBit_childItZoneHIO_c();
 	/* 8025BEDC */ void init();
 	/* 8025C404 */ ~dSvBit_childItZoneHIO_c();
 };
 
-// build dSvBit_childItOneZoneHIO_c (dSvBit_childItOneZoneHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childItOneZoneHIO_c) */
-/* top-level dependencies (end dSvBit_childItOneZoneHIO_c) */
+// build dSvBit_childItOneZoneHIO_c (['dSvBit_childItOneZoneHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childItOneZoneHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childItOneZoneHIO_c']) */
 struct dSvBit_childItOneZoneHIO_c {
 	/* 8025BF08 */ dSvBit_childItOneZoneHIO_c();
 	/* 8025BF3C */ void init();
 	/* 8025C3BC */ ~dSvBit_childItOneZoneHIO_c();
 };
 
-// build dSvBit_childTbPerfectionHIO_c (dSvBit_childTbPerfectionHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childTbPerfectionHIO_c) */
-/* top-level dependencies (end dSvBit_childTbPerfectionHIO_c) */
+// build dSvBit_childTbPerfectionHIO_c (['dSvBit_childTbPerfectionHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childTbPerfectionHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childTbPerfectionHIO_c']) */
 struct dSvBit_childTbPerfectionHIO_c {
 	/* 8025BF68 */ dSvBit_childTbPerfectionHIO_c();
 	/* 8025BF9C */ void init();
 	/* 8025C374 */ ~dSvBit_childTbPerfectionHIO_c();
 };
 
-// build dSvBit_childDarknessHIO_c (dSvBit_childDarknessHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childDarknessHIO_c) */
-/* top-level dependencies (end dSvBit_childDarknessHIO_c) */
+// build dSvBit_childDarknessHIO_c (['dSvBit_childDarknessHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childDarknessHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childDarknessHIO_c']) */
 struct dSvBit_childDarknessHIO_c {
 	/* 8025C004 */ dSvBit_childDarknessHIO_c();
 	/* 8025C038 */ void init();
 	/* 8025C32C */ ~dSvBit_childDarknessHIO_c();
 };
 
-// build dSvBit_childTransformHIO_c (dSvBit_childTransformHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childTransformHIO_c) */
-/* top-level dependencies (end dSvBit_childTransformHIO_c) */
+// build dSvBit_childTransformHIO_c (['dSvBit_childTransformHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childTransformHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childTransformHIO_c']) */
 struct dSvBit_childTransformHIO_c {
 	/* 8025C0A0 */ dSvBit_childTransformHIO_c();
 	/* 8025C0D4 */ void init();
 	/* 8025C2E4 */ ~dSvBit_childTransformHIO_c();
 };
 
-// build dSvBit_childOtherHIO_c (dSvBit_childOtherHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childOtherHIO_c) */
-/* top-level dependencies (end dSvBit_childOtherHIO_c) */
+// build dSvBit_childOtherHIO_c (['dSvBit_childOtherHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childOtherHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childOtherHIO_c']) */
 struct dSvBit_childOtherHIO_c {
 	/* 8025C13C */ dSvBit_childOtherHIO_c();
 	/* 8025C178 */ void init();
 	/* 8025C29C */ ~dSvBit_childOtherHIO_c();
 };
 
-// build dSvBit_HIO_c (dSvBit_HIO_c) False/False
-/* top-level dependencies (begin dSvBit_HIO_c) */
-/* top-level dependencies (end dSvBit_HIO_c) */
+// build dSvBit_HIO_c (['dSvBit_HIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_HIO_c']) */
+/* top-level dependencies (end ['dSvBit_HIO_c']) */
 struct dSvBit_HIO_c {
 	/* 8025C1F8 */ void init();
 	/* 8025C6FC */ ~dSvBit_HIO_c();
 };
 
-// build dSvBit_childTreasureHIO_c (dSvBit_childTreasureHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childTreasureHIO_c) */
-/* top-level dependencies (end dSvBit_childTreasureHIO_c) */
+// build dSvBit_childTreasureHIO_c (['dSvBit_childTreasureHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childTreasureHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childTreasureHIO_c']) */
 struct dSvBit_childTreasureHIO_c {
 	/* 8025C874 */ ~dSvBit_childTreasureHIO_c();
 };
 
-// build dSvBit_childItemHIO_c (dSvBit_childItemHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childItemHIO_c) */
-/* top-level dependencies (end dSvBit_childItemHIO_c) */
+// build dSvBit_childItemHIO_c (['dSvBit_childItemHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childItemHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childItemHIO_c']) */
 struct dSvBit_childItemHIO_c {
 	/* 8025C8D4 */ ~dSvBit_childItemHIO_c();
 };
 
-// build dSvBit_childSwitchHIO_c (dSvBit_childSwitchHIO_c) False/False
-/* top-level dependencies (begin dSvBit_childSwitchHIO_c) */
-/* top-level dependencies (end dSvBit_childSwitchHIO_c) */
+// build dSvBit_childSwitchHIO_c (['dSvBit_childSwitchHIO_c']) False/False
+/* top-level dependencies (begin ['dSvBit_childSwitchHIO_c']) */
+/* top-level dependencies (end ['dSvBit_childSwitchHIO_c']) */
 struct dSvBit_childSwitchHIO_c {
 	/* 8025C970 */ ~dSvBit_childSwitchHIO_c();
 };
 
-// build dSv_player_status_b_c (dSv_player_status_b_c) False/False
-/* top-level dependencies (begin dSv_player_status_b_c) */
-/* top-level dependencies (end dSv_player_status_b_c) */
+// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
+/* top-level dependencies (begin ['dSv_player_status_b_c']) */
+/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032BB0 */ void isDarkClearLV(int) const;
 	/* 80032BEC */ void isTransformLV(int) const;
 };
 
-// build dSv_light_drop_c (dSv_light_drop_c) False/False
-/* top-level dependencies (begin dSv_light_drop_c) */
-/* top-level dependencies (end dSv_light_drop_c) */
+// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
+/* top-level dependencies (begin ['dSv_light_drop_c']) */
+/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 80034340 */ void getLightDropNum(u8) const;
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 	/* 80034860 */ void isSwitch(int) const;
 	/* 800348EC */ void isItem(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_danBit_c (dSv_danBit_c) False/False
-/* top-level dependencies (begin dSv_danBit_c) */
-/* top-level dependencies (end dSv_danBit_c) */
+// build dSv_danBit_c (['dSv_danBit_c']) False/False
+/* top-level dependencies (begin ['dSv_danBit_c']) */
+/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034BE8 */ void isSwitch(int) const;
 	/* 80034C74 */ void isItem(int) const;

@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build node_class (node_class) False/False
-/* top-level dependencies (begin node_class) */
-/* top-level dependencies (end node_class) */
+// build node_class (['node_class']) False/False
+/* top-level dependencies (begin ['node_class']) */
+/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
-// build node_lists_tree_class (node_lists_tree_class) False/False
-/* top-level dependencies (begin node_lists_tree_class) */
-/* top-level dependencies (end node_lists_tree_class) */
+// build node_lists_tree_class (['node_lists_tree_class']) False/False
+/* top-level dependencies (begin ['node_lists_tree_class']) */
+/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 

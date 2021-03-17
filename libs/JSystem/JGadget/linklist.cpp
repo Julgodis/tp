@@ -9,34 +9,32 @@
 // Types:
 // 
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -49,7 +47,7 @@ struct JGadget {
 		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 

@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build J3DTransformInfo (J3DTransformInfo) False/False
-/* top-level dependencies (begin J3DTransformInfo) */
-/* top-level dependencies (end J3DTransformInfo) */
+// build J3DTransformInfo (['J3DTransformInfo']) False/False
+/* top-level dependencies (begin ['J3DTransformInfo']) */
+/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
+// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) False/False
+/* top-level dependencies (begin ['J3DTextureSRTInfo']) */
+/* top-level dependencies (end ['J3DTextureSRTInfo']) */
 struct J3DTextureSRTInfo {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 

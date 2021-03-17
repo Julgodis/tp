@@ -9,20 +9,20 @@
 // Types:
 // 
 
-// build dEvt_control_c (dEvt_control_c) False/False
-// build dEvt_order_c (dEvt_order_c) False/False
-/* top-level dependencies (begin dEvt_order_c) */
-/* top-level dependencies (end dEvt_order_c) */
+// build dEvt_control_c (['dEvt_control_c']) False/False
+// build dEvt_order_c (['dEvt_order_c']) False/False
+/* top-level dependencies (begin ['dEvt_order_c']) */
+/* top-level dependencies (end ['dEvt_order_c']) */
 struct dEvt_order_c {
 	/* 80030154 */ ~dEvt_order_c();
 	/* 800415D4 */ dEvt_order_c();
 };
 
-/* top-level dependencies (begin dEvt_control_c) */
-// outer dependency: dEvt_order_c
-/* top-level dependencies (end dEvt_control_c) */
+/* top-level dependencies (begin ['dEvt_control_c']) */
+// outer dependency: ('dEvt_order_c',)
+/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
-	// dEvt_order_c
+	// ('dEvt_order_c',)
 	/* 80041580 */ dEvt_control_c();
 	/* 800415D8 */ void orderOld(u16, u16, u16, u16, void*, void*, void const*);
 	/* 80041668 */ void order(u16, u16, u16, u16, void*, void*, s16, u8);
@@ -71,10 +71,10 @@ struct dEvt_control_c {
 	/* 80043724 */ void setGtItm(u8);
 };
 
-// build dEvt_order_c (dEvt_order_c) True/True
-// build dEvt_info_c (dEvt_info_c) False/False
-/* top-level dependencies (begin dEvt_info_c) */
-/* top-level dependencies (end dEvt_info_c) */
+// build dEvt_order_c (['dEvt_order_c']) True/True
+// build dEvt_info_c (['dEvt_info_c']) False/False
+/* top-level dependencies (begin ['dEvt_info_c']) */
+/* top-level dependencies (end ['dEvt_info_c']) */
 struct dEvt_info_c {
 	/* 800433F0 */ dEvt_info_c();
 	/* 80043428 */ void setEventName(char*);
@@ -82,92 +82,92 @@ struct dEvt_info_c {
 	/* 800434CC */ void beforeProc();
 };
 
-// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
-/* top-level dependencies (begin mDoGph_gInf_c) */
-/* top-level dependencies (end mDoGph_gInf_c) */
+// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
+/* top-level dependencies (begin ['mDoGph_gInf_c']) */
+/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
 	/* 800080D0 */ void fadeOut(f32);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349A4 */ void offEventBit(u16);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build daItemBase_c (daItemBase_c) False/False
-/* top-level dependencies (begin daItemBase_c) */
-/* top-level dependencies (end daItemBase_c) */
+// build daItemBase_c (['daItemBase_c']) False/False
+/* top-level dependencies (begin ['daItemBase_c']) */
+/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037AE4 */ void dead();
 };
 
-// build dDemo_c (dDemo_c) False/False
-/* top-level dependencies (begin dDemo_c) */
-/* top-level dependencies (end dDemo_c) */
+// build dDemo_c (['dDemo_c']) False/False
+/* top-level dependencies (begin ['dDemo_c']) */
+/* top-level dependencies (end ['dDemo_c']) */
 struct dDemo_c {
 	/* 80039CF8 */ void end();
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dEvDtEvent_c (dEvDtEvent_c) False/False
-/* top-level dependencies (begin dEvDtEvent_c) */
-/* top-level dependencies (end dEvDtEvent_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dEvDtEvent_c (['dEvDtEvent_c']) False/False
+/* top-level dependencies (begin ['dEvDtEvent_c']) */
+/* top-level dependencies (end ['dEvDtEvent_c']) */
 struct dEvDtEvent_c {
 	/* 80043EFC */ void forceFinish();
 };
 
-// build dEvent_exception_c (dEvent_exception_c) False/False
-/* top-level dependencies (begin dEvent_exception_c) */
-/* top-level dependencies (end dEvent_exception_c) */
+// build dEvent_exception_c (['dEvent_exception_c']) False/False
+/* top-level dependencies (begin ['dEvent_exception_c']) */
+/* top-level dependencies (end ['dEvent_exception_c']) */
 struct dEvent_exception_c {
 	/* 800463F0 */ void setStartDemo(int);
 };
 
-// build dEvent_manager_c (dEvent_manager_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dEvent_manager_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dEvent_manager_c) */
+// build dEvent_manager_c (['dEvent_manager_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['dEvent_manager_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 80046800 */ void setObjectArchive(char*);
 	/* 80046DAC */ void endProc(s16, int);
 	/* 80046E64 */ void Sequencer();
@@ -180,32 +180,32 @@ struct dEvent_manager_c {
 	/* 80048348 */ void cancelStaff(char const*);
 };
 
-// build dVibration_c (dVibration_c) False/False
-/* top-level dependencies (begin dVibration_c) */
-/* top-level dependencies (end dVibration_c) */
+// build dVibration_c (['dVibration_c']) False/False
+/* top-level dependencies (begin ['dVibration_c']) */
+/* top-level dependencies (end ['dVibration_c']) */
 struct dVibration_c {
 	/* 8006FD94 */ void StopQuake(int);
 };
 
-// build dCamera_c (dCamera_c) False/False
-/* top-level dependencies (begin dCamera_c) */
-/* top-level dependencies (end dCamera_c) */
+// build dCamera_c (['dCamera_c']) False/False
+/* top-level dependencies (begin ['dCamera_c']) */
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 801614C4 */ void QuickStart();
 };
 
-// build dMsgObject_c (dMsgObject_c) False/False
-/* top-level dependencies (begin dMsgObject_c) */
-/* top-level dependencies (end dMsgObject_c) */
+// build dMsgObject_c (['dMsgObject_c']) False/False
+/* top-level dependencies (begin ['dMsgObject_c']) */
+/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 80237994 */ void onKillMessageFlag();
 	/* 802379AC */ void setKillMessageFlag();
 	/* 80238098 */ void endFlowGroup();
 };
 
-// build Z2StatusMgr (Z2StatusMgr) False/False
-/* top-level dependencies (begin Z2StatusMgr) */
-/* top-level dependencies (end Z2StatusMgr) */
+// build Z2StatusMgr (['Z2StatusMgr']) False/False
+/* top-level dependencies (begin ['Z2StatusMgr']) */
+/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B61E8 */ void setDemoName(char*);
 };

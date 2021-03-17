@@ -9,32 +9,32 @@
 // Types:
 // 
 
-// build dFile_warning_c (dFile_warning_c) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build dFile_warning_c (['dFile_warning_c']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin dFile_warning_c) */
-// outer dependency: JUtility::TColor
-// outer dependency: JKRArchive
-/* top-level dependencies (end dFile_warning_c) */
+/* top-level dependencies (begin ['dFile_warning_c']) */
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dFile_warning_c']) */
 struct dFile_warning_c {
-	// JUtility::TColor
-	// JKRArchive
+	// ('JUtility', 'TColor')
+	// ('JKRArchive',)
 	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
 	/* 80191C18 */ ~dFile_warning_c();
 	/* 80191CF4 */ void screenSet();
@@ -51,50 +51,50 @@ struct dFile_warning_c {
 	/* 80192240 */ void setFontColor(JUtility::TColor, JUtility::TColor);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JUtility (JUtility) True/True
-// build J2DTextBox (J2DTextBox) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin J2DTextBox) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end J2DTextBox) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTextBox (['J2DTextBox']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['J2DTextBox']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 8019230C */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build dDlst_FileWarn_c (dDlst_FileWarn_c) False/False
-/* top-level dependencies (begin dDlst_FileWarn_c) */
-/* top-level dependencies (end dDlst_FileWarn_c) */
+// build dDlst_FileWarn_c (['dDlst_FileWarn_c']) False/False
+/* top-level dependencies (begin ['dDlst_FileWarn_c']) */
+/* top-level dependencies (end ['dDlst_FileWarn_c']) */
 struct dDlst_FileWarn_c {
 	/* 80192354 */ void draw();
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-// build J2DScreen (J2DScreen) False/False
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
+// build J2DScreen (['J2DScreen']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) False/False
+/* top-level dependencies (begin ['J2DAnmTransform']) */
+/* top-level dependencies (end ['J2DAnmTransform']) */
 struct J2DAnmTransform {
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build J2DGrafContext (J2DGrafContext) False/False
-/* top-level dependencies (begin J2DGrafContext) */
-/* top-level dependencies (end J2DGrafContext) */
+// build J2DGrafContext (['J2DGrafContext']) False/False
+/* top-level dependencies (begin ['J2DGrafContext']) */
+/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: J2DAnmTransform
-// outer dependency: JKRArchive
-// outer dependency: J2DGrafContext
-/* top-level dependencies (end J2DScreen) */
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['J2DScreen']) */
+// outer dependency: ('J2DAnmTransform',)
+// outer dependency: ('J2DGrafContext',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// J2DAnmTransform
-	// JKRArchive
-	// J2DGrafContext
+	// ('J2DAnmTransform',)
+	// ('J2DGrafContext',)
+	// ('JKRArchive',)
 	/* 80192414 */ void setAnimation(J2DAnmTransform*);
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
@@ -102,71 +102,71 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build J2DAnmTransform (J2DAnmTransform) True/True
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dMsgString_c (dMsgString_c) False/False
-/* top-level dependencies (begin dMsgString_c) */
-/* top-level dependencies (end dMsgString_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dMsgString_c (['dMsgString_c']) False/False
+/* top-level dependencies (begin ['dMsgString_c']) */
+/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build CPaneMgr (CPaneMgr) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
+// build CPaneMgr (['CPaneMgr']) False/False
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build J2DScreen (J2DScreen) True/True
-/* top-level dependencies (begin CPaneMgr) */
-// outer dependency: JKRExpHeap
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgr) */
+/* top-level dependencies (begin ['CPaneMgr']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JKRExpHeap',)
+/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// JKRExpHeap
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build J2DPane (J2DPane) False/False
-// build J2DAnmTransform (J2DAnmTransform) True/True
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DAnmTransform
-/* top-level dependencies (end J2DPane) */
+// build J2DPane (['J2DPane']) False/False
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DAnmTransform',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DAnmTransform
+	// ('J2DAnmTransform',)
 	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
 };
 
-// build J2DGrafContext (J2DGrafContext) True/True
-// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
-/* top-level dependencies (begin J2DAnmLoaderDataBase) */
-/* top-level dependencies (end J2DAnmLoaderDataBase) */
+// build J2DGrafContext (['J2DGrafContext']) True/True
+// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
+/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };

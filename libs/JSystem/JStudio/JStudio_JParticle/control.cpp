@@ -9,32 +9,38 @@
 // Types:
 // 
 
-// build JStudio_JParticle (JStudio_JParticle) False/False
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::TAdaptor_particle
-/* top-level dependencies (end JStudio) */
+// build JStudio_JParticle (['JStudio_JParticle']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+/* top-level dependencies (end ['JPABaseEmitter']) */
+struct JPABaseEmitter {
+};
+
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build JStudio (['JStudio']) True/True
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+// outer dependency: ('JStudio', 'TAdaptor_particle')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TObject (JStudio::TObject) False/False
-	/* dependencies (begin JStudio::TObject) */
-	/* dependencies (end JStudio::TObject) */
+	// build TObject (['JStudio', 'TObject']) False/False
+	/* dependencies (begin ['JStudio', 'TObject']) */
+	/* dependencies (end ['JStudio', 'TObject']) */
 	struct TObject {
 	};
 
-	// build stb (JStudio::stb) False/False
-	/* dependencies (begin JStudio::stb) */
-	/* dependencies (end JStudio::stb) */
+	// build stb (['JStudio', 'stb']) False/False
+	/* dependencies (begin ['JStudio', 'stb']) */
+	/* dependencies (end ['JStudio', 'stb']) */
 	struct stb {
-		// build data (JStudio::stb::data) False/False
-		/* dependencies (begin JStudio::stb::data) */
-		/* dependencies (end JStudio::stb::data) */
+		// build data (['JStudio', 'stb', 'data']) False/False
+		/* dependencies (begin ['JStudio', 'stb', 'data']) */
+		/* dependencies (end ['JStudio', 'stb', 'data']) */
 		struct data {
-			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
-			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
-			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
+			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
+			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
@@ -42,57 +48,54 @@ namespace JStudio {
 
 	};
 
-	// build TCreateObject (JStudio::TCreateObject) False/False
-	/* dependencies (begin JStudio::TCreateObject) */
-	/* dependencies (end JStudio::TCreateObject) */
+	// build TCreateObject (['JStudio', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio', 'TCreateObject']) */
+	/* dependencies (end ['JStudio', 'TCreateObject']) */
 	struct TCreateObject {
 		/* 80285488 */ ~TCreateObject();
 	};
 
-	// build TObject_particle (JStudio::TObject_particle) False/False
-	/* dependencies (begin JStudio::TObject_particle) */
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_particle)
-	// build stb (JStudio::stb) True/True
-	// inner dependency: TAdaptor_particle (JStudio::TAdaptor_particle) True False (for JStudio::TObject_particle)
-	// build TAdaptor_particle (JStudio::TAdaptor_particle) False/False
-	/* dependencies (begin JStudio::TAdaptor_particle) */
-	/* dependencies (end JStudio::TAdaptor_particle) */
+	// build TObject_particle (['JStudio', 'TObject_particle']) False/False
+	/* dependencies (begin ['JStudio', 'TObject_particle']) */
+	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_particle'])
+	// build stb (['JStudio', 'stb']) True/True
+	// inner dependency: 1 ('JStudio', 'TAdaptor_particle') (for ['JStudio', 'TObject_particle'])
+	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_particle']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
 	};
 
-	/* dependencies (end JStudio::TObject_particle) */
+	/* dependencies (end ['JStudio', 'TObject_particle']) */
 	struct TObject_particle {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TAdaptor_particle
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+		// ('JStudio', 'TAdaptor_particle')
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 	};
 
-	// build TAdaptor_particle (JStudio::TAdaptor_particle) True/True
+	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) True/True
 };
 
-// build JStudio (JStudio) True/True
-// build JStudio_JParticle (JStudio_JParticle) True/False
+// build JStudio (['JStudio']) True/True
+// build JStudio_JParticle (['JStudio_JParticle']) True/False
 struct JStudio_JParticle;
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
-struct JPABaseEmitter {
-};
-
-/* top-level dependencies (begin JStudio_JParticle) */
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::TObject
-// outer dependency: JStudio_JParticle::TCreateObject
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JStudio_JParticle) */
+/* top-level dependencies (begin ['JStudio_JParticle']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JStudio', 'TObject')
+// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
+// outer dependency: ('JStudio_JParticle', 'TCreateObject')
+/* top-level dependencies (end ['JStudio_JParticle']) */
 struct JStudio_JParticle {
-	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
-	/* dependencies (begin JStudio_JParticle::TCreateObject) */
-	/* dependencies (end JStudio_JParticle::TCreateObject) */
+	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio_JParticle', 'TCreateObject']) */
+	// inner dependency: 0 ('JPABaseEmitter',) (for ['JStudio_JParticle', 'TCreateObject'])
+	// inner dependency: 0 ('JStudio', 'TObject') (for ['JStudio_JParticle', 'TCreateObject'])
+	// inner dependency: 0 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio_JParticle', 'TCreateObject'])
+	/* dependencies (end ['JStudio_JParticle', 'TCreateObject']) */
 	struct TCreateObject {
-		// JStudio::stb::data::TParse_TBlock_object
-		// JStudio::TObject
-		// JPABaseEmitter
+		// ('JPABaseEmitter',)
+		// ('JStudio', 'TObject')
+		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 8028E3A0 */ ~TCreateObject();
 		/* 8028E400 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 		/* 8028E474 */ void emitter_create(u32);
@@ -100,27 +103,27 @@ struct JStudio_JParticle {
 		/* 8028E508 */ void createObject_JPA_PARTICLE_(JStudio::stb::data::TParse_TBlock_object const&, JStudio_JParticle::TCreateObject*);
 	};
 
-	// build TAdaptor_particle (JStudio_JParticle::TAdaptor_particle) False/False
-	/* dependencies (begin JStudio_JParticle::TAdaptor_particle) */
-	// inner dependency: TCreateObject (JStudio_JParticle::TCreateObject) True False (for JStudio_JParticle::TAdaptor_particle)
-	// build TCreateObject (JStudio_JParticle::TCreateObject) True/True
-	/* dependencies (end JStudio_JParticle::TAdaptor_particle) */
+	// build TAdaptor_particle (['JStudio_JParticle', 'TAdaptor_particle']) False/False
+	/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle']) */
+	// inner dependency: 1 ('JStudio_JParticle', 'TCreateObject') (for ['JStudio_JParticle', 'TAdaptor_particle'])
+	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) True/True
+	/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
-		// JStudio_JParticle::TCreateObject
+		// ('JStudio_JParticle', 'TCreateObject')
 		/* 8028E60C */ TAdaptor_particle(JStudio_JParticle::TCreateObject*);
 	};
 
 };
 
-// build JStudio (JStudio) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build JPAEmitterManager (JPAEmitterManager) False/False
-// build JPABaseEmitter (JPABaseEmitter) True/True
-/* top-level dependencies (begin JPAEmitterManager) */
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAEmitterManager) */
+// build JStudio (['JStudio']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPAEmitterManager (['JPAEmitterManager']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+/* top-level dependencies (begin ['JPAEmitterManager']) */
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPAEmitterManager']) */
 struct JPAEmitterManager {
-	// JPABaseEmitter
+	// ('JPABaseEmitter',)
 	/* 8027E2D8 */ void forceDeleteEmitter(JPABaseEmitter*);
 };
 

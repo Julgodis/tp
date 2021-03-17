@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build JASBasicBank (JASBasicBank) False/False
-// build JASInst (JASInst) False/False
-/* top-level dependencies (begin JASInst) */
-/* top-level dependencies (end JASInst) */
+// build JASBasicBank (['JASBasicBank']) False/False
+// build JASInst (['JASInst']) False/False
+/* top-level dependencies (begin ['JASInst']) */
+/* top-level dependencies (end ['JASInst']) */
 struct JASInst {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
+// build JASInstParam (['JASInstParam']) False/False
+/* top-level dependencies (begin ['JASInstParam']) */
+/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-/* top-level dependencies (begin JASBasicBank) */
-// outer dependency: JASInst
-// outer dependency: JKRHeap
-// outer dependency: JASInstParam
-/* top-level dependencies (end JASBasicBank) */
+/* top-level dependencies (begin ['JASBasicBank']) */
+// outer dependency: ('JASInst',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASInstParam',)
+/* top-level dependencies (end ['JASBasicBank']) */
 struct JASBasicBank {
-	// JASInst
-	// JKRHeap
-	// JASInstParam
+	// ('JASInst',)
+	// ('JKRHeap',)
+	// ('JASInstParam',)
 	/* 80297D78 */ JASBasicBank();
 	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
 	/* 80297E00 */ void getInstParam(int, int, int, JASInstParam*) const;
@@ -46,19 +46,19 @@ struct JASBasicBank {
 	/* 80297F68 */ void getType() const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASInstParam (JASInstParam) True/True
-// build JASInst (JASInst) True/True
-// build JASBank (JASBank) False/False
-/* top-level dependencies (begin JASBank) */
-/* top-level dependencies (end JASBank) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASInstParam (['JASInstParam']) True/True
+// build JASInst (['JASInst']) True/True
+// build JASBank (['JASBank']) False/False
+/* top-level dependencies (begin ['JASBank']) */
+/* top-level dependencies (end ['JASBank']) */
 struct JASBank {
 	/* 80297EC4 */ ~JASBank();
 };
 
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };

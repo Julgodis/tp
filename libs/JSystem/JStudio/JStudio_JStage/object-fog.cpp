@@ -9,37 +9,39 @@
 // Types:
 // 
 
-// build JStudio_JStage (JStudio_JStage) False/False
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
+// build JStudio_JStage (['JStudio_JStage']) False/False
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (JStage::TSystem) False/False
-	/* dependencies (begin JStage::TSystem) */
-	/* dependencies (end JStage::TSystem) */
+	// build TSystem (['JStage', 'TSystem']) False/False
+	/* dependencies (begin ['JStage', 'TSystem']) */
+	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
 	};
 
-	// build TFog (JStage::TFog) False/False
-	/* dependencies (begin JStage::TFog) */
-	/* dependencies (end JStage::TFog) */
+	// build TFog (['JStage', 'TFog']) False/False
+	/* dependencies (begin ['JStage', 'TFog']) */
+	/* dependencies (end ['JStage', 'TFog']) */
 	struct TFog {
 	};
 
 };
 
-// build JStage (JStage) True/True
-/* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStage::TFog
-// outer dependency: JStage::TSystem
-/* top-level dependencies (end JStudio_JStage) */
+// build JStage (['JStage']) True/True
+/* top-level dependencies (begin ['JStudio_JStage']) */
+// outer dependency: ('JStage', 'TFog')
+// outer dependency: ('JStage', 'TSystem')
+/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// build TAdaptor_fog (JStudio_JStage::TAdaptor_fog) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_fog) */
-	/* dependencies (end JStudio_JStage::TAdaptor_fog) */
+	// build TAdaptor_fog (['JStudio_JStage', 'TAdaptor_fog']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_fog']) */
+	// inner dependency: 0 ('JStage', 'TFog') (for ['JStudio_JStage', 'TAdaptor_fog'])
+	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_fog'])
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_fog']) */
 	struct TAdaptor_fog {
-		// JStage::TFog
-		// JStage::TSystem
+		// ('JStage', 'TFog')
+		// ('JStage', 'TSystem')
 		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
 		/* 8028C610 */ ~TAdaptor_fog();
 		/* 8028C684 */ void adaptor_do_prepare();
@@ -49,36 +51,34 @@ struct JStudio_JStage {
 		/* 8028C880 */ void adaptor_do_data(void const*, u32, void const*, u32);
 	};
 
-	// build TAdaptor_object_ (JStudio_JStage::TAdaptor_object_) False/False
-	/* dependencies (begin JStudio_JStage::TAdaptor_object_) */
-	/* dependencies (end JStudio_JStage::TAdaptor_object_) */
+	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
+	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
+	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
 	struct TAdaptor_object_ {
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 	};
 
 };
 
-// build JStage (JStage) True/True
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build JStage (['JStage']) True/True
+// build JStudio (['JStudio']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TVariableValue
-// outer dependency: _GXColor
-/* top-level dependencies (end JStudio) */
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TVariableValue (JStudio::TVariableValue) False/False
-	/* dependencies (begin JStudio::TVariableValue) */
-	/* dependencies (end JStudio::TVariableValue) */
+	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
+	/* dependencies (begin ['JStudio', 'TVariableValue']) */
+	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
-		// build TOutput (JStudio::TVariableValue::TOutput) False/False
-		/* dependencies (begin JStudio::TVariableValue::TOutput) */
-		/* dependencies (end JStudio::TVariableValue::TOutput) */
+		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
+		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
+		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
 		struct TOutput {
 			/* 80285E0C */ ~TOutput();
 		};
@@ -87,25 +87,26 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-	// build TAdaptor (JStudio::TAdaptor) False/False
-	/* dependencies (begin JStudio::TAdaptor) */
-	/* dependencies (end JStudio::TAdaptor) */
+	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor']) */
+	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
+	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// _GXColor
+		// ('_GXColor',)
 		/* 802862AC */ void adaptor_setVariableValue_GXColor(u32 const*, _GXColor const&);
 		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
 	};
 
-	// build TAdaptor_fog (JStudio::TAdaptor_fog) False/False
-	/* dependencies (begin JStudio::TAdaptor_fog) */
-	/* dependencies (end JStudio::TAdaptor_fog) */
+	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_fog']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_fog']) */
 	struct TAdaptor_fog {
 		/* 8028717C */ ~TAdaptor_fog();
 	};
 
 };
 
-// build _GXColor (_GXColor) True/True
+// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 

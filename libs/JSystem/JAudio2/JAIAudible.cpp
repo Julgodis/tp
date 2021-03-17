@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAIAudible (JAIAudible) False/False
-/* top-level dependencies (begin JAIAudible) */
-/* top-level dependencies (end JAIAudible) */
+// build JAIAudible (['JAIAudible']) False/False
+/* top-level dependencies (begin ['JAIAudible']) */
+/* top-level dependencies (end ['JAIAudible']) */
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
 };

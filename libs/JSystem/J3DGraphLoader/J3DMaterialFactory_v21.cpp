@@ -9,10 +9,16 @@
 // Types:
 // 
 
-// build J3DMaterialFactory_v21 (J3DMaterialFactory_v21) False/False
-// build J3DMaterial (J3DMaterial) False/False
-/* top-level dependencies (begin J3DMaterial) */
-/* top-level dependencies (end J3DMaterial) */
+// build J3DMaterialFactory_v21 (['J3DMaterialFactory_v21']) False/False
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) False/False
+/* top-level dependencies (begin ['J3DMaterialBlock_v21']) */
+/* top-level dependencies (end ['J3DMaterialBlock_v21']) */
+struct J3DMaterialBlock_v21 {
+};
+
+// build J3DMaterial (['J3DMaterial']) False/False
+/* top-level dependencies (begin ['J3DMaterial']) */
+/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -22,19 +28,13 @@ struct J3DMaterial {
 	/* 80316240 */ void initialize();
 };
 
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) False/False
-/* top-level dependencies (begin J3DMaterialBlock_v21) */
-/* top-level dependencies (end J3DMaterialBlock_v21) */
-struct J3DMaterialBlock_v21 {
-};
-
-/* top-level dependencies (begin J3DMaterialFactory_v21) */
-// outer dependency: J3DMaterial
-// outer dependency: J3DMaterialBlock_v21
-/* top-level dependencies (end J3DMaterialFactory_v21) */
+/* top-level dependencies (begin ['J3DMaterialFactory_v21']) */
+// outer dependency: ('J3DMaterialBlock_v21',)
+// outer dependency: ('J3DMaterial',)
+/* top-level dependencies (end ['J3DMaterialFactory_v21']) */
 struct J3DMaterialFactory_v21 {
-	// J3DMaterial
-	// J3DMaterialBlock_v21
+	// ('J3DMaterialBlock_v21',)
+	// ('J3DMaterial',)
 	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
 	/* 80332F84 */ void countUniqueMaterials();
 	/* 80332FA8 */ void countTexGens(int) const;
@@ -63,35 +63,35 @@ struct J3DMaterialFactory_v21 {
 	/* 80334074 */ void newNBTScale(int) const;
 };
 
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
-// build J3DMaterial (J3DMaterial) True/True
-// build J3DTevStage (J3DTevStage) False/False
-// build J3DTevStageInfo (J3DTevStageInfo) False/False
-/* top-level dependencies (begin J3DTevStageInfo) */
-/* top-level dependencies (end J3DTevStageInfo) */
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) True/True
+// build J3DMaterial (['J3DMaterial']) True/True
+// build J3DTevStage (['J3DTevStage']) False/False
+// build J3DTevStageInfo (['J3DTevStageInfo']) False/False
+/* top-level dependencies (begin ['J3DTevStageInfo']) */
+/* top-level dependencies (end ['J3DTevStageInfo']) */
 struct J3DTevStageInfo {
 };
 
-/* top-level dependencies (begin J3DTevStage) */
-// outer dependency: J3DTevStageInfo
-/* top-level dependencies (end J3DTevStage) */
+/* top-level dependencies (begin ['J3DTevStage']) */
+// outer dependency: ('J3DTevStageInfo',)
+/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
-	// J3DTevStageInfo
+	// ('J3DTevStageInfo',)
 	/* 8000E230 */ J3DTevStage();
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-// build J3DTevStageInfo (J3DTevStageInfo) True/True
-// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
-/* top-level dependencies (begin J3DTexMtxInfo) */
-/* top-level dependencies (end J3DTexMtxInfo) */
+// build J3DTevStageInfo (['J3DTevStageInfo']) True/True
+// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
+/* top-level dependencies (begin ['J3DTexMtxInfo']) */
+/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-// build J3DFogInfo (J3DFogInfo) False/False
-/* top-level dependencies (begin J3DFogInfo) */
-/* top-level dependencies (end J3DFogInfo) */
+// build J3DFogInfo (['J3DFogInfo']) False/False
+/* top-level dependencies (begin ['J3DFogInfo']) */
+/* top-level dependencies (end ['J3DFogInfo']) */
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
 };

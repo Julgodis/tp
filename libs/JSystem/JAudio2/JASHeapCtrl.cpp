@@ -9,19 +9,19 @@
 // Types:
 // 
 
-// build JASHeap (JASHeap) False/False
-// build JASDisposer (JASDisposer) False/False
-/* top-level dependencies (begin JASDisposer) */
-/* top-level dependencies (end JASDisposer) */
+// build JASHeap (['JASHeap']) False/False
+// build JASDisposer (['JASDisposer']) False/False
+/* top-level dependencies (begin ['JASDisposer']) */
+/* top-level dependencies (end ['JASDisposer']) */
 struct JASDisposer {
 	/* 80290BCC */ void onDispose();
 };
 
-/* top-level dependencies (begin JASHeap) */
-// outer dependency: JASDisposer
-/* top-level dependencies (end JASHeap) */
+/* top-level dependencies (begin ['JASHeap']) */
+// outer dependency: ('JASDisposer',)
+/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
-	// JASDisposer
+	// ('JASDisposer',)
 	/* 80290140 */ JASHeap(JASDisposer*);
 	/* 802901AC */ void initRootHeap(void*, u32);
 	/* 8029021C */ void alloc(JASHeap*, u32);
@@ -34,10 +34,10 @@ struct JASHeap {
 	/* 80290B54 */ ~JASHeap();
 };
 
-// build JASDisposer (JASDisposer) True/True
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASDisposer (['JASDisposer']) True/True
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -46,18 +46,18 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASKernel (JASKernel) False/False
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JASKernel (['JASKernel']) False/False
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin JASKernel) */
-// outer dependency: JKRSolidHeap
-/* top-level dependencies (end JASKernel) */
+/* top-level dependencies (begin ['JASKernel']) */
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
-	// JKRSolidHeap
+	// ('JKRSolidHeap',)
 	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290AC8 */ void getCommandHeap();
@@ -65,38 +65,38 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JKRSolidHeap (JKRSolidHeap) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);

@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JUTNameTab (JUTNameTab) False/False
-// build ResNTAB (ResNTAB) False/False
-/* top-level dependencies (begin ResNTAB) */
-/* top-level dependencies (end ResNTAB) */
+// build JUTNameTab (['JUTNameTab']) False/False
+// build ResNTAB (['ResNTAB']) False/False
+/* top-level dependencies (begin ['ResNTAB']) */
+/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin JUTNameTab) */
-// outer dependency: ResNTAB
-/* top-level dependencies (end JUTNameTab) */
+/* top-level dependencies (begin ['JUTNameTab']) */
+// outer dependency: ('ResNTAB',)
+/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ResNTAB
+	// ('ResNTAB',)
 	/* 802DE9A0 */ JUTNameTab();
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 	/* 802DEA1C */ void setResource(ResNTAB const*);
@@ -29,7 +29,7 @@ struct JUTNameTab {
 	/* 802DEB28 */ void calcKeyCode(char const*) const;
 };
 
-// build ResNTAB (ResNTAB) True/True
+// build ResNTAB (['ResNTAB']) True/True
 // 
 // Forward References:
 // 

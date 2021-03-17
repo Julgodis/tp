@@ -9,10 +9,10 @@
 // Types:
 // 
 
-// build JKRThread (JKRThread) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRThread (['JKRThread']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -21,19 +21,19 @@ struct JKRHeap {
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
 };
 
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: JKRHeap
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// JKRHeap
-	// OSThread
+	// ('JKRHeap',)
+	// ('OSThread',)
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D16B8 */ JKRThread(OSThread*, int);
@@ -45,40 +45,40 @@ struct JKRThread {
 	/* 802D1E14 */ bool run();
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build OSThread (OSThread) True/True
-// build JKRThreadSwitch (JKRThreadSwitch) False/False
-// build JKRHeap (JKRHeap) True/True
-// build JKRThread (JKRThread) True/True
-// build JKRThreadName_ (JKRThreadName_) False/False
-/* top-level dependencies (begin JKRThreadName_) */
-/* top-level dependencies (end JKRThreadName_) */
-struct JKRThreadName_ {
-};
-
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
+// build JKRHeap (['JKRHeap']) True/True
+// build OSThread (['OSThread']) True/True
+// build JKRThreadSwitch (['JKRThreadSwitch']) False/False
+// build JUTConsole (['JUTConsole']) False/False
+/* top-level dependencies (begin ['JUTConsole']) */
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
 };
 
-// build OSThread (OSThread) True/True
-/* top-level dependencies (begin JKRThreadSwitch) */
-// outer dependency: JKRHeap
-// outer dependency: JKRThread
-// outer dependency: JKRThreadName_
-// outer dependency: JUTConsole
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThreadSwitch) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRThreadName_ (['JKRThreadName_']) False/False
+/* top-level dependencies (begin ['JKRThreadName_']) */
+/* top-level dependencies (end ['JKRThreadName_']) */
+struct JKRThreadName_ {
+};
+
+// build OSThread (['OSThread']) True/True
+// build JKRThread (['JKRThread']) True/True
+/* top-level dependencies (begin ['JKRThreadSwitch']) */
+// outer dependency: ('JUTConsole',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRThreadName_',)
+// outer dependency: ('OSThread',)
+// outer dependency: ('JKRThread',)
+/* top-level dependencies (end ['JKRThreadSwitch']) */
 struct JKRThreadSwitch {
-	// JKRThreadName_
-	// JUTConsole
-	// JKRHeap
-	// JKRThread
-	// OSThread
+	// ('JUTConsole',)
+	// ('JKRHeap',)
+	// ('OSThread',)
+	// ('JKRThreadName_',)
+	// ('JKRThread',)
 	/* 802D199C */ JKRThreadSwitch(JKRHeap*);
 	/* 802D1A14 */ void createManager(JKRHeap*);
 	/* 802D1A70 */ void enter(JKRThread*, int);
@@ -88,31 +88,31 @@ struct JKRThreadSwitch {
 	/* 802D1E4C */ ~JKRThreadSwitch();
 };
 
-// build JKRThreadName_ (JKRThreadName_) True/True
-// build JUTConsole (JUTConsole) True/True
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRThreadName_ (['JKRThreadName_']) True/True
+// build JUTConsole (['JUTConsole']) True/True
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBE74 */ JSUPtrList(bool);
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();

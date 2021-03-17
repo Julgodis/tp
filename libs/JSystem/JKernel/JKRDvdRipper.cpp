@@ -9,10 +9,10 @@
 // Types:
 // 
 
-// build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRDvdFile (JKRDvdFile) False/False
-/* top-level dependencies (begin JKRDvdFile) */
-/* top-level dependencies (end JKRDvdFile) */
+// build JKRDvdRipper (['JKRDvdRipper']) False/False
+// build JKRDvdFile (['JKRDvdFile']) False/False
+/* top-level dependencies (begin ['JKRDvdFile']) */
+/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
@@ -20,37 +20,37 @@ struct JKRDvdFile {
 	/* 802D98C4 */ void open(s32);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
-struct JKRExpandSwitch {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRDvdRipper (JKRDvdRipper) True/False
+// build JKRDvdRipper (['JKRDvdRipper']) True/False
 struct JKRDvdRipper;
-/* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRDvdFile
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-// outer dependency: JKRDvdRipper::EAllocDirection
-/* top-level dependencies (end JKRDvdRipper) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
+struct JKRExpandSwitch {
+};
+
+/* top-level dependencies (begin ['JKRDvdRipper']) */
+// outer dependency: ('JKRDvdFile',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRDvdRipper', 'EAllocDirection')
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRDvdRipper']) */
 struct JKRDvdRipper {
-	// JKRDvdFile
-	// JKRExpandSwitch
-	// JKRHeap
-	// JKRDvdRipper::EAllocDirection
-	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
-	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
-	/* dependencies (end JKRDvdRipper::EAllocDirection) */
+	// ('JKRDvdFile',)
+	// ('JKRHeap',)
+	// ('JKRDvdRipper', 'EAllocDirection')
+	// ('JKRExpandSwitch',)
+	// build EAllocDirection (['JKRDvdRipper', 'EAllocDirection']) False/False
+	/* dependencies (begin ['JKRDvdRipper', 'EAllocDirection']) */
+	/* dependencies (end ['JKRDvdRipper', 'EAllocDirection']) */
 	struct EAllocDirection {
 	};
 
@@ -60,28 +60,28 @@ struct JKRDvdRipper {
 	/* 802DA7D4 */ void isErrorRetry();
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JKRDvdFile (JKRDvdFile) True/True
-// build JKRDecomp (JKRDecomp) False/False
-/* top-level dependencies (begin JKRDecomp) */
-/* top-level dependencies (end JKRDecomp) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRDvdFile (['JKRDvdFile']) True/True
+// build JKRDecomp (['JKRDecomp']) False/False
+/* top-level dependencies (begin ['JKRDecomp']) */
+/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-/* top-level dependencies (begin JSUPtrList) */
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+/* top-level dependencies (begin ['JSUPtrList']) */
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build J3DShapeFactory (J3DShapeFactory) False/False
-// build J3DShapeBlock (J3DShapeBlock) False/False
-/* top-level dependencies (begin J3DShapeBlock) */
-/* top-level dependencies (end J3DShapeBlock) */
+// build J3DShapeFactory (['J3DShapeFactory']) False/False
+// build J3DShapeBlock (['J3DShapeBlock']) False/False
+/* top-level dependencies (begin ['J3DShapeBlock']) */
+/* top-level dependencies (end ['J3DShapeBlock']) */
 struct J3DShapeBlock {
 };
 
-// build _GXVtxDescList (_GXVtxDescList) False/False
-/* top-level dependencies (begin _GXVtxDescList) */
-/* top-level dependencies (end _GXVtxDescList) */
+// build _GXVtxDescList (['_GXVtxDescList']) False/False
+/* top-level dependencies (begin ['_GXVtxDescList']) */
+/* top-level dependencies (end ['_GXVtxDescList']) */
 struct _GXVtxDescList {
 };
 
-/* top-level dependencies (begin J3DShapeFactory) */
-// outer dependency: J3DShapeBlock
-// outer dependency: _GXVtxDescList
-/* top-level dependencies (end J3DShapeFactory) */
+/* top-level dependencies (begin ['J3DShapeFactory']) */
+// outer dependency: ('J3DShapeBlock',)
+// outer dependency: ('_GXVtxDescList',)
+/* top-level dependencies (end ['J3DShapeFactory']) */
 struct J3DShapeFactory {
-	// J3DShapeBlock
-	// _GXVtxDescList
+	// ('J3DShapeBlock',)
+	// ('_GXVtxDescList',)
 	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
 	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
 	/* 803375BC */ void newShapeMtx(u32, int, int) const;
@@ -39,18 +39,18 @@ struct J3DShapeFactory {
 	/* 803379E8 */ void calcSizeShapeMtx(u32, int, int) const;
 };
 
-// build J3DShapeBlock (J3DShapeBlock) True/True
-// build _GXVtxDescList (_GXVtxDescList) True/True
-// build J3DShapeDraw (J3DShapeDraw) False/False
-/* top-level dependencies (begin J3DShapeDraw) */
-/* top-level dependencies (end J3DShapeDraw) */
+// build J3DShapeBlock (['J3DShapeBlock']) True/True
+// build _GXVtxDescList (['_GXVtxDescList']) True/True
+// build J3DShapeDraw (['J3DShapeDraw']) False/False
+/* top-level dependencies (begin ['J3DShapeDraw']) */
+/* top-level dependencies (end ['J3DShapeDraw']) */
 struct J3DShapeDraw {
 	/* 80314ABC */ J3DShapeDraw(u8 const*, u32);
 };
 
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314B48 */ void initialize();
 };

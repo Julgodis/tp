@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JPAKeyBlock (JPAKeyBlock) False/False
-/* top-level dependencies (begin JPAKeyBlock) */
-/* top-level dependencies (end JPAKeyBlock) */
+// build JPAKeyBlock (['JPAKeyBlock']) False/False
+/* top-level dependencies (begin ['JPAKeyBlock']) */
+/* top-level dependencies (end ['JPAKeyBlock']) */
 struct JPAKeyBlock {
 	/* 8027D730 */ JPAKeyBlock(u8 const*);
 	/* 8027D740 */ void calc(f32);

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JKRFile (JKRFile) False/False
-/* top-level dependencies (begin JKRFile) */
-/* top-level dependencies (end JKRFile) */
+// build JKRFile (['JKRFile']) False/False
+/* top-level dependencies (begin ['JKRFile']) */
+/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 	/* 802D9518 */ void read(void*, s32, s32);
 };

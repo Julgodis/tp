@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build fmpTresTypeGroupDataList_c (fmpTresTypeGroupDataList_c) False/False
-// build dTres_c (dTres_c) False/False
-// build dTres_c (dTres_c) True/False
+// build fmpTresTypeGroupDataList_c (['fmpTresTypeGroupDataList_c']) False/False
+// build dTres_c (['dTres_c']) False/False
+// build dTres_c (['dTres_c']) True/False
 struct dTres_c;
-/* top-level dependencies (begin dTres_c) */
-// outer dependency: dTres_c::typeGroupData_c
-/* top-level dependencies (end dTres_c) */
+/* top-level dependencies (begin ['dTres_c']) */
+// outer dependency: ('dTres_c', 'typeGroupData_c')
+/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// dTres_c::typeGroupData_c
-	// build data_s (dTres_c::data_s) False/False
-	/* dependencies (begin dTres_c::data_s) */
-	/* dependencies (end dTres_c::data_s) */
+	// ('dTres_c', 'typeGroupData_c')
+	// build data_s (['dTres_c', 'data_s']) False/False
+	/* dependencies (begin ['dTres_c', 'data_s']) */
+	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
-	// build typeGroupData_c (dTres_c::typeGroupData_c) False/False
-	/* dependencies (begin dTres_c::typeGroupData_c) */
-	/* dependencies (end dTres_c::typeGroupData_c) */
+	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
+	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
+	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
@@ -36,64 +36,64 @@ struct dTres_c {
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-/* top-level dependencies (begin fmpTresTypeGroupDataList_c) */
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end fmpTresTypeGroupDataList_c) */
+/* top-level dependencies (begin ['fmpTresTypeGroupDataList_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+/* top-level dependencies (end ['fmpTresTypeGroupDataList_c']) */
 struct fmpTresTypeGroupDataList_c {
-	// dTres_c::data_s
+	// ('dTres_c', 'data_s')
 	/* 8003D790 */ void addTypeGroupData(u8, dTres_c::data_s const*);
 	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
 	/* 8003EC90 */ fmpTresTypeGroupDataList_c();
 };
 
-// build dTres_c (dTres_c) True/True
-// build dMenu_Fmap_room_data_c (dMenu_Fmap_room_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_room_data_c) */
-/* top-level dependencies (end dMenu_Fmap_room_data_c) */
+// build dTres_c (['dTres_c']) True/True
+// build dMenu_Fmap_room_data_c (['dMenu_Fmap_room_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_room_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_room_data_c']) */
 struct dMenu_Fmap_room_data_c {
 	/* 8003D818 */ void isArrival();
 	/* 8003D868 */ void buildTresTypeGroup(int, int, int);
 	/* 8003D92C */ void buildFmapRoomData(int, int, f32, f32, f32, f32);
 };
 
-// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_stage_data_c) */
-/* top-level dependencies (end dMenu_Fmap_stage_data_c) */
+// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_stage_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_stage_data_c']) */
 struct dMenu_Fmap_stage_data_c {
 	/* 8003D95C */ void isArrival();
 	/* 8003D9D8 */ void buildFmapStageData(int, f32, f32);
 };
 
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
-/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) False/False
+/* top-level dependencies (begin ['dMenu_Fmap_region_data_c']) */
+/* top-level dependencies (end ['dMenu_Fmap_region_data_c']) */
 struct dMenu_Fmap_region_data_c {
 	/* 8003DB48 */ void getMenuFmapStageData(int);
 	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 	/* 8003DEE0 */ void buildFmapRegionData(int);
 };
 
-// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-/* top-level dependencies (begin dMenu_Fmap_world_data_c) */
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end dMenu_Fmap_world_data_c) */
+// build dMenu_Fmap_world_data_c (['dMenu_Fmap_world_data_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+/* top-level dependencies (begin ['dMenu_Fmap_world_data_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+/* top-level dependencies (end ['dMenu_Fmap_world_data_c']) */
 struct dMenu_Fmap_world_data_c {
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
 	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
 	/* 8003E04C */ void buildFmapWorldData();
 };
 
-// build dMenuFmapIconPointer_c (dMenuFmapIconPointer_c) False/False
-// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) True/True
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
-/* top-level dependencies (begin dMenuFmapIconPointer_c) */
-// outer dependency: dMenu_Fmap_stage_data_c
-// outer dependency: dMenu_Fmap_region_data_c
-/* top-level dependencies (end dMenuFmapIconPointer_c) */
+// build dMenuFmapIconPointer_c (['dMenuFmapIconPointer_c']) False/False
+// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
+// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) True/True
+/* top-level dependencies (begin ['dMenuFmapIconPointer_c']) */
+// outer dependency: ('dMenu_Fmap_region_data_c',)
+// outer dependency: ('dMenu_Fmap_stage_data_c',)
+/* top-level dependencies (end ['dMenuFmapIconPointer_c']) */
 struct dMenuFmapIconPointer_c {
-	// dMenu_Fmap_stage_data_c
-	// dMenu_Fmap_region_data_c
+	// ('dMenu_Fmap_region_data_c',)
+	// ('dMenu_Fmap_stage_data_c',)
 	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
 	/* 8003E1C0 */ void getFirstData();
 	/* 8003E2BC */ void getData();
@@ -105,55 +105,55 @@ struct dMenuFmapIconPointer_c {
 	/* 8003E510 */ void getValidData();
 };
 
-// build dMenuFmapIconDisp_c (dMenuFmapIconDisp_c) False/False
-// build dTres_c (dTres_c) True/True
-/* top-level dependencies (begin dMenuFmapIconDisp_c) */
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end dMenuFmapIconDisp_c) */
+// build dMenuFmapIconDisp_c (['dMenuFmapIconDisp_c']) False/False
+// build dTres_c (['dTres_c']) True/True
+/* top-level dependencies (begin ['dMenuFmapIconDisp_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+/* top-level dependencies (end ['dMenuFmapIconDisp_c']) */
 struct dMenuFmapIconDisp_c {
-	// dTres_c::data_s
+	// ('dTres_c', 'data_s')
 	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
 	/* 8003E6E8 */ void isDrawDisp();
 };
 
-// build fmpTresTypeGroupData_c (fmpTresTypeGroupData_c) False/False
-/* top-level dependencies (begin fmpTresTypeGroupData_c) */
-/* top-level dependencies (end fmpTresTypeGroupData_c) */
+// build fmpTresTypeGroupData_c (['fmpTresTypeGroupData_c']) False/False
+/* top-level dependencies (begin ['fmpTresTypeGroupData_c']) */
+/* top-level dependencies (end ['fmpTresTypeGroupData_c']) */
 struct fmpTresTypeGroupData_c {
 	/* 8003EB70 */ ~fmpTresTypeGroupData_c();
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 };
 
-// build dSv_event_c (dSv_event_c) False/False
-/* top-level dependencies (begin dSv_event_c) */
-/* top-level dependencies (end dSv_event_c) */
+// build dSv_event_c (['dSv_event_c']) False/False
+/* top-level dependencies (begin ['dSv_event_c']) */
+/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_memory2_c (dSv_memory2_c) False/False
-/* top-level dependencies (begin dSv_memory2_c) */
-/* top-level dependencies (end dSv_memory2_c) */
+// build dSv_memory2_c (['dSv_memory2_c']) False/False
+/* top-level dependencies (begin ['dSv_memory2_c']) */
+/* top-level dependencies (end ['dSv_memory2_c']) */
 struct dSv_memory2_c {
 	/* 80034AEC */ void isVisitedRoom(int);
 };
 
-// build dSv_save_c (dSv_save_c) False/False
-/* top-level dependencies (begin dSv_save_c) */
-/* top-level dependencies (end dSv_save_c) */
+// build dSv_save_c (['dSv_save_c']) False/False
+/* top-level dependencies (begin ['dSv_save_c']) */
+/* top-level dependencies (end ['dSv_save_c']) */
 struct dSv_save_c {
 	/* 800350A8 */ void getSave2(int);
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };

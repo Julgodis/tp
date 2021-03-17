@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build JASRegisterParam (JASRegisterParam) False/False
-// build JASRegisterParam (JASRegisterParam) True/False
+// build JASRegisterParam (['JASRegisterParam']) False/False
+// build JASRegisterParam (['JASRegisterParam']) True/False
 struct JASRegisterParam;
-/* top-level dependencies (begin JASRegisterParam) */
-// outer dependency: JASRegisterParam::RegID
-/* top-level dependencies (end JASRegisterParam) */
+/* top-level dependencies (begin ['JASRegisterParam']) */
+// outer dependency: ('JASRegisterParam', 'RegID')
+/* top-level dependencies (end ['JASRegisterParam']) */
 struct JASRegisterParam {
-	// JASRegisterParam::RegID
-	// build RegID (JASRegisterParam::RegID) False/False
-	/* dependencies (begin JASRegisterParam::RegID) */
-	/* dependencies (end JASRegisterParam::RegID) */
+	// ('JASRegisterParam', 'RegID')
+	// build RegID (['JASRegisterParam', 'RegID']) False/False
+	/* dependencies (begin ['JASRegisterParam', 'RegID']) */
+	/* dependencies (end ['JASRegisterParam', 'RegID']) */
 	struct RegID {
 	};
 

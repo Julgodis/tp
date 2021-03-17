@@ -9,59 +9,59 @@
 // Types:
 // 
 
-// build J2DPrint (J2DPrint) False/False
-// build J2DPrint (J2DPrint) True/False
+// build J2DPrint (['J2DPrint']) False/False
+// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) False/False
+/* top-level dependencies (begin ['J2DTextBoxVBinding']) */
+/* top-level dependencies (end ['J2DTextBoxVBinding']) */
+struct J2DTextBoxVBinding {
+};
+
+// build J2DPrint (['J2DPrint']) True/False
 struct J2DPrint;
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) False/False
+/* top-level dependencies (begin ['J2DTextBoxHBinding']) */
+/* top-level dependencies (end ['J2DTextBoxHBinding']) */
+struct J2DTextBoxHBinding {
+};
+
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
-/* top-level dependencies (begin J2DTextBoxVBinding) */
-/* top-level dependencies (end J2DTextBoxVBinding) */
-struct J2DTextBoxVBinding {
-};
-
-// build JUTFont (JUTFont) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin JUTFont) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFont) */
+// build JUTFont (['JUTFont']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['JUTFont']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
 };
 
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
-/* top-level dependencies (begin J2DTextBoxHBinding) */
-/* top-level dependencies (end J2DTextBoxHBinding) */
-struct J2DTextBoxHBinding {
-};
-
-/* top-level dependencies (begin J2DPrint) */
-// outer dependency: J2DPrint::TSize
-// outer dependency: JUtility::TColor
-// outer dependency: J2DTextBoxVBinding
-// outer dependency: JUTFont
-// outer dependency: J2DTextBoxHBinding
-/* top-level dependencies (end J2DPrint) */
+/* top-level dependencies (begin ['J2DPrint']) */
+// outer dependency: ('J2DTextBoxVBinding',)
+// outer dependency: ('J2DPrint', 'TSize')
+// outer dependency: ('J2DTextBoxHBinding',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['J2DPrint']) */
 struct J2DPrint {
-	// J2DPrint::TSize
-	// JUtility::TColor
-	// J2DTextBoxHBinding
-	// J2DTextBoxVBinding
-	// JUTFont
-	// build TSize (J2DPrint::TSize) False/False
-	/* dependencies (begin J2DPrint::TSize) */
-	/* dependencies (end J2DPrint::TSize) */
+	// ('J2DTextBoxHBinding',)
+	// ('JUtility', 'TColor')
+	// ('JUTFont',)
+	// ('J2DTextBoxVBinding',)
+	// ('J2DPrint', 'TSize')
+	// build TSize (['J2DPrint', 'TSize']) False/False
+	/* dependencies (begin ['J2DPrint', 'TSize']) */
+	/* dependencies (end ['J2DPrint', 'TSize']) */
 	struct TSize {
 	};
 
@@ -81,13 +81,13 @@ struct J2DPrint {
 	/* 802F5AC4 */ void getNumberF32(u8 const**, f32, f32, int);
 };
 
-// build JUTFont (JUTFont) True/True
-// build JUtility (JUtility) True/True
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
-// build J2DTextBoxVBinding (J2DTextBoxVBinding) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUTFont (['JUTFont']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) True/True
+// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

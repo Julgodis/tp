@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build door_param2_c (door_param2_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build door_param2_c (['door_param2_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin door_param2_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end door_param2_c) */
+/* top-level dependencies (begin ['door_param2_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['door_param2_c']) */
 struct door_param2_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 8003A188 */ void getKind(fopAc_ac_c*);
 	/* 8003A194 */ void getDoorModel(fopAc_ac_c*);
 	/* 8003A1A0 */ void getFrontOption(fopAc_ac_c*);
@@ -41,7 +41,7 @@ struct door_param2_c {
 	/* 8003A254 */ void getMBLightInf(fopAc_ac_c*);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
 // 
 // Forward References:
 // 

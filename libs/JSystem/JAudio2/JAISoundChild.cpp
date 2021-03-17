@@ -9,34 +9,34 @@
 // Types:
 // 
 
-// build JAISoundChild (JAISoundChild) False/False
-// build JASTrack (JASTrack) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JAISoundChild (['JAISoundChild']) False/False
+// build JASTrack (['JASTrack']) False/False
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 };
 
-/* top-level dependencies (begin JASTrack) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JASTrack) */
+/* top-level dependencies (begin ['JASTrack']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-/* top-level dependencies (begin JAISoundChild) */
-// outer dependency: JASTrack
-/* top-level dependencies (end JAISoundChild) */
+/* top-level dependencies (begin ['JAISoundChild']) */
+// outer dependency: ('JASTrack',)
+/* top-level dependencies (end ['JAISoundChild']) */
 struct JAISoundChild {
-	// JASTrack
+	// ('JASTrack',)
 	/* 802A2AB0 */ void init();
 	/* 802A2B28 */ void mixOut(JASTrack*);
 	/* 802A2B7C */ void calc();
 };
 
-// build JASTrack (JASTrack) True/True
-// build JASSoundParams (JASSoundParams) True/True
+// build JASTrack (['JASTrack']) True/True
+// build JASSoundParams (['JASSoundParams']) True/True
 // 
 // Forward References:
 // 

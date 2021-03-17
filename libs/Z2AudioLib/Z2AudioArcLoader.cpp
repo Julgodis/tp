@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build Z2AudioArcLoader (Z2AudioArcLoader) False/False
-// build JAUSection (JAUSection) False/False
-/* top-level dependencies (begin JAUSection) */
-/* top-level dependencies (end JAUSection) */
+// build Z2AudioArcLoader (['Z2AudioArcLoader']) False/False
+// build JAUSection (['JAUSection']) False/False
+/* top-level dependencies (begin ['JAUSection']) */
+/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
 };
 
-/* top-level dependencies (begin Z2AudioArcLoader) */
-// outer dependency: JAUSection
-/* top-level dependencies (end Z2AudioArcLoader) */
+/* top-level dependencies (begin ['Z2AudioArcLoader']) */
+// outer dependency: ('JAUSection',)
+/* top-level dependencies (end ['Z2AudioArcLoader']) */
 struct Z2AudioArcLoader {
-	// JAUSection
+	// ('JAUSection',)
 	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
 	/* 802A9A70 */ void readCommandMore(u32);
 	/* 802A9AC8 */ void readBFCA(void const*);
@@ -28,21 +28,21 @@ struct Z2AudioArcLoader {
 	/* 802A9B58 */ ~Z2AudioArcLoader();
 };
 
-// build JAUSection (JAUSection) True/True
-// build JAUAudioArcInterpreter (JAUAudioArcInterpreter) False/False
-/* top-level dependencies (begin JAUAudioArcInterpreter) */
-/* top-level dependencies (end JAUAudioArcInterpreter) */
+// build JAUSection (['JAUSection']) True/True
+// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
+/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
+/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
-// build JAUAudioArcLoader (JAUAudioArcLoader) False/False
-// build JAUSection (JAUSection) True/True
-/* top-level dependencies (begin JAUAudioArcLoader) */
-// outer dependency: JAUSection
-/* top-level dependencies (end JAUAudioArcLoader) */
+// build JAUAudioArcLoader (['JAUAudioArcLoader']) False/False
+// build JAUSection (['JAUSection']) True/True
+/* top-level dependencies (begin ['JAUAudioArcLoader']) */
+// outer dependency: ('JAUSection',)
+/* top-level dependencies (end ['JAUAudioArcLoader']) */
 struct JAUAudioArcLoader {
-	// JAUSection
+	// ('JAUSection',)
 	/* 802A4740 */ JAUAudioArcLoader(JAUSection*);
 	/* 802A47AC */ void readWS(u32, void const*, u32);
 	/* 802A4804 */ void readBNK(u32, void const*);
@@ -58,52 +58,52 @@ struct JAUAudioArcLoader {
 	/* 802A49D8 */ void readMaxSeCategory(int, int, int);
 };
 
-// build JAUSectionHeap (JAUSectionHeap) False/False
-/* top-level dependencies (begin JAUSectionHeap) */
-/* top-level dependencies (end JAUSectionHeap) */
+// build JAUSectionHeap (['JAUSectionHeap']) False/False
+/* top-level dependencies (begin ['JAUSectionHeap']) */
+/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
 	/* 802A6094 */ void getOpenSection();
 };
 
-// build Z2FxLineMgr (Z2FxLineMgr) False/False
-// build JKRArchive (JKRArchive) False/False
-// build JKRArchive (JKRArchive) True/False
-struct JKRArchive;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountDirection
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/False
+struct JKRArchive;
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// JKRArchive::EMountDirection
-	// JKRHeap
-	// build EMountDirection (JKRArchive::EMountDirection) False/False
-	/* dependencies (begin JKRArchive::EMountDirection) */
-	/* dependencies (end JKRArchive::EMountDirection) */
+	// ('JKRArchive', 'EMountDirection')
+	// ('JKRHeap',)
+	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
+	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
 	/* 802D5840 */ void mount(void*, JKRHeap*, JKRArchive::EMountDirection);
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin Z2FxLineMgr) */
-// outer dependency: JKRArchive
-// outer dependency: JKRHeap
-/* top-level dependencies (end Z2FxLineMgr) */
+/* top-level dependencies (begin ['Z2FxLineMgr']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
-	// JKRArchive
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRArchive',)
 	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JKRHeap (JKRHeap) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

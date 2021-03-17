@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build nodedraw_method_class (nodedraw_method_class) False/False
-/* top-level dependencies (begin nodedraw_method_class) */
-/* top-level dependencies (end nodedraw_method_class) */
+// build nodedraw_method_class (['nodedraw_method_class']) False/False
+/* top-level dependencies (begin ['nodedraw_method_class']) */
+/* top-level dependencies (end ['nodedraw_method_class']) */
 struct nodedraw_method_class {
 };
 
-// build process_node_class (process_node_class) False/False
-/* top-level dependencies (begin process_node_class) */
-/* top-level dependencies (end process_node_class) */
+// build process_node_class (['process_node_class']) False/False
+/* top-level dependencies (begin ['process_node_class']) */
+/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 

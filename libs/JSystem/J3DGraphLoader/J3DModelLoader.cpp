@@ -9,90 +9,90 @@
 // Types:
 // 
 
-// build J3DModelLoader (J3DModelLoader) False/False
-// build J3DShapeBlock (J3DShapeBlock) False/False
-/* top-level dependencies (begin J3DShapeBlock) */
-/* top-level dependencies (end J3DShapeBlock) */
+// build J3DModelLoader (['J3DModelLoader']) False/False
+// build J3DShapeBlock (['J3DShapeBlock']) False/False
+/* top-level dependencies (begin ['J3DShapeBlock']) */
+/* top-level dependencies (end ['J3DShapeBlock']) */
 struct J3DShapeBlock {
 };
 
-// build J3DEnvelopeBlock (J3DEnvelopeBlock) False/False
-/* top-level dependencies (begin J3DEnvelopeBlock) */
-/* top-level dependencies (end J3DEnvelopeBlock) */
-struct J3DEnvelopeBlock {
-};
-
-// build J3DJointBlock (J3DJointBlock) False/False
-/* top-level dependencies (begin J3DJointBlock) */
-/* top-level dependencies (end J3DJointBlock) */
-struct J3DJointBlock {
-};
-
-// build J3DModelInfoBlock (J3DModelInfoBlock) False/False
-/* top-level dependencies (begin J3DModelInfoBlock) */
-/* top-level dependencies (end J3DModelInfoBlock) */
+// build J3DModelInfoBlock (['J3DModelInfoBlock']) False/False
+/* top-level dependencies (begin ['J3DModelInfoBlock']) */
+/* top-level dependencies (end ['J3DModelInfoBlock']) */
 struct J3DModelInfoBlock {
 };
 
-// build J3DVertexBlock (J3DVertexBlock) False/False
-/* top-level dependencies (begin J3DVertexBlock) */
-/* top-level dependencies (end J3DVertexBlock) */
-struct J3DVertexBlock {
-};
-
-// build J3DTextureBlock (J3DTextureBlock) False/False
-/* top-level dependencies (begin J3DTextureBlock) */
-/* top-level dependencies (end J3DTextureBlock) */
+// build J3DTextureBlock (['J3DTextureBlock']) False/False
+/* top-level dependencies (begin ['J3DTextureBlock']) */
+/* top-level dependencies (end ['J3DTextureBlock']) */
 struct J3DTextureBlock {
 };
 
-// build J3DDrawBlock (J3DDrawBlock) False/False
-/* top-level dependencies (begin J3DDrawBlock) */
-/* top-level dependencies (end J3DDrawBlock) */
+// build J3DDrawBlock (['J3DDrawBlock']) False/False
+/* top-level dependencies (begin ['J3DDrawBlock']) */
+/* top-level dependencies (end ['J3DDrawBlock']) */
 struct J3DDrawBlock {
 };
 
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) False/False
-/* top-level dependencies (begin J3DMaterialBlock_v21) */
-/* top-level dependencies (end J3DMaterialBlock_v21) */
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) False/False
+/* top-level dependencies (begin ['J3DMaterialBlock_v21']) */
+/* top-level dependencies (end ['J3DMaterialBlock_v21']) */
 struct J3DMaterialBlock_v21 {
 };
 
-// build J3DMaterialBlock (J3DMaterialBlock) False/False
-/* top-level dependencies (begin J3DMaterialBlock) */
-/* top-level dependencies (end J3DMaterialBlock) */
-struct J3DMaterialBlock {
+// build J3DEnvelopeBlock (['J3DEnvelopeBlock']) False/False
+/* top-level dependencies (begin ['J3DEnvelopeBlock']) */
+/* top-level dependencies (end ['J3DEnvelopeBlock']) */
+struct J3DEnvelopeBlock {
 };
 
-// build J3DMaterialDLBlock (J3DMaterialDLBlock) False/False
-/* top-level dependencies (begin J3DMaterialDLBlock) */
-/* top-level dependencies (end J3DMaterialDLBlock) */
+// build J3DMaterialDLBlock (['J3DMaterialDLBlock']) False/False
+/* top-level dependencies (begin ['J3DMaterialDLBlock']) */
+/* top-level dependencies (end ['J3DMaterialDLBlock']) */
 struct J3DMaterialDLBlock {
 };
 
-/* top-level dependencies (begin J3DModelLoader) */
-// outer dependency: J3DShapeBlock
-// outer dependency: J3DEnvelopeBlock
-// outer dependency: J3DJointBlock
-// outer dependency: J3DModelInfoBlock
-// outer dependency: J3DVertexBlock
-// outer dependency: J3DTextureBlock
-// outer dependency: J3DDrawBlock
-// outer dependency: J3DMaterialBlock_v21
-// outer dependency: J3DMaterialBlock
-// outer dependency: J3DMaterialDLBlock
-/* top-level dependencies (end J3DModelLoader) */
+// build J3DVertexBlock (['J3DVertexBlock']) False/False
+/* top-level dependencies (begin ['J3DVertexBlock']) */
+/* top-level dependencies (end ['J3DVertexBlock']) */
+struct J3DVertexBlock {
+};
+
+// build J3DMaterialBlock (['J3DMaterialBlock']) False/False
+/* top-level dependencies (begin ['J3DMaterialBlock']) */
+/* top-level dependencies (end ['J3DMaterialBlock']) */
+struct J3DMaterialBlock {
+};
+
+// build J3DJointBlock (['J3DJointBlock']) False/False
+/* top-level dependencies (begin ['J3DJointBlock']) */
+/* top-level dependencies (end ['J3DJointBlock']) */
+struct J3DJointBlock {
+};
+
+/* top-level dependencies (begin ['J3DModelLoader']) */
+// outer dependency: ('J3DShapeBlock',)
+// outer dependency: ('J3DModelInfoBlock',)
+// outer dependency: ('J3DTextureBlock',)
+// outer dependency: ('J3DDrawBlock',)
+// outer dependency: ('J3DMaterialBlock_v21',)
+// outer dependency: ('J3DEnvelopeBlock',)
+// outer dependency: ('J3DMaterialDLBlock',)
+// outer dependency: ('J3DVertexBlock',)
+// outer dependency: ('J3DMaterialBlock',)
+// outer dependency: ('J3DJointBlock',)
+/* top-level dependencies (end ['J3DModelLoader']) */
 struct J3DModelLoader {
-	// J3DShapeBlock
-	// J3DEnvelopeBlock
-	// J3DJointBlock
-	// J3DModelInfoBlock
-	// J3DVertexBlock
-	// J3DTextureBlock
-	// J3DDrawBlock
-	// J3DMaterialBlock_v21
-	// J3DMaterialBlock
-	// J3DMaterialDLBlock
+	// ('J3DShapeBlock',)
+	// ('J3DModelInfoBlock',)
+	// ('J3DTextureBlock',)
+	// ('J3DDrawBlock',)
+	// ('J3DMaterialBlock_v21',)
+	// ('J3DEnvelopeBlock',)
+	// ('J3DMaterialDLBlock',)
+	// ('J3DVertexBlock',)
+	// ('J3DMaterialBlock',)
+	// ('J3DJointBlock',)
 	/* 8033468C */ J3DModelLoader();
 	/* 803347E0 */ void load(void const*, u32);
 	/* 80334ABC */ void loadMaterialTable(void const*);
@@ -122,37 +122,37 @@ struct J3DModelLoader {
 	/* 80336A98 */ void calcLoadBinaryDisplayListSize(void const*, u32);
 };
 
-// build J3DModelLoaderDataBase (J3DModelLoaderDataBase) False/False
-/* top-level dependencies (begin J3DModelLoaderDataBase) */
-/* top-level dependencies (end J3DModelLoaderDataBase) */
+// build J3DModelLoaderDataBase (['J3DModelLoaderDataBase']) False/False
+/* top-level dependencies (begin ['J3DModelLoaderDataBase']) */
+/* top-level dependencies (end ['J3DModelLoaderDataBase']) */
 struct J3DModelLoaderDataBase {
 	/* 803346BC */ void load(void const*, u32);
 };
 
-// build J3DModelInfoBlock (J3DModelInfoBlock) True/True
-// build _GXVtxAttrFmtList (_GXVtxAttrFmtList) False/False
-/* top-level dependencies (begin _GXVtxAttrFmtList) */
-/* top-level dependencies (end _GXVtxAttrFmtList) */
+// build J3DModelInfoBlock (['J3DModelInfoBlock']) True/True
+// build _GXVtxAttrFmtList (['_GXVtxAttrFmtList']) False/False
+/* top-level dependencies (begin ['_GXVtxAttrFmtList']) */
+/* top-level dependencies (end ['_GXVtxAttrFmtList']) */
 struct _GXVtxAttrFmtList {
 };
 
-// build _GXAttr (_GXAttr) False/False
-/* top-level dependencies (begin _GXAttr) */
-/* top-level dependencies (end _GXAttr) */
+// build _GXAttr (['_GXAttr']) False/False
+/* top-level dependencies (begin ['_GXAttr']) */
+/* top-level dependencies (end ['_GXAttr']) */
 struct _GXAttr {
 };
 
-// build J3DVertexBlock (J3DVertexBlock) True/True
-// build J3DEnvelopeBlock (J3DEnvelopeBlock) True/True
-// build J3DDrawBlock (J3DDrawBlock) True/True
-// build J3DJointBlock (J3DJointBlock) True/True
-// build J3DModelLoader_v26 (J3DModelLoader_v26) False/False
-// build J3DMaterialBlock (J3DMaterialBlock) True/True
-/* top-level dependencies (begin J3DModelLoader_v26) */
-// outer dependency: J3DMaterialBlock
-/* top-level dependencies (end J3DModelLoader_v26) */
+// build J3DVertexBlock (['J3DVertexBlock']) True/True
+// build J3DEnvelopeBlock (['J3DEnvelopeBlock']) True/True
+// build J3DDrawBlock (['J3DDrawBlock']) True/True
+// build J3DJointBlock (['J3DJointBlock']) True/True
+// build J3DModelLoader_v26 (['J3DModelLoader_v26']) False/False
+// build J3DMaterialBlock (['J3DMaterialBlock']) True/True
+/* top-level dependencies (begin ['J3DModelLoader_v26']) */
+// outer dependency: ('J3DMaterialBlock',)
+/* top-level dependencies (end ['J3DModelLoader_v26']) */
 struct J3DModelLoader_v26 {
-	// J3DMaterialBlock
+	// ('J3DMaterialBlock',)
 	/* 80335614 */ void readMaterial(J3DMaterialBlock const*, u32);
 	/* 80335CE4 */ void readMaterialTable(J3DMaterialBlock const*, u32);
 	/* 80336398 */ ~J3DModelLoader_v26();
@@ -160,51 +160,51 @@ struct J3DModelLoader_v26 {
 	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
 };
 
-// build J3DMaterialBlock (J3DMaterialBlock) True/True
-// build J3DModelLoader_v21 (J3DModelLoader_v21) False/False
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
-/* top-level dependencies (begin J3DModelLoader_v21) */
-// outer dependency: J3DMaterialBlock_v21
-/* top-level dependencies (end J3DModelLoader_v21) */
+// build J3DMaterialBlock (['J3DMaterialBlock']) True/True
+// build J3DModelLoader_v21 (['J3DModelLoader_v21']) False/False
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) True/True
+/* top-level dependencies (begin ['J3DModelLoader_v21']) */
+// outer dependency: ('J3DMaterialBlock_v21',)
+/* top-level dependencies (end ['J3DModelLoader_v21']) */
 struct J3DModelLoader_v21 {
-	// J3DMaterialBlock_v21
+	// ('J3DMaterialBlock_v21',)
 	/* 80335890 */ void readMaterial_v21(J3DMaterialBlock_v21 const*, u32);
 	/* 80335E20 */ void readMaterialTable_v21(J3DMaterialBlock_v21 const*, u32);
 	/* 803363F4 */ ~J3DModelLoader_v21();
 };
 
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
-// build J3DShapeBlock (J3DShapeBlock) True/True
-// build J3DTextureBlock (J3DTextureBlock) True/True
-// build J3DMaterialDLBlock (J3DMaterialDLBlock) True/True
-// build J3DMaterial (J3DMaterial) False/False
-/* top-level dependencies (begin J3DMaterial) */
-/* top-level dependencies (end J3DMaterial) */
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) True/True
+// build J3DShapeBlock (['J3DShapeBlock']) True/True
+// build J3DTextureBlock (['J3DTextureBlock']) True/True
+// build J3DMaterialDLBlock (['J3DMaterialDLBlock']) True/True
+// build J3DMaterial (['J3DMaterial']) False/False
+/* top-level dependencies (begin ['J3DMaterial']) */
+/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 80316240 */ void initialize();
 	/* 80332B94 */ ~J3DMaterial();
 	/* 80336650 */ J3DMaterial();
 };
 
-// build J3DTexture (J3DTexture) False/False
-/* top-level dependencies (begin J3DTexture) */
-/* top-level dependencies (end J3DTexture) */
+// build J3DTexture (['J3DTexture']) False/False
+/* top-level dependencies (begin ['J3DTexture']) */
+/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
 	/* 803366A4 */ ~J3DTexture();
 };
 
-// build J3DMtxCalc (J3DMtxCalc) False/False
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
+// build J3DMtxCalc (['J3DMtxCalc']) False/False
+// build J3DAnmTransform (['J3DAnmTransform']) False/False
+/* top-level dependencies (begin ['J3DAnmTransform']) */
+/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 };
 
-/* top-level dependencies (begin J3DMtxCalc) */
-// outer dependency: J3DAnmTransform
-/* top-level dependencies (end J3DMtxCalc) */
+/* top-level dependencies (begin ['J3DMtxCalc']) */
+// outer dependency: ('J3DAnmTransform',)
+/* top-level dependencies (end ['J3DMtxCalc']) */
 struct J3DMtxCalc {
-	// J3DAnmTransform
+	// ('J3DAnmTransform',)
 	/* 80014E8C */ void setAnmTransform(u8, J3DAnmTransform*);
 	/* 80014E90 */ void setAnmTransform(J3DAnmTransform*);
 	/* 80014E94 */ bool getAnmTransform(u8);
@@ -213,167 +213,167 @@ struct J3DMtxCalc {
 	/* 80014EA8 */ void getWeight(u8) const;
 };
 
-// build J3DAnmTransform (J3DAnmTransform) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build J3DAnmTransform (['J3DAnmTransform']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build JUTNameTab (JUTNameTab) False/False
-// build ResNTAB (ResNTAB) False/False
-/* top-level dependencies (begin ResNTAB) */
-/* top-level dependencies (end ResNTAB) */
+// build JUTNameTab (['JUTNameTab']) False/False
+// build ResNTAB (['ResNTAB']) False/False
+/* top-level dependencies (begin ['ResNTAB']) */
+/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin JUTNameTab) */
-// outer dependency: ResNTAB
-/* top-level dependencies (end JUTNameTab) */
+/* top-level dependencies (begin ['JUTNameTab']) */
+// outer dependency: ('ResNTAB',)
+/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ResNTAB
+	// ('ResNTAB',)
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-// build ResNTAB (ResNTAB) True/True
-// build J3DShapeTable (J3DShapeTable) False/False
-// build J3DDrawMtxData (J3DDrawMtxData) False/False
-/* top-level dependencies (begin J3DDrawMtxData) */
-/* top-level dependencies (end J3DDrawMtxData) */
-struct J3DDrawMtxData {
-};
-
-// build J3DVertexData (J3DVertexData) False/False
-/* top-level dependencies (begin J3DVertexData) */
-/* top-level dependencies (end J3DVertexData) */
+// build ResNTAB (['ResNTAB']) True/True
+// build J3DShapeTable (['J3DShapeTable']) False/False
+// build J3DVertexData (['J3DVertexData']) False/False
+/* top-level dependencies (begin ['J3DVertexData']) */
+/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 };
 
-/* top-level dependencies (begin J3DShapeTable) */
-// outer dependency: J3DDrawMtxData
-// outer dependency: J3DVertexData
-/* top-level dependencies (end J3DShapeTable) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
+/* top-level dependencies (begin ['J3DDrawMtxData']) */
+/* top-level dependencies (end ['J3DDrawMtxData']) */
+struct J3DDrawMtxData {
+};
+
+/* top-level dependencies (begin ['J3DShapeTable']) */
+// outer dependency: ('J3DVertexData',)
+// outer dependency: ('J3DDrawMtxData',)
+/* top-level dependencies (end ['J3DShapeTable']) */
 struct J3DShapeTable {
-	// J3DDrawMtxData
-	// J3DVertexData
+	// ('J3DVertexData',)
+	// ('J3DDrawMtxData',)
 	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-// build J3DDrawMtxData (J3DDrawMtxData) True/True
-// build J3DVertexData (J3DVertexData) True/True
-// build J3DJointTree (J3DJointTree) False/False
-// build J3DJoint (J3DJoint) False/False
-/* top-level dependencies (begin J3DJoint) */
-/* top-level dependencies (end J3DJoint) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) True/True
+// build J3DVertexData (['J3DVertexData']) True/True
+// build J3DJointTree (['J3DJointTree']) False/False
+// build J3DJoint (['J3DJoint']) False/False
+/* top-level dependencies (begin ['J3DJoint']) */
+/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 };
 
-// build J3DModelHierarchy (J3DModelHierarchy) False/False
-/* top-level dependencies (begin J3DModelHierarchy) */
-/* top-level dependencies (end J3DModelHierarchy) */
-struct J3DModelHierarchy {
-};
-
-// build J3DMaterialTable (J3DMaterialTable) False/False
-/* top-level dependencies (begin J3DMaterialTable) */
-/* top-level dependencies (end J3DMaterialTable) */
+// build J3DShapeTable (['J3DShapeTable']) True/True
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 	/* 8032F5A8 */ void clear();
 	/* 8032F5D0 */ J3DMaterialTable();
 };
 
-// build J3DShapeTable (J3DShapeTable) True/True
-/* top-level dependencies (begin J3DJointTree) */
-// outer dependency: J3DJoint
-// outer dependency: J3DModelHierarchy
-// outer dependency: J3DMaterialTable
-// outer dependency: J3DShapeTable
-/* top-level dependencies (end J3DJointTree) */
+// build J3DModelHierarchy (['J3DModelHierarchy']) False/False
+/* top-level dependencies (begin ['J3DModelHierarchy']) */
+/* top-level dependencies (end ['J3DModelHierarchy']) */
+struct J3DModelHierarchy {
+};
+
+/* top-level dependencies (begin ['J3DJointTree']) */
+// outer dependency: ('J3DJoint',)
+// outer dependency: ('J3DShapeTable',)
+// outer dependency: ('J3DMaterialTable',)
+// outer dependency: ('J3DModelHierarchy',)
+/* top-level dependencies (end ['J3DJointTree']) */
 struct J3DJointTree {
-	// J3DJoint
-	// J3DModelHierarchy
-	// J3DMaterialTable
-	// J3DShapeTable
+	// ('J3DJoint',)
+	// ('J3DShapeTable',)
+	// ('J3DMaterialTable',)
+	// ('J3DModelHierarchy',)
 	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
 	/* 80325C00 */ void findImportantMtxIndex();
 };
 
-// build J3DJoint (J3DJoint) True/True
-// build J3DModelHierarchy (J3DModelHierarchy) True/True
-// build J3DMaterialTable (J3DMaterialTable) True/True
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DJoint (['J3DJoint']) True/True
+// build J3DModelHierarchy (['J3DModelHierarchy']) True/True
+// build J3DMaterialTable (['J3DMaterialTable']) True/True
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 80325D88 */ void clear();
 	/* 80325DA0 */ J3DModelData();
 	/* 80325EC8 */ void indexToPtr();
 };
 
-// build J3DMtxCalcJ3DSysInitBasic (J3DMtxCalcJ3DSysInitBasic) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DMtxCalcJ3DSysInitBasic (['J3DMtxCalcJ3DSysInitBasic']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DMtxCalcJ3DSysInitBasic) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DMtxCalcJ3DSysInitBasic) */
+/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitBasic']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitBasic']) */
 struct J3DMtxCalcJ3DSysInitBasic {
-	// Vec
+	// ('Vec',)
 	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build Vec (Vec) True/True
-// build J3DMtxCalcCalcTransformBasic (J3DMtxCalcCalcTransformBasic) False/False
-// build J3DTransformInfo (J3DTransformInfo) False/False
-/* top-level dependencies (begin J3DTransformInfo) */
-/* top-level dependencies (end J3DTransformInfo) */
+// build Vec (['Vec']) True/True
+// build J3DMtxCalcCalcTransformBasic (['J3DMtxCalcCalcTransformBasic']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) False/False
+/* top-level dependencies (begin ['J3DTransformInfo']) */
+/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin J3DMtxCalcCalcTransformBasic) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DMtxCalcCalcTransformBasic) */
+/* top-level dependencies (begin ['J3DMtxCalcCalcTransformBasic']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DMtxCalcCalcTransformBasic']) */
 struct J3DMtxCalcCalcTransformBasic {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DTransformInfo (J3DTransformInfo) True/True
-// build J3DMtxCalcCalcTransformSoftimage (J3DMtxCalcCalcTransformSoftimage) False/False
-// build J3DTransformInfo (J3DTransformInfo) True/True
-/* top-level dependencies (begin J3DMtxCalcCalcTransformSoftimage) */
-// outer dependency: J3DTransformInfo
-/* top-level dependencies (end J3DMtxCalcCalcTransformSoftimage) */
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+// build J3DMtxCalcCalcTransformSoftimage (['J3DMtxCalcCalcTransformSoftimage']) False/False
+// build J3DTransformInfo (['J3DTransformInfo']) True/True
+/* top-level dependencies (begin ['J3DMtxCalcCalcTransformSoftimage']) */
+// outer dependency: ('J3DTransformInfo',)
+/* top-level dependencies (end ['J3DMtxCalcCalcTransformSoftimage']) */
 struct J3DMtxCalcCalcTransformSoftimage {
-	// J3DTransformInfo
+	// ('J3DTransformInfo',)
 	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DMaterialFactory (J3DMaterialFactory) False/False
-// build J3DMaterialBlock (J3DMaterialBlock) True/True
-// build J3DMaterialDLBlock (J3DMaterialDLBlock) True/True
-// build J3DMaterialFactory (J3DMaterialFactory) True/False
+// build J3DMaterialFactory (['J3DMaterialFactory']) False/False
+// build J3DMaterialFactory (['J3DMaterialFactory']) True/False
 struct J3DMaterialFactory;
-// build J3DMaterial (J3DMaterial) True/True
-/* top-level dependencies (begin J3DMaterialFactory) */
-// outer dependency: J3DMaterialBlock
-// outer dependency: J3DMaterialDLBlock
-// outer dependency: J3DMaterialFactory::MaterialType
-// outer dependency: J3DMaterial
-/* top-level dependencies (end J3DMaterialFactory) */
+// build J3DMaterial (['J3DMaterial']) True/True
+// build J3DMaterialBlock (['J3DMaterialBlock']) True/True
+// build J3DMaterialDLBlock (['J3DMaterialDLBlock']) True/True
+/* top-level dependencies (begin ['J3DMaterialFactory']) */
+// outer dependency: ('J3DMaterialFactory', 'MaterialType')
+// outer dependency: ('J3DMaterial',)
+// outer dependency: ('J3DMaterialBlock',)
+// outer dependency: ('J3DMaterialDLBlock',)
+/* top-level dependencies (end ['J3DMaterialFactory']) */
 struct J3DMaterialFactory {
-	// J3DMaterialBlock
-	// J3DMaterialDLBlock
-	// J3DMaterialFactory::MaterialType
-	// J3DMaterial
-	// build MaterialType (J3DMaterialFactory::MaterialType) False/False
-	/* dependencies (begin J3DMaterialFactory::MaterialType) */
-	/* dependencies (end J3DMaterialFactory::MaterialType) */
+	// ('J3DMaterialFactory', 'MaterialType')
+	// ('J3DMaterial',)
+	// ('J3DMaterialBlock',)
+	// ('J3DMaterialDLBlock',)
+	// build MaterialType (['J3DMaterialFactory', 'MaterialType']) False/False
+	/* dependencies (begin ['J3DMaterialFactory', 'MaterialType']) */
+	/* dependencies (end ['J3DMaterialFactory', 'MaterialType']) */
 	struct MaterialType {
 	};
 
@@ -384,53 +384,53 @@ struct J3DMaterialFactory {
 	/* 8033168C */ void modifyPatchedCurrentMtx(J3DMaterial*, int) const;
 };
 
-// build J3DMaterialFactory_v21 (J3DMaterialFactory_v21) False/False
-// build J3DMaterial (J3DMaterial) True/True
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
-/* top-level dependencies (begin J3DMaterialFactory_v21) */
-// outer dependency: J3DMaterial
-// outer dependency: J3DMaterialBlock_v21
-/* top-level dependencies (end J3DMaterialFactory_v21) */
+// build J3DMaterialFactory_v21 (['J3DMaterialFactory_v21']) False/False
+// build J3DMaterialBlock_v21 (['J3DMaterialBlock_v21']) True/True
+// build J3DMaterial (['J3DMaterial']) True/True
+/* top-level dependencies (begin ['J3DMaterialFactory_v21']) */
+// outer dependency: ('J3DMaterialBlock_v21',)
+// outer dependency: ('J3DMaterial',)
+/* top-level dependencies (end ['J3DMaterialFactory_v21']) */
 struct J3DMaterialFactory_v21 {
-	// J3DMaterial
-	// J3DMaterialBlock_v21
+	// ('J3DMaterialBlock_v21',)
+	// ('J3DMaterial',)
 	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
 	/* 80332F84 */ void countUniqueMaterials();
 	/* 80333068 */ void create(J3DMaterial*, int, u32) const;
 };
 
-// build J3DJointFactory (J3DJointFactory) False/False
-// build J3DJointBlock (J3DJointBlock) True/True
-/* top-level dependencies (begin J3DJointFactory) */
-// outer dependency: J3DJointBlock
-/* top-level dependencies (end J3DJointFactory) */
+// build J3DJointFactory (['J3DJointFactory']) False/False
+// build J3DJointBlock (['J3DJointBlock']) True/True
+/* top-level dependencies (begin ['J3DJointFactory']) */
+// outer dependency: ('J3DJointBlock',)
+/* top-level dependencies (end ['J3DJointFactory']) */
 struct J3DJointFactory {
-	// J3DJointBlock
+	// ('J3DJointBlock',)
 	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
 	/* 803371D0 */ void create(int);
 };
 
-// build J3DShapeFactory (J3DShapeFactory) False/False
-// build J3DShapeBlock (J3DShapeBlock) True/True
-// build _GXVtxDescList (_GXVtxDescList) False/False
-/* top-level dependencies (begin _GXVtxDescList) */
-/* top-level dependencies (end _GXVtxDescList) */
+// build J3DShapeFactory (['J3DShapeFactory']) False/False
+// build J3DShapeBlock (['J3DShapeBlock']) True/True
+// build _GXVtxDescList (['_GXVtxDescList']) False/False
+/* top-level dependencies (begin ['_GXVtxDescList']) */
+/* top-level dependencies (end ['_GXVtxDescList']) */
 struct _GXVtxDescList {
 };
 
-/* top-level dependencies (begin J3DShapeFactory) */
-// outer dependency: J3DShapeBlock
-// outer dependency: _GXVtxDescList
-/* top-level dependencies (end J3DShapeFactory) */
+/* top-level dependencies (begin ['J3DShapeFactory']) */
+// outer dependency: ('J3DShapeBlock',)
+// outer dependency: ('_GXVtxDescList',)
+/* top-level dependencies (end ['J3DShapeFactory']) */
 struct J3DShapeFactory {
-	// J3DShapeBlock
-	// _GXVtxDescList
+	// ('J3DShapeBlock',)
+	// ('_GXVtxDescList',)
 	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
 	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
 	/* 803378D8 */ void allocVcdVatCmdBuffer(u32);
 };
 
-// build _GXVtxDescList (_GXVtxDescList) True/True
+// build _GXVtxDescList (['_GXVtxDescList']) True/True
 // 
 // Forward References:
 // 

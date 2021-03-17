@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JUTAssertion (JUTAssertion) False/False
-/* top-level dependencies (begin JUTAssertion) */
-/* top-level dependencies (end JUTAssertion) */
+// build JUTAssertion (['JUTAssertion']) False/False
+/* top-level dependencies (begin ['JUTAssertion']) */
+/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E495C */ void create();
 	/* 802E4960 */ void flush_subroutine();
@@ -21,36 +21,36 @@ struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
 };
 
-// build JUTFont (JUTFont) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTFont (['JUTFont']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTFont) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFont) */
+/* top-level dependencies (begin ['JUTFont']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-// build JUtility (JUtility) True/True
-// build JUTDirectPrint (JUTDirectPrint) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin JUTDirectPrint) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTDirectPrint) */
+// build JUtility (['JUtility']) True/True
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };

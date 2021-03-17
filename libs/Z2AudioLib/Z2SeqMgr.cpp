@@ -9,19 +9,19 @@
 // Types:
 // 
 
-// build Z2SeqMgr (Z2SeqMgr) False/False
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-/* top-level dependencies (begin Z2SeqMgr) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end Z2SeqMgr) */
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802AEEA0 */ Z2SeqMgr();
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AF408 */ void bgmStop(u32, s32);
@@ -71,60 +71,60 @@ struct Z2SeqMgr {
 	/* 802B5ED4 */ void taktModeMuteOff();
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
-// build JAISeqMgr (JAISeqMgr) False/False
-/* top-level dependencies (begin JAISeqMgr) */
-/* top-level dependencies (end JAISeqMgr) */
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build JAISeqMgr (['JAISeqMgr']) False/False
+/* top-level dependencies (begin ['JAISeqMgr']) */
+/* top-level dependencies (end ['JAISeqMgr']) */
 struct JAISeqMgr {
 	/* 802A1C90 */ void calc();
 	/* 802A1E3C */ void stop(u32);
 	/* 802A1EFC */ void mixOut();
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A21A0 */ void releaseHandle();
 	/* 802A24DC */ void stop(u32);
 	/* 802A2598 */ void stop();
 };
 
-// build JAISoundStatus_ (JAISoundStatus_) False/False
-/* top-level dependencies (begin JAISoundStatus_) */
-/* top-level dependencies (end JAISoundStatus_) */
+// build JAISoundStatus_ (['JAISoundStatus_']) False/False
+/* top-level dependencies (begin ['JAISoundStatus_']) */
+/* top-level dependencies (end ['JAISoundStatus_']) */
 struct JAISoundStatus_ {
 	/* 802A2220 */ void lockWhenPrepared();
 	/* 802A2244 */ void unlockIfLocked();
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2EBC */ void movePan(f32, u32);
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build JAIStreamMgr (JAIStreamMgr) False/False
-/* top-level dependencies (begin JAIStreamMgr) */
-/* top-level dependencies (end JAIStreamMgr) */
+// build JAIStreamMgr (['JAIStreamMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamMgr']) */
+/* top-level dependencies (end ['JAIStreamMgr']) */
 struct JAIStreamMgr {
 	/* 802A4068 */ void stop(u32);
 };
 
-// build Z2Calc (Z2Calc) False/False
-// build Z2Calc (Z2Calc) True/False
+// build Z2Calc (['Z2Calc']) False/False
+// build Z2Calc (['Z2Calc']) True/False
 struct Z2Calc;
-/* top-level dependencies (begin Z2Calc) */
-// outer dependency: Z2Calc::CurveSign
-/* top-level dependencies (end Z2Calc) */
+/* top-level dependencies (begin ['Z2Calc']) */
+// outer dependency: ('Z2Calc', 'CurveSign')
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// Z2Calc::CurveSign
-	// build CurveSign (Z2Calc::CurveSign) False/False
-	/* dependencies (begin Z2Calc::CurveSign) */
-	/* dependencies (end Z2Calc::CurveSign) */
+	// ('Z2Calc', 'CurveSign')
+	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
+	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
+	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -132,35 +132,35 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundStarter (Z2SoundStarter) False/False
-// build JAISoundHandle (JAISoundHandle) True/True
-/* top-level dependencies (begin Z2SoundStarter) */
-// outer dependency: JAISoundHandle
-/* top-level dependencies (end Z2SoundStarter) */
+// build Z2SoundStarter (['Z2SoundStarter']) False/False
+// build JAISoundHandle (['JAISoundHandle']) True/True
+/* top-level dependencies (begin ['Z2SoundStarter']) */
+// outer dependency: ('JAISoundHandle',)
+/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// JAISoundHandle
+	// ('JAISoundHandle',)
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 };
 
-// build Z2StatusMgr (Z2StatusMgr) False/False
-/* top-level dependencies (begin Z2StatusMgr) */
-/* top-level dependencies (end Z2StatusMgr) */
+// build Z2StatusMgr (['Z2StatusMgr']) False/False
+/* top-level dependencies (begin ['Z2StatusMgr']) */
+/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B61E8 */ void setDemoName(char*);
 	/* 802B6734 */ void checkDayTime();
 };
 
-// build Z2SceneMgr (Z2SceneMgr) False/False
-/* top-level dependencies (begin Z2SceneMgr) */
-/* top-level dependencies (end Z2SceneMgr) */
+// build Z2SceneMgr (['Z2SceneMgr']) False/False
+/* top-level dependencies (begin ['Z2SceneMgr']) */
+/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B68E0 */ void setSceneExist(bool);
 };
 
-// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
-/* top-level dependencies (begin Z2SoundObjMgr) */
-/* top-level dependencies (end Z2SoundObjMgr) */
+// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundObjMgr']) */
+/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
 	/* 802BF994 */ void searchEnemy();

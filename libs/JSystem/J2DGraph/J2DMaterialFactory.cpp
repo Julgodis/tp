@@ -9,46 +9,46 @@
 // Types:
 // 
 
-// build J2DMaterialFactory (J2DMaterialFactory) False/False
-// build J2DMaterial (J2DMaterial) False/False
-/* top-level dependencies (begin J2DMaterial) */
-/* top-level dependencies (end J2DMaterial) */
-struct J2DMaterial {
-	/* 802EA410 */ void createTevBlock(int, bool);
-	/* 802EA5C4 */ void createIndBlock(int, bool);
+// build J2DMaterialFactory (['J2DMaterialFactory']) False/False
+// build J2DMaterialBlock (['J2DMaterialBlock']) False/False
+/* top-level dependencies (begin ['J2DMaterialBlock']) */
+/* top-level dependencies (end ['J2DMaterialBlock']) */
+struct J2DMaterialBlock {
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
-// build J2DResReference (J2DResReference) False/False
-/* top-level dependencies (begin J2DResReference) */
-/* top-level dependencies (end J2DResReference) */
+// build J2DResReference (['J2DResReference']) False/False
+/* top-level dependencies (begin ['J2DResReference']) */
+/* top-level dependencies (end ['J2DResReference']) */
 struct J2DResReference {
 	/* 8030CF10 */ void getResReference(u16) const;
 	/* 8030CF44 */ void getName(u16) const;
 };
 
-// build J2DMaterialBlock (J2DMaterialBlock) False/False
-/* top-level dependencies (begin J2DMaterialBlock) */
-/* top-level dependencies (end J2DMaterialBlock) */
-struct J2DMaterialBlock {
+// build J2DMaterial (['J2DMaterial']) False/False
+/* top-level dependencies (begin ['J2DMaterial']) */
+/* top-level dependencies (end ['J2DMaterial']) */
+struct J2DMaterial {
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
 };
 
-/* top-level dependencies (begin J2DMaterialFactory) */
-// outer dependency: J2DMaterial
-// outer dependency: JKRArchive
-// outer dependency: J2DResReference
-// outer dependency: J2DMaterialBlock
-/* top-level dependencies (end J2DMaterialFactory) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin ['J2DMaterialFactory']) */
+// outer dependency: ('J2DMaterialBlock',)
+// outer dependency: ('J2DResReference',)
+// outer dependency: ('J2DMaterial',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DMaterialFactory']) */
 struct J2DMaterialFactory {
-	// J2DMaterial
-	// JKRArchive
-	// J2DResReference
-	// J2DMaterialBlock
+	// ('J2DMaterialBlock',)
+	// ('J2DResReference',)
+	// ('J2DMaterial',)
+	// ('JKRArchive',)
 	/* 802F2AD0 */ J2DMaterialFactory(J2DMaterialBlock const&);
 	/* 802F2C94 */ void countStages(int) const;
 	/* 802F2D1C */ void create(J2DMaterial*, int, u32, J2DResReference*, J2DResReference*, JKRArchive*) const;
@@ -77,48 +77,48 @@ struct J2DMaterialFactory {
 	/* 802F40D8 */ void newDither(int) const;
 };
 
-// build J2DMaterialBlock (J2DMaterialBlock) True/True
-// build J2DMaterial (J2DMaterial) True/True
-// build J2DResReference (J2DResReference) True/True
-// build JKRArchive (JKRArchive) True/True
-// build J2DTevStage (J2DTevStage) False/False
-// build J2DTevStageInfo (J2DTevStageInfo) False/False
-/* top-level dependencies (begin J2DTevStageInfo) */
-/* top-level dependencies (end J2DTevStageInfo) */
+// build J2DMaterialBlock (['J2DMaterialBlock']) True/True
+// build J2DMaterial (['J2DMaterial']) True/True
+// build J2DResReference (['J2DResReference']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build J2DTevStage (['J2DTevStage']) False/False
+// build J2DTevStageInfo (['J2DTevStageInfo']) False/False
+/* top-level dependencies (begin ['J2DTevStageInfo']) */
+/* top-level dependencies (end ['J2DTevStageInfo']) */
 struct J2DTevStageInfo {
 };
 
-/* top-level dependencies (begin J2DTevStage) */
-// outer dependency: J2DTevStageInfo
-/* top-level dependencies (end J2DTevStage) */
+/* top-level dependencies (begin ['J2DTevStage']) */
+// outer dependency: ('J2DTevStageInfo',)
+/* top-level dependencies (end ['J2DTevStage']) */
 struct J2DTevStage {
-	// J2DTevStageInfo
+	// ('J2DTevStageInfo',)
 	/* 802F1940 */ J2DTevStage();
 	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
 	/* 802F4110 */ J2DTevStage(J2DTevStageInfo const&);
 };
 
-// build J2DTevStageInfo (J2DTevStageInfo) True/True
-// build JUTResReference (JUTResReference) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JUTResReference) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JUTResReference) */
+// build J2DTevStageInfo (['J2DTevStageInfo']) True/True
+// build JUTResReference (['JUTResReference']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JUTResReference']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JUTResReference']) */
 struct JUTResReference {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
-// build J2DTexMtx (J2DTexMtx) False/False
-/* top-level dependencies (begin J2DTexMtx) */
-/* top-level dependencies (end J2DTexMtx) */
+// build J2DTexMtx (['J2DTexMtx']) False/False
+/* top-level dependencies (begin ['J2DTexMtx']) */
+/* top-level dependencies (end ['J2DTexMtx']) */
 struct J2DTexMtx {
 	/* 802E9CC4 */ void calc();
 };
 
-// build J2DDataManage (J2DDataManage) False/False
-/* top-level dependencies (begin J2DDataManage) */
-/* top-level dependencies (end J2DDataManage) */
+// build J2DDataManage (['J2DDataManage']) False/False
+/* top-level dependencies (begin ['J2DDataManage']) */
+/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
 	/* 8030CE18 */ void get(char const*);
 };

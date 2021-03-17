@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build d2DBSplinePath (d2DBSplinePath) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build d2DBSplinePath (['d2DBSplinePath']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin d2DBSplinePath) */
-// outer dependency: cXyz
-/* top-level dependencies (end d2DBSplinePath) */
+/* top-level dependencies (begin ['d2DBSplinePath']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['d2DBSplinePath']) */
 struct d2DBSplinePath {
-	// cXyz
+	// ('cXyz',)
 	/* 80097878 */ void Init(s32, s32);
 	/* 80097904 */ void Step();
 	/* 80097A6C */ void Calc(cXyz*);
@@ -28,24 +28,24 @@ struct d2DBSplinePath {
 	/* 80097B68 */ void Spot(f32*, f32);
 };
 
-// build cXyz (cXyz) True/True
-// build dPathCurve (dPathCurve) False/False
-// build dPath (dPath) False/False
-/* top-level dependencies (begin dPath) */
-/* top-level dependencies (end dPath) */
+// build cXyz (['cXyz']) True/True
+// build dPathCurve (['dPathCurve']) False/False
+// build dPath (['dPath']) False/False
+/* top-level dependencies (begin ['dPath']) */
+/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-/* top-level dependencies (begin dPathCurve) */
-// outer dependency: dPath
-/* top-level dependencies (end dPathCurve) */
+/* top-level dependencies (begin ['dPathCurve']) */
+// outer dependency: ('dPath',)
+/* top-level dependencies (end ['dPathCurve']) */
 struct dPathCurve {
-	// dPath
+	// ('dPath',)
 	/* 80097C5C */ void Init(dPath*);
 	/* 80097C74 */ void bSpline2(f32);
 };
 
-// build dPath (dPath) True/True
+// build dPath (['dPath']) True/True
 // 
 // Forward References:
 // 

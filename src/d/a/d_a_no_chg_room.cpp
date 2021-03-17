@@ -9,59 +9,59 @@
 // Types:
 // 
 
-// build daNocrm_c (daNocrm_c) False/False
-/* top-level dependencies (begin daNocrm_c) */
-/* top-level dependencies (end daNocrm_c) */
+// build daNocrm_c (['daNocrm_c']) False/False
+/* top-level dependencies (begin ['daNocrm_c']) */
+/* top-level dependencies (end ['daNocrm_c']) */
 struct daNocrm_c {
 	/* 801452DC */ void execute();
 	/* 80145508 */ void getRoomNo(int);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build fopAcM_gc_c (fopAcM_gc_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build fopAcM_gc_c (['fopAcM_gc_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin fopAcM_gc_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end fopAcM_gc_c) */
+/* top-level dependencies (begin ['fopAcM_gc_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['fopAcM_gc_c']) */
 struct fopAcM_gc_c {
-	// cXyz
+	// ('cXyz',)
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-// build cXyz (cXyz) True/True
-// build process_node_class (process_node_class) False/False
-/* top-level dependencies (begin process_node_class) */
-/* top-level dependencies (end process_node_class) */
+// build cXyz (['cXyz']) True/True
+// build process_node_class (['process_node_class']) False/False
+/* top-level dependencies (begin ['process_node_class']) */
+/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
 // 
 // Forward References:
 // 

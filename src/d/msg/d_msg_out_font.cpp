@@ -9,49 +9,49 @@
 // Types:
 // 
 
-// build COutFontSet_c (COutFontSet_c) False/False
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
+// build COutFontSet_c (['COutFontSet_c']) False/False
+// build J2DTextBox (['J2DTextBox']) False/False
+/* top-level dependencies (begin ['J2DTextBox']) */
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 };
 
-/* top-level dependencies (begin COutFontSet_c) */
-// outer dependency: J2DTextBox
-/* top-level dependencies (end COutFontSet_c) */
+/* top-level dependencies (begin ['COutFontSet_c']) */
+// outer dependency: ('J2DTextBox',)
+/* top-level dependencies (end ['COutFontSet_c']) */
 struct COutFontSet_c {
-	// J2DTextBox
+	// ('J2DTextBox',)
 	/* 80225BB8 */ COutFontSet_c();
 	/* 80225BF4 */ ~COutFontSet_c();
 	/* 80225C3C */ void initialize();
 	/* 80225C70 */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
-// build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) False/False
-// build J2DPicture (J2DPicture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J2DTextBox (['J2DTextBox']) True/True
+// build COutFont_c (['COutFont_c']) False/False
+// build J2DTextBox (['J2DTextBox']) True/True
+// build J2DPicture (['J2DPicture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J2DPicture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J2DPicture) */
+/* top-level dependencies (begin ['J2DPicture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build J2DTextBox (J2DTextBox) True/True
-/* top-level dependencies (begin COutFont_c) */
-// outer dependency: J2DPicture
-// outer dependency: J2DTextBox
-/* top-level dependencies (end COutFont_c) */
+/* top-level dependencies (begin ['COutFont_c']) */
+// outer dependency: ('J2DTextBox',)
+// outer dependency: ('J2DPicture',)
+/* top-level dependencies (end ['COutFont_c']) */
 struct COutFont_c {
-	// J2DPicture
-	// J2DTextBox
+	// ('J2DTextBox',)
+	// ('J2DPicture',)
 	/* 80225C94 */ COutFont_c(u8);
 	/* 80225D60 */ ~COutFont_c();
 	/* 80225E7C */ void setPane(J2DPicture*);
@@ -65,25 +65,25 @@ struct COutFont_c {
 	/* 80228530 */ void getBtiName(int);
 };
 
-// build J2DPicture (J2DPicture) True/True
-// build J2DPane (J2DPane) False/False
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
+// build J2DPicture (['J2DPicture']) True/True
+// build J2DPane (['J2DPane']) False/False
+// build J2DRotateAxis (['J2DRotateAxis']) False/False
+/* top-level dependencies (begin ['J2DRotateAxis']) */
+/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DRotateAxis
-/* top-level dependencies (end J2DPane) */
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DRotateAxis',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DRotateAxis
+	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7AFC */ void getParentPane();
 };
 
-// build J2DRotateAxis (J2DRotateAxis) True/True
-// build ResTIMG (ResTIMG) True/True
+// build J2DRotateAxis (['J2DRotateAxis']) True/True
+// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 

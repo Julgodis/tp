@@ -9,10 +9,10 @@
 // Types:
 // 
 
-// build JKRFileCache (JKRFileCache) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRFileCache (['JKRFileCache']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
@@ -21,14 +21,14 @@ struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-/* top-level dependencies (begin JKRFileCache) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRFileCache) */
+/* top-level dependencies (begin ['JKRFileCache']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRFileCache']) */
 struct JKRFileCache {
-	// JKRHeap
-	// build CCacheBlock (JKRFileCache::CCacheBlock) False/False
-	/* dependencies (begin JKRFileCache::CCacheBlock) */
-	/* dependencies (end JKRFileCache::CCacheBlock) */
+	// ('JKRHeap',)
+	// build CCacheBlock (['JKRFileCache', 'CCacheBlock']) False/False
+	/* dependencies (begin ['JKRFileCache', 'CCacheBlock']) */
+	/* dependencies (end ['JKRFileCache', 'CCacheBlock']) */
 	struct CCacheBlock {
 		/* 802D566C */ CCacheBlock(u32, u32, void const*);
 	};
@@ -58,53 +58,53 @@ struct JKRFileCache {
 	/* 802D574C */ void readNameResource(void*, u32, u32, char const*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D40F0 */ JKRFileLoader();
 	/* 802D4148 */ ~JKRFileLoader();
 	/* 802D41D4 */ void unmount();
 };
 
-// build JKRDvdFinder (JKRDvdFinder) False/False
-/* top-level dependencies (begin JKRDvdFinder) */
-/* top-level dependencies (end JKRDvdFinder) */
+// build JKRDvdFinder (['JKRDvdFinder']) False/False
+/* top-level dependencies (begin ['JKRDvdFinder']) */
+/* top-level dependencies (end ['JKRDvdFinder']) */
 struct JKRDvdFinder {
 	/* 802D4770 */ JKRDvdFinder(char const*);
 };
 
-// build JKRFile (JKRFile) False/False
-/* top-level dependencies (begin JKRFile) */
-/* top-level dependencies (end JKRFile) */
+// build JKRFile (['JKRFile']) False/False
+/* top-level dependencies (begin ['JKRFile']) */
+/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 	/* 802D9518 */ void read(void*, s32, s32);
 };
 
-// build JKRDvdFile (JKRDvdFile) False/False
-/* top-level dependencies (begin JKRDvdFile) */
-/* top-level dependencies (end JKRDvdFile) */
+// build JKRDvdFile (['JKRDvdFile']) False/False
+/* top-level dependencies (begin ['JKRDvdFile']) */
+/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
 	/* 802D95F8 */ JKRDvdFile(char const*);
 	/* 802D9748 */ ~JKRDvdFile();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);

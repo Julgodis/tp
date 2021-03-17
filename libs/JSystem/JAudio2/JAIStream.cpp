@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASAramStream (JASAramStream) False/False
-/* top-level dependencies (begin JASAramStream) */
-/* top-level dependencies (end JASAramStream) */
+// build JASAramStream (['JASAramStream']) False/False
+/* top-level dependencies (begin ['JASAramStream']) */
+/* top-level dependencies (end ['JASAramStream']) */
 struct JASAramStream {
 	/* 802963A8 */ JASAramStream();
 	/* 8029655C */ void prepare(s32, int);
@@ -21,26 +21,26 @@ struct JASAramStream {
 	/* 802966CC */ void cancel();
 };
 
-// build JAIStream (JAIStream) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JAIStream (['JAIStream']) False/False
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 };
 
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
+// build JAISoundActivity (['JAISoundActivity']) False/False
+/* top-level dependencies (begin ['JAISoundActivity']) */
+/* top-level dependencies (end ['JAISoundActivity']) */
 struct JAISoundActivity {
 };
 
-/* top-level dependencies (begin JAIStream) */
-// outer dependency: JASSoundParams
-// outer dependency: JAISoundActivity
-/* top-level dependencies (end JAIStream) */
+/* top-level dependencies (begin ['JAIStream']) */
+// outer dependency: ('JASSoundParams',)
+// outer dependency: ('JAISoundActivity',)
+/* top-level dependencies (end ['JAIStream']) */
 struct JAIStream {
-	// JASSoundParams
-	// JAISoundActivity
+	// ('JASSoundParams',)
+	// ('JAISoundActivity',)
 	/* 802A3230 */ void prepare_prepareStream_();
 	/* 802A33F4 */ void prepare_();
 	/* 802A3498 */ void prepare_startStream_();
@@ -57,30 +57,30 @@ struct JAIStream {
 	/* 802A3AD0 */ bool getTempoMgr();
 };
 
-// build JASSoundParams (JASSoundParams) True/True
-// build JAISoundActivity (JAISoundActivity) True/True
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASSoundParams (['JASSoundParams']) True/True
+// build JAISoundActivity (['JAISoundActivity']) True/True
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JAISoundParams (JAISoundParams) False/False
-// build JASSoundParams (JASSoundParams) True/True
-/* top-level dependencies (begin JAISoundParams) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JAISoundParams) */
+// build JAISoundParams (['JAISoundParams']) False/False
+// build JASSoundParams (['JASSoundParams']) True/True
+/* top-level dependencies (begin ['JAISoundParams']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JAISoundParams']) */
 struct JAISoundParams {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A22F8 */ JAISound();
 	/* 802A25D8 */ bool asSe();
@@ -90,17 +90,17 @@ struct JAISound {
 	/* 802A26B8 */ void calc_JAISound_();
 };
 
-// build JAISoundChild (JAISoundChild) False/False
-/* top-level dependencies (begin JAISoundChild) */
-/* top-level dependencies (end JAISoundChild) */
+// build JAISoundChild (['JAISoundChild']) False/False
+/* top-level dependencies (begin ['JAISoundChild']) */
+/* top-level dependencies (end ['JAISoundChild']) */
 struct JAISoundChild {
 	/* 802A2AB0 */ void init();
 	/* 802A2B7C */ void calc();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 };

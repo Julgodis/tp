@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build J3DJointFactory (J3DJointFactory) False/False
-// build J3DJointBlock (J3DJointBlock) False/False
-/* top-level dependencies (begin J3DJointBlock) */
-/* top-level dependencies (end J3DJointBlock) */
+// build J3DJointFactory (['J3DJointFactory']) False/False
+// build J3DJointBlock (['J3DJointBlock']) False/False
+/* top-level dependencies (begin ['J3DJointBlock']) */
+/* top-level dependencies (end ['J3DJointBlock']) */
 struct J3DJointBlock {
 };
 
-/* top-level dependencies (begin J3DJointFactory) */
-// outer dependency: J3DJointBlock
-/* top-level dependencies (end J3DJointFactory) */
+/* top-level dependencies (begin ['J3DJointFactory']) */
+// outer dependency: ('J3DJointBlock',)
+/* top-level dependencies (end ['J3DJointFactory']) */
 struct J3DJointFactory {
-	// J3DJointBlock
+	// ('J3DJointBlock',)
 	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
 	/* 803371D0 */ void create(int);
 };
 
-// build J3DJointBlock (J3DJointBlock) True/True
-// build J3DJoint (J3DJoint) False/False
-/* top-level dependencies (begin J3DJoint) */
-/* top-level dependencies (end J3DJoint) */
+// build J3DJointBlock (['J3DJointBlock']) True/True
+// build J3DJoint (['J3DJoint']) False/False
+/* top-level dependencies (begin ['J3DJoint']) */
+/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 	/* 8032F170 */ J3DJoint();
 };

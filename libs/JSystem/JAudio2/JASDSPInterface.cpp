@@ -9,32 +9,33 @@
 // Types:
 // 
 
-// build JASDsp (JASDsp) False/False
-// build JASDsp (JASDsp) True/False
-struct JASDsp;
-// build JASWaveInfo (JASWaveInfo) False/False
-/* top-level dependencies (begin JASWaveInfo) */
-/* top-level dependencies (end JASWaveInfo) */
+// build JASDsp (['JASDsp']) False/False
+// build JASWaveInfo (['JASWaveInfo']) False/False
+/* top-level dependencies (begin ['JASWaveInfo']) */
+/* top-level dependencies (end ['JASWaveInfo']) */
 struct JASWaveInfo {
 };
 
-/* top-level dependencies (begin JASDsp) */
-// outer dependency: JASDsp::FxlineConfig_
-// outer dependency: JASWaveInfo
-/* top-level dependencies (end JASDsp) */
+// build JASDsp (['JASDsp']) True/False
+struct JASDsp;
+/* top-level dependencies (begin ['JASDsp']) */
+// outer dependency: ('JASWaveInfo',)
+// outer dependency: ('JASDsp', 'FxlineConfig_')
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// JASDsp::FxlineConfig_
-	// build FxlineConfig_ (JASDsp::FxlineConfig_) False/False
-	/* dependencies (begin JASDsp::FxlineConfig_) */
-	/* dependencies (end JASDsp::FxlineConfig_) */
+	// ('JASDsp', 'FxlineConfig_')
+	// build FxlineConfig_ (['JASDsp', 'FxlineConfig_']) False/False
+	/* dependencies (begin ['JASDsp', 'FxlineConfig_']) */
+	/* dependencies (end ['JASDsp', 'FxlineConfig_']) */
 	struct FxlineConfig_ {
 	};
 
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
+	// build TChannel (['JASDsp', 'TChannel']) False/False
+	/* dependencies (begin ['JASDsp', 'TChannel']) */
+	// inner dependency: 0 ('JASWaveInfo',) (for ['JASDsp', 'TChannel'])
+	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
-		// JASWaveInfo
+		// ('JASWaveInfo',)
 		/* 8029DCA4 */ void init();
 		/* 8029DCE0 */ void playStart();
 		/* 8029DD44 */ void playStop();
@@ -72,17 +73,17 @@ struct JASDsp {
 	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
-// build JASWaveInfo (JASWaveInfo) True/True
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASWaveInfo (['JASWaveInfo']) True/True
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

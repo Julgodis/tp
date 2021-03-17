@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build dMenuMapCommon_c (['dMenuMapCommon_c']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin dMenuMapCommon_c) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end dMenuMapCommon_c) */
+/* top-level dependencies (begin ['dMenuMapCommon_c']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dMenuMapCommon_c']) */
 struct dMenuMapCommon_c {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
@@ -36,62 +36,62 @@ struct dMenuMapCommon_c {
 	/* 801C47C4 */ void debugIcon();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end dSelect_cursor_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build dSelect_cursor_c (['dSelect_cursor_c']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['dSelect_cursor_c']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dSelect_cursor_c']) */
 struct dSelect_cursor_c {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801951C8 */ void setScale(f32);
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-// build J2DPane (J2DPane) False/False
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
-struct J2DRotateAxis {
-};
-
-// build J2DBasePosition (J2DBasePosition) False/False
-/* top-level dependencies (begin J2DBasePosition) */
-/* top-level dependencies (end J2DBasePosition) */
+// build J2DPane (['J2DPane']) False/False
+// build J2DBasePosition (['J2DBasePosition']) False/False
+/* top-level dependencies (begin ['J2DBasePosition']) */
+/* top-level dependencies (end ['J2DBasePosition']) */
 struct J2DBasePosition {
 };
 
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DRotateAxis
-// outer dependency: J2DBasePosition
-/* top-level dependencies (end J2DPane) */
+// build J2DRotateAxis (['J2DRotateAxis']) False/False
+/* top-level dependencies (begin ['J2DRotateAxis']) */
+/* top-level dependencies (end ['J2DRotateAxis']) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DBasePosition',)
+// outer dependency: ('J2DRotateAxis',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DRotateAxis
-	// J2DBasePosition
+	// ('J2DBasePosition',)
+	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
 };
 
-// build J2DRotateAxis (J2DRotateAxis) True/True
-// build J2DBasePosition (J2DBasePosition) True/True
-// build J2DPicture (J2DPicture) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J2DRotateAxis (['J2DRotateAxis']) True/True
+// build J2DBasePosition (['J2DBasePosition']) True/True
+// build J2DPicture (['J2DPicture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J2DPicture) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end J2DPicture) */
+/* top-level dependencies (begin ['J2DPicture']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (ResTIMG) True/True
+// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 

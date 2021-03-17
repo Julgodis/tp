@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build Z2AudioMgr (Z2AudioMgr) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build Z2AudioMgr (['Z2AudioMgr']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin Z2AudioMgr) */
-// outer dependency: JKRArchive
-// outer dependency: JKRSolidHeap
-/* top-level dependencies (end Z2AudioMgr) */
+/* top-level dependencies (begin ['Z2AudioMgr']) */
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
-	// JKRArchive
-	// JKRSolidHeap
+	// ('JKRArchive',)
+	// ('JKRSolidHeap',)
 	/* 802CD248 */ Z2AudioMgr();
 	/* 802CD34C */ void init(JKRSolidHeap*, u32, void*, JKRArchive*);
 	/* 802CD888 */ void setOutputMode(u32);
@@ -39,11 +39,11 @@ struct Z2AudioMgr {
 	/* 802CDA6C */ void hasReset() const;
 };
 
-// build JKRSolidHeap (JKRSolidHeap) True/True
-// build JKRArchive (JKRArchive) True/True
-// build JASHeap (JASHeap) False/False
-/* top-level dependencies (begin JASHeap) */
-/* top-level dependencies (end JASHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JASHeap (['JASHeap']) False/False
+/* top-level dependencies (begin ['JASHeap']) */
+/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
 	/* 8029021C */ void alloc(JASHeap*, u32);
 	/* 802904E4 */ void free();
@@ -51,42 +51,42 @@ struct JASHeap {
 	/* 802A4A5C */ void __defctor();
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-// build JASKernel (JASKernel) False/False
-/* top-level dependencies (begin JASKernel) */
-/* top-level dependencies (end JASKernel) */
+// build JASKernel (['JASKernel']) False/False
+/* top-level dependencies (begin ['JASKernel']) */
+/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JASResArcLoader (JASResArcLoader) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JASResArcLoader) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JASResArcLoader) */
+// build JASResArcLoader (['JASResArcLoader']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JASResArcLoader']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9F0 */ void getSubFrames();
 	/* 8029E178 */ void setOutputMode(u32);
 };
 
-// build JASAudioReseter (JASAudioReseter) False/False
-/* top-level dependencies (begin JASAudioReseter) */
-/* top-level dependencies (end JASAudioReseter) */
+// build JASAudioReseter (['JASAudioReseter']) False/False
+/* top-level dependencies (begin ['JASAudioReseter']) */
+/* top-level dependencies (end ['JASAudioReseter']) */
 struct JASAudioReseter {
 	/* 8029D0B4 */ JASAudioReseter();
 	/* 8029D138 */ void start(u32, bool);
@@ -94,134 +94,134 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
-// build JAISeMgr (JAISeMgr) False/False
-// build JAISeqDataMgr (JAISeqDataMgr) False/False
-/* top-level dependencies (begin JAISeqDataMgr) */
-/* top-level dependencies (end JAISeqDataMgr) */
-struct JAISeqDataMgr {
-};
-
-// build JAIAudience (JAIAudience) False/False
-/* top-level dependencies (begin JAIAudience) */
-/* top-level dependencies (end JAIAudience) */
+// build JAISeMgr (['JAISeMgr']) False/False
+// build JAIAudience (['JAIAudience']) False/False
+/* top-level dependencies (begin ['JAIAudience']) */
+/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 };
 
-// build JAISeCategoryArrangement (JAISeCategoryArrangement) False/False
-/* top-level dependencies (begin JAISeCategoryArrangement) */
-/* top-level dependencies (end JAISeCategoryArrangement) */
+// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) False/False
+/* top-level dependencies (begin ['JAISeCategoryArrangement']) */
+/* top-level dependencies (end ['JAISeCategoryArrangement']) */
 struct JAISeCategoryArrangement {
 };
 
-/* top-level dependencies (begin JAISeMgr) */
-// outer dependency: JAISeqDataMgr
-// outer dependency: JAIAudience
-// outer dependency: JAISeCategoryArrangement
-/* top-level dependencies (end JAISeMgr) */
+// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
+/* top-level dependencies (begin ['JAISeqDataMgr']) */
+/* top-level dependencies (end ['JAISeqDataMgr']) */
+struct JAISeqDataMgr {
+};
+
+/* top-level dependencies (begin ['JAISeMgr']) */
+// outer dependency: ('JAIAudience',)
+// outer dependency: ('JAISeCategoryArrangement',)
+// outer dependency: ('JAISeqDataMgr',)
+/* top-level dependencies (end ['JAISeMgr']) */
 struct JAISeMgr {
-	// JAISeqDataMgr
-	// JAIAudience
-	// JAISeCategoryArrangement
+	// ('JAIAudience',)
+	// ('JAISeCategoryArrangement',)
+	// ('JAISeqDataMgr',)
 	/* 802A0268 */ void setCategoryArrangement(JAISeCategoryArrangement const&);
 	/* 802A03D8 */ void setAudience(JAIAudience*);
 	/* 802A03E0 */ void setSeqDataMgr(JAISeqDataMgr*);
 	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
-// build JAISeCategoryArrangement (JAISeCategoryArrangement) True/True
-// build JAIAudience (JAIAudience) True/True
-// build JAISeqDataMgr (JAISeqDataMgr) True/True
-// build JAISoundInfo (JAISoundInfo) False/False
-/* top-level dependencies (begin JAISoundInfo) */
-/* top-level dependencies (end JAISoundInfo) */
+// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) True/True
+// build JAIAudience (['JAIAudience']) True/True
+// build JAISeqDataMgr (['JAISeqDataMgr']) True/True
+// build JAISoundInfo (['JAISoundInfo']) False/False
+/* top-level dependencies (begin ['JAISoundInfo']) */
+/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D34 */ JAISoundInfo(bool);
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-// build JAIStreamAramMgr (JAIStreamAramMgr) False/False
-/* top-level dependencies (begin JAIStreamAramMgr) */
-/* top-level dependencies (end JAIStreamAramMgr) */
+// build JAIStreamAramMgr (['JAIStreamAramMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamAramMgr']) */
+/* top-level dependencies (end ['JAIStreamAramMgr']) */
 struct JAIStreamAramMgr {
 	/* 802A3B20 */ ~JAIStreamAramMgr();
 };
 
-// build JAUAudioArcInterpreter (JAUAudioArcInterpreter) False/False
-/* top-level dependencies (begin JAUAudioArcInterpreter) */
-/* top-level dependencies (end JAUAudioArcInterpreter) */
+// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
+/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
+/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
-// build JAUAudioArcLoader (JAUAudioArcLoader) False/False
-/* top-level dependencies (begin JAUAudioArcLoader) */
-/* top-level dependencies (end JAUAudioArcLoader) */
+// build JAUAudioArcLoader (['JAUAudioArcLoader']) False/False
+/* top-level dependencies (begin ['JAUAudioArcLoader']) */
+/* top-level dependencies (end ['JAUAudioArcLoader']) */
 struct JAUAudioArcLoader {
 	/* 802A478C */ void load(void const*);
 };
 
-// build JAU_JASInitializer (JAU_JASInitializer) False/False
-// build JKRSolidHeap (JKRSolidHeap) True/True
-/* top-level dependencies (begin JAU_JASInitializer) */
-// outer dependency: JKRSolidHeap
-/* top-level dependencies (end JAU_JASInitializer) */
+// build JAU_JASInitializer (['JAU_JASInitializer']) False/False
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+/* top-level dependencies (begin ['JAU_JASInitializer']) */
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['JAU_JASInitializer']) */
 struct JAU_JASInitializer {
-	// JKRSolidHeap
+	// ('JKRSolidHeap',)
 	/* 802A4AD0 */ JAU_JASInitializer();
 	/* 802A4B28 */ void initJASystem(JKRSolidHeap*);
 };
 
-// build JAU_JAIInitializer (JAU_JAIInitializer) False/False
-/* top-level dependencies (begin JAU_JAIInitializer) */
-/* top-level dependencies (end JAU_JAIInitializer) */
+// build JAU_JAIInitializer (['JAU_JAIInitializer']) False/False
+/* top-level dependencies (begin ['JAU_JAIInitializer']) */
+/* top-level dependencies (end ['JAU_JAIInitializer']) */
 struct JAU_JAIInitializer {
 	/* 802A4D3C */ JAU_JAIInitializer();
 	/* 802A4D60 */ void initJAInterface();
 };
 
-// build JAUSection (JAUSection) False/False
-/* top-level dependencies (begin JAUSection) */
-/* top-level dependencies (end JAUSection) */
+// build JAUSection (['JAUSection']) False/False
+/* top-level dependencies (begin ['JAUSection']) */
+/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
 	/* 802A50F8 */ void finishBuild();
 };
 
-// build JAUSectionHeap (JAUSectionHeap) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JAUSectionHeap) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JAUSectionHeap) */
+// build JAUSectionHeap (['JAUSectionHeap']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JAUSectionHeap']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 802A5E60 */ void setSeqDataArchive(JKRArchive*);
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 };
 
-// build Z2AudioArcLoader (Z2AudioArcLoader) False/False
-// build JAUSection (JAUSection) True/True
-/* top-level dependencies (begin Z2AudioArcLoader) */
-// outer dependency: JAUSection
-/* top-level dependencies (end Z2AudioArcLoader) */
+// build Z2AudioArcLoader (['Z2AudioArcLoader']) False/False
+// build JAUSection (['JAUSection']) True/True
+/* top-level dependencies (begin ['Z2AudioArcLoader']) */
+// outer dependency: ('JAUSection',)
+/* top-level dependencies (end ['Z2AudioArcLoader']) */
 struct Z2AudioArcLoader {
-	// JAUSection
+	// ('JAUSection',)
 	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
 };
 
-// build JASTrack (JASTrack) False/False
-/* top-level dependencies (begin JASTrack) */
-/* top-level dependencies (end JASTrack) */
+// build JASTrack (['JASTrack']) False/False
+/* top-level dependencies (begin ['JASTrack']) */
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 };
 
-// build Z2SoundMgr (Z2SoundMgr) False/False
-/* top-level dependencies (begin Z2SoundMgr) */
-/* top-level dependencies (end Z2SoundMgr) */
+// build Z2SoundMgr (['Z2SoundMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundMgr']) */
+/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
 	/* 802A9E80 */ Z2SoundMgr();
 	/* 802AA67C */ void framework();
@@ -229,33 +229,33 @@ struct Z2SoundMgr {
 	/* 802AA908 */ void initParams();
 };
 
-// build Z2SoundStarter (Z2SoundStarter) False/False
-/* top-level dependencies (begin Z2SoundStarter) */
-/* top-level dependencies (end Z2SoundStarter) */
+// build Z2SoundStarter (['Z2SoundStarter']) False/False
+/* top-level dependencies (begin ['Z2SoundStarter']) */
+/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
 	/* 802AAB94 */ Z2SoundStarter(bool);
 };
 
-// build Z2SeMgr (Z2SeMgr) False/False
-/* top-level dependencies (begin Z2SeMgr) */
-/* top-level dependencies (end Z2SeMgr) */
+// build Z2SeMgr (['Z2SeMgr']) False/False
+/* top-level dependencies (begin ['Z2SeMgr']) */
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
 	/* 802AB64C */ Z2SeMgr();
 	/* 802AB750 */ void initSe();
 	/* 802AE184 */ void processSeFramework();
 };
 
-// build Z2SeqMgr (Z2SeqMgr) False/False
-/* top-level dependencies (begin Z2SeqMgr) */
-/* top-level dependencies (end Z2SeqMgr) */
+// build Z2SeqMgr (['Z2SeqMgr']) False/False
+/* top-level dependencies (begin ['Z2SeqMgr']) */
+/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AEEA0 */ Z2SeqMgr();
 	/* 802B33A8 */ void processBgmFramework();
 };
 
-// build Z2StatusMgr (Z2StatusMgr) False/False
-/* top-level dependencies (begin Z2StatusMgr) */
-/* top-level dependencies (end Z2StatusMgr) */
+// build Z2StatusMgr (['Z2StatusMgr']) False/False
+/* top-level dependencies (begin ['Z2StatusMgr']) */
+/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B5F1C */ Z2StatusMgr();
 	/* 802B5F7C */ void processHeartGaugeSound();
@@ -263,46 +263,46 @@ struct Z2StatusMgr {
 	/* 802B671C */ void processTime();
 };
 
-// build Z2SceneMgr (Z2SceneMgr) False/False
-/* top-level dependencies (begin Z2SceneMgr) */
-/* top-level dependencies (end Z2SceneMgr) */
+// build Z2SceneMgr (['Z2SceneMgr']) False/False
+/* top-level dependencies (begin ['Z2SceneMgr']) */
+/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B6840 */ Z2SceneMgr();
 	/* 802B9C50 */ void framework();
 };
 
-// build Z2FxLineMgr (Z2FxLineMgr) False/False
-/* top-level dependencies (begin Z2FxLineMgr) */
-/* top-level dependencies (end Z2FxLineMgr) */
+// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
+/* top-level dependencies (begin ['Z2FxLineMgr']) */
+/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
 	/* 802BA7DC */ Z2FxLineMgr();
 };
 
-// build Z2Audience (Z2Audience) False/False
-/* top-level dependencies (begin Z2Audience) */
-/* top-level dependencies (end Z2Audience) */
+// build Z2Audience (['Z2Audience']) False/False
+/* top-level dependencies (begin ['Z2Audience']) */
+/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
 	/* 802BD130 */ Z2Audience();
 };
 
-// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
-/* top-level dependencies (begin Z2SoundObjMgr) */
-/* top-level dependencies (end Z2SoundObjMgr) */
+// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundObjMgr']) */
+/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF920 */ Z2SoundObjMgr();
 };
 
-// build Z2SpeechMgr2 (Z2SpeechMgr2) False/False
-/* top-level dependencies (begin Z2SpeechMgr2) */
-/* top-level dependencies (end Z2SpeechMgr2) */
+// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
+/* top-level dependencies (begin ['Z2SpeechMgr2']) */
+/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
 	/* 802CBC60 */ Z2SpeechMgr2();
 	/* 802CC9D0 */ void framework();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

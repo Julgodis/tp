@@ -9,74 +9,74 @@
 // Types:
 // 
 
-// build base_process_class (base_process_class) False/False
-/* top-level dependencies (begin base_process_class) */
-/* top-level dependencies (end base_process_class) */
+// build base_process_class (['base_process_class']) False/False
+/* top-level dependencies (begin ['base_process_class']) */
+/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build dComIfG_play_c (dComIfG_play_c) False/False
-/* top-level dependencies (begin dComIfG_play_c) */
-/* top-level dependencies (end dComIfG_play_c) */
+// build dComIfG_play_c (['dComIfG_play_c']) False/False
+/* top-level dependencies (begin ['dComIfG_play_c']) */
+/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002CAC4 */ void drawSimpleModel();
 };
 
-// build dLib_time_c (dLib_time_c) False/False
-/* top-level dependencies (begin dLib_time_c) */
-/* top-level dependencies (end dLib_time_c) */
+// build dLib_time_c (['dLib_time_c']) False/False
+/* top-level dependencies (begin ['dLib_time_c']) */
+/* top-level dependencies (end ['dLib_time_c']) */
 struct dLib_time_c {
 	/* 80032880 */ void stopTime();
 	/* 800328BC */ void startTime();
 };
 
-// build dDlst_peekZ_c (dDlst_peekZ_c) False/False
-/* top-level dependencies (begin dDlst_peekZ_c) */
-/* top-level dependencies (end dDlst_peekZ_c) */
+// build dDlst_peekZ_c (['dDlst_peekZ_c']) False/False
+/* top-level dependencies (begin ['dDlst_peekZ_c']) */
+/* top-level dependencies (end ['dDlst_peekZ_c']) */
 struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-// build dDvdErrorMsg_c (dDvdErrorMsg_c) False/False
-/* top-level dependencies (begin dDvdErrorMsg_c) */
-/* top-level dependencies (end dDvdErrorMsg_c) */
+// build dDvdErrorMsg_c (['dDvdErrorMsg_c']) False/False
+/* top-level dependencies (begin ['dDvdErrorMsg_c']) */
+/* top-level dependencies (end ['dDvdErrorMsg_c']) */
 struct dDvdErrorMsg_c {
 	/* 8009D354 */ void execute();
 };
 
-// build dShutdownErrorMsg_c (dShutdownErrorMsg_c) False/False
-/* top-level dependencies (begin dShutdownErrorMsg_c) */
-/* top-level dependencies (end dShutdownErrorMsg_c) */
+// build dShutdownErrorMsg_c (['dShutdownErrorMsg_c']) False/False
+/* top-level dependencies (begin ['dShutdownErrorMsg_c']) */
+/* top-level dependencies (end ['dShutdownErrorMsg_c']) */
 struct dShutdownErrorMsg_c {
 	/* 8009D790 */ void execute();
 };
 
-// build Z2SoundMgr (Z2SoundMgr) False/False
-/* top-level dependencies (begin Z2SoundMgr) */
-/* top-level dependencies (end Z2SoundMgr) */
+// build Z2SoundMgr (['Z2SoundMgr']) False/False
+/* top-level dependencies (begin ['Z2SoundMgr']) */
+/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
 	/* 802AA6B0 */ void pauseAllGameSound(bool);
 };
 
-// build JUTGamePad (JUTGamePad) False/False
-/* top-level dependencies (begin JUTGamePad) */
-/* top-level dependencies (end JUTGamePad) */
+// build JUTGamePad (['JUTGamePad']) False/False
+/* top-level dependencies (begin ['JUTGamePad']) */
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// build CRumble (JUTGamePad::CRumble) False/False
-	/* dependencies (begin JUTGamePad::CRumble) */
-	/* dependencies (end JUTGamePad::CRumble) */
+	// build CRumble (['JUTGamePad', 'CRumble']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
+	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
 		/* 802E1948 */ void stopPatternedRumble(s16);
 	};

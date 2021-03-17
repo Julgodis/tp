@@ -9,45 +9,44 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
-// build JStage (JStage) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStage (['JStage']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JStage (JStage) True/True
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TECameraProjection
-// outer dependency: JStage::TECameraView
-// outer dependency: Vec
-// outer dependency: JStage::TObject
-/* top-level dependencies (end JStage) */
+// build JStage (['JStage']) True/False
+struct JStage;
+// build JStage (['JStage']) True/True
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JStage', 'TECameraProjection')
+// outer dependency: ('JStage', 'TECameraView')
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TCamera (JStage::TCamera) False/False
-	/* dependencies (begin JStage::TCamera) */
-	// inner dependency: TECameraProjection (JStage::TECameraProjection) True False (for JStage::TCamera)
-	// build TECameraProjection (JStage::TECameraProjection) False/False
-	/* dependencies (begin JStage::TECameraProjection) */
-	/* dependencies (end JStage::TECameraProjection) */
+	// build TCamera (['JStage', 'TCamera']) False/False
+	/* dependencies (begin ['JStage', 'TCamera']) */
+	// inner dependency: 0 ('Vec',) (for ['JStage', 'TCamera'])
+	// inner dependency: 1 ('JStage', 'TECameraProjection') (for ['JStage', 'TCamera'])
+	// build TECameraProjection (['JStage', 'TECameraProjection']) False/False
+	/* dependencies (begin ['JStage', 'TECameraProjection']) */
+	/* dependencies (end ['JStage', 'TECameraProjection']) */
 	struct TECameraProjection {
 	};
 
-	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
-	// build TECameraView (JStage::TECameraView) False/False
-	/* dependencies (begin JStage::TECameraView) */
-	/* dependencies (end JStage::TECameraView) */
+	// inner dependency: 1 ('JStage', 'TECameraView') (for ['JStage', 'TCamera'])
+	// build TECameraView (['JStage', 'TECameraView']) False/False
+	/* dependencies (begin ['JStage', 'TECameraView']) */
+	/* dependencies (end ['JStage', 'TECameraView']) */
 	struct TECameraView {
 	};
 
-	/* dependencies (end JStage::TCamera) */
+	/* dependencies (end ['JStage', 'TCamera']) */
 	struct TCamera {
-		// JStage::TECameraProjection
-		// JStage::TECameraView
-		// Vec
+		// ('Vec',)
+		// ('JStage', 'TECameraProjection')
+		// ('JStage', 'TECameraView')
 		/* 80280BA0 */ ~TCamera();
 		/* 80280C00 */ s32 JSGFGetType() const;
 		/* 80280C08 */ bool JSGGetProjectionType() const;
@@ -74,11 +73,11 @@ struct JStage {
 		/* 80280C7C */ void JSGSetViewRoll(f32);
 	};
 
-	// build TECameraProjection (JStage::TECameraProjection) True/True
-	// build TECameraView (JStage::TECameraView) True/True
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TECameraProjection (['JStage', 'TECameraProjection']) True/True
+	// build TECameraView (['JStage', 'TECameraView']) True/True
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -96,7 +95,7 @@ struct JStage {
 
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

@@ -44,10 +44,10 @@ class Struct:
     types: Dict[str,"Struct"] = field(default_factory=dict)
 
     @property
-    def id(self):
+    def id(self) -> List[str]:
         if self.parent:
-            return f"{self.parent.id}::{self.name}"
-        return self.name
+            return self.parent.id + [self.name]
+        return [self.name]
 
     def __eq__(self, other):
         if self.__class__ != other.__class__:
@@ -55,7 +55,7 @@ class Struct:
         return self.id == other.id
 
     def __hash__(self):
-        return hash(self.id)
+        return hash(tuple(self.id))
 
 @dataclass(eq=False)
 class Namespace(Struct):
@@ -1033,33 +1033,29 @@ class CPPExporter:
             relocation_addrs = symbol.relocation_symbols(self.context, self.gst, section)
             relocation_symbols.update(relocation_addrs)
 
-    def get_or_create_type(self, parent, types, name):
-        parts = name.split("::")
-        class_name = parts[0]
-        if not class_name in types:
-            assert len(class_name) > 0
+    def get_or_create_type(self, parent, types, names):
+        class_name = names[0]
+        if not class_name.name in types:
             full_name = ""
             if parent:
                 full_name = f"{parent.id}::"
-            full_name += class_name
+            full_name += class_name.name
             if full_name in globals.NAMESPACES:
-                types[class_name] = Namespace(class_name, parent)
+                types[class_name.name] = Namespace(class_name.name, parent)
             else:
-                types[class_name] = Struct(class_name, parent)
+                types[class_name.name] = Struct(class_name.name, parent)
 
-        struct = types[class_name]
-        if len(parts) == 1:
+        struct = types[class_name.name]
+        if len(names) == 1:
             return struct
         else:
-            return self.get_or_create_type(struct, struct.types, "::".join(parts[1:]))
+            return self.get_or_create_type(struct, struct.types, names[1:])
 
-    def get_or_create_type_from_name(self, parent, types, name):
-        parts = name.split("::")
-        if len(parts) == 1:
+    def get_or_create_type_from_name(self, parent, types, names):
+        if len(names) == 1:
             return None
 
-        class_name = "::".join(parts[:-1])
-        struct = self.get_or_create_type(parent,types, class_name)
+        struct = self.get_or_create_type(parent,types, names[:-1])
         return struct
 
     def build_forward_type(self, forward_types, types, parent_struct, arg, indirect: bool = False):
@@ -1074,25 +1070,23 @@ class CPPExporter:
             return self.build_forward_type(forward_types, types, parent_struct, arg.of, indirect=True)
 
         if isinstance(arg, NamedType):
-            struct = self.get_or_create_type(None, types, arg.name)
+            struct = self.get_or_create_type(None, types, arg.names)
             if not struct:
                 forward_types.add(arg)
             else:
-                if not "::" in arg.name:
+                if arg.has_class:
                     forward_types.add(arg)
                 if parent_struct:
-                    parent_struct.dependecies.add(arg.name)
+                    parent_struct.dependecies.add(tuple([x.name for x in arg.names]))
 
     def build_forward_types(self, forward_types, types, symbol):
         if not isinstance(symbol, Function):
             return
 
         struct = None
-        if symbol.is_demangled():
-            if symbol.class_name:
-                class_name = symbol.class_name + "::".join(symbol.func_name.split("::")[:-1])
-                struct = self.get_or_create_type(None, types, class_name)
-                struct.symbols.append(symbol)
+        if symbol.has_class:
+            struct = self.get_or_create_type_from_name(None, types, symbol.func_name.parts)
+            struct.symbols.append(symbol)
 
         self.build_forward_type(forward_types, types, struct, symbol.return_type)
         for arg in symbol.argument_types:
@@ -1176,10 +1170,18 @@ class CPPExporter:
                     def get_all_dependencies(struct):
                         deps = set()
                         deps.update(struct.dependecies)
-                        deps.discard(struct)
+                        deps.discard(tuple(struct.id))
                         for child in struct.types.values():
                             deps.update(get_all_dependencies(child))
                         return deps
+
+                    def index_of_same(a, b):
+                        if len(a) >= len(b):
+                            return 0
+                        for i, a_value in enumerate(a):
+                            if a_value != b[i]:
+                                return i
+                        return len(a)
 
                     async def build_struct(struct, indent):
                         pad = "\t" * indent
@@ -1197,12 +1199,9 @@ class CPPExporter:
 
                         if indent == 0:
                             deps = get_all_dependencies(struct)
-                            deps.discard(struct.id)
+                            deps.discard(tuple(struct.id))
                             for dep in deps:
-                                # only need to generate the top-level struct
-                                if "::" in dep:
-                                    dep = dep.split("::")[0]
-                                await build_struct(types[dep], 0)
+                                await build_struct(types[dep[0]], 0)
 
                             await builder.write(f"{pad}/* top-level dependencies (begin {struct.id}) */")
                             for dep in deps:
@@ -1211,13 +1210,14 @@ class CPPExporter:
                         else:
                             await builder.write(f"{pad}/* dependencies (begin {struct.id}) */")
                             deps = struct.dependecies
-                            deps.discard(struct.id)
+                            deps.discard(tuple(struct.id))
                             for dep in deps:
-                                full_name = dep
-                                if not full_name.startswith(struct.parent.id):
+                                index = index_of_same(struct.parent.id, dep)
+                                await builder.write(f"{pad}// inner dependency: {index} {dep} (for {struct.id})")
+                                if index <= 0:
                                     continue
-                                dep = dep[len(struct.parent.id)+2:].split("::")[0]
-                                await builder.write(f"{pad}// inner dependency: {dep} ({full_name}) {dep in struct.parent.types} {struct.id==full_name} (for {struct.id})")
+                                full_name = dep
+                                dep = dep[index]
                                 if not dep in struct.parent.types:
                                     continue
                                 child = struct.parent.types[dep]
@@ -1234,7 +1234,7 @@ class CPPExporter:
 
                         await builder.write(f"{pad}{decl} {struct.name} {{")
                         deps = struct.dependecies
-                        deps.discard(struct.id)
+                        deps.discard(tuple(struct.id))
                         for dep in deps:
                             await builder.write(f"{pad}\t// {dep}")
 
@@ -1438,7 +1438,7 @@ class CPPExporter:
         # if cpp_gen:
         #    g.LOG.debug(f"generated cpp: '{path}'")
 
-            #self.context.debug(f"generated cpp: '{path}' ({tu.name})")
+        self.context.debug(f"generated cpp: '{path}' ({tu.name})")
 
         return tasks
 

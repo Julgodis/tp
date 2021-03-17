@@ -9,44 +9,44 @@
 // Types:
 // 
 
-// build JUTDbPrint (JUTDbPrint) False/False
-// build JUTFont (JUTFont) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
-struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
-	struct TColor {
-	};
-
-};
-
-/* top-level dependencies (begin JUTFont) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-	// JUtility::TColor
-	/* 802DED70 */ void setCharColor(JUtility::TColor);
-	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUTDbPrint (['JUTDbPrint']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-/* top-level dependencies (begin JUTDbPrint) */
-// outer dependency: JUTFont
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTDbPrint) */
+// build JUTFont (['JUTFont']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
+struct JUtility {
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin ['JUTFont']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFont']) */
+struct JUTFont {
+	// ('JUtility', 'TColor')
+	/* 802DED70 */ void setCharColor(JUtility::TColor);
+	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+/* top-level dependencies (begin ['JUTDbPrint']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['JUTDbPrint']) */
 struct JUTDbPrint {
-	// JUTFont
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JUTFont',)
 	/* 802E0148 */ JUTDbPrint(JUTFont*, JKRHeap*);
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 	/* 802E0204 */ void changeFont(JUTFont*);
@@ -56,12 +56,12 @@ struct JUTDbPrint {
 	/* 802E0440 */ void drawString(int, int, int, u8 const*);
 };
 
-// build JUTFont (JUTFont) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JUtility (JUtility) True/True
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build JUTFont (['JUTFont']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();

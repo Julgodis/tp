@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build daItemBase_c (daItemBase_c) False/False
-/* top-level dependencies (begin daItemBase_c) */
-/* top-level dependencies (end daItemBase_c) */
+// build daItemBase_c (['daItemBase_c']) False/False
+/* top-level dependencies (begin ['daItemBase_c']) */
+/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037A5C */ void getItemNo();
 	/* 80037A64 */ void hide();
@@ -23,9 +23,9 @@ struct daItemBase_c {
 	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 

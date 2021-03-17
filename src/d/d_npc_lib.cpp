@@ -9,19 +9,34 @@
 // Types:
 // 
 
-// build dNpcLib_lookat_c (dNpcLib_lookat_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dNpcLib_lookat_c (['dNpcLib_lookat_c']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
+struct J3DModel {
+};
+
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 	/* 80266B34 */ void operator-(Vec const&) const;
@@ -29,38 +44,23 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
-};
-
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin dNpcLib_lookat_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModel
-// outer dependency: csXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dNpcLib_lookat_c) */
+/* top-level dependencies (begin ['dNpcLib_lookat_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('J3DModel',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dNpcLib_lookat_c']) */
 struct dNpcLib_lookat_c {
-	// cXyz
-	// J3DModel
-	// csXyz
-	// fopAc_ac_c
+	// ('csXyz',)
+	// ('J3DModel',)
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80251314 */ dNpcLib_lookat_c();
 	/* 8025140C */ void init(J3DModel*, int*, csXyz*, csXyz*);
 	/* 80251534 */ void action(cXyz, cXyz, fopAc_ac_c*, f32 (* )[4], int);
@@ -71,26 +71,26 @@ struct dNpcLib_lookat_c {
 	/* 80252094 */ ~dNpcLib_lookat_c();
 };
 
-// build J3DModel (J3DModel) True/True
-// build csXyz (csXyz) True/True
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin mDoMtx_stack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build J3DModel (['J3DModel']) True/True
+// build csXyz (['csXyz']) True/True
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// cXyz
-	// csXyz
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CE9C */ void XYZrotS(csXyz const&);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

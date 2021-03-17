@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build JUTFont (JUTFont) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTFont (['JUTFont']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTFont) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFont) */
+/* top-level dependencies (begin ['JUTFont']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802DECF8 */ JUTFont();
 	/* 802DED24 */ void initialize_state();
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
@@ -34,7 +34,7 @@ struct JUTFont {
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-// build JUtility (JUtility) True/True
+// build JUtility (['JUtility']) True/True
 // 
 // Forward References:
 // 

@@ -9,19 +9,19 @@
 // Types:
 // 
 
-// build JAUAudioArcLoader (JAUAudioArcLoader) False/False
-// build JAUSection (JAUSection) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAUAudioArcLoader (['JAUAudioArcLoader']) False/False
+// build JAUSection (['JAUSection']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin JAUSection) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSection) */
+/* top-level dependencies (begin ['JAUSection']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802A51E4 */ void newSoundTable(void const*, u32, bool);
 	/* 802A52A0 */ void newSoundNameTable(void const*, u32, bool);
 	/* 802A535C */ void newStreamFileTable(void const*, bool);
@@ -36,11 +36,11 @@ struct JAUSection {
 	/* 802A5D9C */ void endNewBankTable();
 };
 
-/* top-level dependencies (begin JAUAudioArcLoader) */
-// outer dependency: JAUSection
-/* top-level dependencies (end JAUAudioArcLoader) */
+/* top-level dependencies (begin ['JAUAudioArcLoader']) */
+// outer dependency: ('JAUSection',)
+/* top-level dependencies (end ['JAUAudioArcLoader']) */
 struct JAUAudioArcLoader {
-	// JAUSection
+	// ('JAUSection',)
 	/* 802A4740 */ JAUAudioArcLoader(JAUSection*);
 	/* 802A478C */ void load(void const*);
 	/* 802A47AC */ void readWS(u32, void const*, u32);
@@ -59,10 +59,10 @@ struct JAUAudioArcLoader {
 	/* 802A49FC */ ~JAUAudioArcLoader();
 };
 
-// build JAUSection (JAUSection) True/True
-// build JAUAudioArcInterpreter (JAUAudioArcInterpreter) False/False
-/* top-level dependencies (begin JAUAudioArcInterpreter) */
-/* top-level dependencies (end JAUAudioArcInterpreter) */
+// build JAUSection (['JAUSection']) True/True
+// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
+/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
+/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4244 */ JAUAudioArcInterpreter();
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
@@ -70,10 +70,10 @@ struct JAUAudioArcInterpreter {
 	/* 802A4314 */ bool readCommandMore(u32);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build JAUSectionHeap (JAUSectionHeap) False/False
-/* top-level dependencies (begin JAUSectionHeap) */
-/* top-level dependencies (end JAUSectionHeap) */
+// build JAISoundID (['JAISoundID']) True/True
+// build JAUSectionHeap (['JAUSectionHeap']) False/False
+/* top-level dependencies (begin ['JAUSectionHeap']) */
+/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 };

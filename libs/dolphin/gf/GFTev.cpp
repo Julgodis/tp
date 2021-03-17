@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build _GXTevRegID (_GXTevRegID) False/False
-/* top-level dependencies (begin _GXTevRegID) */
-/* top-level dependencies (end _GXTevRegID) */
+// build _GXTevRegID (['_GXTevRegID']) False/False
+/* top-level dependencies (begin ['_GXTevRegID']) */
+/* top-level dependencies (end ['_GXTevRegID']) */
 struct _GXTevRegID {
 };
 
-// build _GXColorS10 (_GXColorS10) False/False
-/* top-level dependencies (begin _GXColorS10) */
-/* top-level dependencies (end _GXColorS10) */
+// build _GXColorS10 (['_GXColorS10']) False/False
+/* top-level dependencies (begin ['_GXColorS10']) */
+/* top-level dependencies (end ['_GXColorS10']) */
 struct _GXColorS10 {
 };
 

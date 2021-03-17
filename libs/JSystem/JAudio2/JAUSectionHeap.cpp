@@ -9,66 +9,66 @@
 // Types:
 // 
 
-// build JAUSection (JAUSection) False/False
-// build JAUSectionHeap (JAUSectionHeap) False/False
-// build JAISeqDataUser (JAISeqDataUser) False/False
-/* top-level dependencies (begin JAISeqDataUser) */
-/* top-level dependencies (end JAISeqDataUser) */
-struct JAISeqDataUser {
-};
-
-// build JAISeqData (JAISeqData) False/False
-/* top-level dependencies (begin JAISeqData) */
-/* top-level dependencies (end JAISeqData) */
+// build JAUSection (['JAUSection']) False/False
+// build JAUSectionHeap (['JAUSectionHeap']) False/False
+// build JAISeqData (['JAISeqData']) False/False
+/* top-level dependencies (begin ['JAISeqData']) */
+/* top-level dependencies (end ['JAISeqData']) */
 struct JAISeqData {
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
+struct JAISoundID {
+};
+
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JAISeqDataUser (['JAISeqDataUser']) False/False
+/* top-level dependencies (begin ['JAISeqDataUser']) */
+/* top-level dependencies (end ['JAISeqDataUser']) */
+struct JAISeqDataUser {
+};
+
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE5F8 */ void freeTail();
 	/* 802CE72C */ void getFreeSize();
 };
 
-/* top-level dependencies (begin JKRSolidHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRSolidHeap) */
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
-/* top-level dependencies (begin JAUSectionHeap) */
-// outer dependency: JAISeqDataUser
-// outer dependency: JAISeqData
-// outer dependency: JKRArchive
-// outer dependency: JKRSolidHeap
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSectionHeap) */
+/* top-level dependencies (begin ['JAUSectionHeap']) */
+// outer dependency: ('JAISeqData',)
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('JAISeqDataUser',)
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
-	// JKRArchive
-	// JKRSolidHeap
-	// JAISoundID
-	// JAISeqDataUser
-	// JAISeqData
-	// build TSectionHeapData (JAUSectionHeap::TSectionHeapData) False/False
-	/* dependencies (begin JAUSectionHeap::TSectionHeapData) */
-	/* dependencies (end JAUSectionHeap::TSectionHeapData) */
+	// ('JAISeqData',)
+	// ('JAISoundID',)
+	// ('JKRArchive',)
+	// ('JAISeqDataUser',)
+	// ('JKRSolidHeap',)
+	// build TSectionHeapData (['JAUSectionHeap', 'TSectionHeapData']) False/False
+	/* dependencies (begin ['JAUSectionHeap', 'TSectionHeapData']) */
+	/* dependencies (end ['JAUSectionHeap', 'TSectionHeapData']) */
 	struct TSectionHeapData {
 		/* 802A5DF4 */ TSectionHeapData();
 	};
@@ -85,17 +85,17 @@ struct JAUSectionHeap {
 	/* 802A6278 */ ~JAUSectionHeap();
 };
 
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAUSection) */
-// outer dependency: JAUSectionHeap
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSection) */
+// build JAISoundID (['JAISoundID']) True/True
+/* top-level dependencies (begin ['JAUSection']) */
+// outer dependency: ('JAUSectionHeap',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
-	// JAUSectionHeap
-	// JAISoundID
-	// build TSectionData (JAUSection::TSectionData) False/False
-	/* dependencies (begin JAUSection::TSectionData) */
-	/* dependencies (end JAUSection::TSectionData) */
+	// ('JAUSectionHeap',)
+	// ('JAISoundID',)
+	// build TSectionData (['JAUSection', 'TSectionData']) False/False
+	/* dependencies (begin ['JAUSection', 'TSectionData']) */
+	/* dependencies (end ['JAUSection', 'TSectionData']) */
 	struct TSectionData {
 		/* 802A4EE8 */ TSectionData();
 		/* 802A4F68 */ void resetRegisteredBankTables();
@@ -122,120 +122,120 @@ struct JAUSection {
 	/* 802A6468 */ ~JAUSection();
 };
 
-// build JAUSectionHeap (JAUSectionHeap) True/True
-// build JAISoundID (JAISoundID) True/True
-// build JKRArchive (JKRArchive) True/True
-// build JKRSolidHeap (JKRSolidHeap) True/True
-// build JAISeqDataUser (JAISeqDataUser) True/True
-// build JAISeqData (JAISeqData) True/True
-// build JASResArcLoader (JASResArcLoader) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JASResArcLoader) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JASResArcLoader) */
+// build JAUSectionHeap (['JAUSectionHeap']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+// build JAISeqDataUser (['JAISeqDataUser']) True/True
+// build JAISeqData (['JAISeqData']) True/True
+// build JASResArcLoader (['JASResArcLoader']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JASResArcLoader']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 };
 
-// build JASWSParser (JASWSParser) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JASWSParser) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASWSParser) */
+// build JASWSParser (['JASWSParser']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JASWSParser']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JASWSParser']) */
 struct JASWSParser {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASBNKParser (JASBNKParser) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JASBNKParser) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASBNKParser) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASBNKParser (['JASBNKParser']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JASBNKParser']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JASBNKParser']) */
 struct JASBNKParser {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80299538 */ void createBank(void const*, JKRHeap*);
 };
 
-// build JASWaveArc (JASWaveArc) False/False
-// build JASHeap (JASHeap) False/False
-/* top-level dependencies (begin JASHeap) */
-/* top-level dependencies (end JASHeap) */
+// build JASWaveArc (['JASWaveArc']) False/False
+// build JASHeap (['JASHeap']) False/False
+/* top-level dependencies (begin ['JASHeap']) */
+/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
 };
 
-/* top-level dependencies (begin JASWaveArc) */
-// outer dependency: JASHeap
-/* top-level dependencies (end JASWaveArc) */
+/* top-level dependencies (begin ['JASWaveArc']) */
+// outer dependency: ('JASHeap',)
+/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
-	// JASHeap
+	// ('JASHeap',)
 	/* 8029A4C0 */ void load(JASHeap*);
 };
 
-// build JASHeap (JASHeap) True/True
-// build JAISeqDataMgr (JAISeqDataMgr) False/False
-/* top-level dependencies (begin JAISeqDataMgr) */
-/* top-level dependencies (end JAISeqDataMgr) */
+// build JASHeap (['JASHeap']) True/True
+// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
+/* top-level dependencies (begin ['JAISeqDataMgr']) */
+/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };
 
-// build JAIStreamDataMgr (JAIStreamDataMgr) False/False
-/* top-level dependencies (begin JAIStreamDataMgr) */
-/* top-level dependencies (end JAIStreamDataMgr) */
+// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamDataMgr']) */
+/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAUBankTable (JAUBankTable) False/False
-/* top-level dependencies (begin JAUBankTable) */
-/* top-level dependencies (end JAUBankTable) */
+// build JAUBankTable (['JAUBankTable']) False/False
+/* top-level dependencies (begin ['JAUBankTable']) */
+/* top-level dependencies (end ['JAUBankTable']) */
 struct JAUBankTable {
 	/* 802A4AA0 */ void getBank(u32) const;
 };
 
-// build JAUSeqCollection (JAUSeqCollection) False/False
-/* top-level dependencies (begin JAUSeqCollection) */
-/* top-level dependencies (end JAUSeqCollection) */
+// build JAUSeqCollection (['JAUSeqCollection']) False/False
+/* top-level dependencies (begin ['JAUSeqCollection']) */
+/* top-level dependencies (end ['JAUSeqCollection']) */
 struct JAUSeqCollection {
 	/* 802A66AC */ void init(void const*);
 };
 
-// build JAUSeqDataMgr_SeqCollection (JAUSeqDataMgr_SeqCollection) False/False
-/* top-level dependencies (begin JAUSeqDataMgr_SeqCollection) */
-/* top-level dependencies (end JAUSeqDataMgr_SeqCollection) */
+// build JAUSeqDataMgr_SeqCollection (['JAUSeqDataMgr_SeqCollection']) False/False
+/* top-level dependencies (begin ['JAUSeqDataMgr_SeqCollection']) */
+/* top-level dependencies (end ['JAUSeqDataMgr_SeqCollection']) */
 struct JAUSeqDataMgr_SeqCollection {
 	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
 };
 
-// build JAUSeqDataBlock (JAUSeqDataBlock) False/False
-/* top-level dependencies (begin JAUSeqDataBlock) */
-/* top-level dependencies (end JAUSeqDataBlock) */
+// build JAUSeqDataBlock (['JAUSeqDataBlock']) False/False
+/* top-level dependencies (begin ['JAUSeqDataBlock']) */
+/* top-level dependencies (end ['JAUSeqDataBlock']) */
 struct JAUSeqDataBlock {
 	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
-// build JAUDynamicSeqDataBlocks (JAUDynamicSeqDataBlocks) False/False
-// build JAISeqDataUser (JAISeqDataUser) True/True
-// build JAISeqData (JAISeqData) True/True
-// build JKRArchive (JKRArchive) True/True
-// build JAUSeqDataBlock (JAUSeqDataBlock) True/True
-// build JAISoundID (JAISoundID) True/True
-/* top-level dependencies (begin JAUDynamicSeqDataBlocks) */
-// outer dependency: JAISeqDataUser
-// outer dependency: JAISeqData
-// outer dependency: JKRArchive
-// outer dependency: JAUSeqDataBlock
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUDynamicSeqDataBlocks) */
+// build JAUDynamicSeqDataBlocks (['JAUDynamicSeqDataBlocks']) False/False
+// build JAISeqData (['JAISeqData']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JAISeqDataUser (['JAISeqDataUser']) True/True
+// build JAUSeqDataBlock (['JAUSeqDataBlock']) True/True
+/* top-level dependencies (begin ['JAUDynamicSeqDataBlocks']) */
+// outer dependency: ('JAISeqData',)
+// outer dependency: ('JAISoundID',)
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('JAISeqDataUser',)
+// outer dependency: ('JAUSeqDataBlock',)
+/* top-level dependencies (end ['JAUDynamicSeqDataBlocks']) */
 struct JAUDynamicSeqDataBlocks {
-	// JKRArchive
-	// JAISoundID
-	// JAISeqDataUser
-	// JAISeqData
-	// JAUSeqDataBlock
+	// ('JAISeqData',)
+	// ('JAISoundID',)
+	// ('JAUSeqDataBlock',)
+	// ('JKRArchive',)
+	// ('JAISeqDataUser',)
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);
 	/* 802A6AA8 */ void getSeqData(JAISoundID, JAISeqDataUser*, JAISeqData*, bool);
@@ -244,23 +244,23 @@ struct JAUDynamicSeqDataBlocks {
 	/* 802A6D48 */ void releaseIdleDynamicSeqDataBlock(JAISeqDataUser*);
 };
 
-// build JAUSoundTable (JAUSoundTable) False/False
-/* top-level dependencies (begin JAUSoundTable) */
-/* top-level dependencies (end JAUSoundTable) */
+// build JAUSoundTable (['JAUSoundTable']) False/False
+/* top-level dependencies (begin ['JAUSoundTable']) */
+/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
 	/* 802A7114 */ void init(void const*);
 };
 
-// build JAUSoundNameTable (JAUSoundNameTable) False/False
-/* top-level dependencies (begin JAUSoundNameTable) */
-/* top-level dependencies (end JAUSoundNameTable) */
+// build JAUSoundNameTable (['JAUSoundNameTable']) False/False
+/* top-level dependencies (begin ['JAUSoundNameTable']) */
+/* top-level dependencies (end ['JAUSoundNameTable']) */
 struct JAUSoundNameTable {
 	/* 802A73D4 */ void init(void const*);
 };
 
-// build JAUStreamFileTable (JAUStreamFileTable) False/False
-/* top-level dependencies (begin JAUStreamFileTable) */
-/* top-level dependencies (end JAUStreamFileTable) */
+// build JAUStreamFileTable (['JAUStreamFileTable']) False/False
+/* top-level dependencies (begin ['JAUStreamFileTable']) */
+/* top-level dependencies (end ['JAUStreamFileTable']) */
 struct JAUStreamFileTable {
 	/* 802A7420 */ JAUStreamFileTable();
 	/* 802A742C */ void init(void const*);
@@ -268,29 +268,29 @@ struct JAUStreamFileTable {
 	/* 802A7484 */ void getFilePath(int) const;
 };
 
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);

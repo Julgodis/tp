@@ -9,45 +9,45 @@
 // Types:
 // 
 
-// build process_priority_class (process_priority_class) False/False
-/* top-level dependencies (begin process_priority_class) */
-/* top-level dependencies (end process_priority_class) */
+// build process_priority_class (['process_priority_class']) False/False
+/* top-level dependencies (begin ['process_priority_class']) */
+/* top-level dependencies (end ['process_priority_class']) */
 struct process_priority_class {
 };
 
-// build process_method_tag_class (process_method_tag_class) False/False
-/* top-level dependencies (begin process_method_tag_class) */
-/* top-level dependencies (end process_method_tag_class) */
+// build process_method_tag_class (['process_method_tag_class']) False/False
+/* top-level dependencies (begin ['process_method_tag_class']) */
+/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build layer_management_tag_class (layer_management_tag_class) False/False
-/* top-level dependencies (begin layer_management_tag_class) */
-/* top-level dependencies (end layer_management_tag_class) */
+// build layer_management_tag_class (['layer_management_tag_class']) False/False
+/* top-level dependencies (begin ['layer_management_tag_class']) */
+/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build line_tag (line_tag) False/False
-/* top-level dependencies (begin line_tag) */
-/* top-level dependencies (end line_tag) */
+// build line_tag (['line_tag']) False/False
+/* top-level dependencies (begin ['line_tag']) */
+/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 

@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin mDoGph_gInf_c) */
-// outer dependency: _GXColor
-/* top-level dependencies (end mDoGph_gInf_c) */
+/* top-level dependencies (begin ['mDoGph_gInf_c']) */
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
-	// _GXColor
-	// build bloom_c (mDoGph_gInf_c::bloom_c) False/False
-	/* dependencies (begin mDoGph_gInf_c::bloom_c) */
-	/* dependencies (end mDoGph_gInf_c::bloom_c) */
+	// ('_GXColor',)
+	// build bloom_c (['mDoGph_gInf_c', 'bloom_c']) False/False
+	/* dependencies (begin ['mDoGph_gInf_c', 'bloom_c']) */
+	/* dependencies (end ['mDoGph_gInf_c', 'bloom_c']) */
 	struct bloom_c {
 		/* 80009544 */ void create();
 		/* 800095F8 */ void remove();
@@ -40,108 +40,108 @@ struct mDoGph_gInf_c {
 	/* 80008330 */ void calcFade();
 };
 
-// build _GXColor (_GXColor) True/True
-// build view_class (view_class) False/False
-/* top-level dependencies (begin view_class) */
-/* top-level dependencies (end view_class) */
+// build _GXColor (['_GXColor']) True/True
+// build view_class (['view_class']) False/False
+/* top-level dependencies (begin ['view_class']) */
+/* top-level dependencies (end ['view_class']) */
 struct view_class {
 };
 
-// build view_port_class (view_port_class) False/False
-/* top-level dependencies (begin view_port_class) */
-/* top-level dependencies (end view_port_class) */
+// build view_port_class (['view_port_class']) False/False
+/* top-level dependencies (begin ['view_port_class']) */
+/* top-level dependencies (end ['view_port_class']) */
 struct view_port_class {
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 8000B118 */ ~J2DOrthoGraph();
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
 };
 
-// build daPy_py_c (daPy_py_c) False/False
-/* top-level dependencies (begin daPy_py_c) */
-/* top-level dependencies (end daPy_py_c) */
+// build daPy_py_c (['daPy_py_c']) False/False
+/* top-level dependencies (begin ['daPy_py_c']) */
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8000B1E4 */ s32 getAtnActorID() const;
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build dPa_control_c (dPa_control_c) False/False
-// build JPADrawInfo (JPADrawInfo) False/False
-/* top-level dependencies (begin JPADrawInfo) */
-/* top-level dependencies (end JPADrawInfo) */
+// build dPa_control_c (['dPa_control_c']) False/False
+// build JPADrawInfo (['JPADrawInfo']) False/False
+/* top-level dependencies (begin ['JPADrawInfo']) */
+/* top-level dependencies (end ['JPADrawInfo']) */
 struct JPADrawInfo {
 };
 
-/* top-level dependencies (begin dPa_control_c) */
-// outer dependency: JPADrawInfo
-/* top-level dependencies (end dPa_control_c) */
+/* top-level dependencies (begin ['dPa_control_c']) */
+// outer dependency: ('JPADrawInfo',)
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// JPADrawInfo
+	// ('JPADrawInfo',)
 	/* 8004C134 */ void calcMenu();
 	/* 8004C188 */ void draw(JPADrawInfo*, u8);
 };
 
-// build JPADrawInfo (JPADrawInfo) True/True
-// build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
-/* top-level dependencies (begin dDlst_shadowControl_c) */
-/* top-level dependencies (end dDlst_shadowControl_c) */
+// build JPADrawInfo (['JPADrawInfo']) True/True
+// build dDlst_shadowControl_c (['dDlst_shadowControl_c']) False/False
+/* top-level dependencies (begin ['dDlst_shadowControl_c']) */
+/* top-level dependencies (end ['dDlst_shadowControl_c']) */
 struct dDlst_shadowControl_c {
 	/* 800557C8 */ void imageDraw(f32 (* )[4]);
 	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-/* top-level dependencies (begin J3DDrawBuffer) */
-/* top-level dependencies (end J3DDrawBuffer) */
-struct J3DDrawBuffer {
-};
-
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: J3DDrawBuffer
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
+/* top-level dependencies (begin ['J3DDrawBuffer']) */
+/* top-level dependencies (end ['J3DDrawBuffer']) */
+struct J3DDrawBuffer {
+};
+
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+// outer dependency: ('J3DDrawBuffer',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// J3DDrawBuffer
-	// dDlst_base_c
+	// ('dDlst_base_c',)
+	// ('J3DDrawBuffer',)
 	/* 80056390 */ void init();
 	/* 80056538 */ void reset();
 	/* 800566D4 */ void drawOpaDrawList(J3DDrawBuffer*);
@@ -152,98 +152,98 @@ struct dDlst_list_c {
 	/* 80056900 */ void calcWipe();
 };
 
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
-// build dDlst_base_c (dDlst_base_c) True/True
-// build dAttention_c (dAttention_c) False/False
-/* top-level dependencies (begin dAttention_c) */
-/* top-level dependencies (end dAttention_c) */
+// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build dAttention_c (['dAttention_c']) False/False
+/* top-level dependencies (begin ['dAttention_c']) */
+/* top-level dependencies (end ['dAttention_c']) */
 struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
-// build dMenu_Collect3D_c (dMenu_Collect3D_c) False/False
-/* top-level dependencies (begin dMenu_Collect3D_c) */
-/* top-level dependencies (end dMenu_Collect3D_c) */
+// build dMenu_Collect3D_c (['dMenu_Collect3D_c']) False/False
+/* top-level dependencies (begin ['dMenu_Collect3D_c']) */
+/* top-level dependencies (end ['dMenu_Collect3D_c']) */
 struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
-// build JFWDisplay (JFWDisplay) False/False
-// build JUTXfb (JUTXfb) False/False
-/* top-level dependencies (begin JUTXfb) */
-/* top-level dependencies (end JUTXfb) */
+// build JFWDisplay (['JFWDisplay']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
+struct _GXRenderModeObj {
+};
+
+// build JUTXfb (['JUTXfb']) False/False
+/* top-level dependencies (begin ['JUTXfb']) */
+/* top-level dependencies (end ['JUTXfb']) */
 struct JUTXfb {
-	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
-	/* dependencies (begin JUTXfb::EXfbNumber) */
-	/* dependencies (end JUTXfb::EXfbNumber) */
+	// build EXfbNumber (['JUTXfb', 'EXfbNumber']) False/False
+	/* dependencies (begin ['JUTXfb', 'EXfbNumber']) */
+	/* dependencies (end ['JUTXfb', 'EXfbNumber']) */
 	struct EXfbNumber {
 	};
 
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
-struct _GXRenderModeObj {
-};
-
-/* top-level dependencies (begin JFWDisplay) */
-// outer dependency: JUTXfb::EXfbNumber
-// outer dependency: JKRHeap
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JFWDisplay) */
+/* top-level dependencies (begin ['JFWDisplay']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('_GXRenderModeObj',)
+// outer dependency: ('JUTXfb', 'EXfbNumber')
+/* top-level dependencies (end ['JFWDisplay']) */
 struct JFWDisplay {
-	// JUTXfb::EXfbNumber
-	// JKRHeap
-	// _GXRenderModeObj
+	// ('JKRHeap',)
+	// ('_GXRenderModeObj',)
+	// ('JUTXfb', 'EXfbNumber')
 	/* 802721DC */ void createManager(_GXRenderModeObj const*, JKRHeap*, JUTXfb::EXfbNumber, bool);
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build JUTXfb (JUTXfb) True/True
-// build JUTVideo (JUTVideo) False/False
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-/* top-level dependencies (begin JUTVideo) */
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTVideo) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build JUTXfb (['JUTXfb']) True/True
+// build JUTVideo (['JUTVideo']) False/False
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+/* top-level dependencies (begin ['JUTVideo']) */
+// outer dependency: ('_GXRenderModeObj',)
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
-	// _GXRenderModeObj
+	// ('_GXRenderModeObj',)
 	/* 802E5198 */ void setRenderMode(_GXRenderModeObj const*);
 };
 
-// build JUTFader (JUTFader) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTFader (['JUTFader']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTFader) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFader) */
+/* top-level dependencies (begin ['JUTFader']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E5530 */ JUTFader(int, int, int, int, JUtility::TColor);
 };
 
-// build JUtility (JUtility) True/True
-// build J2DPrint (J2DPrint) False/False
-/* top-level dependencies (begin J2DPrint) */
-/* top-level dependencies (end J2DPrint) */
+// build JUtility (['JUtility']) True/True
+// build J2DPrint (['J2DPrint']) False/False
+/* top-level dependencies (begin ['J2DPrint']) */
+/* top-level dependencies (end ['J2DPrint']) */
 struct J2DPrint {
 	/* 802F4658 */ void setBuffer(u32);
 };
 
-// build J3DSys (J3DSys) False/False
-/* top-level dependencies (begin J3DSys) */
-/* top-level dependencies (end J3DSys) */
+// build J3DSys (['J3DSys']) False/False
+/* top-level dependencies (begin ['J3DSys']) */
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 803100BC */ void drawInit();
 	/* 8031073C */ void reinitGX();

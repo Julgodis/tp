@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build J2DDataManage (J2DDataManage) False/False
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build J2DDataManage (['J2DDataManage']) False/False
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-/* top-level dependencies (begin J2DDataManage) */
-// outer dependency: JSUInputStream
-/* top-level dependencies (end J2DDataManage) */
+/* top-level dependencies (begin ['J2DDataManage']) */
+// outer dependency: ('JSUInputStream',)
+/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
-	// JSUInputStream
+	// ('JSUInputStream',)
 	/* 8030CE18 */ void get(char const*);
 	/* 8030CE7C */ void get(JSUInputStream*);
 };
 
-// build JSUInputStream (JSUInputStream) True/True
-// build J2DResReference (J2DResReference) False/False
-/* top-level dependencies (begin J2DResReference) */
-/* top-level dependencies (end J2DResReference) */
+// build JSUInputStream (['JSUInputStream']) True/True
+// build J2DResReference (['J2DResReference']) False/False
+/* top-level dependencies (begin ['J2DResReference']) */
+/* top-level dependencies (end ['J2DResReference']) */
 struct J2DResReference {
 	/* 8030CF10 */ void getResReference(u16) const;
 	/* 8030CF44 */ void getName(u16) const;

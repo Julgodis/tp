@@ -9,59 +9,61 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
-// build _GXSpotFn (_GXSpotFn) False/False
-/* top-level dependencies (begin _GXSpotFn) */
-/* top-level dependencies (end _GXSpotFn) */
+// build JStage (['JStage']) False/False
+// build _GXSpotFn (['_GXSpotFn']) False/False
+/* top-level dependencies (begin ['_GXSpotFn']) */
+/* top-level dependencies (end ['_GXSpotFn']) */
 struct _GXSpotFn {
 };
 
-// build _GXDistAttnFn (_GXDistAttnFn) False/False
-/* top-level dependencies (begin _GXDistAttnFn) */
-/* top-level dependencies (end _GXDistAttnFn) */
-struct _GXDistAttnFn {
-};
-
-// build JStage (JStage) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build JStage (['JStage']) True/False
+struct JStage;
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TELight
-// outer dependency: _GXSpotFn
-// outer dependency: _GXDistAttnFn
-// outer dependency: JStage::TObject
-// outer dependency: Vec
-// outer dependency: _GXColor
-/* top-level dependencies (end JStage) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
+struct Vec {
+};
+
+// build _GXDistAttnFn (['_GXDistAttnFn']) False/False
+/* top-level dependencies (begin ['_GXDistAttnFn']) */
+/* top-level dependencies (end ['_GXDistAttnFn']) */
+struct _GXDistAttnFn {
+};
+
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('_GXSpotFn',)
+// outer dependency: ('JStage', 'TELight')
+// outer dependency: ('_GXColor',)
+// outer dependency: ('Vec',)
+// outer dependency: ('_GXDistAttnFn',)
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TLight (JStage::TLight) False/False
-	/* dependencies (begin JStage::TLight) */
-	// inner dependency: TELight (JStage::TELight) True False (for JStage::TLight)
-	// build TELight (JStage::TELight) False/False
-	/* dependencies (begin JStage::TELight) */
-	/* dependencies (end JStage::TELight) */
+	// build TLight (['JStage', 'TLight']) False/False
+	/* dependencies (begin ['JStage', 'TLight']) */
+	// inner dependency: 0 ('_GXSpotFn',) (for ['JStage', 'TLight'])
+	// inner dependency: 1 ('JStage', 'TELight') (for ['JStage', 'TLight'])
+	// build TELight (['JStage', 'TELight']) False/False
+	/* dependencies (begin ['JStage', 'TELight']) */
+	/* dependencies (end ['JStage', 'TELight']) */
 	struct TELight {
 	};
 
-	/* dependencies (end JStage::TLight) */
+	// inner dependency: 0 ('_GXColor',) (for ['JStage', 'TLight'])
+	// inner dependency: 0 ('Vec',) (for ['JStage', 'TLight'])
+	// inner dependency: 0 ('_GXDistAttnFn',) (for ['JStage', 'TLight'])
+	/* dependencies (end ['JStage', 'TLight']) */
 	struct TLight {
-		// _GXSpotFn
-		// JStage::TELight
-		// _GXDistAttnFn
-		// Vec
-		// _GXColor
+		// ('_GXSpotFn',)
+		// ('JStage', 'TELight')
+		// ('_GXColor',)
+		// ('Vec',)
+		// ('_GXDistAttnFn',)
 		/* 80280D28 */ ~TLight();
 		/* 80280D88 */ s32 JSGFGetType() const;
 		/* 80280D90 */ bool JSGGetLightType() const;
@@ -78,10 +80,10 @@ struct JStage {
 		/* 80280DD0 */ void JSGSetDirection(Vec const&);
 	};
 
-	// build TELight (JStage::TELight) True/True
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TELight (['JStage', 'TELight']) True/True
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -99,10 +101,10 @@ struct JStage {
 
 };
 
-// build _GXColor (_GXColor) True/True
-// build _GXDistAttnFn (_GXDistAttnFn) True/True
-// build _GXSpotFn (_GXSpotFn) True/True
-// build Vec (Vec) True/True
+// build _GXColor (['_GXColor']) True/True
+// build _GXDistAttnFn (['_GXDistAttnFn']) True/True
+// build _GXSpotFn (['_GXSpotFn']) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

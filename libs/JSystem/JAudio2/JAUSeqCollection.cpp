@@ -9,57 +9,57 @@
 // Types:
 // 
 
-// build JAUSeqCollection (JAUSeqCollection) False/False
-// build JAISeqData (JAISeqData) False/False
-/* top-level dependencies (begin JAISeqData) */
-/* top-level dependencies (end JAISeqData) */
+// build JAUSeqCollection (['JAUSeqCollection']) False/False
+// build JAISeqData (['JAISeqData']) False/False
+/* top-level dependencies (begin ['JAISeqData']) */
+/* top-level dependencies (end ['JAISeqData']) */
 struct JAISeqData {
 };
 
-// build JAISeqDataRegion (JAISeqDataRegion) False/False
-/* top-level dependencies (begin JAISeqDataRegion) */
-/* top-level dependencies (end JAISeqDataRegion) */
+// build JAISeqDataRegion (['JAISeqDataRegion']) False/False
+/* top-level dependencies (begin ['JAISeqDataRegion']) */
+/* top-level dependencies (end ['JAISeqDataRegion']) */
 struct JAISeqDataRegion {
 };
 
-/* top-level dependencies (begin JAUSeqCollection) */
-// outer dependency: JAISeqData
-// outer dependency: JAISeqDataRegion
-/* top-level dependencies (end JAUSeqCollection) */
+/* top-level dependencies (begin ['JAUSeqCollection']) */
+// outer dependency: ('JAISeqData',)
+// outer dependency: ('JAISeqDataRegion',)
+/* top-level dependencies (end ['JAUSeqCollection']) */
 struct JAUSeqCollection {
-	// JAISeqData
-	// JAISeqDataRegion
+	// ('JAISeqData',)
+	// ('JAISeqDataRegion',)
 	/* 802A66A0 */ JAUSeqCollection();
 	/* 802A66AC */ void init(void const*);
 	/* 802A66FC */ void getSeqData(int, int, JAISeqData*);
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-// build JAISeqData (JAISeqData) True/True
-// build JAISeqDataRegion (JAISeqDataRegion) True/True
-// build JAUSeqDataMgr_SeqCollection (JAUSeqDataMgr_SeqCollection) False/False
-// build JAISeqDataUser (JAISeqDataUser) False/False
-/* top-level dependencies (begin JAISeqDataUser) */
-/* top-level dependencies (end JAISeqDataUser) */
+// build JAISeqData (['JAISeqData']) True/True
+// build JAISeqDataRegion (['JAISeqDataRegion']) True/True
+// build JAUSeqDataMgr_SeqCollection (['JAUSeqDataMgr_SeqCollection']) False/False
+// build JAISeqDataUser (['JAISeqDataUser']) False/False
+/* top-level dependencies (begin ['JAISeqDataUser']) */
+/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 };
 
-// build JAISeqData (JAISeqData) True/True
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build JAISeqData (['JAISeqData']) True/True
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin JAUSeqDataMgr_SeqCollection) */
-// outer dependency: JAISeqDataUser
-// outer dependency: JAISeqData
-// outer dependency: JAISoundID
-/* top-level dependencies (end JAUSeqDataMgr_SeqCollection) */
+/* top-level dependencies (begin ['JAUSeqDataMgr_SeqCollection']) */
+// outer dependency: ('JAISeqDataUser',)
+// outer dependency: ('JAISeqData',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['JAUSeqDataMgr_SeqCollection']) */
 struct JAUSeqDataMgr_SeqCollection {
-	// JAISeqDataUser
-	// JAISeqData
-	// JAISoundID
+	// ('JAISeqDataUser',)
+	// ('JAISeqData',)
+	// ('JAISoundID',)
 	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
 	/* 802A67D0 */ void setSeqDataUser(JAISeqDataUser*);
 	/* 802A67DC */ void releaseSeqData();
@@ -67,11 +67,11 @@ struct JAUSeqDataMgr_SeqCollection {
 	/* 802A6894 */ ~JAUSeqDataMgr_SeqCollection();
 };
 
-// build JAISeqDataUser (JAISeqDataUser) True/True
-// build JAISoundID (JAISoundID) True/True
-// build JAISeqDataMgr (JAISeqDataMgr) False/False
-/* top-level dependencies (begin JAISeqDataMgr) */
-/* top-level dependencies (end JAISeqDataMgr) */
+// build JAISeqDataUser (['JAISeqDataUser']) True/True
+// build JAISoundID (['JAISoundID']) True/True
+// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
+/* top-level dependencies (begin ['JAISeqDataMgr']) */
+/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };

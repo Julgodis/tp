@@ -9,59 +9,59 @@
 // Types:
 // 
 
-// build JPAEmitterCallBack (JPAEmitterCallBack) False/False
-/* top-level dependencies (begin JPAEmitterCallBack) */
-/* top-level dependencies (end JPAEmitterCallBack) */
+// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
+/* top-level dependencies (begin ['JPAEmitterCallBack']) */
+/* top-level dependencies (end ['JPAEmitterCallBack']) */
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-// build JPAResource (JPAResource) False/False
-/* top-level dependencies (begin JPAResource) */
-/* top-level dependencies (end JPAResource) */
-struct JPAResource {
-};
-
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build JPAEmitterManager (JPAEmitterManager) False/False
-/* top-level dependencies (begin JPAEmitterManager) */
-/* top-level dependencies (end JPAEmitterManager) */
-struct JPAEmitterManager {
-};
-
-// build JPABaseParticle (JPABaseParticle) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+// build JPABaseParticle (['JPABaseParticle']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-/* top-level dependencies (begin JPABaseParticle) */
-// outer dependency: JPAEmitterWorkData
-/* top-level dependencies (end JPABaseParticle) */
+/* top-level dependencies (begin ['JPABaseParticle']) */
+// outer dependency: ('JPAEmitterWorkData',)
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// JPAEmitterWorkData
+	// ('JPAEmitterWorkData',)
 	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
-/* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: JPAResource
-// outer dependency: _GXTexMapID
-// outer dependency: JPAEmitterManager
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPABaseEmitter) */
+// build JPAEmitterManager (['JPAEmitterManager']) False/False
+/* top-level dependencies (begin ['JPAEmitterManager']) */
+/* top-level dependencies (end ['JPAEmitterManager']) */
+struct JPAEmitterManager {
+};
+
+// build JPAResource (['JPAResource']) False/False
+/* top-level dependencies (begin ['JPAResource']) */
+/* top-level dependencies (end ['JPAResource']) */
+struct JPAResource {
+};
+
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+// outer dependency: ('JPABaseParticle',)
+// outer dependency: ('JPAEmitterManager',)
+// outer dependency: ('JPAResource',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// JPAResource
-	// _GXTexMapID
-	// JPAEmitterManager
-	// JPABaseParticle
+	// ('JPABaseParticle',)
+	// ('JPAEmitterManager',)
+	// ('JPAResource',)
+	// ('_GXTexMapID',)
 	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
 	/* 8027EA40 */ void createParticle();
 	/* 8027EB60 */ void createChild(JPABaseParticle*);
@@ -73,18 +73,18 @@ struct JPABaseEmitter {
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
 };
 
-// build JPAEmitterManager (JPAEmitterManager) True/True
-// build JPAResource (JPAResource) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JUTTexture (JUTTexture) False/False
-// build _GXTexMapID (_GXTexMapID) True/True
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end JUTTexture) */
+// build JPAEmitterManager (['JPAEmitterManager']) True/True
+// build JPAResource (['JPAResource']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 

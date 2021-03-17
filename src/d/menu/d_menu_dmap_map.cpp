@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build renderingDmap_c (renderingDmap_c) False/False
-// build dTres_c (dTres_c) False/False
-// build dTres_c (dTres_c) True/False
+// build renderingDmap_c (['renderingDmap_c']) False/False
+// build dTres_c (['dTres_c']) False/False
+// build dTres_c (['dTres_c']) True/False
 struct dTres_c;
-/* top-level dependencies (begin dTres_c) */
-// outer dependency: dTres_c::typeGroupData_c
-/* top-level dependencies (end dTres_c) */
+/* top-level dependencies (begin ['dTres_c']) */
+// outer dependency: ('dTres_c', 'typeGroupData_c')
+/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// dTres_c::typeGroupData_c
-	// build data_s (dTres_c::data_s) False/False
-	/* dependencies (begin dTres_c::data_s) */
-	/* dependencies (end dTres_c::data_s) */
+	// ('dTres_c', 'typeGroupData_c')
+	// build data_s (['dTres_c', 'data_s']) False/False
+	/* dependencies (begin ['dTres_c', 'data_s']) */
+	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
-	// build typeGroupData_c (dTres_c::typeGroupData_c) False/False
-	/* dependencies (begin dTres_c::typeGroupData_c) */
-	/* dependencies (end dTres_c::typeGroupData_c) */
+	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
+	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
+	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
@@ -35,11 +35,11 @@ struct dTres_c {
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-/* top-level dependencies (begin renderingDmap_c) */
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end renderingDmap_c) */
+/* top-level dependencies (begin ['renderingDmap_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+/* top-level dependencies (end ['renderingDmap_c']) */
 struct renderingDmap_c {
-	// dTres_c::data_s
+	// ('dTres_c', 'data_s')
 	/* 801C0380 */ ~renderingDmap_c();
 	/* 801C084C */ void hasMap() const;
 	/* 801C086C */ void isDrawIconSingle2(dTres_c::data_s const*, bool, bool, int) const;
@@ -59,10 +59,10 @@ struct renderingDmap_c {
 	/* 801C263C */ bool isRendIcon() const;
 };
 
-// build dTres_c (dTres_c) True/True
-// build dMenu_DmapMap_c (dMenu_DmapMap_c) False/False
-/* top-level dependencies (begin dMenu_DmapMap_c) */
-/* top-level dependencies (end dMenu_DmapMap_c) */
+// build dTres_c (['dTres_c']) True/True
+// build dMenu_DmapMap_c (['dMenu_DmapMap_c']) False/False
+/* top-level dependencies (begin ['dMenu_DmapMap_c']) */
+/* top-level dependencies (end ['dMenu_DmapMap_c']) */
 struct dMenu_DmapMap_c {
 	/* 801C0CD8 */ void _create(u16, u16, u16, u16, void*);
 	/* 801C0D04 */ void _delete();
@@ -70,9 +70,9 @@ struct dMenu_DmapMap_c {
 	/* 801C0E4C */ void setPos(int, int, f32, f32, f32, bool, f32);
 };
 
-// build dMenu_StageMapCtrl_c (dMenu_StageMapCtrl_c) False/False
-/* top-level dependencies (begin dMenu_StageMapCtrl_c) */
-/* top-level dependencies (end dMenu_StageMapCtrl_c) */
+// build dMenu_StageMapCtrl_c (['dMenu_StageMapCtrl_c']) False/False
+/* top-level dependencies (begin ['dMenu_StageMapCtrl_c']) */
+/* top-level dependencies (end ['dMenu_StageMapCtrl_c']) */
 struct dMenu_StageMapCtrl_c {
 	/* 801C0EE0 */ void getMapBlendPer() const;
 	/* 801C0F24 */ void getPixelStageSizeX() const;
@@ -111,9 +111,9 @@ struct dMenu_StageMapCtrl_c {
 	/* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
-// build dMenu_DmapMapCtrl_c (dMenu_DmapMapCtrl_c) False/False
-/* top-level dependencies (begin dMenu_DmapMapCtrl_c) */
-/* top-level dependencies (end dMenu_DmapMapCtrl_c) */
+// build dMenu_DmapMapCtrl_c (['dMenu_DmapMapCtrl_c']) False/False
+/* top-level dependencies (begin ['dMenu_DmapMapCtrl_c']) */
+/* top-level dependencies (end ['dMenu_DmapMapCtrl_c']) */
 struct dMenu_DmapMapCtrl_c {
 	/* 801BD144 */ ~dMenu_DmapMapCtrl_c();
 	/* 801C18C0 */ void getZoomMinMaxCheck(f32*, f32*, f32*, f32*, bool*, bool*);
@@ -125,57 +125,57 @@ struct dMenu_DmapMapCtrl_c {
 	/* 801C25C0 */ void getInitDispCenter(f32*, f32*);
 };
 
-// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin mDoGph_gInf_c) */
-// outer dependency: _GXColor
-/* top-level dependencies (end mDoGph_gInf_c) */
+/* top-level dependencies (begin ['mDoGph_gInf_c']) */
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
-	// _GXColor
+	// ('_GXColor',)
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-// build _GXColor (_GXColor) True/True
-// build dDrawPath_c (dDrawPath_c) False/False
-// build dDrawPath_c (dDrawPath_c) True/False
+// build _GXColor (['_GXColor']) True/True
+// build dDrawPath_c (['dDrawPath_c']) False/False
+// build dDrawPath_c (['dDrawPath_c']) True/False
 struct dDrawPath_c;
-// build dDrawPath_c (dDrawPath_c) True/True
-// build dDrawPath_c (dDrawPath_c) True/True
-/* top-level dependencies (begin dDrawPath_c) */
-// outer dependency: dDrawPath_c::line_class
-// outer dependency: dDrawPath_c::poly_class
-// outer dependency: dDrawPath_c::room_class
-/* top-level dependencies (end dDrawPath_c) */
+// build dDrawPath_c (['dDrawPath_c']) True/True
+// build dDrawPath_c (['dDrawPath_c']) True/True
+/* top-level dependencies (begin ['dDrawPath_c']) */
+// outer dependency: ('dDrawPath_c', 'room_class')
+// outer dependency: ('dDrawPath_c', 'line_class')
+// outer dependency: ('dDrawPath_c', 'poly_class')
+/* top-level dependencies (end ['dDrawPath_c']) */
 struct dDrawPath_c {
-	// dDrawPath_c::line_class
-	// dDrawPath_c::poly_class
-	// dDrawPath_c::room_class
-	// build line_class (dDrawPath_c::line_class) False/False
-	/* dependencies (begin dDrawPath_c::line_class) */
-	/* dependencies (end dDrawPath_c::line_class) */
+	// ('dDrawPath_c', 'room_class')
+	// ('dDrawPath_c', 'line_class')
+	// ('dDrawPath_c', 'poly_class')
+	// build line_class (['dDrawPath_c', 'line_class']) False/False
+	/* dependencies (begin ['dDrawPath_c', 'line_class']) */
+	/* dependencies (end ['dDrawPath_c', 'line_class']) */
 	struct line_class {
 	};
 
-	// build poly_class (dDrawPath_c::poly_class) False/False
-	/* dependencies (begin dDrawPath_c::poly_class) */
-	/* dependencies (end dDrawPath_c::poly_class) */
+	// build poly_class (['dDrawPath_c', 'poly_class']) False/False
+	/* dependencies (begin ['dDrawPath_c', 'poly_class']) */
+	/* dependencies (end ['dDrawPath_c', 'poly_class']) */
 	struct poly_class {
 	};
 
-	// build room_class (dDrawPath_c::room_class) False/False
-	/* dependencies (begin dDrawPath_c::room_class) */
-	/* dependencies (end dDrawPath_c::room_class) */
+	// build room_class (['dDrawPath_c', 'room_class']) False/False
+	/* dependencies (begin ['dDrawPath_c', 'room_class']) */
+	/* dependencies (end ['dDrawPath_c', 'room_class']) */
 	struct room_class {
 	};
 
-	// build group_class (dDrawPath_c::group_class) False/False
-	/* dependencies (begin dDrawPath_c::group_class) */
-	/* dependencies (end dDrawPath_c::group_class) */
+	// build group_class (['dDrawPath_c', 'group_class']) False/False
+	/* dependencies (begin ['dDrawPath_c', 'group_class']) */
+	/* dependencies (end ['dDrawPath_c', 'group_class']) */
 	struct group_class {
 	};
 
@@ -187,40 +187,40 @@ struct dDrawPath_c {
 	/* 8003CCC4 */ void drawPath();
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dRenderingMap_c (dRenderingMap_c) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build dRenderingMap_c (['dRenderingMap_c']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin dRenderingMap_c) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end dRenderingMap_c) */
+/* top-level dependencies (begin ['dRenderingMap_c']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['dRenderingMap_c']) */
 struct dRenderingMap_c {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build dRenderingFDAmap_c (dRenderingFDAmap_c) False/False
-/* top-level dependencies (begin dRenderingFDAmap_c) */
-/* top-level dependencies (end dRenderingFDAmap_c) */
+// build ResTIMG (['ResTIMG']) True/True
+// build dRenderingFDAmap_c (['dRenderingFDAmap_c']) False/False
+/* top-level dependencies (begin ['dRenderingFDAmap_c']) */
+/* top-level dependencies (end ['dRenderingFDAmap_c']) */
 struct dRenderingFDAmap_c {
 	/* 8003D188 */ void preRenderingMap();
 	/* 8003D320 */ void postRenderingMap();
@@ -228,9 +228,9 @@ struct dRenderingFDAmap_c {
 	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
-// build dMapInfo_n (dMapInfo_n) False/False
-/* top-level dependencies (begin dMapInfo_n) */
-/* top-level dependencies (end dMapInfo_n) */
+// build dMapInfo_n (['dMapInfo_n']) False/False
+/* top-level dependencies (begin ['dMapInfo_n']) */
+/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
 	/* 8003ECA0 */ void chkGetCompass();
 	/* 8003ECD8 */ void chkGetMap();
@@ -243,38 +243,38 @@ struct dMapInfo_n {
 	/* 8003F1F4 */ void getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*);
 };
 
-// build dMapInfo_c (dMapInfo_c) False/False
-/* top-level dependencies (begin dMapInfo_c) */
-/* top-level dependencies (end dMapInfo_c) */
+// build dMapInfo_c (['dMapInfo_c']) False/False
+/* top-level dependencies (begin ['dMapInfo_c']) */
+/* top-level dependencies (end ['dMapInfo_c']) */
 struct dMapInfo_c {
 	/* 8003F570 */ void calcNowStayFloorNo(f32, bool);
 };
 
-// build dMpath_c (dMpath_c) False/False
-/* top-level dependencies (begin dMpath_c) */
-/* top-level dependencies (end dMpath_c) */
+// build dMpath_c (['dMpath_c']) False/False
+/* top-level dependencies (begin ['dMpath_c']) */
+/* top-level dependencies (end ['dMpath_c']) */
 struct dMpath_c {
 	/* 8003F760 */ void getTopBottomFloorNo(s8*, s8*);
 };
 
-// build renderingDAmap_c (renderingDAmap_c) False/False
-// build dDrawPath_c (dDrawPath_c) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build renderingDAmap_c (['renderingDAmap_c']) False/False
+// build dTres_c (['dTres_c']) True/True
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dTres_c (dTres_c) True/True
-/* top-level dependencies (begin renderingDAmap_c) */
-// outer dependency: dDrawPath_c::group_class
-// outer dependency: Vec
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end renderingDAmap_c) */
+// build dDrawPath_c (['dDrawPath_c']) True/True
+/* top-level dependencies (begin ['renderingDAmap_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+// outer dependency: ('Vec',)
+// outer dependency: ('dDrawPath_c', 'group_class')
+/* top-level dependencies (end ['renderingDAmap_c']) */
 struct renderingDAmap_c {
-	// dDrawPath_c::group_class
-	// Vec
-	// dTres_c::data_s
+	// ('dTres_c', 'data_s')
+	// ('Vec',)
+	// ('dDrawPath_c', 'group_class')
 	/* 8003FCC8 */ void init(u8*, u16, u16, u16, u16);
 	/* 8003FD08 */ void entry(f32, f32, f32, int, s8);
 	/* 8003FD9C */ void isSwitch(dDrawPath_c::group_class const*);
@@ -295,14 +295,14 @@ struct renderingDAmap_c {
 	/* 80040AE4 */ void getIconGroupNumber(u8) const;
 };
 
-// build renderingPlusDoor_c (renderingPlusDoor_c) False/False
-/* top-level dependencies (begin renderingPlusDoor_c) */
-/* top-level dependencies (end renderingPlusDoor_c) */
+// build renderingPlusDoor_c (['renderingPlusDoor_c']) False/False
+/* top-level dependencies (begin ['renderingPlusDoor_c']) */
+/* top-level dependencies (end ['renderingPlusDoor_c']) */
 struct renderingPlusDoor_c {
 	/* 80040518 */ void afterDrawPath();
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

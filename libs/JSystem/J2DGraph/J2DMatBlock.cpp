@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build J2DColorBlock (J2DColorBlock) False/False
-/* top-level dependencies (begin J2DColorBlock) */
-/* top-level dependencies (end J2DColorBlock) */
+// build J2DColorBlock (['J2DColorBlock']) False/False
+/* top-level dependencies (begin ['J2DColorBlock']) */
+/* top-level dependencies (end ['J2DColorBlock']) */
 struct J2DColorBlock {
 	/* 802EB394 */ void initialize();
 	/* 802EB424 */ void setGX();
 };
 
-// build J2DTexGenBlock (J2DTexGenBlock) False/False
-// build J2DTexMtx (J2DTexMtx) False/False
-/* top-level dependencies (begin J2DTexMtx) */
-/* top-level dependencies (end J2DTexMtx) */
+// build J2DTexGenBlock (['J2DTexGenBlock']) False/False
+// build J2DTexMtx (['J2DTexMtx']) False/False
+/* top-level dependencies (begin ['J2DTexMtx']) */
+/* top-level dependencies (end ['J2DTexMtx']) */
 struct J2DTexMtx {
 	/* 802E9C90 */ void load(u32);
 	/* 802E9CC4 */ void calc();
 };
 
-/* top-level dependencies (begin J2DTexGenBlock) */
-// outer dependency: J2DTexMtx
-/* top-level dependencies (end J2DTexGenBlock) */
+/* top-level dependencies (begin ['J2DTexGenBlock']) */
+// outer dependency: ('J2DTexMtx',)
+/* top-level dependencies (end ['J2DTexGenBlock']) */
 struct J2DTexGenBlock {
-	// J2DTexMtx
+	// ('J2DTexMtx',)
 	/* 802EB510 */ void initialize();
 	/* 802EB570 */ void setGX();
 	/* 802EB620 */ ~J2DTexGenBlock();
@@ -38,120 +38,132 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-// build J2DTexMtx (J2DTexMtx) True/True
-// build J2DTevBlock (J2DTevBlock) False/False
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
+// build J2DTexMtx (['J2DTexMtx']) True/True
+// build J2DTevBlock (['J2DTevBlock']) False/False
+// build J2DTevStage (['J2DTevStage']) False/False
+// build J2DTevStageInfo (['J2DTevStageInfo']) False/False
+/* top-level dependencies (begin ['J2DTevStageInfo']) */
+/* top-level dependencies (end ['J2DTevStageInfo']) */
+struct J2DTevStageInfo {
+};
+
+/* top-level dependencies (begin ['J2DTevStage']) */
+// outer dependency: ('J2DTevStageInfo',)
+/* top-level dependencies (end ['J2DTevStage']) */
+struct J2DTevStage {
+	// ('J2DTevStageInfo',)
+	/* 802F1940 */ J2DTevStage();
+	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
+};
+
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) False/False
+/* top-level dependencies (begin ['J2DTevSwapModeInfo']) */
+/* top-level dependencies (end ['J2DTevSwapModeInfo']) */
+struct J2DTevSwapModeInfo {
+};
+
+// build ResTLUT (['ResTLUT']) False/False
+/* top-level dependencies (begin ['ResTLUT']) */
+/* top-level dependencies (end ['ResTLUT']) */
+struct ResTLUT {
+};
+
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
-// build J2DTevStage (J2DTevStage) False/False
-// build J2DTevStageInfo (J2DTevStageInfo) False/False
-/* top-level dependencies (begin J2DTevStageInfo) */
-/* top-level dependencies (end J2DTevStageInfo) */
-struct J2DTevStageInfo {
-};
-
-/* top-level dependencies (begin J2DTevStage) */
-// outer dependency: J2DTevStageInfo
-/* top-level dependencies (end J2DTevStage) */
-struct J2DTevStage {
-	// J2DTevStageInfo
-	/* 802F1940 */ J2DTevStage();
-	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
-};
-
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) False/False
-/* top-level dependencies (begin J2DTevSwapModeTable) */
-/* top-level dependencies (end J2DTevSwapModeTable) */
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) False/False
+/* top-level dependencies (begin ['J2DTevSwapModeTable']) */
+/* top-level dependencies (end ['J2DTevSwapModeTable']) */
 struct J2DTevSwapModeTable {
 	/* 802F1934 */ J2DTevSwapModeTable();
 };
 
-// build JUTPalette (JUTPalette) False/False
-// build ResTLUT (ResTLUT) False/False
-/* top-level dependencies (begin ResTLUT) */
-/* top-level dependencies (end ResTLUT) */
-struct ResTLUT {
-};
-
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
+// build JUTPalette (['JUTPalette']) False/False
+// build _GXTlut (['_GXTlut']) False/False
+/* top-level dependencies (begin ['_GXTlut']) */
+/* top-level dependencies (end ['_GXTlut']) */
 struct _GXTlut {
 };
 
-/* top-level dependencies (begin JUTPalette) */
-// outer dependency: ResTLUT
-// outer dependency: _GXTlut
-/* top-level dependencies (end JUTPalette) */
+// build ResTLUT (['ResTLUT']) True/True
+/* top-level dependencies (begin ['JUTPalette']) */
+// outer dependency: ('_GXTlut',)
+// outer dependency: ('ResTLUT',)
+/* top-level dependencies (end ['JUTPalette']) */
 struct JUTPalette {
-	// ResTLUT
-	// _GXTlut
+	// ('_GXTlut',)
+	// ('ResTLUT',)
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) False/False
-/* top-level dependencies (begin J2DGXColorS10) */
-/* top-level dependencies (end J2DGXColorS10) */
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
+struct JUTFont {
 };
 
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
+// build J2DTevOrder (['J2DTevOrder']) False/False
+/* top-level dependencies (begin ['J2DTevOrder']) */
+/* top-level dependencies (end ['J2DTevOrder']) */
+struct J2DTevOrder {
+	/* 802F1B70 */ J2DTevOrder();
 };
 
-// build J2DIndTevStage (J2DIndTevStage) False/False
-/* top-level dependencies (begin J2DIndTevStage) */
-/* top-level dependencies (end J2DIndTevStage) */
+// build J2DIndTevStage (['J2DIndTevStage']) False/False
+/* top-level dependencies (begin ['J2DIndTevStage']) */
+/* top-level dependencies (end ['J2DIndTevStage']) */
 struct J2DIndTevStage {
 	/* 802EA044 */ void load(u8);
 	/* 802F18A0 */ J2DIndTevStage();
 };
 
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) False/False
-/* top-level dependencies (begin J2DTevSwapModeInfo) */
-/* top-level dependencies (end J2DTevSwapModeInfo) */
-struct J2DTevSwapModeInfo {
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
+struct ResTIMG {
 };
 
-// build JUTTexture (JUTTexture) False/False
-// build JUTPalette (JUTPalette) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build ResTIMG (ResTIMG) True/True
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: JUTPalette
-// outer dependency: _GXTexMapID
-// outer dependency: ResTIMG
-/* top-level dependencies (end JUTTexture) */
+// build J2DGXColorS10 (['J2DGXColorS10']) False/False
+/* top-level dependencies (begin ['J2DGXColorS10']) */
+/* top-level dependencies (end ['J2DGXColorS10']) */
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+// build ResTIMG (['ResTIMG']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTexMapID',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('JUTPalette',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// JUTPalette
-	// _GXTexMapID
-	// ResTIMG
+	// ('_GXTexMapID',)
+	// ('ResTIMG',)
+	// ('JUTPalette',)
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
@@ -159,50 +171,38 @@ struct JUTTexture {
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build J2DTevOrder (J2DTevOrder) False/False
-/* top-level dependencies (begin J2DTevOrder) */
-/* top-level dependencies (end J2DTevOrder) */
-struct J2DTevOrder {
-	/* 802F1B70 */ J2DTevOrder();
-};
-
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
-/* top-level dependencies (begin J2DTevBlock) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: _GXTexMapID
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: JUTTexture
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock) */
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock']) */
 struct J2DTevBlock {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// _GXTexMapID
-	// J2DIndTevStage
-	// J2DTevSwapModeInfo
-	// JUTTexture
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('J2DTevSwapModeInfo',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeTable',)
+	// ('JUTPalette',)
+	// ('JUTFont',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802EA12C */ bool getTevSwapModeTable(u32);
 	/* 802EA134 */ bool getTevStage(u32);
 	/* 802EA13C */ bool getTevColor(u32);
@@ -248,52 +248,52 @@ struct J2DTevBlock {
 	/* 802F2ACC */ void setFontUndeleteFlag();
 };
 
-// build J2DTevBlock1 (J2DTevBlock1) False/False
-// build ResFONT (ResFONT) True/True
-// build JUtility (JUtility) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTPalette (JUTPalette) True/True
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build JUTTexture (JUTTexture) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build JUTFont (JUTFont) True/True
-/* top-level dependencies (begin J2DTevBlock1) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: JUTTexture
-// outer dependency: _GXTexMapID
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock1) */
+// build J2DTevBlock1 (['J2DTevBlock1']) False/False
+// build J2DTevStage (['J2DTevStage']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock1']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock1']) */
 struct J2DTevBlock1 {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// JUTTexture
-	// _GXTexMapID
-	// J2DTevSwapModeInfo
-	// J2DIndTevStage
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeInfo',)
+	// ('J2DTevSwapModeTable',)
+	// ('JUTFont',)
+	// ('JUTPalette',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802EB88C */ J2DTevBlock1();
 	/* 802EB998 */ ~J2DTevBlock1();
 	/* 802EBA50 */ void initialize();
@@ -342,59 +342,59 @@ struct J2DTevBlock1 {
 	/* 802F2A30 */ void setFontUndeleteFlag();
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build JUTPalette (JUTPalette) True/True
-// build JUTTexture (JUTTexture) True/True
-// build ResFONT (ResFONT) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTLUT (ResTLUT) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevBlock2 (J2DTevBlock2) False/False
-// build ResFONT (ResFONT) True/True
-// build JUtility (JUtility) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTPalette (JUTPalette) True/True
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build JUTTexture (JUTTexture) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build JUTFont (JUTFont) True/True
-/* top-level dependencies (begin J2DTevBlock2) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: JUTTexture
-// outer dependency: _GXTexMapID
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock2) */
+// build ResTIMG (['ResTIMG']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build J2DTevBlock2 (['J2DTevBlock2']) False/False
+// build J2DTevStage (['J2DTevStage']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock2']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock2']) */
 struct J2DTevBlock2 {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// JUTTexture
-	// _GXTexMapID
-	// J2DTevSwapModeInfo
-	// J2DIndTevStage
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeInfo',)
+	// ('J2DTevSwapModeTable',)
+	// ('JUTFont',)
+	// ('JUTPalette',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802EC5B8 */ J2DTevBlock2();
 	/* 802EC6C8 */ ~J2DTevBlock2();
 	/* 802EC7A0 */ void initialize();
@@ -443,52 +443,52 @@ struct J2DTevBlock2 {
 	/* 802F2790 */ void setFontUndeleteFlag();
 };
 
-// build J2DTevBlock4 (J2DTevBlock4) False/False
-// build ResFONT (ResFONT) True/True
-// build JUtility (JUtility) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTPalette (JUTPalette) True/True
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build JUTTexture (JUTTexture) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build JUTFont (JUTFont) True/True
-/* top-level dependencies (begin J2DTevBlock4) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: JUTTexture
-// outer dependency: _GXTexMapID
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock4) */
+// build J2DTevBlock4 (['J2DTevBlock4']) False/False
+// build J2DTevStage (['J2DTevStage']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock4']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock4']) */
 struct J2DTevBlock4 {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// JUTTexture
-	// _GXTexMapID
-	// J2DTevSwapModeInfo
-	// J2DIndTevStage
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeInfo',)
+	// ('J2DTevSwapModeTable',)
+	// ('JUTFont',)
+	// ('JUTPalette',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802ED8BC */ J2DTevBlock4();
 	/* 802ED9E4 */ ~J2DTevBlock4();
 	/* 802EDAC4 */ void initialize();
@@ -537,52 +537,52 @@ struct J2DTevBlock4 {
 	/* 802F24EC */ void setFontUndeleteFlag();
 };
 
-// build J2DTevBlock8 (J2DTevBlock8) False/False
-// build ResFONT (ResFONT) True/True
-// build JUtility (JUtility) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTPalette (JUTPalette) True/True
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build JUTTexture (JUTTexture) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build JUTFont (JUTFont) True/True
-/* top-level dependencies (begin J2DTevBlock8) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: JUTTexture
-// outer dependency: _GXTexMapID
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock8) */
+// build J2DTevBlock8 (['J2DTevBlock8']) False/False
+// build J2DTevStage (['J2DTevStage']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock8']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock8']) */
 struct J2DTevBlock8 {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// JUTTexture
-	// _GXTexMapID
-	// J2DTevSwapModeInfo
-	// J2DIndTevStage
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeInfo',)
+	// ('J2DTevSwapModeTable',)
+	// ('JUTFont',)
+	// ('JUTPalette',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802EED64 */ J2DTevBlock8();
 	/* 802EEE8C */ ~J2DTevBlock8();
 	/* 802EEF6C */ void initialize();
@@ -631,52 +631,52 @@ struct J2DTevBlock8 {
 	/* 802F224C */ void setFontUndeleteFlag();
 };
 
-// build J2DTevBlock16 (J2DTevBlock16) False/False
-// build ResFONT (ResFONT) True/True
-// build JUtility (JUtility) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTPalette (JUTPalette) True/True
-// build ResTLUT (ResTLUT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build JUTTexture (JUTTexture) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build JUTFont (JUTFont) True/True
-/* top-level dependencies (begin J2DTevBlock16) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: ResTIMG
-// outer dependency: J2DTevStage
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTPalette
-// outer dependency: ResTLUT
-// outer dependency: J2DGXColorS10
-// outer dependency: JUTTexture
-// outer dependency: _GXTexMapID
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: J2DIndTevStage
-// outer dependency: J2DTevOrder
-// outer dependency: JUTFont
-/* top-level dependencies (end J2DTevBlock16) */
+// build J2DTevBlock16 (['J2DTevBlock16']) False/False
+// build J2DTevStage (['J2DTevStage']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build JUTFont (['JUTFont']) True/True
+// build JUTPalette (['JUTPalette']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build JUTTexture (['JUTTexture']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+/* top-level dependencies (begin ['J2DTevBlock16']) */
+// outer dependency: ('J2DTevStage',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('J2DTevSwapModeInfo',)
+// outer dependency: ('J2DTevSwapModeTable',)
+// outer dependency: ('JUTFont',)
+// outer dependency: ('JUTPalette',)
+// outer dependency: ('J2DTevOrder',)
+// outer dependency: ('J2DIndTevStage',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('J2DGXColorS10',)
+// outer dependency: ('JUTTexture',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J2DTevBlock16']) */
 struct J2DTevBlock16 {
-	// ResFONT
-	// JUtility::TColor
-	// ResTIMG
-	// J2DTevStage
-	// J2DTevSwapModeTable
-	// JUTPalette
-	// ResTLUT
-	// J2DGXColorS10
-	// JUTTexture
-	// _GXTexMapID
-	// J2DTevSwapModeInfo
-	// J2DIndTevStage
-	// J2DTevOrder
-	// JUTFont
+	// ('J2DTevStage',)
+	// ('ResFONT',)
+	// ('ResTLUT',)
+	// ('JUtility', 'TColor')
+	// ('J2DTevSwapModeInfo',)
+	// ('J2DTevSwapModeTable',)
+	// ('JUTFont',)
+	// ('JUTPalette',)
+	// ('J2DTevOrder',)
+	// ('J2DIndTevStage',)
+	// ('ResTIMG',)
+	// ('J2DGXColorS10',)
+	// ('JUTTexture',)
+	// ('_GXTexMapID',)
 	/* 802F01E4 */ J2DTevBlock16();
 	/* 802F030C */ ~J2DTevBlock16();
 	/* 802F03EC */ void initialize();
@@ -725,39 +725,39 @@ struct J2DTevBlock16 {
 	/* 802F1FAC */ void setFontUndeleteFlag();
 };
 
-// build J2DIndBlockFull (J2DIndBlockFull) False/False
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
-/* top-level dependencies (begin J2DIndTexCoordScale) */
-/* top-level dependencies (end J2DIndTexCoordScale) */
-struct J2DIndTexCoordScale {
-	/* 802EA0CC */ void load(u8);
-	/* 802EB290 */ ~J2DIndTexCoordScale();
-};
-
-// build J2DIndTexOrder (J2DIndTexOrder) False/False
-/* top-level dependencies (begin J2DIndTexOrder) */
-/* top-level dependencies (end J2DIndTexOrder) */
+// build J2DIndBlockFull (['J2DIndBlockFull']) False/False
+// build J2DIndTexOrder (['J2DIndTexOrder']) False/False
+/* top-level dependencies (begin ['J2DIndTexOrder']) */
+/* top-level dependencies (end ['J2DIndTexOrder']) */
 struct J2DIndTexOrder {
 	/* 802EA0FC */ void load(u8);
 };
 
-// build J2DIndTexMtx (J2DIndTexMtx) False/False
-/* top-level dependencies (begin J2DIndTexMtx) */
-/* top-level dependencies (end J2DIndTexMtx) */
+// build J2DIndTexMtx (['J2DIndTexMtx']) False/False
+/* top-level dependencies (begin ['J2DIndTexMtx']) */
+/* top-level dependencies (end ['J2DIndTexMtx']) */
 struct J2DIndTexMtx {
 	/* 802EA098 */ void load(u8);
 	/* 802EB2E4 */ ~J2DIndTexMtx();
 };
 
-/* top-level dependencies (begin J2DIndBlockFull) */
-// outer dependency: J2DIndTexCoordScale
-// outer dependency: J2DIndTexOrder
-// outer dependency: J2DIndTexMtx
-/* top-level dependencies (end J2DIndBlockFull) */
+// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) False/False
+/* top-level dependencies (begin ['J2DIndTexCoordScale']) */
+/* top-level dependencies (end ['J2DIndTexCoordScale']) */
+struct J2DIndTexCoordScale {
+	/* 802EA0CC */ void load(u8);
+	/* 802EB290 */ ~J2DIndTexCoordScale();
+};
+
+/* top-level dependencies (begin ['J2DIndBlockFull']) */
+// outer dependency: ('J2DIndTexOrder',)
+// outer dependency: ('J2DIndTexMtx',)
+// outer dependency: ('J2DIndTexCoordScale',)
+/* top-level dependencies (end ['J2DIndBlockFull']) */
 struct J2DIndBlockFull {
-	// J2DIndTexCoordScale
-	// J2DIndTexOrder
-	// J2DIndTexMtx
+	// ('J2DIndTexOrder',)
+	// ('J2DIndTexMtx',)
+	// ('J2DIndTexCoordScale',)
 	/* 802F1664 */ void initialize();
 	/* 802F1730 */ void setGX();
 	/* 802F1B94 */ void getType();
@@ -772,45 +772,45 @@ struct J2DIndBlockFull {
 	/* 802F1C7C */ ~J2DIndBlockFull();
 };
 
-// build J2DPEBlock (J2DPEBlock) False/False
-/* top-level dependencies (begin J2DPEBlock) */
-/* top-level dependencies (end J2DPEBlock) */
+// build J2DPEBlock (['J2DPEBlock']) False/False
+/* top-level dependencies (begin ['J2DPEBlock']) */
+/* top-level dependencies (end ['J2DPEBlock']) */
 struct J2DPEBlock {
 	/* 802F17FC */ void initialize();
 	/* 802F1840 */ void setGX();
 };
 
-// build J2DIndTevStage (J2DIndTevStage) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build J2DTevStage (J2DTevStage) True/True
-// build J2DTevStageInfo (J2DTevStageInfo) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DIndTexOrder (J2DIndTexOrder) True/True
-// build J2DIndTexMtx (J2DIndTexMtx) True/True
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) True/True
-// build JUtility (JUtility) True/True
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build _GXTlut (_GXTlut) True/True
-// build JUTResFont (JUTResFont) False/False
-// build ResFONT (ResFONT) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build J2DIndTevStage (['J2DIndTevStage']) True/True
+// build J2DTevSwapModeTable (['J2DTevSwapModeTable']) True/True
+// build J2DTevStage (['J2DTevStage']) True/True
+// build J2DTevStageInfo (['J2DTevStageInfo']) True/True
+// build J2DTevOrder (['J2DTevOrder']) True/True
+// build J2DGXColorS10 (['J2DGXColorS10']) True/True
+// build J2DIndTexOrder (['J2DIndTexOrder']) True/True
+// build J2DIndTexMtx (['J2DIndTexMtx']) True/True
+// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) True/True
+// build JUtility (['JUtility']) True/True
+// build J2DTevSwapModeInfo (['J2DTevSwapModeInfo']) True/True
+// build _GXTlut (['_GXTlut']) True/True
+// build JUTResFont (['JUTResFont']) False/False
+// build ResFONT (['ResFONT']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JUTResFont) */
-// outer dependency: ResFONT
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTResFont) */
+/* top-level dependencies (begin ['JUTResFont']) */
+// outer dependency: ('ResFONT',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ResFONT
-	// JKRHeap
+	// ('ResFONT',)
+	// ('JKRHeap',)
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
-// build JKRHeap (JKRHeap) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

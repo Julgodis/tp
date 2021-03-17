@@ -9,83 +9,83 @@
 // Types:
 // 
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cM3dGLin (cM3dGLin) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cM3dGLin (['cM3dGLin']) False/False
+// build Vec (['Vec']) True/True
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build Vec (Vec) True/True
-/* top-level dependencies (begin cM3dGLin) */
-// outer dependency: cXyz
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGLin) */
+/* top-level dependencies (begin ['cM3dGLin']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// cXyz
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 	/* 8026F350 */ void CalcPos(Vec*, f32) const;
 };
 
-// build cM3dGPla (cM3dGPla) False/False
-/* top-level dependencies (begin cM3dGPla) */
-/* top-level dependencies (end cM3dGPla) */
+// build cM3dGPla (['cM3dGPla']) False/False
+/* top-level dependencies (begin ['cM3dGPla']) */
+/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-// build cXyz (cXyz) True/True
-// build cM3dGAab (cM3dGAab) False/False
-/* top-level dependencies (begin cM3dGAab) */
-/* top-level dependencies (end cM3dGAab) */
+// build cXyz (['cXyz']) True/True
+// build cM3dGAab (['cM3dGAab']) False/False
+/* top-level dependencies (begin ['cM3dGAab']) */
+/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
 };
 
-// build cM3dGCyl (cM3dGCyl) False/False
-/* top-level dependencies (begin cM3dGCyl) */
-/* top-level dependencies (end cM3dGCyl) */
+// build cM3dGCyl (['cM3dGCyl']) False/False
+/* top-level dependencies (begin ['cM3dGCyl']) */
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
 };
 
-// build cM3dGSph (cM3dGSph) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin cM3dGSph) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGSph) */
+// build cM3dGSph (['cM3dGSph']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGSph']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// cXyz
+	// ('cXyz',)
 	/* 8026F648 */ void SetC(cXyz const&);
 	/* 8026F708 */ void SetR(f32);
 };
 
-// build cM3dGTri (cM3dGTri) False/False
-/* top-level dependencies (begin cM3dGTri) */
-/* top-level dependencies (end cM3dGTri) */
+// build cM3dGTri (['cM3dGTri']) False/False
+/* top-level dependencies (begin ['cM3dGTri']) */
+/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
 };
 
-// build cM3d_Range (cM3d_Range) False/False
-/* top-level dependencies (begin cM3d_Range) */
-/* top-level dependencies (end cM3d_Range) */
+// build cM3d_Range (['cM3d_Range']) False/False
+/* top-level dependencies (begin ['cM3d_Range']) */
+/* top-level dependencies (end ['cM3d_Range']) */
 struct cM3d_Range {
 };
 
-// build cM3dGCps (cM3dGCps) False/False
-/* top-level dependencies (begin cM3dGCps) */
-/* top-level dependencies (end cM3dGCps) */
+// build cM3dGCps (['cM3dGCps']) False/False
+/* top-level dependencies (begin ['cM3dGCps']) */
+/* top-level dependencies (end ['cM3dGCps']) */
 struct cM3dGCps {
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build mDoMemCd_Ctrl_c (mDoMemCd_Ctrl_c) False/False
-/* top-level dependencies (begin mDoMemCd_Ctrl_c) */
-/* top-level dependencies (end mDoMemCd_Ctrl_c) */
+// build mDoMemCd_Ctrl_c (['mDoMemCd_Ctrl_c']) False/False
+/* top-level dependencies (begin ['mDoMemCd_Ctrl_c']) */
+/* top-level dependencies (end ['mDoMemCd_Ctrl_c']) */
 struct mDoMemCd_Ctrl_c {
 	/* 8001672C */ mDoMemCd_Ctrl_c();
 	/* 80016730 */ void ThdInit();
@@ -36,36 +36,36 @@ struct mDoMemCd_Ctrl_c {
 	/* 80017360 */ void setCardState(s32);
 };
 
-// build CARDFileInfo (CARDFileInfo) False/False
-/* top-level dependencies (begin CARDFileInfo) */
-/* top-level dependencies (end CARDFileInfo) */
+// build CARDFileInfo (['CARDFileInfo']) False/False
+/* top-level dependencies (begin ['CARDFileInfo']) */
+/* top-level dependencies (end ['CARDFileInfo']) */
 struct CARDFileInfo {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
 
-// build JKRThread (JKRThread) False/False
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build JKRThread (['JKRThread']) False/False
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// OSThread
+	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build OSThread (OSThread) True/True
+// build OSThread (['OSThread']) True/True
 // 
 // Forward References:
 // 

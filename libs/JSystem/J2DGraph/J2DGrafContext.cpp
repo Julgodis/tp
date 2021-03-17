@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build J2DGrafContext (J2DGrafContext) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build J2DGrafContext (['J2DGrafContext']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin J2DGrafContext) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end J2DGrafContext) */
+/* top-level dependencies (begin ['J2DGrafContext']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E8B08 */ J2DGrafContext(f32, f32, f32, f32);
 	/* 802E8BB4 */ void setPort();
 	/* 802E8C44 */ void setup2D();
@@ -39,7 +39,7 @@ struct J2DGrafContext {
 	/* 802E966C */ void setLookat();
 };
 
-// build JUtility (JUtility) True/True
+// build JUtility (['JUtility']) True/True
 // 
 // Forward References:
 // 

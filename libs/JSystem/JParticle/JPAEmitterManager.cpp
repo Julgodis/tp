@@ -9,73 +9,73 @@
 // Types:
 // 
 
-// build JPAEmitterManager (JPAEmitterManager) False/False
-// build JPADrawInfo (JPADrawInfo) False/False
-/* top-level dependencies (begin JPADrawInfo) */
-/* top-level dependencies (end JPADrawInfo) */
+// build JPAEmitterManager (['JPAEmitterManager']) False/False
+// build JPADrawInfo (['JPADrawInfo']) False/False
+/* top-level dependencies (begin ['JPADrawInfo']) */
+/* top-level dependencies (end ['JPADrawInfo']) */
 struct JPADrawInfo {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
-// build JPAResourceManager (JPAResourceManager) False/False
-/* top-level dependencies (begin JPAResourceManager) */
-/* top-level dependencies (end JPAResourceManager) */
-struct JPAResourceManager {
-	/* 80273E68 */ void getResource(u16) const;
-};
-
-// build JPABaseEmitter (JPABaseEmitter) False/False
-// build JPAResource (JPAResource) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+// build JPAEmitterManager (['JPAEmitterManager']) True/False
+struct JPAEmitterManager;
+// build JPAResource (['JPAResource']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseEmitter (JPABaseEmitter) True/False
+// build JPABaseEmitter (['JPABaseEmitter']) True/False
 struct JPABaseEmitter;
-/* top-level dependencies (begin JPAResource) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAResource) */
+/* top-level dependencies (begin ['JPAResource']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
-	// JPAEmitterWorkData
-	// JPABaseEmitter
+	// ('JPAEmitterWorkData',)
+	// ('JPABaseEmitter',)
 	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
 	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
 };
 
-// build JPAEmitterManager (JPAEmitterManager) True/False
-struct JPAEmitterManager;
-/* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: JPAResource
-// outer dependency: JPAEmitterManager
-/* top-level dependencies (end JPABaseEmitter) */
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+// outer dependency: ('JPAEmitterManager',)
+// outer dependency: ('JPAResource',)
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// JPAResource
-	// JPAEmitterManager
+	// ('JPAEmitterManager',)
+	// ('JPAResource',)
 	/* 8027E5EC */ ~JPABaseEmitter();
 	/* 8027E64C */ JPABaseEmitter();
 	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
-/* top-level dependencies (begin JPAEmitterManager) */
-// outer dependency: JPADrawInfo
-// outer dependency: JKRHeap
-// outer dependency: JPAResourceManager
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPAEmitterManager) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
+struct JKRHeap {
+};
+
+// build JPAResourceManager (['JPAResourceManager']) False/False
+/* top-level dependencies (begin ['JPAResourceManager']) */
+/* top-level dependencies (end ['JPAResourceManager']) */
+struct JPAResourceManager {
+	/* 80273E68 */ void getResource(u16) const;
+};
+
+/* top-level dependencies (begin ['JPAEmitterManager']) */
+// outer dependency: ('JPADrawInfo',)
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JPAResourceManager',)
+/* top-level dependencies (end ['JPAEmitterManager']) */
 struct JPAEmitterManager {
-	// JPADrawInfo
-	// JKRHeap
-	// JPAResourceManager
-	// JPABaseEmitter
+	// ('JPADrawInfo',)
+	// ('JPABaseEmitter',)
+	// ('JKRHeap',)
+	// ('JPAResourceManager',)
 	/* 8027DCA0 */ JPAEmitterManager(u32, u32, JKRHeap*, u8, u8);
 	/* 8027DFA0 */ void calc(u8);
 	/* 8027E028 */ void draw(JPADrawInfo const*, u8);
@@ -87,27 +87,27 @@ struct JPAEmitterManager {
 	/* 8027E3F4 */ void calcYBBCam();
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JPADrawInfo (JPADrawInfo) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build JPAResourceManager (JPAResourceManager) True/True
-// build JPAResource (JPAResource) True/True
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JPADrawInfo (['JPADrawInfo']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPAResourceManager (['JPAResourceManager']) True/True
+// build JPAResource (['JPAResource']) True/True
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASTrackPort (JASTrackPort) False/False
-/* top-level dependencies (begin JASTrackPort) */
-/* top-level dependencies (end JASTrackPort) */
+// build JASTrackPort (['JASTrackPort']) False/False
+/* top-level dependencies (begin ['JASTrackPort']) */
+/* top-level dependencies (end ['JASTrackPort']) */
 struct JASTrackPort {
 	/* 8029354C */ void init();
 	/* 8029357C */ void readImport(u32);

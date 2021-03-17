@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build dBgPlc (dBgPlc) False/False
-// build sBgPc (sBgPc) False/False
-/* top-level dependencies (begin sBgPc) */
-/* top-level dependencies (end sBgPc) */
+// build dBgPlc (['dBgPlc']) False/False
+// build sBgPc (['sBgPc']) False/False
+/* top-level dependencies (begin ['sBgPc']) */
+/* top-level dependencies (end ['sBgPc']) */
 struct sBgPc {
 };
 
-/* top-level dependencies (begin dBgPlc) */
-// outer dependency: sBgPc
-/* top-level dependencies (end dBgPlc) */
+/* top-level dependencies (begin ['dBgPlc']) */
+// outer dependency: ('sBgPc',)
+/* top-level dependencies (end ['dBgPlc']) */
 struct dBgPlc {
-	// sBgPc
+	// ('sBgPc',)
 	/* 80074074 */ dBgPlc();
 	/* 80074080 */ ~dBgPlc();
 	/* 800740BC */ void setBase(void*);
@@ -28,7 +28,7 @@ struct dBgPlc {
 	/* 800740DC */ void getGrpCode(int) const;
 };
 
-// build sBgPc (sBgPc) True/True
+// build sBgPc (['sBgPc']) True/True
 // 
 // Forward References:
 // 

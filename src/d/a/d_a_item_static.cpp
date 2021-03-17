@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build daItem_c (daItem_c) False/False
-/* top-level dependencies (begin daItem_c) */
-/* top-level dependencies (end daItem_c) */
+// build daItem_c (['daItem_c']) False/False
+/* top-level dependencies (begin ['daItem_c']) */
+/* top-level dependencies (end ['daItem_c']) */
 struct daItem_c {
 	/* 80037BE0 */ void startCtrl();
 	/* 80037BF4 */ void startControl();

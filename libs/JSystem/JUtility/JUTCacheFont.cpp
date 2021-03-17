@@ -9,50 +9,50 @@
 // Types:
 // 
 
-// build JUTCacheFont (JUTCacheFont) False/False
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
-struct ResFONT {
-};
-
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUTCacheFont (['JUTCacheFont']) False/False
+// build JUTCacheFont (['JUTCacheFont']) True/False
+struct JUTCacheFont;
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JUTCacheFont (JUTCacheFont) True/False
-struct JUTCacheFont;
-// build JUTCacheFont (JUTCacheFont) True/True
-/* top-level dependencies (begin JUTCacheFont) */
-// outer dependency: ResFONT
-// outer dependency: _GXTexMapID
-// outer dependency: JKRHeap
-// outer dependency: JUTCacheFont::TCachePage
-// outer dependency: JUTCacheFont::TGlyphCacheInfo
-/* top-level dependencies (end JUTCacheFont) */
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
+struct ResFONT {
+};
+
+// build JUTCacheFont (['JUTCacheFont']) True/True
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+/* top-level dependencies (begin ['JUTCacheFont']) */
+// outer dependency: ('JUTCacheFont', 'TCachePage')
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('JUTCacheFont', 'TGlyphCacheInfo')
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JUTCacheFont']) */
 struct JUTCacheFont {
-	// ResFONT
-	// _GXTexMapID
-	// JKRHeap
-	// JUTCacheFont::TCachePage
-	// JUTCacheFont::TGlyphCacheInfo
-	// build TGlyphCacheInfo (JUTCacheFont::TGlyphCacheInfo) False/False
-	/* dependencies (begin JUTCacheFont::TGlyphCacheInfo) */
-	/* dependencies (end JUTCacheFont::TGlyphCacheInfo) */
+	// ('JUTCacheFont', 'TCachePage')
+	// ('JKRHeap',)
+	// ('ResFONT',)
+	// ('JUTCacheFont', 'TGlyphCacheInfo')
+	// ('_GXTexMapID',)
+	// build TGlyphCacheInfo (['JUTCacheFont', 'TGlyphCacheInfo']) False/False
+	/* dependencies (begin ['JUTCacheFont', 'TGlyphCacheInfo']) */
+	/* dependencies (end ['JUTCacheFont', 'TGlyphCacheInfo']) */
 	struct TGlyphCacheInfo {
 	};
 
-	// build TCachePage (JUTCacheFont::TCachePage) False/False
-	/* dependencies (begin JUTCacheFont::TCachePage) */
-	/* dependencies (end JUTCacheFont::TCachePage) */
+	// build TCachePage (['JUTCacheFont', 'TCachePage']) False/False
+	/* dependencies (begin ['JUTCacheFont', 'TCachePage']) */
+	/* dependencies (end ['JUTCacheFont', 'TCachePage']) */
 	struct TCachePage {
 	};
 
@@ -75,42 +75,42 @@ struct JUTCacheFont {
 	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
 };
 
-// build ResFONT (ResFONT) True/True
-// build JKRHeap (JKRHeap) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build JUTResFont (JUTResFont) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build ResFONT (['ResFONT']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build JUTResFont (['JUTResFont']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// build TWidth (JUTFont::TWidth) False/False
-	/* dependencies (begin JUTFont::TWidth) */
-	/* dependencies (end JUTFont::TWidth) */
+	// build TWidth (['JUTFont', 'TWidth']) False/False
+	/* dependencies (begin ['JUTFont', 'TWidth']) */
+	/* dependencies (end ['JUTFont', 'TWidth']) */
 	struct TWidth {
 	};
 
 	/* 802DED24 */ void initialize_state();
 };
 
-/* top-level dependencies (begin JUTResFont) */
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont::TWidth
-/* top-level dependencies (end JUTResFont) */
+/* top-level dependencies (begin ['JUTResFont']) */
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JUTFont', 'TWidth')
+/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// JUtility::TColor
-	// JUTFont::TWidth
+	// ('JUtility', 'TColor')
+	// ('JUTFont', 'TWidth')
 	/* 802DDFD8 */ void getResFont() const;
 	/* 802DDFE0 */ void getFontType() const;
 	/* 802DDFEC */ void getLeading() const;
@@ -131,48 +131,48 @@ struct JUTResFont {
 	/* 802DFDA4 */ void isLeadByte(int) const;
 };
 
-// build JKRAram (JKRAram) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
+// build JKRAram (['JKRAram']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAram) */
+/* top-level dependencies (begin ['JKRAram']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// JKRExpandSwitch
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRExpandSwitch',)
 	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRAramHeap (JKRAramHeap) False/False
-// build JKRAramHeap (JKRAramHeap) True/False
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JKRAramHeap (['JKRAramHeap']) False/False
+// build JKRAramHeap (['JKRAramHeap']) True/False
 struct JKRAramHeap;
-/* top-level dependencies (begin JKRAramHeap) */
-// outer dependency: JKRAramHeap::EAllocMode
-/* top-level dependencies (end JKRAramHeap) */
+/* top-level dependencies (begin ['JKRAramHeap']) */
+// outer dependency: ('JKRAramHeap', 'EAllocMode')
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// JKRAramHeap::EAllocMode
-	// build EAllocMode (JKRAramHeap::EAllocMode) False/False
-	/* dependencies (begin JKRAramHeap::EAllocMode) */
-	/* dependencies (end JKRAramHeap::EAllocMode) */
+	// ('JKRAramHeap', 'EAllocMode')
+	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
+	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
+	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-// build JUTFont (JUTFont) True/True
-// build JUtility (JUtility) True/True
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTFont (['JUTFont']) True/True
+// build JUtility (['JUtility']) True/True
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

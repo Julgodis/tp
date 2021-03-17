@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAISoundStarter (JAISoundStarter) False/False
-/* top-level dependencies (begin JAISoundStarter) */
-/* top-level dependencies (end JAISoundStarter) */
+// build JAISoundStarter (['JAISoundStarter']) False/False
+/* top-level dependencies (begin ['JAISoundStarter']) */
+/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F6C */ JAISoundStarter(bool);
 	/* 802A2F88 */ ~JAISoundStarter();

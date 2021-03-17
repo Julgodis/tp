@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 	/* 8029E3B0 */ void clamp();
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);

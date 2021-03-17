@@ -9,53 +9,53 @@
 // Types:
 // 
 
-// build JKRArchive (JKRArchive) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRArchive (['JKRArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/False
+struct JKRArchive;
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRArchive (JKRArchive) True/False
-struct JKRArchive;
-// build JKRArchive (JKRArchive) True/True
-// build JKRArchive (JKRArchive) True/True
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRHeap
-// outer dependency: JKRArchive::EMountMode
-// outer dependency: JKRArchive::EMountDirection
-// outer dependency: JKRArchive::SDirEntry
-// outer dependency: JKRArchive::SDIFileEntry
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRArchive']) */
+// outer dependency: ('JKRArchive', 'SDIFileEntry')
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRArchive', 'SDirEntry')
+// outer dependency: ('JKRArchive', 'EMountMode')
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// JKRArchive::EMountDirection
-	// JKRArchive::SDirEntry
-	// JKRHeap
-	// JKRArchive::EMountMode
-	// JKRArchive::SDIFileEntry
-	// build EMountMode (JKRArchive::EMountMode) False/False
-	/* dependencies (begin JKRArchive::EMountMode) */
-	/* dependencies (end JKRArchive::EMountMode) */
+	// ('JKRArchive', 'SDIFileEntry')
+	// ('JKRHeap',)
+	// ('JKRArchive', 'SDirEntry')
+	// ('JKRArchive', 'EMountDirection')
+	// ('JKRArchive', 'EMountMode')
+	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
+	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
-	// build EMountDirection (JKRArchive::EMountDirection) False/False
-	/* dependencies (begin JKRArchive::EMountDirection) */
-	/* dependencies (end JKRArchive::EMountDirection) */
+	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
+	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
+	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
-	// build SDirEntry (JKRArchive::SDirEntry) False/False
-	/* dependencies (begin JKRArchive::SDirEntry) */
-	/* dependencies (end JKRArchive::SDirEntry) */
+	// build SDirEntry (['JKRArchive', 'SDirEntry']) False/False
+	/* dependencies (begin ['JKRArchive', 'SDirEntry']) */
+	/* dependencies (end ['JKRArchive', 'SDirEntry']) */
 	struct SDirEntry {
 	};
 
-	// build SDIFileEntry (JKRArchive::SDIFileEntry) False/False
-	/* dependencies (begin JKRArchive::SDIFileEntry) */
-	/* dependencies (end JKRArchive::SDIFileEntry) */
+	// build SDIFileEntry (['JKRArchive', 'SDIFileEntry']) False/False
+	/* dependencies (begin ['JKRArchive', 'SDIFileEntry']) */
+	/* dependencies (end ['JKRArchive', 'SDIFileEntry']) */
 	struct SDIFileEntry {
 	};
 
@@ -95,71 +95,71 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D41D4 */ void unmount();
 };
 
-// build JKRArcFinder (JKRArcFinder) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRArcFinder) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JKRArcFinder) */
+// build JKRArcFinder (['JKRArcFinder']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRArcFinder']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JKRArcFinder']) */
 struct JKRArcFinder {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
 };
 
-// build JKRMemArchive (JKRMemArchive) False/False
-// build JKRArchive (JKRArchive) True/True
-// build JKRMemBreakFlag (JKRMemBreakFlag) False/False
-/* top-level dependencies (begin JKRMemBreakFlag) */
-/* top-level dependencies (end JKRMemBreakFlag) */
+// build JKRMemArchive (['JKRMemArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+// build JKRMemBreakFlag (['JKRMemBreakFlag']) False/False
+/* top-level dependencies (begin ['JKRMemBreakFlag']) */
+/* top-level dependencies (end ['JKRMemBreakFlag']) */
 struct JKRMemBreakFlag {
 };
 
-/* top-level dependencies (begin JKRMemArchive) */
-// outer dependency: JKRArchive::EMountDirection
-// outer dependency: JKRMemBreakFlag
-/* top-level dependencies (end JKRMemArchive) */
+/* top-level dependencies (begin ['JKRMemArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+// outer dependency: ('JKRMemBreakFlag',)
+/* top-level dependencies (end ['JKRMemArchive']) */
 struct JKRMemArchive {
-	// JKRArchive::EMountDirection
-	// JKRMemBreakFlag
+	// ('JKRArchive', 'EMountDirection')
+	// ('JKRMemBreakFlag',)
 	/* 802D69B8 */ JKRMemArchive(s32, JKRArchive::EMountDirection);
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
 
-// build JKRMemBreakFlag (JKRMemBreakFlag) True/True
-// build JKRAramArchive (JKRAramArchive) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRAramArchive) */
-// outer dependency: JKRArchive::EMountDirection
-/* top-level dependencies (end JKRAramArchive) */
+// build JKRMemBreakFlag (['JKRMemBreakFlag']) True/True
+// build JKRAramArchive (['JKRAramArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRAramArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
-	// JKRArchive::EMountDirection
+	// ('JKRArchive', 'EMountDirection')
 	/* 802D70C0 */ JKRAramArchive(s32, JKRArchive::EMountDirection);
 };
 
-// build JKRDvdArchive (JKRDvdArchive) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRDvdArchive) */
-// outer dependency: JKRArchive::EMountDirection
-/* top-level dependencies (end JKRDvdArchive) */
+// build JKRDvdArchive (['JKRDvdArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRDvdArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRDvdArchive']) */
 struct JKRDvdArchive {
-	// JKRArchive::EMountDirection
+	// ('JKRArchive', 'EMountDirection')
 	/* 802D7BF0 */ JKRDvdArchive(s32, JKRArchive::EMountDirection);
 };
 
-// build JKRCompArchive (JKRCompArchive) False/False
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JKRCompArchive) */
-// outer dependency: JKRArchive::EMountDirection
-/* top-level dependencies (end JKRCompArchive) */
+// build JKRCompArchive (['JKRCompArchive']) False/False
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JKRCompArchive']) */
+// outer dependency: ('JKRArchive', 'EMountDirection')
+/* top-level dependencies (end ['JKRCompArchive']) */
 struct JKRCompArchive {
-	// JKRArchive::EMountDirection
+	// ('JKRArchive', 'EMountDirection')
 	/* 802D87D4 */ JKRCompArchive(s32, JKRArchive::EMountDirection);
 };
 

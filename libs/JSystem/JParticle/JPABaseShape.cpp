@@ -9,67 +9,67 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-/* top-level dependencies (begin JPABaseParticle) */
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+/* top-level dependencies (begin ['JPABaseParticle']) */
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build JPAClrAnmKeyData (JPAClrAnmKeyData) False/False
-/* top-level dependencies (begin JPAClrAnmKeyData) */
-/* top-level dependencies (end JPAClrAnmKeyData) */
+// build JPAClrAnmKeyData (['JPAClrAnmKeyData']) False/False
+/* top-level dependencies (begin ['JPAClrAnmKeyData']) */
+/* top-level dependencies (end ['JPAClrAnmKeyData']) */
 struct JPAClrAnmKeyData {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
-// build JPABaseShape (JPABaseShape) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JPABaseShape) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JKRHeap
-/* top-level dependencies (end JPABaseShape) */
+// build JPABaseShape (['JPABaseShape']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JPABaseShape']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JPABaseShape']) */
 struct JPABaseShape {
-	// JPAEmitterWorkData
-	// JKRHeap
+	// ('JPAEmitterWorkData',)
+	// ('JKRHeap',)
 	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
 };
 
-// build JUTTexture (JUTTexture) False/False
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end JUTTexture) */
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build _GXTexMapID (_GXTexMapID) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
 // 
 // Forward References:
 // 

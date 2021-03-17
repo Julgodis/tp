@@ -9,27 +9,25 @@
 // Types:
 // 
 
-// build JASSeqParser (JASSeqParser) False/False
-// build JASSeqParser (JASSeqParser) True/False
-struct JASSeqParser;
-// build JASTrack (JASTrack) False/False
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
+// build JASSeqParser (['JASSeqParser']) False/False
+// build JASTrack (['JASTrack']) False/False
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Point (JASOscillator::Point) False/False
-	/* dependencies (begin JASOscillator::Point) */
-	/* dependencies (end JASOscillator::Point) */
+	// build Point (['JASOscillator', 'Point']) False/False
+	/* dependencies (begin ['JASOscillator', 'Point']) */
+	/* dependencies (end ['JASOscillator', 'Point']) */
 	struct Point {
 	};
 
 };
 
-/* top-level dependencies (begin JASTrack) */
-// outer dependency: JASOscillator::Point
-/* top-level dependencies (end JASTrack) */
+/* top-level dependencies (begin ['JASTrack']) */
+// outer dependency: ('JASOscillator', 'Point')
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// JASOscillator::Point
+	// ('JASOscillator', 'Point')
 	/* 80291A08 */ void setSeqData(void*, u32);
 	/* 80291ABC */ void start();
 	/* 80291BB8 */ void closeChild(u32);
@@ -53,16 +51,18 @@ struct JASTrack {
 	/* 80292BC0 */ void setTimebase(u16);
 };
 
-/* top-level dependencies (begin JASSeqParser) */
-// outer dependency: JASSeqParser::BranchCondition
-// outer dependency: JASTrack
-/* top-level dependencies (end JASSeqParser) */
+// build JASSeqParser (['JASSeqParser']) True/False
+struct JASSeqParser;
+/* top-level dependencies (begin ['JASSeqParser']) */
+// outer dependency: ('JASTrack',)
+// outer dependency: ('JASSeqParser', 'BranchCondition')
+/* top-level dependencies (end ['JASSeqParser']) */
 struct JASSeqParser {
-	// JASSeqParser::BranchCondition
-	// JASTrack
-	// build BranchCondition (JASSeqParser::BranchCondition) False/False
-	/* dependencies (begin JASSeqParser::BranchCondition) */
-	/* dependencies (end JASSeqParser::BranchCondition) */
+	// ('JASTrack',)
+	// ('JASSeqParser', 'BranchCondition')
+	// build BranchCondition (['JASSeqParser', 'BranchCondition']) False/False
+	/* dependencies (begin ['JASSeqParser', 'BranchCondition']) */
+	/* dependencies (end ['JASSeqParser', 'BranchCondition']) */
 	struct BranchCondition {
 	};
 
@@ -136,27 +136,27 @@ struct JASSeqParser {
 	/* 802958D4 */ void parse(JASTrack*);
 };
 
-// build JASTrack (JASTrack) True/True
-// build JASOscillator (JASOscillator) True/True
-// build JASTrackPort (JASTrackPort) False/False
-/* top-level dependencies (begin JASTrackPort) */
-/* top-level dependencies (end JASTrackPort) */
+// build JASTrack (['JASTrack']) True/True
+// build JASOscillator (['JASOscillator']) True/True
+// build JASTrackPort (['JASTrackPort']) False/False
+/* top-level dependencies (begin ['JASTrackPort']) */
+/* top-level dependencies (end ['JASTrackPort']) */
 struct JASTrackPort {
 	/* 8029360C */ void checkImport(u32) const;
 	/* 80293628 */ void checkExport(u32) const;
 };
 
-// build JASRegisterParam (JASRegisterParam) False/False
-// build JASRegisterParam (JASRegisterParam) True/False
+// build JASRegisterParam (['JASRegisterParam']) False/False
+// build JASRegisterParam (['JASRegisterParam']) True/False
 struct JASRegisterParam;
-/* top-level dependencies (begin JASRegisterParam) */
-// outer dependency: JASRegisterParam::RegID
-/* top-level dependencies (end JASRegisterParam) */
+/* top-level dependencies (begin ['JASRegisterParam']) */
+// outer dependency: ('JASRegisterParam', 'RegID')
+/* top-level dependencies (end ['JASRegisterParam']) */
 struct JASRegisterParam {
-	// JASRegisterParam::RegID
-	// build RegID (JASRegisterParam::RegID) False/False
-	/* dependencies (begin JASRegisterParam::RegID) */
-	/* dependencies (end JASRegisterParam::RegID) */
+	// ('JASRegisterParam', 'RegID')
+	// build RegID (['JASRegisterParam', 'RegID']) False/False
+	/* dependencies (begin ['JASRegisterParam', 'RegID']) */
+	/* dependencies (end ['JASRegisterParam', 'RegID']) */
 	struct RegID {
 	};
 
@@ -164,9 +164,9 @@ struct JASRegisterParam {
 	/* 802937B8 */ void read(JASRegisterParam::RegID);
 };
 
-// build JASSeqCtrl (JASSeqCtrl) False/False
-/* top-level dependencies (begin JASSeqCtrl) */
-/* top-level dependencies (end JASSeqCtrl) */
+// build JASSeqCtrl (['JASSeqCtrl']) False/False
+/* top-level dependencies (begin ['JASSeqCtrl']) */
+/* top-level dependencies (end ['JASSeqCtrl']) */
 struct JASSeqCtrl {
 	/* 80293AE0 */ void setIntrMask(u32);
 	/* 80293AF0 */ void clrIntrMask(u32);
@@ -174,9 +174,9 @@ struct JASSeqCtrl {
 	/* 80293B78 */ void checkIntr();
 };
 
-// build JASSeqReader (JASSeqReader) False/False
-/* top-level dependencies (begin JASSeqReader) */
-/* top-level dependencies (end JASSeqReader) */
+// build JASSeqReader (['JASSeqReader']) False/False
+/* top-level dependencies (begin ['JASSeqReader']) */
+/* top-level dependencies (end ['JASSeqReader']) */
 struct JASSeqReader {
 	/* 8029618C */ void call(u32);
 	/* 802961CC */ void loopStart(u32);
@@ -185,13 +185,13 @@ struct JASSeqReader {
 	/* 802962B0 */ void readMidiValue();
 };
 
-// build JMath (JMath) False/False
-/* top-level dependencies (begin JMath) */
-/* top-level dependencies (end JMath) */
+// build JMath (['JMath']) False/False
+/* top-level dependencies (begin ['JMath']) */
+/* top-level dependencies (end ['JMath']) */
 struct JMath {
-	// build TRandom_fast_ (JMath::TRandom_fast_) False/False
-	/* dependencies (begin JMath::TRandom_fast_) */
-	/* dependencies (end JMath::TRandom_fast_) */
+	// build TRandom_fast_ (['JMath', 'TRandom_fast_']) False/False
+	/* dependencies (begin ['JMath', 'TRandom_fast_']) */
+	/* dependencies (end ['JMath', 'TRandom_fast_']) */
 	struct TRandom_fast_ {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};

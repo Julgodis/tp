@@ -9,43 +9,43 @@
 // Types:
 // 
 
-// build JASBasicInst (JASBasicInst) False/False
-// build JASOscillator (JASOscillator) False/False
-/* top-level dependencies (begin JASOscillator) */
-/* top-level dependencies (end JASOscillator) */
+// build JASBasicInst (['JASBasicInst']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
+struct JKRHeap {
+};
+
+// build JASInstParam (['JASInstParam']) False/False
+/* top-level dependencies (begin ['JASInstParam']) */
+/* top-level dependencies (end ['JASInstParam']) */
+struct JASInstParam {
+};
+
+// build JASOscillator (['JASOscillator']) False/False
+/* top-level dependencies (begin ['JASOscillator']) */
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
-struct JASInstParam {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
-/* top-level dependencies (begin JASBasicInst) */
-// outer dependency: JASOscillator::Data
-// outer dependency: JASInstParam
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASBasicInst) */
+/* top-level dependencies (begin ['JASBasicInst']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASInstParam',)
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASBasicInst']) */
 struct JASBasicInst {
-	// JASOscillator::Data
-	// JASInstParam
-	// JKRHeap
-	// build TKeymap (JASBasicInst::TKeymap) False/False
-	/* dependencies (begin JASBasicInst::TKeymap) */
-	/* dependencies (end JASBasicInst::TKeymap) */
+	// ('JKRHeap',)
+	// ('JASInstParam',)
+	// ('JASOscillator', 'Data')
+	// build TKeymap (['JASBasicInst', 'TKeymap']) False/False
+	/* dependencies (begin ['JASBasicInst', 'TKeymap']) */
+	/* dependencies (end ['JASBasicInst', 'TKeymap']) */
 	struct TKeymap {
 		/* 80298250 */ ~TKeymap();
 		/* 802982D4 */ TKeymap();
@@ -60,19 +60,19 @@ struct JASBasicInst {
 	/* 802982E0 */ void getType() const;
 };
 
-// build JASInstParam (JASInstParam) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JASOscillator (JASOscillator) True/True
-// build JASInst (JASInst) False/False
-/* top-level dependencies (begin JASInst) */
-/* top-level dependencies (end JASInst) */
+// build JASInstParam (['JASInstParam']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JASOscillator (['JASOscillator']) True/True
+// build JASInst (['JASInst']) False/False
+/* top-level dependencies (begin ['JASInst']) */
+/* top-level dependencies (end ['JASInst']) */
 struct JASInst {
 	/* 8029828C */ ~JASInst();
 };
 
-// build JASCalc (JASCalc) False/False
-/* top-level dependencies (begin JASCalc) */
-/* top-level dependencies (end JASCalc) */
+// build JASCalc (['JASCalc']) False/False
+/* top-level dependencies (begin ['JASCalc']) */
+/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE72C */ void getFreeSize();
@@ -19,29 +19,29 @@ struct JKRHeap {
 	/* 802CEB78 */ void setErrorFlag(bool);
 };
 
-// build OSContext (OSContext) False/False
-/* top-level dependencies (begin OSContext) */
-/* top-level dependencies (end OSContext) */
+// build OSContext (['OSContext']) False/False
+/* top-level dependencies (begin ['OSContext']) */
+/* top-level dependencies (end ['OSContext']) */
 struct OSContext {
 };
 
-// build mDoDvdThd (mDoDvdThd) False/False
-/* top-level dependencies (begin mDoDvdThd) */
-/* top-level dependencies (end mDoDvdThd) */
+// build mDoDvdThd (['mDoDvdThd']) False/False
+/* top-level dependencies (begin ['mDoDvdThd']) */
+/* top-level dependencies (end ['mDoDvdThd']) */
 struct mDoDvdThd {
 	/* 80015858 */ void create(s32);
 };
 
-// build mDoMemCd_Ctrl_c (mDoMemCd_Ctrl_c) False/False
-/* top-level dependencies (begin mDoMemCd_Ctrl_c) */
-/* top-level dependencies (end mDoMemCd_Ctrl_c) */
+// build mDoMemCd_Ctrl_c (['mDoMemCd_Ctrl_c']) False/False
+/* top-level dependencies (begin ['mDoMemCd_Ctrl_c']) */
+/* top-level dependencies (end ['mDoMemCd_Ctrl_c']) */
 struct mDoMemCd_Ctrl_c {
 	/* 80016730 */ void ThdInit();
 };
 
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
+// build JUTConsole (['JUTConsole']) False/False
+/* top-level dependencies (begin ['JUTConsole']) */
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
@@ -50,90 +50,90 @@ struct JUTConsole {
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
-// build cMl (cMl) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin cMl) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end cMl) */
+// build cMl (['cMl']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['cMl']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['cMl']) */
 struct cMl {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80263220 */ void init(JKRHeap*);
 };
 
-// build JFWSystem (JFWSystem) False/False
-/* top-level dependencies (begin JFWSystem) */
-/* top-level dependencies (end JFWSystem) */
+// build JFWSystem (['JFWSystem']) False/False
+/* top-level dependencies (begin ['JFWSystem']) */
+/* top-level dependencies (end ['JFWSystem']) */
 struct JFWSystem {
 	/* 80271CD0 */ void firstInit();
 	/* 80271D18 */ void init();
 };
 
-// build JKRThread (JKRThread) False/False
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build JKRThread (['JKRThread']) False/False
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// OSThread
+	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 };
 
-// build OSThread (OSThread) True/True
-// build JKRThreadSwitch (JKRThreadSwitch) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRThreadSwitch) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRThreadSwitch) */
+// build OSThread (['OSThread']) True/True
+// build JKRThreadSwitch (['JKRThreadSwitch']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRThreadSwitch']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRThreadSwitch']) */
 struct JKRThreadSwitch {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D1A14 */ void createManager(JKRHeap*);
 };
 
-// build JKRAramStream (JKRAramStream) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRAramStream) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAramStream) */
+// build JKRAramStream (['JKRAramStream']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRAramStream']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
-// build JUTDbPrint (JUTDbPrint) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
+// build JUTDbPrint (['JUTDbPrint']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTDbPrint) */
-// outer dependency: JUTFont
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTDbPrint) */
+/* top-level dependencies (begin ['JUTDbPrint']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['JUTDbPrint']) */
 struct JUTDbPrint {
-	// JUTFont
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JUTFont',)
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 };
 
-// build JUTFont (JUTFont) True/True
-// build JUTGamePad (JUTGamePad) False/False
-// build JUTGamePad (JUTGamePad) True/False
+// build JUTFont (['JUTFont']) True/True
+// build JUTGamePad (['JUTGamePad']) False/False
+// build JUTGamePad (['JUTGamePad']) True/False
 struct JUTGamePad;
-/* top-level dependencies (begin JUTGamePad) */
-// outer dependency: JUTGamePad::EPadPort
-/* top-level dependencies (end JUTGamePad) */
+/* top-level dependencies (begin ['JUTGamePad']) */
+// outer dependency: ('JUTGamePad', 'EPadPort')
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// JUTGamePad::EPadPort
-	// build EPadPort (JUTGamePad::EPadPort) False/False
-	/* dependencies (begin JUTGamePad::EPadPort) */
-	/* dependencies (end JUTGamePad::EPadPort) */
+	// ('JUTGamePad', 'EPadPort')
+	// build EPadPort (['JUTGamePad', 'EPadPort']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EPadPort']) */
+	/* dependencies (end ['JUTGamePad', 'EPadPort']) */
 	struct EPadPort {
 	};
 
@@ -141,9 +141,9 @@ struct JUTGamePad {
 	/* 802E07B0 */ ~JUTGamePad();
 };
 
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E2F18 */ void isEnablePad() const;
 	/* 802E2F54 */ void readPad(u32*, u32*);
@@ -151,27 +151,27 @@ struct JUTException {
 	/* 802E3B0C */ void appendMapFile(char const*);
 };
 
-// build JUTAssertion (JUTAssertion) False/False
-/* top-level dependencies (begin JUTAssertion) */
-/* top-level dependencies (end JUTAssertion) */
+// build JUTAssertion (['JUTAssertion']) False/False
+/* top-level dependencies (begin ['JUTAssertion']) */
+/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E4C34 */ void setVisible(bool);
 };
 
-// build JUTVideo (JUTVideo) False/False
-/* top-level dependencies (begin JUTVideo) */
-/* top-level dependencies (end JUTVideo) */
+// build JUTVideo (['JUTVideo']) False/False
+/* top-level dependencies (begin ['JUTVideo']) */
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
 	/* 802E4CAC */ void destroyManager();
 };
 
-// build JUTConsoleManager (JUTConsoleManager) False/False
-// build JUTConsole (JUTConsole) True/True
-/* top-level dependencies (begin JUTConsoleManager) */
-// outer dependency: JUTConsole
-/* top-level dependencies (end JUTConsoleManager) */
+// build JUTConsoleManager (['JUTConsoleManager']) False/False
+// build JUTConsole (['JUTConsole']) True/True
+/* top-level dependencies (begin ['JUTConsoleManager']) */
+// outer dependency: ('JUTConsole',)
+/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
-	// JUTConsole
+	// ('JUTConsole',)
 	/* 802E8450 */ void drawDirect(bool) const;
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
 };

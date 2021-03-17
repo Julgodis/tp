@@ -9,38 +9,38 @@
 // Types:
 // 
 
-// build JPAParticleCallBack (JPAParticleCallBack) False/False
-/* top-level dependencies (begin JPAParticleCallBack) */
-/* top-level dependencies (end JPAParticleCallBack) */
+// build JPAParticleCallBack (['JPAParticleCallBack']) False/False
+/* top-level dependencies (begin ['JPAParticleCallBack']) */
+/* top-level dependencies (end ['JPAParticleCallBack']) */
 struct JPAParticleCallBack {
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-// build JPABaseParticle (JPABaseParticle) True/False
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+// build JPABaseParticle (['JPABaseParticle']) True/False
 struct JPABaseParticle;
-/* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPABaseEmitter) */
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// JPABaseParticle
+	// ('JPABaseParticle',)
 	/* 8027EB60 */ void createChild(JPABaseParticle*);
 };
 
-/* top-level dependencies (begin JPABaseParticle) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JPABaseParticle) */
+/* top-level dependencies (begin ['JPABaseParticle']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPABaseEmitter',)
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// JPAEmitterWorkData
-	// JPABaseEmitter
+	// ('JPAEmitterWorkData',)
+	// ('JPABaseEmitter',)
 	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
@@ -50,26 +50,26 @@ struct JPABaseParticle {
 	/* 80280568 */ void getHeight(JPABaseEmitter const*) const;
 };
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build JPAResource (JPAResource) False/False
-// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
-// build JPABaseParticle (JPABaseParticle) True/True
-/* top-level dependencies (begin JPAResource) */
-// outer dependency: JPAEmitterWorkData
-// outer dependency: JPABaseParticle
-/* top-level dependencies (end JPAResource) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPAResource (['JPAResource']) False/False
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
+// build JPABaseParticle (['JPABaseParticle']) True/True
+/* top-level dependencies (begin ['JPAResource']) */
+// outer dependency: ('JPAEmitterWorkData',)
+// outer dependency: ('JPABaseParticle',)
+/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
-	// JPAEmitterWorkData
-	// JPABaseParticle
+	// ('JPAEmitterWorkData',)
+	// ('JPABaseParticle',)
 	/* 8027658C */ void calc_p(JPAEmitterWorkData*, JPABaseParticle*);
 	/* 80276608 */ void calc_c(JPAEmitterWorkData*, JPABaseParticle*);
 	/* 80276684 */ void calcField(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 

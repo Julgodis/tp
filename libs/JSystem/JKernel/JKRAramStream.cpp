@@ -9,38 +9,38 @@
 // Types:
 // 
 
-// build JKRAramStream (JKRAramStream) False/False
-// build JSUFileInputStream (JSUFileInputStream) False/False
-/* top-level dependencies (begin JSUFileInputStream) */
-/* top-level dependencies (end JSUFileInputStream) */
-struct JSUFileInputStream {
+// build JKRAramStream (['JKRAramStream']) False/False
+// build JKRAramStreamCommand (['JKRAramStreamCommand']) False/False
+/* top-level dependencies (begin ['JKRAramStreamCommand']) */
+/* top-level dependencies (end ['JKRAramStreamCommand']) */
+struct JKRAramStreamCommand {
+	/* 802D4088 */ JKRAramStreamCommand();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRAramStreamCommand (JKRAramStreamCommand) False/False
-/* top-level dependencies (begin JKRAramStreamCommand) */
-/* top-level dependencies (end JKRAramStreamCommand) */
-struct JKRAramStreamCommand {
-	/* 802D4088 */ JKRAramStreamCommand();
+// build JSUFileInputStream (['JSUFileInputStream']) False/False
+/* top-level dependencies (begin ['JSUFileInputStream']) */
+/* top-level dependencies (end ['JSUFileInputStream']) */
+struct JSUFileInputStream {
 };
 
-/* top-level dependencies (begin JKRAramStream) */
-// outer dependency: JSUFileInputStream
-// outer dependency: JKRHeap
-// outer dependency: JKRAramStreamCommand
-/* top-level dependencies (end JKRAramStream) */
+/* top-level dependencies (begin ['JKRAramStream']) */
+// outer dependency: ('JKRAramStreamCommand',)
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JSUFileInputStream',)
+/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
-	// JSUFileInputStream
-	// JKRHeap
-	// JKRAramStreamCommand
+	// ('JKRAramStreamCommand',)
+	// ('JKRHeap',)
+	// ('JSUFileInputStream',)
 	/* 802D3B48 */ void create(s32);
 	/* 802D3BB8 */ JKRAramStream(s32);
 	/* 802D3C08 */ ~JKRAramStream();
@@ -52,60 +52,60 @@ struct JKRAramStream {
 	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
-// build JKRAramStreamCommand (JKRAramStreamCommand) True/True
-// build JSUFileInputStream (JSUFileInputStream) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JSURandomInputStream (JSURandomInputStream) False/False
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
-/* top-level dependencies (begin JSUStreamSeekFrom) */
-/* top-level dependencies (end JSUStreamSeekFrom) */
+// build JKRAramStreamCommand (['JKRAramStreamCommand']) True/True
+// build JSUFileInputStream (['JSUFileInputStream']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
+/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
+/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin JSURandomInputStream) */
-// outer dependency: JSUStreamSeekFrom
-/* top-level dependencies (end JSURandomInputStream) */
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+// outer dependency: ('JSUStreamSeekFrom',)
+/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// JSUStreamSeekFrom
+	// ('JSUStreamSeekFrom',)
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JKRThread (JKRThread) False/False
-/* top-level dependencies (begin JKRThread) */
-/* top-level dependencies (end JKRThread) */
+// build JKRThread (['JKRThread']) False/False
+/* top-level dependencies (begin ['JKRThread']) */
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JKRAramPiece (JKRAramPiece) False/False
-// build JKRAramBlock (JKRAramBlock) False/False
-/* top-level dependencies (begin JKRAramBlock) */
-/* top-level dependencies (end JKRAramBlock) */
+// build JKRAramPiece (['JKRAramPiece']) False/False
+// build JKRAramBlock (['JKRAramBlock']) False/False
+/* top-level dependencies (begin ['JKRAramBlock']) */
+/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
 };
 
-/* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAramBlock
-/* top-level dependencies (end JKRAramPiece) */
+/* top-level dependencies (begin ['JKRAramPiece']) */
+// outer dependency: ('JKRAramBlock',)
+/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// JKRAramBlock
+	// ('JKRAramBlock',)
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 };
 
-// build JKRAramBlock (JKRAramBlock) True/True
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JKRAramBlock (['JKRAramBlock']) True/True
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
-// build JUTException (JUTException) False/False
-/* top-level dependencies (begin JUTException) */
-/* top-level dependencies (end JUTException) */
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
+// build JUTException (['JUTException']) False/False
+/* top-level dependencies (begin ['JUTException']) */
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };

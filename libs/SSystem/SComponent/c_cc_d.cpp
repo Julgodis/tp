@@ -9,51 +9,51 @@
 // Types:
 // 
 
-// build cCcD_DivideInfo (cCcD_DivideInfo) False/False
-/* top-level dependencies (begin cCcD_DivideInfo) */
-/* top-level dependencies (end cCcD_DivideInfo) */
+// build cCcD_DivideInfo (['cCcD_DivideInfo']) False/False
+/* top-level dependencies (begin ['cCcD_DivideInfo']) */
+/* top-level dependencies (end ['cCcD_DivideInfo']) */
 struct cCcD_DivideInfo {
 	/* 80263358 */ void Set(u32, u32, u32);
 	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
 };
 
-// build cCcD_DivideArea (cCcD_DivideArea) False/False
-// build cM3dGAab (cM3dGAab) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cCcD_DivideArea (['cCcD_DivideArea']) False/False
+// build cM3dGAab (['cM3dGAab']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-/* top-level dependencies (begin cM3dGAab) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGAab) */
+/* top-level dependencies (begin ['cM3dGAab']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// cXyz
+	// ('cXyz',)
 	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
 	/* 8026ECF8 */ void ClearForMinMax();
 	/* 8026ED1C */ void SetMinMax(cXyz const&);
 	/* 8026EE68 */ void PlusR(f32);
 };
 
-// build cCcD_DivideInfo (cCcD_DivideInfo) True/True
-/* top-level dependencies (begin cCcD_DivideArea) */
-// outer dependency: cM3dGAab
-// outer dependency: cCcD_DivideInfo
-/* top-level dependencies (end cCcD_DivideArea) */
+// build cCcD_DivideInfo (['cCcD_DivideInfo']) True/True
+/* top-level dependencies (begin ['cCcD_DivideArea']) */
+// outer dependency: ('cM3dGAab',)
+// outer dependency: ('cCcD_DivideInfo',)
+/* top-level dependencies (end ['cCcD_DivideArea']) */
 struct cCcD_DivideArea {
-	// cM3dGAab
-	// cCcD_DivideInfo
+	// ('cM3dGAab',)
+	// ('cCcD_DivideInfo',)
 	/* 802633A8 */ void SetArea(cM3dGAab const&);
 	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
 	/* 802636A0 */ void CalcDivideInfoOverArea(cCcD_DivideInfo*, cM3dGAab const&);
 };
 
-// build cM3dGAab (cM3dGAab) True/True
-// build cCcD_Stts (cCcD_Stts) False/False
-/* top-level dependencies (begin cCcD_Stts) */
-/* top-level dependencies (end cCcD_Stts) */
+// build cM3dGAab (['cM3dGAab']) True/True
+// build cCcD_Stts (['cCcD_Stts']) False/False
+/* top-level dependencies (begin ['cCcD_Stts']) */
+/* top-level dependencies (end ['cCcD_Stts']) */
 struct cCcD_Stts {
 	/* 801410A4 */ ~cCcD_Stts();
 	/* 80263894 */ bool GetGStts() const;
@@ -68,61 +68,61 @@ struct cCcD_Stts {
 	/* 802649EC */ void ClrTg();
 };
 
-// build cCcD_ObjCommonBase (cCcD_ObjCommonBase) False/False
-/* top-level dependencies (begin cCcD_ObjCommonBase) */
-/* top-level dependencies (end cCcD_ObjCommonBase) */
+// build cCcD_ObjCommonBase (['cCcD_ObjCommonBase']) False/False
+/* top-level dependencies (begin ['cCcD_ObjCommonBase']) */
+/* top-level dependencies (end ['cCcD_ObjCommonBase']) */
 struct cCcD_ObjCommonBase {
 	/* 802639B0 */ void ct();
 };
 
-// build cCcD_ObjHitInf (cCcD_ObjHitInf) False/False
-// build cCcD_SrcObjHitInf (cCcD_SrcObjHitInf) False/False
-/* top-level dependencies (begin cCcD_SrcObjHitInf) */
-/* top-level dependencies (end cCcD_SrcObjHitInf) */
+// build cCcD_ObjHitInf (['cCcD_ObjHitInf']) False/False
+// build cCcD_SrcObjHitInf (['cCcD_SrcObjHitInf']) False/False
+/* top-level dependencies (begin ['cCcD_SrcObjHitInf']) */
+/* top-level dependencies (end ['cCcD_SrcObjHitInf']) */
 struct cCcD_SrcObjHitInf {
 };
 
-/* top-level dependencies (begin cCcD_ObjHitInf) */
-// outer dependency: cCcD_SrcObjHitInf
-/* top-level dependencies (end cCcD_ObjHitInf) */
+/* top-level dependencies (begin ['cCcD_ObjHitInf']) */
+// outer dependency: ('cCcD_SrcObjHitInf',)
+/* top-level dependencies (end ['cCcD_ObjHitInf']) */
 struct cCcD_ObjHitInf {
-	// cCcD_SrcObjHitInf
+	// ('cCcD_SrcObjHitInf',)
 	/* 802639C4 */ void Set(cCcD_SrcObjHitInf const&);
 };
 
-// build cCcD_SrcObjHitInf (cCcD_SrcObjHitInf) True/True
-// build cCcD_Obj (cCcD_Obj) False/False
-// build cCcD_SrcObj (cCcD_SrcObj) False/False
-/* top-level dependencies (begin cCcD_SrcObj) */
-/* top-level dependencies (end cCcD_SrcObj) */
+// build cCcD_SrcObjHitInf (['cCcD_SrcObjHitInf']) True/True
+// build cCcD_Obj (['cCcD_Obj']) False/False
+// build cCcD_SrcObj (['cCcD_SrcObj']) False/False
+/* top-level dependencies (begin ['cCcD_SrcObj']) */
+/* top-level dependencies (end ['cCcD_SrcObj']) */
 struct cCcD_SrcObj {
 };
 
-/* top-level dependencies (begin cCcD_Obj) */
-// outer dependency: cCcD_SrcObj
-/* top-level dependencies (end cCcD_Obj) */
+/* top-level dependencies (begin ['cCcD_Obj']) */
+// outer dependency: ('cCcD_SrcObj',)
+/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
-	// cCcD_SrcObj
+	// ('cCcD_SrcObj',)
 	/* 80263A10 */ void ct();
 	/* 80263A1C */ void Set(cCcD_SrcObj const&);
 	/* 80263A48 */ void GetAc();
 };
 
-// build cCcD_SrcObj (cCcD_SrcObj) True/True
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) False/False
-// build cXyz (cXyz) True/True
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/False
+// build cCcD_SrcObj (['cCcD_SrcObj']) True/True
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) False/False
+// build cXyz (['cXyz']) True/True
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/False
 struct cCcD_ShapeAttr;
-/* top-level dependencies (begin cCcD_ShapeAttr) */
-// outer dependency: cXyz
-// outer dependency: cCcD_ShapeAttr::Shape
-/* top-level dependencies (end cCcD_ShapeAttr) */
+/* top-level dependencies (begin ['cCcD_ShapeAttr']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('cCcD_ShapeAttr', 'Shape')
+/* top-level dependencies (end ['cCcD_ShapeAttr']) */
 struct cCcD_ShapeAttr {
-	// cXyz
-	// cCcD_ShapeAttr::Shape
-	// build Shape (cCcD_ShapeAttr::Shape) False/False
-	/* dependencies (begin cCcD_ShapeAttr::Shape) */
-	/* dependencies (end cCcD_ShapeAttr::Shape) */
+	// ('cXyz',)
+	// ('cCcD_ShapeAttr', 'Shape')
+	// build Shape (['cCcD_ShapeAttr', 'Shape']) False/False
+	/* dependencies (begin ['cCcD_ShapeAttr', 'Shape']) */
+	/* dependencies (end ['cCcD_ShapeAttr', 'Shape']) */
 	struct Shape {
 	};
 
@@ -134,98 +134,55 @@ struct cCcD_ShapeAttr {
 	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
 };
 
-// build cCcD_TriAttr (cCcD_TriAttr) False/False
-// build cCcD_CylAttr (cCcD_CylAttr) False/False
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cXyz (cXyz) True/True
-// build cCcD_AabAttr (cCcD_AabAttr) False/False
-/* top-level dependencies (begin cCcD_AabAttr) */
-/* top-level dependencies (end cCcD_AabAttr) */
-struct cCcD_AabAttr {
-};
-
-// build cCcD_PntAttr (cCcD_PntAttr) False/False
-/* top-level dependencies (begin cCcD_PntAttr) */
-/* top-level dependencies (end cCcD_PntAttr) */
+// build cCcD_TriAttr (['cCcD_TriAttr']) False/False
+// build cCcD_CpsAttr (['cCcD_CpsAttr']) False/False
+// build cCcD_CylAttr (['cCcD_CylAttr']) False/False
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cCcD_CpsAttr (['cCcD_CpsAttr']) True/False
+struct cCcD_CpsAttr;
+// build cCcD_PntAttr (['cCcD_PntAttr']) False/False
+/* top-level dependencies (begin ['cCcD_PntAttr']) */
+/* top-level dependencies (end ['cCcD_PntAttr']) */
 struct cCcD_PntAttr {
 };
 
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cCcD_TriAttr (cCcD_TriAttr) True/False
-struct cCcD_TriAttr;
-// build cCcD_SphAttr (cCcD_SphAttr) False/False
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cCcD_CylAttr (cCcD_CylAttr) True/False
-struct cCcD_CylAttr;
-// build cXyz (cXyz) True/True
-// build cCcD_AabAttr (cCcD_AabAttr) True/True
-// build cCcD_PntAttr (cCcD_PntAttr) True/True
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cCcD_TriAttr (cCcD_TriAttr) True/True
-// build cCcD_CpsAttr (cCcD_CpsAttr) False/False
-// build cCcD_CylAttr (cCcD_CylAttr) True/True
-// build cXyz (cXyz) True/True
-// build cCcD_AabAttr (cCcD_AabAttr) True/True
-// build cCcD_PntAttr (cCcD_PntAttr) True/True
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cCcD_TriAttr (cCcD_TriAttr) True/True
-// build cCcD_SphAttr (cCcD_SphAttr) True/False
-struct cCcD_SphAttr;
-/* top-level dependencies (begin cCcD_CpsAttr) */
-// outer dependency: cCcD_CylAttr
-// outer dependency: cXyz
-// outer dependency: cCcD_AabAttr
-// outer dependency: cCcD_PntAttr
-// outer dependency: cCcD_ShapeAttr
-// outer dependency: cCcD_TriAttr
-// outer dependency: cCcD_SphAttr
-/* top-level dependencies (end cCcD_CpsAttr) */
-struct cCcD_CpsAttr {
-	// cCcD_CylAttr
-	// cXyz
-	// cCcD_AabAttr
-	// cCcD_PntAttr
-	// cCcD_ShapeAttr
-	// cCcD_TriAttr
-	// cCcD_SphAttr
-	/* 80084FD4 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80084FDC */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 8008501C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80085024 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 8008502C */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 80085034 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 80085450 */ ~cCcD_CpsAttr();
-	/* 80263D38 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 80263D7C */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80263ED4 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80263F24 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 80263F74 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 80263FC4 */ void CalcAabBox();
-	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
+// build cCcD_AabAttr (['cCcD_AabAttr']) False/False
+/* top-level dependencies (begin ['cCcD_AabAttr']) */
+/* top-level dependencies (end ['cCcD_AabAttr']) */
+struct cCcD_AabAttr {
 };
 
-/* top-level dependencies (begin cCcD_SphAttr) */
-// outer dependency: cCcD_ShapeAttr::Shape
-// outer dependency: cCcD_CylAttr
-// outer dependency: cXyz
-// outer dependency: cCcD_AabAttr
-// outer dependency: cCcD_PntAttr
-// outer dependency: cCcD_ShapeAttr
-// outer dependency: cCcD_TriAttr
-// outer dependency: cCcD_CpsAttr
-/* top-level dependencies (end cCcD_SphAttr) */
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cCcD_SphAttr (['cCcD_SphAttr']) False/False
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cCcD_CpsAttr (['cCcD_CpsAttr']) True/True
+// build cCcD_CylAttr (['cCcD_CylAttr']) True/False
+struct cCcD_CylAttr;
+// build cCcD_PntAttr (['cCcD_PntAttr']) True/True
+// build cCcD_AabAttr (['cCcD_AabAttr']) True/True
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cXyz (['cXyz']) True/True
+// build cCcD_TriAttr (['cCcD_TriAttr']) True/False
+struct cCcD_TriAttr;
+/* top-level dependencies (begin ['cCcD_SphAttr']) */
+// outer dependency: ('cCcD_ShapeAttr', 'Shape')
+// outer dependency: ('cCcD_CpsAttr',)
+// outer dependency: ('cCcD_CylAttr',)
+// outer dependency: ('cCcD_PntAttr',)
+// outer dependency: ('cCcD_AabAttr',)
+// outer dependency: ('cCcD_ShapeAttr',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cCcD_TriAttr',)
+/* top-level dependencies (end ['cCcD_SphAttr']) */
 struct cCcD_SphAttr {
-	// cCcD_ShapeAttr::Shape
-	// cCcD_CylAttr
-	// cXyz
-	// cCcD_AabAttr
-	// cCcD_PntAttr
-	// cCcD_ShapeAttr
-	// cCcD_TriAttr
-	// cCcD_CpsAttr
+	// ('cCcD_ShapeAttr', 'Shape')
+	// ('cCcD_CpsAttr',)
+	// ('cCcD_CylAttr',)
+	// ('cCcD_PntAttr',)
+	// ('cCcD_AabAttr',)
+	// ('cCcD_ShapeAttr',)
+	// ('cXyz',)
+	// ('cCcD_TriAttr',)
 	/* 80037A54 */ void GetCoCP();
 	/* 80084B44 */ void GetCoCP() const;
 	/* 80084B4C */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
@@ -248,26 +205,27 @@ struct cCcD_SphAttr {
 	/* 80264808 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
-// build cCcD_CpsAttr (cCcD_CpsAttr) True/True
-/* top-level dependencies (begin cCcD_CylAttr) */
-// outer dependency: cCcD_ShapeAttr::Shape
-// outer dependency: cXyz
-// outer dependency: cCcD_AabAttr
-// outer dependency: cCcD_PntAttr
-// outer dependency: cCcD_ShapeAttr
-// outer dependency: cCcD_TriAttr
-// outer dependency: cCcD_SphAttr
-// outer dependency: cCcD_CpsAttr
-/* top-level dependencies (end cCcD_CylAttr) */
+// build cXyz (['cXyz']) True/True
+// build cCcD_TriAttr (['cCcD_TriAttr']) True/True
+/* top-level dependencies (begin ['cCcD_CylAttr']) */
+// outer dependency: ('cCcD_ShapeAttr', 'Shape')
+// outer dependency: ('cCcD_CpsAttr',)
+// outer dependency: ('cCcD_PntAttr',)
+// outer dependency: ('cCcD_AabAttr',)
+// outer dependency: ('cCcD_ShapeAttr',)
+// outer dependency: ('cCcD_SphAttr',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cCcD_TriAttr',)
+/* top-level dependencies (end ['cCcD_CylAttr']) */
 struct cCcD_CylAttr {
-	// cCcD_ShapeAttr::Shape
-	// cXyz
-	// cCcD_AabAttr
-	// cCcD_PntAttr
-	// cCcD_ShapeAttr
-	// cCcD_TriAttr
-	// cCcD_SphAttr
-	// cCcD_CpsAttr
+	// ('cCcD_ShapeAttr', 'Shape')
+	// ('cCcD_CpsAttr',)
+	// ('cCcD_PntAttr',)
+	// ('cCcD_AabAttr',)
+	// ('cCcD_ShapeAttr',)
+	// ('cCcD_SphAttr',)
+	// ('cXyz',)
+	// ('cCcD_TriAttr',)
 	/* 80037A4C */ void GetCoCP();
 	/* 80084CC0 */ void GetCoCP() const;
 	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
@@ -290,29 +248,71 @@ struct cCcD_CylAttr {
 	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
-// build cXyz (cXyz) True/True
-// build cCcD_AabAttr (cCcD_AabAttr) True/True
-// build cCcD_PntAttr (cCcD_PntAttr) True/True
-// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
-// build cCcD_SphAttr (cCcD_SphAttr) True/True
-// build cCcD_CpsAttr (cCcD_CpsAttr) True/True
-/* top-level dependencies (begin cCcD_TriAttr) */
-// outer dependency: cCcD_CylAttr
-// outer dependency: cXyz
-// outer dependency: cCcD_AabAttr
-// outer dependency: cCcD_PntAttr
-// outer dependency: cCcD_ShapeAttr
-// outer dependency: cCcD_SphAttr
-// outer dependency: cCcD_CpsAttr
-/* top-level dependencies (end cCcD_TriAttr) */
+// build cCcD_PntAttr (['cCcD_PntAttr']) True/True
+// build cCcD_AabAttr (['cCcD_AabAttr']) True/True
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cCcD_SphAttr (['cCcD_SphAttr']) True/True
+// build cXyz (['cXyz']) True/True
+// build cCcD_TriAttr (['cCcD_TriAttr']) True/True
+/* top-level dependencies (begin ['cCcD_CpsAttr']) */
+// outer dependency: ('cCcD_CylAttr',)
+// outer dependency: ('cCcD_PntAttr',)
+// outer dependency: ('cCcD_AabAttr',)
+// outer dependency: ('cCcD_ShapeAttr',)
+// outer dependency: ('cCcD_SphAttr',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('cCcD_TriAttr',)
+/* top-level dependencies (end ['cCcD_CpsAttr']) */
+struct cCcD_CpsAttr {
+	// ('cCcD_CylAttr',)
+	// ('cCcD_PntAttr',)
+	// ('cCcD_AabAttr',)
+	// ('cCcD_ShapeAttr',)
+	// ('cCcD_SphAttr',)
+	// ('cXyz',)
+	// ('cCcD_TriAttr',)
+	/* 80084FD4 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084FDC */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 8008501C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80085024 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 8008502C */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80085034 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80085450 */ ~cCcD_CpsAttr();
+	/* 80263D38 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80263D7C */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80263ED4 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80263F24 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80263F74 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80263FC4 */ void CalcAabBox();
+	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
+};
+
+// build cCcD_CylAttr (['cCcD_CylAttr']) True/True
+// build cCcD_PntAttr (['cCcD_PntAttr']) True/True
+// build cCcD_AabAttr (['cCcD_AabAttr']) True/True
+// build cCcD_ShapeAttr (['cCcD_ShapeAttr']) True/True
+// build cCcD_SphAttr (['cCcD_SphAttr']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cCcD_TriAttr']) */
+// outer dependency: ('cCcD_CpsAttr',)
+// outer dependency: ('cCcD_CylAttr',)
+// outer dependency: ('cCcD_PntAttr',)
+// outer dependency: ('cCcD_AabAttr',)
+// outer dependency: ('cCcD_ShapeAttr',)
+// outer dependency: ('cCcD_SphAttr',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cCcD_TriAttr']) */
 struct cCcD_TriAttr {
-	// cCcD_CylAttr
-	// cXyz
-	// cCcD_AabAttr
-	// cCcD_PntAttr
-	// cCcD_ShapeAttr
-	// cCcD_SphAttr
-	// cCcD_CpsAttr
+	// ('cCcD_CpsAttr',)
+	// ('cCcD_CylAttr',)
+	// ('cCcD_PntAttr',)
+	// ('cCcD_AabAttr',)
+	// ('cCcD_ShapeAttr',)
+	// ('cCcD_SphAttr',)
+	// ('cXyz',)
 	/* 80084E44 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
 	/* 80084E4C */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
 	/* 80084E54 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
@@ -332,119 +332,119 @@ struct cCcD_TriAttr {
 	/* 80264938 */ ~cCcD_TriAttr();
 };
 
-// build cCcD_CpsAttr (cCcD_CpsAttr) True/True
-// build cXyz (cXyz) True/True
-// build cCcD_CylAttr (cCcD_CylAttr) True/True
-// build cCcD_SphAttr (cCcD_SphAttr) True/True
-// build cCcD_ObjAt (cCcD_ObjAt) False/False
-// build cCcD_Obj (cCcD_Obj) True/True
-// build cCcD_SrcObjAt (cCcD_SrcObjAt) False/False
-/* top-level dependencies (begin cCcD_SrcObjAt) */
-/* top-level dependencies (end cCcD_SrcObjAt) */
+// build cCcD_CpsAttr (['cCcD_CpsAttr']) True/True
+// build cXyz (['cXyz']) True/True
+// build cCcD_CylAttr (['cCcD_CylAttr']) True/True
+// build cCcD_SphAttr (['cCcD_SphAttr']) True/True
+// build cCcD_ObjAt (['cCcD_ObjAt']) False/False
+// build cCcD_SrcObjAt (['cCcD_SrcObjAt']) False/False
+/* top-level dependencies (begin ['cCcD_SrcObjAt']) */
+/* top-level dependencies (end ['cCcD_SrcObjAt']) */
 struct cCcD_SrcObjAt {
 };
 
-/* top-level dependencies (begin cCcD_ObjAt) */
-// outer dependency: cCcD_Obj
-// outer dependency: cCcD_SrcObjAt
-/* top-level dependencies (end cCcD_ObjAt) */
+// build cCcD_Obj (['cCcD_Obj']) True/True
+/* top-level dependencies (begin ['cCcD_ObjAt']) */
+// outer dependency: ('cCcD_SrcObjAt',)
+// outer dependency: ('cCcD_Obj',)
+/* top-level dependencies (end ['cCcD_ObjAt']) */
 struct cCcD_ObjAt {
-	// cCcD_Obj
-	// cCcD_SrcObjAt
+	// ('cCcD_SrcObjAt',)
+	// ('cCcD_Obj',)
 	/* 8026483C */ void SetHit(cCcD_Obj*);
 	/* 8026484C */ void Set(cCcD_SrcObjAt const&);
 	/* 80264868 */ void ClrHit();
 };
 
-// build cCcD_SrcObjAt (cCcD_SrcObjAt) True/True
-// build cCcD_ObjTg (cCcD_ObjTg) False/False
-// build cCcD_Obj (cCcD_Obj) True/True
-// build cCcD_SrcObjTg (cCcD_SrcObjTg) False/False
-/* top-level dependencies (begin cCcD_SrcObjTg) */
-/* top-level dependencies (end cCcD_SrcObjTg) */
+// build cCcD_SrcObjAt (['cCcD_SrcObjAt']) True/True
+// build cCcD_ObjTg (['cCcD_ObjTg']) False/False
+// build cCcD_SrcObjTg (['cCcD_SrcObjTg']) False/False
+/* top-level dependencies (begin ['cCcD_SrcObjTg']) */
+/* top-level dependencies (end ['cCcD_SrcObjTg']) */
 struct cCcD_SrcObjTg {
 };
 
-/* top-level dependencies (begin cCcD_ObjTg) */
-// outer dependency: cCcD_Obj
-// outer dependency: cCcD_SrcObjTg
-/* top-level dependencies (end cCcD_ObjTg) */
+// build cCcD_Obj (['cCcD_Obj']) True/True
+/* top-level dependencies (begin ['cCcD_ObjTg']) */
+// outer dependency: ('cCcD_SrcObjTg',)
+// outer dependency: ('cCcD_Obj',)
+/* top-level dependencies (end ['cCcD_ObjTg']) */
 struct cCcD_ObjTg {
-	// cCcD_Obj
-	// cCcD_SrcObjTg
+	// ('cCcD_SrcObjTg',)
+	// ('cCcD_Obj',)
 	/* 80264880 */ void Set(cCcD_SrcObjTg const&);
 	/* 80264894 */ void SetGrp(u32);
 	/* 802648B0 */ void ClrHit();
 	/* 802648C8 */ void SetHit(cCcD_Obj*);
 };
 
-// build cCcD_SrcObjTg (cCcD_SrcObjTg) True/True
-// build cCcD_ObjCo (cCcD_ObjCo) False/False
-// build cCcD_Obj (cCcD_Obj) True/True
-/* top-level dependencies (begin cCcD_ObjCo) */
-// outer dependency: cCcD_Obj
-/* top-level dependencies (end cCcD_ObjCo) */
+// build cCcD_SrcObjTg (['cCcD_SrcObjTg']) True/True
+// build cCcD_ObjCo (['cCcD_ObjCo']) False/False
+// build cCcD_Obj (['cCcD_Obj']) True/True
+/* top-level dependencies (begin ['cCcD_ObjCo']) */
+// outer dependency: ('cCcD_Obj',)
+/* top-level dependencies (end ['cCcD_ObjCo']) */
 struct cCcD_ObjCo {
-	// cCcD_Obj
+	// ('cCcD_Obj',)
 	/* 802648D8 */ void SetHit(cCcD_Obj*);
 	/* 802648E8 */ void ClrHit();
 	/* 80264900 */ void SetIGrp(u32);
 	/* 8026491C */ void SetVsGrp(u32);
 };
 
-// build cCcD_AabAttr (cCcD_AabAttr) True/True
-// build cCcD_PntAttr (cCcD_PntAttr) True/True
-// build cM3dGCyl (cM3dGCyl) False/False
-// build cXyz (cXyz) True/True
-// build cM3dGSph (cM3dGSph) False/False
-// build cXyz (cXyz) True/True
-// build cM3dGCyl (cM3dGCyl) True/False
+// build cCcD_AabAttr (['cCcD_AabAttr']) True/True
+// build cCcD_PntAttr (['cCcD_PntAttr']) True/True
+// build cM3dGCyl (['cM3dGCyl']) False/False
+// build cXyz (['cXyz']) True/True
+// build cM3dGSph (['cM3dGSph']) False/False
+// build cM3dGCyl (['cM3dGCyl']) True/False
 struct cM3dGCyl;
-/* top-level dependencies (begin cM3dGSph) */
-// outer dependency: cXyz
-// outer dependency: cM3dGCyl
-/* top-level dependencies (end cM3dGSph) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['cM3dGSph']) */
+// outer dependency: ('cM3dGCyl',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// cXyz
-	// cM3dGCyl
+	// ('cM3dGCyl',)
+	// ('cXyz',)
 	/* 8026F710 */ void cross(cM3dGSph const*, cXyz*) const;
 	/* 8026F73C */ void cross(cM3dGCyl const*, cXyz*) const;
 };
 
-/* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cXyz
-// outer dependency: cM3dGSph
-/* top-level dependencies (end cM3dGCyl) */
+/* top-level dependencies (begin ['cM3dGCyl']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('cM3dGSph',)
+/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// cXyz
-	// cM3dGSph
+	// ('cXyz',)
+	// ('cM3dGSph',)
 	/* 8026F208 */ void cross(cM3dGSph const*, cXyz*) const;
 	/* 8026F22C */ void cross(cM3dGCyl const*, cXyz*) const;
 };
 
-// build cM3dGSph (cM3dGSph) True/True
-// build cM3dGTri (cM3dGTri) False/False
-// build cM3dGCyl (cM3dGCyl) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cM3dGSph (['cM3dGSph']) True/True
+// build cM3dGTri (['cM3dGTri']) False/False
+// build cM3dGCyl (['cM3dGCyl']) True/True
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGTri) */
-// outer dependency: cM3dGCyl
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGTri) */
+/* top-level dependencies (begin ['cM3dGTri']) */
+// outer dependency: ('cM3dGCyl',)
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
-	// cM3dGCyl
-	// Vec
+	// ('cM3dGCyl',)
+	// ('Vec',)
 	/* 8026F7B0 */ void cross(cM3dGCyl const*, Vec*) const;
 };
 
-// build Vec (Vec) True/True
-// build cM3dGCps (cM3dGCps) False/False
-/* top-level dependencies (begin cM3dGCps) */
-/* top-level dependencies (end cM3dGCps) */
+// build Vec (['Vec']) True/True
+// build cM3dGCps (['cM3dGCps']) False/False
+/* top-level dependencies (begin ['cM3dGCps']) */
+/* top-level dependencies (end ['cM3dGCps']) */
 struct cM3dGCps {
 };
 

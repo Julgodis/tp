@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASSeqReader (JASSeqReader) False/False
-/* top-level dependencies (begin JASSeqReader) */
-/* top-level dependencies (end JASSeqReader) */
+// build JASSeqReader (['JASSeqReader']) False/False
+/* top-level dependencies (begin ['JASSeqReader']) */
+/* top-level dependencies (end ['JASSeqReader']) */
 struct JASSeqReader {
 	/* 80296108 */ void init();
 	/* 80296148 */ void init(void*);

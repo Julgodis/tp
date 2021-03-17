@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build cMl (cMl) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build cMl (['cMl']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-/* top-level dependencies (begin cMl) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end cMl) */
+/* top-level dependencies (begin ['cMl']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['cMl']) */
 struct cMl {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80263220 */ void init(JKRHeap*);
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
-// build JKRHeap (JKRHeap) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build mDoCPd_c (mDoCPd_c) False/False
-/* top-level dependencies (begin mDoCPd_c) */
-/* top-level dependencies (end mDoCPd_c) */
+// build mDoCPd_c (['mDoCPd_c']) False/False
+/* top-level dependencies (begin ['mDoCPd_c']) */
+/* top-level dependencies (end ['mDoCPd_c']) */
 struct mDoCPd_c {
 	/* 80007D74 */ void recalibrate();
 };

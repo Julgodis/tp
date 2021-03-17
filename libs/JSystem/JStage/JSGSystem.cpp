@@ -9,28 +9,28 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
+// build JStage (['JStage']) False/False
+// build JStage (['JStage']) True/False
 struct JStage;
-// build JStage (JStage) True/True
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TEObject
-// outer dependency: JStage::TObject
-/* top-level dependencies (end JStage) */
+// build JStage (['JStage']) True/True
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('JStage', 'TEObject')
+// outer dependency: ('JStage', 'TObject')
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (JStage::TSystem) False/False
-	/* dependencies (begin JStage::TSystem) */
-	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
-	// build TEObject (JStage::TEObject) False/False
-	/* dependencies (begin JStage::TEObject) */
-	/* dependencies (end JStage::TEObject) */
+	// build TSystem (['JStage', 'TSystem']) False/False
+	/* dependencies (begin ['JStage', 'TSystem']) */
+	// inner dependency: 1 ('JStage', 'TEObject') (for ['JStage', 'TSystem'])
+	// build TEObject (['JStage', 'TEObject']) False/False
+	/* dependencies (begin ['JStage', 'TEObject']) */
+	/* dependencies (end ['JStage', 'TEObject']) */
 	struct TEObject {
 	};
 
-	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// inner dependency: 1 ('JStage', 'TObject') (for ['JStage', 'TSystem'])
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -46,10 +46,10 @@ struct JStage {
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
-	/* dependencies (end JStage::TSystem) */
+	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
-		// JStage::TEObject
-		// JStage::TObject
+		// ('JStage', 'TEObject')
+		// ('JStage', 'TObject')
 		/* 80280E90 */ ~TSystem();
 		/* 80280EF0 */ bool JSGFGetType() const;
 		/* 80280EF8 */ bool JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
@@ -59,8 +59,8 @@ struct JStage {
 		/* 80280F14 */ void JSGSetSystemData(u32, u32);
 	};
 
-	// build TObject (JStage::TObject) True/True
-	// build TEObject (JStage::TEObject) True/True
+	// build TObject (['JStage', 'TObject']) True/True
+	// build TEObject (['JStage', 'TEObject']) True/True
 };
 
 // 

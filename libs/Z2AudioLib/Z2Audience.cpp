@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build Z2AudibleChannel (Z2AudibleChannel) False/False
-/* top-level dependencies (begin Z2AudibleChannel) */
-/* top-level dependencies (end Z2AudibleChannel) */
+// build Z2AudibleChannel (['Z2AudibleChannel']) False/False
+/* top-level dependencies (begin ['Z2AudibleChannel']) */
+/* top-level dependencies (end ['Z2AudibleChannel']) */
 struct Z2AudibleChannel {
 	/* 802BBE74 */ Z2AudibleChannel();
 };
 
-// build Z2Audible (Z2Audible) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build Z2Audible (['Z2Audible']) False/False
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 	/* 8029E3B0 */ void clamp();
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
 };
 
-/* top-level dependencies (begin Z2Audible) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end Z2Audible) */
+/* top-level dependencies (begin ['Z2Audible']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['Z2Audible']) */
 struct Z2Audible {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 802BBE98 */ void calc();
 	/* 802BBED0 */ void getOuterParams(int);
 	/* 802BBEE4 */ void setOuterParams(JASSoundParams const&, JASSoundParams const&, int);
@@ -38,10 +38,10 @@ struct Z2Audible {
 	/* 802BD510 */ ~Z2Audible();
 };
 
-// build JASSoundParams (JASSoundParams) True/True
-// build Z2Audience3DSetting (Z2Audience3DSetting) False/False
-/* top-level dependencies (begin Z2Audience3DSetting) */
-/* top-level dependencies (end Z2Audience3DSetting) */
+// build JASSoundParams (['JASSoundParams']) True/True
+// build Z2Audience3DSetting (['Z2Audience3DSetting']) False/False
+/* top-level dependencies (begin ['Z2Audience3DSetting']) */
+/* top-level dependencies (end ['Z2Audience3DSetting']) */
 struct Z2Audience3DSetting {
 	/* 802BC248 */ Z2Audience3DSetting();
 	/* 802BC284 */ void init();
@@ -51,21 +51,21 @@ struct Z2Audience3DSetting {
 	/* 802BC6F8 */ void updateDolbyDist(f32, f32);
 };
 
-// build Z2AudioCamera (Z2AudioCamera) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Z2AudioCamera (['Z2AudioCamera']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build Z2Audible (Z2Audible) True/True
-/* top-level dependencies (begin Z2AudioCamera) */
-// outer dependency: Vec
-// outer dependency: Z2Audible
-/* top-level dependencies (end Z2AudioCamera) */
+// build Z2Audible (['Z2Audible']) True/True
+/* top-level dependencies (begin ['Z2AudioCamera']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('Z2Audible',)
+/* top-level dependencies (end ['Z2AudioCamera']) */
 struct Z2AudioCamera {
-	// Vec
-	// Z2Audible
+	// ('Vec',)
+	// ('Z2Audible',)
 	/* 802BC758 */ Z2AudioCamera();
 	/* 802BC788 */ void init();
 	/* 802BC7DC */ void setCameraState(f32 const (* )[4], Vec&, bool);
@@ -75,17 +75,17 @@ struct Z2AudioCamera {
 	/* 802BCCC0 */ void isInSight(Vec&) const;
 };
 
-// build Vec (Vec) True/True
-// build Z2SpotMic (Z2SpotMic) False/False
-// build Z2AudioCamera (Z2AudioCamera) True/True
-// build Z2Audible (Z2Audible) True/True
-/* top-level dependencies (begin Z2SpotMic) */
-// outer dependency: Z2AudioCamera
-// outer dependency: Z2Audible
-/* top-level dependencies (end Z2SpotMic) */
+// build Vec (['Vec']) True/True
+// build Z2SpotMic (['Z2SpotMic']) False/False
+// build Z2AudioCamera (['Z2AudioCamera']) True/True
+// build Z2Audible (['Z2Audible']) True/True
+/* top-level dependencies (begin ['Z2SpotMic']) */
+// outer dependency: ('Z2AudioCamera',)
+// outer dependency: ('Z2Audible',)
+/* top-level dependencies (end ['Z2SpotMic']) */
 struct Z2SpotMic {
-	// Z2AudioCamera
-	// Z2Audible
+	// ('Z2AudioCamera',)
+	// ('Z2Audible',)
 	/* 802BCD28 */ Z2SpotMic();
 	/* 802BCDA8 */ void clearMicState(int);
 	/* 802BCDE8 */ void calcVolumeFactor(int);
@@ -95,34 +95,34 @@ struct Z2SpotMic {
 	/* 802BD03C */ void calcMicVolume(f32, int, f32);
 };
 
-// build Z2Audience (Z2Audience) False/False
-// build JASSoundParams (JASSoundParams) True/True
-// build JAIAudible (JAIAudible) False/False
-/* top-level dependencies (begin JAIAudible) */
-/* top-level dependencies (end JAIAudible) */
+// build Z2Audience (['Z2Audience']) False/False
+// build Z2AudioCamera (['Z2AudioCamera']) True/True
+// build Z2Audible (['Z2Audible']) True/True
+// build Z2AudibleChannel (['Z2AudibleChannel']) True/True
+// build JASSoundParams (['JASSoundParams']) True/True
+// build Vec (['Vec']) True/True
+// build JAIAudible (['JAIAudible']) False/False
+/* top-level dependencies (begin ['JAIAudible']) */
+/* top-level dependencies (end ['JAIAudible']) */
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
 };
 
-// build Z2AudioCamera (Z2AudioCamera) True/True
-// build Z2Audible (Z2Audible) True/True
-// build Vec (Vec) True/True
-// build Z2AudibleChannel (Z2AudibleChannel) True/True
-/* top-level dependencies (begin Z2Audience) */
-// outer dependency: JASSoundParams
-// outer dependency: JAIAudible
-// outer dependency: Z2AudioCamera
-// outer dependency: Z2Audible
-// outer dependency: Vec
-// outer dependency: Z2AudibleChannel
-/* top-level dependencies (end Z2Audience) */
+/* top-level dependencies (begin ['Z2Audience']) */
+// outer dependency: ('Z2AudioCamera',)
+// outer dependency: ('Z2Audible',)
+// outer dependency: ('Z2AudibleChannel',)
+// outer dependency: ('JASSoundParams',)
+// outer dependency: ('Vec',)
+// outer dependency: ('JAIAudible',)
+/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
-	// JASSoundParams
-	// JAIAudible
-	// Z2AudioCamera
-	// Z2Audible
-	// Z2AudibleChannel
-	// Vec
+	// ('Z2AudioCamera',)
+	// ('Z2Audible',)
+	// ('Z2AudibleChannel',)
+	// ('Vec',)
+	// ('JAIAudible',)
+	// ('JASSoundParams',)
 	/* 802BD130 */ Z2Audience();
 	/* 802BD1FC */ ~Z2Audience();
 	/* 802BD2DC */ void setAudioCamera(f32 (* )[4], Vec&, Vec&, f32, f32, bool, int, bool);
@@ -142,10 +142,10 @@ struct Z2Audience {
 	/* 802BDED4 */ void getMaxChannels();
 };
 
-// build JAIAudible (JAIAudible) True/True
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JAIAudible (['JAIAudible']) True/True
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -153,24 +153,24 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JAIAudience (JAIAudience) False/False
-/* top-level dependencies (begin JAIAudience) */
-/* top-level dependencies (end JAIAudience) */
+// build JAIAudience (['JAIAudience']) False/False
+/* top-level dependencies (begin ['JAIAudience']) */
+/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 	/* 8029EFF4 */ ~JAIAudience();
 };
 
-// build Z2Calc (Z2Calc) False/False
-// build Z2Calc (Z2Calc) True/False
+// build Z2Calc (['Z2Calc']) False/False
+// build Z2Calc (['Z2Calc']) True/False
 struct Z2Calc;
-/* top-level dependencies (begin Z2Calc) */
-// outer dependency: Z2Calc::CurveSign
-/* top-level dependencies (end Z2Calc) */
+/* top-level dependencies (begin ['Z2Calc']) */
+// outer dependency: ('Z2Calc', 'CurveSign')
+/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// Z2Calc::CurveSign
-	// build CurveSign (Z2Calc::CurveSign) False/False
-	/* dependencies (begin Z2Calc::CurveSign) */
-	/* dependencies (end Z2Calc::CurveSign) */
+	// ('Z2Calc', 'CurveSign')
+	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
+	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
+	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -178,22 +178,22 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundInfo (Z2SoundInfo) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build Z2SoundInfo (['Z2SoundInfo']) False/False
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SoundInfo) */
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SoundInfo) */
+/* top-level dependencies (begin ['Z2SoundInfo']) */
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SoundInfo']) */
 struct Z2SoundInfo {
-	// JAISoundID
+	// ('JAISoundID',)
 	/* 802BB158 */ void getAudibleSwFull(JAISoundID);
 };
 
-// build JAISoundID (JAISoundID) True/True
+// build JAISoundID (['JAISoundID']) True/True
 // 
 // Forward References:
 // 

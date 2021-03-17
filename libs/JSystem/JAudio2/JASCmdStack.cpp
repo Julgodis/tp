@@ -9,13 +9,13 @@
 // Types:
 // 
 
-// build JASPortCmd (JASPortCmd) False/False
-/* top-level dependencies (begin JASPortCmd) */
-/* top-level dependencies (end JASPortCmd) */
+// build JASPortCmd (['JASPortCmd']) False/False
+/* top-level dependencies (begin ['JASPortCmd']) */
+/* top-level dependencies (end ['JASPortCmd']) */
 struct JASPortCmd {
-	// build TPortHead (JASPortCmd::TPortHead) False/False
-	/* dependencies (begin JASPortCmd::TPortHead) */
-	/* dependencies (end JASPortCmd::TPortHead) */
+	// build TPortHead (['JASPortCmd', 'TPortHead']) False/False
+	/* dependencies (begin ['JASPortCmd', 'TPortHead']) */
+	/* dependencies (end ['JASPortCmd', 'TPortHead']) */
 	struct TPortHead {
 		/* 80291094 */ void execCommandOnce();
 		/* 8029110C */ void execCommandStay();
@@ -25,24 +25,24 @@ struct JASPortCmd {
 	/* 80291060 */ void execAllCommand();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUPtrLink (JSUPtrLink) True/True
+// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 

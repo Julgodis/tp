@@ -9,16 +9,16 @@
 // Types:
 // 
 
-// build JAIStreamDataMgr (JAIStreamDataMgr) False/False
-/* top-level dependencies (begin JAIStreamDataMgr) */
-/* top-level dependencies (end JAIStreamDataMgr) */
+// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamDataMgr']) */
+/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAIStreamAramMgr (JAIStreamAramMgr) False/False
-/* top-level dependencies (begin JAIStreamAramMgr) */
-/* top-level dependencies (end JAIStreamAramMgr) */
+// build JAIStreamAramMgr (['JAIStreamAramMgr']) False/False
+/* top-level dependencies (begin ['JAIStreamAramMgr']) */
+/* top-level dependencies (end ['JAIStreamAramMgr']) */
 struct JAIStreamAramMgr {
 	/* 802A3B20 */ ~JAIStreamAramMgr();
 };

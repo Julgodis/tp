@@ -9,19 +9,17 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::object::TIDData
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+/* top-level dependencies (begin ['JStudio']) */
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build object (JStudio::object) False/False
-	/* dependencies (begin JStudio::object) */
-	/* dependencies (end JStudio::object) */
+	// build object (['JStudio', 'object']) False/False
+	/* dependencies (begin ['JStudio', 'object']) */
+	/* dependencies (end ['JStudio', 'object']) */
 	struct object {
-		// build TIDData (JStudio::object::TIDData) False/False
-		/* dependencies (begin JStudio::object::TIDData) */
-		/* dependencies (end JStudio::object::TIDData) */
+		// build TIDData (['JStudio', 'object', 'TIDData']) False/False
+		/* dependencies (begin ['JStudio', 'object', 'TIDData']) */
+		/* dependencies (end ['JStudio', 'object', 'TIDData']) */
 		struct TIDData {
 			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
 		};

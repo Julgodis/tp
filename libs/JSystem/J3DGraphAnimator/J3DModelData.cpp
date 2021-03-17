@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 80325D88 */ void clear();
 	/* 80325DA0 */ J3DModelData();
@@ -24,46 +24,46 @@ struct J3DModelData {
 	/* 8032617C */ ~J3DModelData();
 };
 
-// build J3DShapeTable (J3DShapeTable) False/False
-/* top-level dependencies (begin J3DShapeTable) */
-/* top-level dependencies (end J3DShapeTable) */
+// build J3DShapeTable (['J3DShapeTable']) False/False
+/* top-level dependencies (begin ['J3DShapeTable']) */
+/* top-level dependencies (end ['J3DShapeTable']) */
 struct J3DShapeTable {
 	/* 80326134 */ ~J3DShapeTable();
 };
 
-// build J3DVertexData (J3DVertexData) False/False
-/* top-level dependencies (begin J3DVertexData) */
-/* top-level dependencies (end J3DVertexData) */
+// build J3DVertexData (['J3DVertexData']) False/False
+/* top-level dependencies (begin ['J3DVertexData']) */
+/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 	/* 80310EF8 */ J3DVertexData();
 };
 
-// build J3DDrawMtxData (J3DDrawMtxData) False/False
-/* top-level dependencies (begin J3DDrawMtxData) */
-/* top-level dependencies (end J3DDrawMtxData) */
+// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
+/* top-level dependencies (begin ['J3DDrawMtxData']) */
+/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 	/* 803115F4 */ ~J3DDrawMtxData();
 };
 
-// build J3DMaterial (J3DMaterial) False/False
-/* top-level dependencies (begin J3DMaterial) */
-/* top-level dependencies (end J3DMaterial) */
+// build J3DMaterial (['J3DMaterial']) False/False
+/* top-level dependencies (begin ['J3DMaterial']) */
+/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 80316290 */ void countDLSize();
 	/* 80316E90 */ void newSharedDisplayList(u32);
 	/* 80316F24 */ void newSingleSharedDisplayList(u32);
 };
 
-// build J3DJointTree (J3DJointTree) False/False
-/* top-level dependencies (begin J3DJointTree) */
-/* top-level dependencies (end J3DJointTree) */
+// build J3DJointTree (['J3DJointTree']) False/False
+/* top-level dependencies (begin ['J3DJointTree']) */
+/* top-level dependencies (end ['J3DJointTree']) */
 struct J3DJointTree {
 	/* 80325A18 */ J3DJointTree();
 };
 
-// build J3DMaterialTable (J3DMaterialTable) False/False
-/* top-level dependencies (begin J3DMaterialTable) */
-/* top-level dependencies (end J3DMaterialTable) */
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 	/* 8032F5D0 */ J3DMaterialTable();
 	/* 8032F604 */ ~J3DMaterialTable();

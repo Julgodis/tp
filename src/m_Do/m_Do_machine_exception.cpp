@@ -9,39 +9,39 @@
 // Types:
 // 
 
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
+// build JUTConsole (['JUTConsole']) False/False
+/* top-level dependencies (begin ['JUTConsole']) */
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E7C38 */ void print(char const*);
 	/* 802E7F7C */ void dumpToTerminal(u32);
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-/* top-level dependencies (begin dRes_control_c) */
-/* top-level dependencies (end dRes_control_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+/* top-level dependencies (begin ['dRes_control_c']) */
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
 	/* 8003C638 */ void dump();
 };
 
-// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
-/* top-level dependencies (begin DynamicModuleControlBase) */
-/* top-level dependencies (end DynamicModuleControlBase) */
+// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
+/* top-level dependencies (begin ['DynamicModuleControlBase']) */
+/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 80262470 */ void dump();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build JKRAramHeap (JKRAramHeap) False/False
-/* top-level dependencies (begin JKRAramHeap) */
-/* top-level dependencies (end JKRAramHeap) */
+// build JKRAramHeap (['JKRAramHeap']) False/False
+/* top-level dependencies (begin ['JKRAramHeap']) */
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 	/* 802D3218 */ void dump();
 };

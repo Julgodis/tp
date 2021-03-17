@@ -9,65 +9,65 @@
 // Types:
 // 
 
-// build J2DTexMtx (J2DTexMtx) False/False
-// build J2DTextureSRTInfo (J2DTextureSRTInfo) False/False
-/* top-level dependencies (begin J2DTextureSRTInfo) */
-/* top-level dependencies (end J2DTextureSRTInfo) */
+// build J2DTexMtx (['J2DTexMtx']) False/False
+// build J2DTextureSRTInfo (['J2DTextureSRTInfo']) False/False
+/* top-level dependencies (begin ['J2DTextureSRTInfo']) */
+/* top-level dependencies (end ['J2DTextureSRTInfo']) */
 struct J2DTextureSRTInfo {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J2DTexMtx) */
-// outer dependency: J2DTextureSRTInfo
-// outer dependency: Vec
-/* top-level dependencies (end J2DTexMtx) */
+/* top-level dependencies (begin ['J2DTexMtx']) */
+// outer dependency: ('J2DTextureSRTInfo',)
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J2DTexMtx']) */
 struct J2DTexMtx {
-	// J2DTextureSRTInfo
-	// Vec
+	// ('J2DTextureSRTInfo',)
+	// ('Vec',)
 	/* 802E9C90 */ void load(u32);
 	/* 802E9CC4 */ void calc();
 	/* 802E9D2C */ void getTextureMtx(J2DTextureSRTInfo const&, Vec, f32 (* )[4]);
 	/* 802E9EBC */ void getTextureMtxMaya(J2DTextureSRTInfo const&, f32 (* )[4]);
 };
 
-// build J2DTextureSRTInfo (J2DTextureSRTInfo) True/True
-// build Vec (Vec) True/True
-// build J2DIndTevStage (J2DIndTevStage) False/False
-/* top-level dependencies (begin J2DIndTevStage) */
-/* top-level dependencies (end J2DIndTevStage) */
+// build J2DTextureSRTInfo (['J2DTextureSRTInfo']) True/True
+// build Vec (['Vec']) True/True
+// build J2DIndTevStage (['J2DIndTevStage']) False/False
+/* top-level dependencies (begin ['J2DIndTevStage']) */
+/* top-level dependencies (end ['J2DIndTevStage']) */
 struct J2DIndTevStage {
 	/* 802EA044 */ void load(u8);
 };
 
-// build J2DIndTexMtx (J2DIndTexMtx) False/False
-/* top-level dependencies (begin J2DIndTexMtx) */
-/* top-level dependencies (end J2DIndTexMtx) */
+// build J2DIndTexMtx (['J2DIndTexMtx']) False/False
+/* top-level dependencies (begin ['J2DIndTexMtx']) */
+/* top-level dependencies (end ['J2DIndTexMtx']) */
 struct J2DIndTexMtx {
 	/* 802EA098 */ void load(u8);
 };
 
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
-/* top-level dependencies (begin J2DIndTexCoordScale) */
-/* top-level dependencies (end J2DIndTexCoordScale) */
+// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) False/False
+/* top-level dependencies (begin ['J2DIndTexCoordScale']) */
+/* top-level dependencies (end ['J2DIndTexCoordScale']) */
 struct J2DIndTexCoordScale {
 	/* 802EA0CC */ void load(u8);
 };
 
-// build J2DIndTexOrder (J2DIndTexOrder) False/False
-/* top-level dependencies (begin J2DIndTexOrder) */
-/* top-level dependencies (end J2DIndTexOrder) */
+// build J2DIndTexOrder (['J2DIndTexOrder']) False/False
+/* top-level dependencies (begin ['J2DIndTexOrder']) */
+/* top-level dependencies (end ['J2DIndTexOrder']) */
 struct J2DIndTexOrder {
 	/* 802EA0FC */ void load(u8);
 };
 
-// build J2DTevBlock (J2DTevBlock) False/False
-/* top-level dependencies (begin J2DTevBlock) */
-/* top-level dependencies (end J2DTevBlock) */
+// build J2DTevBlock (['J2DTevBlock']) False/False
+/* top-level dependencies (begin ['J2DTevBlock']) */
+/* top-level dependencies (end ['J2DTevBlock']) */
 struct J2DTevBlock {
 	/* 802EA12C */ bool getTevSwapModeTable(u32);
 	/* 802EA134 */ bool getTevStage(u32);
@@ -82,9 +82,9 @@ struct J2DTevBlock {
 	/* 802EA184 */ bool getIndTevStage(u32);
 };
 
-// build J2DIndBlock (J2DIndBlock) False/False
-/* top-level dependencies (begin J2DIndBlock) */
-/* top-level dependencies (end J2DIndBlock) */
+// build J2DIndBlock (['J2DIndBlock']) False/False
+/* top-level dependencies (begin ['J2DIndBlock']) */
+/* top-level dependencies (end ['J2DIndBlock']) */
 struct J2DIndBlock {
 	/* 802EA18C */ bool getIndTexCoordScale(u32);
 	/* 802EA194 */ bool getIndTexMtx(u32);

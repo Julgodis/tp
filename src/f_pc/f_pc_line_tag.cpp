@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build line_tag (line_tag) False/False
-/* top-level dependencies (begin line_tag) */
-/* top-level dependencies (end line_tag) */
+// build line_tag (['line_tag']) False/False
+/* top-level dependencies (begin ['line_tag']) */
+/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_lists_tree_class (node_lists_tree_class) False/False
-/* top-level dependencies (begin node_lists_tree_class) */
-/* top-level dependencies (end node_lists_tree_class) */
+// build node_lists_tree_class (['node_lists_tree_class']) False/False
+/* top-level dependencies (begin ['node_lists_tree_class']) */
+/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 

@@ -9,35 +9,33 @@
 // Types:
 // 
 
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::fvb::TObject
-// outer dependency: JStudio::fvb::TControl
-// outer dependency: JStudio::fvb::data::TParse_TParagraph::TData
-// outer dependency: JStudio::object::TIDData
-// outer dependency: JStudio::fvb::data::TParse_TBlock
-/* top-level dependencies (end JStudio) */
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+// build JStudio (['JStudio']) True/True
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'fvb', 'TObject')
+// outer dependency: ('JStudio', 'fvb', 'TControl')
+// outer dependency: ('JStudio', 'fvb', 'data', 'TParse_TBlock')
+// outer dependency: ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build fvb (JStudio::fvb) False/False
-	/* dependencies (begin JStudio::fvb) */
-	/* dependencies (end JStudio::fvb) */
-	namespace fvb {
-		// build TObject (JStudio::fvb::TObject) False/False
-		/* dependencies (begin JStudio::fvb::TObject) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject)
-		// build TControl (JStudio::fvb::TControl) False/False
-		/* dependencies (begin JStudio::fvb::TControl) */
-		// inner dependency: TObject (JStudio::fvb::TObject) True False (for JStudio::fvb::TControl)
-		// build TObject (JStudio::fvb::TObject) True/False
+	// build fvb (['JStudio', 'fvb']) False/False
+	/* dependencies (begin ['JStudio', 'fvb']) */
+	/* dependencies (end ['JStudio', 'fvb']) */
+	struct fvb {
+		// build TObject (['JStudio', 'fvb', 'TObject']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TControl']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'TObject') (for ['JStudio', 'fvb', 'TControl'])
+		// build TObject (['JStudio', 'fvb', 'TObject']) True/False
 		struct TObject;
-		/* dependencies (end JStudio::fvb::TControl) */
+		/* dependencies (end ['JStudio', 'fvb', 'TControl']) */
 		struct TControl {
-			// JStudio::fvb::TObject
+			// ('JStudio', 'fvb', 'TObject')
 			/* 80284668 */ TControl();
 			/* 80284698 */ ~TControl();
 			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
@@ -48,26 +46,26 @@ namespace JStudio {
 			/* 802848D4 */ void getObject_index(u32);
 		};
 
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject)
-		// build data (JStudio::fvb::data) False/False
-		/* dependencies (begin JStudio::fvb::data) */
-		/* dependencies (end JStudio::fvb::data) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject'])
+		// build data (['JStudio', 'fvb', 'data']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'data']) */
+		/* dependencies (end ['JStudio', 'fvb', 'data']) */
 		struct data {
-			// build TParse_TBlock (JStudio::fvb::data::TParse_TBlock) False/False
-			/* dependencies (begin JStudio::fvb::data::TParse_TBlock) */
-			/* dependencies (end JStudio::fvb::data::TParse_TBlock) */
+			// build TParse_TBlock (['JStudio', 'fvb', 'data', 'TParse_TBlock']) False/False
+			/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TBlock']) */
+			/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TBlock']) */
 			struct TParse_TBlock {
 			};
 
-			// build TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph) False/False
-			/* dependencies (begin JStudio::fvb::data::TParse_TParagraph) */
-			// inner dependency: TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::data::TParse_TParagraph)
-			/* dependencies (end JStudio::fvb::data::TParse_TParagraph) */
+			// build TParse_TParagraph (['JStudio', 'fvb', 'data', 'TParse_TParagraph']) False/False
+			/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
+			// inner dependency: 3 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'data', 'TParse_TParagraph'])
+			/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
 			struct TParse_TParagraph {
-				// JStudio::fvb::data::TParse_TParagraph::TData
-				// build TData (JStudio::fvb::data::TParse_TParagraph::TData) False/False
-				/* dependencies (begin JStudio::fvb::data::TParse_TParagraph::TData) */
-				/* dependencies (end JStudio::fvb::data::TParse_TParagraph::TData) */
+				// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+				// build TData (['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) False/False
+				/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
+				/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
 				struct TData {
 				};
 
@@ -76,146 +74,146 @@ namespace JStudio {
 
 		};
 
-		/* dependencies (end JStudio::fvb::TObject) */
+		/* dependencies (end ['JStudio', 'fvb', 'TObject']) */
 		struct TObject {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80283F80 */ ~TObject();
 			/* 80283FC8 */ void prepare(JStudio::fvb::data::TParse_TBlock const&, JStudio::fvb::TControl*);
 		};
 
-		// build data (JStudio::fvb::data) True/True
-		// build TControl (JStudio::fvb::TControl) True/True
-		// build TObject_composite (JStudio::fvb::TObject_composite) False/False
-		/* dependencies (begin JStudio::fvb::TObject_composite) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_composite)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_composite)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_composite)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_composite) */
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// build TObject_composite (['JStudio', 'fvb', 'TObject_composite']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_composite']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_composite'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_composite'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_composite'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_composite']) */
 		struct TObject_composite {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80284254 */ TObject_composite(JStudio::fvb::data::TParse_TBlock const&);
 			/* 802842D4 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284F78 */ ~TObject_composite();
 		};
 
-		// build TObject_constant (JStudio::fvb::TObject_constant) False/False
-		/* dependencies (begin JStudio::fvb::TObject_constant) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_constant)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_constant)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_constant)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_constant) */
+		// build TObject_constant (['JStudio', 'fvb', 'TObject_constant']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_constant']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_constant'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_constant'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_constant'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_constant']) */
 		struct TObject_constant {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80284338 */ TObject_constant(JStudio::fvb::data::TParse_TBlock const&);
 			/* 802843B8 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284EF4 */ ~TObject_constant();
 		};
 
-		// build TObject_transition (JStudio::fvb::TObject_transition) False/False
-		/* dependencies (begin JStudio::fvb::TObject_transition) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_transition)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_transition)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_transition)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_transition) */
+		// build TObject_transition (['JStudio', 'fvb', 'TObject_transition']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_transition']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_transition'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_transition'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_transition'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_transition']) */
 		struct TObject_transition {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 802843C8 */ TObject_transition(JStudio::fvb::data::TParse_TBlock const&);
 			/* 80284448 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284E70 */ ~TObject_transition();
 		};
 
-		// build TObject_list (JStudio::fvb::TObject_list) False/False
-		/* dependencies (begin JStudio::fvb::TObject_list) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_list)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_list)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_list)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_list) */
+		// build TObject_list (['JStudio', 'fvb', 'TObject_list']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_list']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_list'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_list'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_list'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_list']) */
 		struct TObject_list {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80284460 */ TObject_list(JStudio::fvb::data::TParse_TBlock const&);
 			/* 802844E0 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284DEC */ ~TObject_list();
 		};
 
-		// build TObject_list_parameter (JStudio::fvb::TObject_list_parameter) False/False
-		/* dependencies (begin JStudio::fvb::TObject_list_parameter) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_list_parameter)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_list_parameter)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_list_parameter)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_list_parameter) */
+		// build TObject_list_parameter (['JStudio', 'fvb', 'TObject_list_parameter']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_list_parameter']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_list_parameter'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_list_parameter'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_list_parameter'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_list_parameter']) */
 		struct TObject_list_parameter {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80284500 */ TObject_list_parameter(JStudio::fvb::data::TParse_TBlock const&);
 			/* 80284580 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284D68 */ ~TObject_list_parameter();
 		};
 
-		// build TObject_hermite (JStudio::fvb::TObject_hermite) False/False
-		/* dependencies (begin JStudio::fvb::TObject_hermite) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TObject_hermite)
-		// build TControl (JStudio::fvb::TControl) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::TObject_hermite)
-		// build data (JStudio::fvb::data) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TObject_hermite)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TObject_hermite) */
+		// build TObject_hermite (['JStudio', 'fvb', 'TObject_hermite']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TObject_hermite']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'TObject_hermite'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TObject_hermite'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TObject_hermite'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TObject_hermite']) */
 		struct TObject_hermite {
-			// JStudio::fvb::TControl
-			// JStudio::fvb::data::TParse_TParagraph::TData
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
+			// ('JStudio', 'fvb', 'TControl')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 802845B0 */ TObject_hermite(JStudio::fvb::data::TParse_TBlock const&);
 			/* 80284630 */ void prepare_data_(JStudio::fvb::data::TParse_TParagraph::TData const&, JStudio::fvb::TControl*);
 			/* 80284CE4 */ ~TObject_hermite();
 		};
 
-		// build TFactory (JStudio::fvb::TFactory) False/False
-		/* dependencies (begin JStudio::fvb::TFactory) */
-		// inner dependency: TObject (JStudio::fvb::TObject) True False (for JStudio::fvb::TFactory)
-		// build TObject (JStudio::fvb::TObject) True/True
-		// inner dependency: data (JStudio::fvb::data::TParse_TBlock) True False (for JStudio::fvb::TFactory)
-		// build data (JStudio::fvb::data) True/True
-		/* dependencies (end JStudio::fvb::TFactory) */
+		// build TFactory (['JStudio', 'fvb', 'TFactory']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TFactory']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'TObject') (for ['JStudio', 'fvb', 'TFactory'])
+		// build TObject (['JStudio', 'fvb', 'TObject']) True/True
+		// inner dependency: 2 ('JStudio', 'fvb', 'data', 'TParse_TBlock') (for ['JStudio', 'fvb', 'TFactory'])
+		// build data (['JStudio', 'fvb', 'data']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TFactory']) */
 		struct TFactory {
-			// JStudio::fvb::TObject
-			// JStudio::fvb::data::TParse_TBlock
+			// ('JStudio', 'fvb', 'TObject')
+			// ('JStudio', 'fvb', 'data', 'TParse_TBlock')
 			/* 80284918 */ ~TFactory();
 			/* 80284960 */ void create(JStudio::fvb::data::TParse_TBlock const&);
 			/* 80284AA0 */ void destroy(JStudio::fvb::TObject*);
 		};
 
-		// build TParse (JStudio::fvb::TParse) False/False
-		/* dependencies (begin JStudio::fvb::TParse) */
-		// inner dependency: TControl (JStudio::fvb::TControl) True False (for JStudio::fvb::TParse)
-		// build TControl (JStudio::fvb::TControl) True/True
-		/* dependencies (end JStudio::fvb::TParse) */
+		// build TParse (['JStudio', 'fvb', 'TParse']) False/False
+		/* dependencies (begin ['JStudio', 'fvb', 'TParse']) */
+		// inner dependency: 2 ('JStudio', 'fvb', 'TControl') (for ['JStudio', 'fvb', 'TParse'])
+		// build TControl (['JStudio', 'fvb', 'TControl']) True/True
+		/* dependencies (end ['JStudio', 'fvb', 'TParse']) */
 		struct TParse {
-			// JStudio::fvb::TControl
+			// ('JStudio', 'fvb', 'TControl')
 			/* 80284ADC */ TParse(JStudio::fvb::TControl*);
 			/* 80284AFC */ ~TParse();
 			/* 80284B5C */ void parseHeader_next(void const**, u32*, u32);
@@ -224,71 +222,71 @@ namespace JStudio {
 
 	};
 
-	// build TFunctionValue (JStudio::TFunctionValue) False/False
-	/* dependencies (begin JStudio::TFunctionValue) */
-	/* dependencies (end JStudio::TFunctionValue) */
+	// build TFunctionValue (['JStudio', 'TFunctionValue']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue']) */
 	struct TFunctionValue {
 		/* 802816A0 */ ~TFunctionValue();
 	};
 
-	// build TFunctionValueAttribute_range (JStudio::TFunctionValueAttribute_range) False/False
-	/* dependencies (begin JStudio::TFunctionValueAttribute_range) */
-	/* dependencies (end JStudio::TFunctionValueAttribute_range) */
+	// build TFunctionValueAttribute_range (['JStudio', 'TFunctionValueAttribute_range']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValueAttribute_range']) */
+	/* dependencies (end ['JStudio', 'TFunctionValueAttribute_range']) */
 	struct TFunctionValueAttribute_range {
 		/* 802819F4 */ void range_set(f64, f64);
 	};
 
-	// build TFunctionValue_composite (JStudio::TFunctionValue_composite) False/False
-	/* dependencies (begin JStudio::TFunctionValue_composite) */
-	/* dependencies (end JStudio::TFunctionValue_composite) */
+	// build TFunctionValue_composite (['JStudio', 'TFunctionValue_composite']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_composite']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_composite']) */
 	struct TFunctionValue_composite {
 		/* 80281D5C */ TFunctionValue_composite();
 	};
 
-	// build TFunctionValue_constant (JStudio::TFunctionValue_constant) False/False
-	/* dependencies (begin JStudio::TFunctionValue_constant) */
-	/* dependencies (end JStudio::TFunctionValue_constant) */
+	// build TFunctionValue_constant (['JStudio', 'TFunctionValue_constant']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_constant']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_constant']) */
 	struct TFunctionValue_constant {
 		/* 8028236C */ TFunctionValue_constant();
 	};
 
-	// build TFunctionValue_transition (JStudio::TFunctionValue_transition) False/False
-	/* dependencies (begin JStudio::TFunctionValue_transition) */
-	/* dependencies (end JStudio::TFunctionValue_transition) */
+	// build TFunctionValue_transition (['JStudio', 'TFunctionValue_transition']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_transition']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_transition']) */
 	struct TFunctionValue_transition {
 		/* 802823EC */ TFunctionValue_transition();
 	};
 
-	// build TFunctionValue_list (JStudio::TFunctionValue_list) False/False
-	/* dependencies (begin JStudio::TFunctionValue_list) */
-	/* dependencies (end JStudio::TFunctionValue_list) */
+	// build TFunctionValue_list (['JStudio', 'TFunctionValue_list']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_list']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_list']) */
 	struct TFunctionValue_list {
 		/* 802826BC */ TFunctionValue_list();
 	};
 
-	// build TFunctionValue_list_parameter (JStudio::TFunctionValue_list_parameter) False/False
-	/* dependencies (begin JStudio::TFunctionValue_list_parameter) */
-	/* dependencies (end JStudio::TFunctionValue_list_parameter) */
+	// build TFunctionValue_list_parameter (['JStudio', 'TFunctionValue_list_parameter']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_list_parameter']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_list_parameter']) */
 	struct TFunctionValue_list_parameter {
 		/* 80282D34 */ TFunctionValue_list_parameter();
 		/* 80282DD8 */ void data_set(f32 const*, u32);
 	};
 
-	// build TFunctionValue_hermite (JStudio::TFunctionValue_hermite) False/False
-	/* dependencies (begin JStudio::TFunctionValue_hermite) */
-	/* dependencies (end JStudio::TFunctionValue_hermite) */
+	// build TFunctionValue_hermite (['JStudio', 'TFunctionValue_hermite']) False/False
+	/* dependencies (begin ['JStudio', 'TFunctionValue_hermite']) */
+	/* dependencies (end ['JStudio', 'TFunctionValue_hermite']) */
 	struct TFunctionValue_hermite {
 		/* 802832C4 */ TFunctionValue_hermite();
 		/* 8028336C */ void data_set(f32 const*, u32, u32);
 	};
 
-	// build object (JStudio::object) False/False
-	/* dependencies (begin JStudio::object) */
-	/* dependencies (end JStudio::object) */
+	// build object (['JStudio', 'object']) False/False
+	/* dependencies (begin ['JStudio', 'object']) */
+	/* dependencies (end ['JStudio', 'object']) */
 	struct object {
-		// build TIDData (JStudio::object::TIDData) False/False
-		/* dependencies (begin JStudio::object::TIDData) */
-		/* dependencies (end JStudio::object::TIDData) */
+		// build TIDData (['JStudio', 'object', 'TIDData']) False/False
+		/* dependencies (begin ['JStudio', 'object', 'TIDData']) */
+		/* dependencies (end ['JStudio', 'object', 'TIDData']) */
 		struct TIDData {
 			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
 		};
@@ -297,45 +295,45 @@ namespace JStudio {
 
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
-		/* dependencies (begin JGadget::binary::TParse_header_block) */
-		/* dependencies (end JGadget::binary::TParse_header_block) */
+		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
+		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 		};
 
 	};
 
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -344,10 +342,10 @@ struct JGadget {
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
-	// build TVector_pointer_void (JGadget::TVector_pointer_void) False/False
-	/* dependencies (begin JGadget::TVector_pointer_void) */
-	/* dependencies (end JGadget::TVector_pointer_void) */
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
+	// build TVector_pointer_void (['JGadget', 'TVector_pointer_void']) False/False
+	/* dependencies (begin ['JGadget', 'TVector_pointer_void']) */
+	/* dependencies (end ['JGadget', 'TVector_pointer_void']) */
 	struct TVector_pointer_void {
 		/* 802DCCFC */ ~TVector_pointer_void();
 		/* 802DCDA4 */ void insert(void**, void const*&);

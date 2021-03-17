@@ -9,22 +9,22 @@
 // Types:
 // 
 
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
+// build J3DLightObj (['J3DLightObj']) False/False
+/* top-level dependencies (begin ['J3DLightObj']) */
+/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80323590 */ void load(u32) const;
 };
 
-// build J3DTexCoord (J3DTexCoord) False/False
-/* top-level dependencies (begin J3DTexCoord) */
-/* top-level dependencies (end J3DTexCoord) */
+// build J3DTexCoord (['J3DTexCoord']) False/False
+/* top-level dependencies (begin ['J3DTexCoord']) */
+/* top-level dependencies (end ['J3DTexCoord']) */
 struct J3DTexCoord {
 };
 
-// build J3DTexMtx (J3DTexMtx) False/False
-/* top-level dependencies (begin J3DTexMtx) */
-/* top-level dependencies (end J3DTexMtx) */
+// build J3DTexMtx (['J3DTexMtx']) False/False
+/* top-level dependencies (begin ['J3DTexMtx']) */
+/* top-level dependencies (end ['J3DTexMtx']) */
 struct J3DTexMtx {
 	/* 803238C4 */ void load(u32) const;
 	/* 80323900 */ void calc(f32 const (* )[4]);
@@ -34,93 +34,93 @@ struct J3DTexMtx {
 	/* 803243BC */ void loadPostTexMtx(u32) const;
 };
 
-// build J3DNBTScale (J3DNBTScale) False/False
-/* top-level dependencies (begin J3DNBTScale) */
-/* top-level dependencies (end J3DNBTScale) */
+// build J3DNBTScale (['J3DNBTScale']) False/False
+/* top-level dependencies (begin ['J3DNBTScale']) */
+/* top-level dependencies (end ['J3DNBTScale']) */
 struct J3DNBTScale {
 };
 
-// build _GXTexMtxType (_GXTexMtxType) False/False
-/* top-level dependencies (begin _GXTexMtxType) */
-/* top-level dependencies (end _GXTexMtxType) */
+// build _GXTexMtxType (['_GXTexMtxType']) False/False
+/* top-level dependencies (begin ['_GXTexMtxType']) */
+/* top-level dependencies (end ['_GXTexMtxType']) */
 struct _GXTexMtxType {
 };
 
-// build _GXLightID (_GXLightID) False/False
-/* top-level dependencies (begin _GXLightID) */
-/* top-level dependencies (end _GXLightID) */
+// build _GXLightID (['_GXLightID']) False/False
+/* top-level dependencies (begin ['_GXLightID']) */
+/* top-level dependencies (end ['_GXLightID']) */
 struct _GXLightID {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXTexGenType (_GXTexGenType) False/False
-/* top-level dependencies (begin _GXTexGenType) */
-/* top-level dependencies (end _GXTexGenType) */
+// build _GXTexGenType (['_GXTexGenType']) False/False
+/* top-level dependencies (begin ['_GXTexGenType']) */
+/* top-level dependencies (end ['_GXTexGenType']) */
 struct _GXTexGenType {
 };
 
-// build _GXTexGenSrc (_GXTexGenSrc) False/False
-/* top-level dependencies (begin _GXTexGenSrc) */
-/* top-level dependencies (end _GXTexGenSrc) */
+// build _GXTexGenSrc (['_GXTexGenSrc']) False/False
+/* top-level dependencies (begin ['_GXTexGenSrc']) */
+/* top-level dependencies (end ['_GXTexGenSrc']) */
 struct _GXTexGenSrc {
 };
 
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-// build _GXTexWrapMode (_GXTexWrapMode) False/False
-/* top-level dependencies (begin _GXTexWrapMode) */
-/* top-level dependencies (end _GXTexWrapMode) */
+// build _GXTexWrapMode (['_GXTexWrapMode']) False/False
+/* top-level dependencies (begin ['_GXTexWrapMode']) */
+/* top-level dependencies (end ['_GXTexWrapMode']) */
 struct _GXTexWrapMode {
 };
 
-// build _GXTexFilter (_GXTexFilter) False/False
-/* top-level dependencies (begin _GXTexFilter) */
-/* top-level dependencies (end _GXTexFilter) */
+// build _GXTexFilter (['_GXTexFilter']) False/False
+/* top-level dependencies (begin ['_GXTexFilter']) */
+/* top-level dependencies (end ['_GXTexFilter']) */
 struct _GXTexFilter {
 };
 
-// build _GXAnisotropy (_GXAnisotropy) False/False
-/* top-level dependencies (begin _GXAnisotropy) */
-/* top-level dependencies (end _GXAnisotropy) */
+// build _GXAnisotropy (['_GXAnisotropy']) False/False
+/* top-level dependencies (begin ['_GXAnisotropy']) */
+/* top-level dependencies (end ['_GXAnisotropy']) */
 struct _GXAnisotropy {
 };
 
-// build _GXTexFmt (_GXTexFmt) False/False
-/* top-level dependencies (begin _GXTexFmt) */
-/* top-level dependencies (end _GXTexFmt) */
+// build _GXTexFmt (['_GXTexFmt']) False/False
+/* top-level dependencies (begin ['_GXTexFmt']) */
+/* top-level dependencies (end ['_GXTexFmt']) */
 struct _GXTexFmt {
 };
 
-// build _GXTlutFmt (_GXTlutFmt) False/False
-/* top-level dependencies (begin _GXTlutFmt) */
-/* top-level dependencies (end _GXTlutFmt) */
+// build _GXTlutFmt (['_GXTlutFmt']) False/False
+/* top-level dependencies (begin ['_GXTlutFmt']) */
+/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-// build _GXTlutSize (_GXTlutSize) False/False
-/* top-level dependencies (begin _GXTlutSize) */
-/* top-level dependencies (end _GXTlutSize) */
+// build _GXTlutSize (['_GXTlutSize']) False/False
+/* top-level dependencies (begin ['_GXTlutSize']) */
+/* top-level dependencies (end ['_GXTlutSize']) */
 struct _GXTlutSize {
 };
 
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
+// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) False/False
+/* top-level dependencies (begin ['J3DTextureSRTInfo']) */
+/* top-level dependencies (end ['J3DTextureSRTInfo']) */
 struct J3DTextureSRTInfo {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 

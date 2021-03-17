@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build cBgS_Chk (cBgS_Chk) False/False
-/* top-level dependencies (begin cBgS_Chk) */
-/* top-level dependencies (end cBgS_Chk) */
+// build cBgS_Chk (['cBgS_Chk']) False/False
+/* top-level dependencies (begin ['cBgS_Chk']) */
+/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();

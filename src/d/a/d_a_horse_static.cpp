@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build e_wb_class (e_wb_class) False/False
-/* top-level dependencies (begin e_wb_class) */
-/* top-level dependencies (end e_wb_class) */
+// build e_wb_class (['e_wb_class']) False/False
+/* top-level dependencies (begin ['e_wb_class']) */
+/* top-level dependencies (end ['e_wb_class']) */
 struct e_wb_class {
 	/* 80037C7C */ void checkWait();
 	/* 80037C90 */ void setPlayerRideNow();
@@ -22,9 +22,9 @@ struct e_wb_class {
 	/* 80037DBC */ void setRunRideMode();
 };
 
-// build Z2CreatureRide (Z2CreatureRide) False/False
-/* top-level dependencies (begin Z2CreatureRide) */
-/* top-level dependencies (end Z2CreatureRide) */
+// build Z2CreatureRide (['Z2CreatureRide']) False/False
+/* top-level dependencies (begin ['Z2CreatureRide']) */
+/* top-level dependencies (end ['Z2CreatureRide']) */
 struct Z2CreatureRide {
 	/* 802C522C */ void setLinkRiding(bool);
 };

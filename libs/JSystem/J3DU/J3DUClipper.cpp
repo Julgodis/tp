@@ -9,25 +9,25 @@
 // Types:
 // 
 
-// build J3DUClipper (J3DUClipper) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DUClipper (['J3DUClipper']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DUClipper) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DUClipper) */
+/* top-level dependencies (begin ['J3DUClipper']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// Vec
+	// ('Vec',)
 	/* 80273778 */ void init();
 	/* 8027378C */ void calcViewFrustum();
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
 	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

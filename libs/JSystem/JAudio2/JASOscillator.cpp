@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build JASOscillator (JASOscillator) False/False
-// build JASOscillator (JASOscillator) True/False
+// build JASOscillator (['JASOscillator']) False/False
+// build JASOscillator (['JASOscillator']) True/False
 struct JASOscillator;
-/* top-level dependencies (begin JASOscillator) */
-// outer dependency: JASOscillator::Data
-/* top-level dependencies (end JASOscillator) */
+/* top-level dependencies (begin ['JASOscillator']) */
+// outer dependency: ('JASOscillator', 'Data')
+/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// JASOscillator::Data
-	// build Data (JASOscillator::Data) False/False
-	/* dependencies (begin JASOscillator::Data) */
-	/* dependencies (end JASOscillator::Data) */
+	// ('JASOscillator', 'Data')
+	// build Data (['JASOscillator', 'Data']) False/False
+	/* dependencies (begin ['JASOscillator', 'Data']) */
+	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 

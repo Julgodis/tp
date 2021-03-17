@@ -9,37 +9,61 @@
 // Types:
 // 
 
-// build CPaneMgr (CPaneMgr) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
+// build CPaneMgr (['CPaneMgr']) False/False
+// build J2DScreen (['J2DScreen']) False/False
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+/* top-level dependencies (end ['JSURandomInputStream']) */
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin ['J2DScreen']) */
+// outer dependency: ('JSURandomInputStream',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['J2DScreen']) */
+struct J2DScreen {
+	// ('JSURandomInputStream',)
+	// ('JKRArchive',)
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+};
+
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build J2DPane (J2DPane) False/False
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+/* top-level dependencies (begin ['JKRExpHeap']) */
+/* top-level dependencies (end ['JKRExpHeap']) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (['J2DPane']) False/False
+// build J2DRotateAxis (['J2DRotateAxis']) False/False
+/* top-level dependencies (begin ['J2DRotateAxis']) */
+/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DRotateAxis
-/* top-level dependencies (end J2DPane) */
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('J2DRotateAxis',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DRotateAxis
+	// ('J2DRotateAxis',)
 	/* 802F7100 */ void getBounds();
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7A8C */ void getFirstChildPane();
@@ -47,41 +71,17 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-// build J2DScreen (J2DScreen) False/False
-// build JSURandomInputStream (JSURandomInputStream) False/False
-/* top-level dependencies (begin JSURandomInputStream) */
-/* top-level dependencies (end JSURandomInputStream) */
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
-};
-
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: JSURandomInputStream
-// outer dependency: JKRArchive
-/* top-level dependencies (end J2DScreen) */
-struct J2DScreen {
-	// JSURandomInputStream
-	// JKRArchive
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
-};
-
-/* top-level dependencies (begin CPaneMgr) */
-// outer dependency: JKRExpHeap
-// outer dependency: JUtility::TColor
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
-/* top-level dependencies (end CPaneMgr) */
+/* top-level dependencies (begin ['CPaneMgr']) */
+// outer dependency: ('J2DScreen',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JKRExpHeap',)
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// JKRExpHeap
-	// JUtility::TColor
-	// J2DPane
-	// J2DScreen
+	// ('J2DScreen',)
+	// ('JUtility', 'TColor')
+	// ('JKRExpHeap',)
+	// ('J2DPane',)
 	/* 80253930 */ CPaneMgr();
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
@@ -102,16 +102,16 @@ struct CPaneMgr {
 	/* 80254FB8 */ void getBounds(J2DPane*);
 };
 
-// build J2DScreen (J2DScreen) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
-// build J2DWindow (J2DWindow) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin J2DWindow) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end J2DWindow) */
+// build J2DScreen (['J2DScreen']) True/True
+// build JKRExpHeap (['JKRExpHeap']) True/True
+// build J2DPane (['J2DPane']) True/True
+// build J2DWindow (['J2DWindow']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['J2DWindow']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['J2DWindow']) */
 struct J2DWindow {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 80254000 */ void getBlack() const;
 	/* 8025400C */ void getWhite() const;
 	/* 802543E0 */ void setWhite(JUtility::TColor);
@@ -119,55 +119,55 @@ struct J2DWindow {
 	/* 80254568 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 };
 
-// build JUtility (JUtility) True/True
-// build J2DTextBox (J2DTextBox) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin J2DTextBox) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end J2DTextBox) */
+// build JUtility (['JUtility']) True/True
+// build J2DTextBox (['J2DTextBox']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['J2DTextBox']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 80254408 */ void setBlack(JUtility::TColor);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JSUMemoryInputStream (JSUMemoryInputStream) False/False
-/* top-level dependencies (begin JSUMemoryInputStream) */
-/* top-level dependencies (end JSUMemoryInputStream) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
+/* top-level dependencies (begin ['JSUMemoryInputStream']) */
+/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
 	/* 802552B8 */ ~JSUMemoryInputStream();
 	/* 802DC520 */ void setBuffer(void const*, s32);
 };
 
-// build JSURandomInputStream (JSURandomInputStream) True/True
-// build JSUIosBase (JSUIosBase) False/False
-/* top-level dependencies (begin JSUIosBase) */
-/* top-level dependencies (end JSUIosBase) */
+// build JSURandomInputStream (['JSURandomInputStream']) True/True
+// build JSUIosBase (['JSUIosBase']) False/False
+/* top-level dependencies (begin ['JSUIosBase']) */
+/* top-level dependencies (end ['JSUIosBase']) */
 struct JSUIosBase {
 	/* 80255388 */ ~JSUIosBase();
 };
 
-// build JKRAramArchive (JKRAramArchive) False/False
-/* top-level dependencies (begin JKRAramArchive) */
-/* top-level dependencies (end JKRAramArchive) */
+// build JKRAramArchive (['JKRAramArchive']) False/False
+/* top-level dependencies (begin ['JKRAramArchive']) */
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 };
 
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DPane (J2DPane) True/True
-/* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DPane
-/* top-level dependencies (end CPaneMgrAlpha) */
+// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
+// build J2DPane (['J2DPane']) True/True
+/* top-level dependencies (begin ['CPaneMgrAlpha']) */
+// outer dependency: ('J2DPane',)
+/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// J2DPane
+	// ('J2DPane',)
 	/* 802553EC */ CPaneMgrAlpha();
 	/* 8025546C */ ~CPaneMgrAlpha();
 	/* 80255658 */ void rateCalc(s16, s16, u8);
@@ -176,21 +176,21 @@ struct CPaneMgrAlpha {
 	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 };
 
-// build J2DRotateAxis (J2DRotateAxis) True/True
+// build J2DRotateAxis (['J2DRotateAxis']) True/True
 // 
 // Forward References:
 // 

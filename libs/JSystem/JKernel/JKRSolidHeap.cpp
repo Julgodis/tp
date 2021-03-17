@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-// build JKRHeap (JKRHeap) False/False
-// build JKRHeap (JKRHeap) True/False
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/False
 struct JKRHeap;
-/* top-level dependencies (begin JKRHeap) */
-// outer dependency: JKRHeap::TState
-/* top-level dependencies (end JKRHeap) */
+/* top-level dependencies (begin ['JKRHeap']) */
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// JKRHeap::TState
-	// build TState (JKRHeap::TState) False/False
-	/* dependencies (begin JKRHeap::TState) */
-	/* dependencies (end JKRHeap::TState) */
+	// ('JKRHeap', 'TState')
+	// build TState (['JKRHeap', 'TState']) False/False
+	/* dependencies (begin ['JKRHeap', 'TState']) */
+	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -41,14 +41,14 @@ struct JKRHeap {
 	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRSolidHeap) */
-// outer dependency: JKRHeap::TState
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRHeap', 'TState')
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// JKRHeap::TState
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRHeap', 'TState')
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0AD0 */ void do_destroy();
 	/* 802D0B30 */ JKRSolidHeap(void*, u32, JKRHeap*, bool);
@@ -73,7 +73,7 @@ struct JKRSolidHeap {
 	/* 802D12A4 */ void do_getTotalFreeSize();
 };
 
-// build JKRHeap (JKRHeap) True/True
+// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 

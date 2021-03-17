@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAUSoundAnimation (JAUSoundAnimation) False/False
-/* top-level dependencies (begin JAUSoundAnimation) */
-/* top-level dependencies (end JAUSoundAnimation) */
+// build JAUSoundAnimation (['JAUSoundAnimation']) False/False
+/* top-level dependencies (begin ['JAUSoundAnimation']) */
+/* top-level dependencies (end ['JAUSoundAnimation']) */
 struct JAUSoundAnimation {
 	/* 802A6F70 */ void getStartSoundIndex(f32) const;
 	/* 802A7044 */ void getEndSoundIndex(f32) const;

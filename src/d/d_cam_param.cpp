@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build dCamMath (dCamMath) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build cSAngle (cSAngle) False/False
-/* top-level dependencies (begin cSAngle) */
-/* top-level dependencies (end cSAngle) */
+// build dCamMath (['dCamMath']) False/False
+// build cSAngle (['cSAngle']) False/False
+/* top-level dependencies (begin ['cSAngle']) */
+/* top-level dependencies (end ['cSAngle']) */
 struct cSAngle {
 };
 
-/* top-level dependencies (begin dCamMath) */
-// outer dependency: cXyz
-// outer dependency: cSAngle
-/* top-level dependencies (end dCamMath) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin ['dCamMath']) */
+// outer dependency: ('cSAngle',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dCamMath']) */
 struct dCamMath {
-	// cXyz
-	// cSAngle
+	// ('cSAngle',)
+	// ('cXyz',)
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088284 */ void zoomFovy(f32, f32);
 	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
@@ -36,9 +36,9 @@ struct dCamMath {
 	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
 };
 
-// build cDegree (cDegree) False/False
-/* top-level dependencies (begin cDegree) */
-/* top-level dependencies (end cDegree) */
+// build cDegree (['cDegree']) False/False
+/* top-level dependencies (begin ['cDegree']) */
+/* top-level dependencies (end ['cDegree']) */
 struct cDegree {
 	/* 800882E0 */ ~cDegree();
 	/* 8027134C */ cDegree(f32);
@@ -46,27 +46,27 @@ struct cDegree {
 	/* 80271418 */ void Cos() const;
 };
 
-// build cXyz (cXyz) True/True
-// build cSAngle (cSAngle) True/True
-// build dCstick_c (dCstick_c) False/False
-/* top-level dependencies (begin dCstick_c) */
-/* top-level dependencies (end dCstick_c) */
+// build cXyz (['cXyz']) True/True
+// build cSAngle (['cSAngle']) True/True
+// build dCstick_c (['dCstick_c']) False/False
+/* top-level dependencies (begin ['dCstick_c']) */
+/* top-level dependencies (end ['dCstick_c']) */
 struct dCstick_c {
 	/* 80088434 */ dCstick_c();
 	/* 8008845C */ bool Shift(u32);
 	/* 800889B0 */ ~dCstick_c();
 };
 
-// build dCamBGChk_c (dCamBGChk_c) False/False
-/* top-level dependencies (begin dCamBGChk_c) */
-/* top-level dependencies (end dCamBGChk_c) */
+// build dCamBGChk_c (['dCamBGChk_c']) False/False
+/* top-level dependencies (begin ['dCamBGChk_c']) */
+/* top-level dependencies (end ['dCamBGChk_c']) */
 struct dCamBGChk_c {
 	/* 80088464 */ dCamBGChk_c();
 };
 
-// build dCamParam_c (dCamParam_c) False/False
-/* top-level dependencies (begin dCamParam_c) */
-/* top-level dependencies (end dCamParam_c) */
+// build dCamParam_c (['dCamParam_c']) False/False
+/* top-level dependencies (begin ['dCamParam_c']) */
+/* top-level dependencies (end ['dCamParam_c']) */
 struct dCamParam_c {
 	/* 800884F0 */ dCamParam_c(s32);
 	/* 8008858C */ ~dCamParam_c();
@@ -74,9 +74,9 @@ struct dCamParam_c {
 	/* 80088620 */ void SearchStyle(u32);
 };
 
-// build dCamSetup_c (dCamSetup_c) False/False
-/* top-level dependencies (begin dCamSetup_c) */
-/* top-level dependencies (end dCamSetup_c) */
+// build dCamSetup_c (['dCamSetup_c']) False/False
+/* top-level dependencies (begin ['dCamSetup_c']) */
+/* top-level dependencies (end ['dCamSetup_c']) */
 struct dCamSetup_c {
 	/* 80088668 */ dCamSetup_c();
 	/* 800888B8 */ ~dCamSetup_c();
@@ -84,25 +84,25 @@ struct dCamSetup_c {
 	/* 80088988 */ void PlayerHideDist();
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dCamera_c (dCamera_c) False/False
-/* top-level dependencies (begin dCamera_c) */
-/* top-level dependencies (end dCamera_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dCamera_c (['dCamera_c']) False/False
+/* top-level dependencies (begin ['dCamera_c']) */
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 80180A40 */ void EventRecoverNotime();
 };

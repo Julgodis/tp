@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 	/* 802DC298 */ void read(void*, s32);
 	/* 802DC2F0 */ void skip(s32);
 };
 
-// build JSURandomInputStream (JSURandomInputStream) False/False
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
-/* top-level dependencies (begin JSUStreamSeekFrom) */
-/* top-level dependencies (end JSUStreamSeekFrom) */
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
+/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
+/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin JSURandomInputStream) */
-// outer dependency: JSUStreamSeekFrom
-/* top-level dependencies (end JSURandomInputStream) */
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+// outer dependency: ('JSUStreamSeekFrom',)
+/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// JSUStreamSeekFrom
+	// ('JSUStreamSeekFrom',)
 	/* 80255328 */ ~JSURandomInputStream();
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC370 */ void align(s32);
@@ -38,7 +38,7 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
 // 
 // Forward References:
 // 

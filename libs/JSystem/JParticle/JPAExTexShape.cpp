@@ -9,35 +9,35 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPAExTexShape (JPAExTexShape) False/False
-/* top-level dependencies (begin JPAExTexShape) */
-/* top-level dependencies (end JPAExTexShape) */
+// build JPAExTexShape (['JPAExTexShape']) False/False
+/* top-level dependencies (begin ['JPAExTexShape']) */
+/* top-level dependencies (end ['JPAExTexShape']) */
 struct JPAExTexShape {
 	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
-// build JUTTexture (JUTTexture) False/False
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
+// build JUTTexture (['JUTTexture']) False/False
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTexMapID
-/* top-level dependencies (end JUTTexture) */
+/* top-level dependencies (begin ['JUTTexture']) */
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// _GXTexMapID
+	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build _GXTexMapID (_GXTexMapID) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
 // 
 // Forward References:
 // 

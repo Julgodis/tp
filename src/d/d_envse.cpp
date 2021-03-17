@@ -9,72 +9,72 @@
 // Types:
 // 
 
-// build dEnvSe_c (dEnvSe_c) False/False
-// build dStage_SoundInfo_c (dStage_SoundInfo_c) False/False
-/* top-level dependencies (begin dStage_SoundInfo_c) */
-/* top-level dependencies (end dStage_SoundInfo_c) */
+// build dEnvSe_c (['dEnvSe_c']) False/False
+// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) False/False
+/* top-level dependencies (begin ['dStage_SoundInfo_c']) */
+/* top-level dependencies (end ['dStage_SoundInfo_c']) */
 struct dStage_SoundInfo_c {
 };
 
-/* top-level dependencies (begin dEnvSe_c) */
-// outer dependency: dStage_SoundInfo_c
-/* top-level dependencies (end dEnvSe_c) */
+/* top-level dependencies (begin ['dEnvSe_c']) */
+// outer dependency: ('dStage_SoundInfo_c',)
+/* top-level dependencies (end ['dEnvSe_c']) */
 struct dEnvSe_c {
-	// dStage_SoundInfo_c
+	// ('dStage_SoundInfo_c',)
 	/* 80182FD8 */ void execute_common(dStage_SoundInfo_c*, s8*, u8);
 	/* 80183480 */ void execute();
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dPath (dPath) False/False
-/* top-level dependencies (begin dPath) */
-/* top-level dependencies (end dPath) */
+// build dPath (['dPath']) False/False
+/* top-level dependencies (begin ['dPath']) */
+/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build dStage_SoundInfo_c (dStage_SoundInfo_c) True/True
-// build dStage_roomControl_c (dStage_roomControl_c) False/False
-/* top-level dependencies (begin dStage_roomControl_c) */
-/* top-level dependencies (end dStage_roomControl_c) */
+// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) True/True
+// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
+/* top-level dependencies (begin ['dStage_roomControl_c']) */
+/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dCamera_c (dCamera_c) False/False
-/* top-level dependencies (begin dCamera_c) */
-/* top-level dependencies (end dCamera_c) */
+// build dCamera_c (['dCamera_c']) False/False
+/* top-level dependencies (begin ['dCamera_c']) */
+/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 80181E64 */ void Eye();
 };
 
-// build cM3dGLin (cM3dGLin) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cM3dGLin (['cM3dGLin']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cM3dGLin) */
-// outer dependency: Vec
-/* top-level dependencies (end cM3dGLin) */
+/* top-level dependencies (begin ['cM3dGLin']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// Vec
+	// ('Vec',)
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 };
 
-// build Vec (Vec) True/True
-// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin Z2EnvSeMgr) */
-// outer dependency: Vec
-/* top-level dependencies (end Z2EnvSeMgr) */
+// build Vec (['Vec']) True/True
+// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['Z2EnvSeMgr']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// Vec
+	// ('Vec',)
 	/* 802C6C84 */ void initStaticEnvSe(u8, u8, u8, u8, Vec*);
 	/* 802C70C8 */ void startStaticEnvSe(s8);
 	/* 802C780C */ void registWindowPos(Vec*);

@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build standard_create_request_class (standard_create_request_class) False/False
-/* top-level dependencies (begin standard_create_request_class) */
-/* top-level dependencies (end standard_create_request_class) */
+// build standard_create_request_class (['standard_create_request_class']) False/False
+/* top-level dependencies (begin ['standard_create_request_class']) */
+/* top-level dependencies (end ['standard_create_request_class']) */
 struct standard_create_request_class {
 };
 
-// build base_process_class (base_process_class) False/False
-/* top-level dependencies (begin base_process_class) */
-/* top-level dependencies (end base_process_class) */
+// build base_process_class (['base_process_class']) False/False
+/* top-level dependencies (begin ['base_process_class']) */
+/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build layer_class (layer_class) False/False
-/* top-level dependencies (begin layer_class) */
-/* top-level dependencies (end layer_class) */
+// build layer_class (['layer_class']) False/False
+/* top-level dependencies (begin ['layer_class']) */
+/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_request_method_class (create_request_method_class) False/False
-/* top-level dependencies (begin create_request_method_class) */
-/* top-level dependencies (end create_request_method_class) */
+// build create_request_method_class (['create_request_method_class']) False/False
+/* top-level dependencies (begin ['create_request_method_class']) */
+/* top-level dependencies (end ['create_request_method_class']) */
 struct create_request_method_class {
 };
 
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 

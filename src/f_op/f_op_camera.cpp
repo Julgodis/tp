@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build camera_class (camera_class) False/False
-/* top-level dependencies (begin camera_class) */
-/* top-level dependencies (end camera_class) */
+// build camera_class (['camera_class']) False/False
+/* top-level dependencies (begin ['camera_class']) */
+/* top-level dependencies (end ['camera_class']) */
 struct camera_class {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build leafdraw_class (leafdraw_class) False/False
-/* top-level dependencies (begin leafdraw_class) */
-/* top-level dependencies (end leafdraw_class) */
+// build leafdraw_class (['leafdraw_class']) False/False
+/* top-level dependencies (begin ['leafdraw_class']) */
+/* top-level dependencies (end ['leafdraw_class']) */
 struct leafdraw_class {
 };
 
-// build leafdraw_method_class (leafdraw_method_class) False/False
-/* top-level dependencies (begin leafdraw_method_class) */
-/* top-level dependencies (end leafdraw_method_class) */
+// build leafdraw_method_class (['leafdraw_method_class']) False/False
+/* top-level dependencies (begin ['leafdraw_method_class']) */
+/* top-level dependencies (end ['leafdraw_method_class']) */
 struct leafdraw_method_class {
 };
 
-// build process_method_class (process_method_class) False/False
-/* top-level dependencies (begin process_method_class) */
-/* top-level dependencies (end process_method_class) */
+// build process_method_class (['process_method_class']) False/False
+/* top-level dependencies (begin ['process_method_class']) */
+/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 

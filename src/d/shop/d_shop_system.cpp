@@ -9,51 +9,25 @@
 // Types:
 // 
 
-// build dShopSystem_c (dShopSystem_c) False/False
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build dShopSystem_c (['dShopSystem_c']) False/False
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build dMsgFlow_c (dMsgFlow_c) False/False
-// build mesg_flow_node_branch (mesg_flow_node_branch) False/False
-/* top-level dependencies (begin mesg_flow_node_branch) */
-/* top-level dependencies (end mesg_flow_node_branch) */
-struct mesg_flow_node_branch {
-};
-
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
-};
-
-/* top-level dependencies (begin dMsgFlow_c) */
-// outer dependency: mesg_flow_node_branch
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dMsgFlow_c) */
-struct dMsgFlow_c {
-	// mesg_flow_node_branch
-	// fopAc_ac_c
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build STControl (STControl) False/False
-/* top-level dependencies (begin STControl) */
-/* top-level dependencies (end STControl) */
+// build STControl (['STControl']) False/False
+/* top-level dependencies (begin ['STControl']) */
+/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -64,17 +38,43 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-/* top-level dependencies (begin dShopSystem_c) */
-// outer dependency: cXyz
-// outer dependency: dMsgFlow_c
-// outer dependency: fopAc_ac_c
-// outer dependency: STControl
-/* top-level dependencies (end dShopSystem_c) */
+// build dMsgFlow_c (['dMsgFlow_c']) False/False
+// build mesg_flow_node_branch (['mesg_flow_node_branch']) False/False
+/* top-level dependencies (begin ['mesg_flow_node_branch']) */
+/* top-level dependencies (end ['mesg_flow_node_branch']) */
+struct mesg_flow_node_branch {
+};
+
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin ['dMsgFlow_c']) */
+// outer dependency: ('mesg_flow_node_branch',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dMsgFlow_c']) */
+struct dMsgFlow_c {
+	// ('mesg_flow_node_branch',)
+	// ('fopAc_ac_c',)
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['dShopSystem_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('STControl',)
+// outer dependency: ('dMsgFlow_c',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dShopSystem_c']) */
 struct dShopSystem_c {
-	// cXyz
-	// dMsgFlow_c
-	// fopAc_ac_c
-	// STControl
+	// ('cXyz',)
+	// ('STControl',)
+	// ('dMsgFlow_c',)
+	// ('fopAc_ac_c',)
 	/* 80197338 */ void initShopSystem();
 	/* 801974E4 */ ~dShopSystem_c();
 	/* 801975C0 */ void onFlag(int);
@@ -125,90 +125,90 @@ struct dShopSystem_c {
 	/* 8019ACF0 */ bool getResName2(int);
 };
 
-// build dMsgFlow_c (dMsgFlow_c) True/True
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build STControl (STControl) True/True
-// build Vec (Vec) True/True
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build dMsgFlow_c (['dMsgFlow_c']) True/True
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build STControl (['STControl']) True/True
+// build Vec (['Vec']) True/True
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034810 */ void onSwitch(int);
 	/* 80034860 */ void isSwitch(int) const;
 };
 
-// build daItemBase_c (daItemBase_c) False/False
-/* top-level dependencies (begin daItemBase_c) */
-/* top-level dependencies (end daItemBase_c) */
+// build daItemBase_c (['daItemBase_c']) False/False
+/* top-level dependencies (begin ['daItemBase_c']) */
+/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 };
 
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build daNpcT_c (daNpcT_c) False/False
-// build cXyz (cXyz) True/True
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
-// build J3DJoint (J3DJoint) False/False
-/* top-level dependencies (begin J3DJoint) */
-/* top-level dependencies (end J3DJoint) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build daNpcT_c (['daNpcT_c']) False/False
+// build J3DJoint (['J3DJoint']) False/False
+/* top-level dependencies (begin ['J3DJoint']) */
+/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build daNpcT_faceMotionAnmData_c (daNpcT_faceMotionAnmData_c) False/False
-/* top-level dependencies (begin daNpcT_faceMotionAnmData_c) */
-/* top-level dependencies (end daNpcT_faceMotionAnmData_c) */
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
+struct J3DModel {
+};
+
+// build daNpcT_faceMotionAnmData_c (['daNpcT_faceMotionAnmData_c']) False/False
+/* top-level dependencies (begin ['daNpcT_faceMotionAnmData_c']) */
+/* top-level dependencies (end ['daNpcT_faceMotionAnmData_c']) */
 struct daNpcT_faceMotionAnmData_c {
 };
 
-// build daNpcT_motionAnmData_c (daNpcT_motionAnmData_c) False/False
-/* top-level dependencies (begin daNpcT_motionAnmData_c) */
-/* top-level dependencies (end daNpcT_motionAnmData_c) */
+// build daNpcT_motionAnmData_c (['daNpcT_motionAnmData_c']) False/False
+/* top-level dependencies (begin ['daNpcT_motionAnmData_c']) */
+/* top-level dependencies (end ['daNpcT_motionAnmData_c']) */
 struct daNpcT_motionAnmData_c {
 };
 
-/* top-level dependencies (begin daNpcT_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModel
-// outer dependency: J3DJoint
-// outer dependency: fopAc_ac_c
-// outer dependency: daNpcT_faceMotionAnmData_c
-// outer dependency: daNpcT_motionAnmData_c
-/* top-level dependencies (end daNpcT_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['daNpcT_c']) */
+// outer dependency: ('J3DJoint',)
+// outer dependency: ('J3DModel',)
+// outer dependency: ('daNpcT_faceMotionAnmData_c',)
+// outer dependency: ('daNpcT_motionAnmData_c',)
+// outer dependency: ('fopAc_ac_c',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['daNpcT_c']) */
 struct daNpcT_c {
-	// J3DModel
-	// J3DJoint
-	// daNpcT_motionAnmData_c
-	// cXyz
-	// fopAc_ac_c
-	// daNpcT_faceMotionAnmData_c
+	// ('J3DJoint',)
+	// ('J3DModel',)
+	// ('daNpcT_faceMotionAnmData_c',)
+	// ('daNpcT_motionAnmData_c',)
+	// ('fopAc_ac_c',)
+	// ('cXyz',)
 	/* 801490D4 */ void ctrlBtk();
 	/* 8014951C */ void ctrlJoint(J3DJoint*, J3DModel*);
 	/* 8014997C */ void evtProc();
@@ -260,22 +260,22 @@ struct daNpcT_c {
 	/* 8014D0B8 */ bool getEyeballMaterialNo();
 };
 
-// build J3DJoint (J3DJoint) True/True
-// build J3DModel (J3DModel) True/True
-// build daNpcT_faceMotionAnmData_c (daNpcT_faceMotionAnmData_c) True/True
-// build daNpcT_motionAnmData_c (daNpcT_motionAnmData_c) True/True
-// build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build J3DJoint (['J3DJoint']) True/True
+// build J3DModel (['J3DModel']) True/True
+// build daNpcT_faceMotionAnmData_c (['daNpcT_faceMotionAnmData_c']) True/True
+// build daNpcT_motionAnmData_c (['daNpcT_motionAnmData_c']) True/True
+// build dSelect_cursor_c (['dSelect_cursor_c']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end dSelect_cursor_c) */
+/* top-level dependencies (begin ['dSelect_cursor_c']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['dSelect_cursor_c']) */
 struct dSelect_cursor_c {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801951C8 */ void setScale(f32);
@@ -283,29 +283,29 @@ struct dSelect_cursor_c {
 	/* 801953CC */ void decAlpha();
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build ShopCam_action_c (ShopCam_action_c) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin ShopCam_action_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end ShopCam_action_c) */
+// build JKRArchive (['JKRArchive']) True/True
+// build ShopCam_action_c (['ShopCam_action_c']) False/False
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['ShopCam_action_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['ShopCam_action_c']) */
 struct ShopCam_action_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80196544 */ void setCamDataIdx(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
 	/* 80196608 */ void setCamDataIdx2(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
 	/* 801968B8 */ void setMasterCamCtrPos(cXyz*);
 };
 
-// build dShopItemCtrl_c (dShopItemCtrl_c) False/False
-// build cXyz (cXyz) True/True
-/* top-level dependencies (begin dShopItemCtrl_c) */
-// outer dependency: cXyz
-/* top-level dependencies (end dShopItemCtrl_c) */
+// build dShopItemCtrl_c (['dShopItemCtrl_c']) False/False
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['dShopItemCtrl_c']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['dShopItemCtrl_c']) */
 struct dShopItemCtrl_c {
-	// cXyz
+	// ('cXyz',)
 	/* 80196958 */ ~dShopItemCtrl_c();
 	/* 801969A0 */ void getCurrentPos(int);
 	/* 80196A3C */ void isHomePos(int);
@@ -313,9 +313,9 @@ struct dShopItemCtrl_c {
 	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
 };
 
-// build dMsgObject_c (dMsgObject_c) False/False
-/* top-level dependencies (begin dMsgObject_c) */
-/* top-level dependencies (end dMsgObject_c) */
+// build dMsgObject_c (['dMsgObject_c']) False/False
+/* top-level dependencies (begin ['dMsgObject_c']) */
+/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802378B8 */ void setShopWaitTimer(u8);
 	/* 8023822C */ void getStatus();
@@ -324,26 +324,26 @@ struct dMsgObject_c {
 	/* 802383D0 */ void getMessageID();
 };
 
-// build mesg_flow_node_branch (mesg_flow_node_branch) True/True
-// build Z2SeMgr (Z2SeMgr) False/False
-// build Vec (Vec) True/True
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
+// build mesg_flow_node_branch (['mesg_flow_node_branch']) True/True
+// build Z2SeMgr (['Z2SeMgr']) False/False
+// build Vec (['Vec']) True/True
+// build JAISoundID (['JAISoundID']) False/False
+/* top-level dependencies (begin ['JAISoundID']) */
+/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: Vec
-// outer dependency: JAISoundID
-/* top-level dependencies (end Z2SeMgr) */
+/* top-level dependencies (begin ['Z2SeMgr']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('JAISoundID',)
+/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// Vec
-	// JAISoundID
+	// ('Vec',)
+	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (JAISoundID) True/True
+// build JAISoundID (['JAISoundID']) True/True
 // 
 // Forward References:
 // 

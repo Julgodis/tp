@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build dMw_HIO_c (dMw_HIO_c) False/False
-/* top-level dependencies (begin dMw_HIO_c) */
-/* top-level dependencies (end dMw_HIO_c) */
+// build dMw_HIO_c (['dMw_HIO_c']) False/False
+/* top-level dependencies (begin ['dMw_HIO_c']) */
+/* top-level dependencies (end ['dMw_HIO_c']) */
 struct dMw_HIO_c {
 	/* 801F9AFC */ dMw_HIO_c();
 	/* 801F9B38 */ void init();
@@ -21,17 +21,17 @@ struct dMw_HIO_c {
 	/* 801F9EE0 */ ~dMw_HIO_c();
 };
 
-// build dMw_DHIO_c (dMw_DHIO_c) False/False
-/* top-level dependencies (begin dMw_DHIO_c) */
-/* top-level dependencies (end dMw_DHIO_c) */
+// build dMw_DHIO_c (['dMw_DHIO_c']) False/False
+/* top-level dependencies (begin ['dMw_DHIO_c']) */
+/* top-level dependencies (end ['dMw_DHIO_c']) */
 struct dMw_DHIO_c {
 	/* 801F9E2C */ dMw_DHIO_c();
 	/* 801F9E98 */ ~dMw_DHIO_c();
 };
 
-// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
-/* top-level dependencies (begin dSv_player_get_item_c) */
-/* top-level dependencies (end dSv_player_get_item_c) */
+// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
+/* top-level dependencies (begin ['dSv_player_get_item_c']) */
+/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };

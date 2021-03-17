@@ -9,43 +9,43 @@
 // Types:
 // 
 
-// build dTres_c (dTres_c) False/False
-// build dTres_c (dTres_c) True/False
+// build dTres_c (['dTres_c']) False/False
+// build dTres_c (['dTres_c']) True/False
 struct dTres_c;
-// build dTres_c (dTres_c) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dTres_c (dTres_c) True/True
-/* top-level dependencies (begin dTres_c) */
-// outer dependency: dTres_c::list_class
-// outer dependency: dTres_c::typeGroupData_c
-// outer dependency: Vec
-// outer dependency: dTres_c::data_s
-/* top-level dependencies (end dTres_c) */
+// build dTres_c (['dTres_c']) True/True
+// build dTres_c (['dTres_c']) True/True
+/* top-level dependencies (begin ['dTres_c']) */
+// outer dependency: ('dTres_c', 'data_s')
+// outer dependency: ('Vec',)
+// outer dependency: ('dTres_c', 'typeGroupData_c')
+// outer dependency: ('dTres_c', 'list_class')
+/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// dTres_c::list_class
-	// dTres_c::typeGroupData_c
-	// Vec
-	// dTres_c::data_s
-	// build list_class (dTres_c::list_class) False/False
-	/* dependencies (begin dTres_c::list_class) */
-	/* dependencies (end dTres_c::list_class) */
+	// ('dTres_c', 'data_s')
+	// ('Vec',)
+	// ('dTres_c', 'typeGroupData_c')
+	// ('dTres_c', 'list_class')
+	// build list_class (['dTres_c', 'list_class']) False/False
+	/* dependencies (begin ['dTres_c', 'list_class']) */
+	/* dependencies (end ['dTres_c', 'list_class']) */
 	struct list_class {
 	};
 
-	// build data_s (dTres_c::data_s) False/False
-	/* dependencies (begin dTres_c::data_s) */
-	/* dependencies (end dTres_c::data_s) */
+	// build data_s (['dTres_c', 'data_s']) False/False
+	/* dependencies (begin ['dTres_c', 'data_s']) */
+	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
-	// build typeGroupData_c (dTres_c::typeGroupData_c) False/False
-	/* dependencies (begin dTres_c::typeGroupData_c) */
-	/* dependencies (end dTres_c::typeGroupData_c) */
+	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
+	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
+	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
@@ -66,34 +66,34 @@ struct dTres_c {
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-// build Vec (Vec) True/True
-// build dSv_memBit_c (dSv_memBit_c) False/False
-/* top-level dependencies (begin dSv_memBit_c) */
-/* top-level dependencies (end dSv_memBit_c) */
+// build Vec (['Vec']) True/True
+// build dSv_memBit_c (['dSv_memBit_c']) False/False
+/* top-level dependencies (begin ['dSv_memBit_c']) */
+/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_info_c (dSv_info_c) False/False
-/* top-level dependencies (begin dSv_info_c) */
-/* top-level dependencies (end dSv_info_c) */
+// build dSv_info_c (['dSv_info_c']) False/False
+/* top-level dependencies (begin ['dSv_info_c']) */
+/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dMapInfo_n (dMapInfo_n) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin dMapInfo_n) */
-// outer dependency: Vec
-/* top-level dependencies (end dMapInfo_n) */
+// build dMapInfo_n (['dMapInfo_n']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['dMapInfo_n']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
-	// Vec
+	// ('Vec',)
 	/* 8003ED60 */ void correctionOriginPos(s8, Vec*);
 };
 
-// build dMapInfo_c (dMapInfo_c) False/False
-/* top-level dependencies (begin dMapInfo_c) */
-/* top-level dependencies (end dMapInfo_c) */
+// build dMapInfo_c (['dMapInfo_c']) False/False
+/* top-level dependencies (begin ['dMapInfo_c']) */
+/* top-level dependencies (end ['dMapInfo_c']) */
 struct dMapInfo_c {
 	/* 8003F40C */ void calcFloorNo(f32, bool, int);
 };

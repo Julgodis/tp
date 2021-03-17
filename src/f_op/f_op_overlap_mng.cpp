@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build overlap_task_class (overlap_task_class) False/False
-/* top-level dependencies (begin overlap_task_class) */
-/* top-level dependencies (end overlap_task_class) */
+// build overlap_task_class (['overlap_task_class']) False/False
+/* top-level dependencies (begin ['overlap_task_class']) */
+/* top-level dependencies (end ['overlap_task_class']) */
 struct overlap_task_class {
 };
 
-// build overlap_request_class (overlap_request_class) False/False
-/* top-level dependencies (begin overlap_request_class) */
-/* top-level dependencies (end overlap_request_class) */
+// build overlap_request_class (['overlap_request_class']) False/False
+/* top-level dependencies (begin ['overlap_request_class']) */
+/* top-level dependencies (end ['overlap_request_class']) */
 struct overlap_request_class {
 };
 
-// build scene_class (scene_class) False/False
-/* top-level dependencies (begin scene_class) */
-/* top-level dependencies (end scene_class) */
+// build scene_class (['scene_class']) False/False
+/* top-level dependencies (begin ['scene_class']) */
+/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
-// build request_base_class (request_base_class) False/False
-/* top-level dependencies (begin request_base_class) */
-/* top-level dependencies (end request_base_class) */
+// build request_base_class (['request_base_class']) False/False
+/* top-level dependencies (begin ['request_base_class']) */
+/* top-level dependencies (end ['request_base_class']) */
 struct request_base_class {
 };
 

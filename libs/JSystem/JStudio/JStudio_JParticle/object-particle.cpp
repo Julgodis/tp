@@ -9,52 +9,58 @@
 // Types:
 // 
 
-// build JStudio_JParticle (JStudio_JParticle) False/False
-// build JStudio_JParticle (JStudio_JParticle) True/False
-struct JStudio_JParticle;
-// build JStudio (JStudio) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
+// build JStudio_JParticle (['JStudio_JParticle']) False/False
+// build JPABaseEmitter (['JPABaseEmitter']) False/False
+/* top-level dependencies (begin ['JPABaseEmitter']) */
+/* top-level dependencies (end ['JPABaseEmitter']) */
+struct JPABaseEmitter {
 };
 
-// build JStudio (JStudio) True/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin JStudio) */
-// outer dependency: _GXColor
-// outer dependency: JStudio::TAdaptor::TSetVariableValue_immediate
-// outer dependency: Vec
-/* top-level dependencies (end JStudio) */
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
+struct _GXColor {
+};
+
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
+// outer dependency: ('Vec',)
+// outer dependency: ('_GXColor',)
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build data (JStudio::data) False/False
-	/* dependencies (begin JStudio::data) */
-	/* dependencies (end JStudio::data) */
+	// build data (['JStudio', 'data']) False/False
+	/* dependencies (begin ['JStudio', 'data']) */
+	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (JStudio::data::TEOperationData) False/False
-		/* dependencies (begin JStudio::data::TEOperationData) */
-		/* dependencies (end JStudio::data::TEOperationData) */
+		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
+		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
+		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build TAdaptor (JStudio::TAdaptor) False/False
-	/* dependencies (begin JStudio::TAdaptor) */
-	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
-	/* dependencies (end JStudio::TAdaptor) */
+	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor']) */
+	// inner dependency: 1 ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate') (for ['JStudio', 'TAdaptor'])
+	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
+	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
+	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// _GXColor
-		// JStudio::TAdaptor::TSetVariableValue_immediate
-		// Vec
-		// build TSetVariableValue_immediate (JStudio::TAdaptor::TSetVariableValue_immediate) False/False
-		/* dependencies (begin JStudio::TAdaptor::TSetVariableValue_immediate) */
-		/* dependencies (end JStudio::TAdaptor::TSetVariableValue_immediate) */
+		// ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
+		// ('Vec',)
+		// ('_GXColor',)
+		// build TSetVariableValue_immediate (['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) False/False
+		/* dependencies (begin ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
+		/* dependencies (end ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
 		struct TSetVariableValue_immediate {
 		};
 
@@ -65,64 +71,62 @@ namespace JStudio {
 		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
 	};
 
-	// build TAdaptor_particle (JStudio::TAdaptor_particle) False/False
-	/* dependencies (begin JStudio::TAdaptor_particle) */
-	/* dependencies (end JStudio::TAdaptor_particle) */
+	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_particle']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
 		/* 8028770C */ ~TAdaptor_particle();
 	};
 
-	// build TControl (JStudio::TControl) False/False
-	/* dependencies (begin JStudio::TControl) */
-	/* dependencies (end JStudio::TControl) */
+	// build TControl (['JStudio', 'TControl']) False/False
+	/* dependencies (begin ['JStudio', 'TControl']) */
+	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_translation_rotation_scaling (JStudio::TControl::TTransform_translation_rotation_scaling) False/False
-		/* dependencies (begin JStudio::TControl::TTransform_translation_rotation_scaling) */
-		/* dependencies (end JStudio::TControl::TTransform_translation_rotation_scaling) */
+		// build TTransform_translation_rotation_scaling (['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) False/False
+		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
+		/* dependencies (end ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
 		struct TTransform_translation_rotation_scaling {
 		};
 
 	};
 
-	// build TVariableValue (JStudio::TVariableValue) False/False
-	/* dependencies (begin JStudio::TVariableValue) */
-	/* dependencies (end JStudio::TVariableValue) */
+	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
+	/* dependencies (begin ['JStudio', 'TVariableValue']) */
+	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
 		/* 8028B568 */ TVariableValue();
 	};
 
 };
 
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
-struct JPABaseEmitter {
-};
-
-/* top-level dependencies (begin JStudio_JParticle) */
-// outer dependency: JStudio_JParticle::TCreateObject
-// outer dependency: JStudio::data::TEOperationData
-// outer dependency: JPABaseEmitter
-/* top-level dependencies (end JStudio_JParticle) */
+// build JStudio_JParticle (['JStudio_JParticle']) True/False
+struct JStudio_JParticle;
+/* top-level dependencies (begin ['JStudio_JParticle']) */
+// outer dependency: ('JPABaseEmitter',)
+// outer dependency: ('JStudio', 'data', 'TEOperationData')
+// outer dependency: ('JStudio_JParticle', 'TCreateObject')
+/* top-level dependencies (end ['JStudio_JParticle']) */
 struct JStudio_JParticle {
-	// build TAdaptor_particle (JStudio_JParticle::TAdaptor_particle) False/False
-	/* dependencies (begin JStudio_JParticle::TAdaptor_particle) */
-	// inner dependency: TCreateObject (JStudio_JParticle::TCreateObject) True False (for JStudio_JParticle::TAdaptor_particle)
-	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
-	/* dependencies (begin JStudio_JParticle::TCreateObject) */
-	/* dependencies (end JStudio_JParticle::TCreateObject) */
+	// build TAdaptor_particle (['JStudio_JParticle', 'TAdaptor_particle']) False/False
+	/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle']) */
+	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JParticle', 'TAdaptor_particle'])
+	// inner dependency: 1 ('JStudio_JParticle', 'TCreateObject') (for ['JStudio_JParticle', 'TAdaptor_particle'])
+	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio_JParticle', 'TCreateObject']) */
+	/* dependencies (end ['JStudio_JParticle', 'TCreateObject']) */
 	struct TCreateObject {
 	};
 
-	/* dependencies (end JStudio_JParticle::TAdaptor_particle) */
+	/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
-		// JStudio_JParticle::TCreateObject
-		// JStudio::data::TEOperationData
-		// build TJPACallback_emitter_ (JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) False/False
-		/* dependencies (begin JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) */
-		/* dependencies (end JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) */
+		// ('JStudio', 'data', 'TEOperationData')
+		// ('JStudio_JParticle', 'TCreateObject')
+		// build TJPACallback_emitter_ (['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) False/False
+		/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) */
+		// inner dependency: 0 ('JPABaseEmitter',) (for ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_'])
+		/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) */
 		struct TJPACallback_emitter_ {
-			// JPABaseEmitter
+			// ('JPABaseEmitter',)
 			/* 8028E700 */ ~TJPACallback_emitter_();
 			/* 8028ECC0 */ void execute(JPABaseEmitter*);
 			/* 8028F060 */ void executeAfter(JPABaseEmitter*);
@@ -150,45 +154,45 @@ struct JStudio_JParticle {
 		/* 8028F1C0 */ void endParticle_fadeOut_(u32);
 	};
 
-	// build TCreateObject (JStudio_JParticle::TCreateObject) True/True
+	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) True/True
 };
 
-// build JStudio (JStudio) True/True
-// build JPABaseEmitter (JPABaseEmitter) True/True
-// build JPAEmitterCallBack (JPAEmitterCallBack) False/False
-/* top-level dependencies (begin JPAEmitterCallBack) */
-/* top-level dependencies (end JPAEmitterCallBack) */
+// build JStudio (['JStudio']) True/True
+// build JPABaseEmitter (['JPABaseEmitter']) True/True
+// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
+/* top-level dependencies (begin ['JPAEmitterCallBack']) */
+/* top-level dependencies (end ['JPAEmitterCallBack']) */
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-// build Vec (Vec) True/True
-// build _GXColor (_GXColor) True/True
-// build JStudio_JStage (JStudio_JStage) False/False
-// build JStudio (JStudio) True/True
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
+// build Vec (['Vec']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build JStudio_JStage (['JStudio_JStage']) False/False
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 	};
 
 };
 
-/* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::TControl::TTransform_translation_rotation_scaling
-// outer dependency: JStage::TObject
-/* top-level dependencies (end JStudio_JStage) */
+/* top-level dependencies (begin ['JStudio_JStage']) */
+// outer dependency: ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
+// outer dependency: ('JStage', 'TObject')
+/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// JStudio::TControl::TTransform_translation_rotation_scaling
-	// JStage::TObject
+	// ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
+	// ('JStage', 'TObject')
 	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
-// build JStage (JStage) True/True
+// build JStage (['JStage']) True/True
 // 
 // Forward References:
 // 

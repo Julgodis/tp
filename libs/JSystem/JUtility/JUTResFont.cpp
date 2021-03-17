@@ -9,44 +9,44 @@
 // Types:
 // 
 
-// build JUTResFont (JUTResFont) False/False
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
+// build JUTResFont (['JUTResFont']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
+struct JKRHeap {
+};
+
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// build TWidth (JUTFont::TWidth) False/False
-	/* dependencies (begin JUTFont::TWidth) */
-	/* dependencies (end JUTFont::TWidth) */
+	// build TWidth (['JUTFont', 'TWidth']) False/False
+	/* dependencies (begin ['JUTFont', 'TWidth']) */
+	/* dependencies (end ['JUTFont', 'TWidth']) */
 	struct TWidth {
 	};
 
@@ -57,19 +57,19 @@ struct JUTFont {
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
 };
 
-/* top-level dependencies (begin JUTResFont) */
-// outer dependency: ResFONT
-// outer dependency: JUtility::TColor
-// outer dependency: _GXTexMapID
-// outer dependency: JKRHeap
-// outer dependency: JUTFont::TWidth
-/* top-level dependencies (end JUTResFont) */
+/* top-level dependencies (begin ['JUTResFont']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('_GXTexMapID',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('JUtility', 'TColor')
+// outer dependency: ('JUTFont', 'TWidth')
+/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ResFONT
-	// JUtility::TColor
-	// JUTFont::TWidth
-	// _GXTexMapID
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('ResFONT',)
+	// ('JUtility', 'TColor')
+	// ('JUTFont', 'TWidth')
+	// ('_GXTexMapID',)
 	/* 802DDFD8 */ void getResFont() const;
 	/* 802DDFE0 */ void getFontType() const;
 	/* 802DDFEC */ void getLeading() const;
@@ -99,11 +99,11 @@ struct JUTResFont {
 	/* 802E00C4 */ void convertSjis(int, u16*) const;
 };
 
-// build ResFONT (ResFONT) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JUtility (JUtility) True/True
-// build _GXTexMapID (_GXTexMapID) True/True
-// build JUTFont (JUTFont) True/True
+// build ResFONT (['ResFONT']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JUtility (['JUtility']) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build JUTFont (['JUTFont']) True/True
 // 
 // Forward References:
 // 

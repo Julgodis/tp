@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build JUTProcBar (JUTProcBar) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTProcBar (['JUTProcBar']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTProcBar) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTProcBar) */
+/* top-level dependencies (begin ['JUTProcBar']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTProcBar']) */
 struct JUTProcBar {
-	// JUtility::TColor
-	// build CTime (JUTProcBar::CTime) False/False
-	/* dependencies (begin JUTProcBar::CTime) */
-	/* dependencies (end JUTProcBar::CTime) */
+	// ('JUtility', 'TColor')
+	// build CTime (['JUTProcBar', 'CTime']) False/False
+	/* dependencies (begin ['JUTProcBar', 'CTime']) */
+	/* dependencies (end ['JUTProcBar', 'CTime']) */
 	struct CTime {
 		/* 802E7340 */ CTime();
 	};
@@ -46,10 +46,10 @@ struct JUTProcBar {
 	/* 802E6FA0 */ void drawHeapBar();
 };
 
-// build JUtility (JUtility) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUtility (['JUtility']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };

@@ -9,30 +9,24 @@
 // Types:
 // 
 
-// build mDoCPd_c (mDoCPd_c) False/False
-// build interface_of_controller_pad (interface_of_controller_pad) False/False
-/* top-level dependencies (begin interface_of_controller_pad) */
-/* top-level dependencies (end interface_of_controller_pad) */
-struct interface_of_controller_pad {
-};
-
-// build JUTGamePad (JUTGamePad) False/False
-// build JUTGamePad (JUTGamePad) True/False
+// build mDoCPd_c (['mDoCPd_c']) False/False
+// build JUTGamePad (['JUTGamePad']) False/False
+// build JUTGamePad (['JUTGamePad']) True/False
 struct JUTGamePad;
-/* top-level dependencies (begin JUTGamePad) */
-// outer dependency: JUTGamePad::EPadPort
-/* top-level dependencies (end JUTGamePad) */
+/* top-level dependencies (begin ['JUTGamePad']) */
+// outer dependency: ('JUTGamePad', 'EPadPort')
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// JUTGamePad::EPadPort
-	// build EPadPort (JUTGamePad::EPadPort) False/False
-	/* dependencies (begin JUTGamePad::EPadPort) */
-	/* dependencies (end JUTGamePad::EPadPort) */
+	// ('JUTGamePad', 'EPadPort')
+	// build EPadPort (['JUTGamePad', 'EPadPort']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EPadPort']) */
+	/* dependencies (end ['JUTGamePad', 'EPadPort']) */
 	struct EPadPort {
 	};
 
-	// build CRumble (JUTGamePad::CRumble) False/False
-	/* dependencies (begin JUTGamePad::CRumble) */
-	/* dependencies (end JUTGamePad::CRumble) */
+	// build CRumble (['JUTGamePad', 'CRumble']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
+	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
 		/* 802E19D8 */ void setEnabled(u32);
 	};
@@ -43,13 +37,19 @@ struct JUTGamePad {
 	/* 802E199C */ void getGamePad(int);
 };
 
-/* top-level dependencies (begin mDoCPd_c) */
-// outer dependency: interface_of_controller_pad
-// outer dependency: JUTGamePad
-/* top-level dependencies (end mDoCPd_c) */
+// build interface_of_controller_pad (['interface_of_controller_pad']) False/False
+/* top-level dependencies (begin ['interface_of_controller_pad']) */
+/* top-level dependencies (end ['interface_of_controller_pad']) */
+struct interface_of_controller_pad {
+};
+
+/* top-level dependencies (begin ['mDoCPd_c']) */
+// outer dependency: ('JUTGamePad',)
+// outer dependency: ('interface_of_controller_pad',)
+/* top-level dependencies (end ['mDoCPd_c']) */
 struct mDoCPd_c {
-	// interface_of_controller_pad
-	// JUTGamePad
+	// ('JUTGamePad',)
+	// ('interface_of_controller_pad',)
 	/* 80007954 */ void create();
 	/* 80007A94 */ void read();
 	/* 80007B7C */ void convert(interface_of_controller_pad*, JUTGamePad*);
@@ -57,8 +57,8 @@ struct mDoCPd_c {
 	/* 80007D74 */ void recalibrate();
 };
 
-// build interface_of_controller_pad (interface_of_controller_pad) True/True
-// build JUTGamePad (JUTGamePad) True/True
+// build interface_of_controller_pad (['interface_of_controller_pad']) True/True
+// build JUTGamePad (['JUTGamePad']) True/True
 // 
 // Forward References:
 // 

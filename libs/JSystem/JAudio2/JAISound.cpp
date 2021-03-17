@@ -9,38 +9,38 @@
 // Types:
 // 
 
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-// build JAISound (JAISound) False/False
-// build JAISoundHandle (JAISoundHandle) True/True
-// build JASTrack (JASTrack) False/False
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
+// build JAISound (['JAISound']) False/False
+// build JAISoundHandle (['JAISoundHandle']) True/True
+// build JASTrack (['JASTrack']) False/False
+// build JASSoundParams (['JASSoundParams']) False/False
+/* top-level dependencies (begin ['JASSoundParams']) */
+/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 };
 
-/* top-level dependencies (begin JASTrack) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JASTrack) */
+/* top-level dependencies (begin ['JASTrack']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-/* top-level dependencies (begin JAISound) */
-// outer dependency: JAISoundHandle
-// outer dependency: JASTrack
-/* top-level dependencies (end JAISound) */
+/* top-level dependencies (begin ['JAISound']) */
+// outer dependency: ('JAISoundHandle',)
+// outer dependency: ('JASTrack',)
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
-	// JAISoundHandle
-	// JASTrack
+	// ('JAISoundHandle',)
+	// ('JASTrack',)
 	/* 802A21A0 */ void releaseHandle();
 	/* 802A21BC */ void attachHandle(JAISoundHandle*);
 	/* 802A22F8 */ JAISound();
@@ -56,26 +56,26 @@ struct JAISound {
 	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
 };
 
-// build JAISoundStatus_ (JAISoundStatus_) False/False
-/* top-level dependencies (begin JAISoundStatus_) */
-/* top-level dependencies (end JAISoundStatus_) */
+// build JAISoundStatus_ (['JAISoundStatus_']) False/False
+/* top-level dependencies (begin ['JAISoundStatus_']) */
+/* top-level dependencies (end ['JAISoundStatus_']) */
 struct JAISoundStatus_ {
 	/* 802A2220 */ void lockWhenPrepared();
 	/* 802A2244 */ void unlockIfLocked();
 };
 
-// build JAISoundParams (JAISoundParams) False/False
-// build JASSoundParams (JASSoundParams) True/True
-/* top-level dependencies (begin JAISoundParams) */
-// outer dependency: JASSoundParams
-/* top-level dependencies (end JAISoundParams) */
+// build JAISoundParams (['JAISoundParams']) False/False
+// build JASSoundParams (['JASSoundParams']) True/True
+/* top-level dependencies (begin ['JAISoundParams']) */
+// outer dependency: ('JASSoundParams',)
+/* top-level dependencies (end ['JAISoundParams']) */
 struct JAISoundParams {
-	// JASSoundParams
+	// ('JASSoundParams',)
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
 };
 
-// build JASSoundParams (JASSoundParams) True/True
-// build JASTrack (JASTrack) True/True
+// build JASSoundParams (['JASSoundParams']) True/True
+// build JASTrack (['JASTrack']) True/True
 // 
 // Forward References:
 // 

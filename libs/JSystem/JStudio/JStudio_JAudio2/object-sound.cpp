@@ -9,42 +9,43 @@
 // Types:
 // 
 
-// build JStudio_JAudio2 (JStudio_JAudio2) False/False
-// build JStudio (JStudio) False/False
-// build JStudio (JStudio) True/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStudio_JAudio2 (['JStudio_JAudio2']) False/False
+// build JStudio (['JStudio']) False/False
+// build JStudio (['JStudio']) True/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TAdaptor::TSetVariableValue_immediate
-// outer dependency: Vec
-/* top-level dependencies (end JStudio) */
+/* top-level dependencies (begin ['JStudio']) */
+// outer dependency: ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build data (JStudio::data) False/False
-	/* dependencies (begin JStudio::data) */
-	/* dependencies (end JStudio::data) */
+	// build data (['JStudio', 'data']) False/False
+	/* dependencies (begin ['JStudio', 'data']) */
+	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (JStudio::data::TEOperationData) False/False
-		/* dependencies (begin JStudio::data::TEOperationData) */
-		/* dependencies (end JStudio::data::TEOperationData) */
+		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
+		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
+		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build TAdaptor (JStudio::TAdaptor) False/False
-	/* dependencies (begin JStudio::TAdaptor) */
-	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
-	/* dependencies (end JStudio::TAdaptor) */
+	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor']) */
+	// inner dependency: 1 ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate') (for ['JStudio', 'TAdaptor'])
+	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
+	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// JStudio::TAdaptor::TSetVariableValue_immediate
-		// Vec
-		// build TSetVariableValue_immediate (JStudio::TAdaptor::TSetVariableValue_immediate) False/False
-		/* dependencies (begin JStudio::TAdaptor::TSetVariableValue_immediate) */
-		/* dependencies (end JStudio::TAdaptor::TSetVariableValue_immediate) */
+		// ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
+		// ('Vec',)
+		// build TSetVariableValue_immediate (['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) False/False
+		/* dependencies (begin ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
+		/* dependencies (end ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
 		struct TSetVariableValue_immediate {
 		};
 
@@ -54,13 +55,13 @@ namespace JStudio {
 		/* 80286274 */ void adaptor_getVariableValue_Vec(Vec*, u32 const*) const;
 	};
 
-	// build TVariableValue (JStudio::TVariableValue) False/False
-	/* dependencies (begin JStudio::TVariableValue) */
-	/* dependencies (end JStudio::TVariableValue) */
+	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
+	/* dependencies (begin ['JStudio', 'TVariableValue']) */
+	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
-		// build TOutput (JStudio::TVariableValue::TOutput) False/False
-		/* dependencies (begin JStudio::TVariableValue::TOutput) */
-		/* dependencies (end JStudio::TVariableValue::TOutput) */
+		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
+		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
+		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
 		struct TOutput {
 			/* 80285E0C */ ~TOutput();
 		};
@@ -68,20 +69,20 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-	// build TAdaptor_sound (JStudio::TAdaptor_sound) False/False
-	/* dependencies (begin JStudio::TAdaptor_sound) */
-	/* dependencies (end JStudio::TAdaptor_sound) */
+	// build TAdaptor_sound (['JStudio', 'TAdaptor_sound']) False/False
+	/* dependencies (begin ['JStudio', 'TAdaptor_sound']) */
+	/* dependencies (end ['JStudio', 'TAdaptor_sound']) */
 	struct TAdaptor_sound {
 		/* 80287B3C */ ~TAdaptor_sound();
 	};
 
-	// build TControl (JStudio::TControl) False/False
-	/* dependencies (begin JStudio::TControl) */
-	/* dependencies (end JStudio::TControl) */
+	// build TControl (['JStudio', 'TControl']) False/False
+	/* dependencies (begin ['JStudio', 'TControl']) */
+	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_position (JStudio::TControl::TTransform_position) False/False
-		/* dependencies (begin JStudio::TControl::TTransform_position) */
-		/* dependencies (end JStudio::TControl::TTransform_position) */
+		// build TTransform_position (['JStudio', 'TControl', 'TTransform_position']) False/False
+		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_position']) */
+		/* dependencies (end ['JStudio', 'TControl', 'TTransform_position']) */
 		struct TTransform_position {
 		};
 
@@ -89,33 +90,35 @@ namespace JStudio {
 
 };
 
-// build JStudio_JAudio2 (JStudio_JAudio2) True/False
+// build JStudio_JAudio2 (['JStudio_JAudio2']) True/False
 struct JStudio_JAudio2;
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio_JAudio2) */
-// outer dependency: JStudio::TAdaptor
-// outer dependency: JStudio_JAudio2::TCreateObject
-// outer dependency: JStudio::data::TEOperationData
-/* top-level dependencies (end JStudio_JAudio2) */
+// build JStudio (['JStudio']) True/True
+/* top-level dependencies (begin ['JStudio_JAudio2']) */
+// outer dependency: ('JStudio', 'TAdaptor')
+// outer dependency: ('JStudio_JAudio2', 'TCreateObject')
+// outer dependency: ('JStudio', 'data', 'TEOperationData')
+/* top-level dependencies (end ['JStudio_JAudio2']) */
 struct JStudio_JAudio2 {
-	// build TAdaptor_sound (JStudio_JAudio2::TAdaptor_sound) False/False
-	/* dependencies (begin JStudio_JAudio2::TAdaptor_sound) */
-	// inner dependency: TCreateObject (JStudio_JAudio2::TCreateObject) True False (for JStudio_JAudio2::TAdaptor_sound)
-	// build TCreateObject (JStudio_JAudio2::TCreateObject) False/False
-	/* dependencies (begin JStudio_JAudio2::TCreateObject) */
-	/* dependencies (end JStudio_JAudio2::TCreateObject) */
+	// build TAdaptor_sound (['JStudio_JAudio2', 'TAdaptor_sound']) False/False
+	/* dependencies (begin ['JStudio_JAudio2', 'TAdaptor_sound']) */
+	// inner dependency: 1 ('JStudio_JAudio2', 'TCreateObject') (for ['JStudio_JAudio2', 'TAdaptor_sound'])
+	// build TCreateObject (['JStudio_JAudio2', 'TCreateObject']) False/False
+	/* dependencies (begin ['JStudio_JAudio2', 'TCreateObject']) */
+	/* dependencies (end ['JStudio_JAudio2', 'TCreateObject']) */
 	struct TCreateObject {
 	};
 
-	/* dependencies (end JStudio_JAudio2::TAdaptor_sound) */
+	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JAudio2', 'TAdaptor_sound'])
+	/* dependencies (end ['JStudio_JAudio2', 'TAdaptor_sound']) */
 	struct TAdaptor_sound {
-		// JStudio_JAudio2::TCreateObject
-		// JStudio::data::TEOperationData
-		// build TVVOSetValue_ (JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) False/False
-		/* dependencies (begin JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) */
-		/* dependencies (end JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) */
+		// ('JStudio_JAudio2', 'TCreateObject')
+		// ('JStudio', 'data', 'TEOperationData')
+		// build TVVOSetValue_ (['JStudio_JAudio2', 'TAdaptor_sound', 'TVVOSetValue_']) False/False
+		/* dependencies (begin ['JStudio_JAudio2', 'TAdaptor_sound', 'TVVOSetValue_']) */
+		// inner dependency: 0 ('JStudio', 'TAdaptor') (for ['JStudio_JAudio2', 'TAdaptor_sound', 'TVVOSetValue_'])
+		/* dependencies (end ['JStudio_JAudio2', 'TAdaptor_sound', 'TVVOSetValue_']) */
 		struct TVVOSetValue_ {
-			// JStudio::TAdaptor
+			// ('JStudio', 'TAdaptor')
 			/* 8028DECC */ void operator()(f32, JStudio::TAdaptor*) const;
 			/* 8028E094 */ ~TVVOSetValue_();
 		};
@@ -142,62 +145,62 @@ struct JStudio_JAudio2 {
 		/* 8028E054 */ void endSound_fadeOut_(u32);
 	};
 
-	// build TCreateObject (JStudio_JAudio2::TCreateObject) True/True
+	// build TCreateObject (['JStudio_JAudio2', 'TCreateObject']) True/True
 };
 
-// build JStudio (JStudio) True/True
-// build Vec (Vec) True/True
-// build JStudio_JStage (JStudio_JStage) False/False
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
+// build JStudio (['JStudio']) True/True
+// build Vec (['Vec']) True/True
+// build JStudio_JStage (['JStudio_JStage']) False/False
+// build JStudio (['JStudio']) True/True
+// build JStage (['JStage']) False/False
+/* top-level dependencies (begin ['JStage']) */
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 	};
 
 };
 
-// build JStudio (JStudio) True/True
-/* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStage::TObject
-// outer dependency: JStudio::TControl::TTransform_position
-/* top-level dependencies (end JStudio_JStage) */
+/* top-level dependencies (begin ['JStudio_JStage']) */
+// outer dependency: ('JStudio', 'TControl', 'TTransform_position')
+// outer dependency: ('JStage', 'TObject')
+/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// JStage::TObject
-	// JStudio::TControl::TTransform_position
+	// ('JStudio', 'TControl', 'TTransform_position')
+	// ('JStage', 'TObject')
 	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
 };
 
-// build JStage (JStage) True/True
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
+// build JStage (['JStage']) True/True
+// build JAISoundHandle (['JAISoundHandle']) False/False
+/* top-level dependencies (begin ['JAISoundHandle']) */
+/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-// build JAISoundStatus_ (JAISoundStatus_) False/False
-/* top-level dependencies (begin JAISoundStatus_) */
-/* top-level dependencies (end JAISoundStatus_) */
+// build JAISoundStatus_ (['JAISoundStatus_']) False/False
+/* top-level dependencies (begin ['JAISoundStatus_']) */
+/* top-level dependencies (end ['JAISoundStatus_']) */
 struct JAISoundStatus_ {
 	/* 802A2220 */ void lockWhenPrepared();
 	/* 802A2244 */ void unlockIfLocked();
 };
 
-// build JAISound (JAISound) False/False
-/* top-level dependencies (begin JAISound) */
-/* top-level dependencies (end JAISound) */
+// build JAISound (['JAISound']) False/False
+/* top-level dependencies (begin ['JAISound']) */
+/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
 	/* 802A2598 */ void stop();
 };
 
-// build JAISoundParamsMove (JAISoundParamsMove) False/False
-/* top-level dependencies (begin JAISoundParamsMove) */
-/* top-level dependencies (end JAISoundParamsMove) */
+// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
+/* top-level dependencies (begin ['JAISoundParamsMove']) */
+/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);

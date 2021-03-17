@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASAudioReseter (JASAudioReseter) False/False
-/* top-level dependencies (begin JASAudioReseter) */
-/* top-level dependencies (end JASAudioReseter) */
+// build JASAudioReseter (['JASAudioReseter']) False/False
+/* top-level dependencies (begin ['JASAudioReseter']) */
+/* top-level dependencies (end ['JASAudioReseter']) */
 struct JASAudioReseter {
 	/* 8029D0B4 */ JASAudioReseter();
 	/* 8029D0FC */ ~JASAudioReseter();
@@ -22,24 +22,24 @@ struct JASAudioReseter {
 	/* 8029D2D4 */ void callback(void*);
 };
 
-// build JASAudioThread (JASAudioThread) False/False
-/* top-level dependencies (begin JASAudioThread) */
-/* top-level dependencies (end JASAudioThread) */
+// build JASAudioThread (['JASAudioThread']) False/False
+/* top-level dependencies (begin ['JASAudioThread']) */
+/* top-level dependencies (end ['JASAudioThread']) */
 struct JASAudioThread {
 	/* 8029CDC0 */ void stop();
 };
 
-// build JASDSPChannel (JASDSPChannel) False/False
-/* top-level dependencies (begin JASDSPChannel) */
-/* top-level dependencies (end JASDSPChannel) */
+// build JASDSPChannel (['JASDSPChannel']) False/False
+/* top-level dependencies (begin ['JASDSPChannel']) */
+/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D340 */ void drop();
 	/* 8029D948 */ void getHandle(u32);
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029E130 */ void setDSPLevel(f32);
 	/* 8029E158 */ void getDSPLevel();

@@ -9,29 +9,29 @@
 // Types:
 // 
 
-// build JAUBankTable (JAUBankTable) False/False
-/* top-level dependencies (begin JAUBankTable) */
-/* top-level dependencies (end JAUBankTable) */
+// build JAUBankTable (['JAUBankTable']) False/False
+/* top-level dependencies (begin ['JAUBankTable']) */
+/* top-level dependencies (end ['JAUBankTable']) */
 struct JAUBankTable {
 	/* 802A4AA0 */ void getBank(u32) const;
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
-// build JSUPtrLink (JSUPtrLink) True/True
+// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build STControl (STControl) False/False
-/* top-level dependencies (begin STControl) */
-/* top-level dependencies (end STControl) */
+// build STControl (['STControl']) False/False
+/* top-level dependencies (begin ['STControl']) */
+/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
@@ -27,87 +27,87 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-// build CSTControl (CSTControl) False/False
-/* top-level dependencies (begin CSTControl) */
-/* top-level dependencies (end CSTControl) */
+// build CSTControl (['CSTControl']) False/False
+/* top-level dependencies (begin ['CSTControl']) */
+/* top-level dependencies (end ['CSTControl']) */
 struct CSTControl {
 	/* 8003217C */ void getValueStick();
 	/* 8003218C */ void getAngleStick();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build cXyz (cXyz) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build cXyz (['cXyz']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin cXyz) */
-// outer dependency: Vec
-/* top-level dependencies (end cXyz) */
+/* top-level dependencies (begin ['cXyz']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// Vec
+	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build JKRAramArchive (JKRAramArchive) False/False
-/* top-level dependencies (begin JKRAramArchive) */
-/* top-level dependencies (end JKRAramArchive) */
+// build JKRAramArchive (['JKRAramArchive']) False/False
+/* top-level dependencies (begin ['JKRAramArchive']) */
+/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 	/* 802D781C */ void getAramAddress(char const*);
 };
 
-// build dLib_time_c (dLib_time_c) False/False
-/* top-level dependencies (begin dLib_time_c) */
-/* top-level dependencies (end dLib_time_c) */
+// build dLib_time_c (['dLib_time_c']) False/False
+/* top-level dependencies (begin ['dLib_time_c']) */
+/* top-level dependencies (end ['dLib_time_c']) */
 struct dLib_time_c {
 	/* 80032804 */ void getTime();
 	/* 80032880 */ void stopTime();
 	/* 800328BC */ void startTime();
 };
 
-// build dEvt_control_c (dEvt_control_c) False/False
-/* top-level dependencies (begin dEvt_control_c) */
-/* top-level dependencies (end dEvt_control_c) */
+// build dEvt_control_c (['dEvt_control_c']) False/False
+/* top-level dependencies (begin ['dEvt_control_c']) */
+/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 800434D8 */ void searchMapEventData(u8);
 };
 
-// build Vec (Vec) True/True
-// build JKRAram (JKRAram) False/False
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
-struct JKRExpandSwitch {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build Vec (['Vec']) True/True
+// build JKRAram (['JKRAram']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRExpandSwitch
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRAram) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
+/* top-level dependencies (begin ['JKRExpandSwitch']) */
+/* top-level dependencies (end ['JKRExpandSwitch']) */
+struct JKRExpandSwitch {
+};
+
+/* top-level dependencies (begin ['JKRAram']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JKRExpandSwitch',)
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// JKRExpandSwitch
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JKRExpandSwitch',)
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) True/True
-// build JKRHeap (JKRHeap) True/True
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D65A4 */ void findFsResource(char const*, u32) const;
 };

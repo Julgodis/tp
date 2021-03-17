@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build delete_tag_class (delete_tag_class) False/False
-/* top-level dependencies (begin delete_tag_class) */
-/* top-level dependencies (end delete_tag_class) */
+// build delete_tag_class (['delete_tag_class']) False/False
+/* top-level dependencies (begin ['delete_tag_class']) */
+/* top-level dependencies (end ['delete_tag_class']) */
 struct delete_tag_class {
 };
 
-// build create_tag_class (create_tag_class) False/False
-/* top-level dependencies (begin create_tag_class) */
-/* top-level dependencies (end create_tag_class) */
+// build create_tag_class (['create_tag_class']) False/False
+/* top-level dependencies (begin ['create_tag_class']) */
+/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (node_list_class) False/False
-/* top-level dependencies (begin node_list_class) */
-/* top-level dependencies (end node_list_class) */
+// build node_list_class (['node_list_class']) False/False
+/* top-level dependencies (begin ['node_list_class']) */
+/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 

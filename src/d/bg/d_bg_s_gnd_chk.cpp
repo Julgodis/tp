@@ -9,55 +9,55 @@
 // Types:
 // 
 
-// build dBgS_GndChk (dBgS_GndChk) False/False
-/* top-level dependencies (begin dBgS_GndChk) */
-/* top-level dependencies (end dBgS_GndChk) */
+// build dBgS_GndChk (['dBgS_GndChk']) False/False
+/* top-level dependencies (begin ['dBgS_GndChk']) */
+/* top-level dependencies (end ['dBgS_GndChk']) */
 struct dBgS_GndChk {
 	/* 8007757C */ dBgS_GndChk();
 	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-// build dBgS_ObjGndChk_Wtr (dBgS_ObjGndChk_Wtr) False/False
-/* top-level dependencies (begin dBgS_ObjGndChk_Wtr) */
-/* top-level dependencies (end dBgS_ObjGndChk_Wtr) */
+// build dBgS_ObjGndChk_Wtr (['dBgS_ObjGndChk_Wtr']) False/False
+/* top-level dependencies (begin ['dBgS_ObjGndChk_Wtr']) */
+/* top-level dependencies (end ['dBgS_ObjGndChk_Wtr']) */
 struct dBgS_ObjGndChk_Wtr {
 	/* 80077678 */ dBgS_ObjGndChk_Wtr();
 	/* 80077710 */ ~dBgS_ObjGndChk_Wtr();
 };
 
-// build dBgS_ObjGndChk_Spl (dBgS_ObjGndChk_Spl) False/False
-/* top-level dependencies (begin dBgS_ObjGndChk_Spl) */
-/* top-level dependencies (end dBgS_ObjGndChk_Spl) */
+// build dBgS_ObjGndChk_Spl (['dBgS_ObjGndChk_Spl']) False/False
+/* top-level dependencies (begin ['dBgS_ObjGndChk_Spl']) */
+/* top-level dependencies (end ['dBgS_ObjGndChk_Spl']) */
 struct dBgS_ObjGndChk_Spl {
 	/* 800777B0 */ dBgS_ObjGndChk_Spl();
 	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
 };
 
-// build dBgS_ObjGndChk_All (dBgS_ObjGndChk_All) False/False
-/* top-level dependencies (begin dBgS_ObjGndChk_All) */
-/* top-level dependencies (end dBgS_ObjGndChk_All) */
+// build dBgS_ObjGndChk_All (['dBgS_ObjGndChk_All']) False/False
+/* top-level dependencies (begin ['dBgS_ObjGndChk_All']) */
+/* top-level dependencies (end ['dBgS_ObjGndChk_All']) */
 struct dBgS_ObjGndChk_All {
 	/* 800778E8 */ ~dBgS_ObjGndChk_All();
 };
 
-// build dBgS_CamGndChk (dBgS_CamGndChk) False/False
-/* top-level dependencies (begin dBgS_CamGndChk) */
-/* top-level dependencies (end dBgS_CamGndChk) */
+// build dBgS_CamGndChk (['dBgS_CamGndChk']) False/False
+/* top-level dependencies (begin ['dBgS_CamGndChk']) */
+/* top-level dependencies (end ['dBgS_CamGndChk']) */
 struct dBgS_CamGndChk {
 	/* 80077988 */ ~dBgS_CamGndChk();
 };
 
-// build dBgS_CamGndChk_Wtr (dBgS_CamGndChk_Wtr) False/False
-/* top-level dependencies (begin dBgS_CamGndChk_Wtr) */
-/* top-level dependencies (end dBgS_CamGndChk_Wtr) */
+// build dBgS_CamGndChk_Wtr (['dBgS_CamGndChk_Wtr']) False/False
+/* top-level dependencies (begin ['dBgS_CamGndChk_Wtr']) */
+/* top-level dependencies (end ['dBgS_CamGndChk_Wtr']) */
 struct dBgS_CamGndChk_Wtr {
 	/* 80077A00 */ dBgS_CamGndChk_Wtr();
 	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
 };
 
-// build dBgS_Chk (dBgS_Chk) False/False
-/* top-level dependencies (begin dBgS_Chk) */
-/* top-level dependencies (end dBgS_Chk) */
+// build dBgS_Chk (['dBgS_Chk']) False/False
+/* top-level dependencies (begin ['dBgS_Chk']) */
+/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -65,17 +65,17 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
-/* top-level dependencies (begin dBgS_PolyPassChk) */
-/* top-level dependencies (end dBgS_PolyPassChk) */
+// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
+/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
+/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 	/* 80078E80 */ void SetCam();
 };
 
-// build cBgS_GndChk (cBgS_GndChk) False/False
-/* top-level dependencies (begin cBgS_GndChk) */
-/* top-level dependencies (end cBgS_GndChk) */
+// build cBgS_GndChk (['cBgS_GndChk']) False/False
+/* top-level dependencies (begin ['cBgS_GndChk']) */
+/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();

@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JAISoundInfo (JAISoundInfo) False/False
-/* top-level dependencies (begin JAISoundInfo) */
-/* top-level dependencies (end JAISoundInfo) */
+// build JAISoundInfo (['JAISoundInfo']) False/False
+/* top-level dependencies (begin ['JAISoundInfo']) */
+/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D34 */ JAISoundInfo(bool);
 	/* 802A2D50 */ ~JAISoundInfo();

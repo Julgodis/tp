@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASLfo (JASLfo) False/False
-/* top-level dependencies (begin JASLfo) */
-/* top-level dependencies (end JASLfo) */
+// build JASLfo (['JASLfo']) False/False
+/* top-level dependencies (begin ['JASLfo']) */
+/* top-level dependencies (end ['JASLfo']) */
 struct JASLfo {
 	/* 8029BD14 */ JASLfo();
 	/* 8029BD44 */ void getValue() const;

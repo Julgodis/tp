@@ -9,51 +9,51 @@
 // Types:
 // 
 
-// build JUTPalette (JUTPalette) False/False
-// build JUTTransparency (JUTTransparency) False/False
-/* top-level dependencies (begin JUTTransparency) */
-/* top-level dependencies (end JUTTransparency) */
-struct JUTTransparency {
-};
-
-// build ResTLUT (ResTLUT) False/False
-/* top-level dependencies (begin ResTLUT) */
-/* top-level dependencies (end ResTLUT) */
-struct ResTLUT {
-};
-
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
+// build JUTPalette (['JUTPalette']) False/False
+// build _GXTlut (['_GXTlut']) False/False
+/* top-level dependencies (begin ['_GXTlut']) */
+/* top-level dependencies (end ['_GXTlut']) */
 struct _GXTlut {
 };
 
-// build _GXTlutFmt (_GXTlutFmt) False/False
-/* top-level dependencies (begin _GXTlutFmt) */
-/* top-level dependencies (end _GXTlutFmt) */
+// build ResTLUT (['ResTLUT']) False/False
+/* top-level dependencies (begin ['ResTLUT']) */
+/* top-level dependencies (end ['ResTLUT']) */
+struct ResTLUT {
+};
+
+// build _GXTlutFmt (['_GXTlutFmt']) False/False
+/* top-level dependencies (begin ['_GXTlutFmt']) */
+/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-/* top-level dependencies (begin JUTPalette) */
-// outer dependency: JUTTransparency
-// outer dependency: ResTLUT
-// outer dependency: _GXTlut
-// outer dependency: _GXTlutFmt
-/* top-level dependencies (end JUTPalette) */
+// build JUTTransparency (['JUTTransparency']) False/False
+/* top-level dependencies (begin ['JUTTransparency']) */
+/* top-level dependencies (end ['JUTTransparency']) */
+struct JUTTransparency {
+};
+
+/* top-level dependencies (begin ['JUTPalette']) */
+// outer dependency: ('_GXTlut',)
+// outer dependency: ('ResTLUT',)
+// outer dependency: ('_GXTlutFmt',)
+// outer dependency: ('JUTTransparency',)
+/* top-level dependencies (end ['JUTPalette']) */
 struct JUTPalette {
-	// JUTTransparency
-	// ResTLUT
-	// _GXTlut
-	// _GXTlutFmt
+	// ('_GXTlut',)
+	// ('ResTLUT',)
+	// ('_GXTlutFmt',)
+	// ('JUTTransparency',)
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
 };
 
-// build _GXTlut (_GXTlut) True/True
-// build ResTLUT (ResTLUT) True/True
-// build _GXTlutFmt (_GXTlutFmt) True/True
-// build JUTTransparency (JUTTransparency) True/True
+// build _GXTlut (['_GXTlut']) True/True
+// build ResTLUT (['ResTLUT']) True/True
+// build _GXTlutFmt (['_GXTlutFmt']) True/True
+// build JUTTransparency (['JUTTransparency']) True/True
 // 
 // Forward References:
 // 

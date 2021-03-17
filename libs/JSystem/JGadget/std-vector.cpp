@@ -9,20 +9,20 @@
 // Types:
 // 
 
-// build JGadget (JGadget) False/False
-/* top-level dependencies (begin JGadget) */
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) False/False
+/* top-level dependencies (begin ['JGadget']) */
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build vector (JGadget::vector) False/False
-	/* dependencies (begin JGadget::vector) */
-	/* dependencies (end JGadget::vector) */
+	// build vector (['JGadget', 'vector']) False/False
+	/* dependencies (begin ['JGadget', 'vector']) */
+	/* dependencies (end ['JGadget', 'vector']) */
 	struct vector {
 		/* 802DCCC8 */ void extend_default(u32, u32, u32);
 	};
 
-	// build TVector_pointer_void (JGadget::TVector_pointer_void) False/False
-	/* dependencies (begin JGadget::TVector_pointer_void) */
-	/* dependencies (end JGadget::TVector_pointer_void) */
+	// build TVector_pointer_void (['JGadget', 'TVector_pointer_void']) False/False
+	/* dependencies (begin ['JGadget', 'TVector_pointer_void']) */
+	/* dependencies (end ['JGadget', 'TVector_pointer_void']) */
 	struct TVector_pointer_void {
 		/* 802DCCFC */ ~TVector_pointer_void();
 		/* 802DCDA4 */ void insert(void**, void const*&);

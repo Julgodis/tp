@@ -9,110 +9,110 @@
 // Types:
 // 
 
-// build JAU_JASInitializer (JAU_JASInitializer) False/False
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JAU_JASInitializer (['JAU_JASInitializer']) False/False
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin JAU_JASInitializer) */
-// outer dependency: JKRSolidHeap
-/* top-level dependencies (end JAU_JASInitializer) */
+/* top-level dependencies (begin ['JAU_JASInitializer']) */
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['JAU_JASInitializer']) */
 struct JAU_JASInitializer {
-	// JKRSolidHeap
+	// ('JKRSolidHeap',)
 	/* 802A4AD0 */ JAU_JASInitializer();
 	/* 802A4B28 */ void initJASystem(JKRSolidHeap*);
 };
 
-// build JKRSolidHeap (JKRSolidHeap) True/True
-// build JAU_JAIInitializer (JAU_JAIInitializer) False/False
-/* top-level dependencies (begin JAU_JAIInitializer) */
-/* top-level dependencies (end JAU_JAIInitializer) */
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+// build JAU_JAIInitializer (['JAU_JAIInitializer']) False/False
+/* top-level dependencies (begin ['JAU_JAIInitializer']) */
+/* top-level dependencies (end ['JAU_JAIInitializer']) */
 struct JAU_JAIInitializer {
 	/* 802A4D3C */ JAU_JAIInitializer();
 	/* 802A4D60 */ void initJAInterface();
 };
 
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
-// build JASGenericMemPool (JASGenericMemPool) False/False
-/* top-level dependencies (begin JASGenericMemPool) */
-/* top-level dependencies (end JASGenericMemPool) */
+// build JASGenericMemPool (['JASGenericMemPool']) False/False
+/* top-level dependencies (begin ['JASGenericMemPool']) */
+/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-// build JASKernel (JASKernel) False/False
-// build JKRSolidHeap (JKRSolidHeap) True/True
-/* top-level dependencies (begin JASKernel) */
-// outer dependency: JKRSolidHeap
-/* top-level dependencies (end JASKernel) */
+// build JASKernel (['JASKernel']) False/False
+// build JKRSolidHeap (['JKRSolidHeap']) True/True
+/* top-level dependencies (begin ['JASKernel']) */
+// outer dependency: ('JKRSolidHeap',)
+/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
-	// JKRSolidHeap
+	// ('JKRSolidHeap',)
 	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
 	/* 80290AD0 */ void setupAramHeap(u32, u32);
 };
 
-// build JASAramStream (JASAramStream) False/False
-/* top-level dependencies (begin JASAramStream) */
-/* top-level dependencies (end JASAramStream) */
+// build JASAramStream (['JASAramStream']) False/False
+/* top-level dependencies (begin ['JASAramStream']) */
+/* top-level dependencies (end ['JASAramStream']) */
 struct JASAramStream {
 	/* 8029631C */ void initSystem(u32, u32);
 };
 
-// build JASWaveArcLoader (JASWaveArcLoader) False/False
-/* top-level dependencies (begin JASWaveArcLoader) */
-/* top-level dependencies (end JASWaveArcLoader) */
+// build JASWaveArcLoader (['JASWaveArcLoader']) False/False
+/* top-level dependencies (begin ['JASWaveArcLoader']) */
+/* top-level dependencies (end ['JASWaveArcLoader']) */
 struct JASWaveArcLoader {
 	/* 8029A0D0 */ void setCurrentDir(char const*);
 };
 
-// build JASAudioThread (JASAudioThread) False/False
-/* top-level dependencies (begin JASAudioThread) */
-/* top-level dependencies (end JASAudioThread) */
+// build JASAudioThread (['JASAudioThread']) False/False
+/* top-level dependencies (begin ['JASAudioThread']) */
+/* top-level dependencies (end ['JASAudioThread']) */
 struct JASAudioThread {
 	/* 8029CD4C */ void create(s32);
 };
 
-// build JASDriver (JASDriver) False/False
-/* top-level dependencies (begin JASDriver) */
-/* top-level dependencies (end JASDriver) */
+// build JASDriver (['JASDriver']) False/False
+/* top-level dependencies (begin ['JASDriver']) */
+/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029E130 */ void setDSPLevel(f32);
 	/* 8029E178 */ void setOutputMode(u32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
-// build JKRThreadSwitch (JKRThreadSwitch) False/False
-// build JKRThread (JKRThread) False/False
-/* top-level dependencies (begin JKRThread) */
-/* top-level dependencies (end JKRThread) */
+// build JKRThreadSwitch (['JKRThreadSwitch']) False/False
+// build JKRThread (['JKRThread']) False/False
+/* top-level dependencies (begin ['JKRThread']) */
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 };
 
-/* top-level dependencies (begin JKRThreadSwitch) */
-// outer dependency: JKRThread
-/* top-level dependencies (end JKRThreadSwitch) */
+/* top-level dependencies (begin ['JKRThreadSwitch']) */
+// outer dependency: ('JKRThread',)
+/* top-level dependencies (end ['JKRThreadSwitch']) */
 struct JKRThreadSwitch {
-	// JKRThread
+	// ('JKRThread',)
 	/* 802D1A70 */ void enter(JKRThread*, int);
 };
 
-// build JKRThread (JKRThread) True/True
+// build JKRThread (['JKRThread']) True/True
 // 
 // Forward References:
 // 

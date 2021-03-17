@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build dBgW_Base (dBgW_Base) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build dBgW_Base (['dBgW_Base']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin dBgW_Base) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dBgW_Base) */
+/* top-level dependencies (begin ['dBgW_Base']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['dBgW_Base']) */
 struct dBgW_Base {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 	/* 8007E5A8 */ dBgW_Base();
 	/* 8007E640 */ ~dBgW_Base();
@@ -39,15 +39,15 @@ struct dBgW_Base {
 	/* 8007E6E0 */ void CalcDiffShapeAngleY(s16);
 };
 
-// build cBgW_BgId (cBgW_BgId) False/False
-/* top-level dependencies (begin cBgW_BgId) */
-/* top-level dependencies (end cBgW_BgId) */
+// build cBgW_BgId (['cBgW_BgId']) False/False
+/* top-level dependencies (begin ['cBgW_BgId']) */
+/* top-level dependencies (end ['cBgW_BgId']) */
 struct cBgW_BgId {
 	/* 8007E5F8 */ ~cBgW_BgId();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build cXyz (cXyz) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build cXyz (['cXyz']) True/True
 // 
 // Forward References:
 // 

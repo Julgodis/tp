@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build JSUMemoryInputStream (JSUMemoryInputStream) False/False
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
-/* top-level dependencies (begin JSUStreamSeekFrom) */
-/* top-level dependencies (end JSUStreamSeekFrom) */
+// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
+/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
+/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin JSUMemoryInputStream) */
-// outer dependency: JSUStreamSeekFrom
-/* top-level dependencies (end JSUMemoryInputStream) */
+/* top-level dependencies (begin ['JSUMemoryInputStream']) */
+// outer dependency: ('JSUStreamSeekFrom',)
+/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
-	// JSUStreamSeekFrom
+	// ('JSUStreamSeekFrom',)
 	/* 802552B8 */ ~JSUMemoryInputStream();
 	/* 802DC520 */ void setBuffer(void const*, s32);
 	/* 802DC534 */ void readData(void*, s32);
@@ -29,10 +29,10 @@ struct JSUMemoryInputStream {
 	/* 802DC630 */ void getPosition() const;
 };
 
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
-// build JSURandomInputStream (JSURandomInputStream) False/False
-/* top-level dependencies (begin JSURandomInputStream) */
-/* top-level dependencies (end JSURandomInputStream) */
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC3FC */ void skip(s32);

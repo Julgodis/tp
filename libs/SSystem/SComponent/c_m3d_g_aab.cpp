@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build cM3dGAab (cM3dGAab) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build cM3dGAab (['cM3dGAab']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin cM3dGAab) */
-// outer dependency: cXyz
-/* top-level dependencies (end cM3dGAab) */
+/* top-level dependencies (begin ['cM3dGAab']) */
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// cXyz
+	// ('cXyz',)
 	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
 	/* 8026EC88 */ void CrossY(cXyz const*) const;
 	/* 8026ECD0 */ void UnderPlaneYUnder(f32) const;
@@ -34,7 +34,7 @@ struct cM3dGAab {
 	/* 8026EE68 */ void PlusR(f32);
 };
 
-// build cXyz (cXyz) True/True
+// build cXyz (['cXyz']) True/True
 // 
 // Forward References:
 // 

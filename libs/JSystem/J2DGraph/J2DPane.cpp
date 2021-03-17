@@ -9,150 +9,150 @@
 // Types:
 // 
 
-// build J2DPane (J2DPane) False/False
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
+// build J2DPane (['J2DPane']) False/False
+// build _GXCullMode (['_GXCullMode']) False/False
+/* top-level dependencies (begin ['_GXCullMode']) */
+/* top-level dependencies (end ['_GXCullMode']) */
+struct _GXCullMode {
+};
+
+// build J2DGrafContext (['J2DGrafContext']) False/False
+/* top-level dependencies (begin ['J2DGrafContext']) */
+/* top-level dependencies (end ['J2DGrafContext']) */
+struct J2DGrafContext {
+	/* 802E8E20 */ void setScissor();
+};
+
+// build J2DAnmTransform (['J2DAnmTransform']) False/False
+/* top-level dependencies (begin ['J2DAnmTransform']) */
+/* top-level dependencies (end ['J2DAnmTransform']) */
 struct J2DAnmTransform {
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
+// build J2DAnmBase (['J2DAnmBase']) False/False
+/* top-level dependencies (begin ['J2DAnmBase']) */
+/* top-level dependencies (end ['J2DAnmBase']) */
+struct J2DAnmBase {
 };
 
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) False/False
+/* top-level dependencies (begin ['J2DAnmTevRegKey']) */
+/* top-level dependencies (end ['J2DAnmTevRegKey']) */
+struct J2DAnmTevRegKey {
+};
+
+// build J2DBasePosition (['J2DBasePosition']) False/False
+/* top-level dependencies (begin ['J2DBasePosition']) */
+/* top-level dependencies (end ['J2DBasePosition']) */
+struct J2DBasePosition {
+};
+
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
+/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
+/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build J2DAnmColor (['J2DAnmColor']) False/False
+/* top-level dependencies (begin ['J2DAnmColor']) */
+/* top-level dependencies (end ['J2DAnmColor']) */
+struct J2DAnmColor {
+};
+
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
+struct ResFONT {
+};
+
+// build J2DAnmVtxColor (['J2DAnmVtxColor']) False/False
+/* top-level dependencies (begin ['J2DAnmVtxColor']) */
+/* top-level dependencies (end ['J2DAnmVtxColor']) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DRotateAxis (['J2DRotateAxis']) False/False
+/* top-level dependencies (begin ['J2DRotateAxis']) */
+/* top-level dependencies (end ['J2DRotateAxis']) */
+struct J2DRotateAxis {
+};
+
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build JSURandomInputStream (JSURandomInputStream) False/False
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
-/* top-level dependencies (begin JSUStreamSeekFrom) */
-/* top-level dependencies (end JSUStreamSeekFrom) */
+// build JSURandomInputStream (['JSURandomInputStream']) False/False
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
+/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
+/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin JSURandomInputStream) */
-// outer dependency: JSUStreamSeekFrom
-/* top-level dependencies (end JSURandomInputStream) */
+/* top-level dependencies (begin ['JSURandomInputStream']) */
+// outer dependency: ('JSUStreamSeekFrom',)
+/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// JSUStreamSeekFrom
+	// ('JSUStreamSeekFrom',)
 	/* 802DC370 */ void align(s32);
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
+struct JKRArchive {
 };
 
-// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
-/* top-level dependencies (begin J2DAnmVisibilityFull) */
-/* top-level dependencies (end J2DAnmVisibilityFull) */
+// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) False/False
+/* top-level dependencies (begin ['J2DAnmVisibilityFull']) */
+/* top-level dependencies (end ['J2DAnmVisibilityFull']) */
 struct J2DAnmVisibilityFull {
 };
 
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J2DAnmTexPattern']) */
+/* top-level dependencies (end ['J2DAnmTexPattern']) */
 struct J2DAnmTexPattern {
 };
 
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
-};
-
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
-struct ResFONT {
-};
-
-// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
-/* top-level dependencies (begin J2DAnmVtxColor) */
-/* top-level dependencies (end J2DAnmVtxColor) */
-struct J2DAnmVtxColor {
-};
-
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
-struct J2DRotateAxis {
-};
-
-// build J2DAnmBase (J2DAnmBase) False/False
-/* top-level dependencies (begin J2DAnmBase) */
-/* top-level dependencies (end J2DAnmBase) */
-struct J2DAnmBase {
-};
-
-// build J2DBasePosition (J2DBasePosition) False/False
-/* top-level dependencies (begin J2DBasePosition) */
-/* top-level dependencies (end J2DBasePosition) */
-struct J2DBasePosition {
-};
-
-// build J2DGrafContext (J2DGrafContext) False/False
-/* top-level dependencies (begin J2DGrafContext) */
-/* top-level dependencies (end J2DGrafContext) */
-struct J2DGrafContext {
-	/* 802E8E20 */ void setScissor();
-};
-
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-};
-
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
-struct _GXCullMode {
-};
-
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DAnmTransform
-// outer dependency: JKRArchive
-// outer dependency: ResTIMG
-// outer dependency: JSURandomInputStream
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmTexPattern
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: ResFONT
-// outer dependency: J2DAnmVtxColor
-// outer dependency: J2DRotateAxis
-// outer dependency: J2DAnmBase
-// outer dependency: J2DBasePosition
-// outer dependency: J2DGrafContext
-// outer dependency: J2DAnmColor
-// outer dependency: _GXCullMode
-/* top-level dependencies (end J2DPane) */
+/* top-level dependencies (begin ['J2DPane']) */
+// outer dependency: ('_GXCullMode',)
+// outer dependency: ('J2DGrafContext',)
+// outer dependency: ('J2DAnmTransform',)
+// outer dependency: ('J2DAnmBase',)
+// outer dependency: ('J2DAnmTevRegKey',)
+// outer dependency: ('J2DBasePosition',)
+// outer dependency: ('J2DAnmTextureSRTKey',)
+// outer dependency: ('J2DAnmColor',)
+// outer dependency: ('ResFONT',)
+// outer dependency: ('J2DAnmVtxColor',)
+// outer dependency: ('J2DRotateAxis',)
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('JSURandomInputStream',)
+// outer dependency: ('JKRArchive',)
+// outer dependency: ('J2DAnmVisibilityFull',)
+// outer dependency: ('J2DAnmTexPattern',)
+/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// J2DAnmTransform
-	// ResFONT
-	// J2DAnmVtxColor
-	// J2DAnmColor
-	// JKRArchive
-	// J2DAnmVisibilityFull
-	// ResTIMG
-	// J2DAnmBase
-	// J2DAnmTextureSRTKey
-	// JSURandomInputStream
-	// J2DBasePosition
-	// J2DGrafContext
-	// J2DRotateAxis
-	// _GXCullMode
-	// J2DAnmTexPattern
-	// J2DAnmTevRegKey
+	// ('J2DBasePosition',)
+	// ('_GXCullMode',)
+	// ('J2DGrafContext',)
+	// ('J2DAnmTransform',)
+	// ('J2DAnmColor',)
+	// ('J2DAnmTextureSRTKey',)
+	// ('ResFONT',)
+	// ('J2DAnmVtxColor',)
+	// ('J2DRotateAxis',)
+	// ('J2DAnmBase',)
+	// ('ResTIMG',)
+	// ('JSURandomInputStream',)
+	// ('JKRArchive',)
+	// ('J2DAnmVisibilityFull',)
+	// ('J2DAnmTexPattern',)
+	// ('J2DAnmTevRegKey',)
 	/* 80020158 */ void setAlpha(u8);
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
@@ -212,71 +212,71 @@ struct J2DPane {
 	/* 802F8478 */ void drawSelf(f32, f32);
 };
 
-// build JSURandomInputStream (JSURandomInputStream) True/True
-// build J2DGrafContext (J2DGrafContext) True/True
-// build J2DRotateAxis (J2DRotateAxis) True/True
-// build ResTIMG (ResTIMG) True/True
-// build ResFONT (ResFONT) True/True
-// build _GXCullMode (_GXCullMode) True/True
-// build J2DBasePosition (J2DBasePosition) True/True
-// build JKRArchive (JKRArchive) True/True
-// build J2DAnmBase (J2DAnmBase) True/True
-// build J2DAnmTransform (J2DAnmTransform) True/True
-// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
-// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
-// build J2DAnmColor (J2DAnmColor) True/True
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSURandomInputStream (['JSURandomInputStream']) True/True
+// build J2DGrafContext (['J2DGrafContext']) True/True
+// build J2DRotateAxis (['J2DRotateAxis']) True/True
+// build ResTIMG (['ResTIMG']) True/True
+// build ResFONT (['ResFONT']) True/True
+// build _GXCullMode (['_GXCullMode']) True/True
+// build J2DBasePosition (['J2DBasePosition']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+// build J2DAnmBase (['J2DAnmBase']) True/True
+// build J2DAnmTransform (['J2DAnmTransform']) True/True
+// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) True/True
+// build J2DAnmVtxColor (['J2DAnmVtxColor']) True/True
+// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) True/True
+// build J2DAnmColor (['J2DAnmColor']) True/True
+// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
+// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
 };
 
-// build JSUInputStream (JSUInputStream) False/False
-/* top-level dependencies (begin JSUInputStream) */
-/* top-level dependencies (end JSUInputStream) */
+// build JSUInputStream (['JSUInputStream']) False/False
+/* top-level dependencies (begin ['JSUInputStream']) */
+/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
-// build JUTResReference (JUTResReference) False/False
-// build JSUInputStream (JSUInputStream) True/True
-// build JKRArchive (JKRArchive) True/True
-/* top-level dependencies (begin JUTResReference) */
-// outer dependency: JSUInputStream
-// outer dependency: JKRArchive
-/* top-level dependencies (end JUTResReference) */
+// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
+// build JUTResReference (['JUTResReference']) False/False
+// build JSUInputStream (['JSUInputStream']) True/True
+// build JKRArchive (['JKRArchive']) True/True
+/* top-level dependencies (begin ['JUTResReference']) */
+// outer dependency: ('JSUInputStream',)
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JUTResReference']) */
 struct JUTResReference {
-	// JSUInputStream
-	// JKRArchive
+	// ('JSUInputStream',)
+	// ('JKRArchive',)
 	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 };
 
-// build J2DDataManage (J2DDataManage) False/False
-// build JSUInputStream (JSUInputStream) True/True
-/* top-level dependencies (begin J2DDataManage) */
-// outer dependency: JSUInputStream
-/* top-level dependencies (end J2DDataManage) */
+// build J2DDataManage (['J2DDataManage']) False/False
+// build JSUInputStream (['JSUInputStream']) True/True
+/* top-level dependencies (begin ['J2DDataManage']) */
+// outer dependency: ('JSUInputStream',)
+/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
-	// JSUInputStream
+	// ('JSUInputStream',)
 	/* 8030CE7C */ void get(JSUInputStream*);
 };
 

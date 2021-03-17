@@ -9,38 +9,38 @@
 // Types:
 // 
 
-// build J3DLightInfo (J3DLightInfo) False/False
-/* top-level dependencies (begin J3DLightInfo) */
-/* top-level dependencies (end J3DLightInfo) */
+// build J3DLightInfo (['J3DLightInfo']) False/False
+/* top-level dependencies (begin ['J3DLightInfo']) */
+/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
-/* top-level dependencies (begin J3DTexMtxInfo) */
-/* top-level dependencies (end J3DTexMtxInfo) */
+// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
+/* top-level dependencies (begin ['J3DTexMtxInfo']) */
+/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
 };
 
-// build J3DIndTexMtxInfo (J3DIndTexMtxInfo) False/False
-/* top-level dependencies (begin J3DIndTexMtxInfo) */
-/* top-level dependencies (end J3DIndTexMtxInfo) */
+// build J3DIndTexMtxInfo (['J3DIndTexMtxInfo']) False/False
+/* top-level dependencies (begin ['J3DIndTexMtxInfo']) */
+/* top-level dependencies (end ['J3DIndTexMtxInfo']) */
 struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-// build J3DFogInfo (J3DFogInfo) False/False
-/* top-level dependencies (begin J3DFogInfo) */
-/* top-level dependencies (end J3DFogInfo) */
+// build J3DFogInfo (['J3DFogInfo']) False/False
+/* top-level dependencies (begin ['J3DFogInfo']) */
+/* top-level dependencies (end ['J3DFogInfo']) */
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
 };
 
-// build J3DNBTScaleInfo (J3DNBTScaleInfo) False/False
-/* top-level dependencies (begin J3DNBTScaleInfo) */
-/* top-level dependencies (end J3DNBTScaleInfo) */
+// build J3DNBTScaleInfo (['J3DNBTScaleInfo']) False/False
+/* top-level dependencies (begin ['J3DNBTScaleInfo']) */
+/* top-level dependencies (end ['J3DNBTScaleInfo']) */
 struct J3DNBTScaleInfo {
 	/* 8032587C */ void operator=(J3DNBTScaleInfo const&);
 };

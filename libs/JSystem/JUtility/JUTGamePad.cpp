@@ -9,83 +9,84 @@
 // Types:
 // 
 
-// build JUTGamePad (JUTGamePad) False/False
-// build JUTGamePad (JUTGamePad) True/False
+// build JUTGamePad (['JUTGamePad']) False/False
+// build JUTGamePad (['JUTGamePad']) True/False
 struct JUTGamePad;
-// build PADStatus (PADStatus) False/False
-/* top-level dependencies (begin PADStatus) */
-/* top-level dependencies (end PADStatus) */
+// build JUTGamePad (['JUTGamePad']) True/True
+// build JUTGamePad (['JUTGamePad']) True/True
+// build JUTGamePad (['JUTGamePad']) True/True
+// build PADStatus (['PADStatus']) False/False
+/* top-level dependencies (begin ['PADStatus']) */
+/* top-level dependencies (end ['PADStatus']) */
 struct PADStatus {
 };
 
-// build JUTGamePad (JUTGamePad) True/True
-// build JUTGamePad (JUTGamePad) True/True
-// build JUTGamePad (JUTGamePad) True/True
-/* top-level dependencies (begin JUTGamePad) */
-// outer dependency: JUTGamePad::EPadPort
-// outer dependency: PADStatus
-// outer dependency: JUTGamePad::EWhichStick
-// outer dependency: JUTGamePad::CRumble::ERumble
-// outer dependency: JUTGamePad::EStickMode
-/* top-level dependencies (end JUTGamePad) */
+/* top-level dependencies (begin ['JUTGamePad']) */
+// outer dependency: ('JUTGamePad', 'EPadPort')
+// outer dependency: ('JUTGamePad', 'EStickMode')
+// outer dependency: ('JUTGamePad', 'EWhichStick')
+// outer dependency: ('JUTGamePad', 'CRumble', 'ERumble')
+// outer dependency: ('PADStatus',)
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// JUTGamePad::EPadPort
-	// build EPadPort (JUTGamePad::EPadPort) False/False
-	/* dependencies (begin JUTGamePad::EPadPort) */
-	/* dependencies (end JUTGamePad::EPadPort) */
+	// ('JUTGamePad', 'EPadPort')
+	// build EPadPort (['JUTGamePad', 'EPadPort']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EPadPort']) */
+	/* dependencies (end ['JUTGamePad', 'EPadPort']) */
 	struct EPadPort {
 	};
 
-	// build CButton (JUTGamePad::CButton) False/False
-	/* dependencies (begin JUTGamePad::CButton) */
-	/* dependencies (end JUTGamePad::CButton) */
+	// build CButton (['JUTGamePad', 'CButton']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CButton']) */
+	// inner dependency: 0 ('PADStatus',) (for ['JUTGamePad', 'CButton'])
+	/* dependencies (end ['JUTGamePad', 'CButton']) */
 	struct CButton {
-		// PADStatus
+		// ('PADStatus',)
 		/* 802E1050 */ void clear();
 		/* 802E108C */ void update(PADStatus const*, u32);
 		/* 802E1A7C */ void setRepeat(u32, u32, u32);
 		/* 802E1CD8 */ CButton();
 	};
 
-	// build CStick (JUTGamePad::CStick) False/False
-	/* dependencies (begin JUTGamePad::CStick) */
-	// inner dependency: EStickMode (JUTGamePad::EStickMode) True False (for JUTGamePad::CStick)
-	// build EStickMode (JUTGamePad::EStickMode) False/False
-	/* dependencies (begin JUTGamePad::EStickMode) */
-	/* dependencies (end JUTGamePad::EStickMode) */
-	struct EStickMode {
-	};
-
-	// inner dependency: EWhichStick (JUTGamePad::EWhichStick) True False (for JUTGamePad::CStick)
-	// build EWhichStick (JUTGamePad::EWhichStick) False/False
-	/* dependencies (begin JUTGamePad::EWhichStick) */
-	/* dependencies (end JUTGamePad::EWhichStick) */
+	// build CStick (['JUTGamePad', 'CStick']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CStick']) */
+	// inner dependency: 1 ('JUTGamePad', 'EWhichStick') (for ['JUTGamePad', 'CStick'])
+	// build EWhichStick (['JUTGamePad', 'EWhichStick']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EWhichStick']) */
+	/* dependencies (end ['JUTGamePad', 'EWhichStick']) */
 	struct EWhichStick {
 	};
 
-	/* dependencies (end JUTGamePad::CStick) */
+	// inner dependency: 1 ('JUTGamePad', 'EStickMode') (for ['JUTGamePad', 'CStick'])
+	// build EStickMode (['JUTGamePad', 'EStickMode']) False/False
+	/* dependencies (begin ['JUTGamePad', 'EStickMode']) */
+	/* dependencies (end ['JUTGamePad', 'EStickMode']) */
+	struct EStickMode {
+	};
+
+	/* dependencies (end ['JUTGamePad', 'CStick']) */
 	struct CStick {
-		// JUTGamePad::EStickMode
-		// JUTGamePad::EWhichStick
+		// ('JUTGamePad', 'EWhichStick')
+		// ('JUTGamePad', 'EStickMode')
 		/* 802E121C */ void clear();
 		/* 802E1238 */ void update(s8, s8, JUTGamePad::EStickMode, JUTGamePad::EWhichStick, u32);
 		/* 802E1500 */ void getButton(u32);
 		/* 802E1CA8 */ CStick();
 	};
 
-	// build EStickMode (JUTGamePad::EStickMode) True/True
-	// build EWhichStick (JUTGamePad::EWhichStick) True/True
-	// build CRumble (JUTGamePad::CRumble) False/False
-	/* dependencies (begin JUTGamePad::CRumble) */
-	// inner dependency:  (JUTGamePad) False False (for JUTGamePad::CRumble)
-	// inner dependency: CRumble (JUTGamePad::CRumble::ERumble) True False (for JUTGamePad::CRumble)
-	/* dependencies (end JUTGamePad::CRumble) */
+	// build EStickMode (['JUTGamePad', 'EStickMode']) True/True
+	// build EWhichStick (['JUTGamePad', 'EWhichStick']) True/True
+	// build CRumble (['JUTGamePad', 'CRumble']) False/False
+	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
+	// inner dependency: 1 ('JUTGamePad', 'CRumble', 'ERumble') (for ['JUTGamePad', 'CRumble'])
+	// inner dependency: 0 ('JUTGamePad',) (for ['JUTGamePad', 'CRumble'])
+	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
-		// JUTGamePad
-		// JUTGamePad::CRumble::ERumble
-		// build ERumble (JUTGamePad::CRumble::ERumble) False/False
-		/* dependencies (begin JUTGamePad::CRumble::ERumble) */
-		/* dependencies (end JUTGamePad::CRumble::ERumble) */
+		// ('JUTGamePad', 'CRumble', 'ERumble')
+		// ('JUTGamePad',)
+		// build ERumble (['JUTGamePad', 'CRumble', 'ERumble']) False/False
+		/* dependencies (begin ['JUTGamePad', 'CRumble', 'ERumble']) */
+		/* dependencies (end ['JUTGamePad', 'CRumble', 'ERumble']) */
 		struct ERumble {
 		};
 
@@ -116,37 +117,37 @@ struct JUTGamePad {
 	/* 802E1A98 */ void recalibrate(u32);
 };
 
-// build PADStatus (PADStatus) True/True
-// build JUTGamePadLongPress (JUTGamePadLongPress) False/False
-/* top-level dependencies (begin JUTGamePadLongPress) */
-/* top-level dependencies (end JUTGamePadLongPress) */
+// build PADStatus (['PADStatus']) True/True
+// build JUTGamePadLongPress (['JUTGamePadLongPress']) False/False
+/* top-level dependencies (begin ['JUTGamePadLongPress']) */
+/* top-level dependencies (end ['JUTGamePadLongPress']) */
 struct JUTGamePadLongPress {
 	/* 802E1AFC */ void checkCallback(int, u32);
 };
 
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBE74 */ JSUPtrList(bool);
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();

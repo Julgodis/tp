@@ -9,30 +9,30 @@
 // Types:
 // 
 
-// build JASResArcLoader (JASResArcLoader) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JASResArcLoader (['JASResArcLoader']) False/False
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5F40 */ void readResource(void*, u32, u16);
 	/* 802D6684 */ void findIdxResource(u32) const;
 	/* 802D6770 */ void findIdResource(u16) const;
 };
 
-/* top-level dependencies (begin JASResArcLoader) */
-// outer dependency: JKRArchive
-/* top-level dependencies (end JASResArcLoader) */
+/* top-level dependencies (begin ['JASResArcLoader']) */
+// outer dependency: ('JKRArchive',)
+/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// JKRArchive
+	// ('JKRArchive',)
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 	/* 80290C7C */ void loadResourceCallback(void*);
 };
 
-// build JKRArchive (JKRArchive) True/True
-// build JASDvd (JASDvd) False/False
-/* top-level dependencies (begin JASDvd) */
-/* top-level dependencies (end JASDvd) */
+// build JKRArchive (['JKRArchive']) True/True
+// build JASDvd (['JASDvd']) False/False
+/* top-level dependencies (begin ['JASDvd']) */
+/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };

@@ -9,19 +9,19 @@
 // Types:
 // 
 
-// build JMessage (JMessage) False/False
-// build JMessage (JMessage) True/False
+// build JMessage (['JMessage']) False/False
+// build JMessage (['JMessage']) True/False
 struct JMessage;
-/* top-level dependencies (begin JMessage) */
-// outer dependency: JMessage::TProcessor
-/* top-level dependencies (end JMessage) */
+/* top-level dependencies (begin ['JMessage']) */
+// outer dependency: ('JMessage', 'TProcessor')
+/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TControl (JMessage::TControl) False/False
-	/* dependencies (begin JMessage::TControl) */
-	// inner dependency: TProcessor (JMessage::TProcessor) True False (for JMessage::TControl)
-	// build TProcessor (JMessage::TProcessor) False/False
-	/* dependencies (begin JMessage::TProcessor) */
-	/* dependencies (end JMessage::TProcessor) */
+	// build TControl (['JMessage', 'TControl']) False/False
+	/* dependencies (begin ['JMessage', 'TControl']) */
+	// inner dependency: 1 ('JMessage', 'TProcessor') (for ['JMessage', 'TControl'])
+	// build TProcessor (['JMessage', 'TProcessor']) False/False
+	/* dependencies (begin ['JMessage', 'TProcessor']) */
+	/* dependencies (end ['JMessage', 'TProcessor']) */
 	struct TProcessor {
 		/* 802A7B90 */ void reset();
 		/* 802A7C54 */ void getResource_groupID(u16) const;
@@ -29,9 +29,9 @@ struct JMessage {
 		/* 802A828C */ void process_onCharacterEnd_normal_(JMessage::TProcessor*);
 	};
 
-	/* dependencies (end JMessage::TControl) */
+	/* dependencies (end ['JMessage', 'TControl']) */
 	struct TControl {
-		// JMessage::TProcessor
+		// ('JMessage', 'TProcessor')
 		/* 802A7548 */ TControl();
 		/* 802A758C */ ~TControl();
 		/* 802A75D4 */ void reset();
@@ -42,17 +42,17 @@ struct JMessage {
 		/* 802A7A20 */ void setMessageCode_inSequence_(JMessage::TProcessor const*, u16, u16);
 	};
 
-	// build TProcessor (JMessage::TProcessor) True/True
-	// build TSequenceProcessor (JMessage::TSequenceProcessor) False/False
-	/* dependencies (begin JMessage::TSequenceProcessor) */
-	/* dependencies (end JMessage::TSequenceProcessor) */
+	// build TProcessor (['JMessage', 'TProcessor']) True/True
+	// build TSequenceProcessor (['JMessage', 'TSequenceProcessor']) False/False
+	/* dependencies (begin ['JMessage', 'TSequenceProcessor']) */
+	/* dependencies (end ['JMessage', 'TSequenceProcessor']) */
 	struct TSequenceProcessor {
 		/* 802A8418 */ void process(char const*);
 	};
 
-	// build TRenderingProcessor (JMessage::TRenderingProcessor) False/False
-	/* dependencies (begin JMessage::TRenderingProcessor) */
-	/* dependencies (end JMessage::TRenderingProcessor) */
+	// build TRenderingProcessor (['JMessage', 'TRenderingProcessor']) False/False
+	/* dependencies (begin ['JMessage', 'TRenderingProcessor']) */
+	/* dependencies (end ['JMessage', 'TRenderingProcessor']) */
 	struct TRenderingProcessor {
 		/* 802A8B20 */ void process(char const*);
 	};

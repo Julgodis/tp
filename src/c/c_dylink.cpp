@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build cDylPhs (cDylPhs) False/False
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build cDylPhs (['cDylPhs']) False/False
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-/* top-level dependencies (begin cDylPhs) */
-// outer dependency: request_of_phase_process_class
-/* top-level dependencies (end cDylPhs) */
+/* top-level dependencies (begin ['cDylPhs']) */
+// outer dependency: ('request_of_phase_process_class',)
+/* top-level dependencies (end ['cDylPhs']) */
 struct cDylPhs {
-	// request_of_phase_process_class
+	// ('request_of_phase_process_class',)
 	/* 80018804 */ s32 phase_01(void*);
 	/* 8001880C */ void phase_02(s16*);
 	/* 80018844 */ bool phase_03(void*);
@@ -28,10 +28,10 @@ struct cDylPhs {
 	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
 };
 
-// build request_of_phase_process_class (request_of_phase_process_class) True/True
-// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
-/* top-level dependencies (begin DynamicModuleControlBase) */
-/* top-level dependencies (end DynamicModuleControlBase) */
+// build request_of_phase_process_class (['request_of_phase_process_class']) True/True
+// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
+/* top-level dependencies (begin ['DynamicModuleControlBase']) */
+/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 800188DC */ bool getModuleName() const;
 	/* 802621CC */ ~DynamicModuleControlBase();
@@ -40,48 +40,48 @@ struct DynamicModuleControlBase {
 	/* 802623EC */ void load_async();
 };
 
-// build DynamicModuleControl (DynamicModuleControl) False/False
-/* top-level dependencies (begin DynamicModuleControl) */
-/* top-level dependencies (end DynamicModuleControl) */
+// build DynamicModuleControl (['DynamicModuleControl']) False/False
+/* top-level dependencies (begin ['DynamicModuleControl']) */
+/* top-level dependencies (end ['DynamicModuleControl']) */
 struct DynamicModuleControl {
 	/* 800188E4 */ ~DynamicModuleControl();
 	/* 80262660 */ DynamicModuleControl(char const*);
 	/* 8026275C */ void initialize();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRSolidHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0BF4 */ void adjustSize();
 };
 
-// build JKRFileLoader (JKRFileLoader) False/False
-/* top-level dependencies (begin JKRFileLoader) */
-/* top-level dependencies (end JKRFileLoader) */
+// build JKRFileLoader (['JKRFileLoader']) False/False
+/* top-level dependencies (begin ['JKRFileLoader']) */
+/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4224 */ void getGlbResource(char const*);
 	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
 };
 
-// build JKRFileCache (JKRFileCache) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRFileCache) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRFileCache) */
+// build JKRFileCache (['JKRFileCache']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRFileCache']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRFileCache']) */
 struct JKRFileCache {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
 };
 

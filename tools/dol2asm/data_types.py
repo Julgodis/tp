@@ -13,11 +13,42 @@ class Type:
         return f"{self.type()} {label}"
 
 @dataclass(frozen=True,eq=True)
-class NamedType(Type):
+class EmptyType(Type):
+    def type(self) -> str:
+        return ""
+
+@dataclass(frozen=True,eq=True)
+class ClassName:
     name: str
+    templates: List[Type] = field(default_factory=list)
+
+    def __hash__(self):
+        return hash((self.name, tuple(self.templates)))
+
+    def to_str(self, without_template: bool = False) -> str:
+        if self.templates and not without_template:
+            args = ", ".join([ x.to_str() for x in self.templates ])
+            return f"{self.name}<{args}>"
+        return self.name
+
+
+@dataclass(frozen=True,eq=True)
+class NamedType(Type):
+    names: List[ClassName]
+
+    def __hash__(self):
+        return hash(tuple(self.names))
 
     def type(self) -> str:
-        return self.name
+        return "::".join([ x.to_str() for x in self.names ])
+
+    @property
+    def has_class(self) -> bool:
+        return len(self.names) > 1
+
+    @property
+    def top_level(self) -> ClassName:
+        return self.names[0]
 
 @dataclass(frozen=True,eq=True)
 class PointerType(Type):
@@ -117,7 +148,7 @@ def builtin_from(name: str) -> BuiltinType:
 
 def is_builtin(type: Type) -> bool:
     try:
-        return type in _builtin_types or isinstance(type, VariadicType)
+        return isinstance(type, BuiltinType) or isinstance(type, VariadicType)
     except:
         print(type)
         raise

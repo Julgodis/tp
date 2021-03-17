@@ -9,50 +9,51 @@
 // Types:
 // 
 
-// build JASWSParser (JASWSParser) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JASWSParser (['JASWSParser']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
-/* top-level dependencies (begin JASWSParser) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JASWSParser) */
+/* top-level dependencies (begin ['JASWSParser']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JASWSParser']) */
 struct JASWSParser {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 80298FB0 */ void getGroupCount(void const*);
 	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
 	/* 80299034 */ void createBasicWaveBank(void const*, JKRHeap*);
 	/* 80299264 */ void createSimpleWaveBank(void const*, JKRHeap*);
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JASBasicWaveBank (JASBasicWaveBank) False/False
-// build JKRHeap (JKRHeap) True/True
-// build JASBasicWaveBank (JASBasicWaveBank) True/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JASBasicWaveBank (['JASBasicWaveBank']) False/False
+// build JASBasicWaveBank (['JASBasicWaveBank']) True/False
 struct JASBasicWaveBank;
-// build JASWaveInfo (JASWaveInfo) False/False
-/* top-level dependencies (begin JASWaveInfo) */
-/* top-level dependencies (end JASWaveInfo) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JASWaveInfo (['JASWaveInfo']) False/False
+/* top-level dependencies (begin ['JASWaveInfo']) */
+/* top-level dependencies (end ['JASWaveInfo']) */
 struct JASWaveInfo {
 };
 
-/* top-level dependencies (begin JASBasicWaveBank) */
-// outer dependency: JKRHeap
-// outer dependency: JASBasicWaveBank::TWaveGroup
-// outer dependency: JASWaveInfo
-/* top-level dependencies (end JASBasicWaveBank) */
+/* top-level dependencies (begin ['JASBasicWaveBank']) */
+// outer dependency: ('JASBasicWaveBank', 'TWaveGroup')
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASWaveInfo',)
+/* top-level dependencies (end ['JASBasicWaveBank']) */
 struct JASBasicWaveBank {
-	// JKRHeap
-	// JASBasicWaveBank::TWaveGroup
-	// JASWaveInfo
-	// build TWaveGroup (JASBasicWaveBank::TWaveGroup) False/False
-	/* dependencies (begin JASBasicWaveBank::TWaveGroup) */
-	/* dependencies (end JASBasicWaveBank::TWaveGroup) */
+	// ('JASBasicWaveBank', 'TWaveGroup')
+	// ('JKRHeap',)
+	// ('JASWaveInfo',)
+	// build TWaveGroup (['JASBasicWaveBank', 'TWaveGroup']) False/False
+	/* dependencies (begin ['JASBasicWaveBank', 'TWaveGroup']) */
+	// inner dependency: 0 ('JKRHeap',) (for ['JASBasicWaveBank', 'TWaveGroup'])
+	/* dependencies (end ['JASBasicWaveBank', 'TWaveGroup']) */
 	struct TWaveGroup {
-		// JKRHeap
+		// ('JKRHeap',)
 		/* 80298A84 */ void setWaveCount(u32, JKRHeap*);
 	};
 
@@ -63,25 +64,25 @@ struct JASBasicWaveBank {
 	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, int, u16, JASWaveInfo const&);
 };
 
-// build JASWaveInfo (JASWaveInfo) True/True
-// build JASSimpleWaveBank (JASSimpleWaveBank) False/False
-// build JKRHeap (JKRHeap) True/True
-// build JASWaveInfo (JASWaveInfo) True/True
-/* top-level dependencies (begin JASSimpleWaveBank) */
-// outer dependency: JKRHeap
-// outer dependency: JASWaveInfo
-/* top-level dependencies (end JASSimpleWaveBank) */
+// build JASWaveInfo (['JASWaveInfo']) True/True
+// build JASSimpleWaveBank (['JASSimpleWaveBank']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JASWaveInfo (['JASWaveInfo']) True/True
+/* top-level dependencies (begin ['JASSimpleWaveBank']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JASWaveInfo',)
+/* top-level dependencies (end ['JASSimpleWaveBank']) */
 struct JASSimpleWaveBank {
-	// JKRHeap
-	// JASWaveInfo
+	// ('JKRHeap',)
+	// ('JASWaveInfo',)
 	/* 80298C94 */ JASSimpleWaveBank();
 	/* 80298DE0 */ void setWaveTableSize(u32, JKRHeap*);
 	/* 80298E84 */ void setWaveInfo(u32, JASWaveInfo const&);
 };
 
-// build JASWaveArc (JASWaveArc) False/False
-/* top-level dependencies (begin JASWaveArc) */
-/* top-level dependencies (end JASWaveArc) */
+// build JASWaveArc (['JASWaveArc']) False/False
+/* top-level dependencies (begin ['JASWaveArc']) */
+/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
 	/* 8029A70C */ void setFileName(char const*);
 };

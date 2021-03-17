@@ -9,42 +9,42 @@
 // Types:
 // 
 
-// build cCcD_Obj (cCcD_Obj) False/False
-/* top-level dependencies (begin cCcD_Obj) */
-/* top-level dependencies (end cCcD_Obj) */
+// build cCcD_Obj (['cCcD_Obj']) False/False
+/* top-level dependencies (begin ['cCcD_Obj']) */
+/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-// build Z2Creature (Z2Creature) False/False
-/* top-level dependencies (begin Z2Creature) */
-/* top-level dependencies (end Z2Creature) */
+// build Z2Creature (['Z2Creature']) False/False
+/* top-level dependencies (begin ['Z2Creature']) */
+/* top-level dependencies (end ['Z2Creature']) */
 struct Z2Creature {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dCcU_AtInfo (dCcU_AtInfo) False/False
-/* top-level dependencies (begin dCcU_AtInfo) */
-/* top-level dependencies (end dCcU_AtInfo) */
+// build dCcU_AtInfo (['dCcU_AtInfo']) False/False
+/* top-level dependencies (begin ['dCcU_AtInfo']) */
+/* top-level dependencies (end ['dCcU_AtInfo']) */
 struct dCcU_AtInfo {
 };
 
-// build daPy_py_c (daPy_py_c) False/False
-/* top-level dependencies (begin daPy_py_c) */
-/* top-level dependencies (end daPy_py_c) */
+// build daPy_py_c (['daPy_py_c']) False/False
+/* top-level dependencies (begin ['daPy_py_c']) */
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 80088134 */ bool checkCutJumpCancelTurn() const;
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-// build dCcD_GObjInf (dCcD_GObjInf) False/False
-/* top-level dependencies (begin dCcD_GObjInf) */
-/* top-level dependencies (end dCcD_GObjInf) */
+// build dCcD_GObjInf (['dCcD_GObjInf']) False/False
+/* top-level dependencies (begin ['dCcD_GObjInf']) */
+/* top-level dependencies (end ['dCcD_GObjInf']) */
 struct dCcD_GObjInf {
 	/* 800845B0 */ void getHitSeID(u8, int);
 };

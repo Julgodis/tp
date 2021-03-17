@@ -9,33 +9,33 @@
 // Types:
 // 
 
-// build J3DTexture (J3DTexture) False/False
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build J3DTexture (['J3DTexture']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin J3DTexture) */
-// outer dependency: _GXTexMapID
-// outer dependency: ResTIMG
-/* top-level dependencies (end J3DTexture) */
+// build _GXTexMapID (['_GXTexMapID']) False/False
+/* top-level dependencies (begin ['_GXTexMapID']) */
+/* top-level dependencies (end ['_GXTexMapID']) */
+struct _GXTexMapID {
+};
+
+/* top-level dependencies (begin ['J3DTexture']) */
+// outer dependency: ('ResTIMG',)
+// outer dependency: ('_GXTexMapID',)
+/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// _GXTexMapID
-	// ResTIMG
+	// ('ResTIMG',)
+	// ('_GXTexMapID',)
 	/* 8031204C */ void loadGX(u16, _GXTexMapID) const;
 	/* 803121A4 */ void entryNum(u16);
 	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
 };
 
-// build _GXTexMapID (_GXTexMapID) True/True
-// build ResTIMG (ResTIMG) True/True
+// build _GXTexMapID (['_GXTexMapID']) True/True
+// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 

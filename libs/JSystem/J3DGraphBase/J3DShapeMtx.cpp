@@ -9,18 +9,18 @@
 // Types:
 // 
 
-// build J3DShapeMtx (J3DShapeMtx) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build J3DShapeMtx (['J3DShapeMtx']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin J3DShapeMtx) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DShapeMtx) */
+/* top-level dependencies (begin ['J3DShapeMtx']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DShapeMtx']) */
 struct J3DShapeMtx {
-	// Vec
+	// ('Vec',)
 	/* 80273E08 */ bool getUseMtxNum() const;
 	/* 803130A8 */ void resetMtxLoadCache();
 	/* 803130E4 */ void loadMtxIndx_PNGP(int, u16) const;
@@ -34,16 +34,16 @@ struct J3DShapeMtx {
 	/* 803147E0 */ void getType() const;
 };
 
-// build J3DDifferedTexMtx (J3DDifferedTexMtx) False/False
-/* top-level dependencies (begin J3DDifferedTexMtx) */
-/* top-level dependencies (end J3DDifferedTexMtx) */
+// build J3DDifferedTexMtx (['J3DDifferedTexMtx']) False/False
+/* top-level dependencies (begin ['J3DDifferedTexMtx']) */
+/* top-level dependencies (end ['J3DDifferedTexMtx']) */
 struct J3DDifferedTexMtx {
 	/* 8031322C */ void loadExecute(f32 const (* )[4]);
 };
 
-// build J3DShapeMtxConcatView (J3DShapeMtxConcatView) False/False
-/* top-level dependencies (begin J3DShapeMtxConcatView) */
-/* top-level dependencies (end J3DShapeMtxConcatView) */
+// build J3DShapeMtxConcatView (['J3DShapeMtxConcatView']) False/False
+/* top-level dependencies (begin ['J3DShapeMtxConcatView']) */
+/* top-level dependencies (end ['J3DShapeMtxConcatView']) */
 struct J3DShapeMtxConcatView {
 	/* 80313828 */ void loadMtxConcatView_PNGP(int, u16) const;
 	/* 803138C8 */ void loadMtxConcatView_PCPU(int, u16) const;
@@ -57,14 +57,14 @@ struct J3DShapeMtxConcatView {
 	/* 8031478C */ void getType() const;
 };
 
-// build Vec (Vec) True/True
-// build J3DShapeMtxMulti (J3DShapeMtxMulti) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin J3DShapeMtxMulti) */
-// outer dependency: Vec
-/* top-level dependencies (end J3DShapeMtxMulti) */
+// build Vec (['Vec']) True/True
+// build J3DShapeMtxMulti (['J3DShapeMtxMulti']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['J3DShapeMtxMulti']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['J3DShapeMtxMulti']) */
 struct J3DShapeMtxMulti {
-	// Vec
+	// ('Vec',)
 	/* 80313E4C */ void load() const;
 	/* 80313EEC */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
 	/* 803146B0 */ ~J3DShapeMtxMulti();
@@ -73,9 +73,9 @@ struct J3DShapeMtxMulti {
 	/* 80314720 */ void getUseMtxIndex(u16) const;
 };
 
-// build J3DShapeMtxMultiConcatView (J3DShapeMtxMultiConcatView) False/False
-/* top-level dependencies (begin J3DShapeMtxMultiConcatView) */
-/* top-level dependencies (end J3DShapeMtxMultiConcatView) */
+// build J3DShapeMtxMultiConcatView (['J3DShapeMtxMultiConcatView']) False/False
+/* top-level dependencies (begin ['J3DShapeMtxMultiConcatView']) */
+/* top-level dependencies (end ['J3DShapeMtxMultiConcatView']) */
 struct J3DShapeMtxMultiConcatView {
 	/* 80313FA4 */ void load() const;
 	/* 8031419C */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
@@ -86,35 +86,35 @@ struct J3DShapeMtxMultiConcatView {
 	/* 803146AC */ void loadNrmMtx(int, u16) const;
 };
 
-// build J3DShapeMtxBBoardConcatView (J3DShapeMtxBBoardConcatView) False/False
-/* top-level dependencies (begin J3DShapeMtxBBoardConcatView) */
-/* top-level dependencies (end J3DShapeMtxBBoardConcatView) */
+// build J3DShapeMtxBBoardConcatView (['J3DShapeMtxBBoardConcatView']) False/False
+/* top-level dependencies (begin ['J3DShapeMtxBBoardConcatView']) */
+/* top-level dependencies (end ['J3DShapeMtxBBoardConcatView']) */
 struct J3DShapeMtxBBoardConcatView {
 	/* 803142D4 */ void load() const;
 	/* 803145A4 */ ~J3DShapeMtxBBoardConcatView();
 	/* 80314610 */ void getType() const;
 };
 
-// build J3DShapeMtxYBBoardConcatView (J3DShapeMtxYBBoardConcatView) False/False
-/* top-level dependencies (begin J3DShapeMtxYBBoardConcatView) */
-/* top-level dependencies (end J3DShapeMtxYBBoardConcatView) */
+// build J3DShapeMtxYBBoardConcatView (['J3DShapeMtxYBBoardConcatView']) False/False
+/* top-level dependencies (begin ['J3DShapeMtxYBBoardConcatView']) */
+/* top-level dependencies (end ['J3DShapeMtxYBBoardConcatView']) */
 struct J3DShapeMtxYBBoardConcatView {
 	/* 803143E4 */ void load() const;
 	/* 80314520 */ ~J3DShapeMtxYBBoardConcatView();
 	/* 8031458C */ void getType() const;
 };
 
-// build J3DSys (J3DSys) False/False
-/* top-level dependencies (begin J3DSys) */
-/* top-level dependencies (end J3DSys) */
+// build J3DSys (['J3DSys']) False/False
+/* top-level dependencies (begin ['J3DSys']) */
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
 	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
 };
 
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
+// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) False/False
+/* top-level dependencies (begin ['J3DTextureSRTInfo']) */
+/* top-level dependencies (end ['J3DTextureSRTInfo']) */
 struct J3DTextureSRTInfo {
 };
 

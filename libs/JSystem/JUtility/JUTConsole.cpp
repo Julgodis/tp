@@ -9,26 +9,26 @@
 // Types:
 // 
 
-// build JUTConsole (JUTConsole) False/False
-// build JUTConsole (JUTConsole) True/False
-struct JUTConsole;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JUTConsole (['JUTConsole']) False/False
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
-/* top-level dependencies (begin JUTConsole) */
-// outer dependency: JUTConsole::EConsoleType
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTConsole) */
+// build JUTConsole (['JUTConsole']) True/False
+struct JUTConsole;
+/* top-level dependencies (begin ['JUTConsole']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JUTConsole', 'EConsoleType')
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
-	// JUTConsole::EConsoleType
-	// JKRHeap
-	// build EConsoleType (JUTConsole::EConsoleType) False/False
-	/* dependencies (begin JUTConsole::EConsoleType) */
-	/* dependencies (end JUTConsole::EConsoleType) */
+	// ('JKRHeap',)
+	// ('JUTConsole', 'EConsoleType')
+	// build EConsoleType (['JUTConsole', 'EConsoleType']) False/False
+	/* dependencies (begin ['JUTConsole', 'EConsoleType']) */
+	/* dependencies (end ['JUTConsole', 'EConsoleType']) */
 	struct EConsoleType {
 	};
 
@@ -48,17 +48,17 @@ struct JUTConsole {
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
-// build JKRHeap (JKRHeap) True/True
-// build JUTConsoleManager (JUTConsoleManager) False/False
-// build JUTConsole (JUTConsole) True/True
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTConsoleManager) */
-// outer dependency: JUTConsole
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTConsoleManager) */
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTConsoleManager (['JUTConsoleManager']) False/False
+// build JUTConsole (['JUTConsole']) True/True
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JUTConsoleManager']) */
+// outer dependency: ('JUTConsole',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
-	// JUTConsole
-	// JKRHeap
+	// ('JUTConsole',)
+	// ('JKRHeap',)
 	/* 802E81CC */ JUTConsoleManager();
 	/* 802E81F4 */ void createManager(JKRHeap*);
 	/* 802E8240 */ void appendConsole(JUTConsole*);
@@ -68,40 +68,40 @@ struct JUTConsoleManager {
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
 };
 
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -109,47 +109,47 @@ struct JGadget {
 		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
-// build JUTFont (JUTFont) False/False
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
+// build JUTFont (['JUTFont']) False/False
+// build JUtility (['JUtility']) False/False
+/* top-level dependencies (begin ['JUtility']) */
+/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
+	// build TColor (['JUtility', 'TColor']) False/False
+	/* dependencies (begin ['JUtility', 'TColor']) */
+	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin JUTFont) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTFont) */
+/* top-level dependencies (begin ['JUTFont']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-// build JUtility (JUtility) True/True
-// build JUTDirectPrint (JUTDirectPrint) False/False
-// build JUtility (JUtility) True/True
-/* top-level dependencies (begin JUTDirectPrint) */
-// outer dependency: JUtility::TColor
-/* top-level dependencies (end JUTDirectPrint) */
+// build JUtility (['JUtility']) True/True
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+// build JUtility (['JUtility']) True/True
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+// outer dependency: ('JUtility', 'TColor')
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
-	// JUtility::TColor
+	// ('JUtility', 'TColor')
 	/* 802E4288 */ void erase(int, int, int, int);
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };
 
-// build J2DOrthoGraph (J2DOrthoGraph) False/False
-/* top-level dependencies (begin J2DOrthoGraph) */
-/* top-level dependencies (end J2DOrthoGraph) */
+// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
+/* top-level dependencies (begin ['J2DOrthoGraph']) */
+/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();

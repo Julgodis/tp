@@ -9,46 +9,46 @@
 // Types:
 // 
 
-// build JKRAramBlock (JKRAramBlock) False/False
-// build JKRAramHeap (JKRAramHeap) False/False
-/* top-level dependencies (begin JKRAramHeap) */
-/* top-level dependencies (end JKRAramHeap) */
+// build JKRAramBlock (['JKRAramBlock']) False/False
+// build JKRAramHeap (['JKRAramHeap']) False/False
+/* top-level dependencies (begin ['JKRAramHeap']) */
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 };
 
-/* top-level dependencies (begin JKRAramBlock) */
-// outer dependency: JKRAramHeap
-/* top-level dependencies (end JKRAramBlock) */
+/* top-level dependencies (begin ['JKRAramBlock']) */
+// outer dependency: ('JKRAramHeap',)
+/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
-	// JKRAramHeap
+	// ('JKRAramHeap',)
 	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3378 */ ~JKRAramBlock();
 	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
 	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
-// build JKRAramHeap (JKRAramHeap) True/True
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRAramHeap (['JKRAramHeap']) True/True
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) True/True
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) True/True
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };

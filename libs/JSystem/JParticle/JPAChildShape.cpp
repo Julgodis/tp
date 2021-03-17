@@ -9,21 +9,21 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
-/* top-level dependencies (begin JPAEmitterWorkData) */
-/* top-level dependencies (end JPAEmitterWorkData) */
+// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
+/* top-level dependencies (begin ['JPAEmitterWorkData']) */
+/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseParticle (JPABaseParticle) False/False
-/* top-level dependencies (begin JPABaseParticle) */
-/* top-level dependencies (end JPABaseParticle) */
+// build JPABaseParticle (['JPABaseParticle']) False/False
+/* top-level dependencies (begin ['JPABaseParticle']) */
+/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-// build JPAChildShape (JPAChildShape) False/False
-/* top-level dependencies (begin JPAChildShape) */
-/* top-level dependencies (end JPAChildShape) */
+// build JPAChildShape (['JPAChildShape']) False/False
+/* top-level dependencies (begin ['JPAChildShape']) */
+/* top-level dependencies (end ['JPAChildShape']) */
 struct JPAChildShape {
 	/* 8027B038 */ JPAChildShape(u8 const*);
 };

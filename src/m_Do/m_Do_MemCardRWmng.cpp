@@ -9,15 +9,15 @@
 // Types:
 // 
 
-// build CARDFileInfo (CARDFileInfo) False/False
-/* top-level dependencies (begin CARDFileInfo) */
-/* top-level dependencies (end CARDFileInfo) */
+// build CARDFileInfo (['CARDFileInfo']) False/False
+/* top-level dependencies (begin ['CARDFileInfo']) */
+/* top-level dependencies (end ['CARDFileInfo']) */
 struct CARDFileInfo {
 };
 
-// build mDoMemCdRWm_HeaderData (mDoMemCdRWm_HeaderData) False/False
-/* top-level dependencies (begin mDoMemCdRWm_HeaderData) */
-/* top-level dependencies (end mDoMemCdRWm_HeaderData) */
+// build mDoMemCdRWm_HeaderData (['mDoMemCdRWm_HeaderData']) False/False
+/* top-level dependencies (begin ['mDoMemCdRWm_HeaderData']) */
+/* top-level dependencies (end ['mDoMemCdRWm_HeaderData']) */
 struct mDoMemCdRWm_HeaderData {
 };
 

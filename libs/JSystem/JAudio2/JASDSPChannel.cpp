@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build JASDSPChannel (JASDSPChannel) False/False
-/* top-level dependencies (begin JASDSPChannel) */
-/* top-level dependencies (end JASDSPChannel) */
+// build JASDSPChannel (['JASDSPChannel']) False/False
+/* top-level dependencies (begin ['JASDSPChannel']) */
+/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D2F4 */ JASDSPChannel();
 	/* 8029D320 */ void free();
@@ -27,13 +27,13 @@ struct JASDSPChannel {
 	/* 8029D948 */ void getHandle(u32);
 };
 
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
+// build JASDsp (['JASDsp']) False/False
+/* top-level dependencies (begin ['JASDsp']) */
+/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
+	// build TChannel (['JASDsp', 'TChannel']) False/False
+	/* dependencies (begin ['JASDsp', 'TChannel']) */
+	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
 		/* 8029DCA4 */ void init();
 		/* 8029DCE0 */ void playStart();
@@ -48,9 +48,9 @@ struct JASDsp {
 	/* 8029DA38 */ void getDSPHandle(int);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 

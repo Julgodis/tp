@@ -9,25 +9,23 @@
 // Types:
 // 
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build JStage (['JStage']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TObject
-// outer dependency: Vec
-/* top-level dependencies (end JStage) */
+/* top-level dependencies (begin ['JStage']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TActor (JStage::TActor) False/False
-	/* dependencies (begin JStage::TActor) */
-	/* dependencies (end JStage::TActor) */
+	// build TActor (['JStage', 'TActor']) False/False
+	/* dependencies (begin ['JStage', 'TActor']) */
+	// inner dependency: 0 ('Vec',) (for ['JStage', 'TActor'])
+	/* dependencies (end ['JStage', 'TActor']) */
 	struct TActor {
-		// Vec
+		// ('Vec',)
 		/* 80280A48 */ ~TActor();
 		/* 80280AA8 */ s32 JSGFGetType() const;
 		/* 80280AB0 */ void JSGGetTranslation(Vec*) const;
@@ -52,9 +50,9 @@ struct JStage {
 		/* 80280B18 */ void JSGGetTextureAnimationFrameMax() const;
 	};
 
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
+	// build TObject (['JStage', 'TObject']) False/False
+	/* dependencies (begin ['JStage', 'TObject']) */
+	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -72,7 +70,7 @@ struct JStage {
 
 };
 
-// build Vec (Vec) True/True
+// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 

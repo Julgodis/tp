@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build JKRAramHeap (JKRAramHeap) False/False
-// build JKRAramHeap (JKRAramHeap) True/False
+// build JKRAramHeap (['JKRAramHeap']) False/False
+// build JKRAramHeap (['JKRAramHeap']) True/False
 struct JKRAramHeap;
-/* top-level dependencies (begin JKRAramHeap) */
-// outer dependency: JKRAramHeap::EAllocMode
-/* top-level dependencies (end JKRAramHeap) */
+/* top-level dependencies (begin ['JKRAramHeap']) */
+// outer dependency: ('JKRAramHeap', 'EAllocMode')
+/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// JKRAramHeap::EAllocMode
-	// build EAllocMode (JKRAramHeap::EAllocMode) False/False
-	/* dependencies (begin JKRAramHeap::EAllocMode) */
-	/* dependencies (end JKRAramHeap::EAllocMode) */
+	// ('JKRAramHeap', 'EAllocMode')
+	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
+	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
+	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
@@ -33,51 +33,51 @@ struct JKRAramHeap {
 	/* 802D3218 */ void dump();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-// build JKRDisposer (JKRDisposer) False/False
-/* top-level dependencies (begin JKRDisposer) */
-/* top-level dependencies (end JKRDisposer) */
+// build JKRDisposer (['JKRDisposer']) False/False
+/* top-level dependencies (begin ['JKRDisposer']) */
+/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JKRAramBlock (JKRAramBlock) False/False
-// build JKRAramHeap (JKRAramHeap) True/True
-/* top-level dependencies (begin JKRAramBlock) */
-// outer dependency: JKRAramHeap
-/* top-level dependencies (end JKRAramBlock) */
+// build JKRAramBlock (['JKRAramBlock']) False/False
+// build JKRAramHeap (['JKRAramHeap']) True/True
+/* top-level dependencies (begin ['JKRAramBlock']) */
+// outer dependency: ('JKRAramHeap',)
+/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
-	// JKRAramHeap
+	// ('JKRAramHeap',)
 	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
 	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
-// build JSUPtrList (JSUPtrList) False/False
-// build JSUPtrLink (JSUPtrLink) False/False
-/* top-level dependencies (begin JSUPtrLink) */
-/* top-level dependencies (end JSUPtrLink) */
+// build JSUPtrList (['JSUPtrList']) False/False
+// build JSUPtrLink (['JSUPtrLink']) False/False
+/* top-level dependencies (begin ['JSUPtrLink']) */
+/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin JSUPtrList) */
-// outer dependency: JSUPtrLink
-/* top-level dependencies (end JSUPtrList) */
+/* top-level dependencies (begin ['JSUPtrList']) */
+// outer dependency: ('JSUPtrLink',)
+/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// JSUPtrLink
+	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
-// build JSUPtrLink (JSUPtrLink) True/True
+// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 

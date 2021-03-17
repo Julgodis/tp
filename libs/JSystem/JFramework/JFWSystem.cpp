@@ -9,166 +9,166 @@
 // Types:
 // 
 
-// build JFWSystem (JFWSystem) False/False
-/* top-level dependencies (begin JFWSystem) */
-/* top-level dependencies (end JFWSystem) */
+// build JFWSystem (['JFWSystem']) False/False
+/* top-level dependencies (begin ['JFWSystem']) */
+/* top-level dependencies (end ['JFWSystem']) */
 struct JFWSystem {
 	/* 80271CD0 */ void firstInit();
 	/* 80271D18 */ void init();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JKRExpHeap) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JKRExpHeap) */
+// build JKRExpHeap (['JKRExpHeap']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JKRExpHeap']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802CEDB4 */ void createRoot(int, bool);
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build JKRThread (JKRThread) False/False
-// build OSThread (OSThread) False/False
-/* top-level dependencies (begin OSThread) */
-/* top-level dependencies (end OSThread) */
+// build JKRThread (['JKRThread']) False/False
+// build OSThread (['OSThread']) False/False
+/* top-level dependencies (begin ['OSThread']) */
+/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
-/* top-level dependencies (end JKRThread) */
+/* top-level dependencies (begin ['JKRThread']) */
+// outer dependency: ('OSThread',)
+/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// OSThread
+	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 };
 
-// build OSThread (OSThread) True/True
-// build JKRAram (JKRAram) False/False
-/* top-level dependencies (begin JKRAram) */
-/* top-level dependencies (end JKRAram) */
+// build OSThread (['OSThread']) True/True
+// build JKRAram (['JKRAram']) False/False
+/* top-level dependencies (begin ['JKRAram']) */
+/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
 	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
 };
 
-// build JUTGraphFifo (JUTGraphFifo) False/False
-/* top-level dependencies (begin JUTGraphFifo) */
-/* top-level dependencies (end JUTGraphFifo) */
+// build JUTGraphFifo (['JUTGraphFifo']) False/False
+/* top-level dependencies (begin ['JUTGraphFifo']) */
+/* top-level dependencies (end ['JUTGraphFifo']) */
 struct JUTGraphFifo {
 	/* 802DEB58 */ JUTGraphFifo(u32);
 };
 
-// build JUTResFont (JUTResFont) False/False
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
+// build JUTResFont (['JUTResFont']) False/False
+// build ResFONT (['ResFONT']) False/False
+/* top-level dependencies (begin ['ResFONT']) */
+/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTResFont) */
-// outer dependency: ResFONT
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTResFont) */
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JUTResFont']) */
+// outer dependency: ('ResFONT',)
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ResFONT
-	// JKRHeap
+	// ('ResFONT',)
+	// ('JKRHeap',)
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
-// build ResFONT (ResFONT) True/True
-// build JUTDbPrint (JUTDbPrint) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
+// build ResFONT (['ResFONT']) True/True
+// build JUTDbPrint (['JUTDbPrint']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+// build JUTFont (['JUTFont']) False/False
+/* top-level dependencies (begin ['JUTFont']) */
+/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
 };
 
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTDbPrint) */
-// outer dependency: JUTFont
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTDbPrint) */
+/* top-level dependencies (begin ['JUTDbPrint']) */
+// outer dependency: ('JKRHeap',)
+// outer dependency: ('JUTFont',)
+/* top-level dependencies (end ['JUTDbPrint']) */
 struct JUTDbPrint {
-	// JUTFont
-	// JKRHeap
+	// ('JKRHeap',)
+	// ('JUTFont',)
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 	/* 802E0204 */ void changeFont(JUTFont*);
 };
 
-// build JUTFont (JUTFont) True/True
-// build JUTGamePad (JUTGamePad) False/False
-/* top-level dependencies (begin JUTGamePad) */
-/* top-level dependencies (end JUTGamePad) */
+// build JUTFont (['JUTFont']) True/True
+// build JUTGamePad (['JUTGamePad']) False/False
+/* top-level dependencies (begin ['JUTGamePad']) */
+/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
 	/* 802E0898 */ void init();
 };
 
-// build JUTException (JUTException) False/False
-// build JUTDirectPrint (JUTDirectPrint) False/False
-/* top-level dependencies (begin JUTDirectPrint) */
-/* top-level dependencies (end JUTDirectPrint) */
+// build JUTException (['JUTException']) False/False
+// build JUTDirectPrint (['JUTDirectPrint']) False/False
+/* top-level dependencies (begin ['JUTDirectPrint']) */
+/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
 	/* 802E4240 */ void start();
 };
 
-/* top-level dependencies (begin JUTException) */
-// outer dependency: JUTDirectPrint
-/* top-level dependencies (end JUTException) */
+/* top-level dependencies (begin ['JUTException']) */
+// outer dependency: ('JUTDirectPrint',)
+/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
-	// JUTDirectPrint
+	// ('JUTDirectPrint',)
 	/* 802E1E40 */ void create(JUTDirectPrint*);
 	/* 802E3FEC */ void createConsole(void*, u32);
 };
 
-// build JUTDirectPrint (JUTDirectPrint) True/True
-// build JUTAssertion (JUTAssertion) False/False
-/* top-level dependencies (begin JUTAssertion) */
-/* top-level dependencies (end JUTAssertion) */
+// build JUTDirectPrint (['JUTDirectPrint']) True/True
+// build JUTAssertion (['JUTAssertion']) False/False
+/* top-level dependencies (begin ['JUTAssertion']) */
+/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E495C */ void create();
 };
 
-// build JUTVideo (JUTVideo) False/False
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
+// build JUTVideo (['JUTVideo']) False/False
+// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
+/* top-level dependencies (begin ['_GXRenderModeObj']) */
+/* top-level dependencies (end ['_GXRenderModeObj']) */
 struct _GXRenderModeObj {
 };
 
-/* top-level dependencies (begin JUTVideo) */
-// outer dependency: _GXRenderModeObj
-/* top-level dependencies (end JUTVideo) */
+/* top-level dependencies (begin ['JUTVideo']) */
+// outer dependency: ('_GXRenderModeObj',)
+/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
-	// _GXRenderModeObj
+	// ('_GXRenderModeObj',)
 	/* 802E4C54 */ void createManager(_GXRenderModeObj const*);
 };
 
-// build _GXRenderModeObj (_GXRenderModeObj) True/True
-// build JUTConsole (JUTConsole) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTConsole) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTConsole) */
+// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
+// build JUTConsole (['JUTConsole']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JUTConsole']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802E7354 */ void create(u32, u32, JKRHeap*);
 };
 
-// build JUTConsoleManager (JUTConsoleManager) False/False
-// build JKRHeap (JKRHeap) True/True
-/* top-level dependencies (begin JUTConsoleManager) */
-// outer dependency: JKRHeap
-/* top-level dependencies (end JUTConsoleManager) */
+// build JUTConsoleManager (['JUTConsoleManager']) False/False
+// build JKRHeap (['JKRHeap']) True/True
+/* top-level dependencies (begin ['JUTConsoleManager']) */
+// outer dependency: ('JKRHeap',)
+/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
-	// JKRHeap
+	// ('JKRHeap',)
 	/* 802E81F4 */ void createManager(JKRHeap*);
 };
 

@@ -9,35 +9,35 @@
 // Types:
 // 
 
-// build J3DJoint (J3DJoint) False/False
-/* top-level dependencies (begin J3DJoint) */
-/* top-level dependencies (end J3DJoint) */
+// build J3DJoint (['J3DJoint']) False/False
+/* top-level dependencies (begin ['J3DJoint']) */
+/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 };
 
-// build daNpcCd2_c (daNpcCd2_c) False/False
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
+// build daNpcCd2_c (['daNpcCd2_c']) False/False
+// build J3DModel (['J3DModel']) False/False
+/* top-level dependencies (begin ['J3DModel']) */
+/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build J3DJoint (J3DJoint) True/True
-// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
-/* top-level dependencies (begin J3DAnmTransformKey) */
-/* top-level dependencies (end J3DAnmTransformKey) */
+// build J3DJoint (['J3DJoint']) True/True
+// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
+/* top-level dependencies (begin ['J3DAnmTransformKey']) */
+/* top-level dependencies (end ['J3DAnmTransformKey']) */
 struct J3DAnmTransformKey {
 };
 
-/* top-level dependencies (begin daNpcCd2_c) */
-// outer dependency: J3DModel
-// outer dependency: J3DJoint
-// outer dependency: J3DAnmTransformKey
-/* top-level dependencies (end daNpcCd2_c) */
+/* top-level dependencies (begin ['daNpcCd2_c']) */
+// outer dependency: ('J3DModel',)
+// outer dependency: ('J3DJoint',)
+// outer dependency: ('J3DAnmTransformKey',)
+/* top-level dependencies (end ['daNpcCd2_c']) */
 struct daNpcCd2_c {
-	// J3DModel
-	// J3DJoint
-	// J3DAnmTransformKey
+	// ('J3DModel',)
+	// ('J3DJoint',)
+	// ('J3DAnmTransformKey',)
 	/* 80157D00 */ void NpcCreate(int);
 	/* 80157F28 */ void ObjCreate(int);
 	/* 80157F68 */ void ChairCreate(f32);
@@ -62,37 +62,37 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
-// build J3DAnmTransformKey (J3DAnmTransformKey) True/True
-// build J3DModel (J3DModel) True/True
-// build PathTrace_c (PathTrace_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build J3DAnmTransformKey (['J3DAnmTransformKey']) True/True
+// build J3DModel (['J3DModel']) True/True
+// build PathTrace_c (['PathTrace_c']) False/False
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
+struct Vec {
+};
+
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
-/* top-level dependencies (begin PathTrace_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-// outer dependency: Vec
-/* top-level dependencies (end PathTrace_c) */
+/* top-level dependencies (begin ['PathTrace_c']) */
+// outer dependency: ('Vec',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['PathTrace_c']) */
 struct PathTrace_c {
-	// cXyz
-	// fopAc_ac_c
-	// Vec
+	// ('Vec',)
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 80159A38 */ void setPath(int, int, int, cXyz*, bool);
 	/* 80159C14 */ void checkPoint(cXyz, f32);
 	/* 80159DC0 */ void checkPathEnd(cXyz, f32);
@@ -106,138 +106,138 @@ struct PathTrace_c {
 	/* 8015A3E4 */ void checkObstacleSub(fopAc_ac_c*);
 };
 
-// build cXyz (cXyz) True/True
-// build Vec (Vec) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build daNpcCd2_HIO_c (daNpcCd2_HIO_c) False/False
-/* top-level dependencies (begin daNpcCd2_HIO_c) */
-/* top-level dependencies (end daNpcCd2_HIO_c) */
+// build cXyz (['cXyz']) True/True
+// build Vec (['Vec']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build daNpcCd2_HIO_c (['daNpcCd2_HIO_c']) False/False
+/* top-level dependencies (begin ['daNpcCd2_HIO_c']) */
+/* top-level dependencies (end ['daNpcCd2_HIO_c']) */
 struct daNpcCd2_HIO_c {
 	/* 8015A4D8 */ daNpcCd2_HIO_c();
 	/* 8015A860 */ ~daNpcCd2_HIO_c();
 };
 
-// build daNpcCd2_HIO_WChild_c (daNpcCd2_HIO_WChild_c) False/False
-/* top-level dependencies (begin daNpcCd2_HIO_WChild_c) */
-/* top-level dependencies (end daNpcCd2_HIO_WChild_c) */
+// build daNpcCd2_HIO_WChild_c (['daNpcCd2_HIO_WChild_c']) False/False
+/* top-level dependencies (begin ['daNpcCd2_HIO_WChild_c']) */
+/* top-level dependencies (end ['daNpcCd2_HIO_WChild_c']) */
 struct daNpcCd2_HIO_WChild_c {
 	/* 8015A678 */ ~daNpcCd2_HIO_WChild_c();
 	/* 8015A730 */ daNpcCd2_HIO_WChild_c();
 };
 
-// build daNpcCd2_HIO_Jnt_c (daNpcCd2_HIO_Jnt_c) False/False
-/* top-level dependencies (begin daNpcCd2_HIO_Jnt_c) */
-/* top-level dependencies (end daNpcCd2_HIO_Jnt_c) */
+// build daNpcCd2_HIO_Jnt_c (['daNpcCd2_HIO_Jnt_c']) False/False
+/* top-level dependencies (begin ['daNpcCd2_HIO_Jnt_c']) */
+/* top-level dependencies (end ['daNpcCd2_HIO_Jnt_c']) */
 struct daNpcCd2_HIO_Jnt_c {
 	/* 8015A6E8 */ ~daNpcCd2_HIO_Jnt_c();
 	/* 8015A788 */ daNpcCd2_HIO_Jnt_c();
 };
 
-// build daNpcCd2_HIO_MChild_c (daNpcCd2_HIO_MChild_c) False/False
-/* top-level dependencies (begin daNpcCd2_HIO_MChild_c) */
-/* top-level dependencies (end daNpcCd2_HIO_MChild_c) */
+// build daNpcCd2_HIO_MChild_c (['daNpcCd2_HIO_MChild_c']) False/False
+/* top-level dependencies (begin ['daNpcCd2_HIO_MChild_c']) */
+/* top-level dependencies (end ['daNpcCd2_HIO_MChild_c']) */
 struct daNpcCd2_HIO_MChild_c {
 	/* 8015A798 */ ~daNpcCd2_HIO_MChild_c();
 	/* 8015A808 */ daNpcCd2_HIO_MChild_c();
 };
 
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+// build csXyz (['csXyz']) False/False
+/* top-level dependencies (begin ['csXyz']) */
+/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-/* top-level dependencies (begin mDoMtx_stack_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build cXyz (['cXyz']) True/True
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('cXyz',)
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// cXyz
-	// csXyz
+	// ('csXyz',)
+	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CDD4 */ void transM(cXyz const&);
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-// build csXyz (csXyz) True/True
-// build mDoExt_btpAnm (mDoExt_btpAnm) False/False
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-/* top-level dependencies (begin J3DAnmTexPattern) */
-/* top-level dependencies (end J3DAnmTexPattern) */
+// build csXyz (['csXyz']) True/True
+// build mDoExt_btpAnm (['mDoExt_btpAnm']) False/False
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J3DAnmTexPattern']) */
+/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 };
 
-// build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTexPattern (J3DAnmTexPattern) True/True
-/* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTexPattern
-/* top-level dependencies (end J3DMaterialTable) */
+// build J3DMaterialTable (['J3DMaterialTable']) False/False
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
+/* top-level dependencies (begin ['J3DMaterialTable']) */
+// outer dependency: ('J3DAnmTexPattern',)
+/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// J3DAnmTexPattern
+	// ('J3DAnmTexPattern',)
 	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
 };
 
-/* top-level dependencies (begin mDoExt_btpAnm) */
-// outer dependency: J3DAnmTexPattern
-// outer dependency: J3DMaterialTable
-/* top-level dependencies (end mDoExt_btpAnm) */
+/* top-level dependencies (begin ['mDoExt_btpAnm']) */
+// outer dependency: ('J3DAnmTexPattern',)
+// outer dependency: ('J3DMaterialTable',)
+/* top-level dependencies (end ['mDoExt_btpAnm']) */
 struct mDoExt_btpAnm {
-	// J3DAnmTexPattern
-	// J3DMaterialTable
+	// ('J3DAnmTexPattern',)
+	// ('J3DMaterialTable',)
 	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-// build J3DMaterialTable (J3DMaterialTable) True/True
-// build J3DAnmTexPattern (J3DAnmTexPattern) True/True
-// build mDoExt_McaMorfSO (mDoExt_McaMorfSO) False/False
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DMaterialTable (['J3DMaterialTable']) True/True
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
+// build mDoExt_McaMorfSO (['mDoExt_McaMorfSO']) False/False
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) False/False
-/* top-level dependencies (begin mDoExt_McaMorfCallBack1_c) */
-/* top-level dependencies (end mDoExt_McaMorfCallBack1_c) */
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-// build Z2Creature (Z2Creature) False/False
-/* top-level dependencies (begin Z2Creature) */
-/* top-level dependencies (end Z2Creature) */
+// build Z2Creature (['Z2Creature']) False/False
+/* top-level dependencies (begin ['Z2Creature']) */
+/* top-level dependencies (end ['Z2Creature']) */
 struct Z2Creature {
 };
 
-// build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) False/False
-/* top-level dependencies (begin mDoExt_McaMorfCallBack2_c) */
-/* top-level dependencies (end mDoExt_McaMorfCallBack2_c) */
+// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) False/False
+/* top-level dependencies (begin ['mDoExt_McaMorfCallBack2_c']) */
+/* top-level dependencies (end ['mDoExt_McaMorfCallBack2_c']) */
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
+// build J3DAnmTransform (['J3DAnmTransform']) False/False
+/* top-level dependencies (begin ['J3DAnmTransform']) */
+/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 };
 
-/* top-level dependencies (begin mDoExt_McaMorfSO) */
-// outer dependency: J3DModelData
-// outer dependency: mDoExt_McaMorfCallBack1_c
-// outer dependency: Z2Creature
-// outer dependency: mDoExt_McaMorfCallBack2_c
-// outer dependency: J3DAnmTransform
-/* top-level dependencies (end mDoExt_McaMorfSO) */
+// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) False/False
+/* top-level dependencies (begin ['mDoExt_McaMorfCallBack1_c']) */
+/* top-level dependencies (end ['mDoExt_McaMorfCallBack1_c']) */
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+/* top-level dependencies (begin ['mDoExt_McaMorfSO']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('Z2Creature',)
+// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
+// outer dependency: ('J3DAnmTransform',)
+// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
+/* top-level dependencies (end ['mDoExt_McaMorfSO']) */
 struct mDoExt_McaMorfSO {
-	// J3DModelData
-	// mDoExt_McaMorfCallBack2_c
-	// mDoExt_McaMorfCallBack1_c
-	// Z2Creature
-	// J3DAnmTransform
+	// ('J3DModelData',)
+	// ('Z2Creature',)
+	// ('mDoExt_McaMorfCallBack1_c',)
+	// ('J3DAnmTransform',)
+	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
 	/* 800110B0 */ void play(u32, s8);
@@ -245,82 +245,82 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
-// build J3DModelData (J3DModelData) True/True
-// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
-// build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) True/True
-// build J3DAnmTransform (J3DAnmTransform) True/True
-// build Z2Creature (Z2Creature) True/True
-// build request_of_phase_process_class (request_of_phase_process_class) False/False
-/* top-level dependencies (begin request_of_phase_process_class) */
-/* top-level dependencies (end request_of_phase_process_class) */
+// build J3DModelData (['J3DModelData']) True/True
+// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
+// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
+// build J3DAnmTransform (['J3DAnmTransform']) True/True
+// build Z2Creature (['Z2Creature']) True/True
+// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
+/* top-level dependencies (begin ['request_of_phase_process_class']) */
+/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
+/* top-level dependencies (begin ['cBgS_PolyInfo']) */
+/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build _GXTexObj (_GXTexObj) False/False
-/* top-level dependencies (begin _GXTexObj) */
-/* top-level dependencies (end _GXTexObj) */
+// build _GXTexObj (['_GXTexObj']) False/False
+/* top-level dependencies (begin ['_GXTexObj']) */
+/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dPa_control_c (dPa_control_c) False/False
-// build cXyz (cXyz) True/True
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dPa_control_c (['dPa_control_c']) False/False
+// build csXyz (['csXyz']) True/True
+// build _GXColor (['_GXColor']) False/False
+/* top-level dependencies (begin ['_GXColor']) */
+/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
-};
-
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
+/* top-level dependencies (begin ['dKy_tevstr_c']) */
+/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-// build csXyz (csXyz) True/True
-/* top-level dependencies (begin dPa_control_c) */
-// outer dependency: cXyz
-// outer dependency: _GXColor
-// outer dependency: dPa_levelEcallBack
-// outer dependency: dKy_tevstr_c
-// outer dependency: csXyz
-/* top-level dependencies (end dPa_control_c) */
+// build cXyz (['cXyz']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
+/* top-level dependencies (begin ['dPa_levelEcallBack']) */
+/* top-level dependencies (end ['dPa_levelEcallBack']) */
+struct dPa_levelEcallBack {
+};
+
+/* top-level dependencies (begin ['dPa_control_c']) */
+// outer dependency: ('csXyz',)
+// outer dependency: ('_GXColor',)
+// outer dependency: ('dKy_tevstr_c',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dPa_levelEcallBack',)
+/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// dPa_levelEcallBack
-	// dKy_tevstr_c
-	// csXyz
-	// cXyz
-	// _GXColor
-	// build level_c (dPa_control_c::level_c) False/False
-	/* dependencies (begin dPa_control_c::level_c) */
-	/* dependencies (end dPa_control_c::level_c) */
+	// ('_GXColor',)
+	// ('dKy_tevstr_c',)
+	// ('dPa_levelEcallBack',)
+	// ('csXyz',)
+	// ('cXyz',)
+	// build level_c (['dPa_control_c', 'level_c']) False/False
+	/* dependencies (begin ['dPa_control_c', 'level_c']) */
+	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
@@ -328,64 +328,64 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
-// build _GXColor (_GXColor) True/True
-// build dPath (dPath) False/False
-/* top-level dependencies (begin dPath) */
-/* top-level dependencies (end dPath) */
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
+// build _GXColor (['_GXColor']) True/True
+// build dPath (['dPath']) False/False
+/* top-level dependencies (begin ['dPath']) */
+/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build dBgS (dBgS) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-/* top-level dependencies (begin dBgS) */
-// outer dependency: cBgS_PolyInfo
-/* top-level dependencies (end dBgS) */
+// build dBgS (['dBgS']) False/False
+// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
+/* top-level dependencies (begin ['dBgS']) */
+// outer dependency: ('cBgS_PolyInfo',)
+/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// cBgS_PolyInfo
+	// ('cBgS_PolyInfo',)
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build daPy_py_c (daPy_py_c) False/False
-/* top-level dependencies (begin daPy_py_c) */
-/* top-level dependencies (end daPy_py_c) */
+// build daPy_py_c (['daPy_py_c']) False/False
+/* top-level dependencies (begin ['daPy_py_c']) */
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build cXyz (cXyz) True/True
-// build J3DModelData (J3DModelData) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
-/* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: cXyz
-// outer dependency: J3DModelData
-// outer dependency: dKy_tevstr_c
-/* top-level dependencies (end dScnKy_env_light_c) */
+// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
+// build J3DModelData (['J3DModelData']) True/True
+// build cXyz (['cXyz']) True/True
+// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
+/* top-level dependencies (begin ['dScnKy_env_light_c']) */
+// outer dependency: ('J3DModelData',)
+// outer dependency: ('cXyz',)
+// outer dependency: ('dKy_tevstr_c',)
+/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// cXyz
-	// J3DModelData
-	// dKy_tevstr_c
+	// ('J3DModelData',)
+	// ('cXyz',)
+	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build Z2CreatureCitizen (Z2CreatureCitizen) False/False
-// build Vec (Vec) True/True
-/* top-level dependencies (begin Z2CreatureCitizen) */
-// outer dependency: Vec
-/* top-level dependencies (end Z2CreatureCitizen) */
+// build Z2CreatureCitizen (['Z2CreatureCitizen']) False/False
+// build Vec (['Vec']) True/True
+/* top-level dependencies (begin ['Z2CreatureCitizen']) */
+// outer dependency: ('Vec',)
+/* top-level dependencies (end ['Z2CreatureCitizen']) */
 struct Z2CreatureCitizen {
-	// Vec
+	// ('Vec',)
 	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0D48 */ void setMdlType(s8, bool, bool);
 };
 
-// build J3DFrameCtrl (J3DFrameCtrl) False/False
-/* top-level dependencies (begin J3DFrameCtrl) */
-/* top-level dependencies (end J3DFrameCtrl) */
+// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
+/* top-level dependencies (begin ['J3DFrameCtrl']) */
+/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };

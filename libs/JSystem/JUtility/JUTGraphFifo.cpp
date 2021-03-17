@@ -9,17 +9,17 @@
 // Types:
 // 
 
-// build JUTGraphFifo (JUTGraphFifo) False/False
-/* top-level dependencies (begin JUTGraphFifo) */
-/* top-level dependencies (end JUTGraphFifo) */
+// build JUTGraphFifo (['JUTGraphFifo']) False/False
+/* top-level dependencies (begin ['JUTGraphFifo']) */
+/* top-level dependencies (end ['JUTGraphFifo']) */
 struct JUTGraphFifo {
 	/* 802DEB58 */ JUTGraphFifo(u32);
 	/* 802DEC34 */ ~JUTGraphFifo();
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);

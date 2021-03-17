@@ -9,52 +9,52 @@
 // Types:
 // 
 
-// build daPy_frameCtrl_c (daPy_frameCtrl_c) False/False
-/* top-level dependencies (begin daPy_frameCtrl_c) */
-/* top-level dependencies (end daPy_frameCtrl_c) */
+// build daPy_frameCtrl_c (['daPy_frameCtrl_c']) False/False
+/* top-level dependencies (begin ['daPy_frameCtrl_c']) */
+/* top-level dependencies (end ['daPy_frameCtrl_c']) */
 struct daPy_frameCtrl_c {
 	/* 8015E4CC */ void checkAnmEnd();
 	/* 8015E510 */ void updateFrame();
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-// build daPy_boomerangMove_c (daPy_boomerangMove_c) False/False
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
+// build daPy_boomerangMove_c (['daPy_boomerangMove_c']) False/False
+// build cXyz (['cXyz']) False/False
+/* top-level dependencies (begin ['cXyz']) */
+/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
+// build fopAc_ac_c (['fopAc_ac_c']) False/False
+/* top-level dependencies (begin ['fopAc_ac_c']) */
+/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin daPy_boomerangMove_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daPy_boomerangMove_c) */
+/* top-level dependencies (begin ['daPy_boomerangMove_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daPy_boomerangMove_c']) */
 struct daPy_boomerangMove_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 8015E5B0 */ void initOffset(cXyz const*);
 	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
 	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
 };
 
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build daPy_py_c (daPy_py_c) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin daPy_py_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daPy_py_c) */
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+// build daPy_py_c (['daPy_py_c']) False/False
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['daPy_py_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 8015EA0C */ void setParamData(int, int, int, int);
 	/* 8015EA20 */ void checkFishingRodItem(int);
 	/* 8015EA48 */ void checkBombItem(int);
@@ -91,29 +91,29 @@ struct daPy_py_c {
 	/* 8015F968 */ void setMidnaFaceNum(int);
 };
 
-// build daPy_actorKeep_c (daPy_actorKeep_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin daPy_actorKeep_c) */
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daPy_actorKeep_c) */
+// build daPy_actorKeep_c (['daPy_actorKeep_c']) False/False
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['daPy_actorKeep_c']) */
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daPy_actorKeep_c']) */
 struct daPy_actorKeep_c {
-	// fopAc_ac_c
+	// ('fopAc_ac_c',)
 	/* 8015EC48 */ void setActor();
 	/* 8015ECB8 */ void setData(fopAc_ac_c*);
 	/* 8015ECFC */ void clearData();
 };
 
-// build daPy_anmHeap_c (daPy_anmHeap_c) False/False
-// build daPy_anmHeap_c (daPy_anmHeap_c) True/False
+// build daPy_anmHeap_c (['daPy_anmHeap_c']) False/False
+// build daPy_anmHeap_c (['daPy_anmHeap_c']) True/False
 struct daPy_anmHeap_c;
-/* top-level dependencies (begin daPy_anmHeap_c) */
-// outer dependency: daPy_anmHeap_c::daAlinkHEAP_TYPE
-/* top-level dependencies (end daPy_anmHeap_c) */
+/* top-level dependencies (begin ['daPy_anmHeap_c']) */
+// outer dependency: ('daPy_anmHeap_c', 'daAlinkHEAP_TYPE')
+/* top-level dependencies (end ['daPy_anmHeap_c']) */
 struct daPy_anmHeap_c {
-	// daPy_anmHeap_c::daAlinkHEAP_TYPE
-	// build daAlinkHEAP_TYPE (daPy_anmHeap_c::daAlinkHEAP_TYPE) False/False
-	/* dependencies (begin daPy_anmHeap_c::daAlinkHEAP_TYPE) */
-	/* dependencies (end daPy_anmHeap_c::daAlinkHEAP_TYPE) */
+	// ('daPy_anmHeap_c', 'daAlinkHEAP_TYPE')
+	// build daAlinkHEAP_TYPE (['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) False/False
+	/* dependencies (begin ['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) */
+	/* dependencies (end ['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) */
 	struct daAlinkHEAP_TYPE {
 	};
 
@@ -129,94 +129,94 @@ struct daPy_anmHeap_c {
 	/* 8015F168 */ void setAnimeHeap();
 };
 
-// build daPy_sightPacket_c (daPy_sightPacket_c) False/False
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
+// build daPy_sightPacket_c (['daPy_sightPacket_c']) False/False
+// build ResTIMG (['ResTIMG']) False/False
+/* top-level dependencies (begin ['ResTIMG']) */
+/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin daPy_sightPacket_c) */
-// outer dependency: ResTIMG
-/* top-level dependencies (end daPy_sightPacket_c) */
+/* top-level dependencies (begin ['daPy_sightPacket_c']) */
+// outer dependency: ('ResTIMG',)
+/* top-level dependencies (end ['daPy_sightPacket_c']) */
 struct daPy_sightPacket_c {
-	// ResTIMG
+	// ('ResTIMG',)
 	/* 80140CDC */ ~daPy_sightPacket_c();
 	/* 8015F1A0 */ void draw();
 	/* 8015F2FC */ void setSight();
 	/* 8015F384 */ void setSightImage(ResTIMG*);
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-/* top-level dependencies (begin mDoMtx_stack_c) */
-/* top-level dependencies (end mDoMtx_stack_c) */
+// build ResTIMG (['ResTIMG']) True/True
+// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
+/* top-level dependencies (begin ['mDoMtx_stack_c']) */
+/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
+// build JKRHeap (['JKRHeap']) False/False
+/* top-level dependencies (begin ['JKRHeap']) */
+/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 };
 
-// build JKRSolidHeap (JKRSolidHeap) False/False
-/* top-level dependencies (begin JKRSolidHeap) */
-/* top-level dependencies (end JKRSolidHeap) */
+// build JKRSolidHeap (['JKRSolidHeap']) False/False
+/* top-level dependencies (begin ['JKRSolidHeap']) */
+/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
+// build Vec (['Vec']) False/False
+/* top-level dependencies (begin ['Vec']) */
+/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dRes_control_c (dRes_control_c) False/False
-// build dRes_info_c (dRes_info_c) False/False
-/* top-level dependencies (begin dRes_info_c) */
-/* top-level dependencies (end dRes_info_c) */
+// build dRes_control_c (['dRes_control_c']) False/False
+// build dRes_info_c (['dRes_info_c']) False/False
+/* top-level dependencies (begin ['dRes_info_c']) */
+/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin dRes_control_c) */
-// outer dependency: dRes_info_c
-/* top-level dependencies (end dRes_control_c) */
+/* top-level dependencies (begin ['dRes_control_c']) */
+// outer dependency: ('dRes_info_c',)
+/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// dRes_info_c
+	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-// build dRes_info_c (dRes_info_c) True/True
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
+// build dRes_info_c (['dRes_info_c']) True/True
+// build dDlst_list_c (['dDlst_list_c']) False/False
+// build dDlst_base_c (['dDlst_base_c']) False/False
+/* top-level dependencies (begin ['dDlst_base_c']) */
+/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-/* top-level dependencies (end dDlst_list_c) */
+/* top-level dependencies (begin ['dDlst_list_c']) */
+// outer dependency: ('dDlst_base_c',)
+/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// dDlst_base_c
+	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (dDlst_base_c) True/True
-// build daAlink_c (daAlink_c) False/False
-// build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin daAlink_c) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end daAlink_c) */
+// build dDlst_base_c (['dDlst_base_c']) True/True
+// build daAlink_c (['daAlink_c']) False/False
+// build cXyz (['cXyz']) True/True
+// build fopAc_ac_c (['fopAc_ac_c']) True/True
+/* top-level dependencies (begin ['daAlink_c']) */
+// outer dependency: ('cXyz',)
+// outer dependency: ('fopAc_ac_c',)
+/* top-level dependencies (end ['daAlink_c']) */
 struct daAlink_c {
-	// cXyz
-	// fopAc_ac_c
+	// ('cXyz',)
+	// ('fopAc_ac_c',)
 	/* 800A0744 */ void setLookPosFromOut(cXyz*);
 	/* 800BDF60 */ void startRestartRoom(u32, int, int, int);
 	/* 800D72BC */ void setDamagePoint(int, int, int, int);
@@ -226,64 +226,64 @@ struct daAlink_c {
 	/* 800E7AEC */ void setFmChainPosFromOut(fopAc_ac_c*, cXyz*, int);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
+// build JKRArchive (['JKRArchive']) False/False
+/* top-level dependencies (begin ['JKRArchive']) */
+/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
-// build J3DSys (J3DSys) False/False
-/* top-level dependencies (begin J3DSys) */
-/* top-level dependencies (end J3DSys) */
+// build J3DSys (['J3DSys']) False/False
+/* top-level dependencies (begin ['J3DSys']) */
+/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DFrameCtrl (J3DFrameCtrl) False/False
-/* top-level dependencies (begin J3DFrameCtrl) */
-/* top-level dependencies (end J3DFrameCtrl) */
+// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
+/* top-level dependencies (begin ['J3DFrameCtrl']) */
+/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803289CC */ void update();
 };
 
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
+// build J3DAnmTransform (['J3DAnmTransform']) False/False
+/* top-level dependencies (begin ['J3DAnmTransform']) */
+/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J3DAnmTextureSRTKey) */
-/* top-level dependencies (end J3DAnmTextureSRTKey) */
+// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
+/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
+/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 	/* 80329E5C */ J3DAnmTextureSRTKey();
 };
 
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-/* top-level dependencies (begin J3DAnmTexPattern) */
-/* top-level dependencies (end J3DAnmTexPattern) */
+// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
+/* top-level dependencies (begin ['J3DAnmTexPattern']) */
+/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
-// build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
-// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
-/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
-/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
+// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
+// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
+/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
+/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin J3DAnmLoaderDataBase) */
-// outer dependency: J3DAnmLoaderDataBaseFlag
-/* top-level dependencies (end J3DAnmLoaderDataBase) */
+/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
+// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
+/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// J3DAnmLoaderDataBaseFlag
+	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 };
 
-// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) True/True
+// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
 // 
 // Forward References:
 // 

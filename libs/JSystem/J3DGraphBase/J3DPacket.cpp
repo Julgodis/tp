@@ -9,9 +9,9 @@
 // Types:
 // 
 
-// build J3DDisplayListObj (J3DDisplayListObj) False/False
-/* top-level dependencies (begin J3DDisplayListObj) */
-/* top-level dependencies (end J3DDisplayListObj) */
+// build J3DDisplayListObj (['J3DDisplayListObj']) False/False
+/* top-level dependencies (begin ['J3DDisplayListObj']) */
+/* top-level dependencies (end ['J3DDisplayListObj']) */
 struct J3DDisplayListObj {
 	/* 80312488 */ void newDisplayList(u32);
 	/* 80312508 */ void newSingleDisplayList(u32);
@@ -25,28 +25,28 @@ struct J3DDisplayListObj {
 	/* 80312714 */ void endPatch();
 };
 
-// build J3DPacket (J3DPacket) False/False
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-/* top-level dependencies (begin J3DDrawBuffer) */
-/* top-level dependencies (end J3DDrawBuffer) */
+// build J3DPacket (['J3DPacket']) False/False
+// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
+/* top-level dependencies (begin ['J3DDrawBuffer']) */
+/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
 };
 
-/* top-level dependencies (begin J3DPacket) */
-// outer dependency: J3DDrawBuffer
-/* top-level dependencies (end J3DPacket) */
+/* top-level dependencies (begin ['J3DPacket']) */
+// outer dependency: ('J3DDrawBuffer',)
+/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
-	// J3DDrawBuffer
+	// ('J3DDrawBuffer',)
 	/* 8000E680 */ ~J3DPacket();
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 	/* 80312758 */ void addChildPacket(J3DPacket*);
 	/* 80313044 */ void draw();
 };
 
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
-// build J3DDrawPacket (J3DDrawPacket) False/False
-/* top-level dependencies (begin J3DDrawPacket) */
-/* top-level dependencies (end J3DDrawPacket) */
+// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
+// build J3DDrawPacket (['J3DDrawPacket']) False/False
+/* top-level dependencies (begin ['J3DDrawPacket']) */
+/* top-level dependencies (end ['J3DDrawPacket']) */
 struct J3DDrawPacket {
 	/* 80312778 */ J3DDrawPacket();
 	/* 803127B0 */ ~J3DDrawPacket();
@@ -55,11 +55,11 @@ struct J3DDrawPacket {
 	/* 80312924 */ void draw();
 };
 
-// build J3DMatPacket (J3DMatPacket) False/False
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
-// build J3DShapePacket (J3DShapePacket) False/False
-/* top-level dependencies (begin J3DShapePacket) */
-/* top-level dependencies (end J3DShapePacket) */
+// build J3DMatPacket (['J3DMatPacket']) False/False
+// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
+// build J3DShapePacket (['J3DShapePacket']) False/False
+/* top-level dependencies (begin ['J3DShapePacket']) */
+/* top-level dependencies (end ['J3DShapePacket']) */
 struct J3DShapePacket {
 	/* 80312B20 */ J3DShapePacket();
 	/* 80312B74 */ ~J3DShapePacket();
@@ -70,13 +70,13 @@ struct J3DShapePacket {
 	/* 80312FBC */ void drawFast();
 };
 
-/* top-level dependencies (begin J3DMatPacket) */
-// outer dependency: J3DDrawBuffer
-// outer dependency: J3DShapePacket
-/* top-level dependencies (end J3DMatPacket) */
+/* top-level dependencies (begin ['J3DMatPacket']) */
+// outer dependency: ('J3DDrawBuffer',)
+// outer dependency: ('J3DShapePacket',)
+/* top-level dependencies (end ['J3DMatPacket']) */
 struct J3DMatPacket {
-	// J3DDrawBuffer
-	// J3DShapePacket
+	// ('J3DDrawBuffer',)
+	// ('J3DShapePacket',)
 	/* 80312948 */ J3DMatPacket();
 	/* 803129A4 */ ~J3DMatPacket();
 	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
@@ -87,24 +87,24 @@ struct J3DMatPacket {
 	/* 80313048 */ void entry(J3DDrawBuffer*);
 };
 
-// build J3DShapePacket (J3DShapePacket) True/True
-// build J3DVertexBuffer (J3DVertexBuffer) False/False
-/* top-level dependencies (begin J3DVertexBuffer) */
-/* top-level dependencies (end J3DVertexBuffer) */
+// build J3DShapePacket (['J3DShapePacket']) True/True
+// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
+/* top-level dependencies (begin ['J3DVertexBuffer']) */
+/* top-level dependencies (end ['J3DVertexBuffer']) */
 struct J3DVertexBuffer {
 	/* 8031106C */ void setArray() const;
 };
 
-// build J3DShape (J3DShape) False/False
-/* top-level dependencies (begin J3DShape) */
-/* top-level dependencies (end J3DShape) */
+// build J3DShape (['J3DShape']) False/False
+/* top-level dependencies (begin ['J3DShape']) */
+/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
+// build J3DModelData (['J3DModelData']) False/False
+/* top-level dependencies (begin ['J3DModelData']) */
+/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };

@@ -9,31 +9,32 @@
 // Types:
 // 
 
-// build JMessage (JMessage) False/False
-// build JMessage (JMessage) True/False
+// build JMessage (['JMessage']) False/False
+// build JMessage (['JMessage']) True/False
 struct JMessage;
-// build JMessage (JMessage) True/True
-/* top-level dependencies (begin JMessage) */
-// outer dependency: JMessage::TResource
-// outer dependency: JMessage::TResourceContainer
-/* top-level dependencies (end JMessage) */
+// build JMessage (['JMessage']) True/True
+/* top-level dependencies (begin ['JMessage']) */
+// outer dependency: ('JMessage', 'TResource')
+// outer dependency: ('JMessage', 'TResourceContainer')
+/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TResource (JMessage::TResource) False/False
-	/* dependencies (begin JMessage::TResource) */
-	/* dependencies (end JMessage::TResource) */
+	// build TResource (['JMessage', 'TResource']) False/False
+	/* dependencies (begin ['JMessage', 'TResource']) */
+	/* dependencies (end ['JMessage', 'TResource']) */
 	struct TResource {
 		/* 802A8CDC */ void toMessageIndex_messageID(u32, u32, bool*) const;
 	};
 
-	// build TResourceContainer (JMessage::TResourceContainer) False/False
-	/* dependencies (begin JMessage::TResourceContainer) */
-	/* dependencies (end JMessage::TResourceContainer) */
+	// build TResourceContainer (['JMessage', 'TResourceContainer']) False/False
+	/* dependencies (begin ['JMessage', 'TResourceContainer']) */
+	/* dependencies (end ['JMessage', 'TResourceContainer']) */
 	struct TResourceContainer {
-		// build TCResource (JMessage::TResourceContainer::TCResource) False/False
-		/* dependencies (begin JMessage::TResourceContainer::TCResource) */
-		/* dependencies (end JMessage::TResourceContainer::TCResource) */
+		// build TCResource (['JMessage', 'TResourceContainer', 'TCResource']) False/False
+		/* dependencies (begin ['JMessage', 'TResourceContainer', 'TCResource']) */
+		// inner dependency: 0 ('JMessage', 'TResource') (for ['JMessage', 'TResourceContainer', 'TCResource'])
+		/* dependencies (end ['JMessage', 'TResourceContainer', 'TCResource']) */
 		struct TCResource {
-			// JMessage::TResource
+			// ('JMessage', 'TResource')
 			/* 802A8EC0 */ TCResource();
 			/* 802A8EF8 */ ~TCResource();
 			/* 802A8F6C */ void Get_groupID(u16);
@@ -46,22 +47,22 @@ struct JMessage {
 		/* 802A90F0 */ void setEncoding_(u8);
 	};
 
-	// build TParse (JMessage::TParse) False/False
-	/* dependencies (begin JMessage::TParse) */
-	// inner dependency: TResourceContainer (JMessage::TResourceContainer) True False (for JMessage::TParse)
-	// build TResourceContainer (JMessage::TResourceContainer) True/True
-	/* dependencies (end JMessage::TParse) */
+	// build TParse (['JMessage', 'TParse']) False/False
+	/* dependencies (begin ['JMessage', 'TParse']) */
+	// inner dependency: 1 ('JMessage', 'TResourceContainer') (for ['JMessage', 'TParse'])
+	// build TResourceContainer (['JMessage', 'TResourceContainer']) True/True
+	/* dependencies (end ['JMessage', 'TParse']) */
 	struct TParse {
-		// JMessage::TResourceContainer
+		// ('JMessage', 'TResourceContainer')
 		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
 		/* 802A9158 */ ~TParse();
 		/* 802A91B8 */ void parseHeader_next(void const**, u32*, u32);
 		/* 802A92F4 */ void parseBlock_next(void const**, u32*, u32);
 	};
 
-	// build locale (JMessage::locale) False/False
-	/* dependencies (begin JMessage::locale) */
-	/* dependencies (end JMessage::locale) */
+	// build locale (['JMessage', 'locale']) False/False
+	/* dependencies (begin ['JMessage', 'locale']) */
+	/* dependencies (end ['JMessage', 'locale']) */
 	struct locale {
 		/* 802A9490 */ void parseCharacter_1Byte(char const**);
 		/* 802A94A8 */ void parseCharacter_2Byte(char const**);
@@ -71,45 +72,45 @@ struct JMessage {
 
 };
 
-// build JGadget (JGadget) False/False
-// build JGadget (JGadget) True/False
+// build JGadget (['JGadget']) False/False
+// build JGadget (['JGadget']) True/False
 struct JGadget;
-// build JGadget (JGadget) True/True
-/* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TLinkListNode
-// outer dependency: JGadget::TNodeLinkList::iterator
-/* top-level dependencies (end JGadget) */
+// build JGadget (['JGadget']) True/True
+/* top-level dependencies (begin ['JGadget']) */
+// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
+// outer dependency: ('JGadget', 'TLinkListNode')
+/* top-level dependencies (end ['JGadget']) */
 struct JGadget {
-	// build binary (JGadget::binary) False/False
-	/* dependencies (begin JGadget::binary) */
-	/* dependencies (end JGadget::binary) */
+	// build binary (['JGadget', 'binary']) False/False
+	/* dependencies (begin ['JGadget', 'binary']) */
+	/* dependencies (end ['JGadget', 'binary']) */
 	struct binary {
-		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
-		/* dependencies (begin JGadget::binary::TParse_header_block) */
-		/* dependencies (end JGadget::binary::TParse_header_block) */
+		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
+		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
+		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 		};
 
 	};
 
-	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
-	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
-	// build TLinkListNode (JGadget::TLinkListNode) False/False
-	/* dependencies (begin JGadget::TLinkListNode) */
-	/* dependencies (end JGadget::TLinkListNode) */
+	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
+	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
+	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
+	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
+	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
+	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
-	/* dependencies (end JGadget::TNodeLinkList) */
+	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// JGadget::TLinkListNode
-		// JGadget::TNodeLinkList::iterator
-		// build iterator (JGadget::TNodeLinkList::iterator) False/False
-		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
-		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		// ('JGadget', 'TNodeLinkList', 'iterator')
+		// ('JGadget', 'TLinkListNode')
+		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
+		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
+		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -118,7 +119,7 @@ struct JGadget {
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (JGadget::TLinkListNode) True/True
+	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 

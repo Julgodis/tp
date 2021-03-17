@@ -9,24 +9,24 @@
 // Types:
 // 
 
-// build JASVoiceBank (JASVoiceBank) False/False
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
+// build JASVoiceBank (['JASVoiceBank']) False/False
+// build JASInstParam (['JASInstParam']) False/False
+/* top-level dependencies (begin ['JASInstParam']) */
+/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-/* top-level dependencies (begin JASVoiceBank) */
-// outer dependency: JASInstParam
-/* top-level dependencies (end JASVoiceBank) */
+/* top-level dependencies (begin ['JASVoiceBank']) */
+// outer dependency: ('JASInstParam',)
+/* top-level dependencies (end ['JASVoiceBank']) */
 struct JASVoiceBank {
-	// JASInstParam
+	// ('JASInstParam',)
 	/* 80297F74 */ void getInstParam(int, int, int, JASInstParam*) const;
 	/* 80297FAC */ ~JASVoiceBank();
 	/* 80298008 */ void getType() const;
 };
 
-// build JASInstParam (JASInstParam) True/True
+// build JASInstParam (['JASInstParam']) True/True
 // 
 // Forward References:
 // 

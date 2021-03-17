@@ -9,37 +9,37 @@
 // Types:
 // 
 
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-// build J3DMatPacket (J3DMatPacket) False/False
-// build J3DShapePacket (J3DShapePacket) False/False
-/* top-level dependencies (begin J3DShapePacket) */
-/* top-level dependencies (end J3DShapePacket) */
-struct J3DShapePacket {
-};
-
-/* top-level dependencies (begin J3DMatPacket) */
-// outer dependency: J3DShapePacket
-/* top-level dependencies (end J3DMatPacket) */
-struct J3DMatPacket {
-	// J3DShapePacket
-	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
-	/* 80312A74 */ void isSame(J3DMatPacket*) const;
-};
-
-// build J3DPacket (J3DPacket) False/False
-/* top-level dependencies (begin J3DPacket) */
-/* top-level dependencies (end J3DPacket) */
+// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
+// build J3DPacket (['J3DPacket']) False/False
+/* top-level dependencies (begin ['J3DPacket']) */
+/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
 	/* 80312758 */ void addChildPacket(J3DPacket*);
 };
 
-/* top-level dependencies (begin J3DDrawBuffer) */
-// outer dependency: J3DMatPacket
-// outer dependency: J3DPacket
-/* top-level dependencies (end J3DDrawBuffer) */
+// build J3DMatPacket (['J3DMatPacket']) False/False
+// build J3DShapePacket (['J3DShapePacket']) False/False
+/* top-level dependencies (begin ['J3DShapePacket']) */
+/* top-level dependencies (end ['J3DShapePacket']) */
+struct J3DShapePacket {
+};
+
+/* top-level dependencies (begin ['J3DMatPacket']) */
+// outer dependency: ('J3DShapePacket',)
+/* top-level dependencies (end ['J3DMatPacket']) */
+struct J3DMatPacket {
+	// ('J3DShapePacket',)
+	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
+	/* 80312A74 */ void isSame(J3DMatPacket*) const;
+};
+
+/* top-level dependencies (begin ['J3DDrawBuffer']) */
+// outer dependency: ('J3DPacket',)
+// outer dependency: ('J3DMatPacket',)
+/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// J3DMatPacket
-	// J3DPacket
+	// ('J3DPacket',)
+	// ('J3DMatPacket',)
 	/* 80324F08 */ void initialize();
 	/* 80324F70 */ void allocBuffer(u32);
 	/* 80325008 */ ~J3DDrawBuffer();
@@ -56,9 +56,9 @@ struct J3DDrawBuffer {
 	/* 80325578 */ void drawTail() const;
 };
 
-// build J3DMatPacket (J3DMatPacket) True/True
-// build J3DPacket (J3DPacket) True/True
-// build J3DShapePacket (J3DShapePacket) True/True
+// build J3DMatPacket (['J3DMatPacket']) True/True
+// build J3DPacket (['J3DPacket']) True/True
+// build J3DShapePacket (['J3DShapePacket']) True/True
 // 
 // Forward References:
 // 
